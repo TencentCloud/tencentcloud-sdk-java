@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TcrRepoInfo extends AbstractModel{
 
     /**
-    * 地域
+    * 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -63,9 +63,9 @@ public class TcrRepoInfo extends AbstractModel{
     private String RepoName;
 
     /**
-     * Get 地域
+     * Get 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -73,9 +73,9 @@ public class TcrRepoInfo extends AbstractModel{
     }
 
     /**
-     * Set 地域
+     * Set 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {

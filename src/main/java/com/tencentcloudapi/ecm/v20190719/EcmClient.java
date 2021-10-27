@@ -309,6 +309,26 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *用于创建一个 OpenSSH RSA 密钥对，可以用于登录 Linux 实例。
+     * @param req CreateKeyPairRequest
+     * @return CreateKeyPairResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKeyPairResponse CreateKeyPair(CreateKeyPairRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKeyPairResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateKeyPairResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateKeyPair");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建负载均衡监听器。
      * @param req CreateListenerRequest
      * @return CreateListenerResponse
@@ -1650,6 +1670,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<DisassociateAddressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisassociateAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于解除实例的密钥绑定关系。
+     * @param req DisassociateInstancesKeyPairsRequest
+     * @return DisassociateInstancesKeyPairsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateInstancesKeyPairs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

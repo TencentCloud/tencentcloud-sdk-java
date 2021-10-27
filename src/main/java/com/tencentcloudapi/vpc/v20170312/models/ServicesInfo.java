@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ServicesInfo extends AbstractModel{
 
     /**
-    * 协议端口
+    * 协议端口。
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * 备注
+    * 备注。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -38,25 +38,25 @@ public class ServicesInfo extends AbstractModel{
     private String Description;
 
     /**
-     * Get 协议端口 
-     * @return Service 协议端口
+     * Get 协议端口。 
+     * @return Service 协议端口。
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 协议端口
-     * @param Service 协议端口
+     * Set 协议端口。
+     * @param Service 协议端口。
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 备注
+     * Get 备注。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 备注
+     * @return Description 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -64,9 +64,9 @@ public class ServicesInfo extends AbstractModel{
     }
 
     /**
-     * Set 备注
+     * Set 备注。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 备注
+     * @param Description 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {

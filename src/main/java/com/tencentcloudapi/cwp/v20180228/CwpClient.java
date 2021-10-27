@@ -4039,28 +4039,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *该接口已废弃
-
-本接口 (RescanImpactedHost) 用于漏洞重新检测。
-     * @param req RescanImpactedHostRequest
-     * @return RescanImpactedHostResponse
-     * @throws TencentCloudSDKException
-     */
-    public RescanImpactedHostResponse RescanImpactedHost(RescanImpactedHostRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RescanImpactedHostResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RescanImpactedHostResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RescanImpactedHost");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *资产指纹启动扫描
      * @param req ScanAssetRequest
      * @return ScanAssetResponse

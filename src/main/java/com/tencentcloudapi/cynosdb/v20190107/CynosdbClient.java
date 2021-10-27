@@ -439,6 +439,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改集群参数
+     * @param req ModifyClusterParamRequest
+     * @return ModifyClusterParamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterParamResponse ModifyClusterParam(ModifyClusterParamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterParamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterParamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterParam");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

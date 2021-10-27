@@ -149,6 +149,38 @@ public class DeviceInfo extends AbstractModel{
     private String CreatorNickName;
 
     /**
+    * 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableState")
+    @Expose
+    private Long EnableState;
+
+    /**
+    * 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
+    * 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -460,6 +492,86 @@ public class DeviceInfo extends AbstractModel{
         this.CreatorNickName = CreatorNickName;
     }
 
+    /**
+     * Get 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableState 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableState() {
+        return this.EnableState;
+    }
+
+    /**
+     * Set 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableState 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableState(Long EnableState) {
+        this.EnableState = EnableState;
+    }
+
+    /**
+     * Get 产品ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 产品名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductName 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductName 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
+    /**
+     * Get 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceType 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceType 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
     public DeviceInfo() {
     }
 
@@ -516,6 +628,18 @@ public class DeviceInfo extends AbstractModel{
         if (source.CreatorNickName != null) {
             this.CreatorNickName = new String(source.CreatorNickName);
         }
+        if (source.EnableState != null) {
+            this.EnableState = new Long(source.EnableState);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
     }
 
 
@@ -539,6 +663,10 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
+        this.setParamSimple(map, prefix + "EnableState", this.EnableState);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

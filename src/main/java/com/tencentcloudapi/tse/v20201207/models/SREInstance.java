@@ -175,6 +175,14 @@ public class SREInstance extends AbstractModel{
     private ServiceGovernanceInfo [] ServiceGovernanceInfos;
 
     /**
+    * 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private KVPair [] Tags;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -542,6 +550,26 @@ public class SREInstance extends AbstractModel{
         this.ServiceGovernanceInfos = ServiceGovernanceInfos;
     }
 
+    /**
+     * Get 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KVPair [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(KVPair [] Tags) {
+        this.Tags = Tags;
+    }
+
     public SREInstance() {
     }
 
@@ -622,6 +650,12 @@ public class SREInstance extends AbstractModel{
                 this.ServiceGovernanceInfos[i] = new ServiceGovernanceInfo(source.ServiceGovernanceInfos[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new KVPair[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new KVPair(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -649,6 +683,7 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
         this.setParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
         this.setParamArrayObj(map, prefix + "ServiceGovernanceInfos.", this.ServiceGovernanceInfos);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

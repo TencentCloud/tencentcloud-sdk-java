@@ -129,6 +129,9 @@ public enum CynosdbErrorCode {
     // 账号余额不足。
      OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),
      
+    // serverless集群当前状态{{1}}不允许该操作。
+     OPERATIONDENIED_SERVERLESSCLUSTERSTATUSDENIED("OperationDenied.ServerlessClusterStatusDenied"),
+     
     // serverless实例当前状态{{1}}不允许该操作。
      OPERATIONDENIED_SERVERLESSINSTANCESTATUSDENIED("OperationDenied.ServerlessInstanceStatusDenied"),
      

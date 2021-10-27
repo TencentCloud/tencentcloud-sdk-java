@@ -160,6 +160,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private InstanceNameSettings InstanceNameSettings;
 
     /**
+    * 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+    */
+    @SerializedName("EnhancedService")
+    @Expose
+    private EnhancedService EnhancedService;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -515,6 +522,22 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
+    /**
+     * Get 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。 
+     * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+     */
+    public EnhancedService getEnhancedService() {
+        return this.EnhancedService;
+    }
+
+    /**
+     * Set 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+     * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+     */
+    public void setEnhancedService(EnhancedService EnhancedService) {
+        this.EnhancedService = EnhancedService;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -580,6 +603,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.InstanceNameSettings != null) {
             this.InstanceNameSettings = new InstanceNameSettings(source.InstanceNameSettings);
         }
+        if (source.EnhancedService != null) {
+            this.EnhancedService = new EnhancedService(source.EnhancedService);
+        }
     }
 
 
@@ -603,6 +629,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+        this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
 
     }
 }

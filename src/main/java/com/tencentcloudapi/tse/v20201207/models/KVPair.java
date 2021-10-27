@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cbs.v20170312.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Image extends AbstractModel{
+public class KVPair extends AbstractModel{
 
     /**
-    * 镜像名称。
+    * 键
     */
-    @SerializedName("ImageName")
+    @SerializedName("Key")
     @Expose
-    private String ImageName;
+    private String Key;
 
     /**
-    * 镜像实例ID。
+    * 值
     */
-    @SerializedName("ImageId")
+    @SerializedName("Value")
     @Expose
-    private String ImageId;
+    private String Value;
 
     /**
-     * Get 镜像名称。 
-     * @return ImageName 镜像名称。
+     * Get 键 
+     * @return Key 键
      */
-    public String getImageName() {
-        return this.ImageName;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 镜像名称。
-     * @param ImageName 镜像名称。
+     * Set 键
+     * @param Key 键
      */
-    public void setImageName(String ImageName) {
-        this.ImageName = ImageName;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 镜像实例ID。 
-     * @return ImageId 镜像实例ID。
+     * Get 值 
+     * @return Value 值
      */
-    public String getImageId() {
-        return this.ImageId;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 镜像实例ID。
-     * @param ImageId 镜像实例ID。
+     * Set 值
+     * @param Value 值
      */
-    public void setImageId(String ImageId) {
-        this.ImageId = ImageId;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public Image() {
+    public KVPair() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Image(Image source) {
-        if (source.ImageName != null) {
-            this.ImageName = new String(source.ImageName);
+    public KVPair(KVPair source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
-        if (source.ImageId != null) {
-            this.ImageId = new String(source.ImageId);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -89,8 +89,8 @@ public class Image extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ImageName", this.ImageName);
-        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

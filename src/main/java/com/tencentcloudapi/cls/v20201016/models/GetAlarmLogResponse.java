@@ -68,6 +68,22 @@ public class GetAlarmLogResponse extends AbstractModel{
     private LogItems [] AnalysisResults;
 
     /**
+    * 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnalysisRecords")
+    @Expose
+    private String [] AnalysisRecords;
+
+    /**
+    * 日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Columns")
+    @Expose
+    private Column [] Columns;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -183,6 +199,46 @@ public class GetAlarmLogResponse extends AbstractModel{
     }
 
     /**
+     * Get 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAnalysisRecords() {
+        return this.AnalysisRecords;
+    }
+
+    /**
+     * Set 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysisRecords(String [] AnalysisRecords) {
+        this.AnalysisRecords = AnalysisRecords;
+    }
+
+    /**
+     * Get 日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Columns 日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Column [] getColumns() {
+        return this.Columns;
+    }
+
+    /**
+     * Set 日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Columns 日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumns(Column [] Columns) {
+        this.Columns = Columns;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -233,6 +289,18 @@ public class GetAlarmLogResponse extends AbstractModel{
                 this.AnalysisResults[i] = new LogItems(source.AnalysisResults[i]);
             }
         }
+        if (source.AnalysisRecords != null) {
+            this.AnalysisRecords = new String[source.AnalysisRecords.length];
+            for (int i = 0; i < source.AnalysisRecords.length; i++) {
+                this.AnalysisRecords[i] = new String(source.AnalysisRecords[i]);
+            }
+        }
+        if (source.Columns != null) {
+            this.Columns = new Column[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new Column(source.Columns[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -249,6 +317,8 @@ public class GetAlarmLogResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ColNames.", this.ColNames);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
+        this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
+        this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

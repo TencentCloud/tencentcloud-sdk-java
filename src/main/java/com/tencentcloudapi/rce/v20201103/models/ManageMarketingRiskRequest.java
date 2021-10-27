@@ -30,6 +30,13 @@ public class ManageMarketingRiskRequest extends AbstractModel{
     private InputManageMarketingRisk BusinessSecurityData;
 
     /**
+    * 业务入参
+    */
+    @SerializedName("BusinessCryptoData")
+    @Expose
+    private InputCryptoManageMarketingRisk BusinessCryptoData;
+
+    /**
      * Get 业务入参 
      * @return BusinessSecurityData 业务入参
      */
@@ -45,6 +52,22 @@ public class ManageMarketingRiskRequest extends AbstractModel{
         this.BusinessSecurityData = BusinessSecurityData;
     }
 
+    /**
+     * Get 业务入参 
+     * @return BusinessCryptoData 业务入参
+     */
+    public InputCryptoManageMarketingRisk getBusinessCryptoData() {
+        return this.BusinessCryptoData;
+    }
+
+    /**
+     * Set 业务入参
+     * @param BusinessCryptoData 业务入参
+     */
+    public void setBusinessCryptoData(InputCryptoManageMarketingRisk BusinessCryptoData) {
+        this.BusinessCryptoData = BusinessCryptoData;
+    }
+
     public ManageMarketingRiskRequest() {
     }
 
@@ -56,6 +79,9 @@ public class ManageMarketingRiskRequest extends AbstractModel{
         if (source.BusinessSecurityData != null) {
             this.BusinessSecurityData = new InputManageMarketingRisk(source.BusinessSecurityData);
         }
+        if (source.BusinessCryptoData != null) {
+            this.BusinessCryptoData = new InputCryptoManageMarketingRisk(source.BusinessCryptoData);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class ManageMarketingRiskRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
+        this.setParamObj(map, prefix + "BusinessCryptoData.", this.BusinessCryptoData);
 
     }
 }

@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RescanImpactedHostResponse extends AbstractModel{
+public class ModifyClusterParamResponse extends AbstractModel{
+
+    /**
+    * 异步请求Id，用于查询结果
+    */
+    @SerializedName("AsyncRequestId")
+    @Expose
+    private String AsyncRequestId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class RescanImpactedHostResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 异步请求Id，用于查询结果 
+     * @return AsyncRequestId 异步请求Id，用于查询结果
+     */
+    public String getAsyncRequestId() {
+        return this.AsyncRequestId;
+    }
+
+    /**
+     * Set 异步请求Id，用于查询结果
+     * @param AsyncRequestId 异步请求Id，用于查询结果
+     */
+    public void setAsyncRequestId(String AsyncRequestId) {
+        this.AsyncRequestId = AsyncRequestId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,17 @@ public class RescanImpactedHostResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public RescanImpactedHostResponse() {
+    public ModifyClusterParamResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RescanImpactedHostResponse(RescanImpactedHostResponse source) {
+    public ModifyClusterParamResponse(ModifyClusterParamResponse source) {
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new String(source.AsyncRequestId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class RescanImpactedHostResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
