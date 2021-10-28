@@ -69,6 +69,12 @@ public enum TdmqErrorCode {
     // 获取主题分区数失败。
      FAILEDOPERATION_GETTOPICPARTITIONSFAILED("FailedOperation.GetTopicPartitionsFailed"),
      
+    // 最大消息超过1MB。
+     FAILEDOPERATION_MAXMESSAGESIZEERROR("FailedOperation.MaxMessageSizeError"),
+     
+    // 上传的msgID错误。
+     FAILEDOPERATION_MESSAGEIDERROR("FailedOperation.MessageIDError"),
+     
     // 必须先清除关联命名空间才能继续操作。
      FAILEDOPERATION_NAMESPACEINUSE("FailedOperation.NamespaceInUse"),
      
@@ -87,6 +93,9 @@ public enum TdmqErrorCode {
     // 保存秘钥失败。
      FAILEDOPERATION_SAVESECRETKEY("FailedOperation.SaveSecretKey"),
      
+    // 消息发送超时。
+     FAILEDOPERATION_SENDMESSAGETIMEOUTERROR("FailedOperation.SendMessageTimeoutError"),
+     
     // 发送消息失败。
      FAILEDOPERATION_SENDMSGFAILED("FailedOperation.SendMsgFailed"),
      
@@ -95,6 +104,9 @@ public enum TdmqErrorCode {
      
     // 必须先清除关联主题数据才能继续操作。
      FAILEDOPERATION_TOPICINUSE("FailedOperation.TopicInUse"),
+     
+    // 请使用partition topic。
+     FAILEDOPERATION_TOPICTYPEERROR("FailedOperation.TopicTypeError"),
      
     // 环境更新失败。
      FAILEDOPERATION_UPDATEENVIRONMENT("FailedOperation.UpdateEnvironment"),
@@ -110,6 +122,9 @@ public enum TdmqErrorCode {
      
     // 必须先清除关联VPC路由数据才能继续操作。
      FAILEDOPERATION_VPCINUSE("FailedOperation.VpcInUse"),
+     
+    // 内部错误。
+     INTERNALERROR("InternalError"),
      
     // Broker服务异常。
      INTERNALERROR_BROKERSERVICE("InternalError.BrokerService"),
@@ -150,6 +165,9 @@ public enum TdmqErrorCode {
     // 上传的topic name错误。
      INVALIDPARAMETERVALUE_TOPICNOTFOUND("InvalidParameterValue.TopicNotFound"),
      
+    // 超过配额限制。
+     LIMITEXCEEDED("LimitExceeded"),
+     
     // 实例下集群数量超过限制。
      LIMITEXCEEDED_CLUSTERS("LimitExceeded.Clusters"),
      
@@ -177,6 +195,9 @@ public enum TdmqErrorCode {
     // 默认环境不允许操作。
      OPERATIONDENIED_DEFAULTENVIRONMENT("OperationDenied.DefaultEnvironment"),
      
+    // 资源被占用。
+     RESOURCEINUSE("ResourceInUse"),
+     
     // 集群已存在。
      RESOURCEINUSE_CLUSTER("ResourceInUse.Cluster"),
      
@@ -194,6 +215,12 @@ public enum TdmqErrorCode {
      
     // 重名，主题已存在。
      RESOURCEINUSE_TOPIC("ResourceInUse.Topic"),
+     
+    // 资源不足。
+     RESOURCEINSUFFICIENT("ResourceInsufficient"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound"),
      
     // 服务的集群不存在。
      RESOURCENOTFOUND_BROKERCLUSTER("ResourceNotFound.BrokerCluster"),

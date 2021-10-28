@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DetectInfoBestFrame extends AbstractModel{
 
     /**
-    * 活体比对最佳帧。
+    * 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrame")
@@ -31,7 +31,7 @@ public class DetectInfoBestFrame extends AbstractModel{
     private String BestFrame;
 
     /**
-    * 自截帧。
+    * 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrames")
@@ -39,9 +39,9 @@ public class DetectInfoBestFrame extends AbstractModel{
     private String [] BestFrames;
 
     /**
-     * Get 活体比对最佳帧。
+     * Get 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BestFrame 活体比对最佳帧。
+     * @return BestFrame 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBestFrame() {
@@ -49,9 +49,9 @@ public class DetectInfoBestFrame extends AbstractModel{
     }
 
     /**
-     * Set 活体比对最佳帧。
+     * Set 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BestFrame 活体比对最佳帧。
+     * @param BestFrame 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrame(String BestFrame) {
@@ -59,9 +59,9 @@ public class DetectInfoBestFrame extends AbstractModel{
     }
 
     /**
-     * Get 自截帧。
+     * Get 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BestFrames 自截帧。
+     * @return BestFrames 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBestFrames() {
@@ -69,9 +69,9 @@ public class DetectInfoBestFrame extends AbstractModel{
     }
 
     /**
-     * Set 自截帧。
+     * Set 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BestFrames 自截帧。
+     * @param BestFrames 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrames(String [] BestFrames) {

@@ -101,7 +101,7 @@ public class Cluster extends AbstractModel{
     private Long MaxQps;
 
     /**
-    * 最大消息保留时间，分钟为单位
+    * 最大消息保留时间，秒为单位
     */
     @SerializedName("MessageRetentionTime")
     @Expose
@@ -399,16 +399,16 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get 最大消息保留时间，分钟为单位 
-     * @return MessageRetentionTime 最大消息保留时间，分钟为单位
+     * Get 最大消息保留时间，秒为单位 
+     * @return MessageRetentionTime 最大消息保留时间，秒为单位
      */
     public Long getMessageRetentionTime() {
         return this.MessageRetentionTime;
     }
 
     /**
-     * Set 最大消息保留时间，分钟为单位
-     * @param MessageRetentionTime 最大消息保留时间，分钟为单位
+     * Set 最大消息保留时间，秒为单位
+     * @param MessageRetentionTime 最大消息保留时间，秒为单位
      */
     public void setMessageRetentionTime(Long MessageRetentionTime) {
         this.MessageRetentionTime = MessageRetentionTime;

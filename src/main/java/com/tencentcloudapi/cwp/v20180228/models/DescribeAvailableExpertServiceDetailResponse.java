@@ -58,7 +58,7 @@ public class DescribeAvailableExpertServiceDetailResponse extends AbstractModel{
     private Boolean EmergencyResponseBuy;
 
     /**
-    * 是否哦购买过旗舰护网
+    * 是否购买过旗舰护网
     */
     @SerializedName("ProtectNetBuy")
     @Expose
@@ -152,16 +152,16 @@ public class DescribeAvailableExpertServiceDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否哦购买过旗舰护网 
-     * @return ProtectNetBuy 是否哦购买过旗舰护网
+     * Get 是否购买过旗舰护网 
+     * @return ProtectNetBuy 是否购买过旗舰护网
      */
     public Boolean getProtectNetBuy() {
         return this.ProtectNetBuy;
     }
 
     /**
-     * Set 是否哦购买过旗舰护网
-     * @param ProtectNetBuy 是否哦购买过旗舰护网
+     * Set 是否购买过旗舰护网
+     * @param ProtectNetBuy 是否购买过旗舰护网
      */
     public void setProtectNetBuy(Boolean ProtectNetBuy) {
         this.ProtectNetBuy = ProtectNetBuy;

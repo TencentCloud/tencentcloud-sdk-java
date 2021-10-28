@@ -80,8 +80,7 @@ public class QueryActivityAntiRushResponse extends AbstractModel{
     private String AssociateAccount;
 
     /**
-    * 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+    * uid值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uid")
@@ -281,11 +280,9 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
     }
 
     /**
-     * Get 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+     * Get uid值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uid 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+     * @return Uid uid值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUid() {
@@ -293,11 +290,9 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
     }
 
     /**
-     * Set 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+     * Set uid值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uid 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+     * @param Uid uid值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUid(String Uid) {

@@ -23,19 +23,14 @@ import java.util.HashMap;
 public class QueryActivityAntiRushRequest extends AbstractModel{
 
     /**
-    * 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
+    * 账号类型
     */
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
 
     /**
-    * 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+    * uid值
     */
     @SerializedName("Uid")
     @Expose
@@ -70,7 +65,7 @@ public class QueryActivityAntiRushRequest extends AbstractModel{
     private String NickName;
 
     /**
-    * 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+    * 手机号
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -245,8 +240,7 @@ public class QueryActivityAntiRushRequest extends AbstractModel{
     private String RandNum;
 
     /**
-    * 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+    * token
     */
     @SerializedName("WxToken")
     @Expose
@@ -262,52 +256,32 @@ public class QueryActivityAntiRushRequest extends AbstractModel{
     private String CheckDevice;
 
     /**
-     * Get 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。 
-     * @return AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
+     * Get 账号类型 
+     * @return AccountType 账号类型
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
-     * @param AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
+     * Set 账号类型
+     * @param AccountType 账号类型
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。 
-     * @return Uid 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+     * Get uid值 
+     * @return Uid uid值
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
-     * @param Uid 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+     * Set uid值
+     * @param Uid uid值
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
@@ -378,16 +352,16 @@ public class QueryActivityAntiRushRequest extends AbstractModel{
     }
 
     /**
-     * Get 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值； 
-     * @return PhoneNumber 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+     * Get 手机号 
+     * @return PhoneNumber 手机号
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
-     * @param PhoneNumber 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+     * Set 手机号
+     * @param PhoneNumber 手机号
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
@@ -802,20 +776,16 @@ public class QueryActivityAntiRushRequest extends AbstractModel{
     }
 
     /**
-     * Get 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；） 
-     * @return WxToken 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+     * Get token 
+     * @return WxToken token
      */
     public String getWxToken() {
         return this.WxToken;
     }
 
     /**
-     * Set 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
-     * @param WxToken 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+     * Set token
+     * @param WxToken token
      */
     public void setWxToken(String WxToken) {
         this.WxToken = WxToken;

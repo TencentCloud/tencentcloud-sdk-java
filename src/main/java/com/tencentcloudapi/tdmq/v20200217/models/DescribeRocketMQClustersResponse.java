@@ -13,36 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallDeviceActionSyncResponse extends AbstractModel{
+public class DescribeRocketMQClustersResponse extends AbstractModel{
 
     /**
-    * 调用Id
-    */
-    @SerializedName("ClientToken")
-    @Expose
-    private String ClientToken;
-
-    /**
-    * 输出参数
+    * 集群信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("OutputParams")
+    @SerializedName("ClusterList")
     @Expose
-    private String OutputParams;
+    private RocketMQClusterDetail [] ClusterList;
 
     /**
-    * 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+    * 总条数
     */
-    @SerializedName("Status")
+    @SerializedName("TotalCount")
     @Expose
-    private String Status;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,55 +45,39 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 调用Id 
-     * @return ClientToken 调用Id
-     */
-    public String getClientToken() {
-        return this.ClientToken;
-    }
-
-    /**
-     * Set 调用Id
-     * @param ClientToken 调用Id
-     */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
-    }
-
-    /**
-     * Get 输出参数
+     * Get 集群信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputParams 输出参数
+     * @return ClusterList 集群信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getOutputParams() {
-        return this.OutputParams;
+    public RocketMQClusterDetail [] getClusterList() {
+        return this.ClusterList;
     }
 
     /**
-     * Set 输出参数
+     * Set 集群信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputParams 输出参数
+     * @param ClusterList 集群信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOutputParams(String OutputParams) {
-        this.OutputParams = OutputParams;
+    public void setClusterList(RocketMQClusterDetail [] ClusterList) {
+        this.ClusterList = ClusterList;
     }
 
     /**
-     * Get 返回状态，当设备不在线等部分情况，会通过该 Status 返回。 
-     * @return Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * Get 总条数 
+     * @return TotalCount 总条数
      */
-    public String getStatus() {
-        return this.Status;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
-     * @param Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * Set 总条数
+     * @param TotalCount 总条数
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -119,22 +96,22 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CallDeviceActionSyncResponse() {
+    public DescribeRocketMQClustersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CallDeviceActionSyncResponse(CallDeviceActionSyncResponse source) {
-        if (source.ClientToken != null) {
-            this.ClientToken = new String(source.ClientToken);
+    public DescribeRocketMQClustersResponse(DescribeRocketMQClustersResponse source) {
+        if (source.ClusterList != null) {
+            this.ClusterList = new RocketMQClusterDetail[source.ClusterList.length];
+            for (int i = 0; i < source.ClusterList.length; i++) {
+                this.ClusterList[i] = new RocketMQClusterDetail(source.ClusterList[i]);
+            }
         }
-        if (source.OutputParams != null) {
-            this.OutputParams = new String(source.OutputParams);
-        }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -146,9 +123,8 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
-        this.setParamSimple(map, prefix + "OutputParams", this.OutputParams);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
