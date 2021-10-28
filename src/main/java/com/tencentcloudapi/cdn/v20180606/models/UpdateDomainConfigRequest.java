@@ -220,6 +220,7 @@ media：流媒体点播加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
     */
     @SerializedName("Area")
     @Expose
@@ -254,7 +255,7 @@ global：全球加速
     private AccessControl AccessControl;
 
     /**
-    * URL重定向配置
+    * 访问URL重写配置
     */
     @SerializedName("UrlRedirect")
     @Expose
@@ -322,6 +323,13 @@ global：全球加速
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
+
+    /**
+    * 远程鉴权配置
+    */
+    @SerializedName("RemoteAuthentication")
+    @Expose
+    private RemoteAuthentication RemoteAuthentication;
 
     /**
      * Get 域名 
@@ -775,11 +783,13 @@ media：流媒体点播加速
      * Get 域名加速区域
 mainland：中国境内加速
 overseas：中国境外加速
-global：全球加速 
+global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待 
      * @return Area 域名加速区域
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
      */
     public String getArea() {
         return this.Area;
@@ -790,10 +800,12 @@ global：全球加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
      * @param Area 域名加速区域
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -864,16 +876,16 @@ global：全球加速
     }
 
     /**
-     * Get URL重定向配置 
-     * @return UrlRedirect URL重定向配置
+     * Get 访问URL重写配置 
+     * @return UrlRedirect 访问URL重写配置
      */
     public UrlRedirect getUrlRedirect() {
         return this.UrlRedirect;
     }
 
     /**
-     * Set URL重定向配置
-     * @param UrlRedirect URL重定向配置
+     * Set 访问URL重写配置
+     * @param UrlRedirect 访问URL重写配置
      */
     public void setUrlRedirect(UrlRedirect UrlRedirect) {
         this.UrlRedirect = UrlRedirect;
@@ -1023,6 +1035,22 @@ global：全球加速
         this.WebSocket = WebSocket;
     }
 
+    /**
+     * Get 远程鉴权配置 
+     * @return RemoteAuthentication 远程鉴权配置
+     */
+    public RemoteAuthentication getRemoteAuthentication() {
+        return this.RemoteAuthentication;
+    }
+
+    /**
+     * Set 远程鉴权配置
+     * @param RemoteAuthentication 远程鉴权配置
+     */
+    public void setRemoteAuthentication(RemoteAuthentication RemoteAuthentication) {
+        this.RemoteAuthentication = RemoteAuthentication;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1160,6 +1188,9 @@ global：全球加速
         if (source.WebSocket != null) {
             this.WebSocket = new WebSocket(source.WebSocket);
         }
+        if (source.RemoteAuthentication != null) {
+            this.RemoteAuthentication = new RemoteAuthentication(source.RemoteAuthentication);
+        }
     }
 
 
@@ -1209,6 +1240,7 @@ global：全球加速
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
+        this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
 
     }
 }

@@ -225,6 +225,12 @@ public enum CdnErrorCode {
     // 参数错误。
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
+    // 域名所在平台不支持远程鉴权。
+     INVALIDPARAMETER_REMOTEAUTHINVALIDPLATFORM("InvalidParameter.RemoteAuthInvalidPlatform"),
+     
+    // 域名所在平台不支持使用https协议访问远程鉴权地址。
+     INVALIDPARAMETER_REMOTEAUTHINVALIDPROTOCOL("InvalidParameter.RemoteAuthInvalidProtocol"),
+     
     // 任务已过期,无法重试。
      INVALIDPARAMETER_SCDNLOGTASKEXPIRED("InvalidParameter.ScdnLogTaskExpired"),
      
@@ -260,6 +266,9 @@ public enum CdnErrorCode {
      
     // 该账号已经创建了太多主题。
      LIMITEXCEEDED_CDNCLSTOOMANYTOPICS("LimitExceeded.CdnClsTooManyTopics"),
+     
+    // 缓存配置规则数超出限制。
+     LIMITEXCEEDED_CDNCONFIGTOOMANYCACHERULES("LimitExceeded.CdnConfigTooManyCacheRules"),
      
     // 域名操作过于频繁。
      LIMITEXCEEDED_CDNHOSTOPTOOOFTEN("LimitExceeded.CdnHostOpTooOften"),

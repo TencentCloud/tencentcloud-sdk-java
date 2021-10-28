@@ -103,7 +103,7 @@ disabled：未启用
     private String Channel;
 
     /**
-    * 流量包生效区域，目前仅支持mainland
+    * 流量包生效区域，mainland或overseas
     */
     @SerializedName("Area")
     @Expose
@@ -129,6 +129,23 @@ disabled：未启用
     @SerializedName("RefundAvailable")
     @Expose
     private Boolean RefundAvailable;
+
+    /**
+    * 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private Long Region;
 
     /**
      * Get 流量包 Id 
@@ -319,16 +336,16 @@ disabled：未启用
     }
 
     /**
-     * Get 流量包生效区域，目前仅支持mainland 
-     * @return Area 流量包生效区域，目前仅支持mainland
+     * Get 流量包生效区域，mainland或overseas 
+     * @return Area 流量包生效区域，mainland或overseas
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 流量包生效区域，目前仅支持mainland
-     * @param Area 流量包生效区域，目前仅支持mainland
+     * Set 流量包生效区域，mainland或overseas
+     * @param Area 流量包生效区域，mainland或overseas
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -380,6 +397,62 @@ disabled：未启用
      */
     public void setRefundAvailable(Boolean RefundAvailable) {
         this.RefundAvailable = RefundAvailable;
+    }
+
+    /**
+     * Get 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(Long Region) {
+        this.Region = Region;
     }
 
     public TrafficPackage() {
@@ -435,6 +508,9 @@ disabled：未启用
         if (source.RefundAvailable != null) {
             this.RefundAvailable = new Boolean(source.RefundAvailable);
         }
+        if (source.Region != null) {
+            this.Region = new Long(source.Region);
+        }
     }
 
 
@@ -457,6 +533,7 @@ disabled：未启用
         this.setParamSimple(map, prefix + "LifeTimeMonth", this.LifeTimeMonth);
         this.setParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
         this.setParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

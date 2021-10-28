@@ -767,6 +767,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *查询BOT会话记录列表
+     * @param req DescribeScdnBotRecordsRequest
+     * @return DescribeScdnBotRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScdnBotRecordsResponse DescribeScdnBotRecords(DescribeScdnBotRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScdnBotRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScdnBotRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScdnBotRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
      * @param req DescribeScdnConfigRequest
      * @return DescribeScdnConfigResponse
@@ -819,6 +839,37 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeScdnTopDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeScdnTopData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
+
++ 依据总流量、总请求数对访问 IP 排序，从大至小返回 TOP 100 IP
++ 依据总流量、总请求数对访问 Refer 排序，从大至小返回 TOP 100 Refer
++ 依据总流量、总请求数对访问 设备 排序，从大至小返回 设备类型
++ 依据总流量、总请求数对访问 操作系统 排序，从大至小返回 操作系统
++ 依据总流量、总请求数对访问 浏览器 排序，从大至小返回 浏览器
+
+注意：
++ 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
++ 本接口为beta版，尚未正式全量发布
+
+     * @param req DescribeTopDataRequest
+     * @return DescribeTopDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopDataResponse DescribeTopData(DescribeTopDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1101,6 +1152,26 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListScdnLogTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListScdnLogTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取Bot攻击的Top数据列表
+     * @param req ListScdnTopBotDataRequest
+     * @return ListScdnTopBotDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListScdnTopBotDataResponse ListScdnTopBotData(ListScdnTopBotDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListScdnTopBotDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListScdnTopBotDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListScdnTopBotData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
