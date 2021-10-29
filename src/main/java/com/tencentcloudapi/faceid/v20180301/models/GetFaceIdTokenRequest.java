@@ -66,6 +66,14 @@ public class GetFaceIdTokenRequest extends AbstractModel{
     private String Extra;
 
     /**
+    * 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+    */
+    @SerializedName("UseCos")
+    @Expose
+    private Boolean UseCos;
+
+    /**
      * Get 本地上传照片(LOCAL)、商业库(BUSINESS) 
      * @return CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
      */
@@ -165,6 +173,26 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         this.Extra = Extra;
     }
 
+    /**
+     * Get 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。 
+     * @return UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     */
+    public Boolean getUseCos() {
+        return this.UseCos;
+    }
+
+    /**
+     * Set 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     * @param UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     */
+    public void setUseCos(Boolean UseCos) {
+        this.UseCos = UseCos;
+    }
+
     public GetFaceIdTokenRequest() {
     }
 
@@ -191,6 +219,9 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.UseCos != null) {
+            this.UseCos = new Boolean(source.UseCos);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "Meta", this.Meta);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "UseCos", this.UseCos);
 
     }
 }

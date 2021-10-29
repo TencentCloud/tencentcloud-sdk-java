@@ -30,11 +30,25 @@ public class EidInfo extends AbstractModel{
     private String EidCode;
 
     /**
-    * eID 中心针对商户方EidCode的电子签名
+    * Eid中心针对商户方EidCode的电子签名
     */
     @SerializedName("EidSign")
     @Expose
     private String EidSign;
+
+    /**
+    * 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+    */
+    @SerializedName("DesKey")
+    @Expose
+    private String DesKey;
+
+    /**
+    * 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+    */
+    @SerializedName("UserInfo")
+    @Expose
+    private String UserInfo;
 
     /**
      * Get 商户方 appeIDcode 的数字证书 
@@ -53,19 +67,51 @@ public class EidInfo extends AbstractModel{
     }
 
     /**
-     * Get eID 中心针对商户方EidCode的电子签名 
-     * @return EidSign eID 中心针对商户方EidCode的电子签名
+     * Get Eid中心针对商户方EidCode的电子签名 
+     * @return EidSign Eid中心针对商户方EidCode的电子签名
      */
     public String getEidSign() {
         return this.EidSign;
     }
 
     /**
-     * Set eID 中心针对商户方EidCode的电子签名
-     * @param EidSign eID 中心针对商户方EidCode的电子签名
+     * Set Eid中心针对商户方EidCode的电子签名
+     * @param EidSign Eid中心针对商户方EidCode的电子签名
      */
     public void setEidSign(String EidSign) {
         this.EidSign = EidSign;
+    }
+
+    /**
+     * Get 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370) 
+     * @return DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     */
+    public String getDesKey() {
+        return this.DesKey;
+    }
+
+    /**
+     * Set 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * @param DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     */
+    public void setDesKey(String DesKey) {
+        this.DesKey = DesKey;
+    }
+
+    /**
+     * Get 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370) 
+     * @return UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     */
+    public String getUserInfo() {
+        return this.UserInfo;
+    }
+
+    /**
+     * Set 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * @param UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     */
+    public void setUserInfo(String UserInfo) {
+        this.UserInfo = UserInfo;
     }
 
     public EidInfo() {
@@ -82,6 +128,12 @@ public class EidInfo extends AbstractModel{
         if (source.EidSign != null) {
             this.EidSign = new String(source.EidSign);
         }
+        if (source.DesKey != null) {
+            this.DesKey = new String(source.DesKey);
+        }
+        if (source.UserInfo != null) {
+            this.UserInfo = new String(source.UserInfo);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class EidInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EidCode", this.EidCode);
         this.setParamSimple(map, prefix + "EidSign", this.EidSign);
+        this.setParamSimple(map, prefix + "DesKey", this.DesKey);
+        this.setParamSimple(map, prefix + "UserInfo", this.UserInfo);
 
     }
 }

@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeScaleResponse extends AbstractModel{
+public class DescribeGroupsResponse extends AbstractModel{
 
     /**
-    * 返回的数据数组
+    * 图库信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("Groups")
     @Expose
-    private RealtimeData [] Data;
+    private GroupInfo [] Groups;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class DescribeRealtimeScaleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的数据数组 
-     * @return Data 返回的数据数组
+     * Get 图库信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Groups 图库信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RealtimeData [] getData() {
-        return this.Data;
+    public GroupInfo [] getGroups() {
+        return this.Groups;
     }
 
     /**
-     * Set 返回的数据数组
-     * @param Data 返回的数据数组
+     * Set 图库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Groups 图库信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(RealtimeData [] Data) {
-        this.Data = Data;
+    public void setGroups(GroupInfo [] Groups) {
+        this.Groups = Groups;
     }
 
     /**
@@ -68,18 +73,18 @@ public class DescribeRealtimeScaleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRealtimeScaleResponse() {
+    public DescribeGroupsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealtimeScaleResponse(DescribeRealtimeScaleResponse source) {
-        if (source.Data != null) {
-            this.Data = new RealtimeData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new RealtimeData(source.Data[i]);
+    public DescribeGroupsResponse(DescribeGroupsResponse source) {
+        if (source.Groups != null) {
+            this.Groups = new GroupInfo[source.Groups.length];
+            for (int i = 0; i < source.Groups.length; i++) {
+                this.Groups[i] = new GroupInfo(source.Groups[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +97,7 @@ public class DescribeRealtimeScaleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

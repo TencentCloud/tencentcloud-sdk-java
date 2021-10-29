@@ -37,8 +37,7 @@ public class DescribeAssetEnvListRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 类型：
-0
+    * 该字段已废弃，由Filters代替
     */
     @SerializedName("Type")
     @Expose
@@ -101,20 +100,16 @@ public class DescribeAssetEnvListRequest extends AbstractModel{
     }
 
     /**
-     * Get 类型：
-0 
-     * @return Type 类型：
-0
+     * Get 该字段已废弃，由Filters代替 
+     * @return Type 该字段已废弃，由Filters代替
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：
-0
-     * @param Type 类型：
-0
+     * Set 该字段已废弃，由Filters代替
+     * @param Type 该字段已废弃，由Filters代替
      */
     public void setType(Long Type) {
         this.Type = Type;

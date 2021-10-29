@@ -13,21 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeQualityResponse extends AbstractModel{
+public class DescribeImagesResponse extends AbstractModel{
 
     /**
-    * 返回的数据类型
+    * 图库名称。
     */
-    @SerializedName("Data")
+    @SerializedName("GroupId")
     @Expose
-    private RealtimeData [] Data;
+    private String GroupId;
+
+    /**
+    * 物品ID。
+    */
+    @SerializedName("EntityId")
+    @Expose
+    private String EntityId;
+
+    /**
+    * 图片信息。
+    */
+    @SerializedName("ImageInfos")
+    @Expose
+    private ImageInfo [] ImageInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +51,51 @@ public class DescribeRealtimeQualityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的数据类型 
-     * @return Data 返回的数据类型
+     * Get 图库名称。 
+     * @return GroupId 图库名称。
      */
-    public RealtimeData [] getData() {
-        return this.Data;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set 返回的数据类型
-     * @param Data 返回的数据类型
+     * Set 图库名称。
+     * @param GroupId 图库名称。
      */
-    public void setData(RealtimeData [] Data) {
-        this.Data = Data;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 物品ID。 
+     * @return EntityId 物品ID。
+     */
+    public String getEntityId() {
+        return this.EntityId;
+    }
+
+    /**
+     * Set 物品ID。
+     * @param EntityId 物品ID。
+     */
+    public void setEntityId(String EntityId) {
+        this.EntityId = EntityId;
+    }
+
+    /**
+     * Get 图片信息。 
+     * @return ImageInfos 图片信息。
+     */
+    public ImageInfo [] getImageInfos() {
+        return this.ImageInfos;
+    }
+
+    /**
+     * Set 图片信息。
+     * @param ImageInfos 图片信息。
+     */
+    public void setImageInfos(ImageInfo [] ImageInfos) {
+        this.ImageInfos = ImageInfos;
     }
 
     /**
@@ -68,18 +114,24 @@ public class DescribeRealtimeQualityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRealtimeQualityResponse() {
+    public DescribeImagesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealtimeQualityResponse(DescribeRealtimeQualityResponse source) {
-        if (source.Data != null) {
-            this.Data = new RealtimeData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new RealtimeData(source.Data[i]);
+    public DescribeImagesResponse(DescribeImagesResponse source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.EntityId != null) {
+            this.EntityId = new String(source.EntityId);
+        }
+        if (source.ImageInfos != null) {
+            this.ImageInfos = new ImageInfo[source.ImageInfos.length];
+            for (int i = 0; i < source.ImageInfos.length; i++) {
+                this.ImageInfos[i] = new ImageInfo(source.ImageInfos[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +144,9 @@ public class DescribeRealtimeQualityResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EntityId", this.EntityId);
+        this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

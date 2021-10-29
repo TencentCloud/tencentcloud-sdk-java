@@ -37,6 +37,13 @@ public class DescribeDeployApplicationDetailRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
+    * 版本部署id
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
+
+    /**
      * Get 服务id 
      * @return ApplicationId 服务id
      */
@@ -68,6 +75,22 @@ public class DescribeDeployApplicationDetailRequest extends AbstractModel{
         this.EnvironmentId = EnvironmentId;
     }
 
+    /**
+     * Get 版本部署id 
+     * @return VersionId 版本部署id
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set 版本部署id
+     * @param VersionId 版本部署id
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
+    }
+
     public DescribeDeployApplicationDetailRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeDeployApplicationDetailRequest extends AbstractModel{
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeDeployApplicationDetailRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
 
     }
 }

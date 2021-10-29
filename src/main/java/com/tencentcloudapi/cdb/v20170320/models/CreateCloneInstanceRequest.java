@@ -149,6 +149,13 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     private String DeployGroupId;
 
     /**
+    * 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 克隆源实例Id。 
      * @return InstanceId 克隆源实例Id。
      */
@@ -436,6 +443,22 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.DeployGroupId = DeployGroupId;
     }
 
+    /**
+     * Get 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。 
+     * @return DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     * @param DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -504,6 +527,9 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         if (source.DeployGroupId != null) {
             this.DeployGroupId = new String(source.DeployGroupId);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -529,6 +555,7 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

@@ -114,6 +114,13 @@ public class BackupInfo extends AbstractModel{
     private String Way;
 
     /**
+    * 手动备份别名
+    */
+    @SerializedName("ManualBackupName")
+    @Expose
+    private String ManualBackupName;
+
+    /**
      * Get 备份文件名 
      * @return Name 备份文件名
      */
@@ -321,6 +328,22 @@ public class BackupInfo extends AbstractModel{
         this.Way = Way;
     }
 
+    /**
+     * Get 手动备份别名 
+     * @return ManualBackupName 手动备份别名
+     */
+    public String getManualBackupName() {
+        return this.ManualBackupName;
+    }
+
+    /**
+     * Set 手动备份别名
+     * @param ManualBackupName 手动备份别名
+     */
+    public void setManualBackupName(String ManualBackupName) {
+        this.ManualBackupName = ManualBackupName;
+    }
+
     public BackupInfo() {
     }
 
@@ -368,6 +391,9 @@ public class BackupInfo extends AbstractModel{
         if (source.Way != null) {
             this.Way = new String(source.Way);
         }
+        if (source.ManualBackupName != null) {
+            this.ManualBackupName = new String(source.ManualBackupName);
+        }
     }
 
 
@@ -388,6 +414,7 @@ public class BackupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "Way", this.Way);
+        this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
 
     }
 }

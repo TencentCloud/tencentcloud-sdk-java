@@ -45,6 +45,13 @@ public class CreateBackupRequest extends AbstractModel{
     private BackupItem [] BackupDBTableList;
 
     /**
+    * 手动备份别名
+    */
+    @SerializedName("ManualBackupName")
+    @Expose
+    private String ManualBackupName;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -96,6 +103,22 @@ public class CreateBackupRequest extends AbstractModel{
         this.BackupDBTableList = BackupDBTableList;
     }
 
+    /**
+     * Get 手动备份别名 
+     * @return ManualBackupName 手动备份别名
+     */
+    public String getManualBackupName() {
+        return this.ManualBackupName;
+    }
+
+    /**
+     * Set 手动备份别名
+     * @param ManualBackupName 手动备份别名
+     */
+    public void setManualBackupName(String ManualBackupName) {
+        this.ManualBackupName = ManualBackupName;
+    }
+
     public CreateBackupRequest() {
     }
 
@@ -116,6 +139,9 @@ public class CreateBackupRequest extends AbstractModel{
                 this.BackupDBTableList[i] = new BackupItem(source.BackupDBTableList[i]);
             }
         }
+        if (source.ManualBackupName != null) {
+            this.ManualBackupName = new String(source.ManualBackupName);
+        }
     }
 
 
@@ -126,6 +152,7 @@ public class CreateBackupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
+        this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
 
     }
 }

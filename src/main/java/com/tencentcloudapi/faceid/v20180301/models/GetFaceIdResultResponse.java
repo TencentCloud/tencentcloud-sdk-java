@@ -58,7 +58,7 @@ public class GetFaceIdResultResponse extends AbstractModel{
     private Float Similarity;
 
     /**
-    * 用户核验的视频
+    * 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoBase64")
@@ -66,7 +66,7 @@ public class GetFaceIdResultResponse extends AbstractModel{
     private String VideoBase64;
 
     /**
-    * 用户核验视频的截帧
+    * 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrameBase64")
@@ -192,9 +192,9 @@ public class GetFaceIdResultResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户核验的视频
+     * Get 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoBase64 用户核验的视频
+     * @return VideoBase64 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoBase64() {
@@ -202,9 +202,9 @@ public class GetFaceIdResultResponse extends AbstractModel{
     }
 
     /**
-     * Set 用户核验的视频
+     * Set 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoBase64 用户核验的视频
+     * @param VideoBase64 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoBase64(String VideoBase64) {
@@ -212,9 +212,9 @@ public class GetFaceIdResultResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户核验视频的截帧
+     * Get 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BestFrameBase64 用户核验视频的截帧
+     * @return BestFrameBase64 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBestFrameBase64() {
@@ -222,9 +222,9 @@ public class GetFaceIdResultResponse extends AbstractModel{
     }
 
     /**
-     * Set 用户核验视频的截帧
+     * Set 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BestFrameBase64 用户核验视频的截帧
+     * @param BestFrameBase64 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrameBase64(String BestFrameBase64) {

@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendEmailRequest extends AbstractModel{
+public class BatchSendEmailRequest extends AbstractModel{
 
     /**
-    * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
+    * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com>
     */
@@ -32,11 +32,11 @@ public class SendEmailRequest extends AbstractModel{
     private String FromEmailAddress;
 
     /**
-    * 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+    * 收件人列表ID
     */
-    @SerializedName("Destination")
+    @SerializedName("ReceiverId")
     @Expose
-    private String [] Destination;
+    private Long ReceiverId;
 
     /**
     * 邮件主题
@@ -44,6 +44,13 @@ public class SendEmailRequest extends AbstractModel{
     @SerializedName("Subject")
     @Expose
     private String Subject;
+
+    /**
+    * 任务类型 1即时 2 定时 3 周期
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
 
     /**
     * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
@@ -74,10 +81,24 @@ public class SendEmailRequest extends AbstractModel{
     private Attachment [] Attachments;
 
     /**
-     * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
+    * 周期发送任务的必要参数
+    */
+    @SerializedName("CycleParam")
+    @Expose
+    private CycleEmailParam CycleParam;
+
+    /**
+    * 定时发送任务的必要参数
+    */
+    @SerializedName("TimedParam")
+    @Expose
+    private TimedEmailParam TimedParam;
+
+    /**
+     * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com> 
-     * @return FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
+     * @return FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com>
      */
@@ -86,10 +107,10 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Set 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
+     * Set 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com>
-     * @param FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
+     * @param FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com>
      */
@@ -98,19 +119,19 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。 
-     * @return Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * Get 收件人列表ID 
+     * @return ReceiverId 收件人列表ID
      */
-    public String [] getDestination() {
-        return this.Destination;
+    public Long getReceiverId() {
+        return this.ReceiverId;
     }
 
     /**
-     * Set 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-     * @param Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * Set 收件人列表ID
+     * @param ReceiverId 收件人列表ID
      */
-    public void setDestination(String [] Destination) {
-        this.Destination = Destination;
+    public void setReceiverId(Long ReceiverId) {
+        this.ReceiverId = ReceiverId;
     }
 
     /**
@@ -127,6 +148,22 @@ public class SendEmailRequest extends AbstractModel{
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
+    }
+
+    /**
+     * Get 任务类型 1即时 2 定时 3 周期 
+     * @return TaskType 任务类型 1即时 2 定时 3 周期
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型 1即时 2 定时 3 周期
+     * @param TaskType 任务类型 1即时 2 定时 3 周期
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
     }
 
     /**
@@ -193,25 +230,57 @@ public class SendEmailRequest extends AbstractModel{
         this.Attachments = Attachments;
     }
 
-    public SendEmailRequest() {
+    /**
+     * Get 周期发送任务的必要参数 
+     * @return CycleParam 周期发送任务的必要参数
+     */
+    public CycleEmailParam getCycleParam() {
+        return this.CycleParam;
+    }
+
+    /**
+     * Set 周期发送任务的必要参数
+     * @param CycleParam 周期发送任务的必要参数
+     */
+    public void setCycleParam(CycleEmailParam CycleParam) {
+        this.CycleParam = CycleParam;
+    }
+
+    /**
+     * Get 定时发送任务的必要参数 
+     * @return TimedParam 定时发送任务的必要参数
+     */
+    public TimedEmailParam getTimedParam() {
+        return this.TimedParam;
+    }
+
+    /**
+     * Set 定时发送任务的必要参数
+     * @param TimedParam 定时发送任务的必要参数
+     */
+    public void setTimedParam(TimedEmailParam TimedParam) {
+        this.TimedParam = TimedParam;
+    }
+
+    public BatchSendEmailRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SendEmailRequest(SendEmailRequest source) {
+    public BatchSendEmailRequest(BatchSendEmailRequest source) {
         if (source.FromEmailAddress != null) {
             this.FromEmailAddress = new String(source.FromEmailAddress);
         }
-        if (source.Destination != null) {
-            this.Destination = new String[source.Destination.length];
-            for (int i = 0; i < source.Destination.length; i++) {
-                this.Destination[i] = new String(source.Destination[i]);
-            }
+        if (source.ReceiverId != null) {
+            this.ReceiverId = new Long(source.ReceiverId);
         }
         if (source.Subject != null) {
             this.Subject = new String(source.Subject);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
         }
         if (source.ReplyToAddresses != null) {
             this.ReplyToAddresses = new String(source.ReplyToAddresses);
@@ -228,6 +297,12 @@ public class SendEmailRequest extends AbstractModel{
                 this.Attachments[i] = new Attachment(source.Attachments[i]);
             }
         }
+        if (source.CycleParam != null) {
+            this.CycleParam = new CycleEmailParam(source.CycleParam);
+        }
+        if (source.TimedParam != null) {
+            this.TimedParam = new TimedEmailParam(source.TimedParam);
+        }
     }
 
 
@@ -236,12 +311,15 @@ public class SendEmailRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FromEmailAddress", this.FromEmailAddress);
-        this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
+        this.setParamSimple(map, prefix + "ReceiverId", this.ReceiverId);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
         this.setParamObj(map, prefix + "Template.", this.Template);
         this.setParamObj(map, prefix + "Simple.", this.Simple);
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
+        this.setParamObj(map, prefix + "CycleParam.", this.CycleParam);
+        this.setParamObj(map, prefix + "TimedParam.", this.TimedParam);
 
     }
 }

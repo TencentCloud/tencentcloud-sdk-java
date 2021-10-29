@@ -37,6 +37,41 @@ public class InputSendTrafficSecuritySmsMsg extends AbstractModel{
     private String [] Mobiles;
 
     /**
+    * 是否授权，1：已授权
+    */
+    @SerializedName("IsAuthorized")
+    @Expose
+    private Long IsAuthorized;
+
+    /**
+    * 加密方式，0：AES加密；1：DES加密
+    */
+    @SerializedName("EncryptMethod")
+    @Expose
+    private Long EncryptMethod;
+
+    /**
+    * 加密算法中的块处理模式，0：ECB模式；1：CBC模式；2：CTR模式；3：CFB模式；4：OFB模式；
+    */
+    @SerializedName("EncryptMode")
+    @Expose
+    private Long EncryptMode;
+
+    /**
+    * 填充模式，0：ZeroPadding；1：PKCS5Padding；2：PKCS7Padding；
+    */
+    @SerializedName("PaddingType")
+    @Expose
+    private Long PaddingType;
+
+    /**
+    * 加密数据
+    */
+    @SerializedName("EncryptData")
+    @Expose
+    private String EncryptData;
+
+    /**
      * Get 投放任务ID 
      * @return TaskId 投放任务ID
      */
@@ -68,6 +103,86 @@ public class InputSendTrafficSecuritySmsMsg extends AbstractModel{
         this.Mobiles = Mobiles;
     }
 
+    /**
+     * Get 是否授权，1：已授权 
+     * @return IsAuthorized 是否授权，1：已授权
+     */
+    public Long getIsAuthorized() {
+        return this.IsAuthorized;
+    }
+
+    /**
+     * Set 是否授权，1：已授权
+     * @param IsAuthorized 是否授权，1：已授权
+     */
+    public void setIsAuthorized(Long IsAuthorized) {
+        this.IsAuthorized = IsAuthorized;
+    }
+
+    /**
+     * Get 加密方式，0：AES加密；1：DES加密 
+     * @return EncryptMethod 加密方式，0：AES加密；1：DES加密
+     */
+    public Long getEncryptMethod() {
+        return this.EncryptMethod;
+    }
+
+    /**
+     * Set 加密方式，0：AES加密；1：DES加密
+     * @param EncryptMethod 加密方式，0：AES加密；1：DES加密
+     */
+    public void setEncryptMethod(Long EncryptMethod) {
+        this.EncryptMethod = EncryptMethod;
+    }
+
+    /**
+     * Get 加密算法中的块处理模式，0：ECB模式；1：CBC模式；2：CTR模式；3：CFB模式；4：OFB模式； 
+     * @return EncryptMode 加密算法中的块处理模式，0：ECB模式；1：CBC模式；2：CTR模式；3：CFB模式；4：OFB模式；
+     */
+    public Long getEncryptMode() {
+        return this.EncryptMode;
+    }
+
+    /**
+     * Set 加密算法中的块处理模式，0：ECB模式；1：CBC模式；2：CTR模式；3：CFB模式；4：OFB模式；
+     * @param EncryptMode 加密算法中的块处理模式，0：ECB模式；1：CBC模式；2：CTR模式；3：CFB模式；4：OFB模式；
+     */
+    public void setEncryptMode(Long EncryptMode) {
+        this.EncryptMode = EncryptMode;
+    }
+
+    /**
+     * Get 填充模式，0：ZeroPadding；1：PKCS5Padding；2：PKCS7Padding； 
+     * @return PaddingType 填充模式，0：ZeroPadding；1：PKCS5Padding；2：PKCS7Padding；
+     */
+    public Long getPaddingType() {
+        return this.PaddingType;
+    }
+
+    /**
+     * Set 填充模式，0：ZeroPadding；1：PKCS5Padding；2：PKCS7Padding；
+     * @param PaddingType 填充模式，0：ZeroPadding；1：PKCS5Padding；2：PKCS7Padding；
+     */
+    public void setPaddingType(Long PaddingType) {
+        this.PaddingType = PaddingType;
+    }
+
+    /**
+     * Get 加密数据 
+     * @return EncryptData 加密数据
+     */
+    public String getEncryptData() {
+        return this.EncryptData;
+    }
+
+    /**
+     * Set 加密数据
+     * @param EncryptData 加密数据
+     */
+    public void setEncryptData(String EncryptData) {
+        this.EncryptData = EncryptData;
+    }
+
     public InputSendTrafficSecuritySmsMsg() {
     }
 
@@ -85,6 +200,21 @@ public class InputSendTrafficSecuritySmsMsg extends AbstractModel{
                 this.Mobiles[i] = new String(source.Mobiles[i]);
             }
         }
+        if (source.IsAuthorized != null) {
+            this.IsAuthorized = new Long(source.IsAuthorized);
+        }
+        if (source.EncryptMethod != null) {
+            this.EncryptMethod = new Long(source.EncryptMethod);
+        }
+        if (source.EncryptMode != null) {
+            this.EncryptMode = new Long(source.EncryptMode);
+        }
+        if (source.PaddingType != null) {
+            this.PaddingType = new Long(source.PaddingType);
+        }
+        if (source.EncryptData != null) {
+            this.EncryptData = new String(source.EncryptData);
+        }
     }
 
 
@@ -94,6 +224,11 @@ public class InputSendTrafficSecuritySmsMsg extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamArraySimple(map, prefix + "Mobiles.", this.Mobiles);
+        this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+        this.setParamSimple(map, prefix + "EncryptMethod", this.EncryptMethod);
+        this.setParamSimple(map, prefix + "EncryptMode", this.EncryptMode);
+        this.setParamSimple(map, prefix + "PaddingType", this.PaddingType);
+        this.setParamSimple(map, prefix + "EncryptData", this.EncryptData);
 
     }
 }

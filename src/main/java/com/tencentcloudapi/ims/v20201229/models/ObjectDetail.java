@@ -58,6 +58,13 @@ public class ObjectDetail extends AbstractModel{
     private Location Location;
 
     /**
+    * 该参数用于返回命中的实体二级标签。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get 该参数用于返回识别对象的ID以方便识别和区分。 
      * @return Id 该参数用于返回识别对象的ID以方便识别和区分。
      */
@@ -137,6 +144,22 @@ public class ObjectDetail extends AbstractModel{
         this.Location = Location;
     }
 
+    /**
+     * Get 该参数用于返回命中的实体二级标签。 
+     * @return SubLabel 该参数用于返回命中的实体二级标签。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该参数用于返回命中的实体二级标签。
+     * @param SubLabel 该参数用于返回命中的实体二级标签。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public ObjectDetail() {
     }
 
@@ -160,6 +183,9 @@ public class ObjectDetail extends AbstractModel{
         if (source.Location != null) {
             this.Location = new Location(source.Location);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ObjectDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamObj(map, prefix + "Location.", this.Location);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

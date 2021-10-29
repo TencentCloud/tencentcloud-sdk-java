@@ -55,7 +55,7 @@ public class BaselineEffectHost extends AbstractModel{
     private String LastScanTime;
 
     /**
-    * 处理状态
+    * 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -183,9 +183,9 @@ public class BaselineEffectHost extends AbstractModel{
     }
 
     /**
-     * Get 处理状态
+     * Get 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 处理状态
+     * @return Status 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -193,9 +193,9 @@ public class BaselineEffectHost extends AbstractModel{
     }
 
     /**
-     * Set 处理状态
+     * Set 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 处理状态
+     * @param Status 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

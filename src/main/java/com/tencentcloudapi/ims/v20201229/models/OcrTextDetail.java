@@ -79,6 +79,13 @@ public class OcrTextDetail extends AbstractModel{
     private Long Rate;
 
     /**
+    * 该字段用于返回检测结果所对应的恶意二级标签。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。 
      * @return Text 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
      */
@@ -206,6 +213,22 @@ public class OcrTextDetail extends AbstractModel{
         this.Rate = Rate;
     }
 
+    /**
+     * Get 该字段用于返回检测结果所对应的恶意二级标签。 
+     * @return SubLabel 该字段用于返回检测结果所对应的恶意二级标签。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该字段用于返回检测结果所对应的恶意二级标签。
+     * @param SubLabel 该字段用于返回检测结果所对应的恶意二级标签。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public OcrTextDetail() {
     }
 
@@ -241,6 +264,9 @@ public class OcrTextDetail extends AbstractModel{
         if (source.Rate != null) {
             this.Rate = new Long(source.Rate);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class OcrTextDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamSimple(map, prefix + "Rate", this.Rate);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

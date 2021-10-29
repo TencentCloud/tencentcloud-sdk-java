@@ -254,6 +254,20 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private String CageId;
 
     /**
+    * 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+    */
+    @SerializedName("AlarmPolicyIdList")
+    @Expose
+    private String [] AlarmPolicyIdList;
+
+    /**
+    * 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。 
      * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
@@ -781,6 +795,38 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.CageId = CageId;
     }
 
+    /**
+     * Get 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。 
+     * @return AlarmPolicyIdList 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+     */
+    public String [] getAlarmPolicyIdList() {
+        return this.AlarmPolicyIdList;
+    }
+
+    /**
+     * Set 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+     * @param AlarmPolicyIdList 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+     */
+    public void setAlarmPolicyIdList(String [] AlarmPolicyIdList) {
+        this.AlarmPolicyIdList = AlarmPolicyIdList;
+    }
+
+    /**
+     * Get 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。 
+     * @return DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     * @param DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -900,6 +946,15 @@ public class CreateDBInstanceRequest extends AbstractModel{
         if (source.CageId != null) {
             this.CageId = new String(source.CageId);
         }
+        if (source.AlarmPolicyIdList != null) {
+            this.AlarmPolicyIdList = new String[source.AlarmPolicyIdList.length];
+            for (int i = 0; i < source.AlarmPolicyIdList.length; i++) {
+                this.AlarmPolicyIdList[i] = new String(source.AlarmPolicyIdList[i]);
+            }
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -940,6 +995,8 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

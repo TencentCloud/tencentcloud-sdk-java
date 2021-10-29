@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeNetworkResponse extends AbstractModel{
+public class BatchSendEmailResponse extends AbstractModel{
 
     /**
-    * 查询返回的数据
+    * 发送任务ID
     */
-    @SerializedName("Data")
+    @SerializedName("TaskId")
     @Expose
-    private RealtimeData [] Data;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeRealtimeNetworkResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询返回的数据 
-     * @return Data 查询返回的数据
+     * Get 发送任务ID 
+     * @return TaskId 发送任务ID
      */
-    public RealtimeData [] getData() {
-        return this.Data;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 查询返回的数据
-     * @param Data 查询返回的数据
+     * Set 发送任务ID
+     * @param TaskId 发送任务ID
      */
-    public void setData(RealtimeData [] Data) {
-        this.Data = Data;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -68,19 +68,16 @@ public class DescribeRealtimeNetworkResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRealtimeNetworkResponse() {
+    public BatchSendEmailResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealtimeNetworkResponse(DescribeRealtimeNetworkResponse source) {
-        if (source.Data != null) {
-            this.Data = new RealtimeData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new RealtimeData(source.Data[i]);
-            }
+    public BatchSendEmailResponse(BatchSendEmailResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class DescribeRealtimeNetworkResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

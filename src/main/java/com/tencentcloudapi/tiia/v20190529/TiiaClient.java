@@ -61,6 +61,47 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
+     *用于创建一个空的图片库，如果图片库已存在则返回错误。
+
+     * @param req CreateGroupRequest
+     * @return CreateGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建图片，并添加对应图片的自定义信息。
+     * @param req CreateImageRequest
+     * @return CreateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageResponse CreateImage(CreateImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据输入的裁剪比例，智能判断一张图片的最佳裁剪区域，确保原图的主体区域不受影响。
 
 可以自动裁剪图片，适应不同平台、设备的展示要求，避免简单拉伸带来的变形。
@@ -77,6 +118,66 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CropImageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CropImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除图片。
+     * @param req DeleteImagesRequest
+     * @return DeleteImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImagesResponse DeleteImages(DeleteImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteImages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询所有的图库信息。
+     * @param req DescribeGroupsRequest
+     * @return DescribeGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupsResponse DescribeGroups(DescribeGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定图片库中的图片列表。
+     * @param req DescribeImagesRequest
+     * @return DescribeImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImages");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -307,6 +408,26 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RecognizeCarResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RecognizeCar");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
+     * @param req SearchImageRequest
+     * @return SearchImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchImageResponse SearchImage(SearchImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
