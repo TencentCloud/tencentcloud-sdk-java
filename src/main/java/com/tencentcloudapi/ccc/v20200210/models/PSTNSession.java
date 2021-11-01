@@ -118,6 +118,20 @@ finished 已完成
     private String OutBoundCallee;
 
     /**
+    * 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+    */
+    @SerializedName("ProtectedCaller")
+    @Expose
+    private String ProtectedCaller;
+
+    /**
+    * 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+    */
+    @SerializedName("ProtectedCallee")
+    @Expose
+    private String ProtectedCallee;
+
+    /**
      * Get 会话 ID 
      * @return SessionID 会话 ID
      */
@@ -341,6 +355,38 @@ finished 已完成
         this.OutBoundCallee = OutBoundCallee;
     }
 
+    /**
+     * Get 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空 
+     * @return ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     */
+    public String getProtectedCaller() {
+        return this.ProtectedCaller;
+    }
+
+    /**
+     * Set 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     * @param ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     */
+    public void setProtectedCaller(String ProtectedCaller) {
+        this.ProtectedCaller = ProtectedCaller;
+    }
+
+    /**
+     * Get 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空 
+     * @return ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+     */
+    public String getProtectedCallee() {
+        return this.ProtectedCallee;
+    }
+
+    /**
+     * Set 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+     * @param ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+     */
+    public void setProtectedCallee(String ProtectedCallee) {
+        this.ProtectedCallee = ProtectedCallee;
+    }
+
     public PSTNSession() {
     }
 
@@ -388,6 +434,12 @@ finished 已完成
         if (source.OutBoundCallee != null) {
             this.OutBoundCallee = new String(source.OutBoundCallee);
         }
+        if (source.ProtectedCaller != null) {
+            this.ProtectedCaller = new String(source.ProtectedCaller);
+        }
+        if (source.ProtectedCallee != null) {
+            this.ProtectedCallee = new String(source.ProtectedCallee);
+        }
     }
 
 
@@ -408,6 +460,8 @@ finished 已完成
         this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "OutBoundCaller", this.OutBoundCaller);
         this.setParamSimple(map, prefix + "OutBoundCallee", this.OutBoundCallee);
+        this.setParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
+        this.setParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
 
     }
 }

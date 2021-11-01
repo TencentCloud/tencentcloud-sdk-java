@@ -30,6 +30,13 @@ public class EnhanceTaDegreeRequest extends AbstractModel{
     private InputTaBspData BspData;
 
     /**
+    * 业务加密数据
+    */
+    @SerializedName("BusinessEncryptData")
+    @Expose
+    private InputBusinessEncryptData BusinessEncryptData;
+
+    /**
      * Get 业务数据 
      * @return BspData 业务数据
      */
@@ -45,6 +52,22 @@ public class EnhanceTaDegreeRequest extends AbstractModel{
         this.BspData = BspData;
     }
 
+    /**
+     * Get 业务加密数据 
+     * @return BusinessEncryptData 业务加密数据
+     */
+    public InputBusinessEncryptData getBusinessEncryptData() {
+        return this.BusinessEncryptData;
+    }
+
+    /**
+     * Set 业务加密数据
+     * @param BusinessEncryptData 业务加密数据
+     */
+    public void setBusinessEncryptData(InputBusinessEncryptData BusinessEncryptData) {
+        this.BusinessEncryptData = BusinessEncryptData;
+    }
+
     public EnhanceTaDegreeRequest() {
     }
 
@@ -56,6 +79,9 @@ public class EnhanceTaDegreeRequest extends AbstractModel{
         if (source.BspData != null) {
             this.BspData = new InputTaBspData(source.BspData);
         }
+        if (source.BusinessEncryptData != null) {
+            this.BusinessEncryptData = new InputBusinessEncryptData(source.BusinessEncryptData);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class EnhanceTaDegreeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BspData.", this.BspData);
+        this.setParamObj(map, prefix + "BusinessEncryptData.", this.BusinessEncryptData);
 
     }
 }

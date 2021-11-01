@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class UploadLogRequest extends AbstractModel{
 
+    /**
+    * 主题id
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
+    * 根据 hashkey 写入相应范围的主题分区
+    */
+    @SerializedName("HashKey")
+    @Expose
+    private String HashKey;
+
+    /**
+    * 压缩方法
+    */
+    @SerializedName("CompressType")
+    @Expose
+    private String CompressType;
+
+    /**
+     * Get 主题id 
+     * @return TopicId 主题id
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set 主题id
+     * @param TopicId 主题id
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
+    /**
+     * Get 根据 hashkey 写入相应范围的主题分区 
+     * @return HashKey 根据 hashkey 写入相应范围的主题分区
+     */
+    public String getHashKey() {
+        return this.HashKey;
+    }
+
+    /**
+     * Set 根据 hashkey 写入相应范围的主题分区
+     * @param HashKey 根据 hashkey 写入相应范围的主题分区
+     */
+    public void setHashKey(String HashKey) {
+        this.HashKey = HashKey;
+    }
+
+    /**
+     * Get 压缩方法 
+     * @return CompressType 压缩方法
+     */
+    public String getCompressType() {
+        return this.CompressType;
+    }
+
+    /**
+     * Set 压缩方法
+     * @param CompressType 压缩方法
+     */
+    public void setCompressType(String CompressType) {
+        this.CompressType = CompressType;
+    }
+
     public UploadLogRequest() {
     }
 
@@ -30,6 +99,15 @@ public class UploadLogRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UploadLogRequest(UploadLogRequest source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.HashKey != null) {
+            this.HashKey = new String(source.HashKey);
+        }
+        if (source.CompressType != null) {
+            this.CompressType = new String(source.CompressType);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class UploadLogRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "HashKey", this.HashKey);
+        this.setParamSimple(map, prefix + "CompressType", this.CompressType);
 
     }
 }

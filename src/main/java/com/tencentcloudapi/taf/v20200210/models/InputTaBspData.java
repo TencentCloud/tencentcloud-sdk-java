@@ -58,7 +58,7 @@ public class InputTaBspData extends AbstractModel{
     private Long Gender;
 
     /**
-    * 用户操作时间
+    * 用户操作时间,uinux时间戳，精确到秒
     */
     @SerializedName("UserTime")
     @Expose
@@ -198,6 +198,13 @@ public class InputTaBspData extends AbstractModel{
     private String Context;
 
     /**
+    * 是否授权
+    */
+    @SerializedName("IsAuthorized")
+    @Expose
+    private Long IsAuthorized;
+
+    /**
      * Get 请求序列号 
      * @return Seq 请求序列号
      */
@@ -278,16 +285,16 @@ public class InputTaBspData extends AbstractModel{
     }
 
     /**
-     * Get 用户操作时间 
-     * @return UserTime 用户操作时间
+     * Get 用户操作时间,uinux时间戳，精确到秒 
+     * @return UserTime 用户操作时间,uinux时间戳，精确到秒
      */
     public Long getUserTime() {
         return this.UserTime;
     }
 
     /**
-     * Set 用户操作时间
-     * @param UserTime 用户操作时间
+     * Set 用户操作时间,uinux时间戳，精确到秒
+     * @param UserTime 用户操作时间,uinux时间戳，精确到秒
      */
     public void setUserTime(Long UserTime) {
         this.UserTime = UserTime;
@@ -597,6 +604,22 @@ public class InputTaBspData extends AbstractModel{
         this.Context = Context;
     }
 
+    /**
+     * Get 是否授权 
+     * @return IsAuthorized 是否授权
+     */
+    public Long getIsAuthorized() {
+        return this.IsAuthorized;
+    }
+
+    /**
+     * Set 是否授权
+     * @param IsAuthorized 是否授权
+     */
+    public void setIsAuthorized(Long IsAuthorized) {
+        this.IsAuthorized = IsAuthorized;
+    }
+
     public InputTaBspData() {
     }
 
@@ -680,6 +703,9 @@ public class InputTaBspData extends AbstractModel{
         if (source.Context != null) {
             this.Context = new String(source.Context);
         }
+        if (source.IsAuthorized != null) {
+            this.IsAuthorized = new Long(source.IsAuthorized);
+        }
     }
 
 
@@ -712,6 +738,7 @@ public class InputTaBspData extends AbstractModel{
         this.setParamSimple(map, prefix + "Latitude", this.Latitude);
         this.setParamSimple(map, prefix + "Longitude", this.Longitude);
         this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
 
     }
 }

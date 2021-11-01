@@ -3,6 +3,9 @@ public enum EssbasicErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 员工已实名。
+     FAILEDOPERATION_STAFFALREADYVERIFY("FailedOperation.StaffAlreadyVerify"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -11,6 +14,15 @@ public enum EssbasicErrorCode {
      
     // 数据库错误。
      INTERNALERROR_DB("InternalError.Db"),
+     
+    // 数据库连接出错。
+     INTERNALERROR_DBCONNECTION("InternalError.DbConnection"),
+     
+    // 数据库读取失败。
+     INTERNALERROR_DBREAD("InternalError.DbRead"),
+     
+    // 数据库更新记录出错。
+     INTERNALERROR_DBUPDATE("InternalError.DbUpdate"),
      
     // 解密错误。
      INTERNALERROR_DECRYPTION("InternalError.Decryption"),
@@ -35,6 +47,9 @@ public enum EssbasicErrorCode {
      
     // 数据不存在。
      INVALIDPARAMETER_DATANOTFOUND("InvalidParameter.DataNotFound"),
+     
+    // 参数为空。
+     INVALIDPARAMETER_EMPTYPARAMS("InvalidParameter.EmptyParams"),
      
     // 参数错误。
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),

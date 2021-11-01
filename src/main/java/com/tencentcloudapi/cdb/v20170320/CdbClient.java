@@ -2007,26 +2007,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。
-     * @param req ModifyRoTypeRequest
-     * @return ModifyRoTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyRoTypeResponse ModifyRoType(ModifyRoTypeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRoTypeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRoTypeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRoType");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
      * @param req ModifyTimeWindowRequest
      * @return ModifyTimeWindowResponse

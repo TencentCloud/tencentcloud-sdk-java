@@ -86,6 +86,13 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private String [] Phones;
 
     /**
+    * 按SessionId筛选
+    */
+    @SerializedName("SessionIds")
+    @Expose
+    private String [] SessionIds;
+
+    /**
      * Get 起始时间戳，Unix 时间戳 
      * @return StartTimeStamp 起始时间戳，Unix 时间戳
      */
@@ -229,6 +236,22 @@ public class DescribeTelCdrRequest extends AbstractModel{
         this.Phones = Phones;
     }
 
+    /**
+     * Get 按SessionId筛选 
+     * @return SessionIds 按SessionId筛选
+     */
+    public String [] getSessionIds() {
+        return this.SessionIds;
+    }
+
+    /**
+     * Set 按SessionId筛选
+     * @param SessionIds 按SessionId筛选
+     */
+    public void setSessionIds(String [] SessionIds) {
+        this.SessionIds = SessionIds;
+    }
+
     public DescribeTelCdrRequest() {
     }
 
@@ -267,6 +290,12 @@ public class DescribeTelCdrRequest extends AbstractModel{
                 this.Phones[i] = new String(source.Phones[i]);
             }
         }
+        if (source.SessionIds != null) {
+            this.SessionIds = new String[source.SessionIds.length];
+            for (int i = 0; i < source.SessionIds.length; i++) {
+                this.SessionIds[i] = new String(source.SessionIds[i]);
+            }
+        }
     }
 
 
@@ -283,6 +312,7 @@ public class DescribeTelCdrRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamArraySimple(map, prefix + "Phones.", this.Phones);
+        this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
 
     }
 }

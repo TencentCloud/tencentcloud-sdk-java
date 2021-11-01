@@ -56,6 +56,13 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
     private String TrackData;
 
     /**
+    * 轨道数据对应的画布宽高比。
+    */
+    @SerializedName("AspectRatio")
+    @Expose
+    private String AspectRatio;
+
+    /**
     * 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
     */
     @SerializedName("CoverData")
@@ -168,6 +175,22 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
     }
 
     /**
+     * Get 轨道数据对应的画布宽高比。 
+     * @return AspectRatio 轨道数据对应的画布宽高比。
+     */
+    public String getAspectRatio() {
+        return this.AspectRatio;
+    }
+
+    /**
+     * Set 轨道数据对应的画布宽高比。
+     * @param AspectRatio 轨道数据对应的画布宽高比。
+     */
+    public void setAspectRatio(String AspectRatio) {
+        this.AspectRatio = AspectRatio;
+    }
+
+    /**
      * Get 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。 
      * @return CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
      */
@@ -251,6 +274,9 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
         if (source.TrackData != null) {
             this.TrackData = new String(source.TrackData);
         }
+        if (source.AspectRatio != null) {
+            this.AspectRatio = new String(source.AspectRatio);
+        }
         if (source.CoverData != null) {
             this.CoverData = new String(source.CoverData);
         }
@@ -274,6 +300,7 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "ExportDestination", this.ExportDestination);
         this.setParamSimple(map, prefix + "TrackData", this.TrackData);
+        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "CoverData", this.CoverData);
         this.setParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
         this.setParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);

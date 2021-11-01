@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeChatMessagesRequest extends AbstractModel{
 
     /**
-    * 服务记录ID
-    */
-    @SerializedName("CdrId")
-    @Expose
-    private String CdrId;
-
-    /**
     * 实例ID
     */
     @SerializedName("InstanceId")
@@ -42,6 +35,13 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
+
+    /**
+    * 服务记录ID
+    */
+    @SerializedName("CdrId")
+    @Expose
+    private String CdrId;
 
     /**
     * 返回记录条数 最大为100默认20
@@ -65,20 +65,11 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     private Long Order;
 
     /**
-     * Get 服务记录ID 
-     * @return CdrId 服务记录ID
-     */
-    public String getCdrId() {
-        return this.CdrId;
-    }
-
-    /**
-     * Set 服务记录ID
-     * @param CdrId 服务记录ID
-     */
-    public void setCdrId(String CdrId) {
-        this.CdrId = CdrId;
-    }
+    * 服务记录SessionID
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
 
     /**
      * Get 实例ID 
@@ -110,6 +101,22 @@ public class DescribeChatMessagesRequest extends AbstractModel{
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 服务记录ID 
+     * @return CdrId 服务记录ID
+     */
+    public String getCdrId() {
+        return this.CdrId;
+    }
+
+    /**
+     * Set 服务记录ID
+     * @param CdrId 服务记录ID
+     */
+    public void setCdrId(String CdrId) {
+        this.CdrId = CdrId;
     }
 
     /**
@@ -160,6 +167,22 @@ public class DescribeChatMessagesRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    /**
+     * Get 服务记录SessionID 
+     * @return SessionId 服务记录SessionID
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 服务记录SessionID
+     * @param SessionId 服务记录SessionID
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public DescribeChatMessagesRequest() {
     }
 
@@ -168,14 +191,14 @@ public class DescribeChatMessagesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeChatMessagesRequest(DescribeChatMessagesRequest source) {
-        if (source.CdrId != null) {
-            this.CdrId = new String(source.CdrId);
-        }
         if (source.InstanceId != null) {
             this.InstanceId = new Long(source.InstanceId);
         }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.CdrId != null) {
+            this.CdrId = new String(source.CdrId);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -186,6 +209,9 @@ public class DescribeChatMessagesRequest extends AbstractModel{
         if (source.Order != null) {
             this.Order = new Long(source.Order);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -193,12 +219,13 @@ public class DescribeChatMessagesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CdrId", this.CdrId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "CdrId", this.CdrId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }
