@@ -52,6 +52,14 @@ public class UrlRedirectRule extends AbstractModel{
     private String RedirectHost;
 
     /**
+    * 指定是全路径配置还是任意匹配
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullMatch")
+    @Expose
+    private Boolean FullMatch;
+
+    /**
      * Get 重定向状态码，301 | 302 
      * @return RedirectStatusCode 重定向状态码，301 | 302
      */
@@ -119,6 +127,26 @@ public class UrlRedirectRule extends AbstractModel{
         this.RedirectHost = RedirectHost;
     }
 
+    /**
+     * Get 指定是全路径配置还是任意匹配
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullMatch 指定是全路径配置还是任意匹配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFullMatch() {
+        return this.FullMatch;
+    }
+
+    /**
+     * Set 指定是全路径配置还是任意匹配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullMatch 指定是全路径配置还是任意匹配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullMatch(Boolean FullMatch) {
+        this.FullMatch = FullMatch;
+    }
+
     public UrlRedirectRule() {
     }
 
@@ -139,6 +167,9 @@ public class UrlRedirectRule extends AbstractModel{
         if (source.RedirectHost != null) {
             this.RedirectHost = new String(source.RedirectHost);
         }
+        if (source.FullMatch != null) {
+            this.FullMatch = new Boolean(source.FullMatch);
+        }
     }
 
 
@@ -150,6 +181,7 @@ public class UrlRedirectRule extends AbstractModel{
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
+        this.setParamSimple(map, prefix + "FullMatch", this.FullMatch);
 
     }
 }

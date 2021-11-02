@@ -63,6 +63,13 @@ public class EditMediaTask extends AbstractModel{
     private String Message;
 
     /**
+    * 编辑视频任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
     * 视频编辑任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -79,18 +86,18 @@ public class EditMediaTask extends AbstractModel{
     private EditMediaTaskOutput Output;
 
     /**
+    * 原始视频的元信息。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
     * 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
     */
     @SerializedName("ProcedureTaskId")
     @Expose
     private String ProcedureTaskId;
-
-    /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-    */
-    @SerializedName("SessionContext")
-    @Expose
-    private String SessionContext;
 
     /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -100,11 +107,11 @@ public class EditMediaTask extends AbstractModel{
     private String SessionId;
 
     /**
-    * 原始视频的元信息。
+    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
     */
-    @SerializedName("MetaData")
+    @SerializedName("SessionContext")
     @Expose
-    private MediaMetaData MetaData;
+    private String SessionContext;
 
     /**
      * Get 任务 ID。 
@@ -207,6 +214,22 @@ public class EditMediaTask extends AbstractModel{
     }
 
     /**
+     * Get 编辑视频任务进度，取值范围 [0-100] 。 
+     * @return Progress 编辑视频任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 编辑视频任务进度，取值范围 [0-100] 。
+     * @param Progress 编辑视频任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Get 视频编辑任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Input 视频编辑任务的输入。
@@ -247,6 +270,22 @@ public class EditMediaTask extends AbstractModel{
     }
 
     /**
+     * Get 原始视频的元信息。 
+     * @return MetaData 原始视频的元信息。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set 原始视频的元信息。
+     * @param MetaData 原始视频的元信息。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Get 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。 
      * @return ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
      */
@@ -260,22 +299,6 @@ public class EditMediaTask extends AbstractModel{
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
-    }
-
-    /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     */
-    public String getSessionContext() {
-        return this.SessionContext;
-    }
-
-    /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     */
-    public void setSessionContext(String SessionContext) {
-        this.SessionContext = SessionContext;
     }
 
     /**
@@ -295,19 +318,19 @@ public class EditMediaTask extends AbstractModel{
     }
 
     /**
-     * Get 原始视频的元信息。 
-     * @return MetaData 原始视频的元信息。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
+     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
-    public MediaMetaData getMetaData() {
-        return this.MetaData;
+    public String getSessionContext() {
+        return this.SessionContext;
     }
 
     /**
-     * Set 原始视频的元信息。
-     * @param MetaData 原始视频的元信息。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
-    public void setMetaData(MediaMetaData MetaData) {
-        this.MetaData = MetaData;
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
     }
 
     public EditMediaTask() {
@@ -333,23 +356,26 @@ public class EditMediaTask extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.Input != null) {
             this.Input = new EditMediaTaskInput(source.Input);
         }
         if (source.Output != null) {
             this.Output = new EditMediaTaskOutput(source.Output);
         }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
         if (source.ProcedureTaskId != null) {
             this.ProcedureTaskId = new String(source.ProcedureTaskId);
-        }
-        if (source.SessionContext != null) {
-            this.SessionContext = new String(source.SessionContext);
         }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
-        if (source.MetaData != null) {
-            this.MetaData = new MediaMetaData(source.MetaData);
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
         }
     }
 
@@ -363,12 +389,13 @@ public class EditMediaTask extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
-        this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
-        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }

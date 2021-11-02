@@ -30,7 +30,7 @@ public class CreateDBImportJobRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 文件名称。该文件是指用户已上传到腾讯云的文件。
+    * 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
     */
     @SerializedName("FileName")
     @Expose
@@ -74,16 +74,16 @@ public class CreateDBImportJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件名称。该文件是指用户已上传到腾讯云的文件。 
-     * @return FileName 文件名称。该文件是指用户已上传到腾讯云的文件。
+     * Get 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。 
+     * @return FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名称。该文件是指用户已上传到腾讯云的文件。
-     * @param FileName 文件名称。该文件是指用户已上传到腾讯云的文件。
+     * Set 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+     * @param FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

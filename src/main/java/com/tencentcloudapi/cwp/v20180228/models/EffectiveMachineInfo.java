@@ -71,6 +71,22 @@ public class EffectiveMachineInfo extends AbstractModel{
     private String Uuid;
 
     /**
+    * 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KernelVersion")
+    @Expose
+    private String KernelVersion;
+
+    /**
+    * 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineStatus")
+    @Expose
+    private String MachineStatus;
+
+    /**
      * Get 机器名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MachineName 机器名称
@@ -190,6 +206,46 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KernelVersion 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKernelVersion() {
+        return this.KernelVersion;
+    }
+
+    /**
+     * Set 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KernelVersion 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKernelVersion(String KernelVersion) {
+        this.KernelVersion = KernelVersion;
+    }
+
+    /**
+     * Get 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineStatus 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMachineStatus() {
+        return this.MachineStatus;
+    }
+
+    /**
+     * Set 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineStatus 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineStatus(String MachineStatus) {
+        this.MachineStatus = MachineStatus;
+    }
+
     public EffectiveMachineInfo() {
     }
 
@@ -219,6 +275,12 @@ public class EffectiveMachineInfo extends AbstractModel{
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.KernelVersion != null) {
+            this.KernelVersion = new String(source.KernelVersion);
+        }
+        if (source.MachineStatus != null) {
+            this.MachineStatus = new String(source.MachineStatus);
+        }
     }
 
 
@@ -232,6 +294,8 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MachineTag.", this.MachineTag);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+        this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
 
     }
 }

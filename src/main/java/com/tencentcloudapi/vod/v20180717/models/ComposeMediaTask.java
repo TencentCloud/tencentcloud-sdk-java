@@ -55,6 +55,13 @@ public class ComposeMediaTask extends AbstractModel{
     private String Message;
 
     /**
+    * 制作媒体文件任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
     * 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -79,18 +86,18 @@ public class ComposeMediaTask extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-    */
-    @SerializedName("SessionContext")
-    @Expose
-    private String SessionContext;
-
-    /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
+
+    /**
+    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
 
     /**
      * Get 任务 ID。 
@@ -173,6 +180,22 @@ public class ComposeMediaTask extends AbstractModel{
     }
 
     /**
+     * Get 制作媒体文件任务进度，取值范围 [0-100] 。 
+     * @return Progress 制作媒体文件任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 制作媒体文件任务进度，取值范围 [0-100] 。
+     * @param Progress 制作媒体文件任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Get 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Input 制作媒体文件任务的输入。
@@ -233,22 +256,6 @@ public class ComposeMediaTask extends AbstractModel{
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     */
-    public String getSessionContext() {
-        return this.SessionContext;
-    }
-
-    /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     */
-    public void setSessionContext(String SessionContext) {
-        this.SessionContext = SessionContext;
-    }
-
-    /**
      * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
@@ -262,6 +269,22 @@ public class ComposeMediaTask extends AbstractModel{
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
+     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
     }
 
     public ComposeMediaTask() {
@@ -284,6 +307,9 @@ public class ComposeMediaTask extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.Input != null) {
             this.Input = new ComposeMediaTaskInput(source.Input);
         }
@@ -293,11 +319,11 @@ public class ComposeMediaTask extends AbstractModel{
         if (source.MetaData != null) {
             this.MetaData = new MediaMetaData(source.MetaData);
         }
-        if (source.SessionContext != null) {
-            this.SessionContext = new String(source.SessionContext);
-        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
         }
     }
 
@@ -310,11 +336,12 @@ public class ComposeMediaTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
-        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }

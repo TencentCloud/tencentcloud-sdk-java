@@ -37,6 +37,13 @@ public class DescribeVersionStatisticsResponse extends AbstractModel{
     private Long ProVersionNum;
 
     /**
+    * 旗舰版数量
+    */
+    @SerializedName("UltimateVersionNum")
+    @Expose
+    private Long UltimateVersionNum;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeVersionStatisticsResponse extends AbstractModel{
     }
 
     /**
+     * Get 旗舰版数量 
+     * @return UltimateVersionNum 旗舰版数量
+     */
+    public Long getUltimateVersionNum() {
+        return this.UltimateVersionNum;
+    }
+
+    /**
+     * Set 旗舰版数量
+     * @param UltimateVersionNum 旗舰版数量
+     */
+    public void setUltimateVersionNum(Long UltimateVersionNum) {
+        this.UltimateVersionNum = UltimateVersionNum;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,9 @@ public class DescribeVersionStatisticsResponse extends AbstractModel{
         if (source.ProVersionNum != null) {
             this.ProVersionNum = new Long(source.ProVersionNum);
         }
+        if (source.UltimateVersionNum != null) {
+            this.UltimateVersionNum = new Long(source.UltimateVersionNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class DescribeVersionStatisticsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BasicVersionNum", this.BasicVersionNum);
         this.setParamSimple(map, prefix + "ProVersionNum", this.ProVersionNum);
+        this.setParamSimple(map, prefix + "UltimateVersionNum", this.UltimateVersionNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

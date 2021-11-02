@@ -80,6 +80,14 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private Long MaxMessageBytes;
 
     /**
+    * 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get 消息保留时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Retention 消息保留时间
@@ -223,6 +231,26 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
+    /**
+     * Get 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionBytes 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionBytes 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public Config() {
     }
 
@@ -252,6 +280,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         if (source.MaxMessageBytes != null) {
             this.MaxMessageBytes = new Long(source.MaxMessageBytes);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -266,6 +297,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }

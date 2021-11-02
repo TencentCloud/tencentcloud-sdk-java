@@ -30,7 +30,7 @@ public class CreateTopicRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
     */
     @SerializedName("TopicName")
     @Expose
@@ -121,6 +121,13 @@ public class CreateTopicRequest extends AbstractModel{
     private String AclRuleName;
 
     /**
+    * 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -137,16 +144,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return TopicName 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
+     * @return TopicName 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param TopicName 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param TopicName 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -344,6 +351,22 @@ public class CreateTopicRequest extends AbstractModel{
         this.AclRuleName = AclRuleName;
     }
 
+    /**
+     * Get 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B 
+     * @return RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * @param RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -397,6 +420,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.AclRuleName != null) {
             this.AclRuleName = new String(source.AclRuleName);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }

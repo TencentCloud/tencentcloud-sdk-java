@@ -268,14 +268,14 @@ public class InputRecognizeTargetAudience extends AbstractModel{
     private Long AdType;
 
     /**
-    * app name
+    * app名称
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * appVer
+    * app版本描述
     */
     @SerializedName("AppVer")
     @Expose
@@ -287,6 +287,13 @@ public class InputRecognizeTargetAudience extends AbstractModel{
     @SerializedName("ReqType")
     @Expose
     private Long ReqType;
+
+    /**
+    * 用户是否授权,1为授权，0为未授权
+    */
+    @SerializedName("IsAuthorized")
+    @Expose
+    private Long IsAuthorized;
 
     /**
      * Get 设备ID，AccountType指定的类型 
@@ -849,32 +856,32 @@ public class InputRecognizeTargetAudience extends AbstractModel{
     }
 
     /**
-     * Get app name 
-     * @return AppName app name
+     * Get app名称 
+     * @return AppName app名称
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set app name
-     * @param AppName app name
+     * Set app名称
+     * @param AppName app名称
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get appVer 
-     * @return AppVer appVer
+     * Get app版本描述 
+     * @return AppVer app版本描述
      */
     public String getAppVer() {
         return this.AppVer;
     }
 
     /**
-     * Set appVer
-     * @param AppVer appVer
+     * Set app版本描述
+     * @param AppVer app版本描述
      */
     public void setAppVer(String AppVer) {
         this.AppVer = AppVer;
@@ -894,6 +901,22 @@ public class InputRecognizeTargetAudience extends AbstractModel{
      */
     public void setReqType(Long ReqType) {
         this.ReqType = ReqType;
+    }
+
+    /**
+     * Get 用户是否授权,1为授权，0为未授权 
+     * @return IsAuthorized 用户是否授权,1为授权，0为未授权
+     */
+    public Long getIsAuthorized() {
+        return this.IsAuthorized;
+    }
+
+    /**
+     * Set 用户是否授权,1为授权，0为未授权
+     * @param IsAuthorized 用户是否授权,1为授权，0为未授权
+     */
+    public void setIsAuthorized(Long IsAuthorized) {
+        this.IsAuthorized = IsAuthorized;
     }
 
     public InputRecognizeTargetAudience() {
@@ -1021,6 +1044,9 @@ public class InputRecognizeTargetAudience extends AbstractModel{
         if (source.ReqType != null) {
             this.ReqType = new Long(source.ReqType);
         }
+        if (source.IsAuthorized != null) {
+            this.IsAuthorized = new Long(source.IsAuthorized);
+        }
     }
 
 
@@ -1066,6 +1092,7 @@ public class InputRecognizeTargetAudience extends AbstractModel{
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "AppVer", this.AppVer);
         this.setParamSimple(map, prefix + "ReqType", this.ReqType);
+        this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
 
     }
 }

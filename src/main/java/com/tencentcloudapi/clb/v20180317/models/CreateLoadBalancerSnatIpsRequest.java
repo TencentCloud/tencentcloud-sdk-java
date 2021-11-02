@@ -37,6 +37,13 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     private SnatIp [] SnatIps;
 
     /**
+    * 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+    */
+    @SerializedName("Number")
+    @Expose
+    private Long Number;
+
+    /**
      * Get 负载均衡唯一性ID，例如：lb-12345678。 
      * @return LoadBalancerId 负载均衡唯一性ID，例如：lb-12345678。
      */
@@ -68,6 +75,22 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
         this.SnatIps = SnatIps;
     }
 
+    /**
+     * Get 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。 
+     * @return Number 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     */
+    public Long getNumber() {
+        return this.Number;
+    }
+
+    /**
+     * Set 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     * @param Number 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     */
+    public void setNumber(Long Number) {
+        this.Number = Number;
+    }
+
     public CreateLoadBalancerSnatIpsRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
                 this.SnatIps[i] = new SnatIp(source.SnatIps[i]);
             }
         }
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+        this.setParamSimple(map, prefix + "Number", this.Number);
 
     }
 }

@@ -187,6 +187,13 @@ public class Machine extends AbstractModel{
     private String MachineType;
 
     /**
+    * 内核版本
+    */
+    @SerializedName("KernelVersion")
+    @Expose
+    private String KernelVersion;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -578,6 +585,22 @@ public class Machine extends AbstractModel{
         this.MachineType = MachineType;
     }
 
+    /**
+     * Get 内核版本 
+     * @return KernelVersion 内核版本
+     */
+    public String getKernelVersion() {
+        return this.KernelVersion;
+    }
+
+    /**
+     * Set 内核版本
+     * @param KernelVersion 内核版本
+     */
+    public void setKernelVersion(String KernelVersion) {
+        this.KernelVersion = KernelVersion;
+    }
+
     public Machine() {
     }
 
@@ -655,6 +678,9 @@ public class Machine extends AbstractModel{
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.KernelVersion != null) {
+            this.KernelVersion = new String(source.KernelVersion);
+        }
     }
 
 
@@ -684,6 +710,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
 
     }
 }

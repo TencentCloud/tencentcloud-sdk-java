@@ -114,6 +114,13 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private String AclRuleName;
 
     /**
+    * 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -321,6 +328,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.AclRuleName = AclRuleName;
     }
 
+    /**
+     * Get 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B 
+     * @return RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * @param RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -371,6 +394,9 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         if (source.AclRuleName != null) {
             this.AclRuleName = new String(source.AclRuleName);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }
