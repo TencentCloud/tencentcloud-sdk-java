@@ -58,6 +58,13 @@ public class InputKolDataList extends AbstractModel{
     private String AgentInfo;
 
     /**
+    * 是否授权
+    */
+    @SerializedName("IsAuthorized")
+    @Expose
+    private Long IsAuthorized;
+
+    /**
      * Get 账号类型[1：微信；2：qq；3：微博] 
      * @return Type 账号类型[1：微信；2：qq；3：微博]
      */
@@ -137,6 +144,22 @@ public class InputKolDataList extends AbstractModel{
         this.AgentInfo = AgentInfo;
     }
 
+    /**
+     * Get 是否授权 
+     * @return IsAuthorized 是否授权
+     */
+    public Long getIsAuthorized() {
+        return this.IsAuthorized;
+    }
+
+    /**
+     * Set 是否授权
+     * @param IsAuthorized 是否授权
+     */
+    public void setIsAuthorized(Long IsAuthorized) {
+        this.IsAuthorized = IsAuthorized;
+    }
+
     public InputKolDataList() {
     }
 
@@ -160,6 +183,9 @@ public class InputKolDataList extends AbstractModel{
         if (source.AgentInfo != null) {
             this.AgentInfo = new String(source.AgentInfo);
         }
+        if (source.IsAuthorized != null) {
+            this.IsAuthorized = new Long(source.IsAuthorized);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class InputKolDataList extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "AgentInfo", this.AgentInfo);
+        this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
 
     }
 }

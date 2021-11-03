@@ -37,7 +37,7 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
     private Long ExpireTime;
 
     /**
-    * 通道唯一标识
+    * 通道唯一标识（接口升级字段为必填）
     */
     @SerializedName("ChannelId")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
     }
 
     /**
-     * Get 通道唯一标识 
-     * @return ChannelId 通道唯一标识
+     * Get 通道唯一标识（接口升级字段为必填） 
+     * @return ChannelId 通道唯一标识（接口升级字段为必填）
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道唯一标识
-     * @param ChannelId 通道唯一标识
+     * Set 通道唯一标识（接口升级字段为必填）
+     * @param ChannelId 通道唯一标识（接口升级字段为必填）
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
