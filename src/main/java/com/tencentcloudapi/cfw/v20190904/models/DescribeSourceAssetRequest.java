@@ -37,7 +37,7 @@ public class DescribeSourceAssetRequest extends AbstractModel{
     private String InsType;
 
     /**
-    * 是否未分组 1是
+    * ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
     */
     @SerializedName("ChooseType")
     @Expose
@@ -51,14 +51,14 @@ public class DescribeSourceAssetRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 页大小
+    * 查询单页的最大值；eg：10；则最多返回10条结果
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * 查询结果的偏移量
     */
     @SerializedName("Offset")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeSourceAssetRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否未分组 1是 
-     * @return ChooseType 是否未分组 1是
+     * Get ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产 
+     * @return ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
      */
     public String getChooseType() {
         return this.ChooseType;
     }
 
     /**
-     * Set 是否未分组 1是
-     * @param ChooseType 是否未分组 1是
+     * Set ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+     * @param ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
      */
     public void setChooseType(String ChooseType) {
         this.ChooseType = ChooseType;
@@ -129,32 +129,32 @@ public class DescribeSourceAssetRequest extends AbstractModel{
     }
 
     /**
-     * Get 页大小 
-     * @return Limit 页大小
+     * Get 查询单页的最大值；eg：10；则最多返回10条结果 
+     * @return Limit 查询单页的最大值；eg：10；则最多返回10条结果
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页大小
-     * @param Limit 页大小
+     * Set 查询单页的最大值；eg：10；则最多返回10条结果
+     * @param Limit 查询单页的最大值；eg：10；则最多返回10条结果
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 查询结果的偏移量 
+     * @return Offset 查询结果的偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 查询结果的偏移量
+     * @param Offset 查询结果的偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

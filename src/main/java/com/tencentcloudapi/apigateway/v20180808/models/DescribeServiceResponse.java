@@ -201,6 +201,22 @@ public class DescribeServiceResponse extends AbstractModel{
     private String SetType;
 
     /**
+    * 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeploymentType")
+    @Expose
+    private String DeploymentType;
+
+    /**
+    * 特殊用途
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecialUse")
+    @Expose
+    private String SpecialUse;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -632,6 +648,46 @@ public class DescribeServiceResponse extends AbstractModel{
     }
 
     /**
+     * Get 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeploymentType 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeploymentType() {
+        return this.DeploymentType;
+    }
+
+    /**
+     * Set 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeploymentType 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeploymentType(String DeploymentType) {
+        this.DeploymentType = DeploymentType;
+    }
+
+    /**
+     * Get 特殊用途
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecialUse 特殊用途
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpecialUse() {
+        return this.SpecialUse;
+    }
+
+    /**
+     * Set 特殊用途
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecialUse 特殊用途
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecialUse(String SpecialUse) {
+        this.SpecialUse = SpecialUse;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -742,6 +798,12 @@ public class DescribeServiceResponse extends AbstractModel{
         if (source.SetType != null) {
             this.SetType = new String(source.SetType);
         }
+        if (source.DeploymentType != null) {
+            this.DeploymentType = new String(source.DeploymentType);
+        }
+        if (source.SpecialUse != null) {
+            this.SpecialUse = new String(source.SpecialUse);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -776,6 +838,8 @@ public class DescribeServiceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "SetType", this.SetType);
+        this.setParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
+        this.setParamSimple(map, prefix + "SpecialUse", this.SpecialUse);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

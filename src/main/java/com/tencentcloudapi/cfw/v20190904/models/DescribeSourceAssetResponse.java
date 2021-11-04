@@ -37,7 +37,7 @@ public class DescribeSourceAssetResponse extends AbstractModel{
     private InstanceInfo [] Data;
 
     /**
-    * 10
+    * 返回数据总数
     */
     @SerializedName("Total")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeSourceAssetResponse extends AbstractModel{
     }
 
     /**
-     * Get 10 
-     * @return Total 10
+     * Get 返回数据总数 
+     * @return Total 返回数据总数
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 10
-     * @param Total 10
+     * Set 返回数据总数
+     * @param Total 返回数据总数
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -1327,6 +1327,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *商户恶意注册接口
+     * @param req QueryMaliciousRegistrationRequest
+     * @return QueryMaliciousRegistrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMaliciousRegistrationResponse QueryMaliciousRegistration(QueryMaliciousRegistrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMaliciousRegistrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMaliciousRegistrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMaliciousRegistration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
      * @param req QueryMemberBindRequest
@@ -2128,7 +2148,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *云支付Tlinx统一下单接口
+     *云支付-统一下单接口
      * @param req UnifiedTlinxOrderRequest
      * @return UnifiedTlinxOrderResponse
      * @throws TencentCloudSDKException

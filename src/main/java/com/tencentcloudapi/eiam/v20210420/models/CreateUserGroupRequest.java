@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateUserGroupRequest extends AbstractModel{
 
     /**
-    * 昵称，长度限制：64个字符。 DisplayName是唯一的。
+    * 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 用户备注，长度限制：512个字符。
+    * 用户组备注，长度限制：512个字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 昵称，长度限制：64个字符。 DisplayName是唯一的。 
-     * @return DisplayName 昵称，长度限制：64个字符。 DisplayName是唯一的。
+     * Get 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。 
+     * @return DisplayName 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 昵称，长度限制：64个字符。 DisplayName是唯一的。
-     * @param DisplayName 昵称，长度限制：64个字符。 DisplayName是唯一的。
+     * Set 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
+     * @param DisplayName 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 用户备注，长度限制：512个字符。 
-     * @return Description 用户备注，长度限制：512个字符。
+     * Get 用户组备注，长度限制：512个字符。 
+     * @return Description 用户组备注，长度限制：512个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 用户备注，长度限制：512个字符。
-     * @param Description 用户备注，长度限制：512个字符。
+     * Set 用户组备注，长度限制：512个字符。
+     * @param Description 用户组备注，长度限制：512个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;

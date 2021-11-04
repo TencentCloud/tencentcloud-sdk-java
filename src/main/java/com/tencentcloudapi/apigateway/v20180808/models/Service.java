@@ -167,6 +167,14 @@ public class Service extends AbstractModel{
     private String SetType;
 
     /**
+    * 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeploymentType")
+    @Expose
+    private String DeploymentType;
+
+    /**
      * Get 内网访问https端口。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InnerHttpsPort 内网访问https端口。
@@ -526,6 +534,26 @@ public class Service extends AbstractModel{
         this.SetType = SetType;
     }
 
+    /**
+     * Get 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeploymentType 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeploymentType() {
+        return this.DeploymentType;
+    }
+
+    /**
+     * Set 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeploymentType 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeploymentType(String DeploymentType) {
+        this.DeploymentType = DeploymentType;
+    }
+
     public Service() {
     }
 
@@ -597,6 +625,9 @@ public class Service extends AbstractModel{
         if (source.SetType != null) {
             this.SetType = new String(source.SetType);
         }
+        if (source.DeploymentType != null) {
+            this.DeploymentType = new String(source.DeploymentType);
+        }
     }
 
 
@@ -622,6 +653,7 @@ public class Service extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SetType", this.SetType);
+        this.setParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
 
     }
 }

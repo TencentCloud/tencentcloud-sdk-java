@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeResourceGroupNewRequest extends AbstractModel{
 
     /**
-    * 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+    * 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
     */
     @SerializedName("QueryType")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeResourceGroupNewRequest extends AbstractModel{
     private String ShowType;
 
     /**
-     * Get 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag 
-     * @return QueryType 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+     * Get 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag 
+     * @return QueryType 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
      */
     public String getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
-     * @param QueryType 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+     * Set 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
+     * @param QueryType 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;

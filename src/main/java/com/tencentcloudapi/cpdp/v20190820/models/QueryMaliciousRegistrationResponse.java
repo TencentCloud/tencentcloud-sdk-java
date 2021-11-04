@@ -13,30 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableReplicaReadonlyResponse extends AbstractModel{
+public class QueryMaliciousRegistrationResponse extends AbstractModel{
 
     /**
-    * 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
+    * 错误码
     */
-    @SerializedName("Status")
+    @SerializedName("ErrCode")
     @Expose
-    private String Status;
+    private String ErrCode;
 
     /**
-    * 任务ID
+    * 错误消息
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TaskId")
+    @SerializedName("Result")
     @Expose
-    private Long TaskId;
+    private MerchantRiskInfo Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +52,55 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 错误：ERROR，正确OK（已废弃）
+     * Get 错误码 
+     * @return ErrCode 错误码
+     */
+    public String getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set 错误码
+     * @param ErrCode 错误码
+     */
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get 错误消息 
+     * @return ErrMsg 错误消息
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 错误消息
+     * @param ErrMsg 错误消息
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 错误：ERROR，正确OK（已废弃）
+     * @return Result 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getStatus() {
-        return this.Status;
+    public MerchantRiskInfo getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 错误：ERROR，正确OK（已废弃）
+     * Set 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @param Result 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setResult(MerchantRiskInfo Result) {
+        this.Result = Result;
     }
 
     /**
@@ -101,19 +119,22 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public EnableReplicaReadonlyResponse() {
+    public QueryMaliciousRegistrationResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnableReplicaReadonlyResponse(EnableReplicaReadonlyResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public QueryMaliciousRegistrationResponse(QueryMaliciousRegistrationResponse source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
         }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.Result != null) {
+            this.Result = new MerchantRiskInfo(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +146,9 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

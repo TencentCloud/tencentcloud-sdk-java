@@ -819,6 +819,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
+     * @param req ModifyDBInstanceSpecRequest
+     * @return ModifyDBInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSpecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSpec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
      * @param req ModifyDBInstancesProjectRequest
      * @return ModifyDBInstancesProjectResponse

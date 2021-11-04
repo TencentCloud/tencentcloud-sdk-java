@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUserGroupResponse extends AbstractModel{
 
     /**
-    * 昵称，长度限制：64个字符。 DisplayName不唯一。
+    * 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisplayName")
@@ -31,7 +31,7 @@ public class DescribeUserGroupResponse extends AbstractModel{
     private String DisplayName;
 
     /**
-    * 用户备注，长度限制：512个字符。
+    * 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -54,9 +54,9 @@ public class DescribeUserGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 昵称，长度限制：64个字符。 DisplayName不唯一。
+     * Get 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisplayName 昵称，长度限制：64个字符。 DisplayName不唯一。
+     * @return DisplayName 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisplayName() {
@@ -64,9 +64,9 @@ public class DescribeUserGroupResponse extends AbstractModel{
     }
 
     /**
-     * Set 昵称，长度限制：64个字符。 DisplayName不唯一。
+     * Set 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisplayName 昵称，长度限制：64个字符。 DisplayName不唯一。
+     * @param DisplayName 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplayName(String DisplayName) {
@@ -74,9 +74,9 @@ public class DescribeUserGroupResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户备注，长度限制：512个字符。
+     * Get 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 用户备注，长度限制：512个字符。
+     * @return Description 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -84,9 +84,9 @@ public class DescribeUserGroupResponse extends AbstractModel{
     }
 
     /**
-     * Set 用户备注，长度限制：512个字符。
+     * Set 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 用户备注，长度限制：512个字符。
+     * @param Description 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {

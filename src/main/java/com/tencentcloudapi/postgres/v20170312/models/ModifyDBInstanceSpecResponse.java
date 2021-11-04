@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableReplicaReadonlyResponse extends AbstractModel{
+public class ModifyDBInstanceSpecResponse extends AbstractModel{
 
     /**
-    * 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
+    * 订单号。
     */
-    @SerializedName("Status")
+    @SerializedName("DealName")
     @Expose
-    private String Status;
+    private String DealName;
 
     /**
-    * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 冻结流水号。
     */
-    @SerializedName("TaskId")
+    @SerializedName("BillId")
     @Expose
-    private Long TaskId;
+    private String BillId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +44,35 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 订单号。 
+     * @return DealName 订单号。
      */
-    public String getStatus() {
-        return this.Status;
+    public String getDealName() {
+        return this.DealName;
     }
 
     /**
-     * Set 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 订单号。
+     * @param DealName 订单号。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 冻结流水号。 
+     * @return BillId 冻结流水号。
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public String getBillId() {
+        return this.BillId;
     }
 
     /**
-     * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 冻结流水号。
+     * @param BillId 冻结流水号。
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setBillId(String BillId) {
+        this.BillId = BillId;
     }
 
     /**
@@ -101,19 +91,19 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public EnableReplicaReadonlyResponse() {
+    public ModifyDBInstanceSpecResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnableReplicaReadonlyResponse(EnableReplicaReadonlyResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public ModifyDBInstanceSpecResponse(ModifyDBInstanceSpecResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
         }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +115,8 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

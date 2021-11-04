@@ -30,21 +30,21 @@ public class DescribeResourceGroupNewResponse extends AbstractModel{
     private String Data;
 
     /**
-    * 无
+    * 未分类实例数量
     */
     @SerializedName("UnResourceNum")
     @Expose
     private Long UnResourceNum;
 
     /**
-    * 无
+    * 接口返回消息
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 无
+    * 返回码；0为请求成功
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -74,48 +74,48 @@ public class DescribeResourceGroupNewResponse extends AbstractModel{
     }
 
     /**
-     * Get 无 
-     * @return UnResourceNum 无
+     * Get 未分类实例数量 
+     * @return UnResourceNum 未分类实例数量
      */
     public Long getUnResourceNum() {
         return this.UnResourceNum;
     }
 
     /**
-     * Set 无
-     * @param UnResourceNum 无
+     * Set 未分类实例数量
+     * @param UnResourceNum 未分类实例数量
      */
     public void setUnResourceNum(Long UnResourceNum) {
         this.UnResourceNum = UnResourceNum;
     }
 
     /**
-     * Get 无 
-     * @return ReturnMsg 无
+     * Get 接口返回消息 
+     * @return ReturnMsg 接口返回消息
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 无
-     * @param ReturnMsg 无
+     * Set 接口返回消息
+     * @param ReturnMsg 接口返回消息
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 无 
-     * @return ReturnCode 无
+     * Get 返回码；0为请求成功 
+     * @return ReturnCode 返回码；0为请求成功
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 无
-     * @param ReturnCode 无
+     * Set 返回码；0为请求成功
+     * @param ReturnCode 返回码；0为请求成功
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

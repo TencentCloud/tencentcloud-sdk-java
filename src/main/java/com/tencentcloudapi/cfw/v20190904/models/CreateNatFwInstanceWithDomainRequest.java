@@ -72,7 +72,7 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
     private String ZoneBak;
 
     /**
-    * 异地灾备 1：使用异地灾备；0：不使用异地灾备
+    * 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
     */
     @SerializedName("CrossAZone")
     @Expose
@@ -205,16 +205,16 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get 异地灾备 1：使用异地灾备；0：不使用异地灾备 
-     * @return CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备
+     * Get 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备 
+     * @return CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
      */
     public Long getCrossAZone() {
         return this.CrossAZone;
     }
 
     /**
-     * Set 异地灾备 1：使用异地灾备；0：不使用异地灾备
-     * @param CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备
+     * Set 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+     * @param CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
      */
     public void setCrossAZone(Long CrossAZone) {
         this.CrossAZone = CrossAZone;

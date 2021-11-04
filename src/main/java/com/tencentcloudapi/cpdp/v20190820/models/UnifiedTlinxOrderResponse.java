@@ -23,19 +23,19 @@ import java.util.HashMap;
 public class UnifiedTlinxOrderResponse extends AbstractModel{
 
     /**
-    * 业务系统返回码
-    */
-    @SerializedName("ErrCode")
-    @Expose
-    private String ErrCode;
-
-    /**
     * 业务系统返回消息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMessage")
     @Expose
     private String ErrMessage;
+
+    /**
+    * 业务系统返回码
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private String ErrCode;
 
     /**
     * 统一下单响应对象
@@ -51,22 +51,6 @@ public class UnifiedTlinxOrderResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 业务系统返回码 
-     * @return ErrCode 业务系统返回码
-     */
-    public String getErrCode() {
-        return this.ErrCode;
-    }
-
-    /**
-     * Set 业务系统返回码
-     * @param ErrCode 业务系统返回码
-     */
-    public void setErrCode(String ErrCode) {
-        this.ErrCode = ErrCode;
-    }
 
     /**
      * Get 业务系统返回消息
@@ -86,6 +70,22 @@ public class UnifiedTlinxOrderResponse extends AbstractModel{
      */
     public void setErrMessage(String ErrMessage) {
         this.ErrMessage = ErrMessage;
+    }
+
+    /**
+     * Get 业务系统返回码 
+     * @return ErrCode 业务系统返回码
+     */
+    public String getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set 业务系统返回码
+     * @param ErrCode 业务系统返回码
+     */
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
     }
 
     /**
@@ -132,11 +132,11 @@ public class UnifiedTlinxOrderResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UnifiedTlinxOrderResponse(UnifiedTlinxOrderResponse source) {
-        if (source.ErrCode != null) {
-            this.ErrCode = new String(source.ErrCode);
-        }
         if (source.ErrMessage != null) {
             this.ErrMessage = new String(source.ErrMessage);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
         }
         if (source.Result != null) {
             this.Result = new PayOrderResult(source.Result);
@@ -151,8 +151,8 @@ public class UnifiedTlinxOrderResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
