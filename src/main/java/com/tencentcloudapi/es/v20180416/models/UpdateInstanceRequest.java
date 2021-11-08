@@ -204,6 +204,34 @@ public class UpdateInstanceRequest extends AbstractModel{
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
+    * 切换到新网络架构
+    */
+    @SerializedName("SwitchPrivateLink")
+    @Expose
+    private String SwitchPrivateLink;
+
+    /**
+    * 启用Cerebro
+    */
+    @SerializedName("EnableCerebro")
+    @Expose
+    private Boolean EnableCerebro;
+
+    /**
+    * Cerebro公网访问状态
+    */
+    @SerializedName("CerebroPublicAccess")
+    @Expose
+    private String CerebroPublicAccess;
+
+    /**
+    * Cerebro内网访问状态
+    */
+    @SerializedName("CerebroPrivateAccess")
+    @Expose
+    private String CerebroPrivateAccess;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -627,6 +655,70 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.WebNodeTypeInfo = WebNodeTypeInfo;
     }
 
+    /**
+     * Get 切换到新网络架构 
+     * @return SwitchPrivateLink 切换到新网络架构
+     */
+    public String getSwitchPrivateLink() {
+        return this.SwitchPrivateLink;
+    }
+
+    /**
+     * Set 切换到新网络架构
+     * @param SwitchPrivateLink 切换到新网络架构
+     */
+    public void setSwitchPrivateLink(String SwitchPrivateLink) {
+        this.SwitchPrivateLink = SwitchPrivateLink;
+    }
+
+    /**
+     * Get 启用Cerebro 
+     * @return EnableCerebro 启用Cerebro
+     */
+    public Boolean getEnableCerebro() {
+        return this.EnableCerebro;
+    }
+
+    /**
+     * Set 启用Cerebro
+     * @param EnableCerebro 启用Cerebro
+     */
+    public void setEnableCerebro(Boolean EnableCerebro) {
+        this.EnableCerebro = EnableCerebro;
+    }
+
+    /**
+     * Get Cerebro公网访问状态 
+     * @return CerebroPublicAccess Cerebro公网访问状态
+     */
+    public String getCerebroPublicAccess() {
+        return this.CerebroPublicAccess;
+    }
+
+    /**
+     * Set Cerebro公网访问状态
+     * @param CerebroPublicAccess Cerebro公网访问状态
+     */
+    public void setCerebroPublicAccess(String CerebroPublicAccess) {
+        this.CerebroPublicAccess = CerebroPublicAccess;
+    }
+
+    /**
+     * Get Cerebro内网访问状态 
+     * @return CerebroPrivateAccess Cerebro内网访问状态
+     */
+    public String getCerebroPrivateAccess() {
+        return this.CerebroPrivateAccess;
+    }
+
+    /**
+     * Set Cerebro内网访问状态
+     * @param CerebroPrivateAccess Cerebro内网访问状态
+     */
+    public void setCerebroPrivateAccess(String CerebroPrivateAccess) {
+        this.CerebroPrivateAccess = CerebroPrivateAccess;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -716,6 +808,18 @@ public class UpdateInstanceRequest extends AbstractModel{
         if (source.WebNodeTypeInfo != null) {
             this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
         }
+        if (source.SwitchPrivateLink != null) {
+            this.SwitchPrivateLink = new String(source.SwitchPrivateLink);
+        }
+        if (source.EnableCerebro != null) {
+            this.EnableCerebro = new Boolean(source.EnableCerebro);
+        }
+        if (source.CerebroPublicAccess != null) {
+            this.CerebroPublicAccess = new String(source.CerebroPublicAccess);
+        }
+        if (source.CerebroPrivateAccess != null) {
+            this.CerebroPrivateAccess = new String(source.CerebroPrivateAccess);
+        }
     }
 
 
@@ -748,6 +852,10 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+        this.setParamSimple(map, prefix + "SwitchPrivateLink", this.SwitchPrivateLink);
+        this.setParamSimple(map, prefix + "EnableCerebro", this.EnableCerebro);
+        this.setParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
+        this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
 
     }
 }

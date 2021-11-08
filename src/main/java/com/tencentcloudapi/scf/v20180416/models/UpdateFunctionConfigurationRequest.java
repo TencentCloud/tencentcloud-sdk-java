@@ -149,6 +149,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private Long InitTimeout;
 
     /**
+    * HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+    */
+    @SerializedName("ProtocolParams")
+    @Expose
+    private ProtocolParams ProtocolParams;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -436,6 +443,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.InitTimeout = InitTimeout;
     }
 
+    /**
+     * Get HTTP函数配置ProtocolType访问协议，当前协议可配置的参数 
+     * @return ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+     */
+    public ProtocolParams getProtocolParams() {
+        return this.ProtocolParams;
+    }
+
+    /**
+     * Set HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+     * @param ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+     */
+    public void setProtocolParams(ProtocolParams ProtocolParams) {
+        this.ProtocolParams = ProtocolParams;
+    }
+
     public UpdateFunctionConfigurationRequest() {
     }
 
@@ -501,6 +524,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         if (source.InitTimeout != null) {
             this.InitTimeout = new Long(source.InitTimeout);
         }
+        if (source.ProtocolParams != null) {
+            this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
+        }
     }
 
 
@@ -526,6 +552,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+        this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
 
     }
 }

@@ -80,7 +80,7 @@ public class DescribeCCTrendResponse extends AbstractModel{
     private String Id;
 
     /**
-    * 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+    * 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
     */
     @SerializedName("MetricName")
     @Expose
@@ -226,16 +226,16 @@ public class DescribeCCTrendResponse extends AbstractModel{
     }
 
     /**
-     * Get 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))] 
-     * @return MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+     * Get 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)] 
+     * @return MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
-     * @param MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+     * Set 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
+     * @param MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

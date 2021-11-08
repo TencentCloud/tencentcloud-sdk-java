@@ -31,6 +31,7 @@ public class Template extends AbstractModel{
 
     /**
     * 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+注意：参数值不能是html等复杂类型的数据。
 示例：{"name":"xxx","age":"xx"}
     */
     @SerializedName("TemplateData")
@@ -55,8 +56,10 @@ public class Template extends AbstractModel{
 
     /**
      * Get 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+注意：参数值不能是html等复杂类型的数据。
 示例：{"name":"xxx","age":"xx"} 
      * @return TemplateData 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+注意：参数值不能是html等复杂类型的数据。
 示例：{"name":"xxx","age":"xx"}
      */
     public String getTemplateData() {
@@ -65,8 +68,10 @@ public class Template extends AbstractModel{
 
     /**
      * Set 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+注意：参数值不能是html等复杂类型的数据。
 示例：{"name":"xxx","age":"xx"}
      * @param TemplateData 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+注意：参数值不能是html等复杂类型的数据。
 示例：{"name":"xxx","age":"xx"}
      */
     public void setTemplateData(String TemplateData) {

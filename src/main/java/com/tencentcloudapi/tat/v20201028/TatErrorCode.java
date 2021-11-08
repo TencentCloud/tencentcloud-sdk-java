@@ -48,6 +48,9 @@ public enum TatErrorCode {
     // 不合法的执行任务ID。
      INVALIDPARAMETERVALUE_INVALIDINVOCATIONTASKID("InvalidParameterValue.InvalidInvocationTaskId"),
      
+    // InvokerId 无效。
+     INVALIDPARAMETERVALUE_INVALIDINVOKERID("InvalidParameterValue.InvalidInvokerId"),
+     
     // 命令执行路径不合法。
      INVALIDPARAMETERVALUE_INVALIDWORKINGDIRECTORY("InvalidParameterValue.InvalidWorkingDirectory"),
      

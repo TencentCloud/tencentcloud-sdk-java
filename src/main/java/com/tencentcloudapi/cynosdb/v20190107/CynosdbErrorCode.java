@@ -42,6 +42,9 @@ public enum CynosdbErrorCode {
     // 获取VPC失败。
      INTERNALERROR_GETVPCFAILED("InternalError.GetVpcFailed"),
      
+    // http请求执行异常。
+     INTERNALERROR_INTERNALHTTPSERVERERROR("InternalError.InternalHttpServerError"),
+     
     // 安全组查询实例失败。
      INTERNALERROR_LISTINSTANCEFAILED("InternalError.ListInstanceFailed"),
      

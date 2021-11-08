@@ -234,6 +234,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
+    * 创建https集群，默认是http
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -729,6 +736,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.WebNodeTypeInfo = WebNodeTypeInfo;
     }
 
+    /**
+     * Get 创建https集群，默认是http 
+     * @return Protocol 创建https集群，默认是http
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 创建https集群，默认是http
+     * @param Protocol 创建https集群，默认是http
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -836,6 +859,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.WebNodeTypeInfo != null) {
             this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -872,6 +898,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

@@ -61,10 +61,7 @@ public enum DtsErrorCode {
      UNAUTHORIZEDOPERATION_NOTENOUGHPRIVILEGES("UnauthorizedOperation.NotEnoughPrivileges"),
      
     // 操作不支持。
-     UNSUPPORTEDOPERATION("UnsupportedOperation"),
-     
-    // 当前实例类型不支持该操作。
-     UNSUPPORTEDOPERATION_ACTIONNOTSUPPORT("UnsupportedOperation.ActionNotSupport");
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private DtsErrorCode (String value){

@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSyncCheckJobResponse extends AbstractModel{
+public class ProtocolParams extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * WebSockets协议支持的参数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RequestId")
+    @SerializedName("WSParams")
     @Expose
-    private String RequestId;
+    private WSParams WSParams;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get WebSockets协议支持的参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WSParams WebSockets协议支持的参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public WSParams getWSParams() {
+        return this.WSParams;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set WebSockets协议支持的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WSParams WebSockets协议支持的参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setWSParams(WSParams WSParams) {
+        this.WSParams = WSParams;
     }
 
-    public CreateSyncCheckJobResponse() {
+    public ProtocolParams() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSyncCheckJobResponse(CreateSyncCheckJobResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public ProtocolParams(ProtocolParams source) {
+        if (source.WSParams != null) {
+            this.WSParams = new WSParams(source.WSParams);
         }
     }
 
@@ -63,7 +68,7 @@ public class CreateSyncCheckJobResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamObj(map, prefix + "WSParams.", this.WSParams);
 
     }
 }

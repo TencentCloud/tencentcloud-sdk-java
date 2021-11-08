@@ -45,6 +45,14 @@ public class UsageDetail extends AbstractModel{
     private String Date;
 
     /**
+    * 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyOrganizationName")
+    @Expose
+    private String ProxyOrganizationName;
+
+    /**
      * Get 渠道侧合作企业唯一标识 
      * @return ProxyOrganizationOpenId 渠道侧合作企业唯一标识
      */
@@ -96,6 +104,26 @@ public class UsageDetail extends AbstractModel{
         this.Date = Date;
     }
 
+    /**
+     * Get 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyOrganizationName 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProxyOrganizationName() {
+        return this.ProxyOrganizationName;
+    }
+
+    /**
+     * Set 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyOrganizationName 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyOrganizationName(String ProxyOrganizationName) {
+        this.ProxyOrganizationName = ProxyOrganizationName;
+    }
+
     public UsageDetail() {
     }
 
@@ -113,6 +141,9 @@ public class UsageDetail extends AbstractModel{
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
+        if (source.ProxyOrganizationName != null) {
+            this.ProxyOrganizationName = new String(source.ProxyOrganizationName);
+        }
     }
 
 
@@ -123,6 +154,7 @@ public class UsageDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
         this.setParamSimple(map, prefix + "Usage", this.Usage);
         this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
 
     }
 }

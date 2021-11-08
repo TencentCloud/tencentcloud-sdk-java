@@ -46,7 +46,7 @@ public class BatchSendEmailRequest extends AbstractModel{
     private String Subject;
 
     /**
-    * 任务类型 1即时 2 定时 3 周期
+    * 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
     */
     @SerializedName("TaskType")
     @Expose
@@ -151,16 +151,16 @@ public class BatchSendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务类型 1即时 2 定时 3 周期 
-     * @return TaskType 任务类型 1即时 2 定时 3 周期
+     * Get 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送 
+     * @return TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型 1即时 2 定时 3 周期
-     * @param TaskType 任务类型 1即时 2 定时 3 周期
+     * Set 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
+     * @param TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

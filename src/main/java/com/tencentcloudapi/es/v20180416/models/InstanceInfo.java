@@ -443,6 +443,22 @@ public class InstanceInfo extends AbstractModel{
     private String Jdk;
 
     /**
+    * 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * 安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1438,6 +1454,46 @@ public class InstanceInfo extends AbstractModel{
         this.Jdk = Jdk;
     }
 
+    /**
+     * Get 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get 安全组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroups 安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * Set 安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroups 安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1626,6 +1682,15 @@ public class InstanceInfo extends AbstractModel{
         if (source.Jdk != null) {
             this.Jdk = new String(source.Jdk);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.SecurityGroups != null) {
+            this.SecurityGroups = new String[source.SecurityGroups.length];
+            for (int i = 0; i < source.SecurityGroups.length; i++) {
+                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
+            }
+        }
     }
 
 
@@ -1690,6 +1755,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         this.setParamSimple(map, prefix + "Jdk", this.Jdk);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }

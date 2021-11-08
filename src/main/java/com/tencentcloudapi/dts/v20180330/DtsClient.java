@@ -146,48 +146,6 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *在调用 StartSyncJob 接口启动灾备同步前, 必须调用本接口创建校验, 且校验成功后才能开始同步数据. 校验的结果可以通过 DescribeSyncCheckJob 查看.
-校验成功后才能启动同步.
-     * @param req CreateSyncCheckJobRequest
-     * @return CreateSyncCheckJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSyncCheckJobResponse CreateSyncCheckJob(CreateSyncCheckJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSyncCheckJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSyncCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSyncCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口(CreateSyncJob)用于创建灾备同步任务。
-创建同步任务后，可以通过 CreateSyncCheckJob 接口发起校验任务。校验成功后才可以通过 StartSyncJob 接口启动同步任务。
-     * @param req CreateSyncJobRequest
-     * @return CreateSyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSyncJobResponse CreateSyncJob(CreateSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DeleteMigrationJob）用于删除数据迁移任务。当通过DescribeMigrateJobs接口查询到任务的状态为：检验中（status=3）、运行中（status=7）、准备完成（status=8）、撤销中（status=11）或者完成中（status=12）时，不允许删除任务。
      * @param req DeleteMigrateJobRequest
      * @return DeleteMigrateJobResponse
@@ -200,26 +158,6 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrateJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *删除灾备同步任务 （运行中的同步任务不能删除）。
-     * @param req DeleteSyncJobRequest
-     * @return DeleteSyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteSyncJobResponse DeleteSyncJob(DeleteSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSyncJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -368,26 +306,6 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSyncCheckJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSyncCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询在迁移平台发起的灾备同步任务
-     * @param req DescribeSyncJobsRequest
-     * @return DescribeSyncJobsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSyncJobsResponse DescribeSyncJobs(DescribeSyncJobsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSyncJobsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSyncJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSyncJobs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -622,26 +540,6 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *创建的灾备同步任务在通过 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校验成功后，可以调用该接口启动同步
-     * @param req StartSyncJobRequest
-     * @return StartSyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartSyncJobResponse StartSyncJob(StartSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartSyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（StopMigrateJob）用于撤销数据迁移任务。
 在迁移过程中允许调用该接口撤销迁移, 撤销迁移的任务会失败。通过DescribeMigrateJobs接口查询到任务状态为运行中（status=7）或准备完成（status=8）时，才能撤销数据迁移任务。
      * @param req StopMigrateJobRequest
@@ -655,26 +553,6 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *将灾备升级为主实例，停止从原来所属主实例的同步，断开主备关系。
-     * @param req SwitchDrToMasterRequest
-     * @return SwitchDrToMasterResponse
-     * @throws TencentCloudSDKException
-     */
-    public SwitchDrToMasterResponse SwitchDrToMaster(SwitchDrToMasterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<SwitchDrToMasterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SwitchDrToMaster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
