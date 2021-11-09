@@ -539,6 +539,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询一键部署任务 （特定接口：外部查询使用）
+     * @param req DescribeCloudBaseRunOneClickTaskExternalRequest
+     * @return DescribeCloudBaseRunOneClickTaskExternalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternal(DescribeCloudBaseRunOneClickTaskExternalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunOneClickTaskExternalResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunOneClickTaskExternalResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunOneClickTaskExternal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询服务、版本和操作类型
      * @param req DescribeCloudBaseRunOperationTypesRequest
      * @return DescribeCloudBaseRunOperationTypesResponse
@@ -631,6 +651,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunServerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCloudBaseRunServer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询微信云托管服务域名
+     * @param req DescribeCloudBaseRunServerDomainNameRequest
+     * @return DescribeCloudBaseRunServerDomainNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunServerDomainNameResponse DescribeCloudBaseRunServerDomainName(DescribeCloudBaseRunServerDomainNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunServerDomainNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunServerDomainNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunServerDomainName");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

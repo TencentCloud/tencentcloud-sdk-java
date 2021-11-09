@@ -148,6 +148,14 @@ disabled：未启用
     private Long Region;
 
     /**
+    * 流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigId")
+    @Expose
+    private Long ConfigId;
+
+    /**
      * Get 流量包 Id 
      * @return Id 流量包 Id
      */
@@ -455,6 +463,26 @@ disabled：未启用
         this.Region = Region;
     }
 
+    /**
+     * Get 流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigId 流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigId() {
+        return this.ConfigId;
+    }
+
+    /**
+     * Set 流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigId 流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigId(Long ConfigId) {
+        this.ConfigId = ConfigId;
+    }
+
     public TrafficPackage() {
     }
 
@@ -511,6 +539,9 @@ disabled：未启用
         if (source.Region != null) {
             this.Region = new Long(source.Region);
         }
+        if (source.ConfigId != null) {
+            this.ConfigId = new Long(source.ConfigId);
+        }
     }
 
 
@@ -534,6 +565,7 @@ disabled：未启用
         this.setParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
         this.setParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
 
     }
 }

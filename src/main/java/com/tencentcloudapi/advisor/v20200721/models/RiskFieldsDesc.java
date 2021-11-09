@@ -48,6 +48,14 @@ tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"
     private String FieldType;
 
     /**
+    * 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FieldDict")
+    @Expose
+    private KeyValue [] FieldDict;
+
+    /**
      * Get 字段ID 
      * @return Field 字段ID
      */
@@ -111,6 +119,26 @@ tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"
         this.FieldType = FieldType;
     }
 
+    /**
+     * Get 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FieldDict 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KeyValue [] getFieldDict() {
+        return this.FieldDict;
+    }
+
+    /**
+     * Set 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FieldDict 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFieldDict(KeyValue [] FieldDict) {
+        this.FieldDict = FieldDict;
+    }
+
     public RiskFieldsDesc() {
     }
 
@@ -128,6 +156,12 @@ tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"
         if (source.FieldType != null) {
             this.FieldType = new String(source.FieldType);
         }
+        if (source.FieldDict != null) {
+            this.FieldDict = new KeyValue[source.FieldDict.length];
+            for (int i = 0; i < source.FieldDict.length; i++) {
+                this.FieldDict[i] = new KeyValue(source.FieldDict[i]);
+            }
+        }
     }
 
 
@@ -138,6 +172,7 @@ tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"
         this.setParamSimple(map, prefix + "Field", this.Field);
         this.setParamSimple(map, prefix + "FieldName", this.FieldName);
         this.setParamSimple(map, prefix + "FieldType", this.FieldType);
+        this.setParamArrayObj(map, prefix + "FieldDict.", this.FieldDict);
 
     }
 }

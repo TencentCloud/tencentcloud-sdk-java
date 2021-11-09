@@ -13,51 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserToGroupRequest extends AbstractModel{
+public class DescribeCloudBaseRunOneClickTaskExternalRequest extends AbstractModel{
 
     /**
-    * 添加的子用户 UIN/UID 和用户组 ID 关联关系
+    * 外部任务Id 最长64字节
     */
-    @SerializedName("Info")
+    @SerializedName("ExternalId")
     @Expose
-    private GroupIdOfUidInfo [] Info;
+    private String ExternalId;
 
     /**
-     * Get 添加的子用户 UIN/UID 和用户组 ID 关联关系 
-     * @return Info 添加的子用户 UIN/UID 和用户组 ID 关联关系
+     * Get 外部任务Id 最长64字节 
+     * @return ExternalId 外部任务Id 最长64字节
      */
-    public GroupIdOfUidInfo [] getInfo() {
-        return this.Info;
+    public String getExternalId() {
+        return this.ExternalId;
     }
 
     /**
-     * Set 添加的子用户 UIN/UID 和用户组 ID 关联关系
-     * @param Info 添加的子用户 UIN/UID 和用户组 ID 关联关系
+     * Set 外部任务Id 最长64字节
+     * @param ExternalId 外部任务Id 最长64字节
      */
-    public void setInfo(GroupIdOfUidInfo [] Info) {
-        this.Info = Info;
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
     }
 
-    public AddUserToGroupRequest() {
+    public DescribeCloudBaseRunOneClickTaskExternalRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddUserToGroupRequest(AddUserToGroupRequest source) {
-        if (source.Info != null) {
-            this.Info = new GroupIdOfUidInfo[source.Info.length];
-            for (int i = 0; i < source.Info.length; i++) {
-                this.Info[i] = new GroupIdOfUidInfo(source.Info[i]);
-            }
+    public DescribeCloudBaseRunOneClickTaskExternalRequest(DescribeCloudBaseRunOneClickTaskExternalRequest source) {
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
         }
     }
 
@@ -66,7 +63,7 @@ public class AddUserToGroupRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Info.", this.Info);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
 
     }
 }

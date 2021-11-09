@@ -289,31 +289,6 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于在通过 CreateSyncCheckJob 接口创建灾备同步校验任务后，获取校验的结果。能查询到当前校验的状态和进度。
-若通过校验, 则可调用 StartSyncJob 启动同步任务。
-若未通过校验, 则会返回校验失败的原因。 可通过 ModifySyncJob 修改配置，然后再次发起校验。
-校验任务需要大概约30秒，当返回的 Status 不为 finished 时表示尚未校验完成，需要轮询该接口。
-如果 Status=finished 且 CheckFlag=1 时表示校验成功。
-如果 Status=finished 且 CheckFlag !=1 时表示校验失败。
-     * @param req DescribeSyncCheckJobRequest
-     * @return DescribeSyncCheckJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSyncCheckJobResponse DescribeSyncCheckJob(DescribeSyncCheckJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSyncCheckJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSyncCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSyncCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（IsolateSubscribe）用于隔离小时计费的订阅实例。调用后，订阅实例将不能使用，同时停止计费。
      * @param req IsolateSubscribeRequest
      * @return IsolateSubscribeResponse
@@ -449,28 +424,6 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeVipVportResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySubscribeVipVport");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *修改灾备同步任务. 
-当同步任务处于下述状态时, 允许调用本接口: 同步任务创建中, 创建完成, 校验成功, 校验失败. 
-源实例和目标实例信息不允许修改，可以修改任务名、需要同步的库表。
-     * @param req ModifySyncJobRequest
-     * @return ModifySyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifySyncJobResponse ModifySyncJob(ModifySyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySyncJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

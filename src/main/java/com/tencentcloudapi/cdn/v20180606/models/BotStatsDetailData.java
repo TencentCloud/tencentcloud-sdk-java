@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySyncJobResponse extends AbstractModel{
+public class BotStatsDetailData extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 时间
     */
-    @SerializedName("RequestId")
+    @SerializedName("Time")
     @Expose
-    private String RequestId;
+    private String Time;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 数据值
+    */
+    @SerializedName("Value")
+    @Expose
+    private Long Value;
+
+    /**
+     * Get 时间 
+     * @return Time 时间
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getTime() {
+        return this.Time;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 时间
+     * @param Time 时间
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setTime(String Time) {
+        this.Time = Time;
     }
 
-    public ModifySyncJobResponse() {
+    /**
+     * Get 数据值 
+     * @return Value 数据值
+     */
+    public Long getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 数据值
+     * @param Value 数据值
+     */
+    public void setValue(Long Value) {
+        this.Value = Value;
+    }
+
+    public BotStatsDetailData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifySyncJobResponse(ModifySyncJobResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public BotStatsDetailData(BotStatsDetailData source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class ModifySyncJobResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

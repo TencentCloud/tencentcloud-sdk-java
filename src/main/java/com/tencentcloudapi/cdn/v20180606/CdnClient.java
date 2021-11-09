@@ -767,6 +767,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *获取BOT统计数据列表
+     * @param req DescribeScdnBotDataRequest
+     * @return DescribeScdnBotDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScdnBotDataResponse DescribeScdnBotData(DescribeScdnBotDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScdnBotDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScdnBotDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScdnBotData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询BOT会话记录列表
      * @param req DescribeScdnBotRecordsRequest
      * @return DescribeScdnBotRecordsResponse

@@ -31,7 +31,7 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     private String HostName;
 
     /**
-    * 危害等级
+    * 危害等级：1-低位，2-中危，3-高危，4-严重
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
@@ -47,7 +47,7 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     private String [] TagList;
 
     /**
-    * 状态
+    * 状态：0-未通过，1-忽略，3-已通过，5-检测中
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -55,7 +55,7 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * 最后检测事件
+    * 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
@@ -99,9 +99,9 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     }
 
     /**
-     * Get 危害等级
+     * Get 危害等级：1-低位，2-中危，3-高危，4-严重
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Level 危害等级
+     * @return Level 危害等级：1-低位，2-中危，3-高危，4-严重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
@@ -109,9 +109,9 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     }
 
     /**
-     * Set 危害等级
+     * Set 危害等级：1-低位，2-中危，3-高危，4-严重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Level 危害等级
+     * @param Level 危害等级：1-低位，2-中危，3-高危，4-严重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
@@ -139,9 +139,9 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     }
 
     /**
-     * Get 状态
+     * Get 状态：0-未通过，1-忽略，3-已通过，5-检测中
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 状态：0-未通过，1-忽略，3-已通过，5-检测中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -149,9 +149,9 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     }
 
     /**
-     * Set 状态
+     * Set 状态：0-未通过，1-忽略，3-已通过，5-检测中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 状态：0-未通过，1-忽略，3-已通过，5-检测中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -159,9 +159,9 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     }
 
     /**
-     * Get 最后检测事件
+     * Get 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastScanTime 最后检测事件
+     * @return LastScanTime 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
@@ -169,9 +169,9 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel{
     }
 
     /**
-     * Set 最后检测事件
+     * Set 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastScanTime 最后检测事件
+     * @param LastScanTime 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {

@@ -39,6 +39,13 @@ public class DetectProductBetaRequest extends AbstractModel{
     private String ImageBase64;
 
     /**
+    * 是否需要百科信息 1：是，0: 否，默认是0
+    */
+    @SerializedName("NeedLemma")
+    @Expose
+    private Long NeedLemma;
+
+    /**
      * Get 图片限制：内测版仅支持jpg、jpeg，图片大小不超过1M，分辨率在25万到100万之间。 
 建议先对图片进行压缩，以便提升处理速度。 
      * @return ImageUrl 图片限制：内测版仅支持jpg、jpeg，图片大小不超过1M，分辨率在25万到100万之间。 
@@ -78,6 +85,22 @@ public class DetectProductBetaRequest extends AbstractModel{
         this.ImageBase64 = ImageBase64;
     }
 
+    /**
+     * Get 是否需要百科信息 1：是，0: 否，默认是0 
+     * @return NeedLemma 是否需要百科信息 1：是，0: 否，默认是0
+     */
+    public Long getNeedLemma() {
+        return this.NeedLemma;
+    }
+
+    /**
+     * Set 是否需要百科信息 1：是，0: 否，默认是0
+     * @param NeedLemma 是否需要百科信息 1：是，0: 否，默认是0
+     */
+    public void setNeedLemma(Long NeedLemma) {
+        this.NeedLemma = NeedLemma;
+    }
+
     public DetectProductBetaRequest() {
     }
 
@@ -92,6 +115,9 @@ public class DetectProductBetaRequest extends AbstractModel{
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
         }
+        if (source.NeedLemma != null) {
+            this.NeedLemma = new Long(source.NeedLemma);
+        }
     }
 
 
@@ -101,6 +127,7 @@ public class DetectProductBetaRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+        this.setParamSimple(map, prefix + "NeedLemma", this.NeedLemma);
 
     }
 }

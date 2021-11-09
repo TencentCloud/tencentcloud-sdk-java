@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.advisor.v20200721.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSyncCheckJobRequest extends AbstractModel{
+public class KeyValue extends AbstractModel{
 
     /**
-    * 要查询的灾备同步任务ID
+    * 键名
     */
-    @SerializedName("JobId")
+    @SerializedName("Key")
     @Expose
-    private String JobId;
+    private String Key;
 
     /**
-     * Get 要查询的灾备同步任务ID 
-     * @return JobId 要查询的灾备同步任务ID
+    * 键名对应值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 键名 
+     * @return Key 键名
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 要查询的灾备同步任务ID
-     * @param JobId 要查询的灾备同步任务ID
+     * Set 键名
+     * @param Key 键名
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DescribeSyncCheckJobRequest() {
+    /**
+     * Get 键名对应值 
+     * @return Value 键名对应值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 键名对应值
+     * @param Value 键名对应值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public KeyValue() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSyncCheckJobRequest(DescribeSyncCheckJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public KeyValue(KeyValue source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class DescribeSyncCheckJobRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

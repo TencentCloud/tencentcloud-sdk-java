@@ -31,7 +31,7 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel{
     private String LatestScanTime;
 
     /**
-    * 是否全部服务器
+    * 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGlobal")
@@ -90,9 +90,9 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否全部服务器
+     * Get 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsGlobal 是否全部服务器
+     * @return IsGlobal 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsGlobal() {
@@ -100,9 +100,9 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否全部服务器
+     * Set 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsGlobal 是否全部服务器
+     * @param IsGlobal 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGlobal(Long IsGlobal) {

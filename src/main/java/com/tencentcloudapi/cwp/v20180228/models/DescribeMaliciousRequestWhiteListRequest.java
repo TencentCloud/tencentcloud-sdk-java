@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeMaliciousRequestWhiteListRequest extends AbstractModel{
 
     /**
-    * 分页参数
+    * 返回数量，默认为10，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页参数
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -46,32 +46,32 @@ public class DescribeMaliciousRequestWhiteListRequest extends AbstractModel{
     private Filters [] Filters;
 
     /**
-     * Get 分页参数 
-     * @return Limit 分页参数
+     * Get 返回数量，默认为10，最大值为100。 
+     * @return Limit 返回数量，默认为10，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数
-     * @param Limit 分页参数
+     * Set 返回数量，默认为10，最大值为100。
+     * @param Limit 返回数量，默认为10，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页参数 
-     * @return Offset 分页参数
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数
-     * @param Offset 分页参数
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

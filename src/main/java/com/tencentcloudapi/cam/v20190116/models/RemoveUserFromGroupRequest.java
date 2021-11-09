@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class RemoveUserFromGroupRequest extends AbstractModel{
 
     /**
-    * 要删除的用户 UID和用户组 ID对应数组
+    * 要删除的用户 UIN/UID和用户组 ID对应数组
     */
     @SerializedName("Info")
     @Expose
     private GroupIdOfUidInfo [] Info;
 
     /**
-     * Get 要删除的用户 UID和用户组 ID对应数组 
-     * @return Info 要删除的用户 UID和用户组 ID对应数组
+     * Get 要删除的用户 UIN/UID和用户组 ID对应数组 
+     * @return Info 要删除的用户 UIN/UID和用户组 ID对应数组
      */
     public GroupIdOfUidInfo [] getInfo() {
         return this.Info;
     }
 
     /**
-     * Set 要删除的用户 UID和用户组 ID对应数组
-     * @param Info 要删除的用户 UID和用户组 ID对应数组
+     * Set 要删除的用户 UIN/UID和用户组 ID对应数组
+     * @param Info 要删除的用户 UIN/UID和用户组 ID对应数组
      */
     public void setInfo(GroupIdOfUidInfo [] Info) {
         this.Info = Info;
