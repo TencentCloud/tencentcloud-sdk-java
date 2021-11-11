@@ -84,7 +84,7 @@ IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时�
 Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
 
 Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≤50）;
 
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
@@ -241,7 +241,7 @@ IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时�
 Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
 
 Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≤50）;
 
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
@@ -257,7 +257,7 @@ IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时�
 Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
 
 Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≤50）;
 
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
@@ -279,7 +279,7 @@ IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时�
 Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
 
 Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≤50）;
 
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
@@ -295,7 +295,7 @@ IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时�
 Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
 
 Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≤50）;
 
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，

@@ -37,7 +37,7 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+    * 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
     */
     @SerializedName("EndTime")
     @Expose
@@ -51,28 +51,28 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
-    * 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
+    * 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序类型。升序asc、降序desc。
+    * 排序类型。升序asc、降序desc。默认desc。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * 分页大小。取值范围[1,100]。
+    * 分页大小。取值范围[1,100]。默认50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移。取值范围[0,INF)。
+    * 分页偏移。取值范围[0,INF)。默认0。
     */
     @SerializedName("Offset")
     @Expose
@@ -111,16 +111,16 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。 
-     * @return EndTime 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * Get 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。 
+     * @return EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
-     * @param EndTime 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * Set 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @param EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -143,64 +143,64 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。 
-     * @return OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
+     * Get 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。 
+     * @return OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
-     * @param OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
+     * Set 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+     * @param OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序类型。升序asc、降序desc。 
-     * @return OrderByType 排序类型。升序asc、降序desc。
+     * Get 排序类型。升序asc、降序desc。默认desc。 
+     * @return OrderByType 排序类型。升序asc、降序desc。默认desc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序类型。升序asc、降序desc。
-     * @param OrderByType 排序类型。升序asc、降序desc。
+     * Set 排序类型。升序asc、降序desc。默认desc。
+     * @param OrderByType 排序类型。升序asc、降序desc。默认desc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get 分页大小。取值范围[1,100]。 
-     * @return Limit 分页大小。取值范围[1,100]。
+     * Get 分页大小。取值范围[1,100]。默认50。 
+     * @return Limit 分页大小。取值范围[1,100]。默认50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小。取值范围[1,100]。
-     * @param Limit 分页大小。取值范围[1,100]。
+     * Set 分页大小。取值范围[1,100]。默认50。
+     * @param Limit 分页大小。取值范围[1,100]。默认50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移。取值范围[0,INF)。 
-     * @return Offset 分页偏移。取值范围[0,INF)。
+     * Get 分页偏移。取值范围[0,INF)。默认0。 
+     * @return Offset 分页偏移。取值范围[0,INF)。默认0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移。取值范围[0,INF)。
-     * @param Offset 分页偏移。取值范围[0,INF)。
+     * Set 分页偏移。取值范围[0,INF)。默认0。
+     * @param Offset 分页偏移。取值范围[0,INF)。默认0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -44,7 +44,7 @@ public class DescribeCloudStorageEventsResponse extends AbstractModel{
     private Boolean Listover;
 
     /**
-    * 拉取结果数量
+    * 内部结果数量，并不等同于事件总数。
     */
     @SerializedName("Total")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeCloudStorageEventsResponse extends AbstractModel{
     }
 
     /**
-     * Get 拉取结果数量 
-     * @return Total 拉取结果数量
+     * Get 内部结果数量，并不等同于事件总数。 
+     * @return Total 内部结果数量，并不等同于事件总数。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 拉取结果数量
-     * @param Total 拉取结果数量
+     * Set 内部结果数量，并不等同于事件总数。
+     * @param Total 内部结果数量，并不等同于事件总数。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -37,7 +37,7 @@ public class DescribeSlowQueryListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+    * 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
     */
     @SerializedName("EndTime")
     @Expose
@@ -111,16 +111,16 @@ public class DescribeSlowQueryListRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。 
-     * @return EndTime 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * Get 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。 
+     * @return EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
-     * @param EndTime 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * Set 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @param EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

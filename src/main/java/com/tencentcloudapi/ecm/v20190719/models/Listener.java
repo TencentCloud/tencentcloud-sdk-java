@@ -95,6 +95,14 @@ public class Listener extends AbstractModel{
     private String SessionType;
 
     /**
+    * 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndPort")
+    @Expose
+    private Long EndPort;
+
+    /**
      * Get 负载均衡监听器 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListenerId 负载均衡监听器 ID
@@ -274,6 +282,26 @@ public class Listener extends AbstractModel{
         this.SessionType = SessionType;
     }
 
+    /**
+     * Get 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndPort 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEndPort() {
+        return this.EndPort;
+    }
+
+    /**
+     * Set 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndPort 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndPort(Long EndPort) {
+        this.EndPort = EndPort;
+    }
+
     public Listener() {
     }
 
@@ -309,6 +337,9 @@ public class Listener extends AbstractModel{
         if (source.SessionType != null) {
             this.SessionType = new String(source.SessionType);
         }
+        if (source.EndPort != null) {
+            this.EndPort = new Long(source.EndPort);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamSimple(map, prefix + "EndPort", this.EndPort);
 
     }
 }

@@ -38,6 +38,7 @@ public class RunInstancesRequest extends AbstractModel{
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+ <b>注：本数据结构中的Zone为必填参数。</b>
     */
     @SerializedName("Placement")
     @Expose
@@ -157,7 +158,7 @@ public class RunInstancesRequest extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
-    * 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+    * 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
     */
     @SerializedName("InstanceMarketOptions")
     @Expose
@@ -228,8 +229,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。 
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+ <b>注：本数据结构中的Zone为必填参数。</b> 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+ <b>注：本数据结构中的Zone为必填参数。</b>
      */
     public Placement getPlacement() {
         return this.Placement;
@@ -237,7 +240,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
     /**
      * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+ <b>注：本数据结构中的Zone为必填参数。</b>
      * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+ <b>注：本数据结构中的Zone为必填参数。</b>
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
@@ -504,16 +509,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。 
-     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * Get 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。 
+     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
         return this.InstanceMarketOptions;
     }
 
     /**
-     * Set 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
-     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * Set 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
+     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
         this.InstanceMarketOptions = InstanceMarketOptions;

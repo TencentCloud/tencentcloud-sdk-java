@@ -38,12 +38,13 @@ public class ModifySmsSignRequest extends AbstractModel{
 
     /**
     * 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1，2，3）。
+0：公司，可选 DocumentType 有（0，1）。
 1：APP，可选 DocumentType 有（0，1，2，3，4） 。
 2：网站，可选 DocumentType 有（0，1，2，3，5）。
-3：公众号或者小程序，可选 DocumentType 有（0，1，2，3，6）。
+3：公众号，可选 DocumentType 有（0，1，2，3，8）。
 4：商标，可选 DocumentType 有（7）。
 5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
+6：小程序，可选 DocumentType 有（0，1，2，3，6）。
 注：必须按照对应关系选择证明类型，否则会审核失败。
     */
     @SerializedName("SignType")
@@ -60,7 +61,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图（个人开发网站）。
 6：小程序设置页面截图（个人认证小程序）。
 7：商标注册书。
-注：必选按照 SignType 选择对应的DocumentType。
+8：公众号设置页面截图（个人认证公众号）。
     */
     @SerializedName("DocumentType")
     @Expose
@@ -142,20 +143,22 @@ public class ModifySmsSignRequest extends AbstractModel{
 
     /**
      * Get 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1，2，3）。
+0：公司，可选 DocumentType 有（0，1）。
 1：APP，可选 DocumentType 有（0，1，2，3，4） 。
 2：网站，可选 DocumentType 有（0，1，2，3，5）。
-3：公众号或者小程序，可选 DocumentType 有（0，1，2，3，6）。
+3：公众号，可选 DocumentType 有（0，1，2，3，8）。
 4：商标，可选 DocumentType 有（7）。
 5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
+6：小程序，可选 DocumentType 有（0，1，2，3，6）。
 注：必须按照对应关系选择证明类型，否则会审核失败。 
      * @return SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1，2，3）。
+0：公司，可选 DocumentType 有（0，1）。
 1：APP，可选 DocumentType 有（0，1，2，3，4） 。
 2：网站，可选 DocumentType 有（0，1，2，3，5）。
-3：公众号或者小程序，可选 DocumentType 有（0，1，2，3，6）。
+3：公众号，可选 DocumentType 有（0，1，2，3，8）。
 4：商标，可选 DocumentType 有（7）。
 5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
+6：小程序，可选 DocumentType 有（0，1，2，3，6）。
 注：必须按照对应关系选择证明类型，否则会审核失败。
      */
     public Long getSignType() {
@@ -164,20 +167,22 @@ public class ModifySmsSignRequest extends AbstractModel{
 
     /**
      * Set 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1，2，3）。
+0：公司，可选 DocumentType 有（0，1）。
 1：APP，可选 DocumentType 有（0，1，2，3，4） 。
 2：网站，可选 DocumentType 有（0，1，2，3，5）。
-3：公众号或者小程序，可选 DocumentType 有（0，1，2，3，6）。
+3：公众号，可选 DocumentType 有（0，1，2，3，8）。
 4：商标，可选 DocumentType 有（7）。
 5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
+6：小程序，可选 DocumentType 有（0，1，2，3，6）。
 注：必须按照对应关系选择证明类型，否则会审核失败。
      * @param SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1，2，3）。
+0：公司，可选 DocumentType 有（0，1）。
 1：APP，可选 DocumentType 有（0，1，2，3，4） 。
 2：网站，可选 DocumentType 有（0，1，2，3，5）。
-3：公众号或者小程序，可选 DocumentType 有（0，1，2，3，6）。
+3：公众号，可选 DocumentType 有（0，1，2，3，8）。
 4：商标，可选 DocumentType 有（7）。
 5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
+6：小程序，可选 DocumentType 有（0，1，2，3，6）。
 注：必须按照对应关系选择证明类型，否则会审核失败。
      */
     public void setSignType(Long SignType) {
@@ -194,7 +199,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图（个人开发网站）。
 6：小程序设置页面截图（个人认证小程序）。
 7：商标注册书。
-注：必选按照 SignType 选择对应的DocumentType。 
+8：公众号设置页面截图（个人认证公众号）。 
      * @return DocumentType 证明类型：
 0：三证合一。
 1：企业营业执照。
@@ -204,7 +209,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图（个人开发网站）。
 6：小程序设置页面截图（个人认证小程序）。
 7：商标注册书。
-注：必选按照 SignType 选择对应的DocumentType。
+8：公众号设置页面截图（个人认证公众号）。
      */
     public Long getDocumentType() {
         return this.DocumentType;
@@ -220,7 +225,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图（个人开发网站）。
 6：小程序设置页面截图（个人认证小程序）。
 7：商标注册书。
-注：必选按照 SignType 选择对应的DocumentType。
+8：公众号设置页面截图（个人认证公众号）。
      * @param DocumentType 证明类型：
 0：三证合一。
 1：企业营业执照。
@@ -230,7 +235,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图（个人开发网站）。
 6：小程序设置页面截图（个人认证小程序）。
 7：商标注册书。
-注：必选按照 SignType 选择对应的DocumentType。
+8：公众号设置页面截图（个人认证公众号）。
      */
     public void setDocumentType(Long DocumentType) {
         this.DocumentType = DocumentType;

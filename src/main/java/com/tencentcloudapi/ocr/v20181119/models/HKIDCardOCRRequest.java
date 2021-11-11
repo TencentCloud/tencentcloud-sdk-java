@@ -39,7 +39,7 @@ public class HKIDCardOCRRequest extends AbstractModel{
     /**
     * 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -91,10 +91,10 @@ public class HKIDCardOCRRequest extends AbstractModel{
     /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。 
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。 
      * @return ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
      */
     public String getImageBase64() {
         return this.ImageBase64;
@@ -103,10 +103,10 @@ public class HKIDCardOCRRequest extends AbstractModel{
     /**
      * Set 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
      * @param ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;

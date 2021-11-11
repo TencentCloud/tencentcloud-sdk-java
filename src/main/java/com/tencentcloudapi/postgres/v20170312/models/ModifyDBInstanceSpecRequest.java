@@ -30,14 +30,14 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * 升级后的实例内存大小，单位GiB。
+    * 修改后的实例内存大小，单位GiB。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 升级后的实例磁盘大小，单位GiB。
+    * 修改后的实例磁盘大小，单位GiB。
     */
     @SerializedName("Storage")
     @Expose
@@ -72,14 +72,14 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long SwitchTag;
 
     /**
-    * 切换开始时间。
+    * 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * 切换截止时间。
+    * 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
     */
     @SerializedName("SwitchEndTime")
     @Expose
@@ -102,32 +102,32 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get 升级后的实例内存大小，单位GiB。 
-     * @return Memory 升级后的实例内存大小，单位GiB。
+     * Get 修改后的实例内存大小，单位GiB。 
+     * @return Memory 修改后的实例内存大小，单位GiB。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 升级后的实例内存大小，单位GiB。
-     * @param Memory 升级后的实例内存大小，单位GiB。
+     * Set 修改后的实例内存大小，单位GiB。
+     * @param Memory 修改后的实例内存大小，单位GiB。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 升级后的实例磁盘大小，单位GiB。 
-     * @return Storage 升级后的实例磁盘大小，单位GiB。
+     * Get 修改后的实例磁盘大小，单位GiB。 
+     * @return Storage 修改后的实例磁盘大小，单位GiB。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 升级后的实例磁盘大小，单位GiB。
-     * @param Storage 升级后的实例磁盘大小，单位GiB。
+     * Set 修改后的实例磁盘大小，单位GiB。
+     * @param Storage 修改后的实例磁盘大小，单位GiB。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -198,32 +198,32 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get 切换开始时间。 
-     * @return SwitchStartTime 切换开始时间。
+     * Get 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。 
+     * @return SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set 切换开始时间。
-     * @param SwitchStartTime 切换开始时间。
+     * Set 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
+     * @param SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get 切换截止时间。 
-     * @return SwitchEndTime 切换截止时间。
+     * Get 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。 
+     * @return SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set 切换截止时间。
-     * @param SwitchEndTime 切换截止时间。
+     * Set 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+     * @param SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;

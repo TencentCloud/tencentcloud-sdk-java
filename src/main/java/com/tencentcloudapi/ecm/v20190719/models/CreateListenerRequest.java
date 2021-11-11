@@ -80,6 +80,13 @@ public class CreateListenerRequest extends AbstractModel{
     private String SessionType;
 
     /**
+    * 批量端口段的结束端口，必须和Ports长度一样。
+    */
+    @SerializedName("EndPorts")
+    @Expose
+    private Long [] EndPorts;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -211,6 +218,22 @@ public class CreateListenerRequest extends AbstractModel{
         this.SessionType = SessionType;
     }
 
+    /**
+     * Get 批量端口段的结束端口，必须和Ports长度一样。 
+     * @return EndPorts 批量端口段的结束端口，必须和Ports长度一样。
+     */
+    public Long [] getEndPorts() {
+        return this.EndPorts;
+    }
+
+    /**
+     * Set 批量端口段的结束端口，必须和Ports长度一样。
+     * @param EndPorts 批量端口段的结束端口，必须和Ports长度一样。
+     */
+    public void setEndPorts(Long [] EndPorts) {
+        this.EndPorts = EndPorts;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -249,6 +272,12 @@ public class CreateListenerRequest extends AbstractModel{
         if (source.SessionType != null) {
             this.SessionType = new String(source.SessionType);
         }
+        if (source.EndPorts != null) {
+            this.EndPorts = new Long[source.EndPorts.length];
+            for (int i = 0; i < source.EndPorts.length; i++) {
+                this.EndPorts[i] = new Long(source.EndPorts[i]);
+            }
+        }
     }
 
 
@@ -264,6 +293,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamArraySimple(map, prefix + "EndPorts.", this.EndPorts);
 
     }
 }

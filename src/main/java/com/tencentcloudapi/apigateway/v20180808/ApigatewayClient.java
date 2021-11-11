@@ -831,6 +831,46 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *本接口（DescribeExclusiveInstanceDetail）用于查询独享实例详情信息。​
+     * @param req DescribeExclusiveInstanceDetailRequest
+     * @return DescribeExclusiveInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetail(DescribeExclusiveInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExclusiveInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExclusiveInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。​
+     * @param req DescribeExclusiveInstancesRequest
+     * @return DescribeExclusiveInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExclusiveInstancesResponse DescribeExclusiveInstances(DescribeExclusiveInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExclusiveInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExclusiveInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeIPStrategy）用于查询IP策略详情。
      * @param req DescribeIPStrategyRequest
      * @return DescribeIPStrategyResponse
@@ -1430,6 +1470,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
                 Type type = new TypeToken<JsonResponseModel<ModifyApiIncrementResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyApiIncrement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyExclusiveInstance）用于修改独享实例信息。​
+     * @param req ModifyExclusiveInstanceRequest
+     * @return ModifyExclusiveInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyExclusiveInstanceResponse ModifyExclusiveInstance(ModifyExclusiveInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyExclusiveInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyExclusiveInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyExclusiveInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

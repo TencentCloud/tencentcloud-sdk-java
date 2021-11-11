@@ -107,6 +107,118 @@ public class ResidenceBookletOCRResponse extends AbstractModel{
     private String Address;
 
     /**
+    * 承办人签章文字
+    */
+    @SerializedName("Signature")
+    @Expose
+    private String Signature;
+
+    /**
+    * 签发日期
+    */
+    @SerializedName("IssueDate")
+    @Expose
+    private String IssueDate;
+
+    /**
+    * 户主页编号
+    */
+    @SerializedName("HomePageNumber")
+    @Expose
+    private String HomePageNumber;
+
+    /**
+    * 户主姓名
+    */
+    @SerializedName("HouseholderName")
+    @Expose
+    private String HouseholderName;
+
+    /**
+    * 户主或与户主关系
+    */
+    @SerializedName("Relationship")
+    @Expose
+    private String Relationship;
+
+    /**
+    * 本市（县）其他住址
+    */
+    @SerializedName("OtherAddresses")
+    @Expose
+    private String OtherAddresses;
+
+    /**
+    * 宗教信仰
+    */
+    @SerializedName("ReligiousBelief")
+    @Expose
+    private String ReligiousBelief;
+
+    /**
+    * 身高
+    */
+    @SerializedName("Height")
+    @Expose
+    private String Height;
+
+    /**
+    * 血型
+    */
+    @SerializedName("BloodType")
+    @Expose
+    private String BloodType;
+
+    /**
+    * 婚姻状况
+    */
+    @SerializedName("MaritalStatus")
+    @Expose
+    private String MaritalStatus;
+
+    /**
+    * 兵役状况
+    */
+    @SerializedName("VeteranStatus")
+    @Expose
+    private String VeteranStatus;
+
+    /**
+    * 职业
+    */
+    @SerializedName("Profession")
+    @Expose
+    private String Profession;
+
+    /**
+    * 何时由何地迁来本市(县)
+    */
+    @SerializedName("MoveToCityInformation")
+    @Expose
+    private String MoveToCityInformation;
+
+    /**
+    * 何时由何地迁来本址
+    */
+    @SerializedName("MoveToSiteInformation")
+    @Expose
+    private String MoveToSiteInformation;
+
+    /**
+    * 登记日期
+    */
+    @SerializedName("RegistrationDate")
+    @Expose
+    private String RegistrationDate;
+
+    /**
+    * 曾用名
+    */
+    @SerializedName("FormerName")
+    @Expose
+    private String FormerName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -306,6 +418,262 @@ public class ResidenceBookletOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 承办人签章文字 
+     * @return Signature 承办人签章文字
+     */
+    public String getSignature() {
+        return this.Signature;
+    }
+
+    /**
+     * Set 承办人签章文字
+     * @param Signature 承办人签章文字
+     */
+    public void setSignature(String Signature) {
+        this.Signature = Signature;
+    }
+
+    /**
+     * Get 签发日期 
+     * @return IssueDate 签发日期
+     */
+    public String getIssueDate() {
+        return this.IssueDate;
+    }
+
+    /**
+     * Set 签发日期
+     * @param IssueDate 签发日期
+     */
+    public void setIssueDate(String IssueDate) {
+        this.IssueDate = IssueDate;
+    }
+
+    /**
+     * Get 户主页编号 
+     * @return HomePageNumber 户主页编号
+     */
+    public String getHomePageNumber() {
+        return this.HomePageNumber;
+    }
+
+    /**
+     * Set 户主页编号
+     * @param HomePageNumber 户主页编号
+     */
+    public void setHomePageNumber(String HomePageNumber) {
+        this.HomePageNumber = HomePageNumber;
+    }
+
+    /**
+     * Get 户主姓名 
+     * @return HouseholderName 户主姓名
+     */
+    public String getHouseholderName() {
+        return this.HouseholderName;
+    }
+
+    /**
+     * Set 户主姓名
+     * @param HouseholderName 户主姓名
+     */
+    public void setHouseholderName(String HouseholderName) {
+        this.HouseholderName = HouseholderName;
+    }
+
+    /**
+     * Get 户主或与户主关系 
+     * @return Relationship 户主或与户主关系
+     */
+    public String getRelationship() {
+        return this.Relationship;
+    }
+
+    /**
+     * Set 户主或与户主关系
+     * @param Relationship 户主或与户主关系
+     */
+    public void setRelationship(String Relationship) {
+        this.Relationship = Relationship;
+    }
+
+    /**
+     * Get 本市（县）其他住址 
+     * @return OtherAddresses 本市（县）其他住址
+     */
+    public String getOtherAddresses() {
+        return this.OtherAddresses;
+    }
+
+    /**
+     * Set 本市（县）其他住址
+     * @param OtherAddresses 本市（县）其他住址
+     */
+    public void setOtherAddresses(String OtherAddresses) {
+        this.OtherAddresses = OtherAddresses;
+    }
+
+    /**
+     * Get 宗教信仰 
+     * @return ReligiousBelief 宗教信仰
+     */
+    public String getReligiousBelief() {
+        return this.ReligiousBelief;
+    }
+
+    /**
+     * Set 宗教信仰
+     * @param ReligiousBelief 宗教信仰
+     */
+    public void setReligiousBelief(String ReligiousBelief) {
+        this.ReligiousBelief = ReligiousBelief;
+    }
+
+    /**
+     * Get 身高 
+     * @return Height 身高
+     */
+    public String getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 身高
+     * @param Height 身高
+     */
+    public void setHeight(String Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get 血型 
+     * @return BloodType 血型
+     */
+    public String getBloodType() {
+        return this.BloodType;
+    }
+
+    /**
+     * Set 血型
+     * @param BloodType 血型
+     */
+    public void setBloodType(String BloodType) {
+        this.BloodType = BloodType;
+    }
+
+    /**
+     * Get 婚姻状况 
+     * @return MaritalStatus 婚姻状况
+     */
+    public String getMaritalStatus() {
+        return this.MaritalStatus;
+    }
+
+    /**
+     * Set 婚姻状况
+     * @param MaritalStatus 婚姻状况
+     */
+    public void setMaritalStatus(String MaritalStatus) {
+        this.MaritalStatus = MaritalStatus;
+    }
+
+    /**
+     * Get 兵役状况 
+     * @return VeteranStatus 兵役状况
+     */
+    public String getVeteranStatus() {
+        return this.VeteranStatus;
+    }
+
+    /**
+     * Set 兵役状况
+     * @param VeteranStatus 兵役状况
+     */
+    public void setVeteranStatus(String VeteranStatus) {
+        this.VeteranStatus = VeteranStatus;
+    }
+
+    /**
+     * Get 职业 
+     * @return Profession 职业
+     */
+    public String getProfession() {
+        return this.Profession;
+    }
+
+    /**
+     * Set 职业
+     * @param Profession 职业
+     */
+    public void setProfession(String Profession) {
+        this.Profession = Profession;
+    }
+
+    /**
+     * Get 何时由何地迁来本市(县) 
+     * @return MoveToCityInformation 何时由何地迁来本市(县)
+     */
+    public String getMoveToCityInformation() {
+        return this.MoveToCityInformation;
+    }
+
+    /**
+     * Set 何时由何地迁来本市(县)
+     * @param MoveToCityInformation 何时由何地迁来本市(县)
+     */
+    public void setMoveToCityInformation(String MoveToCityInformation) {
+        this.MoveToCityInformation = MoveToCityInformation;
+    }
+
+    /**
+     * Get 何时由何地迁来本址 
+     * @return MoveToSiteInformation 何时由何地迁来本址
+     */
+    public String getMoveToSiteInformation() {
+        return this.MoveToSiteInformation;
+    }
+
+    /**
+     * Set 何时由何地迁来本址
+     * @param MoveToSiteInformation 何时由何地迁来本址
+     */
+    public void setMoveToSiteInformation(String MoveToSiteInformation) {
+        this.MoveToSiteInformation = MoveToSiteInformation;
+    }
+
+    /**
+     * Get 登记日期 
+     * @return RegistrationDate 登记日期
+     */
+    public String getRegistrationDate() {
+        return this.RegistrationDate;
+    }
+
+    /**
+     * Set 登记日期
+     * @param RegistrationDate 登记日期
+     */
+    public void setRegistrationDate(String RegistrationDate) {
+        this.RegistrationDate = RegistrationDate;
+    }
+
+    /**
+     * Get 曾用名 
+     * @return FormerName 曾用名
+     */
+    public String getFormerName() {
+        return this.FormerName;
+    }
+
+    /**
+     * Set 曾用名
+     * @param FormerName 曾用名
+     */
+    public void setFormerName(String FormerName) {
+        this.FormerName = FormerName;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -365,6 +733,54 @@ public class ResidenceBookletOCRResponse extends AbstractModel{
         if (source.Address != null) {
             this.Address = new String(source.Address);
         }
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
+        }
+        if (source.IssueDate != null) {
+            this.IssueDate = new String(source.IssueDate);
+        }
+        if (source.HomePageNumber != null) {
+            this.HomePageNumber = new String(source.HomePageNumber);
+        }
+        if (source.HouseholderName != null) {
+            this.HouseholderName = new String(source.HouseholderName);
+        }
+        if (source.Relationship != null) {
+            this.Relationship = new String(source.Relationship);
+        }
+        if (source.OtherAddresses != null) {
+            this.OtherAddresses = new String(source.OtherAddresses);
+        }
+        if (source.ReligiousBelief != null) {
+            this.ReligiousBelief = new String(source.ReligiousBelief);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.BloodType != null) {
+            this.BloodType = new String(source.BloodType);
+        }
+        if (source.MaritalStatus != null) {
+            this.MaritalStatus = new String(source.MaritalStatus);
+        }
+        if (source.VeteranStatus != null) {
+            this.VeteranStatus = new String(source.VeteranStatus);
+        }
+        if (source.Profession != null) {
+            this.Profession = new String(source.Profession);
+        }
+        if (source.MoveToCityInformation != null) {
+            this.MoveToCityInformation = new String(source.MoveToCityInformation);
+        }
+        if (source.MoveToSiteInformation != null) {
+            this.MoveToSiteInformation = new String(source.MoveToSiteInformation);
+        }
+        if (source.RegistrationDate != null) {
+            this.RegistrationDate = new String(source.RegistrationDate);
+        }
+        if (source.FormerName != null) {
+            this.FormerName = new String(source.FormerName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -387,6 +803,22 @@ public class ResidenceBookletOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ServicePlace", this.ServicePlace);
         this.setParamSimple(map, prefix + "Household", this.Household);
         this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "Signature", this.Signature);
+        this.setParamSimple(map, prefix + "IssueDate", this.IssueDate);
+        this.setParamSimple(map, prefix + "HomePageNumber", this.HomePageNumber);
+        this.setParamSimple(map, prefix + "HouseholderName", this.HouseholderName);
+        this.setParamSimple(map, prefix + "Relationship", this.Relationship);
+        this.setParamSimple(map, prefix + "OtherAddresses", this.OtherAddresses);
+        this.setParamSimple(map, prefix + "ReligiousBelief", this.ReligiousBelief);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "BloodType", this.BloodType);
+        this.setParamSimple(map, prefix + "MaritalStatus", this.MaritalStatus);
+        this.setParamSimple(map, prefix + "VeteranStatus", this.VeteranStatus);
+        this.setParamSimple(map, prefix + "Profession", this.Profession);
+        this.setParamSimple(map, prefix + "MoveToCityInformation", this.MoveToCityInformation);
+        this.setParamSimple(map, prefix + "MoveToSiteInformation", this.MoveToSiteInformation);
+        this.setParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
+        this.setParamSimple(map, prefix + "FormerName", this.FormerName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

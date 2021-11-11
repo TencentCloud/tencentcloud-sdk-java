@@ -720,6 +720,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口用户查询当前地域用户设置的默认备份下载来源限制。
+     * @param req DescribeBackupDownloadRestrictionRequest
+     * @return DescribeBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadRestriction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeBackupOverview)用于查询用户的备份概览。返回用户当前备份总个数、备份总的占用容量、赠送的免费容量、计费容量（容量单位为字节）。
      * @param req DescribeBackupOverviewRequest
      * @return DescribeBackupOverviewResponse
@@ -1799,6 +1819,26 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+     * @param req ModifyBackupDownloadRestrictionRequest
+     * @return ModifyBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupDownloadRestriction");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

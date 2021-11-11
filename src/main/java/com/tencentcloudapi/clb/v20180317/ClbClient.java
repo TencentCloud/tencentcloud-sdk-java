@@ -1140,6 +1140,26 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *升、降配接口。支持共享型clb升级到性能保障型clb。支持性能保障型提升等级。支持性能保障降低规格。（不支持性能保障降级到共享型）。
+     * @param req ModifyLoadBalancerSlaRequest
+     * @return ModifyLoadBalancerSlaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(ModifyLoadBalancerSlaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancerSlaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerSlaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancerSla");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ModifyRuleRequest

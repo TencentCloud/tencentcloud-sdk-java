@@ -30,7 +30,7 @@ public class DescribeCloudBaseRunOneClickTaskExternalResponse extends AbstractMo
     private String ExternalId;
 
     /**
-    * 环境Id
+    * 弃用
     */
     @SerializedName("EnvId")
     @Expose
@@ -93,6 +93,13 @@ finished
     private String FailReason;
 
     /**
+    * 用户envId
+    */
+    @SerializedName("UserEnvId")
+    @Expose
+    private String UserEnvId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -116,16 +123,16 @@ finished
     }
 
     /**
-     * Get 环境Id 
-     * @return EnvId 环境Id
+     * Get 弃用 
+     * @return EnvId 弃用
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境Id
-     * @param EnvId 环境Id
+     * Set 弃用
+     * @param EnvId 弃用
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
@@ -272,6 +279,22 @@ finished
     }
 
     /**
+     * Get 用户envId 
+     * @return UserEnvId 用户envId
+     */
+    public String getUserEnvId() {
+        return this.UserEnvId;
+    }
+
+    /**
+     * Set 用户envId
+     * @param UserEnvId 用户envId
+     */
+    public void setUserEnvId(String UserEnvId) {
+        this.UserEnvId = UserEnvId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -322,6 +345,9 @@ finished
         if (source.FailReason != null) {
             this.FailReason = new String(source.FailReason);
         }
+        if (source.UserEnvId != null) {
+            this.UserEnvId = new String(source.UserEnvId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -341,6 +367,7 @@ finished
         this.setParamSimple(map, prefix + "Stage", this.Stage);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
+        this.setParamSimple(map, prefix + "UserEnvId", this.UserEnvId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

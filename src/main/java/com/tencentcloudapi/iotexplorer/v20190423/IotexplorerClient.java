@@ -99,6 +99,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *用于新建批量生产设备
+     * @param req CreateBatchProductionRequest
+     * @return CreateBatchProductionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBatchProductionResponse CreateBatchProduction(CreateBatchProductionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBatchProductionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBatchProductionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBatchProduction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建设备
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
@@ -519,6 +539,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取量产详情信息。
+     * @param req DescribeBatchProductionRequest
+     * @return DescribeBatchProductionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchProductionResponse DescribeBatchProduction(DescribeBatchProductionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBatchProductionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBatchProductionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBatchProduction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查看某个设备的详细信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
@@ -871,6 +911,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableTopicRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableTopicRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列出量产数据列表信息。
+     * @param req GetBatchProductionsListRequest
+     * @return GetBatchProductionsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBatchProductionsListResponse GetBatchProductionsList(GetBatchProductionsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBatchProductionsListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBatchProductionsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetBatchProductionsList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

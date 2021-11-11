@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PlatformInfo extends AbstractModel{
 
     /**
-    * 平台名称。
+    * 平台标识。
     */
     @SerializedName("Platform")
     @Expose
@@ -75,16 +75,16 @@ public class PlatformInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get 平台名称。 
-     * @return Platform 平台名称。
+     * Get 平台标识。 
+     * @return Platform 平台标识。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称。
-     * @param Platform 平台名称。
+     * Set 平台标识。
+     * @param Platform 平台标识。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

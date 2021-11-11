@@ -21,6 +21,9 @@ public enum IotexplorerErrorCode {
     // 存在其他升级任务。
      FAILEDOPERATION_OTHERUPDATETASKEXIST("FailedOperation.OtherUpdateTaskExist"),
      
+    // 产品尚未发布。
+     FAILEDOPERATION_PRODUCTNOTRELEASED("FailedOperation.ProductNotReleased"),
+     
     // 转发已经停止。
      FAILEDOPERATION_RULEALREADYDISABLED("FailedOperation.RuleAlreadyDisabled"),
      
@@ -207,6 +210,12 @@ public enum IotexplorerErrorCode {
     // 应用数量超出限制。
      LIMITEXCEEDED_APPLICATIONEXCEEDLIMIT("LimitExceeded.ApplicationExceedLimit"),
      
+    // 量产超出限制。
+     LIMITEXCEEDED_BATCHPRODUCTIONEXCEEDLIMIT("LimitExceeded.BatchProductionExceedLimit"),
+     
+    // 量产为空。
+     LIMITEXCEEDED_BATCHPRODUCTIONNULL("LimitExceeded.BatchProductionNull"),
+     
     // 设备数量超过限制。
      LIMITEXCEEDED_DEVICEEXCEEDLIMIT("LimitExceeded.DeviceExceedLimit"),
      
@@ -233,6 +242,15 @@ public enum IotexplorerErrorCode {
      
     // 物模型事件 Type 错误。
      MISSINGPARAMETER_MODELDEFINEEVENTTYPEERROR("MissingParameter.ModelDefineEventTypeError"),
+     
+    // 已有量产进行，请等待量产完成。
+     RESOURCEINSUFFICIENT_BATCHPRODUCTIONISRUNNING("ResourceInsufficient.BatchProductionIsRunning"),
+     
+    // 量产不存在。
+     RESOURCENOTFOUND_BATCHPRODUCTIONNOTEXIST("ResourceNotFound.BatchProductionNotExist"),
+     
+    // 上传URL无法获取。
+     RESOURCENOTFOUND_CANNOTGETFROMURL("ResourceNotFound.CannotGetFromUrl"),
      
     // 存在重复设备。
      RESOURCENOTFOUND_DEVICEDUPKEYEXIST("ResourceNotFound.DeviceDupKeyExist"),
