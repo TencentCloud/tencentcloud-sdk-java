@@ -51,6 +51,13 @@ public class DescribeLaneRulesRequest extends AbstractModel{
     private String RuleId;
 
     /**
+    * 无
+    */
+    @SerializedName("RuleIdList")
+    @Expose
+    private String [] RuleIdList;
+
+    /**
      * Get 每页展示的条数 
      * @return Limit 每页展示的条数
      */
@@ -114,6 +121,22 @@ public class DescribeLaneRulesRequest extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 无 
+     * @return RuleIdList 无
+     */
+    public String [] getRuleIdList() {
+        return this.RuleIdList;
+    }
+
+    /**
+     * Set 无
+     * @param RuleIdList 无
+     */
+    public void setRuleIdList(String [] RuleIdList) {
+        this.RuleIdList = RuleIdList;
+    }
+
     public DescribeLaneRulesRequest() {
     }
 
@@ -134,6 +157,12 @@ public class DescribeLaneRulesRequest extends AbstractModel{
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.RuleIdList != null) {
+            this.RuleIdList = new String[source.RuleIdList.length];
+            for (int i = 0; i < source.RuleIdList.length; i++) {
+                this.RuleIdList[i] = new String(source.RuleIdList[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class DescribeLaneRulesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
 
     }
 }

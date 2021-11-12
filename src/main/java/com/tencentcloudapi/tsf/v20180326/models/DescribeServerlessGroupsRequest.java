@@ -79,6 +79,13 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 无
+    */
+    @SerializedName("GroupIdList")
+    @Expose
+    private String [] GroupIdList;
+
+    /**
      * Get 搜索字段，模糊搜索groupName字段 
      * @return SearchWord 搜索字段，模糊搜索groupName字段
      */
@@ -206,6 +213,22 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 无 
+     * @return GroupIdList 无
+     */
+    public String [] getGroupIdList() {
+        return this.GroupIdList;
+    }
+
+    /**
+     * Set 无
+     * @param GroupIdList 无
+     */
+    public void setGroupIdList(String [] GroupIdList) {
+        this.GroupIdList = GroupIdList;
+    }
+
     public DescribeServerlessGroupsRequest() {
     }
 
@@ -238,6 +261,12 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.GroupIdList != null) {
+            this.GroupIdList = new String[source.GroupIdList.length];
+            for (int i = 0; i < source.GroupIdList.length; i++) {
+                this.GroupIdList[i] = new String(source.GroupIdList[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
 
     }
 }

@@ -58,6 +58,13 @@ public class DescribeSimpleClustersRequest extends AbstractModel{
     private String SearchWord;
 
     /**
+    * 无
+    */
+    @SerializedName("DisableProgramAuthCheck")
+    @Expose
+    private Boolean DisableProgramAuthCheck;
+
+    /**
      * Get 需要查询的集群ID列表，不填或不传入时查询所有内容 
      * @return ClusterIdList 需要查询的集群ID列表，不填或不传入时查询所有内容
      */
@@ -137,6 +144,22 @@ public class DescribeSimpleClustersRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    /**
+     * Get 无 
+     * @return DisableProgramAuthCheck 无
+     */
+    public Boolean getDisableProgramAuthCheck() {
+        return this.DisableProgramAuthCheck;
+    }
+
+    /**
+     * Set 无
+     * @param DisableProgramAuthCheck 无
+     */
+    public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
+        this.DisableProgramAuthCheck = DisableProgramAuthCheck;
+    }
+
     public DescribeSimpleClustersRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeSimpleClustersRequest extends AbstractModel{
         if (source.SearchWord != null) {
             this.SearchWord = new String(source.SearchWord);
         }
+        if (source.DisableProgramAuthCheck != null) {
+            this.DisableProgramAuthCheck = new Boolean(source.DisableProgramAuthCheck);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeSimpleClustersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
 
     }
 }

@@ -93,6 +93,13 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
     private String IsDefault;
 
     /**
+    * 无
+    */
+    @SerializedName("DisableProgramAuthCheck")
+    @Expose
+    private Boolean DisableProgramAuthCheck;
+
+    /**
      * Get 命名空间ID列表，不传入时查询全量 
      * @return NamespaceIdList 命名空间ID列表，不传入时查询全量
      */
@@ -252,6 +259,22 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
         this.IsDefault = IsDefault;
     }
 
+    /**
+     * Get 无 
+     * @return DisableProgramAuthCheck 无
+     */
+    public Boolean getDisableProgramAuthCheck() {
+        return this.DisableProgramAuthCheck;
+    }
+
+    /**
+     * Set 无
+     * @param DisableProgramAuthCheck 无
+     */
+    public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
+        this.DisableProgramAuthCheck = DisableProgramAuthCheck;
+    }
+
     public DescribeSimpleNamespacesRequest() {
     }
 
@@ -299,6 +322,9 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
         if (source.IsDefault != null) {
             this.IsDefault = new String(source.IsDefault);
         }
+        if (source.DisableProgramAuthCheck != null) {
+            this.DisableProgramAuthCheck = new Boolean(source.DisableProgramAuthCheck);
+        }
     }
 
 
@@ -316,6 +342,7 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "NamespaceTypeList.", this.NamespaceTypeList);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
 
     }
 }

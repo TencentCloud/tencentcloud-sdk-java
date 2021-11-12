@@ -79,6 +79,13 @@ public class CreateNamespaceRequest extends AbstractModel{
     private String ProgramId;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
      */
@@ -206,6 +213,22 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.ProgramId = ProgramId;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateNamespaceRequest() {
     }
 
@@ -238,6 +261,12 @@ public class CreateNamespaceRequest extends AbstractModel{
         if (source.ProgramId != null) {
             this.ProgramId = new String(source.ProgramId);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
         this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

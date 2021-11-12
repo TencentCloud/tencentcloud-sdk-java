@@ -37,6 +37,13 @@ public class CreateGatewayApiRequest extends AbstractModel{
     private ApiInfo [] ApiList;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get API 分组ID 
      * @return GroupId API 分组ID
      */
@@ -68,6 +75,22 @@ public class CreateGatewayApiRequest extends AbstractModel{
         this.ApiList = ApiList;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateGatewayApiRequest() {
     }
 
@@ -85,6 +108,12 @@ public class CreateGatewayApiRequest extends AbstractModel{
                 this.ApiList[i] = new ApiInfo(source.ApiList[i]);
             }
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class CreateGatewayApiRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "ApiList.", this.ApiList);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

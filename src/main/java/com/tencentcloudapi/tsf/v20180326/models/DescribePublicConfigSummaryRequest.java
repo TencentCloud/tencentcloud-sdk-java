@@ -58,6 +58,27 @@ public class DescribePublicConfigSummaryRequest extends AbstractModel{
     private Long OrderType;
 
     /**
+    * 无
+    */
+    @SerializedName("ConfigTagList")
+    @Expose
+    private String [] ConfigTagList;
+
+    /**
+    * 无
+    */
+    @SerializedName("DisableProgramAuthCheck")
+    @Expose
+    private Boolean DisableProgramAuthCheck;
+
+    /**
+    * 无
+    */
+    @SerializedName("ConfigIdList")
+    @Expose
+    private String [] ConfigIdList;
+
+    /**
      * Get 查询关键字，模糊查询：配置项名称，不传入时查询全量 
      * @return SearchWord 查询关键字，模糊查询：配置项名称，不传入时查询全量
      */
@@ -137,6 +158,54 @@ public class DescribePublicConfigSummaryRequest extends AbstractModel{
         this.OrderType = OrderType;
     }
 
+    /**
+     * Get 无 
+     * @return ConfigTagList 无
+     */
+    public String [] getConfigTagList() {
+        return this.ConfigTagList;
+    }
+
+    /**
+     * Set 无
+     * @param ConfigTagList 无
+     */
+    public void setConfigTagList(String [] ConfigTagList) {
+        this.ConfigTagList = ConfigTagList;
+    }
+
+    /**
+     * Get 无 
+     * @return DisableProgramAuthCheck 无
+     */
+    public Boolean getDisableProgramAuthCheck() {
+        return this.DisableProgramAuthCheck;
+    }
+
+    /**
+     * Set 无
+     * @param DisableProgramAuthCheck 无
+     */
+    public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
+        this.DisableProgramAuthCheck = DisableProgramAuthCheck;
+    }
+
+    /**
+     * Get 无 
+     * @return ConfigIdList 无
+     */
+    public String [] getConfigIdList() {
+        return this.ConfigIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ConfigIdList 无
+     */
+    public void setConfigIdList(String [] ConfigIdList) {
+        this.ConfigIdList = ConfigIdList;
+    }
+
     public DescribePublicConfigSummaryRequest() {
     }
 
@@ -160,6 +229,21 @@ public class DescribePublicConfigSummaryRequest extends AbstractModel{
         if (source.OrderType != null) {
             this.OrderType = new Long(source.OrderType);
         }
+        if (source.ConfigTagList != null) {
+            this.ConfigTagList = new String[source.ConfigTagList.length];
+            for (int i = 0; i < source.ConfigTagList.length; i++) {
+                this.ConfigTagList[i] = new String(source.ConfigTagList[i]);
+            }
+        }
+        if (source.DisableProgramAuthCheck != null) {
+            this.DisableProgramAuthCheck = new Boolean(source.DisableProgramAuthCheck);
+        }
+        if (source.ConfigIdList != null) {
+            this.ConfigIdList = new String[source.ConfigIdList.length];
+            for (int i = 0; i < source.ConfigIdList.length; i++) {
+                this.ConfigIdList[i] = new String(source.ConfigIdList[i]);
+            }
+        }
     }
 
 
@@ -172,6 +256,9 @@ public class DescribePublicConfigSummaryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamArraySimple(map, prefix + "ConfigTagList.", this.ConfigTagList);
+        this.setParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
+        this.setParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
 
     }
 }

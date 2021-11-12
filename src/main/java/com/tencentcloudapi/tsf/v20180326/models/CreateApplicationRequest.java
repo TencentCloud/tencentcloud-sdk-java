@@ -93,6 +93,13 @@ public class CreateApplicationRequest extends AbstractModel{
     private Boolean IgnoreCreateImageRepository;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 应用名称 
      * @return ApplicationName 应用名称
      */
@@ -252,6 +259,22 @@ public class CreateApplicationRequest extends AbstractModel{
         this.IgnoreCreateImageRepository = IgnoreCreateImageRepository;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateApplicationRequest() {
     }
 
@@ -293,6 +316,12 @@ public class CreateApplicationRequest extends AbstractModel{
         if (source.IgnoreCreateImageRepository != null) {
             this.IgnoreCreateImageRepository = new Boolean(source.IgnoreCreateImageRepository);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -310,6 +339,7 @@ public class CreateApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
         this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
         this.setParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

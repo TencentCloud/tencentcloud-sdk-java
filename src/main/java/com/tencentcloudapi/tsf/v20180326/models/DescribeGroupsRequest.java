@@ -93,6 +93,13 @@ public class DescribeGroupsRequest extends AbstractModel{
     private String Status;
 
     /**
+    * 无
+    */
+    @SerializedName("GroupIdList")
+    @Expose
+    private String [] GroupIdList;
+
+    /**
      * Get 搜索字段 
      * @return SearchWord 搜索字段
      */
@@ -252,6 +259,22 @@ public class DescribeGroupsRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 无 
+     * @return GroupIdList 无
+     */
+    public String [] getGroupIdList() {
+        return this.GroupIdList;
+    }
+
+    /**
+     * Set 无
+     * @param GroupIdList 无
+     */
+    public void setGroupIdList(String [] GroupIdList) {
+        this.GroupIdList = GroupIdList;
+    }
+
     public DescribeGroupsRequest() {
     }
 
@@ -293,6 +316,12 @@ public class DescribeGroupsRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.GroupIdList != null) {
+            this.GroupIdList = new String[source.GroupIdList.length];
+            for (int i = 0; i < source.GroupIdList.length; i++) {
+                this.GroupIdList[i] = new String(source.GroupIdList[i]);
+            }
+        }
     }
 
 
@@ -310,6 +339,7 @@ public class DescribeGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "GroupResourceTypeList.", this.GroupResourceTypeList);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
 
     }
 }

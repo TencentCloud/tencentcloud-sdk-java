@@ -72,6 +72,13 @@ public class CreateConfigRequest extends AbstractModel{
     private Boolean EncodeWithBase64;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 配置项名称 
      * @return ConfigName 配置项名称
      */
@@ -183,6 +190,22 @@ public class CreateConfigRequest extends AbstractModel{
         this.EncodeWithBase64 = EncodeWithBase64;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateConfigRequest() {
     }
 
@@ -212,6 +235,12 @@ public class CreateConfigRequest extends AbstractModel{
         if (source.EncodeWithBase64 != null) {
             this.EncodeWithBase64 = new Boolean(source.EncodeWithBase64);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -226,6 +255,7 @@ public class CreateConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfigVersionDesc", this.ConfigVersionDesc);
         this.setParamSimple(map, prefix + "ConfigType", this.ConfigType);
         this.setParamSimple(map, prefix + "EncodeWithBase64", this.EncodeWithBase64);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

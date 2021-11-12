@@ -58,6 +58,13 @@ public class CreateLaneRuleRequest extends AbstractModel{
     private String LaneId;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 泳道规则名称 
      * @return RuleName 泳道规则名称
      */
@@ -137,6 +144,22 @@ public class CreateLaneRuleRequest extends AbstractModel{
         this.LaneId = LaneId;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateLaneRuleRequest() {
     }
 
@@ -163,6 +186,12 @@ public class CreateLaneRuleRequest extends AbstractModel{
         if (source.LaneId != null) {
             this.LaneId = new String(source.LaneId);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class CreateLaneRuleRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RuleTagList.", this.RuleTagList);
         this.setParamSimple(map, prefix + "RuleTagRelationship", this.RuleTagRelationship);
         this.setParamSimple(map, prefix + "LaneId", this.LaneId);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

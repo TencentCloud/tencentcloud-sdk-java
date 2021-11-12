@@ -44,6 +44,13 @@ public class CreateLaneRequest extends AbstractModel{
     private LaneGroup [] LaneGroupList;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 泳道名称 
      * @return LaneName 泳道名称
      */
@@ -91,6 +98,22 @@ public class CreateLaneRequest extends AbstractModel{
         this.LaneGroupList = LaneGroupList;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateLaneRequest() {
     }
 
@@ -111,6 +134,12 @@ public class CreateLaneRequest extends AbstractModel{
                 this.LaneGroupList[i] = new LaneGroup(source.LaneGroupList[i]);
             }
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class CreateLaneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LaneName", this.LaneName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArrayObj(map, prefix + "LaneGroupList.", this.LaneGroupList);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

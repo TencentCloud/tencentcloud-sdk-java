@@ -44,6 +44,20 @@ public class DescribeLanesRequest extends AbstractModel{
     private String SearchWord;
 
     /**
+    * 无
+    */
+    @SerializedName("LaneIdList")
+    @Expose
+    private String [] LaneIdList;
+
+    /**
+    * 无
+    */
+    @SerializedName("DisableProgramAuthCheck")
+    @Expose
+    private Boolean DisableProgramAuthCheck;
+
+    /**
      * Get 每页展示的条数 
      * @return Limit 每页展示的条数
      */
@@ -91,6 +105,38 @@ public class DescribeLanesRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    /**
+     * Get 无 
+     * @return LaneIdList 无
+     */
+    public String [] getLaneIdList() {
+        return this.LaneIdList;
+    }
+
+    /**
+     * Set 无
+     * @param LaneIdList 无
+     */
+    public void setLaneIdList(String [] LaneIdList) {
+        this.LaneIdList = LaneIdList;
+    }
+
+    /**
+     * Get 无 
+     * @return DisableProgramAuthCheck 无
+     */
+    public Boolean getDisableProgramAuthCheck() {
+        return this.DisableProgramAuthCheck;
+    }
+
+    /**
+     * Set 无
+     * @param DisableProgramAuthCheck 无
+     */
+    public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
+        this.DisableProgramAuthCheck = DisableProgramAuthCheck;
+    }
+
     public DescribeLanesRequest() {
     }
 
@@ -108,6 +154,15 @@ public class DescribeLanesRequest extends AbstractModel{
         if (source.SearchWord != null) {
             this.SearchWord = new String(source.SearchWord);
         }
+        if (source.LaneIdList != null) {
+            this.LaneIdList = new String[source.LaneIdList.length];
+            for (int i = 0; i < source.LaneIdList.length; i++) {
+                this.LaneIdList[i] = new String(source.LaneIdList[i]);
+            }
+        }
+        if (source.DisableProgramAuthCheck != null) {
+            this.DisableProgramAuthCheck = new Boolean(source.DisableProgramAuthCheck);
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class DescribeLanesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamArraySimple(map, prefix + "LaneIdList.", this.LaneIdList);
+        this.setParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
 
     }
 }

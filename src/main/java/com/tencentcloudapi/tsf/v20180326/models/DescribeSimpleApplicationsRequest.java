@@ -72,6 +72,13 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel{
     private String SearchWord;
 
     /**
+    * 无
+    */
+    @SerializedName("DisableProgramAuthCheck")
+    @Expose
+    private Boolean DisableProgramAuthCheck;
+
+    /**
      * Get 应用ID列表 
      * @return ApplicationIdList 应用ID列表
      */
@@ -183,6 +190,22 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    /**
+     * Get 无 
+     * @return DisableProgramAuthCheck 无
+     */
+    public Boolean getDisableProgramAuthCheck() {
+        return this.DisableProgramAuthCheck;
+    }
+
+    /**
+     * Set 无
+     * @param DisableProgramAuthCheck 无
+     */
+    public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
+        this.DisableProgramAuthCheck = DisableProgramAuthCheck;
+    }
+
     public DescribeSimpleApplicationsRequest() {
     }
 
@@ -218,6 +241,9 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel{
         if (source.SearchWord != null) {
             this.SearchWord = new String(source.SearchWord);
         }
+        if (source.DisableProgramAuthCheck != null) {
+            this.DisableProgramAuthCheck = new Boolean(source.DisableProgramAuthCheck);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
 
     }
 }

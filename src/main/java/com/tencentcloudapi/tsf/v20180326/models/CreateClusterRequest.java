@@ -107,6 +107,34 @@ public class CreateClusterRequest extends AbstractModel{
     private String ProgramId;
 
     /**
+    * api地址
+    */
+    @SerializedName("KuberneteApiServer")
+    @Expose
+    private String KuberneteApiServer;
+
+    /**
+    * K : kubeconfig, S : service account
+    */
+    @SerializedName("KuberneteNativeType")
+    @Expose
+    private String KuberneteNativeType;
+
+    /**
+    * native secret
+    */
+    @SerializedName("KuberneteNativeSecret")
+    @Expose
+    private String KuberneteNativeSecret;
+
+    /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -298,6 +326,70 @@ public class CreateClusterRequest extends AbstractModel{
         this.ProgramId = ProgramId;
     }
 
+    /**
+     * Get api地址 
+     * @return KuberneteApiServer api地址
+     */
+    public String getKuberneteApiServer() {
+        return this.KuberneteApiServer;
+    }
+
+    /**
+     * Set api地址
+     * @param KuberneteApiServer api地址
+     */
+    public void setKuberneteApiServer(String KuberneteApiServer) {
+        this.KuberneteApiServer = KuberneteApiServer;
+    }
+
+    /**
+     * Get K : kubeconfig, S : service account 
+     * @return KuberneteNativeType K : kubeconfig, S : service account
+     */
+    public String getKuberneteNativeType() {
+        return this.KuberneteNativeType;
+    }
+
+    /**
+     * Set K : kubeconfig, S : service account
+     * @param KuberneteNativeType K : kubeconfig, S : service account
+     */
+    public void setKuberneteNativeType(String KuberneteNativeType) {
+        this.KuberneteNativeType = KuberneteNativeType;
+    }
+
+    /**
+     * Get native secret 
+     * @return KuberneteNativeSecret native secret
+     */
+    public String getKuberneteNativeSecret() {
+        return this.KuberneteNativeSecret;
+    }
+
+    /**
+     * Set native secret
+     * @param KuberneteNativeSecret native secret
+     */
+    public void setKuberneteNativeSecret(String KuberneteNativeSecret) {
+        this.KuberneteNativeSecret = KuberneteNativeSecret;
+    }
+
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -342,6 +434,21 @@ public class CreateClusterRequest extends AbstractModel{
         if (source.ProgramId != null) {
             this.ProgramId = new String(source.ProgramId);
         }
+        if (source.KuberneteApiServer != null) {
+            this.KuberneteApiServer = new String(source.KuberneteApiServer);
+        }
+        if (source.KuberneteNativeType != null) {
+            this.KuberneteNativeType = new String(source.KuberneteNativeType);
+        }
+        if (source.KuberneteNativeSecret != null) {
+            this.KuberneteNativeSecret = new String(source.KuberneteNativeSecret);
+        }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -361,6 +468,10 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
         this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
+        this.setParamSimple(map, prefix + "KuberneteApiServer", this.KuberneteApiServer);
+        this.setParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
+        this.setParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }
