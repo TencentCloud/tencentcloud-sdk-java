@@ -51,6 +51,13 @@ public class DescribeResourceRelatedJobsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 资源版本号
+    */
+    @SerializedName("ResourceConfigVersion")
+    @Expose
+    private Long ResourceConfigVersion;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -114,6 +121,22 @@ public class DescribeResourceRelatedJobsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 资源版本号 
+     * @return ResourceConfigVersion 资源版本号
+     */
+    public Long getResourceConfigVersion() {
+        return this.ResourceConfigVersion;
+    }
+
+    /**
+     * Set 资源版本号
+     * @param ResourceConfigVersion 资源版本号
+     */
+    public void setResourceConfigVersion(Long ResourceConfigVersion) {
+        this.ResourceConfigVersion = ResourceConfigVersion;
+    }
+
     public DescribeResourceRelatedJobsRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeResourceRelatedJobsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ResourceConfigVersion != null) {
+            this.ResourceConfigVersion = new Long(source.ResourceConfigVersion);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeResourceRelatedJobsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DESCByJobConfigCreateTime", this.DESCByJobConfigCreateTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ResourceConfigVersion", this.ResourceConfigVersion);
 
     }
 }

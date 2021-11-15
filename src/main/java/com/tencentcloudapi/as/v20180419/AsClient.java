@@ -255,26 +255,6 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
-     * @param req CreatePaiInstanceRequest
-     * @return CreatePaiInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreatePaiInstanceResponse CreatePaiInstance(CreatePaiInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreatePaiInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePaiInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（CreateScalingPolicy）用于创建告警触发策略。
      * @param req CreateScalingPolicyRequest
      * @return CreateScalingPolicyResponse

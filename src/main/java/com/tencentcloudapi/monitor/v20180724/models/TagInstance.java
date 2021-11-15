@@ -60,7 +60,7 @@ public class TagInstance extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private String RegionId;
+    private Long RegionId;
 
     /**
     * 绑定状态，2：绑定成功，1：绑定中
@@ -164,7 +164,7 @@ public class TagInstance extends AbstractModel{
      * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -174,7 +174,7 @@ public class TagInstance extends AbstractModel{
      * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegionId(String RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -239,7 +239,7 @@ public class TagInstance extends AbstractModel{
             this.ServiceType = new String(source.ServiceType);
         }
         if (source.RegionId != null) {
-            this.RegionId = new String(source.RegionId);
+            this.RegionId = new Long(source.RegionId);
         }
         if (source.BindingStatus != null) {
             this.BindingStatus = new Long(source.BindingStatus);

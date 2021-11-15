@@ -157,6 +157,14 @@ public class CloudBaseRunServerVersionItem extends AbstractModel{
     private Long CurrentReplicas;
 
     /**
+    * Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Architecture")
+    @Expose
+    private String Architecture;
+
+    /**
      * Get 版本名称 
      * @return VersionName 版本名称
      */
@@ -488,6 +496,26 @@ public class CloudBaseRunServerVersionItem extends AbstractModel{
         this.CurrentReplicas = CurrentReplicas;
     }
 
+    /**
+     * Get Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Architecture Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArchitecture() {
+        return this.Architecture;
+    }
+
+    /**
+     * Set Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Architecture Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchitecture(String Architecture) {
+        this.Architecture = Architecture;
+    }
+
     public CloudBaseRunServerVersionItem() {
     }
 
@@ -550,6 +578,9 @@ public class CloudBaseRunServerVersionItem extends AbstractModel{
         if (source.CurrentReplicas != null) {
             this.CurrentReplicas = new Long(source.CurrentReplicas);
         }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
     }
 
 
@@ -574,6 +605,7 @@ public class CloudBaseRunServerVersionItem extends AbstractModel{
         this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "CurrentReplicas", this.CurrentReplicas);
+        this.setParamSimple(map, prefix + "Architecture", this.Architecture);
 
     }
 }

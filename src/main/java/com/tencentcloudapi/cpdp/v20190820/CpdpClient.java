@@ -406,6 +406,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *直播平台-主播入驻
+     * @param req CreateAnchorRequest
+     * @return CreateAnchorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAnchorResponse CreateAnchor(CreateAnchorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAnchorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAnchorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAnchor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *灵云-批量主播转账接口
      * @param req CreateBatchPaymentRequest
      * @return CreateBatchPaymentResponse
@@ -2180,6 +2200,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadExternalAnchorInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UploadExternalAnchorInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播平台-文件上传
+     * @param req UploadFileRequest
+     * @return UploadFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadFileResponse UploadFile(UploadFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

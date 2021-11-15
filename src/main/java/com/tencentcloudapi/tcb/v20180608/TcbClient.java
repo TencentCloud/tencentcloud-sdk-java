@@ -1362,6 +1362,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *修改服务版本的副本数，环境变量
+     * @param req ModifyCloudBaseRunServerVersionRequest
+     * @return ModifyCloudBaseRunServerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersion(ModifyCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCloudBaseRunServerVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCloudBaseRunServerVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCloudBaseRunServerVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改数据库权限
      * @param req ModifyDatabaseACLRequest
      * @return ModifyDatabaseACLResponse
