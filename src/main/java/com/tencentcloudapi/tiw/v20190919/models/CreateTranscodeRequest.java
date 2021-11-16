@@ -45,11 +45,11 @@ public class CreateTranscodeRequest extends AbstractModel{
     private Boolean IsStaticPPT;
 
     /**
-    * 注意: 该参数已废弃, 请使用 MinScaleResolution
+    * 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
     */
     @SerializedName("MinResolution")
     @Expose
@@ -153,32 +153,32 @@ tar.gz： 生成`.tar.gz`压缩包
     }
 
     /**
-     * Get 注意: 该参数已废弃, 请使用 MinScaleResolution
+     * Get 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x" 
-     * @return MinResolution 注意: 该参数已废弃, 请使用 MinScaleResolution
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x" 
+     * @return MinResolution 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
      */
     public String getMinResolution() {
         return this.MinResolution;
     }
 
     /**
-     * Set 注意: 该参数已废弃, 请使用 MinScaleResolution
+     * Set 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
-     * @param MinResolution 注意: 该参数已废弃, 请使用 MinScaleResolution
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     * @param MinResolution 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
      */
     public void setMinResolution(String MinResolution) {
         this.MinResolution = MinResolution;

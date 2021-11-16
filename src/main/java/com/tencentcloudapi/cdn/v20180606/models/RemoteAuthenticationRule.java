@@ -23,15 +23,17 @@ import java.util.HashMap;
 public class RemoteAuthenticationRule extends AbstractModel{
 
     /**
-    * 远程鉴权服务http url
+    * 远程鉴权Server。
+默认值:和上层配置的"Server"一致；
     */
     @SerializedName("Server")
     @Expose
     private String Server;
 
     /**
-    * 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
+    * 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
     */
     @SerializedName("AuthMethod")
     @Expose
@@ -41,8 +43,9 @@ all: 不指定访问访问方法；
     * 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
     */
     @SerializedName("RuleType")
     @Expose
@@ -55,6 +58,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
     */
     @SerializedName("RulePaths")
     @Expose
@@ -63,6 +67,7 @@ index 时填充 /
     /**
     * 请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
     */
     @SerializedName("AuthTimeout")
     @Expose
@@ -71,43 +76,52 @@ index 时填充 /
     /**
     * 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
     */
     @SerializedName("AuthTimeoutAction")
     @Expose
     private String AuthTimeoutAction;
 
     /**
-     * Get 远程鉴权服务http url 
-     * @return Server 远程鉴权服务http url
+     * Get 远程鉴权Server。
+默认值:和上层配置的"Server"一致； 
+     * @return Server 远程鉴权Server。
+默认值:和上层配置的"Server"一致；
      */
     public String getServer() {
         return this.Server;
     }
 
     /**
-     * Set 远程鉴权服务http url
-     * @param Server 远程鉴权服务http url
+     * Set 远程鉴权Server。
+默认值:和上层配置的"Server"一致；
+     * @param Server 远程鉴权Server。
+默认值:和上层配置的"Server"一致；
      */
     public void setServer(String Server) {
         this.Server = Server;
     }
 
     /**
-     * Get 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法； 
-     * @return AuthMethod 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
+     * Get 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all 
+     * @return AuthMethod 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
      */
     public String getAuthMethod() {
         return this.AuthMethod;
     }
 
     /**
-     * Set 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
-     * @param AuthMethod 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
+     * Set 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
+     * @param AuthMethod 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
      */
     public void setAuthMethod(String AuthMethod) {
         this.AuthMethod = AuthMethod;
@@ -117,13 +131,15 @@ all: 不指定访问访问方法；
      * Get 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效 
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all 
      * @return RuleType 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
      */
     public String getRuleType() {
         return this.RuleType;
@@ -133,13 +149,15 @@ path：指定绝对路径生效
      * Set 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
      * @param RuleType 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
@@ -151,13 +169,15 @@ all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
-index 时填充 / 
+index 时填充 /
+默认值:* 
      * @return RulePaths 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
      */
     public String [] getRulePaths() {
         return this.RulePaths;
@@ -170,12 +190,14 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
      * @param RulePaths 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;
@@ -183,9 +205,11 @@ index 时填充 /
 
     /**
      * Get 请求远程鉴权服务器超时时间，单位毫秒；
-取值范围：[1,30 000] 
+取值范围：[1,30 000]
+默认值:20000 
      * @return AuthTimeout 请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
      */
     public Long getAuthTimeout() {
         return this.AuthTimeout;
@@ -194,8 +218,10 @@ index 时填充 /
     /**
      * Set 请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
      * @param AuthTimeout 请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
      */
     public void setAuthTimeout(Long AuthTimeout) {
         this.AuthTimeout = AuthTimeout;
@@ -204,10 +230,12 @@ index 时填充 /
     /**
      * Get 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403； 
+RETURN_403:超时拦截；
+默认值:RETURN_200 
      * @return AuthTimeoutAction 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
      */
     public String getAuthTimeoutAction() {
         return this.AuthTimeoutAction;
@@ -216,10 +244,12 @@ RETURN_403:超时返回403；
     /**
      * Set 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
      * @param AuthTimeoutAction 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
      */
     public void setAuthTimeoutAction(String AuthTimeoutAction) {
         this.AuthTimeoutAction = AuthTimeoutAction;

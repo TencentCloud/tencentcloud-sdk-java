@@ -44,6 +44,22 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     private EnvAddressInfo [] EnvAddressInfos;
 
     /**
+    * 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsoleInternetAddress")
+    @Expose
+    private String ConsoleInternetAddress;
+
+    /**
+    * 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsoleIntranetAddress")
+    @Expose
+    private String ConsoleIntranetAddress;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +115,46 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     }
 
     /**
+     * Get 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsoleInternetAddress 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConsoleInternetAddress() {
+        return this.ConsoleInternetAddress;
+    }
+
+    /**
+     * Set 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsoleInternetAddress 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsoleInternetAddress(String ConsoleInternetAddress) {
+        this.ConsoleInternetAddress = ConsoleInternetAddress;
+    }
+
+    /**
+     * Get 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsoleIntranetAddress 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConsoleIntranetAddress() {
+        return this.ConsoleIntranetAddress;
+    }
+
+    /**
+     * Set 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsoleIntranetAddress 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsoleIntranetAddress(String ConsoleIntranetAddress) {
+        this.ConsoleIntranetAddress = ConsoleIntranetAddress;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -134,6 +190,12 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
                 this.EnvAddressInfos[i] = new EnvAddressInfo(source.EnvAddressInfos[i]);
             }
         }
+        if (source.ConsoleInternetAddress != null) {
+            this.ConsoleInternetAddress = new String(source.ConsoleInternetAddress);
+        }
+        if (source.ConsoleIntranetAddress != null) {
+            this.ConsoleIntranetAddress = new String(source.ConsoleIntranetAddress);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -147,6 +209,8 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
         this.setParamSimple(map, prefix + "InternetAddress", this.InternetAddress);
         this.setParamArrayObj(map, prefix + "EnvAddressInfos.", this.EnvAddressInfos);
+        this.setParamSimple(map, prefix + "ConsoleInternetAddress", this.ConsoleInternetAddress);
+        this.setParamSimple(map, prefix + "ConsoleIntranetAddress", this.ConsoleIntranetAddress);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

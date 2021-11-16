@@ -264,6 +264,14 @@ notInService       不在服务区
     private String ProtectedCallee;
 
     /**
+    * 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uui")
+    @Expose
+    private String Uui;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -915,6 +923,26 @@ notInService       不在服务区
         this.ProtectedCallee = ProtectedCallee;
     }
 
+    /**
+     * Get 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uui 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUui() {
+        return this.Uui;
+    }
+
+    /**
+     * Set 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uui 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUui(String Uui) {
+        this.Uui = Uui;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1010,6 +1038,9 @@ notInService       不在服务区
         if (source.ProtectedCallee != null) {
             this.ProtectedCallee = new String(source.ProtectedCallee);
         }
+        if (source.Uui != null) {
+            this.Uui = new String(source.Uui);
+        }
     }
 
 
@@ -1043,6 +1074,7 @@ notInService       不在服务区
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
         this.setParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
+        this.setParamSimple(map, prefix + "Uui", this.Uui);
 
     }
 }

@@ -45,6 +45,14 @@ public class DescribeEventsResponse extends AbstractModel{
     private Event [] Events;
 
     /**
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ public class DescribeEventsResponse extends AbstractModel{
     }
 
     /**
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -139,6 +167,9 @@ public class DescribeEventsResponse extends AbstractModel{
                 this.Events[i] = new Event(source.Events[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -152,6 +183,7 @@ public class DescribeEventsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

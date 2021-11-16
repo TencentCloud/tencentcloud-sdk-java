@@ -183,6 +183,22 @@ public class SREInstance extends AbstractModel{
     private KVPair [] Tags;
 
     /**
+    * 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableConsoleInternet")
+    @Expose
+    private Boolean EnableConsoleInternet;
+
+    /**
+    * 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableConsoleIntranet")
+    @Expose
+    private Boolean EnableConsoleIntranet;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -570,6 +586,46 @@ public class SREInstance extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableConsoleInternet() {
+        return this.EnableConsoleInternet;
+    }
+
+    /**
+     * Set 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableConsoleInternet(Boolean EnableConsoleInternet) {
+        this.EnableConsoleInternet = EnableConsoleInternet;
+    }
+
+    /**
+     * Get 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableConsoleIntranet() {
+        return this.EnableConsoleIntranet;
+    }
+
+    /**
+     * Set 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableConsoleIntranet(Boolean EnableConsoleIntranet) {
+        this.EnableConsoleIntranet = EnableConsoleIntranet;
+    }
+
     public SREInstance() {
     }
 
@@ -656,6 +712,12 @@ public class SREInstance extends AbstractModel{
                 this.Tags[i] = new KVPair(source.Tags[i]);
             }
         }
+        if (source.EnableConsoleInternet != null) {
+            this.EnableConsoleInternet = new Boolean(source.EnableConsoleInternet);
+        }
+        if (source.EnableConsoleIntranet != null) {
+            this.EnableConsoleIntranet = new Boolean(source.EnableConsoleIntranet);
+        }
     }
 
 
@@ -684,6 +746,8 @@ public class SREInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
         this.setParamArrayObj(map, prefix + "ServiceGovernanceInfos.", this.ServiceGovernanceInfos);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnableConsoleInternet", this.EnableConsoleInternet);
+        this.setParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
 
     }
 }

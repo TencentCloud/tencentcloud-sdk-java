@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class DescribeSmsTemplateListRequest extends AbstractModel{
 
     /**
-    * 模板 ID 数组。
-<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
-    */
-    @SerializedName("TemplateIdSet")
-    @Expose
-    private Long [] TemplateIdSet;
-
-    /**
     * 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
@@ -40,24 +32,28 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
     private Long International;
 
     /**
-     * Get 模板 ID 数组。
-<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert> 
-     * @return TemplateIdSet 模板 ID 数组。
+    * 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
 <dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
-     */
-    public Long [] getTemplateIdSet() {
-        return this.TemplateIdSet;
-    }
+    */
+    @SerializedName("TemplateIdSet")
+    @Expose
+    private Long [] TemplateIdSet;
 
     /**
-     * Set 模板 ID 数组。
-<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
-     * @param TemplateIdSet 模板 ID 数组。
-<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
-     */
-    public void setTemplateIdSet(Long [] TemplateIdSet) {
-        this.TemplateIdSet = TemplateIdSet;
-    }
+    * 最大上限，最多100。
+注：默认为0，TemplateIdSet 为空时启用。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移量。
+注：默认为0，TemplateIdSet 为空时启用。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 是否国际/港澳台短信：
@@ -83,6 +79,66 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
         this.International = International;
     }
 
+    /**
+     * Get 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert> 
+     * @return TemplateIdSet 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
+     */
+    public Long [] getTemplateIdSet() {
+        return this.TemplateIdSet;
+    }
+
+    /**
+     * Set 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
+     * @param TemplateIdSet 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
+     */
+    public void setTemplateIdSet(Long [] TemplateIdSet) {
+        this.TemplateIdSet = TemplateIdSet;
+    }
+
+    /**
+     * Get 最大上限，最多100。
+注：默认为0，TemplateIdSet 为空时启用。 
+     * @return Limit 最大上限，最多100。
+注：默认为0，TemplateIdSet 为空时启用。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 最大上限，最多100。
+注：默认为0，TemplateIdSet 为空时启用。
+     * @param Limit 最大上限，最多100。
+注：默认为0，TemplateIdSet 为空时启用。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量。
+注：默认为0，TemplateIdSet 为空时启用。 
+     * @return Offset 偏移量。
+注：默认为0，TemplateIdSet 为空时启用。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量。
+注：默认为0，TemplateIdSet 为空时启用。
+     * @param Offset 偏移量。
+注：默认为0，TemplateIdSet 为空时启用。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeSmsTemplateListRequest() {
     }
 
@@ -91,14 +147,20 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSmsTemplateListRequest(DescribeSmsTemplateListRequest source) {
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
         if (source.TemplateIdSet != null) {
             this.TemplateIdSet = new Long[source.TemplateIdSet.length];
             for (int i = 0; i < source.TemplateIdSet.length; i++) {
                 this.TemplateIdSet[i] = new Long(source.TemplateIdSet[i]);
             }
         }
-        if (source.International != null) {
-            this.International = new Long(source.International);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -107,8 +169,10 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
         this.setParamSimple(map, prefix + "International", this.International);
+        this.setParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }
