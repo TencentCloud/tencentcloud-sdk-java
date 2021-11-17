@@ -30,7 +30,7 @@ public class DescribeJoinTeamsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 团队列表
+    * 团队列表。
     */
     @SerializedName("TeamSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeJoinTeamsResponse extends AbstractModel{
     }
 
     /**
-     * Get 团队列表 
-     * @return TeamSet 团队列表
+     * Get 团队列表。 
+     * @return TeamSet 团队列表。
      */
     public JoinTeamInfo [] getTeamSet() {
         return this.TeamSet;
     }
 
     /**
-     * Set 团队列表
-     * @param TeamSet 团队列表
+     * Set 团队列表。
+     * @param TeamSet 团队列表。
      */
     public void setTeamSet(JoinTeamInfo [] TeamSet) {
         this.TeamSet = TeamSet;

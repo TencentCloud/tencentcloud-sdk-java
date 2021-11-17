@@ -100,6 +100,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private String Role;
 
     /**
+    * [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
     * 函数日志投递到的CLS LogsetID
     */
     @SerializedName("ClsLogsetId")
@@ -374,6 +381,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。 
+     * @return InstallDependency [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * Set [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     * @param InstallDependency [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
+    }
+
+    /**
      * Get 函数日志投递到的CLS LogsetID 
      * @return ClsLogsetId 函数日志投递到的CLS LogsetID
      */
@@ -638,6 +661,9 @@ public class CreateFunctionRequest extends AbstractModel{
         if (source.Role != null) {
             this.Role = new String(source.Role);
         }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
+        }
         if (source.ClsLogsetId != null) {
             this.ClsLogsetId = new String(source.ClsLogsetId);
         }
@@ -704,6 +730,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Type", this.Type);

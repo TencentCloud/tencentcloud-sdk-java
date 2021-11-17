@@ -86,6 +86,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String Role;
 
     /**
+    * [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
     * 日志投递到的cls日志集ID
     */
     @SerializedName("ClsLogsetId")
@@ -300,6 +307,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。 
+     * @return InstallDependency [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * Set [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     * @param InstallDependency [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
+    }
+
+    /**
      * Get 日志投递到的cls日志集ID 
      * @return ClsLogsetId 日志投递到的cls日志集ID
      */
@@ -494,6 +517,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         if (source.Role != null) {
             this.Role = new String(source.Role);
         }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
+        }
         if (source.ClsLogsetId != null) {
             this.ClsLogsetId = new String(source.ClsLogsetId);
         }
@@ -543,6 +569,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);

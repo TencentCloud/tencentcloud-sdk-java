@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class StopSecurityGroupRuleDispatchRequest extends AbstractModel{
 
+    /**
+    * 值为1，中止全部
+    */
+    @SerializedName("StopType")
+    @Expose
+    private Long StopType;
+
+    /**
+     * Get 值为1，中止全部 
+     * @return StopType 值为1，中止全部
+     */
+    public Long getStopType() {
+        return this.StopType;
+    }
+
+    /**
+     * Set 值为1，中止全部
+     * @param StopType 值为1，中止全部
+     */
+    public void setStopType(Long StopType) {
+        this.StopType = StopType;
+    }
+
     public StopSecurityGroupRuleDispatchRequest() {
     }
 
@@ -30,6 +53,9 @@ public class StopSecurityGroupRuleDispatchRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public StopSecurityGroupRuleDispatchRequest(StopSecurityGroupRuleDispatchRequest source) {
+        if (source.StopType != null) {
+            this.StopType = new Long(source.StopType);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class StopSecurityGroupRuleDispatchRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "StopType", this.StopType);
 
     }
 }

@@ -150,6 +150,13 @@ public class SlowLogData extends AbstractModel{
     private String ExampleSql;
 
     /**
+    * 账户的域名
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
      * Get 语句校验和，用于查询详情 
      * @return CheckSum 语句校验和，用于查询详情
      */
@@ -441,6 +448,22 @@ public class SlowLogData extends AbstractModel{
         this.ExampleSql = ExampleSql;
     }
 
+    /**
+     * Get 账户的域名 
+     * @return Host 账户的域名
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set 账户的域名
+     * @param Host 账户的域名
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
     public SlowLogData() {
     }
 
@@ -503,6 +526,9 @@ public class SlowLogData extends AbstractModel{
         if (source.ExampleSql != null) {
             this.ExampleSql = new String(source.ExampleSql);
         }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
     }
 
 
@@ -528,6 +554,7 @@ public class SlowLogData extends AbstractModel{
         this.setParamSimple(map, prefix + "TsMin", this.TsMin);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "ExampleSql", this.ExampleSql);
+        this.setParamSimple(map, prefix + "Host", this.Host);
 
     }
 }

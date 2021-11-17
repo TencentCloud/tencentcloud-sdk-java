@@ -30,21 +30,28 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 日志服务(CLS)的日志集ID。
+    * 日志服务(CLS)的日志集 ID。
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * 日志服务(CLS)的日志主题ID。
+    * 日志服务(CLS)的日志主题 ID。
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
     */
     @SerializedName("LogTopicId")
     @Expose
     private String LogTopicId;
 
     /**
-    * 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+    * 日志类型：
+<li>ACCESS：访问日志</li>
+<li>HEALTH：健康检查日志</li>
+默认为ACCESS。
     */
     @SerializedName("LogType")
     @Expose
@@ -67,48 +74,76 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志服务(CLS)的日志集ID。 
-     * @return LogSetId 日志服务(CLS)的日志集ID。
+     * Get 日志服务(CLS)的日志集 ID。
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li> 
+     * @return LogSetId 日志服务(CLS)的日志集 ID。
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set 日志服务(CLS)的日志集ID。
-     * @param LogSetId 日志服务(CLS)的日志集ID。
+     * Set 日志服务(CLS)的日志集 ID。
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
+     * @param LogSetId 日志服务(CLS)的日志集 ID。
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get 日志服务(CLS)的日志主题ID。 
-     * @return LogTopicId 日志服务(CLS)的日志主题ID。
+     * Get 日志服务(CLS)的日志主题 ID。
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li> 
+     * @return LogTopicId 日志服务(CLS)的日志主题 ID。
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set 日志服务(CLS)的日志主题ID。
-     * @param LogTopicId 日志服务(CLS)的日志主题ID。
+     * Set 日志服务(CLS)的日志主题 ID。
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
+     * @param LogTopicId 日志服务(CLS)的日志主题 ID。
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>删除日志主题时，此参数填写为null即可。</li>
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
     }
 
     /**
-     * Get 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。 
-     * @return LogType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     * Get 日志类型：
+<li>ACCESS：访问日志</li>
+<li>HEALTH：健康检查日志</li>
+默认为ACCESS。 
+     * @return LogType 日志类型：
+<li>ACCESS：访问日志</li>
+<li>HEALTH：健康检查日志</li>
+默认为ACCESS。
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
-     * @param LogType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     * Set 日志类型：
+<li>ACCESS：访问日志</li>
+<li>HEALTH：健康检查日志</li>
+默认为ACCESS。
+     * @param LogType 日志类型：
+<li>ACCESS：访问日志</li>
+<li>HEALTH：健康检查日志</li>
+默认为ACCESS。
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

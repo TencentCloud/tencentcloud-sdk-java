@@ -30,14 +30,14 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+    * 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
     */
     @SerializedName("SnatIps")
     @Expose
     private SnatIp [] SnatIps;
 
     /**
-    * 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+    * 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
     */
     @SerializedName("Number")
     @Expose
@@ -60,32 +60,32 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     }
 
     /**
-     * Get 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。 
-     * @return SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+     * Get 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。 
+     * @return SnatIps 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
      */
     public SnatIp [] getSnatIps() {
         return this.SnatIps;
     }
 
     /**
-     * Set 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
-     * @param SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+     * Set 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
+     * @param SnatIps 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
      */
     public void setSnatIps(SnatIp [] SnatIps) {
         this.SnatIps = SnatIps;
     }
 
     /**
-     * Get 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。 
-     * @return Number 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     * Get 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。 
+     * @return Number 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
      */
     public Long getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
-     * @param Number 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     * Set 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
+     * @param Number 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
      */
     public void setNumber(Long Number) {
         this.Number = Number;

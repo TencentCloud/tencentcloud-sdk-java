@@ -162,6 +162,26 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *指定导出的参数，创建一个视频编码配置
+     * @param req CreateVideoEncodingPresetRequest
+     * @return CreateVideoEncodingPresetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoEncodingPresetResponse CreateVideoEncodingPreset(CreateVideoEncodingPresetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVideoEncodingPresetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVideoEncodingPresetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVideoEncodingPreset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除分类信息，删除时检验下述限制：
 <li>分类路径必须存在；</li>
 <li>分类下没有绑定素材。</li>
@@ -278,6 +298,26 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTeamMembersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTeamMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除指定 ID 的视频编码配置
+     * @param req DeleteVideoEncodingPresetRequest
+     * @return DeleteVideoEncodingPresetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVideoEncodingPresetResponse DeleteVideoEncodingPreset(DeleteVideoEncodingPresetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVideoEncodingPresetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVideoEncodingPresetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVideoEncodingPreset");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -543,6 +583,26 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTeamsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTeams");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询视频编码配置信息。
+     * @param req DescribeVideoEncodingPresetsRequest
+     * @return DescribeVideoEncodingPresetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoEncodingPresetsResponse DescribeVideoEncodingPresets(DescribeVideoEncodingPresetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoEncodingPresetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoEncodingPresetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVideoEncodingPresets");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -860,6 +920,26 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTeamMemberResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyTeamMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改视频编码配置信息。
+     * @param req ModifyVideoEncodingPresetRequest
+     * @return ModifyVideoEncodingPresetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVideoEncodingPresetResponse ModifyVideoEncodingPreset(ModifyVideoEncodingPresetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVideoEncodingPresetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVideoEncodingPresetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVideoEncodingPreset");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

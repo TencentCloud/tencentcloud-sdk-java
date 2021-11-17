@@ -37,7 +37,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     private String ProjectId;
 
     /**
-    * 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+    * 视频编码配置 ID，支持自定义创建，推荐优先使用系统预置的导出配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -75,6 +75,13 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     @SerializedName("VODExportInfo")
     @Expose
     private VODExportInfo VODExportInfo;
+
+    /**
+    * 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+    */
+    @SerializedName("ExportExtensionArgs")
+    @Expose
+    private VideoExportExtensionArgs ExportExtensionArgs;
 
     /**
     * 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
@@ -116,11 +123,11 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+     * Get 视频编码配置 ID，支持自定义创建，推荐优先使用系统预置的导出配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li> 
-     * @return Definition 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+     * @return Definition 视频编码配置 ID，支持自定义创建，推荐优先使用系统预置的导出配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -130,11 +137,11 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
-     * Set 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+     * Set 视频编码配置 ID，支持自定义创建，推荐优先使用系统预置的导出配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
-     * @param Definition 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+     * @param Definition 视频编码配置 ID，支持自定义创建，推荐优先使用系统预置的导出配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -216,6 +223,22 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。 
+     * @return ExportExtensionArgs 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+     */
+    public VideoExportExtensionArgs getExportExtensionArgs() {
+        return this.ExportExtensionArgs;
+    }
+
+    /**
+     * Set 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+     * @param ExportExtensionArgs 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+     */
+    public void setExportExtensionArgs(VideoExportExtensionArgs ExportExtensionArgs) {
+        this.ExportExtensionArgs = ExportExtensionArgs;
+    }
+
+    /**
      * Get 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。 
      * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
      */
@@ -260,6 +283,9 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
         if (source.VODExportInfo != null) {
             this.VODExportInfo = new VODExportInfo(source.VODExportInfo);
         }
+        if (source.ExportExtensionArgs != null) {
+            this.ExportExtensionArgs = new VideoExportExtensionArgs(source.ExportExtensionArgs);
+        }
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
@@ -277,6 +303,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CoverData", this.CoverData);
         this.setParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
         this.setParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
+        this.setParamObj(map, prefix + "ExportExtensionArgs.", this.ExportExtensionArgs);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }

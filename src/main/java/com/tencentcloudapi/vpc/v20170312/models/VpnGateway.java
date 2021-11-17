@@ -149,6 +149,20 @@ public class VpnGateway extends AbstractModel{
     private String NetworkInstanceId;
 
     /**
+    * CDC 实例ID
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * SSL-VPN 客户端连接数。
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
+
+    /**
      * Get 网关实例ID。 
      * @return VpnGatewayId 网关实例ID。
      */
@@ -436,6 +450,38 @@ public class VpnGateway extends AbstractModel{
         this.NetworkInstanceId = NetworkInstanceId;
     }
 
+    /**
+     * Get CDC 实例ID 
+     * @return CdcId CDC 实例ID
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC 实例ID
+     * @param CdcId CDC 实例ID
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get SSL-VPN 客户端连接数。 
+     * @return MaxConnection SSL-VPN 客户端连接数。
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set SSL-VPN 客户端连接数。
+     * @param MaxConnection SSL-VPN 客户端连接数。
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
+    }
+
     public VpnGateway() {
     }
 
@@ -501,6 +547,12 @@ public class VpnGateway extends AbstractModel{
         if (source.NetworkInstanceId != null) {
             this.NetworkInstanceId = new String(source.NetworkInstanceId);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
     }
 
 
@@ -526,6 +578,8 @@ public class VpnGateway extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
 
     }
 }

@@ -75,6 +75,12 @@ public enum VpcErrorCode {
     // 该地址计费方式与其他地址冲突。
      INVALIDPARAMETERVALUE_ADDRESSINTERNETCHARGETYPECONFLICT("InvalidParameterValue.AddressInternetChargeTypeConflict"),
      
+    // 该IP地址现在不可用。
+     INVALIDPARAMETERVALUE_ADDRESSIPNOTAVAILABLE("InvalidParameterValue.AddressIpNotAvailable"),
+     
+    // IP地址未找到。
+     INVALIDPARAMETERVALUE_ADDRESSIPNOTFOUND("InvalidParameterValue.AddressIpNotFound"),
+     
     // 该地址不可与此实例申请。
      INVALIDPARAMETERVALUE_ADDRESSNOTAPPLICABLE("InvalidParameterValue.AddressNotApplicable"),
      
@@ -141,6 +147,9 @@ public enum VpcErrorCode {
     // 该实例状态无法完成操作。
      INVALIDPARAMETERVALUE_INVALIDINSTANCESTATE("InvalidParameterValue.InvalidInstanceState"),
      
+    // 无效的IPv6地址。
+     INVALIDPARAMETERVALUE_INVALIDIPV6("InvalidParameterValue.InvalidIpv6"),
+     
     // 该Tag不合法。
      INVALIDPARAMETERVALUE_INVALIDTAG("InvalidParameterValue.InvalidTag"),
      
@@ -152,6 +161,9 @@ public enum VpcErrorCode {
      
     // 入参格式不合法。
      INVALIDPARAMETERVALUE_MALFORMED("InvalidParameterValue.Malformed"),
+     
+    // 集群类型不同的IP不可在同一请求中。
+     INVALIDPARAMETERVALUE_MIXEDADDRESSIPSETTYPE("InvalidParameterValue.MixedAddressIpSetType"),
      
     // NAT网关的SNAT规则已经存在。
      INVALIDPARAMETERVALUE_NATSNATRULEEXISTS("InvalidParameterValue.NatSnatRuleExists"),
@@ -312,6 +324,18 @@ public enum VpcErrorCode {
     // 接口不存在。
      UNSUPPORTEDOPERATION_ACTIONNOTFOUND("UnsupportedOperation.ActionNotFound"),
      
+    // 欠费状态不支持该操作。
+     UNSUPPORTEDOPERATION_ADDRESSIPINARREAR("UnsupportedOperation.AddressIpInArrear"),
+     
+    // 此付费模式的IP地址不支持该操作。
+     UNSUPPORTEDOPERATION_ADDRESSIPINTERNETCHARGETYPENOTPERMIT("UnsupportedOperation.AddressIpInternetChargeTypeNotPermit"),
+     
+    // 绑定此实例的IP地址不支持该操作。
+     UNSUPPORTEDOPERATION_ADDRESSIPNOTSUPPORTINSTANCE("UnsupportedOperation.AddressIpNotSupportInstance"),
+     
+    // 此IP地址状态不支持该操作。
+     UNSUPPORTEDOPERATION_ADDRESSIPSTATUSNOTPERMIT("UnsupportedOperation.AddressIpStatusNotPermit"),
+     
     // 资源不在指定的AppId下。
      UNSUPPORTEDOPERATION_APPIDMISMATCH("UnsupportedOperation.AppIdMismatch"),
      
@@ -323,6 +347,9 @@ public enum VpcErrorCode {
      
     // 当前云联网还有预付费带宽未到期，不支持主动删除。
      UNSUPPORTEDOPERATION_BANDWIDTHNOTEXPIRED("UnsupportedOperation.BandwidthNotExpired"),
+     
+    // 该带宽包不支持此操作。
+     UNSUPPORTEDOPERATION_BANDWIDTHPACKAGEIDNOTSUPPORTED("UnsupportedOperation.BandwidthPackageIdNotSupported"),
      
     // 已绑定EIP。
      UNSUPPORTEDOPERATION_BINDEIP("UnsupportedOperation.BindEIP"),

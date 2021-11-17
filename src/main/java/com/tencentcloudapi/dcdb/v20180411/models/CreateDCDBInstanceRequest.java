@@ -171,6 +171,13 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private String DcnInstanceId;
 
     /**
+    * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
      * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -522,6 +529,22 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.DcnInstanceId = DcnInstanceId;
     }
 
+    /**
+     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0 
+     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -602,6 +625,9 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         if (source.DcnInstanceId != null) {
             this.DcnInstanceId = new String(source.DcnInstanceId);
         }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
     }
 
 
@@ -629,6 +655,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
         this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

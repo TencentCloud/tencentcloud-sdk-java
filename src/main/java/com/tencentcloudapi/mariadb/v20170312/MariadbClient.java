@@ -1009,6 +1009,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
+     * @param req ModifyDBSyncModeRequest
+     * @return ModifyDBSyncModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBSyncModeResponse ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBSyncMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。
      * @param req ModifyLogFileRetentionPeriodRequest
      * @return ModifyLogFileRetentionPeriodResponse
@@ -1046,6 +1066,26 @@ public class MariadbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRealServerAccessStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRealServerAccessStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ModifySyncTaskAttribute) 用于修改同步任务的属性（目前只支持修改任务名称）
+     * @param req ModifySyncTaskAttributeRequest
+     * @return ModifySyncTaskAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncTaskAttributeResponse ModifySyncTaskAttribute(ModifySyncTaskAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySyncTaskAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySyncTaskAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

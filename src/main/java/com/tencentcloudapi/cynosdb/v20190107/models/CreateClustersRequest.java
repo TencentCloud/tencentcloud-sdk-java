@@ -67,21 +67,24 @@ public class CreateClustersRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 普通实例Cpu核数
+    * 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 普通实例内存,单位G
+    * 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 存储大小，单位G
+    * 该参数无实际意义，已废弃。
+存储大小，单位G。
     */
     @SerializedName("Storage")
     @Expose
@@ -154,7 +157,8 @@ timeRollback，时间点回档
     private String ExpectTime;
 
     /**
-    * 时间点回档，指定时间允许范围
+    * 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
     */
     @SerializedName("ExpectTimeThresh")
     @Expose
@@ -417,48 +421,60 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 普通实例Cpu核数 
-     * @return Cpu 普通实例Cpu核数
+     * Get 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数 
+     * @return Cpu 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 普通实例Cpu核数
-     * @param Cpu 普通实例Cpu核数
+     * Set 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
+     * @param Cpu 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 普通实例内存,单位G 
-     * @return Memory 普通实例内存,单位G
+     * Get 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G 
+     * @return Memory 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 普通实例内存,单位G
-     * @param Memory 普通实例内存,单位G
+     * Set 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
+     * @param Memory 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 存储大小，单位G 
-     * @return Storage 存储大小，单位G
+     * Get 该参数无实际意义，已废弃。
+存储大小，单位G。 
+     * @return Storage 该参数无实际意义，已废弃。
+存储大小，单位G。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储大小，单位G
-     * @param Storage 存储大小，单位G
+     * Set 该参数无实际意义，已废弃。
+存储大小，单位G。
+     * @param Storage 该参数无实际意义，已废弃。
+存储大小，单位G。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -621,16 +637,20 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get 时间点回档，指定时间允许范围 
-     * @return ExpectTimeThresh 时间点回档，指定时间允许范围
+     * Get 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围 
+     * @return ExpectTimeThresh 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
      */
     public Long getExpectTimeThresh() {
         return this.ExpectTimeThresh;
     }
 
     /**
-     * Set 时间点回档，指定时间允许范围
-     * @param ExpectTimeThresh 时间点回档，指定时间允许范围
+     * Set 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
+     * @param ExpectTimeThresh 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
      */
     public void setExpectTimeThresh(Long ExpectTimeThresh) {
         this.ExpectTimeThresh = ExpectTimeThresh;

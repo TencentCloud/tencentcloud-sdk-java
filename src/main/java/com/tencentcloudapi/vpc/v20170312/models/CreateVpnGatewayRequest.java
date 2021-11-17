@@ -65,7 +65,7 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * VPN网关类型。值“CCN”云联网类型VPN网关
+    * VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
     */
     @SerializedName("Type")
     @Expose
@@ -77,6 +77,20 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * CDC实例ID
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
 
     /**
      * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。 
@@ -175,16 +189,16 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get VPN网关类型。值“CCN”云联网类型VPN网关 
-     * @return Type VPN网关类型。值“CCN”云联网类型VPN网关
+     * Get VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN 
+     * @return Type VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set VPN网关类型。值“CCN”云联网类型VPN网关
-     * @param Type VPN网关类型。值“CCN”云联网类型VPN网关
+     * Set VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
+     * @param Type VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -204,6 +218,38 @@ public class CreateVpnGatewayRequest extends AbstractModel{
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get CDC实例ID 
+     * @return CdcId CDC实例ID
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC实例ID
+     * @param CdcId CDC实例ID
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。 
+     * @return MaxConnection SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+     * @param MaxConnection SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
     }
 
     public CreateVpnGatewayRequest() {
@@ -241,6 +287,12 @@ public class CreateVpnGatewayRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
     }
 
 
@@ -256,6 +308,8 @@ public class CreateVpnGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
 
     }
 }

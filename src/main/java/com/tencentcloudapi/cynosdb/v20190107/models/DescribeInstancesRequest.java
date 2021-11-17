@@ -69,7 +69,14 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String DbType;
 
     /**
-    * 实例状态
+    * 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
     */
     @SerializedName("Status")
     @Expose
@@ -195,16 +202,44 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例状态 
-     * @return Status 实例状态
+     * Get 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线 
+     * @return Status 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-     * @param Status 实例状态
+     * Set 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
+     * @param Status 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
      */
     public void setStatus(String Status) {
         this.Status = Status;
