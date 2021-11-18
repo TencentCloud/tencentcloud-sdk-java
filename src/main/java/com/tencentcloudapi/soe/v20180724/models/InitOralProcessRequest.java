@@ -31,7 +31,7 @@ public class InitOralProcessRequest extends AbstractModel{
 
     /**
     * 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
     */
@@ -115,6 +115,7 @@ public class InitOralProcessRequest extends AbstractModel{
     * 评估语言
 0：英文
 1：中文
+ServerType不填默认为0
     */
     @SerializedName("ServerType")
     @Expose
@@ -158,11 +159,11 @@ public class InitOralProcessRequest extends AbstractModel{
 
     /**
      * Get 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。 
      * @return RefText 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
@@ -172,11 +173,11 @@ public class InitOralProcessRequest extends AbstractModel{
 
     /**
      * Set 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      * @param RefText 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
@@ -391,10 +392,12 @@ public class InitOralProcessRequest extends AbstractModel{
     /**
      * Get 评估语言
 0：英文
-1：中文 
+1：中文
+ServerType不填默认为0 
      * @return ServerType 评估语言
 0：英文
 1：中文
+ServerType不填默认为0
      */
     public Long getServerType() {
         return this.ServerType;
@@ -404,9 +407,11 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 评估语言
 0：英文
 1：中文
+ServerType不填默认为0
      * @param ServerType 评估语言
 0：英文
 1：中文
+ServerType不填默认为0
      */
     public void setServerType(Long ServerType) {
         this.ServerType = ServerType;

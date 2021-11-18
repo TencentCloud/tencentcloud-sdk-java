@@ -44,6 +44,14 @@ public class MeshConfig extends AbstractModel{
     private PrometheusConfig Prometheus;
 
     /**
+    * 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Inject")
+    @Expose
+    private InjectConfig Inject;
+
+    /**
      * Get Istio配置 
      * @return Istio Istio配置
      */
@@ -91,6 +99,26 @@ public class MeshConfig extends AbstractModel{
         this.Prometheus = Prometheus;
     }
 
+    /**
+     * Get 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Inject 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InjectConfig getInject() {
+        return this.Inject;
+    }
+
+    /**
+     * Set 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Inject 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInject(InjectConfig Inject) {
+        this.Inject = Inject;
+    }
+
     public MeshConfig() {
     }
 
@@ -108,6 +136,9 @@ public class MeshConfig extends AbstractModel{
         if (source.Prometheus != null) {
             this.Prometheus = new PrometheusConfig(source.Prometheus);
         }
+        if (source.Inject != null) {
+            this.Inject = new InjectConfig(source.Inject);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class MeshConfig extends AbstractModel{
         this.setParamObj(map, prefix + "Istio.", this.Istio);
         this.setParamObj(map, prefix + "AccessLog.", this.AccessLog);
         this.setParamObj(map, prefix + "Prometheus.", this.Prometheus);
+        this.setParamObj(map, prefix + "Inject.", this.Inject);
 
     }
 }

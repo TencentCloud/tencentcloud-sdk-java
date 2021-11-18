@@ -223,7 +223,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private String StatusName;
 
     /**
-    * 证书包含的多个域名（包含主域名）
+    * 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubjectAltName")
@@ -802,9 +802,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 证书包含的多个域名（包含主域名）
+     * Get 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubjectAltName 证书包含的多个域名（包含主域名）
+     * @return SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubjectAltName() {
@@ -812,9 +812,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 证书包含的多个域名（包含主域名）
+     * Set 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubjectAltName 证书包含的多个域名（包含主域名）
+     * @param SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubjectAltName(String [] SubjectAltName) {

@@ -59,6 +59,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *创建新企业安全组规则
+     * @param req AddEnterpriseSecurityGroupRulesRequest
+     * @return AddEnterpriseSecurityGroupRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(AddEnterpriseSecurityGroupRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddEnterpriseSecurityGroupRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddEnterpriseSecurityGroupRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddEnterpriseSecurityGroupRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建规则
      * @param req CreateAcRulesRequest
      * @return CreateAcRulesResponse
@@ -433,6 +453,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCfwEipsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCfwEips");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询新企业安全组规则
+     * @param req DescribeEnterpriseSecurityGroupRuleRequest
+     * @return DescribeEnterpriseSecurityGroupRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(DescribeEnterpriseSecurityGroupRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnterpriseSecurityGroupRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1282,6 +1322,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveAcRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除新企业安全组规则
+     * @param req RemoveEnterpriseSecurityGroupRuleRequest
+     * @return RemoveEnterpriseSecurityGroupRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(RemoveEnterpriseSecurityGroupRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveEnterpriseSecurityGroupRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -37,6 +37,14 @@ public class IstioConfig extends AbstractModel{
     private TracingConfig Tracing;
 
     /**
+    * 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisablePolicyChecks")
+    @Expose
+    private Boolean DisablePolicyChecks;
+
+    /**
      * Get 外部流量策略 
      * @return OutboundTrafficPolicy 外部流量策略
      */
@@ -68,6 +76,26 @@ public class IstioConfig extends AbstractModel{
         this.Tracing = Tracing;
     }
 
+    /**
+     * Get 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisablePolicyChecks 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDisablePolicyChecks() {
+        return this.DisablePolicyChecks;
+    }
+
+    /**
+     * Set 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisablePolicyChecks 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisablePolicyChecks(Boolean DisablePolicyChecks) {
+        this.DisablePolicyChecks = DisablePolicyChecks;
+    }
+
     public IstioConfig() {
     }
 
@@ -82,6 +110,9 @@ public class IstioConfig extends AbstractModel{
         if (source.Tracing != null) {
             this.Tracing = new TracingConfig(source.Tracing);
         }
+        if (source.DisablePolicyChecks != null) {
+            this.DisablePolicyChecks = new Boolean(source.DisablePolicyChecks);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class IstioConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OutboundTrafficPolicy", this.OutboundTrafficPolicy);
         this.setParamObj(map, prefix + "Tracing.", this.Tracing);
+        this.setParamSimple(map, prefix + "DisablePolicyChecks", this.DisablePolicyChecks);
 
     }
 }

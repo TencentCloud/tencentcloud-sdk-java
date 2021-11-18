@@ -31,7 +31,7 @@ public class VulEffectHostList extends AbstractModel{
     private Long EventId;
 
     /**
-    * 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+    * 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -103,6 +103,30 @@ public class VulEffectHostList extends AbstractModel{
     private String Description;
 
     /**
+    * 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostVersion")
+    @Expose
+    private Long HostVersion;
+
+    /**
+    * 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportAutoFix")
+    @Expose
+    private Long IsSupportAutoFix;
+
+    /**
+    * 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FixStatusMsg")
+    @Expose
+    private String FixStatusMsg;
+
+    /**
      * Get 事件id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventId 事件id
@@ -123,9 +147,9 @@ public class VulEffectHostList extends AbstractModel{
     }
 
     /**
-     * Get 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+     * Get 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+     * @return Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -133,9 +157,9 @@ public class VulEffectHostList extends AbstractModel{
     }
 
     /**
-     * Set 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+     * Set 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+     * @param Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -302,6 +326,66 @@ public class VulEffectHostList extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostVersion 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHostVersion() {
+        return this.HostVersion;
+    }
+
+    /**
+     * Set 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostVersion 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostVersion(Long HostVersion) {
+        this.HostVersion = HostVersion;
+    }
+
+    /**
+     * Get 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportAutoFix 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportAutoFix() {
+        return this.IsSupportAutoFix;
+    }
+
+    /**
+     * Set 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportAutoFix 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportAutoFix(Long IsSupportAutoFix) {
+        this.IsSupportAutoFix = IsSupportAutoFix;
+    }
+
+    /**
+     * Get 失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FixStatusMsg 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFixStatusMsg() {
+        return this.FixStatusMsg;
+    }
+
+    /**
+     * Set 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FixStatusMsg 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFixStatusMsg(String FixStatusMsg) {
+        this.FixStatusMsg = FixStatusMsg;
+    }
+
     public VulEffectHostList() {
     }
 
@@ -343,6 +427,15 @@ public class VulEffectHostList extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.HostVersion != null) {
+            this.HostVersion = new Long(source.HostVersion);
+        }
+        if (source.IsSupportAutoFix != null) {
+            this.IsSupportAutoFix = new Long(source.IsSupportAutoFix);
+        }
+        if (source.FixStatusMsg != null) {
+            this.FixStatusMsg = new String(source.FixStatusMsg);
+        }
     }
 
 
@@ -360,6 +453,9 @@ public class VulEffectHostList extends AbstractModel{
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
+        this.setParamSimple(map, prefix + "IsSupportAutoFix", this.IsSupportAutoFix);
+        this.setParamSimple(map, prefix + "FixStatusMsg", this.FixStatusMsg);
 
     }
 }

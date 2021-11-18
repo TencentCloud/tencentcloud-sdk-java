@@ -79,6 +79,38 @@ public class EmergencyVul extends AbstractModel{
     private Long Progress;
 
     /**
+    * cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CveId")
+    @Expose
+    private String CveId;
+
+    /**
+    * CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvssScore")
+    @Expose
+    private Float CvssScore;
+
+    /**
+    * 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String Labels;
+
+    /**
+    * 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostCount")
+    @Expose
+    private Long HostCount;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -206,6 +238,86 @@ public class EmergencyVul extends AbstractModel{
         this.Progress = Progress;
     }
 
+    /**
+     * Get cve编号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CveId cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCveId() {
+        return this.CveId;
+    }
+
+    /**
+     * Set cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CveId cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCveId(String CveId) {
+        this.CveId = CveId;
+    }
+
+    /**
+     * Get CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvssScore CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCvssScore() {
+        return this.CvssScore;
+    }
+
+    /**
+     * Set CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvssScore CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvssScore(Float CvssScore) {
+        this.CvssScore = CvssScore;
+    }
+
+    /**
+     * Get 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(String Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
+     * Get 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostCount 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHostCount() {
+        return this.HostCount;
+    }
+
+    /**
+     * Set 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostCount 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostCount(Long HostCount) {
+        this.HostCount = HostCount;
+    }
+
     public EmergencyVul() {
     }
 
@@ -238,6 +350,18 @@ public class EmergencyVul extends AbstractModel{
         if (source.Progress != null) {
             this.Progress = new Long(source.Progress);
         }
+        if (source.CveId != null) {
+            this.CveId = new String(source.CveId);
+        }
+        if (source.CvssScore != null) {
+            this.CvssScore = new Float(source.CvssScore);
+        }
+        if (source.Labels != null) {
+            this.Labels = new String(source.Labels);
+        }
+        if (source.HostCount != null) {
+            this.HostCount = new Long(source.HostCount);
+        }
     }
 
 
@@ -253,6 +377,10 @@ public class EmergencyVul extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "CveId", this.CveId);
+        this.setParamSimple(map, prefix + "CvssScore", this.CvssScore);
+        this.setParamSimple(map, prefix + "Labels", this.Labels);
+        this.setParamSimple(map, prefix + "HostCount", this.HostCount);
 
     }
 }

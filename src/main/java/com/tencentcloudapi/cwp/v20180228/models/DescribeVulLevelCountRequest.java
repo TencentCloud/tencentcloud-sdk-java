@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeVulLevelCountRequest extends AbstractModel{
 
+    /**
+    * 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+    */
+    @SerializedName("VulCategory")
+    @Expose
+    private Long VulCategory;
+
+    /**
+     * Get 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞 
+     * @return VulCategory 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+     */
+    public Long getVulCategory() {
+        return this.VulCategory;
+    }
+
+    /**
+     * Set 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+     * @param VulCategory 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+     */
+    public void setVulCategory(Long VulCategory) {
+        this.VulCategory = VulCategory;
+    }
+
     public DescribeVulLevelCountRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeVulLevelCountRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeVulLevelCountRequest(DescribeVulLevelCountRequest source) {
+        if (source.VulCategory != null) {
+            this.VulCategory = new Long(source.VulCategory);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeVulLevelCountRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VulCategory", this.VulCategory);
 
     }
 }

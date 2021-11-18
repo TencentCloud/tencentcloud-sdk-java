@@ -58,6 +58,30 @@ public class DescribeScanStateResponse extends AbstractModel{
     private Long Type;
 
     /**
+    * 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScanBeginTime")
+    @Expose
+    private String ScanBeginTime;
+
+    /**
+    * 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskEventCount")
+    @Expose
+    private Long RiskEventCount;
+
+    /**
+    * 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScanEndTime")
+    @Expose
+    private String ScanEndTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +169,66 @@ public class DescribeScanStateResponse extends AbstractModel{
     }
 
     /**
+     * Get 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScanBeginTime 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScanBeginTime() {
+        return this.ScanBeginTime;
+    }
+
+    /**
+     * Set 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScanBeginTime 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScanBeginTime(String ScanBeginTime) {
+        this.ScanBeginTime = ScanBeginTime;
+    }
+
+    /**
+     * Get 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskEventCount 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRiskEventCount() {
+        return this.RiskEventCount;
+    }
+
+    /**
+     * Set 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskEventCount 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskEventCount(Long RiskEventCount) {
+        this.RiskEventCount = RiskEventCount;
+    }
+
+    /**
+     * Get 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScanEndTime 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScanEndTime() {
+        return this.ScanEndTime;
+    }
+
+    /**
+     * Set 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScanEndTime 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScanEndTime(String ScanEndTime) {
+        this.ScanEndTime = ScanEndTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -186,6 +270,15 @@ public class DescribeScanStateResponse extends AbstractModel{
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.ScanBeginTime != null) {
+            this.ScanBeginTime = new String(source.ScanBeginTime);
+        }
+        if (source.RiskEventCount != null) {
+            this.RiskEventCount = new Long(source.RiskEventCount);
+        }
+        if (source.ScanEndTime != null) {
+            this.ScanEndTime = new String(source.ScanEndTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -201,6 +294,9 @@ public class DescribeScanStateResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamArraySimple(map, prefix + "VulId.", this.VulId);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "ScanBeginTime", this.ScanBeginTime);
+        this.setParamSimple(map, prefix + "RiskEventCount", this.RiskEventCount);
+        this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

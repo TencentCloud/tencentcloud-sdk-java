@@ -37,7 +37,7 @@ public class VulInfoList extends AbstractModel{
     private String Name;
 
     /**
-    * 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+    * 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
     */
     @SerializedName("Status")
     @Expose
@@ -127,6 +127,46 @@ public class VulInfoList extends AbstractModel{
     private String StatusStr;
 
     /**
+    * cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CveId")
+    @Expose
+    private String CveId;
+
+    /**
+    * CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvssScore")
+    @Expose
+    private Float CvssScore;
+
+    /**
+    * 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String Labels;
+
+    /**
+    * 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FixSwitch")
+    @Expose
+    private Long FixSwitch;
+
+    /**
+    * 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
      * @return Ids 漏洞包含的事件id串，多个用“,”分割
      */
@@ -159,16 +199,16 @@ public class VulInfoList extends AbstractModel{
     }
 
     /**
-     * Get 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态 
-     * @return Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+     * Get 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败 
+     * @return Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
-     * @param Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+     * Set 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
+     * @param Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -374,6 +414,106 @@ public class VulInfoList extends AbstractModel{
         this.StatusStr = StatusStr;
     }
 
+    /**
+     * Get cve编号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CveId cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCveId() {
+        return this.CveId;
+    }
+
+    /**
+     * Set cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CveId cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCveId(String CveId) {
+        this.CveId = CveId;
+    }
+
+    /**
+     * Get CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvssScore CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCvssScore() {
+        return this.CvssScore;
+    }
+
+    /**
+     * Set CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvssScore CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvssScore(Float CvssScore) {
+        this.CvssScore = CvssScore;
+    }
+
+    /**
+     * Get 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(String Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
+     * Get 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFixSwitch() {
+        return this.FixSwitch;
+    }
+
+    /**
+     * Set 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFixSwitch(Long FixSwitch) {
+        this.FixSwitch = FixSwitch;
+    }
+
+    /**
+     * Get 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public VulInfoList() {
     }
 
@@ -424,6 +564,21 @@ public class VulInfoList extends AbstractModel{
         if (source.StatusStr != null) {
             this.StatusStr = new String(source.StatusStr);
         }
+        if (source.CveId != null) {
+            this.CveId = new String(source.CveId);
+        }
+        if (source.CvssScore != null) {
+            this.CvssScore = new Float(source.CvssScore);
+        }
+        if (source.Labels != null) {
+            this.Labels = new String(source.Labels);
+        }
+        if (source.FixSwitch != null) {
+            this.FixSwitch = new Long(source.FixSwitch);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
     }
 
 
@@ -445,6 +600,11 @@ public class VulInfoList extends AbstractModel{
         this.setParamSimple(map, prefix + "NameWisteria", this.NameWisteria);
         this.setParamSimple(map, prefix + "DescriptWisteria", this.DescriptWisteria);
         this.setParamSimple(map, prefix + "StatusStr", this.StatusStr);
+        this.setParamSimple(map, prefix + "CveId", this.CveId);
+        this.setParamSimple(map, prefix + "CvssScore", this.CvssScore);
+        this.setParamSimple(map, prefix + "Labels", this.Labels);
+        this.setParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

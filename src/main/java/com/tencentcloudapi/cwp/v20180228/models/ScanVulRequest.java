@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ScanVulRequest extends AbstractModel{
 
     /**
-    * 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
-    */
-    @SerializedName("VulCategories")
-    @Expose
-    private String VulCategories;
-
-    /**
     * 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
     */
     @SerializedName("VulLevels")
@@ -42,6 +35,13 @@ public class ScanVulRequest extends AbstractModel{
     @SerializedName("HostType")
     @Expose
     private Long HostType;
+
+    /**
+    * 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+    */
+    @SerializedName("VulCategories")
+    @Expose
+    private String VulCategories;
 
     /**
     * 自选服务器时生效，主机quuid的string数组
@@ -70,22 +70,6 @@ public class ScanVulRequest extends AbstractModel{
     @SerializedName("VulIds")
     @Expose
     private Long [] VulIds;
-
-    /**
-     * Get 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔) 
-     * @return VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
-     */
-    public String getVulCategories() {
-        return this.VulCategories;
-    }
-
-    /**
-     * Set 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
-     * @param VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
-     */
-    public void setVulCategories(String VulCategories) {
-        this.VulCategories = VulCategories;
-    }
 
     /**
      * Get 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔) 
@@ -117,6 +101,22 @@ public class ScanVulRequest extends AbstractModel{
      */
     public void setHostType(Long HostType) {
         this.HostType = HostType;
+    }
+
+    /**
+     * Get 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔) 
+     * @return VulCategories 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+     */
+    public String getVulCategories() {
+        return this.VulCategories;
+    }
+
+    /**
+     * Set 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+     * @param VulCategories 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+     */
+    public void setVulCategories(String VulCategories) {
+        this.VulCategories = VulCategories;
     }
 
     /**
@@ -191,14 +191,14 @@ public class ScanVulRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ScanVulRequest(ScanVulRequest source) {
-        if (source.VulCategories != null) {
-            this.VulCategories = new String(source.VulCategories);
-        }
         if (source.VulLevels != null) {
             this.VulLevels = new String(source.VulLevels);
         }
         if (source.HostType != null) {
             this.HostType = new Long(source.HostType);
+        }
+        if (source.VulCategories != null) {
+            this.VulCategories = new String(source.VulCategories);
         }
         if (source.QuuidList != null) {
             this.QuuidList = new String[source.QuuidList.length];
@@ -225,9 +225,9 @@ public class ScanVulRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VulCategories", this.VulCategories);
         this.setParamSimple(map, prefix + "VulLevels", this.VulLevels);
         this.setParamSimple(map, prefix + "HostType", this.HostType);
+        this.setParamSimple(map, prefix + "VulCategories", this.VulCategories);
         this.setParamArraySimple(map, prefix + "QuuidList.", this.QuuidList);
         this.setParamSimple(map, prefix + "VulEmergency", this.VulEmergency);
         this.setParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);

@@ -72,7 +72,7 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
     private SecurityEventInfo ReverseShell;
 
     /**
-    * 系统组件相关风险事件
+    * 应用漏洞风险事件
     */
     @SerializedName("SysVul")
     @Expose
@@ -119,6 +119,22 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
     @SerializedName("EventsCount")
     @Expose
     private Long EventsCount;
+
+    /**
+    * window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WindowVul")
+    @Expose
+    private SecurityEventInfo WindowVul;
+
+    /**
+    * linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LinuxVul")
+    @Expose
+    private SecurityEventInfo LinuxVul;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -240,16 +256,16 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
     }
 
     /**
-     * Get 系统组件相关风险事件 
-     * @return SysVul 系统组件相关风险事件
+     * Get 应用漏洞风险事件 
+     * @return SysVul 应用漏洞风险事件
      */
     public SecurityEventInfo getSysVul() {
         return this.SysVul;
     }
 
     /**
-     * Set 系统组件相关风险事件
-     * @param SysVul 系统组件相关风险事件
+     * Set 应用漏洞风险事件
+     * @param SysVul 应用漏洞风险事件
      */
     public void setSysVul(SecurityEventInfo SysVul) {
         this.SysVul = SysVul;
@@ -352,6 +368,46 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
     }
 
     /**
+     * Get window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WindowVul window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityEventInfo getWindowVul() {
+        return this.WindowVul;
+    }
+
+    /**
+     * Set window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WindowVul window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWindowVul(SecurityEventInfo WindowVul) {
+        this.WindowVul = WindowVul;
+    }
+
+    /**
+     * Get linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LinuxVul linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityEventInfo getLinuxVul() {
+        return this.LinuxVul;
+    }
+
+    /**
+     * Set linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LinuxVul linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLinuxVul(SecurityEventInfo LinuxVul) {
+        this.LinuxVul = LinuxVul;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -417,6 +473,12 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
         if (source.EventsCount != null) {
             this.EventsCount = new Long(source.EventsCount);
         }
+        if (source.WindowVul != null) {
+            this.WindowVul = new SecurityEventInfo(source.WindowVul);
+        }
+        if (source.LinuxVul != null) {
+            this.LinuxVul = new SecurityEventInfo(source.LinuxVul);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -441,6 +503,8 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
         this.setParamObj(map, prefix + "AttackLogs.", this.AttackLogs);
         this.setParamSimple(map, prefix + "EffectMachineCount", this.EffectMachineCount);
         this.setParamSimple(map, prefix + "EventsCount", this.EventsCount);
+        this.setParamObj(map, prefix + "WindowVul.", this.WindowVul);
+        this.setParamObj(map, prefix + "LinuxVul.", this.LinuxVul);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

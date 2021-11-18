@@ -47,7 +47,7 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     private Long VulLevel;
 
     /**
-    * 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+    * 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulType")
@@ -127,6 +127,14 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     private Float CvssScoreFloat;
 
     /**
+    * 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String Labels;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -194,9 +202,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
-     * Get 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+     * Get 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VulType 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+     * @return VulType 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulType() {
@@ -204,9 +212,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
-     * Set 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+     * Set 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VulType 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+     * @param VulType 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulType(Long VulType) {
@@ -394,6 +402,26 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
+     * Get 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(String Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -456,6 +484,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
         if (source.CvssScoreFloat != null) {
             this.CvssScoreFloat = new Float(source.CvssScoreFloat);
         }
+        if (source.Labels != null) {
+            this.Labels = new String(source.Labels);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -479,6 +510,7 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CvssScore", this.CvssScore);
         this.setParamSimple(map, prefix + "CveInfo", this.CveInfo);
         this.setParamSimple(map, prefix + "CvssScoreFloat", this.CvssScoreFloat);
+        this.setParamSimple(map, prefix + "Labels", this.Labels);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
