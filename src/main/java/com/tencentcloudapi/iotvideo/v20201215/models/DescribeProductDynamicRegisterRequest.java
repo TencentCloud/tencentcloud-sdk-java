@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulLevelCountRequest extends AbstractModel{
+public class DescribeProductDynamicRegisterRequest extends AbstractModel{
 
     /**
-    * 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+    * 产品ID
     */
-    @SerializedName("VulCategory")
+    @SerializedName("ProductId")
     @Expose
-    private Long VulCategory;
+    private String ProductId;
 
     /**
-     * Get 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞 
-     * @return VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * Get 产品ID 
+     * @return ProductId 产品ID
      */
-    public Long getVulCategory() {
-        return this.VulCategory;
+    public String getProductId() {
+        return this.ProductId;
     }
 
     /**
-     * Set 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
-     * @param VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * Set 产品ID
+     * @param ProductId 产品ID
      */
-    public void setVulCategory(Long VulCategory) {
-        this.VulCategory = VulCategory;
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
     }
 
-    public DescribeVulLevelCountRequest() {
+    public DescribeProductDynamicRegisterRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVulLevelCountRequest(DescribeVulLevelCountRequest source) {
-        if (source.VulCategory != null) {
-            this.VulCategory = new Long(source.VulCategory);
+    public DescribeProductDynamicRegisterRequest(DescribeProductDynamicRegisterRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeVulLevelCountRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VulCategory", this.VulCategory);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

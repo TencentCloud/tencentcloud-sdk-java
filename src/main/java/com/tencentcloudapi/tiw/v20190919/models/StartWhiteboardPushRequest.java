@@ -30,7 +30,9 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 需要推流白板的房间号，取值范围: (1, 4294967295)
+    * 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
     */
     @SerializedName("RoomId")
     @Expose
@@ -171,6 +173,30 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     private String ExtraData;
 
     /**
+    * **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+    */
+    @SerializedName("TRTCRoomId")
+    @Expose
+    private Long TRTCRoomId;
+
+    /**
+    * **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+    */
+    @SerializedName("TRTCRoomIdStr")
+    @Expose
+    private String TRTCRoomIdStr;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -187,16 +213,24 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     }
 
     /**
-     * Get 需要推流白板的房间号，取值范围: (1, 4294967295) 
-     * @return RoomId 需要推流白板的房间号，取值范围: (1, 4294967295)
+     * Get 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。 
+     * @return RoomId 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 需要推流白板的房间号，取值范围: (1, 4294967295)
-     * @param RoomId 需要推流白板的房间号，取值范围: (1, 4294967295)
+     * Set 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
+     * @param RoomId 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
@@ -570,6 +604,78 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         this.ExtraData = ExtraData;
     }
 
+    /**
+     * Get **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。 
+     * @return TRTCRoomId **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+     */
+    public Long getTRTCRoomId() {
+        return this.TRTCRoomId;
+    }
+
+    /**
+     * Set **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+     * @param TRTCRoomId **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+     */
+    public void setTRTCRoomId(Long TRTCRoomId) {
+        this.TRTCRoomId = TRTCRoomId;
+    }
+
+    /**
+     * Get **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。 
+     * @return TRTCRoomIdStr **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+     */
+    public String getTRTCRoomIdStr() {
+        return this.TRTCRoomIdStr;
+    }
+
+    /**
+     * Set **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+     * @param TRTCRoomIdStr **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+     */
+    public void setTRTCRoomIdStr(String TRTCRoomIdStr) {
+        this.TRTCRoomIdStr = TRTCRoomIdStr;
+    }
+
     public StartWhiteboardPushRequest() {
     }
 
@@ -626,6 +732,12 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         if (source.ExtraData != null) {
             this.ExtraData = new String(source.ExtraData);
         }
+        if (source.TRTCRoomId != null) {
+            this.TRTCRoomId = new Long(source.TRTCRoomId);
+        }
+        if (source.TRTCRoomIdStr != null) {
+            this.TRTCRoomIdStr = new String(source.TRTCRoomIdStr);
+        }
     }
 
 
@@ -649,6 +761,8 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         this.setParamSimple(map, prefix + "AutoPublish", this.AutoPublish);
         this.setParamSimple(map, prefix + "UserDefinedStreamId", this.UserDefinedStreamId);
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
+        this.setParamSimple(map, prefix + "TRTCRoomId", this.TRTCRoomId);
+        this.setParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
 
     }
 }

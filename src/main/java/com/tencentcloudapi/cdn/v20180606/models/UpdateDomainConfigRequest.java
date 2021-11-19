@@ -332,6 +332,13 @@ global：全球加速
     private RemoteAuthentication RemoteAuthentication;
 
     /**
+    * 共享CNAME配置，白名单功能
+    */
+    @SerializedName("ShareCname")
+    @Expose
+    private ShareCname ShareCname;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1051,6 +1058,22 @@ global：全球加速
         this.RemoteAuthentication = RemoteAuthentication;
     }
 
+    /**
+     * Get 共享CNAME配置，白名单功能 
+     * @return ShareCname 共享CNAME配置，白名单功能
+     */
+    public ShareCname getShareCname() {
+        return this.ShareCname;
+    }
+
+    /**
+     * Set 共享CNAME配置，白名单功能
+     * @param ShareCname 共享CNAME配置，白名单功能
+     */
+    public void setShareCname(ShareCname ShareCname) {
+        this.ShareCname = ShareCname;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1191,6 +1214,9 @@ global：全球加速
         if (source.RemoteAuthentication != null) {
             this.RemoteAuthentication = new RemoteAuthentication(source.RemoteAuthentication);
         }
+        if (source.ShareCname != null) {
+            this.ShareCname = new ShareCname(source.ShareCname);
+        }
     }
 
 
@@ -1241,6 +1267,7 @@ global：全球加速
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+        this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
 
     }
 }

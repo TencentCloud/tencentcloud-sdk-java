@@ -56,6 +56,15 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
     private String FilterType;
 
     /**
+    * 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupSecretKey")
+    @Expose
+    private String BackupSecretKey;
+
+    /**
      * Get 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -139,6 +148,30 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
         this.FilterType = FilterType;
     }
 
+    /**
+     * Get 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupSecretKey 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupSecretKey() {
+        return this.BackupSecretKey;
+    }
+
+    /**
+     * Set 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupSecretKey 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupSecretKey(String BackupSecretKey) {
+        this.BackupSecretKey = BackupSecretKey;
+    }
+
     public AuthenticationTypeB() {
     }
 
@@ -162,6 +195,9 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
         if (source.FilterType != null) {
             this.FilterType = new String(source.FilterType);
         }
+        if (source.BackupSecretKey != null) {
+            this.BackupSecretKey = new String(source.BackupSecretKey);
+        }
     }
 
 
@@ -173,6 +209,7 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
+        this.setParamSimple(map, prefix + "BackupSecretKey", this.BackupSecretKey);
 
     }
 }

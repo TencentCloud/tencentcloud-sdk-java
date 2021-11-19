@@ -1330,6 +1330,26 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *查询实例价格
+     * @param req DescribePriceRunInstanceRequest
+     * @return DescribePriceRunInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePriceRunInstanceResponse DescribePriceRunInstance(DescribePriceRunInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePriceRunInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePriceRunInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePriceRunInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询自定义路由策略与云联网路由策略冲突列表
      * @param req DescribeRouteConflictsRequest
      * @return DescribeRouteConflictsResponse

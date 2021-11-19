@@ -79,6 +79,30 @@ public class RecordTaskItem extends AbstractModel{
     private Long RecordStatus;
 
     /**
+    * 场景ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneId")
+    @Expose
+    private Long SceneId;
+
+    /**
+    * 告警ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarnId")
+    @Expose
+    private Long WarnId;
+
+    /**
+    * 录制id，NVR下属设备有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
      * Get 录像任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecordTaskId 录像任务ID
@@ -218,6 +242,66 @@ public class RecordTaskItem extends AbstractModel{
         this.RecordStatus = RecordStatus;
     }
 
+    /**
+     * Get 场景ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneId 场景ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSceneId() {
+        return this.SceneId;
+    }
+
+    /**
+     * Set 场景ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneId 场景ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneId(Long SceneId) {
+        this.SceneId = SceneId;
+    }
+
+    /**
+     * Get 告警ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarnId 告警ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWarnId() {
+        return this.WarnId;
+    }
+
+    /**
+     * Set 告警ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarnId 告警ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarnId(Long WarnId) {
+        this.WarnId = WarnId;
+    }
+
+    /**
+     * Get 录制id，NVR下属设备有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordId 录制id，NVR下属设备有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 录制id，NVR下属设备有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordId 录制id，NVR下属设备有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
+    }
+
     public RecordTaskItem() {
     }
 
@@ -247,6 +331,15 @@ public class RecordTaskItem extends AbstractModel{
         if (source.RecordStatus != null) {
             this.RecordStatus = new Long(source.RecordStatus);
         }
+        if (source.SceneId != null) {
+            this.SceneId = new Long(source.SceneId);
+        }
+        if (source.WarnId != null) {
+            this.WarnId = new Long(source.WarnId);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
     }
 
 
@@ -261,6 +354,9 @@ public class RecordTaskItem extends AbstractModel{
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
         this.setParamSimple(map, prefix + "RecordStatus", this.RecordStatus);
+        this.setParamSimple(map, prefix + "SceneId", this.SceneId);
+        this.setParamSimple(map, prefix + "WarnId", this.WarnId);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
 
     }
 }

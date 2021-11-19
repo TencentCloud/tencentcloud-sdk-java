@@ -510,6 +510,14 @@ off：不支持
     private RemoteAuthentication RemoteAuthentication;
 
     /**
+    * 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShareCname")
+    @Expose
+    private ShareCname ShareCname;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1749,6 +1757,26 @@ off：不支持
         this.RemoteAuthentication = RemoteAuthentication;
     }
 
+    /**
+     * Get 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShareCname 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ShareCname getShareCname() {
+        return this.ShareCname;
+    }
+
+    /**
+     * Set 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShareCname 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShareCname(ShareCname ShareCname) {
+        this.ShareCname = ShareCname;
+    }
+
     public DetailDomain() {
     }
 
@@ -1943,6 +1971,9 @@ off：不支持
         if (source.RemoteAuthentication != null) {
             this.RemoteAuthentication = new RemoteAuthentication(source.RemoteAuthentication);
         }
+        if (source.ShareCname != null) {
+            this.ShareCname = new ShareCname(source.ShareCname);
+        }
     }
 
 
@@ -2009,6 +2040,7 @@ off：不支持
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+        this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
 
     }
 }
