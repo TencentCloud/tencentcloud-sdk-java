@@ -66,7 +66,7 @@ public class DescribeAssetSystemPackageListRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 排序方式，asc-升序 或 desc-降序
+    * 排序方式，asc-升序 或 desc-降序。默认：desc-降序
     */
     @SerializedName("Order")
     @Expose
@@ -192,16 +192,16 @@ public class DescribeAssetSystemPackageListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序方式，asc-升序 或 desc-降序 
-     * @return Order 排序方式，asc-升序 或 desc-降序
+     * Get 排序方式，asc-升序 或 desc-降序。默认：desc-降序 
+     * @return Order 排序方式，asc-升序 或 desc-降序。默认：desc-降序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式，asc-升序 或 desc-降序
-     * @param Order 排序方式，asc-升序 或 desc-降序
+     * Set 排序方式，asc-升序 或 desc-降序。默认：desc-降序
+     * @param Order 排序方式，asc-升序 或 desc-降序。默认：desc-降序
      */
     public void setOrder(String Order) {
         this.Order = Order;

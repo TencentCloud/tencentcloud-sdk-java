@@ -161,6 +161,13 @@ public class BGPIPInstance extends AbstractModel{
     private String Domain;
 
     /**
+    * 是否开启安全加速，是为1，否为0。
+    */
+    @SerializedName("DamDDoSStatus")
+    @Expose
+    private Long DamDDoSStatus;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -508,6 +515,22 @@ public class BGPIPInstance extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get 是否开启安全加速，是为1，否为0。 
+     * @return DamDDoSStatus 是否开启安全加速，是为1，否为0。
+     */
+    public Long getDamDDoSStatus() {
+        return this.DamDDoSStatus;
+    }
+
+    /**
+     * Set 是否开启安全加速，是为1，否为0。
+     * @param DamDDoSStatus 是否开启安全加速，是为1，否为0。
+     */
+    public void setDamDDoSStatus(Long DamDDoSStatus) {
+        this.DamDDoSStatus = DamDDoSStatus;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -567,6 +590,9 @@ public class BGPIPInstance extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.DamDDoSStatus != null) {
+            this.DamDDoSStatus = new Long(source.DamDDoSStatus);
+        }
     }
 
 
@@ -591,6 +617,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
         this.setParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
 
     }
 }

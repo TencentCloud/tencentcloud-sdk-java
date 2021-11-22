@@ -149,56 +149,56 @@ public class VerifyBizLicenseResponse extends AbstractModel{
     private String ApprDate;
 
     /**
-    * 省
+    * 省（返回空值）
     */
     @SerializedName("Province")
     @Expose
     private String Province;
 
     /**
-    * 地级市
+    * 地级市（返回空值）
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * 区\县
+    * 区\县（返回空值）
     */
     @SerializedName("County")
     @Expose
     private String County;
 
     /**
-    * 住所所在行政区划代码
+    * 住所所在行政区划代码（返回空值）
     */
     @SerializedName("AreaCode")
     @Expose
     private String AreaCode;
 
     /**
-    * 行业门类代码
+    * 行业门类代码（返回空值）
     */
     @SerializedName("IndustryPhyCode")
     @Expose
     private String IndustryPhyCode;
 
     /**
-    * 行业门类名称
+    * 行业门类名称（返回空值）
     */
     @SerializedName("IndustryPhyName")
     @Expose
     private String IndustryPhyName;
 
     /**
-    * 国民经济行业代码
+    * 国民经济行业代码（返回空值）
     */
     @SerializedName("IndustryCode")
     @Expose
     private String IndustryCode;
 
     /**
-    * 国民经济行业名称
+    * 国民经济行业名称（返回空值）
     */
     @SerializedName("IndustryName")
     @Expose
@@ -556,128 +556,128 @@ public class VerifyBizLicenseResponse extends AbstractModel{
     }
 
     /**
-     * Get 省 
-     * @return Province 省
+     * Get 省（返回空值） 
+     * @return Province 省（返回空值）
      */
     public String getProvince() {
         return this.Province;
     }
 
     /**
-     * Set 省
-     * @param Province 省
+     * Set 省（返回空值）
+     * @param Province 省（返回空值）
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 地级市 
-     * @return City 地级市
+     * Get 地级市（返回空值） 
+     * @return City 地级市（返回空值）
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set 地级市
-     * @param City 地级市
+     * Set 地级市（返回空值）
+     * @param City 地级市（返回空值）
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 区\县 
-     * @return County 区\县
+     * Get 区\县（返回空值） 
+     * @return County 区\县（返回空值）
      */
     public String getCounty() {
         return this.County;
     }
 
     /**
-     * Set 区\县
-     * @param County 区\县
+     * Set 区\县（返回空值）
+     * @param County 区\县（返回空值）
      */
     public void setCounty(String County) {
         this.County = County;
     }
 
     /**
-     * Get 住所所在行政区划代码 
-     * @return AreaCode 住所所在行政区划代码
+     * Get 住所所在行政区划代码（返回空值） 
+     * @return AreaCode 住所所在行政区划代码（返回空值）
      */
     public String getAreaCode() {
         return this.AreaCode;
     }
 
     /**
-     * Set 住所所在行政区划代码
-     * @param AreaCode 住所所在行政区划代码
+     * Set 住所所在行政区划代码（返回空值）
+     * @param AreaCode 住所所在行政区划代码（返回空值）
      */
     public void setAreaCode(String AreaCode) {
         this.AreaCode = AreaCode;
     }
 
     /**
-     * Get 行业门类代码 
-     * @return IndustryPhyCode 行业门类代码
+     * Get 行业门类代码（返回空值） 
+     * @return IndustryPhyCode 行业门类代码（返回空值）
      */
     public String getIndustryPhyCode() {
         return this.IndustryPhyCode;
     }
 
     /**
-     * Set 行业门类代码
-     * @param IndustryPhyCode 行业门类代码
+     * Set 行业门类代码（返回空值）
+     * @param IndustryPhyCode 行业门类代码（返回空值）
      */
     public void setIndustryPhyCode(String IndustryPhyCode) {
         this.IndustryPhyCode = IndustryPhyCode;
     }
 
     /**
-     * Get 行业门类名称 
-     * @return IndustryPhyName 行业门类名称
+     * Get 行业门类名称（返回空值） 
+     * @return IndustryPhyName 行业门类名称（返回空值）
      */
     public String getIndustryPhyName() {
         return this.IndustryPhyName;
     }
 
     /**
-     * Set 行业门类名称
-     * @param IndustryPhyName 行业门类名称
+     * Set 行业门类名称（返回空值）
+     * @param IndustryPhyName 行业门类名称（返回空值）
      */
     public void setIndustryPhyName(String IndustryPhyName) {
         this.IndustryPhyName = IndustryPhyName;
     }
 
     /**
-     * Get 国民经济行业代码 
-     * @return IndustryCode 国民经济行业代码
+     * Get 国民经济行业代码（返回空值） 
+     * @return IndustryCode 国民经济行业代码（返回空值）
      */
     public String getIndustryCode() {
         return this.IndustryCode;
     }
 
     /**
-     * Set 国民经济行业代码
-     * @param IndustryCode 国民经济行业代码
+     * Set 国民经济行业代码（返回空值）
+     * @param IndustryCode 国民经济行业代码（返回空值）
      */
     public void setIndustryCode(String IndustryCode) {
         this.IndustryCode = IndustryCode;
     }
 
     /**
-     * Get 国民经济行业名称 
-     * @return IndustryName 国民经济行业名称
+     * Get 国民经济行业名称（返回空值） 
+     * @return IndustryName 国民经济行业名称（返回空值）
      */
     public String getIndustryName() {
         return this.IndustryName;
     }
 
     /**
-     * Set 国民经济行业名称
-     * @param IndustryName 国民经济行业名称
+     * Set 国民经济行业名称（返回空值）
+     * @param IndustryName 国民经济行业名称（返回空值）
      */
     public void setIndustryName(String IndustryName) {
         this.IndustryName = IndustryName;

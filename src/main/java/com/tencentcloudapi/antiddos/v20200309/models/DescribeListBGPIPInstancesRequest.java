@@ -92,6 +92,13 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private String [] FilterEipEipAddressStatus;
 
     /**
+    * 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+    */
+    @SerializedName("FilterDamDDoSStatus")
+    @Expose
+    private Long FilterDamDDoSStatus;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -259,6 +266,22 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterEipEipAddressStatus = FilterEipEipAddressStatus;
     }
 
+    /**
+     * Get 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。 
+     * @return FilterDamDDoSStatus 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+     */
+    public Long getFilterDamDDoSStatus() {
+        return this.FilterDamDDoSStatus;
+    }
+
+    /**
+     * Set 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+     * @param FilterDamDDoSStatus 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+     */
+    public void setFilterDamDDoSStatus(Long FilterDamDDoSStatus) {
+        this.FilterDamDDoSStatus = FilterDamDDoSStatus;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -297,6 +320,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
                 this.FilterEipEipAddressStatus[i] = new String(source.FilterEipEipAddressStatus[i]);
             }
         }
+        if (source.FilterDamDDoSStatus != null) {
+            this.FilterDamDDoSStatus = new Long(source.FilterDamDDoSStatus);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterName", this.FilterName);
         this.setParamSimple(map, prefix + "FilterEipType", this.FilterEipType);
         this.setParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
+        this.setParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
 
     }
 }
