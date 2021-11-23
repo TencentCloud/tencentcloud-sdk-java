@@ -50,21 +50,28 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
-    * 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+    * 通知接收端类型，取值如下
+<br><li>USER_GROUP：用户组
+<br><li>CMQ_QUEUE：CMQ 队列
+<br><li>CMQ_TOPIC：CMQ 主题
+<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+
+默认值为：`USER_GROUP`。
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+    * CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+    * CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
     */
     @SerializedName("TopicName")
     @Expose
@@ -143,48 +150,76 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。 
-     * @return TargetType 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     * Get 通知接收端类型，取值如下
+<br><li>USER_GROUP：用户组
+<br><li>CMQ_QUEUE：CMQ 队列
+<br><li>CMQ_TOPIC：CMQ 主题
+<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+
+默认值为：`USER_GROUP`。 
+     * @return TargetType 通知接收端类型，取值如下
+<br><li>USER_GROUP：用户组
+<br><li>CMQ_QUEUE：CMQ 队列
+<br><li>CMQ_TOPIC：CMQ 主题
+<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+
+默认值为：`USER_GROUP`。
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
-     * @param TargetType 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     * Set 通知接收端类型，取值如下
+<br><li>USER_GROUP：用户组
+<br><li>CMQ_QUEUE：CMQ 队列
+<br><li>CMQ_TOPIC：CMQ 主题
+<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+
+默认值为：`USER_GROUP`。
+     * @param TargetType 通知接收端类型，取值如下
+<br><li>USER_GROUP：用户组
+<br><li>CMQ_QUEUE：CMQ 队列
+<br><li>CMQ_TOPIC：CMQ 主题
+<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+
+默认值为：`USER_GROUP`。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。 
-     * @return QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     * Get CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。 
+     * @return QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
-     * @param QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     * Set CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
+     * @param QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。 
-     * @return TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+     * Get CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。 
+     * @return TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
-     * @param TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+     * Set CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
+     * @param TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

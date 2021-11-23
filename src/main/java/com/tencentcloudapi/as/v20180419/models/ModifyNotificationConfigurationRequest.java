@@ -50,14 +50,14 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
-    * CMQ 队列名。
+    * CMQ 队列或 TDMQ CMQ 队列名。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ 主题名。
+    * CMQ 主题或 TDMQ CMQ 主题名。
     */
     @SerializedName("TopicName")
     @Expose
@@ -136,32 +136,32 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get CMQ 队列名。 
-     * @return QueueName CMQ 队列名。
+     * Get CMQ 队列或 TDMQ CMQ 队列名。 
+     * @return QueueName CMQ 队列或 TDMQ CMQ 队列名。
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ 队列名。
-     * @param QueueName CMQ 队列名。
+     * Set CMQ 队列或 TDMQ CMQ 队列名。
+     * @param QueueName CMQ 队列或 TDMQ CMQ 队列名。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ 主题名。 
-     * @return TopicName CMQ 主题名。
+     * Get CMQ 主题或 TDMQ CMQ 主题名。 
+     * @return TopicName CMQ 主题或 TDMQ CMQ 主题名。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ 主题名。
-     * @param TopicName CMQ 主题名。
+     * Set CMQ 主题或 TDMQ CMQ 主题名。
+     * @param TopicName CMQ 主题或 TDMQ CMQ 主题名。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

@@ -37,6 +37,14 @@ public class LivenessRecognitionRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 活体检测类型，取值：LIP/ACTION/SILENT。
+LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+    */
+    @SerializedName("LivenessType")
+    @Expose
+    private String LivenessType;
+
+    /**
     * 用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
     */
@@ -45,12 +53,15 @@ BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
     private String VideoBase64;
 
     /**
-    * 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+    * 用于活体检测的视频Url 地址。视频下载后经Base64编码不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
+
+视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+
+建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
     */
-    @SerializedName("LivenessType")
+    @SerializedName("VideoUrl")
     @Expose
-    private String LivenessType;
+    private String VideoUrl;
 
     /**
     * 数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；
@@ -111,6 +122,26 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
+     * Get 活体检测类型，取值：LIP/ACTION/SILENT。
+LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。 
+     * @return LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
+LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     */
+    public String getLivenessType() {
+        return this.LivenessType;
+    }
+
+    /**
+     * Set 活体检测类型，取值：LIP/ACTION/SILENT。
+LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     * @param LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
+LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     */
+    public void setLivenessType(String LivenessType) {
+        this.LivenessType = LivenessType;
+    }
+
+    /**
      * Get 用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。 
      * @return VideoBase64 用于活体检测的视频，视频的BASE64值；
@@ -131,23 +162,35 @@ BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
     }
 
     /**
-     * Get 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。 
-     * @return LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     * Get 用于活体检测的视频Url 地址。视频下载后经Base64编码不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
+
+视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+
+建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
+     * @return VideoUrl 用于活体检测的视频Url 地址。视频下载后经Base64编码不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
+
+视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+
+建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
-    public String getLivenessType() {
-        return this.LivenessType;
+    public String getVideoUrl() {
+        return this.VideoUrl;
     }
 
     /**
-     * Set 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
-     * @param LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     * Set 用于活体检测的视频Url 地址。视频下载后经Base64编码不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
+
+视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+
+建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param VideoUrl 用于活体检测的视频Url 地址。视频下载后经Base64编码不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
+
+视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+
+建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
-    public void setLivenessType(String LivenessType) {
-        this.LivenessType = LivenessType;
+    public void setVideoUrl(String VideoUrl) {
+        this.VideoUrl = VideoUrl;
     }
 
     /**
@@ -232,11 +275,14 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.LivenessType != null) {
+            this.LivenessType = new String(source.LivenessType);
+        }
         if (source.VideoBase64 != null) {
             this.VideoBase64 = new String(source.VideoBase64);
         }
-        if (source.LivenessType != null) {
-            this.LivenessType = new String(source.LivenessType);
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
         }
         if (source.ValidateData != null) {
             this.ValidateData = new String(source.ValidateData);
@@ -256,8 +302,9 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
         this.setParamSimple(map, prefix + "LivenessType", this.LivenessType);
+        this.setParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
+        this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
         this.setParamSimple(map, prefix + "ValidateData", this.ValidateData);
         this.setParamSimple(map, prefix + "Optional", this.Optional);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);

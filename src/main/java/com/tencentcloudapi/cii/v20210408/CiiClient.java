@@ -178,4 +178,24 @@ public class CiiClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *上传医疗影像文件，可以用来做结构化。
+     * @param req UploadMedicalFileRequest
+     * @return UploadMedicalFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadMedicalFileResponse UploadMedicalFile(UploadMedicalFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadMedicalFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadMedicalFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadMedicalFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

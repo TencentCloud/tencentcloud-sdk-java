@@ -23,79 +23,89 @@ import java.util.HashMap;
 public class NotificationTarget extends AbstractModel{
 
     /**
-    * 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+    * 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`、`TDMQ_CMQ_QUEUE`、`TDMQ_CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
 <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
+<li> TDMQ_CMQ_QUEUE，指腾讯云 TDMQ 消息队列-队列模型。</li>
+<li> TDMQ_CMQ_TOPIC，指腾讯云 TDMQ 消息队列-主题模型。</li>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
+    * 队列名称，如果`TargetType`取值为`CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE`，则本字段必填。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
+    * 主题名称，如果`TargetType`取值为`CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC`，则本字段必填。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
-<li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
-<li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li> 
-     * @return TargetType 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+     * Get 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`、`TDMQ_CMQ_QUEUE`、`TDMQ_CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
 <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
+<li> TDMQ_CMQ_QUEUE，指腾讯云 TDMQ 消息队列-队列模型。</li>
+<li> TDMQ_CMQ_TOPIC，指腾讯云 TDMQ 消息队列-主题模型。</li> 
+     * @return TargetType 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`、`TDMQ_CMQ_QUEUE`、`TDMQ_CMQ_TOPIC`。
+<li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
+<li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
+<li> TDMQ_CMQ_QUEUE，指腾讯云 TDMQ 消息队列-队列模型。</li>
+<li> TDMQ_CMQ_TOPIC，指腾讯云 TDMQ 消息队列-主题模型。</li>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+     * Set 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`、`TDMQ_CMQ_QUEUE`、`TDMQ_CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
 <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
-     * @param TargetType 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+<li> TDMQ_CMQ_QUEUE，指腾讯云 TDMQ 消息队列-队列模型。</li>
+<li> TDMQ_CMQ_TOPIC，指腾讯云 TDMQ 消息队列-主题模型。</li>
+     * @param TargetType 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`、`TDMQ_CMQ_QUEUE`、`TDMQ_CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
 <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
+<li> TDMQ_CMQ_QUEUE，指腾讯云 TDMQ 消息队列-队列模型。</li>
+<li> TDMQ_CMQ_TOPIC，指腾讯云 TDMQ 消息队列-主题模型。</li>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。 
-     * @return QueueName 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
+     * Get 队列名称，如果`TargetType`取值为`CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE`，则本字段必填。 
+     * @return QueueName 队列名称，如果`TargetType`取值为`CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE`，则本字段必填。
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
-     * @param QueueName 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
+     * Set 队列名称，如果`TargetType`取值为`CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE`，则本字段必填。
+     * @param QueueName 队列名称，如果`TargetType`取值为`CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE`，则本字段必填。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。 
-     * @return TopicName 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
+     * Get 主题名称，如果`TargetType`取值为`CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC`，则本字段必填。 
+     * @return TopicName 主题名称，如果`TargetType`取值为`CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC`，则本字段必填。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
-     * @param TopicName 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
+     * Set 主题名称，如果`TargetType`取值为`CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC`，则本字段必填。
+     * @param TopicName 主题名称，如果`TargetType`取值为`CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC`，则本字段必填。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

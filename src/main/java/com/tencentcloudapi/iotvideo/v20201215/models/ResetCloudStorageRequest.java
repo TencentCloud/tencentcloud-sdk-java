@@ -37,6 +37,20 @@ public class ResetCloudStorageRequest extends AbstractModel{
     private String DeviceName;
 
     /**
+    * 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
+    * 云存用户Id，为空则为默认云存空间。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -68,6 +82,38 @@ public class ResetCloudStorageRequest extends AbstractModel{
         this.DeviceName = DeviceName;
     }
 
+    /**
+     * Get 通道ID 非NVR设备则不填 NVR设备则必填 默认为无 
+     * @return ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @param ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 云存用户Id，为空则为默认云存空间。 
+     * @return UserId 云存用户Id，为空则为默认云存空间。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 云存用户Id，为空则为默认云存空间。
+     * @param UserId 云存用户Id，为空则为默认云存空间。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public ResetCloudStorageRequest() {
     }
 
@@ -82,6 +128,12 @@ public class ResetCloudStorageRequest extends AbstractModel{
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class ResetCloudStorageRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

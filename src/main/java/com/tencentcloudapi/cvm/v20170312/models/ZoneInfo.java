@@ -76,6 +76,7 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
     */
     @SerializedName("Zone")
     @Expose
@@ -155,7 +156,8 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
-<li> ap-nanjing-2 </li> 
+<li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li> 
      * @return Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -209,6 +211,7 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      */
     public String getZone() {
         return this.Zone;
@@ -268,6 +271,7 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      * @param Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -321,6 +325,7 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

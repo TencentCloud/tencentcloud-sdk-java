@@ -73,7 +73,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private Long NeedRecordNum;
 
     /**
-    * 查询指定产品信息（暂时未开放获取）
+    * 已废弃参数，未开放
     */
     @SerializedName("ProductCode")
     @Expose
@@ -106,6 +106,14 @@ public class DescribeBillDetailRequest extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
 
     /**
      * Get 偏移量 
@@ -224,16 +232,16 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询指定产品信息（暂时未开放获取） 
-     * @return ProductCode 查询指定产品信息（暂时未开放获取）
+     * Get 已废弃参数，未开放 
+     * @return ProductCode 已废弃参数，未开放
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 查询指定产品信息（暂时未开放获取）
-     * @param ProductCode 查询指定产品信息（暂时未开放获取）
+     * Set 已废弃参数，未开放
+     * @param ProductCode 已废弃参数，未开放
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
@@ -303,6 +311,26 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a> 
+     * @return BusinessCode 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     * @param BusinessCode 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
     public DescribeBillDetailRequest() {
     }
 
@@ -347,6 +375,9 @@ public class DescribeBillDetailRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
     }
 
 
@@ -366,6 +397,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
 
     }
 }
