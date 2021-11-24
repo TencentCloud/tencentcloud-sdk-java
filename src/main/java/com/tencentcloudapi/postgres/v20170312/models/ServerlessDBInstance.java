@@ -143,6 +143,14 @@ public class ServerlessDBInstance extends AbstractModel{
     private Tag [] TagList;
 
     /**
+    * 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get 实例id，唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DBInstanceId 实例id，唯一标识符
@@ -442,6 +450,26 @@ public class ServerlessDBInstance extends AbstractModel{
         this.TagList = TagList;
     }
 
+    /**
+     * Get 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBKernelVersion 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBKernelVersion 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public ServerlessDBInstance() {
     }
 
@@ -507,6 +535,9 @@ public class ServerlessDBInstance extends AbstractModel{
                 this.TagList[i] = new Tag(source.TagList[i]);
             }
         }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -529,6 +560,7 @@ public class ServerlessDBInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DBAccountSet.", this.DBAccountSet);
         this.setParamArraySimple(map, prefix + "DBDatabaseList.", this.DBDatabaseList);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

@@ -148,6 +148,14 @@ public class ReadOnlyGroup extends AbstractModel{
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
+    * 只读组网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAccessList")
+    @Expose
+    private NetworkAccess [] NetworkAccessList;
+
+    /**
      * Get 只读组标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReadOnlyGroupId 只读组标识
@@ -443,6 +451,26 @@ public class ReadOnlyGroup extends AbstractModel{
         this.DBInstanceNetInfo = DBInstanceNetInfo;
     }
 
+    /**
+     * Get 只读组网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkAccessList 只读组网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NetworkAccess [] getNetworkAccessList() {
+        return this.NetworkAccessList;
+    }
+
+    /**
+     * Set 只读组网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAccessList 只读组网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
+        this.NetworkAccessList = NetworkAccessList;
+    }
+
     public ReadOnlyGroup() {
     }
 
@@ -508,6 +536,12 @@ public class ReadOnlyGroup extends AbstractModel{
                 this.DBInstanceNetInfo[i] = new DBInstanceNetInfo(source.DBInstanceNetInfo[i]);
             }
         }
+        if (source.NetworkAccessList != null) {
+            this.NetworkAccessList = new NetworkAccess[source.NetworkAccessList.length];
+            for (int i = 0; i < source.NetworkAccessList.length; i++) {
+                this.NetworkAccessList[i] = new NetworkAccess(source.NetworkAccessList[i]);
+            }
+        }
     }
 
 
@@ -532,6 +566,7 @@ public class ReadOnlyGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ReadOnlyDBInstanceList.", this.ReadOnlyDBInstanceList);
         this.setParamSimple(map, prefix + "Rebalance", this.Rebalance);
         this.setParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
+        this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
 
     }
 }

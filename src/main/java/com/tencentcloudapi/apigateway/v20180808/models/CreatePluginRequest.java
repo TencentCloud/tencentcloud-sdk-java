@@ -30,7 +30,7 @@ public class CreatePluginRequest extends AbstractModel{
     private String PluginName;
 
     /**
-    * 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+    * 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
     */
     @SerializedName("PluginType")
     @Expose
@@ -67,16 +67,16 @@ public class CreatePluginRequest extends AbstractModel{
     }
 
     /**
-     * Get 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。 
-     * @return PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+     * Get 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。 
+     * @return PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
      */
     public String getPluginType() {
         return this.PluginType;
     }
 
     /**
-     * Set 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
-     * @param PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+     * Set 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
+     * @param PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
      */
     public void setPluginType(String PluginType) {
         this.PluginType = PluginType;

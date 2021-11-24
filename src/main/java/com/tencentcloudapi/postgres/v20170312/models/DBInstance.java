@@ -128,7 +128,7 @@ public class DBInstance extends AbstractModel{
     private String DBCharset;
 
     /**
-    * PostgreSQL内核版本
+    * PostgreSQL主版本
     */
     @SerializedName("DBVersion")
     @Expose
@@ -250,6 +250,22 @@ public class DBInstance extends AbstractModel{
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
+
+    /**
+    * 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
+    * 实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAccessList")
+    @Expose
+    private NetworkAccess [] NetworkAccessList;
 
     /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
@@ -492,16 +508,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL内核版本 
-     * @return DBVersion PostgreSQL内核版本
+     * Get PostgreSQL主版本 
+     * @return DBVersion PostgreSQL主版本
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL内核版本
-     * @param DBVersion PostgreSQL内核版本
+     * Set PostgreSQL主版本
+     * @param DBVersion PostgreSQL主版本
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -783,6 +799,46 @@ public class DBInstance extends AbstractModel{
         this.OfflineTime = OfflineTime;
     }
 
+    /**
+     * Get 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBKernelVersion 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBKernelVersion 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
+    /**
+     * Get 实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkAccessList 实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NetworkAccess [] getNetworkAccessList() {
+        return this.NetworkAccessList;
+    }
+
+    /**
+     * Set 实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAccessList 实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
+        this.NetworkAccessList = NetworkAccessList;
+    }
+
     public DBInstance() {
     }
 
@@ -893,6 +949,15 @@ public class DBInstance extends AbstractModel{
         if (source.OfflineTime != null) {
             this.OfflineTime = new String(source.OfflineTime);
         }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
+        if (source.NetworkAccessList != null) {
+            this.NetworkAccessList = new NetworkAccess[source.NetworkAccessList.length];
+            for (int i = 0; i < source.NetworkAccessList.length; i++) {
+                this.NetworkAccessList[i] = new NetworkAccess(source.NetworkAccessList[i]);
+            }
+        }
     }
 
 
@@ -932,6 +997,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
         this.setParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
 
     }
 }

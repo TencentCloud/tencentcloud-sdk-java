@@ -66,6 +66,14 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
     private MediaTranscodeItem Output;
 
     /**
+    * 转码进度，取值范围 [0-100]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -165,6 +173,26 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
         this.Output = Output;
     }
 
+    /**
+     * Get 转码进度，取值范围 [0-100]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Progress 转码进度，取值范围 [0-100]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 转码进度，取值范围 [0-100]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Progress 转码进度，取值范围 [0-100]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public MediaProcessTaskTranscodeResult() {
     }
 
@@ -191,6 +219,9 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
         if (source.Output != null) {
             this.Output = new MediaTranscodeItem(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

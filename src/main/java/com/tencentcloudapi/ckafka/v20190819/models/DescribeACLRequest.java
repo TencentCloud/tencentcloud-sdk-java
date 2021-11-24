@@ -30,14 +30,14 @@ public class DescribeACLRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
+    * Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
     */
     @SerializedName("ResourceType")
     @Expose
     private Long ResourceType;
 
     /**
-    * 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
+    * 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -81,32 +81,32 @@ public class DescribeACLRequest extends AbstractModel{
     }
 
     /**
-     * Get Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用 
-     * @return ResourceType Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
+     * Get Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER) 
+     * @return ResourceType Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
-     * @param ResourceType Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
+     * Set Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
+     * @param ResourceType Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称 
-     * @return ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
+     * Get 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。 
+     * @return ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
-     * @param ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
+     * Set 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
+     * @param ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
