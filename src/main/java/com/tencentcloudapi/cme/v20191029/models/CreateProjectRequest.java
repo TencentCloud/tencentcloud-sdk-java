@@ -38,6 +38,7 @@ public class CreateProjectRequest extends AbstractModel{
 
     /**
     * 项目归属者。
+注：云转推项目，仅支持个人归属。
     */
     @SerializedName("Owner")
     @Expose
@@ -155,8 +156,10 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目归属者。 
+     * Get 项目归属者。
+注：云转推项目，仅支持个人归属。 
      * @return Owner 项目归属者。
+注：云转推项目，仅支持个人归属。
      */
     public Entity getOwner() {
         return this.Owner;
@@ -164,7 +167,9 @@ public class CreateProjectRequest extends AbstractModel{
 
     /**
      * Set 项目归属者。
+注：云转推项目，仅支持个人归属。
      * @param Owner 项目归属者。
+注：云转推项目，仅支持个人归属。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
