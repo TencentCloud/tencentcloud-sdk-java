@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateProjectRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
@@ -37,7 +37,9 @@ public class CreateProjectRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 项目归属者。
+    * 项目归属者，即项目的所有者，后续操作只有该所有者有权限操作。
+
+注：目前所有项目只能设置归属个人，暂不支持团队项目。
     */
     @SerializedName("Owner")
     @Expose
@@ -58,8 +60,10 @@ public class CreateProjectRequest extends AbstractModel{
     /**
     * 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Default：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
+
+注：不填则为默认模式。
     */
     @SerializedName("Mode")
     @Expose
@@ -81,58 +85,58 @@ public class CreateProjectRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 导播台信息，仅当项目类型为 SWITCHER 时必填。
+    * 导播台项目输入信息，仅当项目类型为 SWITCHER 时必填。
     */
     @SerializedName("SwitcherProjectInput")
     @Expose
     private SwitcherProjectInput SwitcherProjectInput;
 
     /**
-    * 直播剪辑信息，暂未开放，请勿使用。
+    * 直播剪辑项目输入信息，暂未开放，请勿使用。
     */
     @SerializedName("LiveStreamClipProjectInput")
     @Expose
     private LiveStreamClipProjectInput LiveStreamClipProjectInput;
 
     /**
-    * 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+    * 视频编辑项目输入信息，仅当项目类型为 VIDEO_EDIT 时必填。
     */
     @SerializedName("VideoEditProjectInput")
     @Expose
     private VideoEditProjectInput VideoEditProjectInput;
 
     /**
-    * 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+    * 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
     */
     @SerializedName("VideoSegmentationProjectInput")
     @Expose
     private VideoSegmentationProjectInput VideoSegmentationProjectInput;
 
     /**
-    * 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+    * 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
     */
     @SerializedName("StreamConnectProjectInput")
     @Expose
     private StreamConnectProjectInput StreamConnectProjectInput;
 
     /**
-    * 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+    * 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
     */
     @SerializedName("RecordReplayProjectInput")
     @Expose
     private RecordReplayProjectInput RecordReplayProjectInput;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
@@ -155,16 +159,24 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目归属者。 
-     * @return Owner 项目归属者。
+     * Get 项目归属者，即项目的所有者，后续操作只有该所有者有权限操作。
+
+注：目前所有项目只能设置归属个人，暂不支持团队项目。 
+     * @return Owner 项目归属者，即项目的所有者，后续操作只有该所有者有权限操作。
+
+注：目前所有项目只能设置归属个人，暂不支持团队项目。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 项目归属者。
-     * @param Owner 项目归属者。
+     * Set 项目归属者，即项目的所有者，后续操作只有该所有者有权限操作。
+
+注：目前所有项目只能设置归属个人，暂不支持团队项目。
+     * @param Owner 项目归属者，即项目的所有者，后续操作只有该所有者有权限操作。
+
+注：目前所有项目只能设置归属个人，暂不支持团队项目。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
@@ -209,12 +221,16 @@ public class CreateProjectRequest extends AbstractModel{
     /**
      * Get 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Default：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li> 
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
+
+注：不填则为默认模式。 
      * @return Mode 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Default：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
+
+注：不填则为默认模式。
      */
     public String getMode() {
         return this.Mode;
@@ -223,12 +239,16 @@ public class CreateProjectRequest extends AbstractModel{
     /**
      * Set 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Default：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
+
+注：不填则为默认模式。
      * @param Mode 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Default：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
+
+注：不填则为默认模式。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -271,96 +291,96 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 导播台信息，仅当项目类型为 SWITCHER 时必填。 
-     * @return SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
+     * Get 导播台项目输入信息，仅当项目类型为 SWITCHER 时必填。 
+     * @return SwitcherProjectInput 导播台项目输入信息，仅当项目类型为 SWITCHER 时必填。
      */
     public SwitcherProjectInput getSwitcherProjectInput() {
         return this.SwitcherProjectInput;
     }
 
     /**
-     * Set 导播台信息，仅当项目类型为 SWITCHER 时必填。
-     * @param SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
+     * Set 导播台项目输入信息，仅当项目类型为 SWITCHER 时必填。
+     * @param SwitcherProjectInput 导播台项目输入信息，仅当项目类型为 SWITCHER 时必填。
      */
     public void setSwitcherProjectInput(SwitcherProjectInput SwitcherProjectInput) {
         this.SwitcherProjectInput = SwitcherProjectInput;
     }
 
     /**
-     * Get 直播剪辑信息，暂未开放，请勿使用。 
-     * @return LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     * Get 直播剪辑项目输入信息，暂未开放，请勿使用。 
+     * @return LiveStreamClipProjectInput 直播剪辑项目输入信息，暂未开放，请勿使用。
      */
     public LiveStreamClipProjectInput getLiveStreamClipProjectInput() {
         return this.LiveStreamClipProjectInput;
     }
 
     /**
-     * Set 直播剪辑信息，暂未开放，请勿使用。
-     * @param LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     * Set 直播剪辑项目输入信息，暂未开放，请勿使用。
+     * @param LiveStreamClipProjectInput 直播剪辑项目输入信息，暂未开放，请勿使用。
      */
     public void setLiveStreamClipProjectInput(LiveStreamClipProjectInput LiveStreamClipProjectInput) {
         this.LiveStreamClipProjectInput = LiveStreamClipProjectInput;
     }
 
     /**
-     * Get 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。 
-     * @return VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+     * Get 视频编辑项目输入信息，仅当项目类型为 VIDEO_EDIT 时必填。 
+     * @return VideoEditProjectInput 视频编辑项目输入信息，仅当项目类型为 VIDEO_EDIT 时必填。
      */
     public VideoEditProjectInput getVideoEditProjectInput() {
         return this.VideoEditProjectInput;
     }
 
     /**
-     * Set 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
-     * @param VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+     * Set 视频编辑项目输入信息，仅当项目类型为 VIDEO_EDIT 时必填。
+     * @param VideoEditProjectInput 视频编辑项目输入信息，仅当项目类型为 VIDEO_EDIT 时必填。
      */
     public void setVideoEditProjectInput(VideoEditProjectInput VideoEditProjectInput) {
         this.VideoEditProjectInput = VideoEditProjectInput;
     }
 
     /**
-     * Get 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。 
-     * @return VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     * Get 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。 
+     * @return VideoSegmentationProjectInput 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
      */
     public VideoSegmentationProjectInput getVideoSegmentationProjectInput() {
         return this.VideoSegmentationProjectInput;
     }
 
     /**
-     * Set 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
-     * @param VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     * Set 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     * @param VideoSegmentationProjectInput 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
      */
     public void setVideoSegmentationProjectInput(VideoSegmentationProjectInput VideoSegmentationProjectInput) {
         this.VideoSegmentationProjectInput = VideoSegmentationProjectInput;
     }
 
     /**
-     * Get 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。 
-     * @return StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     * Get 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。 
+     * @return StreamConnectProjectInput 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
      */
     public StreamConnectProjectInput getStreamConnectProjectInput() {
         return this.StreamConnectProjectInput;
     }
 
     /**
-     * Set 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
-     * @param StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     * Set 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     * @param StreamConnectProjectInput 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
      */
     public void setStreamConnectProjectInput(StreamConnectProjectInput StreamConnectProjectInput) {
         this.StreamConnectProjectInput = StreamConnectProjectInput;
     }
 
     /**
-     * Get 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。 
-     * @return RecordReplayProjectInput 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     * Get 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。 
+     * @return RecordReplayProjectInput 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
      */
     public RecordReplayProjectInput getRecordReplayProjectInput() {
         return this.RecordReplayProjectInput;
     }
 
     /**
-     * Set 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
-     * @param RecordReplayProjectInput 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     * Set 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     * @param RecordReplayProjectInput 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
      */
     public void setRecordReplayProjectInput(RecordReplayProjectInput RecordReplayProjectInput) {
         this.RecordReplayProjectInput = RecordReplayProjectInput;

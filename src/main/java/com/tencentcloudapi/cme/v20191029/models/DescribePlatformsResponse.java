@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePlatformsResponse extends AbstractModel{
 
     /**
-    * 符合搜索条件的记录总数。
+    * 符合查询条件的记录总数。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribePlatformsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合搜索条件的记录总数。 
-     * @return TotalCount 符合搜索条件的记录总数。
+     * Get 符合查询条件的记录总数。 
+     * @return TotalCount 符合查询条件的记录总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合搜索条件的记录总数。
-     * @param TotalCount 符合搜索条件的记录总数。
+     * Set 符合查询条件的记录总数。
+     * @param TotalCount 符合查询条件的记录总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

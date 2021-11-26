@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyTeamRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
@@ -37,30 +37,30 @@ public class ModifyTeamRequest extends AbstractModel{
     private String TeamId;
 
     /**
-    * 团队名称，不能超过 30 个字符。
+    * 团队名称。团队名称不能置空，并且不能超过30个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改所有团队的信息。如果指定操作者，则操作者必须为团队管理员或者所有者。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
@@ -83,32 +83,32 @@ public class ModifyTeamRequest extends AbstractModel{
     }
 
     /**
-     * Get 团队名称，不能超过 30 个字符。 
-     * @return Name 团队名称，不能超过 30 个字符。
+     * Get 团队名称。团队名称不能置空，并且不能超过30个字符。 
+     * @return Name 团队名称。团队名称不能置空，并且不能超过30个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 团队名称，不能超过 30 个字符。
-     * @param Name 团队名称，不能超过 30 个字符。
+     * Set 团队名称。团队名称不能置空，并且不能超过30个字符。
+     * @param Name 团队名称。团队名称不能置空，并且不能超过30个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改所有团队的信息。如果指定操作者，则操作者必须为团队管理员或者所有者。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改所有团队的信息。如果指定操作者，则操作者必须为团队管理员或者所有者。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改所有团队的信息。如果指定操作者，则操作者必须为团队管理员或者所有者。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改所有团队的信息。如果指定操作者，则操作者必须为团队管理员或者所有者。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

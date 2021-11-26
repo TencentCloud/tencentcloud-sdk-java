@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 项目 Id。
+    * 项目 Id，使用项目 Id 进行过滤。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -39,6 +39,8 @@ public class DescribeTasksRequest extends AbstractModel{
     /**
     * 任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
     */
     @SerializedName("TaskTypeSet")
     @Expose
@@ -49,6 +51,8 @@ public class DescribeTasksRequest extends AbstractModel{
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
     */
     @SerializedName("StatusSet")
     @Expose
@@ -69,39 +73,39 @@ public class DescribeTasksRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 项目 Id。 
-     * @return ProjectId 项目 Id。
+     * Get 项目 Id，使用项目 Id 进行过滤。 
+     * @return ProjectId 项目 Id，使用项目 Id 进行过滤。
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 Id。
-     * @param ProjectId 项目 Id。
+     * Set 项目 Id，使用项目 Id 进行过滤。
+     * @param ProjectId 项目 Id，使用项目 Id 进行过滤。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -109,9 +113,13 @@ public class DescribeTasksRequest extends AbstractModel{
 
     /**
      * Get 任务类型集合，取值有：
-<li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li> 
+<li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。 
      * @return TaskTypeSet 任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
      */
     public String [] getTaskTypeSet() {
         return this.TaskTypeSet;
@@ -120,8 +128,12 @@ public class DescribeTasksRequest extends AbstractModel{
     /**
      * Set 任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
      * @param TaskTypeSet 任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
      */
     public void setTaskTypeSet(String [] TaskTypeSet) {
         this.TaskTypeSet = TaskTypeSet;
@@ -131,11 +143,15 @@ public class DescribeTasksRequest extends AbstractModel{
      * Get 任务状态集合，取值有：
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
-<li>FAIL：失败。</li> 
+<li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。 
      * @return StatusSet 任务状态集合，取值有：
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
      */
     public String [] getStatusSet() {
         return this.StatusSet;
@@ -146,10 +162,14 @@ public class DescribeTasksRequest extends AbstractModel{
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
      * @param StatusSet 任务状态集合，取值有：
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
      */
     public void setStatusSet(String [] StatusSet) {
         this.StatusSet = StatusSet;
@@ -188,16 +208,16 @@ public class DescribeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

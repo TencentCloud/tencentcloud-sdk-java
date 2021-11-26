@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class HandleStreamConnectProjectRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 云转推项目Id 。
+    * 云转推项目 Id 。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -74,32 +74,39 @@ public class HandleStreamConnectProjectRequest extends AbstractModel{
     private String CurrentStopTime;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 云转推项目Id 。 
-     * @return ProjectId 云转推项目Id 。
+     * Get 云转推项目 Id 。 
+     * @return ProjectId 云转推项目 Id 。
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 云转推项目Id 。
-     * @param ProjectId 云转推项目Id 。
+     * Set 云转推项目 Id 。
+     * @param ProjectId 云转推项目 Id 。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -193,6 +200,22 @@ public class HandleStreamConnectProjectRequest extends AbstractModel{
         this.CurrentStopTime = CurrentStopTime;
     }
 
+    /**
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
     public HandleStreamConnectProjectRequest() {
     }
 
@@ -222,6 +245,9 @@ public class HandleStreamConnectProjectRequest extends AbstractModel{
         if (source.CurrentStopTime != null) {
             this.CurrentStopTime = new String(source.CurrentStopTime);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class HandleStreamConnectProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InputEndpoint", this.InputEndpoint);
         this.setParamObj(map, prefix + "OutputInfo.", this.OutputInfo);
         this.setParamSimple(map, prefix + "CurrentStopTime", this.CurrentStopTime);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

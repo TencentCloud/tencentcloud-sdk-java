@@ -1,79 +1,10 @@
 # 本版本更新包含以下内容：
 
-## 视频处理(mps) 版本：2019-06-12
-
-### 第 36 次发布
-
-发布时间：2021-11-24 08:11:23
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [MediaProcessTaskTranscodeResult](https://cloud.tencent.com/document/api/862/37615#MediaProcessTaskTranscodeResult)
-
-	* 新增成员：Progress
-
-
-
-
-## 云数据库 PostgreSQL(postgres) 版本：2017-03-12
-
-### 第 20 次发布
-
-发布时间：2021-11-24 08:12:02
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增数据结构：
-
-* [NetworkAccess](https://cloud.tencent.com/document/api/409/16778#NetworkAccess)
-
-修改数据结构：
-
-* [DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)
-
-	* 新增成员：DBKernelVersion, NetworkAccessList
-
-* [ReadOnlyGroup](https://cloud.tencent.com/document/api/409/16778#ReadOnlyGroup)
-
-	* 新增成员：NetworkAccessList
-
-* [ServerlessDBInstance](https://cloud.tencent.com/document/api/409/16778#ServerlessDBInstance)
-
-	* 新增成员：DBKernelVersion
-
-
-
-
-## 腾讯云自动化助手(tat) 版本：2020-10-28
+## 云防火墙(cfw) 版本：2019-09-04
 
 ### 第 14 次发布
 
-发布时间：2021-11-24 08:13:01
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [CreateCommand](https://cloud.tencent.com/document/api/1340/52684)
-
-	* 新增入参：OutputCOSBucketUrl, OutputCOSKeyPrefix
-
-
-
-
-## 分布式消息队列(tdmq) 版本：2020-02-17
-
-### 第 23 次发布
-
-发布时间：2021-11-24 08:13:42
+发布时间：2021-11-26 08:05:36
 
 本次发布包含了以下内容：
 
@@ -81,38 +12,102 @@
 
 新增接口：
 
-* [CreateAMQPCluster](https://cloud.tencent.com/document/api/1179/64661)
-* [CreateAMQPExchange](https://cloud.tencent.com/document/api/1179/64672)
-* [CreateAMQPQueue](https://cloud.tencent.com/document/api/1179/64671)
-* [CreateAMQPRouteRelation](https://cloud.tencent.com/document/api/1179/64670)
-* [CreateAMQPVHost](https://cloud.tencent.com/document/api/1179/64660)
-* [DeleteAMQPCluster](https://cloud.tencent.com/document/api/1179/64656)
-* [DeleteAMQPExchange](https://cloud.tencent.com/document/api/1179/64669)
-* [DeleteAMQPQueue](https://cloud.tencent.com/document/api/1179/64668)
-* [DeleteAMQPRouteRelation](https://cloud.tencent.com/document/api/1179/64667)
-* [DeleteAMQPVHost](https://cloud.tencent.com/document/api/1179/64659)
-* [DescribeAMQPCluster](https://cloud.tencent.com/document/api/1179/64655)
-* [DescribeAMQPClusters](https://cloud.tencent.com/document/api/1179/64654)
-* [DescribeAMQPCreateQuota](https://cloud.tencent.com/document/api/1179/64653)
-* [DescribeAMQPExchanges](https://cloud.tencent.com/document/api/1179/64666)
-* [DescribeAMQPQueues](https://cloud.tencent.com/document/api/1179/64665)
-* [DescribeAMQPRouteRelations](https://cloud.tencent.com/document/api/1179/64664)
-* [DescribeAMQPVHosts](https://cloud.tencent.com/document/api/1179/64658)
-* [ModifyAMQPCluster](https://cloud.tencent.com/document/api/1179/64652)
-* [ModifyAMQPExchange](https://cloud.tencent.com/document/api/1179/64663)
-* [ModifyAMQPQueue](https://cloud.tencent.com/document/api/1179/64662)
-* [ModifyAMQPVHost](https://cloud.tencent.com/document/api/1179/64657)
+* [DescribeAddrTemplateList](https://cloud.tencent.com/document/api/1132/64831)
 
 新增数据结构：
 
-* [AMQPClusterConfig](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterConfig)
-* [AMQPClusterDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterDetail)
-* [AMQPClusterInfo](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterInfo)
-* [AMQPClusterRecentStats](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterRecentStats)
-* [AMQPExchange](https://cloud.tencent.com/document/api/1179/46089#AMQPExchange)
-* [AMQPQueueDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPQueueDetail)
-* [AMQPRouteRelation](https://cloud.tencent.com/document/api/1179/46089#AMQPRouteRelation)
-* [AMQPVHost](https://cloud.tencent.com/document/api/1179/46089#AMQPVHost)
+* [TemplateListInfo](https://cloud.tencent.com/document/api/1132/49071#TemplateListInfo)
+
+修改数据结构：
+
+* [SecurityGroupRule](https://cloud.tencent.com/document/api/1132/49071#SecurityGroupRule)
+
+	* 新增成员：Id, Enable
+
+
+
+
+## 腾讯云剪(cme) 版本：2019-10-29
+
+### 第 43 次发布
+
+发布时间：2021-11-26 08:06:20
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [HandleStreamConnectProject](https://cloud.tencent.com/document/api/1156/54998)
+
+	* 新增入参：Operator
+
+
+
+
+## 分布式数据库 TDSQL(dcdb) 版本：2018-04-11
+
+### 第 30 次发布
+
+发布时间：2021-11-26 08:08:12
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [UpgradeDCDBInstance](https://cloud.tencent.com/document/api/557/16136)
+
+	* 新增入参：Zones
+
+
+
+
+## 云数据库 MariaDB(mariadb) 版本：2017-03-12
+
+### 第 27 次发布
+
+发布时间：2021-11-26 08:11:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeUpgradePrice](https://cloud.tencent.com/document/api/237/16183)
+
+	* 新增入参：NodeCount
+
+* [UpgradeDBInstance](https://cloud.tencent.com/document/api/237/16189)
+
+	* 新增入参：Zones
+
+
+
+
+## 云开发 CloudBase(tcb) 版本：2018-06-08
+
+### 第 76 次发布
+
+发布时间：2021-11-26 08:13:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeCloudBaseRunOneClickTaskExternal](https://cloud.tencent.com/document/api/876/63779)
+
+	* 新增出参：StartTime, Steps
+
+
+新增数据结构：
+
+* [OneClickTaskStepInfo](https://cloud.tencent.com/document/api/876/34822#OneClickTaskStepInfo)
 
 
 
@@ -12040,6 +12035,29 @@
 
 ## 云防火墙(cfw) 版本：2019-09-04
 
+### 第 14 次发布
+
+发布时间：2021-11-26 08:05:36
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeAddrTemplateList](https://cloud.tencent.com/document/api/1132/64831)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[TemplateListInfo](https://cloud.tencent.com/document/api/1132/49071#TemplateListInfo)](https://cloud.tencent.com/document/api/1132/49071#[TemplateListInfo](https://cloud.tencent.com/document/api/1132/49071#TemplateListInfo))
+
+修改数据结构：
+
+* [SecurityGroupRule](https://cloud.tencent.com/document/api/1132/49071#SecurityGroupRule)
+
+	* 新增成员：Id, Enable
+
+
 ### 第 13 次发布
 
 发布时间：2021-11-18 08:04:19
@@ -15190,6 +15208,21 @@
 
 
 ## 腾讯云剪(cme) 版本：2019-10-29
+
+### 第 43 次发布
+
+发布时间：2021-11-26 08:06:20
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [HandleStreamConnectProject](https://cloud.tencent.com/document/api/1156/54998)
+
+	* 新增入参：Operator
+
 
 ### 第 42 次发布
 
@@ -22377,6 +22410,21 @@
 
 
 ## 分布式数据库 TDSQL(dcdb) 版本：2018-04-11
+
+### 第 30 次发布
+
+发布时间：2021-11-26 08:08:12
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [UpgradeDCDBInstance](https://cloud.tencent.com/document/api/557/16136)
+
+	* 新增入参：Zones
+
 
 ### 第 29 次发布
 
@@ -36731,6 +36779,25 @@
 
 ## 云数据库 MariaDB(mariadb) 版本：2017-03-12
 
+### 第 27 次发布
+
+发布时间：2021-11-26 08:11:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeUpgradePrice](https://cloud.tencent.com/document/api/237/16183)
+
+	* 新增入参：NodeCount
+
+* [UpgradeDBInstance](https://cloud.tencent.com/document/api/237/16189)
+
+	* 新增入参：Zones
+
+
 ### 第 26 次发布
 
 发布时间：2021-11-17 08:13:35
@@ -42638,7 +42705,7 @@
 
 新增数据结构：
 
-* [[NetworkAccess](https://cloud.tencent.com/document/api/409/16778#NetworkAccess)](https://cloud.tencent.com/document/api/409/16778#[NetworkAccess](https://cloud.tencent.com/document/api/409/16778#NetworkAccess))
+* [NetworkAccess](https://cloud.tencent.com/document/api/409/16778#NetworkAccess)
 
 修改数据结构：
 
@@ -48756,6 +48823,25 @@
 
 ## 云开发 CloudBase(tcb) 版本：2018-06-08
 
+### 第 76 次发布
+
+发布时间：2021-11-26 08:13:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeCloudBaseRunOneClickTaskExternal](https://cloud.tencent.com/document/api/876/63779)
+
+	* 新增出参：StartTime, Steps
+
+
+新增数据结构：
+
+* [[OneClickTaskStepInfo](https://cloud.tencent.com/document/api/876/34822#OneClickTaskStepInfo)](https://cloud.tencent.com/document/api/876/34822#[OneClickTaskStepInfo](https://cloud.tencent.com/document/api/876/34822#OneClickTaskStepInfo))
+
 ### 第 75 次发布
 
 发布时间：2021-11-15 08:13:00
@@ -51327,38 +51413,38 @@
 
 新增接口：
 
-* [[CreateAMQPCluster](https://cloud.tencent.com/document/api/1179/64661)](https://cloud.tencent.com/document/api/#/#)
-* [[CreateAMQPExchange](https://cloud.tencent.com/document/api/1179/64672)](https://cloud.tencent.com/document/api/#/#)
-* [[CreateAMQPQueue](https://cloud.tencent.com/document/api/1179/64671)](https://cloud.tencent.com/document/api/#/#)
-* [[CreateAMQPRouteRelation](https://cloud.tencent.com/document/api/1179/64670)](https://cloud.tencent.com/document/api/#/#)
-* [[CreateAMQPVHost](https://cloud.tencent.com/document/api/1179/64660)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteAMQPCluster](https://cloud.tencent.com/document/api/1179/64656)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteAMQPExchange](https://cloud.tencent.com/document/api/1179/64669)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteAMQPQueue](https://cloud.tencent.com/document/api/1179/64668)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteAMQPRouteRelation](https://cloud.tencent.com/document/api/1179/64667)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteAMQPVHost](https://cloud.tencent.com/document/api/1179/64659)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPCluster](https://cloud.tencent.com/document/api/1179/64655)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPClusters](https://cloud.tencent.com/document/api/1179/64654)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPCreateQuota](https://cloud.tencent.com/document/api/1179/64653)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPExchanges](https://cloud.tencent.com/document/api/1179/64666)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPQueues](https://cloud.tencent.com/document/api/1179/64665)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPRouteRelations](https://cloud.tencent.com/document/api/1179/64664)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeAMQPVHosts](https://cloud.tencent.com/document/api/1179/64658)](https://cloud.tencent.com/document/api/#/#)
-* [[ModifyAMQPCluster](https://cloud.tencent.com/document/api/1179/64652)](https://cloud.tencent.com/document/api/#/#)
-* [[ModifyAMQPExchange](https://cloud.tencent.com/document/api/1179/64663)](https://cloud.tencent.com/document/api/#/#)
-* [[ModifyAMQPQueue](https://cloud.tencent.com/document/api/1179/64662)](https://cloud.tencent.com/document/api/#/#)
-* [[ModifyAMQPVHost](https://cloud.tencent.com/document/api/1179/64657)](https://cloud.tencent.com/document/api/#/#)
+* [CreateAMQPCluster](https://cloud.tencent.com/document/api/1179/64661)
+* [CreateAMQPExchange](https://cloud.tencent.com/document/api/1179/64672)
+* [CreateAMQPQueue](https://cloud.tencent.com/document/api/1179/64671)
+* [CreateAMQPRouteRelation](https://cloud.tencent.com/document/api/1179/64670)
+* [CreateAMQPVHost](https://cloud.tencent.com/document/api/1179/64660)
+* [DeleteAMQPCluster](https://cloud.tencent.com/document/api/1179/64656)
+* [DeleteAMQPExchange](https://cloud.tencent.com/document/api/1179/64669)
+* [DeleteAMQPQueue](https://cloud.tencent.com/document/api/1179/64668)
+* [DeleteAMQPRouteRelation](https://cloud.tencent.com/document/api/1179/64667)
+* [DeleteAMQPVHost](https://cloud.tencent.com/document/api/1179/64659)
+* [DescribeAMQPCluster](https://cloud.tencent.com/document/api/1179/64655)
+* [DescribeAMQPClusters](https://cloud.tencent.com/document/api/1179/64654)
+* [DescribeAMQPCreateQuota](https://cloud.tencent.com/document/api/1179/64653)
+* [DescribeAMQPExchanges](https://cloud.tencent.com/document/api/1179/64666)
+* [DescribeAMQPQueues](https://cloud.tencent.com/document/api/1179/64665)
+* [DescribeAMQPRouteRelations](https://cloud.tencent.com/document/api/1179/64664)
+* [DescribeAMQPVHosts](https://cloud.tencent.com/document/api/1179/64658)
+* [ModifyAMQPCluster](https://cloud.tencent.com/document/api/1179/64652)
+* [ModifyAMQPExchange](https://cloud.tencent.com/document/api/1179/64663)
+* [ModifyAMQPQueue](https://cloud.tencent.com/document/api/1179/64662)
+* [ModifyAMQPVHost](https://cloud.tencent.com/document/api/1179/64657)
 
 新增数据结构：
 
-* [[AMQPClusterConfig](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterConfig)](https://cloud.tencent.com/document/api/1179/46089#[AMQPClusterConfig](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterConfig))
-* [[AMQPClusterDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterDetail)](https://cloud.tencent.com/document/api/1179/46089#[AMQPClusterDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterDetail))
-* [[AMQPClusterInfo](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterInfo)](https://cloud.tencent.com/document/api/1179/46089#[AMQPClusterInfo](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterInfo))
-* [[AMQPClusterRecentStats](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterRecentStats)](https://cloud.tencent.com/document/api/1179/46089#[AMQPClusterRecentStats](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterRecentStats))
-* [[AMQPExchange](https://cloud.tencent.com/document/api/1179/46089#AMQPExchange)](https://cloud.tencent.com/document/api/1179/46089#[AMQPExchange](https://cloud.tencent.com/document/api/1179/46089#AMQPExchange))
-* [[AMQPQueueDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPQueueDetail)](https://cloud.tencent.com/document/api/1179/46089#[AMQPQueueDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPQueueDetail))
-* [[AMQPRouteRelation](https://cloud.tencent.com/document/api/1179/46089#AMQPRouteRelation)](https://cloud.tencent.com/document/api/1179/46089#[AMQPRouteRelation](https://cloud.tencent.com/document/api/1179/46089#AMQPRouteRelation))
-* [[AMQPVHost](https://cloud.tencent.com/document/api/1179/46089#AMQPVHost)](https://cloud.tencent.com/document/api/1179/46089#[AMQPVHost](https://cloud.tencent.com/document/api/1179/46089#AMQPVHost))
+* [AMQPClusterConfig](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterConfig)
+* [AMQPClusterDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterDetail)
+* [AMQPClusterInfo](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterInfo)
+* [AMQPClusterRecentStats](https://cloud.tencent.com/document/api/1179/46089#AMQPClusterRecentStats)
+* [AMQPExchange](https://cloud.tencent.com/document/api/1179/46089#AMQPExchange)
+* [AMQPQueueDetail](https://cloud.tencent.com/document/api/1179/46089#AMQPQueueDetail)
+* [AMQPRouteRelation](https://cloud.tencent.com/document/api/1179/46089#AMQPRouteRelation)
+* [AMQPVHost](https://cloud.tencent.com/document/api/1179/46089#AMQPVHost)
 
 ### 第 22 次发布
 
@@ -53872,6 +53958,23 @@
 
 
 ## 容器服务(tke) 版本：2018-05-25
+
+### 第 78 次发布
+
+发布时间：2021-11-25 08:15:58
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [ScaleInClusterMaster](https://cloud.tencent.com/document/api/457/64792)
+* [ScaleOutClusterMaster](https://cloud.tencent.com/document/api/457/64791)
+
+新增数据结构：
+
+* [ScaleInMaster](https://cloud.tencent.com/document/api/457/31866#ScaleInMaster)
 
 ### 第 77 次发布
 

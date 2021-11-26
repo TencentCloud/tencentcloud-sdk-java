@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ExportVideoByVideoSegmentationDataRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
@@ -61,9 +61,9 @@ public class ExportVideoByVideoSegmentationDataRequest extends AbstractModel{
     private Long Definition;
 
     /**
-    * 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
+    * 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
     */
     @SerializedName("ExportDestination")
     @Expose
@@ -84,23 +84,23 @@ public class ExportVideoByVideoSegmentationDataRequest extends AbstractModel{
     private VODExportInfo VODExportInfo;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
@@ -183,24 +183,24 @@ public class ExportVideoByVideoSegmentationDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li> 
-     * @return ExportDestination 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
+     * Get 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li> 
+     * @return ExportDestination 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
      */
     public String getExportDestination() {
         return this.ExportDestination;
     }
 
     /**
-     * Set 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
-     * @param ExportDestination 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
+     * Set 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+     * @param ExportDestination 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
      */
     public void setExportDestination(String ExportDestination) {
         this.ExportDestination = ExportDestination;
@@ -239,16 +239,16 @@ public class ExportVideoByVideoSegmentationDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

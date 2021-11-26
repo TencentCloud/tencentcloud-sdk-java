@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAccountsRequest extends AbstractModel{
 
     /**
-    * 平台唯一标识。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 手机号码。
+    * 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
     */
     @SerializedName("Phone")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeAccountsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 平台唯一标识。 
-     * @return Platform 平台唯一标识。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台唯一标识。
-     * @param Platform 平台唯一标识。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 手机号码。 
-     * @return Phone 手机号码。
+     * Get 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。 
+     * @return Phone 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 手机号码。
-     * @param Phone 手机号码。
+     * Set 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
+     * @param Phone 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;

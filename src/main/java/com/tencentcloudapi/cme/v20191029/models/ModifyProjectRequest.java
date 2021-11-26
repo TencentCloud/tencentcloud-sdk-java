@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyProjectRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
@@ -44,16 +44,14 @@ public class ModifyProjectRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
+    * 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * 项目归属者。
+    * 项目所有者。目前仅支持个人项目，不支持团队项目。
     */
     @SerializedName("Owner")
     @Expose
@@ -62,24 +60,24 @@ public class ModifyProjectRequest extends AbstractModel{
     /**
     * 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
@@ -118,40 +116,32 @@ public class ModifyProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li> 
-     * @return AspectRatio 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
+     * Get 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。 
+     * @return AspectRatio 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-     * @param AspectRatio 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
+     * Set 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
+     * @param AspectRatio 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get 项目归属者。 
-     * @return Owner 项目归属者。
+     * Get 项目所有者。目前仅支持个人项目，不支持团队项目。 
+     * @return Owner 项目所有者。目前仅支持个人项目，不支持团队项目。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 项目归属者。
-     * @param Owner 项目归属者。
+     * Set 项目所有者。目前仅支持个人项目，不支持团队项目。
+     * @param Owner 项目所有者。目前仅支持个人项目，不支持团队项目。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
@@ -160,12 +150,12 @@ public class ModifyProjectRequest extends AbstractModel{
     /**
      * Get 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li> 
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li> 
      * @return Mode 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
      */
     public String getMode() {
         return this.Mode;
@@ -174,12 +164,12 @@ public class ModifyProjectRequest extends AbstractModel{
     /**
      * Set 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
      * @param Mode 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

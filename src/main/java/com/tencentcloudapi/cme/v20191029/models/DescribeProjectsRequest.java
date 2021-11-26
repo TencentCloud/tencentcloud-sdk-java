@@ -23,59 +23,65 @@ import java.util.HashMap;
 public class DescribeProjectsRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 项目 Id 列表，N 从 0 开始取值，最大 19。
+    * 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
     */
     @SerializedName("ProjectIds")
     @Expose
     private String [] ProjectIds;
 
     /**
-    * 画布宽高比集合。
+    * 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
     */
     @SerializedName("AspectRatioSet")
     @Expose
     private String [] AspectRatioSet;
 
     /**
-    * 项目类别，取值有：
+    * 项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+
+注：如果不填则不使用项目类型进行过滤。
     */
     @SerializedName("CategorySet")
     @Expose
     private String [] CategorySet;
 
     /**
-    * 项目模式，一个项目可以有多种模式并相互切换。
+    * 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+
+注：不填不使用项目模式进行过滤。
     */
     @SerializedName("Modes")
     @Expose
     private String [] Modes;
 
     /**
-    * 列表排序，支持下列排序字段：
+    * 结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
+
+注：如不填，则使用项目创建时间倒序排列。
     */
     @SerializedName("Sort")
     @Expose
     private SortBy Sort;
 
     /**
-    * 项目归属者。
+    * 项目所有者，目前仅支持个人项目过滤。
     */
     @SerializedName("Owner")
     @Expose
@@ -96,159 +102,183 @@ public class DescribeProjectsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 项目 Id 列表，N 从 0 开始取值，最大 19。 
-     * @return ProjectIds 项目 Id 列表，N 从 0 开始取值，最大 19。
+     * Get 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。 
+     * @return ProjectIds 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
      */
     public String [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目 Id 列表，N 从 0 开始取值，最大 19。
-     * @param ProjectIds 项目 Id 列表，N 从 0 开始取值，最大 19。
+     * Set 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
+     * @param ProjectIds 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
      */
     public void setProjectIds(String [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 画布宽高比集合。 
-     * @return AspectRatioSet 画布宽高比集合。
+     * Get 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。 
+     * @return AspectRatioSet 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
      */
     public String [] getAspectRatioSet() {
         return this.AspectRatioSet;
     }
 
     /**
-     * Set 画布宽高比集合。
-     * @param AspectRatioSet 画布宽高比集合。
+     * Set 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
+     * @param AspectRatioSet 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
      */
     public void setAspectRatioSet(String [] AspectRatioSet) {
         this.AspectRatioSet = AspectRatioSet;
     }
 
     /**
-     * Get 项目类别，取值有：
-<li>VIDEO_EDIT：视频编辑。</li>
-<li>SWITCHER：导播台。</li>
-<li>VIDEO_SEGMENTATION：视频拆条。</li>
-<li>STREAM_CONNECT：云转推。</li>
-<li>RECORD_REPLAY：录制回放。</li> 
-     * @return CategorySet 项目类别，取值有：
+     * Get 项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+
+注：如果不填则不使用项目类型进行过滤。 
+     * @return CategorySet 项目类型过滤参数列表，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
+
+注：如果不填则不使用项目类型进行过滤。
      */
     public String [] getCategorySet() {
         return this.CategorySet;
     }
 
     /**
-     * Set 项目类别，取值有：
+     * Set 项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
-     * @param CategorySet 项目类别，取值有：
+
+注：如果不填则不使用项目类型进行过滤。
+     * @param CategorySet 项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+
+注：如果不填则不使用项目类型进行过滤。
      */
     public void setCategorySet(String [] CategorySet) {
         this.CategorySet = CategorySet;
     }
 
     /**
-     * Get 项目模式，一个项目可以有多种模式并相互切换。
-当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Default：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li> 
-     * @return Modes 项目模式，一个项目可以有多种模式并相互切换。
+     * Get 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+
+注：不填不使用项目模式进行过滤。 
+     * @return Modes 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+
+注：不填不使用项目模式进行过滤。
      */
     public String [] getModes() {
         return this.Modes;
     }
 
     /**
-     * Set 项目模式，一个项目可以有多种模式并相互切换。
+     * Set 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
-     * @param Modes 项目模式，一个项目可以有多种模式并相互切换。
+
+注：不填不使用项目模式进行过滤。
+     * @param Modes 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+
+注：不填不使用项目模式进行过滤。
      */
     public void setModes(String [] Modes) {
         this.Modes = Modes;
     }
 
     /**
-     * Get 列表排序，支持下列排序字段：
-<li>CreateTime：创建时间；</li>
-<li>UpdateTime：更新时间。</li> 
-     * @return Sort 列表排序，支持下列排序字段：
+     * Get 结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
+
+注：如不填，则使用项目创建时间倒序排列。 
+     * @return Sort 结果排序方式，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+
+注：如不填，则使用项目创建时间倒序排列。
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 列表排序，支持下列排序字段：
+     * Set 结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
-     * @param Sort 列表排序，支持下列排序字段：
+
+注：如不填，则使用项目创建时间倒序排列。
+     * @param Sort 结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
+
+注：如不填，则使用项目创建时间倒序排列。
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 项目归属者。 
-     * @return Owner 项目归属者。
+     * Get 项目所有者，目前仅支持个人项目过滤。 
+     * @return Owner 项目所有者，目前仅支持个人项目过滤。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 项目归属者。
-     * @param Owner 项目归属者。
+     * Set 项目所有者，目前仅支持个人项目过滤。
+     * @param Owner 项目所有者，目前仅支持个人项目过滤。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
@@ -287,16 +317,16 @@ public class DescribeProjectsRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

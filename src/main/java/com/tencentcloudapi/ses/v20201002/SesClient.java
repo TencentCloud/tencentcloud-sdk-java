@@ -240,7 +240,7 @@ public class SesClient extends AbstractClient{
     }
 
     /**
-     *获取邮件发送状态。仅支持查询90天之内的数据
+     *获取邮件发送状态。仅支持查询180天之内的数据
      * @param req GetSendEmailStatusRequest
      * @return GetSendEmailStatusResponse
      * @throws TencentCloudSDKException

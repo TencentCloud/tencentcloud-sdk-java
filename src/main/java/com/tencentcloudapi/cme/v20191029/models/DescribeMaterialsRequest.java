@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeMaterialsRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 媒体 ID 列表，N 从 0 开始取值，最大 19。
+    * 媒体 ID 列表，一次最多可拉取20个媒体的信息。
     */
     @SerializedName("MaterialIds")
     @Expose
@@ -46,39 +46,39 @@ public class DescribeMaterialsRequest extends AbstractModel{
     private SortBy Sort;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 媒体 ID 列表，N 从 0 开始取值，最大 19。 
-     * @return MaterialIds 媒体 ID 列表，N 从 0 开始取值，最大 19。
+     * Get 媒体 ID 列表，一次最多可拉取20个媒体的信息。 
+     * @return MaterialIds 媒体 ID 列表，一次最多可拉取20个媒体的信息。
      */
     public String [] getMaterialIds() {
         return this.MaterialIds;
     }
 
     /**
-     * Set 媒体 ID 列表，N 从 0 开始取值，最大 19。
-     * @param MaterialIds 媒体 ID 列表，N 从 0 开始取值，最大 19。
+     * Set 媒体 ID 列表，一次最多可拉取20个媒体的信息。
+     * @param MaterialIds 媒体 ID 列表，一次最多可拉取20个媒体的信息。
      */
     public void setMaterialIds(String [] MaterialIds) {
         this.MaterialIds = MaterialIds;
@@ -109,16 +109,16 @@ public class DescribeMaterialsRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

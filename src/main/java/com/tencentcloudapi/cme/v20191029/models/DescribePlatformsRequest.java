@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribePlatformsRequest extends AbstractModel{
 
     /**
-    * 平台集合。
+    * 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
     */
     @SerializedName("Platforms")
     @Expose
     private String [] Platforms;
 
     /**
-    * 平台绑定的 license Id 集合。
+    * 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
     */
     @SerializedName("LicenseIds")
     @Expose
@@ -44,39 +44,39 @@ public class DescribePlatformsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 分页返回的记录条数，默认值：10。
+    * 分页返回的记录条数，默认值：10，最大值：20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 平台集合。 
-     * @return Platforms 平台集合。
+     * Get 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。 
+     * @return Platforms 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
      */
     public String [] getPlatforms() {
         return this.Platforms;
     }
 
     /**
-     * Set 平台集合。
-     * @param Platforms 平台集合。
+     * Set 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
+     * @param Platforms 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
      */
     public void setPlatforms(String [] Platforms) {
         this.Platforms = Platforms;
     }
 
     /**
-     * Get 平台绑定的 license Id 集合。 
-     * @return LicenseIds 平台绑定的 license Id 集合。
+     * Get 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。 
+     * @return LicenseIds 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
      */
     public String [] getLicenseIds() {
         return this.LicenseIds;
     }
 
     /**
-     * Set 平台绑定的 license Id 集合。
-     * @param LicenseIds 平台绑定的 license Id 集合。
+     * Set 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
+     * @param LicenseIds 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
      */
     public void setLicenseIds(String [] LicenseIds) {
         this.LicenseIds = LicenseIds;
@@ -99,16 +99,16 @@ public class DescribePlatformsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页返回的记录条数，默认值：10。 
-     * @return Limit 分页返回的记录条数，默认值：10。
+     * Get 分页返回的记录条数，默认值：10，最大值：20。 
+     * @return Limit 分页返回的记录条数，默认值：10，最大值：20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页返回的记录条数，默认值：10。
-     * @param Limit 分页返回的记录条数，默认值：10。
+     * Set 分页返回的记录条数，默认值：10，最大值：20。
+     * @param Limit 分页返回的记录条数，默认值：10，最大值：20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

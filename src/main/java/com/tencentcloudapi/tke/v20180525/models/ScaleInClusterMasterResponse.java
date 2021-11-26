@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cme.v20191029.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSharedSpaceResponse extends AbstractModel{
-
-    /**
-    * 查询到的共享空间总数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 各个共享空间对应的授权者信息。
-    */
-    @SerializedName("AuthorizerSet")
-    @Expose
-    private Authorizer [] AuthorizerSet;
+public class ScaleInClusterMasterResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeSharedSpaceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 查询到的共享空间总数。 
-     * @return TotalCount 查询到的共享空间总数。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 查询到的共享空间总数。
-     * @param TotalCount 查询到的共享空间总数。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 各个共享空间对应的授权者信息。 
-     * @return AuthorizerSet 各个共享空间对应的授权者信息。
-     */
-    public Authorizer [] getAuthorizerSet() {
-        return this.AuthorizerSet;
-    }
-
-    /**
-     * Set 各个共享空间对应的授权者信息。
-     * @param AuthorizerSet 各个共享空间对应的授权者信息。
-     */
-    public void setAuthorizerSet(Authorizer [] AuthorizerSet) {
-        this.AuthorizerSet = AuthorizerSet;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeSharedSpaceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeSharedSpaceResponse() {
+    public ScaleInClusterMasterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSharedSpaceResponse(DescribeSharedSpaceResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.AuthorizerSet != null) {
-            this.AuthorizerSet = new Authorizer[source.AuthorizerSet.length];
-            for (int i = 0; i < source.AuthorizerSet.length; i++) {
-                this.AuthorizerSet[i] = new Authorizer(source.AuthorizerSet[i]);
-            }
-        }
+    public ScaleInClusterMasterResponse(ScaleInClusterMasterResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeSharedSpaceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "AuthorizerSet.", this.AuthorizerSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

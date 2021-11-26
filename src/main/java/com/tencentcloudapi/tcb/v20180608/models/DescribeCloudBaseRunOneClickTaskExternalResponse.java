@@ -100,6 +100,20 @@ finished
     private String UserEnvId;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 步骤信息
+    */
+    @SerializedName("Steps")
+    @Expose
+    private OneClickTaskStepInfo [] Steps;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -295,6 +309,38 @@ finished
     }
 
     /**
+     * Get 创建时间 
+     * @return StartTime 创建时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param StartTime 创建时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 步骤信息 
+     * @return Steps 步骤信息
+     */
+    public OneClickTaskStepInfo [] getSteps() {
+        return this.Steps;
+    }
+
+    /**
+     * Set 步骤信息
+     * @param Steps 步骤信息
+     */
+    public void setSteps(OneClickTaskStepInfo [] Steps) {
+        this.Steps = Steps;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -348,6 +394,15 @@ finished
         if (source.UserEnvId != null) {
             this.UserEnvId = new String(source.UserEnvId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Steps != null) {
+            this.Steps = new OneClickTaskStepInfo[source.Steps.length];
+            for (int i = 0; i < source.Steps.length; i++) {
+                this.Steps[i] = new OneClickTaskStepInfo(source.Steps[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -368,6 +423,8 @@ finished
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
         this.setParamSimple(map, prefix + "UserEnvId", this.UserEnvId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamArrayObj(map, prefix + "Steps.", this.Steps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

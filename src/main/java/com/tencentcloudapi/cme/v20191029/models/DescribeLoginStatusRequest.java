@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeLoginStatusRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 用户 Id 列表，N 从 0 开始取值，最大 19。
+    * 用户 Id 列表，N 从0开始取值，最大19。
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 用户 Id 列表，N 从 0 开始取值，最大 19。 
-     * @return UserIds 用户 Id 列表，N 从 0 开始取值，最大 19。
+     * Get 用户 Id 列表，N 从0开始取值，最大19。 
+     * @return UserIds 用户 Id 列表，N 从0开始取值，最大19。
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 用户 Id 列表，N 从 0 开始取值，最大 19。
-     * @param UserIds 用户 Id 列表，N 从 0 开始取值，最大 19。
+     * Set 用户 Id 列表，N 从0开始取值，最大19。
+     * @param UserIds 用户 Id 列表，N 从0开始取值，最大19。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

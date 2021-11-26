@@ -60,6 +60,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
+    * 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -147,6 +154,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.VoucherIds = VoucherIds;
     }
 
+    /**
+     * Get 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区 
+     * @return Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     * @param Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -173,6 +196,12 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
                 this.VoucherIds[i] = new String(source.VoucherIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -185,6 +214,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

@@ -1779,6 +1779,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *缩容独立集群master节点
+     * @param req ScaleInClusterMasterRequest
+     * @return ScaleInClusterMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleInClusterMasterResponse ScaleInClusterMaster(ScaleInClusterMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleInClusterMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleInClusterMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleInClusterMaster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *扩容独立集群master节点
+     * @param req ScaleOutClusterMasterRequest
+     * @return ScaleOutClusterMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutClusterMasterResponse ScaleOutClusterMaster(ScaleOutClusterMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutClusterMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutClusterMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutClusterMaster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *仅能设置节点池中处于伸缩组的节点
      * @param req SetNodePoolNodeProtectionRequest
      * @return SetNodePoolNodeProtectionResponse

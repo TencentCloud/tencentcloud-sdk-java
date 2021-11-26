@@ -112,6 +112,20 @@ drop：拒绝
     private String ServiceTemplateId;
 
     /**
+    * 规则对应的唯一id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 规则状态，true表示启用，false表示禁用
+    */
+    @SerializedName("Enable")
+    @Expose
+    private String Enable;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -347,6 +361,38 @@ drop：拒绝
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
+    /**
+     * Get 规则对应的唯一id 
+     * @return Id 规则对应的唯一id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 规则对应的唯一id
+     * @param Id 规则对应的唯一id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 规则状态，true表示启用，false表示禁用 
+     * @return Enable 规则状态，true表示启用，false表示禁用
+     */
+    public String getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 规则状态，true表示启用，false表示禁用
+     * @param Enable 规则状态，true表示启用，false表示禁用
+     */
+    public void setEnable(String Enable) {
+        this.Enable = Enable;
+    }
+
     public SecurityGroupRule() {
     }
 
@@ -385,6 +431,12 @@ drop：拒绝
         if (source.ServiceTemplateId != null) {
             this.ServiceTemplateId = new String(source.ServiceTemplateId);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Enable != null) {
+            this.Enable = new String(source.Enable);
+        }
     }
 
 
@@ -402,6 +454,8 @@ drop：拒绝
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
 
     }
 }

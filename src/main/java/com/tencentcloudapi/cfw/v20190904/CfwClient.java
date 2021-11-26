@@ -379,6 +379,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *获取地址模版列表
+     * @param req DescribeAddrTemplateListRequest
+     * @return DescribeAddrTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddrTemplateListResponse DescribeAddrTemplateList(DescribeAddrTemplateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddrTemplateListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddrTemplateListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAddrTemplateList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全组关联实例列表
      * @param req DescribeAssociatedInstanceListRequest
      * @return DescribeAssociatedInstanceListResponse

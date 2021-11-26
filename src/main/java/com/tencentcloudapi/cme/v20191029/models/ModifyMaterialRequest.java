@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class ModifyMaterialRequest extends AbstractModel{
 
     /**
-    * 平台名称，指定访问的平台。
+    * 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 媒体 Id。
+    * 要修改的媒体 Id。
     */
     @SerializedName("MaterialId")
     @Expose
     private String MaterialId;
 
     /**
-    * 媒体或分类路径归属。
+    * 媒体归属者。
     */
     @SerializedName("Owner")
     @Expose
     private Entity Owner;
 
     /**
-    * 媒体名称，不能超过30个字符。
+    * 媒体名称，不能超过30个字符，不填则不修改。
     */
     @SerializedName("Name")
     @Expose
@@ -58,71 +58,71 @@ public class ModifyMaterialRequest extends AbstractModel{
     private String ClassPath;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意媒体的信息。如果指定操作者，则操作者必须对媒体有写权限。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 平台名称，指定访问的平台。 
-     * @return Platform 平台名称，指定访问的平台。
+     * Get 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
+     * @return Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台名称，指定访问的平台。
-     * @param Platform 平台名称，指定访问的平台。
+     * Set 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 媒体 Id。 
-     * @return MaterialId 媒体 Id。
+     * Get 要修改的媒体 Id。 
+     * @return MaterialId 要修改的媒体 Id。
      */
     public String getMaterialId() {
         return this.MaterialId;
     }
 
     /**
-     * Set 媒体 Id。
-     * @param MaterialId 媒体 Id。
+     * Set 要修改的媒体 Id。
+     * @param MaterialId 要修改的媒体 Id。
      */
     public void setMaterialId(String MaterialId) {
         this.MaterialId = MaterialId;
     }
 
     /**
-     * Get 媒体或分类路径归属。 
-     * @return Owner 媒体或分类路径归属。
+     * Get 媒体归属者。 
+     * @return Owner 媒体归属者。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 媒体或分类路径归属。
-     * @param Owner 媒体或分类路径归属。
+     * Set 媒体归属者。
+     * @param Owner 媒体归属者。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 媒体名称，不能超过30个字符。 
-     * @return Name 媒体名称，不能超过30个字符。
+     * Get 媒体名称，不能超过30个字符，不填则不修改。 
+     * @return Name 媒体名称，不能超过30个字符，不填则不修改。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 媒体名称，不能超过30个字符。
-     * @param Name 媒体名称，不能超过30个字符。
+     * Set 媒体名称，不能超过30个字符，不填则不修改。
+     * @param Name 媒体名称，不能超过30个字符，不填则不修改。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -145,16 +145,16 @@ public class ModifyMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意媒体的信息。如果指定操作者，则操作者必须对媒体有写权限。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意媒体的信息。如果指定操作者，则操作者必须对媒体有写权限。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意媒体的信息。如果指定操作者，则操作者必须对媒体有写权限。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意媒体的信息。如果指定操作者，则操作者必须对媒体有写权限。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

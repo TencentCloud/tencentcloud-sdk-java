@@ -46,6 +46,13 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
     private Long Storage;
 
     /**
+    * 新节点数，传0表示节点数不变
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
      * Get 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -101,6 +108,22 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
         this.Storage = Storage;
     }
 
+    /**
+     * Get 新节点数，传0表示节点数不变 
+     * @return NodeCount 新节点数，传0表示节点数不变
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set 新节点数，传0表示节点数不变
+     * @param NodeCount 新节点数，传0表示节点数不变
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
     public DescribeUpgradePriceRequest() {
     }
 
@@ -118,6 +141,9 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
         }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
     }
 
 
@@ -128,6 +154,7 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
 
     }
 }
