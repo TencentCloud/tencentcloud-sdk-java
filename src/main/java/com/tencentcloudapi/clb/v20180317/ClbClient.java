@@ -142,6 +142,26 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *克隆负载均衡实例，根据指定的负载均衡实例，复制出相同规则和绑定关系的负载均衡实例。
+     * @param req CloneLoadBalancerRequest
+     * @return CloneLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneLoadBalancerResponse CloneLoadBalancer(CloneLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建CLB专有日志集，此日志集用于存储CLB的日志。
      * @param req CreateClsLogSetRequest
      * @return CreateClsLogSetResponse

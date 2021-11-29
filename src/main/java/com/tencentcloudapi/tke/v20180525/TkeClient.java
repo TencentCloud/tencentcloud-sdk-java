@@ -1479,6 +1479,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *关闭集群删除保护
+     * @param req DisableClusterDeletionProtectionRequest
+     * @return DisableClusterDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClusterDeletionProtectionResponse DisableClusterDeletionProtection(DisableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableClusterDeletionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
      * @param req DisableVpcCniNetworkTypeRequest
      * @return DisableVpcCniNetworkTypeResponse
@@ -1491,6 +1511,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisableVpcCniNetworkTypeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableVpcCniNetworkType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用集群删除保护
+     * @param req EnableClusterDeletionProtectionRequest
+     * @return EnableClusterDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableClusterDeletionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableClusterDeletionProtection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

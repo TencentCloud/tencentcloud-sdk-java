@@ -30,7 +30,7 @@ public class StartExecutionRequest extends AbstractModel{
     private String StateMachineResourceName;
 
     /**
-    * 输入参数
+    * 输入参数，内容为JsonObject，长度不大于524288字符。
     */
     @SerializedName("Input")
     @Expose
@@ -60,16 +60,16 @@ public class StartExecutionRequest extends AbstractModel{
     }
 
     /**
-     * Get 输入参数 
-     * @return Input 输入参数
+     * Get 输入参数，内容为JsonObject，长度不大于524288字符。 
+     * @return Input 输入参数，内容为JsonObject，长度不大于524288字符。
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 输入参数
-     * @param Input 输入参数
+     * Set 输入参数，内容为JsonObject，长度不大于524288字符。
+     * @param Input 输入参数，内容为JsonObject，长度不大于524288字符。
      */
     public void setInput(String Input) {
         this.Input = Input;

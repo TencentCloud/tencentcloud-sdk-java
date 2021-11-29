@@ -31,7 +31,7 @@ public class SlowLogItem extends AbstractModel{
     private Long Timestamp;
 
     /**
-    * Sql的执行时长。
+    * Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryTime")
@@ -71,7 +71,7 @@ public class SlowLogItem extends AbstractModel{
     private String Database;
 
     /**
-    * 锁时长。
+    * 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockTime")
@@ -131,9 +131,9 @@ public class SlowLogItem extends AbstractModel{
     }
 
     /**
-     * Get Sql的执行时长。
+     * Get Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueryTime Sql的执行时长。
+     * @return QueryTime Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getQueryTime() {
@@ -141,9 +141,9 @@ public class SlowLogItem extends AbstractModel{
     }
 
     /**
-     * Set Sql的执行时长。
+     * Set Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryTime Sql的执行时长。
+     * @param QueryTime Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryTime(Float QueryTime) {
@@ -231,9 +231,9 @@ public class SlowLogItem extends AbstractModel{
     }
 
     /**
-     * Get 锁时长。
+     * Get 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LockTime 锁时长。
+     * @return LockTime 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLockTime() {
@@ -241,9 +241,9 @@ public class SlowLogItem extends AbstractModel{
     }
 
     /**
-     * Set 锁时长。
+     * Set 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LockTime 锁时长。
+     * @param LockTime 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockTime(Float LockTime) {
