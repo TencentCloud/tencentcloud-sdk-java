@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUndoVulCountsRequest extends AbstractModel{
 
     /**
-    * 漏洞分类，最小值为1，最大值为5
+    * 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
     */
     @SerializedName("VulCategory")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeUndoVulCountsRequest extends AbstractModel{
     private String IfEmergency;
 
     /**
-     * Get 漏洞分类，最小值为1，最大值为5 
-     * @return VulCategory 漏洞分类，最小值为1，最大值为5
+     * Get 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 
+     * @return VulCategory 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set 漏洞分类，最小值为1，最大值为5
-     * @param VulCategory 漏洞分类，最小值为1，最大值为5
+     * Set 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+     * @param VulCategory 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;

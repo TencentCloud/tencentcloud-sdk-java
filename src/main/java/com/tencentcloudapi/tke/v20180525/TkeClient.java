@@ -1559,6 +1559,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *操作TKE集群的addon
+     * @param req ForwardApplicationRequestV3Request
+     * @return ForwardApplicationRequestV3Response
+     * @throws TencentCloudSDKException
+     */
+    public ForwardApplicationRequestV3Response ForwardApplicationRequestV3(ForwardApplicationRequestV3Request req) throws TencentCloudSDKException{
+        JsonResponseModel<ForwardApplicationRequestV3Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForwardApplicationRequestV3Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ForwardApplicationRequestV3");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取TKE支持的App列表
+     * @param req GetTkeAppChartListRequest
+     * @return GetTkeAppChartListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTkeAppChartListResponse GetTkeAppChartList(GetTkeAppChartListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTkeAppChartListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTkeAppChartListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTkeAppChartList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获得节点升级当前的进度 
      * @param req GetUpgradeInstanceProgressRequest
      * @return GetUpgradeInstanceProgressResponse

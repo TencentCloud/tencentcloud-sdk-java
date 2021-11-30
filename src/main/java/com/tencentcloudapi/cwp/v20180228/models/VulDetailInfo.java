@@ -51,7 +51,7 @@ public class VulDetailInfo extends AbstractModel{
     private String CveId;
 
     /**
-    * 漏洞分类
+    * 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
     */
     @SerializedName("VulCategory")
     @Expose
@@ -164,16 +164,16 @@ public class VulDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 漏洞分类 
-     * @return VulCategory 漏洞分类
+     * Get 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞 
+     * @return VulCategory 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set 漏洞分类
-     * @param VulCategory 漏洞分类
+     * Set 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
+     * @param VulCategory 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;

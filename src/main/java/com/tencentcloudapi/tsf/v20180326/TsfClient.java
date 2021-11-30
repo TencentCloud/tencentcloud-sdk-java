@@ -1561,6 +1561,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *获取部署组其他属性
+     * @param req DescribeGroupAttributeRequest
+     * @return DescribeGroupAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupAttributeResponse DescribeGroupAttribute(DescribeGroupAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询某个API分组已绑定的网关部署组信息列表
      * @param req DescribeGroupBindedGatewaysRequest
      * @return DescribeGroupBindedGatewaysResponse

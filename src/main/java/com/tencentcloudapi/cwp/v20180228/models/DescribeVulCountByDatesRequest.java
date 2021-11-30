@@ -30,7 +30,7 @@ public class DescribeVulCountByDatesRequest extends AbstractModel{
     private Long [] LastDays;
 
     /**
-    * 漏洞的分类，最小值为1最大值为5
+    * 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
     */
     @SerializedName("VulCategory")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeVulCountByDatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 漏洞的分类，最小值为1最大值为5 
-     * @return VulCategory 漏洞的分类，最小值为1最大值为5
+     * Get 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 
+     * @return VulCategory 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set 漏洞的分类，最小值为1最大值为5
-     * @param VulCategory 漏洞的分类，最小值为1最大值为5
+     * Set 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+     * @param VulCategory 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;

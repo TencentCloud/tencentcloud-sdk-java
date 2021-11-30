@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeScanVulSettingResponse extends AbstractModel{
 
     /**
-    * 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
+    * 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
     */
     @SerializedName("VulCategories")
     @Expose
@@ -93,16 +93,16 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔) 
-     * @return VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
+     * Get 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 
+     * @return VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public String getVulCategories() {
         return this.VulCategories;
     }
 
     /**
-     * Set 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
-     * @param VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
+     * Set 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+     * @param VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public void setVulCategories(String VulCategories) {
         this.VulCategories = VulCategories;

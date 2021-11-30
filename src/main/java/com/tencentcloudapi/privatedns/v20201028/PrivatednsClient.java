@@ -39,6 +39,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *创建私有域解析账号
+     * @param req CreatePrivateDNSAccountRequest
+     * @return CreatePrivateDNSAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(CreatePrivateDNSAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrivateDNSAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrivateDNSAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrivateDNSAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建私有域
      * @param req CreatePrivateZoneRequest
      * @return CreatePrivateZoneResponse
@@ -79,6 +99,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *删除私有域解析账号
+     * @param req DeletePrivateDNSAccountRequest
+     * @return DeletePrivateDNSAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(DeletePrivateDNSAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrivateDNSAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrivateDNSAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrivateDNSAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除私有域并停止解析
      * @param req DeletePrivateZoneRequest
      * @return DeletePrivateZoneResponse
@@ -111,6 +151,26 @@ public class PrivatednsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePrivateZoneRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeletePrivateZoneRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取私有域解析账号的VPC列表
+     * @param req DescribeAccountVpcListRequest
+     * @return DescribeAccountVpcListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountVpcListResponse DescribeAccountVpcList(DescribeAccountVpcListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountVpcListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountVpcListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccountVpcList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

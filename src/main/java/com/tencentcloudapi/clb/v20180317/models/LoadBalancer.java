@@ -428,6 +428,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String HealthLogTopicId;
 
     /**
+    * 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIds")
+    @Expose
+    private String [] ClusterIds;
+
+    /**
+    * 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttributeFlags")
+    @Expose
+    private String [] AttributeFlags;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1435,6 +1451,46 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.HealthLogTopicId = HealthLogTopicId;
     }
 
+    /**
+     * Get 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIds 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getClusterIds() {
+        return this.ClusterIds;
+    }
+
+    /**
+     * Set 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIds 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
+    }
+
+    /**
+     * Get 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttributeFlags 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAttributeFlags() {
+        return this.AttributeFlags;
+    }
+
+    /**
+     * Set 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttributeFlags 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttributeFlags(String [] AttributeFlags) {
+        this.AttributeFlags = AttributeFlags;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1614,6 +1670,18 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.HealthLogTopicId != null) {
             this.HealthLogTopicId = new String(source.HealthLogTopicId);
         }
+        if (source.ClusterIds != null) {
+            this.ClusterIds = new String[source.ClusterIds.length];
+            for (int i = 0; i < source.ClusterIds.length; i++) {
+                this.ClusterIds[i] = new String(source.ClusterIds[i]);
+            }
+        }
+        if (source.AttributeFlags != null) {
+            this.AttributeFlags = new String[source.AttributeFlags.length];
+            for (int i = 0; i < source.AttributeFlags.length; i++) {
+                this.AttributeFlags[i] = new String(source.AttributeFlags[i]);
+            }
+        }
     }
 
 
@@ -1672,6 +1740,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
         this.setParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
         this.setParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+        this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
 
     }
 }

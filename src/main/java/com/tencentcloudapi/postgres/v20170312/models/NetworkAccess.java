@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class NetworkAccess extends AbstractModel{
 
     /**
-    * 网络资源id，实例id或RO组id
+    * 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
@@ -31,7 +31,7 @@ public class NetworkAccess extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 资源类型，1-实例 2-RO组
+    * 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -47,7 +47,7 @@ public class NetworkAccess extends AbstractModel{
     private String VpcId;
 
     /**
-    * IP地址
+    * IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
@@ -55,7 +55,7 @@ public class NetworkAccess extends AbstractModel{
     private String Vip;
 
     /**
-    * ipv6的IP地址
+    * IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
@@ -63,7 +63,7 @@ public class NetworkAccess extends AbstractModel{
     private String Vip6;
 
     /**
-    * 连接Port地址
+    * 访问端口
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
@@ -87,9 +87,9 @@ public class NetworkAccess extends AbstractModel{
     private Long VpcStatus;
 
     /**
-     * Get 网络资源id，实例id或RO组id
+     * Get 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceId 网络资源id，实例id或RO组id
+     * @return ResourceId 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
@@ -97,9 +97,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set 网络资源id，实例id或RO组id
+     * Set 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceId 网络资源id，实例id或RO组id
+     * @param ResourceId 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
@@ -107,9 +107,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Get 资源类型，1-实例 2-RO组
+     * Get 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 资源类型，1-实例 2-RO组
+     * @return ResourceType 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceType() {
@@ -117,9 +117,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set 资源类型，1-实例 2-RO组
+     * Set 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 资源类型，1-实例 2-RO组
+     * @param ResourceType 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(Long ResourceType) {
@@ -147,9 +147,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Get IP地址
+     * Get IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip IP地址
+     * @return Vip IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
@@ -157,9 +157,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set IP地址
+     * Set IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip IP地址
+     * @param Vip IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
@@ -167,9 +167,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Get ipv6的IP地址
+     * Get IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip6 ipv6的IP地址
+     * @return Vip6 IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
@@ -177,9 +177,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set ipv6的IP地址
+     * Set IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip6 ipv6的IP地址
+     * @param Vip6 IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
@@ -187,9 +187,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Get 连接Port地址
+     * Get 访问端口
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vport 连接Port地址
+     * @return Vport 访问端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
@@ -197,9 +197,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set 连接Port地址
+     * Set 访问端口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vport 连接Port地址
+     * @param Vport 访问端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {

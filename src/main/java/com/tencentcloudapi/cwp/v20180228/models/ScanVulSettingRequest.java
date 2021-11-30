@@ -30,7 +30,7 @@ public class ScanVulSettingRequest extends AbstractModel{
     private Long TimerInterval;
 
     /**
-    * 漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2]
+    * 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞, 以数组方式传参[1,2]
     */
     @SerializedName("VulCategories")
     @Expose
@@ -95,16 +95,16 @@ public class ScanVulSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2] 
-     * @return VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2]
+     * Get 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞, 以数组方式传参[1,2] 
+     * @return VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞, 以数组方式传参[1,2]
      */
     public Long [] getVulCategories() {
         return this.VulCategories;
     }
 
     /**
-     * Set 漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2]
-     * @param VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2]
+     * Set 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞, 以数组方式传参[1,2]
+     * @param VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞, 以数组方式传参[1,2]
      */
     public void setVulCategories(Long [] VulCategories) {
         this.VulCategories = VulCategories;

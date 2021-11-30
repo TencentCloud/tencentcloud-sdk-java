@@ -793,6 +793,26 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *查询运行中、隔离中、即将到期和负载均衡总数。
+     * @param req DescribeLoadBalancerOverviewRequest
+     * @return DescribeLoadBalancerOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancerOverviewResponse DescribeLoadBalancerOverview(DescribeLoadBalancerOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancerOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLoadBalancerOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询账号下的高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。
      * @param req DescribeLoadBalancerTrafficRequest
      * @return DescribeLoadBalancerTrafficResponse
