@@ -40,6 +40,12 @@ public class DescribeInstancesRequest extends AbstractModel{
 <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
 类型：String
 必选：否
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
+<li>instance-state</li>按照【实例状态】进行过滤。
+类型：String
+必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。
     */
     @SerializedName("Filters")
@@ -87,6 +93,12 @@ public class DescribeInstancesRequest extends AbstractModel{
 <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
 类型：String
 必选：否
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
+<li>instance-state</li>按照【实例状态】进行过滤。
+类型：String
+必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。 
      * @return Filters 过滤器列表。
 <li>instance-name</li>按照【实例名称】进行过滤。
@@ -96,6 +108,12 @@ public class DescribeInstancesRequest extends AbstractModel{
 类型：String
 必选：否
 <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
+类型：String
+必选：否
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
+<li>instance-state</li>按照【实例状态】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。
@@ -115,6 +133,12 @@ public class DescribeInstancesRequest extends AbstractModel{
 <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
 类型：String
 必选：否
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
+<li>instance-state</li>按照【实例状态】进行过滤。
+类型：String
+必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。
      * @param Filters 过滤器列表。
 <li>instance-name</li>按照【实例名称】进行过滤。
@@ -124,6 +148,12 @@ public class DescribeInstancesRequest extends AbstractModel{
 类型：String
 必选：否
 <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
+类型：String
+必选：否
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
+<li>instance-state</li>按照【实例状态】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。

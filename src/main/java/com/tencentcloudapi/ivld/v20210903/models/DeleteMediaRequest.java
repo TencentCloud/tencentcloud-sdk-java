@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Price extends AbstractModel{
+public class DeleteMediaRequest extends AbstractModel{
 
     /**
-    * 实例价格。
+    * 媒资文件在系统中的ID
     */
-    @SerializedName("InstancePrice")
+    @SerializedName("MediaId")
     @Expose
-    private InstancePrice InstancePrice;
+    private String MediaId;
 
     /**
-     * Get 实例价格。 
-     * @return InstancePrice 实例价格。
+     * Get 媒资文件在系统中的ID 
+     * @return MediaId 媒资文件在系统中的ID
      */
-    public InstancePrice getInstancePrice() {
-        return this.InstancePrice;
+    public String getMediaId() {
+        return this.MediaId;
     }
 
     /**
-     * Set 实例价格。
-     * @param InstancePrice 实例价格。
+     * Set 媒资文件在系统中的ID
+     * @param MediaId 媒资文件在系统中的ID
      */
-    public void setInstancePrice(InstancePrice InstancePrice) {
-        this.InstancePrice = InstancePrice;
+    public void setMediaId(String MediaId) {
+        this.MediaId = MediaId;
     }
 
-    public Price() {
+    public DeleteMediaRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Price(Price source) {
-        if (source.InstancePrice != null) {
-            this.InstancePrice = new InstancePrice(source.InstancePrice);
+    public DeleteMediaRequest(DeleteMediaRequest source) {
+        if (source.MediaId != null) {
+            this.MediaId = new String(source.MediaId);
         }
     }
 
@@ -63,7 +63,7 @@ public class Price extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+        this.setParamSimple(map, prefix + "MediaId", this.MediaId);
 
     }
 }

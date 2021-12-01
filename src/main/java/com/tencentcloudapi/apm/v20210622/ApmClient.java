@@ -58,4 +58,24 @@ public class ApmClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *APM实例列表拉取
+     * @param req DescribeApmInstancesRequest
+     * @return DescribeApmInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmInstancesResponse DescribeApmInstances(DescribeApmInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApmInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApmInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApmInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Price extends AbstractModel{
+public class DescribeTaskRequest extends AbstractModel{
 
     /**
-    * 实例价格。
+    * CreateTask返回的任务ID，最长32B
     */
-    @SerializedName("InstancePrice")
+    @SerializedName("TaskId")
     @Expose
-    private InstancePrice InstancePrice;
+    private String TaskId;
 
     /**
-     * Get 实例价格。 
-     * @return InstancePrice 实例价格。
+     * Get CreateTask返回的任务ID，最长32B 
+     * @return TaskId CreateTask返回的任务ID，最长32B
      */
-    public InstancePrice getInstancePrice() {
-        return this.InstancePrice;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 实例价格。
-     * @param InstancePrice 实例价格。
+     * Set CreateTask返回的任务ID，最长32B
+     * @param TaskId CreateTask返回的任务ID，最长32B
      */
-    public void setInstancePrice(InstancePrice InstancePrice) {
-        this.InstancePrice = InstancePrice;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
-    public Price() {
+    public DescribeTaskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Price(Price source) {
-        if (source.InstancePrice != null) {
-            this.InstancePrice = new InstancePrice(source.InstancePrice);
+    public DescribeTaskRequest(DescribeTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
     }
 
@@ -63,7 +63,7 @@ public class Price extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

@@ -1781,7 +1781,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     }
 
     /**
-     *本接口（UpdateApiAppKey）用于更新应用秘钥。
+     *本接口（UpdateApiAppKey）用于更新应用密钥。
      * @param req UpdateApiAppKeyRequest
      * @return UpdateApiAppKeyResponse
      * @throws TencentCloudSDKException

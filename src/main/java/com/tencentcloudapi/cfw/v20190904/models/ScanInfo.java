@@ -30,7 +30,7 @@ public class ScanInfo extends AbstractModel{
     private ScanResultInfo ScanResultInfo;
 
     /**
-    * 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
+    * 扫描状态 0扫描中 1完成  2未勾选自动扫描
     */
     @SerializedName("ScanStatus")
     @Expose
@@ -67,16 +67,16 @@ public class ScanInfo extends AbstractModel{
     }
 
     /**
-     * Get 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面 
-     * @return ScanStatus 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
+     * Get 扫描状态 0扫描中 1完成  2未勾选自动扫描 
+     * @return ScanStatus 扫描状态 0扫描中 1完成  2未勾选自动扫描
      */
     public Long getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
-     * @param ScanStatus 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
+     * Set 扫描状态 0扫描中 1完成  2未勾选自动扫描
+     * @param ScanStatus 扫描状态 0扫描中 1完成  2未勾选自动扫描
      */
     public void setScanStatus(Long ScanStatus) {
         this.ScanStatus = ScanStatus;
