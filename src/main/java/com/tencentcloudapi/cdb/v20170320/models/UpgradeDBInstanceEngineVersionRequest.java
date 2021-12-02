@@ -51,6 +51,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     private Long UpgradeSubversion;
 
     /**
+    * 延迟阈值。取值范围1~10
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -114,6 +121,22 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         this.UpgradeSubversion = UpgradeSubversion;
     }
 
+    /**
+     * Get 延迟阈值。取值范围1~10 
+     * @return MaxDelayTime 延迟阈值。取值范围1~10
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set 延迟阈值。取值范围1~10
+     * @param MaxDelayTime 延迟阈值。取值范围1~10
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public UpgradeDBInstanceEngineVersionRequest() {
     }
 
@@ -134,6 +157,9 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         if (source.UpgradeSubversion != null) {
             this.UpgradeSubversion = new Long(source.UpgradeSubversion);
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         this.setParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

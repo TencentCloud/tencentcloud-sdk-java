@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VideoEditProjectOutput extends AbstractModel{
 
     /**
-    * 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+    * 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
     */
     @SerializedName("MaterialId")
     @Expose
@@ -52,16 +52,16 @@ public class VideoEditProjectOutput extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-     * Get 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。 
-     * @return MaterialId 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     * Get 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。 
+     * @return MaterialId 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
      */
     public String getMaterialId() {
         return this.MaterialId;
     }
 
     /**
-     * Set 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
-     * @param MaterialId 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     * Set 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
+     * @param MaterialId 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
      */
     public void setMaterialId(String MaterialId) {
         this.MaterialId = MaterialId;

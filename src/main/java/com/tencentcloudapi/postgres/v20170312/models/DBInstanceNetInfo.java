@@ -51,11 +51,27 @@ public class DBInstanceNetInfo extends AbstractModel{
     private String NetType;
 
     /**
-    * 网络连接状态
+    * 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
      * Get DNS域名 
@@ -122,19 +138,59 @@ public class DBInstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get 网络连接状态 
-     * @return Status 网络连接状态
+     * Get 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）； 
+     * @return Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 网络连接状态
-     * @param Status 网络连接状态
+     * Set 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+     * @param Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     public DBInstanceNetInfo() {
@@ -160,6 +216,12 @@ public class DBInstanceNetInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -172,6 +234,8 @@ public class DBInstanceNetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

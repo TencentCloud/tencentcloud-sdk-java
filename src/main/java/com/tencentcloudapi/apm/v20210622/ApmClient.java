@@ -39,6 +39,26 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *业务购买APM实例，调用该接口创建
+     * @param req CreateApmInstanceRequest
+     * @return CreateApmInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApmInstanceResponse CreateApmInstance(CreateApmInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApmInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApmInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApmInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取Apm Agent信息
      * @param req DescribeApmAgentRequest
      * @return DescribeApmAgentResponse

@@ -148,7 +148,7 @@ public class ReadOnlyGroup extends AbstractModel{
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
-    * 只读组网络信息列表
+    * 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkAccessList")
@@ -452,9 +452,9 @@ public class ReadOnlyGroup extends AbstractModel{
     }
 
     /**
-     * Get 只读组网络信息列表
+     * Get 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkAccessList 只读组网络信息列表
+     * @return NetworkAccessList 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkAccess [] getNetworkAccessList() {
@@ -462,9 +462,9 @@ public class ReadOnlyGroup extends AbstractModel{
     }
 
     /**
-     * Set 只读组网络信息列表
+     * Set 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkAccessList 只读组网络信息列表
+     * @param NetworkAccessList 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {

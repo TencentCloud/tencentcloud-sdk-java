@@ -26,7 +26,7 @@ public class VideoExportExtensionArgs extends AbstractModel{
     * 封装格式，可选值：
 <li>mp4 </li>
 <li>mov </li>
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
     */
     @SerializedName("Container")
     @Expose
@@ -38,7 +38,7 @@ public class VideoExportExtensionArgs extends AbstractModel{
 例如：项目的宽高比是 16：9 ：
 <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
 <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
     */
     @SerializedName("ShortEdge")
     @Expose
@@ -46,17 +46,24 @@ public class VideoExportExtensionArgs extends AbstractModel{
 
     /**
     * 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
+    * 帧率。取值范围：[15, 60]，不填默认值为 25。
+    */
+    @SerializedName("FrameRate")
+    @Expose
+    private Float FrameRate;
+
+    /**
     * 是否去除视频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
     */
     @SerializedName("RemoveVideo")
     @Expose
@@ -66,7 +73,7 @@ public class VideoExportExtensionArgs extends AbstractModel{
     * 是否去除音频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
     */
     @SerializedName("RemoveAudio")
     @Expose
@@ -90,11 +97,11 @@ public class VideoExportExtensionArgs extends AbstractModel{
      * Get 封装格式，可选值：
 <li>mp4 </li>
 <li>mov </li>
-不填则默认使用导出模板中的值。 
+不填则使用视频导出编码配置。 
      * @return Container 封装格式，可选值：
 <li>mp4 </li>
 <li>mov </li>
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
      */
     public String getContainer() {
         return this.Container;
@@ -104,11 +111,11 @@ public class VideoExportExtensionArgs extends AbstractModel{
      * Set 封装格式，可选值：
 <li>mp4 </li>
 <li>mov </li>
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
      * @param Container 封装格式，可选值：
 <li>mp4 </li>
 <li>mov </li>
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
      */
     public void setContainer(String Container) {
         this.Container = Container;
@@ -120,13 +127,13 @@ public class VideoExportExtensionArgs extends AbstractModel{
 例如：项目的宽高比是 16：9 ：
 <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
 <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则默认使用导出模板中对的值。 
+不填则使用视频导出编码配置。 
      * @return ShortEdge 视频短边尺寸，取值范围： [128, 4096]，单位：px。
 视频最后的分辨率，根据短边尺寸和宽高比进行计算。
 例如：项目的宽高比是 16：9 ：
 <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
 <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      */
     public Long getShortEdge() {
         return this.ShortEdge;
@@ -138,13 +145,13 @@ public class VideoExportExtensionArgs extends AbstractModel{
 例如：项目的宽高比是 16：9 ：
 <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
 <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      * @param ShortEdge 视频短边尺寸，取值范围： [128, 4096]，单位：px。
 视频最后的分辨率，根据短边尺寸和宽高比进行计算。
 例如：项目的宽高比是 16：9 ：
 <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
 <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      */
     public void setShortEdge(Long ShortEdge) {
         this.ShortEdge = ShortEdge;
@@ -152,9 +159,9 @@ public class VideoExportExtensionArgs extends AbstractModel{
 
     /**
      * Get 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则默认使用导出模板中的值。 
+不填则使用视频导出编码配置。 
      * @return VideoBitrate 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
@@ -162,23 +169,39 @@ public class VideoExportExtensionArgs extends AbstractModel{
 
     /**
      * Set 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
      * @param VideoBitrate 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则默认使用导出模板中的值。
+不填则使用视频导出编码配置。
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
+     * Get 帧率。取值范围：[15, 60]，不填默认值为 25。 
+     * @return FrameRate 帧率。取值范围：[15, 60]，不填默认值为 25。
+     */
+    public Float getFrameRate() {
+        return this.FrameRate;
+    }
+
+    /**
+     * Set 帧率。取值范围：[15, 60]，不填默认值为 25。
+     * @param FrameRate 帧率。取值范围：[15, 60]，不填默认值为 25。
+     */
+    public void setFrameRate(Float FrameRate) {
+        this.FrameRate = FrameRate;
+    }
+
+    /**
      * Get 是否去除视频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。 
+不填则使用视频导出编码配置。 
      * @return RemoveVideo 是否去除视频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
@@ -188,11 +211,11 @@ public class VideoExportExtensionArgs extends AbstractModel{
      * Set 是否去除视频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      * @param RemoveVideo 是否去除视频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
@@ -202,11 +225,11 @@ public class VideoExportExtensionArgs extends AbstractModel{
      * Get 是否去除音频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。 
+不填则使用视频导出编码配置。 
      * @return RemoveAudio 是否去除音频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
@@ -216,11 +239,11 @@ public class VideoExportExtensionArgs extends AbstractModel{
      * Set 是否去除音频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      * @param RemoveAudio 是否去除音频数据，可选值：
 <li>0：保留；</li>
 <li>1：去除。</li>
-不填则默认使用导出模板中对的值。
+不填则使用视频导出编码配置。
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
@@ -275,6 +298,9 @@ public class VideoExportExtensionArgs extends AbstractModel{
         if (source.VideoBitrate != null) {
             this.VideoBitrate = new Long(source.VideoBitrate);
         }
+        if (source.FrameRate != null) {
+            this.FrameRate = new Float(source.FrameRate);
+        }
         if (source.RemoveVideo != null) {
             this.RemoveVideo = new Long(source.RemoveVideo);
         }
@@ -297,6 +323,7 @@ public class VideoExportExtensionArgs extends AbstractModel{
         this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamSimple(map, prefix + "ShortEdge", this.ShortEdge);
         this.setParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
+        this.setParamSimple(map, prefix + "FrameRate", this.FrameRate);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

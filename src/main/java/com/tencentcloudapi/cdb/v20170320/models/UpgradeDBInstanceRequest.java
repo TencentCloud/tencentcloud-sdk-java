@@ -114,6 +114,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long FastUpgrade;
 
     /**
+    * 延迟阈值。取值范围1~10，默认值为10。
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -321,6 +328,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.FastUpgrade = FastUpgrade;
     }
 
+    /**
+     * Get 延迟阈值。取值范围1~10，默认值为10。 
+     * @return MaxDelayTime 延迟阈值。取值范围1~10，默认值为10。
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set 延迟阈值。取值范围1~10，默认值为10。
+     * @param MaxDelayTime 延迟阈值。取值范围1~10，默认值为10。
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -368,6 +391,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.FastUpgrade != null) {
             this.FastUpgrade = new Long(source.FastUpgrade);
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -388,6 +414,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

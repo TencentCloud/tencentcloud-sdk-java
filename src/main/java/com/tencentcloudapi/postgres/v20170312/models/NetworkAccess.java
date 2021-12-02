@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class NetworkAccess extends AbstractModel{
 
     /**
-    * 网络资源id，实例id或RO组id(此字段已废弃)
+    * 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
@@ -31,7 +31,7 @@ public class NetworkAccess extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 资源类型，1-实例 2-RO组(此字段已废弃)
+    * 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -87,9 +87,9 @@ public class NetworkAccess extends AbstractModel{
     private Long VpcStatus;
 
     /**
-     * Get 网络资源id，实例id或RO组id(此字段已废弃)
+     * Get 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceId 网络资源id，实例id或RO组id(此字段已废弃)
+     * @return ResourceId 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
@@ -97,9 +97,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set 网络资源id，实例id或RO组id(此字段已废弃)
+     * Set 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceId 网络资源id，实例id或RO组id(此字段已废弃)
+     * @param ResourceId 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
@@ -107,9 +107,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Get 资源类型，1-实例 2-RO组(此字段已废弃)
+     * Get 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 资源类型，1-实例 2-RO组(此字段已废弃)
+     * @return ResourceType 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceType() {
@@ -117,9 +117,9 @@ public class NetworkAccess extends AbstractModel{
     }
 
     /**
-     * Set 资源类型，1-实例 2-RO组(此字段已废弃)
+     * Set 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 资源类型，1-实例 2-RO组(此字段已废弃)
+     * @param ResourceType 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(Long ResourceType) {

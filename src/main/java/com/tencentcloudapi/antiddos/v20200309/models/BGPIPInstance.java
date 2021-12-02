@@ -168,6 +168,14 @@ public class BGPIPInstance extends AbstractModel{
     private Long DamDDoSStatus;
 
     /**
+    * 是否Ipv6版本的IP, 是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("V6Flag")
+    @Expose
+    private Long V6Flag;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -531,6 +539,26 @@ public class BGPIPInstance extends AbstractModel{
         this.DamDDoSStatus = DamDDoSStatus;
     }
 
+    /**
+     * Get 是否Ipv6版本的IP, 是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return V6Flag 是否Ipv6版本的IP, 是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getV6Flag() {
+        return this.V6Flag;
+    }
+
+    /**
+     * Set 是否Ipv6版本的IP, 是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param V6Flag 是否Ipv6版本的IP, 是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setV6Flag(Long V6Flag) {
+        this.V6Flag = V6Flag;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -593,6 +621,9 @@ public class BGPIPInstance extends AbstractModel{
         if (source.DamDDoSStatus != null) {
             this.DamDDoSStatus = new Long(source.DamDDoSStatus);
         }
+        if (source.V6Flag != null) {
+            this.V6Flag = new Long(source.V6Flag);
+        }
     }
 
 
@@ -618,6 +649,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
+        this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
 
     }
 }

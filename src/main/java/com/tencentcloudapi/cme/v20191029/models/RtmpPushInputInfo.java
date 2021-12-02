@@ -30,7 +30,7 @@ public class RtmpPushInputInfo extends AbstractModel{
     private Long ExpiredSecond;
 
     /**
-    * 直播推流地址，入参不填默认由云剪生成。
+    * 直播推流地址，入参不填默认由多媒体创作引擎生成。
     */
     @SerializedName("PushUrl")
     @Expose
@@ -53,16 +53,16 @@ public class RtmpPushInputInfo extends AbstractModel{
     }
 
     /**
-     * Get 直播推流地址，入参不填默认由云剪生成。 
-     * @return PushUrl 直播推流地址，入参不填默认由云剪生成。
+     * Get 直播推流地址，入参不填默认由多媒体创作引擎生成。 
+     * @return PushUrl 直播推流地址，入参不填默认由多媒体创作引擎生成。
      */
     public String getPushUrl() {
         return this.PushUrl;
     }
 
     /**
-     * Set 直播推流地址，入参不填默认由云剪生成。
-     * @param PushUrl 直播推流地址，入参不填默认由云剪生成。
+     * Set 直播推流地址，入参不填默认由多媒体创作引擎生成。
+     * @param PushUrl 直播推流地址，入参不填默认由多媒体创作引擎生成。
      */
     public void setPushUrl(String PushUrl) {
         this.PushUrl = PushUrl;

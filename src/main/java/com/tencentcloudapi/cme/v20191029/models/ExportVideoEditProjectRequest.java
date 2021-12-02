@@ -47,9 +47,9 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     private Long Definition;
 
     /**
-    * 导出目标。
-<li>CME：云剪，即导出为云剪媒体；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
+    * 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
     */
     @SerializedName("ExportDestination")
     @Expose
@@ -63,7 +63,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     private String CoverData;
 
     /**
-    * 导出的云剪媒体信息。当导出目标为 CME 时必填。
+    * 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
     */
     @SerializedName("CMEExportInfo")
     @Expose
@@ -151,24 +151,24 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 导出目标。
-<li>CME：云剪，即导出为云剪媒体；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li> 
-     * @return ExportDestination 导出目标。
-<li>CME：云剪，即导出为云剪媒体；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
+     * Get 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li> 
+     * @return ExportDestination 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
      */
     public String getExportDestination() {
         return this.ExportDestination;
     }
 
     /**
-     * Set 导出目标。
-<li>CME：云剪，即导出为云剪媒体；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
-     * @param ExportDestination 导出目标。
-<li>CME：云剪，即导出为云剪媒体；</li>
-<li>VOD：云点播，即导出为云点播媒资。</li>
+     * Set 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
+     * @param ExportDestination 导出目标，指定导出视频的目标媒资库，可取值有：
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
      */
     public void setExportDestination(String ExportDestination) {
         this.ExportDestination = ExportDestination;
@@ -191,16 +191,16 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 导出的云剪媒体信息。当导出目标为 CME 时必填。 
-     * @return CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+     * Get 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。 
+     * @return CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      */
     public CMEExportInfo getCMEExportInfo() {
         return this.CMEExportInfo;
     }
 
     /**
-     * Set 导出的云剪媒体信息。当导出目标为 CME 时必填。
-     * @param CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+     * Set 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
+     * @param CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      */
     public void setCMEExportInfo(CMEExportInfo CMEExportInfo) {
         this.CMEExportInfo = CMEExportInfo;

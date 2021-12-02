@@ -446,6 +446,26 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *该接口根据指定的查询条件返回函数单个请求运行状态。
+     * @param req GetRequestStatusRequest
+     * @return GetRequestStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRequestStatusResponse GetRequestStatus(GetRequestStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRequestStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRequestStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRequestStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取函数的最大独占配额详情。
      * @param req GetReservedConcurrencyConfigRequest
      * @return GetReservedConcurrencyConfigResponse

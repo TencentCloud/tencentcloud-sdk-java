@@ -119,7 +119,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *创建云剪项目，目前支持的项目类型有：
+     *创建多媒体创作引擎项目，目前支持的项目类型有：
 <li>视频剪辑项目：用于普通视频剪辑；</li>
 <li>直播剪辑项目：用于直播流剪辑；</li>
 <li>导播台项目：用于云导播台；</li>
@@ -207,7 +207,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *删除用户登录态，使用户登出云剪平台。
+     *删除用户登录态，使用户登出多媒体创作引擎平台。
      * @param req DeleteLoginStatusRequest
      * @return DeleteLoginStatusResponse
      * @throws TencentCloudSDKException
@@ -792,7 +792,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *将云点播媒资文件导入到云剪媒体资源库。支持导入媒体归属团队或者个人。
+     *将云点播媒资文件导入到多媒体创作引擎媒体资源库。支持导入媒体归属团队或者个人。
      * @param req ImportMaterialRequest
      * @return ImportMaterialResponse
      * @throws TencentCloudSDKException

@@ -38,7 +38,7 @@ public class AudioTrackItem extends AbstractModel{
     * 音频媒体，可取值为：
 <ul>
 <li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
-<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 CME 时，参数填多媒体创作引擎媒体 Id；</li>
 <li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
 </ul>
 
@@ -104,7 +104,7 @@ public class AudioTrackItem extends AbstractModel{
      * Get 音频媒体，可取值为：
 <ul>
 <li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
-<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 CME 时，参数填多媒体创作引擎媒体 Id；</li>
 <li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
 </ul>
 
@@ -114,7 +114,7 @@ public class AudioTrackItem extends AbstractModel{
      * @return SourceMedia 音频媒体，可取值为：
 <ul>
 <li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
-<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 CME 时，参数填多媒体创作引擎媒体 Id；</li>
 <li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
 </ul>
 
@@ -130,7 +130,7 @@ public class AudioTrackItem extends AbstractModel{
      * Set 音频媒体，可取值为：
 <ul>
 <li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
-<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 CME 时，参数填多媒体创作引擎媒体 Id；</li>
 <li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
 </ul>
 
@@ -140,7 +140,7 @@ public class AudioTrackItem extends AbstractModel{
      * @param SourceMedia 音频媒体，可取值为：
 <ul>
 <li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
-<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 CME 时，参数填多媒体创作引擎媒体 Id；</li>
 <li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
 </ul>
 

@@ -260,7 +260,7 @@ public class DBInstance extends AbstractModel{
     private String DBKernelVersion;
 
     /**
-    * 实例网络信息列表
+    * 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkAccessList")
@@ -820,9 +820,9 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 实例网络信息列表
+     * Get 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkAccessList 实例网络信息列表
+     * @return NetworkAccessList 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkAccess [] getNetworkAccessList() {
@@ -830,9 +830,9 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Set 实例网络信息列表
+     * Set 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkAccessList 实例网络信息列表
+     * @param NetworkAccessList 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
