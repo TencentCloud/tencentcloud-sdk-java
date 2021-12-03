@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Whiteboard extends AbstractModel{
 
     /**
-    * 实时录制结果里白板视频宽，默认为1280
+    * 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 实时录制结果里白板视频高，默认为960
+    * 实时录制结果里白板视频高，取值必须大于等于2，默认为960
     */
     @SerializedName("Height")
     @Expose
@@ -44,32 +44,32 @@ public class Whiteboard extends AbstractModel{
     private String InitParam;
 
     /**
-     * Get 实时录制结果里白板视频宽，默认为1280 
-     * @return Width 实时录制结果里白板视频宽，默认为1280
+     * Get 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280 
+     * @return Width 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 实时录制结果里白板视频宽，默认为1280
-     * @param Width 实时录制结果里白板视频宽，默认为1280
+     * Set 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
+     * @param Width 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 实时录制结果里白板视频高，默认为960 
-     * @return Height 实时录制结果里白板视频高，默认为960
+     * Get 实时录制结果里白板视频高，取值必须大于等于2，默认为960 
+     * @return Height 实时录制结果里白板视频高，取值必须大于等于2，默认为960
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 实时录制结果里白板视频高，默认为960
-     * @param Height 实时录制结果里白板视频高，默认为960
+     * Set 实时录制结果里白板视频高，取值必须大于等于2，默认为960
+     * @param Height 实时录制结果里白板视频高，取值必须大于等于2，默认为960
      */
     public void setHeight(Long Height) {
         this.Height = Height;

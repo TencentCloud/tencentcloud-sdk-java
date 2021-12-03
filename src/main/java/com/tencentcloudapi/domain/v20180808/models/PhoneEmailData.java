@@ -44,6 +44,13 @@ public class PhoneEmailData extends AbstractModel{
     private String CreatedOn;
 
     /**
+    * 1=控制台校验，2=第三方校验
+    */
+    @SerializedName("CheckStatus")
+    @Expose
+    private Long CheckStatus;
+
+    /**
      * Get 手机号或者邮箱 
      * @return Code 手机号或者邮箱
      */
@@ -91,6 +98,22 @@ public class PhoneEmailData extends AbstractModel{
         this.CreatedOn = CreatedOn;
     }
 
+    /**
+     * Get 1=控制台校验，2=第三方校验 
+     * @return CheckStatus 1=控制台校验，2=第三方校验
+     */
+    public Long getCheckStatus() {
+        return this.CheckStatus;
+    }
+
+    /**
+     * Set 1=控制台校验，2=第三方校验
+     * @param CheckStatus 1=控制台校验，2=第三方校验
+     */
+    public void setCheckStatus(Long CheckStatus) {
+        this.CheckStatus = CheckStatus;
+    }
+
     public PhoneEmailData() {
     }
 
@@ -108,6 +131,9 @@ public class PhoneEmailData extends AbstractModel{
         if (source.CreatedOn != null) {
             this.CreatedOn = new String(source.CreatedOn);
         }
+        if (source.CheckStatus != null) {
+            this.CheckStatus = new Long(source.CheckStatus);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class PhoneEmailData extends AbstractModel{
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
 
     }
 }

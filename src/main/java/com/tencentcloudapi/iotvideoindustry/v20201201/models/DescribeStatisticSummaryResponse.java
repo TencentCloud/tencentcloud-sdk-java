@@ -71,6 +71,14 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
     private Float P2PPeakValue;
 
     /**
+    * RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivePushTotal")
+    @Expose
+    private Long LivePushTotal;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -198,6 +206,26 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivePushTotal RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLivePushTotal() {
+        return this.LivePushTotal;
+    }
+
+    /**
+     * Set RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivePushTotal RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivePushTotal(Long LivePushTotal) {
+        this.LivePushTotal = LivePushTotal;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -239,6 +267,9 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
         if (source.P2PPeakValue != null) {
             this.P2PPeakValue = new Float(source.P2PPeakValue);
         }
+        if (source.LivePushTotal != null) {
+            this.LivePushTotal = new Long(source.LivePushTotal);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -255,6 +286,7 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageUsage", this.StorageUsage);
         this.setParamSimple(map, prefix + "P2PFluxTotal", this.P2PFluxTotal);
         this.setParamSimple(map, prefix + "P2PPeakValue", this.P2PPeakValue);
+        this.setParamSimple(map, prefix + "LivePushTotal", this.LivePushTotal);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -72,6 +72,13 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     private String CosBucketRegion;
 
     /**
+    * 是否自动安装依赖
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
     * 函数所属环境
     */
     @SerializedName("EnvId")
@@ -212,6 +219,22 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否自动安装依赖 
+     * @return InstallDependency 是否自动安装依赖
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * Set 是否自动安装依赖
+     * @param InstallDependency 是否自动安装依赖
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
+    }
+
+    /**
      * Get 函数所属环境 
      * @return EnvId 函数所属环境
      */
@@ -304,6 +327,9 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
         if (source.CosBucketRegion != null) {
             this.CosBucketRegion = new String(source.CosBucketRegion);
         }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
+        }
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
@@ -330,6 +356,7 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZipFile", this.ZipFile);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
         this.setParamObj(map, prefix + "Code.", this.Code);

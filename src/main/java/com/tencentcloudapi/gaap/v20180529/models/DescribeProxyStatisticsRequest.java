@@ -61,6 +61,13 @@ public class DescribeProxyStatisticsRequest extends AbstractModel{
     private Long Granularity;
 
     /**
+    * 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+    */
+    @SerializedName("Isp")
+    @Expose
+    private String Isp;
+
+    /**
      * Get 通道ID 
      * @return ProxyId 通道ID
      */
@@ -152,6 +159,22 @@ public class DescribeProxyStatisticsRequest extends AbstractModel{
         this.Granularity = Granularity;
     }
 
+    /**
+     * Get 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据 
+     * @return Isp 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+     */
+    public String getIsp() {
+        return this.Isp;
+    }
+
+    /**
+     * Set 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+     * @param Isp 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+     */
+    public void setIsp(String Isp) {
+        this.Isp = Isp;
+    }
+
     public DescribeProxyStatisticsRequest() {
     }
 
@@ -178,6 +201,9 @@ public class DescribeProxyStatisticsRequest extends AbstractModel{
         if (source.Granularity != null) {
             this.Granularity = new Long(source.Granularity);
         }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
     }
 
 
@@ -190,6 +216,7 @@ public class DescribeProxyStatisticsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
+        this.setParamSimple(map, prefix + "Isp", this.Isp);
 
     }
 }

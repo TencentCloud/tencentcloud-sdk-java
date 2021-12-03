@@ -30,14 +30,14 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
+    * 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 告警策略ID，使用此字段时 GroupId 会被忽略
+    * 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
     */
     @SerializedName("PolicyId")
     @Expose
@@ -74,32 +74,32 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0 
-     * @return GroupId 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
+     * Get 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数 
+     * @return GroupId 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
-     * @param GroupId 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
+     * Set 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
+     * @param GroupId 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 告警策略ID，使用此字段时 GroupId 会被忽略 
-     * @return PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
+     * Get 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准 
+     * @return PolicyId 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID，使用此字段时 GroupId 会被忽略
-     * @param PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
+     * Set 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
+     * @param PolicyId 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

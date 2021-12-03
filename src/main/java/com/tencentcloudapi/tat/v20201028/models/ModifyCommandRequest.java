@@ -51,21 +51,21 @@ public class ModifyCommandRequest extends AbstractModel{
     private String Content;
 
     /**
-    * 命令类型，目前仅支持取值：SHELL。
+    * 命令类型，目前支持取值：SHELL、POWERSHELL。
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * 命令执行路径，默认：`/root`。
+    * 命令执行路径。
     */
     @SerializedName("WorkingDirectory")
     @Expose
     private String WorkingDirectory;
 
     /**
-    * 命令超时时间，默认60秒。取值范围[1, 86400]。
+    * 命令超时时间。取值范围[1, 86400]。
     */
     @SerializedName("Timeout")
     @Expose
@@ -85,7 +85,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
     * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
     */
     @SerializedName("Username")
     @Expose
@@ -173,48 +173,48 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 命令类型，目前仅支持取值：SHELL。 
-     * @return CommandType 命令类型，目前仅支持取值：SHELL。
+     * Get 命令类型，目前支持取值：SHELL、POWERSHELL。 
+     * @return CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型，目前仅支持取值：SHELL。
-     * @param CommandType 命令类型，目前仅支持取值：SHELL。
+     * Set 命令类型，目前支持取值：SHELL、POWERSHELL。
+     * @param CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get 命令执行路径，默认：`/root`。 
-     * @return WorkingDirectory 命令执行路径，默认：`/root`。
+     * Get 命令执行路径。 
+     * @return WorkingDirectory 命令执行路径。
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set 命令执行路径，默认：`/root`。
-     * @param WorkingDirectory 命令执行路径，默认：`/root`。
+     * Set 命令执行路径。
+     * @param WorkingDirectory 命令执行路径。
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
     }
 
     /**
-     * Get 命令超时时间，默认60秒。取值范围[1, 86400]。 
-     * @return Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
+     * Get 命令超时时间。取值范围[1, 86400]。 
+     * @return Timeout 命令超时时间。取值范围[1, 86400]。
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 命令超时时间，默认60秒。取值范围[1, 86400]。
-     * @param Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
+     * Set 命令超时时间。取值范围[1, 86400]。
+     * @param Timeout 命令超时时间。取值范围[1, 86400]。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
@@ -258,9 +258,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。 
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。 
      * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
      */
     public String getUsername() {
         return this.Username;
@@ -268,9 +268,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
      * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
      */
     public void setUsername(String Username) {
         this.Username = Username;

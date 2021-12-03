@@ -58,6 +58,20 @@ public class TaskResult extends AbstractModel{
     private Long Dropped;
 
     /**
+    * 日志在cos中的地址
+    */
+    @SerializedName("OutputUrl")
+    @Expose
+    private String OutputUrl;
+
+    /**
+    * 日志上传cos的错误信息。
+    */
+    @SerializedName("OutputUploadCOSErrorInfo")
+    @Expose
+    private String OutputUploadCOSErrorInfo;
+
+    /**
      * Get 命令执行ExitCode。 
      * @return ExitCode 命令执行ExitCode。
      */
@@ -137,6 +151,38 @@ public class TaskResult extends AbstractModel{
         this.Dropped = Dropped;
     }
 
+    /**
+     * Get 日志在cos中的地址 
+     * @return OutputUrl 日志在cos中的地址
+     */
+    public String getOutputUrl() {
+        return this.OutputUrl;
+    }
+
+    /**
+     * Set 日志在cos中的地址
+     * @param OutputUrl 日志在cos中的地址
+     */
+    public void setOutputUrl(String OutputUrl) {
+        this.OutputUrl = OutputUrl;
+    }
+
+    /**
+     * Get 日志上传cos的错误信息。 
+     * @return OutputUploadCOSErrorInfo 日志上传cos的错误信息。
+     */
+    public String getOutputUploadCOSErrorInfo() {
+        return this.OutputUploadCOSErrorInfo;
+    }
+
+    /**
+     * Set 日志上传cos的错误信息。
+     * @param OutputUploadCOSErrorInfo 日志上传cos的错误信息。
+     */
+    public void setOutputUploadCOSErrorInfo(String OutputUploadCOSErrorInfo) {
+        this.OutputUploadCOSErrorInfo = OutputUploadCOSErrorInfo;
+    }
+
     public TaskResult() {
     }
 
@@ -160,6 +206,12 @@ public class TaskResult extends AbstractModel{
         if (source.Dropped != null) {
             this.Dropped = new Long(source.Dropped);
         }
+        if (source.OutputUrl != null) {
+            this.OutputUrl = new String(source.OutputUrl);
+        }
+        if (source.OutputUploadCOSErrorInfo != null) {
+            this.OutputUploadCOSErrorInfo = new String(source.OutputUploadCOSErrorInfo);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class TaskResult extends AbstractModel{
         this.setParamSimple(map, prefix + "ExecStartTime", this.ExecStartTime);
         this.setParamSimple(map, prefix + "ExecEndTime", this.ExecEndTime);
         this.setParamSimple(map, prefix + "Dropped", this.Dropped);
+        this.setParamSimple(map, prefix + "OutputUrl", this.OutputUrl);
+        this.setParamSimple(map, prefix + "OutputUploadCOSErrorInfo", this.OutputUploadCOSErrorInfo);
 
     }
 }

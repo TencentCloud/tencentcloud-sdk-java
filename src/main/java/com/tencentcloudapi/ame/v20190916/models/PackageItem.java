@@ -72,6 +72,13 @@ public class PackageItem extends AbstractModel{
     private String AuthorizedArea;
 
     /**
+    * 标签数组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
      * Get 订单id 
      * @return OrderId 订单id
      */
@@ -183,6 +190,22 @@ public class PackageItem extends AbstractModel{
         this.AuthorizedArea = AuthorizedArea;
     }
 
+    /**
+     * Get 标签数组 
+     * @return Tags 标签数组
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签数组
+     * @param Tags 标签数组
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
     public PackageItem() {
     }
 
@@ -212,6 +235,12 @@ public class PackageItem extends AbstractModel{
         if (source.AuthorizedArea != null) {
             this.AuthorizedArea = new String(source.AuthorizedArea);
         }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -226,6 +255,7 @@ public class PackageItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ArtistName", this.ArtistName);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "AuthorizedArea", this.AuthorizedArea);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }
 }

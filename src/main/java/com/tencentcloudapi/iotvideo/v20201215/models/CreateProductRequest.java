@@ -86,6 +86,13 @@ public class CreateProductRequest extends AbstractModel{
     private Long EncryptionType;
 
     /**
+    * 连接类型，wifi表示WIFI连接，cellular表示4G连接
+    */
+    @SerializedName("NetType")
+    @Expose
+    private String NetType;
+
+    /**
      * Get 产品名称 
      * @return ProductName 产品名称
      */
@@ -229,6 +236,22 @@ public class CreateProductRequest extends AbstractModel{
         this.EncryptionType = EncryptionType;
     }
 
+    /**
+     * Get 连接类型，wifi表示WIFI连接，cellular表示4G连接 
+     * @return NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
+     */
+    public String getNetType() {
+        return this.NetType;
+    }
+
+    /**
+     * Set 连接类型，wifi表示WIFI连接，cellular表示4G连接
+     * @param NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
+     */
+    public void setNetType(String NetType) {
+        this.NetType = NetType;
+    }
+
     public CreateProductRequest() {
     }
 
@@ -267,6 +290,9 @@ public class CreateProductRequest extends AbstractModel{
         if (source.EncryptionType != null) {
             this.EncryptionType = new Long(source.EncryptionType);
         }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class CreateProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChipId", this.ChipId);
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
         this.setParamSimple(map, prefix + "EncryptionType", this.EncryptionType);
+        this.setParamSimple(map, prefix + "NetType", this.NetType);
 
     }
 }

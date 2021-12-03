@@ -959,6 +959,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取某个租户的虚拟集群列表
+     * @param req DescribeAllTenantsRequest
+     * @return DescribeAllTenantsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllTenantsResponse DescribeAllTenants(DescribeAllTenantsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllTenantsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllTenantsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllTenants");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户绑定的专享集群列表
      * @param req DescribeBindClustersRequest
      * @return DescribeBindClustersResponse

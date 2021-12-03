@@ -114,6 +114,34 @@ public class DescribeVideoListRequest extends AbstractModel{
     private String ChannelId;
 
     /**
+    * 录制计划ID
+    */
+    @SerializedName("PlanId")
+    @Expose
+    private String PlanId;
+
+    /**
+    * 场景ID
+    */
+    @SerializedName("SceneId")
+    @Expose
+    private Long SceneId;
+
+    /**
+    * 告警ID
+    */
+    @SerializedName("WarnId")
+    @Expose
+    private Long WarnId;
+
+    /**
+    * 录制类型 1: 联动计划录制 2: 告警录制
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private Long [] RecordType;
+
+    /**
      * Get 偏移 
      * @return Offset 偏移
      */
@@ -321,6 +349,70 @@ public class DescribeVideoListRequest extends AbstractModel{
         this.ChannelId = ChannelId;
     }
 
+    /**
+     * Get 录制计划ID 
+     * @return PlanId 录制计划ID
+     */
+    public String getPlanId() {
+        return this.PlanId;
+    }
+
+    /**
+     * Set 录制计划ID
+     * @param PlanId 录制计划ID
+     */
+    public void setPlanId(String PlanId) {
+        this.PlanId = PlanId;
+    }
+
+    /**
+     * Get 场景ID 
+     * @return SceneId 场景ID
+     */
+    public Long getSceneId() {
+        return this.SceneId;
+    }
+
+    /**
+     * Set 场景ID
+     * @param SceneId 场景ID
+     */
+    public void setSceneId(Long SceneId) {
+        this.SceneId = SceneId;
+    }
+
+    /**
+     * Get 告警ID 
+     * @return WarnId 告警ID
+     */
+    public Long getWarnId() {
+        return this.WarnId;
+    }
+
+    /**
+     * Set 告警ID
+     * @param WarnId 告警ID
+     */
+    public void setWarnId(Long WarnId) {
+        this.WarnId = WarnId;
+    }
+
+    /**
+     * Get 录制类型 1: 联动计划录制 2: 告警录制 
+     * @return RecordType 录制类型 1: 联动计划录制 2: 告警录制
+     */
+    public Long [] getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set 录制类型 1: 联动计划录制 2: 告警录制
+     * @param RecordType 录制类型 1: 联动计划录制 2: 告警录制
+     */
+    public void setRecordType(Long [] RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public DescribeVideoListRequest() {
     }
 
@@ -368,6 +460,21 @@ public class DescribeVideoListRequest extends AbstractModel{
         if (source.ChannelId != null) {
             this.ChannelId = new String(source.ChannelId);
         }
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+        if (source.SceneId != null) {
+            this.SceneId = new Long(source.SceneId);
+        }
+        if (source.WarnId != null) {
+            this.WarnId = new Long(source.WarnId);
+        }
+        if (source.RecordType != null) {
+            this.RecordType = new Long[source.RecordType.length];
+            for (int i = 0; i < source.RecordType.length; i++) {
+                this.RecordType[i] = new Long(source.RecordType[i]);
+            }
+        }
     }
 
 
@@ -388,6 +495,10 @@ public class DescribeVideoListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndFileSize", this.EndFileSize);
         this.setParamSimple(map, prefix + "IsRecording", this.IsRecording);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamSimple(map, prefix + "SceneId", this.SceneId);
+        this.setParamSimple(map, prefix + "WarnId", this.WarnId);
+        this.setParamArraySimple(map, prefix + "RecordType.", this.RecordType);
 
     }
 }

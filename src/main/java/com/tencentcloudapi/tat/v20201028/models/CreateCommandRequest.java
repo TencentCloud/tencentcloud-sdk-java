@@ -44,14 +44,14 @@ public class CreateCommandRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 命令类型，目前仅支持取值：SHELL。默认：SHELL。
+    * 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * 命令执行路径，默认：/root。
+    * 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
     */
     @SerializedName("WorkingDirectory")
     @Expose
@@ -93,7 +93,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
     * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；Windows 实例当前仅支持以 System 用户执行命令。
     */
     @SerializedName("Username")
     @Expose
@@ -165,32 +165,32 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 命令类型，目前仅支持取值：SHELL。默认：SHELL。 
-     * @return CommandType 命令类型，目前仅支持取值：SHELL。默认：SHELL。
+     * Get 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。 
+     * @return CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型，目前仅支持取值：SHELL。默认：SHELL。
-     * @param CommandType 命令类型，目前仅支持取值：SHELL。默认：SHELL。
+     * Set 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
+     * @param CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get 命令执行路径，默认：/root。 
-     * @return WorkingDirectory 命令执行路径，默认：/root。
+     * Get 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。 
+     * @return WorkingDirectory 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set 命令执行路径，默认：/root。
-     * @param WorkingDirectory 命令执行路径，默认：/root。
+     * Set 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
+     * @param WorkingDirectory 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
@@ -286,9 +286,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。 
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；Windows 实例当前仅支持以 System 用户执行命令。 
      * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；Windows 实例当前仅支持以 System 用户执行命令。
      */
     public String getUsername() {
         return this.Username;
@@ -296,9 +296,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；Windows 实例当前仅支持以 System 用户执行命令。
      * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；Windows 实例当前仅支持以 System 用户执行命令。
      */
     public void setUsername(String Username) {
         this.Username = Username;

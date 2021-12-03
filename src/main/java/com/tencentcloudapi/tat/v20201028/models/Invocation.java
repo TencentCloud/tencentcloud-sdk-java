@@ -155,6 +155,20 @@ public class Invocation extends AbstractModel{
     private String WorkingDirectory;
 
     /**
+    * 日志上传的cos bucket 地址。
+    */
+    @SerializedName("OutputCOSBucketUrl")
+    @Expose
+    private String OutputCOSBucketUrl;
+
+    /**
+    * 日志在cos bucket中的目录。
+    */
+    @SerializedName("OutputCOSKeyPrefix")
+    @Expose
+    private String OutputCOSKeyPrefix;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -466,6 +480,38 @@ public class Invocation extends AbstractModel{
         this.WorkingDirectory = WorkingDirectory;
     }
 
+    /**
+     * Get 日志上传的cos bucket 地址。 
+     * @return OutputCOSBucketUrl 日志上传的cos bucket 地址。
+     */
+    public String getOutputCOSBucketUrl() {
+        return this.OutputCOSBucketUrl;
+    }
+
+    /**
+     * Set 日志上传的cos bucket 地址。
+     * @param OutputCOSBucketUrl 日志上传的cos bucket 地址。
+     */
+    public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
+        this.OutputCOSBucketUrl = OutputCOSBucketUrl;
+    }
+
+    /**
+     * Get 日志在cos bucket中的目录。 
+     * @return OutputCOSKeyPrefix 日志在cos bucket中的目录。
+     */
+    public String getOutputCOSKeyPrefix() {
+        return this.OutputCOSKeyPrefix;
+    }
+
+    /**
+     * Set 日志在cos bucket中的目录。
+     * @param OutputCOSKeyPrefix 日志在cos bucket中的目录。
+     */
+    public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
+        this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;
+    }
+
     public Invocation() {
     }
 
@@ -531,6 +577,12 @@ public class Invocation extends AbstractModel{
         if (source.WorkingDirectory != null) {
             this.WorkingDirectory = new String(source.WorkingDirectory);
         }
+        if (source.OutputCOSBucketUrl != null) {
+            this.OutputCOSBucketUrl = new String(source.OutputCOSBucketUrl);
+        }
+        if (source.OutputCOSKeyPrefix != null) {
+            this.OutputCOSKeyPrefix = new String(source.OutputCOSKeyPrefix);
+        }
     }
 
 
@@ -556,6 +608,8 @@ public class Invocation extends AbstractModel{
         this.setParamSimple(map, prefix + "CommandType", this.CommandType);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
+        this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
+        this.setParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);
 
     }
 }

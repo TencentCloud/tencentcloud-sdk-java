@@ -100,6 +100,14 @@ public class VideoProduct extends AbstractModel{
     private Long UpdateTime;
 
     /**
+    * 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetType")
+    @Expose
+    private String NetType;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -275,6 +283,26 @@ public class VideoProduct extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetType() {
+        return this.NetType;
+    }
+
+    /**
+     * Set 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetType(String NetType) {
+        this.NetType = NetType;
+    }
+
     public VideoProduct() {
     }
 
@@ -319,6 +347,9 @@ public class VideoProduct extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
     }
 
 
@@ -337,6 +368,7 @@ public class VideoProduct extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "NetType", this.NetType);
 
     }
 }
