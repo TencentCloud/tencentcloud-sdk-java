@@ -747,6 +747,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *直播平台-扣减额度
+     * @param req DeduceQuotaRequest
+     * @return DeduceQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeduceQuotaResponse DeduceQuota(DeduceQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeduceQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeduceQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeduceQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播平台-删除代理商完税信息
      * @param req DeleteAgentTaxPaymentInfoRequest
      * @return DeleteAgentTaxPaymentInfoResponse
@@ -1319,6 +1339,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryApplicationMaterialResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryApplicationMaterial");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播平台-查询分配关系
+     * @param req QueryAssignmentRequest
+     * @return QueryAssignmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAssignmentResponse QueryAssignment(QueryAssignmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAssignmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAssignmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryAssignment");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

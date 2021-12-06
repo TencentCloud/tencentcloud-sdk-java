@@ -139,6 +139,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取用户购买信息列表
+     * @param req DescribeCCCBuyInfoListRequest
+     * @return DescribeCCCBuyInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCCBuyInfoListResponse DescribeCCCBuyInfoList(DescribeCCCBuyInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCCBuyInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCCBuyInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCCCBuyInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取呼入实时数据统计指标
      * @param req DescribeCallInMetricsRequest
      * @return DescribeCallInMetricsResponse

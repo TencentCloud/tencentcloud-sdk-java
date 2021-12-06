@@ -352,6 +352,34 @@ public class CreateApiRequest extends AbstractModel{
     private String ServiceScfFunctionType;
 
     /**
+    * EIAM应用类型。
+    */
+    @SerializedName("EIAMAppType")
+    @Expose
+    private String EIAMAppType;
+
+    /**
+    * EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+    */
+    @SerializedName("EIAMAuthType")
+    @Expose
+    private String EIAMAuthType;
+
+    /**
+    * EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+    */
+    @SerializedName("TokenTimeout")
+    @Expose
+    private Long TokenTimeout;
+
+    /**
+    * EIAM应用ID。
+    */
+    @SerializedName("EIAMAppId")
+    @Expose
+    private String EIAMAppId;
+
+    /**
      * Get API 所在的服务唯一 ID。 
      * @return ServiceId API 所在的服务唯一 ID。
      */
@@ -1103,6 +1131,70 @@ public class CreateApiRequest extends AbstractModel{
         this.ServiceScfFunctionType = ServiceScfFunctionType;
     }
 
+    /**
+     * Get EIAM应用类型。 
+     * @return EIAMAppType EIAM应用类型。
+     */
+    public String getEIAMAppType() {
+        return this.EIAMAppType;
+    }
+
+    /**
+     * Set EIAM应用类型。
+     * @param EIAMAppType EIAM应用类型。
+     */
+    public void setEIAMAppType(String EIAMAppType) {
+        this.EIAMAppType = EIAMAppType;
+    }
+
+    /**
+     * Get EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。 
+     * @return EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     */
+    public String getEIAMAuthType() {
+        return this.EIAMAuthType;
+    }
+
+    /**
+     * Set EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     * @param EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     */
+    public void setEIAMAuthType(String EIAMAuthType) {
+        this.EIAMAuthType = EIAMAuthType;
+    }
+
+    /**
+     * Get EIAM应用Token 有效时间，单位为秒，默认为7200秒。 
+     * @return TokenTimeout EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     */
+    public Long getTokenTimeout() {
+        return this.TokenTimeout;
+    }
+
+    /**
+     * Set EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     * @param TokenTimeout EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     */
+    public void setTokenTimeout(Long TokenTimeout) {
+        this.TokenTimeout = TokenTimeout;
+    }
+
+    /**
+     * Get EIAM应用ID。 
+     * @return EIAMAppId EIAM应用ID。
+     */
+    public String getEIAMAppId() {
+        return this.EIAMAppId;
+    }
+
+    /**
+     * Set EIAM应用ID。
+     * @param EIAMAppId EIAM应用ID。
+     */
+    public void setEIAMAppId(String EIAMAppId) {
+        this.EIAMAppId = EIAMAppId;
+    }
+
     public CreateApiRequest() {
     }
 
@@ -1270,6 +1362,18 @@ public class CreateApiRequest extends AbstractModel{
         if (source.ServiceScfFunctionType != null) {
             this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
         }
+        if (source.EIAMAppType != null) {
+            this.EIAMAppType = new String(source.EIAMAppType);
+        }
+        if (source.EIAMAuthType != null) {
+            this.EIAMAuthType = new String(source.EIAMAuthType);
+        }
+        if (source.TokenTimeout != null) {
+            this.TokenTimeout = new Long(source.TokenTimeout);
+        }
+        if (source.EIAMAppId != null) {
+            this.EIAMAppId = new String(source.EIAMAppId);
+        }
     }
 
 
@@ -1324,6 +1428,10 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+        this.setParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
+        this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
+        this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
+        this.setParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
 
     }
 }

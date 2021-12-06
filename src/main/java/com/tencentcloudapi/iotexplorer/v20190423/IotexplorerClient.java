@@ -919,6 +919,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *无
+     * @param req GenSingleDeviceSignatureOfPublicRequest
+     * @return GenSingleDeviceSignatureOfPublicResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(GenSingleDeviceSignatureOfPublicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenSingleDeviceSignatureOfPublic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列出量产数据列表信息。
      * @param req GetBatchProductionsListRequest
      * @return GetBatchProductionsListResponse

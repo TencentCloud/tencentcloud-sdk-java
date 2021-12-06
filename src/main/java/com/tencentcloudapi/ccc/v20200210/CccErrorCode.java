@@ -31,7 +31,10 @@ public enum CccErrorCode {
      LIMITEXCEEDED("LimitExceeded"),
      
     // 超出数量限制。
-     LIMITEXCEEDED_OUTOFCOUNTLIMIT("LimitExceeded.OutOfCountLimit");
+     LIMITEXCEEDED_OUTOFCOUNTLIMIT("LimitExceeded.OutOfCountLimit"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private CccErrorCode (String value){

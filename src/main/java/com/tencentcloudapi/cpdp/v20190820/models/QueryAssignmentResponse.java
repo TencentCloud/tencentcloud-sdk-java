@@ -13,37 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListClsLogTopicsResponse extends AbstractModel{
+public class QueryAssignmentResponse extends AbstractModel{
 
     /**
-    * 上海区域日志集信息
+    * 错误码。响应成功："SUCCESS"，其他为不成功。
     */
-    @SerializedName("Logset")
+    @SerializedName("ErrCode")
     @Expose
-    private LogSetInfo Logset;
+    private String ErrCode;
 
     /**
-    * 上海区域日志主题信息列表
+    * 响应消息
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * 返回响应
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Topics")
+    @SerializedName("Result")
     @Expose
-    private TopicInfo [] Topics;
-
-    /**
-    * 其他区域日志集信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ExtraLogset")
-    @Expose
-    private ExtraLogset [] ExtraLogset;
+    private AssignmentData Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,59 +52,55 @@ public class ListClsLogTopicsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 上海区域日志集信息 
-     * @return Logset 上海区域日志集信息
+     * Get 错误码。响应成功："SUCCESS"，其他为不成功。 
+     * @return ErrCode 错误码。响应成功："SUCCESS"，其他为不成功。
      */
-    public LogSetInfo getLogset() {
-        return this.Logset;
+    public String getErrCode() {
+        return this.ErrCode;
     }
 
     /**
-     * Set 上海区域日志集信息
-     * @param Logset 上海区域日志集信息
+     * Set 错误码。响应成功："SUCCESS"，其他为不成功。
+     * @param ErrCode 错误码。响应成功："SUCCESS"，其他为不成功。
      */
-    public void setLogset(LogSetInfo Logset) {
-        this.Logset = Logset;
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 上海区域日志主题信息列表
+     * Get 响应消息 
+     * @return ErrMsg 响应消息
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 响应消息
+     * @param ErrMsg 响应消息
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get 返回响应
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Topics 上海区域日志主题信息列表
+     * @return Result 返回响应
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TopicInfo [] getTopics() {
-        return this.Topics;
+    public AssignmentData getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 上海区域日志主题信息列表
+     * Set 返回响应
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Topics 上海区域日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTopics(TopicInfo [] Topics) {
-        this.Topics = Topics;
-    }
-
-    /**
-     * Get 其他区域日志集信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraLogset 其他区域日志集信息列表
+     * @param Result 返回响应
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ExtraLogset [] getExtraLogset() {
-        return this.ExtraLogset;
-    }
-
-    /**
-     * Set 其他区域日志集信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraLogset 其他区域日志集信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setExtraLogset(ExtraLogset [] ExtraLogset) {
-        this.ExtraLogset = ExtraLogset;
+    public void setResult(AssignmentData Result) {
+        this.Result = Result;
     }
 
     /**
@@ -124,28 +119,22 @@ public class ListClsLogTopicsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ListClsLogTopicsResponse() {
+    public QueryAssignmentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListClsLogTopicsResponse(ListClsLogTopicsResponse source) {
-        if (source.Logset != null) {
-            this.Logset = new LogSetInfo(source.Logset);
+    public QueryAssignmentResponse(QueryAssignmentResponse source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
         }
-        if (source.Topics != null) {
-            this.Topics = new TopicInfo[source.Topics.length];
-            for (int i = 0; i < source.Topics.length; i++) {
-                this.Topics[i] = new TopicInfo(source.Topics[i]);
-            }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
         }
-        if (source.ExtraLogset != null) {
-            this.ExtraLogset = new ExtraLogset[source.ExtraLogset.length];
-            for (int i = 0; i < source.ExtraLogset.length; i++) {
-                this.ExtraLogset[i] = new ExtraLogset(source.ExtraLogset[i]);
-            }
+        if (source.Result != null) {
+            this.Result = new AssignmentData(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -157,9 +146,9 @@ public class ListClsLogTopicsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Logset.", this.Logset);
-        this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
-        this.setParamArrayObj(map, prefix + "ExtraLogset.", this.ExtraLogset);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

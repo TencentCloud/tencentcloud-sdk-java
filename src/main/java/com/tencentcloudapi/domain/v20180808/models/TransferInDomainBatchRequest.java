@@ -69,6 +69,20 @@ false：关闭60天内禁止转移注册商锁定
     private Boolean LockTransfer;
 
     /**
+    * 是否开启更新锁：0=默认不开启，1=开启
+    */
+    @SerializedName("UpdateProhibition")
+    @Expose
+    private Long UpdateProhibition;
+
+    /**
+    * 是否开启转移锁：0=默认不开启，1=开启
+    */
+    @SerializedName("TransferProhibition")
+    @Expose
+    private Long TransferProhibition;
+
+    /**
      * Get 转入的域名名称数组。 
      * @return Domains 转入的域名名称数组。
      */
@@ -180,6 +194,38 @@ false：关闭60天内禁止转移注册商锁定
         this.LockTransfer = LockTransfer;
     }
 
+    /**
+     * Get 是否开启更新锁：0=默认不开启，1=开启 
+     * @return UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
+     */
+    public Long getUpdateProhibition() {
+        return this.UpdateProhibition;
+    }
+
+    /**
+     * Set 是否开启更新锁：0=默认不开启，1=开启
+     * @param UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
+     */
+    public void setUpdateProhibition(Long UpdateProhibition) {
+        this.UpdateProhibition = UpdateProhibition;
+    }
+
+    /**
+     * Get 是否开启转移锁：0=默认不开启，1=开启 
+     * @return TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
+     */
+    public Long getTransferProhibition() {
+        return this.TransferProhibition;
+    }
+
+    /**
+     * Set 是否开启转移锁：0=默认不开启，1=开启
+     * @param TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
+     */
+    public void setTransferProhibition(Long TransferProhibition) {
+        this.TransferProhibition = TransferProhibition;
+    }
+
     public TransferInDomainBatchRequest() {
     }
 
@@ -212,6 +258,12 @@ false：关闭60天内禁止转移注册商锁定
         if (source.LockTransfer != null) {
             this.LockTransfer = new Boolean(source.LockTransfer);
         }
+        if (source.UpdateProhibition != null) {
+            this.UpdateProhibition = new Long(source.UpdateProhibition);
+        }
+        if (source.TransferProhibition != null) {
+            this.TransferProhibition = new Long(source.TransferProhibition);
+        }
     }
 
 
@@ -225,6 +277,8 @@ false：关闭60天内禁止转移注册商锁定
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
+        this.setParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
+        this.setParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
 
     }
 }

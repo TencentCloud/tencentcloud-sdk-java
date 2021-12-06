@@ -60,6 +60,14 @@ public class TopicInfo extends AbstractModel{
     private String Channel;
 
     /**
+    * cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deleted")
+    @Expose
+    private String Deleted;
+
+    /**
      * Get 主题ID 
      * @return TopicId 主题ID
      */
@@ -147,6 +155,26 @@ public class TopicInfo extends AbstractModel{
         this.Channel = Channel;
     }
 
+    /**
+     * Get cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deleted cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeleted() {
+        return this.Deleted;
+    }
+
+    /**
+     * Set cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deleted cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleted(String Deleted) {
+        this.Deleted = Deleted;
+    }
+
     public TopicInfo() {
     }
 
@@ -170,6 +198,9 @@ public class TopicInfo extends AbstractModel{
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.Deleted != null) {
+            this.Deleted = new String(source.Deleted);
+        }
     }
 
 
@@ -182,6 +213,7 @@ public class TopicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "Deleted", this.Deleted);
 
     }
 }

@@ -38,6 +38,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_dialect：多方言。
     */
     @SerializedName("EngineModelType")
     @Expose
@@ -164,7 +165,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_wuu-SH：16k 上海话方言； 
+• 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_dialect：多方言。 
      * @return EngineModelType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -180,6 +182,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_dialect：多方言。
      */
     public String getEngineModelType() {
         return this.EngineModelType;
@@ -201,6 +204,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_dialect：多方言。
      * @param EngineModelType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -216,6 +220,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_dialect：多方言。
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;

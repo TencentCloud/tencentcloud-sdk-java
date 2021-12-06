@@ -67,6 +67,20 @@ public class CreateDomainBatchRequest extends AbstractModel{
     private String PackageResourceId;
 
     /**
+    * 是否开启更新锁：0=默认不开启，1=开启
+    */
+    @SerializedName("UpdateProhibition")
+    @Expose
+    private Long UpdateProhibition;
+
+    /**
+    * 是否开启转移锁：0=默认不开启，1=开启
+    */
+    @SerializedName("TransferProhibition")
+    @Expose
+    private Long TransferProhibition;
+
+    /**
      * Get 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940) 
      * @return TemplateId 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
      */
@@ -170,6 +184,38 @@ public class CreateDomainBatchRequest extends AbstractModel{
         this.PackageResourceId = PackageResourceId;
     }
 
+    /**
+     * Get 是否开启更新锁：0=默认不开启，1=开启 
+     * @return UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
+     */
+    public Long getUpdateProhibition() {
+        return this.UpdateProhibition;
+    }
+
+    /**
+     * Set 是否开启更新锁：0=默认不开启，1=开启
+     * @param UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
+     */
+    public void setUpdateProhibition(Long UpdateProhibition) {
+        this.UpdateProhibition = UpdateProhibition;
+    }
+
+    /**
+     * Get 是否开启转移锁：0=默认不开启，1=开启 
+     * @return TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
+     */
+    public Long getTransferProhibition() {
+        return this.TransferProhibition;
+    }
+
+    /**
+     * Set 是否开启转移锁：0=默认不开启，1=开启
+     * @param TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
+     */
+    public void setTransferProhibition(Long TransferProhibition) {
+        this.TransferProhibition = TransferProhibition;
+    }
+
     public CreateDomainBatchRequest() {
     }
 
@@ -199,6 +245,12 @@ public class CreateDomainBatchRequest extends AbstractModel{
         if (source.PackageResourceId != null) {
             this.PackageResourceId = new String(source.PackageResourceId);
         }
+        if (source.UpdateProhibition != null) {
+            this.UpdateProhibition = new Long(source.UpdateProhibition);
+        }
+        if (source.TransferProhibition != null) {
+            this.TransferProhibition = new Long(source.TransferProhibition);
+        }
     }
 
 
@@ -212,6 +264,8 @@ public class CreateDomainBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "PackageResourceId", this.PackageResourceId);
+        this.setParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
+        this.setParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
 
     }
 }

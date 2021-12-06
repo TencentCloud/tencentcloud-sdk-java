@@ -80,6 +80,22 @@ public class LogSetInfo extends AbstractModel{
     private String Region;
 
     /**
+    * cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deleted")
+    @Expose
+    private String Deleted;
+
+    /**
+    * 英文区域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionEn")
+    @Expose
+    private String RegionEn;
+
+    /**
      * Get 开发者ID 
      * @return AppId 开发者ID
      */
@@ -211,6 +227,46 @@ public class LogSetInfo extends AbstractModel{
         this.Region = Region;
     }
 
+    /**
+     * Get cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deleted cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeleted() {
+        return this.Deleted;
+    }
+
+    /**
+     * Set cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deleted cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleted(String Deleted) {
+        this.Deleted = Deleted;
+    }
+
+    /**
+     * Get 英文区域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionEn 英文区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionEn() {
+        return this.RegionEn;
+    }
+
+    /**
+     * Set 英文区域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionEn 英文区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionEn(String RegionEn) {
+        this.RegionEn = RegionEn;
+    }
+
     public LogSetInfo() {
     }
 
@@ -243,6 +299,12 @@ public class LogSetInfo extends AbstractModel{
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Deleted != null) {
+            this.Deleted = new String(source.Deleted);
+        }
+        if (source.RegionEn != null) {
+            this.RegionEn = new String(source.RegionEn);
+        }
     }
 
 
@@ -258,6 +320,8 @@ public class LogSetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LogsetSavePeriod", this.LogsetSavePeriod);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Deleted", this.Deleted);
+        this.setParamSimple(map, prefix + "RegionEn", this.RegionEn);
 
     }
 }
