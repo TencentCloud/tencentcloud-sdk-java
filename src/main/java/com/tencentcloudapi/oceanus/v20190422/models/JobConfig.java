@@ -148,6 +148,22 @@ public class JobConfig extends AbstractModel{
     private Float TaskManagerSpec;
 
     /**
+    * CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClsTopicId")
+    @Expose
+    private String ClsTopicId;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -455,6 +471,46 @@ public class JobConfig extends AbstractModel{
         this.TaskManagerSpec = TaskManagerSpec;
     }
 
+    /**
+     * Get CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClsLogsetId CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * Set CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClsLogsetId CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * Get CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClsTopicId CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClsTopicId() {
+        return this.ClsTopicId;
+    }
+
+    /**
+     * Set CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClsTopicId CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClsTopicId(String ClsTopicId) {
+        this.ClsTopicId = ClsTopicId;
+    }
+
     public JobConfig() {
     }
 
@@ -517,6 +573,12 @@ public class JobConfig extends AbstractModel{
         if (source.TaskManagerSpec != null) {
             this.TaskManagerSpec = new Float(source.TaskManagerSpec);
         }
+        if (source.ClsLogsetId != null) {
+            this.ClsLogsetId = new String(source.ClsLogsetId);
+        }
+        if (source.ClsTopicId != null) {
+            this.ClsTopicId = new String(source.ClsTopicId);
+        }
     }
 
 
@@ -540,6 +602,8 @@ public class JobConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxParallelism", this.MaxParallelism);
         this.setParamSimple(map, prefix + "JobManagerSpec", this.JobManagerSpec);
         this.setParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
 
     }
 }

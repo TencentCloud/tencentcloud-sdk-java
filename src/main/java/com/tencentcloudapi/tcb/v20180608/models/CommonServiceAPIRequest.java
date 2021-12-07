@@ -37,6 +37,13 @@ public class CommonServiceAPIRequest extends AbstractModel{
     private String JSONData;
 
     /**
+    * 指定角色
+    */
+    @SerializedName("ApiRole")
+    @Expose
+    private String ApiRole;
+
+    /**
      * Get Service名，需要转发访问的接口名 
      * @return Service Service名，需要转发访问的接口名
      */
@@ -68,6 +75,22 @@ public class CommonServiceAPIRequest extends AbstractModel{
         this.JSONData = JSONData;
     }
 
+    /**
+     * Get 指定角色 
+     * @return ApiRole 指定角色
+     */
+    public String getApiRole() {
+        return this.ApiRole;
+    }
+
+    /**
+     * Set 指定角色
+     * @param ApiRole 指定角色
+     */
+    public void setApiRole(String ApiRole) {
+        this.ApiRole = ApiRole;
+    }
+
     public CommonServiceAPIRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CommonServiceAPIRequest extends AbstractModel{
         if (source.JSONData != null) {
             this.JSONData = new String(source.JSONData);
         }
+        if (source.ApiRole != null) {
+            this.ApiRole = new String(source.ApiRole);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CommonServiceAPIRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
         this.setParamSimple(map, prefix + "JSONData", this.JSONData);
+        this.setParamSimple(map, prefix + "ApiRole", this.ApiRole);
 
     }
 }

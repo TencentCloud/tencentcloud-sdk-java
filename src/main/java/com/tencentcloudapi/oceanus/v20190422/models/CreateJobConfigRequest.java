@@ -107,6 +107,20 @@ public class CreateJobConfigRequest extends AbstractModel{
     private Float TaskManagerSpec;
 
     /**
+    * CLS日志集ID
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * CLS日志主题ID
+    */
+    @SerializedName("ClsTopicId")
+    @Expose
+    private String ClsTopicId;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -298,6 +312,38 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.TaskManagerSpec = TaskManagerSpec;
     }
 
+    /**
+     * Get CLS日志集ID 
+     * @return ClsLogsetId CLS日志集ID
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * Set CLS日志集ID
+     * @param ClsLogsetId CLS日志集ID
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * Get CLS日志主题ID 
+     * @return ClsTopicId CLS日志主题ID
+     */
+    public String getClsTopicId() {
+        return this.ClsTopicId;
+    }
+
+    /**
+     * Set CLS日志主题ID
+     * @param ClsTopicId CLS日志主题ID
+     */
+    public void setClsTopicId(String ClsTopicId) {
+        this.ClsTopicId = ClsTopicId;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -348,6 +394,12 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.TaskManagerSpec != null) {
             this.TaskManagerSpec = new Float(source.TaskManagerSpec);
         }
+        if (source.ClsLogsetId != null) {
+            this.ClsLogsetId = new String(source.ClsLogsetId);
+        }
+        if (source.ClsTopicId != null) {
+            this.ClsTopicId = new String(source.ClsTopicId);
+        }
     }
 
 
@@ -367,6 +419,8 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LogCollect", this.LogCollect);
         this.setParamSimple(map, prefix + "JobManagerSpec", this.JobManagerSpec);
         this.setParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
 
     }
 }
