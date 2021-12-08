@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetCheckModeResponse extends AbstractModel{
+public class GetAsyncEventStatusResponse extends AbstractModel{
 
     /**
-    * "Succ"表示设置成功，"Failed"表示设置失败
+    * 异步事件状态
     */
-    @SerializedName("SetCheckResult")
+    @SerializedName("Result")
     @Expose
-    private String SetCheckResult;
+    private AsyncEventStatus Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class SetCheckModeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get "Succ"表示设置成功，"Failed"表示设置失败 
-     * @return SetCheckResult "Succ"表示设置成功，"Failed"表示设置失败
+     * Get 异步事件状态 
+     * @return Result 异步事件状态
      */
-    public String getSetCheckResult() {
-        return this.SetCheckResult;
+    public AsyncEventStatus getResult() {
+        return this.Result;
     }
 
     /**
-     * Set "Succ"表示设置成功，"Failed"表示设置失败
-     * @param SetCheckResult "Succ"表示设置成功，"Failed"表示设置失败
+     * Set 异步事件状态
+     * @param Result 异步事件状态
      */
-    public void setSetCheckResult(String SetCheckResult) {
-        this.SetCheckResult = SetCheckResult;
+    public void setResult(AsyncEventStatus Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +68,16 @@ public class SetCheckModeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public SetCheckModeResponse() {
+    public GetAsyncEventStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SetCheckModeResponse(SetCheckModeResponse source) {
-        if (source.SetCheckResult != null) {
-            this.SetCheckResult = new String(source.SetCheckResult);
+    public GetAsyncEventStatusResponse(GetAsyncEventStatusResponse source) {
+        if (source.Result != null) {
+            this.Result = new AsyncEventStatus(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class SetCheckModeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SetCheckResult", this.SetCheckResult);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

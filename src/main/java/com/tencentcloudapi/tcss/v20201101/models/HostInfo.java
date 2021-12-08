@@ -30,7 +30,7 @@ public class HostInfo extends AbstractModel{
     private String HostID;
 
     /**
-    * 主机ip
+    * 主机ip即内网ip
     */
     @SerializedName("HostIP")
     @Expose
@@ -79,11 +79,39 @@ public class HostInfo extends AbstractModel{
     private Long ContainerCnt;
 
     /**
-    * 主机运行状态
+    * agent运行状态
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 是否是Containerd
+    */
+    @SerializedName("IsContainerd")
+    @Expose
+    private Boolean IsContainerd;
+
+    /**
+    * 主机来源
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * 外网ip
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
+    * 主机uuid
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
 
     /**
      * Get 主机id 
@@ -102,16 +130,16 @@ public class HostInfo extends AbstractModel{
     }
 
     /**
-     * Get 主机ip 
-     * @return HostIP 主机ip
+     * Get 主机ip即内网ip 
+     * @return HostIP 主机ip即内网ip
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set 主机ip
-     * @param HostIP 主机ip
+     * Set 主机ip即内网ip
+     * @param HostIP 主机ip即内网ip
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
@@ -214,19 +242,83 @@ public class HostInfo extends AbstractModel{
     }
 
     /**
-     * Get 主机运行状态 
-     * @return Status 主机运行状态
+     * Get agent运行状态 
+     * @return Status agent运行状态
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 主机运行状态
-     * @param Status 主机运行状态
+     * Set agent运行状态
+     * @param Status agent运行状态
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 是否是Containerd 
+     * @return IsContainerd 是否是Containerd
+     */
+    public Boolean getIsContainerd() {
+        return this.IsContainerd;
+    }
+
+    /**
+     * Set 是否是Containerd
+     * @param IsContainerd 是否是Containerd
+     */
+    public void setIsContainerd(Boolean IsContainerd) {
+        this.IsContainerd = IsContainerd;
+    }
+
+    /**
+     * Get 主机来源 
+     * @return MachineType 主机来源
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机来源
+     * @param MachineType 主机来源
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get 外网ip 
+     * @return PublicIp 外网ip
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIp 外网ip
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
+    /**
+     * Get 主机uuid 
+     * @return Uuid 主机uuid
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 主机uuid
+     * @param Uuid 主机uuid
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
     }
 
     public HostInfo() {
@@ -264,6 +356,18 @@ public class HostInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.IsContainerd != null) {
+            this.IsContainerd = new Boolean(source.IsContainerd);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
     }
 
 
@@ -280,6 +384,10 @@ public class HostInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageCnt", this.ImageCnt);
         this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsContainerd", this.IsContainerd);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
 
     }
 }

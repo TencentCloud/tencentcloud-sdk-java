@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCheckComponentResponse extends AbstractModel{
 
     /**
-    * “InstallSucc"表示安装成功，"InstallFailed"表示安装失败
+    * "InstallSucc"表示安装成功，"InstallFailed"表示安装失败
     */
     @SerializedName("InstallResult")
     @Expose
@@ -37,16 +37,16 @@ public class CreateCheckComponentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get “InstallSucc"表示安装成功，"InstallFailed"表示安装失败 
-     * @return InstallResult “InstallSucc"表示安装成功，"InstallFailed"表示安装失败
+     * Get "InstallSucc"表示安装成功，"InstallFailed"表示安装失败 
+     * @return InstallResult "InstallSucc"表示安装成功，"InstallFailed"表示安装失败
      */
     public String getInstallResult() {
         return this.InstallResult;
     }
 
     /**
-     * Set “InstallSucc"表示安装成功，"InstallFailed"表示安装失败
-     * @param InstallResult “InstallSucc"表示安装成功，"InstallFailed"表示安装失败
+     * Set "InstallSucc"表示安装成功，"InstallFailed"表示安装失败
+     * @param InstallResult "InstallSucc"表示安装成功，"InstallFailed"表示安装失败
      */
     public void setInstallResult(String InstallResult) {
         this.InstallResult = InstallResult;

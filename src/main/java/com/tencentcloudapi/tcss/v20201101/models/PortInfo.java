@@ -107,6 +107,20 @@ public class PortInfo extends AbstractModel{
     private String RunAs;
 
     /**
+    * 主机名称
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
+    * 外网ip
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
      * Get 类型 
      * @return Type 类型
      */
@@ -298,6 +312,38 @@ public class PortInfo extends AbstractModel{
         this.RunAs = RunAs;
     }
 
+    /**
+     * Get 主机名称 
+     * @return HostName 主机名称
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 主机名称
+     * @param HostName 主机名称
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
+     * Get 外网ip 
+     * @return PublicIp 外网ip
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIp 外网ip
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
     public PortInfo() {
     }
 
@@ -342,6 +388,12 @@ public class PortInfo extends AbstractModel{
         if (source.RunAs != null) {
             this.RunAs = new String(source.RunAs);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
     }
 
 
@@ -361,6 +413,8 @@ public class PortInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ListenContainer", this.ListenContainer);
         this.setParamSimple(map, prefix + "ListenHost", this.ListenHost);
         this.setParamSimple(map, prefix + "RunAs", this.RunAs);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
 
     }
 }

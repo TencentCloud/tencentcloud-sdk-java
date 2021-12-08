@@ -128,6 +128,13 @@ public class ContainerInfo extends AbstractModel{
     private String HostName;
 
     /**
+    * 外网ip
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
      * Get 容器id 
      * @return ContainerID 容器id
      */
@@ -367,6 +374,22 @@ public class ContainerInfo extends AbstractModel{
         this.HostName = HostName;
     }
 
+    /**
+     * Get 外网ip 
+     * @return PublicIp 外网ip
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIp 外网ip
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
     public ContainerInfo() {
     }
 
@@ -420,6 +443,9 @@ public class ContainerInfo extends AbstractModel{
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
     }
 
 
@@ -442,6 +468,7 @@ public class ContainerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
 
     }
 }

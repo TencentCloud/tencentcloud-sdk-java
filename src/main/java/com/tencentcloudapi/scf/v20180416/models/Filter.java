@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class Filter extends AbstractModel{
 
     /**
-    * 需要过滤的字段。
+    * 需要过滤的字段。过滤条件数量限制为10。
+Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
+Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
+当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +40,28 @@ public class Filter extends AbstractModel{
     private String [] Values;
 
     /**
-     * Get 需要过滤的字段。 
-     * @return Name 需要过滤的字段。
+     * Get 需要过滤的字段。过滤条件数量限制为10。
+Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
+Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
+当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。 
+     * @return Name 需要过滤的字段。过滤条件数量限制为10。
+Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
+Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
+当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 需要过滤的字段。
-     * @param Name 需要过滤的字段。
+     * Set 需要过滤的字段。过滤条件数量限制为10。
+Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
+Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
+当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
+     * @param Name 需要过滤的字段。过滤条件数量限制为10。
+Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
+Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
+当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
      */
     public void setName(String Name) {
         this.Name = Name;

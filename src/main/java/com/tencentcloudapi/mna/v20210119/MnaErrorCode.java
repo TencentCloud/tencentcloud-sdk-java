@@ -43,7 +43,10 @@ public enum MnaErrorCode {
      OPERATIONDENIED_VENDORSERVERERROR("OperationDenied.VendorServerError"),
      
     // 请求的次数超过了频率限制。
-     REQUESTLIMITEXCEEDED("RequestLimitExceeded");
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable");
      
     private String value;
     private MnaErrorCode (String value){

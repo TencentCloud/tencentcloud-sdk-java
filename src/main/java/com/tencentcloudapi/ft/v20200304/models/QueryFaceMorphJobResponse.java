@@ -38,6 +38,14 @@ public class QueryFaceMorphJobResponse extends AbstractModel{
     private FaceMorphOutput FaceMorphOutput;
 
     /**
+    * 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobStatusCode")
+    @Expose
+    private Long JobStatusCode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ public class QueryFaceMorphJobResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getJobStatusCode() {
+        return this.JobStatusCode;
+    }
+
+    /**
+     * Set 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobStatusCode(Long JobStatusCode) {
+        this.JobStatusCode = JobStatusCode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -110,6 +138,9 @@ public class QueryFaceMorphJobResponse extends AbstractModel{
         if (source.FaceMorphOutput != null) {
             this.FaceMorphOutput = new FaceMorphOutput(source.FaceMorphOutput);
         }
+        if (source.JobStatusCode != null) {
+            this.JobStatusCode = new Long(source.JobStatusCode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,6 +153,7 @@ public class QueryFaceMorphJobResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
         this.setParamObj(map, prefix + "FaceMorphOutput.", this.FaceMorphOutput);
+        this.setParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

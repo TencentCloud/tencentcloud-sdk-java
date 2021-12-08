@@ -39,7 +39,7 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
     private String EndTime;
 
     /**
-    * 需购买的虚拟机核数
+    * 需购买的机器核数
     */
     @SerializedName("CoresCnt")
     @Expose
@@ -108,16 +108,16 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 需购买的虚拟机核数 
-     * @return CoresCnt 需购买的虚拟机核数
+     * Get 需购买的机器核数 
+     * @return CoresCnt 需购买的机器核数
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
     }
 
     /**
-     * Set 需购买的虚拟机核数
-     * @param CoresCnt 需购买的虚拟机核数
+     * Set 需购买的机器核数
+     * @param CoresCnt 需购买的机器核数
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;

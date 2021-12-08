@@ -93,6 +93,20 @@ public class ProcessInfo extends AbstractModel{
     private String ProcessName;
 
     /**
+    * 主机名称
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
+    * 外网ip
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
      * Get 进程启动时间 
      * @return StartTime 进程启动时间
      */
@@ -252,6 +266,38 @@ public class ProcessInfo extends AbstractModel{
         this.ProcessName = ProcessName;
     }
 
+    /**
+     * Get 主机名称 
+     * @return HostName 主机名称
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 主机名称
+     * @param HostName 主机名称
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
+     * Get 外网ip 
+     * @return PublicIp 外网ip
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIp 外网ip
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
     public ProcessInfo() {
     }
 
@@ -290,6 +336,12 @@ public class ProcessInfo extends AbstractModel{
         if (source.ProcessName != null) {
             this.ProcessName = new String(source.ProcessName);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
     }
 
 
@@ -307,6 +359,8 @@ public class ProcessInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
 
     }
 }

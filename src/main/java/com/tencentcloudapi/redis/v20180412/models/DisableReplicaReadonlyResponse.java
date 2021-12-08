@@ -23,11 +23,12 @@ import java.util.HashMap;
 public class DisableReplicaReadonlyResponse extends AbstractModel{
 
     /**
-    * 失败:ERROR，成功:OK
+    * 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Status")
+    @SerializedName("TaskId")
     @Expose
-    private String Status;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class DisableReplicaReadonlyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 失败:ERROR，成功:OK 
-     * @return Status 失败:ERROR，成功:OK
+     * Get 任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getStatus() {
-        return this.Status;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 失败:ERROR，成功:OK
-     * @param Status 失败:ERROR，成功:OK
+     * Set 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -76,8 +81,8 @@ public class DisableReplicaReadonlyResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DisableReplicaReadonlyResponse(DisableReplicaReadonlyResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class DisableReplicaReadonlyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

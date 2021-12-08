@@ -290,6 +290,54 @@ public class ClusterInstancesInfo extends AbstractModel{
     private String Zone;
 
     /**
+    * 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneName")
+    @Expose
+    private String SceneName;
+
+    /**
+    * 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneServiceClass")
+    @Expose
+    private String SceneServiceClass;
+
+    /**
+    * 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneEmrVersion")
+    @Expose
+    private String SceneEmrVersion;
+
+    /**
+    * 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisplayName")
+    @Expose
+    private String DisplayName;
+
+    /**
+    * vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
+    * subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetName")
+    @Expose
+    private String SubnetName;
+
+    /**
      * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID号
@@ -997,6 +1045,126 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get 场景名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneName 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSceneName() {
+        return this.SceneName;
+    }
+
+    /**
+     * Set 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneName 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneName(String SceneName) {
+        this.SceneName = SceneName;
+    }
+
+    /**
+     * Get 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneServiceClass 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSceneServiceClass() {
+        return this.SceneServiceClass;
+    }
+
+    /**
+     * Set 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneServiceClass 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneServiceClass(String SceneServiceClass) {
+        this.SceneServiceClass = SceneServiceClass;
+    }
+
+    /**
+     * Get 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneEmrVersion 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSceneEmrVersion() {
+        return this.SceneEmrVersion;
+    }
+
+    /**
+     * Set 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneEmrVersion 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneEmrVersion(String SceneEmrVersion) {
+        this.SceneEmrVersion = SceneEmrVersion;
+    }
+
+    /**
+     * Get 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisplayName 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisplayName() {
+        return this.DisplayName;
+    }
+
+    /**
+     * Set 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisplayName 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisplayName(String DisplayName) {
+        this.DisplayName = DisplayName;
+    }
+
+    /**
+     * Get vpc name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcName vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcName vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
+     * Get subnet name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetName subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetName() {
+        return this.SubnetName;
+    }
+
+    /**
+     * Set subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetName subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetName(String SubnetName) {
+        this.SubnetName = SubnetName;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1098,6 +1266,24 @@ public class ClusterInstancesInfo extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.SceneName != null) {
+            this.SceneName = new String(source.SceneName);
+        }
+        if (source.SceneServiceClass != null) {
+            this.SceneServiceClass = new String(source.SceneServiceClass);
+        }
+        if (source.SceneEmrVersion != null) {
+            this.SceneEmrVersion = new String(source.SceneEmrVersion);
+        }
+        if (source.DisplayName != null) {
+            this.DisplayName = new String(source.DisplayName);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
     }
 
 
@@ -1135,6 +1321,12 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "SceneName", this.SceneName);
+        this.setParamSimple(map, prefix + "SceneServiceClass", this.SceneServiceClass);
+        this.setParamSimple(map, prefix + "SceneEmrVersion", this.SceneEmrVersion);
+        this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
 
     }
 }

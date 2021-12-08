@@ -128,7 +128,7 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     private Long ContainerCnt;
 
     /**
-    * k8s ip
+    * k8s IP
     */
     @SerializedName("K8sMasterIP")
     @Expose
@@ -149,11 +149,32 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     private String KubeProxyVersion;
 
     /**
-    * 主机运行状态 offline,online,pause
+    * "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 是否Containerd
+    */
+    @SerializedName("IsContainerd")
+    @Expose
+    private Boolean IsContainerd;
+
+    /**
+    * 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * 外网ip
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -403,16 +424,16 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get k8s ip 
-     * @return K8sMasterIP k8s ip
+     * Get k8s IP 
+     * @return K8sMasterIP k8s IP
      */
     public String getK8sMasterIP() {
         return this.K8sMasterIP;
     }
 
     /**
-     * Set k8s ip
-     * @param K8sMasterIP k8s ip
+     * Set k8s IP
+     * @param K8sMasterIP k8s IP
      */
     public void setK8sMasterIP(String K8sMasterIP) {
         this.K8sMasterIP = K8sMasterIP;
@@ -451,19 +472,67 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 主机运行状态 offline,online,pause 
-     * @return Status 主机运行状态 offline,online,pause
+     * Get "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中 
+     * @return Status "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 主机运行状态 offline,online,pause
-     * @param Status 主机运行状态 offline,online,pause
+     * Set "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
+     * @param Status "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 是否Containerd 
+     * @return IsContainerd 是否Containerd
+     */
+    public Boolean getIsContainerd() {
+        return this.IsContainerd;
+    }
+
+    /**
+     * Set 是否Containerd
+     * @param IsContainerd 是否Containerd
+     */
+    public void setIsContainerd(Boolean IsContainerd) {
+        this.IsContainerd = IsContainerd;
+    }
+
+    /**
+     * Get 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器" 
+     * @return MachineType 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+     * @param MachineType 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get 外网ip 
+     * @return PublicIp 外网ip
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIp 外网ip
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
     }
 
     /**
@@ -547,6 +616,15 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.IsContainerd != null) {
+            this.IsContainerd = new Boolean(source.IsContainerd);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -576,6 +654,9 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
         this.setParamSimple(map, prefix + "KubeProxyVersion", this.KubeProxyVersion);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsContainerd", this.IsContainerd);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

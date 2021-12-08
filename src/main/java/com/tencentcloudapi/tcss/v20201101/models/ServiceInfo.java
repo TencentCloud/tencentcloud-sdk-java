@@ -156,6 +156,20 @@ public class ServiceInfo extends AbstractModel{
     private String ContainerId;
 
     /**
+    * 主机名称
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
+    * 外网ip
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
      * Get 服务id 
      * @return ServiceID 服务id
      */
@@ -459,6 +473,38 @@ public class ServiceInfo extends AbstractModel{
         this.ContainerId = ContainerId;
     }
 
+    /**
+     * Get 主机名称 
+     * @return HostName 主机名称
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 主机名称
+     * @param HostName 主机名称
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
+     * Get 外网ip 
+     * @return PublicIp 外网ip
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIp 外网ip
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
     public ServiceInfo() {
     }
 
@@ -530,6 +576,12 @@ public class ServiceInfo extends AbstractModel{
         if (source.ContainerId != null) {
             this.ContainerId = new String(source.ContainerId);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
     }
 
 
@@ -556,6 +608,8 @@ public class ServiceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Exe", this.Exe);
         this.setParamSimple(map, prefix + "Parameter", this.Parameter);
         this.setParamSimple(map, prefix + "ContainerId", this.ContainerId);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
 
     }
 }
