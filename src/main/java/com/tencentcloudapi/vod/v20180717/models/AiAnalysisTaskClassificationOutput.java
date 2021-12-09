@@ -24,14 +24,31 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel{
 
     /**
     * 视频智能分类列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ClassificationSetFileUrl 对应的文件中获取。
     */
     @SerializedName("ClassificationSet")
     @Expose
     private MediaAiAnalysisClassificationItem [] ClassificationSet;
 
     /**
-     * Get 视频智能分类列表。 
+    * 视频智能分类列表文件 URL。文件的内容为 JSON，数据结构与 ClassificationSet 字段一致。 （文件不会永久存储，到达 ClassificationSetFileUrlExpireTime 时间点后文件将被删除）。
+    */
+    @SerializedName("ClassificationSetFileUrl")
+    @Expose
+    private String ClassificationSetFileUrl;
+
+    /**
+    * 视频智能分类列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("ClassificationSetFileUrlExpireTime")
+    @Expose
+    private String ClassificationSetFileUrlExpireTime;
+
+    /**
+     * Get 视频智能分类列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ClassificationSetFileUrl 对应的文件中获取。 
      * @return ClassificationSet 视频智能分类列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ClassificationSetFileUrl 对应的文件中获取。
      */
     public MediaAiAnalysisClassificationItem [] getClassificationSet() {
         return this.ClassificationSet;
@@ -39,10 +56,44 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel{
 
     /**
      * Set 视频智能分类列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ClassificationSetFileUrl 对应的文件中获取。
      * @param ClassificationSet 视频智能分类列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ClassificationSetFileUrl 对应的文件中获取。
      */
     public void setClassificationSet(MediaAiAnalysisClassificationItem [] ClassificationSet) {
         this.ClassificationSet = ClassificationSet;
+    }
+
+    /**
+     * Get 视频智能分类列表文件 URL。文件的内容为 JSON，数据结构与 ClassificationSet 字段一致。 （文件不会永久存储，到达 ClassificationSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return ClassificationSetFileUrl 视频智能分类列表文件 URL。文件的内容为 JSON，数据结构与 ClassificationSet 字段一致。 （文件不会永久存储，到达 ClassificationSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public String getClassificationSetFileUrl() {
+        return this.ClassificationSetFileUrl;
+    }
+
+    /**
+     * Set 视频智能分类列表文件 URL。文件的内容为 JSON，数据结构与 ClassificationSet 字段一致。 （文件不会永久存储，到达 ClassificationSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param ClassificationSetFileUrl 视频智能分类列表文件 URL。文件的内容为 JSON，数据结构与 ClassificationSet 字段一致。 （文件不会永久存储，到达 ClassificationSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public void setClassificationSetFileUrl(String ClassificationSetFileUrl) {
+        this.ClassificationSetFileUrl = ClassificationSetFileUrl;
+    }
+
+    /**
+     * Get 视频智能分类列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return ClassificationSetFileUrlExpireTime 视频智能分类列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getClassificationSetFileUrlExpireTime() {
+        return this.ClassificationSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set 视频智能分类列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param ClassificationSetFileUrlExpireTime 视频智能分类列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setClassificationSetFileUrlExpireTime(String ClassificationSetFileUrlExpireTime) {
+        this.ClassificationSetFileUrlExpireTime = ClassificationSetFileUrlExpireTime;
     }
 
     public AiAnalysisTaskClassificationOutput() {
@@ -59,6 +110,12 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel{
                 this.ClassificationSet[i] = new MediaAiAnalysisClassificationItem(source.ClassificationSet[i]);
             }
         }
+        if (source.ClassificationSetFileUrl != null) {
+            this.ClassificationSetFileUrl = new String(source.ClassificationSetFileUrl);
+        }
+        if (source.ClassificationSetFileUrlExpireTime != null) {
+            this.ClassificationSetFileUrlExpireTime = new String(source.ClassificationSetFileUrlExpireTime);
+        }
     }
 
 
@@ -67,6 +124,8 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ClassificationSet.", this.ClassificationSet);
+        this.setParamSimple(map, prefix + "ClassificationSetFileUrl", this.ClassificationSetFileUrl);
+        this.setParamSimple(map, prefix + "ClassificationSetFileUrlExpireTime", this.ClassificationSetFileUrlExpireTime);
 
     }
 }

@@ -157,7 +157,7 @@ public class BillDetail extends AbstractModel{
     private BillTagInfo [] Tags;
 
     /**
-    * 商品名称代码
+    * 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
@@ -165,7 +165,7 @@ public class BillDetail extends AbstractModel{
     private String BusinessCode;
 
     /**
-    * 子商品名称代码
+    * 子产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
@@ -173,7 +173,7 @@ public class BillDetail extends AbstractModel{
     private String ProductCode;
 
     /**
-    * 交易类型代码（未开放的字段）
+    * 交易类型代码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
@@ -504,9 +504,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 商品名称代码
+     * Get 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessCode 商品名称代码
+     * @return BusinessCode 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
@@ -514,9 +514,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 商品名称代码
+     * Set 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessCode 商品名称代码
+     * @param BusinessCode 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
@@ -524,9 +524,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 子商品名称代码
+     * Get 子产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductCode 子商品名称代码
+     * @return ProductCode 子产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
@@ -534,9 +534,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 子商品名称代码
+     * Set 子产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductCode 子商品名称代码
+     * @param ProductCode 子产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
@@ -544,9 +544,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 交易类型代码（未开放的字段）
+     * Get 交易类型代码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActionType 交易类型代码（未开放的字段）
+     * @return ActionType 交易类型代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
@@ -554,9 +554,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 交易类型代码（未开放的字段）
+     * Set 交易类型代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActionType 交易类型代码（未开放的字段）
+     * @param ActionType 交易类型代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {

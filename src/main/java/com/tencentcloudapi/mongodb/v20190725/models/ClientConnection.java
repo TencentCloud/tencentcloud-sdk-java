@@ -37,6 +37,13 @@ public class ClientConnection extends AbstractModel{
     private Long Count;
 
     /**
+    * 是否为内部ip
+    */
+    @SerializedName("InternalService")
+    @Expose
+    private Boolean InternalService;
+
+    /**
      * Get 连接的客户端IP 
      * @return IP 连接的客户端IP
      */
@@ -68,6 +75,22 @@ public class ClientConnection extends AbstractModel{
         this.Count = Count;
     }
 
+    /**
+     * Get 是否为内部ip 
+     * @return InternalService 是否为内部ip
+     */
+    public Boolean getInternalService() {
+        return this.InternalService;
+    }
+
+    /**
+     * Set 是否为内部ip
+     * @param InternalService 是否为内部ip
+     */
+    public void setInternalService(Boolean InternalService) {
+        this.InternalService = InternalService;
+    }
+
     public ClientConnection() {
     }
 
@@ -82,6 +105,9 @@ public class ClientConnection extends AbstractModel{
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.InternalService != null) {
+            this.InternalService = new Boolean(source.InternalService);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ClientConnection extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "InternalService", this.InternalService);
 
     }
 }

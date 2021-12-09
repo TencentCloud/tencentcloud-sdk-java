@@ -89,6 +89,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
     */
     @SerializedName("ActionType")
     @Expose
@@ -109,7 +110,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private String PayMode;
 
     /**
-    * 商品名称代码
+    * 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
     */
     @SerializedName("BusinessCode")
@@ -230,7 +231,8 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
 按量计费冲正
 按量计费冲正
 按量计费冲正
-按量计费冲正 
+按量计费冲正
+包年包月转按量 
      * @return ActionType 查询交易类型，如下：
 包年包月新购
 包年包月续费
@@ -261,6 +263,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
      */
     public String getActionType() {
         return this.ActionType;
@@ -297,6 +300,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
      * @param ActionType 查询交易类型，如下：
 包年包月新购
 包年包月续费
@@ -327,6 +331,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -365,9 +370,9 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
-     * Get 商品名称代码
+     * Get 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a> 
-     * @return BusinessCode 商品名称代码
+     * @return BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     public String getBusinessCode() {
@@ -375,9 +380,9 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
-     * Set 商品名称代码
+     * Set 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
-     * @param BusinessCode 商品名称代码
+     * @param BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     public void setBusinessCode(String BusinessCode) {

@@ -94,7 +94,37 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 查询交易类型。如 按量计费日结，按量计费小时结 等
+    * 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
     */
     @SerializedName("ActionType")
     @Expose
@@ -108,7 +138,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 商品名称代码
+    * 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
     */
     @SerializedName("BusinessCode")
@@ -280,16 +310,136 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询交易类型。如 按量计费日结，按量计费小时结 等 
-     * @return ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * Get 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量 
+     * @return ActionType 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 查询交易类型。如 按量计费日结，按量计费小时结 等
-     * @param ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * Set 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
+     * @param ActionType 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -312,9 +462,9 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 商品名称代码
+     * Get 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a> 
-     * @return BusinessCode 商品名称代码
+     * @return BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     public String getBusinessCode() {
@@ -322,9 +472,9 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
-     * Set 商品名称代码
+     * Set 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
-     * @param BusinessCode 商品名称代码
+     * @param BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     public void setBusinessCode(String BusinessCode) {

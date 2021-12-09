@@ -140,6 +140,14 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     private PathBasedOriginRule [] PathBasedOrigin;
 
     /**
+    * HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvanceHttps")
+    @Expose
+    private AdvanceHttps AdvanceHttps;
+
+    /**
      * Get 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -475,6 +483,26 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
         this.PathBasedOrigin = PathBasedOrigin;
     }
 
+    /**
+     * Get HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvanceHttps HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvanceHttps getAdvanceHttps() {
+        return this.AdvanceHttps;
+    }
+
+    /**
+     * Set HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvanceHttps HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvanceHttps(AdvanceHttps AdvanceHttps) {
+        this.AdvanceHttps = AdvanceHttps;
+    }
+
     public Origin() {
     }
 
@@ -528,6 +556,9 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
                 this.PathBasedOrigin[i] = new PathBasedOriginRule(source.PathBasedOrigin[i]);
             }
         }
+        if (source.AdvanceHttps != null) {
+            this.AdvanceHttps = new AdvanceHttps(source.AdvanceHttps);
+        }
     }
 
 
@@ -546,6 +577,7 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
         this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         this.setParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
+        this.setParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
 
     }
 }

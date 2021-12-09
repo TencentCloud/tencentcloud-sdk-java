@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ConditionBusiness extends AbstractModel{
 
     /**
-    * 产品码
+    * 产品名称代码
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -37,16 +37,16 @@ public class ConditionBusiness extends AbstractModel{
     private String BusinessCodeName;
 
     /**
-     * Get 产品码 
-     * @return BusinessCode 产品码
+     * Get 产品名称代码 
+     * @return BusinessCode 产品名称代码
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品码
-     * @param BusinessCode 产品码
+     * Set 产品名称代码
+     * @param BusinessCode 产品名称代码
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;

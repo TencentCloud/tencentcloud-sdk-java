@@ -30,7 +30,7 @@ public class BillResourceSummary extends AbstractModel{
     private String BusinessCodeName;
 
     /**
-    * 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+    * 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -235,14 +235,14 @@ public class BillResourceSummary extends AbstractModel{
     private String OperateUin;
 
     /**
-    * 商品名称代码
+    * 产品名称代码
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 子商品名称代码
+    * 子产品名称代码
     */
     @SerializedName("ProductCode")
     @Expose
@@ -272,16 +272,16 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
-     * Get 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-" 
-     * @return ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * Get 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-" 
+     * @return ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
-     * @param ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * Set 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * @param ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -744,32 +744,32 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
-     * Get 商品名称代码 
-     * @return BusinessCode 商品名称代码
+     * Get 产品名称代码 
+     * @return BusinessCode 产品名称代码
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 商品名称代码
-     * @param BusinessCode 商品名称代码
+     * Set 产品名称代码
+     * @param BusinessCode 产品名称代码
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 子商品名称代码 
-     * @return ProductCode 子商品名称代码
+     * Get 子产品名称代码 
+     * @return ProductCode 子产品名称代码
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 子商品名称代码
-     * @param ProductCode 子商品名称代码
+     * Set 子产品名称代码
+     * @param ProductCode 子产品名称代码
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;

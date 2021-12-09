@@ -66,6 +66,14 @@ public class TaskStatus extends AbstractModel{
     private SentenceDetail [] ResultDetail;
 
     /**
+    * 音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioDuration")
+    @Expose
+    private Float AudioDuration;
+
+    /**
      * Get 任务标识。 
      * @return TaskId 任务标识。
      */
@@ -165,6 +173,26 @@ public class TaskStatus extends AbstractModel{
         this.ResultDetail = ResultDetail;
     }
 
+    /**
+     * Get 音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioDuration 音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getAudioDuration() {
+        return this.AudioDuration;
+    }
+
+    /**
+     * Set 音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioDuration 音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioDuration(Float AudioDuration) {
+        this.AudioDuration = AudioDuration;
+    }
+
     public TaskStatus() {
     }
 
@@ -194,6 +222,9 @@ public class TaskStatus extends AbstractModel{
                 this.ResultDetail[i] = new SentenceDetail(source.ResultDetail[i]);
             }
         }
+        if (source.AudioDuration != null) {
+            this.AudioDuration = new Float(source.AudioDuration);
+        }
     }
 
 
@@ -207,6 +238,7 @@ public class TaskStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
+        this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
 
     }
 }

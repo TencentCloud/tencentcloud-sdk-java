@@ -24,14 +24,31 @@ public class AiAnalysisTaskCoverOutput extends AbstractModel{
 
     /**
     * 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
     */
     @SerializedName("CoverSet")
     @Expose
     private MediaAiAnalysisCoverItem [] CoverSet;
 
     /**
-     * Get 智能封面列表。 
+    * 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+    */
+    @SerializedName("CoverSetFileUrl")
+    @Expose
+    private String CoverSetFileUrl;
+
+    /**
+    * 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("CoverSetFileUrlExpireTime")
+    @Expose
+    private String CoverSetFileUrlExpireTime;
+
+    /**
+     * Get 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。 
      * @return CoverSet 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
      */
     public MediaAiAnalysisCoverItem [] getCoverSet() {
         return this.CoverSet;
@@ -39,10 +56,44 @@ public class AiAnalysisTaskCoverOutput extends AbstractModel{
 
     /**
      * Set 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
      * @param CoverSet 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
      */
     public void setCoverSet(MediaAiAnalysisCoverItem [] CoverSet) {
         this.CoverSet = CoverSet;
+    }
+
+    /**
+     * Get 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return CoverSetFileUrl 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public String getCoverSetFileUrl() {
+        return this.CoverSetFileUrl;
+    }
+
+    /**
+     * Set 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param CoverSetFileUrl 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public void setCoverSetFileUrl(String CoverSetFileUrl) {
+        this.CoverSetFileUrl = CoverSetFileUrl;
+    }
+
+    /**
+     * Get 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return CoverSetFileUrlExpireTime 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getCoverSetFileUrlExpireTime() {
+        return this.CoverSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param CoverSetFileUrlExpireTime 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setCoverSetFileUrlExpireTime(String CoverSetFileUrlExpireTime) {
+        this.CoverSetFileUrlExpireTime = CoverSetFileUrlExpireTime;
     }
 
     public AiAnalysisTaskCoverOutput() {
@@ -59,6 +110,12 @@ public class AiAnalysisTaskCoverOutput extends AbstractModel{
                 this.CoverSet[i] = new MediaAiAnalysisCoverItem(source.CoverSet[i]);
             }
         }
+        if (source.CoverSetFileUrl != null) {
+            this.CoverSetFileUrl = new String(source.CoverSetFileUrl);
+        }
+        if (source.CoverSetFileUrlExpireTime != null) {
+            this.CoverSetFileUrlExpireTime = new String(source.CoverSetFileUrlExpireTime);
+        }
     }
 
 
@@ -67,6 +124,8 @@ public class AiAnalysisTaskCoverOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CoverSet.", this.CoverSet);
+        this.setParamSimple(map, prefix + "CoverSetFileUrl", this.CoverSetFileUrl);
+        this.setParamSimple(map, prefix + "CoverSetFileUrlExpireTime", this.CoverSetFileUrlExpireTime);
 
     }
 }

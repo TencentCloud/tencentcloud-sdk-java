@@ -41,10 +41,25 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel{
 
     /**
     * Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
+
+    /**
+    * Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+    */
+    @SerializedName("SegmentSetFileUrl")
+    @Expose
+    private String SegmentSetFileUrl;
+
+    /**
+    * Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("SegmentSetFileUrlExpireTime")
+    @Expose
+    private String SegmentSetFileUrlExpireTime;
 
     /**
      * Get Asr 文字涉违禁评分，分值为0到100。 
@@ -91,8 +106,10 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get Asr 文字有涉违禁嫌疑的视频片段列表。 
+     * Get Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。 
      * @return SegmentSet Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -100,10 +117,44 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel{
 
     /**
      * Set Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      * @param SegmentSet Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return SegmentSetFileUrl Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public String getSegmentSetFileUrl() {
+        return this.SegmentSetFileUrl;
+    }
+
+    /**
+     * Set Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param SegmentSetFileUrl Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
+        this.SegmentSetFileUrl = SegmentSetFileUrl;
+    }
+
+    /**
+     * Get Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return SegmentSetFileUrlExpireTime Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getSegmentSetFileUrlExpireTime() {
+        return this.SegmentSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param SegmentSetFileUrlExpireTime Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
+        this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     public AiReviewProhibitedAsrTaskOutput() {
@@ -126,6 +177,12 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel{
                 this.SegmentSet[i] = new MediaContentReviewAsrTextSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.SegmentSetFileUrl != null) {
+            this.SegmentSetFileUrl = new String(source.SegmentSetFileUrl);
+        }
+        if (source.SegmentSetFileUrlExpireTime != null) {
+            this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
+        }
     }
 
 
@@ -136,6 +193,8 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
 
     }
 }

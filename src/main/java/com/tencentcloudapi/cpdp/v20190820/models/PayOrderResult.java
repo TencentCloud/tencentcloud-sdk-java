@@ -135,6 +135,54 @@ public class PayOrderResult extends AbstractModel{
     private String TradeQrcode;
 
     /**
+    * 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatAppId")
+    @Expose
+    private String WechatAppId;
+
+    /**
+    * 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatTimeStamp")
+    @Expose
+    private String WechatTimeStamp;
+
+    /**
+    * 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatNonceStr")
+    @Expose
+    private String WechatNonceStr;
+
+    /**
+    * 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatSignType")
+    @Expose
+    private String WechatSignType;
+
+    /**
+    * 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatPackage")
+    @Expose
+    private String WechatPackage;
+
+    /**
+    * 微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatPaySign")
+    @Expose
+    private String WechatPaySign;
+
+    /**
      * Get 付款订单号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OrderNo 付款订单号
@@ -414,6 +462,126 @@ public class PayOrderResult extends AbstractModel{
         this.TradeQrcode = TradeQrcode;
     }
 
+    /**
+     * Get 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatAppId 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWechatAppId() {
+        return this.WechatAppId;
+    }
+
+    /**
+     * Set 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatAppId 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatAppId(String WechatAppId) {
+        this.WechatAppId = WechatAppId;
+    }
+
+    /**
+     * Get 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatTimeStamp 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWechatTimeStamp() {
+        return this.WechatTimeStamp;
+    }
+
+    /**
+     * Set 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatTimeStamp 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatTimeStamp(String WechatTimeStamp) {
+        this.WechatTimeStamp = WechatTimeStamp;
+    }
+
+    /**
+     * Get 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatNonceStr 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWechatNonceStr() {
+        return this.WechatNonceStr;
+    }
+
+    /**
+     * Set 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatNonceStr 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatNonceStr(String WechatNonceStr) {
+        this.WechatNonceStr = WechatNonceStr;
+    }
+
+    /**
+     * Get 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatSignType 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWechatSignType() {
+        return this.WechatSignType;
+    }
+
+    /**
+     * Set 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatSignType 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatSignType(String WechatSignType) {
+        this.WechatSignType = WechatSignType;
+    }
+
+    /**
+     * Get 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatPackage 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWechatPackage() {
+        return this.WechatPackage;
+    }
+
+    /**
+     * Set 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatPackage 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatPackage(String WechatPackage) {
+        this.WechatPackage = WechatPackage;
+    }
+
+    /**
+     * Get 微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatPaySign 微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWechatPaySign() {
+        return this.WechatPaySign;
+    }
+
+    /**
+     * Set 微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatPaySign 微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatPaySign(String WechatPaySign) {
+        this.WechatPaySign = WechatPaySign;
+    }
+
     public PayOrderResult() {
     }
 
@@ -464,6 +632,24 @@ public class PayOrderResult extends AbstractModel{
         if (source.TradeQrcode != null) {
             this.TradeQrcode = new String(source.TradeQrcode);
         }
+        if (source.WechatAppId != null) {
+            this.WechatAppId = new String(source.WechatAppId);
+        }
+        if (source.WechatTimeStamp != null) {
+            this.WechatTimeStamp = new String(source.WechatTimeStamp);
+        }
+        if (source.WechatNonceStr != null) {
+            this.WechatNonceStr = new String(source.WechatNonceStr);
+        }
+        if (source.WechatSignType != null) {
+            this.WechatSignType = new String(source.WechatSignType);
+        }
+        if (source.WechatPackage != null) {
+            this.WechatPackage = new String(source.WechatPackage);
+        }
+        if (source.WechatPaySign != null) {
+            this.WechatPaySign = new String(source.WechatPaySign);
+        }
     }
 
 
@@ -485,6 +671,12 @@ public class PayOrderResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OrderCurrency", this.OrderCurrency);
         this.setParamSimple(map, prefix + "TradeQrcode", this.TradeQrcode);
+        this.setParamSimple(map, prefix + "WechatAppId", this.WechatAppId);
+        this.setParamSimple(map, prefix + "WechatTimeStamp", this.WechatTimeStamp);
+        this.setParamSimple(map, prefix + "WechatNonceStr", this.WechatNonceStr);
+        this.setParamSimple(map, prefix + "WechatSignType", this.WechatSignType);
+        this.setParamSimple(map, prefix + "WechatPackage", this.WechatPackage);
+        this.setParamSimple(map, prefix + "WechatPaySign", this.WechatPaySign);
 
     }
 }

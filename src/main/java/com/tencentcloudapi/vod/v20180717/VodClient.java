@@ -1111,7 +1111,8 @@ public class VodClient extends AbstractClient{
 
     /**
      *该接口用于查询指定日期范围内每天的播放统计数据。
-* 可以查询最近30天的播放统计数据。
+* 可以查询最近一年的播放统计数据。
+* 结束日期和起始日期的时间跨度最大为90天。
      * @param req DescribeDailyMediaPlayStatRequest
      * @return DescribeDailyMediaPlayStatResponse
      * @throws TencentCloudSDKException
@@ -1132,7 +1133,7 @@ public class VodClient extends AbstractClient{
 
     /**
      *该接口用于查询每日播放Top100 的媒体文件的播放统计数据。
-* 可以查询最近30天的播放统计数据。
+* 可以查询最近一年的播放统计数据。
 * 可以按播放次数或者播放流量查询。
 * 播放次数统计说明：
     1. HLS 文件：访问 M3U8 文件时统计播放次数；访问 TS 文件不统计播放次数。
@@ -1157,7 +1158,7 @@ public class VodClient extends AbstractClient{
 
     /**
      *该接口用于查询播放统计文件的下载地址。
-* 可以查询最近30天的播放统计文件下载地址。
+* 可以查询最近一年的播放统计文件下载地址，查询的起始日期和结束日期的时间跨度不超过90天。
 * 云点播每天对前一天的 CDN 请求日志进行分析处理，生成播放统计文件。
 * 播放统计文件内容包含媒体文件的播放次数、播放流量等统计信息。
 * 播放次数统计说明：

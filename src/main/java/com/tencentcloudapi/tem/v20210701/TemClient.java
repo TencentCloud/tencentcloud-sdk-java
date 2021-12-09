@@ -319,6 +319,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *修改应用实例数量
+     * @param req ModifyApplicationReplicasRequest
+     * @return ModifyApplicationReplicasResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationReplicasResponse ModifyApplicationReplicas(ModifyApplicationReplicasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationReplicasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationReplicasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplicationReplicas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *编辑环境
      * @param req ModifyEnvironmentRequest
      * @return ModifyEnvironmentResponse

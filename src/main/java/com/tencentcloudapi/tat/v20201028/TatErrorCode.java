@@ -33,6 +33,9 @@ public enum TatErrorCode {
     // 实例类型不一致。
      INVALIDPARAMETERVALUE_INCONSISTENTINSTANCE("InvalidParameterValue.InconsistentInstance"),
      
+    // 实例ID与执行活动无关。
+     INVALIDPARAMETERVALUE_INSTANCEISNOTRELATEDTOINVOCATION("InvalidParameterValue.InstanceIsNotRelatedToInvocation"),
+     
     // CommandId 无效。
      INVALIDPARAMETERVALUE_INVALIDCOMMANDID("InvalidParameterValue.InvalidCommandId"),
      
@@ -105,6 +108,9 @@ public enum TatErrorCode {
     // 长度超过限制。
      INVALIDPARAMETERVALUE_TOOLONG("InvalidParameterValue.TooLong"),
      
+    // 超过配额限制。
+     LIMITEXCEEDED("LimitExceeded"),
+     
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),
      
@@ -116,6 +122,9 @@ public enum TatErrorCode {
      
     // 实例不存在。
      RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
+     
+    // 执行活动未找到。
+     RESOURCENOTFOUND_INVOCATIONNOTFOUND("ResourceNotFound.InvocationNotFound"),
      
     // Agent 未安装。
      RESOURCEUNAVAILABLE_AGENTNOTINSTALLED("ResourceUnavailable.AgentNotInstalled"),
@@ -142,7 +151,10 @@ public enum TatErrorCode {
      UNAUTHORIZEDOPERATION_MFAEXPIRED("UnauthorizedOperation.MFAExpired"),
      
     // Multi-Factor Authentication(MFA) 不存在。
-     UNAUTHORIZEDOPERATION_MFANOTFOUND("UnauthorizedOperation.MFANotFound");
+     UNAUTHORIZEDOPERATION_MFANOTFOUND("UnauthorizedOperation.MFANotFound"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private TatErrorCode (String value){

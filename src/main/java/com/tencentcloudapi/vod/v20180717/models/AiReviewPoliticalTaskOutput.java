@@ -52,10 +52,25 @@ violation_photo：
 
     /**
     * 有涉政嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewPoliticalSegmentItem [] SegmentSet;
+
+    /**
+    * 涉政嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+    */
+    @SerializedName("SegmentSetFileUrl")
+    @Expose
+    private String SegmentSetFileUrl;
+
+    /**
+    * 涉政嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("SegmentSetFileUrlExpireTime")
+    @Expose
+    private String SegmentSetFileUrlExpireTime;
 
     /**
      * Get 视频涉政评分，分值为0到100。 
@@ -134,8 +149,10 @@ violation_photo：
     }
 
     /**
-     * Get 有涉政嫌疑的视频片段列表。 
+     * Get 有涉政嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。 
      * @return SegmentSet 有涉政嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public MediaContentReviewPoliticalSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -143,10 +160,44 @@ violation_photo：
 
     /**
      * Set 有涉政嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      * @param SegmentSet 有涉政嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public void setSegmentSet(MediaContentReviewPoliticalSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get 涉政嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return SegmentSetFileUrl 涉政嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public String getSegmentSetFileUrl() {
+        return this.SegmentSetFileUrl;
+    }
+
+    /**
+     * Set 涉政嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param SegmentSetFileUrl 涉政嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
+        this.SegmentSetFileUrl = SegmentSetFileUrl;
+    }
+
+    /**
+     * Get 涉政嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return SegmentSetFileUrlExpireTime 涉政嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getSegmentSetFileUrlExpireTime() {
+        return this.SegmentSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set 涉政嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param SegmentSetFileUrlExpireTime 涉政嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
+        this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     public AiReviewPoliticalTaskOutput() {
@@ -172,6 +223,12 @@ violation_photo：
                 this.SegmentSet[i] = new MediaContentReviewPoliticalSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.SegmentSetFileUrl != null) {
+            this.SegmentSetFileUrl = new String(source.SegmentSetFileUrl);
+        }
+        if (source.SegmentSetFileUrlExpireTime != null) {
+            this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
+        }
     }
 
 
@@ -183,6 +240,8 @@ violation_photo：
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
 
     }
 }

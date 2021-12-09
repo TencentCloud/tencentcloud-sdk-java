@@ -59,6 +59,26 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataEventUrl信息
+     * @param req DescribeDataEventUrlRequest
+     * @return DescribeDataEventUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEventUrlResponse DescribeDataEventUrl(DescribeDataEventUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataEventUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataEventUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataEventUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取LogUrlStatistics信息
      * @param req DescribeDataLogUrlStatisticsRequest
      * @return DescribeDataLogUrlStatisticsResponse
@@ -91,6 +111,26 @@ public class RumClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDataPerformancePageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDataPerformancePage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取DescribeDataPvUrlStatistics信息
+     * @param req DescribeDataPvUrlStatisticsRequest
+     * @return DescribeDataPvUrlStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(DescribeDataPvUrlStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataPvUrlStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataPvUrlStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataPvUrlStatistics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

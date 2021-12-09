@@ -44,7 +44,7 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * 优雅关停
+    * 该参数已下线
     */
     @SerializedName("GraceShutdown")
     @Expose
@@ -99,16 +99,16 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     }
 
     /**
-     * Get 优雅关停 
-     * @return GraceShutdown 优雅关停
+     * Get 该参数已下线 
+     * @return GraceShutdown 该参数已下线
      */
     public Boolean getGraceShutdown() {
         return this.GraceShutdown;
     }
 
     /**
-     * Set 优雅关停
-     * @param GraceShutdown 优雅关停
+     * Set 该参数已下线
+     * @param GraceShutdown 该参数已下线
      */
     public void setGraceShutdown(Boolean GraceShutdown) {
         this.GraceShutdown = GraceShutdown;

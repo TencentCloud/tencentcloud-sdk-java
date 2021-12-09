@@ -24,14 +24,31 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
     * 视频智能精彩片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 HighlightSetFileUrl 对应的文件中获取。
     */
     @SerializedName("HighlightSet")
     @Expose
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-     * Get 视频智能精彩片段列表。 
+    * 视频智能精彩片段列表文件 URL。文件的内容为 JSON，数据结构与 HighlightSet 字段一致。 （文件不会永久存储，到达 HighlightSetFileUrlExpireTime 时间点后文件将被删除）。
+    */
+    @SerializedName("HighlightSetFileUrl")
+    @Expose
+    private String HighlightSetFileUrl;
+
+    /**
+    * 视频智能精彩片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("HighlightSetFileUrlExpireTime")
+    @Expose
+    private String HighlightSetFileUrlExpireTime;
+
+    /**
+     * Get 视频智能精彩片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 HighlightSetFileUrl 对应的文件中获取。 
      * @return HighlightSet 视频智能精彩片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 HighlightSetFileUrl 对应的文件中获取。
      */
     public MediaAiAnalysisHighlightItem [] getHighlightSet() {
         return this.HighlightSet;
@@ -39,10 +56,44 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
      * Set 视频智能精彩片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 HighlightSetFileUrl 对应的文件中获取。
      * @param HighlightSet 视频智能精彩片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 HighlightSetFileUrl 对应的文件中获取。
      */
     public void setHighlightSet(MediaAiAnalysisHighlightItem [] HighlightSet) {
         this.HighlightSet = HighlightSet;
+    }
+
+    /**
+     * Get 视频智能精彩片段列表文件 URL。文件的内容为 JSON，数据结构与 HighlightSet 字段一致。 （文件不会永久存储，到达 HighlightSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return HighlightSetFileUrl 视频智能精彩片段列表文件 URL。文件的内容为 JSON，数据结构与 HighlightSet 字段一致。 （文件不会永久存储，到达 HighlightSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public String getHighlightSetFileUrl() {
+        return this.HighlightSetFileUrl;
+    }
+
+    /**
+     * Set 视频智能精彩片段列表文件 URL。文件的内容为 JSON，数据结构与 HighlightSet 字段一致。 （文件不会永久存储，到达 HighlightSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param HighlightSetFileUrl 视频智能精彩片段列表文件 URL。文件的内容为 JSON，数据结构与 HighlightSet 字段一致。 （文件不会永久存储，到达 HighlightSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public void setHighlightSetFileUrl(String HighlightSetFileUrl) {
+        this.HighlightSetFileUrl = HighlightSetFileUrl;
+    }
+
+    /**
+     * Get 视频智能精彩片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return HighlightSetFileUrlExpireTime 视频智能精彩片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getHighlightSetFileUrlExpireTime() {
+        return this.HighlightSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set 视频智能精彩片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param HighlightSetFileUrlExpireTime 视频智能精彩片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setHighlightSetFileUrlExpireTime(String HighlightSetFileUrlExpireTime) {
+        this.HighlightSetFileUrlExpireTime = HighlightSetFileUrlExpireTime;
     }
 
     public AiAnalysisTaskHighlightOutput() {
@@ -59,6 +110,12 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
                 this.HighlightSet[i] = new MediaAiAnalysisHighlightItem(source.HighlightSet[i]);
             }
         }
+        if (source.HighlightSetFileUrl != null) {
+            this.HighlightSetFileUrl = new String(source.HighlightSetFileUrl);
+        }
+        if (source.HighlightSetFileUrlExpireTime != null) {
+            this.HighlightSetFileUrlExpireTime = new String(source.HighlightSetFileUrlExpireTime);
+        }
     }
 
 
@@ -67,6 +124,8 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "HighlightSet.", this.HighlightSet);
+        this.setParamSimple(map, prefix + "HighlightSetFileUrl", this.HighlightSetFileUrl);
+        this.setParamSimple(map, prefix + "HighlightSetFileUrlExpireTime", this.HighlightSetFileUrlExpireTime);
 
     }
 }

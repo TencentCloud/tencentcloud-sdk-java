@@ -1419,6 +1419,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *下发RRPC消息
+     * @param req PublishRRPCMessageRequest
+     * @return PublishRRPCMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishRRPCMessageResponse PublishRRPCMessage(PublishRRPCMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishRRPCMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishRRPCMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PublishRRPCMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
      * @param req ReleaseStudioProductRequest
      * @return ReleaseStudioProductResponse

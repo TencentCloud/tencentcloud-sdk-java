@@ -198,6 +198,14 @@ Pending是创建中，Running是 运行中。
     private String AutoCreatedEipId;
 
     /**
+    * 容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PersistStatus")
+    @Expose
+    private Boolean PersistStatus;
+
+    /**
      * Get EKS Cotainer Instance Id 
      * @return EksCiId EKS Cotainer Instance Id
      */
@@ -633,6 +641,26 @@ Pending是创建中，Running是 运行中。
         this.AutoCreatedEipId = AutoCreatedEipId;
     }
 
+    /**
+     * Get 容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PersistStatus 容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPersistStatus() {
+        return this.PersistStatus;
+    }
+
+    /**
+     * Set 容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PersistStatus 容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPersistStatus(Boolean PersistStatus) {
+        this.PersistStatus = PersistStatus;
+    }
+
     public EksCi() {
     }
 
@@ -716,6 +744,9 @@ Pending是创建中，Running是 运行中。
         if (source.AutoCreatedEipId != null) {
             this.AutoCreatedEipId = new String(source.AutoCreatedEipId);
         }
+        if (source.PersistStatus != null) {
+            this.PersistStatus = new Boolean(source.PersistStatus);
+        }
     }
 
 
@@ -745,6 +776,7 @@ Pending是创建中，Running是 运行中。
         this.setParamArrayObj(map, prefix + "InitContainers.", this.InitContainers);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "AutoCreatedEipId", this.AutoCreatedEipId);
+        this.setParamSimple(map, prefix + "PersistStatus", this.PersistStatus);
 
     }
 }

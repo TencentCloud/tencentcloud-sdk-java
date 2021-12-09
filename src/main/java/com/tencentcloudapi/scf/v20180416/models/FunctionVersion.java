@@ -54,6 +54,14 @@ public class FunctionVersion extends AbstractModel{
     private String ModTime;
 
     /**
+    * 版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 函数版本名称 
      * @return Version 函数版本名称
      */
@@ -129,6 +137,26 @@ public class FunctionVersion extends AbstractModel{
         this.ModTime = ModTime;
     }
 
+    /**
+     * Get 版本状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public FunctionVersion() {
     }
 
@@ -149,6 +177,9 @@ public class FunctionVersion extends AbstractModel{
         if (source.ModTime != null) {
             this.ModTime = new String(source.ModTime);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -160,6 +191,7 @@ public class FunctionVersion extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

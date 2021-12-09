@@ -39,6 +39,29 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *取消一台或多台CVM实例执行的命令
+
+* 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+* 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
+     * @param req CancelInvocationRequest
+     * @return CancelInvocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelInvocationResponse CancelInvocation(CancelInvocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelInvocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelInvocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelInvocation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于创建命令。
      * @param req CreateCommandRequest
      * @return CreateCommandResponse

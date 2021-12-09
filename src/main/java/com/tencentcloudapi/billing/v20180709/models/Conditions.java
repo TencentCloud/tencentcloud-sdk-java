@@ -30,7 +30,7 @@ public class Conditions extends AbstractModel{
     private Long TimeRange;
 
     /**
-    * 产品编码
+    * 产品名称代码
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -65,14 +65,14 @@ public class Conditions extends AbstractModel{
     private String ResourceKeyword;
 
     /**
-    * 产品编码
+    * 产品名称代码
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String [] BusinessCodes;
 
     /**
-    * 子产品编码
+    * 子产品名称代码
     */
     @SerializedName("ProductCodes")
     @Expose
@@ -172,16 +172,16 @@ public class Conditions extends AbstractModel{
     }
 
     /**
-     * Get 产品编码 
-     * @return BusinessCode 产品编码
+     * Get 产品名称代码 
+     * @return BusinessCode 产品名称代码
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品编码
-     * @param BusinessCode 产品编码
+     * Set 产品名称代码
+     * @param BusinessCode 产品名称代码
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
@@ -252,32 +252,32 @@ public class Conditions extends AbstractModel{
     }
 
     /**
-     * Get 产品编码 
-     * @return BusinessCodes 产品编码
+     * Get 产品名称代码 
+     * @return BusinessCodes 产品名称代码
      */
     public String [] getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set 产品编码
-     * @param BusinessCodes 产品编码
+     * Set 产品名称代码
+     * @param BusinessCodes 产品名称代码
      */
     public void setBusinessCodes(String [] BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 子产品编码 
-     * @return ProductCodes 子产品编码
+     * Get 子产品名称代码 
+     * @return ProductCodes 子产品名称代码
      */
     public String [] getProductCodes() {
         return this.ProductCodes;
     }
 
     /**
-     * Set 子产品编码
-     * @param ProductCodes 子产品编码
+     * Set 子产品名称代码
+     * @param ProductCodes 子产品名称代码
      */
     public void setProductCodes(String [] ProductCodes) {
         this.ProductCodes = ProductCodes;

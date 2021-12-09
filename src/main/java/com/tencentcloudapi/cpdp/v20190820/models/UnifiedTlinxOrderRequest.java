@@ -163,6 +163,29 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     private String Royalty;
 
     /**
+    * 小程序支付参数：填默认值 1
+    */
+    @SerializedName("Jsapi")
+    @Expose
+    private String Jsapi;
+
+    /**
+    * 小程序支付参数：
+当前调起支付的小程序APPID
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private String SubAppId;
+
+    /**
+    * 小程序支付参数:
+用户在子商户appid下的唯一标识。
+    */
+    @SerializedName("SubOpenId")
+    @Expose
+    private String SubOpenId;
+
+    /**
      * Get 开发者流水号 
      * @return DeveloperNo 开发者流水号
      */
@@ -482,6 +505,62 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         this.Royalty = Royalty;
     }
 
+    /**
+     * Get 小程序支付参数：填默认值 1 
+     * @return Jsapi 小程序支付参数：填默认值 1
+     */
+    public String getJsapi() {
+        return this.Jsapi;
+    }
+
+    /**
+     * Set 小程序支付参数：填默认值 1
+     * @param Jsapi 小程序支付参数：填默认值 1
+     */
+    public void setJsapi(String Jsapi) {
+        this.Jsapi = Jsapi;
+    }
+
+    /**
+     * Get 小程序支付参数：
+当前调起支付的小程序APPID 
+     * @return SubAppId 小程序支付参数：
+当前调起支付的小程序APPID
+     */
+    public String getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set 小程序支付参数：
+当前调起支付的小程序APPID
+     * @param SubAppId 小程序支付参数：
+当前调起支付的小程序APPID
+     */
+    public void setSubAppId(String SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get 小程序支付参数:
+用户在子商户appid下的唯一标识。 
+     * @return SubOpenId 小程序支付参数:
+用户在子商户appid下的唯一标识。
+     */
+    public String getSubOpenId() {
+        return this.SubOpenId;
+    }
+
+    /**
+     * Set 小程序支付参数:
+用户在子商户appid下的唯一标识。
+     * @param SubOpenId 小程序支付参数:
+用户在子商户appid下的唯一标识。
+     */
+    public void setSubOpenId(String SubOpenId) {
+        this.SubOpenId = SubOpenId;
+    }
+
     public UnifiedTlinxOrderRequest() {
     }
 
@@ -550,6 +629,15 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         if (source.Royalty != null) {
             this.Royalty = new String(source.Royalty);
         }
+        if (source.Jsapi != null) {
+            this.Jsapi = new String(source.Jsapi);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.SubOpenId != null) {
+            this.SubOpenId = new String(source.SubOpenId);
+        }
     }
 
 
@@ -577,6 +665,9 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DiscountAmount", this.DiscountAmount);
         this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamSimple(map, prefix + "Royalty", this.Royalty);
+        this.setParamSimple(map, prefix + "Jsapi", this.Jsapi);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "SubOpenId", this.SubOpenId);
 
     }
 }

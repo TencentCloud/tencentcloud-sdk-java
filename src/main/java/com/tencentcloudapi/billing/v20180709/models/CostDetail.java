@@ -30,14 +30,14 @@ public class CostDetail extends AbstractModel{
     private String PayerUin;
 
     /**
-    * 业务名称
+    * 产品名称
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 产品名称
+    * 子产品名称
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -129,7 +129,7 @@ public class CostDetail extends AbstractModel{
     private CostComponentSet [] ComponentSet;
 
     /**
-    * 产品代码
+    * 子产品名称代码
     */
     @SerializedName("ProductCode")
     @Expose
@@ -152,32 +152,32 @@ public class CostDetail extends AbstractModel{
     }
 
     /**
-     * Get 业务名称 
-     * @return BusinessCodeName 业务名称
+     * Get 产品名称 
+     * @return BusinessCodeName 产品名称
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 业务名称
-     * @param BusinessCodeName 业务名称
+     * Set 产品名称
+     * @param BusinessCodeName 产品名称
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 产品名称 
-     * @return ProductCodeName 产品名称
+     * Get 子产品名称 
+     * @return ProductCodeName 子产品名称
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 产品名称
-     * @param ProductCodeName 产品名称
+     * Set 子产品名称
+     * @param ProductCodeName 子产品名称
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -380,16 +380,16 @@ public class CostDetail extends AbstractModel{
     }
 
     /**
-     * Get 产品代码 
-     * @return ProductCode 产品代码
+     * Get 子产品名称代码 
+     * @return ProductCode 子产品名称代码
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 产品代码
-     * @param ProductCode 产品代码
+     * Set 子产品名称代码
+     * @param ProductCode 子产品名称代码
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
