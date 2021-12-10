@@ -81,6 +81,13 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     private Encryption Encryption;
 
     /**
+    * 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+    */
+    @SerializedName("IntentionVerifyText")
+    @Expose
+    private String IntentionVerifyText;
+
+    /**
      * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。 
      * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      */
@@ -216,6 +223,22 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.Encryption = Encryption;
     }
 
+    /**
+     * Get 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。 
+     * @return IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     */
+    public String getIntentionVerifyText() {
+        return this.IntentionVerifyText;
+    }
+
+    /**
+     * Set 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     * @param IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     */
+    public void setIntentionVerifyText(String IntentionVerifyText) {
+        this.IntentionVerifyText = IntentionVerifyText;
+    }
+
     public DetectAuthRequest() {
     }
 
@@ -248,6 +271,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         if (source.Encryption != null) {
             this.Encryption = new Encryption(source.Encryption);
         }
+        if (source.IntentionVerifyText != null) {
+            this.IntentionVerifyText = new String(source.IntentionVerifyText);
+        }
     }
 
 
@@ -263,6 +289,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
 
     }
 }

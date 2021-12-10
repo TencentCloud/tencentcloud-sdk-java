@@ -156,6 +156,14 @@ disabled：未启用
     private Long ConfigId;
 
     /**
+    * 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtensionMode")
+    @Expose
+    private Long ExtensionMode;
+
+    /**
      * Get 流量包 Id 
      * @return Id 流量包 Id
      */
@@ -483,6 +491,26 @@ disabled：未启用
         this.ConfigId = ConfigId;
     }
 
+    /**
+     * Get 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtensionMode 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExtensionMode() {
+        return this.ExtensionMode;
+    }
+
+    /**
+     * Set 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtensionMode 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtensionMode(Long ExtensionMode) {
+        this.ExtensionMode = ExtensionMode;
+    }
+
     public TrafficPackage() {
     }
 
@@ -542,6 +570,9 @@ disabled：未启用
         if (source.ConfigId != null) {
             this.ConfigId = new Long(source.ConfigId);
         }
+        if (source.ExtensionMode != null) {
+            this.ExtensionMode = new Long(source.ExtensionMode);
+        }
     }
 
 
@@ -566,6 +597,7 @@ disabled：未启用
         this.setParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "ExtensionMode", this.ExtensionMode);
 
     }
 }

@@ -253,6 +253,17 @@ public class CreateInstanceRequest extends AbstractModel{
     private String ApplicationRole;
 
     /**
+    * 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+    */
+    @SerializedName("SceneName")
+    @Expose
+    private String SceneName;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -848,6 +859,38 @@ public class CreateInstanceRequest extends AbstractModel{
         this.ApplicationRole = ApplicationRole;
     }
 
+    /**
+     * Get 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase 
+     * @return SceneName 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public String getSceneName() {
+        return this.SceneName;
+    }
+
+    /**
+     * Set 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     * @param SceneName 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public void setSceneName(String SceneName) {
+        this.SceneName = SceneName;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -949,6 +992,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.ApplicationRole != null) {
             this.ApplicationRole = new String(source.ApplicationRole);
         }
+        if (source.SceneName != null) {
+            this.SceneName = new String(source.SceneName);
+        }
     }
 
 
@@ -983,6 +1029,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
+        this.setParamSimple(map, prefix + "SceneName", this.SceneName);
 
     }
 }

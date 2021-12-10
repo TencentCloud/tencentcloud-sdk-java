@@ -272,6 +272,14 @@ notInService       不在服务区
     private String Uui;
 
     /**
+    * IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IVRKeyPressedEx")
+    @Expose
+    private IVRKeyPressedElement [] IVRKeyPressedEx;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -943,6 +951,26 @@ notInService       不在服务区
         this.Uui = Uui;
     }
 
+    /**
+     * Get IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IVRKeyPressedElement [] getIVRKeyPressedEx() {
+        return this.IVRKeyPressedEx;
+    }
+
+    /**
+     * Set IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIVRKeyPressedEx(IVRKeyPressedElement [] IVRKeyPressedEx) {
+        this.IVRKeyPressedEx = IVRKeyPressedEx;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1041,6 +1069,12 @@ notInService       不在服务区
         if (source.Uui != null) {
             this.Uui = new String(source.Uui);
         }
+        if (source.IVRKeyPressedEx != null) {
+            this.IVRKeyPressedEx = new IVRKeyPressedElement[source.IVRKeyPressedEx.length];
+            for (int i = 0; i < source.IVRKeyPressedEx.length; i++) {
+                this.IVRKeyPressedEx[i] = new IVRKeyPressedElement(source.IVRKeyPressedEx[i]);
+            }
+        }
     }
 
 
@@ -1075,6 +1109,7 @@ notInService       不在服务区
         this.setParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
         this.setParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
         this.setParamSimple(map, prefix + "Uui", this.Uui);
+        this.setParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
 
     }
 }

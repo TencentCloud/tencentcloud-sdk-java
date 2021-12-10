@@ -65,7 +65,7 @@ public class ContainerInfo extends AbstractModel{
     private String Cmd;
 
     /**
-    * cpu 使用率 *1000
+    * CPU使用率 *1000
     */
     @SerializedName("CPUUsage")
     @Expose
@@ -231,16 +231,16 @@ public class ContainerInfo extends AbstractModel{
     }
 
     /**
-     * Get cpu 使用率 *1000 
-     * @return CPUUsage cpu 使用率 *1000
+     * Get CPU使用率 *1000 
+     * @return CPUUsage CPU使用率 *1000
      */
     public Long getCPUUsage() {
         return this.CPUUsage;
     }
 
     /**
-     * Set cpu 使用率 *1000
-     * @param CPUUsage cpu 使用率 *1000
+     * Set CPU使用率 *1000
+     * @param CPUUsage CPU使用率 *1000
      */
     public void setCPUUsage(Long CPUUsage) {
         this.CPUUsage = CPUUsage;

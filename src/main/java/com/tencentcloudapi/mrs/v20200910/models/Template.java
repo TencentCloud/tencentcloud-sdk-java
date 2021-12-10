@@ -151,6 +151,14 @@ public class Template extends AbstractModel{
     private VaccineCertificate VaccineCertificate;
 
     /**
+    * OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrText")
+    @Expose
+    private String OcrText;
+
+    /**
      * Get 患者信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PatientInfo 患者信息
@@ -470,6 +478,26 @@ public class Template extends AbstractModel{
         this.VaccineCertificate = VaccineCertificate;
     }
 
+    /**
+     * Get OCR文本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OcrText OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOcrText() {
+        return this.OcrText;
+    }
+
+    /**
+     * Set OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrText OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrText(String OcrText) {
+        this.OcrText = OcrText;
+    }
+
     public Template() {
     }
 
@@ -526,6 +554,9 @@ public class Template extends AbstractModel{
         if (source.VaccineCertificate != null) {
             this.VaccineCertificate = new VaccineCertificate(source.VaccineCertificate);
         }
+        if (source.OcrText != null) {
+            this.OcrText = new String(source.OcrText);
+        }
     }
 
 
@@ -549,6 +580,7 @@ public class Template extends AbstractModel{
         this.setParamObj(map, prefix + "Endoscopy.", this.Endoscopy);
         this.setParamObj(map, prefix + "Prescription.", this.Prescription);
         this.setParamObj(map, prefix + "VaccineCertificate.", this.VaccineCertificate);
+        this.setParamSimple(map, prefix + "OcrText", this.OcrText);
 
     }
 }

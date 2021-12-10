@@ -219,6 +219,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *删除预付费实例
+     * @param req DeleteInstancePreRequest
+     * @return DeleteInstancePreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstancePreResponse DeleteInstancePre(DeleteInstancePreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstancePreResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstancePreResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInstancePre");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改删除路由延迟触发时间
      * @param req DeleteRouteTriggerTimeRequest
      * @return DeleteRouteTriggerTimeResponse

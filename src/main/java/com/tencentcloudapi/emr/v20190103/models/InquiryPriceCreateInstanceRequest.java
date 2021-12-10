@@ -134,6 +134,17 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     private Long ProductId;
 
     /**
+    * 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+    */
+    @SerializedName("SceneName")
+    @Expose
+    private String SceneName;
+
+    /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -421,6 +432,38 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase 
+     * @return SceneName 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public String getSceneName() {
+        return this.SceneName;
+    }
+
+    /**
+     * Set 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     * @param SceneName 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public void setSceneName(String SceneName) {
+        this.SceneName = SceneName;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -471,6 +514,9 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
+        if (source.SceneName != null) {
+            this.SceneName = new String(source.SceneName);
+        }
     }
 
 
@@ -491,6 +537,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "SceneName", this.SceneName);
 
     }
 }

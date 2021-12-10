@@ -1019,6 +1019,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *用于获取设备绑定的用户列表
+     * @param req GetFamilyDeviceUserListRequest
+     * @return GetFamilyDeviceUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFamilyDeviceUserListResponse GetFamilyDeviceUserList(GetFamilyDeviceUserListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFamilyDeviceUserListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFamilyDeviceUserListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFamilyDeviceUserList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取 LoRa 网关列表接口
      * @param req GetLoRaGatewayListRequest
      * @return GetLoRaGatewayListResponse

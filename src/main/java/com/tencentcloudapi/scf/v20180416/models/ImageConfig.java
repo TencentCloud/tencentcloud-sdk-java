@@ -45,7 +45,7 @@ public class ImageConfig extends AbstractModel{
     private String RegistryId;
 
     /**
-    * 应用的ENTRYPOINT
+    * 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntryPoint")
@@ -121,9 +121,9 @@ public class ImageConfig extends AbstractModel{
     }
 
     /**
-     * Get 应用的ENTRYPOINT
+     * Get 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EntryPoint 应用的ENTRYPOINT
+     * @return EntryPoint 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntryPoint() {
@@ -131,9 +131,9 @@ public class ImageConfig extends AbstractModel{
     }
 
     /**
-     * Set 应用的ENTRYPOINT
+     * Set 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EntryPoint 应用的ENTRYPOINT
+     * @param EntryPoint 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntryPoint(String EntryPoint) {
