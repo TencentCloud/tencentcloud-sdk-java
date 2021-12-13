@@ -39,6 +39,26 @@ public class CiiClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
+     * @param req CreateAutoClassifyStructureTaskRequest
+     * @return CreateAutoClassifyStructureTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoClassifyStructureTaskResponse CreateAutoClassifyStructureTask(CreateAutoClassifyStructureTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAutoClassifyStructureTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAutoClassifyStructureTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAutoClassifyStructureTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
      * @param req CreateStructureTaskRequest
      * @return CreateStructureTaskResponse

@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class RestoreMediaTask extends AbstractModel{
 
     /**
-    * 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * 提示信息。
-    */
-    @SerializedName("Message")
-    @Expose
-    private String Message;
-
-    /**
     * 文件ID。
     */
     @SerializedName("FileId")
@@ -69,43 +55,24 @@ public class RestoreMediaTask extends AbstractModel{
 
     /**
     * 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RestoreDay")
     @Expose
     private Long RestoreDay;
 
     /**
-     * Get 取回任务状态，0表示取回完成，其他值表示取回还未完成。 
-     * @return Status 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
+    * 该字段已废弃。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
-     * Set 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-     * @param Status 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 提示信息。 
-     * @return Message 提示信息。
-     */
-    public String getMessage() {
-        return this.Message;
-    }
-
-    /**
-     * Set 提示信息。
-     * @param Message 提示信息。
-     */
-    public void setMessage(String Message) {
-        this.Message = Message;
-    }
+    * 该字段已废弃。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
 
     /**
      * Get 文件ID。 
@@ -184,10 +151,8 @@ public class RestoreMediaTask extends AbstractModel{
     }
 
     /**
-     * Get 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时取回副本有效期，单位：天。对于永久取回，取值为0。 
      * @return RestoreDay 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRestoreDay() {
         return this.RestoreDay;
@@ -195,12 +160,42 @@ public class RestoreMediaTask extends AbstractModel{
 
     /**
      * Set 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RestoreDay 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;
+    }
+
+    /**
+     * Get 该字段已废弃。 
+     * @return Status 该字段已废弃。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 该字段已废弃。
+     * @param Status 该字段已废弃。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 该字段已废弃。 
+     * @return Message 该字段已废弃。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 该字段已废弃。
+     * @param Message 该字段已废弃。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     public RestoreMediaTask() {
@@ -211,12 +206,6 @@ public class RestoreMediaTask extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RestoreMediaTask(RestoreMediaTask source) {
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
-        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
@@ -232,6 +221,12 @@ public class RestoreMediaTask extends AbstractModel{
         if (source.RestoreDay != null) {
             this.RestoreDay = new Long(source.RestoreDay);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -239,13 +234,13 @@ public class RestoreMediaTask extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "OriginalStorageClass", this.OriginalStorageClass);
         this.setParamSimple(map, prefix + "TargetStorageClass", this.TargetStorageClass);
         this.setParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
         this.setParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

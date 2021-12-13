@@ -1137,6 +1137,31 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (ModifyInstanceDiskType) 用于修改实例硬盘介质类型。
+
+* 只支持实例的本地系统盘、本地数据盘转化成指定云硬盘介质。
+* 只支持实例在关机状态下转换成指定云硬盘介质。
+* 不支持竞价实例类型。
+* 修改前请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)接口查询账户余额。
+     * @param req ModifyInstanceDiskTypeRequest
+     * @return ModifyInstanceDiskTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceDiskTypeResponse ModifyInstanceDiskType(ModifyInstanceDiskTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceDiskTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceDiskTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceDiskType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (ModifyInstancesAttribute) 用于修改实例的属性（目前只支持修改实例的名称和关联的安全组）。
 
 * 每次请求必须指定实例的一种属性用于修改。
