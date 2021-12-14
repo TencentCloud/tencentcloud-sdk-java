@@ -33,6 +33,11 @@ public class Demo {
     public static final String LZ_4 = "lz4";
     //TODO 替换为自己业务的 topic
     public static final String TOPIC = "";
+    /**
+     * TODO 需要根据客户的实际地域自行填写，可参考：Region 枚举类
+     * @see com.tencentcloudapi.common.profile.Region
+     */
+    public static final String REGION = "xxxx";
     public static final String PRODUCT_NAME_CLS = "cls";
     public static final String UPLOAD_LOG_URL = "UploadLog";
     public static final String VERSION = "2020-10-16";
@@ -82,7 +87,7 @@ public class Demo {
         //endregion
 
         try {
-            CommonClient client = new CommonClient(PRODUCT_NAME_CLS, VERSION, cred, Region.GuangzhouOpen.getValue(), clientProfile);
+            CommonClient client = new CommonClient(PRODUCT_NAME_CLS, VERSION, cred, REGION, clientProfile);
             String resp = client.callOctetStream(UPLOAD_LOG_URL, headers, body);
             System.out.println(resp);
         } catch (TencentCloudSDKException te) {
