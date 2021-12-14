@@ -302,6 +302,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
+     * @param req DescribeInstanceParamsRequest
+     * @return DescribeInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceParams");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实例绑定的安全组
      * @param req DescribeSecurityGroupRequest
      * @return DescribeSecurityGroupResponse

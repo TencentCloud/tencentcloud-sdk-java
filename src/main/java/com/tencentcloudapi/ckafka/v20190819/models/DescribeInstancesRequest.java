@@ -58,7 +58,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 匹配标签key值。
+    * 已废弃。匹配标签key值。
     */
     @SerializedName("TagKey")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 匹配标签key值。 
-     * @return TagKey 匹配标签key值。
+     * Get 已废弃。匹配标签key值。 
+     * @return TagKey 已废弃。匹配标签key值。
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 匹配标签key值。
-     * @param TagKey 匹配标签key值。
+     * Set 已废弃。匹配标签key值。
+     * @param TagKey 已废弃。匹配标签key值。
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;

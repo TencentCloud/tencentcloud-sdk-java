@@ -51,6 +51,13 @@ public class ModifyRocketMQTopicRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 分区数，全局类型无效，不可小于当前分区数
+    */
+    @SerializedName("PartitionNum")
+    @Expose
+    private Long PartitionNum;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -114,6 +121,22 @@ public class ModifyRocketMQTopicRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 分区数，全局类型无效，不可小于当前分区数 
+     * @return PartitionNum 分区数，全局类型无效，不可小于当前分区数
+     */
+    public Long getPartitionNum() {
+        return this.PartitionNum;
+    }
+
+    /**
+     * Set 分区数，全局类型无效，不可小于当前分区数
+     * @param PartitionNum 分区数，全局类型无效，不可小于当前分区数
+     */
+    public void setPartitionNum(Long PartitionNum) {
+        this.PartitionNum = PartitionNum;
+    }
+
     public ModifyRocketMQTopicRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyRocketMQTopicRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PartitionNum != null) {
+            this.PartitionNum = new Long(source.PartitionNum);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ModifyRocketMQTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
 
     }
 }

@@ -23,74 +23,72 @@ import java.util.HashMap;
 public class ExternalMediaInfo extends AbstractModel{
 
     /**
-    * 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-    */
-    @SerializedName("Definition")
-    @Expose
-    private Long Definition;
-
-    /**
-    * 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+    * 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
     */
     @SerializedName("MediaKey")
     @Expose
     private String MediaKey;
 
     /**
-     * Get 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。 
-     * @return Definition 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-     */
-    public Long getDefinition() {
-        return this.Definition;
-    }
+    * 该字段废弃，请勿使用。
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
 
     /**
-     * Set 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-     * @param Definition 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-     */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
-    }
+    * 媒资挂载的存储 Id。
+    */
+    @SerializedName("StorageId")
+    @Expose
+    private String StorageId;
 
     /**
-     * Get 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。 
-     * @return MediaKey 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+     * Get 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。 
+     * @return MediaKey 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
      */
     public String getMediaKey() {
         return this.MediaKey;
     }
 
     /**
-     * Set 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
-     * @param MediaKey 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+     * Set 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
+     * @param MediaKey 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
      */
     public void setMediaKey(String MediaKey) {
         this.MediaKey = MediaKey;
+    }
+
+    /**
+     * Get 该字段废弃，请勿使用。 
+     * @return Definition 该字段废弃，请勿使用。
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 该字段废弃，请勿使用。
+     * @param Definition 该字段废弃，请勿使用。
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
+     * Get 媒资挂载的存储 Id。 
+     * @return StorageId 媒资挂载的存储 Id。
+     */
+    public String getStorageId() {
+        return this.StorageId;
+    }
+
+    /**
+     * Set 媒资挂载的存储 Id。
+     * @param StorageId 媒资挂载的存储 Id。
+     */
+    public void setStorageId(String StorageId) {
+        this.StorageId = StorageId;
     }
 
     public ExternalMediaInfo() {
@@ -101,11 +99,14 @@ public class ExternalMediaInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ExternalMediaInfo(ExternalMediaInfo source) {
+        if (source.MediaKey != null) {
+            this.MediaKey = new String(source.MediaKey);
+        }
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
-        if (source.MediaKey != null) {
-            this.MediaKey = new String(source.MediaKey);
+        if (source.StorageId != null) {
+            this.StorageId = new String(source.StorageId);
         }
     }
 
@@ -114,8 +115,9 @@ public class ExternalMediaInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "MediaKey", this.MediaKey);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
 
     }
 }

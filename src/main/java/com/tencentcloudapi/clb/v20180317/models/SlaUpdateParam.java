@@ -30,7 +30,7 @@ public class SlaUpdateParam extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 需要变更的性能保障级别
+    * 变更为性能容量型，固定为SLA
     */
     @SerializedName("SlaType")
     @Expose
@@ -53,16 +53,16 @@ public class SlaUpdateParam extends AbstractModel{
     }
 
     /**
-     * Get 需要变更的性能保障级别 
-     * @return SlaType 需要变更的性能保障级别
+     * Get 变更为性能容量型，固定为SLA 
+     * @return SlaType 变更为性能容量型，固定为SLA
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 需要变更的性能保障级别
-     * @param SlaType 需要变更的性能保障级别
+     * Set 变更为性能容量型，固定为SLA
+     * @param SlaType 变更为性能容量型，固定为SLA
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

@@ -13,50 +13,50 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.clb.v20180317.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerSlaRequest extends AbstractModel{
+public class DescribeAutoScalingAdvicesRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例信息
+    * 待查询的伸缩组列表，上限100。
     */
-    @SerializedName("LoadBalancerSla")
+    @SerializedName("AutoScalingGroupIds")
     @Expose
-    private SlaUpdateParam [] LoadBalancerSla;
+    private String [] AutoScalingGroupIds;
 
     /**
-     * Get 负载均衡实例信息 
-     * @return LoadBalancerSla 负载均衡实例信息
+     * Get 待查询的伸缩组列表，上限100。 
+     * @return AutoScalingGroupIds 待查询的伸缩组列表，上限100。
      */
-    public SlaUpdateParam [] getLoadBalancerSla() {
-        return this.LoadBalancerSla;
+    public String [] getAutoScalingGroupIds() {
+        return this.AutoScalingGroupIds;
     }
 
     /**
-     * Set 负载均衡实例信息
-     * @param LoadBalancerSla 负载均衡实例信息
+     * Set 待查询的伸缩组列表，上限100。
+     * @param AutoScalingGroupIds 待查询的伸缩组列表，上限100。
      */
-    public void setLoadBalancerSla(SlaUpdateParam [] LoadBalancerSla) {
-        this.LoadBalancerSla = LoadBalancerSla;
+    public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
+        this.AutoScalingGroupIds = AutoScalingGroupIds;
     }
 
-    public ModifyLoadBalancerSlaRequest() {
+    public DescribeAutoScalingAdvicesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyLoadBalancerSlaRequest(ModifyLoadBalancerSlaRequest source) {
-        if (source.LoadBalancerSla != null) {
-            this.LoadBalancerSla = new SlaUpdateParam[source.LoadBalancerSla.length];
-            for (int i = 0; i < source.LoadBalancerSla.length; i++) {
-                this.LoadBalancerSla[i] = new SlaUpdateParam(source.LoadBalancerSla[i]);
+    public DescribeAutoScalingAdvicesRequest(DescribeAutoScalingAdvicesRequest source) {
+        if (source.AutoScalingGroupIds != null) {
+            this.AutoScalingGroupIds = new String[source.AutoScalingGroupIds.length];
+            for (int i = 0; i < source.AutoScalingGroupIds.length; i++) {
+                this.AutoScalingGroupIds[i] = new String(source.AutoScalingGroupIds[i]);
             }
         }
     }
@@ -66,7 +66,7 @@ public class ModifyLoadBalancerSlaRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "LoadBalancerSla.", this.LoadBalancerSla);
+        this.setParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
 
     }
 }

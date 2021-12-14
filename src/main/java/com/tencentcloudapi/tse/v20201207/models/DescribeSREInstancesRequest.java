@@ -51,6 +51,13 @@ public class DescribeSREInstancesRequest extends AbstractModel{
     private String QueryType;
 
     /**
+    * 调用方来源
+    */
+    @SerializedName("QuerySource")
+    @Expose
+    private String QuerySource;
+
+    /**
      * Get 请求过滤参数 
      * @return Filters 请求过滤参数
      */
@@ -114,6 +121,22 @@ public class DescribeSREInstancesRequest extends AbstractModel{
         this.QueryType = QueryType;
     }
 
+    /**
+     * Get 调用方来源 
+     * @return QuerySource 调用方来源
+     */
+    public String getQuerySource() {
+        return this.QuerySource;
+    }
+
+    /**
+     * Set 调用方来源
+     * @param QuerySource 调用方来源
+     */
+    public void setQuerySource(String QuerySource) {
+        this.QuerySource = QuerySource;
+    }
+
     public DescribeSREInstancesRequest() {
     }
 
@@ -137,6 +160,9 @@ public class DescribeSREInstancesRequest extends AbstractModel{
         if (source.QueryType != null) {
             this.QueryType = new String(source.QueryType);
         }
+        if (source.QuerySource != null) {
+            this.QuerySource = new String(source.QuerySource);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class DescribeSREInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
+        this.setParamSimple(map, prefix + "QuerySource", this.QuerySource);
 
     }
 }

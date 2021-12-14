@@ -163,6 +163,13 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     private String Browser;
 
     /**
+    * 环境
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -482,6 +489,22 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         this.Browser = Browser;
     }
 
+    /**
+     * Get 环境 
+     * @return Env 环境
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 环境
+     * @param Env 环境
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
     public DescribeDataPvUrlStatisticsRequest() {
     }
 
@@ -550,6 +573,9 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         if (source.Browser != null) {
             this.Browser = new String(source.Browser);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
     }
 
 
@@ -577,6 +603,7 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAbroad", this.IsAbroad);
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "Browser", this.Browser);
+        this.setParamSimple(map, prefix + "Env", this.Env);
 
     }
 }

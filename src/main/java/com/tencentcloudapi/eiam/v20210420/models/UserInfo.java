@@ -39,6 +39,46 @@ public class UserInfo extends AbstractModel{
     private String DisplayName;
 
     /**
+    * 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Phone")
+    @Expose
+    private String Phone;
+
+    /**
+    * 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Email")
+    @Expose
+    private String Email;
+
+    /**
+    * 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSource")
+    @Expose
+    private String DataSource;
+
+    /**
      * Get 用户ID，是用户全局唯一标识，长度限制：64个字符。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 用户ID，是用户全局唯一标识，长度限制：64个字符。
@@ -78,6 +118,106 @@ public class UserInfo extends AbstractModel{
         this.DisplayName = DisplayName;
     }
 
+    /**
+     * Get 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserName 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserName 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Phone 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhone() {
+        return this.Phone;
+    }
+
+    /**
+     * Set 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Phone 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhone(String Phone) {
+        this.Phone = Phone;
+    }
+
+    /**
+     * Get 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Email 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEmail() {
+        return this.Email;
+    }
+
+    /**
+     * Set 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Email 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    /**
+     * Get 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 数据来源。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSource 数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataSource() {
+        return this.DataSource;
+    }
+
+    /**
+     * Set 数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSource 数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSource(String DataSource) {
+        this.DataSource = DataSource;
+    }
+
     public UserInfo() {
     }
 
@@ -92,6 +232,21 @@ public class UserInfo extends AbstractModel{
         if (source.DisplayName != null) {
             this.DisplayName = new String(source.DisplayName);
         }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.DataSource != null) {
+            this.DataSource = new String(source.DataSource);
+        }
     }
 
 
@@ -101,6 +256,11 @@ public class UserInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Phone", this.Phone);
+        this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "DataSource", this.DataSource);
 
     }
 }

@@ -13,51 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.clb.v20180317.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerSlaRequest extends AbstractModel{
+public class DescribeInstanceParamsRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例信息
+    * 实例ID
     */
-    @SerializedName("LoadBalancerSla")
+    @SerializedName("InstanceId")
     @Expose
-    private SlaUpdateParam [] LoadBalancerSla;
+    private String InstanceId;
 
     /**
-     * Get 负载均衡实例信息 
-     * @return LoadBalancerSla 负载均衡实例信息
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
-    public SlaUpdateParam [] getLoadBalancerSla() {
-        return this.LoadBalancerSla;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 负载均衡实例信息
-     * @param LoadBalancerSla 负载均衡实例信息
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
-    public void setLoadBalancerSla(SlaUpdateParam [] LoadBalancerSla) {
-        this.LoadBalancerSla = LoadBalancerSla;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public ModifyLoadBalancerSlaRequest() {
+    public DescribeInstanceParamsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyLoadBalancerSlaRequest(ModifyLoadBalancerSlaRequest source) {
-        if (source.LoadBalancerSla != null) {
-            this.LoadBalancerSla = new SlaUpdateParam[source.LoadBalancerSla.length];
-            for (int i = 0; i < source.LoadBalancerSla.length; i++) {
-                this.LoadBalancerSla[i] = new SlaUpdateParam(source.LoadBalancerSla[i]);
-            }
+    public DescribeInstanceParamsRequest(DescribeInstanceParamsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -66,7 +63,7 @@ public class ModifyLoadBalancerSlaRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "LoadBalancerSla.", this.LoadBalancerSla);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

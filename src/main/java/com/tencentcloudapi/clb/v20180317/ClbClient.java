@@ -673,6 +673,26 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *查询跨域2.0版本云联网后端子机和网卡信息。
+     * @param req DescribeCrossTargetsRequest
+     * @return DescribeCrossTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossTargetsResponse DescribeCrossTargets(DescribeCrossTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCrossTargetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCrossTargetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCrossTargets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *拉取配置绑定的 server 或 location，如果 domain 存在，结果将根据 domain 过滤。或拉取配置绑定的 loadbalancer。
      * @param req DescribeCustomizedConfigAssociateListRequest
      * @return DescribeCustomizedConfigAssociateListResponse
@@ -1201,7 +1221,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *升、降配接口。支持共享型clb升级到性能保障型clb。支持性能保障型提升等级。支持性能保障降低规格。（不支持性能保障降级到共享型）。
+     *支持共享型clb升级到性能容量型clb（不支持性能保障降级到共享型）。
      * @param req ModifyLoadBalancerSlaRequest
      * @return ModifyLoadBalancerSlaResponse
      * @throws TencentCloudSDKException

@@ -159,6 +159,14 @@ public class Template extends AbstractModel{
     private String OcrText;
 
     /**
+    * OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrResult")
+    @Expose
+    private String OcrResult;
+
+    /**
      * Get 患者信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PatientInfo 患者信息
@@ -498,6 +506,26 @@ public class Template extends AbstractModel{
         this.OcrText = OcrText;
     }
 
+    /**
+     * Get OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OcrResult OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOcrResult() {
+        return this.OcrResult;
+    }
+
+    /**
+     * Set OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrResult OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrResult(String OcrResult) {
+        this.OcrResult = OcrResult;
+    }
+
     public Template() {
     }
 
@@ -557,6 +585,9 @@ public class Template extends AbstractModel{
         if (source.OcrText != null) {
             this.OcrText = new String(source.OcrText);
         }
+        if (source.OcrResult != null) {
+            this.OcrResult = new String(source.OcrResult);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class Template extends AbstractModel{
         this.setParamObj(map, prefix + "Prescription.", this.Prescription);
         this.setParamObj(map, prefix + "VaccineCertificate.", this.VaccineCertificate);
         this.setParamSimple(map, prefix + "OcrText", this.OcrText);
+        this.setParamSimple(map, prefix + "OcrResult", this.OcrResult);
 
     }
 }

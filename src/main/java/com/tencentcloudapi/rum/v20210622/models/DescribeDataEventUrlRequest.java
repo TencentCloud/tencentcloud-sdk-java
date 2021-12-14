@@ -170,6 +170,13 @@ public class DescribeDataEventUrlRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 环境
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -505,6 +512,22 @@ public class DescribeDataEventUrlRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 环境 
+     * @return Env 环境
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 环境
+     * @param Env 环境
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
     public DescribeDataEventUrlRequest() {
     }
 
@@ -576,6 +599,9 @@ public class DescribeDataEventUrlRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
     }
 
 
@@ -604,6 +630,7 @@ public class DescribeDataEventUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "Browser", this.Browser);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Env", this.Env);
 
     }
 }

@@ -170,6 +170,13 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
     private String CostType;
 
     /**
+    * 环境变量
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
      * Get 项目ID 
      * @return ID 项目ID
      */
@@ -505,6 +512,22 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
         this.CostType = CostType;
     }
 
+    /**
+     * Get 环境变量 
+     * @return Env 环境变量
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 环境变量
+     * @param Env 环境变量
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
     public DescribeDataPerformancePageRequest() {
     }
 
@@ -576,6 +599,9 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
         if (source.CostType != null) {
             this.CostType = new String(source.CostType);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
     }
 
 
@@ -604,6 +630,7 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Brand", this.Brand);
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "CostType", this.CostType);
+        this.setParamSimple(map, prefix + "Env", this.Env);
 
     }
 }

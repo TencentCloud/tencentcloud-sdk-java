@@ -458,6 +458,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *此接口用于查询伸缩组配置建议。
+     * @param req DescribeAutoScalingAdvicesRequest
+     * @return DescribeAutoScalingAdvicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScalingAdvicesResponse DescribeAutoScalingAdvices(DescribeAutoScalingAdvicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoScalingAdvices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeAutoScalingGroupLastActivities）用于查询伸缩组的最新一次伸缩活动记录。
      * @param req DescribeAutoScalingGroupLastActivitiesRequest
      * @return DescribeAutoScalingGroupLastActivitiesResponse

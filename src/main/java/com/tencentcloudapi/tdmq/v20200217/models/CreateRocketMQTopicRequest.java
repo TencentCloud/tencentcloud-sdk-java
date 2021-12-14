@@ -37,7 +37,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
     private String [] Namespaces;
 
     /**
-    * 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction
+    * 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
     */
     @SerializedName("Type")
     @Expose
@@ -56,6 +56,13 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * 分区数，全局顺序无效
+    */
+    @SerializedName("PartitionNum")
+    @Expose
+    private Long PartitionNum;
 
     /**
      * Get 主题名称，3-64个字符，只能包含字母、数字、“-”及“_” 
@@ -90,16 +97,16 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction 
-     * @return Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction
+     * Get 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder 
+     * @return Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction
-     * @param Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction
+     * Set 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
+     * @param Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -137,6 +144,22 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 分区数，全局顺序无效 
+     * @return PartitionNum 分区数，全局顺序无效
+     */
+    public Long getPartitionNum() {
+        return this.PartitionNum;
+    }
+
+    /**
+     * Set 分区数，全局顺序无效
+     * @param PartitionNum 分区数，全局顺序无效
+     */
+    public void setPartitionNum(Long PartitionNum) {
+        this.PartitionNum = PartitionNum;
+    }
+
     public CreateRocketMQTopicRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PartitionNum != null) {
+            this.PartitionNum = new Long(source.PartitionNum);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
 
     }
 }
