@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InsuranceResult extends AbstractModel{
 
     /**
-    * 险种
+    * 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
     */
     @SerializedName("InsuranceType")
     @Expose
@@ -37,16 +37,16 @@ public class InsuranceResult extends AbstractModel{
     private MachinePredict [] Result;
 
     /**
-     * Get 险种 
-     * @return InsuranceType 险种
+     * Get 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险) 
+     * @return InsuranceType 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
      */
     public String getInsuranceType() {
         return this.InsuranceType;
     }
 
     /**
-     * Set 险种
-     * @param InsuranceType 险种
+     * Set 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
+     * @param InsuranceType 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
      */
     public void setInsuranceType(String InsuranceType) {
         this.InsuranceType = InsuranceType;

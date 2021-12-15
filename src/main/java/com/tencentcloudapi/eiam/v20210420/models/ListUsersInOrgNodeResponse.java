@@ -55,6 +55,22 @@ public class ListUsersInOrgNodeResponse extends AbstractModel{
     private Long TotalUserNum;
 
     /**
+    * 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrgNodeIdPath")
+    @Expose
+    private String OrgNodeIdPath;
+
+    /**
+    * 组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrgNodeNamePath")
+    @Expose
+    private String OrgNodeNamePath;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -142,6 +158,46 @@ public class ListUsersInOrgNodeResponse extends AbstractModel{
     }
 
     /**
+     * Get 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrgNodeIdPath 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrgNodeIdPath() {
+        return this.OrgNodeIdPath;
+    }
+
+    /**
+     * Set 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrgNodeIdPath 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrgNodeIdPath(String OrgNodeIdPath) {
+        this.OrgNodeIdPath = OrgNodeIdPath;
+    }
+
+    /**
+     * Get 组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrgNodeNamePath 组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrgNodeNamePath() {
+        return this.OrgNodeNamePath;
+    }
+
+    /**
+     * Set 组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrgNodeNamePath 组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrgNodeNamePath(String OrgNodeNamePath) {
+        this.OrgNodeNamePath = OrgNodeNamePath;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -183,6 +239,12 @@ public class ListUsersInOrgNodeResponse extends AbstractModel{
         if (source.TotalUserNum != null) {
             this.TotalUserNum = new Long(source.TotalUserNum);
         }
+        if (source.OrgNodeIdPath != null) {
+            this.OrgNodeIdPath = new String(source.OrgNodeIdPath);
+        }
+        if (source.OrgNodeNamePath != null) {
+            this.OrgNodeNamePath = new String(source.OrgNodeNamePath);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -197,6 +259,8 @@ public class ListUsersInOrgNodeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
         this.setParamArrayObj(map, prefix + "UserInfo.", this.UserInfo);
         this.setParamSimple(map, prefix + "TotalUserNum", this.TotalUserNum);
+        this.setParamSimple(map, prefix + "OrgNodeIdPath", this.OrgNodeIdPath);
+        this.setParamSimple(map, prefix + "OrgNodeNamePath", this.OrgNodeNamePath);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

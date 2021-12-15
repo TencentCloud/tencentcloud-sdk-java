@@ -87,6 +87,14 @@ public class DescribeOrgNodeResponse extends AbstractModel{
     private OrgNodeChildInfo [] OrgNodeChildInfo;
 
     /**
+    * 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -254,6 +262,26 @@ public class DescribeOrgNodeResponse extends AbstractModel{
     }
 
     /**
+     * Get 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -304,6 +332,9 @@ public class DescribeOrgNodeResponse extends AbstractModel{
                 this.OrgNodeChildInfo[i] = new OrgNodeChildInfo(source.OrgNodeChildInfo[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -322,6 +353,7 @@ public class DescribeOrgNodeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
         this.setParamArrayObj(map, prefix + "OrgNodeChildInfo.", this.OrgNodeChildInfo);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

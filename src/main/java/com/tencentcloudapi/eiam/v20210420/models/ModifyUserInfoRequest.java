@@ -93,6 +93,13 @@ public class ModifyUserInfoRequest extends AbstractModel{
     private Boolean PwdNeedReset;
 
     /**
+    * 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+    */
+    @SerializedName("OrgNodeId")
+    @Expose
+    private String OrgNodeId;
+
+    /**
      * Get 用户名，长度限制：32个字符。 Username 和 UserId 需选择一个作为搜索条件；如两个条件同时使用则默认使用Username作为搜索条件。 
      * @return UserName 用户名，长度限制：32个字符。 Username 和 UserId 需选择一个作为搜索条件；如两个条件同时使用则默认使用Username作为搜索条件。
      */
@@ -252,6 +259,22 @@ public class ModifyUserInfoRequest extends AbstractModel{
         this.PwdNeedReset = PwdNeedReset;
     }
 
+    /**
+     * Get 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。 
+     * @return OrgNodeId 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     */
+    public String getOrgNodeId() {
+        return this.OrgNodeId;
+    }
+
+    /**
+     * Set 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     * @param OrgNodeId 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     */
+    public void setOrgNodeId(String OrgNodeId) {
+        this.OrgNodeId = OrgNodeId;
+    }
+
     public ModifyUserInfoRequest() {
     }
 
@@ -293,6 +316,9 @@ public class ModifyUserInfoRequest extends AbstractModel{
         if (source.PwdNeedReset != null) {
             this.PwdNeedReset = new Boolean(source.PwdNeedReset);
         }
+        if (source.OrgNodeId != null) {
+            this.OrgNodeId = new String(source.OrgNodeId);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class ModifyUserInfoRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
+        this.setParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
 
     }
 }

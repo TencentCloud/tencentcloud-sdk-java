@@ -30,6 +30,34 @@ public class ListUserGroupsOfUserRequest extends AbstractModel{
     private String UserId;
 
     /**
+    * 模糊查询条件，支持匹配用户组名称（DisplayName）。如果该字段为空，则默认展示该用户所有的用户组。
+    */
+    @SerializedName("SearchCondition")
+    @Expose
+    private UserGroupInformationSearchCriteria SearchCondition;
+
+    /**
+    * 排序条件集合。可排序的属性支持：用户组名称（DisplayName）、用户组ID（UserGroupId）、创建时间（CreatedDate）。如果该字段为空，则默认按照用户组名称正向排序。
+    */
+    @SerializedName("Sort")
+    @Expose
+    private SortCondition Sort;
+
+    /**
+    * 分页偏移量，默认为0。Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页读取数量，默认为50，最大值为100。 Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get 用户ID，是用户的全局唯一标识。 
      * @return UserId 用户ID，是用户的全局唯一标识。
      */
@@ -45,6 +73,70 @@ public class ListUserGroupsOfUserRequest extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 模糊查询条件，支持匹配用户组名称（DisplayName）。如果该字段为空，则默认展示该用户所有的用户组。 
+     * @return SearchCondition 模糊查询条件，支持匹配用户组名称（DisplayName）。如果该字段为空，则默认展示该用户所有的用户组。
+     */
+    public UserGroupInformationSearchCriteria getSearchCondition() {
+        return this.SearchCondition;
+    }
+
+    /**
+     * Set 模糊查询条件，支持匹配用户组名称（DisplayName）。如果该字段为空，则默认展示该用户所有的用户组。
+     * @param SearchCondition 模糊查询条件，支持匹配用户组名称（DisplayName）。如果该字段为空，则默认展示该用户所有的用户组。
+     */
+    public void setSearchCondition(UserGroupInformationSearchCriteria SearchCondition) {
+        this.SearchCondition = SearchCondition;
+    }
+
+    /**
+     * Get 排序条件集合。可排序的属性支持：用户组名称（DisplayName）、用户组ID（UserGroupId）、创建时间（CreatedDate）。如果该字段为空，则默认按照用户组名称正向排序。 
+     * @return Sort 排序条件集合。可排序的属性支持：用户组名称（DisplayName）、用户组ID（UserGroupId）、创建时间（CreatedDate）。如果该字段为空，则默认按照用户组名称正向排序。
+     */
+    public SortCondition getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序条件集合。可排序的属性支持：用户组名称（DisplayName）、用户组ID（UserGroupId）、创建时间（CreatedDate）。如果该字段为空，则默认按照用户组名称正向排序。
+     * @param Sort 排序条件集合。可排序的属性支持：用户组名称（DisplayName）、用户组ID（UserGroupId）、创建时间（CreatedDate）。如果该字段为空，则默认按照用户组名称正向排序。
+     */
+    public void setSort(SortCondition Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
+     * Get 分页偏移量，默认为0。Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。 
+     * @return Offset 分页偏移量，默认为0。Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量，默认为0。Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+     * @param Offset 分页偏移量，默认为0。Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页读取数量，默认为50，最大值为100。 Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。 
+     * @return Limit 分页读取数量，默认为50，最大值为100。 Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页读取数量，默认为50，最大值为100。 Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+     * @param Limit 分页读取数量，默认为50，最大值为100。 Offset 和 Limit 两个字段需配合使用，即其中一个指定了，另一个必须指定。 如果不指定以上参数，则表示不进行分页查询，即只返回最多50个用户组。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public ListUserGroupsOfUserRequest() {
     }
 
@@ -56,6 +148,18 @@ public class ListUserGroupsOfUserRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.SearchCondition != null) {
+            this.SearchCondition = new UserGroupInformationSearchCriteria(source.SearchCondition);
+        }
+        if (source.Sort != null) {
+            this.Sort = new SortCondition(source.Sort);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -64,6 +168,10 @@ public class ListUserGroupsOfUserRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

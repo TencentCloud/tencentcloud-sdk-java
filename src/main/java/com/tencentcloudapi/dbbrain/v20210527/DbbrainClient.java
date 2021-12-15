@@ -239,6 +239,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取指定时间段内的诊断事件列表，支持依据风险等级、实例ID等条件过滤。
+     * @param req DescribeDBDiagEventsRequest
+     * @return DescribeDBDiagEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBDiagEventsResponse DescribeDBDiagEvents(DescribeDBDiagEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBDiagEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBDiagEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBDiagEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取实例诊断事件的列表。
      * @param req DescribeDBDiagHistoryRequest
      * @return DescribeDBDiagHistoryResponse

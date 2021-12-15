@@ -39,6 +39,22 @@ public class ListUserGroupsOfUserResponse extends AbstractModel{
     private String UserId;
 
     /**
+    * 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserGroupInfoList")
+    @Expose
+    private UserGroupInfo [] UserGroupInfoList;
+
+    /**
+    * 返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +102,46 @@ public class ListUserGroupsOfUserResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserGroupInfoList 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserGroupInfo [] getUserGroupInfoList() {
+        return this.UserGroupInfoList;
+    }
+
+    /**
+     * Set 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserGroupInfoList 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserGroupInfoList(UserGroupInfo [] UserGroupInfoList) {
+        this.UserGroupInfoList = UserGroupInfoList;
+    }
+
+    /**
+     * Get 返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -118,6 +174,15 @@ public class ListUserGroupsOfUserResponse extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.UserGroupInfoList != null) {
+            this.UserGroupInfoList = new UserGroupInfo[source.UserGroupInfoList.length];
+            for (int i = 0; i < source.UserGroupInfoList.length; i++) {
+                this.UserGroupInfoList[i] = new UserGroupInfo(source.UserGroupInfoList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -130,6 +195,8 @@ public class ListUserGroupsOfUserResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "UserGroupIds.", this.UserGroupIds);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamArrayObj(map, prefix + "UserGroupInfoList.", this.UserGroupInfoList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

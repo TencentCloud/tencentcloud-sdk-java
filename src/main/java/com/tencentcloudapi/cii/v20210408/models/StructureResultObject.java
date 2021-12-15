@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class StructureResultObject extends AbstractModel{
 
     /**
-    * 0表示正常返回
+    * 0表示正常返回；1代表结果未生成；2代表任务执行失败
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 报告类型
+    * 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
     */
     @SerializedName("TaskType")
     @Expose
@@ -51,32 +51,32 @@ public class StructureResultObject extends AbstractModel{
     private String SubTaskId;
 
     /**
-     * Get 0表示正常返回 
-     * @return Code 0表示正常返回
+     * Get 0表示正常返回；1代表结果未生成；2代表任务执行失败 
+     * @return Code 0表示正常返回；1代表结果未生成；2代表任务执行失败
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 0表示正常返回
-     * @param Code 0表示正常返回
+     * Set 0表示正常返回；1代表结果未生成；2代表任务执行失败
+     * @param Code 0表示正常返回；1代表结果未生成；2代表任务执行失败
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 报告类型 
-     * @return TaskType 报告类型
+     * Get 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历) 
+     * @return TaskType 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 报告类型
-     * @param TaskType 报告类型
+     * Set 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
+     * @param TaskType 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

@@ -119,6 +119,14 @@ public class DescribeUserInfoResponse extends AbstractModel{
     private String ActivationTime;
 
     /**
+    * 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PwdNeedReset")
+    @Expose
+    private Boolean PwdNeedReset;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -366,6 +374,26 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PwdNeedReset 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPwdNeedReset() {
+        return this.PwdNeedReset;
+    }
+
+    /**
+     * Set 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PwdNeedReset 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPwdNeedReset(Boolean PwdNeedReset) {
+        this.PwdNeedReset = PwdNeedReset;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -428,6 +456,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
         if (source.ActivationTime != null) {
             this.ActivationTime = new String(source.ActivationTime);
         }
+        if (source.PwdNeedReset != null) {
+            this.PwdNeedReset = new Boolean(source.PwdNeedReset);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -450,6 +481,7 @@ public class DescribeUserInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
         this.setParamSimple(map, prefix + "ActivationTime", this.ActivationTime);
+        this.setParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,6 +30,13 @@ public class StorageOption extends AbstractModel{
     private CFSOption [] CFSOptions;
 
     /**
+    * 集群挂在GooseFS文件系统选项
+    */
+    @SerializedName("GooseFSOptions")
+    @Expose
+    private GooseFSOption [] GooseFSOptions;
+
+    /**
      * Get 集群挂载CFS文件系统选项 
      * @return CFSOptions 集群挂载CFS文件系统选项
      */
@@ -43,6 +50,22 @@ public class StorageOption extends AbstractModel{
      */
     public void setCFSOptions(CFSOption [] CFSOptions) {
         this.CFSOptions = CFSOptions;
+    }
+
+    /**
+     * Get 集群挂在GooseFS文件系统选项 
+     * @return GooseFSOptions 集群挂在GooseFS文件系统选项
+     */
+    public GooseFSOption [] getGooseFSOptions() {
+        return this.GooseFSOptions;
+    }
+
+    /**
+     * Set 集群挂在GooseFS文件系统选项
+     * @param GooseFSOptions 集群挂在GooseFS文件系统选项
+     */
+    public void setGooseFSOptions(GooseFSOption [] GooseFSOptions) {
+        this.GooseFSOptions = GooseFSOptions;
     }
 
     public StorageOption() {
@@ -59,6 +82,12 @@ public class StorageOption extends AbstractModel{
                 this.CFSOptions[i] = new CFSOption(source.CFSOptions[i]);
             }
         }
+        if (source.GooseFSOptions != null) {
+            this.GooseFSOptions = new GooseFSOption[source.GooseFSOptions.length];
+            for (int i = 0; i < source.GooseFSOptions.length; i++) {
+                this.GooseFSOptions[i] = new GooseFSOption(source.GooseFSOptions[i]);
+            }
+        }
     }
 
 
@@ -67,6 +96,7 @@ public class StorageOption extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CFSOptions.", this.CFSOptions);
+        this.setParamArrayObj(map, prefix + "GooseFSOptions.", this.GooseFSOptions);
 
     }
 }

@@ -139,6 +139,46 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *创建直播频道
+     * @param req CreateLiveChannelRequest
+     * @return CreateLiveChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveChannelResponse CreateLiveChannel(CreateLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建直播录制计划
+     * @param req CreateLiveRecordPlanRequest
+     * @return CreateLiveRecordPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveRecordPlanResponse CreateLiveRecordPlan(CreateLiveRecordPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveRecordPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveRecordPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLiveRecordPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
      * @param req CreateRecordPlanRequest
      * @return CreateRecordPlanResponse
@@ -159,6 +199,26 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *创建场景
+     * @param req CreateSceneRequest
+     * @return CreateSceneResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSceneResponse CreateScene(CreateSceneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSceneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSceneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScene");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateTimeTemplate) 用于根据模板描述的具体录制时间片段，创建定制化的时间模板。
      * @param req CreateTimeTemplateRequest
      * @return CreateTimeTemplateResponse
@@ -171,6 +231,26 @@ public class IotvideoindustryClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTimeTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTimeTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除通道接口
+     * @param req DeleteChannelRequest
+     * @return DeleteChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteChannelResponse DeleteChannel(DeleteChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -219,6 +299,66 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *删除直播接口
+     * @param req DeleteLiveChannelRequest
+     * @return DeleteLiveChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveChannelResponse DeleteLiveChannel(DeleteLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除直播录制计划
+     * @param req DeleteLiveRecordPlanRequest
+     * @return DeleteLiveRecordPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveRecordPlanResponse DeleteLiveRecordPlan(DeleteLiveRecordPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveRecordPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLiveRecordPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播录像删除
+     * @param req DeleteLiveVideoListRequest
+     * @return DeleteLiveVideoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveVideoListResponse DeleteLiveVideoList(DeleteLiveVideoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveVideoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveVideoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLiveVideoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteRecordPlan)用于删除录制计划
 录制计划删除的同时，会停止该录制计划下的全部录制任务。
      * @param req DeleteRecordPlanRequest
@@ -232,6 +372,26 @@ public class IotvideoindustryClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordPlanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRecordPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除场景
+     * @param req DeleteSceneRequest
+     * @return DeleteSceneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSceneResponse DeleteScene(DeleteSceneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSceneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSceneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteScene");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -260,6 +420,26 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *删除录像存储列表
+     * @param req DeleteVideoListRequest
+     * @return DeleteVideoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVideoListResponse DeleteVideoList(DeleteVideoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVideoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVideoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVideoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeAllDeviceList) 用于获取设备列表。
      * @param req DescribeAllDeviceListRequest
      * @return DescribeAllDeviceListResponse
@@ -272,6 +452,46 @@ public class IotvideoindustryClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAllDeviceListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAllDeviceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取场景绑定设备列表
+     * @param req DescribeBindSceneDevicesRequest
+     * @return DescribeBindSceneDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBindSceneDevicesResponse DescribeBindSceneDevices(DescribeBindSceneDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBindSceneDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBindSceneDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBindSceneDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据直播录制计划获取频道列表
+     * @param req DescribeChannelsByLiveRecordPlanRequest
+     * @return DescribeChannelsByLiveRecordPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelsByLiveRecordPlanResponse DescribeChannelsByLiveRecordPlan(DescribeChannelsByLiveRecordPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChannelsByLiveRecordPlan");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -440,6 +660,146 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *直播详情接口
+     * @param req DescribeLiveChannelRequest
+     * @return DescribeLiveChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveChannelResponse DescribeLiveChannel(DescribeLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播列表接口
+     * @param req DescribeLiveChannelListRequest
+     * @return DescribeLiveChannelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveChannelListResponse DescribeLiveChannelList(DescribeLiveChannelListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveChannelListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveChannelListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveChannelList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取直播录制计划详情
+     * @param req DescribeLiveRecordPlanByIdRequest
+     * @return DescribeLiveRecordPlanByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveRecordPlanByIdResponse DescribeLiveRecordPlanById(DescribeLiveRecordPlanByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveRecordPlanByIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordPlanByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveRecordPlanById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取直播录制计划列表
+     * @param req DescribeLiveRecordPlanIdsRequest
+     * @return DescribeLiveRecordPlanIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveRecordPlanIdsResponse DescribeLiveRecordPlanIds(DescribeLiveRecordPlanIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveRecordPlanIdsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordPlanIdsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveRecordPlanIds");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播拉流接口
+     * @param req DescribeLiveStreamRequest
+     * @return DescribeLiveStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamResponse DescribeLiveStream(DescribeLiveStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播录像回放列表
+     * @param req DescribeLiveVideoListRequest
+     * @return DescribeLiveVideoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveVideoListResponse DescribeLiveVideoList(DescribeLiveVideoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveVideoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveVideoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveVideoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播录像存储日期列表
+     * @param req DescribeRecordDatesByLiveRequest
+     * @return DescribeRecordDatesByLiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordDatesByLiveResponse DescribeRecordDatesByLive(DescribeRecordDatesByLiveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordDatesByLiveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordDatesByLiveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordDatesByLive");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取回放视频流(NVR录制用)
 RecordId和StartTime/EndTime互斥
 当存在RecordId时，StartTime和EndTime无效
@@ -475,6 +835,26 @@ RecordId和StartTime/EndTime互斥
                 Type type = new TypeToken<JsonResponseModel<DescribeSIPServerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSIPServer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取场景列表
+     * @param req DescribeScenesRequest
+     * @return DescribeScenesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScenesResponse DescribeScenes(DescribeScenesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScenesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScenesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScenes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -535,6 +915,26 @@ RecordId和StartTime/EndTime互斥
                 Type type = new TypeToken<JsonResponseModel<DescribeSubGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSubGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询主设备订阅状态
+     * @param req DescribeSubscriptionStatusRequest
+     * @return DescribeSubscriptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscriptionStatusResponse DescribeSubscriptionStatus(DescribeSubscriptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubscriptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubscriptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubscriptionStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -703,6 +1103,26 @@ RecordId和StartTime/EndTime互斥
     }
 
     /**
+     *直播录制计划绑定解绑直播频道
+     * @param req ModifyBindPlanLiveChannelRequest
+     * @return ModifyBindPlanLiveChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBindPlanLiveChannelResponse ModifyBindPlanLiveChannel(ModifyBindPlanLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBindPlanLiveChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBindPlanLiveChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBindPlanLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyDeviceData)用于编辑设备信息。
      * @param req ModifyDeviceDataRequest
      * @return ModifyDeviceDataResponse
@@ -715,6 +1135,106 @@ RecordId和StartTime/EndTime互斥
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDeviceData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑直播接口
+     * @param req ModifyLiveChannelRequest
+     * @return ModifyLiveChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveChannelResponse ModifyLiveChannel(ModifyLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑直播录制计划
+     * @param req ModifyLiveRecordPlanRequest
+     * @return ModifyLiveRecordPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveRecordPlanResponse ModifyLiveRecordPlan(ModifyLiveRecordPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveRecordPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveRecordPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播录像编辑
+     * @param req ModifyLiveVideoRequest
+     * @return ModifyLiveVideoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveVideoResponse ModifyLiveVideo(ModifyLiveVideoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveVideoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveVideoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveVideo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑设备订阅状态
+     * @param req ModifySubscriptionStatusRequest
+     * @return ModifySubscriptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscriptionStatusResponse ModifySubscriptionStatus(ModifySubscriptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscriptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscriptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySubscriptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改录像存储列表
+     * @param req ModifyVideoInfoRequest
+     * @return ModifyVideoInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVideoInfoResponse ModifyVideoInfo(ModifyVideoInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVideoInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVideoInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVideoInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

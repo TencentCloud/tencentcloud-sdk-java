@@ -80,6 +80,18 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     private Long PageSize;
 
     /**
+    * 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FluxPackageBillMode")
+    @Expose
+    private String FluxPackageBillMode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -243,6 +255,42 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFluxPackageBillMode() {
+        return this.FluxPackageBillMode;
+    }
+
+    /**
+     * Set 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFluxPackageBillMode(String FluxPackageBillMode) {
+        this.FluxPackageBillMode = FluxPackageBillMode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -287,6 +335,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.FluxPackageBillMode != null) {
+            this.FluxPackageBillMode = new String(source.FluxPackageBillMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -303,6 +354,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "FluxPackageBillMode", this.FluxPackageBillMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

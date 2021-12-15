@@ -79,6 +79,14 @@ public class OrgNodeChildInfo extends AbstractModel{
     private String CreatedDate;
 
     /**
+    * 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 机构节点展示名称，长度限制：64个字符。 默认与机构名相同。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DisplayName 机构节点展示名称，长度限制：64个字符。 默认与机构名相同。
@@ -218,6 +226,26 @@ public class OrgNodeChildInfo extends AbstractModel{
         this.CreatedDate = CreatedDate;
     }
 
+    /**
+     * Get 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public OrgNodeChildInfo() {
     }
 
@@ -247,6 +275,9 @@ public class OrgNodeChildInfo extends AbstractModel{
         if (source.CreatedDate != null) {
             this.CreatedDate = new String(source.CreatedDate);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class OrgNodeChildInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

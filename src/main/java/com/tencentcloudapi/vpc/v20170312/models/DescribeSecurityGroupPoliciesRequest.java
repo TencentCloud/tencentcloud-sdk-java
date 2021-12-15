@@ -30,6 +30,22 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
     private String SecurityGroupId;
 
     /**
+    * 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
+<li>security-group-id - String - 安全组ID。</li>
+<li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
+<li>address-module - String - IP地址模板或IP地址组模板ID。</li>
+<li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
+<li>protocol-type - String - 安全组策略支持的协议，可选值：`TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`。</li>
+<li>port - String - 是否必填：否 -协议端口，支持模糊匹配，值为`ALL`时，查询所有的端口。</li>
+<li>poly - String - 协议策略，可选值：`ALL`，所有策略；`ACCEPT`，允许；`DROP`，拒绝。</li>
+<li>direction - String - 协议规则，可选值：`ALL`，所有策略；`INBOUND`，入站规则；`OUTBOUND`，出站规则。</li>
+<li>description - String - 协议描述，该过滤条件支持模糊匹配。</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
      * @return SecurityGroupId 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
@@ -45,6 +61,58 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
         this.SecurityGroupId = SecurityGroupId;
     }
 
+    /**
+     * Get 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
+<li>security-group-id - String - 安全组ID。</li>
+<li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
+<li>address-module - String - IP地址模板或IP地址组模板ID。</li>
+<li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
+<li>protocol-type - String - 安全组策略支持的协议，可选值：`TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`。</li>
+<li>port - String - 是否必填：否 -协议端口，支持模糊匹配，值为`ALL`时，查询所有的端口。</li>
+<li>poly - String - 协议策略，可选值：`ALL`，所有策略；`ACCEPT`，允许；`DROP`，拒绝。</li>
+<li>direction - String - 协议规则，可选值：`ALL`，所有策略；`INBOUND`，入站规则；`OUTBOUND`，出站规则。</li>
+<li>description - String - 协议描述，该过滤条件支持模糊匹配。</li> 
+     * @return Filters 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
+<li>security-group-id - String - 安全组ID。</li>
+<li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
+<li>address-module - String - IP地址模板或IP地址组模板ID。</li>
+<li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
+<li>protocol-type - String - 安全组策略支持的协议，可选值：`TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`。</li>
+<li>port - String - 是否必填：否 -协议端口，支持模糊匹配，值为`ALL`时，查询所有的端口。</li>
+<li>poly - String - 协议策略，可选值：`ALL`，所有策略；`ACCEPT`，允许；`DROP`，拒绝。</li>
+<li>direction - String - 协议规则，可选值：`ALL`，所有策略；`INBOUND`，入站规则；`OUTBOUND`，出站规则。</li>
+<li>description - String - 协议描述，该过滤条件支持模糊匹配。</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
+<li>security-group-id - String - 安全组ID。</li>
+<li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
+<li>address-module - String - IP地址模板或IP地址组模板ID。</li>
+<li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
+<li>protocol-type - String - 安全组策略支持的协议，可选值：`TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`。</li>
+<li>port - String - 是否必填：否 -协议端口，支持模糊匹配，值为`ALL`时，查询所有的端口。</li>
+<li>poly - String - 协议策略，可选值：`ALL`，所有策略；`ACCEPT`，允许；`DROP`，拒绝。</li>
+<li>direction - String - 协议规则，可选值：`ALL`，所有策略；`INBOUND`，入站规则；`OUTBOUND`，出站规则。</li>
+<li>description - String - 协议描述，该过滤条件支持模糊匹配。</li>
+     * @param Filters 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
+<li>security-group-id - String - 安全组ID。</li>
+<li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
+<li>address-module - String - IP地址模板或IP地址组模板ID。</li>
+<li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
+<li>protocol-type - String - 安全组策略支持的协议，可选值：`TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`。</li>
+<li>port - String - 是否必填：否 -协议端口，支持模糊匹配，值为`ALL`时，查询所有的端口。</li>
+<li>poly - String - 协议策略，可选值：`ALL`，所有策略；`ACCEPT`，允许；`DROP`，拒绝。</li>
+<li>direction - String - 协议规则，可选值：`ALL`，所有策略；`INBOUND`，入站规则；`OUTBOUND`，出站规则。</li>
+<li>description - String - 协议描述，该过滤条件支持模糊匹配。</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeSecurityGroupPoliciesRequest() {
     }
 
@@ -56,6 +124,12 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
         if (source.SecurityGroupId != null) {
             this.SecurityGroupId = new String(source.SecurityGroupId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -64,6 +138,7 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

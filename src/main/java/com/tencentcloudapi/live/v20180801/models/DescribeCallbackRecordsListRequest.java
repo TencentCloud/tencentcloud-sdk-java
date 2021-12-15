@@ -61,7 +61,8 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
     * 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
     */
     @SerializedName("EventType")
     @Expose
@@ -159,11 +160,13 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
      * Get 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。 
+100: "录制"
+200: "截图回调"。 
      * @return EventType 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
      */
     public Long getEventType() {
         return this.EventType;
@@ -173,11 +176,13 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
      * Set 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
      * @param EventType 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
      */
     public void setEventType(Long EventType) {
         this.EventType = EventType;

@@ -47,6 +47,22 @@ public class ApplicationAuthorizationInfo extends AbstractModel{
     private InheritedForm InheritedForm;
 
     /**
+    * 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
+    * 应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedDate")
+    @Expose
+    private String CreatedDate;
+
+    /**
      * Get 用户在被授权应用下对应的账号列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationAccounts 用户在被授权应用下对应的账号列表
@@ -106,6 +122,46 @@ public class ApplicationAuthorizationInfo extends AbstractModel{
         this.InheritedForm = InheritedForm;
     }
 
+    /**
+     * Get 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
+    /**
+     * Get 应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedDate 应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedDate() {
+        return this.CreatedDate;
+    }
+
+    /**
+     * Set 应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedDate 应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedDate(String CreatedDate) {
+        this.CreatedDate = CreatedDate;
+    }
+
     public ApplicationAuthorizationInfo() {
     }
 
@@ -126,6 +182,12 @@ public class ApplicationAuthorizationInfo extends AbstractModel{
         if (source.InheritedForm != null) {
             this.InheritedForm = new InheritedForm(source.InheritedForm);
         }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.CreatedDate != null) {
+            this.CreatedDate = new String(source.CreatedDate);
+        }
     }
 
 
@@ -136,6 +198,8 @@ public class ApplicationAuthorizationInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ApplicationAccounts.", this.ApplicationAccounts);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamObj(map, prefix + "InheritedForm.", this.InheritedForm);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+        this.setParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
 
     }
 }

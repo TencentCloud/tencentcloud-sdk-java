@@ -99,6 +99,13 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private Long FilterDamDDoSStatus;
 
     /**
+    * 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+    */
+    @SerializedName("FilterStatus")
+    @Expose
+    private String FilterStatus;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -282,6 +289,22 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterDamDDoSStatus = FilterDamDDoSStatus;
     }
 
+    /**
+     * Get 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking 
+     * @return FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     */
+    public String getFilterStatus() {
+        return this.FilterStatus;
+    }
+
+    /**
+     * Set 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     * @param FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     */
+    public void setFilterStatus(String FilterStatus) {
+        this.FilterStatus = FilterStatus;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -323,6 +346,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         if (source.FilterDamDDoSStatus != null) {
             this.FilterDamDDoSStatus = new Long(source.FilterDamDDoSStatus);
         }
+        if (source.FilterStatus != null) {
+            this.FilterStatus = new String(source.FilterStatus);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterEipType", this.FilterEipType);
         this.setParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
         this.setParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
+        this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
 
     }
 }
