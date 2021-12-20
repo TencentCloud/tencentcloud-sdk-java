@@ -44,7 +44,7 @@ public class CFSOption extends AbstractModel{
     private String Protocol;
 
     /**
-    * 文件系统存储类型，默认值SD
+    * 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
     */
     @SerializedName("StorageType")
     @Expose
@@ -99,16 +99,16 @@ public class CFSOption extends AbstractModel{
     }
 
     /**
-     * Get 文件系统存储类型，默认值SD 
-     * @return StorageType 文件系统存储类型，默认值SD
+     * Get 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。 
+     * @return StorageType 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 文件系统存储类型，默认值SD
-     * @param StorageType 文件系统存储类型，默认值SD
+     * Set 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+     * @param StorageType 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

@@ -220,6 +220,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *使用一闪SDK生成的数据包检测活体，并和用户传入的图片进行比对。
+     * @param req DetectReflectLivenessAndCompareRequest
+     * @return DetectReflectLivenessAndCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetectReflectLivenessAndCompare");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
      * @param req EncryptedPhoneVerificationRequest
      * @return EncryptedPhoneVerificationResponse

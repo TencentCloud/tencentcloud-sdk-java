@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DatabaseInfo extends AbstractModel{
 
     /**
-    * 数据库名称。
+    * 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 数据库描述信息，长度 0~256。
+    * 数据库描述信息，长度 0~500。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
@@ -46,25 +46,33 @@ public class DatabaseInfo extends AbstractModel{
     private Property [] Properties;
 
     /**
-     * Get 数据库名称。 
-     * @return DatabaseName 数据库名称。
+    * 数据库cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+     * Get 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。 
+     * @return DatabaseName 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 数据库名称。
-     * @param DatabaseName 数据库名称。
+     * Set 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。
+     * @param DatabaseName 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 数据库描述信息，长度 0~256。
+     * Get 数据库描述信息，长度 0~500。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comment 数据库描述信息，长度 0~256。
+     * @return Comment 数据库描述信息，长度 0~500。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
@@ -72,9 +80,9 @@ public class DatabaseInfo extends AbstractModel{
     }
 
     /**
-     * Set 数据库描述信息，长度 0~256。
+     * Set 数据库描述信息，长度 0~500。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comment 数据库描述信息，长度 0~256。
+     * @param Comment 数据库描述信息，长度 0~500。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
@@ -101,6 +109,26 @@ public class DatabaseInfo extends AbstractModel{
         this.Properties = Properties;
     }
 
+    /**
+     * Get 数据库cos路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Location 数据库cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 数据库cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Location 数据库cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
     public DatabaseInfo() {
     }
 
@@ -121,6 +149,9 @@ public class DatabaseInfo extends AbstractModel{
                 this.Properties[i] = new Property(source.Properties[i]);
             }
         }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
     }
 
 
@@ -131,6 +162,7 @@ public class DatabaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

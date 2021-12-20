@@ -53,11 +53,46 @@ table-id - String - （过滤条件）table id形如：12342。
     private Filter [] Filters;
 
     /**
-    * 指定查询的数据源名称，默认为CosDataCatalog
+    * 指定查询的数据源名称，默认为DataLakeCatalog
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
     private String DatasourceConnectionName;
+
+    /**
+    * 起始时间：用于对更新时间的筛选
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 终止时间：用于对更新时间的筛选
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 排序字段，支持：ModifiedTime（默认）；CreateTime
+    */
+    @SerializedName("Sort")
+    @Expose
+    private String Sort;
+
+    /**
+    * 排序字段，false：降序（默认）；true
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Boolean Asc;
+
+    /**
+    * table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+    */
+    @SerializedName("TableType")
+    @Expose
+    private String TableType;
 
     /**
      * Get 列出该数据库下所属数据表。 
@@ -132,19 +167,99 @@ table-id - String - （过滤条件）table id形如：12342。
     }
 
     /**
-     * Get 指定查询的数据源名称，默认为CosDataCatalog 
-     * @return DatasourceConnectionName 指定查询的数据源名称，默认为CosDataCatalog
+     * Get 指定查询的数据源名称，默认为DataLakeCatalog 
+     * @return DatasourceConnectionName 指定查询的数据源名称，默认为DataLakeCatalog
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
     }
 
     /**
-     * Set 指定查询的数据源名称，默认为CosDataCatalog
-     * @param DatasourceConnectionName 指定查询的数据源名称，默认为CosDataCatalog
+     * Set 指定查询的数据源名称，默认为DataLakeCatalog
+     * @param DatasourceConnectionName 指定查询的数据源名称，默认为DataLakeCatalog
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
+    /**
+     * Get 起始时间：用于对更新时间的筛选 
+     * @return StartTime 起始时间：用于对更新时间的筛选
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 起始时间：用于对更新时间的筛选
+     * @param StartTime 起始时间：用于对更新时间的筛选
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 终止时间：用于对更新时间的筛选 
+     * @return EndTime 终止时间：用于对更新时间的筛选
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 终止时间：用于对更新时间的筛选
+     * @param EndTime 终止时间：用于对更新时间的筛选
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 排序字段，支持：ModifiedTime（默认）；CreateTime 
+     * @return Sort 排序字段，支持：ModifiedTime（默认）；CreateTime
+     */
+    public String getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序字段，支持：ModifiedTime（默认）；CreateTime
+     * @param Sort 排序字段，支持：ModifiedTime（默认）；CreateTime
+     */
+    public void setSort(String Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
+     * Get 排序字段，false：降序（默认）；true 
+     * @return Asc 排序字段，false：降序（默认）；true
+     */
+    public Boolean getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 排序字段，false：降序（默认）；true
+     * @param Asc 排序字段，false：降序（默认）；true
+     */
+    public void setAsc(Boolean Asc) {
+        this.Asc = Asc;
+    }
+
+    /**
+     * Get table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW 
+     * @return TableType table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+     */
+    public String getTableType() {
+        return this.TableType;
+    }
+
+    /**
+     * Set table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+     * @param TableType table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+     */
+    public void setTableType(String TableType) {
+        this.TableType = TableType;
     }
 
     public DescribeTablesRequest() {
@@ -173,6 +288,21 @@ table-id - String - （过滤条件）table id形如：12342。
         if (source.DatasourceConnectionName != null) {
             this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Boolean(source.Asc);
+        }
+        if (source.TableType != null) {
+            this.TableType = new String(source.TableType);
+        }
     }
 
 
@@ -185,6 +315,11 @@ table-id - String - （过滤条件）table id形如：12342。
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
+        this.setParamSimple(map, prefix + "TableType", this.TableType);
 
     }
 }

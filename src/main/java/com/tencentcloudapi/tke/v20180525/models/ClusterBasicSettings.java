@@ -86,6 +86,13 @@ public class ClusterBasicSettings extends AbstractModel{
     private Boolean NeedWorkSecurityGroup;
 
     /**
+    * 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64 
      * @return ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      */
@@ -229,6 +236,22 @@ public class ClusterBasicSettings extends AbstractModel{
         this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;
     }
 
+    /**
+     * Get 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡 
+     * @return SubnetId 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     * @param SubnetId 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public ClusterBasicSettings() {
     }
 
@@ -267,6 +290,9 @@ public class ClusterBasicSettings extends AbstractModel{
         if (source.NeedWorkSecurityGroup != null) {
             this.NeedWorkSecurityGroup = new Boolean(source.NeedWorkSecurityGroup);
         }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class ClusterBasicSettings extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

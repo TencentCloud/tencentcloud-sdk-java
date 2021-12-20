@@ -44,6 +44,13 @@ public class CreateTaskRequest extends AbstractModel{
     private String DatasourceConnectionName;
 
     /**
+    * 数据引擎名称，不填提交到默认集群
+    */
+    @SerializedName("DataEngineName")
+    @Expose
+    private String DataEngineName;
+
+    /**
      * Get 计算任务，该参数中包含任务类型及其相关配置信息 
      * @return Task 计算任务，该参数中包含任务类型及其相关配置信息
      */
@@ -91,6 +98,22 @@ public class CreateTaskRequest extends AbstractModel{
         this.DatasourceConnectionName = DatasourceConnectionName;
     }
 
+    /**
+     * Get 数据引擎名称，不填提交到默认集群 
+     * @return DataEngineName 数据引擎名称，不填提交到默认集群
+     */
+    public String getDataEngineName() {
+        return this.DataEngineName;
+    }
+
+    /**
+     * Set 数据引擎名称，不填提交到默认集群
+     * @param DataEngineName 数据引擎名称，不填提交到默认集群
+     */
+    public void setDataEngineName(String DataEngineName) {
+        this.DataEngineName = DataEngineName;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateTaskRequest extends AbstractModel{
         if (source.DatasourceConnectionName != null) {
             this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
         }
+        if (source.DataEngineName != null) {
+            this.DataEngineName = new String(source.DataEngineName);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateTaskRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Task.", this.Task);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+        this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
 
     }
 }

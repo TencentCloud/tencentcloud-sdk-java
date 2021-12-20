@@ -163,6 +163,13 @@ IDC-IP Google
     private String FilterIp;
 
     /**
+    * 域名列表，为空表示查询AppID维度数据
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
+
+    /**
      * Get BOT类型，取值为"UB","UCB","TCB"，分别表示：未知类型，自定义类型，公开类型 
      * @return BotType BOT类型，取值为"UB","UCB","TCB"，分别表示：未知类型，自定义类型，公开类型
      */
@@ -590,6 +597,22 @@ IDC-IP Google
         this.FilterIp = FilterIp;
     }
 
+    /**
+     * Get 域名列表，为空表示查询AppID维度数据 
+     * @return Domains 域名列表，为空表示查询AppID维度数据
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 域名列表，为空表示查询AppID维度数据
+     * @param Domains 域名列表，为空表示查询AppID维度数据
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
     public DescribeScdnBotRecordsRequest() {
     }
 
@@ -634,6 +657,12 @@ IDC-IP Google
         if (source.FilterIp != null) {
             this.FilterIp = new String(source.FilterIp);
         }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
     }
 
 
@@ -652,6 +681,7 @@ IDC-IP Google
         this.setParamSimple(map, prefix + "FilterName", this.FilterName);
         this.setParamSimple(map, prefix + "FilterAction", this.FilterAction);
         this.setParamSimple(map, prefix + "FilterIp", this.FilterIp);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
 
     }
 }

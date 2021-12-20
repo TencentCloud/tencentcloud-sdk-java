@@ -91,6 +91,14 @@ public class TextModerationResponse extends AbstractModel{
     private String DataId;
 
     /**
+    * 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -262,6 +270,26 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
+     * Get 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubLabel 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubLabel 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -321,6 +349,9 @@ public class TextModerationResponse extends AbstractModel{
         if (source.DataId != null) {
             this.DataId = new String(source.DataId);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -340,6 +371,7 @@ public class TextModerationResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "DataId", this.DataId);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

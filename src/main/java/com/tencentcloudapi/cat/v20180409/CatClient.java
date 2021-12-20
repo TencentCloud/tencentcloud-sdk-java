@@ -79,6 +79,26 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *批量创建探测任务
+     * @param req CreateProbeTasksRequest
+     * @return CreateProbeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProbeTasksResponse CreateProbeTasks(CreateProbeTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProbeTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProbeTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProbeTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建拨测任务(扩展)
      * @param req CreateTaskExRequest
      * @return CreateTaskExResponse
@@ -111,6 +131,26 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAgentGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAgentGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除拨测任务
+     * @param req DeleteProbeTaskRequest
+     * @return DeleteProbeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProbeTaskResponse DeleteProbeTask(DeleteProbeTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteProbeTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteProbeTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteProbeTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -251,6 +291,66 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCatLogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCatLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据时间范围、任务ID、运营商等条件查询单次拨测详情数据
+     * @param req DescribeDetailedSingleProbeDataRequest
+     * @return DescribeDetailedSingleProbeDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDetailedSingleProbeDataResponse DescribeDetailedSingleProbeData(DescribeDetailedSingleProbeDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDetailedSingleProbeDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDetailedSingleProbeDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDetailedSingleProbeData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询拨测节点
+     * @param req DescribeProbeNodesRequest
+     * @return DescribeProbeNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProbeNodesResponse DescribeProbeNodes(DescribeProbeNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProbeNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProbeNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProbeNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询探测任务列表
+     * @param req DescribeProbeTasksRequest
+     * @return DescribeProbeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProbeTasksResponse DescribeProbeTasks(DescribeProbeTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProbeTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProbeTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProbeTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -539,6 +639,26 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *恢复拨测任务
+     * @param req ResumeProbeTaskRequest
+     * @return ResumeProbeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeProbeTaskResponse ResumeProbeTask(ResumeProbeTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeProbeTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeProbeTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeProbeTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *运行拨测任务
      * @param req RunTaskRequest
      * @return RunTaskResponse
@@ -551,6 +671,46 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RunTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *暂停拨测任务
+     * @param req SuspendProbeTaskRequest
+     * @return SuspendProbeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SuspendProbeTaskResponse SuspendProbeTask(SuspendProbeTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SuspendProbeTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SuspendProbeTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SuspendProbeTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量更新拨测任务配置
+     * @param req UpdateProbeTaskConfigurationListRequest
+     * @return UpdateProbeTaskConfigurationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProbeTaskConfigurationListResponse UpdateProbeTaskConfigurationList(UpdateProbeTaskConfigurationListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProbeTaskConfigurationListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProbeTaskConfigurationListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProbeTaskConfigurationList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

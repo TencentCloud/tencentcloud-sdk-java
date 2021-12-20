@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextModerationRequest extends AbstractModel{
 
     /**
-    * 文本内容Base64编码，限制原文长度不能超过10000个unicode字符
+    * 该字段表示待检测对象的文本内容，长度不能超过10000（按unicode编码计算）
     */
     @SerializedName("Content")
     @Expose
@@ -58,16 +58,16 @@ public class TextModerationRequest extends AbstractModel{
     private Device Device;
 
     /**
-     * Get 文本内容Base64编码，限制原文长度不能超过10000个unicode字符 
-     * @return Content 文本内容Base64编码，限制原文长度不能超过10000个unicode字符
+     * Get 该字段表示待检测对象的文本内容，长度不能超过10000（按unicode编码计算） 
+     * @return Content 该字段表示待检测对象的文本内容，长度不能超过10000（按unicode编码计算）
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 文本内容Base64编码，限制原文长度不能超过10000个unicode字符
-     * @param Content 文本内容Base64编码，限制原文长度不能超过10000个unicode字符
+     * Set 该字段表示待检测对象的文本内容，长度不能超过10000（按unicode编码计算）
+     * @param Content 该字段表示待检测对象的文本内容，长度不能超过10000（按unicode编码计算）
      */
     public void setContent(String Content) {
         this.Content = Content;

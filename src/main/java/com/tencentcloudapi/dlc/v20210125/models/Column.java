@@ -70,6 +70,30 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     private String Nullable;
 
     /**
+    * 字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Position")
+    @Expose
+    private Long Position;
+
+    /**
+    * 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifiedTime")
+    @Expose
+    private String ModifiedTime;
+
+    /**
      * Get 列名称，不区分大小写，最大支持25个字符。 
      * @return Name 列名称，不区分大小写，最大支持25个字符。
      */
@@ -185,6 +209,66 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.Nullable = Nullable;
     }
 
+    /**
+     * Get 字段位置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Position 字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPosition() {
+        return this.Position;
+    }
+
+    /**
+     * Set 字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Position 字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPosition(Long Position) {
+        this.Position = Position;
+    }
+
+    /**
+     * Get 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifiedTime 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifiedTime() {
+        return this.ModifiedTime;
+    }
+
+    /**
+     * Set 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifiedTime 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifiedTime(String ModifiedTime) {
+        this.ModifiedTime = ModifiedTime;
+    }
+
     public Column() {
     }
 
@@ -211,6 +295,15 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         if (source.Nullable != null) {
             this.Nullable = new String(source.Nullable);
         }
+        if (source.Position != null) {
+            this.Position = new Long(source.Position);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
     }
 
 
@@ -224,6 +317,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.setParamSimple(map, prefix + "Precision", this.Precision);
         this.setParamSimple(map, prefix + "Scale", this.Scale);
         this.setParamSimple(map, prefix + "Nullable", this.Nullable);
+        this.setParamSimple(map, prefix + "Position", this.Position);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
 
     }
 }

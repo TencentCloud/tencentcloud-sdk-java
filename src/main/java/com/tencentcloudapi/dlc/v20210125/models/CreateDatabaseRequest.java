@@ -30,7 +30,7 @@ public class CreateDatabaseRequest extends AbstractModel{
     private DatabaseInfo DatabaseInfo;
 
     /**
-    * 数据源名称，默认为CosDataCatalog
+    * 数据源名称，默认为DataLakeCatalog
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
@@ -53,16 +53,16 @@ public class CreateDatabaseRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据源名称，默认为CosDataCatalog 
-     * @return DatasourceConnectionName 数据源名称，默认为CosDataCatalog
+     * Get 数据源名称，默认为DataLakeCatalog 
+     * @return DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
     }
 
     /**
-     * Set 数据源名称，默认为CosDataCatalog
-     * @param DatasourceConnectionName 数据源名称，默认为CosDataCatalog
+     * Set 数据源名称，默认为DataLakeCatalog
+     * @param DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;

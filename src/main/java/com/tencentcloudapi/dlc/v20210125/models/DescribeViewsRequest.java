@@ -60,6 +60,34 @@ view-id - String - （过滤条件）view id形如：12342。
     private String DatasourceConnectionName;
 
     /**
+    * 排序字段
+    */
+    @SerializedName("Sort")
+    @Expose
+    private String Sort;
+
+    /**
+    * 排序规则
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Boolean Asc;
+
+    /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 列出该数据库下所属数据表。 
      * @return DatabaseName 列出该数据库下所属数据表。
      */
@@ -147,6 +175,70 @@ view-id - String - （过滤条件）view id形如：12342。
         this.DatasourceConnectionName = DatasourceConnectionName;
     }
 
+    /**
+     * Get 排序字段 
+     * @return Sort 排序字段
+     */
+    public String getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序字段
+     * @param Sort 排序字段
+     */
+    public void setSort(String Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
+     * Get 排序规则 
+     * @return Asc 排序规则
+     */
+    public Boolean getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 排序规则
+     * @param Asc 排序规则
+     */
+    public void setAsc(Boolean Asc) {
+        this.Asc = Asc;
+    }
+
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeViewsRequest() {
     }
 
@@ -173,6 +265,18 @@ view-id - String - （过滤条件）view id形如：12342。
         if (source.DatasourceConnectionName != null) {
             this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
         }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Boolean(source.Asc);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -185,6 +289,10 @@ view-id - String - （过滤条件）view id形如：12342。
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

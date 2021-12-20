@@ -107,6 +107,15 @@ public class AudioResult extends AbstractModel{
     private AudioResultDetailLanguageResult [] LanguageResults;
 
     /**
+    * 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
@@ -310,6 +319,30 @@ public class AudioResult extends AbstractModel{
         this.LanguageResults = LanguageResults;
     }
 
+    /**
+     * Get 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public AudioResult() {
     }
 
@@ -360,6 +393,9 @@ public class AudioResult extends AbstractModel{
                 this.LanguageResults[i] = new AudioResultDetailLanguageResult(source.LanguageResults[i]);
             }
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -378,6 +414,7 @@ public class AudioResult extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TextResults.", this.TextResults);
         this.setParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
         this.setParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

@@ -108,6 +108,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（AttachDisks）用于挂载一个或多个云硬盘。
+     * @param req AttachDisksRequest
+     * @return AttachDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateBlueprint) 用于创建镜像。
      * @param req CreateBlueprintRequest
      * @return CreateBlueprintResponse
@@ -388,6 +408,106 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDiskConfigs）用于查询云硬盘配置。
+     * @param req DescribeDiskConfigsRequest
+     * @return DescribeDiskConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskConfigsResponse DescribeDiskConfigs(DescribeDiskConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiskConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息。
+     * @param req DescribeDiskDiscountRequest
+     * @return DescribeDiskDiscountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskDiscountResponse DescribeDiskDiscount(DescribeDiskDiscountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskDiscountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskDiscountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiskDiscount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDisks）用于查询云硬盘信息。
+     * @param req DescribeDisksRequest
+     * @return DescribeDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDisksResponse DescribeDisks(DescribeDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDisksDeniedActions）用于查询一个或多个云硬盘的操作限制列表信息。
+     * @param req DescribeDisksDeniedActionsRequest
+     * @return DescribeDisksDeniedActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDisksDeniedActionsResponse DescribeDisksDeniedActions(DescribeDisksDeniedActionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDisksDeniedActionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDisksDeniedActionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDisksDeniedActions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDisksReturnable）用于查询云硬盘是否可退还。
+     * @param req DescribeDisksReturnableRequest
+     * @return DescribeDisksReturnableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDisksReturnableResponse DescribeDisksReturnable(DescribeDisksReturnableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDisksReturnableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDisksReturnableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDisksReturnable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
      * @param req DescribeFirewallRulesRequest
      * @return DescribeFirewallRulesResponse
@@ -530,6 +650,26 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesDeniedActionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstancesDeniedActions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeInstancesDiskNum)用于查询实例挂载云硬盘数量。
+     * @param req DescribeInstancesDiskNumRequest
+     * @return DescribeInstancesDiskNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesDiskNumResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstancesDiskNum");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -738,6 +878,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DetachDisks）用于卸载一个或多个云硬盘。
+     * @param req DetachDisksRequest
+     * @return DetachDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachDisksResponse DetachDisks(DetachDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
 
 * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
@@ -804,6 +964,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（InquirePriceCreateDisks）用于新购云硬盘询价。
+     * @param req InquirePriceCreateDisksRequest
+     * @return InquirePriceCreateDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateDisksResponse InquirePriceCreateDisks(InquirePriceCreateDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceCreateDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceCreateDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceCreateDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquiryPriceCreateInstances）用于创建实例询价。
      * @param req InquirePriceCreateInstancesRequest
      * @return InquirePriceCreateInstancesResponse
@@ -816,6 +996,26 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquirePriceCreateInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquirePriceCreateInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（InquirePriceRenewDisks）用于续费云硬盘询价。
+     * @param req InquirePriceRenewDisksRequest
+     * @return InquirePriceRenewDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewDisksResponse InquirePriceRenewDisks(InquirePriceRenewDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceRenewDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceRenewDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceRenewDisks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -856,6 +1056,46 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyBlueprintAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBlueprintAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyDisksAttribute)用于修改云硬盘属性。
+     * @param req ModifyDisksAttributeRequest
+     * @return ModifyDisksAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDisksAttributeResponse ModifyDisksAttribute(ModifyDisksAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDisksAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDisksAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDisksAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
+     * @param req ModifyDisksRenewFlagRequest
+     * @return ModifyDisksRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDisksRenewFlagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDisksRenewFlag");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1150,6 +1390,26 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（TerminateDisks）用于销毁一个或多个云硬盘。
+     * @param req TerminateDisksRequest
+     * @return TerminateDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDisksResponse TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateDisks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

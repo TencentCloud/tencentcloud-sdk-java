@@ -38,7 +38,7 @@ public class DatabaseResponseInfo extends AbstractModel{
     private String Comment;
 
     /**
-    * 数据库属性列表。
+    * 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -98,9 +98,9 @@ public class DatabaseResponseInfo extends AbstractModel{
     }
 
     /**
-     * Get 数据库属性列表。
+     * Get 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties 数据库属性列表。
+     * @return Properties 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Property [] getProperties() {
@@ -108,9 +108,9 @@ public class DatabaseResponseInfo extends AbstractModel{
     }
 
     /**
-     * Set 数据库属性列表。
+     * Set 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties 数据库属性列表。
+     * @param Properties 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(Property [] Properties) {

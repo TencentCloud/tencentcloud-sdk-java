@@ -30,6 +30,14 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
     private Price Price;
 
     /**
+    * 数据盘价格信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataDiskPriceSet")
+    @Expose
+    private DataDiskPrice [] DataDiskPriceSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
      */
     public void setPrice(Price Price) {
         this.Price = Price;
+    }
+
+    /**
+     * Get 数据盘价格信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataDiskPriceSet 数据盘价格信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataDiskPrice [] getDataDiskPriceSet() {
+        return this.DataDiskPriceSet;
+    }
+
+    /**
+     * Set 数据盘价格信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataDiskPriceSet 数据盘价格信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
+        this.DataDiskPriceSet = DataDiskPriceSet;
     }
 
     /**
@@ -79,6 +107,12 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
         if (source.Price != null) {
             this.Price = new Price(source.Price);
         }
+        if (source.DataDiskPriceSet != null) {
+            this.DataDiskPriceSet = new DataDiskPrice[source.DataDiskPriceSet.length];
+            for (int i = 0; i < source.DataDiskPriceSet.length; i++) {
+                this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +124,7 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Price.", this.Price);
+        this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

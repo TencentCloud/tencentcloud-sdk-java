@@ -69,6 +69,9 @@ public enum VpcErrorCode {
     // 下一跳类型与下一跳网关不匹配。
      INVALIDPARAMETER_NEXTHOPMISMATCH("InvalidParameter.NextHopMismatch"),
      
+    // 专线网关跨可用区容灾组不存在。
+     INVALIDPARAMETER_VPGHAGROUPNOTFOUND("InvalidParameter.VpgHaGroupNotFound"),
+     
     // 指定的两个参数冲突，不能同时存在。 EIP只能绑定在实例上或指定网卡的指定内网 IP 上。
      INVALIDPARAMETERCONFLICT("InvalidParameterConflict"),
      
@@ -123,6 +126,9 @@ public enum VpcErrorCode {
     // 缺少参数。
      INVALIDPARAMETERVALUE_EMPTY("InvalidParameterValue.Empty"),
      
+    // IPv6规则没有更改。
+     INVALIDPARAMETERVALUE_IPV6RULENOTCHANGE("InvalidParameterValue.IPv6RuleNotChange"),
+     
     // 该实例的计费方式与其他实例不同。
      INVALIDPARAMETERVALUE_INCONSISTENTINSTANCEINTERNETCHARGETYPE("InvalidParameterValue.InconsistentInstanceInternetChargeType"),
      
@@ -140,6 +146,9 @@ public enum VpcErrorCode {
      
     // 由于该IP被禁用，无法绑定该实例。
      INVALIDPARAMETERVALUE_INSTANCENORMALPUBLICIPBLOCKED("InvalidParameterValue.InstanceNormalPublicIpBlocked"),
+     
+    // 网络计费模式没有更改。
+     INVALIDPARAMETERVALUE_INTERNETCHARGETYPENOTCHANGED("InvalidParameterValue.InternetChargeTypeNotChanged"),
      
     // 无效的带宽包计费方式。
      INVALIDPARAMETERVALUE_INVALIDBANDWIDTHPACKAGECHARGETYPE("InvalidParameterValue.InvalidBandwidthPackageChargeType"),
@@ -369,6 +378,9 @@ public enum VpcErrorCode {
     // 实例已关联CCN。
      UNSUPPORTEDOPERATION_CCNATTACHED("UnsupportedOperation.CcnAttached"),
      
+    // 当前云联网有流日志，不支持删除。
+     UNSUPPORTEDOPERATION_CCNHASFLOWLOG("UnsupportedOperation.CcnHasFlowLog"),
+     
     // 实例未关联CCN。
      UNSUPPORTEDOPERATION_CCNNOTATTACHED("UnsupportedOperation.CcnNotAttached"),
      
@@ -417,6 +429,9 @@ public enum VpcErrorCode {
     // 账户余额不足。
      UNSUPPORTEDOPERATION_INSUFFICIENTFUNDS("UnsupportedOperation.InsufficientFunds"),
      
+    // 不支持该操作。
+     UNSUPPORTEDOPERATION_INVALIDACTION("UnsupportedOperation.InvalidAction"),
+     
     // 该地址的网络付费方式不支持此操作。
      UNSUPPORTEDOPERATION_INVALIDADDRESSINTERNETCHARGETYPE("UnsupportedOperation.InvalidAddressInternetChargeType"),
      
@@ -438,6 +453,9 @@ public enum VpcErrorCode {
     // 关联当前云联网的实例的账号存在不是金融云账号。
      UNSUPPORTEDOPERATION_ISNOTFINANCEACCOUNT("UnsupportedOperation.IsNotFinanceAccount"),
      
+    // 该ISP不支持此操作。
+     UNSUPPORTEDOPERATION_ISPNOTSUPPORTED("UnsupportedOperation.IspNotSupported"),
+     
     // 指定的CDC已存在本地网关。
      UNSUPPORTEDOPERATION_LOCALGATEWAYALREADYEXISTS("UnsupportedOperation.LocalGateWayAlreadyExists"),
      
@@ -446,6 +464,9 @@ public enum VpcErrorCode {
      
     // NAT网关类型不支持SNAT规则。
      UNSUPPORTEDOPERATION_NATGATEWAYTYPENOTSUPPORTSNAT("UnsupportedOperation.NatGatewayTypeNotSupportSNAT"),
+     
+    // NAT实例不支持该操作。
+     UNSUPPORTEDOPERATION_NATNOTSUPPORTED("UnsupportedOperation.NatNotSupported"),
      
     // 指定的子网不支持创建本地网关类型的路由。
      UNSUPPORTEDOPERATION_NORMALSUBNETNOTSUPPORTLOCALGATEWAY("UnsupportedOperation.NormalSubnetNotSupportLocalGateway"),

@@ -156,6 +156,53 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     private String Zone;
 
     /**
+    * 网关流控明细启用状态：
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableFlowDetails")
+    @Expose
+    private Long EnableFlowDetails;
+
+    /**
+    * 开启、关闭网关流控明细时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowDetailsUpdateTime")
+    @Expose
+    private String FlowDetailsUpdateTime;
+
+    /**
+    * 是否支持开启网关流控明细
+0：不支持
+1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewAfc")
+    @Expose
+    private Long NewAfc;
+
+    /**
+    * 专线网关接入网络类型：
+<li>`VXLAN` - VXLAN类型。</li>
+<li>`MPLS` - MPLS类型。</li>
+<li>`Hybrid` - Hybrid类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessNetworkType")
+    @Expose
+    private String AccessNetworkType;
+
+    /**
+    * 跨可用区容灾专线网关的可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HaZoneList")
+    @Expose
+    private String [] HaZoneList;
+
+    /**
      * Get 专线网关`ID`。 
      * @return DirectConnectGatewayId 专线网关`ID`。
      */
@@ -483,6 +530,134 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.Zone = Zone;
     }
 
+    /**
+     * Get 网关流控明细启用状态：
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableFlowDetails 网关流控明细启用状态：
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableFlowDetails() {
+        return this.EnableFlowDetails;
+    }
+
+    /**
+     * Set 网关流控明细启用状态：
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableFlowDetails 网关流控明细启用状态：
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableFlowDetails(Long EnableFlowDetails) {
+        this.EnableFlowDetails = EnableFlowDetails;
+    }
+
+    /**
+     * Get 开启、关闭网关流控明细时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowDetailsUpdateTime 开启、关闭网关流控明细时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlowDetailsUpdateTime() {
+        return this.FlowDetailsUpdateTime;
+    }
+
+    /**
+     * Set 开启、关闭网关流控明细时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowDetailsUpdateTime 开启、关闭网关流控明细时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowDetailsUpdateTime(String FlowDetailsUpdateTime) {
+        this.FlowDetailsUpdateTime = FlowDetailsUpdateTime;
+    }
+
+    /**
+     * Get 是否支持开启网关流控明细
+0：不支持
+1：支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewAfc 是否支持开启网关流控明细
+0：不支持
+1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNewAfc() {
+        return this.NewAfc;
+    }
+
+    /**
+     * Set 是否支持开启网关流控明细
+0：不支持
+1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewAfc 是否支持开启网关流控明细
+0：不支持
+1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewAfc(Long NewAfc) {
+        this.NewAfc = NewAfc;
+    }
+
+    /**
+     * Get 专线网关接入网络类型：
+<li>`VXLAN` - VXLAN类型。</li>
+<li>`MPLS` - MPLS类型。</li>
+<li>`Hybrid` - Hybrid类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessNetworkType 专线网关接入网络类型：
+<li>`VXLAN` - VXLAN类型。</li>
+<li>`MPLS` - MPLS类型。</li>
+<li>`Hybrid` - Hybrid类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessNetworkType() {
+        return this.AccessNetworkType;
+    }
+
+    /**
+     * Set 专线网关接入网络类型：
+<li>`VXLAN` - VXLAN类型。</li>
+<li>`MPLS` - MPLS类型。</li>
+<li>`Hybrid` - Hybrid类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessNetworkType 专线网关接入网络类型：
+<li>`VXLAN` - VXLAN类型。</li>
+<li>`MPLS` - MPLS类型。</li>
+<li>`Hybrid` - Hybrid类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessNetworkType(String AccessNetworkType) {
+        this.AccessNetworkType = AccessNetworkType;
+    }
+
+    /**
+     * Get 跨可用区容灾专线网关的可用区列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HaZoneList 跨可用区容灾专线网关的可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getHaZoneList() {
+        return this.HaZoneList;
+    }
+
+    /**
+     * Set 跨可用区容灾专线网关的可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HaZoneList 跨可用区容灾专线网关的可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHaZoneList(String [] HaZoneList) {
+        this.HaZoneList = HaZoneList;
+    }
+
     public DirectConnectGateway() {
     }
 
@@ -545,6 +720,24 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.EnableFlowDetails != null) {
+            this.EnableFlowDetails = new Long(source.EnableFlowDetails);
+        }
+        if (source.FlowDetailsUpdateTime != null) {
+            this.FlowDetailsUpdateTime = new String(source.FlowDetailsUpdateTime);
+        }
+        if (source.NewAfc != null) {
+            this.NewAfc = new Long(source.NewAfc);
+        }
+        if (source.AccessNetworkType != null) {
+            this.AccessNetworkType = new String(source.AccessNetworkType);
+        }
+        if (source.HaZoneList != null) {
+            this.HaZoneList = new String[source.HaZoneList.length];
+            for (int i = 0; i < source.HaZoneList.length; i++) {
+                this.HaZoneList[i] = new String(source.HaZoneList[i]);
+            }
+        }
     }
 
 
@@ -569,6 +762,11 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "EnableFlowDetails", this.EnableFlowDetails);
+        this.setParamSimple(map, prefix + "FlowDetailsUpdateTime", this.FlowDetailsUpdateTime);
+        this.setParamSimple(map, prefix + "NewAfc", this.NewAfc);
+        this.setParamSimple(map, prefix + "AccessNetworkType", this.AccessNetworkType);
+        this.setParamArraySimple(map, prefix + "HaZoneList.", this.HaZoneList);
 
     }
 }

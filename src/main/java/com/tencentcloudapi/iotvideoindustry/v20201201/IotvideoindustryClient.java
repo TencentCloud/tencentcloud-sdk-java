@@ -179,6 +179,26 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *创建消息转发配置
+     * @param req CreateMessageForwardRequest
+     * @return CreateMessageForwardResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMessageForwardResponse CreateMessageForward(CreateMessageForwardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMessageForwardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMessageForwardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMessageForward");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
      * @param req CreateRecordPlanRequest
      * @return CreateRecordPlanResponse
@@ -351,6 +371,26 @@ public class IotvideoindustryClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveVideoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLiveVideoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除消息转发配置
+     * @param req DeleteMessageForwardRequest
+     * @return DeleteMessageForwardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMessageForwardResponse DeleteMessageForward(DeleteMessageForwardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMessageForwardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMessageForwardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteMessageForward");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -780,6 +820,46 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *查看消息转发配置详情
+     * @param req DescribeMessageForwardRequest
+     * @return DescribeMessageForwardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageForwardResponse DescribeMessageForward(DescribeMessageForwardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMessageForwardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMessageForwardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMessageForward");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看消息转发配置列表
+     * @param req DescribeMessageForwardsRequest
+     * @return DescribeMessageForwardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageForwardsResponse DescribeMessageForwards(DescribeMessageForwardsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMessageForwardsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMessageForwardsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMessageForwards");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播录像存储日期列表
      * @param req DescribeRecordDatesByLiveRequest
      * @return DescribeRecordDatesByLiveResponse
@@ -1195,6 +1275,26 @@ RecordId和StartTime/EndTime互斥
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveVideoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveVideo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改消息转发配置
+     * @param req ModifyMessageForwardRequest
+     * @return ModifyMessageForwardResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMessageForwardResponse ModifyMessageForward(ModifyMessageForwardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMessageForwardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMessageForwardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMessageForward");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -79,6 +79,13 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String Filter;
 
     /**
+    * 图像主体区域。
+    */
+    @SerializedName("ImageRect")
+    @Expose
+    private ImageRect ImageRect;
+
+    /**
      * Get 图库名称。 
      * @return GroupId 图库名称。
      */
@@ -218,6 +225,22 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.Filter = Filter;
     }
 
+    /**
+     * Get 图像主体区域。 
+     * @return ImageRect 图像主体区域。
+     */
+    public ImageRect getImageRect() {
+        return this.ImageRect;
+    }
+
+    /**
+     * Set 图像主体区域。
+     * @param ImageRect 图像主体区域。
+     */
+    public void setImageRect(ImageRect ImageRect) {
+        this.ImageRect = ImageRect;
+    }
+
     public SearchImageRequest() {
     }
 
@@ -247,6 +270,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if (source.Filter != null) {
             this.Filter = new String(source.Filter);
         }
+        if (source.ImageRect != null) {
+            this.ImageRect = new ImageRect(source.ImageRect);
+        }
     }
 
 
@@ -261,6 +287,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Filter", this.Filter);
+        this.setParamObj(map, prefix + "ImageRect.", this.ImageRect);
 
     }
 }

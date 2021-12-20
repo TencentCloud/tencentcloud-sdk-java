@@ -30,7 +30,7 @@ public class MachinePredict extends AbstractModel{
     private String Title;
 
     /**
-    * 核保结论
+    * 核保结论：加费、承保、拒保、延期、除外、加费+除外
     */
     @SerializedName("Conclusion")
     @Expose
@@ -74,16 +74,16 @@ public class MachinePredict extends AbstractModel{
     }
 
     /**
-     * Get 核保结论 
-     * @return Conclusion 核保结论
+     * Get 核保结论：加费、承保、拒保、延期、除外、加费+除外 
+     * @return Conclusion 核保结论：加费、承保、拒保、延期、除外、加费+除外
      */
     public String getConclusion() {
         return this.Conclusion;
     }
 
     /**
-     * Set 核保结论
-     * @param Conclusion 核保结论
+     * Set 核保结论：加费、承保、拒保、延期、除外、加费+除外
+     * @param Conclusion 核保结论：加费、承保、拒保、延期、除外、加费+除外
      */
     public void setConclusion(String Conclusion) {
         this.Conclusion = Conclusion;

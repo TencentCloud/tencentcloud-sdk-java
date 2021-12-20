@@ -37,6 +37,20 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * 是否续费数据盘
+    */
+    @SerializedName("RenewDataDisk")
+    @Expose
+    private Boolean RenewDataDisk;
+
+    /**
+    * 数据盘是否对齐实例到期时间
+    */
+    @SerializedName("AlignInstanceExpiredTime")
+    @Expose
+    private Boolean AlignInstanceExpiredTime;
+
+    /**
      * Get 待续费的实例。 
      * @return InstanceIds 待续费的实例。
      */
@@ -68,6 +82,38 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get 是否续费数据盘 
+     * @return RenewDataDisk 是否续费数据盘
+     */
+    public Boolean getRenewDataDisk() {
+        return this.RenewDataDisk;
+    }
+
+    /**
+     * Set 是否续费数据盘
+     * @param RenewDataDisk 是否续费数据盘
+     */
+    public void setRenewDataDisk(Boolean RenewDataDisk) {
+        this.RenewDataDisk = RenewDataDisk;
+    }
+
+    /**
+     * Get 数据盘是否对齐实例到期时间 
+     * @return AlignInstanceExpiredTime 数据盘是否对齐实例到期时间
+     */
+    public Boolean getAlignInstanceExpiredTime() {
+        return this.AlignInstanceExpiredTime;
+    }
+
+    /**
+     * Set 数据盘是否对齐实例到期时间
+     * @param AlignInstanceExpiredTime 数据盘是否对齐实例到期时间
+     */
+    public void setAlignInstanceExpiredTime(Boolean AlignInstanceExpiredTime) {
+        this.AlignInstanceExpiredTime = AlignInstanceExpiredTime;
+    }
+
     public InquirePriceRenewInstancesRequest() {
     }
 
@@ -85,6 +131,12 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.RenewDataDisk != null) {
+            this.RenewDataDisk = new Boolean(source.RenewDataDisk);
+        }
+        if (source.AlignInstanceExpiredTime != null) {
+            this.AlignInstanceExpiredTime = new Boolean(source.AlignInstanceExpiredTime);
+        }
     }
 
 
@@ -94,6 +146,8 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "RenewDataDisk", this.RenewDataDisk);
+        this.setParamSimple(map, prefix + "AlignInstanceExpiredTime", this.AlignInstanceExpiredTime);
 
     }
 }

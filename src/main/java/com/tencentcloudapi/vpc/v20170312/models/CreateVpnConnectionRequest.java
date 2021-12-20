@@ -115,6 +115,34 @@ CCN VPN 形的通道 可以不传VPCID
     private String RouteType;
 
     /**
+    * 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+    */
+    @SerializedName("NegotiationType")
+    @Expose
+    private String NegotiationType;
+
+    /**
+    * DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+    */
+    @SerializedName("DpdEnable")
+    @Expose
+    private Long DpdEnable;
+
+    /**
+    * DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+    */
+    @SerializedName("DpdTimeout")
+    @Expose
+    private String DpdTimeout;
+
+    /**
+    * DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+    */
+    @SerializedName("DpdAction")
+    @Expose
+    private String DpdAction;
+
+    /**
      * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
@@ -326,6 +354,70 @@ CCN VPN 形的通道 可以不传VPCID
         this.RouteType = RouteType;
     }
 
+    /**
+     * Get 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商） 
+     * @return NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     */
+    public String getNegotiationType() {
+        return this.NegotiationType;
+    }
+
+    /**
+     * Set 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     * @param NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     */
+    public void setNegotiationType(String NegotiationType) {
+        this.NegotiationType = NegotiationType;
+    }
+
+    /**
+     * Get DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启） 
+     * @return DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     */
+    public Long getDpdEnable() {
+        return this.DpdEnable;
+    }
+
+    /**
+     * Set DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * @param DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     */
+    public void setDpdEnable(Long DpdEnable) {
+        this.DpdEnable = DpdEnable;
+    }
+
+    /**
+     * Get DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒 
+     * @return DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     */
+    public String getDpdTimeout() {
+        return this.DpdTimeout;
+    }
+
+    /**
+     * Set DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     * @param DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     */
+    public void setDpdTimeout(String DpdTimeout) {
+        this.DpdTimeout = DpdTimeout;
+    }
+
+    /**
+     * Get DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试） 
+     * @return DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     */
+    public String getDpdAction() {
+        return this.DpdAction;
+    }
+
+    /**
+     * Set DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * @param DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     */
+    public void setDpdAction(String DpdAction) {
+        this.DpdAction = DpdAction;
+    }
+
     public CreateVpnConnectionRequest() {
     }
 
@@ -379,6 +471,18 @@ CCN VPN 形的通道 可以不传VPCID
         if (source.RouteType != null) {
             this.RouteType = new String(source.RouteType);
         }
+        if (source.NegotiationType != null) {
+            this.NegotiationType = new String(source.NegotiationType);
+        }
+        if (source.DpdEnable != null) {
+            this.DpdEnable = new Long(source.DpdEnable);
+        }
+        if (source.DpdTimeout != null) {
+            this.DpdTimeout = new String(source.DpdTimeout);
+        }
+        if (source.DpdAction != null) {
+            this.DpdAction = new String(source.DpdAction);
+        }
     }
 
 
@@ -399,6 +503,10 @@ CCN VPN 形的通道 可以不传VPCID
         this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
         this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
+        this.setParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
+        this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+        this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+        this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
 
     }
 }

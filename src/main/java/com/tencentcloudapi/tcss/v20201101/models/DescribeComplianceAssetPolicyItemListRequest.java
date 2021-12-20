@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel{
 
     /**
-    * 资产的ID。
+    * 客户资产的ID。
     */
     @SerializedName("CustomerAssetId")
     @Expose
@@ -52,16 +52,16 @@ RiskLevel
     private ComplianceFilters [] Filters;
 
     /**
-     * Get 资产的ID。 
-     * @return CustomerAssetId 资产的ID。
+     * Get 客户资产的ID。 
+     * @return CustomerAssetId 客户资产的ID。
      */
     public Long getCustomerAssetId() {
         return this.CustomerAssetId;
     }
 
     /**
-     * Set 资产的ID。
-     * @param CustomerAssetId 资产的ID。
+     * Set 客户资产的ID。
+     * @param CustomerAssetId 客户资产的ID。
      */
     public void setCustomerAssetId(Long CustomerAssetId) {
         this.CustomerAssetId = CustomerAssetId;

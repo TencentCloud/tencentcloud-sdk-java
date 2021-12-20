@@ -79,6 +79,27 @@ public class StsClient extends AbstractClient{
     }
 
     /**
+     *获取当前调用者的身份信息。
+接口支持主账号，子账号长期密钥以及AssumeRole，GetFederationToken生成的临时凭据的身份获取。
+     * @param req GetCallerIdentityRequest
+     * @return GetCallerIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCallerIdentityResponse GetCallerIdentity(GetCallerIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCallerIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCallerIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetCallerIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取联合身份临时访问凭证
      * @param req GetFederationTokenRequest
      * @return GetFederationTokenResponse

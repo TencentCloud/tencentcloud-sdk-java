@@ -542,6 +542,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeFileDownloadUrl)用于获取数据库指定备份或日志文件的下载连接。
+     * @param req DescribeFileDownloadUrlRequest
+     * @return DescribeFileDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeFlow）用于查询流程状态。
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse

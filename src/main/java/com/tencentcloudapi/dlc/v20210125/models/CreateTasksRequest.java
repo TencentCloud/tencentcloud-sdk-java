@@ -37,11 +37,18 @@ public class CreateTasksRequest extends AbstractModel{
     private TasksInfo Tasks;
 
     /**
-    * 数据源名称，默认为COSDataCatalog
+    * 数据源名称，默认为DataLakeCatalog
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
     private String DatasourceConnectionName;
+
+    /**
+    * 计算引擎名称，不填任务提交到默认集群
+    */
+    @SerializedName("DataEngineName")
+    @Expose
+    private String DataEngineName;
 
     /**
      * Get 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。 
@@ -76,19 +83,35 @@ public class CreateTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据源名称，默认为COSDataCatalog 
-     * @return DatasourceConnectionName 数据源名称，默认为COSDataCatalog
+     * Get 数据源名称，默认为DataLakeCatalog 
+     * @return DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
     }
 
     /**
-     * Set 数据源名称，默认为COSDataCatalog
-     * @param DatasourceConnectionName 数据源名称，默认为COSDataCatalog
+     * Set 数据源名称，默认为DataLakeCatalog
+     * @param DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
+    /**
+     * Get 计算引擎名称，不填任务提交到默认集群 
+     * @return DataEngineName 计算引擎名称，不填任务提交到默认集群
+     */
+    public String getDataEngineName() {
+        return this.DataEngineName;
+    }
+
+    /**
+     * Set 计算引擎名称，不填任务提交到默认集群
+     * @param DataEngineName 计算引擎名称，不填任务提交到默认集群
+     */
+    public void setDataEngineName(String DataEngineName) {
+        this.DataEngineName = DataEngineName;
     }
 
     public CreateTasksRequest() {
@@ -108,6 +131,9 @@ public class CreateTasksRequest extends AbstractModel{
         if (source.DatasourceConnectionName != null) {
             this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
         }
+        if (source.DataEngineName != null) {
+            this.DataEngineName = new String(source.DataEngineName);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+        this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
 
     }
 }

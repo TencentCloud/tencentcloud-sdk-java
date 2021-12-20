@@ -65,7 +65,7 @@ public class CreateClusterRequest extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-    * 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+    * 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
     */
     @SerializedName("ExistedInstancesForNode")
     @Expose
@@ -182,16 +182,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。 
-     * @return ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * Get 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。 
+     * @return ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
      */
     public ExistedInstancesForNode [] getExistedInstancesForNode() {
         return this.ExistedInstancesForNode;
     }
 
     /**
-     * Set 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
-     * @param ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * Set 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
+     * @param ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
      */
     public void setExistedInstancesForNode(ExistedInstancesForNode [] ExistedInstancesForNode) {
         this.ExistedInstancesForNode = ExistedInstancesForNode;

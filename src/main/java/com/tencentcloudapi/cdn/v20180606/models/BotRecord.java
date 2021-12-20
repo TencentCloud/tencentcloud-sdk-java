@@ -127,6 +127,14 @@ BotType=UCB时，为二期接口，暂时未定义内容
     private String Id;
 
     /**
+    * 域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 动作，取值为以为3个类型中的一个："intercept","permit","monitor"，分别表示： 拦截， 放行，监控 
      * @return Action 动作，取值为以为3个类型中的一个："intercept","permit","monitor"，分别表示： 拦截， 放行，监控
      */
@@ -410,6 +418,26 @@ BotType=UCB时，为二期接口，暂时未定义内容
         this.Id = Id;
     }
 
+    /**
+     * Get 域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public BotRecord() {
     }
 
@@ -454,6 +482,9 @@ BotType=UCB时，为二期接口，暂时未定义内容
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -472,6 +503,7 @@ BotType=UCB时，为二期接口，暂时未定义内容
         this.setParamSimple(map, prefix + "AvgSpeed", this.AvgSpeed);
         this.setParamSimple(map, prefix + "TcbDetail", this.TcbDetail);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

@@ -121,6 +121,13 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DeleteSnapshot;
 
     /**
+    * 创建云盘时指定自动挂载并初始化该数据盘。
+    */
+    @SerializedName("AutoMountConfiguration")
+    @Expose
+    private AutoMountConfiguration AutoMountConfiguration;
+
+    /**
      * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
      */
@@ -344,6 +351,22 @@ public class CreateDisksRequest extends AbstractModel{
         this.DeleteSnapshot = DeleteSnapshot;
     }
 
+    /**
+     * Get 创建云盘时指定自动挂载并初始化该数据盘。 
+     * @return AutoMountConfiguration 创建云盘时指定自动挂载并初始化该数据盘。
+     */
+    public AutoMountConfiguration getAutoMountConfiguration() {
+        return this.AutoMountConfiguration;
+    }
+
+    /**
+     * Set 创建云盘时指定自动挂载并初始化该数据盘。
+     * @param AutoMountConfiguration 创建云盘时指定自动挂载并初始化该数据盘。
+     */
+    public void setAutoMountConfiguration(AutoMountConfiguration AutoMountConfiguration) {
+        this.AutoMountConfiguration = AutoMountConfiguration;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -397,6 +420,9 @@ public class CreateDisksRequest extends AbstractModel{
         if (source.DeleteSnapshot != null) {
             this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
+        if (source.AutoMountConfiguration != null) {
+            this.AutoMountConfiguration = new AutoMountConfiguration(source.AutoMountConfiguration);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class CreateDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+        this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
 
     }
 }

@@ -45,6 +45,30 @@ public class TableBaseInfo extends AbstractModel{
     private String DatasourceConnectionName;
 
     /**
+    * 该数据表备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableComment")
+    @Expose
+    private String TableComment;
+
+    /**
+    * 具体类型，表or视图
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 数据格式类型，hive，iceberg等
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableFormat")
+    @Expose
+    private String TableFormat;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -96,6 +120,66 @@ public class TableBaseInfo extends AbstractModel{
         this.DatasourceConnectionName = DatasourceConnectionName;
     }
 
+    /**
+     * Get 该数据表备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableComment 该数据表备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableComment() {
+        return this.TableComment;
+    }
+
+    /**
+     * Set 该数据表备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableComment 该数据表备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableComment(String TableComment) {
+        this.TableComment = TableComment;
+    }
+
+    /**
+     * Get 具体类型，表or视图
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 具体类型，表or视图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 具体类型，表or视图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 具体类型，表or视图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 数据格式类型，hive，iceberg等
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableFormat 数据格式类型，hive，iceberg等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableFormat() {
+        return this.TableFormat;
+    }
+
+    /**
+     * Set 数据格式类型，hive，iceberg等
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableFormat 数据格式类型，hive，iceberg等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableFormat(String TableFormat) {
+        this.TableFormat = TableFormat;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -113,6 +197,15 @@ public class TableBaseInfo extends AbstractModel{
         if (source.DatasourceConnectionName != null) {
             this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
         }
+        if (source.TableComment != null) {
+            this.TableComment = new String(source.TableComment);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TableFormat != null) {
+            this.TableFormat = new String(source.TableFormat);
+        }
     }
 
 
@@ -123,6 +216,9 @@ public class TableBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+        this.setParamSimple(map, prefix + "TableComment", this.TableComment);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "TableFormat", this.TableFormat);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Sort;
 
     /**
-    * searchlog   histogram
+    * searchlog  histogram
     */
     @SerializedName("ActionType")
     @Expose
@@ -51,21 +51,21 @@ public class DescribeLogListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * 限制
+    * 单次查询返回的原始日志条数，最大值为100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 上下文
+    * 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 查询语句
+    * 查询语句，语句长度最大为4096
     */
     @SerializedName("Query")
     @Expose
@@ -95,16 +95,16 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get searchlog   histogram 
-     * @return ActionType searchlog   histogram
+     * Get searchlog  histogram 
+     * @return ActionType searchlog  histogram
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set searchlog   histogram
-     * @param ActionType searchlog   histogram
+     * Set searchlog  histogram
+     * @param ActionType searchlog  histogram
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -143,48 +143,48 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制 
-     * @return Limit 限制
+     * Get 单次查询返回的原始日志条数，最大值为100 
+     * @return Limit 单次查询返回的原始日志条数，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制
-     * @param Limit 限制
+     * Set 单次查询返回的原始日志条数，最大值为100
+     * @param Limit 单次查询返回的原始日志条数，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 上下文 
-     * @return Context 上下文
+     * Get 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时 
+     * @return Context 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 上下文
-     * @param Context 上下文
+     * Set 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
+     * @param Context 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 查询语句 
-     * @return Query 查询语句
+     * Get 查询语句，语句长度最大为4096 
+     * @return Query 查询语句，语句长度最大为4096
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句
-     * @param Query 查询语句
+     * Set 查询语句，语句长度最大为4096
+     * @param Query 查询语句，语句长度最大为4096
      */
     public void setQuery(String Query) {
         this.Query = Query;

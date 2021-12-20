@@ -44,11 +44,25 @@ public class DescribeDatabasesRequest extends AbstractModel{
     private String KeyWord;
 
     /**
-    * 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+    * 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
     private String DatasourceConnectionName;
+
+    /**
+    * 排序字段，当前版本仅支持按库名排序
+    */
+    @SerializedName("Sort")
+    @Expose
+    private String Sort;
+
+    /**
+    * 排序类型：false：降序（默认）、true：升序
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Boolean Asc;
 
     /**
      * Get 返回数量，默认为10，最大值为100。 
@@ -99,19 +113,51 @@ public class DescribeDatabasesRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog 
-     * @return DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+     * Get 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog 
+     * @return DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
     }
 
     /**
-     * Set 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
-     * @param DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+     * Set 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
+     * @param DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
+    /**
+     * Get 排序字段，当前版本仅支持按库名排序 
+     * @return Sort 排序字段，当前版本仅支持按库名排序
+     */
+    public String getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序字段，当前版本仅支持按库名排序
+     * @param Sort 排序字段，当前版本仅支持按库名排序
+     */
+    public void setSort(String Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
+     * Get 排序类型：false：降序（默认）、true：升序 
+     * @return Asc 排序类型：false：降序（默认）、true：升序
+     */
+    public Boolean getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 排序类型：false：降序（默认）、true：升序
+     * @param Asc 排序类型：false：降序（默认）、true：升序
+     */
+    public void setAsc(Boolean Asc) {
+        this.Asc = Asc;
     }
 
     public DescribeDatabasesRequest() {
@@ -134,6 +180,12 @@ public class DescribeDatabasesRequest extends AbstractModel{
         if (source.DatasourceConnectionName != null) {
             this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
         }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Boolean(source.Asc);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class DescribeDatabasesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

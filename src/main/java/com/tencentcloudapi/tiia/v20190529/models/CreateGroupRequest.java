@@ -62,6 +62,7 @@ public class CreateGroupRequest extends AbstractModel{
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
     */
     @SerializedName("GroupType")
     @Expose
@@ -151,11 +152,13 @@ public class CreateGroupRequest extends AbstractModel{
      * Get 图库类型， 默认为通用。
 类型： 
 1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。 
+2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。 
      * @return GroupType 图库类型， 默认为通用。
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
      */
     public Long getGroupType() {
         return this.GroupType;
@@ -166,10 +169,12 @@ public class CreateGroupRequest extends AbstractModel{
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
      * @param GroupType 图库类型， 默认为通用。
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
      */
     public void setGroupType(Long GroupType) {
         this.GroupType = GroupType;

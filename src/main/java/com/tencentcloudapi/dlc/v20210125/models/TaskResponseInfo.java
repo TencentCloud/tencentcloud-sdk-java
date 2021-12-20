@@ -144,6 +144,70 @@ public class TaskResponseInfo extends AbstractModel{
     private String ProgressDetail;
 
     /**
+    * 任务结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * 计算资源id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataEngineId")
+    @Expose
+    private String DataEngineId;
+
+    /**
+    * 执行sql的子uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
+    * 计算资源名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataEngineName")
+    @Expose
+    private String DataEngineName;
+
+    /**
+    * 导入类型是本地导入还是cos
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
+
+    /**
+    * 导入配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputConf")
+    @Expose
+    private String InputConf;
+
+    /**
+    * 数据条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataNumber")
+    @Expose
+    private Long DataNumber;
+
+    /**
+    * 查询数据能不能下载
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanDownload")
+    @Expose
+    private Boolean CanDownload;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -423,6 +487,166 @@ public class TaskResponseInfo extends AbstractModel{
         this.ProgressDetail = ProgressDetail;
     }
 
+    /**
+     * Get 任务结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 任务结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 任务结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 任务结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 计算资源id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataEngineId 计算资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataEngineId() {
+        return this.DataEngineId;
+    }
+
+    /**
+     * Set 计算资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataEngineId 计算资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataEngineId(String DataEngineId) {
+        this.DataEngineId = DataEngineId;
+    }
+
+    /**
+     * Get 执行sql的子uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperateUin 执行sql的子uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set 执行sql的子uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateUin 执行sql的子uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get 计算资源名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataEngineName 计算资源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataEngineName() {
+        return this.DataEngineName;
+    }
+
+    /**
+     * Set 计算资源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataEngineName 计算资源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataEngineName(String DataEngineName) {
+        this.DataEngineName = DataEngineName;
+    }
+
+    /**
+     * Get 导入类型是本地导入还是cos
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputType 导入类型是本地导入还是cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * Set 导入类型是本地导入还是cos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputType 导入类型是本地导入还是cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
+    }
+
+    /**
+     * Get 导入配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputConf 导入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputConf() {
+        return this.InputConf;
+    }
+
+    /**
+     * Set 导入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputConf 导入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputConf(String InputConf) {
+        this.InputConf = InputConf;
+    }
+
+    /**
+     * Get 数据条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataNumber 数据条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDataNumber() {
+        return this.DataNumber;
+    }
+
+    /**
+     * Set 数据条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataNumber 数据条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataNumber(Long DataNumber) {
+        this.DataNumber = DataNumber;
+    }
+
+    /**
+     * Get 查询数据能不能下载
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanDownload 查询数据能不能下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanDownload() {
+        return this.CanDownload;
+    }
+
+    /**
+     * Set 查询数据能不能下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanDownload 查询数据能不能下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanDownload(Boolean CanDownload) {
+        this.CanDownload = CanDownload;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -482,6 +706,30 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.ProgressDetail != null) {
             this.ProgressDetail = new String(source.ProgressDetail);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.DataEngineId != null) {
+            this.DataEngineId = new String(source.DataEngineId);
+        }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.DataEngineName != null) {
+            this.DataEngineName = new String(source.DataEngineName);
+        }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.InputConf != null) {
+            this.InputConf = new String(source.InputConf);
+        }
+        if (source.DataNumber != null) {
+            this.DataNumber = new Long(source.DataNumber);
+        }
+        if (source.CanDownload != null) {
+            this.CanDownload = new Boolean(source.CanDownload);
+        }
     }
 
 
@@ -506,6 +754,14 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputMessage", this.OutputMessage);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
+        this.setParamSimple(map, prefix + "InputConf", this.InputConf);
+        this.setParamSimple(map, prefix + "DataNumber", this.DataNumber);
+        this.setParamSimple(map, prefix + "CanDownload", this.CanDownload);
 
     }
 }

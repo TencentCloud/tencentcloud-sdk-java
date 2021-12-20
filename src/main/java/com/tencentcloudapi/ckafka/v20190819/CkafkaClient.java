@@ -59,6 +59,46 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *批量修改消费组offset
+     * @param req BatchModifyGroupOffsetsRequest
+     * @return BatchModifyGroupOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyGroupOffsetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchModifyGroupOffsets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量设置主题属性
+     * @param req BatchModifyTopicAttributesRequest
+     * @return BatchModifyTopicAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyTopicAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchModifyTopicAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加 ACL 策略
      * @param req CreateAclRequest
      * @return CreateAclResponse

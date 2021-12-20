@@ -98,6 +98,22 @@ public class ZoneResponse extends AbstractModel{
     private String Physical;
 
     /**
+    * 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private String PublicNetwork;
+
+    /**
+    * 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicNetworkLimit")
+    @Expose
+    private String PublicNetworkLimit;
+
+    /**
      * Get zone列表 
      * @return ZoneList zone列表
      */
@@ -277,6 +293,46 @@ public class ZoneResponse extends AbstractModel{
         this.Physical = Physical;
     }
 
+    /**
+     * Get 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicNetwork 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicNetwork 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicNetwork(String PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
+    /**
+     * Get 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicNetworkLimit 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicNetworkLimit() {
+        return this.PublicNetworkLimit;
+    }
+
+    /**
+     * Set 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicNetworkLimit 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicNetworkLimit(String PublicNetworkLimit) {
+        this.PublicNetworkLimit = PublicNetworkLimit;
+    }
+
     public ZoneResponse() {
     }
 
@@ -321,6 +377,12 @@ public class ZoneResponse extends AbstractModel{
         if (source.Physical != null) {
             this.Physical = new String(source.Physical);
         }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new String(source.PublicNetwork);
+        }
+        if (source.PublicNetworkLimit != null) {
+            this.PublicNetworkLimit = new String(source.PublicNetworkLimit);
+        }
     }
 
 
@@ -338,6 +400,8 @@ public class ZoneResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "StandardS2", this.StandardS2);
         this.setParamSimple(map, prefix + "Profession", this.Profession);
         this.setParamSimple(map, prefix + "Physical", this.Physical);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
 
     }
 }

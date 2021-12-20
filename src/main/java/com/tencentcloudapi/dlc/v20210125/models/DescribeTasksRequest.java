@@ -41,13 +41,15 @@ public class DescribeTasksRequest extends AbstractModel{
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+task-operator- string （子uin过滤）
+task-type -string （任务类型过滤）分导入任务和sql任务
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 排序字段，支持如下字段类型，create-time
+    * 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
     */
     @SerializedName("SortBy")
     @Expose
@@ -73,6 +75,13 @@ task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：D
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+    * 支持计算资源名字筛选
+    */
+    @SerializedName("DataEngineName")
+    @Expose
+    private String DataEngineName;
 
     /**
      * Get 返回数量，默认为10，最大值为100。 
@@ -110,11 +119,15 @@ task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：D
      * Get 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。 
+task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+task-operator- string （子uin过滤）
+task-type -string （任务类型过滤）分导入任务和sql任务 
      * @return Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+task-operator- string （子uin过滤）
+task-type -string （任务类型过滤）分导入任务和sql任务
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -125,26 +138,30 @@ task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：D
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+task-operator- string （子uin过滤）
+task-type -string （任务类型过滤）分导入任务和sql任务
      * @param Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+task-operator- string （子uin过滤）
+task-type -string （任务类型过滤）分导入任务和sql任务
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段，支持如下字段类型，create-time 
-     * @return SortBy 排序字段，支持如下字段类型，create-time
+     * Get 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间） 
+     * @return SortBy 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序字段，支持如下字段类型，create-time
-     * @param SortBy 排序字段，支持如下字段类型，create-time
+     * Set 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
+     * @param SortBy 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
@@ -198,6 +215,22 @@ task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：D
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 支持计算资源名字筛选 
+     * @return DataEngineName 支持计算资源名字筛选
+     */
+    public String getDataEngineName() {
+        return this.DataEngineName;
+    }
+
+    /**
+     * Set 支持计算资源名字筛选
+     * @param DataEngineName 支持计算资源名字筛选
+     */
+    public void setDataEngineName(String DataEngineName) {
+        this.DataEngineName = DataEngineName;
+    }
+
     public DescribeTasksRequest() {
     }
 
@@ -230,6 +263,9 @@ task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：D
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.DataEngineName != null) {
+            this.DataEngineName = new String(source.DataEngineName);
+        }
     }
 
 
@@ -244,6 +280,7 @@ task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：D
         this.setParamSimple(map, prefix + "Sorting", this.Sorting);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
 
     }
 }

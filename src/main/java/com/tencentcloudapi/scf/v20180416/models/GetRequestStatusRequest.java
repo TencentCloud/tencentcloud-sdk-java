@@ -44,7 +44,7 @@ public class GetRequestStatusRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
+    * 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
     */
     @SerializedName("StartTime")
     @Expose
@@ -106,16 +106,16 @@ public class GetRequestStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时 
-     * @return StartTime 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
+     * Get 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min 
+     * @return StartTime 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
-     * @param StartTime 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
+     * Set 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
+     * @param StartTime 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

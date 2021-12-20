@@ -70,6 +70,13 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * 专线网关高可用区容灾组ID
+    */
+    @SerializedName("HaZoneGroupId")
+    @Expose
+    private String HaZoneGroupId;
+
+    /**
      * Get 专线网关名称 
      * @return DirectConnectGatewayName 专线网关名称
      */
@@ -185,6 +192,22 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get 专线网关高可用区容灾组ID 
+     * @return HaZoneGroupId 专线网关高可用区容灾组ID
+     */
+    public String getHaZoneGroupId() {
+        return this.HaZoneGroupId;
+    }
+
+    /**
+     * Set 专线网关高可用区容灾组ID
+     * @param HaZoneGroupId 专线网关高可用区容灾组ID
+     */
+    public void setHaZoneGroupId(String HaZoneGroupId) {
+        this.HaZoneGroupId = HaZoneGroupId;
+    }
+
     public CreateDirectConnectGatewayRequest() {
     }
 
@@ -211,6 +234,9 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.HaZoneGroupId != null) {
+            this.HaZoneGroupId = new String(source.HaZoneGroupId);
+        }
     }
 
 
@@ -224,6 +250,7 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "HaZoneGroupId", this.HaZoneGroupId);
 
     }
 }

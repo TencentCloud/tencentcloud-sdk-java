@@ -64,7 +64,7 @@ cdn业务：
 
     /**
     * 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
     */
     @SerializedName("Domain")
     @Expose
@@ -204,9 +204,9 @@ cdn业务：
 
     /**
      * Get 查询域名 例如 www.qq.com
-非CDN业务查询时值为空 
+非CDN业务查询时传入空字符串，返回的值为空 
      * @return Domain 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
      */
     public String getDomain() {
         return this.Domain;
@@ -214,9 +214,9 @@ cdn业务：
 
     /**
      * Set 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
      * @param Domain 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

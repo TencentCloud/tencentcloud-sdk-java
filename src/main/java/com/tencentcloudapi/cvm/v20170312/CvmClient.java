@@ -171,6 +171,50 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateLaunchTemplate）用于创建实例启动模板。
+
+实例启动模板是一种配置数据并可用于创建实例，其内容包含创建实例所需的配置，比如实例类型，数据盘和系统盘的类型和大小，以及安全组等信息。
+
+初次创建实例模板后，其模板版本为默认版本1，新版本的创建可使用CreateLaunchTemplateVersion创建，版本号递增。默认情况下，在RunInstances中指定实例启动模板，若不指定模板版本号，则使用默认版本。
+     * @param req CreateLaunchTemplateRequest
+     * @return CreateLaunchTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchTemplateResponse CreateLaunchTemplate(CreateLaunchTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLaunchTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateLaunchTemplateVersion）根据指定的实例模板ID以及对应的模板版本号创建新的实例启动模板，若未指定模板版本号则使用默认版本号。每个实例启动模板最多创建30个版本。
+     * @param req CreateLaunchTemplateVersionRequest
+     * @return CreateLaunchTemplateVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersion(CreateLaunchTemplateVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLaunchTemplateVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DeleteDisasterRecoverGroups)用于删除[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群组才能被删除，非空的群组需要先销毁组内所有云服务器，才能执行删除操作，不然会产生删除置放群组失败的错误。
      * @param req DeleteDisasterRecoverGroupsRequest
      * @return DeleteDisasterRecoverGroupsResponse
@@ -230,6 +274,46 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteKeyPairsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteKeyPairs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteLaunchTemplate）用于删除一个实例启动模板。
+     * @param req DeleteLaunchTemplateRequest
+     * @return DeleteLaunchTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLaunchTemplateResponse DeleteLaunchTemplate(DeleteLaunchTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLaunchTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteLaunchTemplateVersions）用于删除一个或者多个实例启动模板版本。
+     * @param req DeleteLaunchTemplateVersionsRequest
+     * @return DeleteLaunchTemplateVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersions(DeleteLaunchTemplateVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLaunchTemplateVersions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -625,6 +709,46 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeKeyPairsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeKeyPairs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeLaunchTemplateVersions）用于查询实例模板版本信息。
+     * @param req DescribeLaunchTemplateVersionsRequest
+     * @return DescribeLaunchTemplateVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersions(DescribeLaunchTemplateVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLaunchTemplateVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeLaunchTemplates）用于查询一个或者多个实例启动模板。
+     * @param req DescribeLaunchTemplatesRequest
+     * @return DescribeLaunchTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLaunchTemplatesResponse DescribeLaunchTemplates(DescribeLaunchTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLaunchTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1301,6 +1425,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyKeyPairAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyLaunchTemplateDefaultVersion）用于修改实例启动模板默认版本。
+     * @param req ModifyLaunchTemplateDefaultVersionRequest
+     * @return ModifyLaunchTemplateDefaultVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersion(ModifyLaunchTemplateDefaultVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLaunchTemplateDefaultVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
