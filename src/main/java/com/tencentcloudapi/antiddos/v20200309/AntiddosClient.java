@@ -139,6 +139,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *添加DDoS防护的IP网段黑白名单
+     * @param req CreateDDoSBlackWhiteIpListRequest
+     * @return CreateDDoSBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpList(CreateDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDDoSBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDDoSBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDDoSBlackWhiteIpList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加DDoS防护的区域封禁配置
      * @param req CreateDDoSGeoIPBlockConfigRequest
      * @return CreateDDoSGeoIPBlockConfigResponse
@@ -359,6 +379,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *删除DDoS防护的IP网段黑白名单
+     * @param req DeleteDDoSBlackWhiteIpListRequest
+     * @return DeleteDDoSBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDDoSBlackWhiteIpListResponse DeleteDDoSBlackWhiteIpList(DeleteDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDDoSBlackWhiteIpList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除DDoS防护的区域封禁配置
      * @param req DeleteDDoSGeoIPBlockConfigRequest
      * @return DeleteDDoSGeoIPBlockConfigResponse
@@ -531,6 +571,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCCTrendResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCCTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取DDoS防护的IP网段黑白名单
+     * @param req DescribeDDoSBlackWhiteIpListRequest
+     * @return DescribeDDoSBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSBlackWhiteIpListResponse DescribeDDoSBlackWhiteIpList(DescribeDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSBlackWhiteIpList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

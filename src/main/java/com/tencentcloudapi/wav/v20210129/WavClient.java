@@ -79,6 +79,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *线索回收接口
+     * @param req CreateLeadRequest
+     * @return CreateLeadResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLeadResponse CreateLead(CreateLeadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLeadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLeadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLead");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据游标拉取活动参与列表信息
      * @param req QueryActivityJoinListRequest
      * @return QueryActivityJoinListResponse
@@ -199,6 +219,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
+     * @param req QueryDealerInfoListRequest
+     * @return QueryDealerInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryDealerInfoListResponse QueryDealerInfoList(QueryDealerInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryDealerInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryDealerInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryDealerInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *企业可通过此接口，根据外部联系人的userid，拉取客户详情
      * @param req QueryExternalContactDetailRequest
      * @return QueryExternalContactDetailResponse
@@ -291,6 +331,26 @@ public class WavClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryMiniAppCodeListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryMiniAppCodeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业可通过此接口获取企微SaaS平台上的车系车型信息。
+     * @param req QueryVehicleInfoListRequest
+     * @return QueryVehicleInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryVehicleInfoListResponse QueryVehicleInfoList(QueryVehicleInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryVehicleInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryVehicleInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryVehicleInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

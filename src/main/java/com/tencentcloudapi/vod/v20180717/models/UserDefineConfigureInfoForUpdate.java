@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class UserDefineConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * 用户自定义人物审核控制参数。
+    * 用户自定义人物智能识别控制参数。
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo;
 
     /**
-    * 用户自定义语音审核控制参数。
+    * 用户自定义语音智能识别控制参数。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * 用户自定义文本审核控制参数。
+    * 用户自定义文本智能识别控制参数。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get 用户自定义人物审核控制参数。 
-     * @return FaceReviewInfo 用户自定义人物审核控制参数。
+     * Get 用户自定义人物智能识别控制参数。 
+     * @return FaceReviewInfo 用户自定义人物智能识别控制参数。
      */
     public UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set 用户自定义人物审核控制参数。
-     * @param FaceReviewInfo 用户自定义人物审核控制参数。
+     * Set 用户自定义人物智能识别控制参数。
+     * @param FaceReviewInfo 用户自定义人物智能识别控制参数。
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get 用户自定义语音审核控制参数。 
-     * @return AsrReviewInfo 用户自定义语音审核控制参数。
+     * Get 用户自定义语音智能识别控制参数。 
+     * @return AsrReviewInfo 用户自定义语音智能识别控制参数。
      */
     public UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set 用户自定义语音审核控制参数。
-     * @param AsrReviewInfo 用户自定义语音审核控制参数。
+     * Set 用户自定义语音智能识别控制参数。
+     * @param AsrReviewInfo 用户自定义语音智能识别控制参数。
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get 用户自定义文本审核控制参数。 
-     * @return OcrReviewInfo 用户自定义文本审核控制参数。
+     * Get 用户自定义文本智能识别控制参数。 
+     * @return OcrReviewInfo 用户自定义文本智能识别控制参数。
      */
     public UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 用户自定义文本审核控制参数。
-     * @param OcrReviewInfo 用户自定义文本审核控制参数。
+     * Set 用户自定义文本智能识别控制参数。
+     * @param OcrReviewInfo 用户自定义文本智能识别控制参数。
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

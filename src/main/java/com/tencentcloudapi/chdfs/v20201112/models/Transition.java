@@ -30,7 +30,7 @@ public class Transition extends AbstractModel{
     private Long Days;
 
     /**
-    * 转换类型（1：归档；2：删除）
+    * 转换类型（1：归档；2：删除；3：低频）
     */
     @SerializedName("Type")
     @Expose
@@ -53,16 +53,16 @@ public class Transition extends AbstractModel{
     }
 
     /**
-     * Get 转换类型（1：归档；2：删除） 
-     * @return Type 转换类型（1：归档；2：删除）
+     * Get 转换类型（1：归档；2：删除；3：低频） 
+     * @return Type 转换类型（1：归档；2：删除；3：低频）
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 转换类型（1：归档；2：删除）
-     * @param Type 转换类型（1：归档；2：删除）
+     * Set 转换类型（1：归档；2：删除；3：低频）
+     * @param Type 转换类型（1：归档；2：删除；3：低频）
      */
     public void setType(Long Type) {
         this.Type = Type;

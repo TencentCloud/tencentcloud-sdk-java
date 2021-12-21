@@ -100,6 +100,22 @@ public class FileSystem extends AbstractModel{
     private Boolean PosixAcl;
 
     /**
+    * 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableRanger")
+    @Expose
+    private Boolean EnableRanger;
+
+    /**
+    * Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RangerServiceAddresses")
+    @Expose
+    private String [] RangerServiceAddresses;
+
+    /**
      * Get 资源所属用户AppId 
      * @return AppId 资源所属用户AppId
      */
@@ -275,6 +291,46 @@ public class FileSystem extends AbstractModel{
         this.PosixAcl = PosixAcl;
     }
 
+    /**
+     * Get 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableRanger 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableRanger() {
+        return this.EnableRanger;
+    }
+
+    /**
+     * Set 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableRanger 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableRanger(Boolean EnableRanger) {
+        this.EnableRanger = EnableRanger;
+    }
+
+    /**
+     * Get Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RangerServiceAddresses Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRangerServiceAddresses() {
+        return this.RangerServiceAddresses;
+    }
+
+    /**
+     * Set Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RangerServiceAddresses Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
+        this.RangerServiceAddresses = RangerServiceAddresses;
+    }
+
     public FileSystem() {
     }
 
@@ -319,6 +375,15 @@ public class FileSystem extends AbstractModel{
         if (source.PosixAcl != null) {
             this.PosixAcl = new Boolean(source.PosixAcl);
         }
+        if (source.EnableRanger != null) {
+            this.EnableRanger = new Boolean(source.EnableRanger);
+        }
+        if (source.RangerServiceAddresses != null) {
+            this.RangerServiceAddresses = new String[source.RangerServiceAddresses.length];
+            for (int i = 0; i < source.RangerServiceAddresses.length; i++) {
+                this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
+            }
+        }
     }
 
 
@@ -337,6 +402,8 @@ public class FileSystem extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
+        this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+        this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
 
     }
 }

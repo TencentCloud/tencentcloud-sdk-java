@@ -37,7 +37,7 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-    * 小程序审核视频播放地址。
+    * 小程序智能识别视频播放地址。
     */
     @SerializedName("Url")
     @Expose
@@ -53,7 +53,7 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
     private String ReviewResult;
 
     /**
-    * 小程序审核元素。
+    * 小程序智能识别元素。
     */
     @SerializedName("ReviewSummary")
     @Expose
@@ -92,16 +92,16 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 小程序审核视频播放地址。 
-     * @return Url 小程序审核视频播放地址。
+     * Get 小程序智能识别视频播放地址。 
+     * @return Url 小程序智能识别视频播放地址。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 小程序审核视频播放地址。
-     * @param Url 小程序审核视频播放地址。
+     * Set 小程序智能识别视频播放地址。
+     * @param Url 小程序智能识别视频播放地址。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -132,16 +132,16 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 小程序审核元素。 
-     * @return ReviewSummary 小程序审核元素。
+     * Get 小程序智能识别元素。 
+     * @return ReviewSummary 小程序智能识别元素。
      */
     public MediaMiniProgramReviewElem [] getReviewSummary() {
         return this.ReviewSummary;
     }
 
     /**
-     * Set 小程序审核元素。
-     * @param ReviewSummary 小程序审核元素。
+     * Set 小程序智能识别元素。
+     * @param ReviewSummary 小程序智能识别元素。
      */
     public void setReviewSummary(MediaMiniProgramReviewElem [] ReviewSummary) {
         this.ReviewSummary = ReviewSummary;

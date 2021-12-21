@@ -51,14 +51,14 @@ public class AiReviewTaskPornResult extends AbstractModel{
     private String Message;
 
     /**
-    * 内容审核鉴黄任务输入。
+    * 智能识别涉及令人反感的信息的任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornTaskInput Input;
 
     /**
-    * 内容审核鉴黄任务输出。
+    * 智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -130,25 +130,25 @@ public class AiReviewTaskPornResult extends AbstractModel{
     }
 
     /**
-     * Get 内容审核鉴黄任务输入。 
-     * @return Input 内容审核鉴黄任务输入。
+     * Get 智能识别涉及令人反感的信息的任务输入。 
+     * @return Input 智能识别涉及令人反感的信息的任务输入。
      */
     public AiReviewPornTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 内容审核鉴黄任务输入。
-     * @param Input 内容审核鉴黄任务输入。
+     * Set 智能识别涉及令人反感的信息的任务输入。
+     * @param Input 智能识别涉及令人反感的信息的任务输入。
      */
     public void setInput(AiReviewPornTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 内容审核鉴黄任务输出。
+     * Get 智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 内容审核鉴黄任务输出。
+     * @return Output 智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewPornTaskOutput getOutput() {
@@ -156,9 +156,9 @@ public class AiReviewTaskPornResult extends AbstractModel{
     }
 
     /**
-     * Set 内容审核鉴黄任务输出。
+     * Set 智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 内容审核鉴黄任务输出。
+     * @param Output 智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewPornTaskOutput Output) {

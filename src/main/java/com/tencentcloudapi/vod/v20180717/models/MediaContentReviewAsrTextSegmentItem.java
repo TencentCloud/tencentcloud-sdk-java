@@ -44,7 +44,7 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
     private Float Confidence;
 
     /**
-    * 嫌疑片段审核结果建议，取值范围：
+    * 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -109,11 +109,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get 嫌疑片段审核结果建议，取值范围：
+     * Get 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion 嫌疑片段审核结果建议，取值范围：
+     * @return Suggestion 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -123,11 +123,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
     }
 
     /**
-     * Set 嫌疑片段审核结果建议，取值范围：
+     * Set 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion 嫌疑片段审核结果建议，取值范围：
+     * @param Suggestion 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>

@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class LaunchTemplate extends AbstractModel{
 
+    /**
+    * 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+    */
+    @SerializedName("LaunchTemplateId")
+    @Expose
+    private String LaunchTemplateId;
+
+    /**
+    * 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+    */
+    @SerializedName("LaunchTemplateVersion")
+    @Expose
+    private Long LaunchTemplateVersion;
+
+    /**
+     * Get 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。 
+     * @return LaunchTemplateId 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+     */
+    public String getLaunchTemplateId() {
+        return this.LaunchTemplateId;
+    }
+
+    /**
+     * Set 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+     * @param LaunchTemplateId 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+     */
+    public void setLaunchTemplateId(String LaunchTemplateId) {
+        this.LaunchTemplateId = LaunchTemplateId;
+    }
+
+    /**
+     * Get 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建 
+     * @return LaunchTemplateVersion 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+     */
+    public Long getLaunchTemplateVersion() {
+        return this.LaunchTemplateVersion;
+    }
+
+    /**
+     * Set 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+     * @param LaunchTemplateVersion 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+     */
+    public void setLaunchTemplateVersion(Long LaunchTemplateVersion) {
+        this.LaunchTemplateVersion = LaunchTemplateVersion;
+    }
+
     public LaunchTemplate() {
     }
 
@@ -30,6 +76,12 @@ public class LaunchTemplate extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LaunchTemplate(LaunchTemplate source) {
+        if (source.LaunchTemplateId != null) {
+            this.LaunchTemplateId = new String(source.LaunchTemplateId);
+        }
+        if (source.LaunchTemplateVersion != null) {
+            this.LaunchTemplateVersion = new Long(source.LaunchTemplateVersion);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class LaunchTemplate extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LaunchTemplateId", this.LaunchTemplateId);
+        this.setParamSimple(map, prefix + "LaunchTemplateVersion", this.LaunchTemplateVersion);
 
     }
 }

@@ -51,14 +51,14 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
     private String Message;
 
     /**
-    * 内容审核 Ocr 文字鉴黄任务输入。
+    * 智能识别 Ocr 文字涉及令人反感的信息的任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornOcrTaskInput Input;
 
     /**
-    * 内容审核 Ocr 文字鉴黄任务输出。
+    * Ocr 文字智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -130,25 +130,25 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
     }
 
     /**
-     * Get 内容审核 Ocr 文字鉴黄任务输入。 
-     * @return Input 内容审核 Ocr 文字鉴黄任务输入。
+     * Get 智能识别 Ocr 文字涉及令人反感的信息的任务输入。 
+     * @return Input 智能识别 Ocr 文字涉及令人反感的信息的任务输入。
      */
     public AiReviewPornOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 内容审核 Ocr 文字鉴黄任务输入。
-     * @param Input 内容审核 Ocr 文字鉴黄任务输入。
+     * Set 智能识别 Ocr 文字涉及令人反感的信息的任务输入。
+     * @param Input 智能识别 Ocr 文字涉及令人反感的信息的任务输入。
      */
     public void setInput(AiReviewPornOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 内容审核 Ocr 文字鉴黄任务输出。
+     * Get Ocr 文字智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 内容审核 Ocr 文字鉴黄任务输出。
+     * @return Output Ocr 文字智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewPornOcrTaskOutput getOutput() {
@@ -156,9 +156,9 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
     }
 
     /**
-     * Set 内容审核 Ocr 文字鉴黄任务输出。
+     * Set Ocr 文字智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 内容审核 Ocr 文字鉴黄任务输出。
+     * @param Output Ocr 文字智能识别涉及令人反感的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewPornOcrTaskOutput Output) {

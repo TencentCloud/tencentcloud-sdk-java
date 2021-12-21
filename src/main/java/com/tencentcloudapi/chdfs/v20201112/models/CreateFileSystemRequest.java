@@ -30,7 +30,7 @@ public class CreateFileSystemRequest extends AbstractModel{
     private String FileSystemName;
 
     /**
-    * 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+    * 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
     */
     @SerializedName("CapacityQuota")
     @Expose
@@ -72,6 +72,20 @@ public class CreateFileSystemRequest extends AbstractModel{
     private String RootInodeGroup;
 
     /**
+    * 是否打开Ranger地址校验
+    */
+    @SerializedName("EnableRanger")
+    @Expose
+    private Boolean EnableRanger;
+
+    /**
+    * Ranger地址列表，默认为空数组
+    */
+    @SerializedName("RangerServiceAddresses")
+    @Expose
+    private String [] RangerServiceAddresses;
+
+    /**
      * Get 文件系统名称 
      * @return FileSystemName 文件系统名称
      */
@@ -88,16 +102,16 @@ public class CreateFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍 
-     * @return CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * Get 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍 
+     * @return CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      */
     public Long getCapacityQuota() {
         return this.CapacityQuota;
     }
 
     /**
-     * Set 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
-     * @param CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * Set 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
+     * @param CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      */
     public void setCapacityQuota(Long CapacityQuota) {
         this.CapacityQuota = CapacityQuota;
@@ -183,6 +197,38 @@ public class CreateFileSystemRequest extends AbstractModel{
         this.RootInodeGroup = RootInodeGroup;
     }
 
+    /**
+     * Get 是否打开Ranger地址校验 
+     * @return EnableRanger 是否打开Ranger地址校验
+     */
+    public Boolean getEnableRanger() {
+        return this.EnableRanger;
+    }
+
+    /**
+     * Set 是否打开Ranger地址校验
+     * @param EnableRanger 是否打开Ranger地址校验
+     */
+    public void setEnableRanger(Boolean EnableRanger) {
+        this.EnableRanger = EnableRanger;
+    }
+
+    /**
+     * Get Ranger地址列表，默认为空数组 
+     * @return RangerServiceAddresses Ranger地址列表，默认为空数组
+     */
+    public String [] getRangerServiceAddresses() {
+        return this.RangerServiceAddresses;
+    }
+
+    /**
+     * Set Ranger地址列表，默认为空数组
+     * @param RangerServiceAddresses Ranger地址列表，默认为空数组
+     */
+    public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
+        this.RangerServiceAddresses = RangerServiceAddresses;
+    }
+
     public CreateFileSystemRequest() {
     }
 
@@ -215,6 +261,15 @@ public class CreateFileSystemRequest extends AbstractModel{
         if (source.RootInodeGroup != null) {
             this.RootInodeGroup = new String(source.RootInodeGroup);
         }
+        if (source.EnableRanger != null) {
+            this.EnableRanger = new Boolean(source.EnableRanger);
+        }
+        if (source.RangerServiceAddresses != null) {
+            this.RangerServiceAddresses = new String[source.RangerServiceAddresses.length];
+            for (int i = 0; i < source.RangerServiceAddresses.length; i++) {
+                this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
+            }
+        }
     }
 
 
@@ -229,6 +284,8 @@ public class CreateFileSystemRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
         this.setParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);
+        this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+        this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private FileSystem FileSystem;
 
     /**
-    * 已使用容量（byte），包括标准和归档存储
+    * 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CapacityUsed")
@@ -38,12 +38,28 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private Long CapacityUsed;
 
     /**
-    * 已使用归档存储容量（byte）
+    * 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArchiveCapacityUsed")
     @Expose
     private Long ArchiveCapacityUsed;
+
+    /**
+    * 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StandardCapacityUsed")
+    @Expose
+    private Long StandardCapacityUsed;
+
+    /**
+    * 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DegradeCapacityUsed")
+    @Expose
+    private Long DegradeCapacityUsed;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -69,9 +85,9 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get 已使用容量（byte），包括标准和归档存储
+     * Get 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CapacityUsed 已使用容量（byte），包括标准和归档存储
+     * @return CapacityUsed 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCapacityUsed() {
@@ -79,9 +95,9 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Set 已使用容量（byte），包括标准和归档存储
+     * Set 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CapacityUsed 已使用容量（byte），包括标准和归档存储
+     * @param CapacityUsed 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapacityUsed(Long CapacityUsed) {
@@ -89,9 +105,9 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get 已使用归档存储容量（byte）
+     * Get 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ArchiveCapacityUsed 已使用归档存储容量（byte）
+     * @return ArchiveCapacityUsed 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getArchiveCapacityUsed() {
@@ -99,13 +115,53 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Set 已使用归档存储容量（byte）
+     * Set 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ArchiveCapacityUsed 已使用归档存储容量（byte）
+     * @param ArchiveCapacityUsed 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchiveCapacityUsed(Long ArchiveCapacityUsed) {
         this.ArchiveCapacityUsed = ArchiveCapacityUsed;
+    }
+
+    /**
+     * Get 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StandardCapacityUsed 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStandardCapacityUsed() {
+        return this.StandardCapacityUsed;
+    }
+
+    /**
+     * Set 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandardCapacityUsed 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandardCapacityUsed(Long StandardCapacityUsed) {
+        this.StandardCapacityUsed = StandardCapacityUsed;
+    }
+
+    /**
+     * Get 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DegradeCapacityUsed 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDegradeCapacityUsed() {
+        return this.DegradeCapacityUsed;
+    }
+
+    /**
+     * Set 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DegradeCapacityUsed 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDegradeCapacityUsed(Long DegradeCapacityUsed) {
+        this.DegradeCapacityUsed = DegradeCapacityUsed;
     }
 
     /**
@@ -141,6 +197,12 @@ public class DescribeFileSystemResponse extends AbstractModel{
         if (source.ArchiveCapacityUsed != null) {
             this.ArchiveCapacityUsed = new Long(source.ArchiveCapacityUsed);
         }
+        if (source.StandardCapacityUsed != null) {
+            this.StandardCapacityUsed = new Long(source.StandardCapacityUsed);
+        }
+        if (source.DegradeCapacityUsed != null) {
+            this.DegradeCapacityUsed = new Long(source.DegradeCapacityUsed);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -154,6 +216,8 @@ public class DescribeFileSystemResponse extends AbstractModel{
         this.setParamObj(map, prefix + "FileSystem.", this.FileSystem);
         this.setParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
         this.setParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
+        this.setParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
+        this.setParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

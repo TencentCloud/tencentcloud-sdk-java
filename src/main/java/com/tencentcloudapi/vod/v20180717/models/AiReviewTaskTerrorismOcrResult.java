@@ -51,14 +51,14 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel{
     private String Message;
 
     /**
-    * 内容审核 Ocr 文字鉴恐任务输入。
+    * 智能识别 Ocr 文字涉及令人不安全的信息的任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismOcrTaskInput Input;
 
     /**
-    * 内容审核 Ocr 文字鉴恐任务输出。
+    * 智能识别 Ocr 文字涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -130,25 +130,25 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel{
     }
 
     /**
-     * Get 内容审核 Ocr 文字鉴恐任务输入。 
-     * @return Input 内容审核 Ocr 文字鉴恐任务输入。
+     * Get 智能识别 Ocr 文字涉及令人不安全的信息的任务输入。 
+     * @return Input 智能识别 Ocr 文字涉及令人不安全的信息的任务输入。
      */
     public AiReviewTerrorismOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 内容审核 Ocr 文字鉴恐任务输入。
-     * @param Input 内容审核 Ocr 文字鉴恐任务输入。
+     * Set 智能识别 Ocr 文字涉及令人不安全的信息的任务输入。
+     * @param Input 智能识别 Ocr 文字涉及令人不安全的信息的任务输入。
      */
     public void setInput(AiReviewTerrorismOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 内容审核 Ocr 文字鉴恐任务输出。
+     * Get 智能识别 Ocr 文字涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 内容审核 Ocr 文字鉴恐任务输出。
+     * @return Output 智能识别 Ocr 文字涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTerrorismOcrTaskOutput getOutput() {
@@ -156,9 +156,9 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel{
     }
 
     /**
-     * Set 内容审核 Ocr 文字鉴恐任务输出。
+     * Set 智能识别 Ocr 文字涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 内容审核 Ocr 文字鉴恐任务输出。
+     * @param Output 智能识别 Ocr 文字涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewTerrorismOcrTaskOutput Output) {

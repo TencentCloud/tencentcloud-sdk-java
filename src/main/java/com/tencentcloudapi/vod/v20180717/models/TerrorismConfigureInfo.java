@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TerrorismConfigureInfo extends AbstractModel{
 
     /**
-    * 画面鉴恐任务控制参数。
+    * 画面鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgReviewInfo")
@@ -31,7 +31,7 @@ public class TerrorismConfigureInfo extends AbstractModel{
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * 文字鉴恐任务控制参数。
+    * 文字鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
@@ -39,9 +39,9 @@ public class TerrorismConfigureInfo extends AbstractModel{
     private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get 画面鉴恐任务控制参数。
+     * Get 画面鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImgReviewInfo 画面鉴恐任务控制参数。
+     * @return ImgReviewInfo 画面鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
@@ -49,9 +49,9 @@ public class TerrorismConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 画面鉴恐任务控制参数。
+     * Set 画面鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImgReviewInfo 画面鉴恐任务控制参数。
+     * @param ImgReviewInfo 画面鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
@@ -59,9 +59,9 @@ public class TerrorismConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Get 文字鉴恐任务控制参数。
+     * Get 文字鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrReviewInfo 文字鉴恐任务控制参数。
+     * @return OcrReviewInfo 文字鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
@@ -69,9 +69,9 @@ public class TerrorismConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 文字鉴恐任务控制参数。
+     * Set 文字鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrReviewInfo 文字鉴恐任务控制参数。
+     * @param OcrReviewInfo 文字鉴别涉及令人不安全的信息的任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {

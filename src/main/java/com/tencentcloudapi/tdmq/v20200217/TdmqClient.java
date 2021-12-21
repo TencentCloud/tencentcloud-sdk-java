@@ -1299,6 +1299,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取消息生产概览信息
+     * @param req DescribePublisherSummaryRequest
+     * @return DescribePublisherSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublisherSummaryResponse DescribePublisherSummary(DescribePublisherSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublisherSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePublisherSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取生产者信息列表
+     * @param req DescribePublishersRequest
+     * @return DescribePublishersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublishersResponse DescribePublishers(DescribePublishersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublishersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublishersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePublishers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取单个RocketMQ集群信息
      * @param req DescribeRocketMQClusterRequest
      * @return DescribeRocketMQClusterResponse

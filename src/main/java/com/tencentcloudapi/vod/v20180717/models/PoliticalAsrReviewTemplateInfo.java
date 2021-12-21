@@ -23,82 +23,82 @@ import java.util.HashMap;
 public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
 
     /**
-    * 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
+    * 语音鉴别涉及令人不适宜的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人不适宜的信息的任务；</li>
+<li>OFF：关闭语音鉴别的涉及令人不适宜的信息的任务。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
-    */
-    @SerializedName("BlockConfidence")
-    @Expose
-    private Long BlockConfidence;
-
-    /**
-    * 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+    * 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li> 
-     * @return Switch 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
+    * 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+    */
+    @SerializedName("BlockConfidence")
+    @Expose
+    private Long BlockConfidence;
+
+    /**
+     * Get 语音鉴别涉及令人不适宜的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人不适宜的信息的任务；</li>
+<li>OFF：关闭语音鉴别的涉及令人不适宜的信息的任务。</li> 
+     * @return Switch 语音鉴别涉及令人不适宜的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人不适宜的信息的任务；</li>
+<li>OFF：关闭语音鉴别的涉及令人不适宜的信息的任务。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
-     * @param Switch 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
+     * Set 语音鉴别涉及令人不适宜的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人不适宜的信息的任务；</li>
+<li>OFF：关闭语音鉴别的涉及令人不适宜的信息的任务。</li>
+     * @param Switch 语音鉴别涉及令人不适宜的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人不适宜的信息的任务；</li>
+<li>OFF：关闭语音鉴别的涉及令人不适宜的信息的任务。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。 
-     * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
-     */
-    public Long getBlockConfidence() {
-        return this.BlockConfidence;
-    }
-
-    /**
-     * Set 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
-     * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
-     */
-    public void setBlockConfidence(Long BlockConfidence) {
-        this.BlockConfidence = BlockConfidence;
-    }
-
-    /**
-     * Get 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。 
-     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。 
+     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
-     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;
+    }
+
+    /**
+     * Get 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。 
+     * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     */
+    public Long getBlockConfidence() {
+        return this.BlockConfidence;
+    }
+
+    /**
+     * Set 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     */
+    public void setBlockConfidence(Long BlockConfidence) {
+        this.BlockConfidence = BlockConfidence;
     }
 
     public PoliticalAsrReviewTemplateInfo() {
@@ -112,11 +112,11 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.BlockConfidence != null) {
-            this.BlockConfidence = new Long(source.BlockConfidence);
-        }
         if (source.ReviewConfidence != null) {
             this.ReviewConfidence = new Long(source.ReviewConfidence);
+        }
+        if (source.BlockConfidence != null) {
+            this.BlockConfidence = new Long(source.BlockConfidence);
         }
     }
 
@@ -126,8 +126,8 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
         this.setParamSimple(map, prefix + "ReviewConfidence", this.ReviewConfidence);
+        this.setParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
 
     }
 }

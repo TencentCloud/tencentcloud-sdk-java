@@ -51,6 +51,20 @@ public class RunJobDescription extends AbstractModel{
     private Long JobConfigVersion;
 
     /**
+    * Savepoint路径
+    */
+    @SerializedName("SavepointPath")
+    @Expose
+    private String SavepointPath;
+
+    /**
+    * Savepoint的Id
+    */
+    @SerializedName("SavepointId")
+    @Expose
+    private String SavepointId;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -114,6 +128,38 @@ public class RunJobDescription extends AbstractModel{
         this.JobConfigVersion = JobConfigVersion;
     }
 
+    /**
+     * Get Savepoint路径 
+     * @return SavepointPath Savepoint路径
+     */
+    public String getSavepointPath() {
+        return this.SavepointPath;
+    }
+
+    /**
+     * Set Savepoint路径
+     * @param SavepointPath Savepoint路径
+     */
+    public void setSavepointPath(String SavepointPath) {
+        this.SavepointPath = SavepointPath;
+    }
+
+    /**
+     * Get Savepoint的Id 
+     * @return SavepointId Savepoint的Id
+     */
+    public String getSavepointId() {
+        return this.SavepointId;
+    }
+
+    /**
+     * Set Savepoint的Id
+     * @param SavepointId Savepoint的Id
+     */
+    public void setSavepointId(String SavepointId) {
+        this.SavepointId = SavepointId;
+    }
+
     public RunJobDescription() {
     }
 
@@ -134,6 +180,12 @@ public class RunJobDescription extends AbstractModel{
         if (source.JobConfigVersion != null) {
             this.JobConfigVersion = new Long(source.JobConfigVersion);
         }
+        if (source.SavepointPath != null) {
+            this.SavepointPath = new String(source.SavepointPath);
+        }
+        if (source.SavepointId != null) {
+            this.SavepointId = new String(source.SavepointId);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class RunJobDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "RunType", this.RunType);
         this.setParamSimple(map, prefix + "StartMode", this.StartMode);
         this.setParamSimple(map, prefix + "JobConfigVersion", this.JobConfigVersion);
+        this.setParamSimple(map, prefix + "SavepointPath", this.SavepointPath);
+        this.setParamSimple(map, prefix + "SavepointId", this.SavepointId);
 
     }
 }

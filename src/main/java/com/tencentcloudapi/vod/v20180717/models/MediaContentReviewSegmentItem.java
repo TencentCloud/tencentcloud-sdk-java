@@ -37,21 +37,21 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-    * 嫌疑片段涉黄分数。
+    * 嫌疑片段涉及令人反感的信息的分数。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 嫌疑片段鉴黄结果标签。
+    * 嫌疑片段涉及令人反感的信息的结果标签。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 嫌疑片段鉴黄结果建议，取值范围：
+    * 嫌疑片段鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -115,43 +115,43 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get 嫌疑片段涉黄分数。 
-     * @return Confidence 嫌疑片段涉黄分数。
+     * Get 嫌疑片段涉及令人反感的信息的分数。 
+     * @return Confidence 嫌疑片段涉及令人反感的信息的分数。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 嫌疑片段涉黄分数。
-     * @param Confidence 嫌疑片段涉黄分数。
+     * Set 嫌疑片段涉及令人反感的信息的分数。
+     * @param Confidence 嫌疑片段涉及令人反感的信息的分数。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 嫌疑片段鉴黄结果标签。 
-     * @return Label 嫌疑片段鉴黄结果标签。
+     * Get 嫌疑片段涉及令人反感的信息的结果标签。 
+     * @return Label 嫌疑片段涉及令人反感的信息的结果标签。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 嫌疑片段鉴黄结果标签。
-     * @param Label 嫌疑片段鉴黄结果标签。
+     * Set 嫌疑片段涉及令人反感的信息的结果标签。
+     * @param Label 嫌疑片段涉及令人反感的信息的结果标签。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 嫌疑片段鉴黄结果建议，取值范围：
+     * Get 嫌疑片段鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion 嫌疑片段鉴黄结果建议，取值范围：
+     * @return Suggestion 嫌疑片段鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -161,11 +161,11 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     }
 
     /**
-     * Set 嫌疑片段鉴黄结果建议，取值范围：
+     * Set 嫌疑片段鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion 嫌疑片段鉴黄结果建议，取值范围：
+     * @param Suggestion 嫌疑片段鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>

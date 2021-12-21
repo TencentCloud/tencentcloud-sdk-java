@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
-    * 视频鉴黄评分，分值为0到100。
+    * 视频鉴别涉及令人反感的信息的评分，分值为0到100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 鉴黄结果建议，取值范围：
+    * 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -40,7 +40,7 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 视频鉴黄结果标签，取值范围：
+    * 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -51,7 +51,7 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     private String Label;
 
     /**
-    * 有涉黄嫌疑的视频片段列表。
+    * 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
     */
     @SerializedName("SegmentSet")
@@ -59,41 +59,41 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-    * 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+    * 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get 视频鉴黄评分，分值为0到100。 
-     * @return Confidence 视频鉴黄评分，分值为0到100。
+     * Get 视频鉴别涉及令人反感的信息的评分，分值为0到100。 
+     * @return Confidence 视频鉴别涉及令人反感的信息的评分，分值为0到100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 视频鉴黄评分，分值为0到100。
-     * @param Confidence 视频鉴黄评分，分值为0到100。
+     * Set 视频鉴别涉及令人反感的信息的评分，分值为0到100。
+     * @param Confidence 视频鉴别涉及令人反感的信息的评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 鉴黄结果建议，取值范围：
+     * Get 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion 鉴黄结果建议，取值范围：
+     * @return Suggestion 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -103,11 +103,11 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set 鉴黄结果建议，取值范围：
+     * Set 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion 鉴黄结果建议，取值范围：
+     * @param Suggestion 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -117,12 +117,12 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get 视频鉴黄结果标签，取值范围：
+     * Get 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li> 
-     * @return Label 视频鉴黄结果标签，取值范围：
+     * @return Label 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -133,12 +133,12 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set 视频鉴黄结果标签，取值范围：
+     * Set 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
-     * @param Label 视频鉴黄结果标签，取值范围：
+     * @param Label 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -149,9 +149,9 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get 有涉黄嫌疑的视频片段列表。
+     * Get 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。 
-     * @return SegmentSet 有涉黄嫌疑的视频片段列表。
+     * @return SegmentSet 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
@@ -159,9 +159,9 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set 有涉黄嫌疑的视频片段列表。
+     * Set 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
-     * @param SegmentSet 有涉黄嫌疑的视频片段列表。
+     * @param SegmentSet 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
@@ -169,32 +169,32 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。 
-     * @return SegmentSetFileUrl 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * Get 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return SegmentSetFileUrl 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
-     * @param SegmentSetFileUrl 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * Set 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param SegmentSetFileUrl 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return SegmentSetFileUrlExpireTime 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return SegmentSetFileUrlExpireTime 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param SegmentSetFileUrlExpireTime 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param SegmentSetFileUrlExpireTime 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

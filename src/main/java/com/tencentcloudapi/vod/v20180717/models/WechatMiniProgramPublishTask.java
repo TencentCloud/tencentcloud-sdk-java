@@ -73,7 +73,7 @@ FINISH：已完成。
     * 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：审核未通过。</li>
+<li>Rejected：智能识别未通过。</li>
     */
     @SerializedName("PublishResult")
     @Expose
@@ -199,11 +199,11 @@ FINISH：已完成。
      * Get 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：审核未通过。</li> 
+<li>Rejected：智能识别未通过。</li> 
      * @return PublishResult 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：审核未通过。</li>
+<li>Rejected：智能识别未通过。</li>
      */
     public String getPublishResult() {
         return this.PublishResult;
@@ -213,11 +213,11 @@ FINISH：已完成。
      * Set 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：审核未通过。</li>
+<li>Rejected：智能识别未通过。</li>
      * @param PublishResult 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：审核未通过。</li>
+<li>Rejected：智能识别未通过。</li>
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;

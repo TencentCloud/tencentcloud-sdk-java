@@ -79,6 +79,13 @@ public class FlowApproverInfo extends AbstractModel{
     private String OpenId;
 
     /**
+    * 合同的强制预览时间：3~300s，未指定则按合同页数计算
+    */
+    @SerializedName("PreReadTime")
+    @Expose
+    private Long PreReadTime;
+
+    /**
      * Get 签署人姓名 
      * @return Name 签署人姓名
      */
@@ -206,6 +213,22 @@ public class FlowApproverInfo extends AbstractModel{
         this.OpenId = OpenId;
     }
 
+    /**
+     * Get 合同的强制预览时间：3~300s，未指定则按合同页数计算 
+     * @return PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     */
+    public Long getPreReadTime() {
+        return this.PreReadTime;
+    }
+
+    /**
+     * Set 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     * @param PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     */
+    public void setPreReadTime(Long PreReadTime) {
+        this.PreReadTime = PreReadTime;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -238,6 +261,9 @@ public class FlowApproverInfo extends AbstractModel{
         if (source.OpenId != null) {
             this.OpenId = new String(source.OpenId);
         }
+        if (source.PreReadTime != null) {
+            this.PreReadTime = new Long(source.PreReadTime);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class FlowApproverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
 
     }
 }

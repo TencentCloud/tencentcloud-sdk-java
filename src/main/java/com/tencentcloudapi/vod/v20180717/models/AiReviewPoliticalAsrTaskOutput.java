@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
 
     /**
-    * Asr 文字涉政、敏感评分，分值为0到100。
+    * Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Asr 文字涉政、敏感结果建议，取值范围：
+    * Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -40,7 +40,7 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * Asr 文字有涉政、敏感嫌疑的视频片段列表。
+    * Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
     */
     @SerializedName("SegmentSet")
@@ -48,41 +48,41 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-    * Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+    * Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Asr 文字涉政、敏感评分，分值为0到100。 
-     * @return Confidence Asr 文字涉政、敏感评分，分值为0到100。
+     * Get Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。 
+     * @return Confidence Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Asr 文字涉政、敏感评分，分值为0到100。
-     * @param Confidence Asr 文字涉政、敏感评分，分值为0到100。
+     * Set Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
+     * @param Confidence Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Asr 文字涉政、敏感结果建议，取值范围：
+     * Get Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion Asr 文字涉政、敏感结果建议，取值范围：
+     * @return Suggestion Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -92,11 +92,11 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set Asr 文字涉政、敏感结果建议，取值范围：
+     * Set Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion Asr 文字涉政、敏感结果建议，取值范围：
+     * @param Suggestion Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -106,9 +106,9 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Get Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。 
-     * @return SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * @return SegmentSet Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
@@ -116,9 +116,9 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Set Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
-     * @param SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * @param SegmentSet Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
@@ -126,32 +126,32 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。 
-     * @return SegmentSetFileUrl Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * Get Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。 
+     * @return SegmentSetFileUrl Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
-     * @param SegmentSetFileUrl Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * Set Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param SegmentSetFileUrl Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return SegmentSetFileUrlExpireTime Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return SegmentSetFileUrlExpireTime Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param SegmentSetFileUrlExpireTime Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param SegmentSetFileUrlExpireTime Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

@@ -438,4 +438,24 @@ public class TemClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *更新应用部署版本
+     * @param req RollingUpdateApplicationByVersionRequest
+     * @return RollingUpdateApplicationByVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(RollingUpdateApplicationByVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RollingUpdateApplicationByVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

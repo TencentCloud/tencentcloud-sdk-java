@@ -95,7 +95,7 @@ public class ProcedureTask extends AbstractModel{
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * 视频内容审核任务的执行状态与结果。
+    * 视频智能识别任务的执行状态与结果。
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
@@ -327,16 +327,16 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核任务的执行状态与结果。 
-     * @return AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * Get 视频智能识别任务的执行状态与结果。 
+     * @return AiContentReviewResultSet 视频智能识别任务的执行状态与结果。
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set 视频内容审核任务的执行状态与结果。
-     * @param AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * Set 视频智能识别任务的执行状态与结果。
+     * @param AiContentReviewResultSet 视频智能识别任务的执行状态与结果。
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;

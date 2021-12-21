@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
-    * 内容审核模板唯一标识。
+    * 智能识别模板唯一标识。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 内容审核模板名称，长度限制：64 个字符。
+    * 智能识别模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 内容审核模板描述信息，长度限制：256 个字符。
+    * 智能识别模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 鉴黄控制参数。
+    * 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PornConfigure")
@@ -52,7 +52,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private PornConfigureInfo PornConfigure;
 
     /**
-    * 鉴恐控制参数。
+    * 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismConfigure")
@@ -60,7 +60,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * 鉴政控制参数。
+    * 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalConfigure")
@@ -78,7 +78,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * 用户自定义内容审核控制参数。
+    * 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefineConfigure")
@@ -86,7 +86,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+    * 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
     */
@@ -116,57 +116,57 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get 内容审核模板唯一标识。 
-     * @return Definition 内容审核模板唯一标识。
+     * Get 智能识别模板唯一标识。 
+     * @return Definition 智能识别模板唯一标识。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 内容审核模板唯一标识。
-     * @param Definition 内容审核模板唯一标识。
+     * Set 智能识别模板唯一标识。
+     * @param Definition 智能识别模板唯一标识。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 内容审核模板名称，长度限制：64 个字符。 
-     * @return Name 内容审核模板名称，长度限制：64 个字符。
+     * Get 智能识别模板名称，长度限制：64 个字符。 
+     * @return Name 智能识别模板名称，长度限制：64 个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 内容审核模板名称，长度限制：64 个字符。
-     * @param Name 内容审核模板名称，长度限制：64 个字符。
+     * Set 智能识别模板名称，长度限制：64 个字符。
+     * @param Name 智能识别模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 内容审核模板描述信息，长度限制：256 个字符。 
-     * @return Comment 内容审核模板描述信息，长度限制：256 个字符。
+     * Get 智能识别模板描述信息，长度限制：256 个字符。 
+     * @return Comment 智能识别模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 内容审核模板描述信息，长度限制：256 个字符。
-     * @param Comment 内容审核模板描述信息，长度限制：256 个字符。
+     * Set 智能识别模板描述信息，长度限制：256 个字符。
+     * @param Comment 智能识别模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 鉴黄控制参数。
+     * Get 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PornConfigure 鉴黄控制参数。
+     * @return PornConfigure 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PornConfigureInfo getPornConfigure() {
@@ -174,9 +174,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 鉴黄控制参数。
+     * Set 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PornConfigure 鉴黄控制参数。
+     * @param PornConfigure 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
@@ -184,9 +184,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 鉴恐控制参数。
+     * Get 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TerrorismConfigure 鉴恐控制参数。
+     * @return TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
@@ -194,9 +194,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 鉴恐控制参数。
+     * Set 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TerrorismConfigure 鉴恐控制参数。
+     * @param TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
@@ -204,9 +204,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 鉴政控制参数。
+     * Get 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PoliticalConfigure 鉴政控制参数。
+     * @return PoliticalConfigure 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
@@ -214,9 +214,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 鉴政控制参数。
+     * Set 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalConfigure 鉴政控制参数。
+     * @param PoliticalConfigure 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
@@ -252,9 +252,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义内容审核控制参数。
+     * Get 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserDefineConfigure 用户自定义内容审核控制参数。
+     * @return UserDefineConfigure 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
@@ -262,9 +262,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 用户自定义内容审核控制参数。
+     * Set 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefineConfigure 用户自定义内容审核控制参数。
+     * @param UserDefineConfigure 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
@@ -272,10 +272,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+     * Get 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li> 
-     * @return ReviewWallSwitch 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+     * @return ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */
@@ -284,10 +284,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+     * Set 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
-     * @param ReviewWallSwitch 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+     * @param ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */

@@ -37,7 +37,7 @@ public class ProcessMediaRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * 视频内容审核类型任务参数。
+    * 视频智能识别类型任务参数。
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -132,16 +132,16 @@ public class ProcessMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核类型任务参数。 
-     * @return AiContentReviewTask 视频内容审核类型任务参数。
+     * Get 视频智能识别类型任务参数。 
+     * @return AiContentReviewTask 视频智能识别类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set 视频内容审核类型任务参数。
-     * @param AiContentReviewTask 视频内容审核类型任务参数。
+     * Set 视频智能识别类型任务参数。
+     * @param AiContentReviewTask 视频智能识别类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;

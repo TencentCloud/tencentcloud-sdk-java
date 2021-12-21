@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class PornConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * 画面鉴黄控制参数。
+    * 画面鉴别涉及令人反感的信息的控制参数。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PornImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * 语音鉴黄控制参数。
+    * 语音鉴别涉及令人反感的信息的控制参数。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PornAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * 文本鉴黄控制参数。
+    * 文本鉴别涉及令人反感的信息的控制参数。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PornOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get 画面鉴黄控制参数。 
-     * @return ImgReviewInfo 画面鉴黄控制参数。
+     * Get 画面鉴别涉及令人反感的信息的控制参数。 
+     * @return ImgReviewInfo 画面鉴别涉及令人反感的信息的控制参数。
      */
     public PornImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 画面鉴黄控制参数。
-     * @param ImgReviewInfo 画面鉴黄控制参数。
+     * Set 画面鉴别涉及令人反感的信息的控制参数。
+     * @param ImgReviewInfo 画面鉴别涉及令人反感的信息的控制参数。
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get 语音鉴黄控制参数。 
-     * @return AsrReviewInfo 语音鉴黄控制参数。
+     * Get 语音鉴别涉及令人反感的信息的控制参数。 
+     * @return AsrReviewInfo 语音鉴别涉及令人反感的信息的控制参数。
      */
     public PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set 语音鉴黄控制参数。
-     * @param AsrReviewInfo 语音鉴黄控制参数。
+     * Set 语音鉴别涉及令人反感的信息的控制参数。
+     * @param AsrReviewInfo 语音鉴别涉及令人反感的信息的控制参数。
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get 文本鉴黄控制参数。 
-     * @return OcrReviewInfo 文本鉴黄控制参数。
+     * Get 文本鉴别涉及令人反感的信息的控制参数。 
+     * @return OcrReviewInfo 文本鉴别涉及令人反感的信息的控制参数。
      */
     public PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 文本鉴黄控制参数。
-     * @param OcrReviewInfo 文本鉴黄控制参数。
+     * Set 文本鉴别涉及令人反感的信息的控制参数。
+     * @param OcrReviewInfo 文本鉴别涉及令人反感的信息的控制参数。
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

@@ -54,7 +54,7 @@ public class ProcedureTemplate extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 智能内容审核类型任务参数。
+    * AI 智能识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiContentReviewTask")
@@ -176,9 +176,9 @@ public class ProcedureTemplate extends AbstractModel{
     }
 
     /**
-     * Get AI 智能内容审核类型任务参数。
+     * Get AI 智能识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiContentReviewTask AI 智能内容审核类型任务参数。
+     * @return AiContentReviewTask AI 智能识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -186,9 +186,9 @@ public class ProcedureTemplate extends AbstractModel{
     }
 
     /**
-     * Set AI 智能内容审核类型任务参数。
+     * Set AI 智能识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiContentReviewTask AI 智能内容审核类型任务参数。
+     * @param AiContentReviewTask AI 智能识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {

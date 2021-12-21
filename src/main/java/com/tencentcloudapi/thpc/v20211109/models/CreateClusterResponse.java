@@ -24,6 +24,7 @@ public class CreateClusterResponse extends AbstractModel{
 
     /**
     * 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -37,8 +38,10 @@ public class CreateClusterResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 集群ID。 
+     * Get 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -46,7 +49,9 @@ public class CreateClusterResponse extends AbstractModel{
 
     /**
      * Set 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

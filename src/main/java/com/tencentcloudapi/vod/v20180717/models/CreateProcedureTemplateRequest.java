@@ -44,7 +44,7 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 智能内容审核类型任务参数。
+    * AI 智能识别类型任务参数。
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -120,16 +120,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get AI 智能内容审核类型任务参数。 
-     * @return AiContentReviewTask AI 智能内容审核类型任务参数。
+     * Get AI 智能识别类型任务参数。 
+     * @return AiContentReviewTask AI 智能识别类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set AI 智能内容审核类型任务参数。
-     * @param AiContentReviewTask AI 智能内容审核类型任务参数。
+     * Set AI 智能识别类型任务参数。
+     * @param AiContentReviewTask AI 智能识别类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;

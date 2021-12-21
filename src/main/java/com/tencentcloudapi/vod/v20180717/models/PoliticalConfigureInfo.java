@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PoliticalConfigureInfo extends AbstractModel{
 
     /**
-    * 画面鉴政控制参数。
+    * 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgReviewInfo")
@@ -31,7 +31,7 @@ public class PoliticalConfigureInfo extends AbstractModel{
     private PoliticalImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * 语音鉴政控制参数。
+    * 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrReviewInfo")
@@ -39,7 +39,7 @@ public class PoliticalConfigureInfo extends AbstractModel{
     private PoliticalAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * 文本鉴政控制参数。
+    * 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
@@ -47,9 +47,9 @@ public class PoliticalConfigureInfo extends AbstractModel{
     private PoliticalOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get 画面鉴政控制参数。
+     * Get 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImgReviewInfo 画面鉴政控制参数。
+     * @return ImgReviewInfo 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalImgReviewTemplateInfo getImgReviewInfo() {
@@ -57,9 +57,9 @@ public class PoliticalConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 画面鉴政控制参数。
+     * Set 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImgReviewInfo 画面鉴政控制参数。
+     * @param ImgReviewInfo 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfo ImgReviewInfo) {
@@ -67,9 +67,9 @@ public class PoliticalConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Get 语音鉴政控制参数。
+     * Get 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrReviewInfo 语音鉴政控制参数。
+     * @return AsrReviewInfo 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalAsrReviewTemplateInfo getAsrReviewInfo() {
@@ -77,9 +77,9 @@ public class PoliticalConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 语音鉴政控制参数。
+     * Set 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrReviewInfo 语音鉴政控制参数。
+     * @param AsrReviewInfo 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo AsrReviewInfo) {
@@ -87,9 +87,9 @@ public class PoliticalConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Get 文本鉴政控制参数。
+     * Get 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrReviewInfo 文本鉴政控制参数。
+     * @return OcrReviewInfo 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalOcrReviewTemplateInfo getOcrReviewInfo() {
@@ -97,9 +97,9 @@ public class PoliticalConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 文本鉴政控制参数。
+     * Set 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrReviewInfo 文本鉴政控制参数。
+     * @param OcrReviewInfo 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo OcrReviewInfo) {

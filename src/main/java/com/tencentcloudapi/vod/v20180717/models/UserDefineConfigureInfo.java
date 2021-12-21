@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UserDefineConfigureInfo extends AbstractModel{
 
     /**
-    * 用户自定义人物审核控制参数。
+    * 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceReviewInfo")
@@ -31,7 +31,7 @@ public class UserDefineConfigureInfo extends AbstractModel{
     private UserDefineFaceReviewTemplateInfo FaceReviewInfo;
 
     /**
-    * 用户自定义语音审核控制参数。
+    * 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrReviewInfo")
@@ -39,7 +39,7 @@ public class UserDefineConfigureInfo extends AbstractModel{
     private UserDefineAsrTextReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * 用户自定义文本审核控制参数。
+    * 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
@@ -47,9 +47,9 @@ public class UserDefineConfigureInfo extends AbstractModel{
     private UserDefineOcrTextReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get 用户自定义人物审核控制参数。
+     * Get 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaceReviewInfo 用户自定义人物审核控制参数。
+     * @return FaceReviewInfo 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
@@ -57,9 +57,9 @@ public class UserDefineConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户自定义人物审核控制参数。
+     * Set 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceReviewInfo 用户自定义人物审核控制参数。
+     * @param FaceReviewInfo 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
@@ -67,9 +67,9 @@ public class UserDefineConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义语音审核控制参数。
+     * Get 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrReviewInfo 用户自定义语音审核控制参数。
+     * @return AsrReviewInfo 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
@@ -77,9 +77,9 @@ public class UserDefineConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户自定义语音审核控制参数。
+     * Set 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrReviewInfo 用户自定义语音审核控制参数。
+     * @param AsrReviewInfo 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
@@ -87,9 +87,9 @@ public class UserDefineConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义文本审核控制参数。
+     * Get 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrReviewInfo 用户自定义文本审核控制参数。
+     * @return OcrReviewInfo 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
@@ -97,9 +97,9 @@ public class UserDefineConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户自定义文本审核控制参数。
+     * Set 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrReviewInfo 用户自定义文本审核控制参数。
+     * @param OcrReviewInfo 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {

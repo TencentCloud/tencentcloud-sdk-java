@@ -80,7 +80,6 @@ public class AudioResultDetailTextResult extends AbstractModel{
 
     /**
     * 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
@@ -229,10 +228,8 @@ public class AudioResultDetailTextResult extends AbstractModel{
 
     /**
      * Get 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
@@ -241,10 +238,8 @@ public class AudioResultDetailTextResult extends AbstractModel{
 
     /**
      * Set 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {

@@ -44,7 +44,7 @@ public class ModifyFileSystemRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+    * 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
     */
     @SerializedName("CapacityQuota")
@@ -64,6 +64,20 @@ public class ModifyFileSystemRequest extends AbstractModel{
     @SerializedName("PosixAcl")
     @Expose
     private Boolean PosixAcl;
+
+    /**
+    * 是否打开Ranger地址校验
+    */
+    @SerializedName("EnableRanger")
+    @Expose
+    private Boolean EnableRanger;
+
+    /**
+    * Ranger地址列表，可以为空数组
+    */
+    @SerializedName("RangerServiceAddresses")
+    @Expose
+    private String [] RangerServiceAddresses;
 
     /**
      * Get 文件系统ID 
@@ -114,9 +128,9 @@ public class ModifyFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * Get 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量 
-     * @return CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @return CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
      */
     public Long getCapacityQuota() {
@@ -124,9 +138,9 @@ public class ModifyFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Set 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * Set 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
-     * @param CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @param CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
      */
     public void setCapacityQuota(Long CapacityQuota) {
@@ -165,6 +179,38 @@ public class ModifyFileSystemRequest extends AbstractModel{
         this.PosixAcl = PosixAcl;
     }
 
+    /**
+     * Get 是否打开Ranger地址校验 
+     * @return EnableRanger 是否打开Ranger地址校验
+     */
+    public Boolean getEnableRanger() {
+        return this.EnableRanger;
+    }
+
+    /**
+     * Set 是否打开Ranger地址校验
+     * @param EnableRanger 是否打开Ranger地址校验
+     */
+    public void setEnableRanger(Boolean EnableRanger) {
+        this.EnableRanger = EnableRanger;
+    }
+
+    /**
+     * Get Ranger地址列表，可以为空数组 
+     * @return RangerServiceAddresses Ranger地址列表，可以为空数组
+     */
+    public String [] getRangerServiceAddresses() {
+        return this.RangerServiceAddresses;
+    }
+
+    /**
+     * Set Ranger地址列表，可以为空数组
+     * @param RangerServiceAddresses Ranger地址列表，可以为空数组
+     */
+    public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
+        this.RangerServiceAddresses = RangerServiceAddresses;
+    }
+
     public ModifyFileSystemRequest() {
     }
 
@@ -194,6 +240,15 @@ public class ModifyFileSystemRequest extends AbstractModel{
         if (source.PosixAcl != null) {
             this.PosixAcl = new Boolean(source.PosixAcl);
         }
+        if (source.EnableRanger != null) {
+            this.EnableRanger = new Boolean(source.EnableRanger);
+        }
+        if (source.RangerServiceAddresses != null) {
+            this.RangerServiceAddresses = new String[source.RangerServiceAddresses.length];
+            for (int i = 0; i < source.RangerServiceAddresses.length; i++) {
+                this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
+            }
+        }
     }
 
 
@@ -207,6 +262,8 @@ public class ModifyFileSystemRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
+        this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+        this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
 
     }
 }

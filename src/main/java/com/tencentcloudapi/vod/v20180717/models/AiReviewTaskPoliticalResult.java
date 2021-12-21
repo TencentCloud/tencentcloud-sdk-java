@@ -51,14 +51,14 @@ public class AiReviewTaskPoliticalResult extends AbstractModel{
     private String Message;
 
     /**
-    * 内容审核鉴政任务输入。
+    * 智能识别涉及令人不适宜信息的任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalTaskInput Input;
 
     /**
-    * 内容审核鉴政任务输出。
+    * 智能识别涉及令人不适宜信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -130,25 +130,25 @@ public class AiReviewTaskPoliticalResult extends AbstractModel{
     }
 
     /**
-     * Get 内容审核鉴政任务输入。 
-     * @return Input 内容审核鉴政任务输入。
+     * Get 智能识别涉及令人不适宜信息的任务输入。 
+     * @return Input 智能识别涉及令人不适宜信息的任务输入。
      */
     public AiReviewPoliticalTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 内容审核鉴政任务输入。
-     * @param Input 内容审核鉴政任务输入。
+     * Set 智能识别涉及令人不适宜信息的任务输入。
+     * @param Input 智能识别涉及令人不适宜信息的任务输入。
      */
     public void setInput(AiReviewPoliticalTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 内容审核鉴政任务输出。
+     * Get 智能识别涉及令人不适宜信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 内容审核鉴政任务输出。
+     * @return Output 智能识别涉及令人不适宜信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewPoliticalTaskOutput getOutput() {
@@ -156,9 +156,9 @@ public class AiReviewTaskPoliticalResult extends AbstractModel{
     }
 
     /**
-     * Set 内容审核鉴政任务输出。
+     * Set 智能识别涉及令人不适宜信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 内容审核鉴政任务输出。
+     * @param Output 智能识别涉及令人不适宜信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewPoliticalTaskOutput Output) {

@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel{
 
     /**
-    * 文本鉴黄任务开关，可选值：
-<li>ON：开启文本鉴黄任务；</li>
-<li>OFF：关闭文本鉴黄任务。</li>
+    * 文本鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启文本鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭文本鉴别涉及令人反感的信息的任务。</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,24 +46,24 @@ public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * Get 文本鉴黄任务开关，可选值：
-<li>ON：开启文本鉴黄任务；</li>
-<li>OFF：关闭文本鉴黄任务。</li> 
-     * @return Switch 文本鉴黄任务开关，可选值：
-<li>ON：开启文本鉴黄任务；</li>
-<li>OFF：关闭文本鉴黄任务。</li>
+     * Get 文本鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启文本鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭文本鉴别涉及令人反感的信息的任务。</li> 
+     * @return Switch 文本鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启文本鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭文本鉴别涉及令人反感的信息的任务。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 文本鉴黄任务开关，可选值：
-<li>ON：开启文本鉴黄任务；</li>
-<li>OFF：关闭文本鉴黄任务。</li>
-     * @param Switch 文本鉴黄任务开关，可选值：
-<li>ON：开启文本鉴黄任务；</li>
-<li>OFF：关闭文本鉴黄任务。</li>
+     * Set 文本鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启文本鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭文本鉴别涉及令人反感的信息的任务。</li>
+     * @param Switch 文本鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启文本鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭文本鉴别涉及令人反感的信息的任务。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

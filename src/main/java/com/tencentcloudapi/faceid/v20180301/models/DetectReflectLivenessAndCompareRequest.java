@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DetectReflectLivenessAndCompareRequest extends AbstractModel{
 
     /**
-    * SDK生成的数据包活体数据包的资源地址。
+    * SDK生成的活体检测数据包的资源地址。
     */
     @SerializedName("LiveDataUrl")
     @Expose
     private String LiveDataUrl;
 
     /**
-    * SDK生成的数据包活体数据包的资源Md5。
+    * SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
     */
     @SerializedName("LiveDataMd5")
     @Expose
@@ -44,39 +44,39 @@ public class DetectReflectLivenessAndCompareRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 用于比对的目标图片的资源Md5。
+    * 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
     */
     @SerializedName("ImageMd5")
     @Expose
     private String ImageMd5;
 
     /**
-     * Get SDK生成的数据包活体数据包的资源地址。 
-     * @return LiveDataUrl SDK生成的数据包活体数据包的资源地址。
+     * Get SDK生成的活体检测数据包的资源地址。 
+     * @return LiveDataUrl SDK生成的活体检测数据包的资源地址。
      */
     public String getLiveDataUrl() {
         return this.LiveDataUrl;
     }
 
     /**
-     * Set SDK生成的数据包活体数据包的资源地址。
-     * @param LiveDataUrl SDK生成的数据包活体数据包的资源地址。
+     * Set SDK生成的活体检测数据包的资源地址。
+     * @param LiveDataUrl SDK生成的活体检测数据包的资源地址。
      */
     public void setLiveDataUrl(String LiveDataUrl) {
         this.LiveDataUrl = LiveDataUrl;
     }
 
     /**
-     * Get SDK生成的数据包活体数据包的资源Md5。 
-     * @return LiveDataMd5 SDK生成的数据包活体数据包的资源Md5。
+     * Get SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。 
+     * @return LiveDataMd5 SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
      */
     public String getLiveDataMd5() {
         return this.LiveDataMd5;
     }
 
     /**
-     * Set SDK生成的数据包活体数据包的资源Md5。
-     * @param LiveDataMd5 SDK生成的数据包活体数据包的资源Md5。
+     * Set SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
+     * @param LiveDataMd5 SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
      */
     public void setLiveDataMd5(String LiveDataMd5) {
         this.LiveDataMd5 = LiveDataMd5;
@@ -99,16 +99,16 @@ public class DetectReflectLivenessAndCompareRequest extends AbstractModel{
     }
 
     /**
-     * Get 用于比对的目标图片的资源Md5。 
-     * @return ImageMd5 用于比对的目标图片的资源Md5。
+     * Get 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。 
+     * @return ImageMd5 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
      */
     public String getImageMd5() {
         return this.ImageMd5;
     }
 
     /**
-     * Set 用于比对的目标图片的资源Md5。
-     * @param ImageMd5 用于比对的目标图片的资源Md5。
+     * Set 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
+     * @param ImageMd5 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
      */
     public void setImageMd5(String ImageMd5) {
         this.ImageMd5 = ImageMd5;

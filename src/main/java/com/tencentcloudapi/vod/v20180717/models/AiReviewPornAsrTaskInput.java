@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiReviewPornAsrTaskInput extends AbstractModel{
 
     /**
-    * 鉴黄模板 ID。
+    * 鉴别涉及令人反感的信息的模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 鉴黄模板 ID。 
-     * @return Definition 鉴黄模板 ID。
+     * Get 鉴别涉及令人反感的信息的模板 ID。 
+     * @return Definition 鉴别涉及令人反感的信息的模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 鉴黄模板 ID。
-     * @param Definition 鉴黄模板 ID。
+     * Set 鉴别涉及令人反感的信息的模板 ID。
+     * @param Definition 鉴别涉及令人反感的信息的模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

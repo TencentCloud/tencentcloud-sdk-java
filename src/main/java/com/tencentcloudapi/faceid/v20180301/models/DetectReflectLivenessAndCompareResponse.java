@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DetectReflectLivenessAndCompareResponse extends AbstractModel{
 
     /**
-    * 验证通过后的视频最佳截图照片资源地址，jpg格式。
+    * 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
     */
     @SerializedName("BestFrameUrl")
     @Expose
     private String BestFrameUrl;
 
     /**
-    * 验证通过后的视频最佳截图照片资源Md5。
+    * 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
     */
     @SerializedName("BestFrameMd5")
     @Expose
     private String BestFrameMd5;
 
     /**
-    * 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+    * 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
     */
     @SerializedName("Result")
     @Expose
@@ -65,48 +65,48 @@ public class DetectReflectLivenessAndCompareResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 验证通过后的视频最佳截图照片资源地址，jpg格式。 
-     * @return BestFrameUrl 验证通过后的视频最佳截图照片资源地址，jpg格式。
+     * Get 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。 
+     * @return BestFrameUrl 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
      */
     public String getBestFrameUrl() {
         return this.BestFrameUrl;
     }
 
     /**
-     * Set 验证通过后的视频最佳截图照片资源地址，jpg格式。
-     * @param BestFrameUrl 验证通过后的视频最佳截图照片资源地址，jpg格式。
+     * Set 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
+     * @param BestFrameUrl 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
      */
     public void setBestFrameUrl(String BestFrameUrl) {
         this.BestFrameUrl = BestFrameUrl;
     }
 
     /**
-     * Get 验证通过后的视频最佳截图照片资源Md5。 
-     * @return BestFrameMd5 验证通过后的视频最佳截图照片资源Md5。
+     * Get 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。 
+     * @return BestFrameMd5 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
      */
     public String getBestFrameMd5() {
         return this.BestFrameMd5;
     }
 
     /**
-     * Set 验证通过后的视频最佳截图照片资源Md5。
-     * @param BestFrameMd5 验证通过后的视频最佳截图照片资源Md5。
+     * Set 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
+     * @param BestFrameMd5 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
      */
     public void setBestFrameMd5(String BestFrameMd5) {
         this.BestFrameMd5 = BestFrameMd5;
     }
 
     /**
-     * Get 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分 
-     * @return Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Get 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。 
+     * @return Result 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
-     * @param Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Set 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
+     * @param Result 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
      */
     public void setResult(String Result) {
         this.Result = Result;

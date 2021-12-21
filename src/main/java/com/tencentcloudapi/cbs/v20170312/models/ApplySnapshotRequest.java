@@ -37,6 +37,20 @@ public class ApplySnapshotRequest extends AbstractModel{
     private String DiskId;
 
     /**
+    * 回滚前是否执行自动关机
+    */
+    @SerializedName("AutoStopInstance")
+    @Expose
+    private Boolean AutoStopInstance;
+
+    /**
+    * 回滚完成后是否自动开机
+    */
+    @SerializedName("AutoStartInstance")
+    @Expose
+    private Boolean AutoStartInstance;
+
+    /**
      * Get 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。 
      * @return SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
@@ -68,6 +82,38 @@ public class ApplySnapshotRequest extends AbstractModel{
         this.DiskId = DiskId;
     }
 
+    /**
+     * Get 回滚前是否执行自动关机 
+     * @return AutoStopInstance 回滚前是否执行自动关机
+     */
+    public Boolean getAutoStopInstance() {
+        return this.AutoStopInstance;
+    }
+
+    /**
+     * Set 回滚前是否执行自动关机
+     * @param AutoStopInstance 回滚前是否执行自动关机
+     */
+    public void setAutoStopInstance(Boolean AutoStopInstance) {
+        this.AutoStopInstance = AutoStopInstance;
+    }
+
+    /**
+     * Get 回滚完成后是否自动开机 
+     * @return AutoStartInstance 回滚完成后是否自动开机
+     */
+    public Boolean getAutoStartInstance() {
+        return this.AutoStartInstance;
+    }
+
+    /**
+     * Set 回滚完成后是否自动开机
+     * @param AutoStartInstance 回滚完成后是否自动开机
+     */
+    public void setAutoStartInstance(Boolean AutoStartInstance) {
+        this.AutoStartInstance = AutoStartInstance;
+    }
+
     public ApplySnapshotRequest() {
     }
 
@@ -82,6 +128,12 @@ public class ApplySnapshotRequest extends AbstractModel{
         if (source.DiskId != null) {
             this.DiskId = new String(source.DiskId);
         }
+        if (source.AutoStopInstance != null) {
+            this.AutoStopInstance = new Boolean(source.AutoStopInstance);
+        }
+        if (source.AutoStartInstance != null) {
+            this.AutoStartInstance = new Boolean(source.AutoStartInstance);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class ApplySnapshotRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "AutoStopInstance", this.AutoStopInstance);
+        this.setParamSimple(map, prefix + "AutoStartInstance", this.AutoStartInstance);
 
     }
 }
