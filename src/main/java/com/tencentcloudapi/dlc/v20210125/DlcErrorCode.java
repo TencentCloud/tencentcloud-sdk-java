@@ -45,6 +45,9 @@ public enum DlcErrorCode {
     // 存储位置错误。
      INVALIDPARAMETER_INVALIDSTORELOCATION("InvalidParameter.InvalidStoreLocation"),
      
+    // 无效的taskid。
+     INVALIDPARAMETER_INVALIDTASKID("InvalidParameter.InvalidTaskId"),
+     
     // 无效的用户名。
      INVALIDPARAMETER_INVALIDUSERNAME("InvalidParameter.InvalidUserName"),
      

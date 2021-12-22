@@ -37,7 +37,7 @@ public class DescribeProbeTasksRequest extends AbstractModel{
     private String TaskName;
 
     /**
-    * 探测目标
+    * 拨测目标
     */
     @SerializedName("TargetAddress")
     @Expose
@@ -111,6 +111,13 @@ public class DescribeProbeTasksRequest extends AbstractModel{
     private Boolean Ascend;
 
     /**
+    * 资源标签值
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private KeyValuePair [] TagFilters;
+
+    /**
      * Get 任务 ID  列表 
      * @return TaskIDs 任务 ID  列表
      */
@@ -143,16 +150,16 @@ public class DescribeProbeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 探测目标 
-     * @return TargetAddress 探测目标
+     * Get 拨测目标 
+     * @return TargetAddress 拨测目标
      */
     public String getTargetAddress() {
         return this.TargetAddress;
     }
 
     /**
-     * Set 探测目标
-     * @param TargetAddress 探测目标
+     * Set 拨测目标
+     * @param TargetAddress 拨测目标
      */
     public void setTargetAddress(String TargetAddress) {
         this.TargetAddress = TargetAddress;
@@ -318,6 +325,22 @@ public class DescribeProbeTasksRequest extends AbstractModel{
         this.Ascend = Ascend;
     }
 
+    /**
+     * Get 资源标签值 
+     * @return TagFilters 资源标签值
+     */
+    public KeyValuePair [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set 资源标签值
+     * @param TagFilters 资源标签值
+     */
+    public void setTagFilters(KeyValuePair [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeProbeTasksRequest() {
     }
 
@@ -374,6 +397,12 @@ public class DescribeProbeTasksRequest extends AbstractModel{
         if (source.Ascend != null) {
             this.Ascend = new Boolean(source.Ascend);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new KeyValuePair[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new KeyValuePair(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -393,6 +422,7 @@ public class DescribeProbeTasksRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TaskCategory.", this.TaskCategory);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Ascend", this.Ascend);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

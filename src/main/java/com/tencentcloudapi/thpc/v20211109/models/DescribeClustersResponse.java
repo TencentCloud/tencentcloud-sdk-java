@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.thpc.v20211109.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartDelayReplicationResponse extends AbstractModel{
+public class DescribeClustersResponse extends AbstractModel{
 
     /**
-    * 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 集群概览信息列表。
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("ClusterSet")
     @Expose
-    private String AsyncRequestId;
+    private ClusterOverview [] ClusterSet;
+
+    /**
+    * 集群数量。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class StartDelayReplicationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群概览信息列表。 
+     * @return ClusterSet 集群概览信息列表。
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public ClusterOverview [] getClusterSet() {
+        return this.ClusterSet;
     }
 
     /**
-     * Set 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 集群概览信息列表。
+     * @param ClusterSet 集群概览信息列表。
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setClusterSet(ClusterOverview [] ClusterSet) {
+        this.ClusterSet = ClusterSet;
+    }
+
+    /**
+     * Get 集群数量。 
+     * @return TotalCount 集群数量。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 集群数量。
+     * @param TotalCount 集群数量。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -73,16 +91,22 @@ public class StartDelayReplicationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public StartDelayReplicationResponse() {
+    public DescribeClustersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartDelayReplicationResponse(StartDelayReplicationResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public DescribeClustersResponse(DescribeClustersResponse source) {
+        if (source.ClusterSet != null) {
+            this.ClusterSet = new ClusterOverview[source.ClusterSet.length];
+            for (int i = 0; i < source.ClusterSet.length; i++) {
+                this.ClusterSet[i] = new ClusterOverview(source.ClusterSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +118,8 @@ public class StartDelayReplicationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArrayObj(map, prefix + "ClusterSet.", this.ClusterSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

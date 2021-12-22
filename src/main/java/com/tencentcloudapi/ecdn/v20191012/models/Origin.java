@@ -72,6 +72,14 @@ public class Origin extends AbstractModel{
     private String BackupOriginType;
 
     /**
+    * HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvanceHttps")
+    @Expose
+    private AdvanceHttps AdvanceHttps;
+
+    /**
      * Get 主源站列表，IP与域名源站不可混填。配置源站端口["origin1:port1", "origin2:port2"]，配置回源权重["origin1::weight1", "origin2::weight2"]，同时配置端口与权重 ["origin1:port1:weight1", "origin2:port2:weight2"]，权重值有效范围为0-100。 
      * @return Origins 主源站列表，IP与域名源站不可混填。配置源站端口["origin1:port1", "origin2:port2"]，配置回源权重["origin1::weight1", "origin2::weight2"]，同时配置端口与权重 ["origin1:port1:weight1", "origin2:port2:weight2"]，权重值有效范围为0-100。
      */
@@ -195,6 +203,26 @@ public class Origin extends AbstractModel{
         this.BackupOriginType = BackupOriginType;
     }
 
+    /**
+     * Get HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvanceHttps HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvanceHttps getAdvanceHttps() {
+        return this.AdvanceHttps;
+    }
+
+    /**
+     * Set HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvanceHttps HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvanceHttps(AdvanceHttps AdvanceHttps) {
+        this.AdvanceHttps = AdvanceHttps;
+    }
+
     public Origin() {
     }
 
@@ -227,6 +255,9 @@ public class Origin extends AbstractModel{
         if (source.BackupOriginType != null) {
             this.BackupOriginType = new String(source.BackupOriginType);
         }
+        if (source.AdvanceHttps != null) {
+            this.AdvanceHttps = new AdvanceHttps(source.AdvanceHttps);
+        }
     }
 
 
@@ -240,6 +271,7 @@ public class Origin extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginPullProtocol", this.OriginPullProtocol);
         this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
+        this.setParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
 
     }
 }

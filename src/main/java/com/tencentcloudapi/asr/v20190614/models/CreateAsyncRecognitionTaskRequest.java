@@ -97,6 +97,13 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
     private String HotwordId;
 
     /**
+    * 回调数据中，是否需要对应音频数据。
+    */
+    @SerializedName("AudioData")
+    @Expose
+    private Boolean AudioData;
+
+    /**
      * Get 引擎模型类型。
 • 16k_zh：16k 中文普通话通用；
 • 16k_zh_video：16k 音视频领域；
@@ -272,6 +279,22 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
         this.HotwordId = HotwordId;
     }
 
+    /**
+     * Get 回调数据中，是否需要对应音频数据。 
+     * @return AudioData 回调数据中，是否需要对应音频数据。
+     */
+    public Boolean getAudioData() {
+        return this.AudioData;
+    }
+
+    /**
+     * Set 回调数据中，是否需要对应音频数据。
+     * @param AudioData 回调数据中，是否需要对应音频数据。
+     */
+    public void setAudioData(Boolean AudioData) {
+        this.AudioData = AudioData;
+    }
+
     public CreateAsyncRecognitionTaskRequest() {
     }
 
@@ -310,6 +333,9 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
         if (source.HotwordId != null) {
             this.HotwordId = new String(source.HotwordId);
         }
+        if (source.AudioData != null) {
+            this.AudioData = new Boolean(source.AudioData);
+        }
     }
 
 
@@ -327,6 +353,7 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
         this.setParamSimple(map, prefix + "WordInfo", this.WordInfo);
         this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        this.setParamSimple(map, prefix + "AudioData", this.AudioData);
 
     }
 }

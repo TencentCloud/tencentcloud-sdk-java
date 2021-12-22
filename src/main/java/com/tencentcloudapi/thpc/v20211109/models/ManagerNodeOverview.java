@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.thpc.v20211109.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopDelayReplicationRequest extends AbstractModel{
+public class ManagerNodeOverview extends AbstractModel{
 
     /**
-    * 实例 ID。
+    * 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("NodeId")
     @Expose
-    private String InstanceId;
+    private String NodeId;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeId 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getNodeId() {
+        return this.NodeId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeId 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
     }
 
-    public StopDelayReplicationRequest() {
+    public ManagerNodeOverview() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopDelayReplicationRequest(StopDelayReplicationRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public ManagerNodeOverview(ManagerNodeOverview source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
         }
     }
 
@@ -63,7 +68,7 @@ public class StopDelayReplicationRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }

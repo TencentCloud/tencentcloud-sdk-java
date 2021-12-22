@@ -132,6 +132,14 @@ public class RoGroup extends AbstractModel{
     private String RoGroupZone;
 
     /**
+    * 延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DelayReplicationTime")
+    @Expose
+    private Long DelayReplicationTime;
+
+    /**
      * Get 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。 
      * @return RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
      */
@@ -387,6 +395,26 @@ public class RoGroup extends AbstractModel{
         this.RoGroupZone = RoGroupZone;
     }
 
+    /**
+     * Get 延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DelayReplicationTime 延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDelayReplicationTime() {
+        return this.DelayReplicationTime;
+    }
+
+    /**
+     * Set 延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DelayReplicationTime 延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelayReplicationTime(Long DelayReplicationTime) {
+        this.DelayReplicationTime = DelayReplicationTime;
+    }
+
     public RoGroup() {
     }
 
@@ -443,6 +471,9 @@ public class RoGroup extends AbstractModel{
         if (source.RoGroupZone != null) {
             this.RoGroupZone = new String(source.RoGroupZone);
         }
+        if (source.DelayReplicationTime != null) {
+            this.DelayReplicationTime = new Long(source.DelayReplicationTime);
+        }
     }
 
 
@@ -465,6 +496,7 @@ public class RoGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "RoGroupRegion", this.RoGroupRegion);
         this.setParamSimple(map, prefix + "RoGroupZone", this.RoGroupZone);
+        this.setParamSimple(map, prefix + "DelayReplicationTime", this.DelayReplicationTime);
 
     }
 }

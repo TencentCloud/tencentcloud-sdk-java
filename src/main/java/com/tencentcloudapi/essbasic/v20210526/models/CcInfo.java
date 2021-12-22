@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopDelayReplicationResponse extends AbstractModel{
+public class CcInfo extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 被抄送人手机号
     */
-    @SerializedName("RequestId")
+    @SerializedName("Mobile")
     @Expose
-    private String RequestId;
+    private String Mobile;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 被抄送人手机号 
+     * @return Mobile 被抄送人手机号
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getMobile() {
+        return this.Mobile;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 被抄送人手机号
+     * @param Mobile 被抄送人手机号
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setMobile(String Mobile) {
+        this.Mobile = Mobile;
     }
 
-    public StopDelayReplicationResponse() {
+    public CcInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopDelayReplicationResponse(StopDelayReplicationResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public CcInfo(CcInfo source) {
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
         }
     }
 
@@ -63,7 +63,7 @@ public class StopDelayReplicationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Mobile", this.Mobile);
 
     }
 }

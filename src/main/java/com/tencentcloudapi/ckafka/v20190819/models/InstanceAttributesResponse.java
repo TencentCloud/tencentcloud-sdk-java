@@ -275,6 +275,14 @@ public class InstanceAttributesResponse extends AbstractModel{
     private Long RemainingTopics;
 
     /**
+    * 动态硬盘扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DynamicDiskConfig")
+    @Expose
+    private DynamicDiskConfig DynamicDiskConfig;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -874,6 +882,26 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.RemainingTopics = RemainingTopics;
     }
 
+    /**
+     * Get 动态硬盘扩容策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DynamicDiskConfig 动态硬盘扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DynamicDiskConfig getDynamicDiskConfig() {
+        return this.DynamicDiskConfig;
+    }
+
+    /**
+     * Set 动态硬盘扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DynamicDiskConfig 动态硬盘扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
+        this.DynamicDiskConfig = DynamicDiskConfig;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -996,6 +1024,9 @@ public class InstanceAttributesResponse extends AbstractModel{
         if (source.RemainingTopics != null) {
             this.RemainingTopics = new Long(source.RemainingTopics);
         }
+        if (source.DynamicDiskConfig != null) {
+            this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
+        }
     }
 
 
@@ -1037,6 +1068,7 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
         this.setParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
+        this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
 
     }
 }

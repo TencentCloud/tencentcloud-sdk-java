@@ -499,7 +499,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *获取实例属性
+     *获取实例属性 
      * @param req DescribeInstanceAttributesRequest
      * @return DescribeInstanceAttributesResponse
      * @throws TencentCloudSDKException

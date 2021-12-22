@@ -53,7 +53,7 @@ public class ImageConfig extends AbstractModel{
     private String EntryPoint;
 
     /**
-    * entrypoint执行命令
+    * 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Command")
@@ -61,7 +61,7 @@ public class ImageConfig extends AbstractModel{
     private String Command;
 
     /**
-    * 命令参数
+    * 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Args")
@@ -141,9 +141,9 @@ public class ImageConfig extends AbstractModel{
     }
 
     /**
-     * Get entrypoint执行命令
+     * Get 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Command entrypoint执行命令
+     * @return Command 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommand() {
@@ -151,9 +151,9 @@ public class ImageConfig extends AbstractModel{
     }
 
     /**
-     * Set entrypoint执行命令
+     * Set 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Command entrypoint执行命令
+     * @param Command 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommand(String Command) {
@@ -161,9 +161,9 @@ public class ImageConfig extends AbstractModel{
     }
 
     /**
-     * Get 命令参数
+     * Get 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Args 命令参数
+     * @return Args 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArgs() {
@@ -171,9 +171,9 @@ public class ImageConfig extends AbstractModel{
     }
 
     /**
-     * Set 命令参数
+     * Set 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Args 命令参数
+     * @param Args 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArgs(String Args) {

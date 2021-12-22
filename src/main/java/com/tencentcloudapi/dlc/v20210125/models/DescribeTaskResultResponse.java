@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoGroupInfoResponse extends AbstractModel{
+public class DescribeTaskResultResponse extends AbstractModel{
 
     /**
-    * 异步任务 ID。
+    * 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("TaskInfo")
     @Expose
-    private String AsyncRequestId;
+    private TaskResultInfo TaskInfo;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class ModifyRoGroupInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务 ID。
+     * Get 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步任务 ID。
+     * @return TaskInfo 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public TaskResultInfo getTaskInfo() {
+        return this.TaskInfo;
     }
 
     /**
-     * Set 异步任务 ID。
+     * Set 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步任务 ID。
+     * @param TaskInfo 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setTaskInfo(TaskResultInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
     }
 
     /**
@@ -73,16 +73,16 @@ public class ModifyRoGroupInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyRoGroupInfoResponse() {
+    public DescribeTaskResultResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyRoGroupInfoResponse(ModifyRoGroupInfoResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public DescribeTaskResultResponse(DescribeTaskResultResponse source) {
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new TaskResultInfo(source.TaskInfo);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +94,7 @@ public class ModifyRoGroupInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

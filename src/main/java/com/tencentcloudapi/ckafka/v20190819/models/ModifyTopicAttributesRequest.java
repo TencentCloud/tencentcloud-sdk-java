@@ -121,6 +121,13 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private Long RetentionBytes;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -344,6 +351,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.RetentionBytes = RetentionBytes;
     }
 
+    /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -397,6 +420,12 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         if (source.RetentionBytes != null) {
             this.RetentionBytes = new Long(source.RetentionBytes);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -418,6 +447,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

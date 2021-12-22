@@ -293,6 +293,22 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String SubStatus;
 
     /**
+    * 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
+    * 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIP")
+    @Expose
+    private String ClientIP;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -996,6 +1012,46 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 内网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostIP 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostIP 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
+    }
+
+    /**
+     * Get 外网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClientIP() {
+        return this.ClientIP;
+    }
+
+    /**
+     * Set 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIP(String ClientIP) {
+        this.ClientIP = ClientIP;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1118,6 +1174,12 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.SubStatus != null) {
             this.SubStatus = new String(source.SubStatus);
         }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
+        if (source.ClientIP != null) {
+            this.ClientIP = new String(source.ClientIP);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1160,6 +1222,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
+        this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

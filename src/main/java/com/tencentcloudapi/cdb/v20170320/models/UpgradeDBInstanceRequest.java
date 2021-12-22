@@ -121,6 +121,20 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long MaxDelayTime;
 
     /**
+    * 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+    */
+    @SerializedName("CrossCluster")
+    @Expose
+    private Long CrossCluster;
+
+    /**
+    * 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -344,6 +358,38 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.MaxDelayTime = MaxDelayTime;
     }
 
+    /**
+     * Get 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。 
+     * @return CrossCluster 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+     */
+    public Long getCrossCluster() {
+        return this.CrossCluster;
+    }
+
+    /**
+     * Set 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+     * @param CrossCluster 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+     */
+    public void setCrossCluster(Long CrossCluster) {
+        this.CrossCluster = CrossCluster;
+    }
+
+    /**
+     * Get 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。 
+     * @return ZoneId 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+     * @param ZoneId 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -394,6 +440,12 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.MaxDelayTime != null) {
             this.MaxDelayTime = new Long(source.MaxDelayTime);
         }
+        if (source.CrossCluster != null) {
+            this.CrossCluster = new Long(source.CrossCluster);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
     }
 
 
@@ -415,6 +467,8 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+        this.setParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

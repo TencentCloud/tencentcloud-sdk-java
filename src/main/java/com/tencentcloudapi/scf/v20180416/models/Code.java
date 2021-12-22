@@ -65,56 +65,56 @@ public class Code extends AbstractModel{
     private String TempCosObjectName;
 
     /**
-    * Git地址
+    * Git地址。该功能已下线。
     */
     @SerializedName("GitUrl")
     @Expose
     private String GitUrl;
 
     /**
-    * Git用户名
+    * Git用户名。该功能已下线。
     */
     @SerializedName("GitUserName")
     @Expose
     private String GitUserName;
 
     /**
-    * Git密码
+    * Git密码。该功能已下线。
     */
     @SerializedName("GitPassword")
     @Expose
     private String GitPassword;
 
     /**
-    * 加密后的Git密码，一般无需指定
+    * 加密后的Git密码，一般无需指定。该功能已下线。
     */
     @SerializedName("GitPasswordSecret")
     @Expose
     private String GitPasswordSecret;
 
     /**
-    * Git分支
+    * Git分支。该功能已下线。
     */
     @SerializedName("GitBranch")
     @Expose
     private String GitBranch;
 
     /**
-    * 代码在Git仓库中的路径
+    * 代码在Git仓库中的路径。该功能已下线。
     */
     @SerializedName("GitDirectory")
     @Expose
     private String GitDirectory;
 
     /**
-    * 指定要拉取的版本
+    * 指定要拉取的版本。该功能已下线。
     */
     @SerializedName("GitCommitId")
     @Expose
     private String GitCommitId;
 
     /**
-    * 加密后的Git用户名，一般无需指定
+    * 加密后的Git用户名，一般无需指定。该功能已下线。
     */
     @SerializedName("GitUserNameSecret")
     @Expose
@@ -224,128 +224,128 @@ public class Code extends AbstractModel{
     }
 
     /**
-     * Get Git地址 
-     * @return GitUrl Git地址
+     * Get Git地址。该功能已下线。 
+     * @return GitUrl Git地址。该功能已下线。
      */
     public String getGitUrl() {
         return this.GitUrl;
     }
 
     /**
-     * Set Git地址
-     * @param GitUrl Git地址
+     * Set Git地址。该功能已下线。
+     * @param GitUrl Git地址。该功能已下线。
      */
     public void setGitUrl(String GitUrl) {
         this.GitUrl = GitUrl;
     }
 
     /**
-     * Get Git用户名 
-     * @return GitUserName Git用户名
+     * Get Git用户名。该功能已下线。 
+     * @return GitUserName Git用户名。该功能已下线。
      */
     public String getGitUserName() {
         return this.GitUserName;
     }
 
     /**
-     * Set Git用户名
-     * @param GitUserName Git用户名
+     * Set Git用户名。该功能已下线。
+     * @param GitUserName Git用户名。该功能已下线。
      */
     public void setGitUserName(String GitUserName) {
         this.GitUserName = GitUserName;
     }
 
     /**
-     * Get Git密码 
-     * @return GitPassword Git密码
+     * Get Git密码。该功能已下线。 
+     * @return GitPassword Git密码。该功能已下线。
      */
     public String getGitPassword() {
         return this.GitPassword;
     }
 
     /**
-     * Set Git密码
-     * @param GitPassword Git密码
+     * Set Git密码。该功能已下线。
+     * @param GitPassword Git密码。该功能已下线。
      */
     public void setGitPassword(String GitPassword) {
         this.GitPassword = GitPassword;
     }
 
     /**
-     * Get 加密后的Git密码，一般无需指定 
-     * @return GitPasswordSecret 加密后的Git密码，一般无需指定
+     * Get 加密后的Git密码，一般无需指定。该功能已下线。 
+     * @return GitPasswordSecret 加密后的Git密码，一般无需指定。该功能已下线。
      */
     public String getGitPasswordSecret() {
         return this.GitPasswordSecret;
     }
 
     /**
-     * Set 加密后的Git密码，一般无需指定
-     * @param GitPasswordSecret 加密后的Git密码，一般无需指定
+     * Set 加密后的Git密码，一般无需指定。该功能已下线。
+     * @param GitPasswordSecret 加密后的Git密码，一般无需指定。该功能已下线。
      */
     public void setGitPasswordSecret(String GitPasswordSecret) {
         this.GitPasswordSecret = GitPasswordSecret;
     }
 
     /**
-     * Get Git分支 
-     * @return GitBranch Git分支
+     * Get Git分支。该功能已下线。 
+     * @return GitBranch Git分支。该功能已下线。
      */
     public String getGitBranch() {
         return this.GitBranch;
     }
 
     /**
-     * Set Git分支
-     * @param GitBranch Git分支
+     * Set Git分支。该功能已下线。
+     * @param GitBranch Git分支。该功能已下线。
      */
     public void setGitBranch(String GitBranch) {
         this.GitBranch = GitBranch;
     }
 
     /**
-     * Get 代码在Git仓库中的路径 
-     * @return GitDirectory 代码在Git仓库中的路径
+     * Get 代码在Git仓库中的路径。该功能已下线。 
+     * @return GitDirectory 代码在Git仓库中的路径。该功能已下线。
      */
     public String getGitDirectory() {
         return this.GitDirectory;
     }
 
     /**
-     * Set 代码在Git仓库中的路径
-     * @param GitDirectory 代码在Git仓库中的路径
+     * Set 代码在Git仓库中的路径。该功能已下线。
+     * @param GitDirectory 代码在Git仓库中的路径。该功能已下线。
      */
     public void setGitDirectory(String GitDirectory) {
         this.GitDirectory = GitDirectory;
     }
 
     /**
-     * Get 指定要拉取的版本 
-     * @return GitCommitId 指定要拉取的版本
+     * Get 指定要拉取的版本。该功能已下线。 
+     * @return GitCommitId 指定要拉取的版本。该功能已下线。
      */
     public String getGitCommitId() {
         return this.GitCommitId;
     }
 
     /**
-     * Set 指定要拉取的版本
-     * @param GitCommitId 指定要拉取的版本
+     * Set 指定要拉取的版本。该功能已下线。
+     * @param GitCommitId 指定要拉取的版本。该功能已下线。
      */
     public void setGitCommitId(String GitCommitId) {
         this.GitCommitId = GitCommitId;
     }
 
     /**
-     * Get 加密后的Git用户名，一般无需指定 
-     * @return GitUserNameSecret 加密后的Git用户名，一般无需指定
+     * Get 加密后的Git用户名，一般无需指定。该功能已下线。 
+     * @return GitUserNameSecret 加密后的Git用户名，一般无需指定。该功能已下线。
      */
     public String getGitUserNameSecret() {
         return this.GitUserNameSecret;
     }
 
     /**
-     * Set 加密后的Git用户名，一般无需指定
-     * @param GitUserNameSecret 加密后的Git用户名，一般无需指定
+     * Set 加密后的Git用户名，一般无需指定。该功能已下线。
+     * @param GitUserNameSecret 加密后的Git用户名，一般无需指定。该功能已下线。
      */
     public void setGitUserNameSecret(String GitUserNameSecret) {
         this.GitUserNameSecret = GitUserNameSecret;

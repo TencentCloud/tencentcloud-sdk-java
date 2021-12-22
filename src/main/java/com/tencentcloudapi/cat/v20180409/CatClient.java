@@ -79,7 +79,7 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *批量创建探测任务
+     *批量创建拨测任务
      * @param req CreateProbeTasksRequest
      * @return CreateProbeTasksResponse
      * @throws TencentCloudSDKException
@@ -339,7 +339,7 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *查询探测任务列表
+     *查询拨测任务列表
      * @param req DescribeProbeTasksRequest
      * @return DescribeProbeTasksResponse
      * @throws TencentCloudSDKException

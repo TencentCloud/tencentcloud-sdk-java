@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cat.v20180409.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoReplicationDelayResponse extends AbstractModel{
+public class KeyValuePair extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 健
     */
-    @SerializedName("RequestId")
+    @SerializedName("Key")
     @Expose
-    private String RequestId;
+    private String Key;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 健 
+     * @return Key 健
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 健
+     * @param Key 健
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public ModifyRoReplicationDelayResponse() {
+    /**
+     * Get 值 
+     * @return Value 值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 值
+     * @param Value 值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public KeyValuePair() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyRoReplicationDelayResponse(ModifyRoReplicationDelayResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public KeyValuePair(KeyValuePair source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class ModifyRoReplicationDelayResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

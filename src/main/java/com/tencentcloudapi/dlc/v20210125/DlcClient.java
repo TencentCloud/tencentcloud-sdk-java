@@ -499,6 +499,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询任务结果
+     * @param req DescribeTaskResultRequest
+     * @return DescribeTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DescribleTasks）用于查询任务列表
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse

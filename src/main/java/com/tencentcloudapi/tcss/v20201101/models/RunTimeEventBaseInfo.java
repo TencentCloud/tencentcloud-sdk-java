@@ -130,6 +130,22 @@ MountNamespace逃逸、
     private String LatestFoundTime;
 
     /**
+    * 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
+    * 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIP")
+    @Expose
+    private String ClientIP;
+
+    /**
      * Get 事件唯一ID 
      * @return EventId 事件唯一ID
      */
@@ -401,6 +417,46 @@ MountNamespace逃逸、
         this.LatestFoundTime = LatestFoundTime;
     }
 
+    /**
+     * Get 内网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostIP 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostIP 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
+    }
+
+    /**
+     * Get 外网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClientIP() {
+        return this.ClientIP;
+    }
+
+    /**
+     * Set 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIP(String ClientIP) {
+        this.ClientIP = ClientIP;
+    }
+
     public RunTimeEventBaseInfo() {
     }
 
@@ -448,6 +504,12 @@ MountNamespace逃逸、
         if (source.LatestFoundTime != null) {
             this.LatestFoundTime = new String(source.LatestFoundTime);
         }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
+        if (source.ClientIP != null) {
+            this.ClientIP = new String(source.ClientIP);
+        }
     }
 
 
@@ -468,6 +530,8 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "EventCount", this.EventCount);
         this.setParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
+        this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
 
     }
 }

@@ -72,6 +72,13 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private Long PublicNetwork;
 
     /**
+    * 动态硬盘扩容策略配置
+    */
+    @SerializedName("DynamicDiskConfig")
+    @Expose
+    private DynamicDiskConfig DynamicDiskConfig;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -183,6 +190,22 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.PublicNetwork = PublicNetwork;
     }
 
+    /**
+     * Get 动态硬盘扩容策略配置 
+     * @return DynamicDiskConfig 动态硬盘扩容策略配置
+     */
+    public DynamicDiskConfig getDynamicDiskConfig() {
+        return this.DynamicDiskConfig;
+    }
+
+    /**
+     * Set 动态硬盘扩容策略配置
+     * @param DynamicDiskConfig 动态硬盘扩容策略配置
+     */
+    public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
+        this.DynamicDiskConfig = DynamicDiskConfig;
+    }
+
     public ModifyInstanceAttributesRequest() {
     }
 
@@ -212,6 +235,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         if (source.PublicNetwork != null) {
             this.PublicNetwork = new Long(source.PublicNetwork);
         }
+        if (source.DynamicDiskConfig != null) {
+            this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
         this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
 
     }
 }

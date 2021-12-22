@@ -119,6 +119,29 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *服务删除
+  - 停止当前运行服务
+  - 删除服务相关资源
+  - 删除服务
+     * @param req DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除 Ingress 规则
      * @param req DeleteIngressRequest
      * @return DeleteIngressResponse

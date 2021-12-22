@@ -45,21 +45,21 @@ public class ProbeTask extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 探测节点列表
+    * 拨测节点列表
     */
     @SerializedName("Nodes")
     @Expose
     private String [] Nodes;
 
     /**
-    * 探测间隔
+    * 拨测间隔
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 探测参数
+    * 拨测参数
     */
     @SerializedName("Parameters")
     @Expose
@@ -130,6 +130,14 @@ public class ProbeTask extends AbstractModel{
     private Long CronState;
 
     /**
+    * 任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagInfoList")
+    @Expose
+    private KeyValuePair [] TagInfoList;
+
+    /**
      * Get 任务名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 任务名
@@ -182,48 +190,48 @@ public class ProbeTask extends AbstractModel{
     }
 
     /**
-     * Get 探测节点列表 
-     * @return Nodes 探测节点列表
+     * Get 拨测节点列表 
+     * @return Nodes 拨测节点列表
      */
     public String [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 探测节点列表
-     * @param Nodes 探测节点列表
+     * Set 拨测节点列表
+     * @param Nodes 拨测节点列表
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 探测间隔 
-     * @return Interval 探测间隔
+     * Get 拨测间隔 
+     * @return Interval 拨测间隔
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 探测间隔
-     * @param Interval 探测间隔
+     * Set 拨测间隔
+     * @param Interval 拨测间隔
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 探测参数 
-     * @return Parameters 探测参数
+     * Get 拨测参数 
+     * @return Parameters 拨测参数
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 探测参数
-     * @param Parameters 探测参数
+     * Set 拨测参数
+     * @param Parameters 拨测参数
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
@@ -389,6 +397,26 @@ public class ProbeTask extends AbstractModel{
         this.CronState = CronState;
     }
 
+    /**
+     * Get 任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagInfoList 任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KeyValuePair [] getTagInfoList() {
+        return this.TagInfoList;
+    }
+
+    /**
+     * Set 任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagInfoList 任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagInfoList(KeyValuePair [] TagInfoList) {
+        this.TagInfoList = TagInfoList;
+    }
+
     public ProbeTask() {
     }
 
@@ -442,6 +470,12 @@ public class ProbeTask extends AbstractModel{
         if (source.CronState != null) {
             this.CronState = new Long(source.CronState);
         }
+        if (source.TagInfoList != null) {
+            this.TagInfoList = new KeyValuePair[source.TagInfoList.length];
+            for (int i = 0; i < source.TagInfoList.length; i++) {
+                this.TagInfoList[i] = new KeyValuePair(source.TagInfoList[i]);
+            }
+        }
     }
 
 
@@ -463,6 +497,7 @@ public class ProbeTask extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "Cron", this.Cron);
         this.setParamSimple(map, prefix + "CronState", this.CronState);
+        this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
 
     }
 }

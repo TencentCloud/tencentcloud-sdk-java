@@ -37,21 +37,21 @@ public class CreateProbeTasksRequest extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 探测节点
+    * 拨测节点
     */
     @SerializedName("Nodes")
     @Expose
     private String [] Nodes;
 
     /**
-    * 探测间隔
+    * 拨测间隔
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 探测参数
+    * 拨测参数
     */
     @SerializedName("Parameters")
     @Expose
@@ -72,6 +72,13 @@ public class CreateProbeTasksRequest extends AbstractModel{
     @SerializedName("Cron")
     @Expose
     private String Cron;
+
+    /**
+    * 资源标签值
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
 
     /**
      * Get 批量任务名-地址 
@@ -106,48 +113,48 @@ public class CreateProbeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 探测节点 
-     * @return Nodes 探测节点
+     * Get 拨测节点 
+     * @return Nodes 拨测节点
      */
     public String [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 探测节点
-     * @param Nodes 探测节点
+     * Set 拨测节点
+     * @param Nodes 拨测节点
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 探测间隔 
-     * @return Interval 探测间隔
+     * Get 拨测间隔 
+     * @return Interval 拨测间隔
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 探测间隔
-     * @param Interval 探测间隔
+     * Set 拨测间隔
+     * @param Interval 拨测间隔
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 探测参数 
-     * @return Parameters 探测参数
+     * Get 拨测参数 
+     * @return Parameters 拨测参数
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 探测参数
-     * @param Parameters 探测参数
+     * Set 拨测参数
+     * @param Parameters 拨测参数
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
@@ -193,6 +200,22 @@ public class CreateProbeTasksRequest extends AbstractModel{
         this.Cron = Cron;
     }
 
+    /**
+     * Get 资源标签值 
+     * @return Tag 资源标签值
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 资源标签值
+     * @param Tag 资源标签值
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
     public CreateProbeTasksRequest() {
     }
 
@@ -228,6 +251,12 @@ public class CreateProbeTasksRequest extends AbstractModel{
         if (source.Cron != null) {
             this.Cron = new String(source.Cron);
         }
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
+            }
+        }
     }
 
 
@@ -242,6 +271,7 @@ public class CreateProbeTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamSimple(map, prefix + "TaskCategory", this.TaskCategory);
         this.setParamSimple(map, prefix + "Cron", this.Cron);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

@@ -51,6 +51,13 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
     private Long IsBalanceRoLoad;
 
     /**
+    * 废弃参数，无意义。
+    */
+    @SerializedName("ReplicationDelayTime")
+    @Expose
+    private Long ReplicationDelayTime;
+
+    /**
      * Get RO 组的 ID。 
      * @return RoGroupId RO 组的 ID。
      */
@@ -114,6 +121,22 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         this.IsBalanceRoLoad = IsBalanceRoLoad;
     }
 
+    /**
+     * Get 废弃参数，无意义。 
+     * @return ReplicationDelayTime 废弃参数，无意义。
+     */
+    public Long getReplicationDelayTime() {
+        return this.ReplicationDelayTime;
+    }
+
+    /**
+     * Set 废弃参数，无意义。
+     * @param ReplicationDelayTime 废弃参数，无意义。
+     */
+    public void setReplicationDelayTime(Long ReplicationDelayTime) {
+        this.ReplicationDelayTime = ReplicationDelayTime;
+    }
+
     public ModifyRoGroupInfoRequest() {
     }
 
@@ -137,6 +160,9 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         if (source.IsBalanceRoLoad != null) {
             this.IsBalanceRoLoad = new Long(source.IsBalanceRoLoad);
         }
+        if (source.ReplicationDelayTime != null) {
+            this.ReplicationDelayTime = new Long(source.ReplicationDelayTime);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RoGroupInfo.", this.RoGroupInfo);
         this.setParamArrayObj(map, prefix + "RoWeightValues.", this.RoWeightValues);
         this.setParamSimple(map, prefix + "IsBalanceRoLoad", this.IsBalanceRoLoad);
+        this.setParamSimple(map, prefix + "ReplicationDelayTime", this.ReplicationDelayTime);
 
     }
 }

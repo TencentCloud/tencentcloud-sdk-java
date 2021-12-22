@@ -86,6 +86,13 @@ public class TemplateInfo extends AbstractModel{
     private Recipient [] Recipients;
 
     /**
+    * 是否是发起人
+    */
+    @SerializedName("IsPromoter")
+    @Expose
+    private Boolean IsPromoter;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -229,6 +236,22 @@ public class TemplateInfo extends AbstractModel{
         this.Recipients = Recipients;
     }
 
+    /**
+     * Get 是否是发起人 
+     * @return IsPromoter 是否是发起人
+     */
+    public Boolean getIsPromoter() {
+        return this.IsPromoter;
+    }
+
+    /**
+     * Set 是否是发起人
+     * @param IsPromoter 是否是发起人
+     */
+    public void setIsPromoter(Boolean IsPromoter) {
+        this.IsPromoter = IsPromoter;
+    }
+
     public TemplateInfo() {
     }
 
@@ -273,6 +296,9 @@ public class TemplateInfo extends AbstractModel{
                 this.Recipients[i] = new Recipient(source.Recipients[i]);
             }
         }
+        if (source.IsPromoter != null) {
+            this.IsPromoter = new Boolean(source.IsPromoter);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
         this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+        this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
 
     }
 }
