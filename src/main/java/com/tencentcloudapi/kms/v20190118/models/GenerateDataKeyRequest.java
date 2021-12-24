@@ -51,6 +51,20 @@ public class GenerateDataKeyRequest extends AbstractModel{
     private String EncryptionContext;
 
     /**
+    * PEM 格式公钥字符串，支持 RSA2048 和 SM2 公钥，用于对返回数据中的 Plaintext 值进行加密。若为空，则不对 Plaintext 值加密。
+    */
+    @SerializedName("EncryptionPublicKey")
+    @Expose
+    private String EncryptionPublicKey;
+
+    /**
+    * 非对称加密算法，配合 EncryptionPublicKey 对返回数据进行加密。目前支持：SM2（C1C3C2），RSAES_PKCS1_V1_5，RSAES_OAEP_SHA_1，RSAES_OAEP_SHA_256。若为空，则默认为 SM2。
+    */
+    @SerializedName("EncryptionAlgorithm")
+    @Expose
+    private String EncryptionAlgorithm;
+
+    /**
      * Get CMK全局唯一标识符 
      * @return KeyId CMK全局唯一标识符
      */
@@ -114,6 +128,38 @@ public class GenerateDataKeyRequest extends AbstractModel{
         this.EncryptionContext = EncryptionContext;
     }
 
+    /**
+     * Get PEM 格式公钥字符串，支持 RSA2048 和 SM2 公钥，用于对返回数据中的 Plaintext 值进行加密。若为空，则不对 Plaintext 值加密。 
+     * @return EncryptionPublicKey PEM 格式公钥字符串，支持 RSA2048 和 SM2 公钥，用于对返回数据中的 Plaintext 值进行加密。若为空，则不对 Plaintext 值加密。
+     */
+    public String getEncryptionPublicKey() {
+        return this.EncryptionPublicKey;
+    }
+
+    /**
+     * Set PEM 格式公钥字符串，支持 RSA2048 和 SM2 公钥，用于对返回数据中的 Plaintext 值进行加密。若为空，则不对 Plaintext 值加密。
+     * @param EncryptionPublicKey PEM 格式公钥字符串，支持 RSA2048 和 SM2 公钥，用于对返回数据中的 Plaintext 值进行加密。若为空，则不对 Plaintext 值加密。
+     */
+    public void setEncryptionPublicKey(String EncryptionPublicKey) {
+        this.EncryptionPublicKey = EncryptionPublicKey;
+    }
+
+    /**
+     * Get 非对称加密算法，配合 EncryptionPublicKey 对返回数据进行加密。目前支持：SM2（C1C3C2），RSAES_PKCS1_V1_5，RSAES_OAEP_SHA_1，RSAES_OAEP_SHA_256。若为空，则默认为 SM2。 
+     * @return EncryptionAlgorithm 非对称加密算法，配合 EncryptionPublicKey 对返回数据进行加密。目前支持：SM2（C1C3C2），RSAES_PKCS1_V1_5，RSAES_OAEP_SHA_1，RSAES_OAEP_SHA_256。若为空，则默认为 SM2。
+     */
+    public String getEncryptionAlgorithm() {
+        return this.EncryptionAlgorithm;
+    }
+
+    /**
+     * Set 非对称加密算法，配合 EncryptionPublicKey 对返回数据进行加密。目前支持：SM2（C1C3C2），RSAES_PKCS1_V1_5，RSAES_OAEP_SHA_1，RSAES_OAEP_SHA_256。若为空，则默认为 SM2。
+     * @param EncryptionAlgorithm 非对称加密算法，配合 EncryptionPublicKey 对返回数据进行加密。目前支持：SM2（C1C3C2），RSAES_PKCS1_V1_5，RSAES_OAEP_SHA_1，RSAES_OAEP_SHA_256。若为空，则默认为 SM2。
+     */
+    public void setEncryptionAlgorithm(String EncryptionAlgorithm) {
+        this.EncryptionAlgorithm = EncryptionAlgorithm;
+    }
+
     public GenerateDataKeyRequest() {
     }
 
@@ -134,6 +180,12 @@ public class GenerateDataKeyRequest extends AbstractModel{
         if (source.EncryptionContext != null) {
             this.EncryptionContext = new String(source.EncryptionContext);
         }
+        if (source.EncryptionPublicKey != null) {
+            this.EncryptionPublicKey = new String(source.EncryptionPublicKey);
+        }
+        if (source.EncryptionAlgorithm != null) {
+            this.EncryptionAlgorithm = new String(source.EncryptionAlgorithm);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class GenerateDataKeyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeySpec", this.KeySpec);
         this.setParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);
         this.setParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
+        this.setParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
+        this.setParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
 
     }
 }

@@ -240,6 +240,20 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private String RepoType;
 
     /**
+    * 数据卷信息
+    */
+    @SerializedName("VolumeInfos")
+    @Expose
+    private VolumeInfo VolumeInfos;
+
+    /**
+    * 数据卷挂载点信息
+    */
+    @SerializedName("VolumeMountInfos")
+    @Expose
+    private VolumeMountInfo VolumeMountInfos;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -735,6 +749,38 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.RepoType = RepoType;
     }
 
+    /**
+     * Get 数据卷信息 
+     * @return VolumeInfos 数据卷信息
+     */
+    public VolumeInfo getVolumeInfos() {
+        return this.VolumeInfos;
+    }
+
+    /**
+     * Set 数据卷信息
+     * @param VolumeInfos 数据卷信息
+     */
+    public void setVolumeInfos(VolumeInfo VolumeInfos) {
+        this.VolumeInfos = VolumeInfos;
+    }
+
+    /**
+     * Get 数据卷挂载点信息 
+     * @return VolumeMountInfos 数据卷挂载点信息
+     */
+    public VolumeMountInfo getVolumeMountInfos() {
+        return this.VolumeMountInfos;
+    }
+
+    /**
+     * Set 数据卷挂载点信息
+     * @param VolumeMountInfos 数据卷挂载点信息
+     */
+    public void setVolumeMountInfos(VolumeMountInfo VolumeMountInfos) {
+        this.VolumeMountInfos = VolumeMountInfos;
+    }
+
     public DeployContainerGroupRequest() {
     }
 
@@ -839,6 +885,12 @@ public class DeployContainerGroupRequest extends AbstractModel{
         if (source.RepoType != null) {
             this.RepoType = new String(source.RepoType);
         }
+        if (source.VolumeInfos != null) {
+            this.VolumeInfos = new VolumeInfo(source.VolumeInfos);
+        }
+        if (source.VolumeMountInfos != null) {
+            this.VolumeMountInfos = new VolumeMountInfo(source.VolumeMountInfos);
+        }
     }
 
 
@@ -877,6 +929,8 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SchedulingStrategy.", this.SchedulingStrategy);
         this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
         this.setParamSimple(map, prefix + "RepoType", this.RepoType);
+        this.setParamObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
+        this.setParamObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
 
     }
 }

@@ -779,6 +779,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取角色权限边界
+     * @param req GetRolePermissionBoundaryRequest
+     * @return GetRolePermissionBoundaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRolePermissionBoundaryResponse GetRolePermissionBoundary(GetRolePermissionBoundaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRolePermissionBoundaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRolePermissionBoundaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRolePermissionBoundary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询SAML身份提供商详情
      * @param req GetSAMLProviderRequest
      * @return GetSAMLProviderResponse
@@ -851,6 +871,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户权限边界
+     * @param req GetUserPermissionBoundaryRequest
+     * @return GetUserPermissionBoundaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserPermissionBoundaryResponse GetUserPermissionBoundary(GetUserPermissionBoundaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUserPermissionBoundaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUserPermissionBoundaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetUserPermissionBoundary");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

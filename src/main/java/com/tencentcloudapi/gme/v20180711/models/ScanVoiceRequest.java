@@ -30,7 +30,7 @@ public class ScanVoiceRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+    * 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
     */
     @SerializedName("Scenes")
     @Expose
@@ -60,6 +60,13 @@ public class ScanVoiceRequest extends AbstractModel{
     private String Callback;
 
     /**
+    * 语言，目前jp代表日语
+    */
+    @SerializedName("Lang")
+    @Expose
+    private String Lang;
+
+    /**
      * Get 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID 
      * @return BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
@@ -76,16 +83,16 @@ public class ScanVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a> 
-     * @return Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * Get 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a> 
+     * @return Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
-     * @param Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * Set 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * @param Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
@@ -147,6 +154,22 @@ public class ScanVoiceRequest extends AbstractModel{
         this.Callback = Callback;
     }
 
+    /**
+     * Get 语言，目前jp代表日语 
+     * @return Lang 语言，目前jp代表日语
+     */
+    public String getLang() {
+        return this.Lang;
+    }
+
+    /**
+     * Set 语言，目前jp代表日语
+     * @param Lang 语言，目前jp代表日语
+     */
+    public void setLang(String Lang) {
+        this.Lang = Lang;
+    }
+
     public ScanVoiceRequest() {
     }
 
@@ -176,6 +199,9 @@ public class ScanVoiceRequest extends AbstractModel{
         if (source.Callback != null) {
             this.Callback = new String(source.Callback);
         }
+        if (source.Lang != null) {
+            this.Lang = new String(source.Lang);
+        }
     }
 
 
@@ -188,6 +214,7 @@ public class ScanVoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Live", this.Live);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "Callback", this.Callback);
+        this.setParamSimple(map, prefix + "Lang", this.Lang);
 
     }
 }

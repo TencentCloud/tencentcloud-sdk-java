@@ -30,7 +30,8 @@ public class DecryptResponse extends AbstractModel{
     private String KeyId;
 
     /**
-    * 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
+    * 若调用时未提供 EncryptionPublicKey，该字段值为 Base64 编码的明文，需进行 Base64 解码以获取明文。
+若调用时提供了 EncryptionPublicKey，则该字段值为使用 EncryptionPublicKey 公钥进行非对称加密后的 Base64 编码的密文。需在 Base64 解码后，使用用户上传的公钥对应的私钥进行进一步解密，以获取明文。
     */
     @SerializedName("Plaintext")
     @Expose
@@ -60,16 +61,20 @@ public class DecryptResponse extends AbstractModel{
     }
 
     /**
-     * Get 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码 
-     * @return Plaintext 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
+     * Get 若调用时未提供 EncryptionPublicKey，该字段值为 Base64 编码的明文，需进行 Base64 解码以获取明文。
+若调用时提供了 EncryptionPublicKey，则该字段值为使用 EncryptionPublicKey 公钥进行非对称加密后的 Base64 编码的密文。需在 Base64 解码后，使用用户上传的公钥对应的私钥进行进一步解密，以获取明文。 
+     * @return Plaintext 若调用时未提供 EncryptionPublicKey，该字段值为 Base64 编码的明文，需进行 Base64 解码以获取明文。
+若调用时提供了 EncryptionPublicKey，则该字段值为使用 EncryptionPublicKey 公钥进行非对称加密后的 Base64 编码的密文。需在 Base64 解码后，使用用户上传的公钥对应的私钥进行进一步解密，以获取明文。
      */
     public String getPlaintext() {
         return this.Plaintext;
     }
 
     /**
-     * Set 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
-     * @param Plaintext 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
+     * Set 若调用时未提供 EncryptionPublicKey，该字段值为 Base64 编码的明文，需进行 Base64 解码以获取明文。
+若调用时提供了 EncryptionPublicKey，则该字段值为使用 EncryptionPublicKey 公钥进行非对称加密后的 Base64 编码的密文。需在 Base64 解码后，使用用户上传的公钥对应的私钥进行进一步解密，以获取明文。
+     * @param Plaintext 若调用时未提供 EncryptionPublicKey，该字段值为 Base64 编码的明文，需进行 Base64 解码以获取明文。
+若调用时提供了 EncryptionPublicKey，则该字段值为使用 EncryptionPublicKey 公钥进行非对称加密后的 Base64 编码的密文。需在 Base64 解码后，使用用户上传的公钥对应的私钥进行进一步解密，以获取明文。
      */
     public void setPlaintext(String Plaintext) {
         this.Plaintext = Plaintext;

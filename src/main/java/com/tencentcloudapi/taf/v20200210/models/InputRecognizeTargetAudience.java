@@ -296,6 +296,13 @@ public class InputRecognizeTargetAudience extends AbstractModel{
     private Long IsAuthorized;
 
     /**
+    * 设备信息
+    */
+    @SerializedName("DeviceList")
+    @Expose
+    private Device [] DeviceList;
+
+    /**
      * Get 设备ID，AccountType指定的类型 
      * @return Uid 设备ID，AccountType指定的类型
      */
@@ -919,6 +926,22 @@ public class InputRecognizeTargetAudience extends AbstractModel{
         this.IsAuthorized = IsAuthorized;
     }
 
+    /**
+     * Get 设备信息 
+     * @return DeviceList 设备信息
+     */
+    public Device [] getDeviceList() {
+        return this.DeviceList;
+    }
+
+    /**
+     * Set 设备信息
+     * @param DeviceList 设备信息
+     */
+    public void setDeviceList(Device [] DeviceList) {
+        this.DeviceList = DeviceList;
+    }
+
     public InputRecognizeTargetAudience() {
     }
 
@@ -1047,6 +1070,12 @@ public class InputRecognizeTargetAudience extends AbstractModel{
         if (source.IsAuthorized != null) {
             this.IsAuthorized = new Long(source.IsAuthorized);
         }
+        if (source.DeviceList != null) {
+            this.DeviceList = new Device[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new Device(source.DeviceList[i]);
+            }
+        }
     }
 
 
@@ -1093,6 +1122,7 @@ public class InputRecognizeTargetAudience extends AbstractModel{
         this.setParamSimple(map, prefix + "AppVer", this.AppVer);
         this.setParamSimple(map, prefix + "ReqType", this.ReqType);
         this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+        this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
 
     }
 }

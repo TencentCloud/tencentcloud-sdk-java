@@ -30,14 +30,16 @@ public class SearchKTVMusicsRequest extends AbstractModel{
     private String KeyWord;
 
     /**
-    * 分页游标
+    * 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页页长
+    * 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +62,40 @@ public class SearchKTVMusicsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页游标 
-     * @return Offset 分页游标
+     * Get 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000 
+     * @return Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页游标
-     * @param Offset 分页游标
+     * Set 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+     * @param Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页页长 
-     * @return Limit 分页页长
+     * Get 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。 
+     * @return Limit 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页页长
-     * @param Limit 分页页长
+     * Set 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
+     * @param Limit 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

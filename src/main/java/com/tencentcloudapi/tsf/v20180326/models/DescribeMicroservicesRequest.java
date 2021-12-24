@@ -79,6 +79,13 @@ public class DescribeMicroservicesRequest extends AbstractModel{
     private String [] MicroserviceIdList;
 
     /**
+    * 搜索的服务名列表
+    */
+    @SerializedName("MicroserviceNameList")
+    @Expose
+    private String [] MicroserviceNameList;
+
+    /**
      * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
@@ -206,6 +213,22 @@ public class DescribeMicroservicesRequest extends AbstractModel{
         this.MicroserviceIdList = MicroserviceIdList;
     }
 
+    /**
+     * Get 搜索的服务名列表 
+     * @return MicroserviceNameList 搜索的服务名列表
+     */
+    public String [] getMicroserviceNameList() {
+        return this.MicroserviceNameList;
+    }
+
+    /**
+     * Set 搜索的服务名列表
+     * @param MicroserviceNameList 搜索的服务名列表
+     */
+    public void setMicroserviceNameList(String [] MicroserviceNameList) {
+        this.MicroserviceNameList = MicroserviceNameList;
+    }
+
     public DescribeMicroservicesRequest() {
     }
 
@@ -244,6 +267,12 @@ public class DescribeMicroservicesRequest extends AbstractModel{
                 this.MicroserviceIdList[i] = new String(source.MicroserviceIdList[i]);
             }
         }
+        if (source.MicroserviceNameList != null) {
+            this.MicroserviceNameList = new String[source.MicroserviceNameList.length];
+            for (int i = 0; i < source.MicroserviceNameList.length; i++) {
+                this.MicroserviceNameList[i] = new String(source.MicroserviceNameList[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ public class DescribeMicroservicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamArraySimple(map, prefix + "MicroserviceIdList.", this.MicroserviceIdList);
+        this.setParamArraySimple(map, prefix + "MicroserviceNameList.", this.MicroserviceNameList);
 
     }
 }

@@ -100,6 +100,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *此接口（DescribeFlowDetailInfo）用于查询合同(流程)的详细信息。
+     * @param req DescribeFlowDetailInfoRequest
+     * @return DescribeFlowDetailInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowDetailInfoResponse DescribeFlowDetailInfo(DescribeFlowDetailInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowDetailInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowDetailInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlowDetailInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据流程信息批量获取资源下载链接
      * @param req DescribeResourceUrlsByFlowsRequest
      * @return DescribeResourceUrlsByFlowsResponse

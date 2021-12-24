@@ -128,7 +128,7 @@ public class DBInstance extends AbstractModel{
     private String DBCharset;
 
     /**
-    * PostgreSQL主版本
+    * PostgreSQL版本
     */
     @SerializedName("DBVersion")
     @Expose
@@ -266,6 +266,14 @@ public class DBInstance extends AbstractModel{
     @SerializedName("NetworkAccessList")
     @Expose
     private NetworkAccess [] NetworkAccessList;
+
+    /**
+    * PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
 
     /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
@@ -508,16 +516,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL主版本 
-     * @return DBVersion PostgreSQL主版本
+     * Get PostgreSQL版本 
+     * @return DBVersion PostgreSQL版本
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL主版本
-     * @param DBVersion PostgreSQL主版本
+     * Set PostgreSQL版本
+     * @param DBVersion PostgreSQL版本
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -839,6 +847,26 @@ public class DBInstance extends AbstractModel{
         this.NetworkAccessList = NetworkAccessList;
     }
 
+    /**
+     * Get PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBMajorVersion PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBMajorVersion PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
     public DBInstance() {
     }
 
@@ -958,6 +986,9 @@ public class DBInstance extends AbstractModel{
                 this.NetworkAccessList[i] = new NetworkAccess(source.NetworkAccessList[i]);
             }
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
     }
 
 
@@ -999,6 +1030,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
 
     }
 }

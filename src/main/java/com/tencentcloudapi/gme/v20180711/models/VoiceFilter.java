@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VoiceFilter extends AbstractModel{
 
     /**
-    * 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+    * 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -39,9 +39,9 @@ public class VoiceFilter extends AbstractModel{
     private String Word;
 
     /**
-     * Get 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * Get 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @return Type 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -49,9 +49,9 @@ public class VoiceFilter extends AbstractModel{
     }
 
     /**
-     * Set 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * Set 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @param Type 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {

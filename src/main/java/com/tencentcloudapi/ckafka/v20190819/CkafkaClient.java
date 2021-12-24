@@ -820,4 +820,24 @@ public class CkafkaClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *通过HTTP接入层发送消息
+     * @param req SendMessageRequest
+     * @return SendMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

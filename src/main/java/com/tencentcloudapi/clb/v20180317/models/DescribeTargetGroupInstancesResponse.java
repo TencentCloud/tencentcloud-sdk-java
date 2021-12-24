@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeTargetGroupInstancesResponse extends AbstractModel{
 
     /**
-    * 本次查询的结果数量
+    * 本次查询的结果数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 绑定的服务器信息
+    * 绑定的服务器信息。
     */
     @SerializedName("TargetGroupInstanceSet")
     @Expose
     private TargetGroupBackend [] TargetGroupInstanceSet;
 
     /**
-    * 实际统计数量，不受Limit，Offset，CAM的影响
+    * 实际统计数量，不受Limit、Offset、CAM的影响。
     */
     @SerializedName("RealCount")
     @Expose
@@ -51,48 +51,48 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 本次查询的结果数量 
-     * @return TotalCount 本次查询的结果数量
+     * Get 本次查询的结果数量。 
+     * @return TotalCount 本次查询的结果数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 本次查询的结果数量
-     * @param TotalCount 本次查询的结果数量
+     * Set 本次查询的结果数量。
+     * @param TotalCount 本次查询的结果数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 绑定的服务器信息 
-     * @return TargetGroupInstanceSet 绑定的服务器信息
+     * Get 绑定的服务器信息。 
+     * @return TargetGroupInstanceSet 绑定的服务器信息。
      */
     public TargetGroupBackend [] getTargetGroupInstanceSet() {
         return this.TargetGroupInstanceSet;
     }
 
     /**
-     * Set 绑定的服务器信息
-     * @param TargetGroupInstanceSet 绑定的服务器信息
+     * Set 绑定的服务器信息。
+     * @param TargetGroupInstanceSet 绑定的服务器信息。
      */
     public void setTargetGroupInstanceSet(TargetGroupBackend [] TargetGroupInstanceSet) {
         this.TargetGroupInstanceSet = TargetGroupInstanceSet;
     }
 
     /**
-     * Get 实际统计数量，不受Limit，Offset，CAM的影响 
-     * @return RealCount 实际统计数量，不受Limit，Offset，CAM的影响
+     * Get 实际统计数量，不受Limit、Offset、CAM的影响。 
+     * @return RealCount 实际统计数量，不受Limit、Offset、CAM的影响。
      */
     public Long getRealCount() {
         return this.RealCount;
     }
 
     /**
-     * Set 实际统计数量，不受Limit，Offset，CAM的影响
-     * @param RealCount 实际统计数量，不受Limit，Offset，CAM的影响
+     * Set 实际统计数量，不受Limit、Offset、CAM的影响。
+     * @param RealCount 实际统计数量，不受Limit、Offset、CAM的影响。
      */
     public void setRealCount(Long RealCount) {
         this.RealCount = RealCount;

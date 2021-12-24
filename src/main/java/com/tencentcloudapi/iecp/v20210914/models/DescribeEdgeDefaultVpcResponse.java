@@ -1,0 +1,198 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iecp.v20210914.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeEdgeDefaultVpcResponse extends AbstractModel{
+
+    /**
+    * 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 网络CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcCidrBlock")
+    @Expose
+    private String VpcCidrBlock;
+
+    /**
+    * 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * 子网CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetCidrBlock")
+    @Expose
+    private String SubnetCidrBlock;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 网络CIDR
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcCidrBlock 网络CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcCidrBlock() {
+        return this.VpcCidrBlock;
+    }
+
+    /**
+     * Set 网络CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcCidrBlock 网络CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcCidrBlock(String VpcCidrBlock) {
+        this.VpcCidrBlock = VpcCidrBlock;
+    }
+
+    /**
+     * Get 子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 子网CIDR
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetCidrBlock 子网CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetCidrBlock() {
+        return this.SubnetCidrBlock;
+    }
+
+    /**
+     * Set 子网CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetCidrBlock 子网CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetCidrBlock(String SubnetCidrBlock) {
+        this.SubnetCidrBlock = SubnetCidrBlock;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeEdgeDefaultVpcResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEdgeDefaultVpcResponse(DescribeEdgeDefaultVpcResponse source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetCidrBlock != null) {
+            this.SubnetCidrBlock = new String(source.SubnetCidrBlock);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

@@ -2199,6 +2199,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *开启 RO 复制，从主实例同步数据。
+     * @param req StartReplicationRequest
+     * @return StartReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartReplicationResponse StartReplication(StartReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartReplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(StopDBImportJob)用于终止数据导入任务。
      * @param req StopDBImportJobRequest
      * @return StopDBImportJobResponse
@@ -2211,6 +2231,26 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopDBImportJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopDBImportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止 RO 复制，中断从主实例同步数据。
+     * @param req StopReplicationRequest
+     * @return StopReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopReplicationResponse StopReplication(StopReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopReplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

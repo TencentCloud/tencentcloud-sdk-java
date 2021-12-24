@@ -30,7 +30,7 @@ public class DescribePrivateZoneRecordListRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 过滤参数
+    * 过滤参数（支持使用Value、RecordType过滤）
     */
     @SerializedName("Filters")
     @Expose
@@ -67,16 +67,16 @@ public class DescribePrivateZoneRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+     * Get 过滤参数（支持使用Value、RecordType过滤） 
+     * @return Filters 过滤参数（支持使用Value、RecordType过滤）
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set 过滤参数（支持使用Value、RecordType过滤）
+     * @param Filters 过滤参数（支持使用Value、RecordType过滤）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -44,7 +44,7 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * 该参数已下线
+    * true，向指定请求[发送 SIGTERM 终止信号](https://cloud.tencent.com/document/product/583/63969#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]， ，默认值为 false。
     */
     @SerializedName("GraceShutdown")
     @Expose
@@ -99,16 +99,16 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     }
 
     /**
-     * Get 该参数已下线 
-     * @return GraceShutdown 该参数已下线
+     * Get true，向指定请求[发送 SIGTERM 终止信号](https://cloud.tencent.com/document/product/583/63969#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]， ，默认值为 false。 
+     * @return GraceShutdown true，向指定请求[发送 SIGTERM 终止信号](https://cloud.tencent.com/document/product/583/63969#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]， ，默认值为 false。
      */
     public Boolean getGraceShutdown() {
         return this.GraceShutdown;
     }
 
     /**
-     * Set 该参数已下线
-     * @param GraceShutdown 该参数已下线
+     * Set true，向指定请求[发送 SIGTERM 终止信号](https://cloud.tencent.com/document/product/583/63969#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]， ，默认值为 false。
+     * @param GraceShutdown true，向指定请求[发送 SIGTERM 终止信号](https://cloud.tencent.com/document/product/583/63969#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]， ，默认值为 false。
      */
     public void setGraceShutdown(Boolean GraceShutdown) {
         this.GraceShutdown = GraceShutdown;

@@ -39,6 +39,9 @@ public enum GmeErrorCode {
     // 缺少参数。
      MISSINGPARAMETER_("MissingParameter."),
      
+    // 操作被拒绝。
+     OPERATIONDENIED("OperationDenied"),
+     
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      

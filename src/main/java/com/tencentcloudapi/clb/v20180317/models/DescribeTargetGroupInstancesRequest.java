@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeTargetGroupInstancesRequest extends AbstractModel{
 
     /**
-    * 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
+    * 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 显示数量限制，默认20
+    * 显示数量限制，默认20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 显示的偏移量，默认为0
+    * 显示的偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤 
-     * @return Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
+     * Get 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。 
+     * @return Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
-     * @param Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
+     * Set 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+     * @param Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 显示数量限制，默认20 
-     * @return Limit 显示数量限制，默认20
+     * Get 显示数量限制，默认20。 
+     * @return Limit 显示数量限制，默认20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 显示数量限制，默认20
-     * @param Limit 显示数量限制，默认20
+     * Set 显示数量限制，默认20。
+     * @param Limit 显示数量限制，默认20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 显示的偏移量，默认为0 
-     * @return Offset 显示的偏移量，默认为0
+     * Get 显示的偏移量，默认为0。 
+     * @return Offset 显示的偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 显示的偏移量，默认为0
-     * @param Offset 显示的偏移量，默认为0
+     * Set 显示的偏移量，默认为0。
+     * @param Offset 显示的偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

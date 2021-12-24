@@ -93,6 +93,13 @@ public class UpdateEKSClusterRequest extends AbstractModel{
     private Boolean NeedDeleteCbs;
 
     /**
+    * 标记是否是新的内外网。默认为false
+    */
+    @SerializedName("ProxyLB")
+    @Expose
+    private Boolean ProxyLB;
+
+    /**
      * Get 弹性集群Id 
      * @return ClusterId 弹性集群Id
      */
@@ -252,6 +259,22 @@ public class UpdateEKSClusterRequest extends AbstractModel{
         this.NeedDeleteCbs = NeedDeleteCbs;
     }
 
+    /**
+     * Get 标记是否是新的内外网。默认为false 
+     * @return ProxyLB 标记是否是新的内外网。默认为false
+     */
+    public Boolean getProxyLB() {
+        return this.ProxyLB;
+    }
+
+    /**
+     * Set 标记是否是新的内外网。默认为false
+     * @param ProxyLB 标记是否是新的内外网。默认为false
+     */
+    public void setProxyLB(Boolean ProxyLB) {
+        this.ProxyLB = ProxyLB;
+    }
+
     public UpdateEKSClusterRequest() {
     }
 
@@ -296,6 +319,9 @@ public class UpdateEKSClusterRequest extends AbstractModel{
         if (source.NeedDeleteCbs != null) {
             this.NeedDeleteCbs = new Boolean(source.NeedDeleteCbs);
         }
+        if (source.ProxyLB != null) {
+            this.ProxyLB = new Boolean(source.ProxyLB);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class UpdateEKSClusterRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "ClearDnsServer", this.ClearDnsServer);
         this.setParamSimple(map, prefix + "NeedDeleteCbs", this.NeedDeleteCbs);
+        this.setParamSimple(map, prefix + "ProxyLB", this.ProxyLB);
 
     }
 }

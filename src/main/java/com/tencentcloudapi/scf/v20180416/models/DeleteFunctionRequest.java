@@ -37,7 +37,7 @@ public class DeleteFunctionRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
+    * 填写需要删除的版本号，不填默认删除函数下全部版本。
     */
     @SerializedName("Qualifier")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本 
-     * @return Qualifier 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
+     * Get 填写需要删除的版本号，不填默认删除函数下全部版本。 
+     * @return Qualifier 填写需要删除的版本号，不填默认删除函数下全部版本。
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
-     * @param Qualifier 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
+     * Set 填写需要删除的版本号，不填默认删除函数下全部版本。
+     * @param Qualifier 填写需要删除的版本号，不填默认删除函数下全部版本。
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

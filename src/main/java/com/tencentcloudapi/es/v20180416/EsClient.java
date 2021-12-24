@@ -139,6 +139,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询集群各视图数据，包括集群维度、节点维度、Kibana维度
+     * @param req DescribeViewsRequest
+     * @return DescribeViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeViewsResponse DescribeViews(DescribeViewsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeViewsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeViewsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeViews");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *智能运维诊断集群
      * @param req DiagnoseInstanceRequest
      * @return DiagnoseInstanceResponse

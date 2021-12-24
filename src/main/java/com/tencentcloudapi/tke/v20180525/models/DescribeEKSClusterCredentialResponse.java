@@ -51,6 +51,13 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
     private ClusterInternalLB InternalLB;
 
     /**
+    * 标记是否新的内外网功能
+    */
+    @SerializedName("ProxyLB")
+    @Expose
+    private Boolean ProxyLB;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
     }
 
     /**
+     * Get 标记是否新的内外网功能 
+     * @return ProxyLB 标记是否新的内外网功能
+     */
+    public Boolean getProxyLB() {
+        return this.ProxyLB;
+    }
+
+    /**
+     * Set 标记是否新的内外网功能
+     * @param ProxyLB 标记是否新的内外网功能
+     */
+    public void setProxyLB(Boolean ProxyLB) {
+        this.ProxyLB = ProxyLB;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -160,6 +183,9 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
         if (source.InternalLB != null) {
             this.InternalLB = new ClusterInternalLB(source.InternalLB);
         }
+        if (source.ProxyLB != null) {
+            this.ProxyLB = new Boolean(source.ProxyLB);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -174,6 +200,7 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
         this.setParamObj(map, prefix + "Credential.", this.Credential);
         this.setParamObj(map, prefix + "PublicLB.", this.PublicLB);
         this.setParamObj(map, prefix + "InternalLB.", this.InternalLB);
+        this.setParamSimple(map, prefix + "ProxyLB", this.ProxyLB);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

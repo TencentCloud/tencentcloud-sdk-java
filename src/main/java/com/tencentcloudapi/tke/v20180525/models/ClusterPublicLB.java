@@ -51,6 +51,13 @@ public class ClusterPublicLB extends AbstractModel{
     private String ExtraParam;
 
     /**
+    * 新内外网功能，需要传递安全组
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
      * Get 是否开启公网访问LB 
      * @return Enabled 是否开启公网访问LB
      */
@@ -114,6 +121,22 @@ public class ClusterPublicLB extends AbstractModel{
         this.ExtraParam = ExtraParam;
     }
 
+    /**
+     * Get 新内外网功能，需要传递安全组 
+     * @return SecurityGroup 新内外网功能，需要传递安全组
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 新内外网功能，需要传递安全组
+     * @param SecurityGroup 新内外网功能，需要传递安全组
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
     public ClusterPublicLB() {
     }
 
@@ -140,6 +163,9 @@ public class ClusterPublicLB extends AbstractModel{
         if (source.ExtraParam != null) {
             this.ExtraParam = new String(source.ExtraParam);
         }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class ClusterPublicLB extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AllowFromCidrs.", this.AllowFromCidrs);
         this.setParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
 
     }
 }
