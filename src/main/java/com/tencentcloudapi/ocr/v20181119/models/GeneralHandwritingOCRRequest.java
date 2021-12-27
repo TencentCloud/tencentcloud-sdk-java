@@ -59,6 +59,14 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
     private Boolean EnableWordPolygon;
 
     /**
+    * 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+    */
+    @SerializedName("EnableDetectText")
+    @Expose
+    private Boolean EnableDetectText;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -154,6 +162,26 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
         this.EnableWordPolygon = EnableWordPolygon;
     }
 
+    /**
+     * Get 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。 
+     * @return EnableDetectText 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+     */
+    public Boolean getEnableDetectText() {
+        return this.EnableDetectText;
+    }
+
+    /**
+     * Set 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+     * @param EnableDetectText 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+     */
+    public void setEnableDetectText(Boolean EnableDetectText) {
+        this.EnableDetectText = EnableDetectText;
+    }
+
     public GeneralHandwritingOCRRequest() {
     }
 
@@ -174,6 +202,9 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
         if (source.EnableWordPolygon != null) {
             this.EnableWordPolygon = new Boolean(source.EnableWordPolygon);
         }
+        if (source.EnableDetectText != null) {
+            this.EnableDetectText = new Boolean(source.EnableDetectText);
+        }
     }
 
 
@@ -185,6 +216,7 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "EnableWordPolygon", this.EnableWordPolygon);
+        this.setParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
 
     }
 }

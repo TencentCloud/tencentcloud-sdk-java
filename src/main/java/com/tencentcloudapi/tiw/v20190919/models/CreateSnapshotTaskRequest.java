@@ -30,7 +30,7 @@ public class CreateSnapshotTaskRequest extends AbstractModel{
     private SnapshotWhiteboard Whiteboard;
 
     /**
-    * 白板房间SdkAppId
+    * 白板房间 `SdkAppId`
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -51,11 +51,24 @@ public class CreateSnapshotTaskRequest extends AbstractModel{
     private String CallbackURL;
 
     /**
-    * 白板板书文件COS存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
+    * 白板板书文件 `COS` 存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
     */
     @SerializedName("COS")
     @Expose
     private SnapshotCOS COS;
+
+    /**
+    * 白板板书生成模式，默认为 `AllMarks`。取值说明如下：
+
+`AllMarks` - 全量模式，即对于客户端每一次调用 `addSnapshotMark` 接口打上的白板板书生成标志全部都会生成对应的白板板书图片。
+
+`LatestMarksOnly` - 单页去重模式，即对于客户端在同一页白板上多次调用 `addSnapshotMark` 打上的白板板书生成标志仅保留最新一次标志来生成对应白板页的白板板书图片。
+
+（**注意：`LatestMarksOnly` 模式只有客户端使用v2.6.8及以上版本的白板SDK调用 `addSnapshotMark` 时才生效，否则即使在调用本API是指定了 `LatestMarksOnly` 模式，服务后台会使用默认的 `AllMarks` 模式生成白板板书**）
+    */
+    @SerializedName("SnapshotMode")
+    @Expose
+    private String SnapshotMode;
 
     /**
      * Get 白板相关参数 
@@ -74,16 +87,16 @@ public class CreateSnapshotTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 白板房间SdkAppId 
-     * @return SdkAppId 白板房间SdkAppId
+     * Get 白板房间 `SdkAppId` 
+     * @return SdkAppId 白板房间 `SdkAppId`
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 白板房间SdkAppId
-     * @param SdkAppId 白板房间SdkAppId
+     * Set 白板房间 `SdkAppId`
+     * @param SdkAppId 白板房间 `SdkAppId`
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -122,19 +135,59 @@ public class CreateSnapshotTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 白板板书文件COS存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天 
-     * @return COS 白板板书文件COS存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
+     * Get 白板板书文件 `COS` 存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天 
+     * @return COS 白板板书文件 `COS` 存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
      */
     public SnapshotCOS getCOS() {
         return this.COS;
     }
 
     /**
-     * Set 白板板书文件COS存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
-     * @param COS 白板板书文件COS存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
+     * Set 白板板书文件 `COS` 存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
+     * @param COS 白板板书文件 `COS` 存储参数， 不填默认存储在公共存储桶，公共存储桶的数据仅保存3天
      */
     public void setCOS(SnapshotCOS COS) {
         this.COS = COS;
+    }
+
+    /**
+     * Get 白板板书生成模式，默认为 `AllMarks`。取值说明如下：
+
+`AllMarks` - 全量模式，即对于客户端每一次调用 `addSnapshotMark` 接口打上的白板板书生成标志全部都会生成对应的白板板书图片。
+
+`LatestMarksOnly` - 单页去重模式，即对于客户端在同一页白板上多次调用 `addSnapshotMark` 打上的白板板书生成标志仅保留最新一次标志来生成对应白板页的白板板书图片。
+
+（**注意：`LatestMarksOnly` 模式只有客户端使用v2.6.8及以上版本的白板SDK调用 `addSnapshotMark` 时才生效，否则即使在调用本API是指定了 `LatestMarksOnly` 模式，服务后台会使用默认的 `AllMarks` 模式生成白板板书**） 
+     * @return SnapshotMode 白板板书生成模式，默认为 `AllMarks`。取值说明如下：
+
+`AllMarks` - 全量模式，即对于客户端每一次调用 `addSnapshotMark` 接口打上的白板板书生成标志全部都会生成对应的白板板书图片。
+
+`LatestMarksOnly` - 单页去重模式，即对于客户端在同一页白板上多次调用 `addSnapshotMark` 打上的白板板书生成标志仅保留最新一次标志来生成对应白板页的白板板书图片。
+
+（**注意：`LatestMarksOnly` 模式只有客户端使用v2.6.8及以上版本的白板SDK调用 `addSnapshotMark` 时才生效，否则即使在调用本API是指定了 `LatestMarksOnly` 模式，服务后台会使用默认的 `AllMarks` 模式生成白板板书**）
+     */
+    public String getSnapshotMode() {
+        return this.SnapshotMode;
+    }
+
+    /**
+     * Set 白板板书生成模式，默认为 `AllMarks`。取值说明如下：
+
+`AllMarks` - 全量模式，即对于客户端每一次调用 `addSnapshotMark` 接口打上的白板板书生成标志全部都会生成对应的白板板书图片。
+
+`LatestMarksOnly` - 单页去重模式，即对于客户端在同一页白板上多次调用 `addSnapshotMark` 打上的白板板书生成标志仅保留最新一次标志来生成对应白板页的白板板书图片。
+
+（**注意：`LatestMarksOnly` 模式只有客户端使用v2.6.8及以上版本的白板SDK调用 `addSnapshotMark` 时才生效，否则即使在调用本API是指定了 `LatestMarksOnly` 模式，服务后台会使用默认的 `AllMarks` 模式生成白板板书**）
+     * @param SnapshotMode 白板板书生成模式，默认为 `AllMarks`。取值说明如下：
+
+`AllMarks` - 全量模式，即对于客户端每一次调用 `addSnapshotMark` 接口打上的白板板书生成标志全部都会生成对应的白板板书图片。
+
+`LatestMarksOnly` - 单页去重模式，即对于客户端在同一页白板上多次调用 `addSnapshotMark` 打上的白板板书生成标志仅保留最新一次标志来生成对应白板页的白板板书图片。
+
+（**注意：`LatestMarksOnly` 模式只有客户端使用v2.6.8及以上版本的白板SDK调用 `addSnapshotMark` 时才生效，否则即使在调用本API是指定了 `LatestMarksOnly` 模式，服务后台会使用默认的 `AllMarks` 模式生成白板板书**）
+     */
+    public void setSnapshotMode(String SnapshotMode) {
+        this.SnapshotMode = SnapshotMode;
     }
 
     public CreateSnapshotTaskRequest() {
@@ -160,6 +213,9 @@ public class CreateSnapshotTaskRequest extends AbstractModel{
         if (source.COS != null) {
             this.COS = new SnapshotCOS(source.COS);
         }
+        if (source.SnapshotMode != null) {
+            this.SnapshotMode = new String(source.SnapshotMode);
+        }
     }
 
 
@@ -172,6 +228,7 @@ public class CreateSnapshotTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
         this.setParamObj(map, prefix + "COS.", this.COS);
+        this.setParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
 
     }
 }
