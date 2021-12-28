@@ -78,4 +78,24 @@ public class OrganizationClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取企业组织信息
+     * @param req DescribeOrganizationRequest
+     * @return DescribeOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationResponse DescribeOrganization(DescribeOrganizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganization");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
