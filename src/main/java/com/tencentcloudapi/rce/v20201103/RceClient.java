@@ -39,6 +39,26 @@ public class RceClient extends AbstractClient{
     }
 
     /**
+     *此接口用于查询风险评估结果
+     * @param req DescribeRiskAssessmentRequest
+     * @return DescribeRiskAssessmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskAssessmentResponse DescribeRiskAssessment(DescribeRiskAssessmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskAssessmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskAssessmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskAssessment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *依托人工智能技术和腾讯丰富的风控实战经验，根据用户提供的数据和业务场景，给客户提供定制化模型服务
      * @param req DescribeRiskModelRequest
      * @return DescribeRiskModelResponse
@@ -51,6 +71,26 @@ public class RceClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRiskModelResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRiskModel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *以图表形式展示三种请求状态的趋势变化
+     * @param req DescribeRiskTrendsRequest
+     * @return DescribeRiskTrendsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskTrendsResponse DescribeRiskTrends(DescribeRiskTrendsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskTrendsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskTrendsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskTrends");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

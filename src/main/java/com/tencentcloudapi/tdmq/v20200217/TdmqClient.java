@@ -1279,26 +1279,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取生产者列表，仅显示在线的生产者
-     * @param req DescribeProducersRequest
-     * @return DescribeProducersResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProducersResponse DescribeProducers(DescribeProducersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProducersResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProducersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProducers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取消息生产概览信息
      * @param req DescribePublisherSummaryRequest
      * @return DescribePublisherSummaryResponse

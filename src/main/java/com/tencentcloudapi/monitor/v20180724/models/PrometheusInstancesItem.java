@@ -263,6 +263,14 @@ public class PrometheusInstancesItem extends AbstractModel{
     private PrometheusInstanceGrantInfo Grant;
 
     /**
+    * 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GrafanaInstanceId")
+    @Expose
+    private String GrafanaInstanceId;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -910,6 +918,26 @@ public class PrometheusInstancesItem extends AbstractModel{
         this.Grant = Grant;
     }
 
+    /**
+     * Get 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GrafanaInstanceId 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGrafanaInstanceId() {
+        return this.GrafanaInstanceId;
+    }
+
+    /**
+     * Set 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GrafanaInstanceId 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGrafanaInstanceId(String GrafanaInstanceId) {
+        this.GrafanaInstanceId = GrafanaInstanceId;
+    }
+
     public PrometheusInstancesItem() {
     }
 
@@ -999,6 +1027,9 @@ public class PrometheusInstancesItem extends AbstractModel{
         if (source.Grant != null) {
             this.Grant = new PrometheusInstanceGrantInfo(source.Grant);
         }
+        if (source.GrafanaInstanceId != null) {
+            this.GrafanaInstanceId = new String(source.GrafanaInstanceId);
+        }
     }
 
 
@@ -1032,6 +1063,7 @@ public class PrometheusInstancesItem extends AbstractModel{
         this.setParamSimple(map, prefix + "GrafanaStatus", this.GrafanaStatus);
         this.setParamSimple(map, prefix + "GrafanaIpWhiteList", this.GrafanaIpWhiteList);
         this.setParamObj(map, prefix + "Grant.", this.Grant);
+        this.setParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
 
     }
 }

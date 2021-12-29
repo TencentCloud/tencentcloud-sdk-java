@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.rce.v20201103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProducersResponse extends AbstractModel{
-
-    /**
-    * 生产者集合数组。
-    */
-    @SerializedName("ProducerSets")
-    @Expose
-    private Producer [] ProducerSets;
-
-    /**
-    * 记录总数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class DescribeRiskAssessmentResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeProducersResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 生产者集合数组。 
-     * @return ProducerSets 生产者集合数组。
-     */
-    public Producer [] getProducerSets() {
-        return this.ProducerSets;
-    }
-
-    /**
-     * Set 生产者集合数组。
-     * @param ProducerSets 生产者集合数组。
-     */
-    public void setProducerSets(Producer [] ProducerSets) {
-        this.ProducerSets = ProducerSets;
-    }
-
-    /**
-     * Get 记录总数。 
-     * @return TotalCount 记录总数。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 记录总数。
-     * @param TotalCount 记录总数。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeProducersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProducersResponse() {
+    public DescribeRiskAssessmentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProducersResponse(DescribeProducersResponse source) {
-        if (source.ProducerSets != null) {
-            this.ProducerSets = new Producer[source.ProducerSets.length];
-            for (int i = 0; i < source.ProducerSets.length; i++) {
-                this.ProducerSets[i] = new Producer(source.ProducerSets[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public DescribeRiskAssessmentResponse(DescribeRiskAssessmentResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeProducersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ProducerSets.", this.ProducerSets);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

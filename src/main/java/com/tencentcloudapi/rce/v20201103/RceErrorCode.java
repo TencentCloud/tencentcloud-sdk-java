@@ -108,6 +108,9 @@ public enum RceErrorCode {
     // 接口不存在。
      RESOURCENOTFOUND_INTERFACENOTFOUND("ResourceNotFound.InterfaceNotFound"),
      
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
     // 未开通服务权限。
      RESOURCEUNAVAILABLE_PERMISSIONDENIED("ResourceUnavailable.PermissionDenied"),
      
