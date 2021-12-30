@@ -59,6 +59,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *策略绑定标签
+     * @param req BindingPolicyTagRequest
+     * @return BindingPolicyTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindingPolicyTagResponse BindingPolicyTag(BindingPolicyTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindingPolicyTagResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindingPolicyTagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindingPolicyTag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建通知模板
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse

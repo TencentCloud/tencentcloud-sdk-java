@@ -30,6 +30,14 @@ public class CreateInstanceResponse extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class CreateInstanceResponse extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealName 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealName 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
@@ -79,6 +107,9 @@ public class CreateInstanceResponse extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class CreateInstanceResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

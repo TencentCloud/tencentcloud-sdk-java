@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.es.v20180416.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateInstanceResponse extends AbstractModel{
-
-    /**
-    * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+public class BindingPolicyTagResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,26 +28,6 @@ public class UpdateInstanceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 订单号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 订单号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -73,17 +45,14 @@ public class UpdateInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateInstanceResponse() {
+    public BindingPolicyTagResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateInstanceResponse(UpdateInstanceResponse source) {
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
-        }
+    public BindingPolicyTagResponse(BindingPolicyTagResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ public class UpdateInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

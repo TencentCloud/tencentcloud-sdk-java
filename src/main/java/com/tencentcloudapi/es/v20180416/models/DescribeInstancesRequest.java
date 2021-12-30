@@ -86,6 +86,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] IpList;
 
     /**
+    * 可用区列表
+    */
+    @SerializedName("ZoneList")
+    @Expose
+    private String [] ZoneList;
+
+    /**
      * Get 集群实例所属可用区，不传则默认所有可用区 
      * @return Zone 集群实例所属可用区，不传则默认所有可用区
      */
@@ -229,6 +236,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.IpList = IpList;
     }
 
+    /**
+     * Get 可用区列表 
+     * @return ZoneList 可用区列表
+     */
+    public String [] getZoneList() {
+        return this.ZoneList;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param ZoneList 可用区列表
+     */
+    public void setZoneList(String [] ZoneList) {
+        this.ZoneList = ZoneList;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -276,6 +299,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.IpList[i] = new String(source.IpList[i]);
             }
         }
+        if (source.ZoneList != null) {
+            this.ZoneList = new String[source.ZoneList.length];
+            for (int i = 0; i < source.ZoneList.length; i++) {
+                this.ZoneList[i] = new String(source.ZoneList[i]);
+            }
+        }
     }
 
 
@@ -292,6 +321,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
+        this.setParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
 
     }
 }

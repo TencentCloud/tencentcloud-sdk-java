@@ -1340,6 +1340,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     * 获取部署组详情
+     * @param req DescribeContainerGroupDeployInfoRequest
+     * @return DescribeContainerGroupDeployInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(DescribeContainerGroupDeployInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeContainerGroupDeployInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeContainerGroupDeployInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeContainerGroupDeployInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
      * @param req DescribeContainerGroupDetailRequest
      * @return DescribeContainerGroupDetailResponse

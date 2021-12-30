@@ -86,7 +86,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private String NetworkType;
 
     /**
-    * 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+    * 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
     */
     @SerializedName("PackageType")
     @Expose
@@ -237,16 +237,16 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。 
-     * @return PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * Get 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。 
+     * @return PackageType 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
-     * @param PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * Set 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     * @param PackageType 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;

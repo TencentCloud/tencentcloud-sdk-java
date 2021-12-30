@@ -109,11 +109,18 @@ public class CreateProxyRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
-    * 网络类型，可取值：normal、cn2，默认值normal
+    * 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
+
+    /**
+    * 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
 
     /**
      * Get 通道的项目ID。 
@@ -316,19 +323,35 @@ public class CreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 网络类型，可取值：normal、cn2，默认值normal 
-     * @return NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     * Get 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网 
+     * @return NetworkType 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型，可取值：normal、cn2，默认值normal
-     * @param NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     * Set 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @param NetworkType 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。 
+     * @return PackageType 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     * @param PackageType 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
     }
 
     public CreateProxyRequest() {
@@ -381,6 +404,9 @@ public class CreateProxyRequest extends AbstractModel{
         if (source.NetworkType != null) {
             this.NetworkType = new String(source.NetworkType);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -401,6 +427,7 @@ public class CreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

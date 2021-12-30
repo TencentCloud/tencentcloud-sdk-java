@@ -156,6 +156,29 @@ public class ClusterView extends AbstractModel{
     private Long UnassignedShardNum;
 
     /**
+    * 企业版COS存储容量大小，单位GB
+    */
+    @SerializedName("TotalCosStorage")
+    @Expose
+    private Long TotalCosStorage;
+
+    /**
+    * 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SearchableSnapshotCosBucket")
+    @Expose
+    private String SearchableSnapshotCosBucket;
+
+    /**
+    * 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SearchableSnapshotCosAppId")
+    @Expose
+    private String SearchableSnapshotCosAppId;
+
+    /**
      * Get 集群健康状态 
      * @return Health 集群健康状态
      */
@@ -459,6 +482,62 @@ public class ClusterView extends AbstractModel{
         this.UnassignedShardNum = UnassignedShardNum;
     }
 
+    /**
+     * Get 企业版COS存储容量大小，单位GB 
+     * @return TotalCosStorage 企业版COS存储容量大小，单位GB
+     */
+    public Long getTotalCosStorage() {
+        return this.TotalCosStorage;
+    }
+
+    /**
+     * Set 企业版COS存储容量大小，单位GB
+     * @param TotalCosStorage 企业版COS存储容量大小，单位GB
+     */
+    public void setTotalCosStorage(Long TotalCosStorage) {
+        this.TotalCosStorage = TotalCosStorage;
+    }
+
+    /**
+     * Get 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SearchableSnapshotCosBucket 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSearchableSnapshotCosBucket() {
+        return this.SearchableSnapshotCosBucket;
+    }
+
+    /**
+     * Set 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchableSnapshotCosBucket 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSearchableSnapshotCosBucket(String SearchableSnapshotCosBucket) {
+        this.SearchableSnapshotCosBucket = SearchableSnapshotCosBucket;
+    }
+
+    /**
+     * Get 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SearchableSnapshotCosAppId 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSearchableSnapshotCosAppId() {
+        return this.SearchableSnapshotCosAppId;
+    }
+
+    /**
+     * Set 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchableSnapshotCosAppId 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSearchableSnapshotCosAppId(String SearchableSnapshotCosAppId) {
+        this.SearchableSnapshotCosAppId = SearchableSnapshotCosAppId;
+    }
+
     public ClusterView() {
     }
 
@@ -527,6 +606,15 @@ public class ClusterView extends AbstractModel{
         if (source.UnassignedShardNum != null) {
             this.UnassignedShardNum = new Long(source.UnassignedShardNum);
         }
+        if (source.TotalCosStorage != null) {
+            this.TotalCosStorage = new Long(source.TotalCosStorage);
+        }
+        if (source.SearchableSnapshotCosBucket != null) {
+            this.SearchableSnapshotCosBucket = new String(source.SearchableSnapshotCosBucket);
+        }
+        if (source.SearchableSnapshotCosAppId != null) {
+            this.SearchableSnapshotCosAppId = new String(source.SearchableSnapshotCosAppId);
+        }
     }
 
 
@@ -553,6 +641,9 @@ public class ClusterView extends AbstractModel{
         this.setParamSimple(map, prefix + "RelocatingShardNum", this.RelocatingShardNum);
         this.setParamSimple(map, prefix + "InitializingShardNum", this.InitializingShardNum);
         this.setParamSimple(map, prefix + "UnassignedShardNum", this.UnassignedShardNum);
+        this.setParamSimple(map, prefix + "TotalCosStorage", this.TotalCosStorage);
+        this.setParamSimple(map, prefix + "SearchableSnapshotCosBucket", this.SearchableSnapshotCosBucket);
+        this.setParamSimple(map, prefix + "SearchableSnapshotCosAppId", this.SearchableSnapshotCosAppId);
 
     }
 }

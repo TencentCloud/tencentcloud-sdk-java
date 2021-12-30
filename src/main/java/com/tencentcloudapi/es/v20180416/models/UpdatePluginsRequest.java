@@ -58,6 +58,13 @@ public class UpdatePluginsRequest extends AbstractModel{
     private Boolean ForceUpdate;
 
     /**
+    * 0：系统插件
+    */
+    @SerializedName("PluginType")
+    @Expose
+    private Long PluginType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -137,6 +144,22 @@ public class UpdatePluginsRequest extends AbstractModel{
         this.ForceUpdate = ForceUpdate;
     }
 
+    /**
+     * Get 0：系统插件 
+     * @return PluginType 0：系统插件
+     */
+    public Long getPluginType() {
+        return this.PluginType;
+    }
+
+    /**
+     * Set 0：系统插件
+     * @param PluginType 0：系统插件
+     */
+    public void setPluginType(Long PluginType) {
+        this.PluginType = PluginType;
+    }
+
     public UpdatePluginsRequest() {
     }
 
@@ -166,6 +189,9 @@ public class UpdatePluginsRequest extends AbstractModel{
         if (source.ForceUpdate != null) {
             this.ForceUpdate = new Boolean(source.ForceUpdate);
         }
+        if (source.PluginType != null) {
+            this.PluginType = new Long(source.PluginType);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class UpdatePluginsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "RemovePluginList.", this.RemovePluginList);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         this.setParamSimple(map, prefix + "ForceUpdate", this.ForceUpdate);
+        this.setParamSimple(map, prefix + "PluginType", this.PluginType);
 
     }
 }

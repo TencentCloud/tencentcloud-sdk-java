@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.es.v20180416.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateInstanceResponse extends AbstractModel{
+public class DescribeContainerGroupDeployInfoResponse extends AbstractModel{
 
     /**
-    * 订单号
-注意：此字段可能返回 null，表示取不到有效值。
+    * 获取部署组
     */
-    @SerializedName("DealName")
+    @SerializedName("Result")
     @Expose
-    private String DealName;
+    private ContainerGroupDeploy Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class UpdateInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单号
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 订单号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 获取部署组 
+     * @return Result 获取部署组
      */
-    public String getDealName() {
-        return this.DealName;
+    public ContainerGroupDeploy getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 订单号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 订单号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 获取部署组
+     * @param Result 获取部署组
      */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setResult(ContainerGroupDeploy Result) {
+        this.Result = Result;
     }
 
     /**
@@ -73,16 +68,16 @@ public class UpdateInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateInstanceResponse() {
+    public DescribeContainerGroupDeployInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateInstanceResponse(UpdateInstanceResponse source) {
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+    public DescribeContainerGroupDeployInfoResponse(DescribeContainerGroupDeployInfoResponse source) {
+        if (source.Result != null) {
+            this.Result = new ContainerGroupDeploy(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ public class UpdateInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

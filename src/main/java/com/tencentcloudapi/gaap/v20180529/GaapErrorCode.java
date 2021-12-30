@@ -138,6 +138,9 @@ public enum GaapErrorCode {
     // 监听器端口已存在。
      INVALIDPARAMETERVALUE_DUPLICATEDLISTENERPORT("InvalidParameterValue.DuplicatedListenerPort"),
      
+    // 无法同时开启所设置的特性。
+     INVALIDPARAMETERVALUE_FEATURECONFLICT("InvalidParameterValue.FeatureConflict"),
+     
     // header黑名单限制。
      INVALIDPARAMETERVALUE_HITBLACKLIST("InvalidParameterValue.HitBlacklist"),
      
@@ -165,6 +168,12 @@ public enum GaapErrorCode {
     // 项目不属于该用户。
      INVALIDPARAMETERVALUE_PROJECTIDNOTBELONG("InvalidParameterValue.ProjectIdNotBelong"),
      
+    // 该通道组下无法支持该通道所需的特性。
+     INVALIDPARAMETERVALUE_PROXYANDGROUPFEATURECONFLICT("InvalidParameterValue.ProxyAndGroupFeatureConflict"),
+     
+    // 该地区不支持通道所设置的特性。
+     INVALIDPARAMETERVALUE_PROXYANDREGIONFEATURECONFLICT("InvalidParameterValue.ProxyAndRegionFeatureConflict"),
+     
     // 源站不属于该用户。
      INVALIDPARAMETERVALUE_REALSERVERNOTBELONG("InvalidParameterValue.RealServerNotBelong"),
      
@@ -191,6 +200,9 @@ public enum GaapErrorCode {
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 跨境通道的联通带宽处于隔离中。
+     UNAUTHORIZEDOPERATION_CROSSBORDERINISOLATING("UnauthorizedOperation.CrossBorderInIsolating"),
      
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),

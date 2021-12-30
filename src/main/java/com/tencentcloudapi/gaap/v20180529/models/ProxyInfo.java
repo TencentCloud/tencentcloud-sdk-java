@@ -251,7 +251,8 @@ CLONING表示复制中。
     private String NetworkType;
 
     /**
-    * 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+    * 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
@@ -839,9 +840,11 @@ CLONING表示复制中。
     }
 
     /**
-     * Get 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+     * Get 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+     * @return PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
@@ -849,9 +852,11 @@ CLONING表示复制中。
     }
 
     /**
-     * Set 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+     * Set 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+     * @param PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
