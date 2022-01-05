@@ -57,6 +57,9 @@ public enum BdaErrorCode {
     // 服务内部错误，请重试。
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      
+    // 任务冲突。
+     FAILEDOPERATION_JOBCONFLICT("FailedOperation.JobConflict"),
+     
     // 任务队列已满。
      FAILEDOPERATION_JOBQUEUEFULL("FailedOperation.JobQueueFull"),
      

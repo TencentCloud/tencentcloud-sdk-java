@@ -123,6 +123,9 @@ public enum CbsErrorCode {
     // 配额不足。
      RESOURCEINSUFFICIENT_OVERQUOTA("ResourceInsufficient.OverQuota"),
      
+    // 云盘退还数量已达上限，不能再退还。
+     RESOURCEINSUFFICIENT_OVERREFUNDQUOTA("ResourceInsufficient.OverRefundQuota"),
+     
     // 资源不存在。
      RESOURCENOTFOUND_NOTFOUND("ResourceNotFound.NotFound"),
      

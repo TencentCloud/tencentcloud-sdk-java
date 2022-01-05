@@ -180,7 +180,7 @@ public class SesClient extends AbstractClient{
     }
 
     /**
-     *删除发信模版
+     *删除发信模板
      * @param req DeleteEmailTemplateRequest
      * @return DeleteEmailTemplateResponse
      * @throws TencentCloudSDKException

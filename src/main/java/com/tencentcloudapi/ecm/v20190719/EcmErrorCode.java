@@ -426,6 +426,9 @@ public enum EcmErrorCode {
     // 缺少私有IP地址。
      MISSINGPARAMETER_MISSINGPRIVATEIPADDRESS("MissingParameter.MissingPrivateIpAddress"),
      
+    // 不允许执行当前操作。
+     OPERATIONDENIED_INSTANCEOPERATIONINPROGRESS("OperationDenied.InstanceOperationInProgress"),
+     
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      

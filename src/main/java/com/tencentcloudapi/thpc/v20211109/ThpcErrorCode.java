@@ -1,5 +1,8 @@
 package com.tencentcloudapi.thpc.v20211109;
 public enum ThpcErrorCode {
+    // cvm调用失败。
+     INTERNALERROR_CALLCVM("InternalError.CallCvm"),
+     
     // 参数格式有误。
      INVALIDPARAMETER_MALFORMED("InvalidParameter.Malformed"),
      

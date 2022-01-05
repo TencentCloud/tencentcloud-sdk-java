@@ -23,8 +23,7 @@ import java.util.HashMap;
 public class ServerCert extends AbstractModel{
 
     /**
-    * 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+    * 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
@@ -85,11 +84,9 @@ public class ServerCert extends AbstractModel{
     private String Message;
 
     /**
-     * Get 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+     * Get 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertId 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+     * @return CertId 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
@@ -97,11 +94,9 @@ public class ServerCert extends AbstractModel{
     }
 
     /**
-     * Set 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+     * Set 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertId 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+     * @param CertId 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {

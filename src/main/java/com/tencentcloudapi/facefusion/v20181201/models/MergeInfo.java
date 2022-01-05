@@ -44,7 +44,7 @@ public class MergeInfo extends AbstractModel{
     private FaceRect InputImageFaceRect;
 
     /**
-    * 控制台上传的素材人脸ID
+    * 控制台上传的素材人脸ID，不填默认取最大人脸
     */
     @SerializedName("TemplateFaceID")
     @Expose
@@ -99,16 +99,16 @@ public class MergeInfo extends AbstractModel{
     }
 
     /**
-     * Get 控制台上传的素材人脸ID 
-     * @return TemplateFaceID 控制台上传的素材人脸ID
+     * Get 控制台上传的素材人脸ID，不填默认取最大人脸 
+     * @return TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸
      */
     public String getTemplateFaceID() {
         return this.TemplateFaceID;
     }
 
     /**
-     * Set 控制台上传的素材人脸ID
-     * @param TemplateFaceID 控制台上传的素材人脸ID
+     * Set 控制台上传的素材人脸ID，不填默认取最大人脸
+     * @param TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸
      */
     public void setTemplateFaceID(String TemplateFaceID) {
         this.TemplateFaceID = TemplateFaceID;

@@ -100,6 +100,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private InstanceExtraArgs ExtraArgs;
 
     /**
+    * 资源标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -275,6 +282,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.ExtraArgs = ExtraArgs;
     }
 
+    /**
+     * Get 资源标签 
+     * @return Tags 资源标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资源标签
+     * @param Tags 资源标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -322,6 +345,12 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -340,6 +369,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -27,6 +27,9 @@ public enum RkpErrorCode {
     // 参数错误。
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
+    // 参数校验错误。
+     INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
+     
     // token不可用或过期。
      INVALIDPARAMETER_TOKENINVALID("InvalidParameter.TokenInvalid"),
      

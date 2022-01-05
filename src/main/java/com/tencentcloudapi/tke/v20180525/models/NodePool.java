@@ -158,6 +158,14 @@ public class NodePool extends AbstractModel{
     private String UserScript;
 
     /**
+    * 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get NodePoolId 资源池id 
      * @return NodePoolId NodePoolId 资源池id
      */
@@ -481,6 +489,26 @@ public class NodePool extends AbstractModel{
         this.UserScript = UserScript;
     }
 
+    /**
+     * Get 资源标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public NodePool() {
     }
 
@@ -549,6 +577,12 @@ public class NodePool extends AbstractModel{
         if (source.UserScript != null) {
             this.UserScript = new String(source.UserScript);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -574,6 +608,7 @@ public class NodePool extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

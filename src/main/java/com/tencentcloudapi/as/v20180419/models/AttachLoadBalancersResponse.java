@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAsyncContextTaskResponse extends AbstractModel{
+public class AttachLoadBalancersResponse extends AbstractModel{
+
+    /**
+    * 伸缩活动ID
+    */
+    @SerializedName("ActivityId")
+    @Expose
+    private String ActivityId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class DeleteAsyncContextTaskResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 伸缩活动ID 
+     * @return ActivityId 伸缩活动ID
+     */
+    public String getActivityId() {
+        return this.ActivityId;
+    }
+
+    /**
+     * Set 伸缩活动ID
+     * @param ActivityId 伸缩活动ID
+     */
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,17 @@ public class DeleteAsyncContextTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteAsyncContextTaskResponse() {
+    public AttachLoadBalancersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteAsyncContextTaskResponse(DeleteAsyncContextTaskResponse source) {
+    public AttachLoadBalancersResponse(AttachLoadBalancersResponse source) {
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class DeleteAsyncContextTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

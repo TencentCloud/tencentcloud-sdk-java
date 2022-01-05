@@ -65,7 +65,7 @@ public class CreateUserRequest extends AbstractModel{
     private String Phone;
 
     /**
-    * 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+    * 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
     */
     @SerializedName("OrgNodeId")
     @Expose
@@ -91,6 +91,13 @@ public class CreateUserRequest extends AbstractModel{
     @SerializedName("PwdNeedReset")
     @Expose
     private Boolean PwdNeedReset;
+
+    /**
+    * 用户所属的次要组织机构ID列表。
+    */
+    @SerializedName("SecondaryOrgNodeIdList")
+    @Expose
+    private String [] SecondaryOrgNodeIdList;
 
     /**
      * Get 用户名，长度限制：64个字符。 
@@ -189,16 +196,16 @@ public class CreateUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。 
-     * @return OrgNodeId 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     * Get 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。 
+     * @return OrgNodeId 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
      */
     public String getOrgNodeId() {
         return this.OrgNodeId;
     }
 
     /**
-     * Set 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
-     * @param OrgNodeId 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     * Set 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     * @param OrgNodeId 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
      */
     public void setOrgNodeId(String OrgNodeId) {
         this.OrgNodeId = OrgNodeId;
@@ -252,6 +259,22 @@ public class CreateUserRequest extends AbstractModel{
         this.PwdNeedReset = PwdNeedReset;
     }
 
+    /**
+     * Get 用户所属的次要组织机构ID列表。 
+     * @return SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+     */
+    public String [] getSecondaryOrgNodeIdList() {
+        return this.SecondaryOrgNodeIdList;
+    }
+
+    /**
+     * Set 用户所属的次要组织机构ID列表。
+     * @param SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+     */
+    public void setSecondaryOrgNodeIdList(String [] SecondaryOrgNodeIdList) {
+        this.SecondaryOrgNodeIdList = SecondaryOrgNodeIdList;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -293,6 +316,12 @@ public class CreateUserRequest extends AbstractModel{
         if (source.PwdNeedReset != null) {
             this.PwdNeedReset = new Boolean(source.PwdNeedReset);
         }
+        if (source.SecondaryOrgNodeIdList != null) {
+            this.SecondaryOrgNodeIdList = new String[source.SecondaryOrgNodeIdList.length];
+            for (int i = 0; i < source.SecondaryOrgNodeIdList.length; i++) {
+                this.SecondaryOrgNodeIdList[i] = new String(source.SecondaryOrgNodeIdList[i]);
+            }
+        }
     }
 
 
@@ -310,6 +339,7 @@ public class CreateUserRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
+        this.setParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
 
     }
 }

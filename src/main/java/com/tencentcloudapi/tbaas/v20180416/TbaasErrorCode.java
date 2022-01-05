@@ -150,6 +150,9 @@ public enum TbaasErrorCode {
     // 无效资源。
      FAILEDOPERATION_INVALIDRESOURCE("FailedOperation.InvalidResource"),
      
+    // 交易请求异常。
+     FAILEDOPERATION_MANAGESERVICE("FailedOperation.ManageService"),
+     
     // Bcos新建合约失败。
      FAILEDOPERATION_NEWCONTRACT("FailedOperation.NewContract"),
      

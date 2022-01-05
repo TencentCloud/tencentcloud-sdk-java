@@ -1,5 +1,8 @@
 package com.tencentcloudapi.hcm.v20181106;
 public enum HcmErrorCode {
+    // 引擎识别失败。
+     INTERNALERROR_ENGINERESULTERROR("InternalError.EngineResultError"),
+     
     // 初始化参数错误。
      INTERNALERROR_INITIALPARAMETERERROR("InternalError.InitialParameterError"),
      

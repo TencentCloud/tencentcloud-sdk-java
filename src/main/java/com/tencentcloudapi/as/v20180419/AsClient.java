@@ -60,6 +60,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
+     * @param req AttachLoadBalancersRequest
+     * @return AttachLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachLoadBalancersResponse AttachLoadBalancers(AttachLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachLoadBalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
      * @param req ClearLaunchConfigurationAttributesRequest
      * @return ClearLaunchConfigurationAttributesResponse
@@ -702,6 +722,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（DetachLoadBalancers）用于从伸缩组移出负载均衡器，本接口不会销毁负载均衡器。
+     * @param req DetachLoadBalancersRequest
+     * @return DetachLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachLoadBalancersResponse DetachLoadBalancers(DetachLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachLoadBalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisableAutoScalingGroup）用于停用指定伸缩组。
      * @param req DisableAutoScalingGroupRequest
      * @return DisableAutoScalingGroupResponse
@@ -820,6 +860,26 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLaunchConfigurationAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
+     * @param req ModifyLoadBalancerTargetAttributesRequest
+     * @return ModifyLoadBalancerTargetAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(ModifyLoadBalancerTargetAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancerTargetAttributes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

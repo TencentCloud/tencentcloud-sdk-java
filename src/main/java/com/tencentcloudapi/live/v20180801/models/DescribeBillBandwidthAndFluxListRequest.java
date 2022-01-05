@@ -73,6 +73,22 @@ Oversea：则查询国外数据，
     private String ServiceName;
 
     /**
+    * 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+    */
+    @SerializedName("RegionNames")
+    @Expose
+    private String [] RegionNames;
+
+    /**
      * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
@@ -200,6 +216,58 @@ Oversea：则查询国外数据，
         this.ServiceName = ServiceName;
     }
 
+    /**
+     * Get 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。 
+     * @return RegionNames 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+     */
+    public String [] getRegionNames() {
+        return this.RegionNames;
+    }
+
+    /**
+     * Set 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+     * @param RegionNames 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+     */
+    public void setRegionNames(String [] RegionNames) {
+        this.RegionNames = RegionNames;
+    }
+
     public DescribeBillBandwidthAndFluxListRequest() {
     }
 
@@ -229,6 +297,12 @@ Oversea：则查询国外数据，
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
+        if (source.RegionNames != null) {
+            this.RegionNames = new String[source.RegionNames.length];
+            for (int i = 0; i < source.RegionNames.length; i++) {
+                this.RegionNames[i] = new String(source.RegionNames[i]);
+            }
+        }
     }
 
 
@@ -242,6 +316,7 @@ Oversea：则查询国外数据，
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamArraySimple(map, prefix + "RegionNames.", this.RegionNames);
 
     }
 }

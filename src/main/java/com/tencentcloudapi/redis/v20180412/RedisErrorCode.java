@@ -51,6 +51,9 @@ public enum RedisErrorCode {
     // 更新安全组失败。
      FAILEDOPERATION_UPDATESECURITYGROUPSFAILED("FailedOperation.UpdateSecurityGroupsFailed"),
      
+    // cam鉴权错误。
+     INTERNALERROR_CAMAUTHOSSRESPONSERETURNCODEERROR("InternalError.CamAuthOssResponseReturnCodeError"),
+     
     // 统一的 DB 操作错误，可以是 update insert select..。
      INTERNALERROR_DBOPERATIONFAILED("InternalError.DbOperationFailed"),
      
@@ -77,6 +80,9 @@ public enum RedisErrorCode {
      
     // 业务参数错误。
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
+     
+    // 参数错误，不支持操作。
+     INVALIDPARAMETER_NOTSUPPORTED("InvalidParameter.NotSupported"),
      
     // 上海金融只提供vpc网络。
      INVALIDPARAMETER_ONLYVPCONSPECZONEID("InvalidParameter.OnlyVPCOnSpecZoneId"),

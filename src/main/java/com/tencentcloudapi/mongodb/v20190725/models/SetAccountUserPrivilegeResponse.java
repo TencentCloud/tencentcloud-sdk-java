@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAsyncContextResultResponse extends AbstractModel{
+public class SetAccountUserPrivilegeResponse extends AbstractModel{
 
     /**
-    * 上文日志是否已经返回
+    * 设置任务ID,用于查询是否设置完成
     */
-    @SerializedName("PrevOver")
+    @SerializedName("FlowId")
     @Expose
-    private Boolean PrevOver;
-
-    /**
-    * 下文日志是否已经返回
-    */
-    @SerializedName("NextOver")
-    @Expose
-    private Boolean NextOver;
-
-    /**
-    * 日志内容
-    */
-    @SerializedName("Results")
-    @Expose
-    private LogInfo [] Results;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DescribeAsyncContextResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 上文日志是否已经返回 
-     * @return PrevOver 上文日志是否已经返回
+     * Get 设置任务ID,用于查询是否设置完成 
+     * @return FlowId 设置任务ID,用于查询是否设置完成
      */
-    public Boolean getPrevOver() {
-        return this.PrevOver;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 上文日志是否已经返回
-     * @param PrevOver 上文日志是否已经返回
+     * Set 设置任务ID,用于查询是否设置完成
+     * @param FlowId 设置任务ID,用于查询是否设置完成
      */
-    public void setPrevOver(Boolean PrevOver) {
-        this.PrevOver = PrevOver;
-    }
-
-    /**
-     * Get 下文日志是否已经返回 
-     * @return NextOver 下文日志是否已经返回
-     */
-    public Boolean getNextOver() {
-        return this.NextOver;
-    }
-
-    /**
-     * Set 下文日志是否已经返回
-     * @param NextOver 下文日志是否已经返回
-     */
-    public void setNextOver(Boolean NextOver) {
-        this.NextOver = NextOver;
-    }
-
-    /**
-     * Get 日志内容 
-     * @return Results 日志内容
-     */
-    public LogInfo [] getResults() {
-        return this.Results;
-    }
-
-    /**
-     * Set 日志内容
-     * @param Results 日志内容
-     */
-    public void setResults(LogInfo [] Results) {
-        this.Results = Results;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -114,25 +68,16 @@ public class DescribeAsyncContextResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAsyncContextResultResponse() {
+    public SetAccountUserPrivilegeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAsyncContextResultResponse(DescribeAsyncContextResultResponse source) {
-        if (source.PrevOver != null) {
-            this.PrevOver = new Boolean(source.PrevOver);
-        }
-        if (source.NextOver != null) {
-            this.NextOver = new Boolean(source.NextOver);
-        }
-        if (source.Results != null) {
-            this.Results = new LogInfo[source.Results.length];
-            for (int i = 0; i < source.Results.length; i++) {
-                this.Results[i] = new LogInfo(source.Results[i]);
-            }
+    public SetAccountUserPrivilegeResponse(SetAccountUserPrivilegeResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -144,9 +89,7 @@ public class DescribeAsyncContextResultResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PrevOver", this.PrevOver);
-        this.setParamSimple(map, prefix + "NextOver", this.NextOver);
-        this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

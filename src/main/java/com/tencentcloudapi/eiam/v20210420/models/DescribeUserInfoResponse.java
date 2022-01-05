@@ -87,7 +87,7 @@ public class DescribeUserInfoResponse extends AbstractModel{
     private String Phone;
 
     /**
-    * 用户所属组织机构 Id。
+    * 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgNodeId")
@@ -125,6 +125,14 @@ public class DescribeUserInfoResponse extends AbstractModel{
     @SerializedName("PwdNeedReset")
     @Expose
     private Boolean PwdNeedReset;
+
+    /**
+    * 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecondaryOrgNodeIdList")
+    @Expose
+    private String [] SecondaryOrgNodeIdList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -294,9 +302,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户所属组织机构 Id。
+     * Get 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgNodeId 用户所属组织机构 Id。
+     * @return OrgNodeId 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgNodeId() {
@@ -304,9 +312,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 用户所属组织机构 Id。
+     * Set 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgNodeId 用户所属组织机构 Id。
+     * @param OrgNodeId 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgNodeId(String OrgNodeId) {
@@ -394,6 +402,26 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecondaryOrgNodeIdList() {
+        return this.SecondaryOrgNodeIdList;
+    }
+
+    /**
+     * Set 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecondaryOrgNodeIdList(String [] SecondaryOrgNodeIdList) {
+        this.SecondaryOrgNodeIdList = SecondaryOrgNodeIdList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -459,6 +487,12 @@ public class DescribeUserInfoResponse extends AbstractModel{
         if (source.PwdNeedReset != null) {
             this.PwdNeedReset = new Boolean(source.PwdNeedReset);
         }
+        if (source.SecondaryOrgNodeIdList != null) {
+            this.SecondaryOrgNodeIdList = new String[source.SecondaryOrgNodeIdList.length];
+            for (int i = 0; i < source.SecondaryOrgNodeIdList.length; i++) {
+                this.SecondaryOrgNodeIdList[i] = new String(source.SecondaryOrgNodeIdList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -482,6 +516,7 @@ public class DescribeUserInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
         this.setParamSimple(map, prefix + "ActivationTime", this.ActivationTime);
         this.setParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
+        this.setParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

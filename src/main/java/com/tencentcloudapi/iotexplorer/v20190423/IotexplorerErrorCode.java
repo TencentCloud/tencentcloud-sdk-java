@@ -333,6 +333,9 @@ public enum IotexplorerErrorCode {
     // 该设备下仍有绑定的设备。
      UNAUTHORIZEDOPERATION_GATEWAYHASBINDEDDEVICES("UnauthorizedOperation.GatewayHasBindedDevices"),
      
+    // 此家庭无权操作。
+     UNAUTHORIZEDOPERATION_NOPERMISSIONTOFAMILY("UnauthorizedOperation.NoPermissionToFamily"),
+     
     // 实例ACL错误。
      UNAUTHORIZEDOPERATION_NOPERMISSIONTOINSTANCE("UnauthorizedOperation.NoPermissionToInstance"),
      

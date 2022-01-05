@@ -100,6 +100,13 @@ public class ModifyUserInfoRequest extends AbstractModel{
     private String OrgNodeId;
 
     /**
+    * 用户所属的次要组织机构ID列表。
+    */
+    @SerializedName("SecondaryOrgNodeIdList")
+    @Expose
+    private String [] SecondaryOrgNodeIdList;
+
+    /**
      * Get 用户名，长度限制：32个字符。 Username 和 UserId 需选择一个作为搜索条件；如两个条件同时使用则默认使用Username作为搜索条件。 
      * @return UserName 用户名，长度限制：32个字符。 Username 和 UserId 需选择一个作为搜索条件；如两个条件同时使用则默认使用Username作为搜索条件。
      */
@@ -275,6 +282,22 @@ public class ModifyUserInfoRequest extends AbstractModel{
         this.OrgNodeId = OrgNodeId;
     }
 
+    /**
+     * Get 用户所属的次要组织机构ID列表。 
+     * @return SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+     */
+    public String [] getSecondaryOrgNodeIdList() {
+        return this.SecondaryOrgNodeIdList;
+    }
+
+    /**
+     * Set 用户所属的次要组织机构ID列表。
+     * @param SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+     */
+    public void setSecondaryOrgNodeIdList(String [] SecondaryOrgNodeIdList) {
+        this.SecondaryOrgNodeIdList = SecondaryOrgNodeIdList;
+    }
+
     public ModifyUserInfoRequest() {
     }
 
@@ -319,6 +342,12 @@ public class ModifyUserInfoRequest extends AbstractModel{
         if (source.OrgNodeId != null) {
             this.OrgNodeId = new String(source.OrgNodeId);
         }
+        if (source.SecondaryOrgNodeIdList != null) {
+            this.SecondaryOrgNodeIdList = new String[source.SecondaryOrgNodeIdList.length];
+            for (int i = 0; i < source.SecondaryOrgNodeIdList.length; i++) {
+                this.SecondaryOrgNodeIdList[i] = new String(source.SecondaryOrgNodeIdList[i]);
+            }
+        }
     }
 
 
@@ -337,6 +366,7 @@ public class ModifyUserInfoRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
         this.setParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
+        this.setParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
 
     }
 }

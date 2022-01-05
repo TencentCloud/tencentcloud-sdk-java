@@ -621,4 +621,24 @@ public class MongodbClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *账户权限设置。
+     * @param req SetAccountUserPrivilegeRequest
+     * @return SetAccountUserPrivilegeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAccountUserPrivilegeResponse SetAccountUserPrivilege(SetAccountUserPrivilegeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetAccountUserPrivilegeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetAccountUserPrivilegeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetAccountUserPrivilege");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

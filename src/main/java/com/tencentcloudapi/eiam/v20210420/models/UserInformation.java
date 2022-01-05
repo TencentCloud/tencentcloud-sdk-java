@@ -71,7 +71,7 @@ public class UserInformation extends AbstractModel{
     private String CreationTime;
 
     /**
-    * 用户所属组织机构路径。
+    * 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgPath")
@@ -239,9 +239,9 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
-     * Get 用户所属组织机构路径。
+     * Get 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgPath 用户所属组织机构路径。
+     * @return OrgPath 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgPath() {
@@ -249,9 +249,9 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
-     * Set 用户所属组织机构路径。
+     * Set 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgPath 用户所属组织机构路径。
+     * @param OrgPath 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgPath(String OrgPath) {

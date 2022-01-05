@@ -132,6 +132,9 @@ public enum TdmqErrorCode {
     // 获取属性失败。
      INTERNALERROR_GETATTRIBUTESFAILED("InternalError.GetAttributesFailed"),
      
+    // 内部错误。
+     INTERNALERROR_ILLEGALMESSAGE("InternalError.IllegalMessage"),
+     
     // 重试可以成功。
      INTERNALERROR_RETRY("InternalError.Retry"),
      
@@ -207,6 +210,9 @@ public enum TdmqErrorCode {
     // 重名，命名空间已存在。
      RESOURCEINUSE_NAMESPACE("ResourceInUse.Namespace"),
      
+    // 队列已存在。
+     RESOURCEINUSE_QUEUE("ResourceInUse.Queue"),
+     
     // 角色已存在。
      RESOURCEINUSE_ROLE("ResourceInUse.Role"),
      
@@ -248,6 +254,9 @@ public enum TdmqErrorCode {
      
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
+    // 发货异常。
+     RESOURCEUNAVAILABLE_CREATEFAILED("ResourceUnavailable.CreateFailed"),
      
     // 系统升级。
      RESOURCEUNAVAILABLE_SYSTEMUPGRADE("ResourceUnavailable.SystemUpgrade"),

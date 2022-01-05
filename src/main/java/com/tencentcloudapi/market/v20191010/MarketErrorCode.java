@@ -1,5 +1,8 @@
 package com.tencentcloudapi.market.v20191010;
 public enum MarketErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

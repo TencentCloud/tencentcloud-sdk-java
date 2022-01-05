@@ -72,6 +72,9 @@ public enum EmrErrorCode {
     // 展示策略错误。
      INVALIDPARAMETER_DISPLAYSTRATEGYNOTMATCH("InvalidParameter.DisplayStrategyNotMatch"),
      
+    // 参数错误。
+     INVALIDPARAMETER_HALESSMASTERCOUNT("InvalidParameter.HALessMasterCount"),
+     
     // Common节点数量无效。
      INVALIDPARAMETER_INCORRECTCOMMONCOUNT("InvalidParameter.IncorrectCommonCount"),
      
@@ -131,6 +134,9 @@ public enum EmrErrorCode {
      
     // 无效的集群保留策略。
      INVALIDPARAMETER_INVALIDINSTANCEPOLICY("InvalidParameter.InvalidInstancePolicy"),
+     
+    // 无效的机型。
+     INVALIDPARAMETER_INVALIDINSTANCETYPE("InvalidParameter.InvalidInstanceType"),
      
     // 无效的流程任务。
      INVALIDPARAMETER_INVALIDJOBFLOW("InvalidParameter.InvalidJobFlow"),

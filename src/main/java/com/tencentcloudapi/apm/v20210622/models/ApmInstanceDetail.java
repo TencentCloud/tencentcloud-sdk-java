@@ -165,6 +165,38 @@ public class ApmInstanceDetail extends AbstractModel{
     private Long SlowRequestSavedThreshold;
 
     /**
+    * cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogRegion")
+    @Expose
+    private String LogRegion;
+
+    /**
+    * 日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogSource")
+    @Expose
+    private String LogSource;
+
+    /**
+    * 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsRelatedLog")
+    @Expose
+    private Long IsRelatedLog;
+
+    /**
+    * 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogTopicID")
+    @Expose
+    private String LogTopicID;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -516,6 +548,86 @@ public class ApmInstanceDetail extends AbstractModel{
         this.SlowRequestSavedThreshold = SlowRequestSavedThreshold;
     }
 
+    /**
+     * Get cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogRegion cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogRegion() {
+        return this.LogRegion;
+    }
+
+    /**
+     * Set cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogRegion cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogRegion(String LogRegion) {
+        this.LogRegion = LogRegion;
+    }
+
+    /**
+     * Get 日志来源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogSource 日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogSource() {
+        return this.LogSource;
+    }
+
+    /**
+     * Set 日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogSource 日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogSource(String LogSource) {
+        this.LogSource = LogSource;
+    }
+
+    /**
+     * Get 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsRelatedLog 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsRelatedLog() {
+        return this.IsRelatedLog;
+    }
+
+    /**
+     * Set 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsRelatedLog 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsRelatedLog(Long IsRelatedLog) {
+        this.IsRelatedLog = IsRelatedLog;
+    }
+
+    /**
+     * Get 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogTopicID 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogTopicID() {
+        return this.LogTopicID;
+    }
+
+    /**
+     * Set 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogTopicID 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogTopicID(String LogTopicID) {
+        this.LogTopicID = LogTopicID;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -581,6 +693,18 @@ public class ApmInstanceDetail extends AbstractModel{
         if (source.SlowRequestSavedThreshold != null) {
             this.SlowRequestSavedThreshold = new Long(source.SlowRequestSavedThreshold);
         }
+        if (source.LogRegion != null) {
+            this.LogRegion = new String(source.LogRegion);
+        }
+        if (source.LogSource != null) {
+            this.LogSource = new String(source.LogSource);
+        }
+        if (source.IsRelatedLog != null) {
+            this.IsRelatedLog = new Long(source.IsRelatedLog);
+        }
+        if (source.LogTopicID != null) {
+            this.LogTopicID = new String(source.LogTopicID);
+        }
     }
 
 
@@ -606,6 +730,10 @@ public class ApmInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "ErrorSample", this.ErrorSample);
         this.setParamSimple(map, prefix + "SlowRequestSavedThreshold", this.SlowRequestSavedThreshold);
+        this.setParamSimple(map, prefix + "LogRegion", this.LogRegion);
+        this.setParamSimple(map, prefix + "LogSource", this.LogSource);
+        this.setParamSimple(map, prefix + "IsRelatedLog", this.IsRelatedLog);
+        this.setParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
 
     }
 }

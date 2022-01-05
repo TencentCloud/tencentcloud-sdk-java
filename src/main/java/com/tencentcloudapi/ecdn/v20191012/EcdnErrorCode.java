@@ -27,6 +27,9 @@ public enum EcdnErrorCode {
     // 无法解析证书信息。
      INVALIDPARAMETER_ECDNCERTNOCERTINFO("InvalidParameter.EcdnCertNoCertInfo"),
      
+    // 缓存配置不合法 。
+     INVALIDPARAMETER_ECDNCONFIGINVALIDCACHE("InvalidParameter.EcdnConfigInvalidCache"),
+     
     // 域名状态不合法。
      INVALIDPARAMETER_ECDNDOMAININVALIDSTATUS("InvalidParameter.EcdnDomainInvalidStatus"),
      
@@ -111,6 +114,15 @@ public enum EcdnErrorCode {
     // 未开通ECDN服务，请开通后使用此接口。
      RESOURCENOTFOUND_ECDNUSERNOTEXISTS("ResourceNotFound.EcdnUserNotExists"),
      
+    // 域名已锁定,请联系腾讯云工程师 。
+     RESOURCEUNAVAILABLE_ECDNDOMAINISLOCKED("ResourceUnavailable.EcdnDomainIsLocked"),
+     
+    // 域名未下线，请检查后重试。
+     RESOURCEUNAVAILABLE_ECDNDOMAINISNOTOFFLINE("ResourceUnavailable.EcdnDomainIsNotOffline"),
+     
+    // 域名已下线，请检查后重试。
+     RESOURCEUNAVAILABLE_ECDNDOMAINISNOTONLINE("ResourceUnavailable.EcdnDomainIsNotOnline"),
+     
     // 子账号禁止查询整体数据。
      UNAUTHORIZEDOPERATION_CDNACCOUNTUNAUTHORIZED("UnauthorizedOperation.CdnAccountUnauthorized"),
      
@@ -153,6 +165,9 @@ public enum EcdnErrorCode {
     // ECDN子账号加速域名未授权。
      UNAUTHORIZEDOPERATION_ECDNHOSTUNAUTHORIZED("UnauthorizedOperation.EcdnHostUnauthorized"),
      
+    // 请前往CDN控制台进行操作 。
+     UNAUTHORIZEDOPERATION_ECDNMIGRATEDCDN("UnauthorizedOperation.EcdnMigratedCdn"),
+     
     // 子账号没有授权域名权限，请授权后重试。
      UNAUTHORIZEDOPERATION_ECDNNODOMAINUNAUTHORIZED("UnauthorizedOperation.EcdnNoDomainUnauthorized"),
      
@@ -172,7 +187,10 @@ public enum EcdnErrorCode {
      UNAUTHORIZEDOPERATION_PROJECTNOPERMISSION("UnauthorizedOperation.ProjectNoPermission"),
      
     // ECDN 子账号项目未授权。
-     UNAUTHORIZEDOPERATION_PROJECTSNOPERMISSION("UnauthorizedOperation.ProjectsNoPermission");
+     UNAUTHORIZEDOPERATION_PROJECTSNOPERMISSION("UnauthorizedOperation.ProjectsNoPermission"),
+     
+    // 未知错误,请稍后重试 。
+     UNAUTHORIZEDOPERATION_UNKNOWN("UnauthorizedOperation.Unknown");
      
     private String value;
     private EcdnErrorCode (String value){
