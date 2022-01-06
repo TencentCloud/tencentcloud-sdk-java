@@ -51,11 +51,18 @@ public class CreateSceneRequest extends AbstractModel{
     private Long StoreDuration;
 
     /**
-    * 设备列表
+    * 设备列表(不推荐使用)
     */
     @SerializedName("Devices")
     @Expose
     private DeviceItem [] Devices;
+
+    /**
+    * 通道列表
+    */
+    @SerializedName("Channels")
+    @Expose
+    private ChannelItem [] Channels;
 
     /**
      * Get 场景名称 
@@ -122,19 +129,35 @@ public class CreateSceneRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备列表 
-     * @return Devices 设备列表
+     * Get 设备列表(不推荐使用) 
+     * @return Devices 设备列表(不推荐使用)
      */
     public DeviceItem [] getDevices() {
         return this.Devices;
     }
 
     /**
-     * Set 设备列表
-     * @param Devices 设备列表
+     * Set 设备列表(不推荐使用)
+     * @param Devices 设备列表(不推荐使用)
      */
     public void setDevices(DeviceItem [] Devices) {
         this.Devices = Devices;
+    }
+
+    /**
+     * Get 通道列表 
+     * @return Channels 通道列表
+     */
+    public ChannelItem [] getChannels() {
+        return this.Channels;
+    }
+
+    /**
+     * Set 通道列表
+     * @param Channels 通道列表
+     */
+    public void setChannels(ChannelItem [] Channels) {
+        this.Channels = Channels;
     }
 
     public CreateSceneRequest() {
@@ -163,6 +186,12 @@ public class CreateSceneRequest extends AbstractModel{
                 this.Devices[i] = new DeviceItem(source.Devices[i]);
             }
         }
+        if (source.Channels != null) {
+            this.Channels = new ChannelItem[source.Channels.length];
+            for (int i = 0; i < source.Channels.length; i++) {
+                this.Channels[i] = new ChannelItem(source.Channels[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class CreateSceneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordDuration", this.RecordDuration);
         this.setParamSimple(map, prefix + "StoreDuration", this.StoreDuration);
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
+        this.setParamArrayObj(map, prefix + "Channels.", this.Channels);
 
     }
 }

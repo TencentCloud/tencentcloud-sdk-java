@@ -30,6 +30,13 @@ public class DescribeTaskStatusRequest extends AbstractModel{
     private String TaskId;
 
     /**
+    * 订单ID。
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
      * Get 请求ID，即接口返回的 RequestId 参数。 
      * @return TaskId 请求ID，即接口返回的 RequestId 参数。
      */
@@ -45,6 +52,22 @@ public class DescribeTaskStatusRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 订单ID。 
+     * @return DealName 订单ID。
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单ID。
+     * @param DealName 订单ID。
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
+    }
+
     public DescribeTaskStatusRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeTaskStatusRequest extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeTaskStatusRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
 
     }
 }

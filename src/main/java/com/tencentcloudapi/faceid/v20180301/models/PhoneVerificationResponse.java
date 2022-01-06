@@ -48,6 +48,14 @@ public class PhoneVerificationResponse extends AbstractModel{
     private String Description;
 
     /**
+    * 运营商名称。
+取值范围为["","移动","电信","联通"]
+    */
+    @SerializedName("Isp")
+    @Expose
+    private String Isp;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -131,6 +139,26 @@ public class PhoneVerificationResponse extends AbstractModel{
     }
 
     /**
+     * Get 运营商名称。
+取值范围为["","移动","电信","联通"] 
+     * @return Isp 运营商名称。
+取值范围为["","移动","电信","联通"]
+     */
+    public String getIsp() {
+        return this.Isp;
+    }
+
+    /**
+     * Set 运营商名称。
+取值范围为["","移动","电信","联通"]
+     * @param Isp 运营商名称。
+取值范围为["","移动","电信","联通"]
+     */
+    public void setIsp(String Isp) {
+        this.Isp = Isp;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -160,6 +188,9 @@ public class PhoneVerificationResponse extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +203,7 @@ public class PhoneVerificationResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

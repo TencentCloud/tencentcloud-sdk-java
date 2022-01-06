@@ -63,6 +63,17 @@ public class DetectInfoIdCardData extends AbstractModel{
     private String Avatar;
 
     /**
+    * 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9102 身份证复印件告警。
+-9103 身份证翻拍告警。
+-9106 身份证 PS 告警。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarnInfos")
+    @Expose
+    private Long [] WarnInfos;
+
+    /**
      * Get OCR正面照片的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OcrFront OCR正面照片的base64编码。
@@ -162,6 +173,38 @@ public class DetectInfoIdCardData extends AbstractModel{
         this.Avatar = Avatar;
     }
 
+    /**
+     * Get 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9102 身份证复印件告警。
+-9103 身份证翻拍告警。
+-9106 身份证 PS 告警。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarnInfos 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9102 身份证复印件告警。
+-9103 身份证翻拍告警。
+-9106 身份证 PS 告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getWarnInfos() {
+        return this.WarnInfos;
+    }
+
+    /**
+     * Set 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9102 身份证复印件告警。
+-9103 身份证翻拍告警。
+-9106 身份证 PS 告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarnInfos 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9102 身份证复印件告警。
+-9103 身份证翻拍告警。
+-9106 身份证 PS 告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarnInfos(Long [] WarnInfos) {
+        this.WarnInfos = WarnInfos;
+    }
+
     public DetectInfoIdCardData() {
     }
 
@@ -185,6 +228,12 @@ public class DetectInfoIdCardData extends AbstractModel{
         if (source.Avatar != null) {
             this.Avatar = new String(source.Avatar);
         }
+        if (source.WarnInfos != null) {
+            this.WarnInfos = new Long[source.WarnInfos.length];
+            for (int i = 0; i < source.WarnInfos.length; i++) {
+                this.WarnInfos[i] = new Long(source.WarnInfos[i]);
+            }
+        }
     }
 
 
@@ -197,6 +246,7 @@ public class DetectInfoIdCardData extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcessedFrontImage", this.ProcessedFrontImage);
         this.setParamSimple(map, prefix + "ProcessedBackImage", this.ProcessedBackImage);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
+        this.setParamArraySimple(map, prefix + "WarnInfos.", this.WarnInfos);
 
     }
 }

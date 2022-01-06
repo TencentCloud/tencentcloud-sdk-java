@@ -103,6 +103,30 @@ public class GroupDeviceItem extends AbstractModel{
     private String Protocol;
 
     /**
+    * 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelNum")
+    @Expose
+    private Long ChannelNum;
+
+    /**
+    * 设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VideoChannelNum")
+    @Expose
+    private Long VideoChannelNum;
+
+    /**
      * Get 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备唯一标识
@@ -302,6 +326,66 @@ public class GroupDeviceItem extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelNum 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChannelNum() {
+        return this.ChannelNum;
+    }
+
+    /**
+     * Set 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelNum 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelNum(Long ChannelNum) {
+        this.ChannelNum = ChannelNum;
+    }
+
+    /**
+     * Get 设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VideoChannelNum 设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVideoChannelNum() {
+        return this.VideoChannelNum;
+    }
+
+    /**
+     * Set 设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoChannelNum 设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVideoChannelNum(Long VideoChannelNum) {
+        this.VideoChannelNum = VideoChannelNum;
+    }
+
     public GroupDeviceItem() {
     }
 
@@ -340,6 +424,15 @@ public class GroupDeviceItem extends AbstractModel{
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ChannelNum != null) {
+            this.ChannelNum = new Long(source.ChannelNum);
+        }
+        if (source.VideoChannelNum != null) {
+            this.VideoChannelNum = new Long(source.VideoChannelNum);
+        }
     }
 
 
@@ -357,6 +450,9 @@ public class GroupDeviceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "IsRecord", this.IsRecord);
         this.setParamSimple(map, prefix + "Recordable", this.Recordable);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ChannelNum", this.ChannelNum);
+        this.setParamSimple(map, prefix + "VideoChannelNum", this.VideoChannelNum);
 
     }
 }

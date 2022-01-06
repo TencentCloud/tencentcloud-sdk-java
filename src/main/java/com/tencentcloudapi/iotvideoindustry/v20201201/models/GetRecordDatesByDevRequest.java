@@ -30,18 +30,18 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
     private String DeviceId;
 
     /**
-    * 偏移量，默认0
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 限制量，默认200
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 偏移量，默认0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 通道唯一标识
@@ -74,22 +74,6 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量，默认0 
-     * @return Offset 偏移量，默认0
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量，默认0
-     * @param Offset 偏移量，默认0
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
      * Get 限制量，默认200 
      * @return Limit 限制量，默认200
      */
@@ -103,6 +87,22 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认0 
+     * @return Offset 偏移量，默认0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认0
+     * @param Offset 偏移量，默认0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -148,11 +148,11 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.ChannelId != null) {
             this.ChannelId = new String(source.ChannelId);
@@ -168,8 +168,8 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "Type", this.Type);
 

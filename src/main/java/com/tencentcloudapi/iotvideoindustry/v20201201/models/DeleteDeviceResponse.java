@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteDeviceResponse extends AbstractModel{
 
     /**
-    * 操作结果
+    * 操作结果 OK-成功； 其他-失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -38,9 +38,9 @@ public class DeleteDeviceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 操作结果
+     * Get 操作结果 OK-成功； 其他-失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 操作结果
+     * @return Status 操作结果 OK-成功； 其他-失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -48,9 +48,9 @@ public class DeleteDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Set 操作结果
+     * Set 操作结果 OK-成功； 其他-失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 操作结果
+     * @param Status 操作结果 OK-成功； 其他-失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

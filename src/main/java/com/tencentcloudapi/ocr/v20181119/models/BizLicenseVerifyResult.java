@@ -24,7 +24,7 @@ public class BizLicenseVerifyResult extends AbstractModel{
 
     /**
     * “0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
     */
     @SerializedName("RegNum")
     @Expose
@@ -50,9 +50,9 @@ public class BizLicenseVerifyResult extends AbstractModel{
 
     /**
      * Get “0“：一致
-“-1”：此号未查询到结果 
+“-1”：不一致 
      * @return RegNum “0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
      */
     public String getRegNum() {
         return this.RegNum;
@@ -60,9 +60,9 @@ public class BizLicenseVerifyResult extends AbstractModel{
 
     /**
      * Set “0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
      * @param RegNum “0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
      */
     public void setRegNum(String RegNum) {
         this.RegNum = RegNum;

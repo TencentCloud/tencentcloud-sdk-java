@@ -156,6 +156,13 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     private Boolean DryRun;
 
     /**
+    * 金融围拢 ID 。
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
      * Get 克隆源实例Id。 
      * @return InstanceId 克隆源实例Id。
      */
@@ -459,6 +466,22 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get 金融围拢 ID 。 
+     * @return CageId 金融围拢 ID 。
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * Set 金融围拢 ID 。
+     * @param CageId 金融围拢 ID 。
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -530,6 +553,9 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
     }
 
 
@@ -556,6 +582,7 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
 
     }
 }

@@ -30,6 +30,14 @@ public class DescribeTaskStatusResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerIds")
+    @Expose
+    private String [] LoadBalancerIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class DescribeTaskStatusResponse extends AbstractModel{
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLoadBalancerIds() {
+        return this.LoadBalancerIds;
+    }
+
+    /**
+     * Set 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerIds(String [] LoadBalancerIds) {
+        this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
@@ -79,6 +107,12 @@ public class DescribeTaskStatusResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.LoadBalancerIds != null) {
+            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
+            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
+                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +124,7 @@ public class DescribeTaskStatusResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

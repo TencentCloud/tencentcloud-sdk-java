@@ -37,7 +37,7 @@ public class CreateDeviceRequest extends AbstractModel{
     private String PassWord;
 
     /**
-    * 设备类型 2:国标IPC设备; 3:NVR设备
+    * 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
     */
     @SerializedName("DeviceType")
     @Expose
@@ -83,16 +83,16 @@ public class CreateDeviceRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备类型 2:国标IPC设备; 3:NVR设备 
-     * @return DeviceType 设备类型 2:国标IPC设备; 3:NVR设备
+     * Get 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型) 
+     * @return DeviceType 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     public Long getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型 2:国标IPC设备; 3:NVR设备
-     * @param DeviceType 设备类型 2:国标IPC设备; 3:NVR设备
+     * Set 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
+     * @param DeviceType 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;

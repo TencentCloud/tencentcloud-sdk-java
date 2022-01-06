@@ -30,28 +30,28 @@ public class DescribeRecordStreamRequest extends AbstractModel{
     private String DeviceId;
 
     /**
-    * 流失效时间
+    * 流失效时间，UNIX时间戳，30天内
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 录像文件Id
+    * 录像文件ID
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * 录像流开始时间，当录像文件Id为空时有效
+    * 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 录像流结束时间，当录像文件Id为空时有效
+    * 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
     */
     @SerializedName("EndTime")
     @Expose
@@ -81,64 +81,64 @@ public class DescribeRecordStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 流失效时间 
-     * @return ExpireTime 流失效时间
+     * Get 流失效时间，UNIX时间戳，30天内 
+     * @return ExpireTime 流失效时间，UNIX时间戳，30天内
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 流失效时间
-     * @param ExpireTime 流失效时间
+     * Set 流失效时间，UNIX时间戳，30天内
+     * @param ExpireTime 流失效时间，UNIX时间戳，30天内
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 录像文件Id 
-     * @return RecordId 录像文件Id
+     * Get 录像文件ID 
+     * @return RecordId 录像文件ID
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 录像文件Id
-     * @param RecordId 录像文件Id
+     * Set 录像文件ID
+     * @param RecordId 录像文件ID
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get 录像流开始时间，当录像文件Id为空时有效 
-     * @return StartTime 录像流开始时间，当录像文件Id为空时有效
+     * Get 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳 
+     * @return StartTime 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 录像流开始时间，当录像文件Id为空时有效
-     * @param StartTime 录像流开始时间，当录像文件Id为空时有效
+     * Set 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
+     * @param StartTime 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 录像流结束时间，当录像文件Id为空时有效 
-     * @return EndTime 录像流结束时间，当录像文件Id为空时有效
+     * Get 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳 
+     * @return EndTime 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 录像流结束时间，当录像文件Id为空时有效
-     * @param EndTime 录像流结束时间，当录像文件Id为空时有效
+     * Set 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
+     * @param EndTime 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

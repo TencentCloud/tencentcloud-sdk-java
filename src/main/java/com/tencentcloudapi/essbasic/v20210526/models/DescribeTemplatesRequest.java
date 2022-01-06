@@ -37,7 +37,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 模版唯一标识
+    * 模板唯一标识
     */
     @SerializedName("TemplateId")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版唯一标识 
-     * @return TemplateId 模版唯一标识
+     * Get 模板唯一标识 
+     * @return TemplateId 模板唯一标识
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版唯一标识
-     * @param TemplateId 模版唯一标识
+     * Set 模板唯一标识
+     * @param TemplateId 模板唯一标识
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

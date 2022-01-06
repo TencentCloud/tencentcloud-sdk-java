@@ -51,7 +51,7 @@ public class DescribeAllDeviceListRequest extends AbstractModel{
     private String [] DeviceIds;
 
     /**
-    * 设备类型过滤
+    * 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
     */
     @SerializedName("DeviceTypes")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeAllDeviceListRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备类型过滤 
-     * @return DeviceTypes 设备类型过滤
+     * Get 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型) 
+     * @return DeviceTypes 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     public Long [] getDeviceTypes() {
         return this.DeviceTypes;
     }
 
     /**
-     * Set 设备类型过滤
-     * @param DeviceTypes 设备类型过滤
+     * Set 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
+     * @param DeviceTypes 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     public void setDeviceTypes(Long [] DeviceTypes) {
         this.DeviceTypes = DeviceTypes;

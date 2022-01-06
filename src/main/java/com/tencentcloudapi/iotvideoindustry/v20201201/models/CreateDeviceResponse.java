@@ -39,7 +39,7 @@ public class CreateDeviceResponse extends AbstractModel{
     private String DeviceId;
 
     /**
-    * 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+    * 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualGroupId")
@@ -94,9 +94,9 @@ public class CreateDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Get 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+     * Get 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualGroupId 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+     * @return VirtualGroupId 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualGroupId() {
@@ -104,9 +104,9 @@ public class CreateDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Set 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+     * Set 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualGroupId 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+     * @param VirtualGroupId 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualGroupId(String VirtualGroupId) {

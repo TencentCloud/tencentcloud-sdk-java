@@ -39,7 +39,7 @@ public class TimeTemplateItem extends AbstractModel{
     private String Name;
 
     /**
-    * 是否全时录制，即7*24小时录制
+    * 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAllWeek")
@@ -47,7 +47,7 @@ public class TimeTemplateItem extends AbstractModel{
     private Long IsAllWeek;
 
     /**
-    * 是否为自定义模板
+    * 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -103,9 +103,9 @@ public class TimeTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 是否全时录制，即7*24小时录制
+     * Get 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAllWeek 是否全时录制，即7*24小时录制
+     * @return IsAllWeek 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAllWeek() {
@@ -113,9 +113,9 @@ public class TimeTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 是否全时录制，即7*24小时录制
+     * Set 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAllWeek 是否全时录制，即7*24小时录制
+     * @param IsAllWeek 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAllWeek(Long IsAllWeek) {
@@ -123,9 +123,9 @@ public class TimeTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 是否为自定义模板
+     * Get 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 是否为自定义模板
+     * @return Type 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -133,9 +133,9 @@ public class TimeTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 是否为自定义模板
+     * Set 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 是否为自定义模板
+     * @param Type 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {

@@ -37,7 +37,7 @@ public class DescribeLiveVideoListRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 直播ID
+    * 直播频道ID
     */
     @SerializedName("LiveChannelId")
     @Expose
@@ -125,16 +125,16 @@ public class DescribeLiveVideoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 直播ID 
-     * @return LiveChannelId 直播ID
+     * Get 直播频道ID 
+     * @return LiveChannelId 直播频道ID
      */
     public String getLiveChannelId() {
         return this.LiveChannelId;
     }
 
     /**
-     * Set 直播ID
-     * @param LiveChannelId 直播ID
+     * Set 直播频道ID
+     * @param LiveChannelId 直播频道ID
      */
     public void setLiveChannelId(String LiveChannelId) {
         this.LiveChannelId = LiveChannelId;
