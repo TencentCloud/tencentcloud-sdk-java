@@ -177,6 +177,20 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     private String PublicIp;
 
     /**
+    * 主机实例ID
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
+    * 地域ID
+    */
+    @SerializedName("RegionID")
+    @Expose
+    private Long RegionID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -536,6 +550,38 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 主机实例ID 
+     * @return InstanceID 主机实例ID
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 主机实例ID
+     * @param InstanceID 主机实例ID
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get 地域ID 
+     * @return RegionID 地域ID
+     */
+    public Long getRegionID() {
+        return this.RegionID;
+    }
+
+    /**
+     * Set 地域ID
+     * @param RegionID 地域ID
+     */
+    public void setRegionID(Long RegionID) {
+        this.RegionID = RegionID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -625,6 +671,12 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
         if (source.PublicIp != null) {
             this.PublicIp = new String(source.PublicIp);
         }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.RegionID != null) {
+            this.RegionID = new Long(source.RegionID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -657,6 +709,8 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "IsContainerd", this.IsContainerd);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "RegionID", this.RegionID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

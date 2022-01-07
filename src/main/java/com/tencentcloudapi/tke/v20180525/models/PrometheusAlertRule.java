@@ -74,6 +74,14 @@ public class PrometheusAlertRule extends AbstractModel{
     private Label [] Annotations;
 
     /**
+    * 告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleState")
+    @Expose
+    private Long RuleState;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -193,6 +201,26 @@ public class PrometheusAlertRule extends AbstractModel{
         this.Annotations = Annotations;
     }
 
+    /**
+     * Get 告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleState 告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleState() {
+        return this.RuleState;
+    }
+
+    /**
+     * Set 告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleState 告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleState(Long RuleState) {
+        this.RuleState = RuleState;
+    }
+
     public PrometheusAlertRule() {
     }
 
@@ -228,6 +256,9 @@ public class PrometheusAlertRule extends AbstractModel{
                 this.Annotations[i] = new Label(source.Annotations[i]);
             }
         }
+        if (source.RuleState != null) {
+            this.RuleState = new Long(source.RuleState);
+        }
     }
 
 
@@ -242,6 +273,7 @@ public class PrometheusAlertRule extends AbstractModel{
         this.setParamSimple(map, prefix + "For", this.For);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
         this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
+        this.setParamSimple(map, prefix + "RuleState", this.RuleState);
 
     }
 }

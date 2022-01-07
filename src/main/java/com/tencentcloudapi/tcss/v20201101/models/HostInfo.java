@@ -93,7 +93,7 @@ public class HostInfo extends AbstractModel{
     private Boolean IsContainerd;
 
     /**
-    * 主机来源
+    * 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
     */
     @SerializedName("MachineType")
     @Expose
@@ -112,6 +112,20 @@ public class HostInfo extends AbstractModel{
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
+
+    /**
+    * 主机实例ID
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
+    * 地域ID
+    */
+    @SerializedName("RegionID")
+    @Expose
+    private Long RegionID;
 
     /**
      * Get 主机id 
@@ -274,16 +288,16 @@ public class HostInfo extends AbstractModel{
     }
 
     /**
-     * Get 主机来源 
-     * @return MachineType 主机来源
+     * Get 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器； 
+     * @return MachineType 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 主机来源
-     * @param MachineType 主机来源
+     * Set 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+     * @param MachineType 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -319,6 +333,38 @@ public class HostInfo extends AbstractModel{
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
+    }
+
+    /**
+     * Get 主机实例ID 
+     * @return InstanceID 主机实例ID
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 主机实例ID
+     * @param InstanceID 主机实例ID
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get 地域ID 
+     * @return RegionID 地域ID
+     */
+    public Long getRegionID() {
+        return this.RegionID;
+    }
+
+    /**
+     * Set 地域ID
+     * @param RegionID 地域ID
+     */
+    public void setRegionID(Long RegionID) {
+        this.RegionID = RegionID;
     }
 
     public HostInfo() {
@@ -368,6 +414,12 @@ public class HostInfo extends AbstractModel{
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.RegionID != null) {
+            this.RegionID = new Long(source.RegionID);
+        }
     }
 
 
@@ -388,6 +440,8 @@ public class HostInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "RegionID", this.RegionID);
 
     }
 }

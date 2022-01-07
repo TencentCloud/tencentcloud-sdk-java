@@ -42,7 +42,6 @@ task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
 task-operator- string （子uin过滤）
-task-type -string （任务类型过滤）分导入任务和sql任务
     */
     @SerializedName("Filters")
     @Expose
@@ -120,14 +119,12 @@ task-type -string （任务类型过滤）分导入任务和sql任务
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
-task-operator- string （子uin过滤）
-task-type -string （任务类型过滤）分导入任务和sql任务 
+task-operator- string （子uin过滤） 
      * @return Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
 task-operator- string （子uin过滤）
-task-type -string （任务类型过滤）分导入任务和sql任务
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -139,13 +136,11 @@ task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
 task-operator- string （子uin过滤）
-task-type -string （任务类型过滤）分导入任务和sql任务
      * @param Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
 task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
 task-operator- string （子uin过滤）
-task-type -string （任务类型过滤）分导入任务和sql任务
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -53,6 +53,15 @@ abnormal = 异常
     private String ClusterName;
 
     /**
+    * 额外labels
+本集群的所有指标都会带上这几个label
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalLabels")
+    @Expose
+    private Label [] ExternalLabels;
+
+    /**
      * Get 集群类型 
      * @return ClusterType 集群类型
      */
@@ -124,6 +133,30 @@ abnormal = 异常
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get 额外labels
+本集群的所有指标都会带上这几个label
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalLabels 额外labels
+本集群的所有指标都会带上这几个label
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Label [] getExternalLabels() {
+        return this.ExternalLabels;
+    }
+
+    /**
+     * Set 额外labels
+本集群的所有指标都会带上这几个label
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalLabels 额外labels
+本集群的所有指标都会带上这几个label
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalLabels(Label [] ExternalLabels) {
+        this.ExternalLabels = ExternalLabels;
+    }
+
     public PrometheusAgentOverview() {
     }
 
@@ -144,6 +177,12 @@ abnormal = 异常
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.ExternalLabels != null) {
+            this.ExternalLabels = new Label[source.ExternalLabels.length];
+            for (int i = 0; i < source.ExternalLabels.length; i++) {
+                this.ExternalLabels[i] = new Label(source.ExternalLabels[i]);
+            }
+        }
     }
 
 
@@ -155,6 +194,7 @@ abnormal = 异常
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
 
     }
 }

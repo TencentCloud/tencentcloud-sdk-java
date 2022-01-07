@@ -131,6 +131,13 @@ public class CloneLoadBalancerRequest extends AbstractModel{
     private String [] ClusterIds;
 
     /**
+    * 性能保障规格。
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
     * Stgw独占集群的标签。
     */
     @SerializedName("ClusterTag")
@@ -404,6 +411,22 @@ public class CloneLoadBalancerRequest extends AbstractModel{
     }
 
     /**
+     * Get 性能保障规格。 
+     * @return SlaType 性能保障规格。
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 性能保障规格。
+     * @param SlaType 性能保障规格。
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
+    /**
      * Get Stgw独占集群的标签。 
      * @return ClusterTag Stgw独占集群的标签。
      */
@@ -513,6 +536,9 @@ public class CloneLoadBalancerRequest extends AbstractModel{
                 this.ClusterIds[i] = new String(source.ClusterIds[i]);
             }
         }
+        if (source.SlaType != null) {
+            this.SlaType = new String(source.SlaType);
+        }
         if (source.ClusterTag != null) {
             this.ClusterTag = new String(source.ClusterTag);
         }
@@ -547,6 +573,7 @@ public class CloneLoadBalancerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);

@@ -959,6 +959,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *列出用户关联的策略（包括随组关联）
+     * @param req ListAttachedUserAllPoliciesRequest
+     * @return ListAttachedUserAllPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(ListAttachedUserAllPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListAttachedUserAllPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ListAttachedUserPolicies）可用于查询子账号关联的策略列表。
      * @param req ListAttachedUserPoliciesRequest
      * @return ListAttachedUserPoliciesResponse

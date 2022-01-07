@@ -23,46 +23,69 @@ import java.util.HashMap;
 public class DescribeChannelStreamURLRequest extends AbstractModel{
 
     /**
-    * 设备唯一标识
+    * 设备唯一标识，必填参数
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 通道唯一标识（接口升级字段为必填）
+    * 流地址失效时间，固定值填写0，其他参数无效，必填参数
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * 通道唯一标识（接口升级字段为必填），必填参数
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-     * Get 设备唯一标识 
-     * @return DeviceId 设备唯一标识
+     * Get 设备唯一标识，必填参数 
+     * @return DeviceId 设备唯一标识，必填参数
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备唯一标识
-     * @param DeviceId 设备唯一标识
+     * Set 设备唯一标识，必填参数
+     * @param DeviceId 设备唯一标识，必填参数
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 通道唯一标识（接口升级字段为必填） 
-     * @return ChannelId 通道唯一标识（接口升级字段为必填）
+     * Get 流地址失效时间，固定值填写0，其他参数无效，必填参数 
+     * @return ExpireTime 流地址失效时间，固定值填写0，其他参数无效，必填参数
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 流地址失效时间，固定值填写0，其他参数无效，必填参数
+     * @param ExpireTime 流地址失效时间，固定值填写0，其他参数无效，必填参数
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 通道唯一标识（接口升级字段为必填），必填参数 
+     * @return ChannelId 通道唯一标识（接口升级字段为必填），必填参数
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道唯一标识（接口升级字段为必填）
-     * @param ChannelId 通道唯一标识（接口升级字段为必填）
+     * Set 通道唯一标识（接口升级字段为必填），必填参数
+     * @param ChannelId 通道唯一标识（接口升级字段为必填），必填参数
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
@@ -79,6 +102,9 @@ public class DescribeChannelStreamURLRequest extends AbstractModel{
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
         if (source.ChannelId != null) {
             this.ChannelId = new String(source.ChannelId);
         }
@@ -90,6 +116,7 @@ public class DescribeChannelStreamURLRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }

@@ -90,7 +90,7 @@ public class FlowInfo extends AbstractModel{
     private String CustomerData;
 
     /**
-    * 被抄送人的信息列表
+    * 被抄送人的信息列表，抄送功能暂不开放
     */
     @SerializedName("CcInfos")
     @Expose
@@ -257,16 +257,16 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 被抄送人的信息列表 
-     * @return CcInfos 被抄送人的信息列表
+     * Get 被抄送人的信息列表，抄送功能暂不开放 
+     * @return CcInfos 被抄送人的信息列表，抄送功能暂不开放
      */
     public CcInfo [] getCcInfos() {
         return this.CcInfos;
     }
 
     /**
-     * Set 被抄送人的信息列表
-     * @param CcInfos 被抄送人的信息列表
+     * Set 被抄送人的信息列表，抄送功能暂不开放
+     * @param CcInfos 被抄送人的信息列表，抄送功能暂不开放
      */
     public void setCcInfos(CcInfo [] CcInfos) {
         this.CcInfos = CcInfos;

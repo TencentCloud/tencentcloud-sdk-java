@@ -462,6 +462,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
+     * @param req GetWeChatBillDetailsRequest
+     * @return GetWeChatBillDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWeChatBillDetailsResponse GetWeChatBillDetails(GetWeChatBillDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetWeChatBillDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetWeChatBillDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetWeChatBillDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
      * @param req IdCardOCRVerificationRequest
      * @return IdCardOCRVerificationResponse

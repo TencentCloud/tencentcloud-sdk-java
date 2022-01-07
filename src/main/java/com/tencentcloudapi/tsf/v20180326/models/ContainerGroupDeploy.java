@@ -279,6 +279,22 @@ public class ContainerGroupDeploy extends AbstractModel{
     private TcrRepoInfo TcrRepoInfo;
 
     /**
+    * 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeInfos")
+    @Expose
+    private VolumeInfo [] VolumeInfos;
+
+    /**
+    * 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeMountInfos")
+    @Expose
+    private VolumeMountInfo [] VolumeMountInfos;
+
+    /**
      * Get 部署组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组id
@@ -918,6 +934,46 @@ public class ContainerGroupDeploy extends AbstractModel{
         this.TcrRepoInfo = TcrRepoInfo;
     }
 
+    /**
+     * Get 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeInfos 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeInfo [] getVolumeInfos() {
+        return this.VolumeInfos;
+    }
+
+    /**
+     * Set 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeInfos 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeInfos(VolumeInfo [] VolumeInfos) {
+        this.VolumeInfos = VolumeInfos;
+    }
+
+    /**
+     * Get 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeMountInfos 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeMountInfo [] getVolumeMountInfos() {
+        return this.VolumeMountInfos;
+    }
+
+    /**
+     * Set 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeMountInfos 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeMountInfos(VolumeMountInfo [] VolumeMountInfos) {
+        this.VolumeMountInfos = VolumeMountInfos;
+    }
+
     public ContainerGroupDeploy() {
     }
 
@@ -1028,6 +1084,18 @@ public class ContainerGroupDeploy extends AbstractModel{
         if (source.TcrRepoInfo != null) {
             this.TcrRepoInfo = new TcrRepoInfo(source.TcrRepoInfo);
         }
+        if (source.VolumeInfos != null) {
+            this.VolumeInfos = new VolumeInfo[source.VolumeInfos.length];
+            for (int i = 0; i < source.VolumeInfos.length; i++) {
+                this.VolumeInfos[i] = new VolumeInfo(source.VolumeInfos[i]);
+            }
+        }
+        if (source.VolumeMountInfos != null) {
+            this.VolumeMountInfos = new VolumeMountInfo[source.VolumeMountInfos.length];
+            for (int i = 0; i < source.VolumeMountInfos.length; i++) {
+                this.VolumeMountInfos[i] = new VolumeMountInfo(source.VolumeMountInfos[i]);
+            }
+        }
     }
 
 
@@ -1067,6 +1135,8 @@ public class ContainerGroupDeploy extends AbstractModel{
         this.setParamSimple(map, prefix + "DisableService", this.DisableService);
         this.setParamSimple(map, prefix + "HeadlessService", this.HeadlessService);
         this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
+        this.setParamArrayObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
+        this.setParamArrayObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
 
     }
 }

@@ -51,7 +51,7 @@ public class DescribeMachinesResponse extends AbstractModel{
     private String UpdateEndTime;
 
     /**
-    * 当前用户可用最新的Loglistener版本
+    * 当前用户可用最新的Loglistener版本
     */
     @SerializedName("LatestAgentVersion")
     @Expose
@@ -136,16 +136,16 @@ public class DescribeMachinesResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前用户可用最新的Loglistener版本 
-     * @return LatestAgentVersion 当前用户可用最新的Loglistener版本
+     * Get 当前用户可用最新的Loglistener版本 
+     * @return LatestAgentVersion 当前用户可用最新的Loglistener版本
      */
     public String getLatestAgentVersion() {
         return this.LatestAgentVersion;
     }
 
     /**
-     * Set 当前用户可用最新的Loglistener版本
-     * @param LatestAgentVersion 当前用户可用最新的Loglistener版本
+     * Set 当前用户可用最新的Loglistener版本
+     * @param LatestAgentVersion 当前用户可用最新的Loglistener版本
      */
     public void setLatestAgentVersion(String LatestAgentVersion) {
         this.LatestAgentVersion = LatestAgentVersion;

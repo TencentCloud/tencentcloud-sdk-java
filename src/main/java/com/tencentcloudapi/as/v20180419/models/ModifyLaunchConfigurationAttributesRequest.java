@@ -167,6 +167,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private EnhancedService EnhancedService;
 
     /**
+    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -538,6 +545,22 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.EnhancedService = EnhancedService;
     }
 
+    /**
+     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
+     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -606,6 +629,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.EnhancedService != null) {
             this.EnhancedService = new EnhancedService(source.EnhancedService);
         }
+        if (source.CamRoleName != null) {
+            this.CamRoleName = new String(source.CamRoleName);
+        }
     }
 
 
@@ -630,6 +656,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }
