@@ -276,6 +276,14 @@ public class DBInstance extends AbstractModel{
     private String DBMajorVersion;
 
     /**
+    * 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBNodeSet")
+    @Expose
+    private DBNode [] DBNodeSet;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -867,6 +875,26 @@ public class DBInstance extends AbstractModel{
         this.DBMajorVersion = DBMajorVersion;
     }
 
+    /**
+     * Get 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBNodeSet 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DBNode [] getDBNodeSet() {
+        return this.DBNodeSet;
+    }
+
+    /**
+     * Set 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBNodeSet 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBNodeSet(DBNode [] DBNodeSet) {
+        this.DBNodeSet = DBNodeSet;
+    }
+
     public DBInstance() {
     }
 
@@ -989,6 +1017,12 @@ public class DBInstance extends AbstractModel{
         if (source.DBMajorVersion != null) {
             this.DBMajorVersion = new String(source.DBMajorVersion);
         }
+        if (source.DBNodeSet != null) {
+            this.DBNodeSet = new DBNode[source.DBNodeSet.length];
+            for (int i = 0; i < source.DBNodeSet.length; i++) {
+                this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
+            }
+        }
     }
 
 
@@ -1031,6 +1065,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
 
     }
 }

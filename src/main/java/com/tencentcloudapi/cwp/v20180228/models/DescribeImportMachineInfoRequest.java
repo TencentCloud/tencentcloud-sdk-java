@@ -37,11 +37,19 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
     private String ImportType;
 
     /**
-    * 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+    * 该参数已作废.
     */
     @SerializedName("IsQueryProMachine")
     @Expose
     private Boolean IsQueryProMachine;
+
+    /**
+    * 过滤条件。
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filters [] Filters;
 
     /**
      * Get 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条) 
@@ -76,19 +84,39 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版） 
-     * @return IsQueryProMachine 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+     * Get 该参数已作废. 
+     * @return IsQueryProMachine 该参数已作废.
      */
     public Boolean getIsQueryProMachine() {
         return this.IsQueryProMachine;
     }
 
     /**
-     * Set 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
-     * @param IsQueryProMachine 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+     * Set 该参数已作废.
+     * @param IsQueryProMachine 该参数已作废.
      */
     public void setIsQueryProMachine(Boolean IsQueryProMachine) {
         this.IsQueryProMachine = IsQueryProMachine;
+    }
+
+    /**
+     * Get 过滤条件。
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li> 
+     * @return Filters 过滤条件。
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
+     */
+    public Filters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件。
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
+     * @param Filters 过滤条件。
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
+     */
+    public void setFilters(Filters [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeImportMachineInfoRequest() {
@@ -111,6 +139,12 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
         if (source.IsQueryProMachine != null) {
             this.IsQueryProMachine = new Boolean(source.IsQueryProMachine);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filters(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -121,6 +155,7 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "MachineList.", this.MachineList);
         this.setParamSimple(map, prefix + "ImportType", this.ImportType);
         this.setParamSimple(map, prefix + "IsQueryProMachine", this.IsQueryProMachine);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

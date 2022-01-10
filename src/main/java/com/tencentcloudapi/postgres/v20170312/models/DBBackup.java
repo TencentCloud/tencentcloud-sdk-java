@@ -100,6 +100,14 @@ public class DBBackup extends AbstractModel{
     private String ExternalAddr;
 
     /**
+    * 备份集ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SetId")
+    @Expose
+    private String SetId;
+
+    /**
      * Get 备份文件唯一标识 
      * @return Id 备份文件唯一标识
      */
@@ -275,6 +283,26 @@ public class DBBackup extends AbstractModel{
         this.ExternalAddr = ExternalAddr;
     }
 
+    /**
+     * Get 备份集ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SetId 备份集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSetId() {
+        return this.SetId;
+    }
+
+    /**
+     * Set 备份集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SetId 备份集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetId(String SetId) {
+        this.SetId = SetId;
+    }
+
     public DBBackup() {
     }
 
@@ -319,6 +347,9 @@ public class DBBackup extends AbstractModel{
         if (source.ExternalAddr != null) {
             this.ExternalAddr = new String(source.ExternalAddr);
         }
+        if (source.SetId != null) {
+            this.SetId = new String(source.SetId);
+        }
     }
 
 
@@ -337,6 +368,7 @@ public class DBBackup extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DbList.", this.DbList);
         this.setParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
         this.setParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+        this.setParamSimple(map, prefix + "SetId", this.SetId);
 
     }
 }

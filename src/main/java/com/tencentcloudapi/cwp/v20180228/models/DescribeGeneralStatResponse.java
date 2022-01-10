@@ -100,6 +100,22 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     private Long Offline;
 
     /**
+    * 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlagshipMachineCnt")
+    @Expose
+    private Long FlagshipMachineCnt;
+
+    /**
+    * 保护天数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectDays")
+    @Expose
+    private Long ProtectDays;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -283,6 +299,46 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     }
 
     /**
+     * Get 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlagshipMachineCnt 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFlagshipMachineCnt() {
+        return this.FlagshipMachineCnt;
+    }
+
+    /**
+     * Set 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlagshipMachineCnt 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlagshipMachineCnt(Long FlagshipMachineCnt) {
+        this.FlagshipMachineCnt = FlagshipMachineCnt;
+    }
+
+    /**
+     * Get 保护天数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectDays 保护天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProtectDays() {
+        return this.ProtectDays;
+    }
+
+    /**
+     * Set 保护天数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectDays 保护天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectDays(Long ProtectDays) {
+        this.ProtectDays = ProtectDays;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -339,6 +395,12 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         if (source.Offline != null) {
             this.Offline = new Long(source.Offline);
         }
+        if (source.FlagshipMachineCnt != null) {
+            this.FlagshipMachineCnt = new Long(source.FlagshipMachineCnt);
+        }
+        if (source.ProtectDays != null) {
+            this.ProtectDays = new Long(source.ProtectDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -360,6 +422,8 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RiskMachine", this.RiskMachine);
         this.setParamSimple(map, prefix + "Shutdown", this.Shutdown);
         this.setParamSimple(map, prefix + "Offline", this.Offline);
+        this.setParamSimple(map, prefix + "FlagshipMachineCnt", this.FlagshipMachineCnt);
+        this.setParamSimple(map, prefix + "ProtectDays", this.ProtectDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

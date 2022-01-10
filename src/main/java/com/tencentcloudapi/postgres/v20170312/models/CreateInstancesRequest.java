@@ -184,6 +184,13 @@ public class CreateInstancesRequest extends AbstractModel{
     private String DBKernelVersion;
 
     /**
+    * 实例节点信息，购买跨可用区实例时填写。
+    */
+    @SerializedName("DBNodeSet")
+    @Expose
+    private DBNode [] DBNodeSet;
+
+    /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
@@ -551,6 +558,22 @@ public class CreateInstancesRequest extends AbstractModel{
         this.DBKernelVersion = DBKernelVersion;
     }
 
+    /**
+     * Get 实例节点信息，购买跨可用区实例时填写。 
+     * @return DBNodeSet 实例节点信息，购买跨可用区实例时填写。
+     */
+    public DBNode [] getDBNodeSet() {
+        return this.DBNodeSet;
+    }
+
+    /**
+     * Set 实例节点信息，购买跨可用区实例时填写。
+     * @param DBNodeSet 实例节点信息，购买跨可用区实例时填写。
+     */
+    public void setDBNodeSet(DBNode [] DBNodeSet) {
+        this.DBNodeSet = DBNodeSet;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -637,6 +660,12 @@ public class CreateInstancesRequest extends AbstractModel{
         if (source.DBKernelVersion != null) {
             this.DBKernelVersion = new String(source.DBKernelVersion);
         }
+        if (source.DBNodeSet != null) {
+            this.DBNodeSet = new DBNode[source.DBNodeSet.length];
+            for (int i = 0; i < source.DBNodeSet.length; i++) {
+                this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
+            }
+        }
     }
 
 
@@ -667,6 +696,7 @@ public class CreateInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
 
     }
 }

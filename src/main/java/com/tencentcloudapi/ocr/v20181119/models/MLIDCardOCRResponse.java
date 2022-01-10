@@ -55,6 +55,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
 -9103	证照翻拍告警
 -9102	证照复印件告警
 -9106       证件遮挡告警
+-9107       模糊图片告警
     */
     @SerializedName("Warn")
     @Expose
@@ -178,11 +179,13 @@ MyKid 儿童卡
      * Get 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
--9106       证件遮挡告警 
+-9106       证件遮挡告警
+-9107       模糊图片告警 
      * @return Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
 -9106       证件遮挡告警
+-9107       模糊图片告警
      */
     public Long [] getWarn() {
         return this.Warn;
@@ -193,10 +196,12 @@ MyKid 儿童卡
 -9103	证照翻拍告警
 -9102	证照复印件告警
 -9106       证件遮挡告警
+-9107       模糊图片告警
      * @param Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
 -9106       证件遮挡告警
+-9107       模糊图片告警
      */
     public void setWarn(Long [] Warn) {
         this.Warn = Warn;

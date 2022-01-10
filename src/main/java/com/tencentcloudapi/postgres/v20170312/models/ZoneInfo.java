@@ -44,7 +44,7 @@ public class ZoneInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+    * 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
     */
     @SerializedName("ZoneState")
     @Expose
@@ -56,6 +56,14 @@ public class ZoneInfo extends AbstractModel{
     @SerializedName("ZoneSupportIpv6")
     @Expose
     private Long ZoneSupportIpv6;
+
+    /**
+    * 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StandbyZoneSet")
+    @Expose
+    private String [] StandbyZoneSet;
 
     /**
      * Get 该可用区的英文名称 
@@ -106,16 +114,16 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
-     * Get 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用 
-     * @return ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * Get 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄 
+     * @return ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
      */
     public String getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * Set 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
-     * @param ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * Set 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
+     * @param ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
      */
     public void setZoneState(String ZoneState) {
         this.ZoneState = ZoneState;
@@ -135,6 +143,26 @@ public class ZoneInfo extends AbstractModel{
      */
     public void setZoneSupportIpv6(Long ZoneSupportIpv6) {
         this.ZoneSupportIpv6 = ZoneSupportIpv6;
+    }
+
+    /**
+     * Get 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StandbyZoneSet 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getStandbyZoneSet() {
+        return this.StandbyZoneSet;
+    }
+
+    /**
+     * Set 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandbyZoneSet 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandbyZoneSet(String [] StandbyZoneSet) {
+        this.StandbyZoneSet = StandbyZoneSet;
     }
 
     public ZoneInfo() {
@@ -160,6 +188,12 @@ public class ZoneInfo extends AbstractModel{
         if (source.ZoneSupportIpv6 != null) {
             this.ZoneSupportIpv6 = new Long(source.ZoneSupportIpv6);
         }
+        if (source.StandbyZoneSet != null) {
+            this.StandbyZoneSet = new String[source.StandbyZoneSet.length];
+            for (int i = 0; i < source.StandbyZoneSet.length; i++) {
+                this.StandbyZoneSet[i] = new String(source.StandbyZoneSet[i]);
+            }
+        }
     }
 
 
@@ -172,6 +206,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneState", this.ZoneState);
         this.setParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
+        this.setParamArraySimple(map, prefix + "StandbyZoneSet.", this.StandbyZoneSet);
 
     }
 }

@@ -247,6 +247,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String CageId;
 
     /**
+    * 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+    */
+    @SerializedName("ParamTemplateType")
+    @Expose
+    private String ParamTemplateType;
+
+    /**
     * 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
     */
     @SerializedName("AlarmPolicyIdList")
@@ -773,6 +780,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。 
+     * @return ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     */
+    public String getParamTemplateType() {
+        return this.ParamTemplateType;
+    }
+
+    /**
+     * Set 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @param ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     */
+    public void setParamTemplateType(String ParamTemplateType) {
+        this.ParamTemplateType = ParamTemplateType;
+    }
+
+    /**
      * Get 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。 
      * @return AlarmPolicyIdList 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
      */
@@ -920,6 +943,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         if (source.CageId != null) {
             this.CageId = new String(source.CageId);
         }
+        if (source.ParamTemplateType != null) {
+            this.ParamTemplateType = new String(source.ParamTemplateType);
+        }
         if (source.AlarmPolicyIdList != null) {
             this.AlarmPolicyIdList = new String[source.AlarmPolicyIdList.length];
             for (int i = 0; i < source.AlarmPolicyIdList.length; i++) {
@@ -968,6 +994,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
+        this.setParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 

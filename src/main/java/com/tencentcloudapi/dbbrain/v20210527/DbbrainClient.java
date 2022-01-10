@@ -99,6 +99,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *创建中断会话的任务。
+     * @param req CreateKillTaskRequest
+     * @return CreateKillTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKillTaskResponse CreateKillTask(CreateKillTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKillTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateKillTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateKillTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
      * @param req CreateMailProfileRequest
      * @return CreateMailProfileResponse
@@ -111,6 +131,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMailProfileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMailProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建中止所有代理节点连接会话的异步任务。当前仅支持 Redis。得到的返回值为异步任务 id，可以作为参数传入接口 DescribeProxySessionKillTasks 查询kill会话任务执行状态。
+     * @param req CreateProxySessionKillTaskRequest
+     * @return CreateProxySessionKillTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProxySessionKillTaskResponse CreateProxySessionKillTask(CreateProxySessionKillTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProxySessionKillTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProxySessionKillTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProxySessionKillTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

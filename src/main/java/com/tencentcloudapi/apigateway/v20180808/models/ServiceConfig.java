@@ -58,6 +58,14 @@ public class ServiceConfig extends AbstractModel{
     private String Method;
 
     /**
+    * API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosConfig")
+    @Expose
+    private CosConfig CosConfig;
+
+    /**
      * Get 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道 
      * @return Product 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
      */
@@ -137,6 +145,26 @@ public class ServiceConfig extends AbstractModel{
         this.Method = Method;
     }
 
+    /**
+     * Get API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosConfig API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CosConfig getCosConfig() {
+        return this.CosConfig;
+    }
+
+    /**
+     * Set API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosConfig API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosConfig(CosConfig CosConfig) {
+        this.CosConfig = CosConfig;
+    }
+
     public ServiceConfig() {
     }
 
@@ -160,6 +188,9 @@ public class ServiceConfig extends AbstractModel{
         if (source.Method != null) {
             this.Method = new String(source.Method);
         }
+        if (source.CosConfig != null) {
+            this.CosConfig = new CosConfig(source.CosConfig);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class ServiceConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamObj(map, prefix + "CosConfig.", this.CosConfig);
 
     }
 }

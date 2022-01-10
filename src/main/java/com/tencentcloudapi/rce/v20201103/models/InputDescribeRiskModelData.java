@@ -44,6 +44,13 @@ public class InputDescribeRiskModelData extends AbstractModel{
     private String UserId;
 
     /**
+    * 是否为测试流量
+    */
+    @SerializedName("IsTest")
+    @Expose
+    private Long IsTest;
+
+    /**
      * Get 业务参数加密后的签名值 
      * @return UserData 业务参数加密后的签名值
      */
@@ -91,6 +98,22 @@ public class InputDescribeRiskModelData extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 是否为测试流量 
+     * @return IsTest 是否为测试流量
+     */
+    public Long getIsTest() {
+        return this.IsTest;
+    }
+
+    /**
+     * Set 是否为测试流量
+     * @param IsTest 是否为测试流量
+     */
+    public void setIsTest(Long IsTest) {
+        this.IsTest = IsTest;
+    }
+
     public InputDescribeRiskModelData() {
     }
 
@@ -108,6 +131,9 @@ public class InputDescribeRiskModelData extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.IsTest != null) {
+            this.IsTest = new Long(source.IsTest);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class InputDescribeRiskModelData extends AbstractModel{
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "ApplyDate", this.ApplyDate);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "IsTest", this.IsTest);
 
     }
 }

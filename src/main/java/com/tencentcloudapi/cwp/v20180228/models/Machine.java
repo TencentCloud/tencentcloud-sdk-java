@@ -41,6 +41,7 @@ public class Machine extends AbstractModel{
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
 <li>SHUTDOWN: 已关机</li>
+<li>UNINSTALLED: 未防护</li>
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -194,6 +195,13 @@ public class Machine extends AbstractModel{
     private String KernelVersion;
 
     /**
+    * 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+    */
+    @SerializedName("ProtectType")
+    @Expose
+    private String ProtectType;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -229,11 +237,13 @@ public class Machine extends AbstractModel{
      * Get 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li> 
+<li>SHUTDOWN: 已关机</li>
+<li>UNINSTALLED: 未防护</li> 
      * @return MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
 <li>SHUTDOWN: 已关机</li>
+<li>UNINSTALLED: 未防护</li>
      */
     public String getMachineStatus() {
         return this.MachineStatus;
@@ -244,10 +254,12 @@ public class Machine extends AbstractModel{
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
 <li>SHUTDOWN: 已关机</li>
+<li>UNINSTALLED: 未防护</li>
      * @param MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
 <li>SHUTDOWN: 已关机</li>
+<li>UNINSTALLED: 未防护</li>
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
@@ -601,6 +613,22 @@ public class Machine extends AbstractModel{
         this.KernelVersion = KernelVersion;
     }
 
+    /**
+     * Get 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版. 
+     * @return ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     */
+    public String getProtectType() {
+        return this.ProtectType;
+    }
+
+    /**
+     * Set 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * @param ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     */
+    public void setProtectType(String ProtectType) {
+        this.ProtectType = ProtectType;
+    }
+
     public Machine() {
     }
 
@@ -681,6 +709,9 @@ public class Machine extends AbstractModel{
         if (source.KernelVersion != null) {
             this.KernelVersion = new String(source.KernelVersion);
         }
+        if (source.ProtectType != null) {
+            this.ProtectType = new String(source.ProtectType);
+        }
     }
 
 
@@ -711,6 +742,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+        this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
 
     }
 }

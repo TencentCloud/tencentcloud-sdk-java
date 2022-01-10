@@ -167,6 +167,13 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private Long HasAssetScan;
 
     /**
+    * 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+    */
+    @SerializedName("ProtectType")
+    @Expose
+    private String ProtectType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -522,6 +529,22 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版. 
+     * @return ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     */
+    public String getProtectType() {
+        return this.ProtectType;
+    }
+
+    /**
+     * Set 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * @param ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     */
+    public void setProtectType(String ProtectType) {
+        this.ProtectType = ProtectType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -602,6 +625,9 @@ public class DescribeMachineInfoResponse extends AbstractModel{
         if (source.HasAssetScan != null) {
             this.HasAssetScan = new Long(source.HasAssetScan);
         }
+        if (source.ProtectType != null) {
+            this.ProtectType = new String(source.ProtectType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -631,6 +657,7 @@ public class DescribeMachineInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
         this.setParamSimple(map, prefix + "ProVersionDeadline", this.ProVersionDeadline);
         this.setParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
+        this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
