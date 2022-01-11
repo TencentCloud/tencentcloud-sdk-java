@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class SecurityGroupBound extends AbstractModel{
 
     /**
-    * 策略，ACCEPT 或者 DROP
-    */
-    @SerializedName("Action")
-    @Expose
-    private String Action;
-
-    /**
     * 来源 IP 或 IP 段，例如192.168.0.0/16
     */
     @SerializedName("CidrIp")
     @Expose
     private String CidrIp;
+
+    /**
+    * 策略，ACCEPT 或者 DROP
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
 
     /**
     * 端口
@@ -51,22 +51,6 @@ public class SecurityGroupBound extends AbstractModel{
     private String IpProtocol;
 
     /**
-     * Get 策略，ACCEPT 或者 DROP 
-     * @return Action 策略，ACCEPT 或者 DROP
-     */
-    public String getAction() {
-        return this.Action;
-    }
-
-    /**
-     * Set 策略，ACCEPT 或者 DROP
-     * @param Action 策略，ACCEPT 或者 DROP
-     */
-    public void setAction(String Action) {
-        this.Action = Action;
-    }
-
-    /**
      * Get 来源 IP 或 IP 段，例如192.168.0.0/16 
      * @return CidrIp 来源 IP 或 IP 段，例如192.168.0.0/16
      */
@@ -80,6 +64,22 @@ public class SecurityGroupBound extends AbstractModel{
      */
     public void setCidrIp(String CidrIp) {
         this.CidrIp = CidrIp;
+    }
+
+    /**
+     * Get 策略，ACCEPT 或者 DROP 
+     * @return Action 策略，ACCEPT 或者 DROP
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 策略，ACCEPT 或者 DROP
+     * @param Action 策略，ACCEPT 或者 DROP
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
     }
 
     /**
@@ -122,11 +122,11 @@ public class SecurityGroupBound extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SecurityGroupBound(SecurityGroupBound source) {
-        if (source.Action != null) {
-            this.Action = new String(source.Action);
-        }
         if (source.CidrIp != null) {
             this.CidrIp = new String(source.CidrIp);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
         }
         if (source.PortRange != null) {
             this.PortRange = new String(source.PortRange);
@@ -141,8 +141,8 @@ public class SecurityGroupBound extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "CidrIp", this.CidrIp);
+        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "PortRange", this.PortRange);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
 

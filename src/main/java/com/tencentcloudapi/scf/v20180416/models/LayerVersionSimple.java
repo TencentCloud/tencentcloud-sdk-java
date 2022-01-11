@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class LayerVersionSimple extends AbstractModel{
 
     /**
-    * layer名称
+    * 绑定的层名称。解绑层需传递空字符串。
     */
     @SerializedName("LayerName")
     @Expose
     private String LayerName;
 
     /**
-    * 版本号
+    * 绑定或解绑层的版本号。解绑函数版本关联的最后一个层版本时，LayerVersion 填 0。
     */
     @SerializedName("LayerVersion")
     @Expose
     private Long LayerVersion;
 
     /**
-     * Get layer名称 
-     * @return LayerName layer名称
+     * Get 绑定的层名称。解绑层需传递空字符串。 
+     * @return LayerName 绑定的层名称。解绑层需传递空字符串。
      */
     public String getLayerName() {
         return this.LayerName;
     }
 
     /**
-     * Set layer名称
-     * @param LayerName layer名称
+     * Set 绑定的层名称。解绑层需传递空字符串。
+     * @param LayerName 绑定的层名称。解绑层需传递空字符串。
      */
     public void setLayerName(String LayerName) {
         this.LayerName = LayerName;
     }
 
     /**
-     * Get 版本号 
-     * @return LayerVersion 版本号
+     * Get 绑定或解绑层的版本号。解绑函数版本关联的最后一个层版本时，LayerVersion 填 0。 
+     * @return LayerVersion 绑定或解绑层的版本号。解绑函数版本关联的最后一个层版本时，LayerVersion 填 0。
      */
     public Long getLayerVersion() {
         return this.LayerVersion;
     }
 
     /**
-     * Set 版本号
-     * @param LayerVersion 版本号
+     * Set 绑定或解绑层的版本号。解绑函数版本关联的最后一个层版本时，LayerVersion 填 0。
+     * @param LayerVersion 绑定或解绑层的版本号。解绑函数版本关联的最后一个层版本时，LayerVersion 填 0。
      */
     public void setLayerVersion(Long LayerVersion) {
         this.LayerVersion = LayerVersion;

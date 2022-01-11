@@ -95,7 +95,10 @@ public class SecretMetadata extends AbstractModel{
     private Long NextRotationTime;
 
     /**
-    * 0 -- 用户自定义凭据；1 -- 云产品凭据
+    * 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretType")
@@ -133,6 +136,14 @@ public class SecretMetadata extends AbstractModel{
     @SerializedName("AssociatedInstanceIDs")
     @Expose
     private String [] AssociatedInstanceIDs;
+
+    /**
+    * 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetUin")
+    @Expose
+    private Long TargetUin;
 
     /**
      * Get 凭据名称 
@@ -303,9 +314,15 @@ public class SecretMetadata extends AbstractModel{
     }
 
     /**
-     * Get 0 -- 用户自定义凭据；1 -- 云产品凭据
+     * Get 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretType 0 -- 用户自定义凭据；1 -- 云产品凭据
+     * @return SecretType 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecretType() {
@@ -313,9 +330,15 @@ public class SecretMetadata extends AbstractModel{
     }
 
     /**
-     * Set 0 -- 用户自定义凭据；1 -- 云产品凭据
+     * Set 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretType 0 -- 用户自定义凭据；1 -- 云产品凭据
+     * @param SecretType 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretType(Long SecretType) {
@@ -402,6 +425,26 @@ public class SecretMetadata extends AbstractModel{
         this.AssociatedInstanceIDs = AssociatedInstanceIDs;
     }
 
+    /**
+     * Get 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTargetUin() {
+        return this.TargetUin;
+    }
+
+    /**
+     * Set 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetUin(Long TargetUin) {
+        this.TargetUin = TargetUin;
+    }
+
     public SecretMetadata() {
     }
 
@@ -458,6 +501,9 @@ public class SecretMetadata extends AbstractModel{
                 this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
             }
         }
+        if (source.TargetUin != null) {
+            this.TargetUin = new Long(source.TargetUin);
+        }
     }
 
 
@@ -480,6 +526,7 @@ public class SecretMetadata extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+        this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
 
     }
 }

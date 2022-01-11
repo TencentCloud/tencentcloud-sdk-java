@@ -54,6 +54,9 @@ public enum EiamErrorCode {
     // 用户为管理员，不能删除。
      FAILEDOPERATION_DELETEUSEREXISTSADMINISTRATOR("FailedOperation.DeleteUserExistsAdministrator"),
      
+    // 删除用户失败。
+     FAILEDOPERATION_DELETEUSERFAILURE("FailedOperation.DeleteUserFailure"),
+     
     // 删除用户组异常。
      FAILEDOPERATION_DELETEUSERGROUPFAILURE("FailedOperation.DeleteUserGroupFailure"),
      

@@ -96,7 +96,7 @@ public class DescribeSecretResponse extends AbstractModel{
     private String ResourceID;
 
     /**
-    * 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+    * 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RotationStatus")
@@ -134,6 +134,14 @@ public class DescribeSecretResponse extends AbstractModel{
     @SerializedName("AssociatedInstanceIDs")
     @Expose
     private String [] AssociatedInstanceIDs;
+
+    /**
+    * 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetUin")
+    @Expose
+    private Long TargetUin;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -315,9 +323,9 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+     * Get 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+     * @return RotationStatus 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRotationStatus() {
@@ -325,9 +333,9 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+     * Set 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+     * @param RotationStatus 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotationStatus(Boolean RotationStatus) {
@@ -415,6 +423,26 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
+     * Get 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTargetUin() {
+        return this.TargetUin;
+    }
+
+    /**
+     * Set 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetUin(Long TargetUin) {
+        this.TargetUin = TargetUin;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -486,6 +514,9 @@ public class DescribeSecretResponse extends AbstractModel{
                 this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
             }
         }
+        if (source.TargetUin != null) {
+            this.TargetUin = new Long(source.TargetUin);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -511,6 +542,7 @@ public class DescribeSecretResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+        this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

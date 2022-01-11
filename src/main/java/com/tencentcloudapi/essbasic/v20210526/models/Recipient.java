@@ -79,6 +79,13 @@ public class Recipient extends AbstractModel{
     private Long RoutingOrder;
 
     /**
+    * 是否是发起方
+    */
+    @SerializedName("IsPromoter")
+    @Expose
+    private Boolean IsPromoter;
+
+    /**
      * Get 签署人唯一标识 
      * @return RecipientId 签署人唯一标识
      */
@@ -206,6 +213,22 @@ public class Recipient extends AbstractModel{
         this.RoutingOrder = RoutingOrder;
     }
 
+    /**
+     * Get 是否是发起方 
+     * @return IsPromoter 是否是发起方
+     */
+    public Boolean getIsPromoter() {
+        return this.IsPromoter;
+    }
+
+    /**
+     * Set 是否是发起方
+     * @param IsPromoter 是否是发起方
+     */
+    public void setIsPromoter(Boolean IsPromoter) {
+        this.IsPromoter = IsPromoter;
+    }
+
     public Recipient() {
     }
 
@@ -238,6 +261,9 @@ public class Recipient extends AbstractModel{
         if (source.RoutingOrder != null) {
             this.RoutingOrder = new Long(source.RoutingOrder);
         }
+        if (source.IsPromoter != null) {
+            this.IsPromoter = new Boolean(source.IsPromoter);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class Recipient extends AbstractModel{
         this.setParamSimple(map, prefix + "RequireSign", this.RequireSign);
         this.setParamSimple(map, prefix + "SignType", this.SignType);
         this.setParamSimple(map, prefix + "RoutingOrder", this.RoutingOrder);
+        this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
 
     }
 }

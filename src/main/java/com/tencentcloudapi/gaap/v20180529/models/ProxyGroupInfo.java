@@ -103,6 +103,16 @@ MOVING表示通道迁移中。
     private Long ProxyType;
 
     /**
+    * 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get 通道组id 
      * @return GroupId 通道组id
      */
@@ -302,6 +312,34 @@ MOVING表示通道迁移中。
         this.ProxyType = ProxyType;
     }
 
+    /**
+     * Get 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Http3Supported 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Http3Supported 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public ProxyGroupInfo() {
     }
 
@@ -343,6 +381,9 @@ MOVING表示通道迁移中。
         if (source.ProxyType != null) {
             this.ProxyType = new Long(source.ProxyType);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -360,6 +401,7 @@ MOVING表示通道迁移中。
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

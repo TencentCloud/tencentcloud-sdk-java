@@ -43,6 +43,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 <li> Editing: 视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> RemoveWatermark: 去除水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
     */
     @SerializedName("Type")
@@ -95,6 +96,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 <li> Editing: 视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> RemoveWatermark: 去除水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li> 
      * @return Type 查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
@@ -102,6 +104,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 <li> Editing: 视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> RemoveWatermark: 去除水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public String getType() {
@@ -115,6 +118,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 <li> Editing: 视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> RemoveWatermark: 去除水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      * @param Type 查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
@@ -122,6 +126,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 <li> Editing: 视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> RemoveWatermark: 去除水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public void setType(String Type) {

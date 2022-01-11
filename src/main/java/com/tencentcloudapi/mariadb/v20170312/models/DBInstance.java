@@ -387,6 +387,14 @@ public class DBInstance extends AbstractModel{
     private Long InstanceType;
 
     /**
+    * 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get 实例 ID，唯一标识一个 TDSQL 实例 
      * @return InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      */
@@ -1242,6 +1250,26 @@ public class DBInstance extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceTags 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceTags 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public DBInstance() {
     }
 
@@ -1400,6 +1428,12 @@ public class DBInstance extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -1457,6 +1491,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

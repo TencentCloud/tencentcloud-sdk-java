@@ -72,6 +72,17 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private String PackageType;
 
     /**
+    * 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果开启了Http3的功能，那么该通道组就不再支持TCP/UDP接入的功能。
+该功能的启停无法在通道组创建完毕后再修改。
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get 通道组所属项目ID 
      * @return ProjectId 通道组所属项目ID
      */
@@ -183,6 +194,38 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.PackageType = PackageType;
     }
 
+    /**
+     * Get 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果开启了Http3的功能，那么该通道组就不再支持TCP/UDP接入的功能。
+该功能的启停无法在通道组创建完毕后再修改。 
+     * @return Http3Supported 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果开启了Http3的功能，那么该通道组就不再支持TCP/UDP接入的功能。
+该功能的启停无法在通道组创建完毕后再修改。
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果开启了Http3的功能，那么该通道组就不再支持TCP/UDP接入的功能。
+该功能的启停无法在通道组创建完毕后再修改。
+     * @param Http3Supported 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果开启了Http3的功能，那么该通道组就不再支持TCP/UDP接入的功能。
+该功能的启停无法在通道组创建完毕后再修改。
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public CreateProxyGroupRequest() {
     }
 
@@ -218,6 +261,9 @@ public class CreateProxyGroupRequest extends AbstractModel{
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -232,6 +278,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

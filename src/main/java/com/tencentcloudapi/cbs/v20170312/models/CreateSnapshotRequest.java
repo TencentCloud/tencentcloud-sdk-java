@@ -37,7 +37,7 @@ public class CreateSnapshotRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
-    * 快照的到期时间，到期后该快照将会自动删除
+    * 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
     */
     @SerializedName("Deadline")
     @Expose
@@ -76,16 +76,16 @@ public class CreateSnapshotRequest extends AbstractModel{
     }
 
     /**
-     * Get 快照的到期时间，到期后该快照将会自动删除 
-     * @return Deadline 快照的到期时间，到期后该快照将会自动删除
+     * Get 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00 
+     * @return Deadline 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 快照的到期时间，到期后该快照将会自动删除
-     * @param Deadline 快照的到期时间，到期后该快照将会自动删除
+     * Set 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
+     * @param Deadline 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifySyncTaskAttributeRequest extends AbstractModel{
 
     /**
-    * 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+    * 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
     */
     @SerializedName("TaskIds")
     @Expose
@@ -37,16 +37,16 @@ public class ModifySyncTaskAttributeRequest extends AbstractModel{
     private String TaskName;
 
     /**
-     * Get 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。 
-     * @return TaskIds 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+     * Get 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。 
+     * @return TaskIds 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
      */
     public String [] getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
-     * @param TaskIds 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+     * Set 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
+     * @param TaskIds 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;

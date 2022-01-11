@@ -215,6 +215,13 @@ FAILED：表示操作失败
     private String Zone;
 
     /**
+    * 实例绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -682,6 +689,22 @@ FAILED：表示操作失败
         this.Zone = Zone;
     }
 
+    /**
+     * Get 实例绑定的标签列表。 
+     * @return Tags 实例绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 实例绑定的标签列表。
+     * @param Tags 实例绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Instance() {
     }
 
@@ -771,6 +794,12 @@ FAILED：表示操作失败
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -803,6 +832,7 @@ FAILED：表示操作失败
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

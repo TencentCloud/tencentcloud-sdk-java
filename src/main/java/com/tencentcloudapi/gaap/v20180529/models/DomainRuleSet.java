@@ -190,6 +190,16 @@ public class DomainRuleSet extends AbstractModel{
     private String BanStatus;
 
     /**
+    * Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get 转发规则域名。 
      * @return Domain 转发规则域名。
      */
@@ -617,6 +627,34 @@ public class DomainRuleSet extends AbstractModel{
         this.BanStatus = BanStatus;
     }
 
+    /**
+     * Get Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Http3Supported Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Http3Supported Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public DomainRuleSet() {
     }
 
@@ -694,6 +732,9 @@ public class DomainRuleSet extends AbstractModel{
         if (source.BanStatus != null) {
             this.BanStatus = new String(source.BanStatus);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -721,6 +762,7 @@ public class DomainRuleSet extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

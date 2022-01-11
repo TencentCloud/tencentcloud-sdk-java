@@ -58,7 +58,7 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     private String AuthTag;
 
     /**
-    * 合作企业方第三方机构唯一标识数据
+    * 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
@@ -145,16 +145,16 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 合作企业方第三方机构唯一标识数据 
-     * @return ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据
+     * Get 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔 
+     * @return ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
      */
     public String getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
     }
 
     /**
-     * Set 合作企业方第三方机构唯一标识数据
-     * @param ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据
+     * Set 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+     * @param ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
      */
     public void setProxyOrganizationOpenIds(String ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;

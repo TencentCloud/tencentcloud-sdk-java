@@ -51,6 +51,16 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private String Url;
 
     /**
+    * 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+    */
+    @SerializedName("Size")
+    @Expose
+    private Long Size;
+
+    /**
      * Get 转自适应码流规格。 
      * @return Definition 转自适应码流规格。
      */
@@ -114,6 +124,34 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li> 
+     * @return Size 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     */
+    public Long getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     * @param Size 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     */
+    public void setSize(Long Size) {
+        this.Size = Size;
+    }
+
     public AdaptiveDynamicStreamingInfoItem() {
     }
 
@@ -134,6 +172,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
     }
 
 
@@ -145,6 +186,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Package", this.Package);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

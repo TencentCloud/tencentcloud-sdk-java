@@ -60,6 +60,16 @@ public class CreateDomainRequest extends AbstractModel{
     private String [] PolyClientCertificateIds;
 
     /**
+    * 是否开启Http3特性的标识，其中：
+0，表示不开启Http3；
+1，表示开启Http3。
+默认不开启Http3。可以通过SetDomainHttp3开启。
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
@@ -147,6 +157,34 @@ public class CreateDomainRequest extends AbstractModel{
         this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
+    /**
+     * Get 是否开启Http3特性的标识，其中：
+0，表示不开启Http3；
+1，表示开启Http3。
+默认不开启Http3。可以通过SetDomainHttp3开启。 
+     * @return Http3Supported 是否开启Http3特性的标识，其中：
+0，表示不开启Http3；
+1，表示开启Http3。
+默认不开启Http3。可以通过SetDomainHttp3开启。
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 是否开启Http3特性的标识，其中：
+0，表示不开启Http3；
+1，表示开启Http3。
+默认不开启Http3。可以通过SetDomainHttp3开启。
+     * @param Http3Supported 是否开启Http3特性的标识，其中：
+0，表示不开启Http3；
+1，表示开启Http3。
+默认不开启Http3。可以通过SetDomainHttp3开启。
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public CreateDomainRequest() {
     }
 
@@ -173,6 +211,9 @@ public class CreateDomainRequest extends AbstractModel{
                 this.PolyClientCertificateIds[i] = new String(source.PolyClientCertificateIds[i]);
             }
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -185,6 +226,7 @@ public class CreateDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
         this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

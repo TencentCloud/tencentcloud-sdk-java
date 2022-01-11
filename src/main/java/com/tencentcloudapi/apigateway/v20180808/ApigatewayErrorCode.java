@@ -408,6 +408,9 @@ public enum ApigatewayErrorCode {
     // 当前插件不支持绑定。
      UNSUPPORTEDOPERATION_ATTACHPLUGIN("UnsupportedOperation.AttachPlugin"),
      
+    // 日志检索起始时间间隔。
+     UNSUPPORTEDOPERATION_CLSSEARCHTIME("UnsupportedOperation.ClsSearchTime"),
+     
     // 协议为HTTP时，不支持强制Https。
      UNSUPPORTEDOPERATION_FORCEHTTPS("UnsupportedOperation.ForceHttps"),
      

@@ -30,6 +30,13 @@ public class TerminateDisksRequest extends AbstractModel{
     private String [] DiskIds;
 
     /**
+    * 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+    */
+    @SerializedName("DeleteSnapshot")
+    @Expose
+    private Long DeleteSnapshot;
+
+    /**
      * Get 需退还的云盘ID列表。 
      * @return DiskIds 需退还的云盘ID列表。
      */
@@ -43,6 +50,22 @@ public class TerminateDisksRequest extends AbstractModel{
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
+    }
+
+    /**
+     * Get 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。 
+     * @return DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     */
+    public Long getDeleteSnapshot() {
+        return this.DeleteSnapshot;
+    }
+
+    /**
+     * Set 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * @param DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     */
+    public void setDeleteSnapshot(Long DeleteSnapshot) {
+        this.DeleteSnapshot = DeleteSnapshot;
     }
 
     public TerminateDisksRequest() {
@@ -59,6 +82,9 @@ public class TerminateDisksRequest extends AbstractModel{
                 this.DiskIds[i] = new String(source.DiskIds[i]);
             }
         }
+        if (source.DeleteSnapshot != null) {
+            this.DeleteSnapshot = new Long(source.DeleteSnapshot);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class TerminateDisksRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
 
     }
 }

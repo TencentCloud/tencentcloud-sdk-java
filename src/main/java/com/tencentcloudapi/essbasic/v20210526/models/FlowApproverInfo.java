@@ -86,7 +86,7 @@ public class FlowApproverInfo extends AbstractModel{
     private Long PreReadTime;
 
     /**
-    * 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN
+    * 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
     */
     @SerializedName("ComponentLimitType")
     @Expose
@@ -102,16 +102,16 @@ public class FlowApproverInfo extends AbstractModel{
     /**
     * 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
     */
-    @SerializedName("OrganizationOpenId")
-    @Expose
-    private String OrganizationOpenId;
-
-    /**
-    * 同一渠道下其他合作企业OpenId，B2B场景下必传；
-    */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
+
+    /**
+    * 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+    */
+    @SerializedName("OrganizationOpenId")
+    @Expose
+    private String OrganizationOpenId;
 
     /**
      * Get 签署人姓名 
@@ -258,16 +258,16 @@ public class FlowApproverInfo extends AbstractModel{
     }
 
     /**
-     * Get 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN 
-     * @return ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN
+     * Get 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名) 
+     * @return ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
      */
     public String [] getComponentLimitType() {
         return this.ComponentLimitType;
     }
 
     /**
-     * Set 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN
-     * @param ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN
+     * Set 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
+     * @param ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
      */
     public void setComponentLimitType(String [] ComponentLimitType) {
         this.ComponentLimitType = ComponentLimitType;
@@ -291,6 +291,22 @@ public class FlowApproverInfo extends AbstractModel{
 
     /**
      * Get 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传； 
+     * @return OrganizationName 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     * @param OrganizationName 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
+    }
+
+    /**
+     * Get 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传； 
      * @return OrganizationOpenId 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
      */
     public String getOrganizationOpenId() {
@@ -303,22 +319,6 @@ public class FlowApproverInfo extends AbstractModel{
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
-    }
-
-    /**
-     * Get 同一渠道下其他合作企业OpenId，B2B场景下必传； 
-     * @return OrganizationName 同一渠道下其他合作企业OpenId，B2B场景下必传；
-     */
-    public String getOrganizationName() {
-        return this.OrganizationName;
-    }
-
-    /**
-     * Set 同一渠道下其他合作企业OpenId，B2B场景下必传；
-     * @param OrganizationName 同一渠道下其他合作企业OpenId，B2B场景下必传；
-     */
-    public void setOrganizationName(String OrganizationName) {
-        this.OrganizationName = OrganizationName;
     }
 
     public FlowApproverInfo() {
@@ -365,11 +365,11 @@ public class FlowApproverInfo extends AbstractModel{
         if (source.RecipientId != null) {
             this.RecipientId = new String(source.RecipientId);
         }
-        if (source.OrganizationOpenId != null) {
-            this.OrganizationOpenId = new String(source.OrganizationOpenId);
-        }
         if (source.OrganizationName != null) {
             this.OrganizationName = new String(source.OrganizationName);
+        }
+        if (source.OrganizationOpenId != null) {
+            this.OrganizationOpenId = new String(source.OrganizationOpenId);
         }
     }
 
@@ -389,8 +389,8 @@ public class FlowApproverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         this.setParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
-        this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
 
     }
 }

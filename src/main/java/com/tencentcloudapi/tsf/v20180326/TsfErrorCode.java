@@ -207,6 +207,9 @@ public enum TsfErrorCode {
     // TSF节点管理通用错误信息。
      INTERNALERROR_INSTANCECOMMONERROR("InternalError.InstanceCommonError"),
      
+    // 创建kubernetes命名空间失败。
+     INTERNALERROR_KUBERNETESAPICREATENAMESPACESERROR("InternalError.KubernetesApiCreateNamespacesError"),
+     
     // 创建kubernetes秘钥失败。
      INTERNALERROR_KUBERNETESAPICREATESECRETERROR("InternalError.KubernetesApiCreateSecretError"),
      
@@ -444,6 +447,9 @@ public enum TsfErrorCode {
     // 服务端口值非法。
      INVALIDPARAMETERVALUE_CONTAINERGROUPPORTINVALID("InvalidParameterValue.ContainergroupPortInvalid"),
      
+    // 服务端口不允许重复映射。
+     INVALIDPARAMETERVALUE_CONTAINERGROUPPORTSREPEAT("InvalidParameterValue.ContainergroupPortsRepeat"),
+     
     // 协议值非法,限定:TCP/UDP。
      INVALIDPARAMETERVALUE_CONTAINERGROUPPROTOCOLINVALID("InvalidParameterValue.ContainergroupProtocolInvalid"),
      
@@ -497,6 +503,9 @@ public enum TsfErrorCode {
      
     // 文件配置项名称不合规。
      INVALIDPARAMETERVALUE_FILECONFIGNAMEINVALID("InvalidParameterValue.FileConfigNameInvalid"),
+     
+    // 同一部署组禁止配置文件重复(文件路径+文件名)。
+     INVALIDPARAMETERVALUE_FILECONFIGPATHEXISTS("InvalidParameterValue.FileConfigPathExists"),
      
     // 文件配置项版本描述不合规。
      INVALIDPARAMETERVALUE_FILECONFIGVERSIONDESCINVALID("InvalidParameterValue.FileConfigVersionDescInvalid"),

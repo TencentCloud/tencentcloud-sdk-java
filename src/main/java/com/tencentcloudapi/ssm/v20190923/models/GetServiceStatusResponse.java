@@ -37,6 +37,14 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long InvalidType;
 
     /**
+    * true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
+    */
+    @SerializedName("AccessKeyEscrowEnabled")
+    @Expose
+    private Boolean AccessKeyEscrowEnabled;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。 
+     * @return AccessKeyEscrowEnabled true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
+     */
+    public Boolean getAccessKeyEscrowEnabled() {
+        return this.AccessKeyEscrowEnabled;
+    }
+
+    /**
+     * Set true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
+     * @param AccessKeyEscrowEnabled true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
+     */
+    public void setAccessKeyEscrowEnabled(Boolean AccessKeyEscrowEnabled) {
+        this.AccessKeyEscrowEnabled = AccessKeyEscrowEnabled;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +133,9 @@ public class GetServiceStatusResponse extends AbstractModel{
         if (source.InvalidType != null) {
             this.InvalidType = new Long(source.InvalidType);
         }
+        if (source.AccessKeyEscrowEnabled != null) {
+            this.AccessKeyEscrowEnabled = new Boolean(source.AccessKeyEscrowEnabled);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +148,7 @@ public class GetServiceStatusResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
         this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
+        this.setParamSimple(map, prefix + "AccessKeyEscrowEnabled", this.AccessKeyEscrowEnabled);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

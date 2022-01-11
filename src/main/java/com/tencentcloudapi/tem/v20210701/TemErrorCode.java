@@ -1,5 +1,8 @@
 package com.tencentcloudapi.tem.v20210701;
 public enum TemErrorCode {
+    // 创建apm资源失败。
+     INTERNALERROR_CREATEAPMRESOURCEERROR("InternalError.CreateApmResourceError"),
+     
     // 创建服务失败。
      INTERNALERROR_CREATESERVICEERROR("InternalError.CreateServiceError"),
      
@@ -11,6 +14,9 @@ public enum TemErrorCode {
      
     // 查询实例信息失败。
      INTERNALERROR_DESCRIBERUNPODLISTERROR("InternalError.DescribeRunPodListError"),
+     
+    // 版本号格式非法。
+     INVALIDPARAMETERVALUE_INVALIDDEPLOYVERSION("InvalidParameterValue.InvalidDeployVersion"),
      
     // 环境重复。
      INVALIDPARAMETERVALUE_NAMESPACEDUPLICATEERROR("InvalidParameterValue.NamespaceDuplicateError"),
@@ -24,11 +30,17 @@ public enum TemErrorCode {
     // 应用名已存在。
      INVALIDPARAMETERVALUE_SERVICENAMEDUPLICATEERROR("InvalidParameterValue.ServiceNameDuplicateError"),
      
+    // 非 JAVA 应用不支持链路追踪特性。
+     INVALIDPARAMETERVALUE_TRAITSTRACINGNOTSUPPORTED("InvalidParameterValue.TraitsTracingNotSupported"),
+     
     // 版本的路由流量不为0。
      INVALIDPARAMETERVALUE_VERSIONROUTERATENOTZERO("InvalidParameterValue.VersionRouteRateNotZero"),
      
     // 环境ID不能为空。
      MISSINGPARAMETER_NAMESPACEIDNULL("MissingParameter.NamespaceIdNull"),
+     
+    // 目标微服务已离线。
+     RESOURCENOTFOUND_MICROSERVICEOFFLINE("ResourceNotFound.MicroserviceOffline"),
      
     // 找不到应用。
      RESOURCENOTFOUND_SERVICENOTFOUND("ResourceNotFound.ServiceNotFound"),

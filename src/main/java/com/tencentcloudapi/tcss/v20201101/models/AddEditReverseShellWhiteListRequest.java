@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AddEditReverseShellWhiteListRequest extends AbstractModel{
 
     /**
-    * 增加白名单信息，白名单id为空，编辑白名单id不能为空
+    * 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
     */
     @SerializedName("WhiteListInfo")
     @Expose
     private ReverseShellWhiteListInfo WhiteListInfo;
 
     /**
-    * 仅在添加白名单时候使用
+    * 仅在添加事件白名单时候使用
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-     * Get 增加白名单信息，白名单id为空，编辑白名单id不能为空 
-     * @return WhiteListInfo 增加白名单信息，白名单id为空，编辑白名单id不能为空
+     * Get 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。 
+     * @return WhiteListInfo 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
      */
     public ReverseShellWhiteListInfo getWhiteListInfo() {
         return this.WhiteListInfo;
     }
 
     /**
-     * Set 增加白名单信息，白名单id为空，编辑白名单id不能为空
-     * @param WhiteListInfo 增加白名单信息，白名单id为空，编辑白名单id不能为空
+     * Set 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
+     * @param WhiteListInfo 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
      */
     public void setWhiteListInfo(ReverseShellWhiteListInfo WhiteListInfo) {
         this.WhiteListInfo = WhiteListInfo;
     }
 
     /**
-     * Get 仅在添加白名单时候使用 
-     * @return EventId 仅在添加白名单时候使用
+     * Get 仅在添加事件白名单时候使用 
+     * @return EventId 仅在添加事件白名单时候使用
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 仅在添加白名单时候使用
-     * @param EventId 仅在添加白名单时候使用
+     * Set 仅在添加事件白名单时候使用
+     * @param EventId 仅在添加事件白名单时候使用
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;

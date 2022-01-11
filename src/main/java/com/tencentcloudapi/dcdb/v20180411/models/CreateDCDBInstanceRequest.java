@@ -178,6 +178,13 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
      * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -545,6 +552,22 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    /**
+     * Get 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数 
+     * @return SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+     * @param SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -628,6 +651,12 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -656,6 +685,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

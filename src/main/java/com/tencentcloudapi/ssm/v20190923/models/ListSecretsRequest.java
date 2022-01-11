@@ -75,6 +75,7 @@ public class ListSecretsRequest extends AbstractModel{
     * 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
     */
     @SerializedName("SecretType")
     @Expose
@@ -218,10 +219,12 @@ public class ListSecretsRequest extends AbstractModel{
     /**
      * Get 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。 
+2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。 
      * @return SecretType 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
      */
     public Long getSecretType() {
         return this.SecretType;
@@ -231,9 +234,11 @@ public class ListSecretsRequest extends AbstractModel{
      * Set 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
      * @param SecretType 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;

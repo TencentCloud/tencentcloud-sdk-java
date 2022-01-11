@@ -44,7 +44,7 @@ public class CreateClusterRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 集群的标签列表
+    * 集群的标签列表(已废弃)
     */
     @SerializedName("Tags")
     @Expose
@@ -106,16 +106,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 集群的标签列表 
-     * @return Tags 集群的标签列表
+     * Get 集群的标签列表(已废弃) 
+     * @return Tags 集群的标签列表(已废弃)
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 集群的标签列表
-     * @param Tags 集群的标签列表
+     * Set 集群的标签列表(已废弃)
+     * @param Tags 集群的标签列表(已废弃)
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

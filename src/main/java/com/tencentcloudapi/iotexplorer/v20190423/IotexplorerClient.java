@@ -39,6 +39,46 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *批量绑定子设备
+     * @param req BindDevicesRequest
+     * @return BindDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindDevicesResponse BindDevices(BindDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量绑定子产品
+     * @param req BindProductsRequest
+     * @return BindProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindProductsResponse BindProducts(BindProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindProducts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供给用户异步调用设备行为的能力
      * @param req CallDeviceActionAsyncRequest
      * @return CallDeviceActionAsyncResponse
@@ -559,6 +599,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取网关产品已经绑定的子产品
+     * @param req DescribeBindedProductsRequest
+     * @return DescribeBindedProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBindedProductsResponse DescribeBindedProducts(DescribeBindedProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBindedProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBindedProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBindedProducts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查看某个设备的详细信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
@@ -571,6 +631,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询设备绑定的网关设备
+     * @param req DescribeDeviceBindGatewayRequest
+     * @return DescribeDeviceBindGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceBindGatewayResponse DescribeDeviceBindGateway(DescribeDeviceBindGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceBindGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceBindGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeviceBindGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -691,6 +771,46 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFirmwareTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFirmwareTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取网关绑定的子设备列表
+     * @param req DescribeGatewayBindDevicesRequest
+     * @return DescribeGatewayBindDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayBindDevicesResponse DescribeGatewayBindDevices(DescribeGatewayBindDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewayBindDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewayBindDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewayBindDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取网关可绑定或解绑的子产品
+     * @param req DescribeGatewaySubProductsRequest
+     * @return DescribeGatewaySubProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewaySubProductsResponse DescribeGatewaySubProducts(DescribeGatewaySubProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewaySubProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewaySubProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewaySubProducts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1031,6 +1151,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetFamilyDeviceUserListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetFamilyDeviceUserList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定网关设备的子设备列表
+     * @param req GetGatewaySubDeviceListRequest
+     * @return GetGatewaySubDeviceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetGatewaySubDeviceListResponse GetGatewaySubDeviceList(GetGatewaySubDeviceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetGatewaySubDeviceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetGatewaySubDeviceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetGatewaySubDeviceList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1531,6 +1671,46 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchTopicRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchTopicRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量解绑子设备
+     * @param req UnbindDevicesRequest
+     * @return UnbindDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindDevicesResponse UnbindDevices(UnbindDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量解绑子产品
+     * @param req UnbindProductsRequest
+     * @return UnbindProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindProductsResponse UnbindProducts(UnbindProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindProducts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

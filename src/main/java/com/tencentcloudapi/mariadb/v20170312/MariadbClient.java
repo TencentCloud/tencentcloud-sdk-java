@@ -200,6 +200,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *创建后付费实例
+     * @param req CreateHourDBInstanceRequest
+     * @return CreateHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHourDBInstanceResponse CreateHourDBInstance(CreateHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHourDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateTmpInstances）用于创建临时实例。
      * @param req CreateTmpInstancesRequest
      * @return CreateTmpInstancesResponse
