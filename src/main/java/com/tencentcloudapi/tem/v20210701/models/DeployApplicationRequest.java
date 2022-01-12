@@ -140,8 +140,10 @@ public class DeployApplicationRequest extends AbstractModel{
 
     /**
     * JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
     */
     @SerializedName("JdkVersion")
     @Expose
@@ -272,6 +274,27 @@ public class DeployApplicationRequest extends AbstractModel{
     @SerializedName("LogEnable")
     @Expose
     private Long LogEnable;
+
+    /**
+    * （除开镜像配置）配置是否修改
+    */
+    @SerializedName("ConfEdited")
+    @Expose
+    private Boolean ConfEdited;
+
+    /**
+    * 是否开启应用加速
+    */
+    @SerializedName("SpeedUp")
+    @Expose
+    private Boolean SpeedUp;
+
+    /**
+    * 启动探针配置
+    */
+    @SerializedName("StartupProbe")
+    @Expose
+    private HealthCheckConfig StartupProbe;
 
     /**
      * Get 应用ID 
@@ -547,11 +570,15 @@ public class DeployApplicationRequest extends AbstractModel{
 
     /**
      * Get JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。 
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。 
      * @return JdkVersion JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
      */
     public String getJdkVersion() {
         return this.JdkVersion;
@@ -559,11 +586,15 @@ public class DeployApplicationRequest extends AbstractModel{
 
     /**
      * Set JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
      * @param JdkVersion JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
      */
     public void setJdkVersion(String JdkVersion) {
         this.JdkVersion = JdkVersion;
@@ -857,6 +888,54 @@ public class DeployApplicationRequest extends AbstractModel{
         this.LogEnable = LogEnable;
     }
 
+    /**
+     * Get （除开镜像配置）配置是否修改 
+     * @return ConfEdited （除开镜像配置）配置是否修改
+     */
+    public Boolean getConfEdited() {
+        return this.ConfEdited;
+    }
+
+    /**
+     * Set （除开镜像配置）配置是否修改
+     * @param ConfEdited （除开镜像配置）配置是否修改
+     */
+    public void setConfEdited(Boolean ConfEdited) {
+        this.ConfEdited = ConfEdited;
+    }
+
+    /**
+     * Get 是否开启应用加速 
+     * @return SpeedUp 是否开启应用加速
+     */
+    public Boolean getSpeedUp() {
+        return this.SpeedUp;
+    }
+
+    /**
+     * Set 是否开启应用加速
+     * @param SpeedUp 是否开启应用加速
+     */
+    public void setSpeedUp(Boolean SpeedUp) {
+        this.SpeedUp = SpeedUp;
+    }
+
+    /**
+     * Get 启动探针配置 
+     * @return StartupProbe 启动探针配置
+     */
+    public HealthCheckConfig getStartupProbe() {
+        return this.StartupProbe;
+    }
+
+    /**
+     * Set 启动探针配置
+     * @param StartupProbe 启动探针配置
+     */
+    public void setStartupProbe(HealthCheckConfig StartupProbe) {
+        this.StartupProbe = StartupProbe;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -997,6 +1076,15 @@ public class DeployApplicationRequest extends AbstractModel{
         if (source.LogEnable != null) {
             this.LogEnable = new Long(source.LogEnable);
         }
+        if (source.ConfEdited != null) {
+            this.ConfEdited = new Boolean(source.ConfEdited);
+        }
+        if (source.SpeedUp != null) {
+            this.SpeedUp = new Boolean(source.SpeedUp);
+        }
+        if (source.StartupProbe != null) {
+            this.StartupProbe = new HealthCheckConfig(source.StartupProbe);
+        }
     }
 
 
@@ -1039,6 +1127,9 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "HorizontalAutoscaler.", this.HorizontalAutoscaler);
         this.setParamArrayObj(map, prefix + "CronHorizontalAutoscaler.", this.CronHorizontalAutoscaler);
         this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
+        this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
+        this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
+        this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
 
     }
 }

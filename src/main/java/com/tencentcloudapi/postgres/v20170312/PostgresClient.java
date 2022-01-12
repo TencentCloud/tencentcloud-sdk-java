@@ -59,6 +59,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *用于克隆实例，支持指定备份集、指定时间点进行克隆。
+     * @param req CloneDBInstanceRequest
+     * @return CloneDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneDBInstanceResponse CloneDBInstance(CloneDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -251,6 +271,66 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeAvailableRecoveryTime）用于查询实例可恢复的时间范围。
+     * @param req DescribeAvailableRecoveryTimeRequest
+     * @return DescribeAvailableRecoveryTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTime(DescribeAvailableRecoveryTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableRecoveryTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableRecoveryTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAvailableRecoveryTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeBackupPlans) 用于实例所有的备份计划查询
+     * @param req DescribeBackupPlansRequest
+     * @return DescribeBackupPlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupPlansResponse DescribeBackupPlans(DescribeBackupPlansRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupPlansResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupPlansResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupPlans");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCloneDBInstanceSpec）用于查询克隆实例可选择的最小规格，包括SpecCode和磁盘。
+     * @param req DescribeCloneDBInstanceSpecRequest
+     * @return DescribeCloneDBInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloneDBInstanceSpecResponse DescribeCloneDBInstanceSpec(DescribeCloneDBInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloneDBInstanceSpecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloneDBInstanceSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloneDBInstanceSpec");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -751,6 +831,46 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ModifyBackupPlan) 用于实例备份计划的修改，默认是在每天的凌晨开始全量备份，备份保留时长是7天。可以根据此接口指定时间进行实例的备份。
+     * @param req ModifyBackupPlanRequest
+     * @return ModifyBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupPlanResponse ModifyBackupPlan(ModifyBackupPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDBInstanceDeployment）用于修改节点可用区部署方式，仅支持主实例。
+     * @param req ModifyDBInstanceDeploymentRequest
+     * @return ModifyDBInstanceDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceDeploymentResponse ModifyDBInstanceDeployment(ModifyDBInstanceDeploymentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceDeploymentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceDeploymentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceDeployment");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

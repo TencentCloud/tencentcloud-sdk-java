@@ -30,7 +30,7 @@ public class CreateTaskRequest extends AbstractModel{
     private Task Task;
 
     /**
-    * 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
+    * 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -67,16 +67,16 @@ public class CreateTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。 
-     * @return DatabaseName 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
+     * Get 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。 
+     * @return DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
-     * @param DatabaseName 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
+     * Set 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
+     * @param DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;

@@ -47,6 +47,22 @@ public class URLNotice extends AbstractModel{
     private String ValidationCode;
 
     /**
+    * 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
      * Get 回调 url（限长256字符）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return URL 回调 url（限长256字符）
@@ -106,6 +122,46 @@ public class URLNotice extends AbstractModel{
         this.ValidationCode = ValidationCode;
     }
 
+    /**
+     * Get 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public URLNotice() {
     }
 
@@ -123,6 +179,12 @@ public class URLNotice extends AbstractModel{
         if (source.ValidationCode != null) {
             this.ValidationCode = new String(source.ValidationCode);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
     }
 
 
@@ -133,6 +195,8 @@ public class URLNotice extends AbstractModel{
         this.setParamSimple(map, prefix + "URL", this.URL);
         this.setParamSimple(map, prefix + "IsValid", this.IsValid);
         this.setParamSimple(map, prefix + "ValidationCode", this.ValidationCode);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

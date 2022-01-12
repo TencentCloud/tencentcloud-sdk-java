@@ -47,6 +47,14 @@ public class TriggerAction extends AbstractModel{
     private String TriggerCronConfig;
 
     /**
+    * 预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProvisionedType")
+    @Expose
+    private String ProvisionedType;
+
+    /**
      * Get 定时预置名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TriggerName 定时预置名称
@@ -106,6 +114,26 @@ public class TriggerAction extends AbstractModel{
         this.TriggerCronConfig = TriggerCronConfig;
     }
 
+    /**
+     * Get 预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProvisionedType 预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProvisionedType() {
+        return this.ProvisionedType;
+    }
+
+    /**
+     * Set 预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProvisionedType 预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProvisionedType(String ProvisionedType) {
+        this.ProvisionedType = ProvisionedType;
+    }
+
     public TriggerAction() {
     }
 
@@ -123,6 +151,9 @@ public class TriggerAction extends AbstractModel{
         if (source.TriggerCronConfig != null) {
             this.TriggerCronConfig = new String(source.TriggerCronConfig);
         }
+        if (source.ProvisionedType != null) {
+            this.ProvisionedType = new String(source.ProvisionedType);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class TriggerAction extends AbstractModel{
         this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
         this.setParamSimple(map, prefix + "TriggerProvisionedConcurrencyNum", this.TriggerProvisionedConcurrencyNum);
         this.setParamSimple(map, prefix + "TriggerCronConfig", this.TriggerCronConfig);
+        this.setParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
 
     }
 }

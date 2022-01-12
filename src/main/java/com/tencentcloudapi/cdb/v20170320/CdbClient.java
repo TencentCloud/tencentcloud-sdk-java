@@ -1546,7 +1546,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表。
+     *本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表，全地域公共参数Region均为ap-shanghai。
      * @param req DescribeUploadedFilesRequest
      * @return DescribeUploadedFilesResponse
      * @throws TencentCloudSDKException
