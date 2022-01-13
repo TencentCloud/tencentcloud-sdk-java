@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateNatFwInstanceWithDomainResponse extends AbstractModel{
 
     /**
+    * nat实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CfwInsId")
+    @Expose
+    private String CfwInsId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get nat实例信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CfwInsId nat实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCfwInsId() {
+        return this.CfwInsId;
+    }
+
+    /**
+     * Set nat实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CfwInsId nat实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCfwInsId(String CfwInsId) {
+        this.CfwInsId = CfwInsId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class CreateNatFwInstanceWithDomainResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateNatFwInstanceWithDomainResponse(CreateNatFwInstanceWithDomainResponse source) {
+        if (source.CfwInsId != null) {
+            this.CfwInsId = new String(source.CfwInsId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateNatFwInstanceWithDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CfwInsId", this.CfwInsId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

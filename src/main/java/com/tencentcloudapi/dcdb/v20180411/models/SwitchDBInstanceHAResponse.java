@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatFwInstanceResponse extends AbstractModel{
+public class SwitchDBInstanceHAResponse extends AbstractModel{
 
     /**
-    * 防火墙实例id
+    * 异步流程Id
     */
-    @SerializedName("CfwInsId")
+    @SerializedName("FlowId")
     @Expose
-    private String CfwInsId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateNatFwInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInsId 防火墙实例id
+     * Get 异步流程Id 
+     * @return FlowId 异步流程Id
      */
-    public String getCfwInsId() {
-        return this.CfwInsId;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInsId 防火墙实例id
+     * Set 异步流程Id
+     * @param FlowId 异步流程Id
      */
-    public void setCfwInsId(String CfwInsId) {
-        this.CfwInsId = CfwInsId;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateNatFwInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateNatFwInstanceResponse() {
+    public SwitchDBInstanceHAResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateNatFwInstanceResponse(CreateNatFwInstanceResponse source) {
-        if (source.CfwInsId != null) {
-            this.CfwInsId = new String(source.CfwInsId);
+    public SwitchDBInstanceHAResponse(SwitchDBInstanceHAResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateNatFwInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CfwInsId", this.CfwInsId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

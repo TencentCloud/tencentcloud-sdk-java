@@ -1050,6 +1050,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(SwitchDBInstanceHA)用于实例主备切换。
+     * @param req SwitchDBInstanceHARequest
+     * @return SwitchDBInstanceHAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceHAResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDBInstanceHA");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpgradeDCDBInstance）用于升级分布式数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
      * @param req UpgradeDCDBInstanceRequest
      * @return UpgradeDCDBInstanceResponse

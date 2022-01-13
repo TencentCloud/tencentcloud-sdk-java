@@ -44,6 +44,20 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
     private Boolean ForceStop;
 
     /**
+    * 待扩容的系统盘配置信息。只支持扩容云盘。
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 扩容云盘的方式是否为在线扩容。
+    */
+    @SerializedName("ResizeOnline")
+    @Expose
+    private Boolean ResizeOnline;
+
+    /**
      * Get 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。 
      * @return InstanceId 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      */
@@ -91,6 +105,38 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
         this.ForceStop = ForceStop;
     }
 
+    /**
+     * Get 待扩容的系统盘配置信息。只支持扩容云盘。 
+     * @return SystemDisk 待扩容的系统盘配置信息。只支持扩容云盘。
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 待扩容的系统盘配置信息。只支持扩容云盘。
+     * @param SystemDisk 待扩容的系统盘配置信息。只支持扩容云盘。
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 扩容云盘的方式是否为在线扩容。 
+     * @return ResizeOnline 扩容云盘的方式是否为在线扩容。
+     */
+    public Boolean getResizeOnline() {
+        return this.ResizeOnline;
+    }
+
+    /**
+     * Set 扩容云盘的方式是否为在线扩容。
+     * @param ResizeOnline 扩容云盘的方式是否为在线扩容。
+     */
+    public void setResizeOnline(Boolean ResizeOnline) {
+        this.ResizeOnline = ResizeOnline;
+    }
+
     public ResizeInstanceDisksRequest() {
     }
 
@@ -111,6 +157,12 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
         if (source.ForceStop != null) {
             this.ForceStop = new Boolean(source.ForceStop);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.ResizeOnline != null) {
+            this.ResizeOnline = new Boolean(source.ResizeOnline);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamSimple(map, prefix + "ResizeOnline", this.ResizeOnline);
 
     }
 }

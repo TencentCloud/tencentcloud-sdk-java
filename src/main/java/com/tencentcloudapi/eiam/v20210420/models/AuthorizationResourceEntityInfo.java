@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthorizationResouceEntityInfo extends AbstractModel{
+public class AuthorizationResourceEntityInfo extends AbstractModel{
 
     /**
     * 授权关系的唯一ID
@@ -134,14 +134,14 @@ public class AuthorizationResouceEntityInfo extends AbstractModel{
         this.ResourceName = ResourceName;
     }
 
-    public AuthorizationResouceEntityInfo() {
+    public AuthorizationResourceEntityInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuthorizationResouceEntityInfo(AuthorizationResouceEntityInfo source) {
+    public AuthorizationResourceEntityInfo(AuthorizationResourceEntityInfo source) {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }

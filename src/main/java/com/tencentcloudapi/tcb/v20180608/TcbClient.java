@@ -1502,6 +1502,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *搜索CLS日志，TCB角色秘钥访问
+     * @param req SearchClsLogRequest
+     * @return SearchClsLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClsLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClsLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchClsLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
      * @param req TurnOffStandaloneGatewayRequest
      * @return TurnOffStandaloneGatewayResponse

@@ -30,7 +30,7 @@ public class ParameterDetail extends AbstractModel{
     private String Name;
 
     /**
-    * 参数类型
+    * 参数类型：integer，enum，float，string，func
     */
     @SerializedName("ParamType")
     @Expose
@@ -86,6 +86,20 @@ public class ParameterDetail extends AbstractModel{
     private String [] EnumValue;
 
     /**
+    * 参数是公式类型时，该字段有效，表示公式类型最大值
+    */
+    @SerializedName("MaxFunc")
+    @Expose
+    private String MaxFunc;
+
+    /**
+    * 参数是公式类型时，该字段有效，表示公式类型最小值
+    */
+    @SerializedName("MinFunc")
+    @Expose
+    private String MinFunc;
+
+    /**
      * Get 参数名称 
      * @return Name 参数名称
      */
@@ -102,16 +116,16 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Get 参数类型 
-     * @return ParamType 参数类型
+     * Get 参数类型：integer，enum，float，string，func 
+     * @return ParamType 参数类型：integer，enum，float，string，func
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set 参数类型
-     * @param ParamType 参数类型
+     * Set 参数类型：integer，enum，float，string，func
+     * @param ParamType 参数类型：integer，enum，float，string，func
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
@@ -229,6 +243,38 @@ public class ParameterDetail extends AbstractModel{
         this.EnumValue = EnumValue;
     }
 
+    /**
+     * Get 参数是公式类型时，该字段有效，表示公式类型最大值 
+     * @return MaxFunc 参数是公式类型时，该字段有效，表示公式类型最大值
+     */
+    public String getMaxFunc() {
+        return this.MaxFunc;
+    }
+
+    /**
+     * Set 参数是公式类型时，该字段有效，表示公式类型最大值
+     * @param MaxFunc 参数是公式类型时，该字段有效，表示公式类型最大值
+     */
+    public void setMaxFunc(String MaxFunc) {
+        this.MaxFunc = MaxFunc;
+    }
+
+    /**
+     * Get 参数是公式类型时，该字段有效，表示公式类型最小值 
+     * @return MinFunc 参数是公式类型时，该字段有效，表示公式类型最小值
+     */
+    public String getMinFunc() {
+        return this.MinFunc;
+    }
+
+    /**
+     * Set 参数是公式类型时，该字段有效，表示公式类型最小值
+     * @param MinFunc 参数是公式类型时，该字段有效，表示公式类型最小值
+     */
+    public void setMinFunc(String MinFunc) {
+        this.MinFunc = MinFunc;
+    }
+
     public ParameterDetail() {
     }
 
@@ -267,6 +313,12 @@ public class ParameterDetail extends AbstractModel{
                 this.EnumValue[i] = new String(source.EnumValue[i]);
             }
         }
+        if (source.MaxFunc != null) {
+            this.MaxFunc = new String(source.MaxFunc);
+        }
+        if (source.MinFunc != null) {
+            this.MinFunc = new String(source.MinFunc);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class ParameterDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Max", this.Max);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
+        this.setParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
+        this.setParamSimple(map, prefix + "MinFunc", this.MinFunc);
 
     }
 }

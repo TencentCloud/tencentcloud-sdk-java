@@ -52,7 +52,7 @@ public class DescribeUserGroupResourcesAuthorizationResponse extends AbstractMod
     */
     @SerializedName("AuthorizationUserGroupResourceList")
     @Expose
-    private AuthorizationResouceEntityInfo [] AuthorizationUserGroupResourceList;
+    private AuthorizationResourceEntityInfo [] AuthorizationUserGroupResourceList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -127,7 +127,7 @@ public class DescribeUserGroupResourcesAuthorizationResponse extends AbstractMod
      * @return AuthorizationUserGroupResourceList 资源列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AuthorizationResouceEntityInfo [] getAuthorizationUserGroupResourceList() {
+    public AuthorizationResourceEntityInfo [] getAuthorizationUserGroupResourceList() {
         return this.AuthorizationUserGroupResourceList;
     }
 
@@ -137,7 +137,7 @@ public class DescribeUserGroupResourcesAuthorizationResponse extends AbstractMod
      * @param AuthorizationUserGroupResourceList 资源列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAuthorizationUserGroupResourceList(AuthorizationResouceEntityInfo [] AuthorizationUserGroupResourceList) {
+    public void setAuthorizationUserGroupResourceList(AuthorizationResourceEntityInfo [] AuthorizationUserGroupResourceList) {
         this.AuthorizationUserGroupResourceList = AuthorizationUserGroupResourceList;
     }
 
@@ -175,9 +175,9 @@ public class DescribeUserGroupResourcesAuthorizationResponse extends AbstractMod
             this.UserGroupName = new String(source.UserGroupName);
         }
         if (source.AuthorizationUserGroupResourceList != null) {
-            this.AuthorizationUserGroupResourceList = new AuthorizationResouceEntityInfo[source.AuthorizationUserGroupResourceList.length];
+            this.AuthorizationUserGroupResourceList = new AuthorizationResourceEntityInfo[source.AuthorizationUserGroupResourceList.length];
             for (int i = 0; i < source.AuthorizationUserGroupResourceList.length; i++) {
-                this.AuthorizationUserGroupResourceList[i] = new AuthorizationResouceEntityInfo(source.AuthorizationUserGroupResourceList[i]);
+                this.AuthorizationUserGroupResourceList[i] = new AuthorizationResourceEntityInfo(source.AuthorizationUserGroupResourceList[i]);
             }
         }
         if (source.RequestId != null) {

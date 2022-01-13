@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatFwInstanceResponse extends AbstractModel{
+public class SearchClsLogResponse extends AbstractModel{
 
     /**
-    * 防火墙实例id
+    * 日志内容结果
     */
-    @SerializedName("CfwInsId")
+    @SerializedName("LogResults")
     @Expose
-    private String CfwInsId;
+    private LogResObject LogResults;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateNatFwInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInsId 防火墙实例id
+     * Get 日志内容结果 
+     * @return LogResults 日志内容结果
      */
-    public String getCfwInsId() {
-        return this.CfwInsId;
+    public LogResObject getLogResults() {
+        return this.LogResults;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInsId 防火墙实例id
+     * Set 日志内容结果
+     * @param LogResults 日志内容结果
      */
-    public void setCfwInsId(String CfwInsId) {
-        this.CfwInsId = CfwInsId;
+    public void setLogResults(LogResObject LogResults) {
+        this.LogResults = LogResults;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateNatFwInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateNatFwInstanceResponse() {
+    public SearchClsLogResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateNatFwInstanceResponse(CreateNatFwInstanceResponse source) {
-        if (source.CfwInsId != null) {
-            this.CfwInsId = new String(source.CfwInsId);
+    public SearchClsLogResponse(SearchClsLogResponse source) {
+        if (source.LogResults != null) {
+            this.LogResults = new LogResObject(source.LogResults);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateNatFwInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CfwInsId", this.CfwInsId);
+        this.setParamObj(map, prefix + "LogResults.", this.LogResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

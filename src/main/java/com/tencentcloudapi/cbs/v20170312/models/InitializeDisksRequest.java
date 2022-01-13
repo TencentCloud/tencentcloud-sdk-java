@@ -13,50 +13,50 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeParamTemplatesRequest extends AbstractModel{
+public class InitializeDisksRequest extends AbstractModel{
 
     /**
-    * 引擎版本，缺省则查询所有
+    * 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
     */
-    @SerializedName("EngineVersions")
+    @SerializedName("DiskIds")
     @Expose
-    private String [] EngineVersions;
+    private String [] DiskIds;
 
     /**
-     * Get 引擎版本，缺省则查询所有 
-     * @return EngineVersions 引擎版本，缺省则查询所有
+     * Get 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内 
+     * @return DiskIds 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
      */
-    public String [] getEngineVersions() {
-        return this.EngineVersions;
+    public String [] getDiskIds() {
+        return this.DiskIds;
     }
 
     /**
-     * Set 引擎版本，缺省则查询所有
-     * @param EngineVersions 引擎版本，缺省则查询所有
+     * Set 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+     * @param DiskIds 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
      */
-    public void setEngineVersions(String [] EngineVersions) {
-        this.EngineVersions = EngineVersions;
+    public void setDiskIds(String [] DiskIds) {
+        this.DiskIds = DiskIds;
     }
 
-    public DescribeParamTemplatesRequest() {
+    public InitializeDisksRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeParamTemplatesRequest(DescribeParamTemplatesRequest source) {
-        if (source.EngineVersions != null) {
-            this.EngineVersions = new String[source.EngineVersions.length];
-            for (int i = 0; i < source.EngineVersions.length; i++) {
-                this.EngineVersions[i] = new String(source.EngineVersions[i]);
+    public InitializeDisksRequest(InitializeDisksRequest source) {
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
             }
         }
     }
@@ -66,7 +66,7 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
 
     }
 }

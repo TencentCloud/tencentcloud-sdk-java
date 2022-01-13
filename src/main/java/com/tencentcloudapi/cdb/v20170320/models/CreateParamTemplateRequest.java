@@ -58,6 +58,13 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
+    * 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
      * Get 参数模板名称。 
      * @return Name 参数模板名称。
      */
@@ -137,6 +144,22 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.ParamList = ParamList;
     }
 
+    /**
+     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。 
+     * @return TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     * @param TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
     public CreateParamTemplateRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CreateParamTemplateRequest extends AbstractModel{
                 this.ParamList[i] = new Parameter(source.ParamList[i]);
             }
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
 
     }
 }

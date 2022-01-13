@@ -59,7 +59,7 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
     */
     @SerializedName("AuthorizationOrgResourceList")
     @Expose
-    private AuthorizationResouceEntityInfo [] AuthorizationOrgResourceList;
+    private AuthorizationResourceEntityInfo [] AuthorizationOrgResourceList;
 
     /**
     * 资源数量
@@ -158,7 +158,7 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
      * @return AuthorizationOrgResourceList 资源列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AuthorizationResouceEntityInfo [] getAuthorizationOrgResourceList() {
+    public AuthorizationResourceEntityInfo [] getAuthorizationOrgResourceList() {
         return this.AuthorizationOrgResourceList;
     }
 
@@ -168,7 +168,7 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
      * @param AuthorizationOrgResourceList 资源列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAuthorizationOrgResourceList(AuthorizationResouceEntityInfo [] AuthorizationOrgResourceList) {
+    public void setAuthorizationOrgResourceList(AuthorizationResourceEntityInfo [] AuthorizationOrgResourceList) {
         this.AuthorizationOrgResourceList = AuthorizationOrgResourceList;
     }
 
@@ -229,9 +229,9 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
             this.OrgNodePath = new String(source.OrgNodePath);
         }
         if (source.AuthorizationOrgResourceList != null) {
-            this.AuthorizationOrgResourceList = new AuthorizationResouceEntityInfo[source.AuthorizationOrgResourceList.length];
+            this.AuthorizationOrgResourceList = new AuthorizationResourceEntityInfo[source.AuthorizationOrgResourceList.length];
             for (int i = 0; i < source.AuthorizationOrgResourceList.length; i++) {
-                this.AuthorizationOrgResourceList[i] = new AuthorizationResouceEntityInfo(source.AuthorizationOrgResourceList[i]);
+                this.AuthorizationOrgResourceList[i] = new AuthorizationResourceEntityInfo(source.AuthorizationOrgResourceList[i]);
             }
         }
         if (source.TotalCount != null) {

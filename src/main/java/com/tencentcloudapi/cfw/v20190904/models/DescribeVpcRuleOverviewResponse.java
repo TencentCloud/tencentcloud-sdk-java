@@ -39,6 +39,14 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
     private Long StartRuleNum;
 
     /**
+    * 规则总量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 规则总量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 规则总量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 规则总量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 规则总量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -115,6 +143,9 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
         if (source.StartRuleNum != null) {
             this.StartRuleNum = new Long(source.StartRuleNum);
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +158,7 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StrategyNum", this.StrategyNum);
         this.setParamSimple(map, prefix + "StartRuleNum", this.StartRuleNum);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

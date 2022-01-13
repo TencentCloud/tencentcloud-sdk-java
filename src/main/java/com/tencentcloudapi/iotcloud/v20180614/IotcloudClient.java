@@ -979,6 +979,66 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（ListLog）用于查看日志信息 
+     * @param req ListLogRequest
+     * @return ListLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLogResponse ListLog(ListLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取日志内容列表
+     * @param req ListLogPayloadRequest
+     * @return ListLogPayloadResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLogPayloadResponse ListLogPayload(ListLogPayloadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLogPayloadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLogPayloadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListLogPayload");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备上报的日志
+     * @param req ListSDKLogRequest
+     * @return ListSDKLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSDKLogResponse ListSDKLog(ListSDKLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListSDKLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListSDKLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListSDKLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *模拟lora类型的设备端向服务器端发送消息
      * @param req PublishAsDeviceRequest
      * @return PublishAsDeviceResponse

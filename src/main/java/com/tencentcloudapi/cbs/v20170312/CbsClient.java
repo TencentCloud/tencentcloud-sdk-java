@@ -485,6 +485,30 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *重新初始化云硬盘至云硬盘初始创建时的状态。使用云硬盘的重新初始化功能时需要注意以下4点：
+1. 如果云硬盘是由快照创建的，则重新初始化会通过此快照重新回滚此云硬盘，即将云硬盘恢复为与快照一致的状态；
+2. 如果云硬盘不是通过快照创建的，则重新初始化会清空此云硬盘的数据；请在重新初始化云硬盘前检查并备份必要的数据；
+3. 当前仅未挂载的、非共享属性的数据盘云硬盘支持重新初始化；
+4. 当创建此云硬盘的原始快照被删除时，不再支持重新初始化此云硬盘。
+     * @param req InitializeDisksRequest
+     * @return InitializeDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InitializeDisksResponse InitializeDisks(InitializeDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InitializeDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InitializeDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InitializeDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquirePriceModifyDiskExtraPerformance）用于调整云硬盘额外性能询价。
      * @param req InquirePriceModifyDiskExtraPerformanceRequest
      * @return InquirePriceModifyDiskExtraPerformanceResponse

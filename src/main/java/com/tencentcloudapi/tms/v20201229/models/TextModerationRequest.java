@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextModerationRequest extends AbstractModel{
 
     /**
-    * 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000（按unicode编码计算），并进行 Base64加密
+    * 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
     */
     @SerializedName("Content")
     @Expose
@@ -58,16 +58,16 @@ public class TextModerationRequest extends AbstractModel{
     private Device Device;
 
     /**
-     * Get 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000（按unicode编码计算），并进行 Base64加密 
-     * @return Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000（按unicode编码计算），并进行 Base64加密
+     * Get 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密 
+     * @return Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000（按unicode编码计算），并进行 Base64加密
-     * @param Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000（按unicode编码计算），并进行 Base64加密
+     * Set 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
+     * @param Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
      */
     public void setContent(String Content) {
         this.Content = Content;

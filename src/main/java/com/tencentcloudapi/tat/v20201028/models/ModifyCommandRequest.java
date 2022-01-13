@@ -85,7 +85,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
     * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
     */
     @SerializedName("Username")
     @Expose
@@ -258,9 +258,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。 
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。 
      * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
      */
     public String getUsername() {
         return this.Username;
@@ -268,9 +268,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
      * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
      */
     public void setUsername(String Username) {
         this.Username = Username;

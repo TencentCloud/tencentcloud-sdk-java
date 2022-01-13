@@ -65,6 +65,13 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String Description;
 
     /**
+    * 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +175,22 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。 
+     * @return TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     * @param TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -212,6 +235,9 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -228,6 +254,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

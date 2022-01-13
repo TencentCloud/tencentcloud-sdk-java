@@ -72,7 +72,7 @@ public class TemplateInfo extends AbstractModel{
     private Long CreatedOn;
 
     /**
-    * 模板类型：1-静默签；2-静默签授权；3-普通模版
+    * 模板类型：1-静默签；2-静默签授权；3-普通模板
     */
     @SerializedName("TemplateType")
     @Expose
@@ -205,16 +205,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板类型：1-静默签；2-静默签授权；3-普通模版 
-     * @return TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模版
+     * Get 模板类型：1-静默签；2-静默签授权；3-普通模板 
+     * @return TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
      */
     public Long getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 模板类型：1-静默签；2-静默签授权；3-普通模版
-     * @param TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模版
+     * Set 模板类型：1-静默签；2-静默签授权；3-普通模板
+     * @param TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
      */
     public void setTemplateType(Long TemplateType) {
         this.TemplateType = TemplateType;

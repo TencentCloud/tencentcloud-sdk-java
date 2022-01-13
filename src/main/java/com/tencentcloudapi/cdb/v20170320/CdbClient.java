@@ -1285,7 +1285,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（DescribeParamTemplates）查询参数模板列表。
+     *该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
      * @param req DescribeParamTemplatesRequest
      * @return DescribeParamTemplatesResponse
      * @throws TencentCloudSDKException
