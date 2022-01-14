@@ -359,6 +359,48 @@ public class ModifyApiRequest extends AbstractModel{
     private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
 
     /**
+    * 事件总线ID。
+    */
+    @SerializedName("EventBusId")
+    @Expose
+    private String EventBusId;
+
+    /**
+    * scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+    */
+    @SerializedName("ServiceScfFunctionType")
+    @Expose
+    private String ServiceScfFunctionType;
+
+    /**
+    * EIAM应用类型。
+    */
+    @SerializedName("EIAMAppType")
+    @Expose
+    private String EIAMAppType;
+
+    /**
+    * EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+    */
+    @SerializedName("EIAMAuthType")
+    @Expose
+    private String EIAMAuthType;
+
+    /**
+    * EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+    */
+    @SerializedName("EIAMAppId")
+    @Expose
+    private String EIAMAppId;
+
+    /**
+    * EIAM应用ID。
+    */
+    @SerializedName("TokenTimeout")
+    @Expose
+    private Long TokenTimeout;
+
+    /**
      * Get API 所在的服务唯一 ID。 
      * @return ServiceId API 所在的服务唯一 ID。
      */
@@ -1126,6 +1168,102 @@ public class ModifyApiRequest extends AbstractModel{
         this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
     }
 
+    /**
+     * Get 事件总线ID。 
+     * @return EventBusId 事件总线ID。
+     */
+    public String getEventBusId() {
+        return this.EventBusId;
+    }
+
+    /**
+     * Set 事件总线ID。
+     * @param EventBusId 事件总线ID。
+     */
+    public void setEventBusId(String EventBusId) {
+        this.EventBusId = EventBusId;
+    }
+
+    /**
+     * Get scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。 
+     * @return ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     */
+    public String getServiceScfFunctionType() {
+        return this.ServiceScfFunctionType;
+    }
+
+    /**
+     * Set scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     * @param ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     */
+    public void setServiceScfFunctionType(String ServiceScfFunctionType) {
+        this.ServiceScfFunctionType = ServiceScfFunctionType;
+    }
+
+    /**
+     * Get EIAM应用类型。 
+     * @return EIAMAppType EIAM应用类型。
+     */
+    public String getEIAMAppType() {
+        return this.EIAMAppType;
+    }
+
+    /**
+     * Set EIAM应用类型。
+     * @param EIAMAppType EIAM应用类型。
+     */
+    public void setEIAMAppType(String EIAMAppType) {
+        this.EIAMAppType = EIAMAppType;
+    }
+
+    /**
+     * Get EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。 
+     * @return EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     */
+    public String getEIAMAuthType() {
+        return this.EIAMAuthType;
+    }
+
+    /**
+     * Set EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     * @param EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     */
+    public void setEIAMAuthType(String EIAMAuthType) {
+        this.EIAMAuthType = EIAMAuthType;
+    }
+
+    /**
+     * Get EIAM应用Token 有效时间，单位为秒，默认为7200秒。 
+     * @return EIAMAppId EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     */
+    public String getEIAMAppId() {
+        return this.EIAMAppId;
+    }
+
+    /**
+     * Set EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     * @param EIAMAppId EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     */
+    public void setEIAMAppId(String EIAMAppId) {
+        this.EIAMAppId = EIAMAppId;
+    }
+
+    /**
+     * Get EIAM应用ID。 
+     * @return TokenTimeout EIAM应用ID。
+     */
+    public Long getTokenTimeout() {
+        return this.TokenTimeout;
+    }
+
+    /**
+     * Set EIAM应用ID。
+     * @param TokenTimeout EIAM应用ID。
+     */
+    public void setTokenTimeout(Long TokenTimeout) {
+        this.TokenTimeout = TokenTimeout;
+    }
+
     public ModifyApiRequest() {
     }
 
@@ -1296,6 +1434,24 @@ public class ModifyApiRequest extends AbstractModel{
                 this.Base64EncodedTriggerRules[i] = new Base64EncodedTriggerRule(source.Base64EncodedTriggerRules[i]);
             }
         }
+        if (source.EventBusId != null) {
+            this.EventBusId = new String(source.EventBusId);
+        }
+        if (source.ServiceScfFunctionType != null) {
+            this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
+        }
+        if (source.EIAMAppType != null) {
+            this.EIAMAppType = new String(source.EIAMAppType);
+        }
+        if (source.EIAMAuthType != null) {
+            this.EIAMAuthType = new String(source.EIAMAuthType);
+        }
+        if (source.EIAMAppId != null) {
+            this.EIAMAppId = new String(source.EIAMAppId);
+        }
+        if (source.TokenTimeout != null) {
+            this.TokenTimeout = new Long(source.TokenTimeout);
+        }
     }
 
 
@@ -1351,6 +1507,12 @@ public class ModifyApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
         this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
+        this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
+        this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+        this.setParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
+        this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
+        this.setParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
+        this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
 
     }
 }

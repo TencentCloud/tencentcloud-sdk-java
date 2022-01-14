@@ -94,6 +94,7 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
 
     /**
     * 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClickTimeout")
     @Expose
@@ -267,8 +268,10 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 一键检测的超时设置 
+     * Get 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClickTimeout 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClickTimeout() {
         return this.ClickTimeout;
@@ -276,7 +279,9 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
 
     /**
      * Set 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClickTimeout 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClickTimeout(Long ClickTimeout) {
         this.ClickTimeout = ClickTimeout;

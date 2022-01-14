@@ -100,6 +100,34 @@ public class RuntimeMC extends AbstractModel{
     private Long RunningInstanceCount;
 
     /**
+    * 已使用cpu核数
+    */
+    @SerializedName("CpuUsed")
+    @Expose
+    private Float CpuUsed;
+
+    /**
+    * cpu核数上限
+    */
+    @SerializedName("CpuLimit")
+    @Expose
+    private Float CpuLimit;
+
+    /**
+    * 已使用内存 MB
+    */
+    @SerializedName("MemoryUsed")
+    @Expose
+    private Float MemoryUsed;
+
+    /**
+    * 内存上限 MB
+    */
+    @SerializedName("MemoryLimit")
+    @Expose
+    private Float MemoryLimit;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -275,6 +303,70 @@ public class RuntimeMC extends AbstractModel{
         this.RunningInstanceCount = RunningInstanceCount;
     }
 
+    /**
+     * Get 已使用cpu核数 
+     * @return CpuUsed 已使用cpu核数
+     */
+    public Float getCpuUsed() {
+        return this.CpuUsed;
+    }
+
+    /**
+     * Set 已使用cpu核数
+     * @param CpuUsed 已使用cpu核数
+     */
+    public void setCpuUsed(Float CpuUsed) {
+        this.CpuUsed = CpuUsed;
+    }
+
+    /**
+     * Get cpu核数上限 
+     * @return CpuLimit cpu核数上限
+     */
+    public Float getCpuLimit() {
+        return this.CpuLimit;
+    }
+
+    /**
+     * Set cpu核数上限
+     * @param CpuLimit cpu核数上限
+     */
+    public void setCpuLimit(Float CpuLimit) {
+        this.CpuLimit = CpuLimit;
+    }
+
+    /**
+     * Get 已使用内存 MB 
+     * @return MemoryUsed 已使用内存 MB
+     */
+    public Float getMemoryUsed() {
+        return this.MemoryUsed;
+    }
+
+    /**
+     * Set 已使用内存 MB
+     * @param MemoryUsed 已使用内存 MB
+     */
+    public void setMemoryUsed(Float MemoryUsed) {
+        this.MemoryUsed = MemoryUsed;
+    }
+
+    /**
+     * Get 内存上限 MB 
+     * @return MemoryLimit 内存上限 MB
+     */
+    public Float getMemoryLimit() {
+        return this.MemoryLimit;
+    }
+
+    /**
+     * Set 内存上限 MB
+     * @param MemoryLimit 内存上限 MB
+     */
+    public void setMemoryLimit(Float MemoryLimit) {
+        this.MemoryLimit = MemoryLimit;
+    }
+
     public RuntimeMC() {
     }
 
@@ -316,6 +408,18 @@ public class RuntimeMC extends AbstractModel{
         if (source.RunningInstanceCount != null) {
             this.RunningInstanceCount = new Long(source.RunningInstanceCount);
         }
+        if (source.CpuUsed != null) {
+            this.CpuUsed = new Float(source.CpuUsed);
+        }
+        if (source.CpuLimit != null) {
+            this.CpuLimit = new Float(source.CpuLimit);
+        }
+        if (source.MemoryUsed != null) {
+            this.MemoryUsed = new Float(source.MemoryUsed);
+        }
+        if (source.MemoryLimit != null) {
+            this.MemoryLimit = new Float(source.MemoryLimit);
+        }
     }
 
 
@@ -334,6 +438,10 @@ public class RuntimeMC extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkerSize", this.WorkerSize);
         this.setParamSimple(map, prefix + "WorkerReplica", this.WorkerReplica);
         this.setParamSimple(map, prefix + "RunningInstanceCount", this.RunningInstanceCount);
+        this.setParamSimple(map, prefix + "CpuUsed", this.CpuUsed);
+        this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
+        this.setParamSimple(map, prefix + "MemoryUsed", this.MemoryUsed);
+        this.setParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
 
     }
 }

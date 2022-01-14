@@ -58,6 +58,13 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
     private Long UnhandledFileCnt;
 
     /**
+    * 未处理木马事件
+    */
+    @SerializedName("UnhandledVirusEventCnt")
+    @Expose
+    private Long UnhandledVirusEventCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 未处理木马事件 
+     * @return UnhandledVirusEventCnt 未处理木马事件
+     */
+    public Long getUnhandledVirusEventCnt() {
+        return this.UnhandledVirusEventCnt;
+    }
+
+    /**
+     * Set 未处理木马事件
+     * @param UnhandledVirusEventCnt 未处理木马事件
+     */
+    public void setUnhandledVirusEventCnt(Long UnhandledVirusEventCnt) {
+        this.UnhandledVirusEventCnt = UnhandledVirusEventCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -183,6 +206,9 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
         if (source.UnhandledFileCnt != null) {
             this.UnhandledFileCnt = new Long(source.UnhandledFileCnt);
         }
+        if (source.UnhandledVirusEventCnt != null) {
+            this.UnhandledVirusEventCnt = new Long(source.UnhandledVirusEventCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -198,6 +224,7 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "UnhandledRiskSyscallCnt", this.UnhandledRiskSyscallCnt);
         this.setParamSimple(map, prefix + "UnhandledAbnormalProcessCnt", this.UnhandledAbnormalProcessCnt);
         this.setParamSimple(map, prefix + "UnhandledFileCnt", this.UnhandledFileCnt);
+        this.setParamSimple(map, prefix + "UnhandledVirusEventCnt", this.UnhandledVirusEventCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

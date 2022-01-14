@@ -73,7 +73,7 @@ public class Cluster extends AbstractModel{
     private String HealthyInfo;
 
     /**
-    * 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+    * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
     */
     @SerializedName("Status")
     @Expose
@@ -335,16 +335,16 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败 
-     * @return Status 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败 
+     * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
-     * @param Status 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+     * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+     * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

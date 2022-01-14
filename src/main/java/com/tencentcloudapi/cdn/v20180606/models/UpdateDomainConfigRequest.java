@@ -304,7 +304,7 @@ global：全球加速
     private OriginCombine OriginCombine;
 
     /**
-    * QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+    * Quic访问（收费服务，详见计费说明和产品文档）
     */
     @SerializedName("Quic")
     @Expose
@@ -995,16 +995,16 @@ global：全球加速
     }
 
     /**
-     * Get QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。 
-     * @return Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * Get Quic访问（收费服务，详见计费说明和产品文档） 
+     * @return Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
-     * @param Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * Set Quic访问（收费服务，详见计费说明和产品文档）
+     * @param Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;

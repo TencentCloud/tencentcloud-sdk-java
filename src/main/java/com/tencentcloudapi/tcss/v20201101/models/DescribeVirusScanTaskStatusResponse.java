@@ -43,6 +43,7 @@ SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
     */
     @SerializedName("Status")
     @Expose
@@ -142,13 +143,15 @@ SCAN_NONE:无，
 SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
-SCAN_CANCELING: 取消中 
+SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消 
      * @return Status 扫描状态 任务状态:
 SCAN_NONE:无， 
 SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
      */
     public String getStatus() {
         return this.Status;
@@ -161,12 +164,14 @@ SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
      * @param Status 扫描状态 任务状态:
 SCAN_NONE:无， 
 SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
      */
     public void setStatus(String Status) {
         this.Status = Status;

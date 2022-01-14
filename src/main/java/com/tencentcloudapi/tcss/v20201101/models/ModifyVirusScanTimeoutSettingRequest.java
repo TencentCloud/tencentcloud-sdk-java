@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyVirusScanTimeoutSettingRequest extends AbstractModel{
 
     /**
-    * 超时时长单位小时
+    * 超时时长单位小时(5~24h)
     */
     @SerializedName("Timeout")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyVirusScanTimeoutSettingRequest extends AbstractModel{
     private Long ScanType;
 
     /**
-     * Get 超时时长单位小时 
-     * @return Timeout 超时时长单位小时
+     * Get 超时时长单位小时(5~24h) 
+     * @return Timeout 超时时长单位小时(5~24h)
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时时长单位小时
-     * @param Timeout 超时时长单位小时
+     * Set 超时时长单位小时(5~24h)
+     * @param Timeout 超时时长单位小时(5~24h)
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

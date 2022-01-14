@@ -137,6 +137,9 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+TIMEOUT: 超时
+TOO_MANY: 任务过多
+OFFLINE: 离线
     */
     @SerializedName("SubStatus")
     @Expose
@@ -409,7 +412,10 @@ FILE_ABNORMAL:文件异常
 FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
-CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在 
+CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+TIMEOUT: 超时
+TOO_MANY: 任务过多
+OFFLINE: 离线 
      * @return SubStatus 失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -417,6 +423,9 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+TIMEOUT: 超时
+TOO_MANY: 任务过多
+OFFLINE: 离线
      */
     public String getSubStatus() {
         return this.SubStatus;
@@ -430,6 +439,9 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+TIMEOUT: 超时
+TOO_MANY: 任务过多
+OFFLINE: 离线
      * @param SubStatus 失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -437,6 +449,9 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+TIMEOUT: 超时
+TOO_MANY: 任务过多
+OFFLINE: 离线
      */
     public void setSubStatus(String SubStatus) {
         this.SubStatus = SubStatus;

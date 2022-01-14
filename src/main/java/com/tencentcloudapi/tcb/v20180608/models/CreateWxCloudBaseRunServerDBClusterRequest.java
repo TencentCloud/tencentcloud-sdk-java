@@ -44,6 +44,13 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
     private String WxAppId;
 
     /**
+    * mysql内核版本，支持5.7,8.0
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get 账户密码 
      * @return AccountPassword 账户密码
      */
@@ -91,6 +98,22 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         this.WxAppId = WxAppId;
     }
 
+    /**
+     * Get mysql内核版本，支持5.7,8.0 
+     * @return DbVersion mysql内核版本，支持5.7,8.0
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set mysql内核版本，支持5.7,8.0
+     * @param DbVersion mysql内核版本，支持5.7,8.0
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public CreateWxCloudBaseRunServerDBClusterRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         if (source.WxAppId != null) {
             this.WxAppId = new String(source.WxAppId);
         }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

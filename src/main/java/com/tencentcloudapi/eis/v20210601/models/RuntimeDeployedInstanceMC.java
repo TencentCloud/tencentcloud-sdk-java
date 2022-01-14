@@ -93,6 +93,13 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
     private Long UpdatedAt;
 
     /**
+    * 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+    */
+    @SerializedName("ProjectType")
+    @Expose
+    private Long ProjectType;
+
+    /**
      * Get 项目id 
      * @return GroupId 项目id
      */
@@ -252,6 +259,22 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用 
+     * @return ProjectType 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+     */
+    public Long getProjectType() {
+        return this.ProjectType;
+    }
+
+    /**
+     * Set 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+     * @param ProjectType 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+     */
+    public void setProjectType(Long ProjectType) {
+        this.ProjectType = ProjectType;
+    }
+
     public RuntimeDeployedInstanceMC() {
     }
 
@@ -290,6 +313,9 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new Long(source.UpdatedAt);
         }
+        if (source.ProjectType != null) {
+            this.ProjectType = new Long(source.ProjectType);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
 
     }
 }

@@ -31,9 +31,11 @@ public class AddCdnDomainRequest extends AbstractModel{
 
     /**
     * 加速域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
     */
     @SerializedName("ServiceType")
     @Expose
@@ -262,7 +264,7 @@ global：全球加速
     private OfflineCache OfflineCache;
 
     /**
-    * QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+    * Quic访问（收费服务，详见计费说明和产品文档）
     */
     @SerializedName("Quic")
     @Expose
@@ -300,13 +302,17 @@ global：全球加速
 
     /**
      * Get 加速域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速 
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速 
      * @return ServiceType 加速域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -314,13 +320,17 @@ media：流媒体点播加速
 
     /**
      * Set 加速域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      * @param ServiceType 加速域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -843,16 +853,16 @@ global：全球加速
     }
 
     /**
-     * Get QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。 
-     * @return Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * Get Quic访问（收费服务，详见计费说明和产品文档） 
+     * @return Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
-     * @param Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * Set Quic访问（收费服务，详见计费说明和产品文档）
+     * @param Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;

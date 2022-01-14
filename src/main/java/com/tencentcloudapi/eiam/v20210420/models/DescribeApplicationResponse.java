@@ -55,7 +55,7 @@ public class DescribeApplicationResponse extends AbstractModel{
     private String ClientId;
 
     /**
-    * 应用类型，即创建应用时所选择的应用模版类型。
+    * 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
@@ -230,9 +230,9 @@ public class DescribeApplicationResponse extends AbstractModel{
     }
 
     /**
-     * Get 应用类型，即创建应用时所选择的应用模版类型。
+     * Get 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationType 应用类型，即创建应用时所选择的应用模版类型。
+     * @return ApplicationType 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
@@ -240,9 +240,9 @@ public class DescribeApplicationResponse extends AbstractModel{
     }
 
     /**
-     * Set 应用类型，即创建应用时所选择的应用模版类型。
+     * Set 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationType 应用类型，即创建应用时所选择的应用模版类型。
+     * @param ApplicationType 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {

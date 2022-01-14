@@ -30,7 +30,7 @@ public class ModifyVirusScanSettingRequest extends AbstractModel{
     private Boolean EnableScan;
 
     /**
-    * 检测周期每隔多少天
+    * 检测周期每隔多少天(1|3|7)
     */
     @SerializedName("Cycle")
     @Expose
@@ -44,7 +44,7 @@ public class ModifyVirusScanSettingRequest extends AbstractModel{
     private String BeginScanAt;
 
     /**
-    * 扫描全部路径
+    * 扫描全部路径(true:全选,false:自选)
     */
     @SerializedName("ScanPathAll")
     @Expose
@@ -58,7 +58,7 @@ public class ModifyVirusScanSettingRequest extends AbstractModel{
     private Long ScanPathType;
 
     /**
-    * 超时时长
+    * 超时时长(5~24h)
     */
     @SerializedName("Timeout")
     @Expose
@@ -109,16 +109,16 @@ public class ModifyVirusScanSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 检测周期每隔多少天 
-     * @return Cycle 检测周期每隔多少天
+     * Get 检测周期每隔多少天(1|3|7) 
+     * @return Cycle 检测周期每隔多少天(1|3|7)
      */
     public Long getCycle() {
         return this.Cycle;
     }
 
     /**
-     * Set 检测周期每隔多少天
-     * @param Cycle 检测周期每隔多少天
+     * Set 检测周期每隔多少天(1|3|7)
+     * @param Cycle 检测周期每隔多少天(1|3|7)
      */
     public void setCycle(Long Cycle) {
         this.Cycle = Cycle;
@@ -141,16 +141,16 @@ public class ModifyVirusScanSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 扫描全部路径 
-     * @return ScanPathAll 扫描全部路径
+     * Get 扫描全部路径(true:全选,false:自选) 
+     * @return ScanPathAll 扫描全部路径(true:全选,false:自选)
      */
     public Boolean getScanPathAll() {
         return this.ScanPathAll;
     }
 
     /**
-     * Set 扫描全部路径
-     * @param ScanPathAll 扫描全部路径
+     * Set 扫描全部路径(true:全选,false:自选)
+     * @param ScanPathAll 扫描全部路径(true:全选,false:自选)
      */
     public void setScanPathAll(Boolean ScanPathAll) {
         this.ScanPathAll = ScanPathAll;
@@ -173,16 +173,16 @@ public class ModifyVirusScanSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 超时时长 
-     * @return Timeout 超时时长
+     * Get 超时时长(5~24h) 
+     * @return Timeout 超时时长(5~24h)
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时时长
-     * @param Timeout 超时时长
+     * Set 超时时长(5~24h)
+     * @param Timeout 超时时长(5~24h)
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

@@ -136,6 +136,20 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     private String IssuingAuthority;
 
     /**
+    * 状态（仅电子驾驶证支持返回该字段）
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
+    * 累积记分（仅电子驾驶证支持返回该字段）
+    */
+    @SerializedName("CumulativeScore")
+    @Expose
+    private String CumulativeScore;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -416,6 +430,38 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     }
 
     /**
+     * Get 状态（仅电子驾驶证支持返回该字段） 
+     * @return State 状态（仅电子驾驶证支持返回该字段）
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 状态（仅电子驾驶证支持返回该字段）
+     * @param State 状态（仅电子驾驶证支持返回该字段）
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
+    /**
+     * Get 累积记分（仅电子驾驶证支持返回该字段） 
+     * @return CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
+     */
+    public String getCumulativeScore() {
+        return this.CumulativeScore;
+    }
+
+    /**
+     * Set 累积记分（仅电子驾驶证支持返回该字段）
+     * @param CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
+     */
+    public void setCumulativeScore(String CumulativeScore) {
+        this.CumulativeScore = CumulativeScore;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -490,6 +536,12 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         if (source.IssuingAuthority != null) {
             this.IssuingAuthority = new String(source.IssuingAuthority);
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CumulativeScore != null) {
+            this.CumulativeScore = new String(source.CumulativeScore);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -515,6 +567,8 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
         this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "CumulativeScore", this.CumulativeScore);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
