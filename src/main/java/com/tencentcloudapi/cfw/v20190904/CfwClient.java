@@ -379,7 +379,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *获取地址模版列表
+     *获取地址模板列表
      * @param req DescribeAddrTemplateListRequest
      * @return DescribeAddrTemplateListResponse
      * @throws TencentCloudSDKException
@@ -1182,6 +1182,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyResourceGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *同步资产-互联网&VPC（新）
+     * @param req ModifyRunSyncAssetRequest
+     * @return ModifyRunSyncAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRunSyncAssetResponse ModifyRunSyncAsset(ModifyRunSyncAssetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRunSyncAssetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRunSyncAssetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRunSyncAsset");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

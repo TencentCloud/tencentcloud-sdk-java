@@ -93,6 +93,13 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Renew;
 
     /**
+    * 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+    */
+    @SerializedName("FilterSource")
+    @Expose
+    private String FilterSource;
+
+    /**
      * Get 分页偏移量，从0开始。 
      * @return Offset 分页偏移量，从0开始。
      */
@@ -252,6 +259,22 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.Renew = Renew;
     }
 
+    /**
+     * Get 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部 
+     * @return FilterSource 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+     */
+    public String getFilterSource() {
+        return this.FilterSource;
+    }
+
+    /**
+     * Set 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+     * @param FilterSource 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+     */
+    public void setFilterSource(String FilterSource) {
+        this.FilterSource = FilterSource;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -293,6 +316,9 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.Renew != null) {
             this.Renew = new Long(source.Renew);
         }
+        if (source.FilterSource != null) {
+            this.FilterSource = new String(source.FilterSource);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamSimple(map, prefix + "Upload", this.Upload);
         this.setParamSimple(map, prefix + "Renew", this.Renew);
+        this.setParamSimple(map, prefix + "FilterSource", this.FilterSource);
 
     }
 }

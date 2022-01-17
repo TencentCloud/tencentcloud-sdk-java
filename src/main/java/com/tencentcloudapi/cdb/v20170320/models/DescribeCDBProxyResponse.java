@@ -63,6 +63,22 @@ public class DescribeCDBProxyResponse extends AbstractModel{
     private ConnectionPoolInfo ConnectionPoolInfo;
 
     /**
+    * 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
+    * 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyGroup")
+    @Expose
+    private ProxyGroup [] ProxyGroup;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -170,6 +186,46 @@ public class DescribeCDBProxyResponse extends AbstractModel{
     }
 
     /**
+     * Get 代理数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Count 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Count 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
+    /**
+     * Get 代理信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyGroup 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProxyGroup [] getProxyGroup() {
+        return this.ProxyGroup;
+    }
+
+    /**
+     * Set 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyGroup 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyGroup(ProxyGroup [] ProxyGroup) {
+        this.ProxyGroup = ProxyGroup;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -208,6 +264,15 @@ public class DescribeCDBProxyResponse extends AbstractModel{
         if (source.ConnectionPoolInfo != null) {
             this.ConnectionPoolInfo = new ConnectionPoolInfo(source.ConnectionPoolInfo);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.ProxyGroup != null) {
+            this.ProxyGroup = new ProxyGroup[source.ProxyGroup.length];
+            for (int i = 0; i < source.ProxyGroup.length; i++) {
+                this.ProxyGroup[i] = new ProxyGroup(source.ProxyGroup[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -223,6 +288,8 @@ public class DescribeCDBProxyResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ProxyNode.", this.ProxyNode);
         this.setParamObj(map, prefix + "RWInstInfo.", this.RWInstInfo);
         this.setParamObj(map, prefix + "ConnectionPoolInfo.", this.ConnectionPoolInfo);
+        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamArrayObj(map, prefix + "ProxyGroup.", this.ProxyGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

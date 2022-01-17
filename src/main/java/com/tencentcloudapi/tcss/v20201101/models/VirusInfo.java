@@ -140,6 +140,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
     */
     @SerializedName("SubStatus")
     @Expose
@@ -415,7 +417,9 @@ CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
-OFFLINE: 离线 
+OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法 
      * @return SubStatus 失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -426,6 +430,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
      */
     public String getSubStatus() {
         return this.SubStatus;
@@ -442,6 +448,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
      * @param SubStatus 失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -452,6 +460,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
      */
     public void setSubStatus(String SubStatus) {
         this.SubStatus = SubStatus;

@@ -38,6 +38,14 @@ public class RoomUser extends AbstractModel{
     private Long [] Uins;
 
     /**
+    * 字符串房间id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StrRoomId")
+    @Expose
+    private String StrRoomId;
+
+    /**
      * Get 房间id 
      * @return RoomId 房间id
      */
@@ -73,6 +81,26 @@ public class RoomUser extends AbstractModel{
         this.Uins = Uins;
     }
 
+    /**
+     * Get 字符串房间id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StrRoomId 字符串房间id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStrRoomId() {
+        return this.StrRoomId;
+    }
+
+    /**
+     * Set 字符串房间id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StrRoomId 字符串房间id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStrRoomId(String StrRoomId) {
+        this.StrRoomId = StrRoomId;
+    }
+
     public RoomUser() {
     }
 
@@ -90,6 +118,9 @@ public class RoomUser extends AbstractModel{
                 this.Uins[i] = new Long(source.Uins[i]);
             }
         }
+        if (source.StrRoomId != null) {
+            this.StrRoomId = new String(source.StrRoomId);
+        }
     }
 
 
@@ -99,6 +130,7 @@ public class RoomUser extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamArraySimple(map, prefix + "Uins.", this.Uins);
+        this.setParamSimple(map, prefix + "StrRoomId", this.StrRoomId);
 
     }
 }

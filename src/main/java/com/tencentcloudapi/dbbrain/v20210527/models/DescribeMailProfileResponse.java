@@ -31,7 +31,7 @@ public class DescribeMailProfileResponse extends AbstractModel{
     private UserProfile [] ProfileList;
 
     /**
-    * 邮件模版总数。
+    * 邮件配置总数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -66,9 +66,9 @@ public class DescribeMailProfileResponse extends AbstractModel{
     }
 
     /**
-     * Get 邮件模版总数。
+     * Get 邮件配置总数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 邮件模版总数。
+     * @return TotalCount 邮件配置总数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -76,9 +76,9 @@ public class DescribeMailProfileResponse extends AbstractModel{
     }
 
     /**
-     * Set 邮件模版总数。
+     * Set 邮件配置总数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 邮件模版总数。
+     * @param TotalCount 邮件配置总数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

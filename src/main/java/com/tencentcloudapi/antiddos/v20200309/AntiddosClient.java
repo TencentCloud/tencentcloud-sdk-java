@@ -279,6 +279,46 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *添加DDoS防护的端口acl策略
+     * @param req CreatePortAclConfigRequest
+     * @return CreatePortAclConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePortAclConfigResponse CreatePortAclConfig(CreatePortAclConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePortAclConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePortAclConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePortAclConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量添加DDoS防护的端口acl策略
+     * @param req CreatePortAclConfigListRequest
+     * @return CreatePortAclConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePortAclConfigListResponse CreatePortAclConfigList(CreatePortAclConfigListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePortAclConfigListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePortAclConfigListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePortAclConfigList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置DDoS防护的协议封禁配置
      * @param req CreateProtocolBlockConfigRequest
      * @return CreateProtocolBlockConfigResponse

@@ -30,11 +30,18 @@ public class DescribeRoomInfoRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 房间号列表，最大不能超过10个
+    * 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
     */
     @SerializedName("RoomIds")
     @Expose
     private Long [] RoomIds;
+
+    /**
+    * 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+    */
+    @SerializedName("StrRoomIds")
+    @Expose
+    private String [] StrRoomIds;
 
     /**
      * Get 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID 
@@ -53,19 +60,35 @@ public class DescribeRoomInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 房间号列表，最大不能超过10个 
-     * @return RoomIds 房间号列表，最大不能超过10个
+     * Get 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个） 
+     * @return RoomIds 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
      */
     public Long [] getRoomIds() {
         return this.RoomIds;
     }
 
     /**
-     * Set 房间号列表，最大不能超过10个
-     * @param RoomIds 房间号列表，最大不能超过10个
+     * Set 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     * @param RoomIds 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
      */
     public void setRoomIds(Long [] RoomIds) {
         this.RoomIds = RoomIds;
+    }
+
+    /**
+     * Get 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个） 
+     * @return StrRoomIds 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     */
+    public String [] getStrRoomIds() {
+        return this.StrRoomIds;
+    }
+
+    /**
+     * Set 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     * @param StrRoomIds 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     */
+    public void setStrRoomIds(String [] StrRoomIds) {
+        this.StrRoomIds = StrRoomIds;
     }
 
     public DescribeRoomInfoRequest() {
@@ -85,6 +108,12 @@ public class DescribeRoomInfoRequest extends AbstractModel{
                 this.RoomIds[i] = new Long(source.RoomIds[i]);
             }
         }
+        if (source.StrRoomIds != null) {
+            this.StrRoomIds = new String[source.StrRoomIds.length];
+            for (int i = 0; i < source.StrRoomIds.length; i++) {
+                this.StrRoomIds[i] = new String(source.StrRoomIds[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class DescribeRoomInfoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamArraySimple(map, prefix + "RoomIds.", this.RoomIds);
+        this.setParamArraySimple(map, prefix + "StrRoomIds.", this.StrRoomIds);
 
     }
 }

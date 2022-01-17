@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDownloadFlowUrlResponse extends AbstractModel{
+public class ModifyRunSyncAssetResponse extends AbstractModel{
 
     /**
-    * 合同（流程）下载地址
+    * 0：同步成功，1：资产更新中，2：后台同步调用失败
     */
-    @SerializedName("DownLoadUrl")
+    @SerializedName("Status")
     @Expose
-    private String DownLoadUrl;
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class GetDownloadFlowUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 合同（流程）下载地址 
-     * @return DownLoadUrl 合同（流程）下载地址
+     * Get 0：同步成功，1：资产更新中，2：后台同步调用失败 
+     * @return Status 0：同步成功，1：资产更新中，2：后台同步调用失败
      */
-    public String getDownLoadUrl() {
-        return this.DownLoadUrl;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 合同（流程）下载地址
-     * @param DownLoadUrl 合同（流程）下载地址
+     * Set 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * @param Status 0：同步成功，1：资产更新中，2：后台同步调用失败
      */
-    public void setDownLoadUrl(String DownLoadUrl) {
-        this.DownLoadUrl = DownLoadUrl;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
@@ -68,16 +68,16 @@ public class GetDownloadFlowUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetDownloadFlowUrlResponse() {
+    public ModifyRunSyncAssetResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetDownloadFlowUrlResponse(GetDownloadFlowUrlResponse source) {
-        if (source.DownLoadUrl != null) {
-            this.DownLoadUrl = new String(source.DownLoadUrl);
+    public ModifyRunSyncAssetResponse(ModifyRunSyncAssetResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class GetDownloadFlowUrlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownLoadUrl", this.DownLoadUrl);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

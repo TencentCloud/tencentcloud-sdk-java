@@ -145,6 +145,13 @@ Hadoop-Hbase
     private String SceneName;
 
     /**
+    * 共用组件信息
+    */
+    @SerializedName("ExternalService")
+    @Expose
+    private ExternalService [] ExternalService;
+
+    /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -464,6 +471,22 @@ Hadoop-Hbase
         this.SceneName = SceneName;
     }
 
+    /**
+     * Get 共用组件信息 
+     * @return ExternalService 共用组件信息
+     */
+    public ExternalService [] getExternalService() {
+        return this.ExternalService;
+    }
+
+    /**
+     * Set 共用组件信息
+     * @param ExternalService 共用组件信息
+     */
+    public void setExternalService(ExternalService [] ExternalService) {
+        this.ExternalService = ExternalService;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -517,6 +540,12 @@ Hadoop-Hbase
         if (source.SceneName != null) {
             this.SceneName = new String(source.SceneName);
         }
+        if (source.ExternalService != null) {
+            this.ExternalService = new ExternalService[source.ExternalService.length];
+            for (int i = 0; i < source.ExternalService.length; i++) {
+                this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
+            }
+        }
     }
 
 
@@ -538,6 +567,7 @@ Hadoop-Hbase
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
+        this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
 
     }
 }

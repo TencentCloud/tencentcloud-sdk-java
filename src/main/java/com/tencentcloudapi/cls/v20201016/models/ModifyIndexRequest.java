@@ -37,7 +37,7 @@ public class ModifyIndexRequest extends AbstractModel{
     private Boolean Status;
 
     /**
-    * 索引规则，Rule和Effective两个必须有一个参数存在
+    * 索引规则
     */
     @SerializedName("Rule")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyIndexRequest extends AbstractModel{
     }
 
     /**
-     * Get 索引规则，Rule和Effective两个必须有一个参数存在 
-     * @return Rule 索引规则，Rule和Effective两个必须有一个参数存在
+     * Get 索引规则 
+     * @return Rule 索引规则
      */
     public RuleInfo getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 索引规则，Rule和Effective两个必须有一个参数存在
-     * @param Rule 索引规则，Rule和Effective两个必须有一个参数存在
+     * Set 索引规则
+     * @param Rule 索引规则
      */
     public void setRule(RuleInfo Rule) {
         this.Rule = Rule;

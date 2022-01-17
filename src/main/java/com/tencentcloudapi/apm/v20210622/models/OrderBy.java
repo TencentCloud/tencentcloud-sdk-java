@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.api.v20201106.models;
+package com.tencentcloudapi.apm.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionsRequest extends AbstractModel{
+public class OrderBy extends AbstractModel{
 
     /**
-    * 待查询产品的名称，例如cvm
+    * 需要排序的字段
     */
-    @SerializedName("Product")
+    @SerializedName("Key")
     @Expose
-    private String Product;
+    private String Key;
 
     /**
-     * Get 待查询产品的名称，例如cvm 
-     * @return Product 待查询产品的名称，例如cvm
+    * 顺序排序/倒序排序
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 需要排序的字段 
+     * @return Key 需要排序的字段
      */
-    public String getProduct() {
-        return this.Product;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 待查询产品的名称，例如cvm
-     * @param Product 待查询产品的名称，例如cvm
+     * Set 需要排序的字段
+     * @param Key 需要排序的字段
      */
-    public void setProduct(String Product) {
-        this.Product = Product;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DescribeRegionsRequest() {
+    /**
+     * Get 顺序排序/倒序排序 
+     * @return Value 顺序排序/倒序排序
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 顺序排序/倒序排序
+     * @param Value 顺序排序/倒序排序
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public OrderBy() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRegionsRequest(DescribeRegionsRequest source) {
-        if (source.Product != null) {
-            this.Product = new String(source.Product);
+    public OrderBy(OrderBy source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class DescribeRegionsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

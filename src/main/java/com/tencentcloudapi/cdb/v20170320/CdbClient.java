@@ -2519,7 +2519,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *昨晚数据库代理配置变更或则升级版本后手动发起立即切换
+     *数据库代理配置变更或则升级版本后手动发起立即切换
      * @param req SwitchCDBProxyRequest
      * @return SwitchCDBProxyResponse
      * @throws TencentCloudSDKException

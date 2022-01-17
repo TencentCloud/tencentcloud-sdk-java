@@ -30,7 +30,7 @@ public class RuleTagInfo extends AbstractModel{
     private Boolean CaseSensitive;
 
     /**
-    * 标签索引配置中的字段信息
+    * 元字段索引配置中的字段信息
     */
     @SerializedName("KeyValues")
     @Expose
@@ -53,16 +53,16 @@ public class RuleTagInfo extends AbstractModel{
     }
 
     /**
-     * Get 标签索引配置中的字段信息 
-     * @return KeyValues 标签索引配置中的字段信息
+     * Get 元字段索引配置中的字段信息 
+     * @return KeyValues 元字段索引配置中的字段信息
      */
     public KeyValueInfo [] getKeyValues() {
         return this.KeyValues;
     }
 
     /**
-     * Set 标签索引配置中的字段信息
-     * @param KeyValues 标签索引配置中的字段信息
+     * Set 元字段索引配置中的字段信息
+     * @param KeyValues 元字段索引配置中的字段信息
      */
     public void setKeyValues(KeyValueInfo [] KeyValues) {
         this.KeyValues = KeyValues;

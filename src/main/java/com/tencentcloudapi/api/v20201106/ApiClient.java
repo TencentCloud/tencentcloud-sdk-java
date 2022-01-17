@@ -39,7 +39,7 @@ public class ApiClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeRegions)用于查询各个产品支持地域信息，当前只支持cvm。
+     *本接口(DescribeRegions)用于查询各个产品支持地域信息。
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException
@@ -59,7 +59,7 @@ public class ApiClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeZones)用于查询产品可用区信息，当前只支持cvm。
+     *本接口(DescribeZones)用于查询产品可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException

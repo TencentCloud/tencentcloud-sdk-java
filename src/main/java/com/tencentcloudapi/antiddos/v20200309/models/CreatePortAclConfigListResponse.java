@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.api.v20201106.models;
+package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionsRequest extends AbstractModel{
+public class CreatePortAclConfigListResponse extends AbstractModel{
 
     /**
-    * 待查询产品的名称，例如cvm
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Product")
+    @SerializedName("RequestId")
     @Expose
-    private String Product;
+    private String RequestId;
 
     /**
-     * Get 待查询产品的名称，例如cvm 
-     * @return Product 待查询产品的名称，例如cvm
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getProduct() {
-        return this.Product;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 待查询产品的名称，例如cvm
-     * @param Product 待查询产品的名称，例如cvm
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setProduct(String Product) {
-        this.Product = Product;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeRegionsRequest() {
+    public CreatePortAclConfigListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRegionsRequest(DescribeRegionsRequest source) {
-        if (source.Product != null) {
-            this.Product = new String(source.Product);
+    public CreatePortAclConfigListResponse(CreatePortAclConfigListResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeRegionsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.api.v20201106.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionsRequest extends AbstractModel{
+public class ModifyRunSyncAssetRequest extends AbstractModel{
 
     /**
-    * 待查询产品的名称，例如cvm
+    * 0: 互联网防火墙开关，1：vpc 防火墙开关
     */
-    @SerializedName("Product")
+    @SerializedName("Type")
     @Expose
-    private String Product;
+    private Long Type;
 
     /**
-     * Get 待查询产品的名称，例如cvm 
-     * @return Product 待查询产品的名称，例如cvm
+     * Get 0: 互联网防火墙开关，1：vpc 防火墙开关 
+     * @return Type 0: 互联网防火墙开关，1：vpc 防火墙开关
      */
-    public String getProduct() {
-        return this.Product;
+    public Long getType() {
+        return this.Type;
     }
 
     /**
-     * Set 待查询产品的名称，例如cvm
-     * @param Product 待查询产品的名称，例如cvm
+     * Set 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @param Type 0: 互联网防火墙开关，1：vpc 防火墙开关
      */
-    public void setProduct(String Product) {
-        this.Product = Product;
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
-    public DescribeRegionsRequest() {
+    public ModifyRunSyncAssetRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRegionsRequest(DescribeRegionsRequest source) {
-        if (source.Product != null) {
-            this.Product = new String(source.Product);
+    public ModifyRunSyncAssetRequest(ModifyRunSyncAssetRequest source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeRegionsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

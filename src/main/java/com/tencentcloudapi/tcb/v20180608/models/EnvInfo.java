@@ -180,6 +180,14 @@ public class EnvInfo extends AbstractModel{
     private ClsInfo [] CustomLogServices;
 
     /**
+    * 环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -567,6 +575,26 @@ public class EnvInfo extends AbstractModel{
         this.CustomLogServices = CustomLogServices;
     }
 
+    /**
+     * Get 环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvType 环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set 环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvType 环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
     public EnvInfo() {
     }
 
@@ -656,6 +684,9 @@ public class EnvInfo extends AbstractModel{
                 this.CustomLogServices[i] = new ClsInfo(source.CustomLogServices[i]);
             }
         }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
     }
 
 
@@ -683,6 +714,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "CustomLogServices.", this.CustomLogServices);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
 
     }
 }

@@ -181,8 +181,9 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *此接口（GetDownloadFlowUrl）用于创建电子签批量下载确认页面链接，支持客户合同（流程）按照自定义文件夹形式 分类下载。
+     *此接口（GetDownloadFlowUrl）用于创建电子签批量下载地址，支持客户合同（流程）按照自定义文件夹形式 分类下载。
 当前接口限制最多合同（流程）50个.
+
      * @param req GetDownloadFlowUrlRequest
      * @return GetDownloadFlowUrlResponse
      * @throws TencentCloudSDKException

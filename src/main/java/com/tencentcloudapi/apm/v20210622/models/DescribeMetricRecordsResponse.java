@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.apm.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDownloadFlowUrlResponse extends AbstractModel{
+public class DescribeMetricRecordsResponse extends AbstractModel{
 
     /**
-    * 合同（流程）下载地址
+    * 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DownLoadUrl")
+    @SerializedName("Records")
     @Expose
-    private String DownLoadUrl;
+    private ApmMetricRecord [] Records;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class GetDownloadFlowUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 合同（流程）下载地址 
-     * @return DownLoadUrl 合同（流程）下载地址
+     * Get 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Records 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDownLoadUrl() {
-        return this.DownLoadUrl;
+    public ApmMetricRecord [] getRecords() {
+        return this.Records;
     }
 
     /**
-     * Set 合同（流程）下载地址
-     * @param DownLoadUrl 合同（流程）下载地址
+     * Set 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Records 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDownLoadUrl(String DownLoadUrl) {
-        this.DownLoadUrl = DownLoadUrl;
+    public void setRecords(ApmMetricRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
@@ -68,16 +73,19 @@ public class GetDownloadFlowUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetDownloadFlowUrlResponse() {
+    public DescribeMetricRecordsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetDownloadFlowUrlResponse(GetDownloadFlowUrlResponse source) {
-        if (source.DownLoadUrl != null) {
-            this.DownLoadUrl = new String(source.DownLoadUrl);
+    public DescribeMetricRecordsResponse(DescribeMetricRecordsResponse source) {
+        if (source.Records != null) {
+            this.Records = new ApmMetricRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new ApmMetricRecord(source.Records[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +97,7 @@ public class GetDownloadFlowUrlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownLoadUrl", this.DownLoadUrl);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

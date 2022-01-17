@@ -87,7 +87,7 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     private String Reference;
 
     /**
-    * CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+    * CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSS")
@@ -302,9 +302,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
-     * Get CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+     * Get CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CVSS CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+     * @return CVSS CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVSS() {
@@ -312,9 +312,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
-     * Set CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+     * Set CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CVSS CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+     * @param CVSS CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSS(String CVSS) {
