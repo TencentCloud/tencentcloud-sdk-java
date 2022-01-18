@@ -79,6 +79,46 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataFetchUrl信息
+     * @param req DescribeDataFetchUrlRequest
+     * @return DescribeDataFetchUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataFetchUrlResponse DescribeDataFetchUrl(DescribeDataFetchUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataFetchUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataFetchUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataFetchUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取DescribeDataFetchUrlInfo信息
+     * @param req DescribeDataFetchUrlInfoRequest
+     * @return DescribeDataFetchUrlInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataFetchUrlInfoResponse DescribeDataFetchUrlInfo(DescribeDataFetchUrlInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataFetchUrlInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataFetchUrlInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataFetchUrlInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取LogUrlStatistics信息
      * @param req DescribeDataLogUrlStatisticsRequest
      * @return DescribeDataLogUrlStatisticsResponse

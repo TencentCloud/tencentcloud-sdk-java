@@ -31,14 +31,14 @@ public class Cdc extends AbstractModel{
     private String CageId;
 
     /**
-    * 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
+    * 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
     */
     @SerializedName("CdcState")
     @Expose
     private String CdcState;
 
     /**
-    * 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+    * 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
@@ -53,7 +53,7 @@ public class Cdc extends AbstractModel{
     private String CdcName;
 
     /**
-    * 独享集群的资源大小。
+    * 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcResource")
@@ -75,7 +75,7 @@ public class Cdc extends AbstractModel{
     private String DiskType;
 
     /**
-    * 独享集群过期时间。
+    * 独享集群到期时间。
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -102,25 +102,25 @@ public class Cdc extends AbstractModel{
     }
 
     /**
-     * Get 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。 
-     * @return CdcState 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
+     * Get 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。 
+     * @return CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
      */
     public String getCdcState() {
         return this.CdcState;
     }
 
     /**
-     * Set 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
-     * @param CdcState 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
+     * Set 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+     * @param CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
      */
     public void setCdcState(String CdcState) {
         this.CdcState = CdcState;
     }
 
     /**
-     * Get 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+     * Get 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Zone 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+     * @return Zone 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
@@ -128,9 +128,9 @@ public class Cdc extends AbstractModel{
     }
 
     /**
-     * Set 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+     * Set 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Zone 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+     * @param Zone 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
@@ -154,9 +154,9 @@ public class Cdc extends AbstractModel{
     }
 
     /**
-     * Get 独享集群的资源大小。
+     * Get 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcResource 独享集群的资源大小。
+     * @return CdcResource 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdcSize getCdcResource() {
@@ -164,9 +164,9 @@ public class Cdc extends AbstractModel{
     }
 
     /**
-     * Set 独享集群的资源大小。
+     * Set 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcResource 独享集群的资源大小。
+     * @param CdcResource 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcResource(CdcSize CdcResource) {
@@ -206,16 +206,16 @@ public class Cdc extends AbstractModel{
     }
 
     /**
-     * Get 独享集群过期时间。 
-     * @return ExpiredTime 独享集群过期时间。
+     * Get 独享集群到期时间。 
+     * @return ExpiredTime 独享集群到期时间。
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 独享集群过期时间。
-     * @param ExpiredTime 独享集群过期时间。
+     * Set 独享集群到期时间。
+     * @param ExpiredTime 独享集群到期时间。
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

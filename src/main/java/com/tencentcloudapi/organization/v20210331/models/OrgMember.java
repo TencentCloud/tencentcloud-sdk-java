@@ -119,6 +119,30 @@ public class OrgMember extends AbstractModel{
     private String IsAllowQuit;
 
     /**
+    * 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayUin")
+    @Expose
+    private String PayUin;
+
+    /**
+    * 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayName")
+    @Expose
+    private String PayName;
+
+    /**
+    * 管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrgIdentity")
+    @Expose
+    private MemberIdentity [] OrgIdentity;
+
+    /**
      * Get 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemberUin 成员Uin
@@ -358,6 +382,66 @@ public class OrgMember extends AbstractModel{
         this.IsAllowQuit = IsAllowQuit;
     }
 
+    /**
+     * Get 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayUin 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayUin() {
+        return this.PayUin;
+    }
+
+    /**
+     * Set 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayUin 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayUin(String PayUin) {
+        this.PayUin = PayUin;
+    }
+
+    /**
+     * Get 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayName 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayName() {
+        return this.PayName;
+    }
+
+    /**
+     * Set 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayName 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayName(String PayName) {
+        this.PayName = PayName;
+    }
+
+    /**
+     * Get 管理身份
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrgIdentity 管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MemberIdentity [] getOrgIdentity() {
+        return this.OrgIdentity;
+    }
+
+    /**
+     * Set 管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrgIdentity 管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrgIdentity(MemberIdentity [] OrgIdentity) {
+        this.OrgIdentity = OrgIdentity;
+    }
+
     public OrgMember() {
     }
 
@@ -405,6 +489,18 @@ public class OrgMember extends AbstractModel{
         if (source.IsAllowQuit != null) {
             this.IsAllowQuit = new String(source.IsAllowQuit);
         }
+        if (source.PayUin != null) {
+            this.PayUin = new String(source.PayUin);
+        }
+        if (source.PayName != null) {
+            this.PayName = new String(source.PayName);
+        }
+        if (source.OrgIdentity != null) {
+            this.OrgIdentity = new MemberIdentity[source.OrgIdentity.length];
+            for (int i = 0; i < source.OrgIdentity.length; i++) {
+                this.OrgIdentity[i] = new MemberIdentity(source.OrgIdentity[i]);
+            }
+        }
     }
 
 
@@ -424,6 +520,9 @@ public class OrgMember extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
+        this.setParamSimple(map, prefix + "PayUin", this.PayUin);
+        this.setParamSimple(map, prefix + "PayName", this.PayName);
+        this.setParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
 
     }
 }

@@ -38,15 +38,7 @@ public class TextToVoiceRequest extends AbstractModel{
     private String SessionId;
 
     /**
-    * 模型类型，1-默认模型。
-    */
-    @SerializedName("ModelType")
-    @Expose
-    private Long ModelType;
-
-    /**
     * 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
     */
     @SerializedName("Volume")
     @Expose
@@ -65,6 +57,13 @@ public class TextToVoiceRequest extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 模型类型，1-默认模型。
+    */
+    @SerializedName("ModelType")
+    @Expose
+    private Long ModelType;
 
     /**
     * 标准音色<li>10510000-智逍遥，阅读男声</li><li>1001-智瑜，情感女声</li><li>1002-智聆，通用女声</li><li>1003-智美，客服女声</li><li>1004-智云，通用男声</li><li>1005-智莉，通用女声</li><li>1007-智娜，客服女声</li><li>1008-智琪，客服女声</li><li>1009-智芸，知性女声</li><li>1010-智华，通用男声</li><li>1017-智蓉，情感女声</li><li>1018-智靖，情感男声</li><li>1050-WeJack，英文男声</li><li>1051-WeRose，英文女声</li>精品音色<br>精品音色拟真度更高，价格不同于标准音色，查看[购买指南](https://cloud.tencent.com/product/tts/pricing)<br><li>100510000-智逍遥，阅读男声</li><li>101001-智瑜，情感女声</li><li>101002-智聆，通用女声</li><li>101003-智美，客服女声</li><li>101004-智云，通用男声</li><li>101005-智莉，通用女声</li><li>101006-智言，助手女声</li><li>101007-智娜，客服女声</li><li>101008-智琪，客服女声</li><li>101009-智芸，知性女声</li><li>101010-智华，通用男声</li><li>101011-智燕，新闻女声</li><li>101012-智丹，新闻女声</li><li>101013-智辉，新闻男声</li><li>101014-智宁，新闻男声</li><li>101015-智萌，男童声</li><li>101016-智甜，女童声</li><li>101017-智蓉，情感女声</li><li>101018-智靖，情感男声</li><li>101019-智彤，粤语女声</li><li>101019-智彤，粤语女声</li><li>101019-智彤，粤语女声</li><li>101020-智刚，新闻男声</li><li>101021-智瑞，新闻男声</li><li>101022-智虹，新闻女声</li><li>101023-智萱，聊天女声</li><li>101024-智皓，聊天男声</li><li>101025-智薇，聊天女声</li><li>101026-智希，通用女声</li><li>101027-智梅，通用女声</li><li>101028-智洁，通用女声</li><li>101029-智凯，通用男声</li><li>101030-智柯，通用男声</li><li>101031-智奎，通用男声</li><li>101032-智芳，通用女声</li><li>101033-智蓓，客服女声</li><li>101034-智莲，通用女声</li><li>101035-智依，通用女声</li><li>101040-智川，四川女声</li><li>101050-WeJack，英文男声</li><li>101051-WeRose，英文女声</li>
@@ -131,26 +130,8 @@ public class TextToVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 模型类型，1-默认模型。 
-     * @return ModelType 模型类型，1-默认模型。
-     */
-    public Long getModelType() {
-        return this.ModelType;
-    }
-
-    /**
-     * Set 模型类型，1-默认模型。
-     * @param ModelType 模型类型，1-默认模型。
-     */
-    public void setModelType(Long ModelType) {
-        this.ModelType = ModelType;
-    }
-
-    /**
-     * Get 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。 
+     * Get 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。 
      * @return Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
      */
     public Float getVolume() {
         return this.Volume;
@@ -158,9 +139,7 @@ public class TextToVoiceRequest extends AbstractModel{
 
     /**
      * Set 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
      * @param Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;
@@ -196,6 +175,22 @@ public class TextToVoiceRequest extends AbstractModel{
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 模型类型，1-默认模型。 
+     * @return ModelType 模型类型，1-默认模型。
+     */
+    public Long getModelType() {
+        return this.ModelType;
+    }
+
+    /**
+     * Set 模型类型，1-默认模型。
+     * @param ModelType 模型类型，1-默认模型。
+     */
+    public void setModelType(Long ModelType) {
+        this.ModelType = ModelType;
     }
 
     /**
@@ -276,9 +271,6 @@ public class TextToVoiceRequest extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
-        if (source.ModelType != null) {
-            this.ModelType = new Long(source.ModelType);
-        }
         if (source.Volume != null) {
             this.Volume = new Float(source.Volume);
         }
@@ -287,6 +279,9 @@ public class TextToVoiceRequest extends AbstractModel{
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ModelType != null) {
+            this.ModelType = new Long(source.ModelType);
         }
         if (source.VoiceType != null) {
             this.VoiceType = new Long(source.VoiceType);
@@ -309,10 +304,10 @@ public class TextToVoiceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
-        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "Speed", this.Speed);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);

@@ -95,6 +95,13 @@ public class BatchSendEmailRequest extends AbstractModel{
     private TimedEmailParam TimedParam;
 
     /**
+    * 退订选项 1: 加入退订链接 0: 不加入退订链接
+    */
+    @SerializedName("Unsubscribe")
+    @Expose
+    private String Unsubscribe;
+
+    /**
      * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com> 
@@ -262,6 +269,22 @@ public class BatchSendEmailRequest extends AbstractModel{
         this.TimedParam = TimedParam;
     }
 
+    /**
+     * Get 退订选项 1: 加入退订链接 0: 不加入退订链接 
+     * @return Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
+     */
+    public String getUnsubscribe() {
+        return this.Unsubscribe;
+    }
+
+    /**
+     * Set 退订选项 1: 加入退订链接 0: 不加入退订链接
+     * @param Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
+     */
+    public void setUnsubscribe(String Unsubscribe) {
+        this.Unsubscribe = Unsubscribe;
+    }
+
     public BatchSendEmailRequest() {
     }
 
@@ -303,6 +326,9 @@ public class BatchSendEmailRequest extends AbstractModel{
         if (source.TimedParam != null) {
             this.TimedParam = new TimedEmailParam(source.TimedParam);
         }
+        if (source.Unsubscribe != null) {
+            this.Unsubscribe = new String(source.Unsubscribe);
+        }
     }
 
 
@@ -320,6 +346,7 @@ public class BatchSendEmailRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         this.setParamObj(map, prefix + "CycleParam.", this.CycleParam);
         this.setParamObj(map, prefix + "TimedParam.", this.TimedParam);
+        this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
 
     }
 }

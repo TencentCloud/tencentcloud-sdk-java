@@ -44,14 +44,14 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private Long [] Status;
 
     /**
-    * 偏移量，不填默认为0
+    * 偏移量，不填默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认10，最大值20
+    * 返回数量，不填则默认10，最大值20。
     */
     @SerializedName("Limit")
     @Expose
@@ -65,11 +65,18 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String TagKey;
 
     /**
-    * 过滤器
+    * 过滤器。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 按照实例ID过滤
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String InstanceIds;
 
     /**
      * Get （过滤条件）按照实例ID过滤 
@@ -120,32 +127,32 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量，不填默认为0 
-     * @return Offset 偏移量，不填默认为0
+     * Get 偏移量，不填默认为0。 
+     * @return Offset 偏移量，不填默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，不填默认为0
-     * @param Offset 偏移量，不填默认为0
+     * Set 偏移量，不填默认为0。
+     * @param Offset 偏移量，不填默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，不填则默认10，最大值20 
-     * @return Limit 返回数量，不填则默认10，最大值20
+     * Get 返回数量，不填则默认10，最大值20。 
+     * @return Limit 返回数量，不填则默认10，最大值20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认10，最大值20
-     * @param Limit 返回数量，不填则默认10，最大值20
+     * Set 返回数量，不填则默认10，最大值20。
+     * @param Limit 返回数量，不填则默认10，最大值20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -168,19 +175,35 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤器 
-     * @return Filters 过滤器
+     * Get 过滤器。 
+     * @return Filters 过滤器。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器
-     * @param Filters 过滤器
+     * Set 过滤器。
+     * @param Filters 过滤器。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 按照实例ID过滤 
+     * @return InstanceIds 按照实例ID过滤
+     */
+    public String getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 按照实例ID过滤
+     * @param InstanceIds 按照实例ID过滤
+     */
+    public void setInstanceIds(String InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     public DescribeInstancesDetailRequest() {
@@ -218,6 +241,9 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String(source.InstanceIds);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
 
     }
 }

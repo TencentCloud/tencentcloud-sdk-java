@@ -220,6 +220,30 @@ public class InstanceDetail extends AbstractModel{
     private String RebalanceTime;
 
     /**
+    * 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+    * 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicNetworkChargeType")
+    @Expose
+    private String PublicNetworkChargeType;
+
+    /**
+    * 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private Long PublicNetwork;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -683,6 +707,66 @@ public class InstanceDetail extends AbstractModel{
         this.RebalanceTime = RebalanceTime;
     }
 
+    /**
+     * Get 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PartitionNumber 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartitionNumber 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
+    }
+
+    /**
+     * Get 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicNetworkChargeType 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicNetworkChargeType() {
+        return this.PublicNetworkChargeType;
+    }
+
+    /**
+     * Set 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicNetworkChargeType 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
+        this.PublicNetworkChargeType = PublicNetworkChargeType;
+    }
+
+    /**
+     * Get 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicNetwork 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicNetwork 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicNetwork(Long PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
     public InstanceDetail() {
     }
 
@@ -781,6 +865,15 @@ public class InstanceDetail extends AbstractModel{
         if (source.RebalanceTime != null) {
             this.RebalanceTime = new String(source.RebalanceTime);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
+        if (source.PublicNetworkChargeType != null) {
+            this.PublicNetworkChargeType = new String(source.PublicNetworkChargeType);
+        }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new Long(source.PublicNetwork);
+        }
     }
 
 
@@ -815,6 +908,9 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
         this.setParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
         this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
 
     }
 }

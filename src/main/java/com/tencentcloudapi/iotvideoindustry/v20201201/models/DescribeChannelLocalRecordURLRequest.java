@@ -44,6 +44,13 @@ public class DescribeChannelLocalRecordURLRequest extends AbstractModel{
     private String RecordId;
 
     /**
+    * UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
     * 录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
     */
     @SerializedName("StartTime")
@@ -106,6 +113,22 @@ public class DescribeChannelLocalRecordURLRequest extends AbstractModel{
     }
 
     /**
+     * Get UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效 
+     * @return ExpireTime UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+     * @param ExpireTime UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
      * Get 录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点 
      * @return StartTime 录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
      */
@@ -154,6 +177,9 @@ public class DescribeChannelLocalRecordURLRequest extends AbstractModel{
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
@@ -170,6 +196,7 @@ public class DescribeChannelLocalRecordURLRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 

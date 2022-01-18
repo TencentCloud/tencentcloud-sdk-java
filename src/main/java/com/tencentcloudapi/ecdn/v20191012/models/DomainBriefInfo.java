@@ -107,6 +107,14 @@ public class DomainBriefInfo extends AbstractModel{
     private String Readonly;
 
     /**
+    * 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get 域名ID。 
      * @return ResourceId 域名ID。
      */
@@ -298,6 +306,26 @@ public class DomainBriefInfo extends AbstractModel{
         this.Readonly = Readonly;
     }
 
+    /**
+     * Get 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
     public DomainBriefInfo() {
     }
 
@@ -342,6 +370,12 @@ public class DomainBriefInfo extends AbstractModel{
         if (source.Readonly != null) {
             this.Readonly = new String(source.Readonly);
         }
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
+            }
+        }
     }
 
 
@@ -361,6 +395,7 @@ public class DomainBriefInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Disable", this.Disable);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

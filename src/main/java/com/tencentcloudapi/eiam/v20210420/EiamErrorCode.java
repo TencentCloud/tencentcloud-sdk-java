@@ -171,6 +171,9 @@ public enum EiamErrorCode {
     // 用户手机不能为空。
      FAILEDOPERATION_USERPHONEISEMPTY("FailedOperation.UserPhoneIsEmpty"),
      
+    // 应用名称已存在。
+     INVALIDPARAMETER_APPDISPLAYNAMEEXISTED("InvalidParameter.AppDisplayNameExisted"),
+     
     // 校验失败：
      INVALIDPARAMETER_ATTRIBUTEVALUEVALIDFAILURE("InvalidParameter.AttributeValueValidFailure"),
      

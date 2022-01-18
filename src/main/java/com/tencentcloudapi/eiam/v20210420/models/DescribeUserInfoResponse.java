@@ -135,6 +135,14 @@ public class DescribeUserInfoResponse extends AbstractModel{
     private String [] SecondaryOrgNodeIdList;
 
     /**
+    * 是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdminFlag")
+    @Expose
+    private Long AdminFlag;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -422,6 +430,26 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdminFlag 是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAdminFlag() {
+        return this.AdminFlag;
+    }
+
+    /**
+     * Set 是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdminFlag 是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdminFlag(Long AdminFlag) {
+        this.AdminFlag = AdminFlag;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -493,6 +521,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
                 this.SecondaryOrgNodeIdList[i] = new String(source.SecondaryOrgNodeIdList[i]);
             }
         }
+        if (source.AdminFlag != null) {
+            this.AdminFlag = new Long(source.AdminFlag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -517,6 +548,7 @@ public class DescribeUserInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivationTime", this.ActivationTime);
         this.setParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
         this.setParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
+        this.setParamSimple(map, prefix + "AdminFlag", this.AdminFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

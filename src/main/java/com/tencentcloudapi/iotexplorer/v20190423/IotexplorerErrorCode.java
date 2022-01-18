@@ -267,6 +267,9 @@ public enum IotexplorerErrorCode {
     // 物模型超出限制。
      LIMITEXCEEDED_THINGMODELEXCEEDLIMIT("LimitExceeded.ThingModelExceedLimit"),
      
+    // Topic数量超出限制。
+     LIMITEXCEEDED_TOPICPOLICYEXCEEDLIMIT("LimitExceeded.TopicPolicyExceedLimit"),
+     
     // 物模型事件 Type 错误。
      MISSINGPARAMETER_MODELDEFINEEVENTTYPEERROR("MissingParameter.ModelDefineEventTypeError"),
      

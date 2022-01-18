@@ -107,6 +107,13 @@ public class DescribeDetailedSingleProbeDataRequest extends AbstractModel{
     private String [] ErrorTypes;
 
     /**
+    * 城市
+    */
+    @SerializedName("City")
+    @Expose
+    private String [] City;
+
+    /**
      * Get 开始时间戳（毫秒级） 
      * @return BeginTime 开始时间戳（毫秒级）
      */
@@ -298,6 +305,22 @@ public class DescribeDetailedSingleProbeDataRequest extends AbstractModel{
         this.ErrorTypes = ErrorTypes;
     }
 
+    /**
+     * Get 城市 
+     * @return City 城市
+     */
+    public String [] getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set 城市
+     * @param City 城市
+     */
+    public void setCity(String [] City) {
+        this.City = City;
+    }
+
     public DescribeDetailedSingleProbeDataRequest() {
     }
 
@@ -357,6 +380,12 @@ public class DescribeDetailedSingleProbeDataRequest extends AbstractModel{
                 this.ErrorTypes[i] = new String(source.ErrorTypes[i]);
             }
         }
+        if (source.City != null) {
+            this.City = new String[source.City.length];
+            for (int i = 0; i < source.City.length; i++) {
+                this.City[i] = new String(source.City[i]);
+            }
+        }
     }
 
 
@@ -376,6 +405,7 @@ public class DescribeDetailedSingleProbeDataRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Operators.", this.Operators);
         this.setParamArraySimple(map, prefix + "Districts.", this.Districts);
         this.setParamArraySimple(map, prefix + "ErrorTypes.", this.ErrorTypes);
+        this.setParamArraySimple(map, prefix + "City.", this.City);
 
     }
 }

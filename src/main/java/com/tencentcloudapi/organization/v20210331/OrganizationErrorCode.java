@@ -24,6 +24,9 @@ public enum OrganizationErrorCode {
     // 名字已经被使用。
      FAILEDOPERATION_MEMBERNAMEUSED("FailedOperation.MemberNameUsed"),
      
+    // 操作计费侧成员权限错误。
+     FAILEDOPERATION_OPERATEBILLINGPERMISSIONERR("FailedOperation.OperateBillingPermissionErr"),
+     
     // 操作策略失败。
      FAILEDOPERATION_OPERATEPOLICY("FailedOperation.OperatePolicy"),
      
@@ -38,6 +41,12 @@ public enum OrganizationErrorCode {
      
     // 组织策略不合法。
      FAILEDOPERATION_ORGANIZATIONPOLICYILLEGAL("FailedOperation.OrganizationPolicyIllegal"),
+     
+    // 代付者不合法。
+     FAILEDOPERATION_PAYUINILLEGAL("FailedOperation.PayUinIllegal"),
+     
+    // 子账号存在身份。
+     FAILEDOPERATION_SUBACCOUNTIDENTITYEXIST("FailedOperation.SubAccountIdentityExist"),
      
     // 子账号不存在。
      FAILEDOPERATION_SUBACCOUNTNOTEXIST("FailedOperation.SubAccountNotExist"),
@@ -61,7 +70,28 @@ public enum OrganizationErrorCode {
      RESOURCENOTFOUND_MEMBERPOLICYNOTEXIST("ResourceNotFound.MemberPolicyNotExist"),
      
     // 企业组织不存在。
-     RESOURCENOTFOUND_ORGANIZATIONNOTEXIST("ResourceNotFound.OrganizationNotExist");
+     RESOURCENOTFOUND_ORGANIZATIONNOTEXIST("ResourceNotFound.OrganizationNotExist"),
+     
+    // 不允许添加代付关系。
+     UNSUPPORTEDOPERATION_ADDDELEGATEPAYERNOTALLOW("UnsupportedOperation.AddDelegatePayerNotAllow"),
+     
+    // 不允许添加优惠继承关系。
+     UNSUPPORTEDOPERATION_ADDDISCOUNTINHERITNOTALLOW("UnsupportedOperation.AddDiscountInheritNotAllow"),
+     
+    // 成员账户欠费。
+     UNSUPPORTEDOPERATION_MEMBERACCOUNTARREARS("UnsupportedOperation.MemberAccountArrears"),
+     
+    // 成员存在优惠继承。
+     UNSUPPORTEDOPERATION_MEMBERDISCOUNTINHERITEXISTED("UnsupportedOperation.MemberDiscountInheritExisted"),
+     
+    // 存在在途订单。
+     UNSUPPORTEDOPERATION_ORDERINPROGRESSEXISTED("UnsupportedOperation.OrderInProgressExisted"),
+     
+    // 管理员存在优惠继承。
+     UNSUPPORTEDOPERATION_OWNERDISCOUNTINHERITEXISTED("UnsupportedOperation.OwnerDiscountInheritExisted"),
+     
+    // 代付者欠费且未开通信用账户。
+     UNSUPPORTEDOPERATION_PAYERARREARSANDNOCREDITACCOUNT("UnsupportedOperation.PayerArrearsAndNoCreditAccount");
      
     private String value;
     private OrganizationErrorCode (String value){

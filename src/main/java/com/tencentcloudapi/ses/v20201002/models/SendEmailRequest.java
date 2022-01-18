@@ -74,7 +74,7 @@ public class SendEmailRequest extends AbstractModel{
     private Attachment [] Attachments;
 
     /**
-    * 是否加入退订链接
+    * 退订选项 1: 加入退订链接 0: 不加入退订链接
     */
     @SerializedName("Unsubscribe")
     @Expose
@@ -201,16 +201,16 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否加入退订链接 
-     * @return Unsubscribe 是否加入退订链接
+     * Get 退订选项 1: 加入退订链接 0: 不加入退订链接 
+     * @return Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set 是否加入退订链接
-     * @param Unsubscribe 是否加入退订链接
+     * Set 退订选项 1: 加入退订链接 0: 不加入退订链接
+     * @param Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;

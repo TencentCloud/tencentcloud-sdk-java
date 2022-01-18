@@ -1453,6 +1453,28 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
+* 只支持对单个实例发起在线烧录FPGA镜像的操作。
+* 支持对单个实例的多块FPGA卡同时烧录FPGA镜像，DBDFs参数为空时，默认对指定实例的所有FPGA卡进行烧录。
+     * @param req ProgramFpgaImageRequest
+     * @return ProgramFpgaImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProgramFpgaImageResponse ProgramFpgaImage(ProgramFpgaImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProgramFpgaImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProgramFpgaImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ProgramFpgaImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
      * @param req PurchaseReservedInstancesOfferingRequest
      * @return PurchaseReservedInstancesOfferingResponse

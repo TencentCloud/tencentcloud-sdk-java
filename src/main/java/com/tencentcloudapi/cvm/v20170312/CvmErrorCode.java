@@ -288,6 +288,9 @@ public enum CvmErrorCode {
     // HostName参数值不合法
      INVALIDPARAMETERVALUE_ILLEGALHOSTNAME("InvalidParameterValue.IllegalHostName"),
      
+    // 传参格式不对。
+     INVALIDPARAMETERVALUE_INCORRECTFORMAT("InvalidParameterValue.IncorrectFormat"),
+     
     // 不支持操作不同计费方式的实例。
      INVALIDPARAMETERVALUE_INSTANCENOTSUPPORTEDMIXPRICINGMODEL("InvalidParameterValue.InstanceNotSupportedMixPricingModel"),
      
@@ -704,6 +707,9 @@ public enum CvmErrorCode {
      
     // 该实例类型不支持竞价计费
      UNSUPPORTEDOPERATION_NOINSTANCETYPESUPPORTSPOT("UnsupportedOperation.NoInstanceTypeSupportSpot"),
+     
+    // 当前实例不是FPGA机型。
+     UNSUPPORTEDOPERATION_NOTFPGAINSTANCE("UnsupportedOperation.NotFpgaInstance"),
      
     // 针对当前实例设置定时任务失败。
      UNSUPPORTEDOPERATION_NOTSUPPORTIMPORTINSTANCESACTIONTIMER("UnsupportedOperation.NotSupportImportInstancesActionTimer"),

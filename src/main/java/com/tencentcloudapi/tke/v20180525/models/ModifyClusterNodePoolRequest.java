@@ -107,6 +107,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+    */
+    @SerializedName("Unschedulable")
+    @Expose
+    private Long Unschedulable;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -298,6 +305,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度. 
+     * @return Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     */
+    public Long getUnschedulable() {
+        return this.Unschedulable;
+    }
+
+    /**
+     * Set 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * @param Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     */
+    public void setUnschedulable(Long Unschedulable) {
+        this.Unschedulable = Unschedulable;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -351,6 +374,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Unschedulable != null) {
+            this.Unschedulable = new Long(source.Unschedulable);
+        }
     }
 
 
@@ -370,6 +396,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
 
     }
 }

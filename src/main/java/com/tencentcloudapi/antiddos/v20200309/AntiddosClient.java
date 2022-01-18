@@ -159,6 +159,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *配置DDoS连接抑制选项
+     * @param req CreateDDoSConnectLimitRequest
+     * @return CreateDDoSConnectLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDDoSConnectLimitResponse CreateDDoSConnectLimit(CreateDDoSConnectLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDDoSConnectLimitResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDDoSConnectLimitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDDoSConnectLimit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加DDoS防护的区域封禁配置
      * @param req CreateDDoSGeoIPBlockConfigRequest
      * @return CreateDDoSGeoIPBlockConfigResponse

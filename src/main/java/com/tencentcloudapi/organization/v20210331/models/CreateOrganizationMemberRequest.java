@@ -30,7 +30,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 关系策略
+    * 关系策略  取值：Financial
     */
     @SerializedName("PolicyType")
     @Expose
@@ -72,6 +72,20 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
     private Long RecordId;
 
     /**
+    * 代付者Uin
+    */
+    @SerializedName("PayUin")
+    @Expose
+    private String PayUin;
+
+    /**
+    * 管理身份
+    */
+    @SerializedName("IdentityRoleID")
+    @Expose
+    private Long [] IdentityRoleID;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -88,16 +102,16 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
     }
 
     /**
-     * Get 关系策略 
-     * @return PolicyType 关系策略
+     * Get 关系策略  取值：Financial 
+     * @return PolicyType 关系策略  取值：Financial
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 关系策略
-     * @param PolicyType 关系策略
+     * Set 关系策略  取值：Financial
+     * @param PolicyType 关系策略  取值：Financial
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
@@ -183,6 +197,38 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
         this.RecordId = RecordId;
     }
 
+    /**
+     * Get 代付者Uin 
+     * @return PayUin 代付者Uin
+     */
+    public String getPayUin() {
+        return this.PayUin;
+    }
+
+    /**
+     * Set 代付者Uin
+     * @param PayUin 代付者Uin
+     */
+    public void setPayUin(String PayUin) {
+        this.PayUin = PayUin;
+    }
+
+    /**
+     * Get 管理身份 
+     * @return IdentityRoleID 管理身份
+     */
+    public Long [] getIdentityRoleID() {
+        return this.IdentityRoleID;
+    }
+
+    /**
+     * Set 管理身份
+     * @param IdentityRoleID 管理身份
+     */
+    public void setIdentityRoleID(Long [] IdentityRoleID) {
+        this.IdentityRoleID = IdentityRoleID;
+    }
+
     public CreateOrganizationMemberRequest() {
     }
 
@@ -215,6 +261,15 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
         if (source.RecordId != null) {
             this.RecordId = new Long(source.RecordId);
         }
+        if (source.PayUin != null) {
+            this.PayUin = new String(source.PayUin);
+        }
+        if (source.IdentityRoleID != null) {
+            this.IdentityRoleID = new Long[source.IdentityRoleID.length];
+            for (int i = 0; i < source.IdentityRoleID.length; i++) {
+                this.IdentityRoleID[i] = new Long(source.IdentityRoleID[i]);
+            }
+        }
     }
 
 
@@ -229,6 +284,8 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "PayUin", this.PayUin);
+        this.setParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
 
     }
 }

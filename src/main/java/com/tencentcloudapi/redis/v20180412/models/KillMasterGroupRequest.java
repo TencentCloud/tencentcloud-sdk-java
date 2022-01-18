@@ -43,6 +43,13 @@ public class KillMasterGroupRequest extends AbstractModel{
     private String Password;
 
     /**
+    * 单AZ实例节点信息
+    */
+    @SerializedName("ShardIds")
+    @Expose
+    private Long [] ShardIds;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -98,6 +105,22 @@ public class KillMasterGroupRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    /**
+     * Get 单AZ实例节点信息 
+     * @return ShardIds 单AZ实例节点信息
+     */
+    public Long [] getShardIds() {
+        return this.ShardIds;
+    }
+
+    /**
+     * Set 单AZ实例节点信息
+     * @param ShardIds 单AZ实例节点信息
+     */
+    public void setShardIds(Long [] ShardIds) {
+        this.ShardIds = ShardIds;
+    }
+
     public KillMasterGroupRequest() {
     }
 
@@ -112,6 +135,12 @@ public class KillMasterGroupRequest extends AbstractModel{
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.ShardIds != null) {
+            this.ShardIds = new Long[source.ShardIds.length];
+            for (int i = 0; i < source.ShardIds.length; i++) {
+                this.ShardIds[i] = new Long(source.ShardIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class KillMasterGroupRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
 
     }
 }
