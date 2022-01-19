@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class QueryMerchantPayWayListResponse extends AbstractModel{
 
     /**
-    * 业务系统返回码
+    * 业务系统返回码，0表示成功，其他表示失败。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -53,16 +53,16 @@ public class QueryMerchantPayWayListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 业务系统返回码 
-     * @return ErrCode 业务系统返回码
+     * Get 业务系统返回码，0表示成功，其他表示失败。 
+     * @return ErrCode 业务系统返回码，0表示成功，其他表示失败。
      */
     public String getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 业务系统返回码
-     * @param ErrCode 业务系统返回码
+     * Set 业务系统返回码，0表示成功，其他表示失败。
+     * @param ErrCode 业务系统返回码，0表示成功，其他表示失败。
      */
     public void setErrCode(String ErrCode) {
         this.ErrCode = ErrCode;

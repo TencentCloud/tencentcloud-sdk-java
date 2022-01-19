@@ -39,6 +39,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *添加复制组成员
+     * @param req AddReplicationInstanceRequest
+     * @return AddReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddReplicationInstanceResponse AddReplicationInstance(AddReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddReplicationInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *应用参数模板到实例
      * @param req ApplyParamsTemplateRequest
      * @return ApplyParamsTemplateResponse
@@ -199,6 +219,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *创建复制组
+     * @param req CreateReplicationGroupRequest
+     * @return CreateReplicationGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReplicationGroupResponse CreateReplicationGroup(CreateReplicationGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReplicationGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReplicationGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReplicationGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除实例子账号
      * @param req DeleteInstanceAccountRequest
      * @return DeleteInstanceAccountResponse
@@ -231,6 +271,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *移除复制组成员
+     * @param req DeleteReplicationInstanceRequest
+     * @return DeleteReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReplicationInstanceResponse DeleteReplicationInstance(DeleteReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReplicationInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

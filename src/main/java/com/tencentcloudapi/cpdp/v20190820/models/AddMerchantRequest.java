@@ -51,7 +51,7 @@ public class AddMerchantRequest extends AbstractModel{
     private String OpenKey;
 
     /**
-    * 营业执照过期时间（yyyy-mm-dd）
+    * 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
     */
     @SerializedName("BusinessLicenseEndDate")
     @Expose
@@ -422,7 +422,7 @@ public class AddMerchantRequest extends AbstractModel{
     private String TaxRegistrationNo;
 
     /**
-    * 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+    * 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
     */
     @SerializedName("Type")
     @Expose
@@ -493,16 +493,16 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 营业执照过期时间（yyyy-mm-dd） 
-     * @return BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd）
+     * Get 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传） 
+     * @return BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
      */
     public String getBusinessLicenseEndDate() {
         return this.BusinessLicenseEndDate;
     }
 
     /**
-     * Set 营业执照过期时间（yyyy-mm-dd）
-     * @param BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd）
+     * Set 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
+     * @param BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
      */
     public void setBusinessLicenseEndDate(String BusinessLicenseEndDate) {
         this.BusinessLicenseEndDate = BusinessLicenseEndDate;
@@ -1341,16 +1341,16 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。 
-     * @return Type 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+     * Get 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。 
+     * @return Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
-     * @param Type 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+     * Set 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
+     * @param Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
      */
     public void setType(String Type) {
         this.Type = Type;

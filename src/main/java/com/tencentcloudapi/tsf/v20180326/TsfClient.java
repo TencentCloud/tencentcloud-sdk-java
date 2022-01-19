@@ -940,7 +940,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *部署容器应用
+     *部署容器应用-更新
      * @param req DeployContainerGroupRequest
      * @return DeployContainerGroupResponse
      * @throws TencentCloudSDKException

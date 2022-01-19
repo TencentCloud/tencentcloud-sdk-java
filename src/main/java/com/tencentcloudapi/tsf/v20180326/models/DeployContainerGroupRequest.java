@@ -268,6 +268,13 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private VolumeMountInfo [] VolumeMountInfoList;
 
     /**
+    * 是否清除数据卷信息，默认false
+    */
+    @SerializedName("VolumeClean")
+    @Expose
+    private Boolean VolumeClean;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -827,6 +834,22 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.VolumeMountInfoList = VolumeMountInfoList;
     }
 
+    /**
+     * Get 是否清除数据卷信息，默认false 
+     * @return VolumeClean 是否清除数据卷信息，默认false
+     */
+    public Boolean getVolumeClean() {
+        return this.VolumeClean;
+    }
+
+    /**
+     * Set 是否清除数据卷信息，默认false
+     * @param VolumeClean 是否清除数据卷信息，默认false
+     */
+    public void setVolumeClean(Boolean VolumeClean) {
+        this.VolumeClean = VolumeClean;
+    }
+
     public DeployContainerGroupRequest() {
     }
 
@@ -949,6 +972,9 @@ public class DeployContainerGroupRequest extends AbstractModel{
                 this.VolumeMountInfoList[i] = new VolumeMountInfo(source.VolumeMountInfoList[i]);
             }
         }
+        if (source.VolumeClean != null) {
+            this.VolumeClean = new Boolean(source.VolumeClean);
+        }
     }
 
 
@@ -991,6 +1017,7 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
         this.setParamArrayObj(map, prefix + "VolumeInfoList.", this.VolumeInfoList);
         this.setParamArrayObj(map, prefix + "VolumeMountInfoList.", this.VolumeMountInfoList);
+        this.setParamSimple(map, prefix + "VolumeClean", this.VolumeClean);
 
     }
 }

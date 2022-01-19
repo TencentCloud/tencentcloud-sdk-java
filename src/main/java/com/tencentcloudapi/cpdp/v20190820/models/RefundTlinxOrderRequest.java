@@ -65,7 +65,7 @@ public class RefundTlinxOrderRequest extends AbstractModel{
     private String RefundAmount;
 
     /**
-    * 主管密码，对密码进行sha1加密，默认为123456
+    * 主管密码，对密码进行SHA-1加密，默认为123456
     */
     @SerializedName("ShopPassword")
     @Expose
@@ -182,16 +182,16 @@ public class RefundTlinxOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 主管密码，对密码进行sha1加密，默认为123456 
-     * @return ShopPassword 主管密码，对密码进行sha1加密，默认为123456
+     * Get 主管密码，对密码进行SHA-1加密，默认为123456 
+     * @return ShopPassword 主管密码，对密码进行SHA-1加密，默认为123456
      */
     public String getShopPassword() {
         return this.ShopPassword;
     }
 
     /**
-     * Set 主管密码，对密码进行sha1加密，默认为123456
-     * @param ShopPassword 主管密码，对密码进行sha1加密，默认为123456
+     * Set 主管密码，对密码进行SHA-1加密，默认为123456
+     * @param ShopPassword 主管密码，对密码进行SHA-1加密，默认为123456
      */
     public void setShopPassword(String ShopPassword) {
         this.ShopPassword = ShopPassword;

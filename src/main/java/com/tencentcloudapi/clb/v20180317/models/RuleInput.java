@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class RuleInput extends AbstractModel{
 
     /**
-    * 转发规则的域名。长度限制为：1~80。
-    */
-    @SerializedName("Domain")
-    @Expose
-    private String Domain;
-
-    /**
     * 转发规则的路径。长度限制为：1~200。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+    * 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
     * 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
@@ -115,20 +115,11 @@ public class RuleInput extends AbstractModel{
     private Boolean Quic;
 
     /**
-     * Get 转发规则的域名。长度限制为：1~80。 
-     * @return Domain 转发规则的域名。长度限制为：1~80。
-     */
-    public String getDomain() {
-        return this.Domain;
-    }
-
-    /**
-     * Set 转发规则的域名。长度限制为：1~80。
-     * @param Domain 转发规则的域名。长度限制为：1~80。
-     */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
-    }
+    * 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
 
     /**
      * Get 转发规则的路径。长度限制为：1~200。 
@@ -144,6 +135,22 @@ public class RuleInput extends AbstractModel{
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。 
+     * @return Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * @param Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -326,6 +333,22 @@ public class RuleInput extends AbstractModel{
         this.Quic = Quic;
     }
 
+    /**
+     * Get 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。 
+     * @return Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * @param Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
     public RuleInput() {
     }
 
@@ -334,11 +357,11 @@ public class RuleInput extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RuleInput(RuleInput source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
-        }
         if (source.Url != null) {
             this.Url = new String(source.Url);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
         }
         if (source.SessionExpireTime != null) {
             this.SessionExpireTime = new Long(source.SessionExpireTime);
@@ -373,6 +396,12 @@ public class RuleInput extends AbstractModel{
         if (source.Quic != null) {
             this.Quic = new Boolean(source.Quic);
         }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
     }
 
 
@@ -380,8 +409,8 @@ public class RuleInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
@@ -393,6 +422,7 @@ public class RuleInput extends AbstractModel{
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "Quic", this.Quic);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
 
     }
 }

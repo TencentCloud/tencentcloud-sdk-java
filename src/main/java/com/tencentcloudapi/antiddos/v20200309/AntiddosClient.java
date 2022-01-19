@@ -659,6 +659,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *获取DDoS连接抑制配置列表
+     * @param req DescribeDDoSConnectLimitListRequest
+     * @return DescribeDDoSConnectLimitListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSConnectLimitListResponse DescribeDDoSConnectLimitList(DescribeDDoSConnectLimitListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSConnectLimitListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSConnectLimitListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSConnectLimitList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取DDoS攻击流量带宽和攻击包速率数据
      * @param req DescribeDDoSTrendRequest
      * @return DescribeDDoSTrendResponse
@@ -893,6 +913,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeListPacketFilterConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeListPacketFilterConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取DDoS防护的端口acl策略列表
+     * @param req DescribeListPortAclListRequest
+     * @return DescribeListPortAclListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeListPortAclListResponse DescribeListPortAclList(DescribeListPortAclListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeListPortAclListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeListPortAclListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeListPortAclList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

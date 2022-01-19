@@ -86,6 +86,13 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
     private Long EndTime;
 
     /**
+    * 业务名称（默认值：taw）
+    */
+    @SerializedName("BusinessName")
+    @Expose
+    private String BusinessName;
+
+    /**
      * Get 过滤条件 
      * @return Filters 过滤条件
      */
@@ -229,6 +236,22 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 业务名称（默认值：taw） 
+     * @return BusinessName 业务名称（默认值：taw）
+     */
+    public String getBusinessName() {
+        return this.BusinessName;
+    }
+
+    /**
+     * Set 业务名称（默认值：taw）
+     * @param BusinessName 业务名称（默认值：taw）
+     */
+    public void setBusinessName(String BusinessName) {
+        this.BusinessName = BusinessName;
+    }
+
     public DescribeMetricRecordsRequest() {
     }
 
@@ -273,6 +296,9 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.BusinessName != null) {
+            this.BusinessName = new String(source.BusinessName);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
 
     }
 }
