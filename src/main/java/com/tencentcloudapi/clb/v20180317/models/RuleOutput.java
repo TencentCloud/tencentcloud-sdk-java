@@ -180,6 +180,14 @@ public class RuleOutput extends AbstractModel{
     private String QuicStatus;
 
     /**
+    * 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -555,6 +563,26 @@ public class RuleOutput extends AbstractModel{
         this.QuicStatus = QuicStatus;
     }
 
+    /**
+     * Get 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domains 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domains 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
     public RuleOutput() {
     }
 
@@ -626,6 +654,12 @@ public class RuleOutput extends AbstractModel{
         if (source.QuicStatus != null) {
             this.QuicStatus = new String(source.QuicStatus);
         }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
     }
 
 
@@ -654,6 +688,7 @@ public class RuleOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
 
     }
 }

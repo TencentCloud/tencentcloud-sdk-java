@@ -39,6 +39,26 @@ public class CiiClient extends AbstractClient{
     }
 
     /**
+     *中银三星需求，基于主任务批量添加结构化子任务
+     * @param req AddSubStructureTasksRequest
+     * @return AddSubStructureTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddSubStructureTasksResponse AddSubStructureTasks(AddSubStructureTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddSubStructureTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddSubStructureTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddSubStructureTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
      * @param req CreateAutoClassifyStructureTaskRequest
      * @return CreateAutoClassifyStructureTaskResponse
@@ -119,6 +139,26 @@ public class CiiClient extends AbstractClient{
     }
 
     /**
+     *saas页面集成了自动分类功能，该接口提供自动分类结果
+     * @param req DescribeReportClassifyRequest
+     * @return DescribeReportClassifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportClassifyResponse DescribeReportClassify(DescribeReportClassifyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReportClassifyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReportClassifyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReportClassify");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
      * @param req DescribeStructCompareDataRequest
      * @return DescribeStructCompareDataResponse
@@ -191,6 +231,26 @@ public class CiiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStructureTaskResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStructureTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeUnderwriteTask)用于查询核保任务结果
+     * @param req DescribeUnderwriteTaskRequest
+     * @return DescribeUnderwriteTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnderwriteTaskResponse DescribeUnderwriteTask(DescribeUnderwriteTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnderwriteTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnderwriteTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnderwriteTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

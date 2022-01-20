@@ -37,14 +37,14 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 域名（必须是已经创建的转发规则下的域名）。
+    * 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 要修改的新域名。
+    * 要修改的新域名。NewDomain和NewDomains只能传一个。
     */
     @SerializedName("NewDomain")
     @Expose
@@ -72,11 +72,18 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
-    * 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+    * 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
     */
     @SerializedName("NewDefaultServerDomain")
     @Expose
     private String NewDefaultServerDomain;
+
+    /**
+    * 要修改的新域名列表。NewDomain和NewDomains只能传一个。
+    */
+    @SerializedName("NewDomains")
+    @Expose
+    private String [] NewDomains;
 
     /**
      * Get 负载均衡实例ID。 
@@ -111,32 +118,32 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 域名（必须是已经创建的转发规则下的域名）。 
-     * @return Domain 域名（必须是已经创建的转发规则下的域名）。
+     * Get 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。 
+     * @return Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名（必须是已经创建的转发规则下的域名）。
-     * @param Domain 域名（必须是已经创建的转发规则下的域名）。
+     * Set 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+     * @param Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 要修改的新域名。 
-     * @return NewDomain 要修改的新域名。
+     * Get 要修改的新域名。NewDomain和NewDomains只能传一个。 
+     * @return NewDomain 要修改的新域名。NewDomain和NewDomains只能传一个。
      */
     public String getNewDomain() {
         return this.NewDomain;
     }
 
     /**
-     * Set 要修改的新域名。
-     * @param NewDomain 要修改的新域名。
+     * Set 要修改的新域名。NewDomain和NewDomains只能传一个。
+     * @param NewDomain 要修改的新域名。NewDomain和NewDomains只能传一个。
      */
     public void setNewDomain(String NewDomain) {
         this.NewDomain = NewDomain;
@@ -191,19 +198,35 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。 
-     * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+     * Get 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。 
+     * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     public String getNewDefaultServerDomain() {
         return this.NewDefaultServerDomain;
     }
 
     /**
-     * Set 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
-     * @param NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+     * Set 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
+     * @param NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
         this.NewDefaultServerDomain = NewDefaultServerDomain;
+    }
+
+    /**
+     * Get 要修改的新域名列表。NewDomain和NewDomains只能传一个。 
+     * @return NewDomains 要修改的新域名列表。NewDomain和NewDomains只能传一个。
+     */
+    public String [] getNewDomains() {
+        return this.NewDomains;
+    }
+
+    /**
+     * Set 要修改的新域名列表。NewDomain和NewDomains只能传一个。
+     * @param NewDomains 要修改的新域名列表。NewDomain和NewDomains只能传一个。
+     */
+    public void setNewDomains(String [] NewDomains) {
+        this.NewDomains = NewDomains;
     }
 
     public ModifyDomainAttributesRequest() {
@@ -238,6 +261,12 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         if (source.NewDefaultServerDomain != null) {
             this.NewDefaultServerDomain = new String(source.NewDefaultServerDomain);
         }
+        if (source.NewDomains != null) {
+            this.NewDomains = new String[source.NewDomains.length];
+            for (int i = 0; i < source.NewDomains.length; i++) {
+                this.NewDomains[i] = new String(source.NewDomains[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
+        this.setParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
 
     }
 }

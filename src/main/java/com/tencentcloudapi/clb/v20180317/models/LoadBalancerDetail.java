@@ -287,6 +287,14 @@ Public：公网属性， Private：内网属性。
     private String TargetHealth;
 
     /**
+    * 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String Domains;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -946,6 +954,26 @@ Public：公网属性， Private：内网属性。
         this.TargetHealth = TargetHealth;
     }
 
+    /**
+     * Get 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domains 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domains 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomains(String Domains) {
+        this.Domains = Domains;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1059,6 +1087,9 @@ Public：公网属性， Private：内网属性。
         if (source.TargetHealth != null) {
             this.TargetHealth = new String(source.TargetHealth);
         }
+        if (source.Domains != null) {
+            this.Domains = new String(source.Domains);
+        }
     }
 
 
@@ -1099,6 +1130,7 @@ Public：公网属性， Private：内网属性。
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
+        this.setParamSimple(map, prefix + "Domains", this.Domains);
 
     }
 }

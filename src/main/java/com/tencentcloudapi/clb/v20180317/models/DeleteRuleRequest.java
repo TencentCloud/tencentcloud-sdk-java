@@ -44,7 +44,7 @@ public class DeleteRuleRequest extends AbstractModel{
     private String [] LocationIds;
 
     /**
-    * 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+    * 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
     */
     @SerializedName("Domain")
     @Expose
@@ -58,7 +58,7 @@ public class DeleteRuleRequest extends AbstractModel{
     private String Url;
 
     /**
-    * 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+    * 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
     */
     @SerializedName("NewDefaultServerDomain")
     @Expose
@@ -113,16 +113,16 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。 
-     * @return Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+     * Get 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。 
+     * @return Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
-     * @param Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+     * Set 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
+     * @param Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -145,16 +145,16 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。 
-     * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     * Get 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。 
+     * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     public String getNewDefaultServerDomain() {
         return this.NewDefaultServerDomain;
     }
 
     /**
-     * Set 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
-     * @param NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     * Set 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
+     * @param NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
         this.NewDefaultServerDomain = NewDefaultServerDomain;

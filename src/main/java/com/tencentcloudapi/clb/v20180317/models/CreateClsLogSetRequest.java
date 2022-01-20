@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateClsLogSetRequest extends AbstractModel{
 
     /**
-    * 日志集的保存周期，单位：天，最大 90。
-    */
-    @SerializedName("Period")
-    @Expose
-    private Long Period;
-
-    /**
     * 日志集的名字，不能和cls其他日志集重名。不填默认为clb_logset。
     */
     @SerializedName("LogsetName")
@@ -37,27 +30,18 @@ public class CreateClsLogSetRequest extends AbstractModel{
     private String LogsetName;
 
     /**
+    * 日志集的保存周期，单位：天。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
     * 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
     */
     @SerializedName("LogsetType")
     @Expose
     private String LogsetType;
-
-    /**
-     * Get 日志集的保存周期，单位：天，最大 90。 
-     * @return Period 日志集的保存周期，单位：天，最大 90。
-     */
-    public Long getPeriod() {
-        return this.Period;
-    }
-
-    /**
-     * Set 日志集的保存周期，单位：天，最大 90。
-     * @param Period 日志集的保存周期，单位：天，最大 90。
-     */
-    public void setPeriod(Long Period) {
-        this.Period = Period;
-    }
 
     /**
      * Get 日志集的名字，不能和cls其他日志集重名。不填默认为clb_logset。 
@@ -73,6 +57,22 @@ public class CreateClsLogSetRequest extends AbstractModel{
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
+    }
+
+    /**
+     * Get 日志集的保存周期，单位：天。 
+     * @return Period 日志集的保存周期，单位：天。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 日志集的保存周期，单位：天。
+     * @param Period 日志集的保存周期，单位：天。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
     }
 
     /**
@@ -99,11 +99,11 @@ public class CreateClsLogSetRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateClsLogSetRequest(CreateClsLogSetRequest source) {
-        if (source.Period != null) {
-            this.Period = new Long(source.Period);
-        }
         if (source.LogsetName != null) {
             this.LogsetName = new String(source.LogsetName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
         }
         if (source.LogsetType != null) {
             this.LogsetType = new String(source.LogsetType);
@@ -115,8 +115,8 @@ public class CreateClsLogSetRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
+        this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "LogsetType", this.LogsetType);
 
     }

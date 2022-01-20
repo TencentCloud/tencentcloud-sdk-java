@@ -72,6 +72,13 @@ public class DescribeTaskRecordsRequest extends AbstractModel{
     private String ExecuteType;
 
     /**
+    * 无
+    */
+    @SerializedName("Ids")
+    @Expose
+    private String [] Ids;
+
+    /**
      * Get 翻页偏移量。 
      * @return Offset 翻页偏移量。
      */
@@ -183,6 +190,22 @@ public class DescribeTaskRecordsRequest extends AbstractModel{
         this.ExecuteType = ExecuteType;
     }
 
+    /**
+     * Get 无 
+     * @return Ids 无
+     */
+    public String [] getIds() {
+        return this.Ids;
+    }
+
+    /**
+     * Set 无
+     * @param Ids 无
+     */
+    public void setIds(String [] Ids) {
+        this.Ids = Ids;
+    }
+
     public DescribeTaskRecordsRequest() {
     }
 
@@ -212,6 +235,12 @@ public class DescribeTaskRecordsRequest extends AbstractModel{
         if (source.ExecuteType != null) {
             this.ExecuteType = new String(source.ExecuteType);
         }
+        if (source.Ids != null) {
+            this.Ids = new String[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new String(source.Ids[i]);
+            }
+        }
     }
 
 
@@ -226,6 +255,7 @@ public class DescribeTaskRecordsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ExecuteType", this.ExecuteType);
+        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
 
     }
 }

@@ -44,7 +44,7 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 通道唯一标识
+    * 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
     */
     @SerializedName("ChannelId")
     @Expose
@@ -106,16 +106,16 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
     }
 
     /**
-     * Get 通道唯一标识 
-     * @return ChannelId 通道唯一标识
+     * Get 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填 
+     * @return ChannelId 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道唯一标识
-     * @param ChannelId 通道唯一标识
+     * Set 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
+     * @param ChannelId 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;

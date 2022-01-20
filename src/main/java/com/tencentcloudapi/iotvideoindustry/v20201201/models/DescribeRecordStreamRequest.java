@@ -58,7 +58,7 @@ public class DescribeRecordStreamRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 通道唯一标识
+    * 通道唯一标识（此接口升级为必填字段）
     */
     @SerializedName("ChannelId")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeRecordStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 通道唯一标识 
-     * @return ChannelId 通道唯一标识
+     * Get 通道唯一标识（此接口升级为必填字段） 
+     * @return ChannelId 通道唯一标识（此接口升级为必填字段）
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道唯一标识
-     * @param ChannelId 通道唯一标识
+     * Set 通道唯一标识（此接口升级为必填字段）
+     * @param ChannelId 通道唯一标识（此接口升级为必填字段）
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;

@@ -30,14 +30,14 @@ public class UpdateRoleConsoleLoginRequest extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-    * 角色ID
+    * 角色ID，入参 RoleId 与 RoleName 二选一
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
 
     /**
-    * 角色名
+    * 角色名，入参 RoleId 与 RoleName 二选一
     */
     @SerializedName("RoleName")
     @Expose
@@ -60,32 +60,32 @@ public class UpdateRoleConsoleLoginRequest extends AbstractModel{
     }
 
     /**
-     * Get 角色ID 
-     * @return RoleId 角色ID
+     * Get 角色ID，入参 RoleId 与 RoleName 二选一 
+     * @return RoleId 角色ID，入参 RoleId 与 RoleName 二选一
      */
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 角色ID
-     * @param RoleId 角色ID
+     * Set 角色ID，入参 RoleId 与 RoleName 二选一
+     * @param RoleId 角色ID，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get 角色名 
-     * @return RoleName 角色名
+     * Get 角色名，入参 RoleId 与 RoleName 二选一 
+     * @return RoleName 角色名，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名
-     * @param RoleName 角色名
+     * Set 角色名，入参 RoleId 与 RoleName 二选一
+     * @param RoleName 角色名，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;

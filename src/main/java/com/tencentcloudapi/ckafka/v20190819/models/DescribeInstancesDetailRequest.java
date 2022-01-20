@@ -72,7 +72,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 按照实例ID过滤
+    * 已经废弃， 使用InstanceIdList
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -191,16 +191,16 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 按照实例ID过滤 
-     * @return InstanceIds 按照实例ID过滤
+     * Get 已经废弃， 使用InstanceIdList 
+     * @return InstanceIds 已经废弃， 使用InstanceIdList
      */
     public String getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 按照实例ID过滤
-     * @param InstanceIds 按照实例ID过滤
+     * Set 已经废弃， 使用InstanceIdList
+     * @param InstanceIds 已经废弃， 使用InstanceIdList
      */
     public void setInstanceIds(String InstanceIds) {
         this.InstanceIds = InstanceIds;

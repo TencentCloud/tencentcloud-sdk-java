@@ -13,22 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTaskFlowResponse extends AbstractModel{
+public class QueryCDBProxyResponse extends AbstractModel{
 
     /**
-    * 工作流 ID
+    * 代理数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("Count")
     @Expose
-    private String Result;
+    private Long Count;
+
+    /**
+    * 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyGroup")
+    @Expose
+    private ProxyGroups [] ProxyGroup;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +46,43 @@ public class CreateTaskFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 工作流 ID
+     * Get 代理数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 工作流 ID
+     * @return Count 代理数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getResult() {
-        return this.Result;
+    public Long getCount() {
+        return this.Count;
     }
 
     /**
-     * Set 工作流 ID
+     * Set 代理数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 工作流 ID
+     * @param Count 代理数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(String Result) {
-        this.Result = Result;
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
+    /**
+     * Get 代理信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyGroup 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProxyGroups [] getProxyGroup() {
+        return this.ProxyGroup;
+    }
+
+    /**
+     * Set 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyGroup 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyGroup(ProxyGroups [] ProxyGroup) {
+        this.ProxyGroup = ProxyGroup;
     }
 
     /**
@@ -73,16 +101,22 @@ public class CreateTaskFlowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateTaskFlowResponse() {
+    public QueryCDBProxyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTaskFlowResponse(CreateTaskFlowResponse source) {
-        if (source.Result != null) {
-            this.Result = new String(source.Result);
+    public QueryCDBProxyResponse(QueryCDBProxyResponse source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.ProxyGroup != null) {
+            this.ProxyGroup = new ProxyGroups[source.ProxyGroup.length];
+            for (int i = 0; i < source.ProxyGroup.length; i++) {
+                this.ProxyGroup[i] = new ProxyGroups(source.ProxyGroup[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +128,8 @@ public class CreateTaskFlowResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamArrayObj(map, prefix + "ProxyGroup.", this.ProxyGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

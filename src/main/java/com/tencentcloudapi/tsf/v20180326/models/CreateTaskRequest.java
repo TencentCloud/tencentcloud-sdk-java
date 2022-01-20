@@ -128,6 +128,13 @@ public class CreateTaskRequest extends AbstractModel{
     private String TaskArgument;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 任务名称，任务长度64字符 
      * @return TaskName 任务名称，任务长度64字符
      */
@@ -367,6 +374,22 @@ public class CreateTaskRequest extends AbstractModel{
         this.TaskArgument = TaskArgument;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -423,6 +446,12 @@ public class CreateTaskRequest extends AbstractModel{
         if (source.TaskArgument != null) {
             this.TaskArgument = new String(source.TaskArgument);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -445,6 +474,7 @@ public class CreateTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SuccessRatio", this.SuccessRatio);
         this.setParamObj(map, prefix + "AdvanceSettings.", this.AdvanceSettings);
         this.setParamSimple(map, prefix + "TaskArgument", this.TaskArgument);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

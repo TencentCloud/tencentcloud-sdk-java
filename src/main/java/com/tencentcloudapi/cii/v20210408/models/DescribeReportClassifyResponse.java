@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTaskFlowResponse extends AbstractModel{
+public class DescribeReportClassifyResponse extends AbstractModel{
 
     /**
-    * 工作流 ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 报告分类结果
     */
-    @SerializedName("Result")
+    @SerializedName("Reports")
     @Expose
-    private String Result;
+    private ClassifiedReports [] Reports;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class CreateTaskFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 工作流 ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 工作流 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 报告分类结果 
+     * @return Reports 报告分类结果
      */
-    public String getResult() {
-        return this.Result;
+    public ClassifiedReports [] getReports() {
+        return this.Reports;
     }
 
     /**
-     * Set 工作流 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 工作流 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 报告分类结果
+     * @param Reports 报告分类结果
      */
-    public void setResult(String Result) {
-        this.Result = Result;
+    public void setReports(ClassifiedReports [] Reports) {
+        this.Reports = Reports;
     }
 
     /**
@@ -73,16 +68,19 @@ public class CreateTaskFlowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateTaskFlowResponse() {
+    public DescribeReportClassifyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTaskFlowResponse(CreateTaskFlowResponse source) {
-        if (source.Result != null) {
-            this.Result = new String(source.Result);
+    public DescribeReportClassifyResponse(DescribeReportClassifyResponse source) {
+        if (source.Reports != null) {
+            this.Reports = new ClassifiedReports[source.Reports.length];
+            for (int i = 0; i < source.Reports.length; i++) {
+                this.Reports[i] = new ClassifiedReports(source.Reports[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +92,7 @@ public class CreateTaskFlowResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "Reports.", this.Reports);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

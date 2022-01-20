@@ -58,7 +58,7 @@ public class GroupMemberInfo extends AbstractModel{
     private String CountryCode;
 
     /**
-    * 是否已验证手机。
+    * 是否已验证手机。0-未验证  1-验证
     */
     @SerializedName("PhoneFlag")
     @Expose
@@ -72,14 +72,14 @@ public class GroupMemberInfo extends AbstractModel{
     private String Email;
 
     /**
-    * 是否已验证邮箱。
+    * 是否已验证邮箱。0-未验证  1-验证
     */
     @SerializedName("EmailFlag")
     @Expose
     private Long EmailFlag;
 
     /**
-    * 用户类型。
+    * 用户类型。1-全局协作者 2-项目协作者 3-消息接收者
     */
     @SerializedName("UserType")
     @Expose
@@ -93,7 +93,7 @@ public class GroupMemberInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 是否为主消息接收人。
+    * 是否为主消息接收人。0-否 1-是
     */
     @SerializedName("IsReceiverOwner")
     @Expose
@@ -180,16 +180,16 @@ public class GroupMemberInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否已验证手机。 
-     * @return PhoneFlag 是否已验证手机。
+     * Get 是否已验证手机。0-未验证  1-验证 
+     * @return PhoneFlag 是否已验证手机。0-未验证  1-验证
      */
     public Long getPhoneFlag() {
         return this.PhoneFlag;
     }
 
     /**
-     * Set 是否已验证手机。
-     * @param PhoneFlag 是否已验证手机。
+     * Set 是否已验证手机。0-未验证  1-验证
+     * @param PhoneFlag 是否已验证手机。0-未验证  1-验证
      */
     public void setPhoneFlag(Long PhoneFlag) {
         this.PhoneFlag = PhoneFlag;
@@ -212,32 +212,32 @@ public class GroupMemberInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否已验证邮箱。 
-     * @return EmailFlag 是否已验证邮箱。
+     * Get 是否已验证邮箱。0-未验证  1-验证 
+     * @return EmailFlag 是否已验证邮箱。0-未验证  1-验证
      */
     public Long getEmailFlag() {
         return this.EmailFlag;
     }
 
     /**
-     * Set 是否已验证邮箱。
-     * @param EmailFlag 是否已验证邮箱。
+     * Set 是否已验证邮箱。0-未验证  1-验证
+     * @param EmailFlag 是否已验证邮箱。0-未验证  1-验证
      */
     public void setEmailFlag(Long EmailFlag) {
         this.EmailFlag = EmailFlag;
     }
 
     /**
-     * Get 用户类型。 
-     * @return UserType 用户类型。
+     * Get 用户类型。1-全局协作者 2-项目协作者 3-消息接收者 
+     * @return UserType 用户类型。1-全局协作者 2-项目协作者 3-消息接收者
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 用户类型。
-     * @param UserType 用户类型。
+     * Set 用户类型。1-全局协作者 2-项目协作者 3-消息接收者
+     * @param UserType 用户类型。1-全局协作者 2-项目协作者 3-消息接收者
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
@@ -260,16 +260,16 @@ public class GroupMemberInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否为主消息接收人。 
-     * @return IsReceiverOwner 是否为主消息接收人。
+     * Get 是否为主消息接收人。0-否 1-是 
+     * @return IsReceiverOwner 是否为主消息接收人。0-否 1-是
      */
     public Long getIsReceiverOwner() {
         return this.IsReceiverOwner;
     }
 
     /**
-     * Set 是否为主消息接收人。
-     * @param IsReceiverOwner 是否为主消息接收人。
+     * Set 是否为主消息接收人。0-否 1-是
+     * @param IsReceiverOwner 是否为主消息接收人。0-否 1-是
      */
     public void setIsReceiverOwner(Long IsReceiverOwner) {
         this.IsReceiverOwner = IsReceiverOwner;

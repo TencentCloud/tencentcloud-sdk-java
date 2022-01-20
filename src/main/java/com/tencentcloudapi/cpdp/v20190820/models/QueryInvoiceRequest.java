@@ -24,6 +24,8 @@ public class QueryInvoiceRequest extends AbstractModel{
 
     /**
     * 开票平台ID
+0 : 高灯
+1 : 票易通
     */
     @SerializedName("InvoicePlatformId")
     @Expose
@@ -74,8 +76,12 @@ public class QueryInvoiceRequest extends AbstractModel{
     private String SellerTaxpayerNum;
 
     /**
-     * Get 开票平台ID 
+     * Get 开票平台ID
+0 : 高灯
+1 : 票易通 
      * @return InvoicePlatformId 开票平台ID
+0 : 高灯
+1 : 票易通
      */
     public Long getInvoicePlatformId() {
         return this.InvoicePlatformId;
@@ -83,7 +89,11 @@ public class QueryInvoiceRequest extends AbstractModel{
 
     /**
      * Set 开票平台ID
+0 : 高灯
+1 : 票易通
      * @param InvoicePlatformId 开票平台ID
+0 : 高灯
+1 : 票易通
      */
     public void setInvoicePlatformId(Long InvoicePlatformId) {
         this.InvoicePlatformId = InvoicePlatformId;

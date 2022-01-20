@@ -419,7 +419,7 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *用于Event事件投递
+     *（已废弃）用于Event事件投递
      * @param req PublishEventRequest
      * @return PublishEventResponse
      * @throws TencentCloudSDKException
@@ -431,6 +431,26 @@ public class EbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishEventResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PublishEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于Event事件投递
+     * @param req PutEventsRequest
+     * @return PutEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutEventsResponse PutEvents(PutEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutEvents");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -51,6 +51,13 @@ public class CreateTaskFlowRequest extends AbstractModel{
     private Long TimeOut;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 工作流名称 
      * @return FlowName 工作流名称
      */
@@ -114,6 +121,22 @@ public class CreateTaskFlowRequest extends AbstractModel{
         this.TimeOut = TimeOut;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public CreateTaskFlowRequest() {
     }
 
@@ -137,6 +160,12 @@ public class CreateTaskFlowRequest extends AbstractModel{
         if (source.TimeOut != null) {
             this.TimeOut = new Long(source.TimeOut);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class CreateTaskFlowRequest extends AbstractModel{
         this.setParamObj(map, prefix + "TriggerRule.", this.TriggerRule);
         this.setParamArrayObj(map, prefix + "FlowEdges.", this.FlowEdges);
         this.setParamSimple(map, prefix + "TimeOut", this.TimeOut);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

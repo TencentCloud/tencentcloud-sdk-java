@@ -30,7 +30,7 @@ public class GetPolicyVersionRequest extends AbstractModel{
     private Long PolicyId;
 
     /**
-    * 策略版本号
+    * 策略版本号，可由ListPolicyVersions获取
     */
     @SerializedName("VersionId")
     @Expose
@@ -53,16 +53,16 @@ public class GetPolicyVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略版本号 
-     * @return VersionId 策略版本号
+     * Get 策略版本号，可由ListPolicyVersions获取 
+     * @return VersionId 策略版本号，可由ListPolicyVersions获取
      */
     public Long getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 策略版本号
-     * @param VersionId 策略版本号
+     * Set 策略版本号，可由ListPolicyVersions获取
+     * @param VersionId 策略版本号，可由ListPolicyVersions获取
      */
     public void setVersionId(Long VersionId) {
         this.VersionId = VersionId;

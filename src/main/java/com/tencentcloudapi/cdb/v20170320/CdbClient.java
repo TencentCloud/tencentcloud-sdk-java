@@ -2335,6 +2335,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *查询代理详情
+     * @param req QueryCDBProxyRequest
+     * @return QueryCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCDBProxyResponse QueryCDBProxy(QueryCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
      * @param req ReleaseIsolatedDBInstancesRequest
      * @return ReleaseIsolatedDBInstancesResponse

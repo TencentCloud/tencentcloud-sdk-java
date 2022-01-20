@@ -555,6 +555,14 @@ public class InstanceInfo extends AbstractModel{
     private Long FrozenDiskSize;
 
     /**
+    * 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthStatus")
+    @Expose
+    private Long HealthStatus;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1830,6 +1838,26 @@ public class InstanceInfo extends AbstractModel{
         this.FrozenDiskSize = FrozenDiskSize;
     }
 
+    /**
+     * Get 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHealthStatus() {
+        return this.HealthStatus;
+    }
+
+    /**
+     * Set 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthStatus(Long HealthStatus) {
+        this.HealthStatus = HealthStatus;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2063,6 +2091,9 @@ public class InstanceInfo extends AbstractModel{
         if (source.FrozenDiskSize != null) {
             this.FrozenDiskSize = new Long(source.FrozenDiskSize);
         }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new Long(source.HealthStatus);
+        }
     }
 
 
@@ -2141,6 +2172,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FrozenMemSize", this.FrozenMemSize);
         this.setParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
         this.setParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
+        this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
 
     }
 }

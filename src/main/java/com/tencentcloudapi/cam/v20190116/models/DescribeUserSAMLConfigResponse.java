@@ -30,7 +30,7 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     private String SAMLMetadata;
 
     /**
-    * 状态：0:未设置，11:已开启，2:已禁用
+    * 状态：0:未设置，1:已开启，2:已禁用
     */
     @SerializedName("Status")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 状态：0:未设置，11:已开启，2:已禁用 
-     * @return Status 状态：0:未设置，11:已开启，2:已禁用
+     * Get 状态：0:未设置，1:已开启，2:已禁用 
+     * @return Status 状态：0:未设置，1:已开启，2:已禁用
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：0:未设置，11:已开启，2:已禁用
-     * @param Status 状态：0:未设置，11:已开启，2:已禁用
+     * Set 状态：0:未设置，1:已开启，2:已禁用
+     * @param Status 状态：0:未设置，1:已开启，2:已禁用
      */
     public void setStatus(Long Status) {
         this.Status = Status;

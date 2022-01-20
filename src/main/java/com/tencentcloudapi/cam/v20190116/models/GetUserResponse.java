@@ -45,13 +45,14 @@ public class GetUserResponse extends AbstractModel{
 
     /**
     * 子用户备注
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 子用户能否登录控制台
+    * 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
     */
     @SerializedName("ConsoleLogin")
     @Expose
@@ -134,8 +135,10 @@ public class GetUserResponse extends AbstractModel{
     }
 
     /**
-     * Get 子用户备注 
+     * Get 子用户备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Remark 子用户备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -143,23 +146,25 @@ public class GetUserResponse extends AbstractModel{
 
     /**
      * Set 子用户备注
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 子用户备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 子用户能否登录控制台 
-     * @return ConsoleLogin 子用户能否登录控制台
+     * Get 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台 
+     * @return ConsoleLogin 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
      */
     public Long getConsoleLogin() {
         return this.ConsoleLogin;
     }
 
     /**
-     * Set 子用户能否登录控制台
-     * @param ConsoleLogin 子用户能否登录控制台
+     * Set 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
+     * @param ConsoleLogin 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
      */
     public void setConsoleLogin(Long ConsoleLogin) {
         this.ConsoleLogin = ConsoleLogin;

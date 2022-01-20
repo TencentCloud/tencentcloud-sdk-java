@@ -135,6 +135,13 @@ public class ModifyTaskRequest extends AbstractModel{
     private String TaskArgument;
 
     /**
+    * 无
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -390,6 +397,22 @@ public class ModifyTaskRequest extends AbstractModel{
         this.TaskArgument = TaskArgument;
     }
 
+    /**
+     * Get 无 
+     * @return ProgramIdList 无
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 无
+     * @param ProgramIdList 无
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
     public ModifyTaskRequest() {
     }
 
@@ -449,6 +472,12 @@ public class ModifyTaskRequest extends AbstractModel{
         if (source.TaskArgument != null) {
             this.TaskArgument = new String(source.TaskArgument);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
     }
 
 
@@ -472,6 +501,7 @@ public class ModifyTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RetryCount", this.RetryCount);
         this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
         this.setParamSimple(map, prefix + "TaskArgument", this.TaskArgument);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
 
     }
 }

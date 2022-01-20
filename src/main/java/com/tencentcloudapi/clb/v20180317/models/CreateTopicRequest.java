@@ -44,6 +44,13 @@ public class CreateTopicRequest extends AbstractModel{
     private String TopicType;
 
     /**
+    * 日志集的保存周期，单位：天，默认30天。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 日志主题的名称。 
      * @return TopicName 日志主题的名称。
      */
@@ -91,6 +98,22 @@ public class CreateTopicRequest extends AbstractModel{
         this.TopicType = TopicType;
     }
 
+    /**
+     * Get 日志集的保存周期，单位：天，默认30天。 
+     * @return Period 日志集的保存周期，单位：天，默认30天。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 日志集的保存周期，单位：天，默认30天。
+     * @param Period 日志集的保存周期，单位：天，默认30天。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.TopicType != null) {
             this.TopicType = new String(source.TopicType);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }
