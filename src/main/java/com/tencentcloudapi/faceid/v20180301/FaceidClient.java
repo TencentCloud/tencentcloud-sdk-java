@@ -681,4 +681,64 @@ public class FaceidClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *本接口用于校验中国移动手机号、姓名和身份证号的真实性和一致性。中国移动支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+     * @param req PhoneVerificationCMCCRequest
+     * @return PhoneVerificationCMCCResponse
+     * @throws TencentCloudSDKException
+     */
+    public PhoneVerificationCMCCResponse PhoneVerificationCMCC(PhoneVerificationCMCCRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PhoneVerificationCMCCResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PhoneVerificationCMCCResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PhoneVerificationCMCC");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于校验中国电信手机号、姓名和身份证号的真实性和一致性。中国电信支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+     * @param req PhoneVerificationCTCCRequest
+     * @return PhoneVerificationCTCCResponse
+     * @throws TencentCloudSDKException
+     */
+    public PhoneVerificationCTCCResponse PhoneVerificationCTCC(PhoneVerificationCTCCRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PhoneVerificationCTCCResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PhoneVerificationCTCCResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PhoneVerificationCTCC");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于校验中国联通手机号、姓名和身份证号的真实性和一致性。中国联通支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+     * @param req PhoneVerificationCUCCRequest
+     * @return PhoneVerificationCUCCResponse
+     * @throws TencentCloudSDKException
+     */
+    public PhoneVerificationCUCCResponse PhoneVerificationCUCC(PhoneVerificationCUCCRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PhoneVerificationCUCCResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PhoneVerificationCUCCResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PhoneVerificationCUCC");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

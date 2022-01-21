@@ -20,35 +20,31 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
+public class ImageRepoInfo extends AbstractModel{
 
     /**
     * 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageDigest")
     @Expose
     private String ImageDigest;
 
     /**
-    * 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 镜像仓库地址
     */
     @SerializedName("ImageRepoAddress")
     @Expose
     private String ImageRepoAddress;
 
     /**
-    * 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 仓库类型
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 镜像名称
     */
     @SerializedName("ImageName")
     @Expose
@@ -56,15 +52,20 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageTag")
     @Expose
     private String ImageTag;
 
     /**
-    * 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
+    * 镜像大小
+    */
+    @SerializedName("ImageSize")
+    @Expose
+    private Long ImageSize;
+
+    /**
+    * 最近扫描时间
     */
     @SerializedName("ScanTime")
     @Expose
@@ -72,7 +73,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanStatus")
     @Expose
@@ -80,7 +80,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCnt")
     @Expose
@@ -88,7 +87,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirusCnt")
     @Expose
@@ -96,7 +94,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskCnt")
     @Expose
@@ -104,15 +101,20 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SentiveInfoCnt")
     @Expose
     private Long SentiveInfoCnt;
 
     /**
+    * 是否可信镜像
+    */
+    @SerializedName("IsTrustImage")
+    @Expose
+    private Boolean IsTrustImage;
+
+    /**
     * 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsName")
     @Expose
@@ -135,16 +137,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private String ScanVulError;
 
     /**
-    * 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LayerInfo")
-    @Expose
-    private String LayerInfo;
-
-    /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -152,7 +145,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -160,7 +152,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -175,7 +166,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private String ScanRiskError;
 
     /**
-    * 木马信息扫描进度
+    * 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanVirusProgress")
@@ -183,7 +174,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private Long ScanVirusProgress;
 
     /**
-    * 漏洞扫描进度
+    * 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanVulProgress")
@@ -191,7 +182,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private Long ScanVulProgress;
 
     /**
-    * 敏感扫描进度
+    * 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanRiskProgress")
@@ -240,19 +231,24 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
     * 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAuthorized")
     @Expose
     private Long IsAuthorized;
 
     /**
-    * 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
+    * 仓库区域
     */
-    @SerializedName("ImageSize")
+    @SerializedName("RegistryRegion")
     @Expose
-    private Long ImageSize;
+    private String RegistryRegion;
+
+    /**
+    * 列表id
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
 
     /**
     * 镜像Id
@@ -263,14 +259,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private String ImageId;
 
     /**
-    * 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RegistryRegion")
-    @Expose
-    private String RegistryRegion;
-
-    /**
     * 镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -279,17 +267,16 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private String ImageCreateTime;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RequestId")
+    @SerializedName("IsLatestImage")
     @Expose
-    private String RequestId;
+    private Boolean IsLatestImage;
 
     /**
-     * Get 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像Digest 
      * @return ImageDigest 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageDigest() {
         return this.ImageDigest;
@@ -297,79 +284,63 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageDigest 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageDigest(String ImageDigest) {
         this.ImageDigest = ImageDigest;
     }
 
     /**
-     * Get 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageRepoAddress 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像仓库地址 
+     * @return ImageRepoAddress 镜像仓库地址
      */
     public String getImageRepoAddress() {
         return this.ImageRepoAddress;
     }
 
     /**
-     * Set 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageRepoAddress 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 镜像仓库地址
+     * @param ImageRepoAddress 镜像仓库地址
      */
     public void setImageRepoAddress(String ImageRepoAddress) {
         this.ImageRepoAddress = ImageRepoAddress;
     }
 
     /**
-     * Get 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegistryType 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 仓库类型 
+     * @return RegistryType 仓库类型
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegistryType 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 仓库类型
+     * @param RegistryType 仓库类型
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像名称 
+     * @return ImageName 镜像名称
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 镜像名称
+     * @param ImageName 镜像名称
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像版本 
      * @return ImageTag 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageTag() {
         return this.ImageTag;
@@ -377,39 +348,47 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageTag 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像大小 
+     * @return ImageSize 镜像大小
+     */
+    public Long getImageSize() {
+        return this.ImageSize;
+    }
+
+    /**
+     * Set 镜像大小
+     * @param ImageSize 镜像大小
+     */
+    public void setImageSize(Long ImageSize) {
+        this.ImageSize = ImageSize;
+    }
+
+    /**
+     * Get 最近扫描时间 
+     * @return ScanTime 最近扫描时间
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 最近扫描时间
+     * @param ScanTime 最近扫描时间
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描状态 
      * @return ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanStatus() {
         return this.ScanStatus;
@@ -417,19 +396,15 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanStatus(String ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
     /**
-     * Get 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全漏洞数 
      * @return VulCnt 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCnt() {
         return this.VulCnt;
@@ -437,19 +412,15 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCnt 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCnt(Long VulCnt) {
         this.VulCnt = VulCnt;
     }
 
     /**
-     * Get 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 木马病毒数 
      * @return VirusCnt 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVirusCnt() {
         return this.VirusCnt;
@@ -457,19 +428,15 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirusCnt 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirusCnt(Long VirusCnt) {
         this.VirusCnt = VirusCnt;
     }
 
     /**
-     * Get 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险行为数 
      * @return RiskCnt 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskCnt() {
         return this.RiskCnt;
@@ -477,19 +444,15 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskCnt 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskCnt(Long RiskCnt) {
         this.RiskCnt = RiskCnt;
     }
 
     /**
-     * Get 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感信息数 
      * @return SentiveInfoCnt 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSentiveInfoCnt() {
         return this.SentiveInfoCnt;
@@ -497,19 +460,31 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SentiveInfoCnt 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSentiveInfoCnt(Long SentiveInfoCnt) {
         this.SentiveInfoCnt = SentiveInfoCnt;
     }
 
     /**
-     * Get 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可信镜像 
+     * @return IsTrustImage 是否可信镜像
+     */
+    public Boolean getIsTrustImage() {
+        return this.IsTrustImage;
+    }
+
+    /**
+     * Set 是否可信镜像
+     * @param IsTrustImage 是否可信镜像
+     */
+    public void setIsTrustImage(Boolean IsTrustImage) {
+        this.IsTrustImage = IsTrustImage;
+    }
+
+    /**
+     * Get 镜像系统 
      * @return OsName 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsName() {
         return this.OsName;
@@ -517,9 +492,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsName 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
@@ -566,30 +539,8 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LayerInfo 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getLayerInfo() {
-        return this.LayerInfo;
-    }
-
-    /**
-     * Set 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LayerInfo 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLayerInfo(String LayerInfo) {
-        this.LayerInfo = LayerInfo;
-    }
-
-    /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -597,19 +548,15 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -617,19 +564,15 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -637,9 +580,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -666,9 +607,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 木马信息扫描进度
+     * Get 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanVirusProgress 木马信息扫描进度
+     * @return ScanVirusProgress 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanVirusProgress() {
@@ -676,9 +617,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 木马信息扫描进度
+     * Set 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanVirusProgress 木马信息扫描进度
+     * @param ScanVirusProgress 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanVirusProgress(Long ScanVirusProgress) {
@@ -686,9 +627,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 漏洞扫描进度
+     * Get 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanVulProgress 漏洞扫描进度
+     * @return ScanVulProgress 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanVulProgress() {
@@ -696,9 +637,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 漏洞扫描进度
+     * Set 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanVulProgress 漏洞扫描进度
+     * @param ScanVulProgress 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanVulProgress(Long ScanVulProgress) {
@@ -706,9 +647,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 敏感扫描进度
+     * Get 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanRiskProgress 敏感扫描进度
+     * @return ScanRiskProgress 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanRiskProgress() {
@@ -716,9 +657,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 敏感扫描进度
+     * Set 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanRiskProgress 敏感扫描进度
+     * @param ScanRiskProgress 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanRiskProgress(Long ScanRiskProgress) {
@@ -826,10 +767,8 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 授权状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权状态 
      * @return IsAuthorized 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAuthorized() {
         return this.IsAuthorized;
@@ -837,32 +776,42 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 
     /**
      * Set 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAuthorized 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAuthorized(Long IsAuthorized) {
         this.IsAuthorized = IsAuthorized;
     }
 
     /**
-     * Get 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSize 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 仓库区域 
+     * @return RegistryRegion 仓库区域
      */
-    public Long getImageSize() {
-        return this.ImageSize;
+    public String getRegistryRegion() {
+        return this.RegistryRegion;
     }
 
     /**
-     * Set 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSize 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 仓库区域
+     * @param RegistryRegion 仓库区域
      */
-    public void setImageSize(Long ImageSize) {
-        this.ImageSize = ImageSize;
+    public void setRegistryRegion(String RegistryRegion) {
+        this.RegistryRegion = RegistryRegion;
+    }
+
+    /**
+     * Get 列表id 
+     * @return Id 列表id
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 列表id
+     * @param Id 列表id
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     /**
@@ -886,26 +835,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegistryRegion 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRegistryRegion() {
-        return this.RegistryRegion;
-    }
-
-    /**
-     * Set 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegistryRegion 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRegistryRegion(String RegistryRegion) {
-        this.RegistryRegion = RegistryRegion;
-    }
-
-    /**
      * Get 镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageCreateTime 镜像创建的时间
@@ -926,29 +855,33 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLatestImage 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public Boolean getIsLatestImage() {
+        return this.IsLatestImage;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLatestImage 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setIsLatestImage(Boolean IsLatestImage) {
+        this.IsLatestImage = IsLatestImage;
     }
 
-    public DescribeAssetImageRegistryDetailResponse() {
+    public ImageRepoInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAssetImageRegistryDetailResponse(DescribeAssetImageRegistryDetailResponse source) {
+    public ImageRepoInfo(ImageRepoInfo source) {
         if (source.ImageDigest != null) {
             this.ImageDigest = new String(source.ImageDigest);
         }
@@ -963,6 +896,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         }
         if (source.ImageTag != null) {
             this.ImageTag = new String(source.ImageTag);
+        }
+        if (source.ImageSize != null) {
+            this.ImageSize = new Long(source.ImageSize);
         }
         if (source.ScanTime != null) {
             this.ScanTime = new String(source.ScanTime);
@@ -982,6 +918,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         if (source.SentiveInfoCnt != null) {
             this.SentiveInfoCnt = new Long(source.SentiveInfoCnt);
         }
+        if (source.IsTrustImage != null) {
+            this.IsTrustImage = new Boolean(source.IsTrustImage);
+        }
         if (source.OsName != null) {
             this.OsName = new String(source.OsName);
         }
@@ -990,9 +929,6 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         }
         if (source.ScanVulError != null) {
             this.ScanVulError = new String(source.ScanVulError);
-        }
-        if (source.LayerInfo != null) {
-            this.LayerInfo = new String(source.LayerInfo);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
@@ -1033,20 +969,20 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         if (source.IsAuthorized != null) {
             this.IsAuthorized = new Long(source.IsAuthorized);
         }
-        if (source.ImageSize != null) {
-            this.ImageSize = new Long(source.ImageSize);
+        if (source.RegistryRegion != null) {
+            this.RegistryRegion = new String(source.RegistryRegion);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
-        if (source.RegistryRegion != null) {
-            this.RegistryRegion = new String(source.RegistryRegion);
-        }
         if (source.ImageCreateTime != null) {
             this.ImageCreateTime = new String(source.ImageCreateTime);
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.IsLatestImage != null) {
+            this.IsLatestImage = new Boolean(source.IsLatestImage);
         }
     }
 
@@ -1060,16 +996,17 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ImageTag", this.ImageTag);
+        this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "ScanStatus", this.ScanStatus);
         this.setParamSimple(map, prefix + "VulCnt", this.VulCnt);
         this.setParamSimple(map, prefix + "VirusCnt", this.VirusCnt);
         this.setParamSimple(map, prefix + "RiskCnt", this.RiskCnt);
         this.setParamSimple(map, prefix + "SentiveInfoCnt", this.SentiveInfoCnt);
+        this.setParamSimple(map, prefix + "IsTrustImage", this.IsTrustImage);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "ScanVirusError", this.ScanVirusError);
         this.setParamSimple(map, prefix + "ScanVulError", this.ScanVulError);
-        this.setParamSimple(map, prefix + "LayerInfo", this.LayerInfo);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
@@ -1083,11 +1020,11 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "VirusStatus", this.VirusStatus);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
-        this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
-        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
 
     }
 }

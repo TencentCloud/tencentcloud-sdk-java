@@ -83,6 +83,13 @@ public class CreateImageRequest extends AbstractModel{
     private Boolean DryRun;
 
     /**
+    * 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 镜像名称 
      * @return ImageName 镜像名称
      */
@@ -226,6 +233,22 @@ public class CreateImageRequest extends AbstractModel{
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateImageRequest() {
     }
 
@@ -264,6 +287,12 @@ public class CreateImageRequest extends AbstractModel{
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -279,6 +308,7 @@ public class CreateImageRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

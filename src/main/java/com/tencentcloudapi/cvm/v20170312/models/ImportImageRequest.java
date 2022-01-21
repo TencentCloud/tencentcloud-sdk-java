@@ -79,6 +79,13 @@ public class ImportImageRequest extends AbstractModel{
     private Boolean Force;
 
     /**
+    * 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
      * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
@@ -206,6 +213,22 @@ public class ImportImageRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    /**
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -238,6 +261,12 @@ public class ImportImageRequest extends AbstractModel{
         if (source.Force != null) {
             this.Force = new Boolean(source.Force);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class ImportImageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "Force", this.Force);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

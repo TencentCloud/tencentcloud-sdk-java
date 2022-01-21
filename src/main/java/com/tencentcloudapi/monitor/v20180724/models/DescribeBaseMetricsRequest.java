@@ -37,6 +37,13 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
     private String MetricName;
 
     /**
+    * 可选参数，按照维度过滤
+    */
+    @SerializedName("Dimensions")
+    @Expose
+    private String [] Dimensions;
+
+    /**
      * Get 业务命名空间，各个云产品的业务命名空间不同。如需获取业务命名空间，请前往各产品监控指标文档，例如云服务器的命名空间，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843) 
      * @return Namespace 业务命名空间，各个云产品的业务命名空间不同。如需获取业务命名空间，请前往各产品监控指标文档，例如云服务器的命名空间，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
      */
@@ -68,6 +75,22 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
         this.MetricName = MetricName;
     }
 
+    /**
+     * Get 可选参数，按照维度过滤 
+     * @return Dimensions 可选参数，按照维度过滤
+     */
+    public String [] getDimensions() {
+        return this.Dimensions;
+    }
+
+    /**
+     * Set 可选参数，按照维度过滤
+     * @param Dimensions 可选参数，按照维度过滤
+     */
+    public void setDimensions(String [] Dimensions) {
+        this.Dimensions = Dimensions;
+    }
+
     public DescribeBaseMetricsRequest() {
     }
 
@@ -82,6 +105,12 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
         }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new String(source.Dimensions[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
 
     }
 }

@@ -58,6 +58,41 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
     private String From;
 
     /**
+    * 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+    */
+    @SerializedName("DeployStrategyType")
+    @Expose
+    private String DeployStrategyType;
+
+    /**
+    * 发布批次数
+    */
+    @SerializedName("TotalBatchCount")
+    @Expose
+    private Long TotalBatchCount;
+
+    /**
+    * 批次间隔时间
+    */
+    @SerializedName("BatchInterval")
+    @Expose
+    private Long BatchInterval;
+
+    /**
+    * 小批量验证批次的实例数
+    */
+    @SerializedName("BetaBatchNum")
+    @Expose
+    private Long BetaBatchNum;
+
+    /**
+    * 发布过程中保障的最小可用实例数
+    */
+    @SerializedName("MinAvailable")
+    @Expose
+    private Long MinAvailable;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -137,6 +172,86 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
         this.From = From;
     }
 
+    /**
+     * Get 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动； 
+     * @return DeployStrategyType 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+     */
+    public String getDeployStrategyType() {
+        return this.DeployStrategyType;
+    }
+
+    /**
+     * Set 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+     * @param DeployStrategyType 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+     */
+    public void setDeployStrategyType(String DeployStrategyType) {
+        this.DeployStrategyType = DeployStrategyType;
+    }
+
+    /**
+     * Get 发布批次数 
+     * @return TotalBatchCount 发布批次数
+     */
+    public Long getTotalBatchCount() {
+        return this.TotalBatchCount;
+    }
+
+    /**
+     * Set 发布批次数
+     * @param TotalBatchCount 发布批次数
+     */
+    public void setTotalBatchCount(Long TotalBatchCount) {
+        this.TotalBatchCount = TotalBatchCount;
+    }
+
+    /**
+     * Get 批次间隔时间 
+     * @return BatchInterval 批次间隔时间
+     */
+    public Long getBatchInterval() {
+        return this.BatchInterval;
+    }
+
+    /**
+     * Set 批次间隔时间
+     * @param BatchInterval 批次间隔时间
+     */
+    public void setBatchInterval(Long BatchInterval) {
+        this.BatchInterval = BatchInterval;
+    }
+
+    /**
+     * Get 小批量验证批次的实例数 
+     * @return BetaBatchNum 小批量验证批次的实例数
+     */
+    public Long getBetaBatchNum() {
+        return this.BetaBatchNum;
+    }
+
+    /**
+     * Set 小批量验证批次的实例数
+     * @param BetaBatchNum 小批量验证批次的实例数
+     */
+    public void setBetaBatchNum(Long BetaBatchNum) {
+        this.BetaBatchNum = BetaBatchNum;
+    }
+
+    /**
+     * Get 发布过程中保障的最小可用实例数 
+     * @return MinAvailable 发布过程中保障的最小可用实例数
+     */
+    public Long getMinAvailable() {
+        return this.MinAvailable;
+    }
+
+    /**
+     * Set 发布过程中保障的最小可用实例数
+     * @param MinAvailable 发布过程中保障的最小可用实例数
+     */
+    public void setMinAvailable(Long MinAvailable) {
+        this.MinAvailable = MinAvailable;
+    }
+
     public RollingUpdateApplicationByVersionRequest() {
     }
 
@@ -160,6 +275,21 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
         if (source.From != null) {
             this.From = new String(source.From);
         }
+        if (source.DeployStrategyType != null) {
+            this.DeployStrategyType = new String(source.DeployStrategyType);
+        }
+        if (source.TotalBatchCount != null) {
+            this.TotalBatchCount = new Long(source.TotalBatchCount);
+        }
+        if (source.BatchInterval != null) {
+            this.BatchInterval = new Long(source.BatchInterval);
+        }
+        if (source.BetaBatchNum != null) {
+            this.BetaBatchNum = new Long(source.BetaBatchNum);
+        }
+        if (source.MinAvailable != null) {
+            this.MinAvailable = new Long(source.MinAvailable);
+        }
     }
 
 
@@ -172,6 +302,11 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
         this.setParamSimple(map, prefix + "From", this.From);
+        this.setParamSimple(map, prefix + "DeployStrategyType", this.DeployStrategyType);
+        this.setParamSimple(map, prefix + "TotalBatchCount", this.TotalBatchCount);
+        this.setParamSimple(map, prefix + "BatchInterval", this.BatchInterval);
+        this.setParamSimple(map, prefix + "BetaBatchNum", this.BetaBatchNum);
+        this.setParamSimple(map, prefix + "MinAvailable", this.MinAvailable);
 
     }
 }

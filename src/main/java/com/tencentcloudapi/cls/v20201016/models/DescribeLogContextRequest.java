@@ -30,7 +30,7 @@ public class DescribeLogContextRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * 日志时间,  格式: YYYY-mm-dd HH:MM:SS
+    * 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
     */
     @SerializedName("BTime")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeLogContextRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志时间,  格式: YYYY-mm-dd HH:MM:SS 
-     * @return BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS
+     * Get 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF 
+     * @return BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
      */
     public String getBTime() {
         return this.BTime;
     }
 
     /**
-     * Set 日志时间,  格式: YYYY-mm-dd HH:MM:SS
-     * @param BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS
+     * Set 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+     * @param BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
      */
     public void setBTime(String BTime) {
         this.BTime = BTime;

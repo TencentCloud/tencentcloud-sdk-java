@@ -44,6 +44,13 @@ public class LicensePlateOCRResponse extends AbstractModel{
     private Rect Rect;
 
     /**
+    * 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+    */
+    @SerializedName("Color")
+    @Expose
+    private String Color;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class LicensePlateOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。 
+     * @return Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+     */
+    public String getColor() {
+        return this.Color;
+    }
+
+    /**
+     * Set 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+     * @param Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+     */
+    public void setColor(String Color) {
+        this.Color = Color;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +154,9 @@ public class LicensePlateOCRResponse extends AbstractModel{
         if (source.Rect != null) {
             this.Rect = new Rect(source.Rect);
         }
+        if (source.Color != null) {
+            this.Color = new String(source.Color);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +170,7 @@ public class LicensePlateOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamObj(map, prefix + "Rect.", this.Rect);
+        this.setParamSimple(map, prefix + "Color", this.Color);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

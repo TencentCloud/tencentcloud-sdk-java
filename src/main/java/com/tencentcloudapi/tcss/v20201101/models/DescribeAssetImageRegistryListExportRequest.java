@@ -65,6 +65,13 @@ public class DescribeAssetImageRegistryListExportRequest extends AbstractModel{
     private String Order;
 
     /**
+    * 是否仅展示repository版本最新的镜像，默认为false
+    */
+    @SerializedName("OnlyShowLatest")
+    @Expose
+    private Boolean OnlyShowLatest;
+
+    /**
      * Get 导出字段 
      * @return ExportField 导出字段
      */
@@ -160,6 +167,22 @@ public class DescribeAssetImageRegistryListExportRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    /**
+     * Get 是否仅展示repository版本最新的镜像，默认为false 
+     * @return OnlyShowLatest 是否仅展示repository版本最新的镜像，默认为false
+     */
+    public Boolean getOnlyShowLatest() {
+        return this.OnlyShowLatest;
+    }
+
+    /**
+     * Set 是否仅展示repository版本最新的镜像，默认为false
+     * @param OnlyShowLatest 是否仅展示repository版本最新的镜像，默认为false
+     */
+    public void setOnlyShowLatest(Boolean OnlyShowLatest) {
+        this.OnlyShowLatest = OnlyShowLatest;
+    }
+
     public DescribeAssetImageRegistryListExportRequest() {
     }
 
@@ -192,6 +215,9 @@ public class DescribeAssetImageRegistryListExportRequest extends AbstractModel{
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
+        if (source.OnlyShowLatest != null) {
+            this.OnlyShowLatest = new Boolean(source.OnlyShowLatest);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class DescribeAssetImageRegistryListExportRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OnlyShowLatest", this.OnlyShowLatest);
 
     }
 }

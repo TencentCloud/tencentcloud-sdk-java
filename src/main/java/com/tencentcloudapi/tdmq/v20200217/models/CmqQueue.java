@@ -236,6 +236,30 @@ public class CmqQueue extends AbstractModel{
     private String NamespaceName;
 
     /**
+    * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 最大未确认消息数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxUnackedMsgNum")
+    @Expose
+    private Long MaxUnackedMsgNum;
+
+    /**
+    * 最大消息堆积大小（字节）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxMsgBacklogSize")
+    @Expose
+    private Long MaxMsgBacklogSize;
+
+    /**
      * Get 消息队列ID。 
      * @return QueueId 消息队列ID。
      */
@@ -763,6 +787,66 @@ public class CmqQueue extends AbstractModel{
         this.NamespaceName = NamespaceName;
     }
 
+    /**
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 最大未确认消息数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxUnackedMsgNum 最大未确认消息数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxUnackedMsgNum() {
+        return this.MaxUnackedMsgNum;
+    }
+
+    /**
+     * Set 最大未确认消息数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxUnackedMsgNum 最大未确认消息数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
+        this.MaxUnackedMsgNum = MaxUnackedMsgNum;
+    }
+
+    /**
+     * Get 最大消息堆积大小（字节）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxMsgBacklogSize 最大消息堆积大小（字节）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxMsgBacklogSize() {
+        return this.MaxMsgBacklogSize;
+    }
+
+    /**
+     * Set 最大消息堆积大小（字节）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxMsgBacklogSize 最大消息堆积大小（字节）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxMsgBacklogSize(Long MaxMsgBacklogSize) {
+        this.MaxMsgBacklogSize = MaxMsgBacklogSize;
+    }
+
     public CmqQueue() {
     }
 
@@ -858,6 +942,15 @@ public class CmqQueue extends AbstractModel{
         if (source.NamespaceName != null) {
             this.NamespaceName = new String(source.NamespaceName);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.MaxUnackedMsgNum != null) {
+            this.MaxUnackedMsgNum = new Long(source.MaxUnackedMsgNum);
+        }
+        if (source.MaxMsgBacklogSize != null) {
+            this.MaxMsgBacklogSize = new Long(source.MaxMsgBacklogSize);
+        }
     }
 
 
@@ -892,6 +985,9 @@ public class CmqQueue extends AbstractModel{
         this.setParamSimple(map, prefix + "Trace", this.Trace);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
+        this.setParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
 
     }
 }

@@ -895,7 +895,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号信息。
+     *本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。
      * @param req LicensePlateOCRRequest
      * @return LicensePlateOCRResponse
      * @throws TencentCloudSDKException

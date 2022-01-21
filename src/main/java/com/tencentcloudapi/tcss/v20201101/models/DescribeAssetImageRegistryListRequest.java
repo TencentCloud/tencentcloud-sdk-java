@@ -22,6 +22,149 @@ import java.util.HashMap;
 
 public class DescribeAssetImageRegistryListRequest extends AbstractModel{
 
+    /**
+    * 需要返回的数量，默认为10，最大值为100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移量，默认为0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 过滤字段
+IsAuthorized是否授权，取值全部all，未授权0，已授权1
+    */
+    @SerializedName("Filters")
+    @Expose
+    private AssetFilters [] Filters;
+
+    /**
+    * 排序字段
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+    * 排序方式，asc，desc
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 是否仅展示各repository最新的镜像, 默认为false
+    */
+    @SerializedName("OnlyShowLatest")
+    @Expose
+    private Boolean OnlyShowLatest;
+
+    /**
+     * Get 需要返回的数量，默认为10，最大值为100 
+     * @return Limit 需要返回的数量，默认为10，最大值为100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 需要返回的数量，默认为10，最大值为100
+     * @param Limit 需要返回的数量，默认为10，最大值为100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认为0 
+     * @return Offset 偏移量，默认为0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0
+     * @param Offset 偏移量，默认为0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 过滤字段
+IsAuthorized是否授权，取值全部all，未授权0，已授权1 
+     * @return Filters 过滤字段
+IsAuthorized是否授权，取值全部all，未授权0，已授权1
+     */
+    public AssetFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤字段
+IsAuthorized是否授权，取值全部all，未授权0，已授权1
+     * @param Filters 过滤字段
+IsAuthorized是否授权，取值全部all，未授权0，已授权1
+     */
+    public void setFilters(AssetFilters [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 排序字段 
+     * @return By 排序字段
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序字段
+     * @param By 排序字段
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
+    /**
+     * Get 排序方式，asc，desc 
+     * @return Order 排序方式，asc，desc
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式，asc，desc
+     * @param Order 排序方式，asc，desc
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 是否仅展示各repository最新的镜像, 默认为false 
+     * @return OnlyShowLatest 是否仅展示各repository最新的镜像, 默认为false
+     */
+    public Boolean getOnlyShowLatest() {
+        return this.OnlyShowLatest;
+    }
+
+    /**
+     * Set 是否仅展示各repository最新的镜像, 默认为false
+     * @param OnlyShowLatest 是否仅展示各repository最新的镜像, 默认为false
+     */
+    public void setOnlyShowLatest(Boolean OnlyShowLatest) {
+        this.OnlyShowLatest = OnlyShowLatest;
+    }
+
     public DescribeAssetImageRegistryListRequest() {
     }
 
@@ -30,6 +173,27 @@ public class DescribeAssetImageRegistryListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetImageRegistryListRequest(DescribeAssetImageRegistryListRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Filters != null) {
+            this.Filters = new AssetFilters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new AssetFilters(source.Filters[i]);
+            }
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OnlyShowLatest != null) {
+            this.OnlyShowLatest = new Boolean(source.OnlyShowLatest);
+        }
     }
 
 
@@ -37,6 +201,12 @@ public class DescribeAssetImageRegistryListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OnlyShowLatest", this.OnlyShowLatest);
 
     }
 }

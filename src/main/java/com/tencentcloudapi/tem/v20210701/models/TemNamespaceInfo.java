@@ -136,6 +136,13 @@ public class TemNamespaceInfo extends AbstractModel{
     private Boolean EnableTswTraceService;
 
     /**
+    * 环境锁，1为上锁，0则为上锁
+    */
+    @SerializedName("Locked")
+    @Expose
+    private Long Locked;
+
+    /**
      * Get 环境id 
      * @return EnvironmentId 环境id
      */
@@ -395,6 +402,22 @@ public class TemNamespaceInfo extends AbstractModel{
         this.EnableTswTraceService = EnableTswTraceService;
     }
 
+    /**
+     * Get 环境锁，1为上锁，0则为上锁 
+     * @return Locked 环境锁，1为上锁，0则为上锁
+     */
+    public Long getLocked() {
+        return this.Locked;
+    }
+
+    /**
+     * Set 环境锁，1为上锁，0则为上锁
+     * @param Locked 环境锁，1为上锁，0则为上锁
+     */
+    public void setLocked(Long Locked) {
+        this.Locked = Locked;
+    }
+
     public TemNamespaceInfo() {
     }
 
@@ -451,6 +474,9 @@ public class TemNamespaceInfo extends AbstractModel{
         if (source.EnableTswTraceService != null) {
             this.EnableTswTraceService = new Boolean(source.EnableTswTraceService);
         }
+        if (source.Locked != null) {
+            this.Locked = new Long(source.Locked);
+        }
     }
 
 
@@ -474,6 +500,7 @@ public class TemNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
+        this.setParamSimple(map, prefix + "Locked", this.Locked);
 
     }
 }
