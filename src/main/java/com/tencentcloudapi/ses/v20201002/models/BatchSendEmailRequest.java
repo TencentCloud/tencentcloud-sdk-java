@@ -53,7 +53,7 @@ public class BatchSendEmailRequest extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
+    * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云（暂未支持）
     */
     @SerializedName("ReplyToAddresses")
     @Expose
@@ -67,14 +67,14 @@ public class BatchSendEmailRequest extends AbstractModel{
     private Template Template;
 
     /**
-    * 使用API直接发送内容时，填写的邮件内容
+    * 使用API直接发送内容时，填写的邮件内容（暂未支持）
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * 需要发送附件时，填写附件相关参数。
+    * 需要发送附件时，填写附件相关参数（暂未支持）
     */
     @SerializedName("Attachments")
     @Expose
@@ -174,16 +174,16 @@ public class BatchSendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。 
-     * @return ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
+     * Get 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云（暂未支持） 
+     * @return ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云（暂未支持）
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
-     * @param ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
+     * Set 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云（暂未支持）
+     * @param ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云（暂未支持）
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
@@ -206,32 +206,32 @@ public class BatchSendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 使用API直接发送内容时，填写的邮件内容 
-     * @return Simple 使用API直接发送内容时，填写的邮件内容
+     * Get 使用API直接发送内容时，填写的邮件内容（暂未支持） 
+     * @return Simple 使用API直接发送内容时，填写的邮件内容（暂未支持）
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set 使用API直接发送内容时，填写的邮件内容
-     * @param Simple 使用API直接发送内容时，填写的邮件内容
+     * Set 使用API直接发送内容时，填写的邮件内容（暂未支持）
+     * @param Simple 使用API直接发送内容时，填写的邮件内容（暂未支持）
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get 需要发送附件时，填写附件相关参数。 
-     * @return Attachments 需要发送附件时，填写附件相关参数。
+     * Get 需要发送附件时，填写附件相关参数（暂未支持） 
+     * @return Attachments 需要发送附件时，填写附件相关参数（暂未支持）
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set 需要发送附件时，填写附件相关参数。
-     * @param Attachments 需要发送附件时，填写附件相关参数。
+     * Set 需要发送附件时，填写附件相关参数（暂未支持）
+     * @param Attachments 需要发送附件时，填写附件相关参数（暂未支持）
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;

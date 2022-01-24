@@ -30,7 +30,7 @@ public class Attachment extends AbstractModel{
     private String FileName;
 
     /**
-    * base64之后的附件内容，您可以发送的附件大小上限为5 MB。 注意：腾讯云api目前要求请求包大小不得超过10 MB。如果您要发送多个附件，那么这些附件的总大小不能超过10 MB。
+    * base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
     */
     @SerializedName("Content")
     @Expose
@@ -53,16 +53,16 @@ public class Attachment extends AbstractModel{
     }
 
     /**
-     * Get base64之后的附件内容，您可以发送的附件大小上限为5 MB。 注意：腾讯云api目前要求请求包大小不得超过10 MB。如果您要发送多个附件，那么这些附件的总大小不能超过10 MB。 
-     * @return Content base64之后的附件内容，您可以发送的附件大小上限为5 MB。 注意：腾讯云api目前要求请求包大小不得超过10 MB。如果您要发送多个附件，那么这些附件的总大小不能超过10 MB。
+     * Get base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。 
+     * @return Content base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set base64之后的附件内容，您可以发送的附件大小上限为5 MB。 注意：腾讯云api目前要求请求包大小不得超过10 MB。如果您要发送多个附件，那么这些附件的总大小不能超过10 MB。
-     * @param Content base64之后的附件内容，您可以发送的附件大小上限为5 MB。 注意：腾讯云api目前要求请求包大小不得超过10 MB。如果您要发送多个附件，那么这些附件的总大小不能超过10 MB。
+     * Set base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
+     * @param Content base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
      */
     public void setContent(String Content) {
         this.Content = Content;

@@ -38,7 +38,7 @@ public class MeshStatus extends AbstractModel{
     private String CanaryVersion;
 
     /**
-    * Prometheus状态
+    * 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Prometheus")
@@ -60,6 +60,14 @@ public class MeshStatus extends AbstractModel{
     @SerializedName("ActiveOperationList")
     @Expose
     private ActiveOperation [] ActiveOperationList;
+
+    /**
+    * 获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TPS")
+    @Expose
+    private PrometheusStatus TPS;
 
     /**
      * Get 服务数量 
@@ -98,9 +106,9 @@ public class MeshStatus extends AbstractModel{
     }
 
     /**
-     * Get Prometheus状态
+     * Get 已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Prometheus Prometheus状态
+     * @return Prometheus 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusStatus [] getPrometheus() {
@@ -108,9 +116,9 @@ public class MeshStatus extends AbstractModel{
     }
 
     /**
-     * Set Prometheus状态
+     * Set 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Prometheus Prometheus状态
+     * @param Prometheus 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrometheus(PrometheusStatus [] Prometheus) {
@@ -157,6 +165,26 @@ public class MeshStatus extends AbstractModel{
         this.ActiveOperationList = ActiveOperationList;
     }
 
+    /**
+     * Get 获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TPS 获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrometheusStatus getTPS() {
+        return this.TPS;
+    }
+
+    /**
+     * Set 获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TPS 获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTPS(PrometheusStatus TPS) {
+        this.TPS = TPS;
+    }
+
     public MeshStatus() {
     }
 
@@ -186,6 +214,9 @@ public class MeshStatus extends AbstractModel{
                 this.ActiveOperationList[i] = new ActiveOperation(source.ActiveOperationList[i]);
             }
         }
+        if (source.TPS != null) {
+            this.TPS = new PrometheusStatus(source.TPS);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class MeshStatus extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Prometheus.", this.Prometheus);
         this.setParamSimple(map, prefix + "StateMessage", this.StateMessage);
         this.setParamArrayObj(map, prefix + "ActiveOperationList.", this.ActiveOperationList);
+        this.setParamObj(map, prefix + "TPS.", this.TPS);
 
     }
 }

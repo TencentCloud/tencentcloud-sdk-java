@@ -38,6 +38,14 @@ public class IMCdrInfo extends AbstractModel{
 
     /**
     * 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
     */
     @SerializedName("EndStatus")
     @Expose
@@ -72,6 +80,30 @@ public class IMCdrInfo extends AbstractModel{
     private Long Timestamp;
 
     /**
+    * 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SkillGroupId")
+    @Expose
+    private String SkillGroupId;
+
+    /**
+    * 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SkillGroupName")
+    @Expose
+    private String SkillGroupName;
+
+    /**
      * Get 服务记录ID 
      * @return Id 服务记录ID
      */
@@ -104,8 +136,24 @@ public class IMCdrInfo extends AbstractModel{
     }
 
     /**
-     * Get 结束状态 
+     * Get 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束 
      * @return EndStatus 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
      */
     public Long getEndStatus() {
         return this.EndStatus;
@@ -113,7 +161,23 @@ public class IMCdrInfo extends AbstractModel{
 
     /**
      * Set 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
      * @param EndStatus 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;
@@ -183,6 +247,66 @@ public class IMCdrInfo extends AbstractModel{
         this.Timestamp = Timestamp;
     }
 
+    /**
+     * Get 会话ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SkillGroupId 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSkillGroupId() {
+        return this.SkillGroupId;
+    }
+
+    /**
+     * Set 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SkillGroupId 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSkillGroupId(String SkillGroupId) {
+        this.SkillGroupId = SkillGroupId;
+    }
+
+    /**
+     * Get 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SkillGroupName 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSkillGroupName() {
+        return this.SkillGroupName;
+    }
+
+    /**
+     * Set 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SkillGroupName 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSkillGroupName(String SkillGroupName) {
+        this.SkillGroupName = SkillGroupName;
+    }
+
     public IMCdrInfo() {
     }
 
@@ -212,6 +336,15 @@ public class IMCdrInfo extends AbstractModel{
         if (source.Timestamp != null) {
             this.Timestamp = new Long(source.Timestamp);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new String(source.SkillGroupId);
+        }
+        if (source.SkillGroupName != null) {
+            this.SkillGroupName = new String(source.SkillGroupName);
+        }
     }
 
 
@@ -226,6 +359,9 @@ public class IMCdrInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "StaffId", this.StaffId);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
+        this.setParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
 
     }
 }

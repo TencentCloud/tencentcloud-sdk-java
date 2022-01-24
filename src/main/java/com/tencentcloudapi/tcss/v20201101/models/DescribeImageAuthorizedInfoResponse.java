@@ -51,6 +51,13 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel{
     private Long NotScannedImageCnt;
 
     /**
+    * 本地未开启扫描镜像数
+    */
+    @SerializedName("NotScannedLocalImageCnt")
+    @Expose
+    private Long NotScannedLocalImageCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 本地未开启扫描镜像数 
+     * @return NotScannedLocalImageCnt 本地未开启扫描镜像数
+     */
+    public Long getNotScannedLocalImageCnt() {
+        return this.NotScannedLocalImageCnt;
+    }
+
+    /**
+     * Set 本地未开启扫描镜像数
+     * @param NotScannedLocalImageCnt 本地未开启扫描镜像数
+     */
+    public void setNotScannedLocalImageCnt(Long NotScannedLocalImageCnt) {
+        this.NotScannedLocalImageCnt = NotScannedLocalImageCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +180,9 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel{
         if (source.NotScannedImageCnt != null) {
             this.NotScannedImageCnt = new Long(source.NotScannedImageCnt);
         }
+        if (source.NotScannedLocalImageCnt != null) {
+            this.NotScannedLocalImageCnt = new Long(source.NotScannedLocalImageCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +197,7 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "UsedAuthorizedCnt", this.UsedAuthorizedCnt);
         this.setParamSimple(map, prefix + "ScannedImageCnt", this.ScannedImageCnt);
         this.setParamSimple(map, prefix + "NotScannedImageCnt", this.NotScannedImageCnt);
+        this.setParamSimple(map, prefix + "NotScannedLocalImageCnt", this.NotScannedLocalImageCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

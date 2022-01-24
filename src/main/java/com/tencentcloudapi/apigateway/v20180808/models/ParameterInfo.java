@@ -51,7 +51,7 @@ public class ParameterInfo extends AbstractModel{
     private String Unit;
 
     /**
-    * 类型
+    * 类型, integer|string
     */
     @SerializedName("Type")
     @Expose
@@ -77,6 +77,30 @@ public class ParameterInfo extends AbstractModel{
     @SerializedName("ModifedTime")
     @Expose
     private String ModifedTime;
+
+    /**
+    * 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValueString")
+    @Expose
+    private String ValueString;
+
+    /**
+    * 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultValueString")
+    @Expose
+    private String DefaultValueString;
+
+    /**
+    * 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Range")
+    @Expose
+    private String Range;
 
     /**
      * Get 名字 
@@ -143,16 +167,16 @@ public class ParameterInfo extends AbstractModel{
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get 类型, integer|string 
+     * @return Type 类型, integer|string
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set 类型, integer|string
+     * @param Type 类型, integer|string
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -206,6 +230,66 @@ public class ParameterInfo extends AbstractModel{
         this.ModifedTime = ModifedTime;
     }
 
+    /**
+     * Get 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValueString 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValueString() {
+        return this.ValueString;
+    }
+
+    /**
+     * Set 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValueString 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValueString(String ValueString) {
+        this.ValueString = ValueString;
+    }
+
+    /**
+     * Get 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultValueString 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultValueString() {
+        return this.DefaultValueString;
+    }
+
+    /**
+     * Set 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultValueString 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultValueString(String DefaultValueString) {
+        this.DefaultValueString = DefaultValueString;
+    }
+
+    /**
+     * Get 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Range 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRange() {
+        return this.Range;
+    }
+
+    /**
+     * Set 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Range 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRange(String Range) {
+        this.Range = Range;
+    }
+
     public ParameterInfo() {
     }
 
@@ -238,6 +322,15 @@ public class ParameterInfo extends AbstractModel{
         if (source.ModifedTime != null) {
             this.ModifedTime = new String(source.ModifedTime);
         }
+        if (source.ValueString != null) {
+            this.ValueString = new String(source.ValueString);
+        }
+        if (source.DefaultValueString != null) {
+            this.DefaultValueString = new String(source.DefaultValueString);
+        }
+        if (source.Range != null) {
+            this.Range = new String(source.Range);
+        }
     }
 
 
@@ -253,6 +346,9 @@ public class ParameterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Minimum", this.Minimum);
         this.setParamSimple(map, prefix + "Maximum", this.Maximum);
         this.setParamSimple(map, prefix + "ModifedTime", this.ModifedTime);
+        this.setParamSimple(map, prefix + "ValueString", this.ValueString);
+        this.setParamSimple(map, prefix + "DefaultValueString", this.DefaultValueString);
+        this.setParamSimple(map, prefix + "Range", this.Range);
 
     }
 }

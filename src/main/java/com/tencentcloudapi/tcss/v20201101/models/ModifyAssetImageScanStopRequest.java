@@ -23,49 +23,95 @@ import java.util.HashMap;
 public class ModifyAssetImageScanStopRequest extends AbstractModel{
 
     /**
-    * 任务id
+    * 任务id；任务id，镜像id和根据过滤条件筛选三选一。
     */
     @SerializedName("TaskID")
     @Expose
     private String TaskID;
 
     /**
-    * 镜像id
+    * 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
     */
     @SerializedName("Images")
     @Expose
     private String [] Images;
 
     /**
-     * Get 任务id 
-     * @return TaskID 任务id
+    * 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private AssetFilters [] Filters;
+
+    /**
+    * 根据过滤条件筛选出镜像，再排除个别镜像
+    */
+    @SerializedName("ExcludeImageIds")
+    @Expose
+    private String ExcludeImageIds;
+
+    /**
+     * Get 任务id；任务id，镜像id和根据过滤条件筛选三选一。 
+     * @return TaskID 任务id；任务id，镜像id和根据过滤条件筛选三选一。
      */
     public String getTaskID() {
         return this.TaskID;
     }
 
     /**
-     * Set 任务id
-     * @param TaskID 任务id
+     * Set 任务id；任务id，镜像id和根据过滤条件筛选三选一。
+     * @param TaskID 任务id；任务id，镜像id和根据过滤条件筛选三选一。
      */
     public void setTaskID(String TaskID) {
         this.TaskID = TaskID;
     }
 
     /**
-     * Get 镜像id 
-     * @return Images 镜像id
+     * Get 镜像id；任务id，镜像id和根据过滤条件筛选三选一。 
+     * @return Images 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 镜像id
-     * @param Images 镜像id
+     * Set 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
+     * @param Images 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
      */
     public void setImages(String [] Images) {
         this.Images = Images;
+    }
+
+    /**
+     * Get 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。 
+     * @return Filters 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+     */
+    public AssetFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+     * @param Filters 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+     */
+    public void setFilters(AssetFilters [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 根据过滤条件筛选出镜像，再排除个别镜像 
+     * @return ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     */
+    public String getExcludeImageIds() {
+        return this.ExcludeImageIds;
+    }
+
+    /**
+     * Set 根据过滤条件筛选出镜像，再排除个别镜像
+     * @param ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     */
+    public void setExcludeImageIds(String ExcludeImageIds) {
+        this.ExcludeImageIds = ExcludeImageIds;
     }
 
     public ModifyAssetImageScanStopRequest() {
@@ -85,6 +131,15 @@ public class ModifyAssetImageScanStopRequest extends AbstractModel{
                 this.Images[i] = new String(source.Images[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new AssetFilters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new AssetFilters(source.Filters[i]);
+            }
+        }
+        if (source.ExcludeImageIds != null) {
+            this.ExcludeImageIds = new String(source.ExcludeImageIds);
+        }
     }
 
 
@@ -94,6 +149,8 @@ public class ModifyAssetImageScanStopRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskID", this.TaskID);
         this.setParamArraySimple(map, prefix + "Images.", this.Images);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ExcludeImageIds", this.ExcludeImageIds);
 
     }
 }

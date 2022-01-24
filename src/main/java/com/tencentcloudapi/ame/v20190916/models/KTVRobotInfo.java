@@ -83,6 +83,17 @@ public class KTVRobotInfo extends AbstractModel{
     private String RTCSystem;
 
     /**
+    * 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
+    */
+    @SerializedName("SetPlayModeInput")
+    @Expose
+    private SetPlayModeCommandInput SetPlayModeInput;
+
+    /**
      * Get 机器人Id。 
      * @return RobotId 机器人Id。
      */
@@ -226,6 +237,38 @@ public class KTVRobotInfo extends AbstractModel{
         this.RTCSystem = RTCSystem;
     }
 
+    /**
+     * Get 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li> 
+     * @return SetPlayModeInput 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
+     */
+    public SetPlayModeCommandInput getSetPlayModeInput() {
+        return this.SetPlayModeInput;
+    }
+
+    /**
+     * Set 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
+     * @param SetPlayModeInput 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
+     */
+    public void setSetPlayModeInput(SetPlayModeCommandInput SetPlayModeInput) {
+        this.SetPlayModeInput = SetPlayModeInput;
+    }
+
     public KTVRobotInfo() {
     }
 
@@ -261,6 +304,9 @@ public class KTVRobotInfo extends AbstractModel{
         if (source.RTCSystem != null) {
             this.RTCSystem = new String(source.RTCSystem);
         }
+        if (source.SetPlayModeInput != null) {
+            this.SetPlayModeInput = new SetPlayModeCommandInput(source.SetPlayModeInput);
+        }
     }
 
 
@@ -276,6 +322,7 @@ public class KTVRobotInfo extends AbstractModel{
         this.setParamObj(map, prefix + "SetAudioParamInput.", this.SetAudioParamInput);
         this.setParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
         this.setParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
+        this.setParamObj(map, prefix + "SetPlayModeInput.", this.SetPlayModeInput);
 
     }
 }

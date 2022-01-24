@@ -999,6 +999,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查看集群状态列表
+     * @param req DescribeClusterStatusRequest
+     * @return DescribeClusterStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterStatusResponse DescribeClusterStatus(DescribeClusterStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群列表
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse

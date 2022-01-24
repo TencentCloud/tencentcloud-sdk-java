@@ -59,6 +59,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建外呼会话
+     * @param req CreateCallOutSessionRequest
+     * @return CreateCallOutSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCallOutSessionResponse CreateCallOutSession(CreateCallOutSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCallOutSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCallOutSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCallOutSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建 SDK 登录 Token。
      * @param req CreateSDKLoginTokenRequest
      * @return CreateSDKLoginTokenResponse
@@ -131,6 +151,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteStaffResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteStaff");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量查询自动任务外呼
+     * @param req DescribeAutoCalloutTasksRequest
+     * @return DescribeAutoCalloutTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoCalloutTasksResponse DescribeAutoCalloutTasks(DescribeAutoCalloutTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoCalloutTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoCalloutTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoCalloutTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

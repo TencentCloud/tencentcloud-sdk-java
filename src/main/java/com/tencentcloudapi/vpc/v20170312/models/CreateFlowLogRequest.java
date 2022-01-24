@@ -51,13 +51,6 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String TrafficType;
 
     /**
-    * 流日志存储ID
-    */
-    @SerializedName("CloudLogId")
-    @Expose
-    private String CloudLogId;
-
-    /**
     * 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
     */
     @SerializedName("VpcId")
@@ -72,11 +65,32 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String FlowLogDescription;
 
     /**
+    * 流日志存储ID
+    */
+    @SerializedName("CloudLogId")
+    @Expose
+    private String CloudLogId;
+
+    /**
     * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 消费端类型：cls、ckafka
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+    * 流日志消费端信息，当消费端类型为ckafka时，必填。
+    */
+    @SerializedName("FlowLogStorage")
+    @Expose
+    private FlowLogStorage FlowLogStorage;
 
     /**
      * Get 流日志实例名字 
@@ -143,22 +157,6 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 流日志存储ID 
-     * @return CloudLogId 流日志存储ID
-     */
-    public String getCloudLogId() {
-        return this.CloudLogId;
-    }
-
-    /**
-     * Set 流日志存储ID
-     * @param CloudLogId 流日志存储ID
-     */
-    public void setCloudLogId(String CloudLogId) {
-        this.CloudLogId = CloudLogId;
-    }
-
-    /**
      * Get 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
      */
@@ -191,6 +189,22 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
+     * Get 流日志存储ID 
+     * @return CloudLogId 流日志存储ID
+     */
+    public String getCloudLogId() {
+        return this.CloudLogId;
+    }
+
+    /**
+     * Set 流日志存储ID
+     * @param CloudLogId 流日志存储ID
+     */
+    public void setCloudLogId(String CloudLogId) {
+        this.CloudLogId = CloudLogId;
+    }
+
+    /**
      * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
      * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
@@ -204,6 +218,38 @@ public class CreateFlowLogRequest extends AbstractModel{
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get 消费端类型：cls、ckafka 
+     * @return StorageType 消费端类型：cls、ckafka
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set 消费端类型：cls、ckafka
+     * @param StorageType 消费端类型：cls、ckafka
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
+    /**
+     * Get 流日志消费端信息，当消费端类型为ckafka时，必填。 
+     * @return FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
+     */
+    public FlowLogStorage getFlowLogStorage() {
+        return this.FlowLogStorage;
+    }
+
+    /**
+     * Set 流日志消费端信息，当消费端类型为ckafka时，必填。
+     * @param FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
+     */
+    public void setFlowLogStorage(FlowLogStorage FlowLogStorage) {
+        this.FlowLogStorage = FlowLogStorage;
     }
 
     public CreateFlowLogRequest() {
@@ -226,20 +272,26 @@ public class CreateFlowLogRequest extends AbstractModel{
         if (source.TrafficType != null) {
             this.TrafficType = new String(source.TrafficType);
         }
-        if (source.CloudLogId != null) {
-            this.CloudLogId = new String(source.CloudLogId);
-        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
         if (source.FlowLogDescription != null) {
             this.FlowLogDescription = new String(source.FlowLogDescription);
         }
+        if (source.CloudLogId != null) {
+            this.CloudLogId = new String(source.CloudLogId);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.FlowLogStorage != null) {
+            this.FlowLogStorage = new FlowLogStorage(source.FlowLogStorage);
         }
     }
 
@@ -252,10 +304,12 @@ public class CreateFlowLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
-        this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+        this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
 
     }
 }

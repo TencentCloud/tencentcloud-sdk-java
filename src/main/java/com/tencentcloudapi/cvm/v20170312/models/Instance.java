@@ -273,6 +273,14 @@ public class Instance extends AbstractModel{
     private String IsolatedSource;
 
     /**
+    * GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GPUInfo")
+    @Expose
+    private GPUInfo GPUInfo;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -864,6 +872,26 @@ public class Instance extends AbstractModel{
         this.IsolatedSource = IsolatedSource;
     }
 
+    /**
+     * Get GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GPUInfo getGPUInfo() {
+        return this.GPUInfo;
+    }
+
+    /**
+     * Set GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGPUInfo(GPUInfo GPUInfo) {
+        this.GPUInfo = GPUInfo;
+    }
+
     public Instance() {
     }
 
@@ -995,6 +1023,9 @@ public class Instance extends AbstractModel{
         if (source.IsolatedSource != null) {
             this.IsolatedSource = new String(source.IsolatedSource);
         }
+        if (source.GPUInfo != null) {
+            this.GPUInfo = new GPUInfo(source.GPUInfo);
+        }
     }
 
 
@@ -1036,6 +1067,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
+        this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
 
     }
 }

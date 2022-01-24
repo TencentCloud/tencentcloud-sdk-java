@@ -35,6 +35,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -80,6 +81,13 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
     private SendMessageCommandInput SendMessageCommandInput;
 
     /**
+    * 播放模式，当Command取SetPlayMode时，必填。
+    */
+    @SerializedName("SetPlayModeCommandInput")
+    @Expose
+    private SetPlayModeCommandInput SetPlayModeCommandInput;
+
+    /**
      * Get 机器人Id。 
      * @return RobotId 机器人Id。
      */
@@ -101,6 +109,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -110,6 +119,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -125,6 +135,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -134,6 +145,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -223,6 +235,22 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         this.SendMessageCommandInput = SendMessageCommandInput;
     }
 
+    /**
+     * Get 播放模式，当Command取SetPlayMode时，必填。 
+     * @return SetPlayModeCommandInput 播放模式，当Command取SetPlayMode时，必填。
+     */
+    public SetPlayModeCommandInput getSetPlayModeCommandInput() {
+        return this.SetPlayModeCommandInput;
+    }
+
+    /**
+     * Set 播放模式，当Command取SetPlayMode时，必填。
+     * @param SetPlayModeCommandInput 播放模式，当Command取SetPlayMode时，必填。
+     */
+    public void setSetPlayModeCommandInput(SetPlayModeCommandInput SetPlayModeCommandInput) {
+        this.SetPlayModeCommandInput = SetPlayModeCommandInput;
+    }
+
     public SyncKTVRobotCommandRequest() {
     }
 
@@ -252,6 +280,9 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         if (source.SendMessageCommandInput != null) {
             this.SendMessageCommandInput = new SendMessageCommandInput(source.SendMessageCommandInput);
         }
+        if (source.SetPlayModeCommandInput != null) {
+            this.SetPlayModeCommandInput = new SetPlayModeCommandInput(source.SetPlayModeCommandInput);
+        }
     }
 
 
@@ -266,6 +297,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SeekCommandInput.", this.SeekCommandInput);
         this.setParamObj(map, prefix + "SetAudioParamCommandInput.", this.SetAudioParamCommandInput);
         this.setParamObj(map, prefix + "SendMessageCommandInput.", this.SendMessageCommandInput);
+        this.setParamObj(map, prefix + "SetPlayModeCommandInput.", this.SetPlayModeCommandInput);
 
     }
 }

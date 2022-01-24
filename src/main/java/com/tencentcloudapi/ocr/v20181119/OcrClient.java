@@ -1182,6 +1182,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持粤康码识别，包括姓名、更新时间、健康码颜色，三个字段的识别结果输出。
+     * @param req RecognizeHealthCodeOCRRequest
+     * @return RecognizeHealthCodeOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(RecognizeHealthCodeOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeHealthCodeOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeHealthCodeOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeHealthCodeOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
      * @param req RecognizeOnlineTaxiItineraryOCRRequest
      * @return RecognizeOnlineTaxiItineraryOCRResponse

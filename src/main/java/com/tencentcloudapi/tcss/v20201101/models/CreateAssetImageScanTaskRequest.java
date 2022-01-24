@@ -23,118 +23,164 @@ import java.util.HashMap;
 public class CreateAssetImageScanTaskRequest extends AbstractModel{
 
     /**
-    * 是否扫描全部镜像
+    * 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * 需要扫描的镜像列表
+    * 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
     */
     @SerializedName("Images")
     @Expose
     private String [] Images;
 
     /**
-    * 扫描漏洞
+    * 扫描漏洞；漏洞，木马和风险需选其一
     */
     @SerializedName("ScanVul")
     @Expose
     private Boolean ScanVul;
 
     /**
-    * 扫描木马
+    * 扫描木马；漏洞，木马和风险需选其一
     */
     @SerializedName("ScanVirus")
     @Expose
     private Boolean ScanVirus;
 
     /**
-    * 扫描风险
+    * 扫描风险；漏洞，木马和风险需选其一
     */
     @SerializedName("ScanRisk")
     @Expose
     private Boolean ScanRisk;
 
     /**
-     * Get 是否扫描全部镜像 
-     * @return All 是否扫描全部镜像
+    * 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private AssetFilters [] Filters;
+
+    /**
+    * 根据过滤条件筛选出镜像，再排除个别镜像
+    */
+    @SerializedName("ExcludeImageIds")
+    @Expose
+    private String [] ExcludeImageIds;
+
+    /**
+     * Get 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。 
+     * @return All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      */
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set 是否扫描全部镜像
-     * @param All 是否扫描全部镜像
+     * Set 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @param All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      */
     public void setAll(Boolean All) {
         this.All = All;
     }
 
     /**
-     * Get 需要扫描的镜像列表 
-     * @return Images 需要扫描的镜像列表
+     * Get 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。 
+     * @return Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 需要扫描的镜像列表
-     * @param Images 需要扫描的镜像列表
+     * Set 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @param Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
      */
     public void setImages(String [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 扫描漏洞 
-     * @return ScanVul 扫描漏洞
+     * Get 扫描漏洞；漏洞，木马和风险需选其一 
+     * @return ScanVul 扫描漏洞；漏洞，木马和风险需选其一
      */
     public Boolean getScanVul() {
         return this.ScanVul;
     }
 
     /**
-     * Set 扫描漏洞
-     * @param ScanVul 扫描漏洞
+     * Set 扫描漏洞；漏洞，木马和风险需选其一
+     * @param ScanVul 扫描漏洞；漏洞，木马和风险需选其一
      */
     public void setScanVul(Boolean ScanVul) {
         this.ScanVul = ScanVul;
     }
 
     /**
-     * Get 扫描木马 
-     * @return ScanVirus 扫描木马
+     * Get 扫描木马；漏洞，木马和风险需选其一 
+     * @return ScanVirus 扫描木马；漏洞，木马和风险需选其一
      */
     public Boolean getScanVirus() {
         return this.ScanVirus;
     }
 
     /**
-     * Set 扫描木马
-     * @param ScanVirus 扫描木马
+     * Set 扫描木马；漏洞，木马和风险需选其一
+     * @param ScanVirus 扫描木马；漏洞，木马和风险需选其一
      */
     public void setScanVirus(Boolean ScanVirus) {
         this.ScanVirus = ScanVirus;
     }
 
     /**
-     * Get 扫描风险 
-     * @return ScanRisk 扫描风险
+     * Get 扫描风险；漏洞，木马和风险需选其一 
+     * @return ScanRisk 扫描风险；漏洞，木马和风险需选其一
      */
     public Boolean getScanRisk() {
         return this.ScanRisk;
     }
 
     /**
-     * Set 扫描风险
-     * @param ScanRisk 扫描风险
+     * Set 扫描风险；漏洞，木马和风险需选其一
+     * @param ScanRisk 扫描风险；漏洞，木马和风险需选其一
      */
     public void setScanRisk(Boolean ScanRisk) {
         this.ScanRisk = ScanRisk;
+    }
+
+    /**
+     * Get 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。 
+     * @return Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     */
+    public AssetFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @param Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     */
+    public void setFilters(AssetFilters [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 根据过滤条件筛选出镜像，再排除个别镜像 
+     * @return ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     */
+    public String [] getExcludeImageIds() {
+        return this.ExcludeImageIds;
+    }
+
+    /**
+     * Set 根据过滤条件筛选出镜像，再排除个别镜像
+     * @param ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     */
+    public void setExcludeImageIds(String [] ExcludeImageIds) {
+        this.ExcludeImageIds = ExcludeImageIds;
     }
 
     public CreateAssetImageScanTaskRequest() {
@@ -163,6 +209,18 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel{
         if (source.ScanRisk != null) {
             this.ScanRisk = new Boolean(source.ScanRisk);
         }
+        if (source.Filters != null) {
+            this.Filters = new AssetFilters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new AssetFilters(source.Filters[i]);
+            }
+        }
+        if (source.ExcludeImageIds != null) {
+            this.ExcludeImageIds = new String[source.ExcludeImageIds.length];
+            for (int i = 0; i < source.ExcludeImageIds.length; i++) {
+                this.ExcludeImageIds[i] = new String(source.ExcludeImageIds[i]);
+            }
+        }
     }
 
 
@@ -175,6 +233,8 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ScanVul", this.ScanVul);
         this.setParamSimple(map, prefix + "ScanVirus", this.ScanVirus);
         this.setParamSimple(map, prefix + "ScanRisk", this.ScanRisk);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "ExcludeImageIds.", this.ExcludeImageIds);
 
     }
 }
