@@ -345,6 +345,9 @@ public enum ScfErrorCode {
     // MemorySize错误。
      INVALIDPARAMETERVALUE_MEMORYSIZE("InvalidParameterValue.MemorySize"),
      
+    // MinCapacity 参数传入错误。
+     INVALIDPARAMETERVALUE_MINCAPACITY("InvalidParameterValue.MinCapacity"),
+     
     // Name参数传入错误。
      INVALIDPARAMETERVALUE_NAME("InvalidParameterValue.Name"),
      

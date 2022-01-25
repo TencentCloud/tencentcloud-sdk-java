@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UploadMedicalFileRequest extends AbstractModel{
 
     /**
-    * 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
+    * 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
     */
     @SerializedName("File")
     @Expose
     private byte [] File;
 
     /**
-    * 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+    * 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
     */
     @SerializedName("FileURL")
     @Expose
     private String FileURL;
 
     /**
-     * Get 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。 
-     * @return File 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
+     * Get 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。 
+     * @return File 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
      */
     public byte [] getFile() {
         return this.File;
     }
 
     /**
-     * Set 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
-     * @param File 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
+     * Set 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
+     * @param File 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
      */
     public void setFile(byte [] File) {
         this.File = File;
     }
 
     /**
-     * Get 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。 
-     * @return FileURL 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+     * Get 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。 
+     * @return FileURL 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
      */
     public String getFileURL() {
         return this.FileURL;
     }
 
     /**
-     * Set 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
-     * @param FileURL 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+     * Set 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
+     * @param FileURL 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
      */
     public void setFileURL(String FileURL) {
         this.FileURL = FileURL;

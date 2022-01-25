@@ -121,6 +121,13 @@ public class CreateJobConfigRequest extends AbstractModel{
     private String ClsTopicId;
 
     /**
+    * 日志采集类型 2：CLS；3：COS
+    */
+    @SerializedName("LogCollectType")
+    @Expose
+    private Long LogCollectType;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -344,6 +351,22 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.ClsTopicId = ClsTopicId;
     }
 
+    /**
+     * Get 日志采集类型 2：CLS；3：COS 
+     * @return LogCollectType 日志采集类型 2：CLS；3：COS
+     */
+    public Long getLogCollectType() {
+        return this.LogCollectType;
+    }
+
+    /**
+     * Set 日志采集类型 2：CLS；3：COS
+     * @param LogCollectType 日志采集类型 2：CLS；3：COS
+     */
+    public void setLogCollectType(Long LogCollectType) {
+        this.LogCollectType = LogCollectType;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -400,6 +423,9 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.ClsTopicId != null) {
             this.ClsTopicId = new String(source.ClsTopicId);
         }
+        if (source.LogCollectType != null) {
+            this.LogCollectType = new Long(source.LogCollectType);
+        }
     }
 
 
@@ -421,6 +447,7 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+        this.setParamSimple(map, prefix + "LogCollectType", this.LogCollectType);
 
     }
 }

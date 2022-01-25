@@ -58,7 +58,7 @@ public class PushDataInfo extends AbstractModel{
     private Long VideoFps;
 
     /**
-    * 推流视频码率，单位: Kbps。
+    * 推流视频码率，单位: bps。
     */
     @SerializedName("VideoSpeed")
     @Expose
@@ -72,7 +72,7 @@ public class PushDataInfo extends AbstractModel{
     private Long AudioFps;
 
     /**
-    * 推流音频码率，单位: Kbps。
+    * 推流音频码率，单位: bps。
     */
     @SerializedName("AudioSpeed")
     @Expose
@@ -123,14 +123,14 @@ public class PushDataInfo extends AbstractModel{
     private Long AsampleRate;
 
     /**
-    * metadata 中的音频码率，单位: Kbps。
+    * metadata 中的音频码率，单位: bps。
     */
     @SerializedName("MetaAudioSpeed")
     @Expose
     private Long MetaAudioSpeed;
 
     /**
-    * metadata 中的视频码率，单位: Kbps。
+    * metadata 中的视频码率，单位: bps。
     */
     @SerializedName("MetaVideoSpeed")
     @Expose
@@ -224,16 +224,16 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get 推流视频码率，单位: Kbps。 
-     * @return VideoSpeed 推流视频码率，单位: Kbps。
+     * Get 推流视频码率，单位: bps。 
+     * @return VideoSpeed 推流视频码率，单位: bps。
      */
     public Long getVideoSpeed() {
         return this.VideoSpeed;
     }
 
     /**
-     * Set 推流视频码率，单位: Kbps。
-     * @param VideoSpeed 推流视频码率，单位: Kbps。
+     * Set 推流视频码率，单位: bps。
+     * @param VideoSpeed 推流视频码率，单位: bps。
      */
     public void setVideoSpeed(Long VideoSpeed) {
         this.VideoSpeed = VideoSpeed;
@@ -256,16 +256,16 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get 推流音频码率，单位: Kbps。 
-     * @return AudioSpeed 推流音频码率，单位: Kbps。
+     * Get 推流音频码率，单位: bps。 
+     * @return AudioSpeed 推流音频码率，单位: bps。
      */
     public Long getAudioSpeed() {
         return this.AudioSpeed;
     }
 
     /**
-     * Set 推流音频码率，单位: Kbps。
-     * @param AudioSpeed 推流音频码率，单位: Kbps。
+     * Set 推流音频码率，单位: bps。
+     * @param AudioSpeed 推流音频码率，单位: bps。
      */
     public void setAudioSpeed(Long AudioSpeed) {
         this.AudioSpeed = AudioSpeed;
@@ -376,32 +376,32 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get metadata 中的音频码率，单位: Kbps。 
-     * @return MetaAudioSpeed metadata 中的音频码率，单位: Kbps。
+     * Get metadata 中的音频码率，单位: bps。 
+     * @return MetaAudioSpeed metadata 中的音频码率，单位: bps。
      */
     public Long getMetaAudioSpeed() {
         return this.MetaAudioSpeed;
     }
 
     /**
-     * Set metadata 中的音频码率，单位: Kbps。
-     * @param MetaAudioSpeed metadata 中的音频码率，单位: Kbps。
+     * Set metadata 中的音频码率，单位: bps。
+     * @param MetaAudioSpeed metadata 中的音频码率，单位: bps。
      */
     public void setMetaAudioSpeed(Long MetaAudioSpeed) {
         this.MetaAudioSpeed = MetaAudioSpeed;
     }
 
     /**
-     * Get metadata 中的视频码率，单位: Kbps。 
-     * @return MetaVideoSpeed metadata 中的视频码率，单位: Kbps。
+     * Get metadata 中的视频码率，单位: bps。 
+     * @return MetaVideoSpeed metadata 中的视频码率，单位: bps。
      */
     public Long getMetaVideoSpeed() {
         return this.MetaVideoSpeed;
     }
 
     /**
-     * Set metadata 中的视频码率，单位: Kbps。
-     * @param MetaVideoSpeed metadata 中的视频码率，单位: Kbps。
+     * Set metadata 中的视频码率，单位: bps。
+     * @param MetaVideoSpeed metadata 中的视频码率，单位: bps。
      */
     public void setMetaVideoSpeed(Long MetaVideoSpeed) {
         this.MetaVideoSpeed = MetaVideoSpeed;
