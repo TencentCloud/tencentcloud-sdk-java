@@ -30,28 +30,53 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
+    */
+    @SerializedName("AudioVideoType")
+    @Expose
+    private String AudioVideoType;
+
+    /**
     * 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
     */
     @SerializedName("DrmSwitch")
     @Expose
     private String DrmSwitch;
 
     /**
-    * 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
+    * 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
+    * 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
     */
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfo DrmStreamingsInfo;
+
+    /**
+    * 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
+    */
+    @SerializedName("TranscodeDefinition")
+    @Expose
+    private Long TranscodeDefinition;
 
     /**
     * 允许输出的雪碧图模板 ID。
@@ -121,14 +146,48 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。 
+     * @return AudioVideoType 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
+     */
+    public String getAudioVideoType() {
+        return this.AudioVideoType;
+    }
+
+    /**
+     * Set 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
+     * @param AudioVideoType 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
+     */
+    public void setAudioVideoType(String AudioVideoType) {
+        this.AudioVideoType = AudioVideoType;
+    }
+
+    /**
      * Get 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
-默认为 OFF。 
+默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。 
      * @return DrmSwitch 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
@@ -139,45 +198,87 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
      * @param DrmSwitch 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
     }
 
     /**
-     * Get 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。 
-     * @return AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
+     * Get 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。 
+     * @return AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
-     * @param AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
+     * Set 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
+     * @param AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。 
-     * @return DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
+     * Get 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。 
+     * @return DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
      */
     public DrmStreamingsInfo getDrmStreamingsInfo() {
         return this.DrmStreamingsInfo;
     }
 
     /**
-     * Set 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
-     * @param DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
+     * Set 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
+     * @param DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfo DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
+    }
+
+    /**
+     * Get 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。 
+     * @return TranscodeDefinition 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
+     */
+    public Long getTranscodeDefinition() {
+        return this.TranscodeDefinition;
+    }
+
+    /**
+     * Set 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
+     * @param TranscodeDefinition 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
+     */
+    public void setTranscodeDefinition(Long TranscodeDefinition) {
+        this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
@@ -323,6 +424,9 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.AudioVideoType != null) {
+            this.AudioVideoType = new String(source.AudioVideoType);
+        }
         if (source.DrmSwitch != null) {
             this.DrmSwitch = new String(source.DrmSwitch);
         }
@@ -331,6 +435,9 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
         }
         if (source.DrmStreamingsInfo != null) {
             this.DrmStreamingsInfo = new DrmStreamingsInfo(source.DrmStreamingsInfo);
+        }
+        if (source.TranscodeDefinition != null) {
+            this.TranscodeDefinition = new Long(source.TranscodeDefinition);
         }
         if (source.ImageSpriteDefinition != null) {
             this.ImageSpriteDefinition = new Long(source.ImageSpriteDefinition);
@@ -361,9 +468,11 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
         this.setParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+        this.setParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
         this.setParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
         this.setParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
         this.setParamSimple(map, prefix + "Domain", this.Domain);

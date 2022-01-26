@@ -138,6 +138,9 @@ public enum SesErrorCode {
     // 收件人列表名称重复。
      INVALIDPARAMETERVALUE_REPEATRECEIVERNAME("InvalidParameterValue.RepeatReceiverName"),
      
+    // 邮件主题长度必须为1-100。
+     INVALIDPARAMETERVALUE_SUBJECTLENGTHERROR("InvalidParameterValue.SubjectLengthError"),
+     
     // 模版资源为空。
      INVALIDPARAMETERVALUE_TEMPLATECONTENTISNULL("InvalidParameterValue.TemplateContentIsNULL"),
      

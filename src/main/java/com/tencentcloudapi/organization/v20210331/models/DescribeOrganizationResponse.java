@@ -119,6 +119,22 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String IsAllowQuit;
 
     /**
+    * 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayUin")
+    @Expose
+    private String PayUin;
+
+    /**
+    * 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayName")
+    @Expose
+    private String PayName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -366,6 +382,46 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
+     * Get 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayUin 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayUin() {
+        return this.PayUin;
+    }
+
+    /**
+     * Set 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayUin 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayUin(String PayUin) {
+        this.PayUin = PayUin;
+    }
+
+    /**
+     * Get 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayName 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayName() {
+        return this.PayName;
+    }
+
+    /**
+     * Set 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayName 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayName(String PayName) {
+        this.PayName = PayName;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -428,6 +484,12 @@ public class DescribeOrganizationResponse extends AbstractModel{
         if (source.IsAllowQuit != null) {
             this.IsAllowQuit = new String(source.IsAllowQuit);
         }
+        if (source.PayUin != null) {
+            this.PayUin = new String(source.PayUin);
+        }
+        if (source.PayName != null) {
+            this.PayName = new String(source.PayName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -450,6 +512,8 @@ public class DescribeOrganizationResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "JoinTime", this.JoinTime);
         this.setParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
+        this.setParamSimple(map, prefix + "PayUin", this.PayUin);
+        this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,7 +44,7 @@ public class DescribeDeviceEventRequest extends AbstractModel{
     private String DeviceId;
 
     /**
-    * 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+    * 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
     */
     @SerializedName("EventTypes")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeDeviceEventRequest extends AbstractModel{
     }
 
     /**
-     * Get 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断 
-     * @return EventTypes 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+     * Get 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断 
+     * @return EventTypes 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
      */
     public Long [] getEventTypes() {
         return this.EventTypes;
     }
 
     /**
-     * Set 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
-     * @param EventTypes 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+     * Set 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+     * @param EventTypes 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
      */
     public void setEventTypes(Long [] EventTypes) {
         this.EventTypes = EventTypes;

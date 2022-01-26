@@ -30,14 +30,14 @@ public class DescribeXP2PDataRequest extends AbstractModel{
     private String P2PAppId;
 
     /**
-    * 查询开始时间
+    * 查询开始时间，时间戳秒
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 查询结束时间
+    * 查询结束时间，时间戳秒
     */
     @SerializedName("To")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeXP2PDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间 
-     * @return From 查询开始时间
+     * Get 查询开始时间，时间戳秒 
+     * @return From 查询开始时间，时间戳秒
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 查询开始时间
-     * @param From 查询开始时间
+     * Set 查询开始时间，时间戳秒
+     * @param From 查询开始时间，时间戳秒
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return To 查询结束时间
+     * Get 查询结束时间，时间戳秒 
+     * @return To 查询结束时间，时间戳秒
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 查询结束时间
-     * @param To 查询结束时间
+     * Set 查询结束时间，时间戳秒
+     * @param To 查询结束时间，时间戳秒
      */
     public void setTo(Long To) {
         this.To = To;

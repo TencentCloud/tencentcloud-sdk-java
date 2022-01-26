@@ -30,6 +30,16 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+    */
+    @SerializedName("AudioVideoType")
+    @Expose
+    private String AudioVideoType;
+
+    /**
     * 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -51,6 +61,13 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfoForUpdate DrmStreamingsInfo;
+
+    /**
+    * 允许输出的转码模板 ID。
+    */
+    @SerializedName("TranscodeDefinition")
+    @Expose
+    private Long TranscodeDefinition;
 
     /**
     * 允许输出的雪碧图模板 ID。
@@ -114,6 +131,34 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li> 
+     * @return AudioVideoType 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+     */
+    public String getAudioVideoType() {
+        return this.AudioVideoType;
+    }
+
+    /**
+     * Set 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+     * @param AudioVideoType 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+     */
+    public void setAudioVideoType(String AudioVideoType) {
+        this.AudioVideoType = AudioVideoType;
+    }
+
+    /**
      * Get 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li> 
@@ -167,6 +212,22 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfoForUpdate DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
+    }
+
+    /**
+     * Get 允许输出的转码模板 ID。 
+     * @return TranscodeDefinition 允许输出的转码模板 ID。
+     */
+    public Long getTranscodeDefinition() {
+        return this.TranscodeDefinition;
+    }
+
+    /**
+     * Set 允许输出的转码模板 ID。
+     * @param TranscodeDefinition 允许输出的转码模板 ID。
+     */
+    public void setTranscodeDefinition(Long TranscodeDefinition) {
+        this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
@@ -288,6 +349,9 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.AudioVideoType != null) {
+            this.AudioVideoType = new String(source.AudioVideoType);
+        }
         if (source.DrmSwitch != null) {
             this.DrmSwitch = new String(source.DrmSwitch);
         }
@@ -296,6 +360,9 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
         }
         if (source.DrmStreamingsInfo != null) {
             this.DrmStreamingsInfo = new DrmStreamingsInfoForUpdate(source.DrmStreamingsInfo);
+        }
+        if (source.TranscodeDefinition != null) {
+            this.TranscodeDefinition = new Long(source.TranscodeDefinition);
         }
         if (source.ImageSpriteDefinition != null) {
             this.ImageSpriteDefinition = new Long(source.ImageSpriteDefinition);
@@ -326,9 +393,11 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
         this.setParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+        this.setParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
         this.setParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
         this.setParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
         this.setParamSimple(map, prefix + "Domain", this.Domain);

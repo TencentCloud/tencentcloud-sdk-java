@@ -40,6 +40,14 @@ public class DescribeKTVRobotsRequest extends AbstractModel{
     private String [] Statuses;
 
     /**
+    * 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
+
+    /**
     * 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
     */
     @SerializedName("Offset")
@@ -98,6 +106,26 @@ public class DescribeKTVRobotsRequest extends AbstractModel{
     }
 
     /**
+     * Get 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li> 
+     * @return CreateTime 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
+     * @param CreateTime 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Get 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。 
      * @return Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
      */
@@ -149,6 +177,9 @@ public class DescribeKTVRobotsRequest extends AbstractModel{
                 this.Statuses[i] = new String(source.Statuses[i]);
             }
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new TimeRange(source.CreateTime);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -164,6 +195,7 @@ public class DescribeKTVRobotsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RobotIds.", this.RobotIds);
         this.setParamArraySimple(map, prefix + "Statuses.", this.Statuses);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 
