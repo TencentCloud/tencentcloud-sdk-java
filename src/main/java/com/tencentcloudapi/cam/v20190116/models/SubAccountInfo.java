@@ -87,6 +87,14 @@ public class SubAccountInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NickName")
+    @Expose
+    private String NickName;
+
+    /**
      * Get 子用户用户 ID 
      * @return Uin 子用户用户 ID
      */
@@ -234,6 +242,26 @@ public class SubAccountInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NickName 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNickName() {
+        return this.NickName;
+    }
+
+    /**
+     * Set 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NickName 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNickName(String NickName) {
+        this.NickName = NickName;
+    }
+
     public SubAccountInfo() {
     }
 
@@ -269,6 +297,9 @@ public class SubAccountInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
     }
 
 
@@ -285,6 +316,7 @@ public class SubAccountInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "NickName", this.NickName);
 
     }
 }

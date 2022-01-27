@@ -239,6 +239,69 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *获取直播互动曲库歌手分类信息
+     * @param req DescribeKTVSingerCategoriesRequest
+     * @return DescribeKTVSingerCategoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVSingerCategoriesResponse DescribeKTVSingerCategories(DescribeKTVSingerCategoriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVSingerCategoriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVSingerCategoriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVSingerCategories");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据歌手id，返回该歌手下歌曲列表。
+
+
+
+     * @param req DescribeKTVSingerMusicsRequest
+     * @return DescribeKTVSingerMusicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVSingerMusicsResponse DescribeKTVSingerMusics(DescribeKTVSingerMusicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVSingerMusicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVSingerMusicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVSingerMusics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据过滤条件，返回匹配的歌手列表。
+     * @param req DescribeKTVSingersRequest
+     * @return DescribeKTVSingersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVSingersResponse DescribeKTVSingers(DescribeKTVSingersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVSingersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVSingersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVSingers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
      * @param req DescribeLyricRequest
      * @return DescribeLyricResponse

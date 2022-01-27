@@ -37,17 +37,19 @@ public class StorageNewFileCreatedEvent extends AbstractModel{
     private String MaterialId;
 
     /**
-    * 操作者 Id。
+    * 操作者 Id。（废弃，请勿使用）
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 操作类型，可取值为：
-<li>Upload：上传；</li>
+    * 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
     */
     @SerializedName("OperationType")
     @Expose
@@ -66,6 +68,20 @@ public class StorageNewFileCreatedEvent extends AbstractModel{
     @SerializedName("ClassPath")
     @Expose
     private String ClassPath;
+
+    /**
+    * 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+    * 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+    */
+    @SerializedName("SourceContext")
+    @Expose
+    private String SourceContext;
 
     /**
      * Get 云点播文件  Id。 
@@ -100,44 +116,52 @@ public class StorageNewFileCreatedEvent extends AbstractModel{
     }
 
     /**
-     * Get 操作者 Id。 
-     * @return Operator 操作者 Id。
+     * Get 操作者 Id。（废弃，请勿使用） 
+     * @return Operator 操作者 Id。（废弃，请勿使用）
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者 Id。
-     * @param Operator 操作者 Id。
+     * Set 操作者 Id。（废弃，请勿使用）
+     * @param Operator 操作者 Id。（废弃，请勿使用）
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 操作类型，可取值为：
-<li>Upload：上传；</li>
+     * Get 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li> 
-     * @return OperationType 操作类型，可取值为：
-<li>Upload：上传；</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li> 
+     * @return OperationType 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set 操作类型，可取值为：
-<li>Upload：上传；</li>
+     * Set 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
-     * @param OperationType 操作类型，可取值为：
-<li>Upload：上传；</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
+     * @param OperationType 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
@@ -175,6 +199,38 @@ public class StorageNewFileCreatedEvent extends AbstractModel{
         this.ClassPath = ClassPath;
     }
 
+    /**
+     * Get 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。 
+     * @return TaskId 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+     * @param TaskId 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。 
+     * @return SourceContext 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+     */
+    public String getSourceContext() {
+        return this.SourceContext;
+    }
+
+    /**
+     * Set 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+     * @param SourceContext 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+     */
+    public void setSourceContext(String SourceContext) {
+        this.SourceContext = SourceContext;
+    }
+
     public StorageNewFileCreatedEvent() {
     }
 
@@ -201,6 +257,12 @@ public class StorageNewFileCreatedEvent extends AbstractModel{
         if (source.ClassPath != null) {
             this.ClassPath = new String(source.ClassPath);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.SourceContext != null) {
+            this.SourceContext = new String(source.SourceContext);
+        }
     }
 
 
@@ -214,6 +276,8 @@ public class StorageNewFileCreatedEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "OperationType", this.OperationType);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
 
     }
 }

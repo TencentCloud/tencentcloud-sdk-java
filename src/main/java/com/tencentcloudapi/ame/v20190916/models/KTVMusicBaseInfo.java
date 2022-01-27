@@ -37,7 +37,14 @@ public class KTVMusicBaseInfo extends AbstractModel{
     private String Name;
 
     /**
-    * 演唱者列表
+    * 演唱者基础信息列表
+    */
+    @SerializedName("SingerInfoSet")
+    @Expose
+    private KTVSingerBaseInfo [] SingerInfoSet;
+
+    /**
+    * 已弃用，请使用SingerInfoSet
     */
     @SerializedName("SingerSet")
     @Expose
@@ -104,16 +111,32 @@ public class KTVMusicBaseInfo extends AbstractModel{
     }
 
     /**
-     * Get 演唱者列表 
-     * @return SingerSet 演唱者列表
+     * Get 演唱者基础信息列表 
+     * @return SingerInfoSet 演唱者基础信息列表
+     */
+    public KTVSingerBaseInfo [] getSingerInfoSet() {
+        return this.SingerInfoSet;
+    }
+
+    /**
+     * Set 演唱者基础信息列表
+     * @param SingerInfoSet 演唱者基础信息列表
+     */
+    public void setSingerInfoSet(KTVSingerBaseInfo [] SingerInfoSet) {
+        this.SingerInfoSet = SingerInfoSet;
+    }
+
+    /**
+     * Get 已弃用，请使用SingerInfoSet 
+     * @return SingerSet 已弃用，请使用SingerInfoSet
      */
     public String [] getSingerSet() {
         return this.SingerSet;
     }
 
     /**
-     * Set 演唱者列表
-     * @param SingerSet 演唱者列表
+     * Set 已弃用，请使用SingerInfoSet
+     * @param SingerSet 已弃用，请使用SingerInfoSet
      */
     public void setSingerSet(String [] SingerSet) {
         this.SingerSet = SingerSet;
@@ -197,6 +220,12 @@ public class KTVMusicBaseInfo extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.SingerInfoSet != null) {
+            this.SingerInfoSet = new KTVSingerBaseInfo[source.SingerInfoSet.length];
+            for (int i = 0; i < source.SingerInfoSet.length; i++) {
+                this.SingerInfoSet[i] = new KTVSingerBaseInfo(source.SingerInfoSet[i]);
+            }
+        }
         if (source.SingerSet != null) {
             this.SingerSet = new String[source.SingerSet.length];
             for (int i = 0; i < source.SingerSet.length; i++) {
@@ -233,6 +262,7 @@ public class KTVMusicBaseInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MusicId", this.MusicId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "SingerInfoSet.", this.SingerInfoSet);
         this.setParamArraySimple(map, prefix + "SingerSet.", this.SingerSet);
         this.setParamArraySimple(map, prefix + "LyricistSet.", this.LyricistSet);
         this.setParamArraySimple(map, prefix + "ComposerSet.", this.ComposerSet);
