@@ -302,6 +302,26 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *获取直播互动曲库歌曲的周榜和月榜
+     * @param req DescribeKTVTopListRequest
+     * @return DescribeKTVTopListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVTopListResponse DescribeKTVTopList(DescribeKTVTopListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVTopListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVTopListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVTopList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
      * @param req DescribeLyricRequest
      * @return DescribeLyricResponse
