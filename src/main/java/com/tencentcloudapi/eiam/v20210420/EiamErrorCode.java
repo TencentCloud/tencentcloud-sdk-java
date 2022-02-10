@@ -48,6 +48,9 @@ public enum EiamErrorCode {
     // 自定义机构节点对外ID已存在。
      FAILEDOPERATION_CUSTOMIZEDPARENTORGNODEIDEXISTED("FailedOperation.CustomizedParentOrgNodeIdExisted"),
      
+    // 默认导入机构不能被删除。
+     FAILEDOPERATION_DEFAULTORGNODECANNOTBEDELETED("FailedOperation.DefaultOrgNodeCanNotBeDeleted"),
+     
     // 删除机构节点失败。
      FAILEDOPERATION_DELETEORGNODEFAILURE("FailedOperation.DeleteOrgNodeFailure"),
      
@@ -148,7 +151,7 @@ public enum EiamErrorCode {
      FAILEDOPERATION_USERALREADYEXISTEDINUSERGROUP("FailedOperation.UserAlreadyExistedInUserGroup"),
      
     // 获取用户被授权访问的应用列表失败。
-     FAILEDOPERATION_USERAUTHLISTFAILED("FailedOperation.UserAuthListFailed"),
+     FAILEDOPERATION_USERAUTHLISTERROR("FailedOperation.UserAuthListError"),
      
     // 用户邮箱已存在。
      FAILEDOPERATION_USEREMAILEXISTED("FailedOperation.UserEmailExisted"),

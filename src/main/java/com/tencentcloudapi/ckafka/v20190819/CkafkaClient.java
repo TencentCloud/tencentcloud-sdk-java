@@ -259,6 +259,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *删除消费组
+     * @param req DeleteGroupRequest
+     * @return DeleteGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除预付费实例
      * @param req DeleteInstancePreRequest
      * @return DeleteInstancePreResponse

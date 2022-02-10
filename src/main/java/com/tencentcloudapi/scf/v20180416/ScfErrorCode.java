@@ -729,6 +729,9 @@ public enum ScfErrorCode {
     // Trigger操作不支持。
      UNSUPPORTEDOPERATION_TRIGGER("UnsupportedOperation.Trigger"),
      
+    // 指定的配置暂不支持，请修正后再试。
+     UNSUPPORTEDOPERATION_UPDATEFUNCTIONEVENTINVOKECONFIG("UnsupportedOperation.UpdateFunctionEventInvokeConfig"),
+     
     // 指定的配置VpcConfig暂不支持。
      UNSUPPORTEDOPERATION_VPCCONFIG("UnsupportedOperation.VpcConfig");
      

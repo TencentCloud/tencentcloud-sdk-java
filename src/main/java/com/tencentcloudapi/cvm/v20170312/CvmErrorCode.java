@@ -273,6 +273,9 @@ public enum CvmErrorCode {
     // 核心计数不合法。
      INVALIDPARAMETERVALUE_CORECOUNTVALUE("InvalidParameterValue.CoreCountValue"),
      
+    // 置放群组ID格式错误。
+     INVALIDPARAMETERVALUE_DISASTERRECOVERGROUPIDMALFORMED("InvalidParameterValue.DisasterRecoverGroupIdMalformed"),
+     
     // 参数值重复。
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
@@ -320,6 +323,9 @@ public enum CvmErrorCode {
      
     // 镜像不允许执行该操作
      INVALIDPARAMETERVALUE_INVALIDIMAGEID("InvalidParameterValue.InvalidImageId"),
+     
+    // 镜像无法用于重装当前实例。
+     INVALIDPARAMETERVALUE_INVALIDIMAGEIDFORRETSETINSTANCE("InvalidParameterValue.InvalidImageIdForRetsetInstance"),
      
     // 当前地域不支持指定镜像所包含的操作系统。
      INVALIDPARAMETERVALUE_INVALIDIMAGEOSNAME("InvalidParameterValue.InvalidImageOsName"),
@@ -482,6 +488,9 @@ public enum CvmErrorCode {
      
     // IP数量超过网卡上限。
      LIMITEXCEEDED_IPV6ADDRESSNUM("LimitExceeded.IPv6AddressNum"),
+     
+    // 实例指定的弹性网卡数目超过了实例弹性网卡数目配额。
+     LIMITEXCEEDED_INSTANCEENINUMLIMIT("LimitExceeded.InstanceEniNumLimit"),
      
     // 当前配额不足够生产指定数量的实例
      LIMITEXCEEDED_INSTANCEQUOTA("LimitExceeded.InstanceQuota"),
@@ -704,6 +713,9 @@ public enum CvmErrorCode {
      
     // 机型数据盘全为本地盘不支持跨机型调整。
      UNSUPPORTEDOPERATION_LOCALDATADISKCHANGEINSTANCEFAMILY("UnsupportedOperation.LocalDataDiskChangeInstanceFamily"),
+     
+    // 不支持正在本地盘转云盘的磁盘，请稍后发起请求。
+     UNSUPPORTEDOPERATION_LOCALDISKMIGRATINGTOCLOUDDISK("UnsupportedOperation.LocalDiskMigratingToCloudDisk"),
      
     // 绑定负载均衡的实例，不支持修改vpc属性。
      UNSUPPORTEDOPERATION_MODIFYVPCWITHCLB("UnsupportedOperation.ModifyVPCWithCLB"),

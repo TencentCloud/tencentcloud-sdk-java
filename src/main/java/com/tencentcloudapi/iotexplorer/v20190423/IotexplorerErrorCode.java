@@ -288,6 +288,9 @@ public enum IotexplorerErrorCode {
     // 固件不存在。
      RESOURCENOTFOUND_DEVICEHASNOFIRMWARE("ResourceNotFound.DeviceHasNoFirmware"),
      
+    // 设备未绑定家庭。
+     RESOURCENOTFOUND_DEVICENOTBIND("ResourceNotFound.DeviceNotBind"),
+     
     // 设备不存在。
      RESOURCENOTFOUND_DEVICENOTEXIST("ResourceNotFound.DeviceNotExist"),
      
