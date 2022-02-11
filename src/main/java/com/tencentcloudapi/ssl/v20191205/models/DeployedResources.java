@@ -44,6 +44,14 @@ public class DeployedResources extends AbstractModel{
     private String Type;
 
     /**
+    * 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceIds")
+    @Expose
+    private String [] ResourceIds;
+
+    /**
      * Get 证书ID 
      * @return CertificateId 证书ID
      */
@@ -91,6 +99,26 @@ public class DeployedResources extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceIds 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getResourceIds() {
+        return this.ResourceIds;
+    }
+
+    /**
+     * Set 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceIds 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceIds(String [] ResourceIds) {
+        this.ResourceIds = ResourceIds;
+    }
+
     public DeployedResources() {
     }
 
@@ -108,6 +136,12 @@ public class DeployedResources extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.ResourceIds != null) {
+            this.ResourceIds = new String[source.ResourceIds.length];
+            for (int i = 0; i < source.ResourceIds.length; i++) {
+                this.ResourceIds[i] = new String(source.ResourceIds[i]);
+            }
+        }
     }
 
 
@@ -118,6 +152,7 @@ public class DeployedResources extends AbstractModel{
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
 
     }
 }

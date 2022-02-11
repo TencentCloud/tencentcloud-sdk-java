@@ -24,6 +24,7 @@ public class CreateLoadBalancerResponse extends AbstractModel{
 
     /**
     * 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -45,8 +46,10 @@ public class CreateLoadBalancerResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 由负载均衡实例唯一 ID 组成的数组。 
+     * Get 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。 
      * @return LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
@@ -54,7 +57,9 @@ public class CreateLoadBalancerResponse extends AbstractModel{
 
     /**
      * Set 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
      * @param LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

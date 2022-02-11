@@ -30,18 +30,18 @@ public class CreateDBImportJobRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
-    */
-    @SerializedName("FileName")
-    @Expose
-    private String FileName;
-
-    /**
     * 云数据库的用户名。
     */
     @SerializedName("User")
     @Expose
     private String User;
+
+    /**
+    * 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
 
     /**
     * 云数据库实例 User 账号的密码。
@@ -56,6 +56,13 @@ public class CreateDBImportJobRequest extends AbstractModel{
     @SerializedName("DbName")
     @Expose
     private String DbName;
+
+    /**
+    * 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
+    */
+    @SerializedName("CosUrl")
+    @Expose
+    private String CosUrl;
 
     /**
      * Get 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
@@ -74,22 +81,6 @@ public class CreateDBImportJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。 
-     * @return FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
-     */
-    public String getFileName() {
-        return this.FileName;
-    }
-
-    /**
-     * Set 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
-     * @param FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
-     */
-    public void setFileName(String FileName) {
-        this.FileName = FileName;
-    }
-
-    /**
      * Get 云数据库的用户名。 
      * @return User 云数据库的用户名。
      */
@@ -103,6 +94,22 @@ public class CreateDBImportJobRequest extends AbstractModel{
      */
     public void setUser(String User) {
         this.User = User;
+    }
+
+    /**
+     * Get 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。 
+     * @return FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+     * @param FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
     }
 
     /**
@@ -137,6 +144,22 @@ public class CreateDBImportJobRequest extends AbstractModel{
         this.DbName = DbName;
     }
 
+    /**
+     * Get 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。 
+     * @return CosUrl 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
+     */
+    public String getCosUrl() {
+        return this.CosUrl;
+    }
+
+    /**
+     * Set 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
+     * @param CosUrl 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
+     */
+    public void setCosUrl(String CosUrl) {
+        this.CosUrl = CosUrl;
+    }
+
     public CreateDBImportJobRequest() {
     }
 
@@ -148,17 +171,20 @@ public class CreateDBImportJobRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.FileName != null) {
-            this.FileName = new String(source.FileName);
-        }
         if (source.User != null) {
             this.User = new String(source.User);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
+        }
+        if (source.CosUrl != null) {
+            this.CosUrl = new String(source.CosUrl);
         }
     }
 
@@ -168,10 +194,11 @@ public class CreateDBImportJobRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamSimple(map, prefix + "CosUrl", this.CosUrl);
 
     }
 }

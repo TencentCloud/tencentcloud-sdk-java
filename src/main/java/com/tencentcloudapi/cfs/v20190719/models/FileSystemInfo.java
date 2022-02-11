@@ -156,6 +156,13 @@ public class FileSystemInfo extends AbstractModel{
     private Long Capacity;
 
     /**
+    * 文件系统标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get 创建时间 
      * @return CreationTime 创建时间
      */
@@ -459,6 +466,22 @@ public class FileSystemInfo extends AbstractModel{
         this.Capacity = Capacity;
     }
 
+    /**
+     * Get 文件系统标签列表 
+     * @return Tags 文件系统标签列表
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 文件系统标签列表
+     * @param Tags 文件系统标签列表
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -524,6 +547,12 @@ public class FileSystemInfo extends AbstractModel{
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -550,6 +579,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

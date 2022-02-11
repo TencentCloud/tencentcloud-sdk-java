@@ -30,6 +30,31 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * ·  NodePoolsName
+    按照【节点池名】进行过滤。
+    类型：String
+    必选：否
+
+·  NodePoolsId
+    按照【节点池id】进行过滤。
+    类型：String
+    必选：否
+
+·  tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get ClusterId（集群id） 
      * @return ClusterId ClusterId（集群id）
      */
@@ -45,6 +70,94 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get ·  NodePoolsName
+    按照【节点池名】进行过滤。
+    类型：String
+    必选：否
+
+·  NodePoolsId
+    按照【节点池id】进行过滤。
+    类型：String
+    必选：否
+
+·  tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否 
+     * @return Filters ·  NodePoolsName
+    按照【节点池名】进行过滤。
+    类型：String
+    必选：否
+
+·  NodePoolsId
+    按照【节点池id】进行过滤。
+    类型：String
+    必选：否
+
+·  tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set ·  NodePoolsName
+    按照【节点池名】进行过滤。
+    类型：String
+    必选：否
+
+·  NodePoolsId
+    按照【节点池id】进行过滤。
+    类型：String
+    必选：否
+
+·  tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+     * @param Filters ·  NodePoolsName
+    按照【节点池名】进行过滤。
+    类型：String
+    必选：否
+
+·  NodePoolsId
+    按照【节点池id】进行过滤。
+    类型：String
+    必选：否
+
+·  tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeClusterNodePoolsRequest() {
     }
 
@@ -56,6 +169,12 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -64,6 +183,7 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -37,7 +37,7 @@ public class FuseFaceReviewDetail extends AbstractModel{
     private String Label;
 
     /**
-    * 对应识别label的置信度，分数越高意味涉政可能性越大。 
+    * 对应识别label的置信度，分数越高意味违法违规可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
 80到100，Suggestion建议为BLOCK。
@@ -89,11 +89,11 @@ BLOCK：违规
     }
 
     /**
-     * Get 对应识别label的置信度，分数越高意味涉政可能性越大。 
+     * Get 对应识别label的置信度，分数越高意味违法违规可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
 80到100，Suggestion建议为BLOCK。 
-     * @return Confidence 对应识别label的置信度，分数越高意味涉政可能性越大。 
+     * @return Confidence 对应识别label的置信度，分数越高意味违法违规可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
 80到100，Suggestion建议为BLOCK。
@@ -103,11 +103,11 @@ BLOCK：违规
     }
 
     /**
-     * Set 对应识别label的置信度，分数越高意味涉政可能性越大。 
+     * Set 对应识别label的置信度，分数越高意味违法违规可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
 80到100，Suggestion建议为BLOCK。
-     * @param Confidence 对应识别label的置信度，分数越高意味涉政可能性越大。 
+     * @param Confidence 对应识别label的置信度，分数越高意味违法违规可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
 80到100，Suggestion建议为BLOCK。

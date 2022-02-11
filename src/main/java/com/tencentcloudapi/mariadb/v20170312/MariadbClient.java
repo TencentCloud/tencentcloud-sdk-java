@@ -522,6 +522,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
+     * @param req DescribeDatabaseTableRequest
+     * @return DescribeDatabaseTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseTableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatabaseTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse

@@ -143,7 +143,7 @@ public class HealthCheck extends AbstractModel{
     private String HttpVersion;
 
     /**
-    * 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+    * 自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceIpType")
@@ -451,9 +451,9 @@ public class HealthCheck extends AbstractModel{
     }
 
     /**
-     * Get 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+     * Get 自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceIpType 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+     * @return SourceIpType 自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceIpType() {
@@ -461,9 +461,9 @@ public class HealthCheck extends AbstractModel{
     }
 
     /**
-     * Set 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+     * Set 自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceIpType 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+     * @param SourceIpType 自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceIpType(Long SourceIpType) {
