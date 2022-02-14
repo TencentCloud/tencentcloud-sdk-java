@@ -37,8 +37,8 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long InvalidType;
 
     /**
-    * true表示用户已经可以使用云API密钥安全托管功能，
-false表示用户暂时不能使用云API密钥安全托管功能。
+    * true表示用户已经可以使用密钥安全托管功能，
+false表示用户暂时不能使用密钥安全托管功能。
     */
     @SerializedName("AccessKeyEscrowEnabled")
     @Expose
@@ -84,20 +84,20 @@ false表示用户暂时不能使用云API密钥安全托管功能。
     }
 
     /**
-     * Get true表示用户已经可以使用云API密钥安全托管功能，
-false表示用户暂时不能使用云API密钥安全托管功能。 
-     * @return AccessKeyEscrowEnabled true表示用户已经可以使用云API密钥安全托管功能，
-false表示用户暂时不能使用云API密钥安全托管功能。
+     * Get true表示用户已经可以使用密钥安全托管功能，
+false表示用户暂时不能使用密钥安全托管功能。 
+     * @return AccessKeyEscrowEnabled true表示用户已经可以使用密钥安全托管功能，
+false表示用户暂时不能使用密钥安全托管功能。
      */
     public Boolean getAccessKeyEscrowEnabled() {
         return this.AccessKeyEscrowEnabled;
     }
 
     /**
-     * Set true表示用户已经可以使用云API密钥安全托管功能，
-false表示用户暂时不能使用云API密钥安全托管功能。
-     * @param AccessKeyEscrowEnabled true表示用户已经可以使用云API密钥安全托管功能，
-false表示用户暂时不能使用云API密钥安全托管功能。
+     * Set true表示用户已经可以使用密钥安全托管功能，
+false表示用户暂时不能使用密钥安全托管功能。
+     * @param AccessKeyEscrowEnabled true表示用户已经可以使用密钥安全托管功能，
+false表示用户暂时不能使用密钥安全托管功能。
      */
     public void setAccessKeyEscrowEnabled(Boolean AccessKeyEscrowEnabled) {
         this.AccessKeyEscrowEnabled = AccessKeyEscrowEnabled;

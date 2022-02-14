@@ -103,6 +103,26 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
+     *查询云审计跟踪集列表
+     * @param req DescribeAuditTracksRequest
+     * @return DescribeAuditTracksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditTracksResponse DescribeAuditTracks(DescribeAuditTracksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditTracksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditTracksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditTracks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询云审计日志
      * @param req DescribeEventsRequest
      * @return DescribeEventsResponse

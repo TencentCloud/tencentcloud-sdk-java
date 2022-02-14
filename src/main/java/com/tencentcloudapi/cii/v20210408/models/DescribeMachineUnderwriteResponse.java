@@ -58,7 +58,10 @@ public class DescribeMachineUnderwriteResponse extends AbstractModel{
     private String UnderwriteTaskId;
 
     /**
-    * 状态码
+    * 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
     */
     @SerializedName("Status")
     @Expose
@@ -159,16 +162,28 @@ public class DescribeMachineUnderwriteResponse extends AbstractModel{
     }
 
     /**
-     * Get 状态码 
-     * @return Status 状态码
+     * Get 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败 
+     * @return Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态码
-     * @param Status 状态码
+     * Set 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     * @param Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

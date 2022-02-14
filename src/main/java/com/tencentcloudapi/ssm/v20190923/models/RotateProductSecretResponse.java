@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RotateProductSecretResponse extends AbstractModel{
 
     /**
-    * 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
+    * 当凭据类型为云产品凭据时（即SecretType为1，如MySQL、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
     */
     @SerializedName("FlowID")
     @Expose
@@ -37,16 +37,16 @@ public class RotateProductSecretResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。 
-     * @return FlowID 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
+     * Get 当凭据类型为云产品凭据时（即SecretType为1，如MySQL、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。 
+     * @return FlowID 当凭据类型为云产品凭据时（即SecretType为1，如MySQL、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
      */
     public Long getFlowID() {
         return this.FlowID;
     }
 
     /**
-     * Set 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
-     * @param FlowID 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
+     * Set 当凭据类型为云产品凭据时（即SecretType为1，如MySQL、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
+     * @param FlowID 当凭据类型为云产品凭据时（即SecretType为1，如MySQL、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
      */
     public void setFlowID(Long FlowID) {
         this.FlowID = FlowID;

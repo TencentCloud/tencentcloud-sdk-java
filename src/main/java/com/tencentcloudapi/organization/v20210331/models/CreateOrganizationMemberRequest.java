@@ -37,14 +37,14 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
     private String PolicyType;
 
     /**
-    * 关系权限
+    * 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
     */
     @SerializedName("PermissionIds")
     @Expose
     private Long [] PermissionIds;
 
     /**
-    * 需要调节的节点
+    * 成员所属部门的节点ID
     */
     @SerializedName("NodeId")
     @Expose
@@ -118,32 +118,32 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
     }
 
     /**
-     * Get 关系权限 
-     * @return PermissionIds 关系权限
+     * Get 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须 
+     * @return PermissionIds 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
      */
     public Long [] getPermissionIds() {
         return this.PermissionIds;
     }
 
     /**
-     * Set 关系权限
-     * @param PermissionIds 关系权限
+     * Set 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
+     * @param PermissionIds 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
      */
     public void setPermissionIds(Long [] PermissionIds) {
         this.PermissionIds = PermissionIds;
     }
 
     /**
-     * Get 需要调节的节点 
-     * @return NodeId 需要调节的节点
+     * Get 成员所属部门的节点ID 
+     * @return NodeId 成员所属部门的节点ID
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 需要调节的节点
-     * @param NodeId 需要调节的节点
+     * Set 成员所属部门的节点ID
+     * @param NodeId 成员所属部门的节点ID
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;

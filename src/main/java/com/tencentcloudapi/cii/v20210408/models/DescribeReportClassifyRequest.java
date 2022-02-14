@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DescribeReportClassifyRequest extends AbstractModel{
 
     /**
-    * 服务类型（Structured/Underwrite）
+    * 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
     */
     @SerializedName("ServiceType")
     @Expose
@@ -37,16 +39,24 @@ public class DescribeReportClassifyRequest extends AbstractModel{
     private String [] FileList;
 
     /**
-     * Get 服务类型（Structured/Underwrite） 
-     * @return ServiceType 服务类型（Structured/Underwrite）
+     * Get 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保 
+     * @return ServiceType 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 服务类型（Structured/Underwrite）
-     * @param ServiceType 服务类型（Structured/Underwrite）
+     * Set 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
+     * @param ServiceType 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

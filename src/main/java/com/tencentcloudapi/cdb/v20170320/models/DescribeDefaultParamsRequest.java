@@ -30,6 +30,13 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
     private String EngineVersion;
 
     /**
+    * 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
      * Get mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。 
      * @return EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
@@ -45,6 +52,22 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    /**
+     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。 
+     * @return TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     * @param TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
     public DescribeDefaultParamsRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
 
     }
 }

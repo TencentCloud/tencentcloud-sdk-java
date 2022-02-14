@@ -439,6 +439,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *用于查询 redis 执行 kill 会话任务后代理节点的执行结果，入参异步任务 ID 从接口 CreateProxySessionKillTask 调用成功后取得。当前 product 只支持：redis。
+     * @param req DescribeProxySessionKillTasksRequest
+     * @return DescribeProxySessionKillTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxySessionKillTasksResponse DescribeProxySessionKillTasks(DescribeProxySessionKillTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxySessionKillTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxySessionKillTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxySessionKillTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
      * @param req DescribeSecurityAuditLogDownloadUrlsRequest
      * @return DescribeSecurityAuditLogDownloadUrlsResponse

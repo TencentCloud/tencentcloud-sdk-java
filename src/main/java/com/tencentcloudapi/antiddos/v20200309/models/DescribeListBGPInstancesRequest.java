@@ -72,7 +72,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long FilterLine;
 
     /**
-    * 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+    * 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
     */
     @SerializedName("FilterStatus")
     @Expose
@@ -198,16 +198,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中 
-     * @return FilterStatus 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+     * Get 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中 
+     * @return FilterStatus 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      */
     public String getFilterStatus() {
         return this.FilterStatus;
     }
 
     /**
-     * Set 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
-     * @param FilterStatus 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+     * Set 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
+     * @param FilterStatus 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      */
     public void setFilterStatus(String FilterStatus) {
         this.FilterStatus = FilterStatus;
