@@ -30,6 +30,13 @@ public class DescribeAssetImageRegistryDetailRequest extends AbstractModel{
     private Long Id;
 
     /**
+    * 镜像ID
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get 仓库列表id 
      * @return Id 仓库列表id
      */
@@ -45,6 +52,22 @@ public class DescribeAssetImageRegistryDetailRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    /**
+     * Get 镜像ID 
+     * @return ImageId 镜像ID
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 镜像ID
+     * @param ImageId 镜像ID
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
     public DescribeAssetImageRegistryDetailRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeAssetImageRegistryDetailRequest extends AbstractModel{
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeAssetImageRegistryDetailRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

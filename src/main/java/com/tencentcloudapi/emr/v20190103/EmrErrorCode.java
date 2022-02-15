@@ -102,6 +102,9 @@ public enum EmrErrorCode {
     // 无效参数，ClusterId。
      INVALIDPARAMETER_INVALIDCLUSTERID("InvalidParameter.InvalidClusterId"),
      
+    // 参数错误。
+     INVALIDPARAMETER_INVALIDCOMMONDISKTYPE("InvalidParameter.InvalidCommonDiskType"),
+     
     // 无效的组件。
      INVALIDPARAMETER_INVALIDCOMPONENT("InvalidParameter.InvalidComponent"),
      
@@ -149,6 +152,9 @@ public enum EmrErrorCode {
      
     // 无效的登录设置。
      INVALIDPARAMETER_INVALIDLOGINSETTING("InvalidParameter.InvalidLoginSetting"),
+     
+    // 参数错误。
+     INVALIDPARAMETER_INVALIDMASTERDISKTYPE("InvalidParameter.InvalidMasterDiskType"),
      
     // 无效的元数据表类型。
      INVALIDPARAMETER_INVALIDMETATYPE("InvalidParameter.InvalidMetaType"),

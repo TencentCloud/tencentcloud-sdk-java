@@ -31,6 +31,14 @@ public class ComplianceK8SDetailInfo extends AbstractModel{
     private String ClusterName;
 
     /**
+    * K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
      * Get K8S集群的名称。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName K8S集群的名称。
@@ -50,6 +58,26 @@ public class ComplianceK8SDetailInfo extends AbstractModel{
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterVersion K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterVersion K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
     public ComplianceK8SDetailInfo() {
     }
 
@@ -61,6 +89,9 @@ public class ComplianceK8SDetailInfo extends AbstractModel{
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
     }
 
 
@@ -69,6 +100,7 @@ public class ComplianceK8SDetailInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
 
     }
 }

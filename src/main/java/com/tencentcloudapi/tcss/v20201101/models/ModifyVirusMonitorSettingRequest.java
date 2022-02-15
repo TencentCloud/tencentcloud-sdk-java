@@ -37,7 +37,7 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
     private Boolean ScanPathAll;
 
     /**
-    * 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+    * 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
     */
     @SerializedName("ScanPathType")
     @Expose
@@ -83,16 +83,16 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径 
-     * @return ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+     * Get 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1) 
+     * @return ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
      */
     public Long getScanPathType() {
         return this.ScanPathType;
     }
 
     /**
-     * Set 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
-     * @param ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+     * Set 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
+     * @param ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
      */
     public void setScanPathType(Long ScanPathType) {
         this.ScanPathType = ScanPathType;

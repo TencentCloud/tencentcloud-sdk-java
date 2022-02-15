@@ -51,6 +51,14 @@ public class ApplicationBasicInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowVisualModify")
+    @Expose
+    private Boolean AllowVisualModify;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -114,6 +122,26 @@ public class ApplicationBasicInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowVisualModify 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowVisualModify() {
+        return this.AllowVisualModify;
+    }
+
+    /**
+     * Set 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowVisualModify 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowVisualModify(Boolean AllowVisualModify) {
+        this.AllowVisualModify = AllowVisualModify;
+    }
+
     public ApplicationBasicInfo() {
     }
 
@@ -134,6 +162,9 @@ public class ApplicationBasicInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.AllowVisualModify != null) {
+            this.AllowVisualModify = new Boolean(source.AllowVisualModify);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class ApplicationBasicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ManageUrl", this.ManageUrl);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AllowVisualModify", this.AllowVisualModify);
 
     }
 }

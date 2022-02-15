@@ -799,6 +799,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询绑定到家庭的网关设备的子设备列表
+     * @param req DescribeGatewaySubDeviceListRequest
+     * @return DescribeGatewaySubDeviceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewaySubDeviceListResponse DescribeGatewaySubDeviceList(DescribeGatewaySubDeviceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewaySubDeviceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewaySubDeviceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewaySubDeviceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取网关可绑定或解绑的子产品
      * @param req DescribeGatewaySubProductsRequest
      * @return DescribeGatewaySubProductsResponse

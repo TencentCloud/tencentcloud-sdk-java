@@ -40,6 +40,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
+<li>SetDestroyMode：设置销毁模式</li>
     */
     @SerializedName("Command")
     @Expose
@@ -88,6 +89,13 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
     private SetPlayModeCommandInput SetPlayModeCommandInput;
 
     /**
+    * 销毁模式，当Command取SetDestroyMode时，必填。
+    */
+    @SerializedName("SetDestroyModeCommandInput")
+    @Expose
+    private SetDestroyModeCommandInput SetDestroyModeCommandInput;
+
+    /**
      * Get 机器人Id。 
      * @return RobotId 机器人Id。
      */
@@ -113,7 +121,8 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
-<li>SendMessage：发送自定义消息</li> 
+<li>SendMessage：发送自定义消息</li>
+<li>SetDestroyMode：设置销毁模式</li> 
      * @return Command 指令，取值有：
 <li>Play：播放</li>
 <li>Pause：暂停</li>
@@ -124,6 +133,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
+<li>SetDestroyMode：设置销毁模式</li>
      */
     public String getCommand() {
         return this.Command;
@@ -140,6 +150,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
+<li>SetDestroyMode：设置销毁模式</li>
      * @param Command 指令，取值有：
 <li>Play：播放</li>
 <li>Pause：暂停</li>
@@ -150,6 +161,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
+<li>SetDestroyMode：设置销毁模式</li>
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -251,6 +263,22 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         this.SetPlayModeCommandInput = SetPlayModeCommandInput;
     }
 
+    /**
+     * Get 销毁模式，当Command取SetDestroyMode时，必填。 
+     * @return SetDestroyModeCommandInput 销毁模式，当Command取SetDestroyMode时，必填。
+     */
+    public SetDestroyModeCommandInput getSetDestroyModeCommandInput() {
+        return this.SetDestroyModeCommandInput;
+    }
+
+    /**
+     * Set 销毁模式，当Command取SetDestroyMode时，必填。
+     * @param SetDestroyModeCommandInput 销毁模式，当Command取SetDestroyMode时，必填。
+     */
+    public void setSetDestroyModeCommandInput(SetDestroyModeCommandInput SetDestroyModeCommandInput) {
+        this.SetDestroyModeCommandInput = SetDestroyModeCommandInput;
+    }
+
     public SyncKTVRobotCommandRequest() {
     }
 
@@ -283,6 +311,9 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         if (source.SetPlayModeCommandInput != null) {
             this.SetPlayModeCommandInput = new SetPlayModeCommandInput(source.SetPlayModeCommandInput);
         }
+        if (source.SetDestroyModeCommandInput != null) {
+            this.SetDestroyModeCommandInput = new SetDestroyModeCommandInput(source.SetDestroyModeCommandInput);
+        }
     }
 
 
@@ -298,6 +329,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SetAudioParamCommandInput.", this.SetAudioParamCommandInput);
         this.setParamObj(map, prefix + "SendMessageCommandInput.", this.SendMessageCommandInput);
         this.setParamObj(map, prefix + "SetPlayModeCommandInput.", this.SetPlayModeCommandInput);
+        this.setParamObj(map, prefix + "SetDestroyModeCommandInput.", this.SetDestroyModeCommandInput);
 
     }
 }

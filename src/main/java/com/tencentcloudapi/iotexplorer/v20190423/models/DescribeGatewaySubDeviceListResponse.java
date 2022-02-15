@@ -13,28 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVirusTaskListResponse extends AbstractModel{
+public class DescribeGatewaySubDeviceListResponse extends AbstractModel{
 
     /**
-    * 文件查杀列表
+    * 设备的总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("List")
+    @SerializedName("Total")
     @Expose
-    private VirusTaskInfo [] List;
+    private Long Total;
 
     /**
-    * 总数量(容器任务数量)
+    * 设备列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("DeviceList")
     @Expose
-    private Long TotalCount;
+    private FamilySubDevice [] DeviceList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +46,43 @@ public class DescribeVirusTaskListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件查杀列表 
-     * @return List 文件查杀列表
+     * Get 设备的总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 设备的总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public VirusTaskInfo [] getList() {
-        return this.List;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 文件查杀列表
-     * @param List 文件查杀列表
+     * Set 设备的总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 设备的总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setList(VirusTaskInfo [] List) {
-        this.List = List;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 总数量(容器任务数量) 
-     * @return TotalCount 总数量(容器任务数量)
+     * Get 设备列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceList 设备列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public FamilySubDevice [] getDeviceList() {
+        return this.DeviceList;
     }
 
     /**
-     * Set 总数量(容器任务数量)
-     * @param TotalCount 总数量(容器任务数量)
+     * Set 设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceList 设备列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setDeviceList(FamilySubDevice [] DeviceList) {
+        this.DeviceList = DeviceList;
     }
 
     /**
@@ -91,22 +101,22 @@ public class DescribeVirusTaskListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeVirusTaskListResponse() {
+    public DescribeGatewaySubDeviceListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVirusTaskListResponse(DescribeVirusTaskListResponse source) {
-        if (source.List != null) {
-            this.List = new VirusTaskInfo[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new VirusTaskInfo(source.List[i]);
-            }
+    public DescribeGatewaySubDeviceListResponse(DescribeGatewaySubDeviceListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.DeviceList != null) {
+            this.DeviceList = new FamilySubDevice[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new FamilySubDevice(source.DeviceList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +128,8 @@ public class DescribeVirusTaskListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "List.", this.List);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
