@@ -58,6 +58,20 @@ public class CustomPersonInfo extends AbstractModel{
     private String L2Category;
 
     /**
+    * 自定义人物图片信息
+    */
+    @SerializedName("ImageInfoSet")
+    @Expose
+    private PersonImageInfo [] ImageInfoSet;
+
+    /**
+    * 自定义人物创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 自定义人物Id 
      * @return PersonId 自定义人物Id
      */
@@ -137,6 +151,38 @@ public class CustomPersonInfo extends AbstractModel{
         this.L2Category = L2Category;
     }
 
+    /**
+     * Get 自定义人物图片信息 
+     * @return ImageInfoSet 自定义人物图片信息
+     */
+    public PersonImageInfo [] getImageInfoSet() {
+        return this.ImageInfoSet;
+    }
+
+    /**
+     * Set 自定义人物图片信息
+     * @param ImageInfoSet 自定义人物图片信息
+     */
+    public void setImageInfoSet(PersonImageInfo [] ImageInfoSet) {
+        this.ImageInfoSet = ImageInfoSet;
+    }
+
+    /**
+     * Get 自定义人物创建时间 
+     * @return CreateTime 自定义人物创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 自定义人物创建时间
+     * @param CreateTime 自定义人物创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public CustomPersonInfo() {
     }
 
@@ -160,6 +206,15 @@ public class CustomPersonInfo extends AbstractModel{
         if (source.L2Category != null) {
             this.L2Category = new String(source.L2Category);
         }
+        if (source.ImageInfoSet != null) {
+            this.ImageInfoSet = new PersonImageInfo[source.ImageInfoSet.length];
+            for (int i = 0; i < source.ImageInfoSet.length; i++) {
+                this.ImageInfoSet[i] = new PersonImageInfo(source.ImageInfoSet[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -172,6 +227,8 @@ public class CustomPersonInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BasicInfo", this.BasicInfo);
         this.setParamSimple(map, prefix + "L1Category", this.L1Category);
         this.setParamSimple(map, prefix + "L2Category", this.L2Category);
+        this.setParamArrayObj(map, prefix + "ImageInfoSet.", this.ImageInfoSet);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

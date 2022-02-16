@@ -51,6 +51,20 @@ public class AccessLogConfig extends AbstractModel{
     private CLS CLS;
 
     /**
+    * 编码格式，可选值：TEXT、JSON
+    */
+    @SerializedName("Encoding")
+    @Expose
+    private String Encoding;
+
+    /**
+    * 日志格式
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get 是否启用 
      * @return Enable 是否启用
      */
@@ -114,6 +128,38 @@ public class AccessLogConfig extends AbstractModel{
         this.CLS = CLS;
     }
 
+    /**
+     * Get 编码格式，可选值：TEXT、JSON 
+     * @return Encoding 编码格式，可选值：TEXT、JSON
+     */
+    public String getEncoding() {
+        return this.Encoding;
+    }
+
+    /**
+     * Set 编码格式，可选值：TEXT、JSON
+     * @param Encoding 编码格式，可选值：TEXT、JSON
+     */
+    public void setEncoding(String Encoding) {
+        this.Encoding = Encoding;
+    }
+
+    /**
+     * Get 日志格式 
+     * @return Format 日志格式
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 日志格式
+     * @param Format 日志格式
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public AccessLogConfig() {
     }
 
@@ -134,6 +180,12 @@ public class AccessLogConfig extends AbstractModel{
         if (source.CLS != null) {
             this.CLS = new CLS(source.CLS);
         }
+        if (source.Encoding != null) {
+            this.Encoding = new String(source.Encoding);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class AccessLogConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Template", this.Template);
         this.setParamObj(map, prefix + "SelectedRange.", this.SelectedRange);
         this.setParamObj(map, prefix + "CLS.", this.CLS);
+        this.setParamSimple(map, prefix + "Encoding", this.Encoding);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

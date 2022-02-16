@@ -101,7 +101,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *增加模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+     *增加模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
      * @param req AddTemplateMemberRequest
      * @return AddTemplateMemberResponse
      * @throws TencentCloudSDKException
@@ -562,7 +562,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateAddressTemplate）用于创建IP地址模版
+     *本接口（CreateAddressTemplate）用于创建IP地址模板。
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -1942,7 +1942,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *删除模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+     *删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
      * @param req DeleteTemplateMemberRequest
      * @return DeleteTemplateMemberResponse
      * @throws TencentCloudSDKException
@@ -4803,7 +4803,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *修改模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+     *修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
      * @param req ModifyTemplateMemberRequest
      * @return ModifyTemplateMemberResponse
      * @throws TencentCloudSDKException

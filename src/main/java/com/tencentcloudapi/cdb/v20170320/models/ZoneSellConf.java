@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ZoneSellConf extends AbstractModel{
 
     /**
-    * 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+    * 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
     */
     @SerializedName("Status")
     @Expose
@@ -136,16 +136,39 @@ public class ZoneSellConf extends AbstractModel{
     private String [] RemoteRoZone;
 
     /**
-     * Get 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示 
-     * @return Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+    * 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+    */
+    @SerializedName("ExClusterStatus")
+    @Expose
+    private Long ExClusterStatus;
+
+    /**
+    * 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExClusterRemoteRoZone")
+    @Expose
+    private String [] ExClusterRemoteRoZone;
+
+    /**
+    * 独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExClusterZoneConf")
+    @Expose
+    private ZoneConf ExClusterZoneConf;
+
+    /**
+     * Get 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示 
+     * @return Status 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
-     * @param Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+     * Set 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @param Status 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -395,6 +418,62 @@ public class ZoneSellConf extends AbstractModel{
         this.RemoteRoZone = RemoteRoZone;
     }
 
+    /**
+     * Get 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示 
+     * @return ExClusterStatus 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+     */
+    public Long getExClusterStatus() {
+        return this.ExClusterStatus;
+    }
+
+    /**
+     * Set 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @param ExClusterStatus 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+     */
+    public void setExClusterStatus(Long ExClusterStatus) {
+        this.ExClusterStatus = ExClusterStatus;
+    }
+
+    /**
+     * Get 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExClusterRemoteRoZone 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getExClusterRemoteRoZone() {
+        return this.ExClusterRemoteRoZone;
+    }
+
+    /**
+     * Set 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExClusterRemoteRoZone 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExClusterRemoteRoZone(String [] ExClusterRemoteRoZone) {
+        this.ExClusterRemoteRoZone = ExClusterRemoteRoZone;
+    }
+
+    /**
+     * Get 独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExClusterZoneConf 独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZoneConf getExClusterZoneConf() {
+        return this.ExClusterZoneConf;
+    }
+
+    /**
+     * Set 独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExClusterZoneConf 独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExClusterZoneConf(ZoneConf ExClusterZoneConf) {
+        this.ExClusterZoneConf = ExClusterZoneConf;
+    }
+
     public ZoneSellConf() {
     }
 
@@ -466,6 +545,18 @@ public class ZoneSellConf extends AbstractModel{
                 this.RemoteRoZone[i] = new String(source.RemoteRoZone[i]);
             }
         }
+        if (source.ExClusterStatus != null) {
+            this.ExClusterStatus = new Long(source.ExClusterStatus);
+        }
+        if (source.ExClusterRemoteRoZone != null) {
+            this.ExClusterRemoteRoZone = new String[source.ExClusterRemoteRoZone.length];
+            for (int i = 0; i < source.ExClusterRemoteRoZone.length; i++) {
+                this.ExClusterRemoteRoZone[i] = new String(source.ExClusterRemoteRoZone[i]);
+            }
+        }
+        if (source.ExClusterZoneConf != null) {
+            this.ExClusterZoneConf = new ZoneConf(source.ExClusterZoneConf);
+        }
     }
 
 
@@ -489,6 +580,9 @@ public class ZoneSellConf extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DrZone.", this.DrZone);
         this.setParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
         this.setParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
+        this.setParamSimple(map, prefix + "ExClusterStatus", this.ExClusterStatus);
+        this.setParamArraySimple(map, prefix + "ExClusterRemoteRoZone.", this.ExClusterRemoteRoZone);
+        this.setParamObj(map, prefix + "ExClusterZoneConf.", this.ExClusterZoneConf);
 
     }
 }

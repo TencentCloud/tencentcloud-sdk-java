@@ -100,14 +100,14 @@ public class FlowApproverInfo extends AbstractModel{
     private String RecipientId;
 
     /**
-    * 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+    * 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+    * 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -290,32 +290,32 @@ public class FlowApproverInfo extends AbstractModel{
     }
 
     /**
-     * Get 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传； 
-     * @return OrganizationName 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     * Get 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传； 
+     * @return OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
-     * @param OrganizationName 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     * Set 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
+     * @param OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传； 
-     * @return OrganizationOpenId 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     * Get 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传； 
+     * @return OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
-     * @param OrganizationOpenId 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+     * Set 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
+     * @param OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;

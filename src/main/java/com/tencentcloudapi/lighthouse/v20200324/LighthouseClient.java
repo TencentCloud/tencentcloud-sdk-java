@@ -198,6 +198,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateInstances)用于创建一个或多个指定套餐的轻量应用服务器实例。
+     * @param req CreateInstancesRequest
+     * @return CreateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateKeyPair）用于创建一个密钥对。
      * @param req CreateKeyPairRequest
      * @return CreateKeyPairResponse
