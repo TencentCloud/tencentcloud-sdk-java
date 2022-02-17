@@ -156,6 +156,13 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private Long InstanceGroupId;
 
     /**
+    * 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+    */
+    @SerializedName("NeedCorrespondence")
+    @Expose
+    private Long NeedCorrespondence;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -471,6 +478,22 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.InstanceGroupId = InstanceGroupId;
     }
 
+    /**
+     * Get 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0 
+     * @return NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     */
+    public Long getNeedCorrespondence() {
+        return this.NeedCorrespondence;
+    }
+
+    /**
+     * Set 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     * @param NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     */
+    public void setNeedCorrespondence(Long NeedCorrespondence) {
+        this.NeedCorrespondence = NeedCorrespondence;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -560,6 +583,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         if (source.InstanceGroupId != null) {
             this.InstanceGroupId = new Long(source.InstanceGroupId);
         }
+        if (source.NeedCorrespondence != null) {
+            this.NeedCorrespondence = new Long(source.NeedCorrespondence);
+        }
     }
 
 
@@ -585,6 +611,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Enable.", this.Enable);
         this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+        this.setParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
 
     }
 }

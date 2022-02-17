@@ -51,6 +51,13 @@ public class RealServer extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+    */
+    @SerializedName("InBanBlacklist")
+    @Expose
+    private Long InBanBlacklist;
+
+    /**
      * Get 源站的IP或域名 
      * @return RealServerIP 源站的IP或域名
      */
@@ -114,6 +121,22 @@ public class RealServer extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。 
+     * @return InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+     */
+    public Long getInBanBlacklist() {
+        return this.InBanBlacklist;
+    }
+
+    /**
+     * Set 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+     * @param InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+     */
+    public void setInBanBlacklist(Long InBanBlacklist) {
+        this.InBanBlacklist = InBanBlacklist;
+    }
+
     public RealServer() {
     }
 
@@ -134,6 +157,9 @@ public class RealServer extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.InBanBlacklist != null) {
+            this.InBanBlacklist = new Long(source.InBanBlacklist);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class RealServer extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);
         this.setParamSimple(map, prefix + "RealServerName", this.RealServerName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
 
     }
 }

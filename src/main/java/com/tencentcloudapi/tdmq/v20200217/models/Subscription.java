@@ -157,6 +157,30 @@ public class Subscription extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubType")
+    @Expose
+    private String SubType;
+
+    /**
+    * 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlockedSubscriptionOnUnackedMsgs")
+    @Expose
+    private Boolean BlockedSubscriptionOnUnackedMsgs;
+
+    /**
+    * 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxUnackedMsgNum")
+    @Expose
+    private Long MaxUnackedMsgNum;
+
+    /**
      * Get 主题名称。 
      * @return TopicName 主题名称。
      */
@@ -488,6 +512,66 @@ public class Subscription extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubType 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubType() {
+        return this.SubType;
+    }
+
+    /**
+     * Set 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubType 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubType(String SubType) {
+        this.SubType = SubType;
+    }
+
+    /**
+     * Get 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlockedSubscriptionOnUnackedMsgs 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getBlockedSubscriptionOnUnackedMsgs() {
+        return this.BlockedSubscriptionOnUnackedMsgs;
+    }
+
+    /**
+     * Set 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockedSubscriptionOnUnackedMsgs 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlockedSubscriptionOnUnackedMsgs(Boolean BlockedSubscriptionOnUnackedMsgs) {
+        this.BlockedSubscriptionOnUnackedMsgs = BlockedSubscriptionOnUnackedMsgs;
+    }
+
+    /**
+     * Get 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxUnackedMsgNum 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxUnackedMsgNum() {
+        return this.MaxUnackedMsgNum;
+    }
+
+    /**
+     * Set 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxUnackedMsgNum 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
+        this.MaxUnackedMsgNum = MaxUnackedMsgNum;
+    }
+
     public Subscription() {
     }
 
@@ -553,6 +637,15 @@ public class Subscription extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SubType != null) {
+            this.SubType = new String(source.SubType);
+        }
+        if (source.BlockedSubscriptionOnUnackedMsgs != null) {
+            this.BlockedSubscriptionOnUnackedMsgs = new Boolean(source.BlockedSubscriptionOnUnackedMsgs);
+        }
+        if (source.MaxUnackedMsgNum != null) {
+            this.MaxUnackedMsgNum = new Long(source.MaxUnackedMsgNum);
+        }
     }
 
 
@@ -577,6 +670,9 @@ public class Subscription extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SubType", this.SubType);
+        this.setParamSimple(map, prefix + "BlockedSubscriptionOnUnackedMsgs", this.BlockedSubscriptionOnUnackedMsgs);
+        this.setParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
 
     }
 }

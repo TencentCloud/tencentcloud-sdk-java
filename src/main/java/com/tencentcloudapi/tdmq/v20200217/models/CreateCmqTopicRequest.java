@@ -58,6 +58,13 @@ public class CreateCmqTopicRequest extends AbstractModel{
     private Boolean Trace;
 
     /**
+    * 标签数组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。 
      * @return TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      */
@@ -137,6 +144,22 @@ public class CreateCmqTopicRequest extends AbstractModel{
         this.Trace = Trace;
     }
 
+    /**
+     * Get 标签数组 
+     * @return Tags 标签数组
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签数组
+     * @param Tags 标签数组
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateCmqTopicRequest() {
     }
 
@@ -160,6 +183,12 @@ public class CreateCmqTopicRequest extends AbstractModel{
         if (source.Trace != null) {
             this.Trace = new Boolean(source.Trace);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class CreateCmqTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
         this.setParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
         this.setParamSimple(map, prefix + "Trace", this.Trace);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

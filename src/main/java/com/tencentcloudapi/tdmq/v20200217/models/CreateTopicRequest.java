@@ -44,6 +44,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long Partitions;
 
     /**
+    * 备注，128字符以内。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
     * 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
@@ -55,18 +62,22 @@ public class CreateTopicRequest extends AbstractModel{
     private Long TopicType;
 
     /**
-    * 备注，128字符以内。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * Pulsar 集群的ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * Pulsar 主题类型
+0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+    */
+    @SerializedName("PulsarTopicType")
+    @Expose
+    private Long PulsarTopicType;
 
     /**
      * Get 环境（命名空间）名称。 
@@ -117,6 +128,22 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
+     * Get 备注，128字符以内。 
+     * @return Remark 备注，128字符以内。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注，128字符以内。
+     * @param Remark 备注，128字符以内。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
      * Get 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
@@ -149,22 +176,6 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 备注，128字符以内。 
-     * @return Remark 备注，128字符以内。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 备注，128字符以内。
-     * @param Remark 备注，128字符以内。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get Pulsar 集群的ID 
      * @return ClusterId Pulsar 集群的ID
      */
@@ -178,6 +189,38 @@ public class CreateTopicRequest extends AbstractModel{
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Pulsar 主题类型
+0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区 
+     * @return PulsarTopicType Pulsar 主题类型
+0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+     */
+    public Long getPulsarTopicType() {
+        return this.PulsarTopicType;
+    }
+
+    /**
+     * Set Pulsar 主题类型
+0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+     * @param PulsarTopicType Pulsar 主题类型
+0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+     */
+    public void setPulsarTopicType(Long PulsarTopicType) {
+        this.PulsarTopicType = PulsarTopicType;
     }
 
     public CreateTopicRequest() {
@@ -197,14 +240,17 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.Partitions != null) {
             this.Partitions = new Long(source.Partitions);
         }
-        if (source.TopicType != null) {
-            this.TopicType = new Long(source.TopicType);
-        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.TopicType != null) {
+            this.TopicType = new Long(source.TopicType);
+        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.PulsarTopicType != null) {
+            this.PulsarTopicType = new Long(source.PulsarTopicType);
         }
     }
 
@@ -216,9 +262,10 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Partitions", this.Partitions);
-        this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
 
     }
 }

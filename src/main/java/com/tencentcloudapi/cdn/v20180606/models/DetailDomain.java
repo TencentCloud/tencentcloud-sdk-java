@@ -70,10 +70,12 @@ offline：已关闭
     private Long ProjectId;
 
     /**
-    * 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+    * 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
     */
     @SerializedName("ServiceType")
     @Expose
@@ -518,6 +520,14 @@ off：不支持
     private ShareCname ShareCname;
 
     /**
+    * 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleEngine")
+    @Expose
+    private RuleEngine RuleEngine;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -634,28 +644,36 @@ offline：已关闭
     }
 
     /**
-     * Get 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速 
-     * @return ServiceType 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+     * Get 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速 
+     * @return ServiceType 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
-     * @param ServiceType 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+     * Set 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
+     * @param ServiceType 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -1777,6 +1795,26 @@ off：不支持
         this.ShareCname = ShareCname;
     }
 
+    /**
+     * Get 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleEngine 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleEngine getRuleEngine() {
+        return this.RuleEngine;
+    }
+
+    /**
+     * Set 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleEngine 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleEngine(RuleEngine RuleEngine) {
+        this.RuleEngine = RuleEngine;
+    }
+
     public DetailDomain() {
     }
 
@@ -1974,6 +2012,9 @@ off：不支持
         if (source.ShareCname != null) {
             this.ShareCname = new ShareCname(source.ShareCname);
         }
+        if (source.RuleEngine != null) {
+            this.RuleEngine = new RuleEngine(source.RuleEngine);
+        }
     }
 
 
@@ -2041,6 +2082,7 @@ off：不支持
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
+        this.setParamObj(map, prefix + "RuleEngine.", this.RuleEngine);
 
     }
 }

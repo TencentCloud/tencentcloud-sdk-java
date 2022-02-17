@@ -88,7 +88,7 @@ public class SetAuthenticationRequest extends AbstractModel{
     private String RealServerCertificateId;
 
     /**
-    * 源站证书域名。
+    * 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
     */
     @SerializedName("RealServerCertificateDomain")
     @Expose
@@ -266,16 +266,16 @@ public class SetAuthenticationRequest extends AbstractModel{
     }
 
     /**
-     * Get 源站证书域名。 
-     * @return RealServerCertificateDomain 源站证书域名。
+     * Get 该字段已废弃，请使用创建规则和修改规则中的SNI功能。 
+     * @return RealServerCertificateDomain 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
      */
     public String getRealServerCertificateDomain() {
         return this.RealServerCertificateDomain;
     }
 
     /**
-     * Set 源站证书域名。
-     * @param RealServerCertificateDomain 源站证书域名。
+     * Set 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
+     * @param RealServerCertificateDomain 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
      */
     public void setRealServerCertificateDomain(String RealServerCertificateDomain) {
         this.RealServerCertificateDomain = RealServerCertificateDomain;

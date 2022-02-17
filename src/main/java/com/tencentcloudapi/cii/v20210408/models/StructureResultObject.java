@@ -51,6 +51,13 @@ public class StructureResultObject extends AbstractModel{
     private String SubTaskId;
 
     /**
+    * 任务文件列表
+    */
+    @SerializedName("TaskFiles")
+    @Expose
+    private String [] TaskFiles;
+
+    /**
      * Get 0表示正常返回；1代表结果未生成；2代表任务执行失败 
      * @return Code 0表示正常返回；1代表结果未生成；2代表任务执行失败
      */
@@ -114,6 +121,22 @@ public class StructureResultObject extends AbstractModel{
         this.SubTaskId = SubTaskId;
     }
 
+    /**
+     * Get 任务文件列表 
+     * @return TaskFiles 任务文件列表
+     */
+    public String [] getTaskFiles() {
+        return this.TaskFiles;
+    }
+
+    /**
+     * Set 任务文件列表
+     * @param TaskFiles 任务文件列表
+     */
+    public void setTaskFiles(String [] TaskFiles) {
+        this.TaskFiles = TaskFiles;
+    }
+
     public StructureResultObject() {
     }
 
@@ -134,6 +157,12 @@ public class StructureResultObject extends AbstractModel{
         if (source.SubTaskId != null) {
             this.SubTaskId = new String(source.SubTaskId);
         }
+        if (source.TaskFiles != null) {
+            this.TaskFiles = new String[source.TaskFiles.length];
+            for (int i = 0; i < source.TaskFiles.length; i++) {
+                this.TaskFiles[i] = new String(source.TaskFiles[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class StructureResultObject extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "StructureResult", this.StructureResult);
         this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
+        this.setParamArraySimple(map, prefix + "TaskFiles.", this.TaskFiles);
 
     }
 }

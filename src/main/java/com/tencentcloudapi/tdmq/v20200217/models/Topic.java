@@ -197,6 +197,17 @@ public class Topic extends AbstractModel{
     private String ConsumerLimit;
 
     /**
+    * 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PulsarTopicType")
+    @Expose
+    private Long PulsarTopicType;
+
+    /**
      * Get 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
@@ -640,6 +651,38 @@ public class Topic extends AbstractModel{
         this.ConsumerLimit = ConsumerLimit;
     }
 
+    /**
+     * Get 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PulsarTopicType 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPulsarTopicType() {
+        return this.PulsarTopicType;
+    }
+
+    /**
+     * Set 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PulsarTopicType 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPulsarTopicType(Long PulsarTopicType) {
+        this.PulsarTopicType = PulsarTopicType;
+    }
+
     public Topic() {
     }
 
@@ -714,6 +757,9 @@ public class Topic extends AbstractModel{
         if (source.ConsumerLimit != null) {
             this.ConsumerLimit = new String(source.ConsumerLimit);
         }
+        if (source.PulsarTopicType != null) {
+            this.PulsarTopicType = new Long(source.PulsarTopicType);
+        }
     }
 
 
@@ -742,6 +788,7 @@ public class Topic extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
         this.setParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
+        this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
 
     }
 }

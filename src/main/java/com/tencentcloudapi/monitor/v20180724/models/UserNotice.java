@@ -47,7 +47,7 @@ public class UserNotice extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+    * 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeWay")
@@ -111,6 +111,14 @@ public class UserNotice extends AbstractModel{
     private Long NeedPhoneArriveNotice;
 
     /**
+    * 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhoneCallType")
+    @Expose
+    private String PhoneCallType;
+
+    /**
      * Get 接收者类型 USER=用户 GROUP=用户组
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReceiverType 接收者类型 USER=用户 GROUP=用户组
@@ -171,9 +179,9 @@ public class UserNotice extends AbstractModel{
     }
 
     /**
-     * Get 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+     * Get 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeWay 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+     * @return NoticeWay 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNoticeWay() {
@@ -181,9 +189,9 @@ public class UserNotice extends AbstractModel{
     }
 
     /**
-     * Set 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+     * Set 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeWay 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+     * @param NoticeWay 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeWay(String [] NoticeWay) {
@@ -330,6 +338,26 @@ public class UserNotice extends AbstractModel{
         this.NeedPhoneArriveNotice = NeedPhoneArriveNotice;
     }
 
+    /**
+     * Get 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhoneCallType 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhoneCallType() {
+        return this.PhoneCallType;
+    }
+
+    /**
+     * Set 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhoneCallType 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhoneCallType(String PhoneCallType) {
+        this.PhoneCallType = PhoneCallType;
+    }
+
     public UserNotice() {
     }
 
@@ -383,6 +411,9 @@ public class UserNotice extends AbstractModel{
         if (source.NeedPhoneArriveNotice != null) {
             this.NeedPhoneArriveNotice = new Long(source.NeedPhoneArriveNotice);
         }
+        if (source.PhoneCallType != null) {
+            this.PhoneCallType = new String(source.PhoneCallType);
+        }
     }
 
 
@@ -401,6 +432,7 @@ public class UserNotice extends AbstractModel{
         this.setParamSimple(map, prefix + "PhoneInnerInterval", this.PhoneInnerInterval);
         this.setParamSimple(map, prefix + "PhoneCircleInterval", this.PhoneCircleInterval);
         this.setParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
+        this.setParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
 
     }
 }

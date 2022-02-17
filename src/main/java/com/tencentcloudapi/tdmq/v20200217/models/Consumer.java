@@ -55,6 +55,14 @@ public class Consumer extends AbstractModel{
     private String ClientVersion;
 
     /**
+    * 消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Partition")
+    @Expose
+    private Long Partition;
+
+    /**
      * Get 消费者开始连接的时间。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConnectedSince 消费者开始连接的时间。
@@ -134,6 +142,26 @@ public class Consumer extends AbstractModel{
         this.ClientVersion = ClientVersion;
     }
 
+    /**
+     * Get 消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Partition 消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPartition() {
+        return this.Partition;
+    }
+
+    /**
+     * Set 消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Partition 消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartition(Long Partition) {
+        this.Partition = Partition;
+    }
+
     public Consumer() {
     }
 
@@ -154,6 +182,9 @@ public class Consumer extends AbstractModel{
         if (source.ClientVersion != null) {
             this.ClientVersion = new String(source.ClientVersion);
         }
+        if (source.Partition != null) {
+            this.Partition = new Long(source.Partition);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class Consumer extends AbstractModel{
         this.setParamSimple(map, prefix + "ConsumerAddr", this.ConsumerAddr);
         this.setParamSimple(map, prefix + "ConsumerName", this.ConsumerName);
         this.setParamSimple(map, prefix + "ClientVersion", this.ClientVersion);
+        this.setParamSimple(map, prefix + "Partition", this.Partition);
 
     }
 }

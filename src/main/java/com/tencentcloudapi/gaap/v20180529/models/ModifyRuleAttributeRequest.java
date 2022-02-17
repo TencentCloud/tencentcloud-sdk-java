@@ -78,12 +78,26 @@ lc，最小连接数。
     private String ForwardProtocol;
 
     /**
-    * 加速通道转发到源站的请求中携带的host。
+    * 回源Host。加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
     */
     @SerializedName("ForwardHost")
     @Expose
     private String ForwardHost;
+
+    /**
+    * 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+    */
+    @SerializedName("ServerNameIndicationSwitch")
+    @Expose
+    private String ServerNameIndicationSwitch;
+
+    /**
+    * 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+    */
+    @SerializedName("ServerNameIndication")
+    @Expose
+    private String ServerNameIndication;
 
     /**
      * Get 监听器ID 
@@ -222,9 +236,9 @@ lc，最小连接数。
     }
 
     /**
-     * Get 加速通道转发到源站的请求中携带的host。
+     * Get 回源Host。加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。 
-     * @return ForwardHost 加速通道转发到源站的请求中携带的host。
+     * @return ForwardHost 回源Host。加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
      */
     public String getForwardHost() {
@@ -232,13 +246,45 @@ lc，最小连接数。
     }
 
     /**
-     * Set 加速通道转发到源站的请求中携带的host。
+     * Set 回源Host。加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
-     * @param ForwardHost 加速通道转发到源站的请求中携带的host。
+     * @param ForwardHost 回源Host。加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
      */
     public void setForwardHost(String ForwardHost) {
         this.ForwardHost = ForwardHost;
+    }
+
+    /**
+     * Get 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。 
+     * @return ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+     */
+    public String getServerNameIndicationSwitch() {
+        return this.ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Set 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+     * @param ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+     */
+    public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
+        this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Get 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。 
+     * @return ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     */
+    public String getServerNameIndication() {
+        return this.ServerNameIndication;
+    }
+
+    /**
+     * Set 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     * @param ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     */
+    public void setServerNameIndication(String ServerNameIndication) {
+        this.ServerNameIndication = ServerNameIndication;
     }
 
     public ModifyRuleAttributeRequest() {
@@ -273,6 +319,12 @@ lc，最小连接数。
         if (source.ForwardHost != null) {
             this.ForwardHost = new String(source.ForwardHost);
         }
+        if (source.ServerNameIndicationSwitch != null) {
+            this.ServerNameIndicationSwitch = new String(source.ServerNameIndicationSwitch);
+        }
+        if (source.ServerNameIndication != null) {
+            this.ServerNameIndication = new String(source.ServerNameIndication);
+        }
     }
 
 
@@ -288,6 +340,8 @@ lc，最小连接数。
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+        this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+        this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
 
     }
 }

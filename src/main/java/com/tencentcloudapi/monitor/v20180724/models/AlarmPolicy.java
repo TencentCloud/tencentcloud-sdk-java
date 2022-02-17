@@ -258,6 +258,14 @@ public class AlarmPolicy extends AbstractModel{
     private TagInstance [] TagInstances;
 
     /**
+    * 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilterDimensionsParam")
+    @Expose
+    private String FilterDimensionsParam;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -849,6 +857,26 @@ public class AlarmPolicy extends AbstractModel{
         this.TagInstances = TagInstances;
     }
 
+    /**
+     * Get 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilterDimensionsParam 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFilterDimensionsParam() {
+        return this.FilterDimensionsParam;
+    }
+
+    /**
+     * Set 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilterDimensionsParam 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilterDimensionsParam(String FilterDimensionsParam) {
+        this.FilterDimensionsParam = FilterDimensionsParam;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -959,6 +987,9 @@ public class AlarmPolicy extends AbstractModel{
                 this.TagInstances[i] = new TagInstance(source.TagInstances[i]);
             }
         }
+        if (source.FilterDimensionsParam != null) {
+            this.FilterDimensionsParam = new String(source.FilterDimensionsParam);
+        }
     }
 
 
@@ -995,6 +1026,7 @@ public class AlarmPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
         this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+        this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
 
     }
 }

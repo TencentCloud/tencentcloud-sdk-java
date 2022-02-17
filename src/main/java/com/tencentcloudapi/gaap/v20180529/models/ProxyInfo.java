@@ -251,7 +251,7 @@ CLONING表示复制中。
     private String NetworkType;
 
     /**
-    * 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+    * 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -284,6 +284,14 @@ CrossBorder表示跨境通道。
     @SerializedName("Http3Supported")
     @Expose
     private Long Http3Supported;
+
+    /**
+    * 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InBanBlacklist")
+    @Expose
+    private Long InBanBlacklist;
 
     /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
@@ -850,10 +858,10 @@ CLONING表示复制中。
     }
 
     /**
-     * Get 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+     * Get 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+     * @return PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -862,10 +870,10 @@ CrossBorder表示跨境通道。
     }
 
     /**
-     * Set 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+     * Set 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+     * @param PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -939,6 +947,26 @@ CrossBorder表示跨境通道。
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;
+    }
+
+    /**
+     * Get 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInBanBlacklist() {
+        return this.InBanBlacklist;
+    }
+
+    /**
+     * Set 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInBanBlacklist(Long InBanBlacklist) {
+        this.InBanBlacklist = InBanBlacklist;
     }
 
     public ProxyInfo() {
@@ -1063,6 +1091,9 @@ CrossBorder表示跨境通道。
         if (source.Http3Supported != null) {
             this.Http3Supported = new Long(source.Http3Supported);
         }
+        if (source.InBanBlacklist != null) {
+            this.InBanBlacklist = new Long(source.InBanBlacklist);
+        }
     }
 
 
@@ -1103,6 +1134,7 @@ CrossBorder表示跨境通道。
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
         this.setParamArrayObj(map, prefix + "IPList.", this.IPList);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+        this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
 
     }
 }

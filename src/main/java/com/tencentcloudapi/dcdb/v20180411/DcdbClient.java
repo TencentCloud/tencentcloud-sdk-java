@@ -321,6 +321,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
+     * @param req DescribeDBSlowLogsRequest
+     * @return DescribeDBSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSlowLogsResponse DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBSlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
      * @param req DescribeDBSyncModeRequest
      * @return DescribeDBSyncModeResponse

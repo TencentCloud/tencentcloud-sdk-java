@@ -110,6 +110,24 @@ public class RuleInfo extends AbstractModel{
     private String ForwardHost;
 
     /**
+    * 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServerNameIndicationSwitch")
+    @Expose
+    private String ServerNameIndicationSwitch;
+
+    /**
+    * 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServerNameIndication")
+    @Expose
+    private String ServerNameIndication;
+
+    /**
      * Get 规则信息 
      * @return RuleId 规则信息
      */
@@ -313,6 +331,54 @@ public class RuleInfo extends AbstractModel{
         this.ForwardHost = ForwardHost;
     }
 
+    /**
+     * Get 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServerNameIndicationSwitch() {
+        return this.ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Set 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
+        this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Get 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServerNameIndication() {
+        return this.ServerNameIndication;
+    }
+
+    /**
+     * Set 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServerNameIndication(String ServerNameIndication) {
+        this.ServerNameIndication = ServerNameIndication;
+    }
+
     public RuleInfo() {
     }
 
@@ -360,6 +426,12 @@ public class RuleInfo extends AbstractModel{
         if (source.ForwardHost != null) {
             this.ForwardHost = new String(source.ForwardHost);
         }
+        if (source.ServerNameIndicationSwitch != null) {
+            this.ServerNameIndicationSwitch = new String(source.ServerNameIndicationSwitch);
+        }
+        if (source.ServerNameIndication != null) {
+            this.ServerNameIndication = new String(source.ServerNameIndication);
+        }
     }
 
 
@@ -379,6 +451,8 @@ public class RuleInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+        this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+        this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
 
     }
 }

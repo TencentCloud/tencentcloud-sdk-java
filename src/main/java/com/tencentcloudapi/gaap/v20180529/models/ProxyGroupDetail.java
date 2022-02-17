@@ -152,7 +152,7 @@ public class ProxyGroupDetail extends AbstractModel{
     private String IPAddressVersion;
 
     /**
-    * 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+    * 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
@@ -482,9 +482,9 @@ public class ProxyGroupDetail extends AbstractModel{
     }
 
     /**
-     * Get 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+     * Get 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+     * @return PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
@@ -492,9 +492,9 @@ public class ProxyGroupDetail extends AbstractModel{
     }
 
     /**
-     * Set 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+     * Set 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+     * @param PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
