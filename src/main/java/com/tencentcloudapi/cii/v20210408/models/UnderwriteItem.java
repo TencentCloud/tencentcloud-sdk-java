@@ -44,6 +44,62 @@ public class UnderwriteItem extends AbstractModel{
     private String Value;
 
     /**
+    * 参考范围
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Range")
+    @Expose
+    private String Range;
+
+    /**
+    * 报告时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportDate")
+    @Expose
+    private String [] ReportDate;
+
+    /**
+    * 文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
+
+    /**
+    * 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InspectProject")
+    @Expose
+    private String InspectProject;
+
+    /**
+    * 单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
+
+    /**
+    * 原名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginName")
+    @Expose
+    private String OriginName;
+
+    /**
+    * 阴阳性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("YinYang")
+    @Expose
+    private String YinYang;
+
+    /**
      * Get 字段名 
      * @return Name 字段名
      */
@@ -91,6 +147,146 @@ public class UnderwriteItem extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get 参考范围
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Range 参考范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRange() {
+        return this.Range;
+    }
+
+    /**
+     * Set 参考范围
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Range 参考范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRange(String Range) {
+        this.Range = Range;
+    }
+
+    /**
+     * Get 报告时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportDate 报告时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getReportDate() {
+        return this.ReportDate;
+    }
+
+    /**
+     * Set 报告时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportDate 报告时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportDate(String [] ReportDate) {
+        this.ReportDate = ReportDate;
+    }
+
+    /**
+     * Get 文件类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileType 文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set 文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileType 文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
+
+    /**
+     * Get 检查项目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InspectProject 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInspectProject() {
+        return this.InspectProject;
+    }
+
+    /**
+     * Set 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InspectProject 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInspectProject(String InspectProject) {
+        this.InspectProject = InspectProject;
+    }
+
+    /**
+     * Get 单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * Set 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
+    /**
+     * Get 原名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginName 原名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginName() {
+        return this.OriginName;
+    }
+
+    /**
+     * Set 原名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginName 原名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginName(String OriginName) {
+        this.OriginName = OriginName;
+    }
+
+    /**
+     * Get 阴阳性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return YinYang 阴阳性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getYinYang() {
+        return this.YinYang;
+    }
+
+    /**
+     * Set 阴阳性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param YinYang 阴阳性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setYinYang(String YinYang) {
+        this.YinYang = YinYang;
+    }
+
     public UnderwriteItem() {
     }
 
@@ -108,6 +304,30 @@ public class UnderwriteItem extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Range != null) {
+            this.Range = new String(source.Range);
+        }
+        if (source.ReportDate != null) {
+            this.ReportDate = new String[source.ReportDate.length];
+            for (int i = 0; i < source.ReportDate.length; i++) {
+                this.ReportDate[i] = new String(source.ReportDate[i]);
+            }
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.InspectProject != null) {
+            this.InspectProject = new String(source.InspectProject);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.OriginName != null) {
+            this.OriginName = new String(source.OriginName);
+        }
+        if (source.YinYang != null) {
+            this.YinYang = new String(source.YinYang);
+        }
     }
 
 
@@ -118,6 +338,13 @@ public class UnderwriteItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Range", this.Range);
+        this.setParamArraySimple(map, prefix + "ReportDate.", this.ReportDate);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "InspectProject", this.InspectProject);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
+        this.setParamSimple(map, prefix + "OriginName", this.OriginName);
+        this.setParamSimple(map, prefix + "YinYang", this.YinYang);
 
     }
 }

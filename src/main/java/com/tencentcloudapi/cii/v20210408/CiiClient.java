@@ -139,6 +139,26 @@ public class CiiClient extends AbstractClient{
     }
 
     /**
+     *获取图片质量分
+     * @param req DescribeQualityScoreRequest
+     * @return DescribeQualityScoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQualityScoreResponse DescribeQualityScore(DescribeQualityScoreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQualityScoreResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQualityScoreResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQualityScore");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *辅助用户对批量报告自动分类
      * @param req DescribeReportClassifyRequest
      * @return DescribeReportClassifyResponse
