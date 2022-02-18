@@ -39,6 +39,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ActivateInstance)用于恢复已隔离的实例访问。
+     * @param req ActivateInstanceRequest
+     * @return ActivateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateInstanceResponse ActivateInstance(ActivateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActivateInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActivateInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ActivateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（AddInstances）用于集群添加实例
      * @param req AddInstancesRequest
      * @return AddInstancesResponse
@@ -59,6 +79,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *安全组批量绑定云资源
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建集群
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
@@ -71,6 +111,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateClustersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *账号所有权限
+     * @param req DescribeAccountAllGrantPrivilegesRequest
+     * @return DescribeAccountAllGrantPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountAllGrantPrivilegesResponse DescribeAccountAllGrantPrivileges(DescribeAccountAllGrantPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountAllGrantPrivilegesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountAllGrantPrivilegesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccountAllGrantPrivileges");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -171,6 +231,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstanceGrpsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusterInstanceGrps");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeClusterParamLogs）查询参数修改日志
+     * @param req DescribeClusterParamLogsRequest
+     * @return DescribeClusterParamLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterParamLogsResponse DescribeClusterParamLogs(DescribeClusterParamLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterParamLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterParamLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterParamLogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -379,6 +459,46 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *安全组批量解绑云资源
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量授权账号权限
+     * @param req GrantAccountPrivilegesRequest
+     * @return GrantAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantAccountPrivilegesResponse GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GrantAccountPrivilegesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GrantAccountPrivileges");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *隔离集群
      * @param req IsolateClusterRequest
      * @return IsolateClusterResponse
@@ -411,6 +531,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<IsolateInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "IsolateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改账号参数
+     * @param req ModifyAccountParamsRequest
+     * @return ModifyAccountParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountParamsResponse ModifyAccountParams(ModifyAccountParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountParamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountParamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountParams");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -531,6 +671,86 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OfflineInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OfflineInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *暂停serverless集群
+     * @param req PauseServerlessRequest
+     * @return PauseServerlessResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseServerlessResponse PauseServerless(PauseServerlessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PauseServerlessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PauseServerlessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PauseServerless");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *恢复serverless集群
+     * @param req ResumeServerlessRequest
+     * @return ResumeServerlessResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeServerlessResponse ResumeServerless(ResumeServerlessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeServerlessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeServerlessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeServerless");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量回收账号权限
+     * @param req RevokeAccountPrivilegesRequest
+     * @return RevokeAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeAccountPrivilegesResponse RevokeAccountPrivileges(RevokeAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevokeAccountPrivilegesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevokeAccountPrivilegesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RevokeAccountPrivileges");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RollBackCluster）用于回档集群
+     * @param req RollBackClusterRequest
+     * @return RollBackClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollBackClusterResponse RollBackCluster(RollBackClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RollBackClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RollBackClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RollBackCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

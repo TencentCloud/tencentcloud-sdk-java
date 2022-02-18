@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyClusterParamRequest extends AbstractModel{
+public class DescribeClusterParamLogsRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -30,18 +30,18 @@ public class ModifyClusterParamRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 修改参数列表
+    * 返回数量，默认为 20，最大值为 100
     */
-    @SerializedName("ParamList")
+    @SerializedName("Limit")
     @Expose
-    private ParamItem [] ParamList;
+    private Long Limit;
 
     /**
-    * 维护期间执行-yes,立即执行-no
+    * 记录偏移量，默认值为0
     */
-    @SerializedName("IsInMaintainPeriod")
+    @SerializedName("Offset")
     @Expose
-    private String IsInMaintainPeriod;
+    private Long Offset;
 
     /**
      * Get 集群ID 
@@ -60,56 +60,53 @@ public class ModifyClusterParamRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改参数列表 
-     * @return ParamList 修改参数列表
+     * Get 返回数量，默认为 20，最大值为 100 
+     * @return Limit 返回数量，默认为 20，最大值为 100
      */
-    public ParamItem [] getParamList() {
-        return this.ParamList;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 修改参数列表
-     * @param ParamList 修改参数列表
+     * Set 返回数量，默认为 20，最大值为 100
+     * @param Limit 返回数量，默认为 20，最大值为 100
      */
-    public void setParamList(ParamItem [] ParamList) {
-        this.ParamList = ParamList;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     /**
-     * Get 维护期间执行-yes,立即执行-no 
-     * @return IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * Get 记录偏移量，默认值为0 
+     * @return Offset 记录偏移量，默认值为0
      */
-    public String getIsInMaintainPeriod() {
-        return this.IsInMaintainPeriod;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 维护期间执行-yes,立即执行-no
-     * @param IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * Set 记录偏移量，默认值为0
+     * @param Offset 记录偏移量，默认值为0
      */
-    public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
-        this.IsInMaintainPeriod = IsInMaintainPeriod;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
-    public ModifyClusterParamRequest() {
+    public DescribeClusterParamLogsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyClusterParamRequest(ModifyClusterParamRequest source) {
+    public DescribeClusterParamLogsRequest(DescribeClusterParamLogsRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.ParamList != null) {
-            this.ParamList = new ParamItem[source.ParamList.length];
-            for (int i = 0; i < source.ParamList.length; i++) {
-                this.ParamList[i] = new ParamItem(source.ParamList[i]);
-            }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
-        if (source.IsInMaintainPeriod != null) {
-            this.IsInMaintainPeriod = new String(source.IsInMaintainPeriod);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -119,8 +116,8 @@ public class ModifyClusterParamRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
-        this.setParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyClusterParamRequest extends AbstractModel{
+public class ActivateInstanceRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -30,18 +30,11 @@ public class ModifyClusterParamRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 修改参数列表
+    * 实例ID数组
     */
-    @SerializedName("ParamList")
+    @SerializedName("InstanceIdList")
     @Expose
-    private ParamItem [] ParamList;
-
-    /**
-    * 维护期间执行-yes,立即执行-no
-    */
-    @SerializedName("IsInMaintainPeriod")
-    @Expose
-    private String IsInMaintainPeriod;
+    private String [] InstanceIdList;
 
     /**
      * Get 集群ID 
@@ -60,56 +53,37 @@ public class ModifyClusterParamRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改参数列表 
-     * @return ParamList 修改参数列表
+     * Get 实例ID数组 
+     * @return InstanceIdList 实例ID数组
      */
-    public ParamItem [] getParamList() {
-        return this.ParamList;
+    public String [] getInstanceIdList() {
+        return this.InstanceIdList;
     }
 
     /**
-     * Set 修改参数列表
-     * @param ParamList 修改参数列表
+     * Set 实例ID数组
+     * @param InstanceIdList 实例ID数组
      */
-    public void setParamList(ParamItem [] ParamList) {
-        this.ParamList = ParamList;
+    public void setInstanceIdList(String [] InstanceIdList) {
+        this.InstanceIdList = InstanceIdList;
     }
 
-    /**
-     * Get 维护期间执行-yes,立即执行-no 
-     * @return IsInMaintainPeriod 维护期间执行-yes,立即执行-no
-     */
-    public String getIsInMaintainPeriod() {
-        return this.IsInMaintainPeriod;
-    }
-
-    /**
-     * Set 维护期间执行-yes,立即执行-no
-     * @param IsInMaintainPeriod 维护期间执行-yes,立即执行-no
-     */
-    public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
-        this.IsInMaintainPeriod = IsInMaintainPeriod;
-    }
-
-    public ModifyClusterParamRequest() {
+    public ActivateInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyClusterParamRequest(ModifyClusterParamRequest source) {
+    public ActivateInstanceRequest(ActivateInstanceRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.ParamList != null) {
-            this.ParamList = new ParamItem[source.ParamList.length];
-            for (int i = 0; i < source.ParamList.length; i++) {
-                this.ParamList[i] = new ParamItem(source.ParamList[i]);
+        if (source.InstanceIdList != null) {
+            this.InstanceIdList = new String[source.InstanceIdList.length];
+            for (int i = 0; i < source.InstanceIdList.length; i++) {
+                this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
             }
-        }
-        if (source.IsInMaintainPeriod != null) {
-            this.IsInMaintainPeriod = new String(source.IsInMaintainPeriod);
         }
     }
 
@@ -119,8 +93,7 @@ public class ModifyClusterParamRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
-        this.setParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
+        this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
 
     }
 }

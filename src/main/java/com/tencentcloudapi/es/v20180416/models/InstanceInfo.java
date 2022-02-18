@@ -563,6 +563,22 @@ public class InstanceInfo extends AbstractModel{
     private Long HealthStatus;
 
     /**
+    * https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsPrivateUrl")
+    @Expose
+    private String EsPrivateUrl;
+
+    /**
+    * https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsPrivateDomain")
+    @Expose
+    private String EsPrivateDomain;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1858,6 +1874,46 @@ public class InstanceInfo extends AbstractModel{
         this.HealthStatus = HealthStatus;
     }
 
+    /**
+     * Get https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsPrivateUrl https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsPrivateUrl() {
+        return this.EsPrivateUrl;
+    }
+
+    /**
+     * Set https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsPrivateUrl https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsPrivateUrl(String EsPrivateUrl) {
+        this.EsPrivateUrl = EsPrivateUrl;
+    }
+
+    /**
+     * Get https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsPrivateDomain https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsPrivateDomain() {
+        return this.EsPrivateDomain;
+    }
+
+    /**
+     * Set https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsPrivateDomain https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsPrivateDomain(String EsPrivateDomain) {
+        this.EsPrivateDomain = EsPrivateDomain;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2094,6 +2150,12 @@ public class InstanceInfo extends AbstractModel{
         if (source.HealthStatus != null) {
             this.HealthStatus = new Long(source.HealthStatus);
         }
+        if (source.EsPrivateUrl != null) {
+            this.EsPrivateUrl = new String(source.EsPrivateUrl);
+        }
+        if (source.EsPrivateDomain != null) {
+            this.EsPrivateDomain = new String(source.EsPrivateDomain);
+        }
     }
 
 
@@ -2173,6 +2235,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
         this.setParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+        this.setParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
+        this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
 
     }
 }
