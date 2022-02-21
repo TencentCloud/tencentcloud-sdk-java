@@ -119,6 +119,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *创建消费者
+     * @param req CreateConsumerRequest
+     * @return CreateConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerResponse CreateConsumer(CreateConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建实例(预付费包年包月)
      * @param req CreateInstancePreRequest
      * @return CreateInstancePreResponse
@@ -151,6 +171,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePartitionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePartition");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加实例路由
+     * @param req CreateRouteRequest
+     * @return CreateRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRouteResponse CreateRoute(CreateRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRouteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRouteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRoute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

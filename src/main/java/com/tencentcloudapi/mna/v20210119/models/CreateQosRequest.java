@@ -91,6 +91,20 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
     private Long Protocol;
 
     /**
+    * 加速策略关键数据
+    */
+    @SerializedName("Context")
+    @Expose
+    private Context Context;
+
+    /**
+    * 签名
+    */
+    @SerializedName("Extern")
+    @Expose
+    private String Extern;
+
+    /**
      * Get 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。 
      * @return SrcAddressInfo 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。
      */
@@ -266,6 +280,38 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 加速策略关键数据 
+     * @return Context 加速策略关键数据
+     */
+    public Context getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set 加速策略关键数据
+     * @param Context 加速策略关键数据
+     */
+    public void setContext(Context Context) {
+        this.Context = Context;
+    }
+
+    /**
+     * Get 签名 
+     * @return Extern 签名
+     */
+    public String getExtern() {
+        return this.Extern;
+    }
+
+    /**
+     * Set 签名
+     * @param Extern 签名
+     */
+    public void setExtern(String Extern) {
+        this.Extern = Extern;
+    }
+
     public CreateQosRequest() {
     }
 
@@ -298,6 +344,12 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
         if (source.Protocol != null) {
             this.Protocol = new Long(source.Protocol);
         }
+        if (source.Context != null) {
+            this.Context = new Context(source.Context);
+        }
+        if (source.Extern != null) {
+            this.Extern = new String(source.Extern);
+        }
     }
 
 
@@ -313,6 +365,8 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
         this.setParamObj(map, prefix + "Capacity.", this.Capacity);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamObj(map, prefix + "Context.", this.Context);
+        this.setParamSimple(map, prefix + "Extern", this.Extern);
 
     }
 }

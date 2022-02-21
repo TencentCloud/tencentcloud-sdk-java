@@ -39,7 +39,7 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *规则检验
+     *检验规则
      * @param req CheckRuleRequest
      * @return CheckRuleResponse
      * @throws TencentCloudSDKException

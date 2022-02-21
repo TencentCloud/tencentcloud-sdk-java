@@ -61,7 +61,7 @@ import com.google.gson.JsonSyntaxException;
 public abstract class AbstractClient {
 
   public static final int HTTP_RSP_OK = 200;
-  public static final String SDK_VERSION = "SDK_JAVA_3.1.452";
+  public static final String SDK_VERSION = "SDK_JAVA_3.1.453";
 
   private Credential credential;
   private ClientProfile profile;
