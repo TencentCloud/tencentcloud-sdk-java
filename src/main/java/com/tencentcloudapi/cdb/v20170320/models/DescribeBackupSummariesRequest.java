@@ -30,28 +30,28 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
     private String Product;
 
     /**
-    * 分页查询数据的偏移量。
+    * 分页查询数据的偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页查询数据的条目限制，默认值为20。
+    * 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
+    * 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+    * 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -74,64 +74,64 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页查询数据的偏移量。 
-     * @return Offset 分页查询数据的偏移量。
+     * Get 分页查询数据的偏移量，默认为0。 
+     * @return Offset 分页查询数据的偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询数据的偏移量。
-     * @param Offset 分页查询数据的偏移量。
+     * Set 分页查询数据的偏移量，默认为0。
+     * @param Offset 分页查询数据的偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页查询数据的条目限制，默认值为20。 
-     * @return Limit 分页查询数据的条目限制，默认值为20。
+     * Get 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。 
+     * @return Limit 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询数据的条目限制，默认值为20。
-     * @param Limit 分页查询数据的条目限制，默认值为20。
+     * Set 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
+     * @param Limit 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。 
-     * @return OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
+     * Get 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。 
+     * @return OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
-     * @param OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
+     * Set 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
+     * @param OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。 
-     * @return OrderDirection 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+     * Get 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。 
+     * @return OrderDirection 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
-     * @param OrderDirection 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+     * Set 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
+     * @param OrderDirection 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

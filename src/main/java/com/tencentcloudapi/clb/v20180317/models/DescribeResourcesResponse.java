@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iecp.v20210914.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
+public class DescribeResourcesResponse extends AbstractModel{
 
     /**
-    * 符合查询条件的记录总数
+    * 可用区支持的资源列表。
     */
-    @SerializedName("Total")
+    @SerializedName("ZoneResourceSet")
     @Expose
-    private Long Total;
+    private ZoneResource [] ZoneResourceSet;
 
     /**
-    * NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 可用区资源列表数目。
     */
-    @SerializedName("NodeUnitTemplates")
+    @SerializedName("TotalCount")
     @Expose
-    private NodeUnitTemplate [] NodeUnitTemplates;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合查询条件的记录总数 
-     * @return Total 符合查询条件的记录总数
+     * Get 可用区支持的资源列表。 
+     * @return ZoneResourceSet 可用区支持的资源列表。
      */
-    public Long getTotal() {
-        return this.Total;
+    public ZoneResource [] getZoneResourceSet() {
+        return this.ZoneResourceSet;
     }
 
     /**
-     * Set 符合查询条件的记录总数
-     * @param Total 符合查询条件的记录总数
+     * Set 可用区支持的资源列表。
+     * @param ZoneResourceSet 可用区支持的资源列表。
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setZoneResourceSet(ZoneResource [] ZoneResourceSet) {
+        this.ZoneResourceSet = ZoneResourceSet;
     }
 
     /**
-     * Get NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeUnitTemplates NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 可用区资源列表数目。 
+     * @return TotalCount 可用区资源列表数目。
      */
-    public NodeUnitTemplate [] getNodeUnitTemplates() {
-        return this.NodeUnitTemplates;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeUnitTemplates NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 可用区资源列表数目。
+     * @param TotalCount 可用区资源列表数目。
      */
-    public void setNodeUnitTemplates(NodeUnitTemplate [] NodeUnitTemplates) {
-        this.NodeUnitTemplates = NodeUnitTemplates;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -96,22 +91,22 @@ public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeEdgeUnitNodeUnitTemplatesResponse() {
+    public DescribeResourcesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEdgeUnitNodeUnitTemplatesResponse(DescribeEdgeUnitNodeUnitTemplatesResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.NodeUnitTemplates != null) {
-            this.NodeUnitTemplates = new NodeUnitTemplate[source.NodeUnitTemplates.length];
-            for (int i = 0; i < source.NodeUnitTemplates.length; i++) {
-                this.NodeUnitTemplates[i] = new NodeUnitTemplate(source.NodeUnitTemplates[i]);
+    public DescribeResourcesResponse(DescribeResourcesResponse source) {
+        if (source.ZoneResourceSet != null) {
+            this.ZoneResourceSet = new ZoneResource[source.ZoneResourceSet.length];
+            for (int i = 0; i < source.ZoneResourceSet.length; i++) {
+                this.ZoneResourceSet[i] = new ZoneResource(source.ZoneResourceSet[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "NodeUnitTemplates.", this.NodeUnitTemplates);
+        this.setParamArrayObj(map, prefix + "ZoneResourceSet.", this.ZoneResourceSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

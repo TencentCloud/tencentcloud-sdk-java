@@ -931,6 +931,26 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *查询用户在当前地域支持可用区列表和资源列表。
+     * @param req DescribeResourcesRequest
+     * @return DescribeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcesResponse DescribeResources(DescribeResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
      * @param req DescribeRewriteRequest
      * @return DescribeRewriteResponse

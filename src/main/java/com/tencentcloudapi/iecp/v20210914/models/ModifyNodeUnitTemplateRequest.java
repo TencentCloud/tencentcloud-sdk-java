@@ -30,7 +30,7 @@ public class ModifyNodeUnitTemplateRequest extends AbstractModel{
     private Long EdgeUnitId;
 
     /**
-    * NodeUnit模版ID
+    * NodeUnit模板ID
     */
     @SerializedName("NodeUnitTemplateID")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyNodeUnitTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get NodeUnit模版ID 
-     * @return NodeUnitTemplateID NodeUnit模版ID
+     * Get NodeUnit模板ID 
+     * @return NodeUnitTemplateID NodeUnit模板ID
      */
     public Long getNodeUnitTemplateID() {
         return this.NodeUnitTemplateID;
     }
 
     /**
-     * Set NodeUnit模版ID
-     * @param NodeUnitTemplateID NodeUnit模版ID
+     * Set NodeUnit模板ID
+     * @param NodeUnitTemplateID NodeUnit模板ID
      */
     public void setNodeUnitTemplateID(Long NodeUnitTemplateID) {
         this.NodeUnitTemplateID = NodeUnitTemplateID;

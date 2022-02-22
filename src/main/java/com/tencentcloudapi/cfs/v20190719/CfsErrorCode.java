@@ -105,6 +105,9 @@ public enum CfsErrorCode {
     // 读写权限设置错误。
      INVALIDPARAMETERVALUE_INVALIDRWPERMISSION("InvalidParameterValue.InvalidRwPermission"),
      
+    // 无效的快照状态。
+     INVALIDPARAMETERVALUE_INVALIDSNAPSHOTSTATUS("InvalidParameterValue.InvalidSnapshotStatus"),
+     
     // 资源包不存在或已绑定。
      INVALIDPARAMETERVALUE_INVALIDSTORAGERESOURCEPKG("InvalidParameterValue.InvalidStorageResourcePkg"),
      

@@ -30,7 +30,7 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 实例名称。
+    * 修改后的实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get 修改后的实例名称。 
+     * @return InstanceName 修改后的实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set 修改后的实例名称。
+     * @param InstanceName 修改后的实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

@@ -225,6 +225,9 @@ public enum IotcloudErrorCode {
     // 产品资源不存在。
      RESOURCENOTFOUND_PRODUCTRESOURCENOTEXIST("ResourceNotFound.ProductResourceNotExist"),
      
+    // 资源文件不存在。
+     RESOURCENOTFOUND_RESOURCEFILENOTEXIST("ResourceNotFound.ResourceFileNotExist"),
+     
     // 任务不存在。
      RESOURCENOTFOUND_TASKNOTEXIST("ResourceNotFound.TaskNotExist"),
      

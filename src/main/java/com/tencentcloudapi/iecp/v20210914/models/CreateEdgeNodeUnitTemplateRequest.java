@@ -30,7 +30,7 @@ public class CreateEdgeNodeUnitTemplateRequest extends AbstractModel{
     private Long EdgeUnitId;
 
     /**
-    * NodeUnit模版名称
+    * NodeUnit模板名称
     */
     @SerializedName("Name")
     @Expose
@@ -74,16 +74,16 @@ public class CreateEdgeNodeUnitTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get NodeUnit模版名称 
-     * @return Name NodeUnit模版名称
+     * Get NodeUnit模板名称 
+     * @return Name NodeUnit模板名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set NodeUnit模版名称
-     * @param Name NodeUnit模版名称
+     * Set NodeUnit模板名称
+     * @param Name NodeUnit模板名称
      */
     public void setName(String Name) {
         this.Name = Name;

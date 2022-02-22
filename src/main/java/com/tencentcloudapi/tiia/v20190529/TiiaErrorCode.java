@@ -159,6 +159,9 @@ public enum TiiaErrorCode {
     // 账号已欠费。
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
+    // 服务正在开通中，请稍等。
+     RESOURCEUNAVAILABLE_ISOPENING("ResourceUnavailable.IsOpening"),
+     
     // 计费状态未知，请确认是否已在控制台开通服务。
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      

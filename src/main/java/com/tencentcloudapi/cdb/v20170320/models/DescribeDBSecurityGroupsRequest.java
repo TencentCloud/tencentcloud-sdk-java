@@ -30,7 +30,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+    * 该值默认为False，表示当传入只读实例ID时，查询操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True。
     */
     @SerializedName("ForReadonlyInstance")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True 
-     * @return ForReadonlyInstance 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     * Get 该值默认为False，表示当传入只读实例ID时，查询操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True。 
+     * @return ForReadonlyInstance 该值默认为False，表示当传入只读实例ID时，查询操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True。
      */
     public Boolean getForReadonlyInstance() {
         return this.ForReadonlyInstance;
     }
 
     /**
-     * Set 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
-     * @param ForReadonlyInstance 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     * Set 该值默认为False，表示当传入只读实例ID时，查询操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True。
+     * @param ForReadonlyInstance 该值默认为False，表示当传入只读实例ID时，查询操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True。
      */
     public void setForReadonlyInstance(Boolean ForReadonlyInstance) {
         this.ForReadonlyInstance = ForReadonlyInstance;

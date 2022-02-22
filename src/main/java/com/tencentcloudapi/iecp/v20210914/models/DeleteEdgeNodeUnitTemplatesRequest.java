@@ -30,7 +30,7 @@ public class DeleteEdgeNodeUnitTemplatesRequest extends AbstractModel{
     private Long EdgeUnitId;
 
     /**
-    * 删除的NodeUnit模版ID列表
+    * 删除的NodeUnit模板ID列表
     */
     @SerializedName("NodeUnitTemplateIDs")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteEdgeNodeUnitTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 删除的NodeUnit模版ID列表 
-     * @return NodeUnitTemplateIDs 删除的NodeUnit模版ID列表
+     * Get 删除的NodeUnit模板ID列表 
+     * @return NodeUnitTemplateIDs 删除的NodeUnit模板ID列表
      */
     public Long [] getNodeUnitTemplateIDs() {
         return this.NodeUnitTemplateIDs;
     }
 
     /**
-     * Set 删除的NodeUnit模版ID列表
-     * @param NodeUnitTemplateIDs 删除的NodeUnit模版ID列表
+     * Set 删除的NodeUnit模板ID列表
+     * @param NodeUnitTemplateIDs 删除的NodeUnit模板ID列表
      */
     public void setNodeUnitTemplateIDs(Long [] NodeUnitTemplateIDs) {
         this.NodeUnitTemplateIDs = NodeUnitTemplateIDs;

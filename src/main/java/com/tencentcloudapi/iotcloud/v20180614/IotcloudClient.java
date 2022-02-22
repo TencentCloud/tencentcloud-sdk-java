@@ -319,6 +319,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteDeviceResource）用于删除设备资源
+     * @param req DeleteDeviceResourceRequest
+     * @return DeleteDeviceResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceResourceResponse DeleteDeviceResource(DeleteDeviceResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeviceResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeviceResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDeviceResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除lora类型的设备
      * @param req DeleteLoraDeviceRequest
      * @return DeleteLoraDeviceResponse
@@ -891,6 +911,26 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisableTopicRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableTopicRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DownloadDeviceResource）用于下载设备资源
+     * @param req DownloadDeviceResourceRequest
+     * @return DownloadDeviceResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadDeviceResourceResponse DownloadDeviceResource(DownloadDeviceResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadDeviceResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadDeviceResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadDeviceResource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

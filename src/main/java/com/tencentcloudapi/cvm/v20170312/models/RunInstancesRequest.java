@@ -206,6 +206,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private LaunchTemplate LaunchTemplate;
 
     /**
+    * 指定CHC物理服务器来创建CHC云主机。
+    */
+    @SerializedName("ChcIds")
+    @Expose
+    private String [] ChcIds;
+
+    /**
      * Get 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）<br><li>SPOTPAID：竞价付费<br><li>CDCPAID：专用集群付费<br>默认值：POSTPAID_BY_HOUR。 
      * @return InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）<br><li>SPOTPAID：竞价付费<br><li>CDCPAID：专用集群付费<br>默认值：POSTPAID_BY_HOUR。
      */
@@ -637,6 +644,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.LaunchTemplate = LaunchTemplate;
     }
 
+    /**
+     * Get 指定CHC物理服务器来创建CHC云主机。 
+     * @return ChcIds 指定CHC物理服务器来创建CHC云主机。
+     */
+    public String [] getChcIds() {
+        return this.ChcIds;
+    }
+
+    /**
+     * Set 指定CHC物理服务器来创建CHC云主机。
+     * @param ChcIds 指定CHC物理服务器来创建CHC云主机。
+     */
+    public void setChcIds(String [] ChcIds) {
+        this.ChcIds = ChcIds;
+    }
+
     public RunInstancesRequest() {
     }
 
@@ -732,6 +755,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.LaunchTemplate != null) {
             this.LaunchTemplate = new LaunchTemplate(source.LaunchTemplate);
         }
+        if (source.ChcIds != null) {
+            this.ChcIds = new String[source.ChcIds.length];
+            for (int i = 0; i < source.ChcIds.length; i++) {
+                this.ChcIds[i] = new String(source.ChcIds[i]);
+            }
+        }
     }
 
 
@@ -764,6 +793,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+        this.setParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
 
     }
 }

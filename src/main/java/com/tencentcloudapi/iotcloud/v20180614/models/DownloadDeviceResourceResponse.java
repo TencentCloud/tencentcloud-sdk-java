@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iecp.v20210914.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
+public class DownloadDeviceResourceResponse extends AbstractModel{
 
     /**
-    * 符合查询条件的记录总数
+    * 设备资源的cos链接
     */
-    @SerializedName("Total")
+    @SerializedName("Url")
     @Expose
-    private Long Total;
-
-    /**
-    * NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("NodeUnitTemplates")
-    @Expose
-    private NodeUnitTemplate [] NodeUnitTemplates;
+    private String Url;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合查询条件的记录总数 
-     * @return Total 符合查询条件的记录总数
+     * Get 设备资源的cos链接 
+     * @return Url 设备资源的cos链接
      */
-    public Long getTotal() {
-        return this.Total;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 符合查询条件的记录总数
-     * @param Total 符合查询条件的记录总数
+     * Set 设备资源的cos链接
+     * @param Url 设备资源的cos链接
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeUnitTemplates NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public NodeUnitTemplate [] getNodeUnitTemplates() {
-        return this.NodeUnitTemplates;
-    }
-
-    /**
-     * Set NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeUnitTemplates NodeUnit模板列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setNodeUnitTemplates(NodeUnitTemplate [] NodeUnitTemplates) {
-        this.NodeUnitTemplates = NodeUnitTemplates;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
@@ -96,22 +68,16 @@ public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeEdgeUnitNodeUnitTemplatesResponse() {
+    public DownloadDeviceResourceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEdgeUnitNodeUnitTemplatesResponse(DescribeEdgeUnitNodeUnitTemplatesResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.NodeUnitTemplates != null) {
-            this.NodeUnitTemplates = new NodeUnitTemplate[source.NodeUnitTemplates.length];
-            for (int i = 0; i < source.NodeUnitTemplates.length; i++) {
-                this.NodeUnitTemplates[i] = new NodeUnitTemplate(source.NodeUnitTemplates[i]);
-            }
+    public DownloadDeviceResourceResponse(DownloadDeviceResourceResponse source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ public class DescribeEdgeUnitNodeUnitTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "NodeUnitTemplates.", this.NodeUnitTemplates);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

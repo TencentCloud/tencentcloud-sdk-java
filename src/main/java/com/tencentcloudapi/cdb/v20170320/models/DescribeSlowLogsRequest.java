@@ -30,7 +30,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 偏移量，最小值为0。
+    * 偏移量，默认值为0，最小值为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量，最小值为0。 
-     * @return Offset 偏移量，最小值为0。
+     * Get 偏移量，默认值为0，最小值为0。 
+     * @return Offset 偏移量，默认值为0，最小值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，最小值为0。
-     * @param Offset 偏移量，最小值为0。
+     * Set 偏移量，默认值为0，最小值为0。
+     * @param Offset 偏移量，默认值为0，最小值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

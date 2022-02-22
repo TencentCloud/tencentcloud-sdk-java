@@ -139,7 +139,7 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *创建边缘单元NodeUnit模版
+     *创建边缘单元NodeUnit模板
      * @param req CreateEdgeNodeUnitTemplateRequest
      * @return CreateEdgeNodeUnitTemplateResponse
      * @throws TencentCloudSDKException
@@ -339,7 +339,7 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *删除边缘单元NodeUnit模版
+     *删除边缘单元NodeUnit模板
      * @param req DeleteEdgeNodeUnitTemplatesRequest
      * @return DeleteEdgeNodeUnitTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1159,7 +1159,7 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *查询边缘单元EdgeUnit模版列表
+     *查询边缘单元EdgeUnit模板列表
      * @param req DescribeEdgeUnitNodeUnitTemplatesRequest
      * @return DescribeEdgeUnitNodeUnitTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1299,7 +1299,7 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *查询指定NodeGroup下NodeUnit模版列表
+     *查询指定NodeGroup下NodeUnit模板列表
      * @param req DescribeNodeUnitTemplateOnNodeGroupRequest
      * @return DescribeNodeUnitTemplateOnNodeGroupResponse
      * @throws TencentCloudSDKException
@@ -1599,7 +1599,7 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *修改边缘单元NodeUnit模版
+     *修改边缘单元NodeUnit模板
      * @param req ModifyNodeUnitTemplateRequest
      * @return ModifyNodeUnitTemplateResponse
      * @throws TencentCloudSDKException
