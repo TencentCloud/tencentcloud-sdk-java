@@ -37,6 +37,20 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
     private Long DesiredCapacity;
 
     /**
+    * 最小实例数，取值范围为0-2000。
+    */
+    @SerializedName("MinSize")
+    @Expose
+    private Long MinSize;
+
+    /**
+    * 最大实例数，取值范围为0-2000。
+    */
+    @SerializedName("MaxSize")
+    @Expose
+    private Long MaxSize;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -68,6 +82,38 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
         this.DesiredCapacity = DesiredCapacity;
     }
 
+    /**
+     * Get 最小实例数，取值范围为0-2000。 
+     * @return MinSize 最小实例数，取值范围为0-2000。
+     */
+    public Long getMinSize() {
+        return this.MinSize;
+    }
+
+    /**
+     * Set 最小实例数，取值范围为0-2000。
+     * @param MinSize 最小实例数，取值范围为0-2000。
+     */
+    public void setMinSize(Long MinSize) {
+        this.MinSize = MinSize;
+    }
+
+    /**
+     * Get 最大实例数，取值范围为0-2000。 
+     * @return MaxSize 最大实例数，取值范围为0-2000。
+     */
+    public Long getMaxSize() {
+        return this.MaxSize;
+    }
+
+    /**
+     * Set 最大实例数，取值范围为0-2000。
+     * @param MaxSize 最大实例数，取值范围为0-2000。
+     */
+    public void setMaxSize(Long MaxSize) {
+        this.MaxSize = MaxSize;
+    }
+
     public ModifyDesiredCapacityRequest() {
     }
 
@@ -82,6 +128,12 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
         if (source.DesiredCapacity != null) {
             this.DesiredCapacity = new Long(source.DesiredCapacity);
         }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+        this.setParamSimple(map, prefix + "MinSize", this.MinSize);
+        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
 
     }
 }

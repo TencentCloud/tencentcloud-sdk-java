@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddressTemplatesResponse extends AbstractModel{
+public class BatchDescribeKTVMusicDetailsResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * 歌曲详情列表信息
     */
-    @SerializedName("TotalCount")
+    @SerializedName("KTVMusicDetailInfoSet")
     @Expose
-    private Long TotalCount;
+    private KTVMusicDetailInfo [] KTVMusicDetailInfoSet;
 
     /**
-    * IP地址模板。
+    * 不存在的歌曲 ID 列表。
     */
-    @SerializedName("AddressTemplateSet")
+    @SerializedName("NotExistMusicIdSet")
     @Expose
-    private AddressTemplate [] AddressTemplateSet;
+    private String [] NotExistMusicIdSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get 歌曲详情列表信息 
+     * @return KTVMusicDetailInfoSet 歌曲详情列表信息
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public KTVMusicDetailInfo [] getKTVMusicDetailInfoSet() {
+        return this.KTVMusicDetailInfoSet;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set 歌曲详情列表信息
+     * @param KTVMusicDetailInfoSet 歌曲详情列表信息
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setKTVMusicDetailInfoSet(KTVMusicDetailInfo [] KTVMusicDetailInfoSet) {
+        this.KTVMusicDetailInfoSet = KTVMusicDetailInfoSet;
     }
 
     /**
-     * Get IP地址模板。 
-     * @return AddressTemplateSet IP地址模板。
+     * Get 不存在的歌曲 ID 列表。 
+     * @return NotExistMusicIdSet 不存在的歌曲 ID 列表。
      */
-    public AddressTemplate [] getAddressTemplateSet() {
-        return this.AddressTemplateSet;
+    public String [] getNotExistMusicIdSet() {
+        return this.NotExistMusicIdSet;
     }
 
     /**
-     * Set IP地址模板。
-     * @param AddressTemplateSet IP地址模板。
+     * Set 不存在的歌曲 ID 列表。
+     * @param NotExistMusicIdSet 不存在的歌曲 ID 列表。
      */
-    public void setAddressTemplateSet(AddressTemplate [] AddressTemplateSet) {
-        this.AddressTemplateSet = AddressTemplateSet;
+    public void setNotExistMusicIdSet(String [] NotExistMusicIdSet) {
+        this.NotExistMusicIdSet = NotExistMusicIdSet;
     }
 
     /**
@@ -91,21 +91,24 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAddressTemplatesResponse() {
+    public BatchDescribeKTVMusicDetailsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAddressTemplatesResponse(DescribeAddressTemplatesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public BatchDescribeKTVMusicDetailsResponse(BatchDescribeKTVMusicDetailsResponse source) {
+        if (source.KTVMusicDetailInfoSet != null) {
+            this.KTVMusicDetailInfoSet = new KTVMusicDetailInfo[source.KTVMusicDetailInfoSet.length];
+            for (int i = 0; i < source.KTVMusicDetailInfoSet.length; i++) {
+                this.KTVMusicDetailInfoSet[i] = new KTVMusicDetailInfo(source.KTVMusicDetailInfoSet[i]);
+            }
         }
-        if (source.AddressTemplateSet != null) {
-            this.AddressTemplateSet = new AddressTemplate[source.AddressTemplateSet.length];
-            for (int i = 0; i < source.AddressTemplateSet.length; i++) {
-                this.AddressTemplateSet[i] = new AddressTemplate(source.AddressTemplateSet[i]);
+        if (source.NotExistMusicIdSet != null) {
+            this.NotExistMusicIdSet = new String[source.NotExistMusicIdSet.length];
+            for (int i = 0; i < source.NotExistMusicIdSet.length; i++) {
+                this.NotExistMusicIdSet[i] = new String(source.NotExistMusicIdSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -118,8 +121,8 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
+        this.setParamArrayObj(map, prefix + "KTVMusicDetailInfoSet.", this.KTVMusicDetailInfoSet);
+        this.setParamArraySimple(map, prefix + "NotExistMusicIdSet.", this.NotExistMusicIdSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

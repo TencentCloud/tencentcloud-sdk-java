@@ -86,6 +86,20 @@ public class MarketComponentInfo extends AbstractModel{
     private String WorkloadVisualConfig;
 
     /**
+    * 无
+    */
+    @SerializedName("DetailUrl")
+    @Expose
+    private String DetailUrl;
+
+    /**
+    * 无
+    */
+    @SerializedName("Installed")
+    @Expose
+    private Boolean Installed;
+
+    /**
      * Get 组件ID 
      * @return ID 组件ID
      */
@@ -229,6 +243,38 @@ public class MarketComponentInfo extends AbstractModel{
         this.WorkloadVisualConfig = WorkloadVisualConfig;
     }
 
+    /**
+     * Get 无 
+     * @return DetailUrl 无
+     */
+    public String getDetailUrl() {
+        return this.DetailUrl;
+    }
+
+    /**
+     * Set 无
+     * @param DetailUrl 无
+     */
+    public void setDetailUrl(String DetailUrl) {
+        this.DetailUrl = DetailUrl;
+    }
+
+    /**
+     * Get 无 
+     * @return Installed 无
+     */
+    public Boolean getInstalled() {
+        return this.Installed;
+    }
+
+    /**
+     * Set 无
+     * @param Installed 无
+     */
+    public void setInstalled(Boolean Installed) {
+        this.Installed = Installed;
+    }
+
     public MarketComponentInfo() {
     }
 
@@ -264,6 +310,12 @@ public class MarketComponentInfo extends AbstractModel{
         if (source.WorkloadVisualConfig != null) {
             this.WorkloadVisualConfig = new String(source.WorkloadVisualConfig);
         }
+        if (source.DetailUrl != null) {
+            this.DetailUrl = new String(source.DetailUrl);
+        }
+        if (source.Installed != null) {
+            this.Installed = new Boolean(source.Installed);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class MarketComponentInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Icon", this.Icon);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "WorkloadVisualConfig", this.WorkloadVisualConfig);
+        this.setParamSimple(map, prefix + "DetailUrl", this.DetailUrl);
+        this.setParamSimple(map, prefix + "Installed", this.Installed);
 
     }
 }

@@ -50,7 +50,7 @@ public class CheckBankCardInformationResponse extends AbstractModel{
     private String AccountBank;
 
     /**
-    * 卡性质：1. 借记卡；2. 贷记卡
+    * 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
     */
     @SerializedName("AccountType")
     @Expose
@@ -136,16 +136,16 @@ public class CheckBankCardInformationResponse extends AbstractModel{
     }
 
     /**
-     * Get 卡性质：1. 借记卡；2. 贷记卡 
-     * @return AccountType 卡性质：1. 借记卡；2. 贷记卡
+     * Get 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡 
+     * @return AccountType 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 卡性质：1. 借记卡；2. 贷记卡
-     * @param AccountType 卡性质：1. 借记卡；2. 贷记卡
+     * Set 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+     * @param AccountType 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;

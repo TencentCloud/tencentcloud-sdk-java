@@ -57,6 +57,9 @@ public enum DcdbErrorCode {
     // 实例安全组信息更新失败。
      FAILEDOPERATION_UPDATEINSTANCEINFOFAILED("FailedOperation.UpdateInstanceInfoFailed"),
      
+    // 用户未实名认证。
+     FAILEDOPERATION_USERNOTAUTHED("FailedOperation.UserNotAuthed"),
+     
     // VPC更新路由失败。
      FAILEDOPERATION_VPCUPDATEROUTEFAILED("FailedOperation.VpcUpdateRouteFailed"),
      

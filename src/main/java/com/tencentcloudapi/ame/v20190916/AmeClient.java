@@ -39,6 +39,26 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *根据 Id 列表查询歌曲的详细信息，包含基础信息及播放信息。
+     * @param req BatchDescribeKTVMusicDetailsRequest
+     * @return BatchDescribeKTVMusicDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(BatchDescribeKTVMusicDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDescribeKTVMusicDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDescribeKTVMusicDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDescribeKTVMusicDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建机器人，支持进入 RTC 房间，播放直播互动曲库歌曲。
      * @param req CreateKTVRobotRequest
      * @return CreateKTVRobotResponse

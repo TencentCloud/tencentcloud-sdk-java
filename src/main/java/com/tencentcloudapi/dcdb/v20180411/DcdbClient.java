@@ -200,6 +200,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *创建DCDB后付费实例
+     * @param req CreateHourDCDBInstanceRequest
+     * @return CreateHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHourDCDBInstanceResponse CreateHourDCDBInstance(CreateHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHourDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse

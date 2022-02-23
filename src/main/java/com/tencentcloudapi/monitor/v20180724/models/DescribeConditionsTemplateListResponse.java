@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddressTemplatesResponse extends AbstractModel{
+public class DescribeConditionsTemplateListResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * 模板总数
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Total")
     @Expose
-    private Long TotalCount;
+    private Long Total;
 
     /**
-    * IP地址模板。
+    * 模板列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AddressTemplateSet")
+    @SerializedName("TemplateGroupList")
     @Expose
-    private AddressTemplate [] AddressTemplateSet;
+    private TemplateGroup [] TemplateGroupList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get 模板总数 
+     * @return Total 模板总数
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set 模板总数
+     * @param Total 模板总数
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get IP地址模板。 
-     * @return AddressTemplateSet IP地址模板。
+     * Get 模板列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateGroupList 模板列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AddressTemplate [] getAddressTemplateSet() {
-        return this.AddressTemplateSet;
+    public TemplateGroup [] getTemplateGroupList() {
+        return this.TemplateGroupList;
     }
 
     /**
-     * Set IP地址模板。
-     * @param AddressTemplateSet IP地址模板。
+     * Set 模板列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateGroupList 模板列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAddressTemplateSet(AddressTemplate [] AddressTemplateSet) {
-        this.AddressTemplateSet = AddressTemplateSet;
+    public void setTemplateGroupList(TemplateGroup [] TemplateGroupList) {
+        this.TemplateGroupList = TemplateGroupList;
     }
 
     /**
@@ -91,21 +96,21 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAddressTemplatesResponse() {
+    public DescribeConditionsTemplateListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAddressTemplatesResponse(DescribeAddressTemplatesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeConditionsTemplateListResponse(DescribeConditionsTemplateListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.AddressTemplateSet != null) {
-            this.AddressTemplateSet = new AddressTemplate[source.AddressTemplateSet.length];
-            for (int i = 0; i < source.AddressTemplateSet.length; i++) {
-                this.AddressTemplateSet[i] = new AddressTemplate(source.AddressTemplateSet[i]);
+        if (source.TemplateGroupList != null) {
+            this.TemplateGroupList = new TemplateGroup[source.TemplateGroupList.length];
+            for (int i = 0; i < source.TemplateGroupList.length; i++) {
+                this.TemplateGroupList[i] = new TemplateGroup(source.TemplateGroupList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -118,8 +123,8 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "TemplateGroupList.", this.TemplateGroupList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

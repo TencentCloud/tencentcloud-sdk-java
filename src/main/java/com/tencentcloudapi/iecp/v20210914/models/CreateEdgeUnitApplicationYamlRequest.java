@@ -30,18 +30,18 @@ public class CreateEdgeUnitApplicationYamlRequest extends AbstractModel{
     private Long EdgeUnitId;
 
     /**
+    * base64后的Yaml配置
+    */
+    @SerializedName("Yaml")
+    @Expose
+    private String Yaml;
+
+    /**
     * 基本信息
     */
     @SerializedName("BasicInfo")
     @Expose
     private ApplicationBasicInfo BasicInfo;
-
-    /**
-    * Yaml配置
-    */
-    @SerializedName("Yaml")
-    @Expose
-    private String Yaml;
 
     /**
      * Get 单元ID 
@@ -60,6 +60,22 @@ public class CreateEdgeUnitApplicationYamlRequest extends AbstractModel{
     }
 
     /**
+     * Get base64后的Yaml配置 
+     * @return Yaml base64后的Yaml配置
+     */
+    public String getYaml() {
+        return this.Yaml;
+    }
+
+    /**
+     * Set base64后的Yaml配置
+     * @param Yaml base64后的Yaml配置
+     */
+    public void setYaml(String Yaml) {
+        this.Yaml = Yaml;
+    }
+
+    /**
      * Get 基本信息 
      * @return BasicInfo 基本信息
      */
@@ -75,22 +91,6 @@ public class CreateEdgeUnitApplicationYamlRequest extends AbstractModel{
         this.BasicInfo = BasicInfo;
     }
 
-    /**
-     * Get Yaml配置 
-     * @return Yaml Yaml配置
-     */
-    public String getYaml() {
-        return this.Yaml;
-    }
-
-    /**
-     * Set Yaml配置
-     * @param Yaml Yaml配置
-     */
-    public void setYaml(String Yaml) {
-        this.Yaml = Yaml;
-    }
-
     public CreateEdgeUnitApplicationYamlRequest() {
     }
 
@@ -102,11 +102,11 @@ public class CreateEdgeUnitApplicationYamlRequest extends AbstractModel{
         if (source.EdgeUnitId != null) {
             this.EdgeUnitId = new Long(source.EdgeUnitId);
         }
-        if (source.BasicInfo != null) {
-            this.BasicInfo = new ApplicationBasicInfo(source.BasicInfo);
-        }
         if (source.Yaml != null) {
             this.Yaml = new String(source.Yaml);
+        }
+        if (source.BasicInfo != null) {
+            this.BasicInfo = new ApplicationBasicInfo(source.BasicInfo);
         }
     }
 
@@ -116,8 +116,8 @@ public class CreateEdgeUnitApplicationYamlRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EdgeUnitId", this.EdgeUnitId);
-        this.setParamObj(map, prefix + "BasicInfo.", this.BasicInfo);
         this.setParamSimple(map, prefix + "Yaml", this.Yaml);
+        this.setParamObj(map, prefix + "BasicInfo.", this.BasicInfo);
 
     }
 }
