@@ -27,6 +27,8 @@ public class DescribePayTypeResponse extends AbstractModel{
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
     */
     @SerializedName("PayType")
@@ -37,6 +39,7 @@ request：请求数计费
     * 计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
     */
     @SerializedName("BillingCycle")
     @Expose
@@ -67,6 +70,8 @@ multiple：分地区计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
     */
     @SerializedName("CurrentPayType")
     @Expose
@@ -84,11 +89,15 @@ request：请求数计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。 
      * @return PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public String getPayType() {
@@ -100,11 +109,15 @@ request：请求数计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      * @param PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public void setPayType(String PayType) {
@@ -114,10 +127,12 @@ request：请求数计费
     /**
      * Get 计费周期：
 day：日结计费
-month：月结计费 
+month：月结计费
+hour：小时结计费 
      * @return BillingCycle 计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
      */
     public String getBillingCycle() {
         return this.BillingCycle;
@@ -127,9 +142,11 @@ month：月结计费
      * Set 计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
      * @param BillingCycle 计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
      */
     public void setBillingCycle(String BillingCycle) {
         this.BillingCycle = BillingCycle;
@@ -195,11 +212,15 @@ multiple：分地区计费
      * Get 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
-request：请求数计费 
+request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费 
      * @return CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
      */
     public String getCurrentPayType() {
         return this.CurrentPayType;
@@ -210,10 +231,14 @@ request：请求数计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
      * @param CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
      */
     public void setCurrentPayType(String CurrentPayType) {
         this.CurrentPayType = CurrentPayType;

@@ -1402,6 +1402,46 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建SSL-VPN-CLIENT
+     * @param req CreateVpnGatewaySslClientRequest
+     * @return CreateVpnGatewaySslClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpnGatewaySslClientResponse CreateVpnGatewaySslClient(CreateVpnGatewaySslClientRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpnGatewaySslClientResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpnGatewaySslClientResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpnGatewaySslClient");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建 Server端
+     * @param req CreateVpnGatewaySslServerRequest
+     * @return CreateVpnGatewaySslServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpnGatewaySslServerResponse CreateVpnGatewaySslServer(CreateVpnGatewaySslServerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpnGatewaySslServerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpnGatewaySslServerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpnGatewaySslServer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteAddressTemplate）用于删除IP地址模板
      * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
@@ -2098,6 +2138,46 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteVpnGatewayRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除SSL-VPN-CLIENT
+     * @param req DeleteVpnGatewaySslClientRequest
+     * @return DeleteVpnGatewaySslClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpnGatewaySslClientResponse DeleteVpnGatewaySslClient(DeleteVpnGatewaySslClientRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpnGatewaySslClientResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewaySslClientResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpnGatewaySslClient");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除SSL-VPN-SERVER 实例
+     * @param req DeleteVpnGatewaySslServerRequest
+     * @return DeleteVpnGatewaySslServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpnGatewaySslServerResponse DeleteVpnGatewaySslServer(DeleteVpnGatewaySslServerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpnGatewaySslServerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewaySslServerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpnGatewaySslServer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3484,6 +3564,46 @@ LimitTypes取值范围：
     }
 
     /**
+     *查询SSL-VPN-CLIENT 列表
+     * @param req DescribeVpnGatewaySslClientsRequest
+     * @return DescribeVpnGatewaySslClientsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewaySslClientsResponse DescribeVpnGatewaySslClients(DescribeVpnGatewaySslClientsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewaySslClientsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewaySslClientsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpnGatewaySslClients");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询SSL-VPN SERVER 列表信息
+     * @param req DescribeVpnGatewaySslServersRequest
+     * @return DescribeVpnGatewaySslServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewaySslServersResponse DescribeVpnGatewaySslServers(DescribeVpnGatewaySslServersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewaySslServersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewaySslServersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpnGatewaySslServers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeVpnGateways）用于查询VPN网关列表。
      * @param req DescribeVpnGatewaysRequest
      * @return DescribeVpnGatewaysResponse
@@ -3620,6 +3740,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<DisableRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *禁用SSL-VPN-CLIENT 证书
+     * @param req DisableVpnGatewaySslClientCertRequest
+     * @return DisableVpnGatewaySslClientCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableVpnGatewaySslClientCertResponse DisableVpnGatewaySslClientCert(DisableVpnGatewaySslClientCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableVpnGatewaySslClientCertResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableVpnGatewaySslClientCertResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableVpnGatewaySslClientCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3794,6 +3934,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *下载SSL-VPN-CLIENT 客户端证书
+     * @param req DownloadVpnGatewaySslClientCertRequest
+     * @return DownloadVpnGatewaySslClientCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadVpnGatewaySslClientCertResponse DownloadVpnGatewaySslClientCert(DownloadVpnGatewaySslClientCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadVpnGatewaySslClientCertResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadVpnGatewaySslClientCertResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadVpnGatewaySslClientCert");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
      * @param req EnableCcnRoutesRequest
@@ -3868,6 +4028,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<EnableVpcEndPointConnectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableVpcEndPointConnect");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用SSL-VPN-CLIENT 证书
+     * @param req EnableVpnGatewaySslClientCertRequest
+     * @return EnableVpnGatewaySslClientCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableVpnGatewaySslClientCertResponse EnableVpnGatewaySslClientCert(EnableVpnGatewaySslClientCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableVpnGatewaySslClientCertResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableVpnGatewaySslClientCertResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableVpnGatewaySslClientCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

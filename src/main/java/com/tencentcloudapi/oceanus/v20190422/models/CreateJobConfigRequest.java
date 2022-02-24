@@ -128,6 +128,13 @@ public class CreateJobConfigRequest extends AbstractModel{
     private Long LogCollectType;
 
     /**
+    * pyflink作业运行时使用的python版本
+    */
+    @SerializedName("PythonVersion")
+    @Expose
+    private String PythonVersion;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -367,6 +374,22 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.LogCollectType = LogCollectType;
     }
 
+    /**
+     * Get pyflink作业运行时使用的python版本 
+     * @return PythonVersion pyflink作业运行时使用的python版本
+     */
+    public String getPythonVersion() {
+        return this.PythonVersion;
+    }
+
+    /**
+     * Set pyflink作业运行时使用的python版本
+     * @param PythonVersion pyflink作业运行时使用的python版本
+     */
+    public void setPythonVersion(String PythonVersion) {
+        this.PythonVersion = PythonVersion;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -426,6 +449,9 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.LogCollectType != null) {
             this.LogCollectType = new Long(source.LogCollectType);
         }
+        if (source.PythonVersion != null) {
+            this.PythonVersion = new String(source.PythonVersion);
+        }
     }
 
 
@@ -448,6 +474,7 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "LogCollectType", this.LogCollectType);
+        this.setParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
 
     }
 }

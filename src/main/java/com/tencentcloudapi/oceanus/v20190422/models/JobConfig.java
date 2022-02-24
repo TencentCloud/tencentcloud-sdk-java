@@ -164,6 +164,14 @@ public class JobConfig extends AbstractModel{
     private String ClsTopicId;
 
     /**
+    * pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PythonVersion")
+    @Expose
+    private String PythonVersion;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -511,6 +519,26 @@ public class JobConfig extends AbstractModel{
         this.ClsTopicId = ClsTopicId;
     }
 
+    /**
+     * Get pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PythonVersion pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPythonVersion() {
+        return this.PythonVersion;
+    }
+
+    /**
+     * Set pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PythonVersion pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPythonVersion(String PythonVersion) {
+        this.PythonVersion = PythonVersion;
+    }
+
     public JobConfig() {
     }
 
@@ -579,6 +607,9 @@ public class JobConfig extends AbstractModel{
         if (source.ClsTopicId != null) {
             this.ClsTopicId = new String(source.ClsTopicId);
         }
+        if (source.PythonVersion != null) {
+            this.PythonVersion = new String(source.PythonVersion);
+        }
     }
 
 
@@ -604,6 +635,7 @@ public class JobConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+        this.setParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
 
     }
 }

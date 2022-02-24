@@ -39,7 +39,7 @@ public class DescribeUserInfoResponse extends AbstractModel{
     private String Status;
 
     /**
-    * 昵称
+    * 昵称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisplayName")
@@ -95,7 +95,7 @@ public class DescribeUserInfoResponse extends AbstractModel{
     private String OrgNodeId;
 
     /**
-    * 数据来源
+    * 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSource")
@@ -190,9 +190,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 昵称
+     * Get 昵称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisplayName 昵称
+     * @return DisplayName 昵称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisplayName() {
@@ -200,9 +200,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 昵称
+     * Set 昵称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisplayName 昵称
+     * @param DisplayName 昵称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplayName(String DisplayName) {
@@ -330,9 +330,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 数据来源
+     * Get 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSource 数据来源
+     * @return DataSource 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSource() {
@@ -340,9 +340,9 @@ public class DescribeUserInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 数据来源
+     * Set 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSource 数据来源
+     * @param DataSource 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSource(String DataSource) {

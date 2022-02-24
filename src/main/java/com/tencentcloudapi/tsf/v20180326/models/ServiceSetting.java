@@ -71,6 +71,22 @@ public class ServiceSetting extends AbstractModel{
     private Boolean AllowDeleteService;
 
     /**
+    * 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpenSessionAffinity")
+    @Expose
+    private Boolean OpenSessionAffinity;
+
+    /**
+    * SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionAffinityTimeoutSeconds")
+    @Expose
+    private Long SessionAffinityTimeoutSeconds;
+
+    /**
      * Get 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
@@ -190,6 +206,46 @@ public class ServiceSetting extends AbstractModel{
         this.AllowDeleteService = AllowDeleteService;
     }
 
+    /**
+     * Get 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OpenSessionAffinity 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getOpenSessionAffinity() {
+        return this.OpenSessionAffinity;
+    }
+
+    /**
+     * Set 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenSessionAffinity 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpenSessionAffinity(Boolean OpenSessionAffinity) {
+        this.OpenSessionAffinity = OpenSessionAffinity;
+    }
+
+    /**
+     * Get SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionAffinityTimeoutSeconds SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSessionAffinityTimeoutSeconds() {
+        return this.SessionAffinityTimeoutSeconds;
+    }
+
+    /**
+     * Set SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionAffinityTimeoutSeconds SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionAffinityTimeoutSeconds(Long SessionAffinityTimeoutSeconds) {
+        this.SessionAffinityTimeoutSeconds = SessionAffinityTimeoutSeconds;
+    }
+
     public ServiceSetting() {
     }
 
@@ -219,6 +275,12 @@ public class ServiceSetting extends AbstractModel{
         if (source.AllowDeleteService != null) {
             this.AllowDeleteService = new Boolean(source.AllowDeleteService);
         }
+        if (source.OpenSessionAffinity != null) {
+            this.OpenSessionAffinity = new Boolean(source.OpenSessionAffinity);
+        }
+        if (source.SessionAffinityTimeoutSeconds != null) {
+            this.SessionAffinityTimeoutSeconds = new Long(source.SessionAffinityTimeoutSeconds);
+        }
     }
 
 
@@ -232,6 +294,8 @@ public class ServiceSetting extends AbstractModel{
         this.setParamSimple(map, prefix + "DisableService", this.DisableService);
         this.setParamSimple(map, prefix + "HeadlessService", this.HeadlessService);
         this.setParamSimple(map, prefix + "AllowDeleteService", this.AllowDeleteService);
+        this.setParamSimple(map, prefix + "OpenSessionAffinity", this.OpenSessionAffinity);
+        this.setParamSimple(map, prefix + "SessionAffinityTimeoutSeconds", this.SessionAffinityTimeoutSeconds);
 
     }
 }

@@ -491,6 +491,32 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建一个在指定时间启动、结束的截图任务，并使用指定截图模板ID对应的配置进行截图。
+- 注意事项
+1. 断流会结束当前截图。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常截图，与是否多次推、断流无关。
+2. 使用上避免创建时间段相互重叠的截图任务。若同一条流当前存在多个时段重叠的任务，为避免重复系统将启动最多3个截图任务。
+3. 创建的截图任务记录在平台侧只保留3个月。
+4. 当前截图任务管理API（CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask）与旧API（CreateLiveInstantSnapshot/StopLiveInstantSnapshot）不兼容，两套接口不能混用。
+5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
+     * @param req CreateScreenshotTaskRequest
+     * @return CreateScreenshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScreenshotTaskResponse CreateScreenshotTask(CreateScreenshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScreenshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScreenshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScreenshotTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除回调规则。
      * @param req DeleteLiveCallbackRuleRequest
      * @return DeleteLiveCallbackRuleResponse
@@ -807,6 +833,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRecordTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除截图任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
+     * @param req DeleteScreenshotTaskRequest
+     * @return DeleteScreenshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScreenshotTaskResponse DeleteScreenshotTask(DeleteScreenshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteScreenshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteScreenshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteScreenshotTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1889,6 +1935,29 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询指定时间段范围内启动和结束的截图任务列表。
+- 使用前提
+1. 仅用于查询由 CreateScreenshotTask接口创建的截图任务。
+2. 不能查询被 DeleteScreenshotTask接口删除以及已过期（平台侧保留3个月）的截图任务。
+     * @param req DescribeScreenshotTaskRequest
+     * @return DescribeScreenshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScreenshotTaskResponse DescribeScreenshotTask(DescribeScreenshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScreenshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScreenshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScreenshotTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询天维度每条流的播放数据，包括总流量等。
      * @param req DescribeStreamDayPlayInfoListRequest
      * @return DescribeStreamDayPlayInfoListResponse
@@ -2425,6 +2494,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<StopRecordTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopRecordTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提前结束截图，中止运行中的截图任务。任务被成功终止后，本次任务将不再启动。
+     * @param req StopScreenshotTaskRequest
+     * @return StopScreenshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopScreenshotTaskResponse StopScreenshotTask(StopScreenshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopScreenshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopScreenshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopScreenshotTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

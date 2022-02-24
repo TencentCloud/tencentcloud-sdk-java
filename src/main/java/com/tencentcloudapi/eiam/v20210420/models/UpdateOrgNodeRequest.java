@@ -44,7 +44,7 @@ public class UpdateOrgNodeRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+    * 机构代码。如果非空则校验此ID的唯一性。
     */
     @SerializedName("CustomizedOrgNodeId")
     @Expose
@@ -99,16 +99,16 @@ public class UpdateOrgNodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。 
-     * @return CustomizedOrgNodeId 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+     * Get 机构代码。如果非空则校验此ID的唯一性。 
+     * @return CustomizedOrgNodeId 机构代码。如果非空则校验此ID的唯一性。
      */
     public String getCustomizedOrgNodeId() {
         return this.CustomizedOrgNodeId;
     }
 
     /**
-     * Set 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
-     * @param CustomizedOrgNodeId 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+     * Set 机构代码。如果非空则校验此ID的唯一性。
+     * @param CustomizedOrgNodeId 机构代码。如果非空则校验此ID的唯一性。
      */
     public void setCustomizedOrgNodeId(String CustomizedOrgNodeId) {
         this.CustomizedOrgNodeId = CustomizedOrgNodeId;
