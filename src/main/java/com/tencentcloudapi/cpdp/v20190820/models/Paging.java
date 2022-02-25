@@ -13,51 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSecurityLastUsedRequest extends AbstractModel{
+public class Paging extends AbstractModel{
 
     /**
-    * 查询密钥ID列表。最多支持10个。
+    * 页码
     */
-    @SerializedName("SecretIdList")
+    @SerializedName("Index")
     @Expose
-    private String [] SecretIdList;
+    private Long Index;
 
     /**
-     * Get 查询密钥ID列表。最多支持10个。 
-     * @return SecretIdList 查询密钥ID列表。最多支持10个。
+    * 页长
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
+     * Get 页码 
+     * @return Index 页码
      */
-    public String [] getSecretIdList() {
-        return this.SecretIdList;
+    public Long getIndex() {
+        return this.Index;
     }
 
     /**
-     * Set 查询密钥ID列表。最多支持10个。
-     * @param SecretIdList 查询密钥ID列表。最多支持10个。
+     * Set 页码
+     * @param Index 页码
      */
-    public void setSecretIdList(String [] SecretIdList) {
-        this.SecretIdList = SecretIdList;
+    public void setIndex(Long Index) {
+        this.Index = Index;
     }
 
-    public GetSecurityLastUsedRequest() {
+    /**
+     * Get 页长 
+     * @return Count 页长
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 页长
+     * @param Count 页长
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
+    public Paging() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSecurityLastUsedRequest(GetSecurityLastUsedRequest source) {
-        if (source.SecretIdList != null) {
-            this.SecretIdList = new String[source.SecretIdList.length];
-            for (int i = 0; i < source.SecretIdList.length; i++) {
-                this.SecretIdList[i] = new String(source.SecretIdList[i]);
-            }
+    public Paging(Paging source) {
+        if (source.Index != null) {
+            this.Index = new Long(source.Index);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
         }
     }
 
@@ -66,7 +89,8 @@ public class GetSecurityLastUsedRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SecretIdList.", this.SecretIdList);
+        this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

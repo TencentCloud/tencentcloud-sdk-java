@@ -107,7 +107,7 @@ public class InstanceDetail extends AbstractModel{
     private Long RenewFlag;
 
     /**
-    * 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+    * 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
     */
     @SerializedName("Healthy")
     @Expose
@@ -436,16 +436,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常 
-     * @return Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+     * Get 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常 
+     * @return Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
      */
     public Long getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
-     * @param Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+     * Set 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+     * @param Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
      */
     public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;

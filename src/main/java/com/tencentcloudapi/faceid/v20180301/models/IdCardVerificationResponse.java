@@ -32,6 +32,8 @@ public class IdCardVerificationResponse extends AbstractModel{
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
     */
     @SerializedName("Result")
     @Expose
@@ -60,7 +62,9 @@ public class IdCardVerificationResponse extends AbstractModel{
 -2: 非法身份证号（长度、校验位等不正确）
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
--5: 证件库中无此身份证记录 
+-5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制 
      * @return Result 认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
@@ -70,6 +74,8 @@ public class IdCardVerificationResponse extends AbstractModel{
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
      */
     public String getResult() {
         return this.Result;
@@ -85,6 +91,8 @@ public class IdCardVerificationResponse extends AbstractModel{
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
      * @param Result 认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
@@ -94,6 +102,8 @@ public class IdCardVerificationResponse extends AbstractModel{
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -65,6 +65,13 @@ public class KTVMusicDetailInfo extends AbstractModel{
     private ChorusClip [] ChorusClipSet;
 
     /**
+    * 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+    */
+    @SerializedName("PreludeInterval")
+    @Expose
+    private Long PreludeInterval;
+
+    /**
      * Get 即使广播曲库歌曲基础信息 
      * @return KTVMusicBaseInfo 即使广播曲库歌曲基础信息
      */
@@ -160,6 +167,22 @@ public class KTVMusicDetailInfo extends AbstractModel{
         this.ChorusClipSet = ChorusClipSet;
     }
 
+    /**
+     * Get 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分 
+     * @return PreludeInterval 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     */
+    public Long getPreludeInterval() {
+        return this.PreludeInterval;
+    }
+
+    /**
+     * Set 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     * @param PreludeInterval 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     */
+    public void setPreludeInterval(Long PreludeInterval) {
+        this.PreludeInterval = PreludeInterval;
+    }
+
     public KTVMusicDetailInfo() {
     }
 
@@ -192,6 +215,9 @@ public class KTVMusicDetailInfo extends AbstractModel{
                 this.ChorusClipSet[i] = new ChorusClip(source.ChorusClipSet[i]);
             }
         }
+        if (source.PreludeInterval != null) {
+            this.PreludeInterval = new Long(source.PreludeInterval);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class KTVMusicDetailInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DefinitionInfoSet.", this.DefinitionInfoSet);
         this.setParamSimple(map, prefix + "MidiJsonUrl", this.MidiJsonUrl);
         this.setParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
+        this.setParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
 
     }
 }

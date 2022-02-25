@@ -30,7 +30,7 @@ public class AssignProjectRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 项目ID
+    * 项目ID，用户已创建项目的唯一ID,非自定义
     */
     @SerializedName("ProjectId")
     @Expose
@@ -53,16 +53,16 @@ public class AssignProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目ID，用户已创建项目的唯一ID,非自定义 
+     * @return ProjectId 项目ID，用户已创建项目的唯一ID,非自定义
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目ID，用户已创建项目的唯一ID,非自定义
+     * @param ProjectId 项目ID，用户已创建项目的唯一ID,非自定义
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

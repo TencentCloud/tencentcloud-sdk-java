@@ -1747,6 +1747,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *灵云-查询超额信息
+     * @param req QueryExceedingInfoRequest
+     * @return QueryExceedingInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryExceedingInfoResponse QueryExceedingInfo(QueryExceedingInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryExceedingInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryExceedingInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryExceedingInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *跨境-查询汇率
      * @param req QueryExchangeRateRequest
      * @return QueryExchangeRateResponse

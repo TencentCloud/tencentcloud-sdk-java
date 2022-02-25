@@ -37,7 +37,7 @@ public class CreateConsumerRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * topic名称
+    * topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
     */
     @SerializedName("TopicName")
     @Expose
@@ -83,16 +83,16 @@ public class CreateConsumerRequest extends AbstractModel{
     }
 
     /**
-     * Get topic名称 
-     * @return TopicName topic名称
+     * Get topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称 
+     * @return TopicName topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set topic名称
-     * @param TopicName topic名称
+     * Set topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+     * @param TopicName topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

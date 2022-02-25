@@ -44,6 +44,20 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
     private Long Volume;
 
     /**
+    * 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+    */
+    @SerializedName("NodeNum")
+    @Expose
+    private Long NodeNum;
+
+    /**
+    * 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+    */
+    @SerializedName("ReplicateSetNum")
+    @Expose
+    private Long ReplicateSetNum;
+
+    /**
      * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
      */
@@ -91,6 +105,38 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
         this.Volume = Volume;
     }
 
+    /**
+     * Get 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数 
+     * @return NodeNum 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     */
+    public Long getNodeNum() {
+        return this.NodeNum;
+    }
+
+    /**
+     * Set 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     * @param NodeNum 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     */
+    public void setNodeNum(Long NodeNum) {
+        this.NodeNum = NodeNum;
+    }
+
+    /**
+     * Get 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数 
+     * @return ReplicateSetNum 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+     */
+    public Long getReplicateSetNum() {
+        return this.ReplicateSetNum;
+    }
+
+    /**
+     * Set 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+     * @param ReplicateSetNum 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+     */
+    public void setReplicateSetNum(Long ReplicateSetNum) {
+        this.ReplicateSetNum = ReplicateSetNum;
+    }
+
     public InquirePriceModifyDBInstanceSpecRequest() {
     }
 
@@ -108,6 +154,12 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.ReplicateSetNum != null) {
+            this.ReplicateSetNum = new Long(source.ReplicateSetNum);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
 
     }
 }

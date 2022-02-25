@@ -44,7 +44,7 @@ public class InstanceMultiParam extends AbstractModel{
     private String [] EnumValue;
 
     /**
-    * 是否需要重启
+    * 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -58,7 +58,7 @@ public class InstanceMultiParam extends AbstractModel{
     private String ParamName;
 
     /**
-    * 状态值
+    * 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
     */
     @SerializedName("Status")
     @Expose
@@ -72,7 +72,7 @@ public class InstanceMultiParam extends AbstractModel{
     private String [] Tips;
 
     /**
-    * 值类型，multi混合类型
+    * 当前值的类型描述，默认为multi
     */
     @SerializedName("ValueType")
     @Expose
@@ -127,16 +127,16 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get 是否需要重启 
-     * @return NeedRestart 是否需要重启
+     * Get 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效； 
+     * @return NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set 是否需要重启
-     * @param NeedRestart 是否需要重启
+     * Set 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+     * @param NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -159,16 +159,16 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get 状态值 
-     * @return Status 状态值
+     * Get 是否为运行中参数值 1:运行中参数值；0：非运行中参数值； 
+     * @return Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值
-     * @param Status 状态值
+     * Set 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @param Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -191,16 +191,16 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get 值类型，multi混合类型 
-     * @return ValueType 值类型，multi混合类型
+     * Get 当前值的类型描述，默认为multi 
+     * @return ValueType 当前值的类型描述，默认为multi
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set 值类型，multi混合类型
-     * @param ValueType 值类型，multi混合类型
+     * Set 当前值的类型描述，默认为multi
+     * @param ValueType 当前值的类型描述，默认为multi
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;

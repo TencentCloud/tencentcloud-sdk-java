@@ -119,7 +119,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *创建消费者
+     *创建消费者组
      * @param req CreateConsumerRequest
      * @return CreateConsumerResponse
      * @throws TencentCloudSDKException

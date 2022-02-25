@@ -51,7 +51,7 @@ public class InstanceIntegerParam extends AbstractModel{
     private String Min;
 
     /**
-    * 是否徐亚哦重启后生效 1:需要重启；0:无需重启
+    * 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -79,14 +79,14 @@ public class InstanceIntegerParam extends AbstractModel{
     private String ValueType;
 
     /**
-    * 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
+    * 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+    * 冗余字段，可忽略
     */
     @SerializedName("Unit")
     @Expose
@@ -157,16 +157,16 @@ public class InstanceIntegerParam extends AbstractModel{
     }
 
     /**
-     * Get 是否徐亚哦重启后生效 1:需要重启；0:无需重启 
-     * @return NeedRestart 是否徐亚哦重启后生效 1:需要重启；0:无需重启
+     * Get 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效； 
+     * @return NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set 是否徐亚哦重启后生效 1:需要重启；0:无需重启
-     * @param NeedRestart 是否徐亚哦重启后生效 1:需要重启；0:无需重启
+     * Set 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+     * @param NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -221,32 +221,32 @@ public class InstanceIntegerParam extends AbstractModel{
     }
 
     /**
-     * Get 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义； 
-     * @return Status 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
+     * Get 是否为运行中参数值 1:运行中参数值；0：非运行中参数值； 
+     * @return Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
-     * @param Status 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
+     * Set 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @param Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数 
-     * @return Unit 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+     * Get 冗余字段，可忽略 
+     * @return Unit 冗余字段，可忽略
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
-     * @param Unit 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+     * Set 冗余字段，可忽略
+     * @param Unit 冗余字段，可忽略
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

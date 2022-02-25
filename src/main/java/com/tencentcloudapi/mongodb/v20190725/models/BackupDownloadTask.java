@@ -79,6 +79,21 @@ public class BackupDownloadTask extends AbstractModel{
     private String Url;
 
     /**
+    * 备份文件备份类型，0-逻辑备份，1-物理备份
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private Long BackupMethod;
+
+    /**
+    * 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupDesc")
+    @Expose
+    private String BackupDesc;
+
+    /**
      * Get 任务创建时间 
      * @return CreateTime 任务创建时间
      */
@@ -206,6 +221,42 @@ public class BackupDownloadTask extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get 备份文件备份类型，0-逻辑备份，1-物理备份 
+     * @return BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
+     */
+    public Long getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set 备份文件备份类型，0-逻辑备份，1-物理备份
+     * @param BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
+     */
+    public void setBackupMethod(Long BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * Get 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupDesc 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupDesc() {
+        return this.BackupDesc;
+    }
+
+    /**
+     * Set 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupDesc 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupDesc(String BackupDesc) {
+        this.BackupDesc = BackupDesc;
+    }
+
     public BackupDownloadTask() {
     }
 
@@ -238,6 +289,12 @@ public class BackupDownloadTask extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new Long(source.BackupMethod);
+        }
+        if (source.BackupDesc != null) {
+            this.BackupDesc = new String(source.BackupDesc);
+        }
     }
 
 
@@ -253,6 +310,8 @@ public class BackupDownloadTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "TimeSpend", this.TimeSpend);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
 
     }
 }

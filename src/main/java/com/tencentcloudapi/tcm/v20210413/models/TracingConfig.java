@@ -30,6 +30,20 @@ public class TracingConfig extends AbstractModel{
     private Float Sampling;
 
     /**
+    * 是否启用调用跟踪
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Boolean Enable;
+
+    /**
+    * 腾讯云 APM 服务相关参数
+    */
+    @SerializedName("APM")
+    @Expose
+    private APM APM;
+
+    /**
      * Get 调用链采样率，百分比 
      * @return Sampling 调用链采样率，百分比
      */
@@ -45,6 +59,38 @@ public class TracingConfig extends AbstractModel{
         this.Sampling = Sampling;
     }
 
+    /**
+     * Get 是否启用调用跟踪 
+     * @return Enable 是否启用调用跟踪
+     */
+    public Boolean getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 是否启用调用跟踪
+     * @param Enable 是否启用调用跟踪
+     */
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * Get 腾讯云 APM 服务相关参数 
+     * @return APM 腾讯云 APM 服务相关参数
+     */
+    public APM getAPM() {
+        return this.APM;
+    }
+
+    /**
+     * Set 腾讯云 APM 服务相关参数
+     * @param APM 腾讯云 APM 服务相关参数
+     */
+    public void setAPM(APM APM) {
+        this.APM = APM;
+    }
+
     public TracingConfig() {
     }
 
@@ -56,6 +102,12 @@ public class TracingConfig extends AbstractModel{
         if (source.Sampling != null) {
             this.Sampling = new Float(source.Sampling);
         }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+        if (source.APM != null) {
+            this.APM = new APM(source.APM);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class TracingConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sampling", this.Sampling);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamObj(map, prefix + "APM.", this.APM);
 
     }
 }

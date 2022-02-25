@@ -30,7 +30,7 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 查询返回记录条数，默认为10000。
+    * 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
     */
     @SerializedName("Limit")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询返回记录条数，默认为10000。 
-     * @return Limit 查询返回记录条数，默认为10000。
+     * Get 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。 
+     * @return Limit 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询返回记录条数，默认为10000。
-     * @param Limit 查询返回记录条数，默认为10000。
+     * Set 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+     * @param Limit 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

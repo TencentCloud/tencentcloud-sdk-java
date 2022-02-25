@@ -37,7 +37,7 @@ public class ResetDBInstancePasswordRequest extends AbstractModel{
     private String UserName;
 
     /**
-    * 新密码
+    * 新密码，新密码长度不能少于8位
     */
     @SerializedName("Password")
     @Expose
@@ -76,16 +76,16 @@ public class ResetDBInstancePasswordRequest extends AbstractModel{
     }
 
     /**
-     * Get 新密码 
-     * @return Password 新密码
+     * Get 新密码，新密码长度不能少于8位 
+     * @return Password 新密码，新密码长度不能少于8位
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 新密码
-     * @param Password 新密码
+     * Set 新密码，新密码长度不能少于8位
+     * @param Password 新密码，新密码长度不能少于8位
      */
     public void setPassword(String Password) {
         this.Password = Password;

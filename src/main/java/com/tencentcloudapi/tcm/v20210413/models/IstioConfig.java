@@ -30,7 +30,7 @@ public class IstioConfig extends AbstractModel{
     private String OutboundTrafficPolicy;
 
     /**
-    * 调用链配置
+    * 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
     */
     @SerializedName("Tracing")
     @Expose
@@ -61,16 +61,16 @@ public class IstioConfig extends AbstractModel{
     }
 
     /**
-     * Get 调用链配置 
-     * @return Tracing 调用链配置
+     * Get 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置） 
+     * @return Tracing 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
      */
     public TracingConfig getTracing() {
         return this.Tracing;
     }
 
     /**
-     * Set 调用链配置
-     * @param Tracing 调用链配置
+     * Set 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
+     * @param Tracing 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
      */
     public void setTracing(TracingConfig Tracing) {
         this.Tracing = Tracing;

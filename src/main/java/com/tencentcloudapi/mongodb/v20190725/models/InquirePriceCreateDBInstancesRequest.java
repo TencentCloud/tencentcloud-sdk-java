@@ -30,7 +30,7 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+    * 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
     */
     @SerializedName("NodeNum")
     @Expose
@@ -58,7 +58,7 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     private String MongoVersion;
 
     /**
-    * 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+    * 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
     */
     @SerializedName("MachineCode")
     @Expose
@@ -109,16 +109,16 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数 
-     * @return NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * Get 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数 
+     * @return NodeNum 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
-     * @param NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * Set 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
+     * @param NodeNum 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -173,16 +173,16 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型 
-     * @return MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+     * Get 机器类型，HIO：高IO型；HIO10G：高IO万兆型； 
+     * @return MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
-     * @param MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+     * Set 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
+     * @param MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;

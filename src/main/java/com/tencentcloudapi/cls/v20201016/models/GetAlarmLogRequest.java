@@ -44,7 +44,7 @@ public class GetAlarmLogRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 单次查询返回的日志条数，最大值为100
+    * 单次查询返回的日志条数，最大值为1000
     */
     @SerializedName("Limit")
     @Expose
@@ -120,16 +120,16 @@ public class GetAlarmLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 单次查询返回的日志条数，最大值为100 
-     * @return Limit 单次查询返回的日志条数，最大值为100
+     * Get 单次查询返回的日志条数，最大值为1000 
+     * @return Limit 单次查询返回的日志条数，最大值为1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的日志条数，最大值为100
-     * @param Limit 单次查询返回的日志条数，最大值为100
+     * Set 单次查询返回的日志条数，最大值为1000
+     * @param Limit 单次查询返回的日志条数，最大值为1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

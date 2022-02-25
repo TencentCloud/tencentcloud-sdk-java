@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class InstanceTextParam extends AbstractModel{
 
     /**
-    * 当前值(暂未使用)
+    * 当前值
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * 默认值(暂未使用)
+    * 默认值
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 是否需要重启(暂未使用)
+    * 是否需要重启
     */
     @SerializedName("NeedRestart")
     @Expose
     private String NeedRestart;
 
     /**
-    * 参数名称(暂未使用)
+    * 参数名称
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * text类型值(暂未使用)
+    * text类型值
     */
     @SerializedName("TextValue")
     @Expose
     private String TextValue;
 
     /**
-    * 说明(暂未使用)
+    * 参数说明
     */
     @SerializedName("Tips")
     @Expose
     private String [] Tips;
 
     /**
-    * 值类型(暂未使用)
+    * 值类型说明
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * 值获取状态(暂未使用)
+    * 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 当前值(暂未使用) 
-     * @return CurrentValue 当前值(暂未使用)
+     * Get 当前值 
+     * @return CurrentValue 当前值
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set 当前值(暂未使用)
-     * @param CurrentValue 当前值(暂未使用)
+     * Set 当前值
+     * @param CurrentValue 当前值
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get 默认值(暂未使用) 
-     * @return DefaultValue 默认值(暂未使用)
+     * Get 默认值 
+     * @return DefaultValue 默认值
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 默认值(暂未使用)
-     * @param DefaultValue 默认值(暂未使用)
+     * Set 默认值
+     * @param DefaultValue 默认值
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 是否需要重启(暂未使用) 
-     * @return NeedRestart 是否需要重启(暂未使用)
+     * Get 是否需要重启 
+     * @return NeedRestart 是否需要重启
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set 是否需要重启(暂未使用)
-     * @param NeedRestart 是否需要重启(暂未使用)
+     * Set 是否需要重启
+     * @param NeedRestart 是否需要重启
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get 参数名称(暂未使用) 
-     * @return ParamName 参数名称(暂未使用)
+     * Get 参数名称 
+     * @return ParamName 参数名称
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set 参数名称(暂未使用)
-     * @param ParamName 参数名称(暂未使用)
+     * Set 参数名称
+     * @param ParamName 参数名称
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get text类型值(暂未使用) 
-     * @return TextValue text类型值(暂未使用)
+     * Get text类型值 
+     * @return TextValue text类型值
      */
     public String getTextValue() {
         return this.TextValue;
     }
 
     /**
-     * Set text类型值(暂未使用)
-     * @param TextValue text类型值(暂未使用)
+     * Set text类型值
+     * @param TextValue text类型值
      */
     public void setTextValue(String TextValue) {
         this.TextValue = TextValue;
     }
 
     /**
-     * Get 说明(暂未使用) 
-     * @return Tips 说明(暂未使用)
+     * Get 参数说明 
+     * @return Tips 参数说明
      */
     public String [] getTips() {
         return this.Tips;
     }
 
     /**
-     * Set 说明(暂未使用)
-     * @param Tips 说明(暂未使用)
+     * Set 参数说明
+     * @param Tips 参数说明
      */
     public void setTips(String [] Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get 值类型(暂未使用) 
-     * @return ValueType 值类型(暂未使用)
+     * Get 值类型说明 
+     * @return ValueType 值类型说明
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set 值类型(暂未使用)
-     * @param ValueType 值类型(暂未使用)
+     * Set 值类型说明
+     * @param ValueType 值类型说明
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get 值获取状态(暂未使用) 
-     * @return Status 值获取状态(暂未使用)
+     * Get 是否为运行中参数值 1:运行中参数值；0：非运行中参数值； 
+     * @return Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 值获取状态(暂未使用)
-     * @param Status 值获取状态(暂未使用)
+     * Set 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @param Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public void setStatus(String Status) {
         this.Status = Status;

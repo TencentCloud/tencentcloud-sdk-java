@@ -37,14 +37,14 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     private String BackupName;
 
     /**
-    * 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+    * 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+    * 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -118,32 +118,32 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间 
-     * @return StartTime 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+     * Get 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间 
+     * @return StartTime 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
-     * @param StartTime 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+     * Set 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+     * @param StartTime 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间 
-     * @return EndTime 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+     * Get 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间 
+     * @return EndTime 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
-     * @param EndTime 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+     * Set 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
+     * @param EndTime 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

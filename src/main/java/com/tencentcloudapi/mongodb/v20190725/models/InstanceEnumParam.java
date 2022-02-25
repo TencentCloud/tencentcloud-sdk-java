@@ -44,7 +44,7 @@ public class InstanceEnumParam extends AbstractModel{
     private String [] EnumValue;
 
     /**
-    * 是否需要重启后生效，"1"需要，"0"无需重启
+    * 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -72,7 +72,7 @@ public class InstanceEnumParam extends AbstractModel{
     private String ValueType;
 
     /**
-    * 是否获取到参数，1为获取，前端正常显示，0:前段显示loading
+    * 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
     */
     @SerializedName("Status")
     @Expose
@@ -127,16 +127,16 @@ public class InstanceEnumParam extends AbstractModel{
     }
 
     /**
-     * Get 是否需要重启后生效，"1"需要，"0"无需重启 
-     * @return NeedRestart 是否需要重启后生效，"1"需要，"0"无需重启
+     * Get 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效； 
+     * @return NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set 是否需要重启后生效，"1"需要，"0"无需重启
-     * @param NeedRestart 是否需要重启后生效，"1"需要，"0"无需重启
+     * Set 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+     * @param NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -191,16 +191,16 @@ public class InstanceEnumParam extends AbstractModel{
     }
 
     /**
-     * Get 是否获取到参数，1为获取，前端正常显示，0:前段显示loading 
-     * @return Status 是否获取到参数，1为获取，前端正常显示，0:前段显示loading
+     * Get 是否为运行中参数值 1:运行中参数值；0：非运行中参数值； 
+     * @return Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否获取到参数，1为获取，前端正常显示，0:前段显示loading
-     * @param Status 是否获取到参数，1为获取，前端正常显示，0:前段显示loading
+     * Set 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @param Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public void setStatus(Long Status) {
         this.Status = Status;

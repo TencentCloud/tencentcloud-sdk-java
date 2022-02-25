@@ -30,7 +30,7 @@ public class RenameInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 实例名称
+    * 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
     */
     @SerializedName("NewName")
     @Expose
@@ -53,16 +53,16 @@ public class RenameInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名称 
-     * @return NewName 实例名称
+     * Get 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 - 
+     * @return NewName 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
      */
     public String getNewName() {
         return this.NewName;
     }
 
     /**
-     * Set 实例名称
-     * @param NewName 实例名称
+     * Set 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
+     * @param NewName 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
      */
     public void setNewName(String NewName) {
         this.NewName = NewName;

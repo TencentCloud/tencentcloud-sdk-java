@@ -65,6 +65,13 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
     private ChorusClip [] ChorusClipSet;
 
     /**
+    * 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+    */
+    @SerializedName("PreludeInterval")
+    @Expose
+    private Long PreludeInterval;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +175,22 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分 
+     * @return PreludeInterval 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     */
+    public Long getPreludeInterval() {
+        return this.PreludeInterval;
+    }
+
+    /**
+     * Set 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     * @param PreludeInterval 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     */
+    public void setPreludeInterval(Long PreludeInterval) {
+        this.PreludeInterval = PreludeInterval;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -215,6 +238,9 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
                 this.ChorusClipSet[i] = new ChorusClip(source.ChorusClipSet[i]);
             }
         }
+        if (source.PreludeInterval != null) {
+            this.PreludeInterval = new Long(source.PreludeInterval);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -231,6 +257,7 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DefinitionInfoSet.", this.DefinitionInfoSet);
         this.setParamSimple(map, prefix + "MidiJsonUrl", this.MidiJsonUrl);
         this.setParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
+        this.setParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
