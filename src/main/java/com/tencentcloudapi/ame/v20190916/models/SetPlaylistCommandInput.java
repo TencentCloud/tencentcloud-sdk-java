@@ -26,6 +26,8 @@ public class SetPlaylistCommandInput extends AbstractModel{
     * 变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
     */
     @SerializedName("Type")
     @Expose
@@ -34,11 +36,19 @@ public class SetPlaylistCommandInput extends AbstractModel{
     /**
     * 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
+
+    /**
+    * 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
+    */
+    @SerializedName("ChangedIndex")
+    @Expose
+    private Long ChangedIndex;
 
     /**
     * 歌曲 ID 列表，当 Type 取 Add 时，必填。
@@ -50,10 +60,14 @@ public class SetPlaylistCommandInput extends AbstractModel{
     /**
      * Get 变更类型，取值有：
 <li>Add：添加</li>
-<li>Delete：删除</li> 
+<li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li> 
      * @return Type 变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
      */
     public String getType() {
         return this.Type;
@@ -63,9 +77,13 @@ public class SetPlaylistCommandInput extends AbstractModel{
      * Set 变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
      * @param Type 变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -74,10 +92,12 @@ public class SetPlaylistCommandInput extends AbstractModel{
     /**
      * Get 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。 
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。 
      * @return Index 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
      */
     public Long getIndex() {
         return this.Index;
@@ -86,13 +106,31 @@ public class SetPlaylistCommandInput extends AbstractModel{
     /**
      * Set 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
      * @param Index 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
      */
     public void setIndex(Long Index) {
         this.Index = Index;
+    }
+
+    /**
+     * Get 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。 
+     * @return ChangedIndex 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
+     */
+    public Long getChangedIndex() {
+        return this.ChangedIndex;
+    }
+
+    /**
+     * Set 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
+     * @param ChangedIndex 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
+     */
+    public void setChangedIndex(Long ChangedIndex) {
+        this.ChangedIndex = ChangedIndex;
     }
 
     /**
@@ -125,6 +163,9 @@ public class SetPlaylistCommandInput extends AbstractModel{
         if (source.Index != null) {
             this.Index = new Long(source.Index);
         }
+        if (source.ChangedIndex != null) {
+            this.ChangedIndex = new Long(source.ChangedIndex);
+        }
         if (source.MusicIds != null) {
             this.MusicIds = new String[source.MusicIds.length];
             for (int i = 0; i < source.MusicIds.length; i++) {
@@ -140,6 +181,7 @@ public class SetPlaylistCommandInput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "ChangedIndex", this.ChangedIndex);
         this.setParamArraySimple(map, prefix + "MusicIds.", this.MusicIds);
 
     }

@@ -44,11 +44,18 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
     private String LoadBalancerID;
 
     /**
-    * Clb所在地域，例如：ap-hongkong。
+    * CLB所在地域，例如：ap-hongkong。
     */
     @SerializedName("LoadBalancerRegion")
     @Expose
     private String LoadBalancerRegion;
+
+    /**
+    * CLB内网IP
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
 
     /**
      * Get 资源实例ID，实例ID形如：bgpip-0000011x。只能填写高防IP实例。 
@@ -99,19 +106,35 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
     }
 
     /**
-     * Get Clb所在地域，例如：ap-hongkong。 
-     * @return LoadBalancerRegion Clb所在地域，例如：ap-hongkong。
+     * Get CLB所在地域，例如：ap-hongkong。 
+     * @return LoadBalancerRegion CLB所在地域，例如：ap-hongkong。
      */
     public String getLoadBalancerRegion() {
         return this.LoadBalancerRegion;
     }
 
     /**
-     * Set Clb所在地域，例如：ap-hongkong。
-     * @param LoadBalancerRegion Clb所在地域，例如：ap-hongkong。
+     * Set CLB所在地域，例如：ap-hongkong。
+     * @param LoadBalancerRegion CLB所在地域，例如：ap-hongkong。
      */
     public void setLoadBalancerRegion(String LoadBalancerRegion) {
         this.LoadBalancerRegion = LoadBalancerRegion;
+    }
+
+    /**
+     * Get CLB内网IP 
+     * @return Vip CLB内网IP
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set CLB内网IP
+     * @param Vip CLB内网IP
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
     }
 
     public AssociateDDoSEipLoadBalancerRequest() {
@@ -134,6 +157,9 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
         if (source.LoadBalancerRegion != null) {
             this.LoadBalancerRegion = new String(source.LoadBalancerRegion);
         }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Eip", this.Eip);
         this.setParamSimple(map, prefix + "LoadBalancerID", this.LoadBalancerID);
         this.setParamSimple(map, prefix + "LoadBalancerRegion", this.LoadBalancerRegion);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
 
     }
 }

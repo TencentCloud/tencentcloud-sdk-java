@@ -37,7 +37,7 @@ public class SubAccountUser extends AbstractModel{
     private String Name;
 
     /**
-    * 子用户 UID
+    * 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
     */
     @SerializedName("Uid")
     @Expose
@@ -113,16 +113,16 @@ public class SubAccountUser extends AbstractModel{
     }
 
     /**
-     * Get 子用户 UID 
-     * @return Uid 子用户 UID
+     * Get 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取 
+     * @return Uid 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 子用户 UID
-     * @param Uid 子用户 UID
+     * Set 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
+     * @param Uid 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;

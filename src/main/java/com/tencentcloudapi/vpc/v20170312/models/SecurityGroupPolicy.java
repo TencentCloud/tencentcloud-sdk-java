@@ -38,6 +38,7 @@ public class SecurityGroupPolicy extends AbstractModel{
 
     /**
     * 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
     */
     @SerializedName("Port")
     @Expose
@@ -132,8 +133,10 @@ public class SecurityGroupPolicy extends AbstractModel{
     }
 
     /**
-     * Get 端口(all, 离散port,  range)。 
+     * Get 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。 
      * @return Port 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
      */
     public String getPort() {
         return this.Port;
@@ -141,7 +144,9 @@ public class SecurityGroupPolicy extends AbstractModel{
 
     /**
      * Set 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
      * @param Port 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
      */
     public void setPort(String Port) {
         this.Port = Port;

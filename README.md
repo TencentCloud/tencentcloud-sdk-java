@@ -11,7 +11,7 @@
 ## 通过 Maven 安装(推荐)
 通过 Maven 获取安装是使用 JAVA SDK 的推荐方法，Maven 是 JAVA 的依赖管理工具，支持您项目所需的依赖项，并将其安装到项目中。关于 Maven 详细可参考 Maven 官网。
 1. 请访问[Maven官网](https://maven.apache.org/)下载对应系统Maven安装包进行安装；
-2. 为您的项目添加 Maven 依赖项，只需在 Maven pom.xml 添加以下依赖项即可。注意这里的版本号只是举例，您可以在[Maven仓库](https://search.maven.org/search?q=tencentcloud-sdk-java)上找到最新的版本(最新版本是3.1.457)
+2. 为您的项目添加 Maven 依赖项，只需在 Maven pom.xml 添加以下依赖项即可。注意这里的版本号只是举例，您可以在[Maven仓库](https://search.maven.org/search?q=tencentcloud-sdk-java)上找到最新的版本(最新版本是3.1.458)
 3. maven仓库中显示的4.0.11是废弃版本，由于maven索引更新问题尚未完全删除;
 4. 引用方法可参考示例。
 ```xml
@@ -20,7 +20,7 @@
     <artifactId>tencentcloud-sdk-java</artifactId>
     <!-- go to https://search.maven.org/search?q=tencentcloud-sdk-java and get the latest version. -->
     <!-- 请到https://search.maven.org/search?q=tencentcloud-sdk-java查询所有版本，最新版本如下 -->
-    <version>3.1.457</version>
+    <version>3.1.458</version>
 </dependency>
 ```
 5. 如上引用方式会将腾讯云所有产品sdk下载到本地，可以将artifactId换成tencentcloud-sdk-java-cvm/cbs/vpc等，即可引用特定产品的sdk，代码中使用方式和大包相同，可参考示例。最新版本也可在[Maven仓库](https://search.maven.org/search?q=tencentcloud-sdk-java)查询，可大大节省存储空间。
