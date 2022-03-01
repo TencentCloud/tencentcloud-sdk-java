@@ -267,6 +267,9 @@ public enum MariadbErrorCode {
     // 初始化数据库实例参数错误。
      INVALIDPARAMETERVALUE_ILLEGALINITPARAM("InvalidParameterValue.IllegalInitParam"),
      
+    // 非法实例ID。
+     INVALIDPARAMETERVALUE_ILLEGALINSTANCEID("InvalidParameterValue.IllegalInstanceId"),
+     
     // 修改log保存天数时过小或过大。
      INVALIDPARAMETERVALUE_ILLEGALLOGSAVEDAYS("InvalidParameterValue.IllegalLogSaveDays"),
      

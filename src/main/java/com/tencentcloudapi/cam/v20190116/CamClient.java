@@ -879,6 +879,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取用户AppId
+     * @param req GetUserAppIdRequest
+     * @return GetUserAppIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserAppIdResponse GetUserAppId(GetUserAppIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUserAppIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUserAppIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetUserAppId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户权限边界
      * @param req GetUserPermissionBoundaryRequest
      * @return GetUserPermissionBoundaryResponse

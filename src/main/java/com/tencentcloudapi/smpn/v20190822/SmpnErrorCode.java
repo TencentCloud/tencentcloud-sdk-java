@@ -10,7 +10,10 @@ public enum SmpnErrorCode {
      INVALIDPARAMETER_PHONENUMBER("InvalidParameter.PhoneNumber"),
      
     // 资源不存在。
-     RESOURCENOTFOUND("ResourceNotFound");
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable");
      
     private String value;
     private SmpnErrorCode (String value){

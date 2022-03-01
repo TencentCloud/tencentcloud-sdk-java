@@ -1781,6 +1781,126 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询调用监控指标
+     * @param req DescribeInovcationIndicatorsRequest
+     * @return DescribeInovcationIndicatorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(DescribeInovcationIndicatorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInovcationIndicatorsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInovcationIndicatorsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInovcationIndicators");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询调用指标数据变化曲线
+     * @param req DescribeInvocationMetricDataCurveRequest
+     * @return DescribeInvocationMetricDataCurveResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurve(DescribeInvocationMetricDataCurveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInvocationMetricDataCurveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricDataCurveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInvocationMetricDataCurve");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询维度
+     * @param req DescribeInvocationMetricDataDimensionRequest
+     * @return DescribeInvocationMetricDataDimensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimension(DescribeInvocationMetricDataDimensionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInvocationMetricDataDimensionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricDataDimensionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInvocationMetricDataDimension");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询单值指标维度
+     * @param req DescribeInvocationMetricDataPointRequest
+     * @return DescribeInvocationMetricDataPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInvocationMetricDataPointResponse DescribeInvocationMetricDataPoint(DescribeInvocationMetricDataPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInvocationMetricDataPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricDataPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInvocationMetricDataPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询调用指标数据散点图
+     * @param req DescribeInvocationMetricScatterPlotRequest
+     * @return DescribeInvocationMetricScatterPlotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInvocationMetricScatterPlotResponse DescribeInvocationMetricScatterPlot(DescribeInvocationMetricScatterPlotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInvocationMetricScatterPlotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricScatterPlotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInvocationMetricScatterPlot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询java实例jvm监控数据,返回数据可选
+     * @param req DescribeJvmMonitorRequest
+     * @return DescribeJvmMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJvmMonitorResponse DescribeJvmMonitor(DescribeJvmMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJvmMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJvmMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJvmMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询泳道规则列表
      * @param req DescribeLaneRulesRequest
      * @return DescribeLaneRulesResponse
@@ -1873,6 +1993,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeMsApiListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeMsApiList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *服务调用监控统计概览
+     * @param req DescribeOverviewInvocationRequest
+     * @return DescribeOverviewInvocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewInvocationResponse DescribeOverviewInvocation(DescribeOverviewInvocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewInvocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewInvocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewInvocation");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2253,6 +2393,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeSimpleNamespacesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSimpleNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *服务统计页面：接口和服务维度
+     * @param req DescribeStatisticsRequest
+     * @return DescribeStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStatisticsResponse DescribeStatistics(DescribeStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStatistics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

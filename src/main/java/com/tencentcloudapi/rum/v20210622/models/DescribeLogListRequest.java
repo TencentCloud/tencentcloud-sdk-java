@@ -65,7 +65,7 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Context;
 
     /**
-    * 查询语句，语句长度最大为4096
+    * 查询语句，参考控制台请求参数，语句长度最大为4096
     */
     @SerializedName("Query")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询语句，语句长度最大为4096 
-     * @return Query 查询语句，语句长度最大为4096
+     * Get 查询语句，参考控制台请求参数，语句长度最大为4096 
+     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，语句长度最大为4096
-     * @param Query 查询语句，语句长度最大为4096
+     * Set 查询语句，参考控制台请求参数，语句长度最大为4096
+     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096
      */
     public void setQuery(String Query) {
         this.Query = Query;

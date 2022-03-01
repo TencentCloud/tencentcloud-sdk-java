@@ -39,6 +39,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *解隔离后付费实例
+     * @param req ActivateHourDBInstanceRequest
+     * @return ActivateHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateHourDBInstanceResponse ActivateHourDBInstance(ActivateHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActivateHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ActivateHourDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (AssociateSecurityGroups) 用于安全组批量绑定云资源。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -915,6 +935,26 @@ public class MariadbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InitDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *隔离后付费实例
+     * @param req IsolateHourDBInstanceRequest
+     * @return IsolateHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateHourDBInstanceResponse IsolateHourDBInstance(IsolateHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateHourDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

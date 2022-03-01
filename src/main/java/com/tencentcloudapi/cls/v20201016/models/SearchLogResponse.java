@@ -23,36 +23,29 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel{
 
     /**
-    * 加载后续内容的Context，过期时间1小时
+    * 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
+    * 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * 返回的是否为分析结果
+    * 返回的是否为统计分析（即SQL）结果
     */
     @SerializedName("Analysis")
     @Expose
     private Boolean Analysis;
 
     /**
-    * 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ColNames")
-    @Expose
-    private String [] ColNames;
-
-    /**
-    * 日志查询结果；当Analysis为True时，可能返回为null
+    * 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -60,7 +53,17 @@ public class SearchLogResponse extends AbstractModel{
     private LogInfo [] Results;
 
     /**
-    * 日志分析结果；当Analysis为False时，可能返回为null
+    * 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColNames")
+    @Expose
+    private String [] ColNames;
+
+    /**
+    * 日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisResults")
@@ -68,7 +71,8 @@ public class SearchLogResponse extends AbstractModel{
     private LogItems [] AnalysisResults;
 
     /**
-    * 新的日志分析结果; UseNewAnalysis为true有效
+    * 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisRecords")
@@ -76,7 +80,8 @@ public class SearchLogResponse extends AbstractModel{
     private String [] AnalysisRecords;
 
     /**
-    * 日志分析的列属性; UseNewAnalysis为true有效
+    * 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Columns")
@@ -91,77 +96,61 @@ public class SearchLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 加载后续内容的Context，过期时间1小时 
-     * @return Context 加载后续内容的Context，过期时间1小时
+     * Get 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时 
+     * @return Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载后续内容的Context，过期时间1小时
-     * @param Context 加载后续内容的Context，过期时间1小时
+     * Set 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * @param Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义 
-     * @return ListOver 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
+     * Get 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效 
+     * @return ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
-     * @param ListOver 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
+     * Set 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
+     * @param ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 返回的是否为分析结果 
-     * @return Analysis 返回的是否为分析结果
+     * Get 返回的是否为统计分析（即SQL）结果 
+     * @return Analysis 返回的是否为统计分析（即SQL）结果
      */
     public Boolean getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set 返回的是否为分析结果
-     * @param Analysis 返回的是否为分析结果
+     * Set 返回的是否为统计分析（即SQL）结果
+     * @param Analysis 返回的是否为统计分析（即SQL）结果
      */
     public void setAnalysis(Boolean Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get 如果Analysis为True，则返回分析结果的列名，否则为空
+     * Get 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getColNames() {
-        return this.ColNames;
-    }
-
-    /**
-     * Set 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setColNames(String [] ColNames) {
-        this.ColNames = ColNames;
-    }
-
-    /**
-     * Get 日志查询结果；当Analysis为True时，可能返回为null
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 日志查询结果；当Analysis为True时，可能返回为null
+     * @return Results 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogInfo [] getResults() {
@@ -169,9 +158,9 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Set 日志查询结果；当Analysis为True时，可能返回为null
+     * Set 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 日志查询结果；当Analysis为True时，可能返回为null
+     * @param Results 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(LogInfo [] Results) {
@@ -179,9 +168,35 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Get 日志分析结果；当Analysis为False时，可能返回为null
+     * Get 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
+     * @return ColNames 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getColNames() {
+        return this.ColNames;
+    }
+
+    /**
+     * Set 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColNames 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColNames(String [] ColNames) {
+        this.ColNames = ColNames;
+    }
+
+    /**
+     * Get 日志统计分析结果
+当UseNewAnalysis为false时生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnalysisResults 日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogItems [] getAnalysisResults() {
@@ -189,9 +204,11 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Set 日志分析结果；当Analysis为False时，可能返回为null
+     * Set 日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
+     * @param AnalysisResults 日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisResults(LogItems [] AnalysisResults) {
@@ -199,9 +216,11 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Get 新的日志分析结果; UseNewAnalysis为true有效
+     * Get 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+     * @return AnalysisRecords 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAnalysisRecords() {
@@ -209,9 +228,11 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Set 新的日志分析结果; UseNewAnalysis为true有效
+     * Set 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+     * @param AnalysisRecords 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisRecords(String [] AnalysisRecords) {
@@ -219,9 +240,11 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Get 日志分析的列属性; UseNewAnalysis为true有效
+     * Get 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Columns 日志分析的列属性; UseNewAnalysis为true有效
+     * @return Columns 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Column [] getColumns() {
@@ -229,9 +252,11 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Set 日志分析的列属性; UseNewAnalysis为true有效
+     * Set 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Columns 日志分析的列属性; UseNewAnalysis为true有效
+     * @param Columns 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumns(Column [] Columns) {
@@ -271,16 +296,16 @@ public class SearchLogResponse extends AbstractModel{
         if (source.Analysis != null) {
             this.Analysis = new Boolean(source.Analysis);
         }
-        if (source.ColNames != null) {
-            this.ColNames = new String[source.ColNames.length];
-            for (int i = 0; i < source.ColNames.length; i++) {
-                this.ColNames[i] = new String(source.ColNames[i]);
-            }
-        }
         if (source.Results != null) {
             this.Results = new LogInfo[source.Results.length];
             for (int i = 0; i < source.Results.length; i++) {
                 this.Results[i] = new LogInfo(source.Results[i]);
+            }
+        }
+        if (source.ColNames != null) {
+            this.ColNames = new String[source.ColNames.length];
+            for (int i = 0; i < source.ColNames.length; i++) {
+                this.ColNames[i] = new String(source.ColNames[i]);
             }
         }
         if (source.AnalysisResults != null) {
@@ -314,8 +339,8 @@ public class SearchLogResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamSimple(map, prefix + "Analysis", this.Analysis);
-        this.setParamArraySimple(map, prefix + "ColNames.", this.ColNames);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamArraySimple(map, prefix + "ColNames.", this.ColNames);
         this.setParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
         this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);

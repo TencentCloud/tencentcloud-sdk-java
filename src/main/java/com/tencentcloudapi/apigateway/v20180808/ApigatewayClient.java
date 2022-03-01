@@ -324,6 +324,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *用于创建创建VPC通道
+     * @param req CreateUpstreamRequest
+     * @return CreateUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUpstreamResponse CreateUpstream(CreateUpstreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUpstreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUpstreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUpstream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateUsagePlan）用于创建使用计划。
 用户在使用 API 网关时，需要创建使用计划并将其绑定到服务的环境中使用。
      * @param req CreateUsagePlanRequest
@@ -498,6 +518,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteServiceSubDomainMapping");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除VPC通道，需要注意有api绑定时，不允许删除
+     * @param req DeleteUpstreamRequest
+     * @return DeleteUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUpstreamResponse DeleteUpstream(DeleteUpstreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUpstreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUpstreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUpstream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1216,6 +1256,46 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
+     *查询VPC通道绑定的api列表
+     * @param req DescribeUpstreamBindApisRequest
+     * @return DescribeUpstreamBindApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamBindApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUpstreamBindApis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询VPC通道列表详情
+     * @param req DescribeUpstreamsRequest
+     * @return DescribeUpstreamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpstreamsResponse DescribeUpstreams(DescribeUpstreamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUpstreams");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeUsagePlan）用于查询一个使用计划的详细信息，包括名称、QPS、创建时间绑定的环境等。
      * @param req DescribeUsagePlanRequest
      * @return DescribeUsagePlanResponse
@@ -1590,6 +1670,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
                 Type type = new TypeToken<JsonResponseModel<ModifySubDomainResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySubDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改VPC通道
+     * @param req ModifyUpstreamRequest
+     * @return ModifyUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUpstreamResponse ModifyUpstream(ModifyUpstreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUpstreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUpstreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUpstream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

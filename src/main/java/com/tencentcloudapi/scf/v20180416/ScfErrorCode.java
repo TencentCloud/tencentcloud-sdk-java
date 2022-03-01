@@ -327,6 +327,9 @@ public enum ScfErrorCode {
     // InvokeType取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_INVOKETYPE("InvalidParameterValue.InvokeType"),
      
+    // L5Enable取值与规范不符，请修正后再试。
+     INVALIDPARAMETERVALUE_L5ENABLE("InvalidParameterValue.L5Enable"),
+     
     // LayerName参数传入错误。
      INVALIDPARAMETERVALUE_LAYERNAME("InvalidParameterValue.LayerName"),
      

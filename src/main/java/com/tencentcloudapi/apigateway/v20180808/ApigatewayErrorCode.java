@@ -114,6 +114,9 @@ public enum ApigatewayErrorCode {
     // 默认的二级域名输入错误。
      FAILEDOPERATION_NETSUBDOMAINERROR("FailedOperation.NetSubDomainError"),
      
+    // 操作后端通道失败。
+     FAILEDOPERATION_OPERATEUPSTREAM("FailedOperation.OperateUpstream"),
+     
     // 设置路径映射错误。
      FAILEDOPERATION_PATHMAPPINGSETERROR("FailedOperation.PathMappingSetError"),
      
@@ -278,6 +281,9 @@ public enum ApigatewayErrorCode {
      
     // URL参数错误。
      INVALIDPARAMETERVALUE_INVALIDURL("InvalidParameterValue.InvalidUrl"),
+     
+    // 无效vpc信息。
+     INVALIDPARAMETERVALUE_INVALIDVPCCONFIG("InvalidParameterValue.InvalidVpcConfig"),
      
     // 方法错误。WEBSOCKET类型的后端服务，前端方法需要配置为GET。
      INVALIDPARAMETERVALUE_INVALIDWSMETHOD("InvalidParameterValue.InvalidWSMethod"),
@@ -482,6 +488,9 @@ public enum ApigatewayErrorCode {
      
     // 服务使用中，不能被删除。
      UNSUPPORTEDOPERATION_UNSUPPORTEDDELETESERVICE("UnsupportedOperation.UnsupportedDeleteService"),
+     
+    // 当前VPC通道存在绑定关系，不支持当前操作。
+     UNSUPPORTEDOPERATION_UNSUPPORTEDDELETEUPSTREAM("UnsupportedOperation.UnsupportedDeleteUpstream"),
      
     // 不支持网络类型。
      UNSUPPORTEDOPERATION_UNSUPPORTEDNETTYPE("UnsupportedOperation.UnsupportedNetType"),
