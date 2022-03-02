@@ -86,6 +86,13 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     private Long SpeedLimit;
 
     /**
+    * 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+    */
+    @SerializedName("Insecure")
+    @Expose
+    private Long Insecure;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -229,6 +236,22 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.SpeedLimit = SpeedLimit;
     }
 
+    /**
+     * Get 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1 
+     * @return Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     */
+    public Long getInsecure() {
+        return this.Insecure;
+    }
+
+    /**
+     * Set 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     * @param Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     */
+    public void setInsecure(Long Insecure) {
+        this.Insecure = Insecure;
+    }
+
     public UpdateAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -264,6 +287,9 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         if (source.SpeedLimit != null) {
             this.SpeedLimit = new Long(source.SpeedLimit);
         }
+        if (source.Insecure != null) {
+            this.Insecure = new Long(source.Insecure);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.setParamSimple(map, prefix + "RegistryVersion", this.RegistryVersion);
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
+        this.setParamSimple(map, prefix + "Insecure", this.Insecure);
 
     }
 }

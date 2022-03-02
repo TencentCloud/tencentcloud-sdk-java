@@ -89,6 +89,14 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private Long SpeedLimit;
 
     /**
+    * 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Insecure")
+    @Expose
+    private Long Insecure;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -252,6 +260,26 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
+     * Get 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInsecure() {
+        return this.Insecure;
+    }
+
+    /**
+     * Set 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInsecure(Long Insecure) {
+        this.Insecure = Insecure;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -302,6 +330,9 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
         if (source.SpeedLimit != null) {
             this.SpeedLimit = new Long(source.SpeedLimit);
         }
+        if (source.Insecure != null) {
+            this.Insecure = new Long(source.Insecure);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -321,6 +352,7 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
         this.setParamSimple(map, prefix + "NetType", this.NetType);
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
+        this.setParamSimple(map, prefix + "Insecure", this.Insecure);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

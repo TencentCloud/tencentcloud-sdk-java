@@ -30,14 +30,14 @@ public class UpdateScanRoomsRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * 字符串房间号，逗号分隔
+    * 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
     */
     @SerializedName("RoomIdString")
     @Expose
     private String RoomIdString;
 
     /**
-    * 正则表达式房间号，["^6.*"]6开头的房间号
+    * 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
     */
     @SerializedName("RoomIdRegex")
     @Expose
@@ -60,32 +60,32 @@ public class UpdateScanRoomsRequest extends AbstractModel{
     }
 
     /**
-     * Get 字符串房间号，逗号分隔 
-     * @return RoomIdString 字符串房间号，逗号分隔
+     * Get 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003" 
+     * @return RoomIdString 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
      */
     public String getRoomIdString() {
         return this.RoomIdString;
     }
 
     /**
-     * Set 字符串房间号，逗号分隔
-     * @param RoomIdString 字符串房间号，逗号分隔
+     * Set 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
+     * @param RoomIdString 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
      */
     public void setRoomIdString(String RoomIdString) {
         this.RoomIdString = RoomIdString;
     }
 
     /**
-     * Get 正则表达式房间号，["^6.*"]6开头的房间号 
-     * @return RoomIdRegex 正则表达式房间号，["^6.*"]6开头的房间号
+     * Get 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检 
+     * @return RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
      */
     public String [] getRoomIdRegex() {
         return this.RoomIdRegex;
     }
 
     /**
-     * Set 正则表达式房间号，["^6.*"]6开头的房间号
-     * @param RoomIdRegex 正则表达式房间号，["^6.*"]6开头的房间号
+     * Set 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+     * @param RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
      */
     public void setRoomIdRegex(String [] RoomIdRegex) {
         this.RoomIdRegex = RoomIdRegex;

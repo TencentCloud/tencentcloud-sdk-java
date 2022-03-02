@@ -99,6 +99,87 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
+     * 新建DID根据公钥生成Tdid
+     * @param req CreateTDidByPublicKeyRequest
+     * @return CreateTDidByPublicKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTDidByPublicKeyResponse CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTDidByPublicKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTDidByPublicKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取权威机构信息
+     * @param req GetAuthorityIssuerRequest
+     * @return GetAuthorityIssuerResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAuthorityIssuerResponse GetAuthorityIssuer(GetAuthorityIssuerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAuthorityIssuerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAuthorityIssuer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看DID文档
+
+     * @param req GetDidDocumentRequest
+     * @return GetDidDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDidDocumentResponse GetDidDocument(GetDidDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDidDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDidDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetDidDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置凭证链上状态
+     * @param req SetCredentialStatusRequest
+     * @return SetCredentialStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetCredentialStatusResponse SetCredentialStatus(SetCredentialStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetCredentialStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetCredentialStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetCredentialStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *验证凭证
      * @param req VerifyCredentialRequest
      * @return VerifyCredentialResponse

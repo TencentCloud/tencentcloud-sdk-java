@@ -30,14 +30,14 @@ public class UpdateScanUsersRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * 字符串用户号，逗号分隔
+    * 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
     */
     @SerializedName("UserIdString")
     @Expose
     private String UserIdString;
 
     /**
-    * 正则表达式用户号，["^6.*"]6开头的用户号
+    * 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
     */
     @SerializedName("UserIdRegex")
     @Expose
@@ -60,32 +60,32 @@ public class UpdateScanUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 字符串用户号，逗号分隔 
-     * @return UserIdString 字符串用户号，逗号分隔
+     * Get 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003" 
+     * @return UserIdString 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
      */
     public String getUserIdString() {
         return this.UserIdString;
     }
 
     /**
-     * Set 字符串用户号，逗号分隔
-     * @param UserIdString 字符串用户号，逗号分隔
+     * Set 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
+     * @param UserIdString 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
      */
     public void setUserIdString(String UserIdString) {
         this.UserIdString = UserIdString;
     }
 
     /**
-     * Get 正则表达式用户号，["^6.*"]6开头的用户号 
-     * @return UserIdRegex 正则表达式用户号，["^6.*"]6开头的用户号
+     * Get 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检 
+     * @return UserIdRegex 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
      */
     public String [] getUserIdRegex() {
         return this.UserIdRegex;
     }
 
     /**
-     * Set 正则表达式用户号，["^6.*"]6开头的用户号
-     * @param UserIdRegex 正则表达式用户号，["^6.*"]6开头的用户号
+     * Set 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+     * @param UserIdRegex 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
      */
     public void setUserIdRegex(String [] UserIdRegex) {
         this.UserIdRegex = UserIdRegex;

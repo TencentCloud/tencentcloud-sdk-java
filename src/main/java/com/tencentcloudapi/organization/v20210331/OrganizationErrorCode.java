@@ -90,6 +90,9 @@ public enum OrganizationErrorCode {
     // 成员存在优惠继承。
      UNSUPPORTEDOPERATION_MEMBERDISCOUNTINHERITEXISTED("UnsupportedOperation.MemberDiscountInheritExisted"),
      
+    // 成员存在账户级优惠。
+     UNSUPPORTEDOPERATION_MEMBEREXISTACCOUNTLEVELDISCOUNTINHERIT("UnsupportedOperation.MemberExistAccountLevelDiscountInherit"),
+     
     // 成员是代理商或代客。
      UNSUPPORTEDOPERATION_MEMBERISAGENT("UnsupportedOperation.MemberIsAgent"),
      
@@ -100,7 +103,10 @@ public enum OrganizationErrorCode {
      UNSUPPORTEDOPERATION_OWNERDISCOUNTINHERITEXISTED("UnsupportedOperation.OwnerDiscountInheritExisted"),
      
     // 代付者欠费且未开通信用账户。
-     UNSUPPORTEDOPERATION_PAYERARREARSANDNOCREDITACCOUNT("UnsupportedOperation.PayerArrearsAndNoCreditAccount");
+     UNSUPPORTEDOPERATION_PAYERARREARSANDNOCREDITACCOUNT("UnsupportedOperation.PayerArrearsAndNoCreditAccount"),
+     
+    // 代付者存在账户级优惠。
+     UNSUPPORTEDOPERATION_PAYEREXISTACCOUNTLEVELDISCOUNTINHERIT("UnsupportedOperation.PayerExistAccountLevelDiscountInherit");
      
     private String value;
     private OrganizationErrorCode (String value){

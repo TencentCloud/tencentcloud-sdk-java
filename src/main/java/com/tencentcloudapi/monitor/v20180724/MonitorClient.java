@@ -99,7 +99,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *创建告警策略
+     *创建云监控告警策略
      * @param req CreateAlarmPolicyRequest
      * @return CreateAlarmPolicyResponse
      * @throws TencentCloudSDKException

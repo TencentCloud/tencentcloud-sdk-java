@@ -44,6 +44,13 @@ public class CreateCredentialRequest extends AbstractModel{
     private String VersionCredential;
 
     /**
+    * 是否未签名
+    */
+    @SerializedName("UnSigned")
+    @Expose
+    private Boolean UnSigned;
+
+    /**
      * Get 参数集合，详见示例 
      * @return FunctionArg 参数集合，详见示例
      */
@@ -91,6 +98,22 @@ public class CreateCredentialRequest extends AbstractModel{
         this.VersionCredential = VersionCredential;
     }
 
+    /**
+     * Get 是否未签名 
+     * @return UnSigned 是否未签名
+     */
+    public Boolean getUnSigned() {
+        return this.UnSigned;
+    }
+
+    /**
+     * Set 是否未签名
+     * @param UnSigned 是否未签名
+     */
+    public void setUnSigned(Boolean UnSigned) {
+        this.UnSigned = UnSigned;
+    }
+
     public CreateCredentialRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateCredentialRequest extends AbstractModel{
         if (source.VersionCredential != null) {
             this.VersionCredential = new String(source.VersionCredential);
         }
+        if (source.UnSigned != null) {
+            this.UnSigned = new Boolean(source.UnSigned);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateCredentialRequest extends AbstractModel{
         this.setParamObj(map, prefix + "FunctionArg.", this.FunctionArg);
         this.setParamObj(map, prefix + "TransactionArg.", this.TransactionArg);
         this.setParamSimple(map, prefix + "VersionCredential", this.VersionCredential);
+        this.setParamSimple(map, prefix + "UnSigned", this.UnSigned);
 
     }
 }

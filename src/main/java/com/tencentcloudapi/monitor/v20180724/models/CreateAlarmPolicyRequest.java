@@ -72,7 +72,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 触发条件模板 Id ，可不传
+    * 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
     */
     @SerializedName("ConditionTemplateId")
     @Expose
@@ -233,16 +233,16 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发条件模板 Id ，可不传 
-     * @return ConditionTemplateId 触发条件模板 Id ，可不传
+     * Get 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。 
+     * @return ConditionTemplateId 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
      */
     public Long getConditionTemplateId() {
         return this.ConditionTemplateId;
     }
 
     /**
-     * Set 触发条件模板 Id ，可不传
-     * @param ConditionTemplateId 触发条件模板 Id ，可不传
+     * Set 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
+     * @param ConditionTemplateId 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
      */
     public void setConditionTemplateId(Long ConditionTemplateId) {
         this.ConditionTemplateId = ConditionTemplateId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRealtimeScanConfigResponse extends AbstractModel{
 
     /**
-    * 返回结果码
+    * 返回结果码，0正常，非0失败
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -37,35 +37,35 @@ public class DescribeRealtimeScanConfigResponse extends AbstractModel{
     private Long BizId;
 
     /**
-    * 送检类型
+    * 送检类型，0: 全量送审，1: 自定义送审
     */
     @SerializedName("AuditType")
     @Expose
     private Long AuditType;
 
     /**
-    * 用户号正则
+    * 用户号正则表达式
     */
     @SerializedName("UserIdRegex")
     @Expose
     private String [] UserIdRegex;
 
     /**
-    * 房间号正则
+    * 房间号正则表达式
     */
     @SerializedName("RoomIdRegex")
     @Expose
     private String [] RoomIdRegex;
 
     /**
-    * 用户号字符串，逗号分隔
+    * 用户号字符串，逗号分隔，示例："0001,0002,0003"
     */
     @SerializedName("UserIdString")
     @Expose
     private String UserIdString;
 
     /**
-    * 房间号字符串，逗号分隔
+    * 房间号字符串，逗号分隔，示例："0001,0002,0003"
     */
     @SerializedName("RoomIdString")
     @Expose
@@ -79,16 +79,16 @@ public class DescribeRealtimeScanConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果码 
-     * @return ErrorCode 返回结果码
+     * Get 返回结果码，0正常，非0失败 
+     * @return ErrorCode 返回结果码，0正常，非0失败
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 返回结果码
-     * @param ErrorCode 返回结果码
+     * Set 返回结果码，0正常，非0失败
+     * @param ErrorCode 返回结果码，0正常，非0失败
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
@@ -111,80 +111,80 @@ public class DescribeRealtimeScanConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 送检类型 
-     * @return AuditType 送检类型
+     * Get 送检类型，0: 全量送审，1: 自定义送审 
+     * @return AuditType 送检类型，0: 全量送审，1: 自定义送审
      */
     public Long getAuditType() {
         return this.AuditType;
     }
 
     /**
-     * Set 送检类型
-     * @param AuditType 送检类型
+     * Set 送检类型，0: 全量送审，1: 自定义送审
+     * @param AuditType 送检类型，0: 全量送审，1: 自定义送审
      */
     public void setAuditType(Long AuditType) {
         this.AuditType = AuditType;
     }
 
     /**
-     * Get 用户号正则 
-     * @return UserIdRegex 用户号正则
+     * Get 用户号正则表达式 
+     * @return UserIdRegex 用户号正则表达式
      */
     public String [] getUserIdRegex() {
         return this.UserIdRegex;
     }
 
     /**
-     * Set 用户号正则
-     * @param UserIdRegex 用户号正则
+     * Set 用户号正则表达式
+     * @param UserIdRegex 用户号正则表达式
      */
     public void setUserIdRegex(String [] UserIdRegex) {
         this.UserIdRegex = UserIdRegex;
     }
 
     /**
-     * Get 房间号正则 
-     * @return RoomIdRegex 房间号正则
+     * Get 房间号正则表达式 
+     * @return RoomIdRegex 房间号正则表达式
      */
     public String [] getRoomIdRegex() {
         return this.RoomIdRegex;
     }
 
     /**
-     * Set 房间号正则
-     * @param RoomIdRegex 房间号正则
+     * Set 房间号正则表达式
+     * @param RoomIdRegex 房间号正则表达式
      */
     public void setRoomIdRegex(String [] RoomIdRegex) {
         this.RoomIdRegex = RoomIdRegex;
     }
 
     /**
-     * Get 用户号字符串，逗号分隔 
-     * @return UserIdString 用户号字符串，逗号分隔
+     * Get 用户号字符串，逗号分隔，示例："0001,0002,0003" 
+     * @return UserIdString 用户号字符串，逗号分隔，示例："0001,0002,0003"
      */
     public String getUserIdString() {
         return this.UserIdString;
     }
 
     /**
-     * Set 用户号字符串，逗号分隔
-     * @param UserIdString 用户号字符串，逗号分隔
+     * Set 用户号字符串，逗号分隔，示例："0001,0002,0003"
+     * @param UserIdString 用户号字符串，逗号分隔，示例："0001,0002,0003"
      */
     public void setUserIdString(String UserIdString) {
         this.UserIdString = UserIdString;
     }
 
     /**
-     * Get 房间号字符串，逗号分隔 
-     * @return RoomIdString 房间号字符串，逗号分隔
+     * Get 房间号字符串，逗号分隔，示例："0001,0002,0003" 
+     * @return RoomIdString 房间号字符串，逗号分隔，示例："0001,0002,0003"
      */
     public String getRoomIdString() {
         return this.RoomIdString;
     }
 
     /**
-     * Set 房间号字符串，逗号分隔
-     * @param RoomIdString 房间号字符串，逗号分隔
+     * Set 房间号字符串，逗号分隔，示例："0001,0002,0003"
+     * @param RoomIdString 房间号字符串，逗号分隔，示例："0001,0002,0003"
      */
     public void setRoomIdString(String RoomIdString) {
         this.RoomIdString = RoomIdString;

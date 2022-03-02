@@ -51,6 +51,20 @@ public class DescribeComplianceWhitelistItemListRequest extends AbstractModel{
     private ComplianceFilters [] Filters;
 
     /**
+    * 排序字段
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+    * 排序方式 desc asc
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
      * Get 起始偏移量，默认为0。 
      * @return Offset 起始偏移量，默认为0。
      */
@@ -114,6 +128,38 @@ public class DescribeComplianceWhitelistItemListRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 排序字段 
+     * @return By 排序字段
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序字段
+     * @param By 排序字段
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
+    /**
+     * Get 排序方式 desc asc 
+     * @return Order 排序方式 desc asc
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式 desc asc
+     * @param Order 排序方式 desc asc
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
     public DescribeComplianceWhitelistItemListRequest() {
     }
 
@@ -140,6 +186,12 @@ public class DescribeComplianceWhitelistItemListRequest extends AbstractModel{
                 this.Filters[i] = new ComplianceFilters(source.Filters[i]);
             }
         }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
     }
 
 
@@ -151,6 +203,8 @@ public class DescribeComplianceWhitelistItemListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "AssetTypeSet.", this.AssetTypeSet);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }
