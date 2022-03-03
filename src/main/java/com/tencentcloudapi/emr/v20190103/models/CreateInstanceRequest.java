@@ -264,6 +264,13 @@ Hadoop-Hbase
     private String SceneName;
 
     /**
+    * 共享组件信息
+    */
+    @SerializedName("ExternalService")
+    @Expose
+    private ExternalService [] ExternalService;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -891,6 +898,22 @@ Hadoop-Hbase
         this.SceneName = SceneName;
     }
 
+    /**
+     * Get 共享组件信息 
+     * @return ExternalService 共享组件信息
+     */
+    public ExternalService [] getExternalService() {
+        return this.ExternalService;
+    }
+
+    /**
+     * Set 共享组件信息
+     * @param ExternalService 共享组件信息
+     */
+    public void setExternalService(ExternalService [] ExternalService) {
+        this.ExternalService = ExternalService;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -995,6 +1018,12 @@ Hadoop-Hbase
         if (source.SceneName != null) {
             this.SceneName = new String(source.SceneName);
         }
+        if (source.ExternalService != null) {
+            this.ExternalService = new ExternalService[source.ExternalService.length];
+            for (int i = 0; i < source.ExternalService.length; i++) {
+                this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
+            }
+        }
     }
 
 
@@ -1030,6 +1059,7 @@ Hadoop-Hbase
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
+        this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
 
     }
 }

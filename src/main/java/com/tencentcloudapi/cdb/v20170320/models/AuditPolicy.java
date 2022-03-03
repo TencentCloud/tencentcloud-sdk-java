@@ -84,6 +84,14 @@ public class AuditPolicy extends AbstractModel{
     private String RuleName;
 
     /**
+    * 数据库实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
      * Get 审计策略 ID。 
      * @return PolicyId 审计策略 ID。
      */
@@ -231,6 +239,26 @@ public class AuditPolicy extends AbstractModel{
         this.RuleName = RuleName;
     }
 
+    /**
+     * Get 数据库实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceName 数据库实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 数据库实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceName 数据库实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
     public AuditPolicy() {
     }
 
@@ -263,6 +291,9 @@ public class AuditPolicy extends AbstractModel{
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
     }
 
 
@@ -278,6 +309,7 @@ public class AuditPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
 
     }
 }

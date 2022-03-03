@@ -52,6 +52,13 @@ public class DescribeResourcesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。 
      * @return ResourceIds 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。
      */
@@ -119,6 +126,22 @@ public class DescribeResourcesRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public DescribeResourcesRequest() {
     }
 
@@ -145,6 +168,9 @@ public class DescribeResourcesRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class DescribeResourcesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

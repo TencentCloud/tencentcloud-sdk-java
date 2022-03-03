@@ -30,6 +30,13 @@ public class RunJobsRequest extends AbstractModel{
     private RunJobDescription [] RunJobDescriptions;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 批量启动作业的描述信息 
      * @return RunJobDescriptions 批量启动作业的描述信息
      */
@@ -43,6 +50,22 @@ public class RunJobsRequest extends AbstractModel{
      */
     public void setRunJobDescriptions(RunJobDescription [] RunJobDescriptions) {
         this.RunJobDescriptions = RunJobDescriptions;
+    }
+
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
     }
 
     public RunJobsRequest() {
@@ -59,6 +82,9 @@ public class RunJobsRequest extends AbstractModel{
                 this.RunJobDescriptions[i] = new RunJobDescription(source.RunJobDescriptions[i]);
             }
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class RunJobsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RunJobDescriptions.", this.RunJobDescriptions);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

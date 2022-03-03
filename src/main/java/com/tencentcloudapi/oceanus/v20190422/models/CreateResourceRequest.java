@@ -65,6 +65,13 @@ public class CreateResourceRequest extends AbstractModel{
     private String FolderId;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 资源位置 
      * @return ResourceLoc 资源位置
      */
@@ -160,6 +167,22 @@ public class CreateResourceRequest extends AbstractModel{
         this.FolderId = FolderId;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public CreateResourceRequest() {
     }
 
@@ -186,6 +209,9 @@ public class CreateResourceRequest extends AbstractModel{
         if (source.FolderId != null) {
             this.FolderId = new String(source.FolderId);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class CreateResourceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ResourceConfigRemark", this.ResourceConfigRemark);
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

@@ -47,6 +47,14 @@ public class ModifyBundle extends AbstractModel{
     private Bundle Bundle;
 
     /**
+    * 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NotSupportModifyMessage")
+    @Expose
+    private String NotSupportModifyMessage;
+
+    /**
      * Get 更改实例套餐后需要补的差价。 
      * @return ModifyPrice 更改实例套餐后需要补的差价。
      */
@@ -106,6 +114,26 @@ public class ModifyBundle extends AbstractModel{
         this.Bundle = Bundle;
     }
 
+    /**
+     * Get 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NotSupportModifyMessage 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNotSupportModifyMessage() {
+        return this.NotSupportModifyMessage;
+    }
+
+    /**
+     * Set 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NotSupportModifyMessage 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotSupportModifyMessage(String NotSupportModifyMessage) {
+        this.NotSupportModifyMessage = NotSupportModifyMessage;
+    }
+
     public ModifyBundle() {
     }
 
@@ -123,6 +151,9 @@ public class ModifyBundle extends AbstractModel{
         if (source.Bundle != null) {
             this.Bundle = new Bundle(source.Bundle);
         }
+        if (source.NotSupportModifyMessage != null) {
+            this.NotSupportModifyMessage = new String(source.NotSupportModifyMessage);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class ModifyBundle extends AbstractModel{
         this.setParamObj(map, prefix + "ModifyPrice.", this.ModifyPrice);
         this.setParamSimple(map, prefix + "ModifyBundleState", this.ModifyBundleState);
         this.setParamObj(map, prefix + "Bundle.", this.Bundle);
+        this.setParamSimple(map, prefix + "NotSupportModifyMessage", this.NotSupportModifyMessage);
 
     }
 }

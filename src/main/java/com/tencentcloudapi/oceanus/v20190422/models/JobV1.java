@@ -255,6 +255,22 @@ public class JobV1 extends AbstractModel{
     private String FlinkVersion;
 
     /**
+    * 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
+    * 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkSpaceName")
+    @Expose
+    private String WorkSpaceName;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -834,6 +850,46 @@ public class JobV1 extends AbstractModel{
         this.FlinkVersion = FlinkVersion;
     }
 
+    /**
+     * Get 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkSpaceId 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkSpaceId 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
+    /**
+     * Get 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkSpaceName 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkSpaceName() {
+        return this.WorkSpaceName;
+    }
+
+    /**
+     * Set 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkSpaceName 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkSpaceName(String WorkSpaceName) {
+        this.WorkSpaceName = WorkSpaceName;
+    }
+
     public JobV1() {
     }
 
@@ -929,6 +985,12 @@ public class JobV1 extends AbstractModel{
         if (source.FlinkVersion != null) {
             this.FlinkVersion = new String(source.FlinkVersion);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
+        if (source.WorkSpaceName != null) {
+            this.WorkSpaceName = new String(source.WorkSpaceName);
+        }
     }
 
 
@@ -965,6 +1027,8 @@ public class JobV1 extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
 
     }
 }

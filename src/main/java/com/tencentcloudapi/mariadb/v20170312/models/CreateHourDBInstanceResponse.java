@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateHourDBInstanceResponse extends AbstractModel{
 
     /**
-    * 长订单号。可以据此调用 DescribeOrders
+    * 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
     */
     @SerializedName("DealName")
@@ -46,9 +46,9 @@ public class CreateHourDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 长订单号。可以据此调用 DescribeOrders
+     * Get 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。 
-     * @return DealName 长订单号。可以据此调用 DescribeOrders
+     * @return DealName 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
      */
     public String getDealName() {
@@ -56,9 +56,9 @@ public class CreateHourDBInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 长订单号。可以据此调用 DescribeOrders
+     * Set 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
-     * @param DealName 长订单号。可以据此调用 DescribeOrders
+     * @param DealName 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
      */
     public void setDealName(String DealName) {

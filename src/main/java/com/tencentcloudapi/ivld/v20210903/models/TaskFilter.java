@@ -72,6 +72,13 @@ public class TaskFilter extends AbstractModel{
     private Long [] MediaLabelSet;
 
     /**
+    * 媒资自定义标签数组
+    */
+    @SerializedName("LabelSet")
+    @Expose
+    private String [] LabelSet;
+
+    /**
      * Get 媒资文件类型 
      * @return MediaTypeSet 媒资文件类型
      */
@@ -183,6 +190,22 @@ public class TaskFilter extends AbstractModel{
         this.MediaLabelSet = MediaLabelSet;
     }
 
+    /**
+     * Get 媒资自定义标签数组 
+     * @return LabelSet 媒资自定义标签数组
+     */
+    public String [] getLabelSet() {
+        return this.LabelSet;
+    }
+
+    /**
+     * Set 媒资自定义标签数组
+     * @param LabelSet 媒资自定义标签数组
+     */
+    public void setLabelSet(String [] LabelSet) {
+        this.LabelSet = LabelSet;
+    }
+
     public TaskFilter() {
     }
 
@@ -233,6 +256,12 @@ public class TaskFilter extends AbstractModel{
                 this.MediaLabelSet[i] = new Long(source.MediaLabelSet[i]);
             }
         }
+        if (source.LabelSet != null) {
+            this.LabelSet = new String[source.LabelSet.length];
+            for (int i = 0; i < source.LabelSet.length; i++) {
+                this.LabelSet[i] = new String(source.LabelSet[i]);
+            }
+        }
     }
 
 
@@ -247,6 +276,7 @@ public class TaskFilter extends AbstractModel{
         this.setParamArraySimple(map, prefix + "MediaNameSet.", this.MediaNameSet);
         this.setParamArraySimple(map, prefix + "MediaLangSet.", this.MediaLangSet);
         this.setParamArraySimple(map, prefix + "MediaLabelSet.", this.MediaLabelSet);
+        this.setParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
 
     }
 }

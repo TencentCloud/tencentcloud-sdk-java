@@ -65,6 +65,13 @@ public class DescribeJobConfigsRequest extends AbstractModel{
     private Boolean OnlyDraft;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -160,6 +167,22 @@ public class DescribeJobConfigsRequest extends AbstractModel{
         this.OnlyDraft = OnlyDraft;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public DescribeJobConfigsRequest() {
     }
 
@@ -192,6 +215,9 @@ public class DescribeJobConfigsRequest extends AbstractModel{
         if (source.OnlyDraft != null) {
             this.OnlyDraft = new Boolean(source.OnlyDraft);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class DescribeJobConfigsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "OnlyDraft", this.OnlyDraft);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

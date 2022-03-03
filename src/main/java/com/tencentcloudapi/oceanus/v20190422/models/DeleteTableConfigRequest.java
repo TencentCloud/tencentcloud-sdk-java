@@ -44,6 +44,13 @@ public class DeleteTableConfigRequest extends AbstractModel{
     private String TableName;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 作业ID 
      * @return JobId 作业ID
      */
@@ -91,6 +98,22 @@ public class DeleteTableConfigRequest extends AbstractModel{
         this.TableName = TableName;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public DeleteTableConfigRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DeleteTableConfigRequest extends AbstractModel{
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DeleteTableConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "DebugId", this.DebugId);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

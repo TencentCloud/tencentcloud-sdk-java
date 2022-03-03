@@ -80,6 +80,30 @@ public class AMQPExchange extends AbstractModel{
     private Boolean Internal;
 
     /**
+    * 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlternateExchange")
+    @Expose
+    private String AlternateExchange;
+
+    /**
+    * 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlternateExchangeDeleteMark")
+    @Expose
+    private Boolean AlternateExchangeDeleteMark;
+
+    /**
+    * 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DelayType")
+    @Expose
+    private String DelayType;
+
+    /**
      * Get Exchange名称 
      * @return Name Exchange名称
      */
@@ -211,6 +235,66 @@ public class AMQPExchange extends AbstractModel{
         this.Internal = Internal;
     }
 
+    /**
+     * Get 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlternateExchange 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlternateExchange() {
+        return this.AlternateExchange;
+    }
+
+    /**
+     * Set 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlternateExchange 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlternateExchange(String AlternateExchange) {
+        this.AlternateExchange = AlternateExchange;
+    }
+
+    /**
+     * Get 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlternateExchangeDeleteMark 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAlternateExchangeDeleteMark() {
+        return this.AlternateExchangeDeleteMark;
+    }
+
+    /**
+     * Set 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlternateExchangeDeleteMark 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlternateExchangeDeleteMark(Boolean AlternateExchangeDeleteMark) {
+        this.AlternateExchangeDeleteMark = AlternateExchangeDeleteMark;
+    }
+
+    /**
+     * Get 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DelayType 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDelayType() {
+        return this.DelayType;
+    }
+
+    /**
+     * Set 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DelayType 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelayType(String DelayType) {
+        this.DelayType = DelayType;
+    }
+
     public AMQPExchange() {
     }
 
@@ -243,6 +327,15 @@ public class AMQPExchange extends AbstractModel{
         if (source.Internal != null) {
             this.Internal = new Boolean(source.Internal);
         }
+        if (source.AlternateExchange != null) {
+            this.AlternateExchange = new String(source.AlternateExchange);
+        }
+        if (source.AlternateExchangeDeleteMark != null) {
+            this.AlternateExchangeDeleteMark = new Boolean(source.AlternateExchangeDeleteMark);
+        }
+        if (source.DelayType != null) {
+            this.DelayType = new String(source.DelayType);
+        }
     }
 
 
@@ -258,6 +351,9 @@ public class AMQPExchange extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Internal", this.Internal);
+        this.setParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
+        this.setParamSimple(map, prefix + "AlternateExchangeDeleteMark", this.AlternateExchangeDeleteMark);
+        this.setParamSimple(map, prefix + "DelayType", this.DelayType);
 
     }
 }

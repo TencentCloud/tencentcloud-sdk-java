@@ -51,6 +51,20 @@ public class CreateTaskRequest extends AbstractModel{
     private Boolean UploadVideo;
 
     /**
+    * 自定义标签，可用于查询
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+    * 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+    */
+    @SerializedName("CallbackURL")
+    @Expose
+    private String CallbackURL;
+
+    /**
      * Get 媒资文件ID，最长32B 
      * @return MediaId 媒资文件ID，最长32B
      */
@@ -114,6 +128,38 @@ public class CreateTaskRequest extends AbstractModel{
         this.UploadVideo = UploadVideo;
     }
 
+    /**
+     * Get 自定义标签，可用于查询 
+     * @return Label 自定义标签，可用于查询
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 自定义标签，可用于查询
+     * @param Label 自定义标签，可用于查询
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
+    /**
+     * Get 任务分析完成的回调地址，该设置优先级高于控制台全局的设置； 
+     * @return CallbackURL 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+     */
+    public String getCallbackURL() {
+        return this.CallbackURL;
+    }
+
+    /**
+     * Set 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+     * @param CallbackURL 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+     */
+    public void setCallbackURL(String CallbackURL) {
+        this.CallbackURL = CallbackURL;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -134,6 +180,12 @@ public class CreateTaskRequest extends AbstractModel{
         if (source.UploadVideo != null) {
             this.UploadVideo = new Boolean(source.UploadVideo);
         }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.CallbackURL != null) {
+            this.CallbackURL = new String(source.CallbackURL);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class CreateTaskRequest extends AbstractModel{
         this.setParamObj(map, prefix + "MediaPreknownInfo.", this.MediaPreknownInfo);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "UploadVideo", this.UploadVideo);
+        this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
 
     }
 }

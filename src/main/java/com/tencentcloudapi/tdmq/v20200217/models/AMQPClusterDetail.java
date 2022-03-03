@@ -45,6 +45,14 @@ public class AMQPClusterDetail extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 集群基本信息 
      * @return Info 集群基本信息
      */
@@ -96,6 +104,26 @@ public class AMQPClusterDetail extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public AMQPClusterDetail() {
     }
 
@@ -116,6 +144,9 @@ public class AMQPClusterDetail extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -126,6 +157,7 @@ public class AMQPClusterDetail extends AbstractModel{
         this.setParamObj(map, prefix + "Info.", this.Info);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

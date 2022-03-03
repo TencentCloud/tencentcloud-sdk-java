@@ -37,7 +37,7 @@ public class CreateAMQPExchangeRequest extends AbstractModel{
     private String [] VHosts;
 
     /**
-    * 交换机类型，可选值为Direct, Fanout, Topic
+    * 交换机类型，可选值为Direct, Fanout, Topic, x-delayed-message
     */
     @SerializedName("Type")
     @Expose
@@ -63,6 +63,13 @@ public class CreateAMQPExchangeRequest extends AbstractModel{
     @SerializedName("AlternateExchange")
     @Expose
     private String AlternateExchange;
+
+    /**
+    * 延迟交换机类型，可选值为Direct, Fanout, Topic, 不允许为x-delayed-message
+    */
+    @SerializedName("DelayedType")
+    @Expose
+    private String DelayedType;
 
     /**
      * Get 交换机名称，3-64个字符，只能包含字母、数字、“-”及“_” 
@@ -97,16 +104,16 @@ public class CreateAMQPExchangeRequest extends AbstractModel{
     }
 
     /**
-     * Get 交换机类型，可选值为Direct, Fanout, Topic 
-     * @return Type 交换机类型，可选值为Direct, Fanout, Topic
+     * Get 交换机类型，可选值为Direct, Fanout, Topic, x-delayed-message 
+     * @return Type 交换机类型，可选值为Direct, Fanout, Topic, x-delayed-message
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 交换机类型，可选值为Direct, Fanout, Topic
-     * @param Type 交换机类型，可选值为Direct, Fanout, Topic
+     * Set 交换机类型，可选值为Direct, Fanout, Topic, x-delayed-message
+     * @param Type 交换机类型，可选值为Direct, Fanout, Topic, x-delayed-message
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -160,6 +167,22 @@ public class CreateAMQPExchangeRequest extends AbstractModel{
         this.AlternateExchange = AlternateExchange;
     }
 
+    /**
+     * Get 延迟交换机类型，可选值为Direct, Fanout, Topic, 不允许为x-delayed-message 
+     * @return DelayedType 延迟交换机类型，可选值为Direct, Fanout, Topic, 不允许为x-delayed-message
+     */
+    public String getDelayedType() {
+        return this.DelayedType;
+    }
+
+    /**
+     * Set 延迟交换机类型，可选值为Direct, Fanout, Topic, 不允许为x-delayed-message
+     * @param DelayedType 延迟交换机类型，可选值为Direct, Fanout, Topic, 不允许为x-delayed-message
+     */
+    public void setDelayedType(String DelayedType) {
+        this.DelayedType = DelayedType;
+    }
+
     public CreateAMQPExchangeRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateAMQPExchangeRequest extends AbstractModel{
         if (source.AlternateExchange != null) {
             this.AlternateExchange = new String(source.AlternateExchange);
         }
+        if (source.DelayedType != null) {
+            this.DelayedType = new String(source.DelayedType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateAMQPExchangeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
+        this.setParamSimple(map, prefix + "DelayedType", this.DelayedType);
 
     }
 }

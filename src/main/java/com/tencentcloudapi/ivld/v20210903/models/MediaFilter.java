@@ -47,6 +47,14 @@ public class MediaFilter extends AbstractModel{
     private String [] MediaIdSet;
 
     /**
+    * 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LabelSet")
+    @Expose
+    private String [] LabelSet;
+
+    /**
      * Get 媒资名称过滤条件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaNameSet 媒资名称过滤条件
@@ -106,6 +114,26 @@ public class MediaFilter extends AbstractModel{
         this.MediaIdSet = MediaIdSet;
     }
 
+    /**
+     * Get 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LabelSet 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLabelSet() {
+        return this.LabelSet;
+    }
+
+    /**
+     * Set 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LabelSet 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabelSet(String [] LabelSet) {
+        this.LabelSet = LabelSet;
+    }
+
     public MediaFilter() {
     }
 
@@ -132,6 +160,12 @@ public class MediaFilter extends AbstractModel{
                 this.MediaIdSet[i] = new String(source.MediaIdSet[i]);
             }
         }
+        if (source.LabelSet != null) {
+            this.LabelSet = new String[source.LabelSet.length];
+            for (int i = 0; i < source.LabelSet.length; i++) {
+                this.LabelSet[i] = new String(source.LabelSet[i]);
+            }
+        }
     }
 
 
@@ -142,6 +176,7 @@ public class MediaFilter extends AbstractModel{
         this.setParamArraySimple(map, prefix + "MediaNameSet.", this.MediaNameSet);
         this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
         this.setParamArraySimple(map, prefix + "MediaIdSet.", this.MediaIdSet);
+        this.setParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
 
     }
 }

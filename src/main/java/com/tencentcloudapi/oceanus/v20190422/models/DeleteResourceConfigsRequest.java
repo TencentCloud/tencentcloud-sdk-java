@@ -37,6 +37,13 @@ public class DeleteResourceConfigsRequest extends AbstractModel{
     private Long [] ResourceConfigVersions;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -68,6 +75,22 @@ public class DeleteResourceConfigsRequest extends AbstractModel{
         this.ResourceConfigVersions = ResourceConfigVersions;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public DeleteResourceConfigsRequest() {
     }
 
@@ -85,6 +108,9 @@ public class DeleteResourceConfigsRequest extends AbstractModel{
                 this.ResourceConfigVersions[i] = new Long(source.ResourceConfigVersions[i]);
             }
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class DeleteResourceConfigsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamArraySimple(map, prefix + "ResourceConfigVersions.", this.ResourceConfigVersions);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

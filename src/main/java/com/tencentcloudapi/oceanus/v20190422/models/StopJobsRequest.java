@@ -30,6 +30,13 @@ public class StopJobsRequest extends AbstractModel{
     private StopJobDescription [] StopJobDescriptions;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 批量停止作业的描述信息 
      * @return StopJobDescriptions 批量停止作业的描述信息
      */
@@ -43,6 +50,22 @@ public class StopJobsRequest extends AbstractModel{
      */
     public void setStopJobDescriptions(StopJobDescription [] StopJobDescriptions) {
         this.StopJobDescriptions = StopJobDescriptions;
+    }
+
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
     }
 
     public StopJobsRequest() {
@@ -59,6 +82,9 @@ public class StopJobsRequest extends AbstractModel{
                 this.StopJobDescriptions[i] = new StopJobDescription(source.StopJobDescriptions[i]);
             }
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class StopJobsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "StopJobDescriptions.", this.StopJobDescriptions);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

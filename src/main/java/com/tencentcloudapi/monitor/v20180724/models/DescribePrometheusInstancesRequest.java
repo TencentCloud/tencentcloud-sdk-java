@@ -89,6 +89,15 @@ public class DescribePrometheusInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private Long InstanceChargeType;
+
+    /**
      * Get 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。 
      * @return InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
      */
@@ -256,6 +265,30 @@ public class DescribePrometheusInstancesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li> 
+     * @return InstanceChargeType 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
+     */
+    public Long getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
+     * @param InstanceChargeType 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
+     */
+    public void setInstanceChargeType(Long InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
     public DescribePrometheusInstancesRequest() {
     }
 
@@ -303,6 +336,9 @@ public class DescribePrometheusInstancesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new Long(source.InstanceChargeType);
+        }
     }
 
 
@@ -318,6 +354,7 @@ public class DescribePrometheusInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IPv4Address.", this.IPv4Address);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

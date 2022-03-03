@@ -45,6 +45,9 @@ public enum PostgresErrorCode {
     // 管控元数据库访问失败，请稍后重试。如果持续不成功，请联系客服进行处理。
      FAILEDOPERATION_DATABASEACCESSERROR("FailedOperation.DatabaseAccessError"),
      
+    // 数据操作失败，请联系客服进行处理。
+     FAILEDOPERATION_DATABASEAFFECTEDERROR("FailedOperation.DatabaseAffectedError"),
+     
     // VPC删除路由失败。
      FAILEDOPERATION_DELETEALLROUTE("FailedOperation.DeleteAllRoute"),
      
@@ -95,6 +98,9 @@ public enum PostgresErrorCode {
      
     // 修改只读组配置失败。
      FAILEDOPERATION_MODIFYROGROUPERROR("FailedOperation.ModifyROGroupError"),
+     
+    // 不符合资源所拥有的的网络数量要求。
+     FAILEDOPERATION_NETWORKNUMLIMITERROR("FailedOperation.NetworkNumLimitError"),
      
     // 访问管控服务失败，请稍后重试。如果持续不成功，请联系客服进行处理。
      FAILEDOPERATION_OSSACCESSERROR("FailedOperation.OssAccessError"),
@@ -149,6 +155,9 @@ public enum PostgresErrorCode {
      
     // 只读实例已在其他只读组。
      FAILEDOPERATION_ROINSTANCEHASINROGROUPERROR("FailedOperation.ROInstanceHasInROGroupError"),
+     
+    // Serverless实例不支持此操作。
+     FAILEDOPERATION_SERVERLESSNOTSUPPORTEDERROR("FailedOperation.ServerlessNotSupportedError"),
      
     // 访问内部服务失败，请稍后重试。如果持续不成功，请联系客服进行处理。
      FAILEDOPERATION_SERVICEACCESSERROR("FailedOperation.ServiceAccessError"),
@@ -215,6 +224,9 @@ public enum PostgresErrorCode {
      
     // 管控系统元数据访问异常，请联系客服处理。
      INTERNALERROR_INSTANCEDATAERROR("InternalError.InstanceDataError"),
+     
+    // 后台数据解析失败，请联系客服进行处理。
+     INTERNALERROR_MARSHALERROR("InternalError.MarshalError"),
      
     // 系统错误。出现这种错误时，请联系客服支持。
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
@@ -402,6 +414,9 @@ public enum PostgresErrorCode {
     // 您没有权限操作当前资源。
      OPERATIONDENIED_INSTANCEACCESSDENIEDERROR("OperationDenied.InstanceAccessDeniedError"),
      
+    // 不支持ipv6。
+     OPERATIONDENIED_INSTANCEIPV6NOTSUPPORTEDERROR("OperationDenied.InstanceIpv6NotSupportedError"),
+     
     // 实例状态限制当前操作。
      OPERATIONDENIED_INSTANCESTATUSDENIEDERROR("OperationDenied.InstanceStatusDeniedError"),
      
@@ -422,6 +437,9 @@ public enum PostgresErrorCode {
      
     // 只读组状态限制当前操作。
      OPERATIONDENIED_ROGROUPSTATUSERROR("OperationDenied.ROGroupStatusError"),
+     
+    // 只读实例不支持ipv6。
+     OPERATIONDENIED_ROINSTANCEIPV6NOTSUPPORTEDERROR("OperationDenied.ROInstanceIpv6NotSupportedError"),
      
     // 只读节点总数不能超过上限值。
      OPERATIONDENIED_ROINSTANCECOUNTEXEEDERROR("OperationDenied.RoInstanceCountExeedError"),

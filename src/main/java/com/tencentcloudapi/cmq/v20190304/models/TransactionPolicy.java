@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class TransactionPolicy extends AbstractModel{
 
     /**
-    * 第一次回查时间。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("FirstQueryInterval")
-    @Expose
-    private Long FirstQueryInterval;
-
-    /**
     * 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -39,24 +31,12 @@ public class TransactionPolicy extends AbstractModel{
     private Long MaxQueryCount;
 
     /**
-     * Get 第一次回查时间。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstQueryInterval 第一次回查时间。
+    * 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getFirstQueryInterval() {
-        return this.FirstQueryInterval;
-    }
-
-    /**
-     * Set 第一次回查时间。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstQueryInterval 第一次回查时间。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setFirstQueryInterval(Long FirstQueryInterval) {
-        this.FirstQueryInterval = FirstQueryInterval;
-    }
+    */
+    @SerializedName("FirstQueryInterval")
+    @Expose
+    private Long FirstQueryInterval;
 
     /**
      * Get 最大查询次数。
@@ -78,6 +58,26 @@ public class TransactionPolicy extends AbstractModel{
         this.MaxQueryCount = MaxQueryCount;
     }
 
+    /**
+     * Get 第一次回查时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstQueryInterval 第一次回查时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFirstQueryInterval() {
+        return this.FirstQueryInterval;
+    }
+
+    /**
+     * Set 第一次回查时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstQueryInterval 第一次回查时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstQueryInterval(Long FirstQueryInterval) {
+        this.FirstQueryInterval = FirstQueryInterval;
+    }
+
     public TransactionPolicy() {
     }
 
@@ -86,11 +86,11 @@ public class TransactionPolicy extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TransactionPolicy(TransactionPolicy source) {
-        if (source.FirstQueryInterval != null) {
-            this.FirstQueryInterval = new Long(source.FirstQueryInterval);
-        }
         if (source.MaxQueryCount != null) {
             this.MaxQueryCount = new Long(source.MaxQueryCount);
+        }
+        if (source.FirstQueryInterval != null) {
+            this.FirstQueryInterval = new Long(source.FirstQueryInterval);
         }
     }
 
@@ -99,8 +99,8 @@ public class TransactionPolicy extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
         this.setParamSimple(map, prefix + "MaxQueryCount", this.MaxQueryCount);
+        this.setParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
 
     }
 }

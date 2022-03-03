@@ -93,6 +93,13 @@ public class CreateServiceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * vpc属性
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
      * Get 用户自定义的服务名称。 
      * @return ServiceName 用户自定义的服务名称。
      */
@@ -252,6 +259,22 @@ public class CreateServiceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get vpc属性 
+     * @return UniqVpcId vpc属性
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set vpc属性
+     * @param UniqVpcId vpc属性
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
     public CreateServiceRequest() {
     }
 
@@ -296,6 +319,9 @@ public class CreateServiceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppIdType", this.AppIdType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
 
     }
 }

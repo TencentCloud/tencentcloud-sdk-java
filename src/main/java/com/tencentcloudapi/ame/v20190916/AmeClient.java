@@ -239,7 +239,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *查询机器人列表，支持 Id、状态等过滤条件。
+     *获取机器人列表，支持 Id、状态等过滤条件。
      * @param req DescribeKTVRobotsRequest
      * @return DescribeKTVRobotsResponse
      * @throws TencentCloudSDKException

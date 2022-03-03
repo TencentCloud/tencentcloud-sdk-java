@@ -30,6 +30,38 @@ public class QueueSet extends AbstractModel{
     private String QueueId;
 
     /**
+    * 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RewindSeconds")
+    @Expose
+    private Long RewindSeconds;
+
+    /**
+    * 创建者Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUin")
+    @Expose
+    private Long CreateUin;
+
+    /**
+    * 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastModifyTime")
+    @Expose
+    private Long LastModifyTime;
+
+    /**
+    * 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VisibilityTimeout")
+    @Expose
+    private Long VisibilityTimeout;
+
+    /**
     * 消息队列名字。
     */
     @SerializedName("QueueName")
@@ -37,20 +69,28 @@ public class QueueSet extends AbstractModel{
     private String QueueName;
 
     /**
-    * 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
+    * 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Qps")
+    @SerializedName("Trace")
     @Expose
-    private Long Qps;
+    private Boolean Trace;
 
     /**
-    * 带宽限制。
+    * 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Bps")
+    @SerializedName("Tags")
     @Expose
-    private Long Bps;
+    private Tag [] Tags;
+
+    /**
+    * 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RewindMsgNum")
+    @Expose
+    private Long RewindMsgNum;
 
     /**
     * 飞行消息最大保留时间。
@@ -59,6 +99,30 @@ public class QueueSet extends AbstractModel{
     @SerializedName("MaxDelaySeconds")
     @Expose
     private Long MaxDelaySeconds;
+
+    /**
+    * 事务消息策略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransactionPolicy")
+    @Expose
+    private TransactionPolicy TransactionPolicy;
+
+    /**
+    * 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MsgRetentionSeconds")
+    @Expose
+    private Long MsgRetentionSeconds;
+
+    /**
+    * 延迟消息数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DelayMsgNum")
+    @Expose
+    private Long DelayMsgNum;
 
     /**
     * 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
@@ -77,60 +141,12 @@ public class QueueSet extends AbstractModel{
     private Long PollingWaitSeconds;
 
     /**
-    * 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+    * 带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MsgRetentionSeconds")
+    @SerializedName("Bps")
     @Expose
-    private Long MsgRetentionSeconds;
-
-    /**
-    * 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("VisibilityTimeout")
-    @Expose
-    private Long VisibilityTimeout;
-
-    /**
-    * 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaxMsgSize")
-    @Expose
-    private Long MaxMsgSize;
-
-    /**
-    * 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RewindSeconds")
-    @Expose
-    private Long RewindSeconds;
-
-    /**
-    * 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private Long CreateTime;
-
-    /**
-    * 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LastModifyTime")
-    @Expose
-    private Long LastModifyTime;
-
-    /**
-    * 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ActiveMsgNum")
-    @Expose
-    private Long ActiveMsgNum;
+    private Long Bps;
 
     /**
     * 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
@@ -141,20 +157,28 @@ public class QueueSet extends AbstractModel{
     private Long InactiveMsgNum;
 
     /**
-    * 延迟消息数。
+    * 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DelayMsgNum")
+    @SerializedName("DeadLetterPolicy")
     @Expose
-    private Long DelayMsgNum;
+    private DeadLetterPolicy DeadLetterPolicy;
 
     /**
-    * 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+    * 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RewindMsgNum")
+    @SerializedName("ActiveMsgNum")
     @Expose
-    private Long RewindMsgNum;
+    private Long ActiveMsgNum;
+
+    /**
+    * 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxMsgSize")
+    @Expose
+    private Long MaxMsgSize;
 
     /**
     * 消息最小未消费时间，单位为秒。
@@ -165,14 +189,6 @@ public class QueueSet extends AbstractModel{
     private Long MinMsgTime;
 
     /**
-    * 事务消息队列。true表示是事务消息，false表示不是事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Transaction")
-    @Expose
-    private Boolean Transaction;
-
-    /**
     * 死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -181,44 +197,36 @@ public class QueueSet extends AbstractModel{
     private DeadLetterSource [] DeadLetterSource;
 
     /**
-    * 死信队列策略。
+    * 事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DeadLetterPolicy")
+    @SerializedName("Transaction")
     @Expose
-    private DeadLetterPolicy DeadLetterPolicy;
+    private Boolean Transaction;
 
     /**
-    * 事务消息策略。
+    * 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TransactionPolicy")
+    @SerializedName("Qps")
     @Expose
-    private TransactionPolicy TransactionPolicy;
+    private Long Qps;
 
     /**
-    * 创建者Uin。
+    * 队列的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CreateUin")
+    @SerializedName("CreateTime")
     @Expose
-    private Long CreateUin;
+    private Long CreateTime;
 
     /**
-    * 关联的标签。
+    * 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Tags")
+    @SerializedName("Migrate")
     @Expose
-    private Tag [] Tags;
-
-    /**
-    * 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Trace")
-    @Expose
-    private Boolean Trace;
+    private Long Migrate;
 
     /**
      * Get 消息队列ID。 
@@ -234,6 +242,86 @@ public class QueueSet extends AbstractModel{
      */
     public void setQueueId(String QueueId) {
         this.QueueId = QueueId;
+    }
+
+    /**
+     * Get 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRewindSeconds() {
+        return this.RewindSeconds;
+    }
+
+    /**
+     * Set 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRewindSeconds(Long RewindSeconds) {
+        this.RewindSeconds = RewindSeconds;
+    }
+
+    /**
+     * Get 创建者Uin。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUin 创建者Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUin() {
+        return this.CreateUin;
+    }
+
+    /**
+     * Set 创建者Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUin 创建者Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUin(Long CreateUin) {
+        this.CreateUin = CreateUin;
+    }
+
+    /**
+     * Get 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastModifyTime() {
+        return this.LastModifyTime;
+    }
+
+    /**
+     * Set 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastModifyTime(Long LastModifyTime) {
+        this.LastModifyTime = LastModifyTime;
+    }
+
+    /**
+     * Get 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVisibilityTimeout() {
+        return this.VisibilityTimeout;
+    }
+
+    /**
+     * Set 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVisibilityTimeout(Long VisibilityTimeout) {
+        this.VisibilityTimeout = VisibilityTimeout;
     }
 
     /**
@@ -253,43 +341,63 @@ public class QueueSet extends AbstractModel{
     }
 
     /**
-     * Get 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
+     * Get 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
+     * @return Trace 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getQps() {
-        return this.Qps;
+    public Boolean getTrace() {
+        return this.Trace;
     }
 
     /**
-     * Set 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
+     * Set 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
+     * @param Trace 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setQps(Long Qps) {
-        this.Qps = Qps;
+    public void setTrace(Boolean Trace) {
+        this.Trace = Trace;
     }
 
     /**
-     * Get 带宽限制。
+     * Get 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bps 带宽限制。
+     * @return Tags 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getBps() {
-        return this.Bps;
+    public Tag [] getTags() {
+        return this.Tags;
     }
 
     /**
-     * Set 带宽限制。
+     * Set 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bps 带宽限制。
+     * @param Tags 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBps(Long Bps) {
-        this.Bps = Bps;
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRewindMsgNum() {
+        return this.RewindMsgNum;
+    }
+
+    /**
+     * Set 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRewindMsgNum(Long RewindMsgNum) {
+        this.RewindMsgNum = RewindMsgNum;
     }
 
     /**
@@ -310,6 +418,66 @@ public class QueueSet extends AbstractModel{
      */
     public void setMaxDelaySeconds(Long MaxDelaySeconds) {
         this.MaxDelaySeconds = MaxDelaySeconds;
+    }
+
+    /**
+     * Get 事务消息策略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransactionPolicy 事务消息策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TransactionPolicy getTransactionPolicy() {
+        return this.TransactionPolicy;
+    }
+
+    /**
+     * Set 事务消息策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransactionPolicy 事务消息策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransactionPolicy(TransactionPolicy TransactionPolicy) {
+        this.TransactionPolicy = TransactionPolicy;
+    }
+
+    /**
+     * Get 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMsgRetentionSeconds() {
+        return this.MsgRetentionSeconds;
+    }
+
+    /**
+     * Set 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
+        this.MsgRetentionSeconds = MsgRetentionSeconds;
+    }
+
+    /**
+     * Get 延迟消息数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DelayMsgNum 延迟消息数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDelayMsgNum() {
+        return this.DelayMsgNum;
+    }
+
+    /**
+     * Set 延迟消息数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DelayMsgNum 延迟消息数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelayMsgNum(Long DelayMsgNum) {
+        this.DelayMsgNum = DelayMsgNum;
     }
 
     /**
@@ -353,143 +521,23 @@ public class QueueSet extends AbstractModel{
     }
 
     /**
-     * Get 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+     * Get 带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+     * @return Bps 带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMsgRetentionSeconds() {
-        return this.MsgRetentionSeconds;
+    public Long getBps() {
+        return this.Bps;
     }
 
     /**
-     * Set 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+     * Set 带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MsgRetentionSeconds 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
-        this.MsgRetentionSeconds = MsgRetentionSeconds;
-    }
-
-    /**
-     * Get 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+     * @param Bps 带宽限制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getVisibilityTimeout() {
-        return this.VisibilityTimeout;
-    }
-
-    /**
-     * Set 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VisibilityTimeout 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setVisibilityTimeout(Long VisibilityTimeout) {
-        this.VisibilityTimeout = VisibilityTimeout;
-    }
-
-    /**
-     * Get 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMaxMsgSize() {
-        return this.MaxMsgSize;
-    }
-
-    /**
-     * Set 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaxMsgSize(Long MaxMsgSize) {
-        this.MaxMsgSize = MaxMsgSize;
-    }
-
-    /**
-     * Get 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getRewindSeconds() {
-        return this.RewindSeconds;
-    }
-
-    /**
-     * Set 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RewindSeconds 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRewindSeconds(Long RewindSeconds) {
-        this.RewindSeconds = RewindSeconds;
-    }
-
-    /**
-     * Get 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreateTime(Long CreateTime) {
-        this.CreateTime = CreateTime;
-    }
-
-    /**
-     * Get 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getLastModifyTime() {
-        return this.LastModifyTime;
-    }
-
-    /**
-     * Set 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastModifyTime 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLastModifyTime(Long LastModifyTime) {
-        this.LastModifyTime = LastModifyTime;
-    }
-
-    /**
-     * Get 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getActiveMsgNum() {
-        return this.ActiveMsgNum;
-    }
-
-    /**
-     * Set 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setActiveMsgNum(Long ActiveMsgNum) {
-        this.ActiveMsgNum = ActiveMsgNum;
+    public void setBps(Long Bps) {
+        this.Bps = Bps;
     }
 
     /**
@@ -513,43 +561,63 @@ public class QueueSet extends AbstractModel{
     }
 
     /**
-     * Get 延迟消息数。
+     * Get 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DelayMsgNum 延迟消息数。
+     * @return DeadLetterPolicy 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDelayMsgNum() {
-        return this.DelayMsgNum;
+    public DeadLetterPolicy getDeadLetterPolicy() {
+        return this.DeadLetterPolicy;
     }
 
     /**
-     * Set 延迟消息数。
+     * Set 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DelayMsgNum 延迟消息数。
+     * @param DeadLetterPolicy 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDelayMsgNum(Long DelayMsgNum) {
-        this.DelayMsgNum = DelayMsgNum;
+    public void setDeadLetterPolicy(DeadLetterPolicy DeadLetterPolicy) {
+        this.DeadLetterPolicy = DeadLetterPolicy;
     }
 
     /**
-     * Get 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+     * Get 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+     * @return ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRewindMsgNum() {
-        return this.RewindMsgNum;
+    public Long getActiveMsgNum() {
+        return this.ActiveMsgNum;
     }
 
     /**
-     * Set 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+     * Set 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RewindMsgNum 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+     * @param ActiveMsgNum 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRewindMsgNum(Long RewindMsgNum) {
-        this.RewindMsgNum = RewindMsgNum;
+    public void setActiveMsgNum(Long ActiveMsgNum) {
+        this.ActiveMsgNum = ActiveMsgNum;
+    }
+
+    /**
+     * Get 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxMsgSize() {
+        return this.MaxMsgSize;
+    }
+
+    /**
+     * Set 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxMsgSize(Long MaxMsgSize) {
+        this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
@@ -573,26 +641,6 @@ public class QueueSet extends AbstractModel{
     }
 
     /**
-     * Get 事务消息队列。true表示是事务消息，false表示不是事务消息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Transaction 事务消息队列。true表示是事务消息，false表示不是事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Boolean getTransaction() {
-        return this.Transaction;
-    }
-
-    /**
-     * Set 事务消息队列。true表示是事务消息，false表示不是事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Transaction 事务消息队列。true表示是事务消息，false表示不是事务消息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTransaction(Boolean Transaction) {
-        this.Transaction = Transaction;
-    }
-
-    /**
      * Get 死信队列。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeadLetterSource 死信队列。
@@ -613,103 +661,83 @@ public class QueueSet extends AbstractModel{
     }
 
     /**
-     * Get 死信队列策略。
+     * Get 事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadLetterPolicy 死信队列策略。
+     * @return Transaction 事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DeadLetterPolicy getDeadLetterPolicy() {
-        return this.DeadLetterPolicy;
+    public Boolean getTransaction() {
+        return this.Transaction;
     }
 
     /**
-     * Set 死信队列策略。
+     * Set 事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadLetterPolicy 死信队列策略。
+     * @param Transaction 事务消息队列。true表示是事务消息，false表示不是事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDeadLetterPolicy(DeadLetterPolicy DeadLetterPolicy) {
-        this.DeadLetterPolicy = DeadLetterPolicy;
+    public void setTransaction(Boolean Transaction) {
+        this.Transaction = Transaction;
     }
 
     /**
-     * Get 事务消息策略。
+     * Get 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransactionPolicy 事务消息策略。
+     * @return Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TransactionPolicy getTransactionPolicy() {
-        return this.TransactionPolicy;
+    public Long getQps() {
+        return this.Qps;
     }
 
     /**
-     * Set 事务消息策略。
+     * Set 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransactionPolicy 事务消息策略。
+     * @param Qps 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTransactionPolicy(TransactionPolicy TransactionPolicy) {
-        this.TransactionPolicy = TransactionPolicy;
+    public void setQps(Long Qps) {
+        this.Qps = Qps;
     }
 
     /**
-     * Get 创建者Uin。
+     * Get 队列的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUin 创建者Uin。
+     * @return CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCreateUin() {
-        return this.CreateUin;
+    public Long getCreateTime() {
+        return this.CreateTime;
     }
 
     /**
-     * Set 创建者Uin。
+     * Set 队列的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUin 创建者Uin。
+     * @param CreateTime 队列的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreateUin(Long CreateUin) {
-        this.CreateUin = CreateUin;
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 关联的标签。
+     * Get 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 关联的标签。
+     * @return Migrate 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Tag [] getTags() {
-        return this.Tags;
+    public Long getMigrate() {
+        return this.Migrate;
     }
 
     /**
-     * Set 关联的标签。
+     * Set 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 关联的标签。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
-     * Get 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Trace 消息轨迹。true表示开启，false表示不开启。
+     * @param Migrate 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Boolean getTrace() {
-        return this.Trace;
-    }
-
-    /**
-     * Set 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Trace 消息轨迹。true表示开启，false表示不开启。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTrace(Boolean Trace) {
-        this.Trace = Trace;
+    public void setMigrate(Long Migrate) {
+        this.Migrate = Migrate;
     }
 
     public QueueSet() {
@@ -723,74 +751,23 @@ public class QueueSet extends AbstractModel{
         if (source.QueueId != null) {
             this.QueueId = new String(source.QueueId);
         }
-        if (source.QueueName != null) {
-            this.QueueName = new String(source.QueueName);
-        }
-        if (source.Qps != null) {
-            this.Qps = new Long(source.Qps);
-        }
-        if (source.Bps != null) {
-            this.Bps = new Long(source.Bps);
-        }
-        if (source.MaxDelaySeconds != null) {
-            this.MaxDelaySeconds = new Long(source.MaxDelaySeconds);
-        }
-        if (source.MaxMsgHeapNum != null) {
-            this.MaxMsgHeapNum = new Long(source.MaxMsgHeapNum);
-        }
-        if (source.PollingWaitSeconds != null) {
-            this.PollingWaitSeconds = new Long(source.PollingWaitSeconds);
-        }
-        if (source.MsgRetentionSeconds != null) {
-            this.MsgRetentionSeconds = new Long(source.MsgRetentionSeconds);
-        }
-        if (source.VisibilityTimeout != null) {
-            this.VisibilityTimeout = new Long(source.VisibilityTimeout);
-        }
-        if (source.MaxMsgSize != null) {
-            this.MaxMsgSize = new Long(source.MaxMsgSize);
-        }
         if (source.RewindSeconds != null) {
             this.RewindSeconds = new Long(source.RewindSeconds);
         }
-        if (source.CreateTime != null) {
-            this.CreateTime = new Long(source.CreateTime);
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
         }
         if (source.LastModifyTime != null) {
             this.LastModifyTime = new Long(source.LastModifyTime);
         }
-        if (source.ActiveMsgNum != null) {
-            this.ActiveMsgNum = new Long(source.ActiveMsgNum);
+        if (source.VisibilityTimeout != null) {
+            this.VisibilityTimeout = new Long(source.VisibilityTimeout);
         }
-        if (source.InactiveMsgNum != null) {
-            this.InactiveMsgNum = new Long(source.InactiveMsgNum);
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
         }
-        if (source.DelayMsgNum != null) {
-            this.DelayMsgNum = new Long(source.DelayMsgNum);
-        }
-        if (source.RewindMsgNum != null) {
-            this.RewindMsgNum = new Long(source.RewindMsgNum);
-        }
-        if (source.MinMsgTime != null) {
-            this.MinMsgTime = new Long(source.MinMsgTime);
-        }
-        if (source.Transaction != null) {
-            this.Transaction = new Boolean(source.Transaction);
-        }
-        if (source.DeadLetterSource != null) {
-            this.DeadLetterSource = new DeadLetterSource[source.DeadLetterSource.length];
-            for (int i = 0; i < source.DeadLetterSource.length; i++) {
-                this.DeadLetterSource[i] = new DeadLetterSource(source.DeadLetterSource[i]);
-            }
-        }
-        if (source.DeadLetterPolicy != null) {
-            this.DeadLetterPolicy = new DeadLetterPolicy(source.DeadLetterPolicy);
-        }
-        if (source.TransactionPolicy != null) {
-            this.TransactionPolicy = new TransactionPolicy(source.TransactionPolicy);
-        }
-        if (source.CreateUin != null) {
-            this.CreateUin = new Long(source.CreateUin);
+        if (source.Trace != null) {
+            this.Trace = new Boolean(source.Trace);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -798,8 +775,62 @@ public class QueueSet extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
-        if (source.Trace != null) {
-            this.Trace = new Boolean(source.Trace);
+        if (source.RewindMsgNum != null) {
+            this.RewindMsgNum = new Long(source.RewindMsgNum);
+        }
+        if (source.MaxDelaySeconds != null) {
+            this.MaxDelaySeconds = new Long(source.MaxDelaySeconds);
+        }
+        if (source.TransactionPolicy != null) {
+            this.TransactionPolicy = new TransactionPolicy(source.TransactionPolicy);
+        }
+        if (source.MsgRetentionSeconds != null) {
+            this.MsgRetentionSeconds = new Long(source.MsgRetentionSeconds);
+        }
+        if (source.DelayMsgNum != null) {
+            this.DelayMsgNum = new Long(source.DelayMsgNum);
+        }
+        if (source.MaxMsgHeapNum != null) {
+            this.MaxMsgHeapNum = new Long(source.MaxMsgHeapNum);
+        }
+        if (source.PollingWaitSeconds != null) {
+            this.PollingWaitSeconds = new Long(source.PollingWaitSeconds);
+        }
+        if (source.Bps != null) {
+            this.Bps = new Long(source.Bps);
+        }
+        if (source.InactiveMsgNum != null) {
+            this.InactiveMsgNum = new Long(source.InactiveMsgNum);
+        }
+        if (source.DeadLetterPolicy != null) {
+            this.DeadLetterPolicy = new DeadLetterPolicy(source.DeadLetterPolicy);
+        }
+        if (source.ActiveMsgNum != null) {
+            this.ActiveMsgNum = new Long(source.ActiveMsgNum);
+        }
+        if (source.MaxMsgSize != null) {
+            this.MaxMsgSize = new Long(source.MaxMsgSize);
+        }
+        if (source.MinMsgTime != null) {
+            this.MinMsgTime = new Long(source.MinMsgTime);
+        }
+        if (source.DeadLetterSource != null) {
+            this.DeadLetterSource = new DeadLetterSource[source.DeadLetterSource.length];
+            for (int i = 0; i < source.DeadLetterSource.length; i++) {
+                this.DeadLetterSource[i] = new DeadLetterSource(source.DeadLetterSource[i]);
+            }
+        }
+        if (source.Transaction != null) {
+            this.Transaction = new Boolean(source.Transaction);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.Migrate != null) {
+            this.Migrate = new Long(source.Migrate);
         }
     }
 
@@ -809,30 +840,31 @@ public class QueueSet extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "QueueId", this.QueueId);
+        this.setParamSimple(map, prefix + "RewindSeconds", this.RewindSeconds);
+        this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
+        this.setParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+        this.setParamSimple(map, prefix + "VisibilityTimeout", this.VisibilityTimeout);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
-        this.setParamSimple(map, prefix + "Qps", this.Qps);
-        this.setParamSimple(map, prefix + "Bps", this.Bps);
+        this.setParamSimple(map, prefix + "Trace", this.Trace);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RewindMsgNum", this.RewindMsgNum);
         this.setParamSimple(map, prefix + "MaxDelaySeconds", this.MaxDelaySeconds);
+        this.setParamObj(map, prefix + "TransactionPolicy.", this.TransactionPolicy);
+        this.setParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
+        this.setParamSimple(map, prefix + "DelayMsgNum", this.DelayMsgNum);
         this.setParamSimple(map, prefix + "MaxMsgHeapNum", this.MaxMsgHeapNum);
         this.setParamSimple(map, prefix + "PollingWaitSeconds", this.PollingWaitSeconds);
-        this.setParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
-        this.setParamSimple(map, prefix + "VisibilityTimeout", this.VisibilityTimeout);
-        this.setParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
-        this.setParamSimple(map, prefix + "RewindSeconds", this.RewindSeconds);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
-        this.setParamSimple(map, prefix + "ActiveMsgNum", this.ActiveMsgNum);
+        this.setParamSimple(map, prefix + "Bps", this.Bps);
         this.setParamSimple(map, prefix + "InactiveMsgNum", this.InactiveMsgNum);
-        this.setParamSimple(map, prefix + "DelayMsgNum", this.DelayMsgNum);
-        this.setParamSimple(map, prefix + "RewindMsgNum", this.RewindMsgNum);
-        this.setParamSimple(map, prefix + "MinMsgTime", this.MinMsgTime);
-        this.setParamSimple(map, prefix + "Transaction", this.Transaction);
-        this.setParamArrayObj(map, prefix + "DeadLetterSource.", this.DeadLetterSource);
         this.setParamObj(map, prefix + "DeadLetterPolicy.", this.DeadLetterPolicy);
-        this.setParamObj(map, prefix + "TransactionPolicy.", this.TransactionPolicy);
-        this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
-        this.setParamSimple(map, prefix + "Trace", this.Trace);
+        this.setParamSimple(map, prefix + "ActiveMsgNum", this.ActiveMsgNum);
+        this.setParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
+        this.setParamSimple(map, prefix + "MinMsgTime", this.MinMsgTime);
+        this.setParamArrayObj(map, prefix + "DeadLetterSource.", this.DeadLetterSource);
+        this.setParamSimple(map, prefix + "Transaction", this.Transaction);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Migrate", this.Migrate);
 
     }
 }

@@ -51,6 +51,13 @@ public class CreateResourceConfigRequest extends AbstractModel{
     private Long AutoDelete;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -114,6 +121,22 @@ public class CreateResourceConfigRequest extends AbstractModel{
         this.AutoDelete = AutoDelete;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public CreateResourceConfigRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateResourceConfigRequest extends AbstractModel{
         if (source.AutoDelete != null) {
             this.AutoDelete = new Long(source.AutoDelete);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateResourceConfigRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ResourceLoc.", this.ResourceLoc);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

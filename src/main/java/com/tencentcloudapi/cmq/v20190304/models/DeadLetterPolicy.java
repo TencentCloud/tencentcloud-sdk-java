@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class DeadLetterPolicy extends AbstractModel{
 
     /**
-    * 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("DeadLetterQueueName")
-    @Expose
-    private String DeadLetterQueueName;
-
-    /**
     * 死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -39,12 +31,12 @@ public class DeadLetterPolicy extends AbstractModel{
     private String DeadLetterQueue;
 
     /**
-    * 死信队列策略。
+    * 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Policy")
+    @SerializedName("DeadLetterQueueName")
     @Expose
-    private Long Policy;
+    private String DeadLetterQueueName;
 
     /**
     * 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
@@ -55,32 +47,20 @@ public class DeadLetterPolicy extends AbstractModel{
     private Long MaxTimeToLive;
 
     /**
+    * 死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Policy")
+    @Expose
+    private Long Policy;
+
+    /**
     * 最大接收次数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReceiveCount")
     @Expose
     private Long MaxReceiveCount;
-
-    /**
-     * Get 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadLetterQueueName 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getDeadLetterQueueName() {
-        return this.DeadLetterQueueName;
-    }
-
-    /**
-     * Set 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadLetterQueueName 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDeadLetterQueueName(String DeadLetterQueueName) {
-        this.DeadLetterQueueName = DeadLetterQueueName;
-    }
 
     /**
      * Get 死信队列。
@@ -103,23 +83,23 @@ public class DeadLetterPolicy extends AbstractModel{
     }
 
     /**
-     * Get 死信队列策略。
+     * Get 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Policy 死信队列策略。
+     * @return DeadLetterQueueName 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPolicy() {
-        return this.Policy;
+    public String getDeadLetterQueueName() {
+        return this.DeadLetterQueueName;
     }
 
     /**
-     * Set 死信队列策略。
+     * Set 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Policy 死信队列策略。
+     * @param DeadLetterQueueName 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPolicy(Long Policy) {
-        this.Policy = Policy;
+    public void setDeadLetterQueueName(String DeadLetterQueueName) {
+        this.DeadLetterQueueName = DeadLetterQueueName;
     }
 
     /**
@@ -140,6 +120,26 @@ public class DeadLetterPolicy extends AbstractModel{
      */
     public void setMaxTimeToLive(Long MaxTimeToLive) {
         this.MaxTimeToLive = MaxTimeToLive;
+    }
+
+    /**
+     * Get 死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Policy 死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPolicy() {
+        return this.Policy;
+    }
+
+    /**
+     * Set 死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Policy 死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicy(Long Policy) {
+        this.Policy = Policy;
     }
 
     /**
@@ -170,17 +170,17 @@ public class DeadLetterPolicy extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeadLetterPolicy(DeadLetterPolicy source) {
-        if (source.DeadLetterQueueName != null) {
-            this.DeadLetterQueueName = new String(source.DeadLetterQueueName);
-        }
         if (source.DeadLetterQueue != null) {
             this.DeadLetterQueue = new String(source.DeadLetterQueue);
         }
-        if (source.Policy != null) {
-            this.Policy = new Long(source.Policy);
+        if (source.DeadLetterQueueName != null) {
+            this.DeadLetterQueueName = new String(source.DeadLetterQueueName);
         }
         if (source.MaxTimeToLive != null) {
             this.MaxTimeToLive = new Long(source.MaxTimeToLive);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Long(source.Policy);
         }
         if (source.MaxReceiveCount != null) {
             this.MaxReceiveCount = new Long(source.MaxReceiveCount);
@@ -192,10 +192,10 @@ public class DeadLetterPolicy extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeadLetterQueueName", this.DeadLetterQueueName);
         this.setParamSimple(map, prefix + "DeadLetterQueue", this.DeadLetterQueue);
-        this.setParamSimple(map, prefix + "Policy", this.Policy);
+        this.setParamSimple(map, prefix + "DeadLetterQueueName", this.DeadLetterQueueName);
         this.setParamSimple(map, prefix + "MaxTimeToLive", this.MaxTimeToLive);
+        this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "MaxReceiveCount", this.MaxReceiveCount);
 
     }

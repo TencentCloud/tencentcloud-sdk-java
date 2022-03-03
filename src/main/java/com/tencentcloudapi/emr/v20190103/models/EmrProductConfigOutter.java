@@ -167,6 +167,14 @@ public class EmrProductConfigOutter extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
+    * SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicKeyId")
+    @Expose
+    private String PublicKeyId;
+
+    /**
      * Get 软件信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SoftInfo 软件信息
@@ -526,6 +534,26 @@ public class EmrProductConfigOutter extends AbstractModel{
         this.SecurityGroups = SecurityGroups;
     }
 
+    /**
+     * Get SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicKeyId SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicKeyId() {
+        return this.PublicKeyId;
+    }
+
+    /**
+     * Set SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicKeyId SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicKeyId(String PublicKeyId) {
+        this.PublicKeyId = PublicKeyId;
+    }
+
     public EmrProductConfigOutter() {
     }
 
@@ -594,6 +622,9 @@ public class EmrProductConfigOutter extends AbstractModel{
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.PublicKeyId != null) {
+            this.PublicKeyId = new String(source.PublicKeyId);
+        }
     }
 
 
@@ -619,6 +650,7 @@ public class EmrProductConfigOutter extends AbstractModel{
         this.setParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "PublicKeyId", this.PublicKeyId);
 
     }
 }

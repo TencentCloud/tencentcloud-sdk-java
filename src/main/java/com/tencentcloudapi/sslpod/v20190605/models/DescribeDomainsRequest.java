@@ -37,13 +37,14 @@ public class DescribeDomainsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+    * 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
+选domain，入参请填Domain
     */
     @SerializedName("SearchType")
     @Expose
@@ -99,6 +100,13 @@ public class DescribeDomainsRequest extends AbstractModel{
     private String Status;
 
     /**
+    * 搜索域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -131,40 +139,44 @@ public class DescribeDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索的类型有：none，tags，grade，brand，code，hash，limit。
-选tags，入参请填Tag，
-选grade，入参请填Grade，
-选brand，入参请填Brand，
-选code，入参请填Code，
-选hash，入参请填Hash
-选limit，标识只返回数量信息 
-     * @return SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+     * Get 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
+选domain，入参请填Domain 
+     * @return SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
+选tags，入参请填Tag，
+选grade，入参请填Grade，
+选brand，入参请填Brand，
+选code，入参请填Code，
+选hash，入参请填Hash
+选limit，标识只返回数量信息
+选domain，入参请填Domain
      */
     public String getSearchType() {
         return this.SearchType;
     }
 
     /**
-     * Set 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+     * Set 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
-     * @param SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选domain，入参请填Domain
+     * @param SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
+选domain，入参请填Domain
      */
     public void setSearchType(String SearchType) {
         this.SearchType = SearchType;
@@ -282,6 +294,22 @@ public class DescribeDomainsRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 搜索域名 
+     * @return Domain 搜索域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 搜索域名
+     * @param Domain 搜索域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public DescribeDomainsRequest() {
     }
 
@@ -320,6 +348,9 @@ public class DescribeDomainsRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -337,6 +368,7 @@ public class DescribeDomainsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Hash", this.Hash);
         this.setParamSimple(map, prefix + "Item", this.Item);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

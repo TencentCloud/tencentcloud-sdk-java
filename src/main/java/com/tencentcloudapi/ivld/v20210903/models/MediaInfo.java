@@ -78,6 +78,14 @@ public class MediaInfo extends AbstractModel{
     private Float Progress;
 
     /**
+    * 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
      * Get 媒资ID 
      * @return MediaId 媒资ID
      */
@@ -213,6 +221,26 @@ public class MediaInfo extends AbstractModel{
         this.Progress = Progress;
     }
 
+    /**
+     * Get 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Label 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Label 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
     public MediaInfo() {
     }
 
@@ -242,6 +270,9 @@ public class MediaInfo extends AbstractModel{
         if (source.Progress != null) {
             this.Progress = new Float(source.Progress);
         }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
     }
 
 
@@ -256,6 +287,7 @@ public class MediaInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "Label", this.Label);
 
     }
 }

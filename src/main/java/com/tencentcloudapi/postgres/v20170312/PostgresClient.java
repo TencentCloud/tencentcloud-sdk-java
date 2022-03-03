@@ -119,6 +119,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *可对实例进行网络的添加操作。
+     * @param req CreateDBInstanceNetworkAccessRequest
+     * @return CreateDBInstanceNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccess(CreateDBInstanceNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBInstanceNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBInstanceNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
@@ -199,6 +219,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *可对RO组进行网络的添加操作。
+     * @param req CreateReadOnlyGroupNetworkAccessRequest
+     * @return CreateReadOnlyGroupNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyGroupNetworkAccessResponse CreateReadOnlyGroupNetworkAccess(CreateReadOnlyGroupNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReadOnlyGroupNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
      * @param req CreateServerlessDBInstanceRequest
      * @return CreateServerlessDBInstanceResponse
@@ -219,6 +259,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *可对实例进行网络的删除操作。
+     * @param req DeleteDBInstanceNetworkAccessRequest
+     * @return DeleteDBInstanceNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBInstanceNetworkAccessResponse DeleteDBInstanceNetworkAccess(DeleteDBInstanceNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDBInstanceNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteReadOnlyGroup)用于删除指定的只读组
      * @param req DeleteReadOnlyGroupRequest
      * @return DeleteReadOnlyGroupResponse
@@ -231,6 +291,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteReadOnlyGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *可对RO组进行网络的删除操作。
+     * @param req DeleteReadOnlyGroupNetworkAccessRequest
+     * @return DeleteReadOnlyGroupNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(DeleteReadOnlyGroupNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReadOnlyGroupNetworkAccess");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

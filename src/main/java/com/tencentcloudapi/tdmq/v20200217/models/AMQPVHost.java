@@ -73,6 +73,14 @@ public class AMQPVHost extends AbstractModel{
     private String Password;
 
     /**
+    * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_” 
      * @return VHostId 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
      */
@@ -188,6 +196,26 @@ public class AMQPVHost extends AbstractModel{
         this.Password = Password;
     }
 
+    /**
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public AMQPVHost() {
     }
 
@@ -217,6 +245,9 @@ public class AMQPVHost extends AbstractModel{
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -231,6 +262,7 @@ public class AMQPVHost extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

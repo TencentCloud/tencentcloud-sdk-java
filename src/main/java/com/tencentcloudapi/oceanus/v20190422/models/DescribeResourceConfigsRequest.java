@@ -65,6 +65,13 @@ public class DescribeResourceConfigsRequest extends AbstractModel{
     private String JobId;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -160,6 +167,22 @@ public class DescribeResourceConfigsRequest extends AbstractModel{
         this.JobId = JobId;
     }
 
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public DescribeResourceConfigsRequest() {
     }
 
@@ -189,6 +212,9 @@ public class DescribeResourceConfigsRequest extends AbstractModel{
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class DescribeResourceConfigsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ResourceConfigVersions.", this.ResourceConfigVersions);
         this.setParamSimple(map, prefix + "JobConfigVersion", this.JobConfigVersion);
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

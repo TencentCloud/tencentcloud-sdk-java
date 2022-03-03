@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateHourDBInstanceRequest extends AbstractModel{
 
     /**
-    * 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+    * 节点可用区分布，最多可填两个可用区。
     */
     @SerializedName("Zones")
     @Expose
@@ -80,9 +80,6 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
 
     /**
     * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
     */
     @SerializedName("DbVersionId")
@@ -132,7 +129,9 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     private String DcnInstanceId;
 
     /**
-    * 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+    * 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
     */
     @SerializedName("InitParams")
     @Expose
@@ -153,16 +152,16 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     private String RollbackTime;
 
     /**
-     * Get 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。 
-     * @return Zones 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Get 节点可用区分布，最多可填两个可用区。 
+     * @return Zones 节点可用区分布，最多可填两个可用区。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
-     * @param Zones 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Set 节点可用区分布，最多可填两个可用区。
+     * @param Zones 节点可用区分布，最多可填两个可用区。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
@@ -282,14 +281,8 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
 
     /**
      * Get 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。 
      * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      */
     public String getDbVersionId() {
@@ -298,14 +291,8 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
 
     /**
      * Set 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      */
     public void setDbVersionId(String DbVersionId) {
@@ -409,16 +396,24 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。 
-     * @return InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     * Get 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。 
+     * @return InitParams 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
      */
     public DBParamValue [] getInitParams() {
         return this.InitParams;
     }
 
     /**
-     * Set 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
-     * @param InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     * Set 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
+     * @param InitParams 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
      */
     public void setInitParams(DBParamValue [] InitParams) {
         this.InitParams = InitParams;

@@ -1256,6 +1256,26 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *修改IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标特性。
+     * @param req ModifyLoadBalancerMixIpTargetRequest
+     * @return ModifyLoadBalancerMixIpTargetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerMixIpTargetResponse ModifyLoadBalancerMixIpTarget(ModifyLoadBalancerMixIpTargetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancerMixIpTargetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerMixIpTargetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancerMixIpTarget");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *支持共享型clb升级到性能容量型clb（不支持性能保障降级到共享型）。
      * @param req ModifyLoadBalancerSlaRequest
      * @return ModifyLoadBalancerSlaResponse

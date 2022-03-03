@@ -338,6 +338,14 @@ public class ClusterInstancesInfo extends AbstractModel{
     private String SubnetName;
 
     /**
+    * 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterExternalServiceInfo")
+    @Expose
+    private ClusterExternalServiceInfo [] ClusterExternalServiceInfo;
+
+    /**
      * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID号
@@ -1165,6 +1173,26 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.SubnetName = SubnetName;
     }
 
+    /**
+     * Get 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterExternalServiceInfo 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterExternalServiceInfo [] getClusterExternalServiceInfo() {
+        return this.ClusterExternalServiceInfo;
+    }
+
+    /**
+     * Set 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterExternalServiceInfo 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterExternalServiceInfo(ClusterExternalServiceInfo [] ClusterExternalServiceInfo) {
+        this.ClusterExternalServiceInfo = ClusterExternalServiceInfo;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1284,6 +1312,12 @@ public class ClusterInstancesInfo extends AbstractModel{
         if (source.SubnetName != null) {
             this.SubnetName = new String(source.SubnetName);
         }
+        if (source.ClusterExternalServiceInfo != null) {
+            this.ClusterExternalServiceInfo = new ClusterExternalServiceInfo[source.ClusterExternalServiceInfo.length];
+            for (int i = 0; i < source.ClusterExternalServiceInfo.length; i++) {
+                this.ClusterExternalServiceInfo[i] = new ClusterExternalServiceInfo(source.ClusterExternalServiceInfo[i]);
+            }
+        }
     }
 
 
@@ -1327,6 +1361,7 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
+        this.setParamArrayObj(map, prefix + "ClusterExternalServiceInfo.", this.ClusterExternalServiceInfo);
 
     }
 }

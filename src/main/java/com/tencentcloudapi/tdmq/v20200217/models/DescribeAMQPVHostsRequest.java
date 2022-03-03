@@ -51,6 +51,13 @@ public class DescribeAMQPVHostsRequest extends AbstractModel{
     private String NameKeyword;
 
     /**
+    * VHostId 列表过滤
+    */
+    @SerializedName("VHostIdList")
+    @Expose
+    private String [] VHostIdList;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -114,6 +121,22 @@ public class DescribeAMQPVHostsRequest extends AbstractModel{
         this.NameKeyword = NameKeyword;
     }
 
+    /**
+     * Get VHostId 列表过滤 
+     * @return VHostIdList VHostId 列表过滤
+     */
+    public String [] getVHostIdList() {
+        return this.VHostIdList;
+    }
+
+    /**
+     * Set VHostId 列表过滤
+     * @param VHostIdList VHostId 列表过滤
+     */
+    public void setVHostIdList(String [] VHostIdList) {
+        this.VHostIdList = VHostIdList;
+    }
+
     public DescribeAMQPVHostsRequest() {
     }
 
@@ -134,6 +157,12 @@ public class DescribeAMQPVHostsRequest extends AbstractModel{
         if (source.NameKeyword != null) {
             this.NameKeyword = new String(source.NameKeyword);
         }
+        if (source.VHostIdList != null) {
+            this.VHostIdList = new String[source.VHostIdList.length];
+            for (int i = 0; i < source.VHostIdList.length; i++) {
+                this.VHostIdList[i] = new String(source.VHostIdList[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class DescribeAMQPVHostsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NameKeyword", this.NameKeyword);
+        this.setParamArraySimple(map, prefix + "VHostIdList.", this.VHostIdList);
 
     }
 }

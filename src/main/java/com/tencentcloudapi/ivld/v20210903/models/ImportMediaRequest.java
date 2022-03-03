@@ -44,6 +44,27 @@ public class ImportMediaRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+    */
+    @SerializedName("WriteBackCosPath")
+    @Expose
+    private String WriteBackCosPath;
+
+    /**
+    * 自定义标签，可用于查询
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+    * 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+    */
+    @SerializedName("CallbackURL")
+    @Expose
+    private String CallbackURL;
+
+    /**
      * Get 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB 
      * @return URL 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
      */
@@ -91,6 +112,54 @@ public class ImportMediaRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾) 
+     * @return WriteBackCosPath 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+     */
+    public String getWriteBackCosPath() {
+        return this.WriteBackCosPath;
+    }
+
+    /**
+     * Set 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+     * @param WriteBackCosPath 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+     */
+    public void setWriteBackCosPath(String WriteBackCosPath) {
+        this.WriteBackCosPath = WriteBackCosPath;
+    }
+
+    /**
+     * Get 自定义标签，可用于查询 
+     * @return Label 自定义标签，可用于查询
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 自定义标签，可用于查询
+     * @param Label 自定义标签，可用于查询
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
+    /**
+     * Get 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置； 
+     * @return CallbackURL 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+     */
+    public String getCallbackURL() {
+        return this.CallbackURL;
+    }
+
+    /**
+     * Set 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+     * @param CallbackURL 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+     */
+    public void setCallbackURL(String CallbackURL) {
+        this.CallbackURL = CallbackURL;
+    }
+
     public ImportMediaRequest() {
     }
 
@@ -108,6 +177,15 @@ public class ImportMediaRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.WriteBackCosPath != null) {
+            this.WriteBackCosPath = new String(source.WriteBackCosPath);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.CallbackURL != null) {
+            this.CallbackURL = new String(source.CallbackURL);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class ImportMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "URL", this.URL);
         this.setParamSimple(map, prefix + "MD5", this.MD5);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "WriteBackCosPath", this.WriteBackCosPath);
+        this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
 
     }
 }

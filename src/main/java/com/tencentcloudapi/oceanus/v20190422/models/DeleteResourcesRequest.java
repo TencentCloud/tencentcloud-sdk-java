@@ -30,6 +30,13 @@ public class DeleteResourcesRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 待删除资源ID列表 
      * @return ResourceIds 待删除资源ID列表
      */
@@ -43,6 +50,22 @@ public class DeleteResourcesRequest extends AbstractModel{
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
+    }
+
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
     }
 
     public DeleteResourcesRequest() {
@@ -59,6 +82,9 @@ public class DeleteResourcesRequest extends AbstractModel{
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class DeleteResourcesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }
