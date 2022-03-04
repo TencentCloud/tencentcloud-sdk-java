@@ -23,25 +23,25 @@ import java.util.HashMap;
 public class CreateExportRequest extends AbstractModel{
 
     /**
-    * 日志主题
+    * 日志主题ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志导出检索语句
-    */
-    @SerializedName("Query")
-    @Expose
-    private String Query;
-
-    /**
-    * 日志导出数量,  最大值1000万
+    * 日志导出数量,  最大值5000万
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
+
+    /**
+    * 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+    */
+    @SerializedName("Query")
+    @Expose
+    private String Query;
 
     /**
     * 日志导出起始时间，毫秒时间戳
@@ -72,51 +72,51 @@ public class CreateExportRequest extends AbstractModel{
     private String Format;
 
     /**
-     * Get 日志主题 
-     * @return TopicId 日志主题
+     * Get 日志主题ID 
+     * @return TopicId 日志主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题
-     * @param TopicId 日志主题
+     * Set 日志主题ID
+     * @param TopicId 日志主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志导出检索语句 
-     * @return Query 日志导出检索语句
-     */
-    public String getQuery() {
-        return this.Query;
-    }
-
-    /**
-     * Set 日志导出检索语句
-     * @param Query 日志导出检索语句
-     */
-    public void setQuery(String Query) {
-        this.Query = Query;
-    }
-
-    /**
-     * Get 日志导出数量,  最大值1000万 
-     * @return Count 日志导出数量,  最大值1000万
+     * Get 日志导出数量,  最大值5000万 
+     * @return Count 日志导出数量,  最大值5000万
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 日志导出数量,  最大值1000万
-     * @param Count 日志导出数量,  最大值1000万
+     * Set 日志导出数量,  最大值5000万
+     * @param Count 日志导出数量,  最大值5000万
      */
     public void setCount(Long Count) {
         this.Count = Count;
+    }
+
+    /**
+     * Get 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a> 
+     * @return Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     */
+    public String getQuery() {
+        return this.Query;
+    }
+
+    /**
+     * Set 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     * @param Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     */
+    public void setQuery(String Query) {
+        this.Query = Query;
     }
 
     /**
@@ -194,11 +194,11 @@ public class CreateExportRequest extends AbstractModel{
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
-        if (source.Query != null) {
-            this.Query = new String(source.Query);
-        }
         if (source.Count != null) {
             this.Count = new Long(source.Count);
+        }
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
         }
         if (source.From != null) {
             this.From = new Long(source.From);
@@ -220,8 +220,8 @@ public class CreateExportRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Order", this.Order);

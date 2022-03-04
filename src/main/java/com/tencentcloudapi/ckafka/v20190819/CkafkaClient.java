@@ -39,6 +39,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *给实例授权token
+     * @param req AuthorizeTokenRequest
+     * @return AuthorizeTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthorizeTokenResponse AuthorizeToken(AuthorizeTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuthorizeTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuthorizeTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AuthorizeToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量添加ACL策略
      * @param req BatchCreateAclRequest
      * @return BatchCreateAclResponse
@@ -91,6 +111,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BatchModifyTopicAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "BatchModifyTopicAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *取消授权token
+     * @param req CancelAuthorizationTokenRequest
+     * @return CancelAuthorizationTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelAuthorizationTokenResponse CancelAuthorizationToken(CancelAuthorizationTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelAuthorizationTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelAuthorizationTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelAuthorizationToken");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -191,6 +231,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateRouteResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateRoute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建最高权限的token
+     * @param req CreateTokenRequest
+     * @return CreateTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTokenResponse CreateToken(CreateTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateToken");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

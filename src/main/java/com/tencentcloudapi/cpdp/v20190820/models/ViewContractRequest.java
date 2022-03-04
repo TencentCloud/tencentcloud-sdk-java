@@ -37,13 +37,6 @@ public class ViewContractRequest extends AbstractModel{
     private String OpenKey;
 
     /**
-    * 沙箱环境填sandbox，正式环境不填
-    */
-    @SerializedName("Profile")
-    @Expose
-    private String Profile;
-
-    /**
     * 外部合同主键编号（ContractId或OutContractId必须传一个）
     */
     @SerializedName("OutContractId")
@@ -56,6 +49,13 @@ public class ViewContractRequest extends AbstractModel{
     @SerializedName("ContractId")
     @Expose
     private String ContractId;
+
+    /**
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
 
     /**
      * Get 收单系统分配的开放ID 
@@ -90,22 +90,6 @@ public class ViewContractRequest extends AbstractModel{
     }
 
     /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public String getProfile() {
-        return this.Profile;
-    }
-
-    /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
-    }
-
-    /**
      * Get 外部合同主键编号（ContractId或OutContractId必须传一个） 
      * @return OutContractId 外部合同主键编号（ContractId或OutContractId必须传一个）
      */
@@ -137,6 +121,22 @@ public class ViewContractRequest extends AbstractModel{
         this.ContractId = ContractId;
     }
 
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
     public ViewContractRequest() {
     }
 
@@ -151,14 +151,14 @@ public class ViewContractRequest extends AbstractModel{
         if (source.OpenKey != null) {
             this.OpenKey = new String(source.OpenKey);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
-        }
         if (source.OutContractId != null) {
             this.OutContractId = new String(source.OutContractId);
         }
         if (source.ContractId != null) {
             this.ContractId = new String(source.ContractId);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -169,9 +169,9 @@ public class ViewContractRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
         this.setParamSimple(map, prefix + "OutContractId", this.OutContractId);
         this.setParamSimple(map, prefix + "ContractId", this.ContractId);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

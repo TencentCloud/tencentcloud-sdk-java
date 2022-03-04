@@ -23,25 +23,11 @@ import java.util.HashMap;
 public class AddMerchantRequest extends AbstractModel{
 
     /**
-    * 法人姓名
+    * 收单系统分配的开放ID
     */
-    @SerializedName("BossName")
+    @SerializedName("OpenId")
     @Expose
-    private String BossName;
-
-    /**
-    * 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
-    */
-    @SerializedName("BusinessLicensePicture")
-    @Expose
-    private String BusinessLicensePicture;
-
-    /**
-    * 招牌名称
-    */
-    @SerializedName("BrandName")
-    @Expose
-    private String BrandName;
+    private String OpenId;
 
     /**
     * 收单系统分配的密钥
@@ -51,6 +37,48 @@ public class AddMerchantRequest extends AbstractModel{
     private String OpenKey;
 
     /**
+    * 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+    */
+    @SerializedName("OutMerchantId")
+    @Expose
+    private String OutMerchantId;
+
+    /**
+    * 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
+    */
+    @SerializedName("MerchantName")
+    @Expose
+    private String MerchantName;
+
+    /**
+    * 营业执照类型（1三证合一，2非三证合一）
+    */
+    @SerializedName("BusinessLicenseType")
+    @Expose
+    private String BusinessLicenseType;
+
+    /**
+    * 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
+    */
+    @SerializedName("BusinessLicenseNo")
+    @Expose
+    private String BusinessLicenseNo;
+
+    /**
+    * 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
+    */
+    @SerializedName("BusinessLicensePicture")
+    @Expose
+    private String BusinessLicensePicture;
+
+    /**
+    * 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
+    */
+    @SerializedName("BusinessLicenseStartDate")
+    @Expose
+    private String BusinessLicenseStartDate;
+
+    /**
     * 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
     */
     @SerializedName("BusinessLicenseEndDate")
@@ -58,11 +86,53 @@ public class AddMerchantRequest extends AbstractModel{
     private String BusinessLicenseEndDate;
 
     /**
-    * 法人证件生效时间（yyyy-mm-dd）
+    * 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
     */
-    @SerializedName("BossStartDate")
+    @SerializedName("ClassificationIds")
     @Expose
-    private String BossStartDate;
+    private String [] ClassificationIds;
+
+    /**
+    * 招牌名称
+    */
+    @SerializedName("BrandName")
+    @Expose
+    private String BrandName;
+
+    /**
+    * 联系电话
+    */
+    @SerializedName("Telephone")
+    @Expose
+    private String Telephone;
+
+    /**
+    * 城市编号
+    */
+    @SerializedName("CityId")
+    @Expose
+    private String CityId;
+
+    /**
+    * 详细地址，不含省市区县名称，长度需要大于5。
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
+
+    /**
+    * 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
+    */
+    @SerializedName("OpenHours")
+    @Expose
+    private String OpenHours;
+
+    /**
+    * 结算账户类型（2对私，1对公）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
     * 清算联行号，开户行行号
@@ -79,102 +149,11 @@ public class AddMerchantRequest extends AbstractModel{
     private String BankName;
 
     /**
-    * 营业执照类型（1三证合一，2非三证合一）
+    * 银行账号
     */
-    @SerializedName("BusinessLicenseType")
+    @SerializedName("AccountNo")
     @Expose
-    private String BusinessLicenseType;
-
-    /**
-    * 法人证件过期时间（yyyy-mm-dd）
-    */
-    @SerializedName("BossEndDate")
-    @Expose
-    private String BossEndDate;
-
-    /**
-    * 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
-    */
-    @SerializedName("BusinessLicenseNo")
-    @Expose
-    private String BusinessLicenseNo;
-
-    /**
-    * 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
-    */
-    @SerializedName("BusinessLicenseStartDate")
-    @Expose
-    private String BusinessLicenseStartDate;
-
-    /**
-    * 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
-    */
-    @SerializedName("BossIdType")
-    @Expose
-    private String BossIdType;
-
-    /**
-    * 详细地址，不含省市区县名称，长度需要大于5。
-    */
-    @SerializedName("Address")
-    @Expose
-    private String Address;
-
-    /**
-    * 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
-    */
-    @SerializedName("BossIdCountry")
-    @Expose
-    private String BossIdCountry;
-
-    /**
-    * 收单系统分配的开放ID
-    */
-    @SerializedName("OpenId")
-    @Expose
-    private String OpenId;
-
-    /**
-    * 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
-    */
-    @SerializedName("MerchantName")
-    @Expose
-    private String MerchantName;
-
-    /**
-    * 法人性别（1男，2女）
-    */
-    @SerializedName("BossSex")
-    @Expose
-    private String BossSex;
-
-    /**
-    * 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
-    */
-    @SerializedName("ClassificationIds")
-    @Expose
-    private String [] ClassificationIds;
-
-    /**
-    * 法人证件号码
-    */
-    @SerializedName("BossIdNo")
-    @Expose
-    private String BossIdNo;
-
-    /**
-    * 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
-    */
-    @SerializedName("LicencePicture")
-    @Expose
-    private String LicencePicture;
-
-    /**
-    * 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
-    */
-    @SerializedName("OpenHours")
-    @Expose
-    private String OpenHours;
+    private String AccountNo;
 
     /**
     * 银行户名
@@ -184,25 +163,39 @@ public class AddMerchantRequest extends AbstractModel{
     private String AccountName;
 
     /**
-    * 银行账号
+    * 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
     */
-    @SerializedName("AccountNo")
+    @SerializedName("BossIdType")
     @Expose
-    private String AccountNo;
+    private String BossIdType;
 
     /**
-    * 结算账户类型（2对私，1对公）
+    * 法人证件号码
     */
-    @SerializedName("AccountType")
+    @SerializedName("BossIdNo")
     @Expose
-    private String AccountType;
+    private String BossIdNo;
 
     /**
-    * 联系电话
+    * 法人姓名
     */
-    @SerializedName("Telephone")
+    @SerializedName("BossName")
     @Expose
-    private String Telephone;
+    private String BossName;
+
+    /**
+    * 法人性别（1男，2女）
+    */
+    @SerializedName("BossSex")
+    @Expose
+    private String BossSex;
+
+    /**
+    * 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
+    */
+    @SerializedName("BossIdCountry")
+    @Expose
+    private String BossIdCountry;
 
     /**
     * 法人身份证正面【私密区】（系统返回的图片路径）
@@ -212,13 +205,6 @@ public class AddMerchantRequest extends AbstractModel{
     private String BossPositive;
 
     /**
-    * 城市编号
-    */
-    @SerializedName("CityId")
-    @Expose
-    private String CityId;
-
-    /**
     * 法人身份证背面【私密区】（系统返回的图片路径）
     */
     @SerializedName("BossBack")
@@ -226,200 +212,25 @@ public class AddMerchantRequest extends AbstractModel{
     private String BossBack;
 
     /**
-    * 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+    * 法人证件生效时间（yyyy-mm-dd）
     */
-    @SerializedName("OutMerchantId")
+    @SerializedName("BossStartDate")
     @Expose
-    private String OutMerchantId;
+    private String BossStartDate;
 
     /**
-    * 组织机构代码证生效时间（yyyy-mm-dd）
+    * 法人证件过期时间（yyyy-mm-dd）
     */
-    @SerializedName("OrganizationStartDate")
+    @SerializedName("BossEndDate")
     @Expose
-    private String OrganizationStartDate;
+    private String BossEndDate;
 
     /**
-    * 法人亲属证件号码
+    * 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
     */
-    @SerializedName("AccountIdNo")
+    @SerializedName("LicencePicture")
     @Expose
-    private String AccountIdNo;
-
-    /**
-    * 财务联系人
-    */
-    @SerializedName("FinancialContact")
-    @Expose
-    private String FinancialContact;
-
-    /**
-    * 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
-    */
-    @SerializedName("AccountIdType")
-    @Expose
-    private String AccountIdType;
-
-    /**
-    * 组织机构代码证号
-    */
-    @SerializedName("OrganizationNo")
-    @Expose
-    private String OrganizationNo;
-
-    /**
-    * 其他资料1
-    */
-    @SerializedName("OtherPictureOne")
-    @Expose
-    private String OtherPictureOne;
-
-    /**
-    * 财务联系人电话
-    */
-    @SerializedName("FinancialTelephone")
-    @Expose
-    private String FinancialTelephone;
-
-    /**
-    * 沙箱环境填sandbox，正式环境不填
-    */
-    @SerializedName("Profile")
-    @Expose
-    private String Profile;
-
-    /**
-    * 组织机构代码证图片【私密区】
-    */
-    @SerializedName("OrganizationPicture")
-    @Expose
-    private String OrganizationPicture;
-
-    /**
-    * 税务登记证生效时间（yyyy-mm-dd）
-    */
-    @SerializedName("TaxRegistrationStartDate")
-    @Expose
-    private String TaxRegistrationStartDate;
-
-    /**
-    * 商户标记，自定义参数
-    */
-    @SerializedName("Tag")
-    @Expose
-    private String Tag;
-
-    /**
-    * 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
-    */
-    @SerializedName("AccountBoss")
-    @Expose
-    private String AccountBoss;
-
-    /**
-    * 法人电话
-    */
-    @SerializedName("BossTelephone")
-    @Expose
-    private String BossTelephone;
-
-    /**
-    * 税务登记证图片【私密区】
-    */
-    @SerializedName("TaxRegistrationPicture")
-    @Expose
-    private String TaxRegistrationPicture;
-
-    /**
-    * 组织机构代码证过期时间（yyyy-mm-dd）
-    */
-    @SerializedName("OrganizationEndDate")
-    @Expose
-    private String OrganizationEndDate;
-
-    /**
-    * 法人职业
-    */
-    @SerializedName("BossJob")
-    @Expose
-    private String BossJob;
-
-    /**
-    * 其他资料3
-    */
-    @SerializedName("OtherPictureThree")
-    @Expose
-    private String OtherPictureThree;
-
-    /**
-    * 授权文件【私密区】
-    */
-    @SerializedName("LicencePictureTwo")
-    @Expose
-    private String LicencePictureTwo;
-
-    /**
-    * 商户logo【公共区】
-    */
-    @SerializedName("Logo")
-    @Expose
-    private String Logo;
-
-    /**
-    * 法人住址
-    */
-    @SerializedName("BossAddress")
-    @Expose
-    private String BossAddress;
-
-    /**
-    * 法人邮箱
-    */
-    @SerializedName("BossEmail")
-    @Expose
-    private String BossEmail;
-
-    /**
-    * 其他资料2
-    */
-    @SerializedName("OtherPictureTwo")
-    @Expose
-    private String OtherPictureTwo;
-
-    /**
-    * 商户简介
-    */
-    @SerializedName("Intro")
-    @Expose
-    private String Intro;
-
-    /**
-    * 客户经理姓名，必须为系统后台的管理员真实姓名
-    */
-    @SerializedName("AccountManagerName")
-    @Expose
-    private String AccountManagerName;
-
-    /**
-    * 税务登记证过期时间（yyyy-mm-dd）
-    */
-    @SerializedName("TaxRegistrationEndDate")
-    @Expose
-    private String TaxRegistrationEndDate;
-
-    /**
-    * 其他资料4
-    */
-    @SerializedName("OtherPictureFour")
-    @Expose
-    private String OtherPictureFour;
-
-    /**
-    * 税务登记证号
-    */
-    @SerializedName("TaxRegistrationNo")
-    @Expose
-    private String TaxRegistrationNo;
+    private String LicencePicture;
 
     /**
     * 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
@@ -429,51 +240,208 @@ public class AddMerchantRequest extends AbstractModel{
     private String Type;
 
     /**
-     * Get 法人姓名 
-     * @return BossName 法人姓名
+    * 组织机构代码证号
+    */
+    @SerializedName("OrganizationNo")
+    @Expose
+    private String OrganizationNo;
+
+    /**
+    * 组织机构代码证生效时间（yyyy-mm-dd）
+    */
+    @SerializedName("OrganizationStartDate")
+    @Expose
+    private String OrganizationStartDate;
+
+    /**
+    * 组织机构代码证图片【私密区】
+    */
+    @SerializedName("OrganizationPicture")
+    @Expose
+    private String OrganizationPicture;
+
+    /**
+    * 组织机构代码证过期时间（yyyy-mm-dd）
+    */
+    @SerializedName("OrganizationEndDate")
+    @Expose
+    private String OrganizationEndDate;
+
+    /**
+    * 商户简介
+    */
+    @SerializedName("Intro")
+    @Expose
+    private String Intro;
+
+    /**
+    * 商户logo【公共区】
+    */
+    @SerializedName("Logo")
+    @Expose
+    private String Logo;
+
+    /**
+    * 商户标记，自定义参数
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+    * 财务联系人电话
+    */
+    @SerializedName("FinancialTelephone")
+    @Expose
+    private String FinancialTelephone;
+
+    /**
+    * 财务联系人
+    */
+    @SerializedName("FinancialContact")
+    @Expose
+    private String FinancialContact;
+
+    /**
+    * 税务登记证号
+    */
+    @SerializedName("TaxRegistrationNo")
+    @Expose
+    private String TaxRegistrationNo;
+
+    /**
+    * 税务登记证图片【私密区】
+    */
+    @SerializedName("TaxRegistrationPicture")
+    @Expose
+    private String TaxRegistrationPicture;
+
+    /**
+    * 税务登记证生效时间（yyyy-mm-dd）
+    */
+    @SerializedName("TaxRegistrationStartDate")
+    @Expose
+    private String TaxRegistrationStartDate;
+
+    /**
+    * 税务登记证过期时间（yyyy-mm-dd）
+    */
+    @SerializedName("TaxRegistrationEndDate")
+    @Expose
+    private String TaxRegistrationEndDate;
+
+    /**
+    * 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
+    */
+    @SerializedName("AccountBoss")
+    @Expose
+    private String AccountBoss;
+
+    /**
+    * 客户经理姓名，必须为系统后台的管理员真实姓名
+    */
+    @SerializedName("AccountManagerName")
+    @Expose
+    private String AccountManagerName;
+
+    /**
+    * 法人电话
+    */
+    @SerializedName("BossTelephone")
+    @Expose
+    private String BossTelephone;
+
+    /**
+    * 法人职业
+    */
+    @SerializedName("BossJob")
+    @Expose
+    private String BossJob;
+
+    /**
+    * 法人邮箱
+    */
+    @SerializedName("BossEmail")
+    @Expose
+    private String BossEmail;
+
+    /**
+    * 法人住址
+    */
+    @SerializedName("BossAddress")
+    @Expose
+    private String BossAddress;
+
+    /**
+    * 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
+    */
+    @SerializedName("AccountIdType")
+    @Expose
+    private String AccountIdType;
+
+    /**
+    * 法人亲属证件号码
+    */
+    @SerializedName("AccountIdNo")
+    @Expose
+    private String AccountIdNo;
+
+    /**
+    * 授权文件【私密区】
+    */
+    @SerializedName("LicencePictureTwo")
+    @Expose
+    private String LicencePictureTwo;
+
+    /**
+    * 其他资料1
+    */
+    @SerializedName("OtherPictureOne")
+    @Expose
+    private String OtherPictureOne;
+
+    /**
+    * 其他资料2
+    */
+    @SerializedName("OtherPictureTwo")
+    @Expose
+    private String OtherPictureTwo;
+
+    /**
+    * 其他资料3
+    */
+    @SerializedName("OtherPictureThree")
+    @Expose
+    private String OtherPictureThree;
+
+    /**
+    * 其他资料4
+    */
+    @SerializedName("OtherPictureFour")
+    @Expose
+    private String OtherPictureFour;
+
+    /**
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
+     * Get 收单系统分配的开放ID 
+     * @return OpenId 收单系统分配的开放ID
      */
-    public String getBossName() {
-        return this.BossName;
+    public String getOpenId() {
+        return this.OpenId;
     }
 
     /**
-     * Set 法人姓名
-     * @param BossName 法人姓名
+     * Set 收单系统分配的开放ID
+     * @param OpenId 收单系统分配的开放ID
      */
-    public void setBossName(String BossName) {
-        this.BossName = BossName;
-    }
-
-    /**
-     * Get 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传） 
-     * @return BusinessLicensePicture 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public String getBusinessLicensePicture() {
-        return this.BusinessLicensePicture;
-    }
-
-    /**
-     * Set 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
-     * @param BusinessLicensePicture 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public void setBusinessLicensePicture(String BusinessLicensePicture) {
-        this.BusinessLicensePicture = BusinessLicensePicture;
-    }
-
-    /**
-     * Get 招牌名称 
-     * @return BrandName 招牌名称
-     */
-    public String getBrandName() {
-        return this.BrandName;
-    }
-
-    /**
-     * Set 招牌名称
-     * @param BrandName 招牌名称
-     */
-    public void setBrandName(String BrandName) {
-        this.BrandName = BrandName;
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
     }
 
     /**
@@ -493,6 +461,102 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
+     * Get 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户 
+     * @return OutMerchantId 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+     */
+    public String getOutMerchantId() {
+        return this.OutMerchantId;
+    }
+
+    /**
+     * Set 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+     * @param OutMerchantId 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+     */
+    public void setOutMerchantId(String OutMerchantId) {
+        this.OutMerchantId = OutMerchantId;
+    }
+
+    /**
+     * Get 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三） 
+     * @return MerchantName 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
+     */
+    public String getMerchantName() {
+        return this.MerchantName;
+    }
+
+    /**
+     * Set 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
+     * @param MerchantName 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
+     */
+    public void setMerchantName(String MerchantName) {
+        this.MerchantName = MerchantName;
+    }
+
+    /**
+     * Get 营业执照类型（1三证合一，2非三证合一） 
+     * @return BusinessLicenseType 营业执照类型（1三证合一，2非三证合一）
+     */
+    public String getBusinessLicenseType() {
+        return this.BusinessLicenseType;
+    }
+
+    /**
+     * Set 营业执照类型（1三证合一，2非三证合一）
+     * @param BusinessLicenseType 营业执照类型（1三证合一，2非三证合一）
+     */
+    public void setBusinessLicenseType(String BusinessLicenseType) {
+        this.BusinessLicenseType = BusinessLicenseType;
+    }
+
+    /**
+     * Get 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传） 
+     * @return BusinessLicenseNo 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
+     */
+    public String getBusinessLicenseNo() {
+        return this.BusinessLicenseNo;
+    }
+
+    /**
+     * Set 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
+     * @param BusinessLicenseNo 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
+     */
+    public void setBusinessLicenseNo(String BusinessLicenseNo) {
+        this.BusinessLicenseNo = BusinessLicenseNo;
+    }
+
+    /**
+     * Get 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传） 
+     * @return BusinessLicensePicture 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
+     */
+    public String getBusinessLicensePicture() {
+        return this.BusinessLicensePicture;
+    }
+
+    /**
+     * Set 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
+     * @param BusinessLicensePicture 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
+     */
+    public void setBusinessLicensePicture(String BusinessLicensePicture) {
+        this.BusinessLicensePicture = BusinessLicensePicture;
+    }
+
+    /**
+     * Get 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传） 
+     * @return BusinessLicenseStartDate 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
+     */
+    public String getBusinessLicenseStartDate() {
+        return this.BusinessLicenseStartDate;
+    }
+
+    /**
+     * Set 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
+     * @param BusinessLicenseStartDate 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
+     */
+    public void setBusinessLicenseStartDate(String BusinessLicenseStartDate) {
+        this.BusinessLicenseStartDate = BusinessLicenseStartDate;
+    }
+
+    /**
      * Get 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传） 
      * @return BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
      */
@@ -509,19 +573,115 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 法人证件生效时间（yyyy-mm-dd） 
-     * @return BossStartDate 法人证件生效时间（yyyy-mm-dd）
+     * Get 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类） 
+     * @return ClassificationIds 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
      */
-    public String getBossStartDate() {
-        return this.BossStartDate;
+    public String [] getClassificationIds() {
+        return this.ClassificationIds;
     }
 
     /**
-     * Set 法人证件生效时间（yyyy-mm-dd）
-     * @param BossStartDate 法人证件生效时间（yyyy-mm-dd）
+     * Set 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
+     * @param ClassificationIds 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
      */
-    public void setBossStartDate(String BossStartDate) {
-        this.BossStartDate = BossStartDate;
+    public void setClassificationIds(String [] ClassificationIds) {
+        this.ClassificationIds = ClassificationIds;
+    }
+
+    /**
+     * Get 招牌名称 
+     * @return BrandName 招牌名称
+     */
+    public String getBrandName() {
+        return this.BrandName;
+    }
+
+    /**
+     * Set 招牌名称
+     * @param BrandName 招牌名称
+     */
+    public void setBrandName(String BrandName) {
+        this.BrandName = BrandName;
+    }
+
+    /**
+     * Get 联系电话 
+     * @return Telephone 联系电话
+     */
+    public String getTelephone() {
+        return this.Telephone;
+    }
+
+    /**
+     * Set 联系电话
+     * @param Telephone 联系电话
+     */
+    public void setTelephone(String Telephone) {
+        this.Telephone = Telephone;
+    }
+
+    /**
+     * Get 城市编号 
+     * @return CityId 城市编号
+     */
+    public String getCityId() {
+        return this.CityId;
+    }
+
+    /**
+     * Set 城市编号
+     * @param CityId 城市编号
+     */
+    public void setCityId(String CityId) {
+        this.CityId = CityId;
+    }
+
+    /**
+     * Get 详细地址，不含省市区县名称，长度需要大于5。 
+     * @return Address 详细地址，不含省市区县名称，长度需要大于5。
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set 详细地址，不含省市区县名称，长度需要大于5。
+     * @param Address 详细地址，不含省市区县名称，长度需要大于5。
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    /**
+     * Get 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00) 
+     * @return OpenHours 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
+     */
+    public String getOpenHours() {
+        return this.OpenHours;
+    }
+
+    /**
+     * Set 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
+     * @param OpenHours 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
+     */
+    public void setOpenHours(String OpenHours) {
+        this.OpenHours = OpenHours;
+    }
+
+    /**
+     * Get 结算账户类型（2对私，1对公） 
+     * @return AccountType 结算账户类型（2对私，1对公）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 结算账户类型（2对私，1对公）
+     * @param AccountType 结算账户类型（2对私，1对公）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     /**
@@ -557,227 +717,19 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 营业执照类型（1三证合一，2非三证合一） 
-     * @return BusinessLicenseType 营业执照类型（1三证合一，2非三证合一）
+     * Get 银行账号 
+     * @return AccountNo 银行账号
      */
-    public String getBusinessLicenseType() {
-        return this.BusinessLicenseType;
+    public String getAccountNo() {
+        return this.AccountNo;
     }
 
     /**
-     * Set 营业执照类型（1三证合一，2非三证合一）
-     * @param BusinessLicenseType 营业执照类型（1三证合一，2非三证合一）
+     * Set 银行账号
+     * @param AccountNo 银行账号
      */
-    public void setBusinessLicenseType(String BusinessLicenseType) {
-        this.BusinessLicenseType = BusinessLicenseType;
-    }
-
-    /**
-     * Get 法人证件过期时间（yyyy-mm-dd） 
-     * @return BossEndDate 法人证件过期时间（yyyy-mm-dd）
-     */
-    public String getBossEndDate() {
-        return this.BossEndDate;
-    }
-
-    /**
-     * Set 法人证件过期时间（yyyy-mm-dd）
-     * @param BossEndDate 法人证件过期时间（yyyy-mm-dd）
-     */
-    public void setBossEndDate(String BossEndDate) {
-        this.BossEndDate = BossEndDate;
-    }
-
-    /**
-     * Get 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传） 
-     * @return BusinessLicenseNo 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public String getBusinessLicenseNo() {
-        return this.BusinessLicenseNo;
-    }
-
-    /**
-     * Set 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
-     * @param BusinessLicenseNo 营业执照编号（系统有唯一性校验），（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public void setBusinessLicenseNo(String BusinessLicenseNo) {
-        this.BusinessLicenseNo = BusinessLicenseNo;
-    }
-
-    /**
-     * Get 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传） 
-     * @return BusinessLicenseStartDate 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public String getBusinessLicenseStartDate() {
-        return this.BusinessLicenseStartDate;
-    }
-
-    /**
-     * Set 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
-     * @param BusinessLicenseStartDate 营业执照生效时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public void setBusinessLicenseStartDate(String BusinessLicenseStartDate) {
-        this.BusinessLicenseStartDate = BusinessLicenseStartDate;
-    }
-
-    /**
-     * Get 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件） 
-     * @return BossIdType 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
-     */
-    public String getBossIdType() {
-        return this.BossIdType;
-    }
-
-    /**
-     * Set 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
-     * @param BossIdType 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
-     */
-    public void setBossIdType(String BossIdType) {
-        this.BossIdType = BossIdType;
-    }
-
-    /**
-     * Get 详细地址，不含省市区县名称，长度需要大于5。 
-     * @return Address 详细地址，不含省市区县名称，长度需要大于5。
-     */
-    public String getAddress() {
-        return this.Address;
-    }
-
-    /**
-     * Set 详细地址，不含省市区县名称，长度需要大于5。
-     * @param Address 详细地址，不含省市区县名称，长度需要大于5。
-     */
-    public void setAddress(String Address) {
-        this.Address = Address;
-    }
-
-    /**
-     * Get 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN） 
-     * @return BossIdCountry 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
-     */
-    public String getBossIdCountry() {
-        return this.BossIdCountry;
-    }
-
-    /**
-     * Set 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
-     * @param BossIdCountry 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
-     */
-    public void setBossIdCountry(String BossIdCountry) {
-        this.BossIdCountry = BossIdCountry;
-    }
-
-    /**
-     * Get 收单系统分配的开放ID 
-     * @return OpenId 收单系统分配的开放ID
-     */
-    public String getOpenId() {
-        return this.OpenId;
-    }
-
-    /**
-     * Set 收单系统分配的开放ID
-     * @param OpenId 收单系统分配的开放ID
-     */
-    public void setOpenId(String OpenId) {
-        this.OpenId = OpenId;
-    }
-
-    /**
-     * Get 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三） 
-     * @return MerchantName 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
-     */
-    public String getMerchantName() {
-        return this.MerchantName;
-    }
-
-    /**
-     * Set 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
-     * @param MerchantName 商户名称，小微商户命名要符合“”商户_名字” （例如：商户_张三）
-     */
-    public void setMerchantName(String MerchantName) {
-        this.MerchantName = MerchantName;
-    }
-
-    /**
-     * Get 法人性别（1男，2女） 
-     * @return BossSex 法人性别（1男，2女）
-     */
-    public String getBossSex() {
-        return this.BossSex;
-    }
-
-    /**
-     * Set 法人性别（1男，2女）
-     * @param BossSex 法人性别（1男，2女）
-     */
-    public void setBossSex(String BossSex) {
-        this.BossSex = BossSex;
-    }
-
-    /**
-     * Get 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类） 
-     * @return ClassificationIds 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
-     */
-    public String [] getClassificationIds() {
-        return this.ClassificationIds;
-    }
-
-    /**
-     * Set 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
-     * @param ClassificationIds 行业分类编号列表（第一个分类编号为主分类，后面的为二级分类）
-     */
-    public void setClassificationIds(String [] ClassificationIds) {
-        this.ClassificationIds = ClassificationIds;
-    }
-
-    /**
-     * Get 法人证件号码 
-     * @return BossIdNo 法人证件号码
-     */
-    public String getBossIdNo() {
-        return this.BossIdNo;
-    }
-
-    /**
-     * Set 法人证件号码
-     * @param BossIdNo 法人证件号码
-     */
-    public void setBossIdNo(String BossIdNo) {
-        this.BossIdNo = BossIdNo;
-    }
-
-    /**
-     * Get 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传） 
-     * @return LicencePicture 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public String getLicencePicture() {
-        return this.LicencePicture;
-    }
-
-    /**
-     * Set 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
-     * @param LicencePicture 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
-     */
-    public void setLicencePicture(String LicencePicture) {
-        this.LicencePicture = LicencePicture;
-    }
-
-    /**
-     * Get 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00) 
-     * @return OpenHours 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
-     */
-    public String getOpenHours() {
-        return this.OpenHours;
-    }
-
-    /**
-     * Set 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
-     * @param OpenHours 营业时间，多个以小写逗号分开(9:00-12:00,13:00-18:00)
-     */
-    public void setOpenHours(String OpenHours) {
-        this.OpenHours = OpenHours;
+    public void setAccountNo(String AccountNo) {
+        this.AccountNo = AccountNo;
     }
 
     /**
@@ -797,51 +749,83 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 银行账号 
-     * @return AccountNo 银行账号
+     * Get 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件） 
+     * @return BossIdType 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
      */
-    public String getAccountNo() {
-        return this.AccountNo;
+    public String getBossIdType() {
+        return this.BossIdType;
     }
 
     /**
-     * Set 银行账号
-     * @param AccountNo 银行账号
+     * Set 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
+     * @param BossIdType 法人证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）
      */
-    public void setAccountNo(String AccountNo) {
-        this.AccountNo = AccountNo;
+    public void setBossIdType(String BossIdType) {
+        this.BossIdType = BossIdType;
     }
 
     /**
-     * Get 结算账户类型（2对私，1对公） 
-     * @return AccountType 结算账户类型（2对私，1对公）
+     * Get 法人证件号码 
+     * @return BossIdNo 法人证件号码
      */
-    public String getAccountType() {
-        return this.AccountType;
+    public String getBossIdNo() {
+        return this.BossIdNo;
     }
 
     /**
-     * Set 结算账户类型（2对私，1对公）
-     * @param AccountType 结算账户类型（2对私，1对公）
+     * Set 法人证件号码
+     * @param BossIdNo 法人证件号码
      */
-    public void setAccountType(String AccountType) {
-        this.AccountType = AccountType;
+    public void setBossIdNo(String BossIdNo) {
+        this.BossIdNo = BossIdNo;
     }
 
     /**
-     * Get 联系电话 
-     * @return Telephone 联系电话
+     * Get 法人姓名 
+     * @return BossName 法人姓名
      */
-    public String getTelephone() {
-        return this.Telephone;
+    public String getBossName() {
+        return this.BossName;
     }
 
     /**
-     * Set 联系电话
-     * @param Telephone 联系电话
+     * Set 法人姓名
+     * @param BossName 法人姓名
      */
-    public void setTelephone(String Telephone) {
-        this.Telephone = Telephone;
+    public void setBossName(String BossName) {
+        this.BossName = BossName;
+    }
+
+    /**
+     * Get 法人性别（1男，2女） 
+     * @return BossSex 法人性别（1男，2女）
+     */
+    public String getBossSex() {
+        return this.BossSex;
+    }
+
+    /**
+     * Set 法人性别（1男，2女）
+     * @param BossSex 法人性别（1男，2女）
+     */
+    public void setBossSex(String BossSex) {
+        this.BossSex = BossSex;
+    }
+
+    /**
+     * Get 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN） 
+     * @return BossIdCountry 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
+     */
+    public String getBossIdCountry() {
+        return this.BossIdCountry;
+    }
+
+    /**
+     * Set 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
+     * @param BossIdCountry 法人证件国别/地区（中国CHN，香港HKG，澳门MAC，台湾CTN）
+     */
+    public void setBossIdCountry(String BossIdCountry) {
+        this.BossIdCountry = BossIdCountry;
     }
 
     /**
@@ -861,22 +845,6 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 城市编号 
-     * @return CityId 城市编号
-     */
-    public String getCityId() {
-        return this.CityId;
-    }
-
-    /**
-     * Set 城市编号
-     * @param CityId 城市编号
-     */
-    public void setCityId(String CityId) {
-        this.CityId = CityId;
-    }
-
-    /**
      * Get 法人身份证背面【私密区】（系统返回的图片路径） 
      * @return BossBack 法人身份证背面【私密区】（系统返回的图片路径）
      */
@@ -893,83 +861,67 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户 
-     * @return OutMerchantId 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+     * Get 法人证件生效时间（yyyy-mm-dd） 
+     * @return BossStartDate 法人证件生效时间（yyyy-mm-dd）
      */
-    public String getOutMerchantId() {
-        return this.OutMerchantId;
+    public String getBossStartDate() {
+        return this.BossStartDate;
     }
 
     /**
-     * Set 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
-     * @param OutMerchantId 机构商户主键（系统有唯一性校验），建议使用商户表的主键ID，防止重复添加商户
+     * Set 法人证件生效时间（yyyy-mm-dd）
+     * @param BossStartDate 法人证件生效时间（yyyy-mm-dd）
      */
-    public void setOutMerchantId(String OutMerchantId) {
-        this.OutMerchantId = OutMerchantId;
+    public void setBossStartDate(String BossStartDate) {
+        this.BossStartDate = BossStartDate;
     }
 
     /**
-     * Get 组织机构代码证生效时间（yyyy-mm-dd） 
-     * @return OrganizationStartDate 组织机构代码证生效时间（yyyy-mm-dd）
+     * Get 法人证件过期时间（yyyy-mm-dd） 
+     * @return BossEndDate 法人证件过期时间（yyyy-mm-dd）
      */
-    public String getOrganizationStartDate() {
-        return this.OrganizationStartDate;
+    public String getBossEndDate() {
+        return this.BossEndDate;
     }
 
     /**
-     * Set 组织机构代码证生效时间（yyyy-mm-dd）
-     * @param OrganizationStartDate 组织机构代码证生效时间（yyyy-mm-dd）
+     * Set 法人证件过期时间（yyyy-mm-dd）
+     * @param BossEndDate 法人证件过期时间（yyyy-mm-dd）
      */
-    public void setOrganizationStartDate(String OrganizationStartDate) {
-        this.OrganizationStartDate = OrganizationStartDate;
+    public void setBossEndDate(String BossEndDate) {
+        this.BossEndDate = BossEndDate;
     }
 
     /**
-     * Get 法人亲属证件号码 
-     * @return AccountIdNo 法人亲属证件号码
+     * Get 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传） 
+     * @return LicencePicture 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
      */
-    public String getAccountIdNo() {
-        return this.AccountIdNo;
+    public String getLicencePicture() {
+        return this.LicencePicture;
     }
 
     /**
-     * Set 法人亲属证件号码
-     * @param AccountIdNo 法人亲属证件号码
+     * Set 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
+     * @param LicencePicture 许可证图片【私密区】，（小微商户不效验，随意传要有值，公司/个体户必传）
      */
-    public void setAccountIdNo(String AccountIdNo) {
-        this.AccountIdNo = AccountIdNo;
+    public void setLicencePicture(String LicencePicture) {
+        this.LicencePicture = LicencePicture;
     }
 
     /**
-     * Get 财务联系人 
-     * @return FinancialContact 财务联系人
+     * Get 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。 
+     * @return Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
      */
-    public String getFinancialContact() {
-        return this.FinancialContact;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set 财务联系人
-     * @param FinancialContact 财务联系人
+     * Set 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
+     * @param Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
      */
-    public void setFinancialContact(String FinancialContact) {
-        this.FinancialContact = FinancialContact;
-    }
-
-    /**
-     * Get 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填 
-     * @return AccountIdType 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
-     */
-    public String getAccountIdType() {
-        return this.AccountIdType;
-    }
-
-    /**
-     * Set 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
-     * @param AccountIdType 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
-     */
-    public void setAccountIdType(String AccountIdType) {
-        this.AccountIdType = AccountIdType;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -989,51 +941,19 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 其他资料1 
-     * @return OtherPictureOne 其他资料1
+     * Get 组织机构代码证生效时间（yyyy-mm-dd） 
+     * @return OrganizationStartDate 组织机构代码证生效时间（yyyy-mm-dd）
      */
-    public String getOtherPictureOne() {
-        return this.OtherPictureOne;
+    public String getOrganizationStartDate() {
+        return this.OrganizationStartDate;
     }
 
     /**
-     * Set 其他资料1
-     * @param OtherPictureOne 其他资料1
+     * Set 组织机构代码证生效时间（yyyy-mm-dd）
+     * @param OrganizationStartDate 组织机构代码证生效时间（yyyy-mm-dd）
      */
-    public void setOtherPictureOne(String OtherPictureOne) {
-        this.OtherPictureOne = OtherPictureOne;
-    }
-
-    /**
-     * Get 财务联系人电话 
-     * @return FinancialTelephone 财务联系人电话
-     */
-    public String getFinancialTelephone() {
-        return this.FinancialTelephone;
-    }
-
-    /**
-     * Set 财务联系人电话
-     * @param FinancialTelephone 财务联系人电话
-     */
-    public void setFinancialTelephone(String FinancialTelephone) {
-        this.FinancialTelephone = FinancialTelephone;
-    }
-
-    /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public String getProfile() {
-        return this.Profile;
-    }
-
-    /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
+    public void setOrganizationStartDate(String OrganizationStartDate) {
+        this.OrganizationStartDate = OrganizationStartDate;
     }
 
     /**
@@ -1053,86 +973,6 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 税务登记证生效时间（yyyy-mm-dd） 
-     * @return TaxRegistrationStartDate 税务登记证生效时间（yyyy-mm-dd）
-     */
-    public String getTaxRegistrationStartDate() {
-        return this.TaxRegistrationStartDate;
-    }
-
-    /**
-     * Set 税务登记证生效时间（yyyy-mm-dd）
-     * @param TaxRegistrationStartDate 税务登记证生效时间（yyyy-mm-dd）
-     */
-    public void setTaxRegistrationStartDate(String TaxRegistrationStartDate) {
-        this.TaxRegistrationStartDate = TaxRegistrationStartDate;
-    }
-
-    /**
-     * Get 商户标记，自定义参数 
-     * @return Tag 商户标记，自定义参数
-     */
-    public String getTag() {
-        return this.Tag;
-    }
-
-    /**
-     * Set 商户标记，自定义参数
-     * @param Tag 商户标记，自定义参数
-     */
-    public void setTag(String Tag) {
-        this.Tag = Tag;
-    }
-
-    /**
-     * Get 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填 
-     * @return AccountBoss 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
-     */
-    public String getAccountBoss() {
-        return this.AccountBoss;
-    }
-
-    /**
-     * Set 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
-     * @param AccountBoss 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
-     */
-    public void setAccountBoss(String AccountBoss) {
-        this.AccountBoss = AccountBoss;
-    }
-
-    /**
-     * Get 法人电话 
-     * @return BossTelephone 法人电话
-     */
-    public String getBossTelephone() {
-        return this.BossTelephone;
-    }
-
-    /**
-     * Set 法人电话
-     * @param BossTelephone 法人电话
-     */
-    public void setBossTelephone(String BossTelephone) {
-        this.BossTelephone = BossTelephone;
-    }
-
-    /**
-     * Get 税务登记证图片【私密区】 
-     * @return TaxRegistrationPicture 税务登记证图片【私密区】
-     */
-    public String getTaxRegistrationPicture() {
-        return this.TaxRegistrationPicture;
-    }
-
-    /**
-     * Set 税务登记证图片【私密区】
-     * @param TaxRegistrationPicture 税务登记证图片【私密区】
-     */
-    public void setTaxRegistrationPicture(String TaxRegistrationPicture) {
-        this.TaxRegistrationPicture = TaxRegistrationPicture;
-    }
-
-    /**
      * Get 组织机构代码证过期时间（yyyy-mm-dd） 
      * @return OrganizationEndDate 组织机构代码证过期时间（yyyy-mm-dd）
      */
@@ -1146,118 +986,6 @@ public class AddMerchantRequest extends AbstractModel{
      */
     public void setOrganizationEndDate(String OrganizationEndDate) {
         this.OrganizationEndDate = OrganizationEndDate;
-    }
-
-    /**
-     * Get 法人职业 
-     * @return BossJob 法人职业
-     */
-    public String getBossJob() {
-        return this.BossJob;
-    }
-
-    /**
-     * Set 法人职业
-     * @param BossJob 法人职业
-     */
-    public void setBossJob(String BossJob) {
-        this.BossJob = BossJob;
-    }
-
-    /**
-     * Get 其他资料3 
-     * @return OtherPictureThree 其他资料3
-     */
-    public String getOtherPictureThree() {
-        return this.OtherPictureThree;
-    }
-
-    /**
-     * Set 其他资料3
-     * @param OtherPictureThree 其他资料3
-     */
-    public void setOtherPictureThree(String OtherPictureThree) {
-        this.OtherPictureThree = OtherPictureThree;
-    }
-
-    /**
-     * Get 授权文件【私密区】 
-     * @return LicencePictureTwo 授权文件【私密区】
-     */
-    public String getLicencePictureTwo() {
-        return this.LicencePictureTwo;
-    }
-
-    /**
-     * Set 授权文件【私密区】
-     * @param LicencePictureTwo 授权文件【私密区】
-     */
-    public void setLicencePictureTwo(String LicencePictureTwo) {
-        this.LicencePictureTwo = LicencePictureTwo;
-    }
-
-    /**
-     * Get 商户logo【公共区】 
-     * @return Logo 商户logo【公共区】
-     */
-    public String getLogo() {
-        return this.Logo;
-    }
-
-    /**
-     * Set 商户logo【公共区】
-     * @param Logo 商户logo【公共区】
-     */
-    public void setLogo(String Logo) {
-        this.Logo = Logo;
-    }
-
-    /**
-     * Get 法人住址 
-     * @return BossAddress 法人住址
-     */
-    public String getBossAddress() {
-        return this.BossAddress;
-    }
-
-    /**
-     * Set 法人住址
-     * @param BossAddress 法人住址
-     */
-    public void setBossAddress(String BossAddress) {
-        this.BossAddress = BossAddress;
-    }
-
-    /**
-     * Get 法人邮箱 
-     * @return BossEmail 法人邮箱
-     */
-    public String getBossEmail() {
-        return this.BossEmail;
-    }
-
-    /**
-     * Set 法人邮箱
-     * @param BossEmail 法人邮箱
-     */
-    public void setBossEmail(String BossEmail) {
-        this.BossEmail = BossEmail;
-    }
-
-    /**
-     * Get 其他资料2 
-     * @return OtherPictureTwo 其他资料2
-     */
-    public String getOtherPictureTwo() {
-        return this.OtherPictureTwo;
-    }
-
-    /**
-     * Set 其他资料2
-     * @param OtherPictureTwo 其他资料2
-     */
-    public void setOtherPictureTwo(String OtherPictureTwo) {
-        this.OtherPictureTwo = OtherPictureTwo;
     }
 
     /**
@@ -1277,51 +1005,67 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户经理姓名，必须为系统后台的管理员真实姓名 
-     * @return AccountManagerName 客户经理姓名，必须为系统后台的管理员真实姓名
+     * Get 商户logo【公共区】 
+     * @return Logo 商户logo【公共区】
      */
-    public String getAccountManagerName() {
-        return this.AccountManagerName;
+    public String getLogo() {
+        return this.Logo;
     }
 
     /**
-     * Set 客户经理姓名，必须为系统后台的管理员真实姓名
-     * @param AccountManagerName 客户经理姓名，必须为系统后台的管理员真实姓名
+     * Set 商户logo【公共区】
+     * @param Logo 商户logo【公共区】
      */
-    public void setAccountManagerName(String AccountManagerName) {
-        this.AccountManagerName = AccountManagerName;
+    public void setLogo(String Logo) {
+        this.Logo = Logo;
     }
 
     /**
-     * Get 税务登记证过期时间（yyyy-mm-dd） 
-     * @return TaxRegistrationEndDate 税务登记证过期时间（yyyy-mm-dd）
+     * Get 商户标记，自定义参数 
+     * @return Tag 商户标记，自定义参数
      */
-    public String getTaxRegistrationEndDate() {
-        return this.TaxRegistrationEndDate;
+    public String getTag() {
+        return this.Tag;
     }
 
     /**
-     * Set 税务登记证过期时间（yyyy-mm-dd）
-     * @param TaxRegistrationEndDate 税务登记证过期时间（yyyy-mm-dd）
+     * Set 商户标记，自定义参数
+     * @param Tag 商户标记，自定义参数
      */
-    public void setTaxRegistrationEndDate(String TaxRegistrationEndDate) {
-        this.TaxRegistrationEndDate = TaxRegistrationEndDate;
+    public void setTag(String Tag) {
+        this.Tag = Tag;
     }
 
     /**
-     * Get 其他资料4 
-     * @return OtherPictureFour 其他资料4
+     * Get 财务联系人电话 
+     * @return FinancialTelephone 财务联系人电话
      */
-    public String getOtherPictureFour() {
-        return this.OtherPictureFour;
+    public String getFinancialTelephone() {
+        return this.FinancialTelephone;
     }
 
     /**
-     * Set 其他资料4
-     * @param OtherPictureFour 其他资料4
+     * Set 财务联系人电话
+     * @param FinancialTelephone 财务联系人电话
      */
-    public void setOtherPictureFour(String OtherPictureFour) {
-        this.OtherPictureFour = OtherPictureFour;
+    public void setFinancialTelephone(String FinancialTelephone) {
+        this.FinancialTelephone = FinancialTelephone;
+    }
+
+    /**
+     * Get 财务联系人 
+     * @return FinancialContact 财务联系人
+     */
+    public String getFinancialContact() {
+        return this.FinancialContact;
+    }
+
+    /**
+     * Set 财务联系人
+     * @param FinancialContact 财务联系人
+     */
+    public void setFinancialContact(String FinancialContact) {
+        this.FinancialContact = FinancialContact;
     }
 
     /**
@@ -1341,19 +1085,275 @@ public class AddMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。 
-     * @return Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
+     * Get 税务登记证图片【私密区】 
+     * @return TaxRegistrationPicture 税务登记证图片【私密区】
      */
-    public String getType() {
-        return this.Type;
+    public String getTaxRegistrationPicture() {
+        return this.TaxRegistrationPicture;
     }
 
     /**
-     * Set 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
-     * @param Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
+     * Set 税务登记证图片【私密区】
+     * @param TaxRegistrationPicture 税务登记证图片【私密区】
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setTaxRegistrationPicture(String TaxRegistrationPicture) {
+        this.TaxRegistrationPicture = TaxRegistrationPicture;
+    }
+
+    /**
+     * Get 税务登记证生效时间（yyyy-mm-dd） 
+     * @return TaxRegistrationStartDate 税务登记证生效时间（yyyy-mm-dd）
+     */
+    public String getTaxRegistrationStartDate() {
+        return this.TaxRegistrationStartDate;
+    }
+
+    /**
+     * Set 税务登记证生效时间（yyyy-mm-dd）
+     * @param TaxRegistrationStartDate 税务登记证生效时间（yyyy-mm-dd）
+     */
+    public void setTaxRegistrationStartDate(String TaxRegistrationStartDate) {
+        this.TaxRegistrationStartDate = TaxRegistrationStartDate;
+    }
+
+    /**
+     * Get 税务登记证过期时间（yyyy-mm-dd） 
+     * @return TaxRegistrationEndDate 税务登记证过期时间（yyyy-mm-dd）
+     */
+    public String getTaxRegistrationEndDate() {
+        return this.TaxRegistrationEndDate;
+    }
+
+    /**
+     * Set 税务登记证过期时间（yyyy-mm-dd）
+     * @param TaxRegistrationEndDate 税务登记证过期时间（yyyy-mm-dd）
+     */
+    public void setTaxRegistrationEndDate(String TaxRegistrationEndDate) {
+        this.TaxRegistrationEndDate = TaxRegistrationEndDate;
+    }
+
+    /**
+     * Get 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填 
+     * @return AccountBoss 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
+     */
+    public String getAccountBoss() {
+        return this.AccountBoss;
+    }
+
+    /**
+     * Set 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
+     * @param AccountBoss 结算账户人身份（1法人，2法人亲属），结算帐户为对私时必填
+     */
+    public void setAccountBoss(String AccountBoss) {
+        this.AccountBoss = AccountBoss;
+    }
+
+    /**
+     * Get 客户经理姓名，必须为系统后台的管理员真实姓名 
+     * @return AccountManagerName 客户经理姓名，必须为系统后台的管理员真实姓名
+     */
+    public String getAccountManagerName() {
+        return this.AccountManagerName;
+    }
+
+    /**
+     * Set 客户经理姓名，必须为系统后台的管理员真实姓名
+     * @param AccountManagerName 客户经理姓名，必须为系统后台的管理员真实姓名
+     */
+    public void setAccountManagerName(String AccountManagerName) {
+        this.AccountManagerName = AccountManagerName;
+    }
+
+    /**
+     * Get 法人电话 
+     * @return BossTelephone 法人电话
+     */
+    public String getBossTelephone() {
+        return this.BossTelephone;
+    }
+
+    /**
+     * Set 法人电话
+     * @param BossTelephone 法人电话
+     */
+    public void setBossTelephone(String BossTelephone) {
+        this.BossTelephone = BossTelephone;
+    }
+
+    /**
+     * Get 法人职业 
+     * @return BossJob 法人职业
+     */
+    public String getBossJob() {
+        return this.BossJob;
+    }
+
+    /**
+     * Set 法人职业
+     * @param BossJob 法人职业
+     */
+    public void setBossJob(String BossJob) {
+        this.BossJob = BossJob;
+    }
+
+    /**
+     * Get 法人邮箱 
+     * @return BossEmail 法人邮箱
+     */
+    public String getBossEmail() {
+        return this.BossEmail;
+    }
+
+    /**
+     * Set 法人邮箱
+     * @param BossEmail 法人邮箱
+     */
+    public void setBossEmail(String BossEmail) {
+        this.BossEmail = BossEmail;
+    }
+
+    /**
+     * Get 法人住址 
+     * @return BossAddress 法人住址
+     */
+    public String getBossAddress() {
+        return this.BossAddress;
+    }
+
+    /**
+     * Set 法人住址
+     * @param BossAddress 法人住址
+     */
+    public void setBossAddress(String BossAddress) {
+        this.BossAddress = BossAddress;
+    }
+
+    /**
+     * Get 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填 
+     * @return AccountIdType 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
+     */
+    public String getAccountIdType() {
+        return this.AccountIdType;
+    }
+
+    /**
+     * Set 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
+     * @param AccountIdType 法人亲属证件类型（1居民身份证,2临时居民身份证,3居民户口簿,4护照,5港澳居民来往内地通行证,6回乡证,7军人证,8武警身份证,9其他法定文件）结算账户人身份为法人亲属时必填
+     */
+    public void setAccountIdType(String AccountIdType) {
+        this.AccountIdType = AccountIdType;
+    }
+
+    /**
+     * Get 法人亲属证件号码 
+     * @return AccountIdNo 法人亲属证件号码
+     */
+    public String getAccountIdNo() {
+        return this.AccountIdNo;
+    }
+
+    /**
+     * Set 法人亲属证件号码
+     * @param AccountIdNo 法人亲属证件号码
+     */
+    public void setAccountIdNo(String AccountIdNo) {
+        this.AccountIdNo = AccountIdNo;
+    }
+
+    /**
+     * Get 授权文件【私密区】 
+     * @return LicencePictureTwo 授权文件【私密区】
+     */
+    public String getLicencePictureTwo() {
+        return this.LicencePictureTwo;
+    }
+
+    /**
+     * Set 授权文件【私密区】
+     * @param LicencePictureTwo 授权文件【私密区】
+     */
+    public void setLicencePictureTwo(String LicencePictureTwo) {
+        this.LicencePictureTwo = LicencePictureTwo;
+    }
+
+    /**
+     * Get 其他资料1 
+     * @return OtherPictureOne 其他资料1
+     */
+    public String getOtherPictureOne() {
+        return this.OtherPictureOne;
+    }
+
+    /**
+     * Set 其他资料1
+     * @param OtherPictureOne 其他资料1
+     */
+    public void setOtherPictureOne(String OtherPictureOne) {
+        this.OtherPictureOne = OtherPictureOne;
+    }
+
+    /**
+     * Get 其他资料2 
+     * @return OtherPictureTwo 其他资料2
+     */
+    public String getOtherPictureTwo() {
+        return this.OtherPictureTwo;
+    }
+
+    /**
+     * Set 其他资料2
+     * @param OtherPictureTwo 其他资料2
+     */
+    public void setOtherPictureTwo(String OtherPictureTwo) {
+        this.OtherPictureTwo = OtherPictureTwo;
+    }
+
+    /**
+     * Get 其他资料3 
+     * @return OtherPictureThree 其他资料3
+     */
+    public String getOtherPictureThree() {
+        return this.OtherPictureThree;
+    }
+
+    /**
+     * Set 其他资料3
+     * @param OtherPictureThree 其他资料3
+     */
+    public void setOtherPictureThree(String OtherPictureThree) {
+        this.OtherPictureThree = OtherPictureThree;
+    }
+
+    /**
+     * Get 其他资料4 
+     * @return OtherPictureFour 其他资料4
+     */
+    public String getOtherPictureFour() {
+        return this.OtherPictureFour;
+    }
+
+    /**
+     * Set 其他资料4
+     * @param OtherPictureFour 其他资料4
+     */
+    public void setOtherPictureFour(String OtherPictureFour) {
+        this.OtherPictureFour = OtherPictureFour;
+    }
+
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
     }
 
     public AddMerchantRequest() {
@@ -1364,59 +1364,32 @@ public class AddMerchantRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddMerchantRequest(AddMerchantRequest source) {
-        if (source.BossName != null) {
-            this.BossName = new String(source.BossName);
-        }
-        if (source.BusinessLicensePicture != null) {
-            this.BusinessLicensePicture = new String(source.BusinessLicensePicture);
-        }
-        if (source.BrandName != null) {
-            this.BrandName = new String(source.BrandName);
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
         }
         if (source.OpenKey != null) {
             this.OpenKey = new String(source.OpenKey);
         }
-        if (source.BusinessLicenseEndDate != null) {
-            this.BusinessLicenseEndDate = new String(source.BusinessLicenseEndDate);
-        }
-        if (source.BossStartDate != null) {
-            this.BossStartDate = new String(source.BossStartDate);
-        }
-        if (source.BankNo != null) {
-            this.BankNo = new String(source.BankNo);
-        }
-        if (source.BankName != null) {
-            this.BankName = new String(source.BankName);
-        }
-        if (source.BusinessLicenseType != null) {
-            this.BusinessLicenseType = new String(source.BusinessLicenseType);
-        }
-        if (source.BossEndDate != null) {
-            this.BossEndDate = new String(source.BossEndDate);
-        }
-        if (source.BusinessLicenseNo != null) {
-            this.BusinessLicenseNo = new String(source.BusinessLicenseNo);
-        }
-        if (source.BusinessLicenseStartDate != null) {
-            this.BusinessLicenseStartDate = new String(source.BusinessLicenseStartDate);
-        }
-        if (source.BossIdType != null) {
-            this.BossIdType = new String(source.BossIdType);
-        }
-        if (source.Address != null) {
-            this.Address = new String(source.Address);
-        }
-        if (source.BossIdCountry != null) {
-            this.BossIdCountry = new String(source.BossIdCountry);
-        }
-        if (source.OpenId != null) {
-            this.OpenId = new String(source.OpenId);
+        if (source.OutMerchantId != null) {
+            this.OutMerchantId = new String(source.OutMerchantId);
         }
         if (source.MerchantName != null) {
             this.MerchantName = new String(source.MerchantName);
         }
-        if (source.BossSex != null) {
-            this.BossSex = new String(source.BossSex);
+        if (source.BusinessLicenseType != null) {
+            this.BusinessLicenseType = new String(source.BusinessLicenseType);
+        }
+        if (source.BusinessLicenseNo != null) {
+            this.BusinessLicenseNo = new String(source.BusinessLicenseNo);
+        }
+        if (source.BusinessLicensePicture != null) {
+            this.BusinessLicensePicture = new String(source.BusinessLicensePicture);
+        }
+        if (source.BusinessLicenseStartDate != null) {
+            this.BusinessLicenseStartDate = new String(source.BusinessLicenseStartDate);
+        }
+        if (source.BusinessLicenseEndDate != null) {
+            this.BusinessLicenseEndDate = new String(source.BusinessLicenseEndDate);
         }
         if (source.ClassificationIds != null) {
             this.ClassificationIds = new String[source.ClassificationIds.length];
@@ -1424,122 +1397,149 @@ public class AddMerchantRequest extends AbstractModel{
                 this.ClassificationIds[i] = new String(source.ClassificationIds[i]);
             }
         }
-        if (source.BossIdNo != null) {
-            this.BossIdNo = new String(source.BossIdNo);
-        }
-        if (source.LicencePicture != null) {
-            this.LicencePicture = new String(source.LicencePicture);
-        }
-        if (source.OpenHours != null) {
-            this.OpenHours = new String(source.OpenHours);
-        }
-        if (source.AccountName != null) {
-            this.AccountName = new String(source.AccountName);
-        }
-        if (source.AccountNo != null) {
-            this.AccountNo = new String(source.AccountNo);
-        }
-        if (source.AccountType != null) {
-            this.AccountType = new String(source.AccountType);
+        if (source.BrandName != null) {
+            this.BrandName = new String(source.BrandName);
         }
         if (source.Telephone != null) {
             this.Telephone = new String(source.Telephone);
         }
-        if (source.BossPositive != null) {
-            this.BossPositive = new String(source.BossPositive);
-        }
         if (source.CityId != null) {
             this.CityId = new String(source.CityId);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.OpenHours != null) {
+            this.OpenHours = new String(source.OpenHours);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
+        if (source.BankNo != null) {
+            this.BankNo = new String(source.BankNo);
+        }
+        if (source.BankName != null) {
+            this.BankName = new String(source.BankName);
+        }
+        if (source.AccountNo != null) {
+            this.AccountNo = new String(source.AccountNo);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
+        if (source.BossIdType != null) {
+            this.BossIdType = new String(source.BossIdType);
+        }
+        if (source.BossIdNo != null) {
+            this.BossIdNo = new String(source.BossIdNo);
+        }
+        if (source.BossName != null) {
+            this.BossName = new String(source.BossName);
+        }
+        if (source.BossSex != null) {
+            this.BossSex = new String(source.BossSex);
+        }
+        if (source.BossIdCountry != null) {
+            this.BossIdCountry = new String(source.BossIdCountry);
+        }
+        if (source.BossPositive != null) {
+            this.BossPositive = new String(source.BossPositive);
         }
         if (source.BossBack != null) {
             this.BossBack = new String(source.BossBack);
         }
-        if (source.OutMerchantId != null) {
-            this.OutMerchantId = new String(source.OutMerchantId);
+        if (source.BossStartDate != null) {
+            this.BossStartDate = new String(source.BossStartDate);
         }
-        if (source.OrganizationStartDate != null) {
-            this.OrganizationStartDate = new String(source.OrganizationStartDate);
+        if (source.BossEndDate != null) {
+            this.BossEndDate = new String(source.BossEndDate);
         }
-        if (source.AccountIdNo != null) {
-            this.AccountIdNo = new String(source.AccountIdNo);
+        if (source.LicencePicture != null) {
+            this.LicencePicture = new String(source.LicencePicture);
         }
-        if (source.FinancialContact != null) {
-            this.FinancialContact = new String(source.FinancialContact);
-        }
-        if (source.AccountIdType != null) {
-            this.AccountIdType = new String(source.AccountIdType);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
         if (source.OrganizationNo != null) {
             this.OrganizationNo = new String(source.OrganizationNo);
         }
-        if (source.OtherPictureOne != null) {
-            this.OtherPictureOne = new String(source.OtherPictureOne);
-        }
-        if (source.FinancialTelephone != null) {
-            this.FinancialTelephone = new String(source.FinancialTelephone);
-        }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
+        if (source.OrganizationStartDate != null) {
+            this.OrganizationStartDate = new String(source.OrganizationStartDate);
         }
         if (source.OrganizationPicture != null) {
             this.OrganizationPicture = new String(source.OrganizationPicture);
         }
-        if (source.TaxRegistrationStartDate != null) {
-            this.TaxRegistrationStartDate = new String(source.TaxRegistrationStartDate);
-        }
-        if (source.Tag != null) {
-            this.Tag = new String(source.Tag);
-        }
-        if (source.AccountBoss != null) {
-            this.AccountBoss = new String(source.AccountBoss);
-        }
-        if (source.BossTelephone != null) {
-            this.BossTelephone = new String(source.BossTelephone);
-        }
-        if (source.TaxRegistrationPicture != null) {
-            this.TaxRegistrationPicture = new String(source.TaxRegistrationPicture);
-        }
         if (source.OrganizationEndDate != null) {
             this.OrganizationEndDate = new String(source.OrganizationEndDate);
-        }
-        if (source.BossJob != null) {
-            this.BossJob = new String(source.BossJob);
-        }
-        if (source.OtherPictureThree != null) {
-            this.OtherPictureThree = new String(source.OtherPictureThree);
-        }
-        if (source.LicencePictureTwo != null) {
-            this.LicencePictureTwo = new String(source.LicencePictureTwo);
-        }
-        if (source.Logo != null) {
-            this.Logo = new String(source.Logo);
-        }
-        if (source.BossAddress != null) {
-            this.BossAddress = new String(source.BossAddress);
-        }
-        if (source.BossEmail != null) {
-            this.BossEmail = new String(source.BossEmail);
-        }
-        if (source.OtherPictureTwo != null) {
-            this.OtherPictureTwo = new String(source.OtherPictureTwo);
         }
         if (source.Intro != null) {
             this.Intro = new String(source.Intro);
         }
-        if (source.AccountManagerName != null) {
-            this.AccountManagerName = new String(source.AccountManagerName);
+        if (source.Logo != null) {
+            this.Logo = new String(source.Logo);
         }
-        if (source.TaxRegistrationEndDate != null) {
-            this.TaxRegistrationEndDate = new String(source.TaxRegistrationEndDate);
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
         }
-        if (source.OtherPictureFour != null) {
-            this.OtherPictureFour = new String(source.OtherPictureFour);
+        if (source.FinancialTelephone != null) {
+            this.FinancialTelephone = new String(source.FinancialTelephone);
+        }
+        if (source.FinancialContact != null) {
+            this.FinancialContact = new String(source.FinancialContact);
         }
         if (source.TaxRegistrationNo != null) {
             this.TaxRegistrationNo = new String(source.TaxRegistrationNo);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.TaxRegistrationPicture != null) {
+            this.TaxRegistrationPicture = new String(source.TaxRegistrationPicture);
+        }
+        if (source.TaxRegistrationStartDate != null) {
+            this.TaxRegistrationStartDate = new String(source.TaxRegistrationStartDate);
+        }
+        if (source.TaxRegistrationEndDate != null) {
+            this.TaxRegistrationEndDate = new String(source.TaxRegistrationEndDate);
+        }
+        if (source.AccountBoss != null) {
+            this.AccountBoss = new String(source.AccountBoss);
+        }
+        if (source.AccountManagerName != null) {
+            this.AccountManagerName = new String(source.AccountManagerName);
+        }
+        if (source.BossTelephone != null) {
+            this.BossTelephone = new String(source.BossTelephone);
+        }
+        if (source.BossJob != null) {
+            this.BossJob = new String(source.BossJob);
+        }
+        if (source.BossEmail != null) {
+            this.BossEmail = new String(source.BossEmail);
+        }
+        if (source.BossAddress != null) {
+            this.BossAddress = new String(source.BossAddress);
+        }
+        if (source.AccountIdType != null) {
+            this.AccountIdType = new String(source.AccountIdType);
+        }
+        if (source.AccountIdNo != null) {
+            this.AccountIdNo = new String(source.AccountIdNo);
+        }
+        if (source.LicencePictureTwo != null) {
+            this.LicencePictureTwo = new String(source.LicencePictureTwo);
+        }
+        if (source.OtherPictureOne != null) {
+            this.OtherPictureOne = new String(source.OtherPictureOne);
+        }
+        if (source.OtherPictureTwo != null) {
+            this.OtherPictureTwo = new String(source.OtherPictureTwo);
+        }
+        if (source.OtherPictureThree != null) {
+            this.OtherPictureThree = new String(source.OtherPictureThree);
+        }
+        if (source.OtherPictureFour != null) {
+            this.OtherPictureFour = new String(source.OtherPictureFour);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -1548,64 +1548,64 @@ public class AddMerchantRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BossName", this.BossName);
-        this.setParamSimple(map, prefix + "BusinessLicensePicture", this.BusinessLicensePicture);
-        this.setParamSimple(map, prefix + "BrandName", this.BrandName);
+        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
+        this.setParamSimple(map, prefix + "OutMerchantId", this.OutMerchantId);
+        this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
+        this.setParamSimple(map, prefix + "BusinessLicenseType", this.BusinessLicenseType);
+        this.setParamSimple(map, prefix + "BusinessLicenseNo", this.BusinessLicenseNo);
+        this.setParamSimple(map, prefix + "BusinessLicensePicture", this.BusinessLicensePicture);
+        this.setParamSimple(map, prefix + "BusinessLicenseStartDate", this.BusinessLicenseStartDate);
         this.setParamSimple(map, prefix + "BusinessLicenseEndDate", this.BusinessLicenseEndDate);
-        this.setParamSimple(map, prefix + "BossStartDate", this.BossStartDate);
+        this.setParamArraySimple(map, prefix + "ClassificationIds.", this.ClassificationIds);
+        this.setParamSimple(map, prefix + "BrandName", this.BrandName);
+        this.setParamSimple(map, prefix + "Telephone", this.Telephone);
+        this.setParamSimple(map, prefix + "CityId", this.CityId);
+        this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "OpenHours", this.OpenHours);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamSimple(map, prefix + "BankNo", this.BankNo);
         this.setParamSimple(map, prefix + "BankName", this.BankName);
-        this.setParamSimple(map, prefix + "BusinessLicenseType", this.BusinessLicenseType);
-        this.setParamSimple(map, prefix + "BossEndDate", this.BossEndDate);
-        this.setParamSimple(map, prefix + "BusinessLicenseNo", this.BusinessLicenseNo);
-        this.setParamSimple(map, prefix + "BusinessLicenseStartDate", this.BusinessLicenseStartDate);
-        this.setParamSimple(map, prefix + "BossIdType", this.BossIdType);
-        this.setParamSimple(map, prefix + "Address", this.Address);
-        this.setParamSimple(map, prefix + "BossIdCountry", this.BossIdCountry);
-        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
-        this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
-        this.setParamSimple(map, prefix + "BossSex", this.BossSex);
-        this.setParamArraySimple(map, prefix + "ClassificationIds.", this.ClassificationIds);
-        this.setParamSimple(map, prefix + "BossIdNo", this.BossIdNo);
-        this.setParamSimple(map, prefix + "LicencePicture", this.LicencePicture);
-        this.setParamSimple(map, prefix + "OpenHours", this.OpenHours);
-        this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "AccountNo", this.AccountNo);
-        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
-        this.setParamSimple(map, prefix + "Telephone", this.Telephone);
+        this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "BossIdType", this.BossIdType);
+        this.setParamSimple(map, prefix + "BossIdNo", this.BossIdNo);
+        this.setParamSimple(map, prefix + "BossName", this.BossName);
+        this.setParamSimple(map, prefix + "BossSex", this.BossSex);
+        this.setParamSimple(map, prefix + "BossIdCountry", this.BossIdCountry);
         this.setParamSimple(map, prefix + "BossPositive", this.BossPositive);
-        this.setParamSimple(map, prefix + "CityId", this.CityId);
         this.setParamSimple(map, prefix + "BossBack", this.BossBack);
-        this.setParamSimple(map, prefix + "OutMerchantId", this.OutMerchantId);
-        this.setParamSimple(map, prefix + "OrganizationStartDate", this.OrganizationStartDate);
-        this.setParamSimple(map, prefix + "AccountIdNo", this.AccountIdNo);
-        this.setParamSimple(map, prefix + "FinancialContact", this.FinancialContact);
-        this.setParamSimple(map, prefix + "AccountIdType", this.AccountIdType);
-        this.setParamSimple(map, prefix + "OrganizationNo", this.OrganizationNo);
-        this.setParamSimple(map, prefix + "OtherPictureOne", this.OtherPictureOne);
-        this.setParamSimple(map, prefix + "FinancialTelephone", this.FinancialTelephone);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
-        this.setParamSimple(map, prefix + "OrganizationPicture", this.OrganizationPicture);
-        this.setParamSimple(map, prefix + "TaxRegistrationStartDate", this.TaxRegistrationStartDate);
-        this.setParamSimple(map, prefix + "Tag", this.Tag);
-        this.setParamSimple(map, prefix + "AccountBoss", this.AccountBoss);
-        this.setParamSimple(map, prefix + "BossTelephone", this.BossTelephone);
-        this.setParamSimple(map, prefix + "TaxRegistrationPicture", this.TaxRegistrationPicture);
-        this.setParamSimple(map, prefix + "OrganizationEndDate", this.OrganizationEndDate);
-        this.setParamSimple(map, prefix + "BossJob", this.BossJob);
-        this.setParamSimple(map, prefix + "OtherPictureThree", this.OtherPictureThree);
-        this.setParamSimple(map, prefix + "LicencePictureTwo", this.LicencePictureTwo);
-        this.setParamSimple(map, prefix + "Logo", this.Logo);
-        this.setParamSimple(map, prefix + "BossAddress", this.BossAddress);
-        this.setParamSimple(map, prefix + "BossEmail", this.BossEmail);
-        this.setParamSimple(map, prefix + "OtherPictureTwo", this.OtherPictureTwo);
-        this.setParamSimple(map, prefix + "Intro", this.Intro);
-        this.setParamSimple(map, prefix + "AccountManagerName", this.AccountManagerName);
-        this.setParamSimple(map, prefix + "TaxRegistrationEndDate", this.TaxRegistrationEndDate);
-        this.setParamSimple(map, prefix + "OtherPictureFour", this.OtherPictureFour);
-        this.setParamSimple(map, prefix + "TaxRegistrationNo", this.TaxRegistrationNo);
+        this.setParamSimple(map, prefix + "BossStartDate", this.BossStartDate);
+        this.setParamSimple(map, prefix + "BossEndDate", this.BossEndDate);
+        this.setParamSimple(map, prefix + "LicencePicture", this.LicencePicture);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "OrganizationNo", this.OrganizationNo);
+        this.setParamSimple(map, prefix + "OrganizationStartDate", this.OrganizationStartDate);
+        this.setParamSimple(map, prefix + "OrganizationPicture", this.OrganizationPicture);
+        this.setParamSimple(map, prefix + "OrganizationEndDate", this.OrganizationEndDate);
+        this.setParamSimple(map, prefix + "Intro", this.Intro);
+        this.setParamSimple(map, prefix + "Logo", this.Logo);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "FinancialTelephone", this.FinancialTelephone);
+        this.setParamSimple(map, prefix + "FinancialContact", this.FinancialContact);
+        this.setParamSimple(map, prefix + "TaxRegistrationNo", this.TaxRegistrationNo);
+        this.setParamSimple(map, prefix + "TaxRegistrationPicture", this.TaxRegistrationPicture);
+        this.setParamSimple(map, prefix + "TaxRegistrationStartDate", this.TaxRegistrationStartDate);
+        this.setParamSimple(map, prefix + "TaxRegistrationEndDate", this.TaxRegistrationEndDate);
+        this.setParamSimple(map, prefix + "AccountBoss", this.AccountBoss);
+        this.setParamSimple(map, prefix + "AccountManagerName", this.AccountManagerName);
+        this.setParamSimple(map, prefix + "BossTelephone", this.BossTelephone);
+        this.setParamSimple(map, prefix + "BossJob", this.BossJob);
+        this.setParamSimple(map, prefix + "BossEmail", this.BossEmail);
+        this.setParamSimple(map, prefix + "BossAddress", this.BossAddress);
+        this.setParamSimple(map, prefix + "AccountIdType", this.AccountIdType);
+        this.setParamSimple(map, prefix + "AccountIdNo", this.AccountIdNo);
+        this.setParamSimple(map, prefix + "LicencePictureTwo", this.LicencePictureTwo);
+        this.setParamSimple(map, prefix + "OtherPictureOne", this.OtherPictureOne);
+        this.setParamSimple(map, prefix + "OtherPictureTwo", this.OtherPictureTwo);
+        this.setParamSimple(map, prefix + "OtherPictureThree", this.OtherPictureThree);
+        this.setParamSimple(map, prefix + "OtherPictureFour", this.OtherPictureFour);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

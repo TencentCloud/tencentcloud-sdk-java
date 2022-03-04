@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class DistributeAccreditTlinxRequest extends AbstractModel{
 
     /**
-    * 收单系统分配的开放ID
+    * 使用门店OpenId
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
+
+    /**
+    * 使用门店OpenKey
+    */
+    @SerializedName("OpenKey")
+    @Expose
+    private String OpenKey;
 
     /**
     * 验证方式，传1手机验证(验证码时效60S)传2结算卡验证(时效6小时)，多种方式用逗号隔开
@@ -35,20 +42,6 @@ public class DistributeAccreditTlinxRequest extends AbstractModel{
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
-
-    /**
-    * 收单系统分配的密钥
-    */
-    @SerializedName("OpenKey")
-    @Expose
-    private String OpenKey;
-
-    /**
-    * 沙箱环境填sandbox，正式环境不填
-    */
-    @SerializedName("Profile")
-    @Expose
-    private String Profile;
 
     /**
     * 分账比例（500=5%）不传默认百分之10
@@ -65,19 +58,42 @@ public class DistributeAccreditTlinxRequest extends AbstractModel{
     private String FullName;
 
     /**
-     * Get 收单系统分配的开放ID 
-     * @return OpenId 收单系统分配的开放ID
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
+     * Get 使用门店OpenId 
+     * @return OpenId 使用门店OpenId
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 收单系统分配的开放ID
-     * @param OpenId 收单系统分配的开放ID
+     * Set 使用门店OpenId
+     * @param OpenId 使用门店OpenId
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
+    }
+
+    /**
+     * Get 使用门店OpenKey 
+     * @return OpenKey 使用门店OpenKey
+     */
+    public String getOpenKey() {
+        return this.OpenKey;
+    }
+
+    /**
+     * Set 使用门店OpenKey
+     * @param OpenKey 使用门店OpenKey
+     */
+    public void setOpenKey(String OpenKey) {
+        this.OpenKey = OpenKey;
     }
 
     /**
@@ -94,38 +110,6 @@ public class DistributeAccreditTlinxRequest extends AbstractModel{
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
-    }
-
-    /**
-     * Get 收单系统分配的密钥 
-     * @return OpenKey 收单系统分配的密钥
-     */
-    public String getOpenKey() {
-        return this.OpenKey;
-    }
-
-    /**
-     * Set 收单系统分配的密钥
-     * @param OpenKey 收单系统分配的密钥
-     */
-    public void setOpenKey(String OpenKey) {
-        this.OpenKey = OpenKey;
-    }
-
-    /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public String getProfile() {
-        return this.Profile;
-    }
-
-    /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
     }
 
     /**
@@ -160,6 +144,22 @@ public class DistributeAccreditTlinxRequest extends AbstractModel{
         this.FullName = FullName;
     }
 
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
     public DistributeAccreditTlinxRequest() {
     }
 
@@ -171,20 +171,20 @@ public class DistributeAccreditTlinxRequest extends AbstractModel{
         if (source.OpenId != null) {
             this.OpenId = new String(source.OpenId);
         }
-        if (source.AuthType != null) {
-            this.AuthType = new String(source.AuthType);
-        }
         if (source.OpenKey != null) {
             this.OpenKey = new String(source.OpenKey);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
         }
         if (source.Percent != null) {
             this.Percent = new String(source.Percent);
         }
         if (source.FullName != null) {
             this.FullName = new String(source.FullName);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -194,11 +194,11 @@ public class DistributeAccreditTlinxRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
-        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "FullName", this.FullName);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

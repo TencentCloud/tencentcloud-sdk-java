@@ -37,13 +37,6 @@ public class ViewShopRequest extends AbstractModel{
     private String OpenKey;
 
     /**
-    * 沙箱环境填sandbox，正式环境不填
-    */
-    @SerializedName("Profile")
-    @Expose
-    private String Profile;
-
-    /**
     * 外部商户主键编号（ShopNo或OutShopId必须传一个）
     */
     @SerializedName("OutShopId")
@@ -56,6 +49,13 @@ public class ViewShopRequest extends AbstractModel{
     @SerializedName("ShopNo")
     @Expose
     private String ShopNo;
+
+    /**
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
 
     /**
      * Get 收单系统分配的开放ID 
@@ -90,22 +90,6 @@ public class ViewShopRequest extends AbstractModel{
     }
 
     /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public String getProfile() {
-        return this.Profile;
-    }
-
-    /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
-    }
-
-    /**
      * Get 外部商户主键编号（ShopNo或OutShopId必须传一个） 
      * @return OutShopId 外部商户主键编号（ShopNo或OutShopId必须传一个）
      */
@@ -137,6 +121,22 @@ public class ViewShopRequest extends AbstractModel{
         this.ShopNo = ShopNo;
     }
 
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
     public ViewShopRequest() {
     }
 
@@ -151,14 +151,14 @@ public class ViewShopRequest extends AbstractModel{
         if (source.OpenKey != null) {
             this.OpenKey = new String(source.OpenKey);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
-        }
         if (source.OutShopId != null) {
             this.OutShopId = new String(source.OutShopId);
         }
         if (source.ShopNo != null) {
             this.ShopNo = new String(source.ShopNo);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -169,9 +169,9 @@ public class ViewShopRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
         this.setParamSimple(map, prefix + "OutShopId", this.OutShopId);
         this.setParamSimple(map, prefix + "ShopNo", this.ShopNo);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

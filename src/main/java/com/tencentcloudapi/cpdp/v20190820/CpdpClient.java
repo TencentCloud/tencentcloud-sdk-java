@@ -179,6 +179,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *聚鑫-申请对账文件
+     * @param req ApplyReconciliationFileRequest
+     * @return ApplyReconciliationFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyReconciliationFileResponse ApplyReconciliationFile(ApplyReconciliationFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyReconciliationFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyReconciliationFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyReconciliationFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *跨境-提交贸易材料。通过提交贸易材料接口可为对接方累计贸易额度，在额度范围内可发起汇兑汇出交易。
      * @param req ApplyTradeRequest
      * @return ApplyTradeResponse
@@ -1067,7 +1087,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *云支付-T查询已添加分账接收方接口
+     *云支付-查询已添加分账接收方接口
      * @param req DistributeQueryReceiverRequest
      * @return DistributeQueryReceiverResponse
      * @throws TencentCloudSDKException
@@ -1787,6 +1807,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *聚鑫-查询会员资金交易信息列表
+     * @param req QueryFundsTransactionDetailsRequest
+     * @return QueryFundsTransactionDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(QueryFundsTransactionDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFundsTransactionDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFundsTransactionDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryFundsTransactionDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *智慧零售-发票查询
      * @param req QueryInvoiceRequest
      * @return QueryInvoiceResponse
@@ -1880,6 +1920,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryMemberTransactionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryMemberTransaction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *聚鑫-查询会员间交易信息列表
+     * @param req QueryMemberTransactionDetailsRequest
+     * @return QueryMemberTransactionDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMemberTransactionDetailsResponse QueryMemberTransactionDetails(QueryMemberTransactionDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMemberTransactionDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMemberTransactionDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMemberTransactionDetails");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2220,6 +2280,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryReconciliationDocumentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryReconciliationDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *聚鑫-查询对账文件申请结果
+     * @param req QueryReconciliationFileApplyInfoRequest
+     * @return QueryReconciliationFileApplyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryReconciliationFileApplyInfoResponse QueryReconciliationFileApplyInfo(QueryReconciliationFileApplyInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryReconciliationFileApplyInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryReconciliationFileApplyInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryReconciliationFileApplyInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

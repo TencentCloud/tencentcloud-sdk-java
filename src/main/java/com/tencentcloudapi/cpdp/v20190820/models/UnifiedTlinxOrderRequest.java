@@ -23,32 +23,25 @@ import java.util.HashMap;
 public class UnifiedTlinxOrderRequest extends AbstractModel{
 
     /**
-    * 开发者流水号
-    */
-    @SerializedName("DeveloperNo")
-    @Expose
-    private String DeveloperNo;
-
-    /**
-    * 收单系统分配的开放ID
+    * 使用门店OpenId
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 交易结果异步通知url地址
-    */
-    @SerializedName("NotifyUrl")
-    @Expose
-    private String NotifyUrl;
-
-    /**
-    * 收单系统分配的密钥
+    * 使用门店OpenKey
     */
     @SerializedName("OpenKey")
     @Expose
     private String OpenKey;
+
+    /**
+    * 开发者流水号
+    */
+    @SerializedName("DeveloperNo")
+    @Expose
+    private String DeveloperNo;
 
     /**
     * 支付标签
@@ -65,46 +58,18 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     private String TradeAmount;
 
     /**
-    * 订单备注
+    * 交易结果异步通知url地址
     */
-    @SerializedName("Remark")
+    @SerializedName("NotifyUrl")
     @Expose
-    private String Remark;
+    private String NotifyUrl;
 
     /**
-    * 订单标记，订单附加数据。
+    * 付款方式名称(当PayTag为Diy时，PayName不能为空)
     */
-    @SerializedName("Tag")
+    @SerializedName("PayName")
     @Expose
-    private String Tag;
-
-    /**
-    * 抹零金额（以分为单位，没有小数点）
-    */
-    @SerializedName("IgnoreAmount")
-    @Expose
-    private String IgnoreAmount;
-
-    /**
-    * 条码支付的授权码（条码抢扫手机扫到的一串数字）
-    */
-    @SerializedName("AuthCode")
-    @Expose
-    private String AuthCode;
-
-    /**
-    * 原始交易金额（以分为单位，没有小数点）
-    */
-    @SerializedName("OriginalAmount")
-    @Expose
-    private String OriginalAmount;
-
-    /**
-    * 订单名称（描述）
-    */
-    @SerializedName("OrderName")
-    @Expose
-    private String OrderName;
+    private String PayName;
 
     /**
     * 公众号支付时，支付成功后跳转url地址
@@ -114,18 +79,32 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     private String JumpUrl;
 
     /**
-    * 沙箱环境填sandbox，正式环境不填
+    * 订单名称（描述）
     */
-    @SerializedName("Profile")
+    @SerializedName("OrderName")
     @Expose
-    private String Profile;
+    private String OrderName;
 
     /**
-    * 收单机构原始交易报文，请转换为json
+    * 原始交易金额（以分为单位，没有小数点）
     */
-    @SerializedName("TradeResult")
+    @SerializedName("OriginalAmount")
     @Expose
-    private String TradeResult;
+    private String OriginalAmount;
+
+    /**
+    * 抹零金额（以分为单位，没有小数点）
+    */
+    @SerializedName("IgnoreAmount")
+    @Expose
+    private String IgnoreAmount;
+
+    /**
+    * 折扣金额（以分为单位，没有小数点）
+    */
+    @SerializedName("DiscountAmount")
+    @Expose
+    private String DiscountAmount;
 
     /**
     * 交易帐号（银行卡号）
@@ -142,18 +121,32 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     private String TradeNo;
 
     /**
-    * 折扣金额（以分为单位，没有小数点）
+    * 条码支付的授权码（条码抢扫手机扫到的一串数字）
     */
-    @SerializedName("DiscountAmount")
+    @SerializedName("AuthCode")
     @Expose
-    private String DiscountAmount;
+    private String AuthCode;
 
     /**
-    * 付款方式名称(当PayTag为Diy时，PayName不能为空)
+    * 订单标记，订单附加数据。
     */
-    @SerializedName("PayName")
+    @SerializedName("Tag")
     @Expose
-    private String PayName;
+    private String Tag;
+
+    /**
+    * 订单备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 收单机构原始交易报文，请转换为json
+    */
+    @SerializedName("TradeResult")
+    @Expose
+    private String TradeResult;
 
     /**
     * 0-不分账，1-需分账。为1时标记为待分账订单，待分账订单不会进行清算。不传默认为不分账。
@@ -186,6 +179,45 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     private String SubOpenId;
 
     /**
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
+     * Get 使用门店OpenId 
+     * @return OpenId 使用门店OpenId
+     */
+    public String getOpenId() {
+        return this.OpenId;
+    }
+
+    /**
+     * Set 使用门店OpenId
+     * @param OpenId 使用门店OpenId
+     */
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
+    }
+
+    /**
+     * Get 使用门店OpenKey 
+     * @return OpenKey 使用门店OpenKey
+     */
+    public String getOpenKey() {
+        return this.OpenKey;
+    }
+
+    /**
+     * Set 使用门店OpenKey
+     * @param OpenKey 使用门店OpenKey
+     */
+    public void setOpenKey(String OpenKey) {
+        this.OpenKey = OpenKey;
+    }
+
+    /**
      * Get 开发者流水号 
      * @return DeveloperNo 开发者流水号
      */
@@ -199,54 +231,6 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
      */
     public void setDeveloperNo(String DeveloperNo) {
         this.DeveloperNo = DeveloperNo;
-    }
-
-    /**
-     * Get 收单系统分配的开放ID 
-     * @return OpenId 收单系统分配的开放ID
-     */
-    public String getOpenId() {
-        return this.OpenId;
-    }
-
-    /**
-     * Set 收单系统分配的开放ID
-     * @param OpenId 收单系统分配的开放ID
-     */
-    public void setOpenId(String OpenId) {
-        this.OpenId = OpenId;
-    }
-
-    /**
-     * Get 交易结果异步通知url地址 
-     * @return NotifyUrl 交易结果异步通知url地址
-     */
-    public String getNotifyUrl() {
-        return this.NotifyUrl;
-    }
-
-    /**
-     * Set 交易结果异步通知url地址
-     * @param NotifyUrl 交易结果异步通知url地址
-     */
-    public void setNotifyUrl(String NotifyUrl) {
-        this.NotifyUrl = NotifyUrl;
-    }
-
-    /**
-     * Get 收单系统分配的密钥 
-     * @return OpenKey 收单系统分配的密钥
-     */
-    public String getOpenKey() {
-        return this.OpenKey;
-    }
-
-    /**
-     * Set 收单系统分配的密钥
-     * @param OpenKey 收单系统分配的密钥
-     */
-    public void setOpenKey(String OpenKey) {
-        this.OpenKey = OpenKey;
     }
 
     /**
@@ -282,99 +266,35 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 订单备注 
-     * @return Remark 订单备注
+     * Get 交易结果异步通知url地址 
+     * @return NotifyUrl 交易结果异步通知url地址
      */
-    public String getRemark() {
-        return this.Remark;
+    public String getNotifyUrl() {
+        return this.NotifyUrl;
     }
 
     /**
-     * Set 订单备注
-     * @param Remark 订单备注
+     * Set 交易结果异步通知url地址
+     * @param NotifyUrl 交易结果异步通知url地址
      */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
+    public void setNotifyUrl(String NotifyUrl) {
+        this.NotifyUrl = NotifyUrl;
     }
 
     /**
-     * Get 订单标记，订单附加数据。 
-     * @return Tag 订单标记，订单附加数据。
+     * Get 付款方式名称(当PayTag为Diy时，PayName不能为空) 
+     * @return PayName 付款方式名称(当PayTag为Diy时，PayName不能为空)
      */
-    public String getTag() {
-        return this.Tag;
+    public String getPayName() {
+        return this.PayName;
     }
 
     /**
-     * Set 订单标记，订单附加数据。
-     * @param Tag 订单标记，订单附加数据。
+     * Set 付款方式名称(当PayTag为Diy时，PayName不能为空)
+     * @param PayName 付款方式名称(当PayTag为Diy时，PayName不能为空)
      */
-    public void setTag(String Tag) {
-        this.Tag = Tag;
-    }
-
-    /**
-     * Get 抹零金额（以分为单位，没有小数点） 
-     * @return IgnoreAmount 抹零金额（以分为单位，没有小数点）
-     */
-    public String getIgnoreAmount() {
-        return this.IgnoreAmount;
-    }
-
-    /**
-     * Set 抹零金额（以分为单位，没有小数点）
-     * @param IgnoreAmount 抹零金额（以分为单位，没有小数点）
-     */
-    public void setIgnoreAmount(String IgnoreAmount) {
-        this.IgnoreAmount = IgnoreAmount;
-    }
-
-    /**
-     * Get 条码支付的授权码（条码抢扫手机扫到的一串数字） 
-     * @return AuthCode 条码支付的授权码（条码抢扫手机扫到的一串数字）
-     */
-    public String getAuthCode() {
-        return this.AuthCode;
-    }
-
-    /**
-     * Set 条码支付的授权码（条码抢扫手机扫到的一串数字）
-     * @param AuthCode 条码支付的授权码（条码抢扫手机扫到的一串数字）
-     */
-    public void setAuthCode(String AuthCode) {
-        this.AuthCode = AuthCode;
-    }
-
-    /**
-     * Get 原始交易金额（以分为单位，没有小数点） 
-     * @return OriginalAmount 原始交易金额（以分为单位，没有小数点）
-     */
-    public String getOriginalAmount() {
-        return this.OriginalAmount;
-    }
-
-    /**
-     * Set 原始交易金额（以分为单位，没有小数点）
-     * @param OriginalAmount 原始交易金额（以分为单位，没有小数点）
-     */
-    public void setOriginalAmount(String OriginalAmount) {
-        this.OriginalAmount = OriginalAmount;
-    }
-
-    /**
-     * Get 订单名称（描述） 
-     * @return OrderName 订单名称（描述）
-     */
-    public String getOrderName() {
-        return this.OrderName;
-    }
-
-    /**
-     * Set 订单名称（描述）
-     * @param OrderName 订单名称（描述）
-     */
-    public void setOrderName(String OrderName) {
-        this.OrderName = OrderName;
+    public void setPayName(String PayName) {
+        this.PayName = PayName;
     }
 
     /**
@@ -394,35 +314,67 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
+     * Get 订单名称（描述） 
+     * @return OrderName 订单名称（描述）
      */
-    public String getProfile() {
-        return this.Profile;
+    public String getOrderName() {
+        return this.OrderName;
     }
 
     /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
+     * Set 订单名称（描述）
+     * @param OrderName 订单名称（描述）
      */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
+    public void setOrderName(String OrderName) {
+        this.OrderName = OrderName;
     }
 
     /**
-     * Get 收单机构原始交易报文，请转换为json 
-     * @return TradeResult 收单机构原始交易报文，请转换为json
+     * Get 原始交易金额（以分为单位，没有小数点） 
+     * @return OriginalAmount 原始交易金额（以分为单位，没有小数点）
      */
-    public String getTradeResult() {
-        return this.TradeResult;
+    public String getOriginalAmount() {
+        return this.OriginalAmount;
     }
 
     /**
-     * Set 收单机构原始交易报文，请转换为json
-     * @param TradeResult 收单机构原始交易报文，请转换为json
+     * Set 原始交易金额（以分为单位，没有小数点）
+     * @param OriginalAmount 原始交易金额（以分为单位，没有小数点）
      */
-    public void setTradeResult(String TradeResult) {
-        this.TradeResult = TradeResult;
+    public void setOriginalAmount(String OriginalAmount) {
+        this.OriginalAmount = OriginalAmount;
+    }
+
+    /**
+     * Get 抹零金额（以分为单位，没有小数点） 
+     * @return IgnoreAmount 抹零金额（以分为单位，没有小数点）
+     */
+    public String getIgnoreAmount() {
+        return this.IgnoreAmount;
+    }
+
+    /**
+     * Set 抹零金额（以分为单位，没有小数点）
+     * @param IgnoreAmount 抹零金额（以分为单位，没有小数点）
+     */
+    public void setIgnoreAmount(String IgnoreAmount) {
+        this.IgnoreAmount = IgnoreAmount;
+    }
+
+    /**
+     * Get 折扣金额（以分为单位，没有小数点） 
+     * @return DiscountAmount 折扣金额（以分为单位，没有小数点）
+     */
+    public String getDiscountAmount() {
+        return this.DiscountAmount;
+    }
+
+    /**
+     * Set 折扣金额（以分为单位，没有小数点）
+     * @param DiscountAmount 折扣金额（以分为单位，没有小数点）
+     */
+    public void setDiscountAmount(String DiscountAmount) {
+        this.DiscountAmount = DiscountAmount;
     }
 
     /**
@@ -458,35 +410,67 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 折扣金额（以分为单位，没有小数点） 
-     * @return DiscountAmount 折扣金额（以分为单位，没有小数点）
+     * Get 条码支付的授权码（条码抢扫手机扫到的一串数字） 
+     * @return AuthCode 条码支付的授权码（条码抢扫手机扫到的一串数字）
      */
-    public String getDiscountAmount() {
-        return this.DiscountAmount;
+    public String getAuthCode() {
+        return this.AuthCode;
     }
 
     /**
-     * Set 折扣金额（以分为单位，没有小数点）
-     * @param DiscountAmount 折扣金额（以分为单位，没有小数点）
+     * Set 条码支付的授权码（条码抢扫手机扫到的一串数字）
+     * @param AuthCode 条码支付的授权码（条码抢扫手机扫到的一串数字）
      */
-    public void setDiscountAmount(String DiscountAmount) {
-        this.DiscountAmount = DiscountAmount;
+    public void setAuthCode(String AuthCode) {
+        this.AuthCode = AuthCode;
     }
 
     /**
-     * Get 付款方式名称(当PayTag为Diy时，PayName不能为空) 
-     * @return PayName 付款方式名称(当PayTag为Diy时，PayName不能为空)
+     * Get 订单标记，订单附加数据。 
+     * @return Tag 订单标记，订单附加数据。
      */
-    public String getPayName() {
-        return this.PayName;
+    public String getTag() {
+        return this.Tag;
     }
 
     /**
-     * Set 付款方式名称(当PayTag为Diy时，PayName不能为空)
-     * @param PayName 付款方式名称(当PayTag为Diy时，PayName不能为空)
+     * Set 订单标记，订单附加数据。
+     * @param Tag 订单标记，订单附加数据。
      */
-    public void setPayName(String PayName) {
-        this.PayName = PayName;
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get 订单备注 
+     * @return Remark 订单备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 订单备注
+     * @param Remark 订单备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 收单机构原始交易报文，请转换为json 
+     * @return TradeResult 收单机构原始交易报文，请转换为json
+     */
+    public String getTradeResult() {
+        return this.TradeResult;
+    }
+
+    /**
+     * Set 收单机构原始交易报文，请转换为json
+     * @param TradeResult 收单机构原始交易报文，请转换为json
+     */
+    public void setTradeResult(String TradeResult) {
+        this.TradeResult = TradeResult;
     }
 
     /**
@@ -561,6 +545,22 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         this.SubOpenId = SubOpenId;
     }
 
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
     public UnifiedTlinxOrderRequest() {
     }
 
@@ -569,17 +569,14 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UnifiedTlinxOrderRequest(UnifiedTlinxOrderRequest source) {
-        if (source.DeveloperNo != null) {
-            this.DeveloperNo = new String(source.DeveloperNo);
-        }
         if (source.OpenId != null) {
             this.OpenId = new String(source.OpenId);
         }
-        if (source.NotifyUrl != null) {
-            this.NotifyUrl = new String(source.NotifyUrl);
-        }
         if (source.OpenKey != null) {
             this.OpenKey = new String(source.OpenKey);
+        }
+        if (source.DeveloperNo != null) {
+            this.DeveloperNo = new String(source.DeveloperNo);
         }
         if (source.PayTag != null) {
             this.PayTag = new String(source.PayTag);
@@ -587,32 +584,26 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         if (source.TradeAmount != null) {
             this.TradeAmount = new String(source.TradeAmount);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
         }
-        if (source.Tag != null) {
-            this.Tag = new String(source.Tag);
-        }
-        if (source.IgnoreAmount != null) {
-            this.IgnoreAmount = new String(source.IgnoreAmount);
-        }
-        if (source.AuthCode != null) {
-            this.AuthCode = new String(source.AuthCode);
-        }
-        if (source.OriginalAmount != null) {
-            this.OriginalAmount = new String(source.OriginalAmount);
-        }
-        if (source.OrderName != null) {
-            this.OrderName = new String(source.OrderName);
+        if (source.PayName != null) {
+            this.PayName = new String(source.PayName);
         }
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
+        if (source.OrderName != null) {
+            this.OrderName = new String(source.OrderName);
         }
-        if (source.TradeResult != null) {
-            this.TradeResult = new String(source.TradeResult);
+        if (source.OriginalAmount != null) {
+            this.OriginalAmount = new String(source.OriginalAmount);
+        }
+        if (source.IgnoreAmount != null) {
+            this.IgnoreAmount = new String(source.IgnoreAmount);
+        }
+        if (source.DiscountAmount != null) {
+            this.DiscountAmount = new String(source.DiscountAmount);
         }
         if (source.TradeAccount != null) {
             this.TradeAccount = new String(source.TradeAccount);
@@ -620,11 +611,17 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         if (source.TradeNo != null) {
             this.TradeNo = new String(source.TradeNo);
         }
-        if (source.DiscountAmount != null) {
-            this.DiscountAmount = new String(source.DiscountAmount);
+        if (source.AuthCode != null) {
+            this.AuthCode = new String(source.AuthCode);
         }
-        if (source.PayName != null) {
-            this.PayName = new String(source.PayName);
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.TradeResult != null) {
+            this.TradeResult = new String(source.TradeResult);
         }
         if (source.Royalty != null) {
             this.Royalty = new String(source.Royalty);
@@ -638,6 +635,9 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
         if (source.SubOpenId != null) {
             this.SubOpenId = new String(source.SubOpenId);
         }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
     }
 
 
@@ -645,29 +645,29 @@ public class UnifiedTlinxOrderRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeveloperNo", this.DeveloperNo);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
-        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
+        this.setParamSimple(map, prefix + "DeveloperNo", this.DeveloperNo);
         this.setParamSimple(map, prefix + "PayTag", this.PayTag);
         this.setParamSimple(map, prefix + "TradeAmount", this.TradeAmount);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
-        this.setParamSimple(map, prefix + "Tag", this.Tag);
-        this.setParamSimple(map, prefix + "IgnoreAmount", this.IgnoreAmount);
-        this.setParamSimple(map, prefix + "AuthCode", this.AuthCode);
-        this.setParamSimple(map, prefix + "OriginalAmount", this.OriginalAmount);
-        this.setParamSimple(map, prefix + "OrderName", this.OrderName);
+        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+        this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
-        this.setParamSimple(map, prefix + "TradeResult", this.TradeResult);
+        this.setParamSimple(map, prefix + "OrderName", this.OrderName);
+        this.setParamSimple(map, prefix + "OriginalAmount", this.OriginalAmount);
+        this.setParamSimple(map, prefix + "IgnoreAmount", this.IgnoreAmount);
+        this.setParamSimple(map, prefix + "DiscountAmount", this.DiscountAmount);
         this.setParamSimple(map, prefix + "TradeAccount", this.TradeAccount);
         this.setParamSimple(map, prefix + "TradeNo", this.TradeNo);
-        this.setParamSimple(map, prefix + "DiscountAmount", this.DiscountAmount);
-        this.setParamSimple(map, prefix + "PayName", this.PayName);
+        this.setParamSimple(map, prefix + "AuthCode", this.AuthCode);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "TradeResult", this.TradeResult);
         this.setParamSimple(map, prefix + "Royalty", this.Royalty);
         this.setParamSimple(map, prefix + "Jsapi", this.Jsapi);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "SubOpenId", this.SubOpenId);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

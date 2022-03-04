@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DistributeAddReceiverRequest extends AbstractModel{
 
     /**
-    * 收单系统分配的开放ID
+    * 使用门店OpenId
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 收单系统分配的密钥
+    * 使用门店OpenKey
     */
     @SerializedName("OpenKey")
     @Expose
@@ -44,13 +44,6 @@ public class DistributeAddReceiverRequest extends AbstractModel{
     private String MerchantNo;
 
     /**
-    * 沙箱环境填sandbox，正式环境不填
-    */
-    @SerializedName("Profile")
-    @Expose
-    private String Profile;
-
-    /**
     * 备注
     */
     @SerializedName("Remark")
@@ -58,32 +51,39 @@ public class DistributeAddReceiverRequest extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 收单系统分配的开放ID 
-     * @return OpenId 收单系统分配的开放ID
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
+     * Get 使用门店OpenId 
+     * @return OpenId 使用门店OpenId
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 收单系统分配的开放ID
-     * @param OpenId 收单系统分配的开放ID
+     * Set 使用门店OpenId
+     * @param OpenId 使用门店OpenId
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 收单系统分配的密钥 
-     * @return OpenKey 收单系统分配的密钥
+     * Get 使用门店OpenKey 
+     * @return OpenKey 使用门店OpenKey
      */
     public String getOpenKey() {
         return this.OpenKey;
     }
 
     /**
-     * Set 收单系统分配的密钥
-     * @param OpenKey 收单系统分配的密钥
+     * Set 使用门店OpenKey
+     * @param OpenKey 使用门店OpenKey
      */
     public void setOpenKey(String OpenKey) {
         this.OpenKey = OpenKey;
@@ -106,22 +106,6 @@ public class DistributeAddReceiverRequest extends AbstractModel{
     }
 
     /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public String getProfile() {
-        return this.Profile;
-    }
-
-    /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
-    }
-
-    /**
      * Get 备注 
      * @return Remark 备注
      */
@@ -135,6 +119,22 @@ public class DistributeAddReceiverRequest extends AbstractModel{
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
     }
 
     public DistributeAddReceiverRequest() {
@@ -154,11 +154,11 @@ public class DistributeAddReceiverRequest extends AbstractModel{
         if (source.MerchantNo != null) {
             this.MerchantNo = new String(source.MerchantNo);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
-        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -170,8 +170,8 @@ public class DistributeAddReceiverRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
         this.setParamSimple(map, prefix + "MerchantNo", this.MerchantNo);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

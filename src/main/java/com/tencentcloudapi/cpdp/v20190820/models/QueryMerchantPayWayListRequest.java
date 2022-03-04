@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class QueryMerchantPayWayListRequest extends AbstractModel{
 
     /**
-    * 收单系统分配的开放ID
+    * 使用门店OpenId
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 收单系统分配的密钥
+    * 使用门店OpenKey
     */
     @SerializedName("OpenKey")
     @Expose
@@ -51,32 +51,32 @@ public class QueryMerchantPayWayListRequest extends AbstractModel{
     private String Profile;
 
     /**
-     * Get 收单系统分配的开放ID 
-     * @return OpenId 收单系统分配的开放ID
+     * Get 使用门店OpenId 
+     * @return OpenId 使用门店OpenId
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 收单系统分配的开放ID
-     * @param OpenId 收单系统分配的开放ID
+     * Set 使用门店OpenId
+     * @param OpenId 使用门店OpenId
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 收单系统分配的密钥 
-     * @return OpenKey 收单系统分配的密钥
+     * Get 使用门店OpenKey 
+     * @return OpenKey 使用门店OpenKey
      */
     public String getOpenKey() {
         return this.OpenKey;
     }
 
     /**
-     * Set 收单系统分配的密钥
-     * @param OpenKey 收单系统分配的密钥
+     * Set 使用门店OpenKey
+     * @param OpenKey 使用门店OpenKey
      */
     public void setOpenKey(String OpenKey) {
         this.OpenKey = OpenKey;

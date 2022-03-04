@@ -3,6 +3,9 @@ public enum CdbErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 子账号无权限。
+     AUTHFAILURE_SUBACCOUNTDENIED("AuthFailure.SubAccountDenied"),
+     
     // 后端错误或者流程错误。
      CDBERROR("CdbError"),
      

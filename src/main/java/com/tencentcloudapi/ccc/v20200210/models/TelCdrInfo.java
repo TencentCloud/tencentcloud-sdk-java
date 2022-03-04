@@ -288,6 +288,14 @@ notInService       不在服务区
     private String AsrUrl;
 
     /**
+    * 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomRecordURL")
+    @Expose
+    private String CustomRecordURL;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -999,6 +1007,26 @@ notInService       不在服务区
         this.AsrUrl = AsrUrl;
     }
 
+    /**
+     * Get 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomRecordURL 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomRecordURL() {
+        return this.CustomRecordURL;
+    }
+
+    /**
+     * Set 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomRecordURL 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomRecordURL(String CustomRecordURL) {
+        this.CustomRecordURL = CustomRecordURL;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1106,6 +1134,9 @@ notInService       不在服务区
         if (source.AsrUrl != null) {
             this.AsrUrl = new String(source.AsrUrl);
         }
+        if (source.CustomRecordURL != null) {
+            this.CustomRecordURL = new String(source.CustomRecordURL);
+        }
     }
 
 
@@ -1142,6 +1173,7 @@ notInService       不在服务区
         this.setParamSimple(map, prefix + "Uui", this.Uui);
         this.setParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
         this.setParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
+        this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
 
     }
 }

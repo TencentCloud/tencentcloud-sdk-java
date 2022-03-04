@@ -30,6 +30,13 @@ public class UploadOrgFileRequest extends AbstractModel{
     private String OpenId;
 
     /**
+    * 收单系统分配的密钥
+    */
+    @SerializedName("OpenKey")
+    @Expose
+    private String OpenKey;
+
+    /**
     * 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
     */
     @SerializedName("Storage")
@@ -58,13 +65,6 @@ public class UploadOrgFileRequest extends AbstractModel{
     private String FileExtension;
 
     /**
-    * 收单系统分配的密钥
-    */
-    @SerializedName("OpenKey")
-    @Expose
-    private String OpenKey;
-
-    /**
     * 沙箱环境填sandbox，正式环境不填
     */
     @SerializedName("Profile")
@@ -85,6 +85,22 @@ public class UploadOrgFileRequest extends AbstractModel{
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
+    }
+
+    /**
+     * Get 收单系统分配的密钥 
+     * @return OpenKey 收单系统分配的密钥
+     */
+    public String getOpenKey() {
+        return this.OpenKey;
+    }
+
+    /**
+     * Set 收单系统分配的密钥
+     * @param OpenKey 收单系统分配的密钥
+     */
+    public void setOpenKey(String OpenKey) {
+        this.OpenKey = OpenKey;
     }
 
     /**
@@ -152,22 +168,6 @@ public class UploadOrgFileRequest extends AbstractModel{
     }
 
     /**
-     * Get 收单系统分配的密钥 
-     * @return OpenKey 收单系统分配的密钥
-     */
-    public String getOpenKey() {
-        return this.OpenKey;
-    }
-
-    /**
-     * Set 收单系统分配的密钥
-     * @param OpenKey 收单系统分配的密钥
-     */
-    public void setOpenKey(String OpenKey) {
-        this.OpenKey = OpenKey;
-    }
-
-    /**
      * Get 沙箱环境填sandbox，正式环境不填 
      * @return Profile 沙箱环境填sandbox，正式环境不填
      */
@@ -194,6 +194,9 @@ public class UploadOrgFileRequest extends AbstractModel{
         if (source.OpenId != null) {
             this.OpenId = new String(source.OpenId);
         }
+        if (source.OpenKey != null) {
+            this.OpenKey = new String(source.OpenKey);
+        }
         if (source.Storage != null) {
             this.Storage = new String(source.Storage);
         }
@@ -206,9 +209,6 @@ public class UploadOrgFileRequest extends AbstractModel{
         if (source.FileExtension != null) {
             this.FileExtension = new String(source.FileExtension);
         }
-        if (source.OpenKey != null) {
-            this.OpenKey = new String(source.OpenKey);
-        }
         if (source.Profile != null) {
             this.Profile = new String(source.Profile);
         }
@@ -220,11 +220,11 @@ public class UploadOrgFileRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);
         this.setParamSimple(map, prefix + "FileExtension", this.FileExtension);
-        this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
         this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }

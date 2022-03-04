@@ -37,13 +37,6 @@ public class DownloadOrgFileRequest extends AbstractModel{
     private String OpenKey;
 
     /**
-    * 沙箱环境填sandbox，正式环境不填
-    */
-    @SerializedName("Profile")
-    @Expose
-    private String Profile;
-
-    /**
     * 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
     */
     @SerializedName("Storage")
@@ -56,6 +49,13 @@ public class DownloadOrgFileRequest extends AbstractModel{
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
+
+    /**
+    * 沙箱环境填sandbox，正式环境不填
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
 
     /**
      * Get 收单系统分配的开放ID 
@@ -90,22 +90,6 @@ public class DownloadOrgFileRequest extends AbstractModel{
     }
 
     /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public String getProfile() {
-        return this.Profile;
-    }
-
-    /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
-     */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
-    }
-
-    /**
      * Get 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域 
      * @return Storage 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
      */
@@ -137,6 +121,22 @@ public class DownloadOrgFileRequest extends AbstractModel{
         this.FilePath = FilePath;
     }
 
+    /**
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
     public DownloadOrgFileRequest() {
     }
 
@@ -151,14 +151,14 @@ public class DownloadOrgFileRequest extends AbstractModel{
         if (source.OpenKey != null) {
             this.OpenKey = new String(source.OpenKey);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
-        }
         if (source.Storage != null) {
             this.Storage = new String(source.Storage);
         }
         if (source.FilePath != null) {
             this.FilePath = new String(source.FilePath);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -169,9 +169,9 @@ public class DownloadOrgFileRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "FilePath", this.FilePath);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

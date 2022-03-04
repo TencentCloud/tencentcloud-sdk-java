@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DistributeCancelRequest extends AbstractModel{
 
     /**
-    * 收单系统分配的开放ID
+    * 使用门店OpenId
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 收单系统分配的密钥
+    * 使用门店OpenKey
     */
     @SerializedName("OpenKey")
     @Expose
@@ -44,11 +44,11 @@ public class DistributeCancelRequest extends AbstractModel{
     private String OrderNo;
 
     /**
-    * 沙箱环境填sandbox，正式环境不填
+    * 商户分账单号，type为2时，和DistributeNo二者传其一
     */
-    @SerializedName("Profile")
+    @SerializedName("OutDistributeNo")
     @Expose
-    private String Profile;
+    private String OutDistributeNo;
 
     /**
     * 平台分账单号，type为2时，和OutDistributeNo二者传其一
@@ -58,39 +58,39 @@ public class DistributeCancelRequest extends AbstractModel{
     private String DistributeNo;
 
     /**
-    * 商户分账单号，type为2时，和DistributeNo二者传其一
+    * 沙箱环境填sandbox，正式环境不填
     */
-    @SerializedName("OutDistributeNo")
+    @SerializedName("Profile")
     @Expose
-    private String OutDistributeNo;
+    private String Profile;
 
     /**
-     * Get 收单系统分配的开放ID 
-     * @return OpenId 收单系统分配的开放ID
+     * Get 使用门店OpenId 
+     * @return OpenId 使用门店OpenId
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 收单系统分配的开放ID
-     * @param OpenId 收单系统分配的开放ID
+     * Set 使用门店OpenId
+     * @param OpenId 使用门店OpenId
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 收单系统分配的密钥 
-     * @return OpenKey 收单系统分配的密钥
+     * Get 使用门店OpenKey 
+     * @return OpenKey 使用门店OpenKey
      */
     public String getOpenKey() {
         return this.OpenKey;
     }
 
     /**
-     * Set 收单系统分配的密钥
-     * @param OpenKey 收单系统分配的密钥
+     * Set 使用门店OpenKey
+     * @param OpenKey 使用门店OpenKey
      */
     public void setOpenKey(String OpenKey) {
         this.OpenKey = OpenKey;
@@ -113,19 +113,19 @@ public class DistributeCancelRequest extends AbstractModel{
     }
 
     /**
-     * Get 沙箱环境填sandbox，正式环境不填 
-     * @return Profile 沙箱环境填sandbox，正式环境不填
+     * Get 商户分账单号，type为2时，和DistributeNo二者传其一 
+     * @return OutDistributeNo 商户分账单号，type为2时，和DistributeNo二者传其一
      */
-    public String getProfile() {
-        return this.Profile;
+    public String getOutDistributeNo() {
+        return this.OutDistributeNo;
     }
 
     /**
-     * Set 沙箱环境填sandbox，正式环境不填
-     * @param Profile 沙箱环境填sandbox，正式环境不填
+     * Set 商户分账单号，type为2时，和DistributeNo二者传其一
+     * @param OutDistributeNo 商户分账单号，type为2时，和DistributeNo二者传其一
      */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
+    public void setOutDistributeNo(String OutDistributeNo) {
+        this.OutDistributeNo = OutDistributeNo;
     }
 
     /**
@@ -145,19 +145,19 @@ public class DistributeCancelRequest extends AbstractModel{
     }
 
     /**
-     * Get 商户分账单号，type为2时，和DistributeNo二者传其一 
-     * @return OutDistributeNo 商户分账单号，type为2时，和DistributeNo二者传其一
+     * Get 沙箱环境填sandbox，正式环境不填 
+     * @return Profile 沙箱环境填sandbox，正式环境不填
      */
-    public String getOutDistributeNo() {
-        return this.OutDistributeNo;
+    public String getProfile() {
+        return this.Profile;
     }
 
     /**
-     * Set 商户分账单号，type为2时，和DistributeNo二者传其一
-     * @param OutDistributeNo 商户分账单号，type为2时，和DistributeNo二者传其一
+     * Set 沙箱环境填sandbox，正式环境不填
+     * @param Profile 沙箱环境填sandbox，正式环境不填
      */
-    public void setOutDistributeNo(String OutDistributeNo) {
-        this.OutDistributeNo = OutDistributeNo;
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
     }
 
     public DistributeCancelRequest() {
@@ -177,14 +177,14 @@ public class DistributeCancelRequest extends AbstractModel{
         if (source.OrderNo != null) {
             this.OrderNo = new String(source.OrderNo);
         }
-        if (source.Profile != null) {
-            this.Profile = new String(source.Profile);
+        if (source.OutDistributeNo != null) {
+            this.OutDistributeNo = new String(source.OutDistributeNo);
         }
         if (source.DistributeNo != null) {
             this.DistributeNo = new String(source.DistributeNo);
         }
-        if (source.OutDistributeNo != null) {
-            this.OutDistributeNo = new String(source.OutDistributeNo);
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
         }
     }
 
@@ -196,9 +196,9 @@ public class DistributeCancelRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "OpenKey", this.OpenKey);
         this.setParamSimple(map, prefix + "OrderNo", this.OrderNo);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
-        this.setParamSimple(map, prefix + "DistributeNo", this.DistributeNo);
         this.setParamSimple(map, prefix + "OutDistributeNo", this.OutDistributeNo);
+        this.setParamSimple(map, prefix + "DistributeNo", this.DistributeNo);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

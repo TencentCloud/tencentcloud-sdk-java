@@ -151,6 +151,14 @@ public class ServeParticipant extends AbstractModel{
     private String SkillGroupName;
 
     /**
+    * 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomRecordURL")
+    @Expose
+    private String CustomRecordURL;
+
+    /**
      * Get 坐席邮箱
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mail 坐席邮箱
@@ -470,6 +478,26 @@ public class ServeParticipant extends AbstractModel{
         this.SkillGroupName = SkillGroupName;
     }
 
+    /**
+     * Get 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomRecordURL 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomRecordURL() {
+        return this.CustomRecordURL;
+    }
+
+    /**
+     * Set 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomRecordURL 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomRecordURL(String CustomRecordURL) {
+        this.CustomRecordURL = CustomRecordURL;
+    }
+
     public ServeParticipant() {
     }
 
@@ -526,6 +554,9 @@ public class ServeParticipant extends AbstractModel{
         if (source.SkillGroupName != null) {
             this.SkillGroupName = new String(source.SkillGroupName);
         }
+        if (source.CustomRecordURL != null) {
+            this.CustomRecordURL = new String(source.CustomRecordURL);
+        }
     }
 
 
@@ -549,6 +580,7 @@ public class ServeParticipant extends AbstractModel{
         this.setParamSimple(map, prefix + "Sequence", this.Sequence);
         this.setParamSimple(map, prefix + "StartTimestamp", this.StartTimestamp);
         this.setParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
+        this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
 
     }
 }
