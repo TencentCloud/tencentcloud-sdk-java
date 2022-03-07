@@ -1459,6 +1459,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取边缘脚本链接
+     * @param req DescribeTKEEdgeScriptRequest
+     * @return DescribeTKEEdgeScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(DescribeTKEEdgeScriptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeScriptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTKEEdgeScript");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取集群版本信息
      * @param req DescribeVersionsRequest
      * @return DescribeVersionsResponse

@@ -95,6 +95,14 @@ public class ShowInfo extends AbstractModel{
     private TextInfo [] TextInfoSet;
 
     /**
+    * 已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClassifiedPersonInfoSet")
+    @Expose
+    private ClassifiedPersonInfo [] ClassifiedPersonInfoSet;
+
+    /**
     * 文本标签列表，包含标签内容和出现信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -315,6 +323,26 @@ public class ShowInfo extends AbstractModel{
     }
 
     /**
+     * Get 已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClassifiedPersonInfoSet 已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClassifiedPersonInfo [] getClassifiedPersonInfoSet() {
+        return this.ClassifiedPersonInfoSet;
+    }
+
+    /**
+     * Set 已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClassifiedPersonInfoSet 已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClassifiedPersonInfoSet(ClassifiedPersonInfo [] ClassifiedPersonInfoSet) {
+        this.ClassifiedPersonInfoSet = ClassifiedPersonInfoSet;
+    }
+
+    /**
      * Get 文本标签列表，包含标签内容和出现信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextTagSet 文本标签列表，包含标签内容和出现信息
@@ -461,6 +489,12 @@ public class ShowInfo extends AbstractModel{
                 this.TextInfoSet[i] = new TextInfo(source.TextInfoSet[i]);
             }
         }
+        if (source.ClassifiedPersonInfoSet != null) {
+            this.ClassifiedPersonInfoSet = new ClassifiedPersonInfo[source.ClassifiedPersonInfoSet.length];
+            for (int i = 0; i < source.ClassifiedPersonInfoSet.length; i++) {
+                this.ClassifiedPersonInfoSet[i] = new ClassifiedPersonInfo(source.ClassifiedPersonInfoSet[i]);
+            }
+        }
         if (source.TextTagSet != null) {
             this.TextTagSet = new MultiLevelTag(source.TextTagSet);
         }
@@ -498,6 +532,7 @@ public class ShowInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TitleSet.", this.TitleSet);
         this.setParamArrayObj(map, prefix + "AudioInfoSet.", this.AudioInfoSet);
         this.setParamArrayObj(map, prefix + "TextInfoSet.", this.TextInfoSet);
+        this.setParamArrayObj(map, prefix + "ClassifiedPersonInfoSet.", this.ClassifiedPersonInfoSet);
         this.setParamObj(map, prefix + "TextTagSet.", this.TextTagSet);
         this.setParamObj(map, prefix + "FrameTagSet.", this.FrameTagSet);
         this.setParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);

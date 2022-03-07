@@ -59,6 +59,14 @@ public class OpenBankPayeeInfo extends AbstractModel{
     private String BankBranchId;
 
     /**
+    * 收款方绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+    */
+    @SerializedName("BindSerialNo")
+    @Expose
+    private String BindSerialNo;
+
+    /**
      * Get 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID 
      * @return PayeeId 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
      */
@@ -142,6 +150,26 @@ public class OpenBankPayeeInfo extends AbstractModel{
         this.BankBranchId = BankBranchId;
     }
 
+    /**
+     * Get 收款方绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。 
+     * @return BindSerialNo 收款方绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+     */
+    public String getBindSerialNo() {
+        return this.BindSerialNo;
+    }
+
+    /**
+     * Set 收款方绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+     * @param BindSerialNo 收款方绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+     */
+    public void setBindSerialNo(String BindSerialNo) {
+        this.BindSerialNo = BindSerialNo;
+    }
+
     public OpenBankPayeeInfo() {
     }
 
@@ -165,6 +193,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
         if (source.BankBranchId != null) {
             this.BankBranchId = new String(source.BankBranchId);
         }
+        if (source.BindSerialNo != null) {
+            this.BindSerialNo = new String(source.BindSerialNo);
+        }
     }
 
 
@@ -177,6 +208,7 @@ public class OpenBankPayeeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
         this.setParamSimple(map, prefix + "BankBranchName", this.BankBranchName);
         this.setParamSimple(map, prefix + "BankBranchId", this.BankBranchId);
+        this.setParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
 
     }
 }
