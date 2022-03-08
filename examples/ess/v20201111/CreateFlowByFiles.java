@@ -1,10 +1,10 @@
-package v20201111;
+package ess.v20201111;
 
 import com.tencentcloudapi.ess.v20201111.EssClient;
 import com.tencentcloudapi.ess.v20201111.models.*;
 
-import static v20201111.ClientConfig.EndPoint;
-import static v20201111.ClientConfig.OperatorId;
+import static ess.v20201111.ClientConfig.EndPoint;
+import static ess.v20201111.ClientConfig.OperatorId;
 
 public class CreateFlowByFiles {
 

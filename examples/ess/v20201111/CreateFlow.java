@@ -1,4 +1,4 @@
-package v20201111;
+package ess.v20201111;
 
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.ess.v20201111.EssClient;
@@ -7,8 +7,8 @@ import com.tencentcloudapi.ess.v20201111.models.CreateFlowResponse;
 import com.tencentcloudapi.ess.v20201111.models.FlowCreateApprover;
 import com.tencentcloudapi.ess.v20201111.models.UserInfo;
 
-import static v20201111.ClientConfig.EndPoint;
-import static v20201111.ClientConfig.OperatorId;
+import static ess.v20201111.ClientConfig.EndPoint;
+import static ess.v20201111.ClientConfig.OperatorId;
 
 public class CreateFlow {
 

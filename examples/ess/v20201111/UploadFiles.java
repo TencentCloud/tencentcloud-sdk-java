@@ -1,4 +1,4 @@
-package v20201111;
+package ess.v20201111;
 
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.profile.ClientProfile;
@@ -15,7 +15,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 
-import static v20201111.ClientConfig.*;
+import static ess.v20201111.ClientConfig.*;
 
 public class UploadFiles {
 

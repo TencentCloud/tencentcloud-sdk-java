@@ -1,4 +1,4 @@
-package v20201111;
+package ess.v20201111;
 
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.profile.ClientProfile;
