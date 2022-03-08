@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListClsLogTopicsRequest extends AbstractModel{
+public class CreateReceiverDetailWithDataResponse extends AbstractModel{
 
     /**
-    * 接入渠道，cdn或者ecdn，默认值为cdn
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Channel")
+    @SerializedName("RequestId")
     @Expose
-    private String Channel;
+    private String RequestId;
 
     /**
-     * Get 接入渠道，cdn或者ecdn，默认值为cdn 
-     * @return Channel 接入渠道，cdn或者ecdn，默认值为cdn
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getChannel() {
-        return this.Channel;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 接入渠道，cdn或者ecdn，默认值为cdn
-     * @param Channel 接入渠道，cdn或者ecdn，默认值为cdn
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setChannel(String Channel) {
-        this.Channel = Channel;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public ListClsLogTopicsRequest() {
+    public CreateReceiverDetailWithDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListClsLogTopicsRequest(ListClsLogTopicsRequest source) {
-        if (source.Channel != null) {
-            this.Channel = new String(source.Channel);
+    public CreateReceiverDetailWithDataResponse(CreateReceiverDetailWithDataResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class ListClsLogTopicsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

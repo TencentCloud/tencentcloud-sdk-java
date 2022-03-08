@@ -163,6 +163,13 @@ public class ImagesInfo extends AbstractModel{
     private Long IsAuthorized;
 
     /**
+    * 组件个数
+    */
+    @SerializedName("ComponentCnt")
+    @Expose
+    private Long ComponentCnt;
+
+    /**
      * Get 镜像id 
      * @return ImageID 镜像id
      */
@@ -482,6 +489,22 @@ public class ImagesInfo extends AbstractModel{
         this.IsAuthorized = IsAuthorized;
     }
 
+    /**
+     * Get 组件个数 
+     * @return ComponentCnt 组件个数
+     */
+    public Long getComponentCnt() {
+        return this.ComponentCnt;
+    }
+
+    /**
+     * Set 组件个数
+     * @param ComponentCnt 组件个数
+     */
+    public void setComponentCnt(Long ComponentCnt) {
+        this.ComponentCnt = ComponentCnt;
+    }
+
     public ImagesInfo() {
     }
 
@@ -550,6 +573,9 @@ public class ImagesInfo extends AbstractModel{
         if (source.IsAuthorized != null) {
             this.IsAuthorized = new Long(source.IsAuthorized);
         }
+        if (source.ComponentCnt != null) {
+            this.ComponentCnt = new Long(source.ComponentCnt);
+        }
     }
 
 
@@ -577,6 +603,7 @@ public class ImagesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ScanRiskError", this.ScanRiskError);
         this.setParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
         this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+        this.setParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
 
     }
 }

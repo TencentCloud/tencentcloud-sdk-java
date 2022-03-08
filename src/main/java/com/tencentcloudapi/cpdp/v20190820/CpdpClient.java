@@ -2068,6 +2068,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付-查询账户余额
+     * @param req QueryOpenBankBankAccountBalanceRequest
+     * @return QueryOpenBankBankAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalance(QueryOpenBankBankAccountBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankBankAccountBalanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankBankAccountBalanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankBankAccountBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *云企付-查询联行号
      * @param req QueryOpenBankBankBranchListRequest
      * @return QueryOpenBankBankBranchListResponse
@@ -2100,6 +2120,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankBindExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryOpenBankBindExternalSubMerchantBankAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云企付-按日期批量查询回单下载地址
+     * @param req QueryOpenBankDailyReceiptDownloadUrlRequest
+     * @return QueryOpenBankDailyReceiptDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrl(QueryOpenBankDailyReceiptDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankDailyReceiptDownloadUrl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

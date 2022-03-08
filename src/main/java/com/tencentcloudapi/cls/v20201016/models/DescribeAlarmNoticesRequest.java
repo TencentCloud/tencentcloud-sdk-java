@@ -23,34 +23,21 @@ import java.util.HashMap;
 public class DescribeAlarmNoticesRequest extends AbstractModel{
 
     /**
-    * <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+    * <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
@@ -74,65 +61,39 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+     * Get <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+     * @return Filters <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
@@ -142,65 +103,39 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     }
 
     /**
-     * Set <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+     * Set <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+     * @param Filters <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。

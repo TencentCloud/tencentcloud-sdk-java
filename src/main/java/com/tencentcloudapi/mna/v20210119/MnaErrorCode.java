@@ -21,6 +21,9 @@ public enum MnaErrorCode {
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
      
+    // 不建议加速。
+     OPERATIONDENIED_ACCELERATIONNOTSUGGEST("OperationDenied.AccelerationNotSuggest"),
+     
     // 中国电信加速token过期。
      OPERATIONDENIED_CTCCTOKENEXPIRED("OperationDenied.CTCCTokenExpired"),
      

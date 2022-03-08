@@ -79,7 +79,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *该接口用户创建通知渠道组。
+     *该接口用于创建通知渠道组。
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse
      * @throws TencentCloudSDKException

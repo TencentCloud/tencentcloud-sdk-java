@@ -31,8 +31,8 @@ public class WebCallback extends AbstractModel{
 
     /**
     * 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
     */
     @SerializedName("CallbackType")
     @Expose
@@ -40,8 +40,8 @@ public class WebCallback extends AbstractModel{
 
     /**
     * 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -51,6 +51,7 @@ public class WebCallback extends AbstractModel{
 
     /**
     * 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
@@ -58,7 +59,8 @@ public class WebCallback extends AbstractModel{
     private String [] Headers;
 
     /**
-    * 请求内容。CallbackType为Http时为必选。
+    * 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
@@ -90,11 +92,11 @@ public class WebCallback extends AbstractModel{
 
     /**
      * Get 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http 
+<li> WeCom
+<li> Http 
      * @return CallbackType 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      */
     public String getCallbackType() {
         return this.CallbackType;
@@ -102,11 +104,11 @@ public class WebCallback extends AbstractModel{
 
     /**
      * Set 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      * @param CallbackType 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      */
     public void setCallbackType(String CallbackType) {
         this.CallbackType = CallbackType;
@@ -114,13 +116,13 @@ public class WebCallback extends AbstractModel{
 
     /**
      * Get 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Method 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -130,13 +132,13 @@ public class WebCallback extends AbstractModel{
 
     /**
      * Set 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -146,8 +148,10 @@ public class WebCallback extends AbstractModel{
 
     /**
      * Get 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Headers 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHeaders() {
@@ -156,8 +160,10 @@ public class WebCallback extends AbstractModel{
 
     /**
      * Set 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(String [] Headers) {
@@ -165,9 +171,11 @@ public class WebCallback extends AbstractModel{
     }
 
     /**
-     * Get 请求内容。CallbackType为Http时为必选。
+     * Get 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Body 请求内容。CallbackType为Http时为必选。
+     * @return Body 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
@@ -175,9 +183,11 @@ public class WebCallback extends AbstractModel{
     }
 
     /**
-     * Set 请求内容。CallbackType为Http时为必选。
+     * Set 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Body 请求内容。CallbackType为Http时为必选。
+     * @param Body 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {

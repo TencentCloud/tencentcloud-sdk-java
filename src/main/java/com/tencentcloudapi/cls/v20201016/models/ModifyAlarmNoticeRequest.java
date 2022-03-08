@@ -23,130 +23,130 @@ import java.util.HashMap;
 public class ModifyAlarmNoticeRequest extends AbstractModel{
 
     /**
-    * 告警通知模板ID。
+    * 通知渠道组ID。
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * 告警模板名称。
+    * 通知渠道组名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+    * 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 告警模板接收者信息。
+    * 通知接收对象。
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * 告警模板回调信息。
+    * 接口回调信息（包括企业微信）。
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-     * Get 告警通知模板ID。 
-     * @return AlarmNoticeId 告警通知模板ID。
+     * Get 通知渠道组ID。 
+     * @return AlarmNoticeId 通知渠道组ID。
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 告警通知模板ID。
-     * @param AlarmNoticeId 告警通知模板ID。
+     * Set 通知渠道组ID。
+     * @param AlarmNoticeId 通知渠道组ID。
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get 告警模板名称。 
-     * @return Name 告警模板名称。
+     * Get 通知渠道组名称。 
+     * @return Name 通知渠道组名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警模板名称。
-     * @param Name 告警模板名称。
+     * Set 通知渠道组名称。
+     * @param Name 通知渠道组名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复 
-     * @return Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+     * Get 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复 
+     * @return Type 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
-     * @param Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+     * Set 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
+     * @param Type 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警模板接收者信息。 
-     * @return NoticeReceivers 告警模板接收者信息。
+     * Get 通知接收对象。 
+     * @return NoticeReceivers 通知接收对象。
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set 告警模板接收者信息。
-     * @param NoticeReceivers 告警模板接收者信息。
+     * Set 通知接收对象。
+     * @param NoticeReceivers 通知接收对象。
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 告警模板回调信息。 
-     * @return WebCallbacks 告警模板回调信息。
+     * Get 接口回调信息（包括企业微信）。 
+     * @return WebCallbacks 接口回调信息（包括企业微信）。
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set 告警模板回调信息。
-     * @param WebCallbacks 告警模板回调信息。
+     * Set 接口回调信息（包括企业微信）。
+     * @param WebCallbacks 接口回调信息（包括企业微信）。
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
