@@ -65,6 +65,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String UpgradeMode;
 
     /**
+    * 升级版本前是否对集群进行备份，默认不备份
+    */
+    @SerializedName("CosBackup")
+    @Expose
+    private Boolean CosBackup;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -160,6 +167,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.UpgradeMode = UpgradeMode;
     }
 
+    /**
+     * Get 升级版本前是否对集群进行备份，默认不备份 
+     * @return CosBackup 升级版本前是否对集群进行备份，默认不备份
+     */
+    public Boolean getCosBackup() {
+        return this.CosBackup;
+    }
+
+    /**
+     * Set 升级版本前是否对集群进行备份，默认不备份
+     * @param CosBackup 升级版本前是否对集群进行备份，默认不备份
+     */
+    public void setCosBackup(Boolean CosBackup) {
+        this.CosBackup = CosBackup;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -186,6 +209,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.UpgradeMode != null) {
             this.UpgradeMode = new String(source.UpgradeMode);
         }
+        if (source.CosBackup != null) {
+            this.CosBackup = new Boolean(source.CosBackup);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+        this.setParamSimple(map, prefix + "CosBackup", this.CosBackup);
 
     }
 }

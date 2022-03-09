@@ -297,6 +297,19 @@ public class DeployApplicationRequest extends AbstractModel{
     private HealthCheckConfig StartupProbe;
 
     /**
+    * 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+    */
+    @SerializedName("OsFlavour")
+    @Expose
+    private String OsFlavour;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -936,6 +949,46 @@ public class DeployApplicationRequest extends AbstractModel{
         this.StartupProbe = StartupProbe;
     }
 
+    /**
+     * Get 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS 
+     * @return OsFlavour 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     */
+    public String getOsFlavour() {
+        return this.OsFlavour;
+    }
+
+    /**
+     * Set 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     * @param OsFlavour 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     */
+    public void setOsFlavour(String OsFlavour) {
+        this.OsFlavour = OsFlavour;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1085,6 +1138,9 @@ public class DeployApplicationRequest extends AbstractModel{
         if (source.StartupProbe != null) {
             this.StartupProbe = new HealthCheckConfig(source.StartupProbe);
         }
+        if (source.OsFlavour != null) {
+            this.OsFlavour = new String(source.OsFlavour);
+        }
     }
 
 
@@ -1130,6 +1186,7 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
         this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
         this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
+        this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
 
     }
 }

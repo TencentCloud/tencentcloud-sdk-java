@@ -93,6 +93,13 @@ public class ScheduledAction extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+    */
+    @SerializedName("ScheduledType")
+    @Expose
+    private String ScheduledType;
+
+    /**
      * Get 定时任务ID。 
      * @return ScheduledActionId 定时任务ID。
      */
@@ -252,6 +259,22 @@ public class ScheduledAction extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。 
+     * @return ScheduledType 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     */
+    public String getScheduledType() {
+        return this.ScheduledType;
+    }
+
+    /**
+     * Set 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     * @param ScheduledType 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     */
+    public void setScheduledType(String ScheduledType) {
+        this.ScheduledType = ScheduledType;
+    }
+
     public ScheduledAction() {
     }
 
@@ -290,6 +313,9 @@ public class ScheduledAction extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.ScheduledType != null) {
+            this.ScheduledType = new String(source.ScheduledType);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class ScheduledAction extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "ScheduledType", this.ScheduledType);
 
     }
 }
