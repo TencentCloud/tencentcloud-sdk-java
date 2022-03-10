@@ -55,6 +55,14 @@ public class SearchKTVMusicsRequest extends AbstractModel{
     private SortBy Sort;
 
     /**
+    * 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("TagIds")
+    @Expose
+    private String [] TagIds;
+
+    /**
      * Get 搜索关键词 
      * @return KeyWord 搜索关键词
      */
@@ -134,6 +142,26 @@ public class SearchKTVMusicsRequest extends AbstractModel{
         this.Sort = Sort;
     }
 
+    /**
+     * Get 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li> 
+     * @return TagIds 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
+     */
+    public String [] getTagIds() {
+        return this.TagIds;
+    }
+
+    /**
+     * Set 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
+     * @param TagIds 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
+     */
+    public void setTagIds(String [] TagIds) {
+        this.TagIds = TagIds;
+    }
+
     public SearchKTVMusicsRequest() {
     }
 
@@ -154,6 +182,12 @@ public class SearchKTVMusicsRequest extends AbstractModel{
         if (source.Sort != null) {
             this.Sort = new SortBy(source.Sort);
         }
+        if (source.TagIds != null) {
+            this.TagIds = new String[source.TagIds.length];
+            for (int i = 0; i < source.TagIds.length; i++) {
+                this.TagIds[i] = new String(source.TagIds[i]);
+            }
+        }
     }
 
 
@@ -165,6 +199,7 @@ public class SearchKTVMusicsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
+        this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
 
     }
 }

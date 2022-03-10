@@ -199,6 +199,26 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *获取直播互动曲库标签分组信息和标签信息
+     * @param req DescribeKTVMusicTagsRequest
+     * @return DescribeKTVMusicTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVMusicTagsResponse DescribeKTVMusicTags(DescribeKTVMusicTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVMusicTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVMusicTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
      * @param req DescribeKTVPlaylistDetailRequest
      * @return DescribeKTVPlaylistDetailResponse
@@ -314,6 +334,26 @@ public class AmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVSingersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeKTVSingers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取直播互动曲库联想词
+     * @param req DescribeKTVSuggestionsRequest
+     * @return DescribeKTVSuggestionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVSuggestionsResponse DescribeKTVSuggestions(DescribeKTVSuggestionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVSuggestionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVSuggestionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVSuggestions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

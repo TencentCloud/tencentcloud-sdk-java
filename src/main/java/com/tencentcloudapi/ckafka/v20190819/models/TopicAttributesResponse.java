@@ -96,6 +96,14 @@ public class TopicAttributesResponse extends AbstractModel{
     private AclRule [] AclRuleList;
 
     /**
+    * topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuotaConfig")
+    @Expose
+    private InstanceQuotaConfigResp QuotaConfig;
+
+    /**
      * Get 主题 ID 
      * @return TopicId 主题 ID
      */
@@ -267,6 +275,26 @@ public class TopicAttributesResponse extends AbstractModel{
         this.AclRuleList = AclRuleList;
     }
 
+    /**
+     * Get topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuotaConfig topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceQuotaConfigResp getQuotaConfig() {
+        return this.QuotaConfig;
+    }
+
+    /**
+     * Set topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuotaConfig topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuotaConfig(InstanceQuotaConfigResp QuotaConfig) {
+        this.QuotaConfig = QuotaConfig;
+    }
+
     public TopicAttributesResponse() {
     }
 
@@ -314,6 +342,9 @@ public class TopicAttributesResponse extends AbstractModel{
                 this.AclRuleList[i] = new AclRule(source.AclRuleList[i]);
             }
         }
+        if (source.QuotaConfig != null) {
+            this.QuotaConfig = new InstanceQuotaConfigResp(source.QuotaConfig);
+        }
     }
 
 
@@ -331,6 +362,7 @@ public class TopicAttributesResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
+        this.setParamObj(map, prefix + "QuotaConfig.", this.QuotaConfig);
 
     }
 }

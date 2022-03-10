@@ -38,6 +38,13 @@ public class CreateKTVRobotRequest extends AbstractModel{
     private JoinRoomInput JoinRoomInput;
 
     /**
+    * license基础信息
+    */
+    @SerializedName("ApplicationLicenseInput")
+    @Expose
+    private ApplicationLicenseInput ApplicationLicenseInput;
+
+    /**
      * Get RTC厂商类型，取值有：
 <li>TRTC</li> 
      * @return RTCSystem RTC厂商类型，取值有：
@@ -73,6 +80,22 @@ public class CreateKTVRobotRequest extends AbstractModel{
         this.JoinRoomInput = JoinRoomInput;
     }
 
+    /**
+     * Get license基础信息 
+     * @return ApplicationLicenseInput license基础信息
+     */
+    public ApplicationLicenseInput getApplicationLicenseInput() {
+        return this.ApplicationLicenseInput;
+    }
+
+    /**
+     * Set license基础信息
+     * @param ApplicationLicenseInput license基础信息
+     */
+    public void setApplicationLicenseInput(ApplicationLicenseInput ApplicationLicenseInput) {
+        this.ApplicationLicenseInput = ApplicationLicenseInput;
+    }
+
     public CreateKTVRobotRequest() {
     }
 
@@ -87,6 +110,9 @@ public class CreateKTVRobotRequest extends AbstractModel{
         if (source.JoinRoomInput != null) {
             this.JoinRoomInput = new JoinRoomInput(source.JoinRoomInput);
         }
+        if (source.ApplicationLicenseInput != null) {
+            this.ApplicationLicenseInput = new ApplicationLicenseInput(source.ApplicationLicenseInput);
+        }
     }
 
 
@@ -96,6 +122,7 @@ public class CreateKTVRobotRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
         this.setParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
+        this.setParamObj(map, prefix + "ApplicationLicenseInput.", this.ApplicationLicenseInput);
 
     }
 }

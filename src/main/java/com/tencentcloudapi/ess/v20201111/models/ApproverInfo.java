@@ -69,7 +69,10 @@ public class ApproverInfo extends AbstractModel{
     private String ApproverIdCardNumber;
 
     /**
-    * 证件类型 ID_CARD 身份证
+    * 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     */
     @SerializedName("ApproverIdCardType")
     @Expose
@@ -221,16 +224,28 @@ VERIFYCODE - 验证码；
     }
 
     /**
-     * Get 证件类型 ID_CARD 身份证 
-     * @return ApproverIdCardType 证件类型 ID_CARD 身份证
+     * Get 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
+     * @return ApproverIdCardType 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public String getApproverIdCardType() {
         return this.ApproverIdCardType;
     }
 
     /**
-     * Set 证件类型 ID_CARD 身份证
-     * @param ApproverIdCardType 证件类型 ID_CARD 身份证
+     * Set 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+     * @param ApproverIdCardType 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public void setApproverIdCardType(String ApproverIdCardType) {
         this.ApproverIdCardType = ApproverIdCardType;

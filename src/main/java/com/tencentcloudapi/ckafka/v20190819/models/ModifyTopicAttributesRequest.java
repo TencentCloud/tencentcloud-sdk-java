@@ -128,6 +128,20 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 生产限流，单位 MB/s
+    */
+    @SerializedName("QuotaProducerByteRate")
+    @Expose
+    private Long QuotaProducerByteRate;
+
+    /**
+    * 消费限流，单位 MB/s
+    */
+    @SerializedName("QuotaConsumerByteRate")
+    @Expose
+    private Long QuotaConsumerByteRate;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -367,6 +381,38 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 生产限流，单位 MB/s 
+     * @return QuotaProducerByteRate 生产限流，单位 MB/s
+     */
+    public Long getQuotaProducerByteRate() {
+        return this.QuotaProducerByteRate;
+    }
+
+    /**
+     * Set 生产限流，单位 MB/s
+     * @param QuotaProducerByteRate 生产限流，单位 MB/s
+     */
+    public void setQuotaProducerByteRate(Long QuotaProducerByteRate) {
+        this.QuotaProducerByteRate = QuotaProducerByteRate;
+    }
+
+    /**
+     * Get 消费限流，单位 MB/s 
+     * @return QuotaConsumerByteRate 消费限流，单位 MB/s
+     */
+    public Long getQuotaConsumerByteRate() {
+        return this.QuotaConsumerByteRate;
+    }
+
+    /**
+     * Set 消费限流，单位 MB/s
+     * @param QuotaConsumerByteRate 消费限流，单位 MB/s
+     */
+    public void setQuotaConsumerByteRate(Long QuotaConsumerByteRate) {
+        this.QuotaConsumerByteRate = QuotaConsumerByteRate;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -426,6 +472,12 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.QuotaProducerByteRate != null) {
+            this.QuotaProducerByteRate = new Long(source.QuotaProducerByteRate);
+        }
+        if (source.QuotaConsumerByteRate != null) {
+            this.QuotaConsumerByteRate = new Long(source.QuotaConsumerByteRate);
+        }
     }
 
 
@@ -448,6 +500,8 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
+        this.setParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
 
     }
 }

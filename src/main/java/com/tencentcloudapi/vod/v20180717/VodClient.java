@@ -2040,6 +2040,38 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改媒体文件的存储类型。
+当媒体文件的存储类型为标准存储时，可以修改为以下类型：
+<li>低频存储</li>
+<li>归档存储</li>
+<li>深度归档存储</li>
+当媒体文件的当前存储类型为低频存储时，可以修改为以下类型：
+<li>标准存储</li>
+<li>归档存储</li>
+<li>深度归档存储</li>
+当媒体文件的当前存储类型为归档存储时，可以修改为以下类型：
+<li>标准存储</li>
+当媒体文件的当前存储类型为深度归档存储时，可以修改为以下类型：
+<li>标准存储</li>
+     * @param req ModifyMediaStorageClassRequest
+     * @return ModifyMediaStorageClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMediaStorageClassResponse ModifyMediaStorageClass(ModifyMediaStorageClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMediaStorageClassResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMediaStorageClass");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
      * @param req ModifyPersonSampleRequest
      * @return ModifyPersonSampleResponse

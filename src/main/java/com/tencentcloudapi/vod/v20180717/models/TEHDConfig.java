@@ -23,9 +23,7 @@ import java.util.HashMap;
 public class TEHDConfig extends AbstractModel{
 
     /**
-    * 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+    * 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
     */
     @SerializedName("Type")
     @Expose
@@ -40,24 +38,16 @@ public class TEHDConfig extends AbstractModel{
     private Long MaxVideoBitrate;
 
     /**
-     * Get 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。 
-     * @return Type 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+     * Get 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。 
+     * @return Type 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
-     * @param Type 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+     * Set 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
+     * @param Type 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
      */
     public void setType(String Type) {
         this.Type = Type;
