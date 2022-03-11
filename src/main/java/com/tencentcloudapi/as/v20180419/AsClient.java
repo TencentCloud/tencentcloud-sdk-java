@@ -973,27 +973,6 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *本接口（PreviewPaiDomainName）用于预览PAI实例域名。
-
-     * @param req PreviewPaiDomainNameRequest
-     * @return PreviewPaiDomainNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public PreviewPaiDomainNameResponse PreviewPaiDomainName(PreviewPaiDomainNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PreviewPaiDomainNameResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<PreviewPaiDomainNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PreviewPaiDomainName");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（RemoveInstances）用于从伸缩组删除 CVM 实例。根据当前的产品逻辑，如果实例由弹性伸缩自动创建，则实例会被销毁；如果实例系创建后加入伸缩组的，则会从伸缩组中移除，保留实例。
 * 如果删除指定实例后，伸缩组内处于`IN_SERVICE`状态的实例数量小于伸缩组最小值，接口将报错
 * 如果伸缩组处于`DISABLED`状态，删除操作不校验`IN_SERVICE`实例数量和最小值的关系

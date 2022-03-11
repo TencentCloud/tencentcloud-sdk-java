@@ -246,30 +246,6 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *查询音视频互动计费时长。
-- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
-- 单次查询统计区间最多不能超过31天。
-- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
-- 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
-     * @param req DescribeTrtcInteractiveTimeRequest
-     * @return DescribeTrtcInteractiveTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTrtcInteractiveTime");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询旁路转码计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。
