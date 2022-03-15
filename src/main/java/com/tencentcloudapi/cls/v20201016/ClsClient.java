@@ -119,6 +119,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建特殊采集配置任务
+     * @param req CreateConfigExtraRequest
+     * @return CreateConfigExtraResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigExtraResponse CreateConfigExtra(CreateConfigExtraRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConfigExtraResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConfigExtraResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConfigExtra");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于创建投递任务
      * @param req CreateConsumerRequest
      * @return CreateConsumerResponse
@@ -319,6 +339,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于删除特殊采集规则配置
+     * @param req DeleteConfigExtraRequest
+     * @return DeleteConfigExtraResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConfigExtraResponse DeleteConfigExtra(DeleteConfigExtraRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteConfigExtraResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteConfigExtraResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteConfigExtra");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除应用到机器组的采集配置
      * @param req DeleteConfigFromMachineGroupRequest
      * @return DeleteConfigFromMachineGroupResponse
@@ -511,6 +551,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAlarms");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于获取特殊采集配置
+     * @param req DescribeConfigExtrasRequest
+     * @return DescribeConfigExtrasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigExtrasResponse DescribeConfigExtras(DescribeConfigExtrasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigExtrasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigExtrasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConfigExtras");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -891,6 +951,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于修改特殊采集配置任务
+     * @param req ModifyConfigExtraRequest
+     * @return ModifyConfigExtraResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConfigExtraResponse ModifyConfigExtra(ModifyConfigExtraRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyConfigExtraResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyConfigExtraResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyConfigExtra");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

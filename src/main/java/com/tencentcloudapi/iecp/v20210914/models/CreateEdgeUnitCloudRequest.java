@@ -65,6 +65,13 @@ public class CreateEdgeUnitCloudRequest extends AbstractModel{
     private String ServiceCIDR;
 
     /**
+    * 是否开启监控。目前内存中权限开启联系产品开通白名单
+    */
+    @SerializedName("OpenCloudMonitor")
+    @Expose
+    private Boolean OpenCloudMonitor;
+
+    /**
      * Get 集群名称，长度小于32 
      * @return Name 集群名称，长度小于32
      */
@@ -160,6 +167,22 @@ public class CreateEdgeUnitCloudRequest extends AbstractModel{
         this.ServiceCIDR = ServiceCIDR;
     }
 
+    /**
+     * Get 是否开启监控。目前内存中权限开启联系产品开通白名单 
+     * @return OpenCloudMonitor 是否开启监控。目前内存中权限开启联系产品开通白名单
+     */
+    public Boolean getOpenCloudMonitor() {
+        return this.OpenCloudMonitor;
+    }
+
+    /**
+     * Set 是否开启监控。目前内存中权限开启联系产品开通白名单
+     * @param OpenCloudMonitor 是否开启监控。目前内存中权限开启联系产品开通白名单
+     */
+    public void setOpenCloudMonitor(Boolean OpenCloudMonitor) {
+        this.OpenCloudMonitor = OpenCloudMonitor;
+    }
+
     public CreateEdgeUnitCloudRequest() {
     }
 
@@ -186,6 +209,9 @@ public class CreateEdgeUnitCloudRequest extends AbstractModel{
         if (source.ServiceCIDR != null) {
             this.ServiceCIDR = new String(source.ServiceCIDR);
         }
+        if (source.OpenCloudMonitor != null) {
+            this.OpenCloudMonitor = new Boolean(source.OpenCloudMonitor);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class CreateEdgeUnitCloudRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "PodCIDR", this.PodCIDR);
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+        this.setParamSimple(map, prefix + "OpenCloudMonitor", this.OpenCloudMonitor);
 
     }
 }

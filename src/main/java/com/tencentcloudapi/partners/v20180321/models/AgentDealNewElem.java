@@ -171,7 +171,7 @@ public class AgentDealNewElem extends AbstractModel{
     private String BigDealId;
 
     /**
-    * 客户类型（new：新拓；old：存量；assign：指派）
+    * 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientType")
@@ -607,9 +607,9 @@ public class AgentDealNewElem extends AbstractModel{
     }
 
     /**
-     * Get 客户类型（new：新拓；old：存量；assign：指派）
+     * Get 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientType 客户类型（new：新拓；old：存量；assign：指派）
+     * @return ClientType 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientType() {
@@ -617,9 +617,9 @@ public class AgentDealNewElem extends AbstractModel{
     }
 
     /**
-     * Set 客户类型（new：新拓；old：存量；assign：指派）
+     * Set 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientType 客户类型（new：新拓；old：存量；assign：指派）
+     * @param ClientType 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientType(String ClientType) {

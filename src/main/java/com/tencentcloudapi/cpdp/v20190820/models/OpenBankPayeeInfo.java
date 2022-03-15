@@ -60,7 +60,7 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
     * 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
     */
     @SerializedName("BindSerialNo")
     @Expose
@@ -152,9 +152,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
      * Get 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。 
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。 
      * @return BindSerialNo 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
      */
     public String getBindSerialNo() {
         return this.BindSerialNo;
@@ -162,9 +162,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
      * Set 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
      * @param BindSerialNo 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
      */
     public void setBindSerialNo(String BindSerialNo) {
         this.BindSerialNo = BindSerialNo;

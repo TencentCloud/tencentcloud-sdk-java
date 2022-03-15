@@ -30,7 +30,7 @@ public class ModifyConsumerRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * 投递任务是否生效
+    * 投递任务是否生效，默认不生效
     */
     @SerializedName("Effective")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyConsumerRequest extends AbstractModel{
     }
 
     /**
-     * Get 投递任务是否生效 
-     * @return Effective 投递任务是否生效
+     * Get 投递任务是否生效，默认不生效 
+     * @return Effective 投递任务是否生效，默认不生效
      */
     public Boolean getEffective() {
         return this.Effective;
     }
 
     /**
-     * Set 投递任务是否生效
-     * @param Effective 投递任务是否生效
+     * Set 投递任务是否生效，默认不生效
+     * @param Effective 投递任务是否生效，默认不生效
      */
     public void setEffective(Boolean Effective) {
         this.Effective = Effective;

@@ -199,6 +199,14 @@ public class SREInstance extends AbstractModel{
     private Boolean EnableConsoleIntranet;
 
     /**
+    * 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigInfoVisible")
+    @Expose
+    private Boolean ConfigInfoVisible;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -626,6 +634,26 @@ public class SREInstance extends AbstractModel{
         this.EnableConsoleIntranet = EnableConsoleIntranet;
     }
 
+    /**
+     * Get 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigInfoVisible 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getConfigInfoVisible() {
+        return this.ConfigInfoVisible;
+    }
+
+    /**
+     * Set 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigInfoVisible 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigInfoVisible(Boolean ConfigInfoVisible) {
+        this.ConfigInfoVisible = ConfigInfoVisible;
+    }
+
     public SREInstance() {
     }
 
@@ -718,6 +746,9 @@ public class SREInstance extends AbstractModel{
         if (source.EnableConsoleIntranet != null) {
             this.EnableConsoleIntranet = new Boolean(source.EnableConsoleIntranet);
         }
+        if (source.ConfigInfoVisible != null) {
+            this.ConfigInfoVisible = new Boolean(source.ConfigInfoVisible);
+        }
     }
 
 
@@ -748,6 +779,7 @@ public class SREInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "EnableConsoleInternet", this.EnableConsoleInternet);
         this.setParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
+        this.setParamSimple(map, prefix + "ConfigInfoVisible", this.ConfigInfoVisible);
 
     }
 }

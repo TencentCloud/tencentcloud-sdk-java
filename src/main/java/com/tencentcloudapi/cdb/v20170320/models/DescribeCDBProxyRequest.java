@@ -30,7 +30,7 @@ public class DescribeCDBProxyRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 代理ID
+    * 代理组ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理ID 
-     * @return ProxyGroupId 代理ID
+     * Get 代理组ID 
+     * @return ProxyGroupId 代理组ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理ID
-     * @param ProxyGroupId 代理ID
+     * Set 代理组ID
+     * @param ProxyGroupId 代理组ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

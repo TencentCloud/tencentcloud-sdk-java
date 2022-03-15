@@ -57,6 +57,9 @@ public enum TemErrorCode {
     // 版本的路由流量不为0。
      INVALIDPARAMETERVALUE_VERSIONROUTERATENOTZERO("InvalidParameterValue.VersionRouteRateNotZero"),
      
+    // 部署版本不能为空。
+     MISSINGPARAMETER_DEPLOYVERSIONNULL("MissingParameter.DeployVersionNull"),
+     
     // 环境ID不能为空。
      MISSINGPARAMETER_NAMESPACEIDNULL("MissingParameter.NamespaceIdNull"),
      

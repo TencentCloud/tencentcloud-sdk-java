@@ -260,6 +260,26 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *根据收件id删除收件人列表,同时删除列表中的所有收件邮箱
+     * @param req DeleteReceiverRequest
+     * @return DeleteReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReceiverResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReceiverResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReceiver");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取某个发信域名的配置详情
      * @param req GetEmailIdentityRequest
      * @return GetEmailIdentityResponse

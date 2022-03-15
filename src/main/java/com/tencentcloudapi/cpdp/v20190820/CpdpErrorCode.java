@@ -66,6 +66,9 @@ public enum CpdpErrorCode {
     // 支付渠道错误。
      FAILEDOPERATION_CHANNELERROR("FailedOperation.ChannelError"),
      
+    // 渠道方退款失败。
+     FAILEDOPERATION_CHANNELREFUNDFAILED("FailedOperation.ChannelRefundFailed"),
+     
     // 终止合约失败。
      FAILEDOPERATION_CLOSECONTRACTDBFAILED("FailedOperation.CloseContractDbFailed"),
      

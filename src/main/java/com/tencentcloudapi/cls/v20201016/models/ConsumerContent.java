@@ -39,6 +39,14 @@ public class ConsumerContent extends AbstractModel{
     private String [] MetaFields;
 
     /**
+    * 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagJsonNotTiled")
+    @Expose
+    private Boolean TagJsonNotTiled;
+
+    /**
      * Get 是否投递 TAG 信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnableTag 是否投递 TAG 信息
@@ -78,6 +86,26 @@ public class ConsumerContent extends AbstractModel{
         this.MetaFields = MetaFields;
     }
 
+    /**
+     * Get 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTagJsonNotTiled() {
+        return this.TagJsonNotTiled;
+    }
+
+    /**
+     * Set 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagJsonNotTiled(Boolean TagJsonNotTiled) {
+        this.TagJsonNotTiled = TagJsonNotTiled;
+    }
+
     public ConsumerContent() {
     }
 
@@ -95,6 +123,9 @@ public class ConsumerContent extends AbstractModel{
                 this.MetaFields[i] = new String(source.MetaFields[i]);
             }
         }
+        if (source.TagJsonNotTiled != null) {
+            this.TagJsonNotTiled = new Boolean(source.TagJsonNotTiled);
+        }
     }
 
 
@@ -104,6 +135,7 @@ public class ConsumerContent extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableTag", this.EnableTag);
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+        this.setParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
 
     }
 }
