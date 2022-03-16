@@ -30,6 +30,14 @@ public class CreateFlowByFilesResponse extends AbstractModel{
     private String FlowId;
 
     /**
+    * 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreviewUrl")
+    @Expose
+    private String PreviewUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class CreateFlowByFilesResponse extends AbstractModel{
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreviewUrl 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreviewUrl() {
+        return this.PreviewUrl;
+    }
+
+    /**
+     * Set 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreviewUrl 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreviewUrl(String PreviewUrl) {
+        this.PreviewUrl = PreviewUrl;
     }
 
     /**
@@ -79,6 +107,9 @@ public class CreateFlowByFilesResponse extends AbstractModel{
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class CreateFlowByFilesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

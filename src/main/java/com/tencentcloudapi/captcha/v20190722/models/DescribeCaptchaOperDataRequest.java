@@ -44,6 +44,13 @@ public class DescribeCaptchaOperDataRequest extends AbstractModel{
     private Long Type;
 
     /**
+    * 查询结束时间
+    */
+    @SerializedName("End")
+    @Expose
+    private Long End;
+
+    /**
      * Get 验证码应用ID 
      * @return CaptchaAppId 验证码应用ID
      */
@@ -91,6 +98,22 @@ public class DescribeCaptchaOperDataRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get 查询结束时间 
+     * @return End 查询结束时间
+     */
+    public Long getEnd() {
+        return this.End;
+    }
+
+    /**
+     * Set 查询结束时间
+     * @param End 查询结束时间
+     */
+    public void setEnd(Long End) {
+        this.End = End;
+    }
+
     public DescribeCaptchaOperDataRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeCaptchaOperDataRequest extends AbstractModel{
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.End != null) {
+            this.End = new Long(source.End);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeCaptchaOperDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CaptchaAppId", this.CaptchaAppId);
         this.setParamSimple(map, prefix + "Start", this.Start);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "End", this.End);
 
     }
 }

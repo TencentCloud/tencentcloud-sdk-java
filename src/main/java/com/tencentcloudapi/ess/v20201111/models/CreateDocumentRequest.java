@@ -72,6 +72,13 @@ public class CreateDocumentRequest extends AbstractModel{
     private String ClientToken;
 
     /**
+    * 是否需要生成预览文件 默认不生成
+    */
+    @SerializedName("NeedPreview")
+    @Expose
+    private Boolean NeedPreview;
+
+    /**
      * Get 无 
      * @return Operator 无
      */
@@ -183,6 +190,22 @@ public class CreateDocumentRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 是否需要生成预览文件 默认不生成 
+     * @return NeedPreview 是否需要生成预览文件 默认不生成
+     */
+    public Boolean getNeedPreview() {
+        return this.NeedPreview;
+    }
+
+    /**
+     * Set 是否需要生成预览文件 默认不生成
+     * @param NeedPreview 是否需要生成预览文件 默认不生成
+     */
+    public void setNeedPreview(Boolean NeedPreview) {
+        this.NeedPreview = NeedPreview;
+    }
+
     public CreateDocumentRequest() {
     }
 
@@ -218,6 +241,9 @@ public class CreateDocumentRequest extends AbstractModel{
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.NeedPreview != null) {
+            this.NeedPreview = new Boolean(source.NeedPreview);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class CreateDocumentRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
 
     }
 }

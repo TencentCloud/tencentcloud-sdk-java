@@ -45,6 +45,13 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     private String [] ErrorMessages;
 
     /**
+    * 预览模式下返回的预览文件url数组
+    */
+    @SerializedName("PreviewUrls")
+    @Expose
+    private String [] PreviewUrls;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,6 +111,22 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     }
 
     /**
+     * Get 预览模式下返回的预览文件url数组 
+     * @return PreviewUrls 预览模式下返回的预览文件url数组
+     */
+    public String [] getPreviewUrls() {
+        return this.PreviewUrls;
+    }
+
+    /**
+     * Set 预览模式下返回的预览文件url数组
+     * @param PreviewUrls 预览模式下返回的预览文件url数组
+     */
+    public void setPreviewUrls(String [] PreviewUrls) {
+        this.PreviewUrls = PreviewUrls;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +168,12 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
                 this.ErrorMessages[i] = new String(source.ErrorMessages[i]);
             }
         }
+        if (source.PreviewUrls != null) {
+            this.PreviewUrls = new String[source.PreviewUrls.length];
+            for (int i = 0; i < source.PreviewUrls.length; i++) {
+                this.PreviewUrls[i] = new String(source.PreviewUrls[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -158,6 +187,7 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamArraySimple(map, prefix + "CustomerData.", this.CustomerData);
         this.setParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
+        this.setParamArraySimple(map, prefix + "PreviewUrls.", this.PreviewUrls);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

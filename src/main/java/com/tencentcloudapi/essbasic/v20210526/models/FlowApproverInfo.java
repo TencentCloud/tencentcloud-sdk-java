@@ -114,6 +114,14 @@ public class FlowApproverInfo extends AbstractModel{
     private String OrganizationOpenId;
 
     /**
+    * 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+    */
+    @SerializedName("NotChannelOrganization")
+    @Expose
+    private Boolean NotChannelOrganization;
+
+    /**
      * Get 签署人姓名 
      * @return Name 签署人姓名
      */
@@ -321,6 +329,26 @@ public class FlowApproverInfo extends AbstractModel{
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
+    /**
+     * Get 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下； 
+     * @return NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+     */
+    public Boolean getNotChannelOrganization() {
+        return this.NotChannelOrganization;
+    }
+
+    /**
+     * Set 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+     * @param NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+     */
+    public void setNotChannelOrganization(Boolean NotChannelOrganization) {
+        this.NotChannelOrganization = NotChannelOrganization;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -371,6 +399,9 @@ public class FlowApproverInfo extends AbstractModel{
         if (source.OrganizationOpenId != null) {
             this.OrganizationOpenId = new String(source.OrganizationOpenId);
         }
+        if (source.NotChannelOrganization != null) {
+            this.NotChannelOrganization = new Boolean(source.NotChannelOrganization);
+        }
     }
 
 
@@ -391,6 +422,7 @@ public class FlowApproverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
+        this.setParamSimple(map, prefix + "NotChannelOrganization", this.NotChannelOrganization);
 
     }
 }

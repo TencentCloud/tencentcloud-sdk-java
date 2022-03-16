@@ -81,6 +81,13 @@ public class SendEmailRequest extends AbstractModel{
     private String Unsubscribe;
 
     /**
+    * 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private Long TriggerType;
+
+    /**
      * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
 如需填写发件人说明，请按照如下方式： 
 别名 <邮箱地址> 
@@ -216,6 +223,22 @@ public class SendEmailRequest extends AbstractModel{
         this.Unsubscribe = Unsubscribe;
     }
 
+    /**
+     * Get 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道 
+     * @return TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+     */
+    public Long getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+     * @param TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+     */
+    public void setTriggerType(Long TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
     public SendEmailRequest() {
     }
 
@@ -254,6 +277,9 @@ public class SendEmailRequest extends AbstractModel{
         if (source.Unsubscribe != null) {
             this.Unsubscribe = new String(source.Unsubscribe);
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new Long(source.TriggerType);
+        }
     }
 
 
@@ -269,6 +295,7 @@ public class SendEmailRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Simple.", this.Simple);
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
 
     }
 }

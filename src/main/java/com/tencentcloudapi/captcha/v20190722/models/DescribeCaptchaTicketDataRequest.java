@@ -37,6 +37,13 @@ public class DescribeCaptchaTicketDataRequest extends AbstractModel{
     private Long Start;
 
     /**
+    * 查询结束时间 例如：20220314
+    */
+    @SerializedName("End")
+    @Expose
+    private Long End;
+
+    /**
      * Get 验证码应用ID 
      * @return CaptchaAppId 验证码应用ID
      */
@@ -68,6 +75,22 @@ public class DescribeCaptchaTicketDataRequest extends AbstractModel{
         this.Start = Start;
     }
 
+    /**
+     * Get 查询结束时间 例如：20220314 
+     * @return End 查询结束时间 例如：20220314
+     */
+    public Long getEnd() {
+        return this.End;
+    }
+
+    /**
+     * Set 查询结束时间 例如：20220314
+     * @param End 查询结束时间 例如：20220314
+     */
+    public void setEnd(Long End) {
+        this.End = End;
+    }
+
     public DescribeCaptchaTicketDataRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeCaptchaTicketDataRequest extends AbstractModel{
         if (source.Start != null) {
             this.Start = new Long(source.Start);
         }
+        if (source.End != null) {
+            this.End = new Long(source.End);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeCaptchaTicketDataRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CaptchaAppId", this.CaptchaAppId);
         this.setParamSimple(map, prefix + "Start", this.Start);
+        this.setParamSimple(map, prefix + "End", this.End);
 
     }
 }

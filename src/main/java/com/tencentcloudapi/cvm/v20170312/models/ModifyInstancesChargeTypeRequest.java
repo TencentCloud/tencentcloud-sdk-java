@@ -44,6 +44,13 @@ public class ModifyInstancesChargeTypeRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * 是否同时切换弹性数据云盘计费模式。取值范围：<br><li>TRUE：表示切换弹性数据云盘计费模式<br><li>FALSE：表示不切换弹性数据云盘计费模式<br><br>默认取值：FALSE。
+    */
+    @SerializedName("ModifyPortableDataDisk")
+    @Expose
+    private Boolean ModifyPortableDataDisk;
+
+    /**
      * Get 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。 
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      */
@@ -91,6 +98,22 @@ public class ModifyInstancesChargeTypeRequest extends AbstractModel{
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get 是否同时切换弹性数据云盘计费模式。取值范围：<br><li>TRUE：表示切换弹性数据云盘计费模式<br><li>FALSE：表示不切换弹性数据云盘计费模式<br><br>默认取值：FALSE。 
+     * @return ModifyPortableDataDisk 是否同时切换弹性数据云盘计费模式。取值范围：<br><li>TRUE：表示切换弹性数据云盘计费模式<br><li>FALSE：表示不切换弹性数据云盘计费模式<br><br>默认取值：FALSE。
+     */
+    public Boolean getModifyPortableDataDisk() {
+        return this.ModifyPortableDataDisk;
+    }
+
+    /**
+     * Set 是否同时切换弹性数据云盘计费模式。取值范围：<br><li>TRUE：表示切换弹性数据云盘计费模式<br><li>FALSE：表示不切换弹性数据云盘计费模式<br><br>默认取值：FALSE。
+     * @param ModifyPortableDataDisk 是否同时切换弹性数据云盘计费模式。取值范围：<br><li>TRUE：表示切换弹性数据云盘计费模式<br><li>FALSE：表示不切换弹性数据云盘计费模式<br><br>默认取值：FALSE。
+     */
+    public void setModifyPortableDataDisk(Boolean ModifyPortableDataDisk) {
+        this.ModifyPortableDataDisk = ModifyPortableDataDisk;
+    }
+
     public ModifyInstancesChargeTypeRequest() {
     }
 
@@ -111,6 +134,9 @@ public class ModifyInstancesChargeTypeRequest extends AbstractModel{
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.ModifyPortableDataDisk != null) {
+            this.ModifyPortableDataDisk = new Boolean(source.ModifyPortableDataDisk);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class ModifyInstancesChargeTypeRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "ModifyPortableDataDisk", this.ModifyPortableDataDisk);
 
     }
 }

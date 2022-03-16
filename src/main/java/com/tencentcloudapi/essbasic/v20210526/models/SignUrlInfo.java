@@ -31,7 +31,7 @@ public class SignUrlInfo extends AbstractModel{
     private String SignUrl;
 
     /**
-    * 链接失效时间
+    * 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deadline")
@@ -141,9 +141,9 @@ PERSON 自然人
     }
 
     /**
-     * Get 链接失效时间
+     * Get 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Deadline 链接失效时间
+     * @return Deadline 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadline() {
@@ -151,9 +151,9 @@ PERSON 自然人
     }
 
     /**
-     * Set 链接失效时间
+     * Set 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Deadline 链接失效时间
+     * @param Deadline 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadline(Long Deadline) {

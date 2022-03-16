@@ -51,7 +51,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String Endpoint;
 
     /**
-    * 签署完成后H5引导页跳转URL
+    * 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
     */
     @SerializedName("JumpUrl")
     @Expose
@@ -122,16 +122,16 @@ public class CreateSignUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 签署完成后H5引导页跳转URL 
-     * @return JumpUrl 签署完成后H5引导页跳转URL
+     * Get 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效 
+     * @return JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
      */
     public String getJumpUrl() {
         return this.JumpUrl;
     }
 
     /**
-     * Set 签署完成后H5引导页跳转URL
-     * @param JumpUrl 签署完成后H5引导页跳转URL
+     * Set 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+     * @param JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;

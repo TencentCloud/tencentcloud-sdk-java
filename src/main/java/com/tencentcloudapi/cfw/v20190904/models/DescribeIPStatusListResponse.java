@@ -13,29 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDocumentResponse extends AbstractModel{
+public class DescribeIPStatusListResponse extends AbstractModel{
 
     /**
-    * 返回的电子文档ID
+    * ip状态信息
     */
-    @SerializedName("DocumentId")
+    @SerializedName("StatusList")
     @Expose
-    private String DocumentId;
+    private IPDefendStatus [] StatusList;
 
     /**
-    * 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+    * 状态码
     */
-    @SerializedName("PreviewFileUrl")
+    @SerializedName("ReturnCode")
     @Expose
-    private String PreviewFileUrl;
+    private Long ReturnCode;
+
+    /**
+    * 状态信息
+    */
+    @SerializedName("ReturnMsg")
+    @Expose
+    private String ReturnMsg;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +51,51 @@ public class CreateDocumentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的电子文档ID 
-     * @return DocumentId 返回的电子文档ID
+     * Get ip状态信息 
+     * @return StatusList ip状态信息
      */
-    public String getDocumentId() {
-        return this.DocumentId;
+    public IPDefendStatus [] getStatusList() {
+        return this.StatusList;
     }
 
     /**
-     * Set 返回的电子文档ID
-     * @param DocumentId 返回的电子文档ID
+     * Set ip状态信息
+     * @param StatusList ip状态信息
      */
-    public void setDocumentId(String DocumentId) {
-        this.DocumentId = DocumentId;
+    public void setStatusList(IPDefendStatus [] StatusList) {
+        this.StatusList = StatusList;
     }
 
     /**
-     * Get 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态码 
+     * @return ReturnCode 状态码
      */
-    public String getPreviewFileUrl() {
-        return this.PreviewFileUrl;
+    public Long getReturnCode() {
+        return this.ReturnCode;
     }
 
     /**
-     * Set 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 状态码
+     * @param ReturnCode 状态码
      */
-    public void setPreviewFileUrl(String PreviewFileUrl) {
-        this.PreviewFileUrl = PreviewFileUrl;
+    public void setReturnCode(Long ReturnCode) {
+        this.ReturnCode = ReturnCode;
+    }
+
+    /**
+     * Get 状态信息 
+     * @return ReturnMsg 状态信息
+     */
+    public String getReturnMsg() {
+        return this.ReturnMsg;
+    }
+
+    /**
+     * Set 状态信息
+     * @param ReturnMsg 状态信息
+     */
+    public void setReturnMsg(String ReturnMsg) {
+        this.ReturnMsg = ReturnMsg;
     }
 
     /**
@@ -96,19 +114,25 @@ public class CreateDocumentResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateDocumentResponse() {
+    public DescribeIPStatusListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDocumentResponse(CreateDocumentResponse source) {
-        if (source.DocumentId != null) {
-            this.DocumentId = new String(source.DocumentId);
+    public DescribeIPStatusListResponse(DescribeIPStatusListResponse source) {
+        if (source.StatusList != null) {
+            this.StatusList = new IPDefendStatus[source.StatusList.length];
+            for (int i = 0; i < source.StatusList.length; i++) {
+                this.StatusList[i] = new IPDefendStatus(source.StatusList[i]);
+            }
         }
-        if (source.PreviewFileUrl != null) {
-            this.PreviewFileUrl = new String(source.PreviewFileUrl);
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
+        if (source.ReturnMsg != null) {
+            this.ReturnMsg = new String(source.ReturnMsg);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +144,9 @@ public class CreateDocumentResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DocumentId", this.DocumentId);
-        this.setParamSimple(map, prefix + "PreviewFileUrl", this.PreviewFileUrl);
+        this.setParamArrayObj(map, prefix + "StatusList.", this.StatusList);
+        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
