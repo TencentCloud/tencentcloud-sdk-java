@@ -86,6 +86,22 @@ public class TableResponseInfo extends AbstractModel{
     private String InputFormat;
 
     /**
+    * 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageSize")
+    @Expose
+    private Long StorageSize;
+
+    /**
+    * 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordCount")
+    @Expose
+    private Long RecordCount;
+
+    /**
      * Get 数据表基本信息。 
      * @return TableBaseInfo 数据表基本信息。
      */
@@ -241,6 +257,46 @@ public class TableResponseInfo extends AbstractModel{
         this.InputFormat = InputFormat;
     }
 
+    /**
+     * Get 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageSize 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStorageSize() {
+        return this.StorageSize;
+    }
+
+    /**
+     * Set 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageSize 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageSize(Long StorageSize) {
+        this.StorageSize = StorageSize;
+    }
+
+    /**
+     * Get 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordCount 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecordCount() {
+        return this.RecordCount;
+    }
+
+    /**
+     * Set 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordCount 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordCount(Long RecordCount) {
+        this.RecordCount = RecordCount;
+    }
+
     public TableResponseInfo() {
     }
 
@@ -282,6 +338,12 @@ public class TableResponseInfo extends AbstractModel{
         if (source.InputFormat != null) {
             this.InputFormat = new String(source.InputFormat);
         }
+        if (source.StorageSize != null) {
+            this.StorageSize = new Long(source.StorageSize);
+        }
+        if (source.RecordCount != null) {
+            this.RecordCount = new Long(source.RecordCount);
+        }
     }
 
 
@@ -297,6 +359,8 @@ public class TableResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "InputFormat", this.InputFormat);
+        this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
+        this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
 
     }
 }

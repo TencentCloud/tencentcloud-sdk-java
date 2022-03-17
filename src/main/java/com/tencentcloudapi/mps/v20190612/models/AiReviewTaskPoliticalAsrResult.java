@@ -51,14 +51,14 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
     private String Message;
 
     /**
-    * 内容审核 Asr 文字鉴政任务输入。
+    * 内容审核 Asr 文字敏感任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalAsrTaskInput Input;
 
     /**
-    * 内容审核 Asr 文字鉴政任务输出。
+    * 内容审核 Asr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -130,25 +130,25 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
     }
 
     /**
-     * Get 内容审核 Asr 文字鉴政任务输入。 
-     * @return Input 内容审核 Asr 文字鉴政任务输入。
+     * Get 内容审核 Asr 文字敏感任务输入。 
+     * @return Input 内容审核 Asr 文字敏感任务输入。
      */
     public AiReviewPoliticalAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 内容审核 Asr 文字鉴政任务输入。
-     * @param Input 内容审核 Asr 文字鉴政任务输入。
+     * Set 内容审核 Asr 文字敏感任务输入。
+     * @param Input 内容审核 Asr 文字敏感任务输入。
      */
     public void setInput(AiReviewPoliticalAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 内容审核 Asr 文字鉴政任务输出。
+     * Get 内容审核 Asr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 内容审核 Asr 文字鉴政任务输出。
+     * @return Output 内容审核 Asr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewPoliticalAsrTaskOutput getOutput() {
@@ -156,9 +156,9 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
     }
 
     /**
-     * Set 内容审核 Asr 文字鉴政任务输出。
+     * Set 内容审核 Asr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 内容审核 Asr 文字鉴政任务输出。
+     * @param Output 内容审核 Asr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewPoliticalAsrTaskOutput Output) {

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AiReviewTerrorismTaskOutput extends AbstractModel{
 
     /**
-    * 视频暴恐评分，分值为0到100。
+    * 视频涉敏评分，分值为0到100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 暴恐结果建议，取值范围：
+    * 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -40,50 +40,50 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 视频暴恐结果标签，取值范围：
+    * 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 有暴恐嫌疑的视频片段列表。
+    * 有涉敏嫌疑的视频片段列表。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * Get 视频暴恐评分，分值为0到100。 
-     * @return Confidence 视频暴恐评分，分值为0到100。
+     * Get 视频涉敏评分，分值为0到100。 
+     * @return Confidence 视频涉敏评分，分值为0到100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 视频暴恐评分，分值为0到100。
-     * @param Confidence 视频暴恐评分，分值为0到100。
+     * Set 视频涉敏评分，分值为0到100。
+     * @param Confidence 视频涉敏评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 暴恐结果建议，取值范围：
+     * Get 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion 暴恐结果建议，取值范围：
+     * @return Suggestion 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -93,11 +93,11 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set 暴恐结果建议，取值范围：
+     * Set 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion 暴恐结果建议，取值范围：
+     * @param Suggestion 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -107,68 +107,68 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get 视频暴恐结果标签，取值范围：
+     * Get 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li> 
-     * @return Label 视频暴恐结果标签，取值范围：
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li> 
+     * @return Label 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 视频暴恐结果标签，取值范围：
+     * Set 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
-     * @param Label 视频暴恐结果标签，取值范围：
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
+     * @param Label 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 有暴恐嫌疑的视频片段列表。 
-     * @return SegmentSet 有暴恐嫌疑的视频片段列表。
+     * Get 有涉敏嫌疑的视频片段列表。 
+     * @return SegmentSet 有涉敏嫌疑的视频片段列表。
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 有暴恐嫌疑的视频片段列表。
-     * @param SegmentSet 有暴恐嫌疑的视频片段列表。
+     * Set 有涉敏嫌疑的视频片段列表。
+     * @param SegmentSet 有涉敏嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

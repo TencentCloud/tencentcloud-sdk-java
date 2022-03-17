@@ -30,7 +30,7 @@ public class JsonInfo extends AbstractModel{
     private Boolean EnableTag;
 
     /**
-    * 元数据信息列表
+    * 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaFields")
@@ -54,9 +54,9 @@ public class JsonInfo extends AbstractModel{
     }
 
     /**
-     * Get 元数据信息列表
+     * Get 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetaFields 元数据信息列表
+     * @return MetaFields 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMetaFields() {
@@ -64,9 +64,9 @@ public class JsonInfo extends AbstractModel{
     }
 
     /**
-     * Set 元数据信息列表
+     * Set 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaFields 元数据信息列表
+     * @param MetaFields 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaFields(String [] MetaFields) {

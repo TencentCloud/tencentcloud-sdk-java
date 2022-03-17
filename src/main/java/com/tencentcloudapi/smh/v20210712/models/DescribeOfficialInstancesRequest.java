@@ -51,6 +51,34 @@ public class DescribeOfficialInstancesRequest extends AbstractModel{
     private Long PageSize;
 
     /**
+    * 对指定列进行排序
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 排序方式
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
+    * 续费管理筛选类型
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
+    * 超级管理管理员账号是否绑定了手机号
+    */
+    @SerializedName("BindPhone")
+    @Expose
+    private Boolean BindPhone;
+
+    /**
      * Get 是否查询实例绑定的超级管理员账号，默认值为 false。 
      * @return SuperAdminAccount 是否查询实例绑定的超级管理员账号，默认值为 false。
      */
@@ -114,6 +142,70 @@ public class DescribeOfficialInstancesRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 对指定列进行排序 
+     * @return OrderBy 对指定列进行排序
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 对指定列进行排序
+     * @param OrderBy 对指定列进行排序
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 排序方式 
+     * @return OrderByType 排序方式
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序方式
+     * @param OrderByType 排序方式
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
+    /**
+     * Get 续费管理筛选类型 
+     * @return AutoRenew 续费管理筛选类型
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set 续费管理筛选类型
+     * @param AutoRenew 续费管理筛选类型
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
+    /**
+     * Get 超级管理管理员账号是否绑定了手机号 
+     * @return BindPhone 超级管理管理员账号是否绑定了手机号
+     */
+    public Boolean getBindPhone() {
+        return this.BindPhone;
+    }
+
+    /**
+     * Set 超级管理管理员账号是否绑定了手机号
+     * @param BindPhone 超级管理管理员账号是否绑定了手机号
+     */
+    public void setBindPhone(Boolean BindPhone) {
+        this.BindPhone = BindPhone;
+    }
+
     public DescribeOfficialInstancesRequest() {
     }
 
@@ -137,6 +229,18 @@ public class DescribeOfficialInstancesRequest extends AbstractModel{
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.BindPhone != null) {
+            this.BindPhone = new Boolean(source.BindPhone);
+        }
     }
 
 
@@ -148,6 +252,10 @@ public class DescribeOfficialInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "BindPhone", this.BindPhone);
 
     }
 }

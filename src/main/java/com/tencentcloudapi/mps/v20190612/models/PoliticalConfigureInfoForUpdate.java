@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * 画面鉴政控制参数。
+    * 画面涉敏控制参数。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * 语音鉴政控制参数。
+    * 语音涉敏控制参数。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * 文本鉴政控制参数。
+    * 文本涉敏控制参数。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get 画面鉴政控制参数。 
-     * @return ImgReviewInfo 画面鉴政控制参数。
+     * Get 画面涉敏控制参数。 
+     * @return ImgReviewInfo 画面涉敏控制参数。
      */
     public PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 画面鉴政控制参数。
-     * @param ImgReviewInfo 画面鉴政控制参数。
+     * Set 画面涉敏控制参数。
+     * @param ImgReviewInfo 画面涉敏控制参数。
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get 语音鉴政控制参数。 
-     * @return AsrReviewInfo 语音鉴政控制参数。
+     * Get 语音涉敏控制参数。 
+     * @return AsrReviewInfo 语音涉敏控制参数。
      */
     public PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set 语音鉴政控制参数。
-     * @param AsrReviewInfo 语音鉴政控制参数。
+     * Set 语音涉敏控制参数。
+     * @param AsrReviewInfo 语音涉敏控制参数。
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get 文本鉴政控制参数。 
-     * @return OcrReviewInfo 文本鉴政控制参数。
+     * Get 文本涉敏控制参数。 
+     * @return OcrReviewInfo 文本涉敏控制参数。
      */
     public PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 文本鉴政控制参数。
-     * @param OcrReviewInfo 文本鉴政控制参数。
+     * Set 文本涉敏控制参数。
+     * @param OcrReviewInfo 文本涉敏控制参数。
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;
