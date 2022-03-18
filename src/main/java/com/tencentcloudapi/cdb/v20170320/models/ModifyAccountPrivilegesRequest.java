@@ -69,7 +69,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     private ColumnPrivilege [] ColumnPrivileges;
 
     /**
-    * 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+    * 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
     */
     @SerializedName("ModifyAction")
     @Expose
@@ -188,16 +188,16 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Get 该参数不为空时，为批量修改权限。可选值为：grant，revoke。 
-     * @return ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     * Get 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。 
+     * @return ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
      */
     public String getModifyAction() {
         return this.ModifyAction;
     }
 
     /**
-     * Set 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
-     * @param ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     * Set 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
+     * @param ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
      */
     public void setModifyAction(String ModifyAction) {
         this.ModifyAction = ModifyAction;

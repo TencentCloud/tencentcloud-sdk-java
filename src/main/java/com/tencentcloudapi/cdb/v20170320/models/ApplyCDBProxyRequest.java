@@ -72,7 +72,7 @@ public class ApplyCDBProxyRequest extends AbstractModel{
     private String [] SecurityGroup;
 
     /**
-    * 描述说明
+    * 描述说明，最大支持256位。
     */
     @SerializedName("Desc")
     @Expose
@@ -191,16 +191,16 @@ public class ApplyCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 描述说明 
-     * @return Desc 描述说明
+     * Get 描述说明，最大支持256位。 
+     * @return Desc 描述说明，最大支持256位。
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 描述说明
-     * @param Desc 描述说明
+     * Set 描述说明，最大支持256位。
+     * @param Desc 描述说明，最大支持256位。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

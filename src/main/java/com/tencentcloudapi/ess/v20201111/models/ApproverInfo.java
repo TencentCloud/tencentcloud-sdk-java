@@ -93,12 +93,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long ApproverRole;
 
     /**
-    * 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+    * 签署意愿确认渠道,WEIXINAPP:人脸识别
     */
     @SerializedName("VerifyChannel")
     @Expose
@@ -284,36 +279,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"] 
-     * @return VerifyChannel 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
+     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
     public String [] getVerifyChannel() {
         return this.VerifyChannel;
     }
 
     /**
-     * Set 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
-     * @param VerifyChannel 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
     public void setVerifyChannel(String [] VerifyChannel) {
         this.VerifyChannel = VerifyChannel;

@@ -65,7 +65,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String Description;
 
     /**
-    * 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+    * 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
     */
     @SerializedName("TemplateType")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。 
-     * @return TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     * Get 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。 
+     * @return TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
-     * @param TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     * Set 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @param TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;

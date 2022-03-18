@@ -104,7 +104,7 @@ public class TopicInfo extends AbstractModel{
     private String StorageType;
 
     /**
-    * 生命周期，单位为天
+    * 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
@@ -304,9 +304,9 @@ public class TopicInfo extends AbstractModel{
     }
 
     /**
-     * Get 生命周期，单位为天
+     * Get 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 生命周期，单位为天
+     * @return Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
@@ -314,9 +314,9 @@ public class TopicInfo extends AbstractModel{
     }
 
     /**
-     * Set 生命周期，单位为天
+     * Set 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 生命周期，单位为天
+     * @param Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {

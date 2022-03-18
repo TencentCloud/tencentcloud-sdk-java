@@ -65,6 +65,13 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
     private URLNotice [] URLNotices;
 
     /**
+    * 推送CLS日志服务的操作 最多1个
+    */
+    @SerializedName("CLSNotices")
+    @Expose
+    private CLSNotice [] CLSNotices;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -160,6 +167,22 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.URLNotices = URLNotices;
     }
 
+    /**
+     * Get 推送CLS日志服务的操作 最多1个 
+     * @return CLSNotices 推送CLS日志服务的操作 最多1个
+     */
+    public CLSNotice [] getCLSNotices() {
+        return this.CLSNotices;
+    }
+
+    /**
+     * Set 推送CLS日志服务的操作 最多1个
+     * @param CLSNotices 推送CLS日志服务的操作 最多1个
+     */
+    public void setCLSNotices(CLSNotice [] CLSNotices) {
+        this.CLSNotices = CLSNotices;
+    }
+
     public CreateAlarmNoticeRequest() {
     }
 
@@ -192,6 +215,12 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
                 this.URLNotices[i] = new URLNotice(source.URLNotices[i]);
             }
         }
+        if (source.CLSNotices != null) {
+            this.CLSNotices = new CLSNotice[source.CLSNotices.length];
+            for (int i = 0; i < source.CLSNotices.length; i++) {
+                this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
+            }
+        }
     }
 
 
@@ -205,6 +234,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
         this.setParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
+        this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
 
     }
 }

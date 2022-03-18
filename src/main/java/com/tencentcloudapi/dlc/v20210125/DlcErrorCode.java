@@ -60,6 +60,9 @@ public enum DlcErrorCode {
     // 无效的用户名。
      INVALIDPARAMETER_INVALIDUSERNAME("InvalidParameter.InvalidUserName"),
      
+    // 无效的用户类型。
+     INVALIDPARAMETER_INVALIDUSERTYPE("InvalidParameter.InvalidUserType"),
+     
     // 无效的工作组名。
      INVALIDPARAMETER_INVALIDWORKGROUPNAME("InvalidParameter.InvalidWorkGroupName"),
      
@@ -81,8 +84,20 @@ public enum DlcErrorCode {
     // 账号余额不足，无法执行SQL任务。
      RESOURCEUNAVAILABLE_BALANCEINSUFFICIENT("ResourceUnavailable.BalanceInsufficient"),
      
+    // 资源售罄。
+     RESOURCESSOLDOUT("ResourcesSoldOut"),
+     
     // 无权限授权策略。
      RESOURCESSOLDOUT_UNAUTHORIZEDGRANTPOLICY("ResourcesSoldOut.UnauthorizedGrantPolicy"),
+     
+    // 无权限操作。
+     RESOURCESSOLDOUT_UNAUTHORIZEDOPERATION("ResourcesSoldOut.UnauthorizedOperation"),
+     
+    // 无权限回收权限。
+     RESOURCESSOLDOUT_UNAUTHORIZEDREVOKEPOLICY("ResourcesSoldOut.UnauthorizedRevokePolicy"),
+     
+    // 未授权操作。
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
     // 无法修改主账号。
      UNSUPPORTEDOPERATION_MODIFYOWNERUNSUPPORTED("UnsupportedOperation.ModifyOwnerUnsupported");
