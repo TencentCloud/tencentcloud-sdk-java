@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class ProjectLimit extends AbstractModel{
 
     /**
-    * 主键ID
-    */
-    @SerializedName("ID")
-    @Expose
-    private Long ID;
-
-    /**
-    * 项目ID
-    */
-    @SerializedName("ProjectID")
-    @Expose
-    private Long ProjectID;
-
-    /**
     * 接口
     */
     @SerializedName("ProjectInterface")
@@ -58,36 +44,18 @@ public class ProjectLimit extends AbstractModel{
     private Long ReportType;
 
     /**
-     * Get 主键ID 
-     * @return ID 主键ID
-     */
-    public Long getID() {
-        return this.ID;
-    }
+    * 主键ID
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
 
     /**
-     * Set 主键ID
-     * @param ID 主键ID
-     */
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
-
-    /**
-     * Get 项目ID 
-     * @return ProjectID 项目ID
-     */
-    public Long getProjectID() {
-        return this.ProjectID;
-    }
-
-    /**
-     * Set 项目ID
-     * @param ProjectID 项目ID
-     */
-    public void setProjectID(Long ProjectID) {
-        this.ProjectID = ProjectID;
-    }
+    * 项目ID
+    */
+    @SerializedName("ProjectID")
+    @Expose
+    private Long ProjectID;
 
     /**
      * Get 接口 
@@ -137,6 +105,38 @@ public class ProjectLimit extends AbstractModel{
         this.ReportType = ReportType;
     }
 
+    /**
+     * Get 主键ID 
+     * @return ID 主键ID
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set 主键ID
+     * @param ID 主键ID
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    /**
+     * Get 项目ID 
+     * @return ProjectID 项目ID
+     */
+    public Long getProjectID() {
+        return this.ProjectID;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectID 项目ID
+     */
+    public void setProjectID(Long ProjectID) {
+        this.ProjectID = ProjectID;
+    }
+
     public ProjectLimit() {
     }
 
@@ -145,12 +145,6 @@ public class ProjectLimit extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ProjectLimit(ProjectLimit source) {
-        if (source.ID != null) {
-            this.ID = new Long(source.ID);
-        }
-        if (source.ProjectID != null) {
-            this.ProjectID = new Long(source.ProjectID);
-        }
         if (source.ProjectInterface != null) {
             this.ProjectInterface = new String(source.ProjectInterface);
         }
@@ -160,6 +154,12 @@ public class ProjectLimit extends AbstractModel{
         if (source.ReportType != null) {
             this.ReportType = new Long(source.ReportType);
         }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
+        if (source.ProjectID != null) {
+            this.ProjectID = new Long(source.ProjectID);
+        }
     }
 
 
@@ -167,11 +167,11 @@ public class ProjectLimit extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ID", this.ID);
-        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamSimple(map, prefix + "ProjectInterface", this.ProjectInterface);
         this.setParamSimple(map, prefix + "ReportRate", this.ReportRate);
         this.setParamSimple(map, prefix + "ReportType", this.ReportType);
+        this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
 
     }
 }

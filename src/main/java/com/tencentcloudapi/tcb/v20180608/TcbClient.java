@@ -1342,6 +1342,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *批量冻结
+     * @param req FreezeCloudBaseRunServersRequest
+     * @return FreezeCloudBaseRunServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(FreezeCloudBaseRunServersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FreezeCloudBaseRunServersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FreezeCloudBaseRunServersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FreezeCloudBaseRunServers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改容器内的版本流量配置
      * @param req ModifyCloudBaseRunServerFlowConfRequest
      * @return ModifyCloudBaseRunServerFlowConfResponse
@@ -1554,6 +1574,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TurnOnStandaloneGatewayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TurnOnStandaloneGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量解冻服务
+     * @param req UnfreezeCloudBaseRunServersRequest
+     * @return UnfreezeCloudBaseRunServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(UnfreezeCloudBaseRunServersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnfreezeCloudBaseRunServersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnfreezeCloudBaseRunServersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnfreezeCloudBaseRunServers");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -24,7 +24,7 @@ public class DDoSGeoIPBlockConfig extends AbstractModel{
 
     /**
     * 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]
@@ -59,12 +59,12 @@ trans(放行)
 
     /**
      * Get 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ] 
      * @return RegionType 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]
@@ -75,12 +75,12 @@ customized(自定义地区)
 
     /**
      * Set 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]
      * @param RegionType 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]

@@ -79,6 +79,13 @@ public class DescribeTawInstancesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 是否为demo模式（1=是，2=否）
+    */
+    @SerializedName("IsDemo")
+    @Expose
+    private Long IsDemo;
+
+    /**
      * Get 计费状态 
      * @return ChargeStatuses 计费状态
      */
@@ -206,6 +213,22 @@ public class DescribeTawInstancesRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 是否为demo模式（1=是，2=否） 
+     * @return IsDemo 是否为demo模式（1=是，2=否）
+     */
+    public Long getIsDemo() {
+        return this.IsDemo;
+    }
+
+    /**
+     * Set 是否为demo模式（1=是，2=否）
+     * @param IsDemo 是否为demo模式（1=是，2=否）
+     */
+    public void setIsDemo(Long IsDemo) {
+        this.IsDemo = IsDemo;
+    }
+
     public DescribeTawInstancesRequest() {
     }
 
@@ -256,6 +279,9 @@ public class DescribeTawInstancesRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.IsDemo != null) {
+            this.IsDemo = new Long(source.IsDemo);
+        }
     }
 
 
@@ -271,6 +297,7 @@ public class DescribeTawInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceStatuses.", this.InstanceStatuses);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "IsDemo", this.IsDemo);
 
     }
 }

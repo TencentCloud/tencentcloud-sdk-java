@@ -44,6 +44,13 @@ public class DescribeProjectsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 是否为demo模式（1=是，2=否）
+    */
+    @SerializedName("IsDemo")
+    @Expose
+    private Long IsDemo;
+
+    /**
      * Get 分页每页数目，整型 
      * @return Limit 分页每页数目，整型
      */
@@ -91,6 +98,22 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 是否为demo模式（1=是，2=否） 
+     * @return IsDemo 是否为demo模式（1=是，2=否）
+     */
+    public Long getIsDemo() {
+        return this.IsDemo;
+    }
+
+    /**
+     * Set 是否为demo模式（1=是，2=否）
+     * @param IsDemo 是否为demo模式（1=是，2=否）
+     */
+    public void setIsDemo(Long IsDemo) {
+        this.IsDemo = IsDemo;
+    }
+
     public DescribeProjectsRequest() {
     }
 
@@ -111,6 +134,9 @@ public class DescribeProjectsRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.IsDemo != null) {
+            this.IsDemo = new Long(source.IsDemo);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "IsDemo", this.IsDemo);
 
     }
 }

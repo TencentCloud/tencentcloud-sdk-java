@@ -111,6 +111,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String NotifyType;
 
     /**
+    * 签署意愿确认渠道,WEIXINAPP:人脸识别
+    */
+    @SerializedName("VerifyChannel")
+    @Expose
+    private String [] VerifyChannel;
+
+    /**
      * Get 签署方类型 (0为企业/1为个人) 
      * @return ApproverType 签署方类型 (0为企业/1为个人)
      */
@@ -318,6 +325,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.NotifyType = NotifyType;
     }
 
+    /**
+     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
+     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     */
+    public String [] getVerifyChannel() {
+        return this.VerifyChannel;
+    }
+
+    /**
+     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     */
+    public void setVerifyChannel(String [] VerifyChannel) {
+        this.VerifyChannel = VerifyChannel;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -362,6 +385,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.NotifyType != null) {
             this.NotifyType = new String(source.NotifyType);
         }
+        if (source.VerifyChannel != null) {
+            this.VerifyChannel = new String[source.VerifyChannel.length];
+            for (int i = 0; i < source.VerifyChannel.length; i++) {
+                this.VerifyChannel[i] = new String(source.VerifyChannel[i]);
+            }
+        }
     }
 
 
@@ -381,6 +410,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "IsFullText", this.IsFullText);
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
 
     }
 }

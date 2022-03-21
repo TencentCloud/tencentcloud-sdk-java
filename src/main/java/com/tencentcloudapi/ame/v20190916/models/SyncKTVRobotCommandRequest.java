@@ -41,6 +41,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
     */
     @SerializedName("Command")
     @Expose
@@ -96,6 +97,13 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
     private SetDestroyModeCommandInput SetDestroyModeCommandInput;
 
     /**
+    * 音量，当Command取SetVolume时，必填。
+    */
+    @SerializedName("SetVolumeCommandInput")
+    @Expose
+    private SetVolumeCommandInput SetVolumeCommandInput;
+
+    /**
      * Get 机器人Id。 
      * @return RobotId 机器人Id。
      */
@@ -122,7 +130,8 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
-<li>SetDestroyMode：设置销毁模式</li> 
+<li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li> 
      * @return Command 指令，取值有：
 <li>Play：播放</li>
 <li>Pause：暂停</li>
@@ -134,6 +143,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
      */
     public String getCommand() {
         return this.Command;
@@ -151,6 +161,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
      * @param Command 指令，取值有：
 <li>Play：播放</li>
 <li>Pause：暂停</li>
@@ -162,6 +173,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -279,6 +291,22 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         this.SetDestroyModeCommandInput = SetDestroyModeCommandInput;
     }
 
+    /**
+     * Get 音量，当Command取SetVolume时，必填。 
+     * @return SetVolumeCommandInput 音量，当Command取SetVolume时，必填。
+     */
+    public SetVolumeCommandInput getSetVolumeCommandInput() {
+        return this.SetVolumeCommandInput;
+    }
+
+    /**
+     * Set 音量，当Command取SetVolume时，必填。
+     * @param SetVolumeCommandInput 音量，当Command取SetVolume时，必填。
+     */
+    public void setSetVolumeCommandInput(SetVolumeCommandInput SetVolumeCommandInput) {
+        this.SetVolumeCommandInput = SetVolumeCommandInput;
+    }
+
     public SyncKTVRobotCommandRequest() {
     }
 
@@ -314,6 +342,9 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         if (source.SetDestroyModeCommandInput != null) {
             this.SetDestroyModeCommandInput = new SetDestroyModeCommandInput(source.SetDestroyModeCommandInput);
         }
+        if (source.SetVolumeCommandInput != null) {
+            this.SetVolumeCommandInput = new SetVolumeCommandInput(source.SetVolumeCommandInput);
+        }
     }
 
 
@@ -330,6 +361,7 @@ public class SyncKTVRobotCommandRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SendMessageCommandInput.", this.SendMessageCommandInput);
         this.setParamObj(map, prefix + "SetPlayModeCommandInput.", this.SetPlayModeCommandInput);
         this.setParamObj(map, prefix + "SetDestroyModeCommandInput.", this.SetDestroyModeCommandInput);
+        this.setParamObj(map, prefix + "SetVolumeCommandInput.", this.SetVolumeCommandInput);
 
     }
 }

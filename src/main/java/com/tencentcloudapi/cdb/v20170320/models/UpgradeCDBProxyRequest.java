@@ -37,14 +37,14 @@ public class UpgradeCDBProxyRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
-    * 代理节点个数
+    * 代理节点个数，实际规格支持数
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * 代理节点核数
+    * 代理节点核数，实际规格支持数
     */
     @SerializedName("Cpu")
     @Expose
@@ -104,32 +104,32 @@ public class UpgradeCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理节点个数 
-     * @return ProxyCount 代理节点个数
+     * Get 代理节点个数，实际规格支持数 
+     * @return ProxyCount 代理节点个数，实际规格支持数
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set 代理节点个数
-     * @param ProxyCount 代理节点个数
+     * Set 代理节点个数，实际规格支持数
+     * @param ProxyCount 代理节点个数，实际规格支持数
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get 代理节点核数 
-     * @return Cpu 代理节点核数
+     * Get 代理节点核数，实际规格支持数 
+     * @return Cpu 代理节点核数，实际规格支持数
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 代理节点核数
-     * @param Cpu 代理节点核数
+     * Set 代理节点核数，实际规格支持数
+     * @param Cpu 代理节点核数，实际规格支持数
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
