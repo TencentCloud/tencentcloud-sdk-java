@@ -1,5 +1,8 @@
 package com.tencentcloudapi.essbasic.v20210526;
 public enum EssbasicErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
@@ -32,6 +35,9 @@ public enum EssbasicErrorCode {
      
     // 生成唯一ID错误。
      INTERNALERROR_GENERATEID("InternalError.GenerateId"),
+     
+    // 序列化错误。
+     INTERNALERROR_SERIALIZE("InternalError.Serialize"),
      
     // 系统错误。
      INTERNALERROR_SYSTEM("InternalError.System"),

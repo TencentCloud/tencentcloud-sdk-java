@@ -319,6 +319,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *查询额度使用情况
+     * @param req DescribeQuotaUsageRequest
+     * @return DescribeQuotaUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuotaUsageResponse DescribeQuotaUsage(DescribeQuotaUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQuotaUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQuotaUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取私有域解析请求量
      * @param req DescribeRequestDataRequest
      * @return DescribeRequestDataResponse

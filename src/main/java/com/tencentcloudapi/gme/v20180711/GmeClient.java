@@ -89,6 +89,46 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *新增自定义送检用户
+     * @param req CreateScanUserRequest
+     * @return CreateScanUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScanUserResponse CreateScanUser(CreateScanUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScanUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScanUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScanUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除自定义送检用户
+     * @param req DeleteScanUserRequest
+     * @return DeleteScanUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScanUserResponse DeleteScanUser(DeleteScanUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteScanUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteScanUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteScanUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
      * @param req DescribeAgeDetectTaskRequest
      * @return DescribeAgeDetectTaskResponse
