@@ -66,6 +66,14 @@ public class AccessControlEventDescription extends AbstractModel{
     private String RuleId;
 
     /**
+    * 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationTime")
+    @Expose
+    private String OperationTime;
+
+    /**
      * Get 事件规则 
      * @return Description 事件规则
      */
@@ -165,6 +173,26 @@ public class AccessControlEventDescription extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperationTime() {
+        return this.OperationTime;
+    }
+
+    /**
+     * Set 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationTime(String OperationTime) {
+        this.OperationTime = OperationTime;
+    }
+
     public AccessControlEventDescription() {
     }
 
@@ -191,6 +219,9 @@ public class AccessControlEventDescription extends AbstractModel{
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.OperationTime != null) {
+            this.OperationTime = new String(source.OperationTime);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class AccessControlEventDescription extends AbstractModel{
         this.setParamObj(map, prefix + "MatchRule.", this.MatchRule);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
 
     }
 }

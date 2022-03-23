@@ -499,6 +499,26 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
+     *批量删除设备
+     * @param req DeleteIotDeviceBatchRequest
+     * @return DeleteIotDeviceBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIotDeviceBatchResponse DeleteIotDeviceBatch(DeleteIotDeviceBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIotDeviceBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIotDeviceBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIotDeviceBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除命名空间
      * @param req DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -691,6 +711,26 @@ public class IecpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigMapsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeConfigMaps");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *自动获取Draco设备的安装包
+     * @param req DescribeDracoEdgeNodeInstallerRequest
+     * @return DescribeDracoEdgeNodeInstallerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDracoEdgeNodeInstallerResponse DescribeDracoEdgeNodeInstaller(DescribeDracoEdgeNodeInstallerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDracoEdgeNodeInstallerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDracoEdgeNodeInstallerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDracoEdgeNodeInstaller");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

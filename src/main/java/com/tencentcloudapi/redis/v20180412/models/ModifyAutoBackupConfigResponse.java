@@ -44,6 +44,13 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String TimePeriod;
 
     /**
+    * 全量备份文件保存天数,单位：天
+    */
+    @SerializedName("BackupStorageDays")
+    @Expose
+    private Long BackupStorageDays;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 全量备份文件保存天数,单位：天 
+     * @return BackupStorageDays 全量备份文件保存天数,单位：天
+     */
+    public Long getBackupStorageDays() {
+        return this.BackupStorageDays;
+    }
+
+    /**
+     * Set 全量备份文件保存天数,单位：天
+     * @param BackupStorageDays 全量备份文件保存天数,单位：天
+     */
+    public void setBackupStorageDays(Long BackupStorageDays) {
+        this.BackupStorageDays = BackupStorageDays;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -134,6 +157,9 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
         if (source.TimePeriod != null) {
             this.TimePeriod = new String(source.TimePeriod);
         }
+        if (source.BackupStorageDays != null) {
+            this.BackupStorageDays = new Long(source.BackupStorageDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -147,6 +173,7 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
         this.setParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
         this.setParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
+        this.setParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -58,6 +58,13 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * vip保留时间，单位：天
+    */
+    @SerializedName("Recycle")
+    @Expose
+    private Long Recycle;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -137,6 +144,22 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get vip保留时间，单位：天 
+     * @return Recycle vip保留时间，单位：天
+     */
+    public Long getRecycle() {
+        return this.Recycle;
+    }
+
+    /**
+     * Set vip保留时间，单位：天
+     * @param Recycle vip保留时间，单位：天
+     */
+    public void setRecycle(Long Recycle) {
+        this.Recycle = Recycle;
+    }
+
     public ModifyNetworkConfigRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Recycle != null) {
+            this.Recycle = new Long(source.Recycle);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Recycle", this.Recycle);
 
     }
 }

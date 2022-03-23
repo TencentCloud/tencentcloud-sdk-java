@@ -86,6 +86,20 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    */
+    @SerializedName("StockPublicIpAddressesBandwidthOut")
+    @Expose
+    private Long StockPublicIpAddressesBandwidthOut;
+
+    /**
+    * 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    */
+    @SerializedName("PublicIpAddressesBandwidthOut")
+    @Expose
+    private Long PublicIpAddressesBandwidthOut;
+
+    /**
      * Get NAT网关名称 
      * @return NatGatewayName NAT网关名称
      */
@@ -229,6 +243,38 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
+     * @return StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public Long getStockPublicIpAddressesBandwidthOut() {
+        return this.StockPublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Set 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public void setStockPublicIpAddressesBandwidthOut(Long StockPublicIpAddressesBandwidthOut) {
+        this.StockPublicIpAddressesBandwidthOut = StockPublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Get 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
+     * @return PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public Long getPublicIpAddressesBandwidthOut() {
+        return this.PublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Set 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public void setPublicIpAddressesBandwidthOut(Long PublicIpAddressesBandwidthOut) {
+        this.PublicIpAddressesBandwidthOut = PublicIpAddressesBandwidthOut;
+    }
+
     public CreateNatGatewayRequest() {
     }
 
@@ -270,6 +316,12 @@ public class CreateNatGatewayRequest extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.StockPublicIpAddressesBandwidthOut != null) {
+            this.StockPublicIpAddressesBandwidthOut = new Long(source.StockPublicIpAddressesBandwidthOut);
+        }
+        if (source.PublicIpAddressesBandwidthOut != null) {
+            this.PublicIpAddressesBandwidthOut = new Long(source.PublicIpAddressesBandwidthOut);
+        }
     }
 
 
@@ -286,6 +338,8 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
+        this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
 
     }
 }

@@ -51,6 +51,20 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    */
+    @SerializedName("StockPublicIpAddressesBandwidthOut")
+    @Expose
+    private Long StockPublicIpAddressesBandwidthOut;
+
+    /**
+    * 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    */
+    @SerializedName("PublicIpAddressesBandwidthOut")
+    @Expose
+    private Long PublicIpAddressesBandwidthOut;
+
+    /**
      * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
@@ -114,6 +128,38 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
+     * @return StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public Long getStockPublicIpAddressesBandwidthOut() {
+        return this.StockPublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Set 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public void setStockPublicIpAddressesBandwidthOut(Long StockPublicIpAddressesBandwidthOut) {
+        this.StockPublicIpAddressesBandwidthOut = StockPublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Get 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
+     * @return PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public Long getPublicIpAddressesBandwidthOut() {
+        return this.PublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Set 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public void setPublicIpAddressesBandwidthOut(Long PublicIpAddressesBandwidthOut) {
+        this.PublicIpAddressesBandwidthOut = PublicIpAddressesBandwidthOut;
+    }
+
     public AssociateNatGatewayAddressRequest() {
     }
 
@@ -137,6 +183,12 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.StockPublicIpAddressesBandwidthOut != null) {
+            this.StockPublicIpAddressesBandwidthOut = new Long(source.StockPublicIpAddressesBandwidthOut);
+        }
+        if (source.PublicIpAddressesBandwidthOut != null) {
+            this.PublicIpAddressesBandwidthOut = new Long(source.PublicIpAddressesBandwidthOut);
+        }
     }
 
 
@@ -148,6 +200,8 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressCount", this.AddressCount);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
+        this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
 
     }
 }

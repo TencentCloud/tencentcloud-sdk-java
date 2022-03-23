@@ -102,6 +102,13 @@ public class BatchSendEmailRequest extends AbstractModel{
     private String Unsubscribe;
 
     /**
+    * 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+    */
+    @SerializedName("ADLocation")
+    @Expose
+    private Long ADLocation;
+
+    /**
      * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com> 
@@ -285,6 +292,22 @@ public class BatchSendEmailRequest extends AbstractModel{
         this.Unsubscribe = Unsubscribe;
     }
 
+    /**
+     * Get 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面 
+     * @return ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     */
+    public Long getADLocation() {
+        return this.ADLocation;
+    }
+
+    /**
+     * Set 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     * @param ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     */
+    public void setADLocation(Long ADLocation) {
+        this.ADLocation = ADLocation;
+    }
+
     public BatchSendEmailRequest() {
     }
 
@@ -329,6 +352,9 @@ public class BatchSendEmailRequest extends AbstractModel{
         if (source.Unsubscribe != null) {
             this.Unsubscribe = new String(source.Unsubscribe);
         }
+        if (source.ADLocation != null) {
+            this.ADLocation = new Long(source.ADLocation);
+        }
     }
 
 
@@ -347,6 +373,7 @@ public class BatchSendEmailRequest extends AbstractModel{
         this.setParamObj(map, prefix + "CycleParam.", this.CycleParam);
         this.setParamObj(map, prefix + "TimedParam.", this.TimedParam);
         this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+        this.setParamSimple(map, prefix + "ADLocation", this.ADLocation);
 
     }
 }
