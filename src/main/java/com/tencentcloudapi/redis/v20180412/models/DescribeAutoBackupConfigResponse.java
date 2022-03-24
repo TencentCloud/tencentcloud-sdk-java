@@ -44,6 +44,20 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
     private String TimePeriod;
 
     /**
+    * 全量备份文件保存天数
+    */
+    @SerializedName("BackupStorageDays")
+    @Expose
+    private Long BackupStorageDays;
+
+    /**
+    * tendis binlog备份文件保存天数
+    */
+    @SerializedName("BinlogStorageDays")
+    @Expose
+    private Long BinlogStorageDays;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +113,38 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 全量备份文件保存天数 
+     * @return BackupStorageDays 全量备份文件保存天数
+     */
+    public Long getBackupStorageDays() {
+        return this.BackupStorageDays;
+    }
+
+    /**
+     * Set 全量备份文件保存天数
+     * @param BackupStorageDays 全量备份文件保存天数
+     */
+    public void setBackupStorageDays(Long BackupStorageDays) {
+        this.BackupStorageDays = BackupStorageDays;
+    }
+
+    /**
+     * Get tendis binlog备份文件保存天数 
+     * @return BinlogStorageDays tendis binlog备份文件保存天数
+     */
+    public Long getBinlogStorageDays() {
+        return this.BinlogStorageDays;
+    }
+
+    /**
+     * Set tendis binlog备份文件保存天数
+     * @param BinlogStorageDays tendis binlog备份文件保存天数
+     */
+    public void setBinlogStorageDays(Long BinlogStorageDays) {
+        this.BinlogStorageDays = BinlogStorageDays;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -134,6 +180,12 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
         if (source.TimePeriod != null) {
             this.TimePeriod = new String(source.TimePeriod);
         }
+        if (source.BackupStorageDays != null) {
+            this.BackupStorageDays = new Long(source.BackupStorageDays);
+        }
+        if (source.BinlogStorageDays != null) {
+            this.BinlogStorageDays = new Long(source.BinlogStorageDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -147,6 +199,8 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
         this.setParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
         this.setParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
+        this.setParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
+        this.setParamSimple(map, prefix + "BinlogStorageDays", this.BinlogStorageDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

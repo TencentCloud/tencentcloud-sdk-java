@@ -37,6 +37,13 @@ public class ManualBackupInstanceRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 保存天数。0代表指定默认保留时间
+    */
+    @SerializedName("StorageDays")
+    @Expose
+    private Long StorageDays;
+
+    /**
      * Get 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。 
      * @return InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
      */
@@ -68,6 +75,22 @@ public class ManualBackupInstanceRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 保存天数。0代表指定默认保留时间 
+     * @return StorageDays 保存天数。0代表指定默认保留时间
+     */
+    public Long getStorageDays() {
+        return this.StorageDays;
+    }
+
+    /**
+     * Set 保存天数。0代表指定默认保留时间
+     * @param StorageDays 保存天数。0代表指定默认保留时间
+     */
+    public void setStorageDays(Long StorageDays) {
+        this.StorageDays = StorageDays;
+    }
+
     public ManualBackupInstanceRequest() {
     }
 
@@ -82,6 +105,9 @@ public class ManualBackupInstanceRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.StorageDays != null) {
+            this.StorageDays = new Long(source.StorageDays);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ManualBackupInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "StorageDays", this.StorageDays);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCommonDBInstancesRequest extends AbstractModel{
 
     /**
-    * 实例Vip信息列表
+    * vpc网络ID信息列表
     */
     @SerializedName("VpcIds")
     @Expose
     private Long [] VpcIds;
 
     /**
-    * 子网id信息列表
+    * 子网ID信息列表
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private Long PayMode;
 
     /**
-    * 实例id过滤信息列表
+    * 实例ID过滤信息列表
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -114,32 +114,32 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get 实例Vip信息列表 
-     * @return VpcIds 实例Vip信息列表
+     * Get vpc网络ID信息列表 
+     * @return VpcIds vpc网络ID信息列表
      */
     public Long [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set 实例Vip信息列表
-     * @param VpcIds 实例Vip信息列表
+     * Set vpc网络ID信息列表
+     * @param VpcIds vpc网络ID信息列表
      */
     public void setVpcIds(Long [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get 子网id信息列表 
-     * @return SubnetIds 子网id信息列表
+     * Get 子网ID信息列表 
+     * @return SubnetIds 子网ID信息列表
      */
     public Long [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网id信息列表
-     * @param SubnetIds 子网id信息列表
+     * Set 子网ID信息列表
+     * @param SubnetIds 子网ID信息列表
      */
     public void setSubnetIds(Long [] SubnetIds) {
         this.SubnetIds = SubnetIds;
@@ -162,16 +162,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例id过滤信息列表 
-     * @return InstanceIds 实例id过滤信息列表
+     * Get 实例ID过滤信息列表 
+     * @return InstanceIds 实例ID过滤信息列表
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例id过滤信息列表
-     * @param InstanceIds 实例id过滤信息列表
+     * Set 实例ID过滤信息列表
+     * @param InstanceIds 实例ID过滤信息列表
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

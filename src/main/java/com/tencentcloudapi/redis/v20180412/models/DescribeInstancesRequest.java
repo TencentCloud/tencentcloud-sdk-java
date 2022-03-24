@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 实例列表的大小，参数默认值20
+    * 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
     */
     @SerializedName("Limit")
     @Expose
@@ -177,16 +177,30 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String MonitorVersion;
 
     /**
-     * Get 实例列表的大小，参数默认值20 
-     * @return Limit 实例列表的大小，参数默认值20
+    * 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private InstanceTagInfo [] InstanceTags;
+
+    /**
+    * 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
+     * Get 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准 
+     * @return Limit 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 实例列表的大小，参数默认值20
-     * @param Limit 实例列表的大小，参数默认值20
+     * Set 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+     * @param Limit 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -528,6 +542,38 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.MonitorVersion = MonitorVersion;
     }
 
+    /**
+     * Get 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤 
+     * @return InstanceTags 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+     */
+    public InstanceTagInfo [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * Set 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+     * @param InstanceTags 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+     */
+    public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
+    /**
+     * Get 根据标签的Key筛选资源，不传或者传空数组则不进行过滤 
+     * @return TagKeys 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+     * @param TagKeys 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -632,6 +678,18 @@ public class DescribeInstancesRequest extends AbstractModel{
         if (source.MonitorVersion != null) {
             this.MonitorVersion = new String(source.MonitorVersion);
         }
+        if (source.InstanceTags != null) {
+            this.InstanceTags = new InstanceTagInfo[source.InstanceTags.length];
+            for (int i = 0; i < source.InstanceTags.length; i++) {
+                this.InstanceTags[i] = new InstanceTagInfo(source.InstanceTags[i]);
+            }
+        }
+        if (source.TagKeys != null) {
+            this.TagKeys = new String[source.TagKeys.length];
+            for (int i = 0; i < source.TagKeys.length; i++) {
+                this.TagKeys[i] = new String(source.TagKeys[i]);
+            }
+        }
     }
 
 
@@ -661,6 +719,8 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamArraySimple(map, prefix + "TypeList.", this.TypeList);
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
 
     }
 }

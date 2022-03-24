@@ -30,6 +30,20 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
+    * 安全组生效内网地址
+    */
+    @SerializedName("VIP")
+    @Expose
+    private String VIP;
+
+    /**
+    * 安全组生效内网端口
+    */
+    @SerializedName("VPort")
+    @Expose
+    private String VPort;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +64,38 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
      */
     public void setGroups(SecurityGroup [] Groups) {
         this.Groups = Groups;
+    }
+
+    /**
+     * Get 安全组生效内网地址 
+     * @return VIP 安全组生效内网地址
+     */
+    public String getVIP() {
+        return this.VIP;
+    }
+
+    /**
+     * Set 安全组生效内网地址
+     * @param VIP 安全组生效内网地址
+     */
+    public void setVIP(String VIP) {
+        this.VIP = VIP;
+    }
+
+    /**
+     * Get 安全组生效内网端口 
+     * @return VPort 安全组生效内网端口
+     */
+    public String getVPort() {
+        return this.VPort;
+    }
+
+    /**
+     * Set 安全组生效内网端口
+     * @param VPort 安全组生效内网端口
+     */
+    public void setVPort(String VPort) {
+        this.VPort = VPort;
     }
 
     /**
@@ -82,6 +128,12 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
                 this.Groups[i] = new SecurityGroup(source.Groups[i]);
             }
         }
+        if (source.VIP != null) {
+            this.VIP = new String(source.VIP);
+        }
+        if (source.VPort != null) {
+            this.VPort = new String(source.VPort);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +145,8 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "VIP", this.VIP);
+        this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
