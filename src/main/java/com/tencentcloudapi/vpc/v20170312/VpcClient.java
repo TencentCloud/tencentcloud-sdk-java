@@ -4901,7 +4901,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *修改弹性网卡服务质量
+     *修改弹性网卡服务质量。
      * @param req ModifyNetworkInterfaceQosRequest
      * @return ModifyNetworkInterfaceQosResponse
      * @throws TencentCloudSDKException
@@ -5258,7 +5258,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+     *本接口（NotifyRoutes）用于路由表列表页操作增加“发布到云联网”，发布路由到云联网。
      * @param req NotifyRoutesRequest
      * @return NotifyRoutesResponse
      * @throws TencentCloudSDKException

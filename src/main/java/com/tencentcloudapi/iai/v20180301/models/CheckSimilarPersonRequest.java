@@ -32,8 +32,8 @@ public class CheckSimilarPersonRequest extends AbstractModel{
 
     /**
     * 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
     */
     @SerializedName("UniquePersonControl")
     @Expose
@@ -61,11 +61,11 @@ public class CheckSimilarPersonRequest extends AbstractModel{
 
     /**
      * Get 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。 
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。 
      * @return UniquePersonControl 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
      */
     public Long getUniquePersonControl() {
         return this.UniquePersonControl;
@@ -73,11 +73,11 @@ public class CheckSimilarPersonRequest extends AbstractModel{
 
     /**
      * Set 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
      * @param UniquePersonControl 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
      */
     public void setUniquePersonControl(Long UniquePersonControl) {
         this.UniquePersonControl = UniquePersonControl;

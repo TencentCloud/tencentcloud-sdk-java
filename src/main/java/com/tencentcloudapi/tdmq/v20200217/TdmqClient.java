@@ -1859,6 +1859,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *重置指定Group的消费位点到指定时间戳
+     * @param req ResetRocketMQConsumerOffSetRequest
+     * @return ResetRocketMQConsumerOffSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(ResetRocketMQConsumerOffSetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetRocketMQConsumerOffSetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetRocketMQConsumerOffSetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetRocketMQConsumerOffSet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *回溯cmq队列
      * @param req RewindCmqQueueRequest
      * @return RewindCmqQueueResponse

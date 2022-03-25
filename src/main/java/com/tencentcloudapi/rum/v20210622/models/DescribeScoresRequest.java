@@ -44,7 +44,7 @@ public class DescribeScoresRequest extends AbstractModel{
     private Long ID;
 
     /**
-    * 是否为demo模式（1=是，2=否）
+    * 该参数已废弃
     */
     @SerializedName("IsDemo")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeScoresRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为demo模式（1=是，2=否） 
-     * @return IsDemo 是否为demo模式（1=是，2=否）
+     * Get 该参数已废弃 
+     * @return IsDemo 该参数已废弃
      */
     public Long getIsDemo() {
         return this.IsDemo;
     }
 
     /**
-     * Set 是否为demo模式（1=是，2=否）
-     * @param IsDemo 是否为demo模式（1=是，2=否）
+     * Set 该参数已废弃
+     * @param IsDemo 该参数已废弃
      */
     public void setIsDemo(Long IsDemo) {
         this.IsDemo = IsDemo;

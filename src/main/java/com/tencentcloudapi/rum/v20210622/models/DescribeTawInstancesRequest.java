@@ -72,14 +72,14 @@ public class DescribeTawInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 过滤参数
+    * 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 是否为demo模式（1=是，2=否）
+    * 该参数已废弃，demo模式请在Filters内注明
     */
     @SerializedName("IsDemo")
     @Expose
@@ -198,32 +198,32 @@ public class DescribeTawInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+     * Get 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]} 
+     * @return Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+     * @param Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 是否为demo模式（1=是，2=否） 
-     * @return IsDemo 是否为demo模式（1=是，2=否）
+     * Get 该参数已废弃，demo模式请在Filters内注明 
+     * @return IsDemo 该参数已废弃，demo模式请在Filters内注明
      */
     public Long getIsDemo() {
         return this.IsDemo;
     }
 
     /**
-     * Set 是否为demo模式（1=是，2=否）
-     * @param IsDemo 是否为demo模式（1=是，2=否）
+     * Set 该参数已废弃，demo模式请在Filters内注明
+     * @param IsDemo 该参数已废弃，demo模式请在Filters内注明
      */
     public void setIsDemo(Long IsDemo) {
         this.IsDemo = IsDemo;

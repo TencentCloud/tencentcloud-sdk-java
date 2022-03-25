@@ -62,6 +62,14 @@ public class BGPInstanceSpecification extends AbstractModel{
     private Long UnionPackFlag;
 
     /**
+    * 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceBandWidth")
+    @Expose
+    private Long ServiceBandWidth;
+
+    /**
      * Get 保底防护峰值，单位Gbps 
      * @return ProtectBandwidth 保底防护峰值，单位Gbps
      */
@@ -157,6 +165,26 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.UnionPackFlag = UnionPackFlag;
     }
 
+    /**
+     * Get 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceBandWidth 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getServiceBandWidth() {
+        return this.ServiceBandWidth;
+    }
+
+    /**
+     * Set 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceBandWidth 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceBandWidth(Long ServiceBandWidth) {
+        this.ServiceBandWidth = ServiceBandWidth;
+    }
+
     public BGPInstanceSpecification() {
     }
 
@@ -180,6 +208,9 @@ public class BGPInstanceSpecification extends AbstractModel{
         if (source.UnionPackFlag != null) {
             this.UnionPackFlag = new Long(source.UnionPackFlag);
         }
+        if (source.ServiceBandWidth != null) {
+            this.ServiceBandWidth = new Long(source.ServiceBandWidth);
+        }
     }
 
 
@@ -192,6 +223,7 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtectIPNumberLimit", this.ProtectIPNumberLimit);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "UnionPackFlag", this.UnionPackFlag);
+        this.setParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
 
     }
 }

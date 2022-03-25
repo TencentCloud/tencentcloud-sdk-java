@@ -86,6 +86,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private String FilterBoundStatus;
 
     /**
+    * 实例id数组
+    */
+    @SerializedName("FilterInstanceIdList")
+    @Expose
+    private String [] FilterInstanceIdList;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -229,6 +236,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.FilterBoundStatus = FilterBoundStatus;
     }
 
+    /**
+     * Get 实例id数组 
+     * @return FilterInstanceIdList 实例id数组
+     */
+    public String [] getFilterInstanceIdList() {
+        return this.FilterInstanceIdList;
+    }
+
+    /**
+     * Set 实例id数组
+     * @param FilterInstanceIdList 实例id数组
+     */
+    public void setFilterInstanceIdList(String [] FilterInstanceIdList) {
+        this.FilterInstanceIdList = FilterInstanceIdList;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -264,6 +287,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterBoundStatus != null) {
             this.FilterBoundStatus = new String(source.FilterBoundStatus);
         }
+        if (source.FilterInstanceIdList != null) {
+            this.FilterInstanceIdList = new String[source.FilterInstanceIdList.length];
+            for (int i = 0; i < source.FilterInstanceIdList.length; i++) {
+                this.FilterInstanceIdList[i] = new String(source.FilterInstanceIdList[i]);
+            }
+        }
     }
 
 
@@ -280,6 +309,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterLine", this.FilterLine);
         this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
         this.setParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
+        this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
 
     }
 }

@@ -1264,6 +1264,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
+     * @param req RecognizeTravelCardOCRRequest
+     * @return RecognizeTravelCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(RecognizeTravelCardOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeTravelCardOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeTravelCardOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeTravelCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
      * @param req ResidenceBookletOCRRequest
      * @return ResidenceBookletOCRResponse

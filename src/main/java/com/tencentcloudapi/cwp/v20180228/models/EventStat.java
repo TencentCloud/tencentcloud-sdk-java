@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.scf.v20180416.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Variable extends AbstractModel{
+public class EventStat extends AbstractModel{
 
     /**
-    * 变量的名称，不可为空字符
+    * 事件数
     */
-    @SerializedName("Key")
+    @SerializedName("EventsNum")
     @Expose
-    private String Key;
+    private Long EventsNum;
 
     /**
-    * 变量的值，不可为空字符
+    * 受影响的主机数
     */
-    @SerializedName("Value")
+    @SerializedName("MachineAffectNum")
     @Expose
-    private String Value;
+    private Long MachineAffectNum;
 
     /**
-     * Get 变量的名称，不可为空字符 
-     * @return Key 变量的名称，不可为空字符
+     * Get 事件数 
+     * @return EventsNum 事件数
      */
-    public String getKey() {
-        return this.Key;
+    public Long getEventsNum() {
+        return this.EventsNum;
     }
 
     /**
-     * Set 变量的名称，不可为空字符
-     * @param Key 变量的名称，不可为空字符
+     * Set 事件数
+     * @param EventsNum 事件数
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setEventsNum(Long EventsNum) {
+        this.EventsNum = EventsNum;
     }
 
     /**
-     * Get 变量的值，不可为空字符 
-     * @return Value 变量的值，不可为空字符
+     * Get 受影响的主机数 
+     * @return MachineAffectNum 受影响的主机数
      */
-    public String getValue() {
-        return this.Value;
+    public Long getMachineAffectNum() {
+        return this.MachineAffectNum;
     }
 
     /**
-     * Set 变量的值，不可为空字符
-     * @param Value 变量的值，不可为空字符
+     * Set 受影响的主机数
+     * @param MachineAffectNum 受影响的主机数
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setMachineAffectNum(Long MachineAffectNum) {
+        this.MachineAffectNum = MachineAffectNum;
     }
 
-    public Variable() {
+    public EventStat() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Variable(Variable source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public EventStat(EventStat source) {
+        if (source.EventsNum != null) {
+            this.EventsNum = new Long(source.EventsNum);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.MachineAffectNum != null) {
+            this.MachineAffectNum = new Long(source.MachineAffectNum);
         }
     }
 
@@ -89,8 +89,8 @@ public class Variable extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "EventsNum", this.EventsNum);
+        this.setParamSimple(map, prefix + "MachineAffectNum", this.MachineAffectNum);
 
     }
 }

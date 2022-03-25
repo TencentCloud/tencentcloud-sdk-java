@@ -66,6 +66,14 @@ public class ParamDesc extends AbstractModel{
     private Boolean HaveSetValue;
 
     /**
+    * 是否需要重启生效，false:不需要重启，
+true:需要重启
+    */
+    @SerializedName("NeedRestart")
+    @Expose
+    private Boolean NeedRestart;
+
+    /**
      * Get 参数名字 
      * @return Param 参数名字
      */
@@ -165,6 +173,26 @@ public class ParamDesc extends AbstractModel{
         this.HaveSetValue = HaveSetValue;
     }
 
+    /**
+     * Get 是否需要重启生效，false:不需要重启，
+true:需要重启 
+     * @return NeedRestart 是否需要重启生效，false:不需要重启，
+true:需要重启
+     */
+    public Boolean getNeedRestart() {
+        return this.NeedRestart;
+    }
+
+    /**
+     * Set 是否需要重启生效，false:不需要重启，
+true:需要重启
+     * @param NeedRestart 是否需要重启生效，false:不需要重启，
+true:需要重启
+     */
+    public void setNeedRestart(Boolean NeedRestart) {
+        this.NeedRestart = NeedRestart;
+    }
+
     public ParamDesc() {
     }
 
@@ -191,6 +219,9 @@ public class ParamDesc extends AbstractModel{
         if (source.HaveSetValue != null) {
             this.HaveSetValue = new Boolean(source.HaveSetValue);
         }
+        if (source.NeedRestart != null) {
+            this.NeedRestart = new Boolean(source.NeedRestart);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class ParamDesc extends AbstractModel{
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamObj(map, prefix + "Constraint.", this.Constraint);
         this.setParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
+        this.setParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
 
     }
 }

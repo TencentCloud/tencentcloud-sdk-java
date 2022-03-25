@@ -99,6 +99,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *创建账号
+     * @param req CreateAccountsRequest
+     * @return CreateAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountsResponse CreateAccounts(CreateAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建集群
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
