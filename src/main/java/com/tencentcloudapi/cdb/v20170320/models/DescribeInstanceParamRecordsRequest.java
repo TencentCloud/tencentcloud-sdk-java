@@ -30,14 +30,14 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 分页偏移量。
+    * 分页偏移量，默认值：0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页大小。
+    * 分页大小，默认值：20。
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页偏移量。 
-     * @return Offset 分页偏移量。
+     * Get 分页偏移量，默认值：0。 
+     * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量。
-     * @param Offset 分页偏移量。
+     * Set 分页偏移量，默认值：0。
+     * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页大小。 
-     * @return Limit 分页大小。
+     * Get 分页大小，默认值：20。 
+     * @return Limit 分页大小，默认值：20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小。
-     * @param Limit 分页大小。
+     * Set 分页大小，默认值：20。
+     * @param Limit 分页大小，默认值：20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

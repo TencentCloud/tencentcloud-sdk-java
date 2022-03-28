@@ -30,14 +30,14 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * 模板名称。
+    * 模板名称，长度不超过64。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模板描述。
+    * 模板描述，长度不超过255。
     */
     @SerializedName("Description")
     @Expose
@@ -67,32 +67,32 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板名称。 
-     * @return Name 模板名称。
+     * Get 模板名称，长度不超过64。 
+     * @return Name 模板名称，长度不超过64。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称。
-     * @param Name 模板名称。
+     * Set 模板名称，长度不超过64。
+     * @param Name 模板名称，长度不超过64。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模板描述。 
-     * @return Description 模板描述。
+     * Get 模板描述，长度不超过255。 
+     * @return Description 模板描述，长度不超过255。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模板描述。
-     * @param Description 模板描述。
+     * Set 模板描述，长度不超过255。
+     * @param Description 模板描述，长度不超过255。
      */
     public void setDescription(String Description) {
         this.Description = Description;

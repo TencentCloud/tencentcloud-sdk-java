@@ -499,7 +499,7 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *查询安全设置
+     *查询用户安全设置
      * @param req DescribeSafeAuthFlagRequest
      * @return DescribeSafeAuthFlagResponse
      * @throws TencentCloudSDKException

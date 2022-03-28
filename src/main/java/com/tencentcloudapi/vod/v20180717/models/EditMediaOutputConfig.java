@@ -52,6 +52,20 @@ public class EditMediaOutputConfig extends AbstractModel{
     private String ExpireTime;
 
     /**
+    * 输出的视频信息。
+    */
+    @SerializedName("VideoStream")
+    @Expose
+    private EditMediaVideoStream VideoStream;
+
+    /**
+    * 极速高清转码参数。
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private EditMediaTEHDConfig TEHDConfig;
+
+    /**
      * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。 
      * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
      */
@@ -119,6 +133,38 @@ public class EditMediaOutputConfig extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 输出的视频信息。 
+     * @return VideoStream 输出的视频信息。
+     */
+    public EditMediaVideoStream getVideoStream() {
+        return this.VideoStream;
+    }
+
+    /**
+     * Set 输出的视频信息。
+     * @param VideoStream 输出的视频信息。
+     */
+    public void setVideoStream(EditMediaVideoStream VideoStream) {
+        this.VideoStream = VideoStream;
+    }
+
+    /**
+     * Get 极速高清转码参数。 
+     * @return TEHDConfig 极速高清转码参数。
+     */
+    public EditMediaTEHDConfig getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * Set 极速高清转码参数。
+     * @param TEHDConfig 极速高清转码参数。
+     */
+    public void setTEHDConfig(EditMediaTEHDConfig TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
     public EditMediaOutputConfig() {
     }
 
@@ -139,6 +185,12 @@ public class EditMediaOutputConfig extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.VideoStream != null) {
+            this.VideoStream = new EditMediaVideoStream(source.VideoStream);
+        }
+        if (source.TEHDConfig != null) {
+            this.TEHDConfig = new EditMediaTEHDConfig(source.TEHDConfig);
+        }
     }
 
 
@@ -150,6 +202,8 @@ public class EditMediaOutputConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamObj(map, prefix + "VideoStream.", this.VideoStream);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
 
     }
 }
