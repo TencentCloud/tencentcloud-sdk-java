@@ -37,6 +37,14 @@ public class CompliancePeriodTaskRule extends AbstractModel{
     private String ExecutionTime;
 
     /**
+    * 是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Boolean Enable;
+
+    /**
      * Get 执行的频率（几天一次），取值为：1,3,7。 
      * @return Frequency 执行的频率（几天一次），取值为：1,3,7。
      */
@@ -68,6 +76,26 @@ public class CompliancePeriodTaskRule extends AbstractModel{
         this.ExecutionTime = ExecutionTime;
     }
 
+    /**
+     * Get 是否开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Enable 是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Enable 是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
+    }
+
     public CompliancePeriodTaskRule() {
     }
 
@@ -82,6 +110,9 @@ public class CompliancePeriodTaskRule extends AbstractModel{
         if (source.ExecutionTime != null) {
             this.ExecutionTime = new String(source.ExecutionTime);
         }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class CompliancePeriodTaskRule extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Frequency", this.Frequency);
         this.setParamSimple(map, prefix + "ExecutionTime", this.ExecutionTime);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
 
     }
 }

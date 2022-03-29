@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEmailTemplateResponse extends AbstractModel{
-
-    /**
-    * 模板id
-    */
-    @SerializedName("TemplateID")
-    @Expose
-    private Long TemplateID;
+public class ModifyInstanceNameResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateEmailTemplateResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 模板id 
-     * @return TemplateID 模板id
-     */
-    public Long getTemplateID() {
-        return this.TemplateID;
-    }
-
-    /**
-     * Set 模板id
-     * @param TemplateID 模板id
-     */
-    public void setTemplateID(Long TemplateID) {
-        this.TemplateID = TemplateID;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class CreateEmailTemplateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateEmailTemplateResponse() {
+    public ModifyInstanceNameResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateEmailTemplateResponse(CreateEmailTemplateResponse source) {
-        if (source.TemplateID != null) {
-            this.TemplateID = new Long(source.TemplateID);
-        }
+    public ModifyInstanceNameResponse(ModifyInstanceNameResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateEmailTemplateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateID", this.TemplateID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

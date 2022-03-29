@@ -217,6 +217,30 @@ public class ClusterInfo extends AbstractModel{
     private KafkaInfo KafkaInfo;
 
     /**
+    * 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TxhBackupExpireDay")
+    @Expose
+    private Long TxhBackupExpireDay;
+
+    /**
+    * 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UlogBackupExpireDay")
+    @Expose
+    private Long UlogBackupExpireDay;
+
+    /**
+    * 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsReadOnlyUlogBackupExpireDay")
+    @Expose
+    private Long IsReadOnlyUlogBackupExpireDay;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -680,6 +704,66 @@ public class ClusterInfo extends AbstractModel{
         this.KafkaInfo = KafkaInfo;
     }
 
+    /**
+     * Get 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TxhBackupExpireDay 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTxhBackupExpireDay() {
+        return this.TxhBackupExpireDay;
+    }
+
+    /**
+     * Set 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TxhBackupExpireDay 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
+        this.TxhBackupExpireDay = TxhBackupExpireDay;
+    }
+
+    /**
+     * Get 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUlogBackupExpireDay() {
+        return this.UlogBackupExpireDay;
+    }
+
+    /**
+     * Set 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUlogBackupExpireDay(Long UlogBackupExpireDay) {
+        this.UlogBackupExpireDay = UlogBackupExpireDay;
+    }
+
+    /**
+     * Get 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsReadOnlyUlogBackupExpireDay() {
+        return this.IsReadOnlyUlogBackupExpireDay;
+    }
+
+    /**
+     * Set 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsReadOnlyUlogBackupExpireDay(Long IsReadOnlyUlogBackupExpireDay) {
+        this.IsReadOnlyUlogBackupExpireDay = IsReadOnlyUlogBackupExpireDay;
+    }
+
     public ClusterInfo() {
     }
 
@@ -775,6 +859,15 @@ public class ClusterInfo extends AbstractModel{
         if (source.KafkaInfo != null) {
             this.KafkaInfo = new KafkaInfo(source.KafkaInfo);
         }
+        if (source.TxhBackupExpireDay != null) {
+            this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
+        }
+        if (source.UlogBackupExpireDay != null) {
+            this.UlogBackupExpireDay = new Long(source.UlogBackupExpireDay);
+        }
+        if (source.IsReadOnlyUlogBackupExpireDay != null) {
+            this.IsReadOnlyUlogBackupExpireDay = new Long(source.IsReadOnlyUlogBackupExpireDay);
+        }
     }
 
 
@@ -808,6 +901,9 @@ public class ClusterInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
         this.setParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
         this.setParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
+        this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+        this.setParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
+        this.setParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
 
     }
 }

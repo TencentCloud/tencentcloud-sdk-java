@@ -135,6 +135,9 @@ public enum DlcErrorCode {
     // 子用户不是管理员，无权将工作组和用户解绑。
      UNAUTHORIZEDOPERATION_UNBINDWORKGROUPSFROMUSER("UnauthorizedOperation.UnbindWorkgroupsFromUser"),
      
+    // 子用户无权使用计算引擎。
+     UNAUTHORIZEDOPERATION_USECOMPUTINGENGINE("UnauthorizedOperation.UseComputingEngine"),
+     
     // 子用户不存在。
      UNAUTHORIZEDOPERATION_USERNOTEXIST("UnauthorizedOperation.UserNotExist"),
      

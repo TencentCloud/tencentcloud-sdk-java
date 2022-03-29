@@ -65,7 +65,9 @@ public class FlowApproverInfo extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 签署人类型，PERSON和ORGANIZATION
+    * 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
     */
     @SerializedName("ApproverType")
     @Expose
@@ -120,6 +122,13 @@ public class FlowApproverInfo extends AbstractModel{
     @SerializedName("NotChannelOrganization")
     @Expose
     private Boolean NotChannelOrganization;
+
+    /**
+    * 使用PDF文件直接发起合同时，签署人指定的签署控件
+    */
+    @SerializedName("SignComponents")
+    @Expose
+    private Component [] SignComponents;
 
     /**
      * Get 签署人姓名 
@@ -218,16 +227,24 @@ public class FlowApproverInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署人类型，PERSON和ORGANIZATION 
-     * @return ApproverType 签署人类型，PERSON和ORGANIZATION
+     * Get 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署； 
+     * @return ApproverType 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
      */
     public String getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set 签署人类型，PERSON和ORGANIZATION
-     * @param ApproverType 签署人类型，PERSON和ORGANIZATION
+     * Set 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+     * @param ApproverType 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
@@ -349,6 +366,22 @@ public class FlowApproverInfo extends AbstractModel{
         this.NotChannelOrganization = NotChannelOrganization;
     }
 
+    /**
+     * Get 使用PDF文件直接发起合同时，签署人指定的签署控件 
+     * @return SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
+     */
+    public Component [] getSignComponents() {
+        return this.SignComponents;
+    }
+
+    /**
+     * Set 使用PDF文件直接发起合同时，签署人指定的签署控件
+     * @param SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
+     */
+    public void setSignComponents(Component [] SignComponents) {
+        this.SignComponents = SignComponents;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -402,6 +435,12 @@ public class FlowApproverInfo extends AbstractModel{
         if (source.NotChannelOrganization != null) {
             this.NotChannelOrganization = new Boolean(source.NotChannelOrganization);
         }
+        if (source.SignComponents != null) {
+            this.SignComponents = new Component[source.SignComponents.length];
+            for (int i = 0; i < source.SignComponents.length; i++) {
+                this.SignComponents[i] = new Component(source.SignComponents[i]);
+            }
+        }
     }
 
 
@@ -423,6 +462,7 @@ public class FlowApproverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         this.setParamSimple(map, prefix + "NotChannelOrganization", this.NotChannelOrganization);
+        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
 
     }
 }

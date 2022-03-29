@@ -699,6 +699,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于构建直方图
+     * @param req DescribeLogHistogramRequest
+     * @return DescribeLogHistogramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogHistogramResponse DescribeLogHistogram(DescribeLogHistogramRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogHistogramResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogHistogramResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogHistogram");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取日志集信息列表。
      * @param req DescribeLogsetsRequest
      * @return DescribeLogsetsResponse

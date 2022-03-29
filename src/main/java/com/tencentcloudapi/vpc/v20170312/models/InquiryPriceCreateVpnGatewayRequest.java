@@ -44,6 +44,20 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
+
+    /**
+    * 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。 
      * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
@@ -91,6 +105,38 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。 
+     * @return MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+     * @param MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
+    }
+
+    /**
+     * Get 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。 
+     * @return Type 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+     * @param Type 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public InquiryPriceCreateVpnGatewayRequest() {
     }
 
@@ -108,6 +154,12 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -38,6 +38,14 @@ public class BoundK8SInfo extends AbstractModel{
     private String BoundClusterType;
 
     /**
+    * 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private String SyncMode;
+
+    /**
      * Get 绑定的kubernetes集群ID 
      * @return BoundClusterId 绑定的kubernetes集群ID
      */
@@ -73,6 +81,26 @@ public class BoundK8SInfo extends AbstractModel{
         this.BoundClusterType = BoundClusterType;
     }
 
+    /**
+     * Get 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SyncMode 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncMode 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSyncMode(String SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
     public BoundK8SInfo() {
     }
 
@@ -87,6 +115,9 @@ public class BoundK8SInfo extends AbstractModel{
         if (source.BoundClusterType != null) {
             this.BoundClusterType = new String(source.BoundClusterType);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new String(source.SyncMode);
+        }
     }
 
 
@@ -96,6 +127,7 @@ public class BoundK8SInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BoundClusterId", this.BoundClusterId);
         this.setParamSimple(map, prefix + "BoundClusterType", this.BoundClusterType);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
 
     }
 }

@@ -58,6 +58,13 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String JumpUrl;
 
     /**
+    * "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+    */
+    @SerializedName("AutoJumpBack")
+    @Expose
+    private Boolean AutoJumpBack;
+
+    /**
      * Get 渠道应用相关信息 
      * @return Agent 渠道应用相关信息
      */
@@ -137,6 +144,22 @@ public class CreateSignUrlsRequest extends AbstractModel{
         this.JumpUrl = JumpUrl;
     }
 
+    /**
+     * Get "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP； 
+     * @return AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     */
+    public Boolean getAutoJumpBack() {
+        return this.AutoJumpBack;
+    }
+
+    /**
+     * Set "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     * @param AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     */
+    public void setAutoJumpBack(Boolean AutoJumpBack) {
+        this.AutoJumpBack = AutoJumpBack;
+    }
+
     public CreateSignUrlsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CreateSignUrlsRequest extends AbstractModel{
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
         }
+        if (source.AutoJumpBack != null) {
+            this.AutoJumpBack = new Boolean(source.AutoJumpBack);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+        this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
 
     }
 }

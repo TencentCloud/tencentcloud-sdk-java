@@ -30,21 +30,21 @@ public class DescribeApplicationsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 分页
+    * 分页，限制当前返回多少条记录，大于等于10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页
+    * 分页，从多少条数据开始返回
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 申请单状态，用于过滤
+    * 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
     */
     @SerializedName("CensorStatus")
     @Expose
@@ -72,7 +72,7 @@ public class DescribeApplicationsRequest extends AbstractModel{
     private String Applicant;
 
     /**
-    * 申请类型，用于过滤
+    * 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
     */
     @SerializedName("ApplyType")
     @Expose
@@ -95,48 +95,48 @@ public class DescribeApplicationsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页 
-     * @return Limit 分页
+     * Get 分页，限制当前返回多少条记录，大于等于10 
+     * @return Limit 分页，限制当前返回多少条记录，大于等于10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页
-     * @param Limit 分页
+     * Set 分页，限制当前返回多少条记录，大于等于10
+     * @param Limit 分页，限制当前返回多少条记录，大于等于10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页 
-     * @return Offset 分页
+     * Get 分页，从多少条数据开始返回 
+     * @return Offset 分页，从多少条数据开始返回
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页
-     * @param Offset 分页
+     * Set 分页，从多少条数据开始返回
+     * @param Offset 分页，从多少条数据开始返回
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 申请单状态，用于过滤 
-     * @return CensorStatus 申请单状态，用于过滤
+     * Get 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回 
+     * @return CensorStatus 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
      */
     public Long getCensorStatus() {
         return this.CensorStatus;
     }
 
     /**
-     * Set 申请单状态，用于过滤
-     * @param CensorStatus 申请单状态，用于过滤
+     * Set 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
+     * @param CensorStatus 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
      */
     public void setCensorStatus(Long CensorStatus) {
         this.CensorStatus = CensorStatus;
@@ -191,16 +191,16 @@ public class DescribeApplicationsRequest extends AbstractModel{
     }
 
     /**
-     * Get 申请类型，用于过滤 
-     * @return ApplyType 申请类型，用于过滤
+     * Get 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档 
+     * @return ApplyType 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
      */
     public Long getApplyType() {
         return this.ApplyType;
     }
 
     /**
-     * Set 申请类型，用于过滤
-     * @param ApplyType 申请类型，用于过滤
+     * Set 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
+     * @param ApplyType 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
      */
     public void setApplyType(Long ApplyType) {
         this.ApplyType = ApplyType;
