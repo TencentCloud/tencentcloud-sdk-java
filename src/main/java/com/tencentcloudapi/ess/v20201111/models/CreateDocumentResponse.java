@@ -30,6 +30,14 @@ public class CreateDocumentResponse extends AbstractModel{
     private String DocumentId;
 
     /**
+    * 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreviewFileUrl")
+    @Expose
+    private String PreviewFileUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class CreateDocumentResponse extends AbstractModel{
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;
+    }
+
+    /**
+     * Get 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreviewFileUrl() {
+        return this.PreviewFileUrl;
+    }
+
+    /**
+     * Set 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreviewFileUrl(String PreviewFileUrl) {
+        this.PreviewFileUrl = PreviewFileUrl;
     }
 
     /**
@@ -79,6 +107,9 @@ public class CreateDocumentResponse extends AbstractModel{
         if (source.DocumentId != null) {
             this.DocumentId = new String(source.DocumentId);
         }
+        if (source.PreviewFileUrl != null) {
+            this.PreviewFileUrl = new String(source.PreviewFileUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class CreateDocumentResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DocumentId", this.DocumentId);
+        this.setParamSimple(map, prefix + "PreviewFileUrl", this.PreviewFileUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

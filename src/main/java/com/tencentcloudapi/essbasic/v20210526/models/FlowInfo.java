@@ -30,7 +30,7 @@ public class FlowInfo extends AbstractModel{
     private String FlowName;
 
     /**
-    * 签署截止时间戳，超过有效签署时间则该签署流程失败
+    * 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
     */
     @SerializedName("Deadline")
     @Expose
@@ -62,7 +62,7 @@ public class FlowInfo extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 多个签署人信息
+    * 多个签署人信息，渠道侧目前不支持超过5个签署方信息
     */
     @SerializedName("FlowApprovers")
     @Expose
@@ -113,16 +113,16 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署截止时间戳，超过有效签署时间则该签署流程失败 
-     * @return Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败
+     * Get 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年 
+     * @return Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 签署截止时间戳，超过有效签署时间则该签署流程失败
-     * @param Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败
+     * Set 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
+     * @param Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
@@ -193,16 +193,16 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 多个签署人信息 
-     * @return FlowApprovers 多个签署人信息
+     * Get 多个签署人信息，渠道侧目前不支持超过5个签署方信息 
+     * @return FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
      */
     public FlowApproverInfo [] getFlowApprovers() {
         return this.FlowApprovers;
     }
 
     /**
-     * Set 多个签署人信息
-     * @param FlowApprovers 多个签署人信息
+     * Set 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * @param FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
      */
     public void setFlowApprovers(FlowApproverInfo [] FlowApprovers) {
         this.FlowApprovers = FlowApprovers;

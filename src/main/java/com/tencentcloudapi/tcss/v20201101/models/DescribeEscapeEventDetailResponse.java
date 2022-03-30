@@ -44,6 +44,21 @@ public class DescribeEscapeEventDetailResponse extends AbstractModel{
     private EscapeEventDescription EventDetail;
 
     /**
+    * 父进程信息
+    */
+    @SerializedName("ParentProcessInfo")
+    @Expose
+    private ProcessBaseInfo ParentProcessInfo;
+
+    /**
+    * 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AncestorProcessInfo")
+    @Expose
+    private ProcessBaseInfo AncestorProcessInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +114,42 @@ public class DescribeEscapeEventDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 父进程信息 
+     * @return ParentProcessInfo 父进程信息
+     */
+    public ProcessBaseInfo getParentProcessInfo() {
+        return this.ParentProcessInfo;
+    }
+
+    /**
+     * Set 父进程信息
+     * @param ParentProcessInfo 父进程信息
+     */
+    public void setParentProcessInfo(ProcessBaseInfo ParentProcessInfo) {
+        this.ParentProcessInfo = ParentProcessInfo;
+    }
+
+    /**
+     * Get 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AncestorProcessInfo 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProcessBaseInfo getAncestorProcessInfo() {
+        return this.AncestorProcessInfo;
+    }
+
+    /**
+     * Set 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AncestorProcessInfo 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAncestorProcessInfo(ProcessBaseInfo AncestorProcessInfo) {
+        this.AncestorProcessInfo = AncestorProcessInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +182,12 @@ public class DescribeEscapeEventDetailResponse extends AbstractModel{
         if (source.EventDetail != null) {
             this.EventDetail = new EscapeEventDescription(source.EventDetail);
         }
+        if (source.ParentProcessInfo != null) {
+            this.ParentProcessInfo = new ProcessBaseInfo(source.ParentProcessInfo);
+        }
+        if (source.AncestorProcessInfo != null) {
+            this.AncestorProcessInfo = new ProcessBaseInfo(source.AncestorProcessInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +201,8 @@ public class DescribeEscapeEventDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "EventBaseInfo.", this.EventBaseInfo);
         this.setParamObj(map, prefix + "ProcessInfo.", this.ProcessInfo);
         this.setParamObj(map, prefix + "EventDetail.", this.EventDetail);
+        this.setParamObj(map, prefix + "ParentProcessInfo.", this.ParentProcessInfo);
+        this.setParamObj(map, prefix + "AncestorProcessInfo.", this.AncestorProcessInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

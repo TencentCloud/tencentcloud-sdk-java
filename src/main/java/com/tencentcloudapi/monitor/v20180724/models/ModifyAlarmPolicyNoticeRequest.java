@@ -23,72 +23,95 @@ import java.util.HashMap;
 public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
 
     /**
-    * 模块名，这里填“monitor”
+    * 模块名，这里填“monitor”。
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 告警策略 ID
+    * 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 告警通知模板 ID 列表
+    * 告警通知模板 ID 列表。
     */
     @SerializedName("NoticeIds")
     @Expose
     private String [] NoticeIds;
 
     /**
-     * Get 模块名，这里填“monitor” 
-     * @return Module 模块名，这里填“monitor”
+    * 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
+     * Get 模块名，这里填“monitor”。 
+     * @return Module 模块名，这里填“monitor”。
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，这里填“monitor”
-     * @param Module 模块名，这里填“monitor”
+     * Set 模块名，这里填“monitor”。
+     * @param Module 模块名，这里填“monitor”。
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 告警策略 ID 
-     * @return PolicyId 告警策略 ID
+     * Get 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。 
+     * @return PolicyId 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略 ID
-     * @param PolicyId 告警策略 ID
+     * Set 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
+     * @param PolicyId 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 告警通知模板 ID 列表 
-     * @return NoticeIds 告警通知模板 ID 列表
+     * Get 告警通知模板 ID 列表。 
+     * @return NoticeIds 告警通知模板 ID 列表。
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 告警通知模板 ID 列表
-     * @param NoticeIds 告警通知模板 ID 列表
+     * Set 告警通知模板 ID 列表。
+     * @param NoticeIds 告警通知模板 ID 列表。
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
+    }
+
+    /**
+     * Get 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。 
+     * @return PolicyIds 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+     * @param PolicyIds 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
     }
 
     public ModifyAlarmPolicyNoticeRequest() {
@@ -111,6 +134,12 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
                 this.NoticeIds[i] = new String(source.NoticeIds[i]);
             }
         }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
 
     }
 }

@@ -86,7 +86,7 @@ public class EditMediaTask extends AbstractModel{
     private EditMediaTaskOutput Output;
 
     /**
-    * 原始视频的元信息。
+    * 输出视频的元信息。
     */
     @SerializedName("MetaData")
     @Expose
@@ -270,16 +270,16 @@ public class EditMediaTask extends AbstractModel{
     }
 
     /**
-     * Get 原始视频的元信息。 
-     * @return MetaData 原始视频的元信息。
+     * Get 输出视频的元信息。 
+     * @return MetaData 输出视频的元信息。
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 原始视频的元信息。
-     * @param MetaData 原始视频的元信息。
+     * Set 输出视频的元信息。
+     * @param MetaData 输出视频的元信息。
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

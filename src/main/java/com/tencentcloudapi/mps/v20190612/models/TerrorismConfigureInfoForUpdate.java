@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TerrorismConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * 画面鉴恐任务控制参数。
+    * 画面涉敏任务控制参数。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * 文本鉴恐任务控制参数。
+    * 文本涉敏任务控制参数。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get 画面鉴恐任务控制参数。 
-     * @return ImgReviewInfo 画面鉴恐任务控制参数。
+     * Get 画面涉敏任务控制参数。 
+     * @return ImgReviewInfo 画面涉敏任务控制参数。
      */
     public TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 画面鉴恐任务控制参数。
-     * @param ImgReviewInfo 画面鉴恐任务控制参数。
+     * Set 画面涉敏任务控制参数。
+     * @param ImgReviewInfo 画面涉敏任务控制参数。
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get 文本鉴恐任务控制参数。 
-     * @return OcrReviewInfo 文本鉴恐任务控制参数。
+     * Get 文本涉敏任务控制参数。 
+     * @return OcrReviewInfo 文本涉敏任务控制参数。
      */
     public TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 文本鉴恐任务控制参数。
-     * @param OcrReviewInfo 文本鉴恐任务控制参数。
+     * Set 文本涉敏任务控制参数。
+     * @param OcrReviewInfo 文本涉敏任务控制参数。
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

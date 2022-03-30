@@ -37,14 +37,14 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-    * 嫌疑片段涉政分数。
+    * 嫌疑片段涉敏分数。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 嫌疑片段鉴政结果建议，取值范围：
+    * 嫌疑片段涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -54,14 +54,14 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 涉政人物、违规图标名字。
+    * 涉敏人物、违规图标名字。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+    * 嫌疑片段涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -70,7 +70,7 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物；</li>
+<li>sensitive_politician：涉敏人物；</li>
 <li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
@@ -99,7 +99,7 @@ military：
     private String Url;
 
     /**
-    * 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+    * 涉敏人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -145,27 +145,27 @@ military：
     }
 
     /**
-     * Get 嫌疑片段涉政分数。 
-     * @return Confidence 嫌疑片段涉政分数。
+     * Get 嫌疑片段涉敏分数。 
+     * @return Confidence 嫌疑片段涉敏分数。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 嫌疑片段涉政分数。
-     * @param Confidence 嫌疑片段涉政分数。
+     * Set 嫌疑片段涉敏分数。
+     * @param Confidence 嫌疑片段涉敏分数。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 嫌疑片段鉴政结果建议，取值范围：
+     * Get 嫌疑片段涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion 嫌疑片段鉴政结果建议，取值范围：
+     * @return Suggestion 嫌疑片段涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -175,11 +175,11 @@ military：
     }
 
     /**
-     * Set 嫌疑片段鉴政结果建议，取值范围：
+     * Set 嫌疑片段涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion 嫌疑片段鉴政结果建议，取值范围：
+     * @param Suggestion 嫌疑片段涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -189,23 +189,23 @@ military：
     }
 
     /**
-     * Get 涉政人物、违规图标名字。 
-     * @return Name 涉政人物、违规图标名字。
+     * Get 涉敏人物、违规图标名字。 
+     * @return Name 涉敏人物、违规图标名字。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 涉政人物、违规图标名字。
-     * @param Name 涉政人物、违规图标名字。
+     * Set 涉敏人物、违规图标名字。
+     * @param Name 涉敏人物、违规图标名字。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * Get 嫌疑片段涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -214,7 +214,7 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物；</li>
+<li>sensitive_politician：涉敏人物；</li>
 <li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
@@ -229,7 +229,7 @@ celebrity：
 <li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：敏感军事人物。</li> 
-     * @return Label 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * @return Label 嫌疑片段涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -238,7 +238,7 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物；</li>
+<li>sensitive_politician：涉敏人物；</li>
 <li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
@@ -259,7 +259,7 @@ military：
     }
 
     /**
-     * Set 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * Set 嫌疑片段涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -268,7 +268,7 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物；</li>
+<li>sensitive_politician：涉敏人物；</li>
 <li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
@@ -283,7 +283,7 @@ celebrity：
 <li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：敏感军事人物。</li>
-     * @param Label 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * @param Label 嫌疑片段涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -292,7 +292,7 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物；</li>
+<li>sensitive_politician：涉敏人物；</li>
 <li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
@@ -333,16 +333,16 @@ military：
     }
 
     /**
-     * Get 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
-     * @return AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Get 涉敏人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
+     * @return AreaCoordSet 涉敏人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
-     * @param AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Set 涉敏人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @param AreaCoordSet 涉敏人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

@@ -37,11 +37,18 @@ public class DescribeProjectsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 过滤条件
+    * 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 该参数已废弃，demo模式请在Filters内注明
+    */
+    @SerializedName("IsDemo")
+    @Expose
+    private Long IsDemo;
 
     /**
      * Get 分页每页数目，整型 
@@ -76,19 +83,35 @@ public class DescribeProjectsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]} 
+     * @return Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+     * @param Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 该参数已废弃，demo模式请在Filters内注明 
+     * @return IsDemo 该参数已废弃，demo模式请在Filters内注明
+     */
+    public Long getIsDemo() {
+        return this.IsDemo;
+    }
+
+    /**
+     * Set 该参数已废弃，demo模式请在Filters内注明
+     * @param IsDemo 该参数已废弃，demo模式请在Filters内注明
+     */
+    public void setIsDemo(Long IsDemo) {
+        this.IsDemo = IsDemo;
     }
 
     public DescribeProjectsRequest() {
@@ -111,6 +134,9 @@ public class DescribeProjectsRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.IsDemo != null) {
+            this.IsDemo = new Long(source.IsDemo);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "IsDemo", this.IsDemo);
 
     }
 }

@@ -45,6 +45,14 @@ public class EscapeEventDescription extends AbstractModel{
     private String Remark;
 
     /**
+    * 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationTime")
+    @Expose
+    private String OperationTime;
+
+    /**
      * Get 事件规则 
      * @return Description 事件规则
      */
@@ -96,6 +104,26 @@ public class EscapeEventDescription extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperationTime() {
+        return this.OperationTime;
+    }
+
+    /**
+     * Set 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationTime(String OperationTime) {
+        this.OperationTime = OperationTime;
+    }
+
     public EscapeEventDescription() {
     }
 
@@ -113,6 +141,9 @@ public class EscapeEventDescription extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.OperationTime != null) {
+            this.OperationTime = new String(source.OperationTime);
+        }
     }
 
 
@@ -123,6 +154,7 @@ public class EscapeEventDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Solution", this.Solution);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
 
     }
 }

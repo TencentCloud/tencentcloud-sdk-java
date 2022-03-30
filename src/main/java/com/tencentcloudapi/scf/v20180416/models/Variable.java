@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Variable extends AbstractModel{
 
     /**
-    * 变量的名称
+    * 变量的名称，不可为空字符
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 变量的值
+    * 变量的值，不可为空字符
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 变量的名称 
-     * @return Key 变量的名称
+     * Get 变量的名称，不可为空字符 
+     * @return Key 变量的名称，不可为空字符
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 变量的名称
-     * @param Key 变量的名称
+     * Set 变量的名称，不可为空字符
+     * @param Key 变量的名称，不可为空字符
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 变量的值 
-     * @return Value 变量的值
+     * Get 变量的值，不可为空字符 
+     * @return Value 变量的值，不可为空字符
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 变量的值
-     * @param Value 变量的值
+     * Set 变量的值，不可为空字符
+     * @param Value 变量的值，不可为空字符
      */
     public void setValue(String Value) {
         this.Value = Value;

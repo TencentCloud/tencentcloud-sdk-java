@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeProductQuotaRequest extends AbstractModel{
 
     /**
-    * 查询的网络产品名称，如vpc、ccn等
+    * 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 查询的网络产品名称，如vpc、ccn等 
-     * @return Product 查询的网络产品名称，如vpc、ccn等
+     * Get 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。 
+     * @return Product 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 查询的网络产品名称，如vpc、ccn等
-     * @param Product 查询的网络产品名称，如vpc、ccn等
+     * Set 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
+     * @param Product 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
      */
     public void setProduct(String Product) {
         this.Product = Product;

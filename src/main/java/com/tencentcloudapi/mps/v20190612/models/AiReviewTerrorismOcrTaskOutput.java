@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
 
     /**
-    * Ocr 文字涉恐评分，分值为0到100。
+    * Ocr 文字涉敏评分，分值为0到100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Ocr 文字涉恐结果建议，取值范围：
+    * Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -40,34 +40,34 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * Ocr 文字有涉恐嫌疑的视频片段列表。
+    * Ocr 文字有涉敏嫌疑的视频片段列表。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Ocr 文字涉恐评分，分值为0到100。 
-     * @return Confidence Ocr 文字涉恐评分，分值为0到100。
+     * Get Ocr 文字涉敏评分，分值为0到100。 
+     * @return Confidence Ocr 文字涉敏评分，分值为0到100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Ocr 文字涉恐评分，分值为0到100。
-     * @param Confidence Ocr 文字涉恐评分，分值为0到100。
+     * Set Ocr 文字涉敏评分，分值为0到100。
+     * @param Confidence Ocr 文字涉敏评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Ocr 文字涉恐结果建议，取值范围：
+     * Get Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion Ocr 文字涉恐结果建议，取值范围：
+     * @return Suggestion Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -77,11 +77,11 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set Ocr 文字涉恐结果建议，取值范围：
+     * Set Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion Ocr 文字涉恐结果建议，取值范围：
+     * @param Suggestion Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -91,16 +91,16 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get Ocr 文字有涉恐嫌疑的视频片段列表。 
-     * @return SegmentSet Ocr 文字有涉恐嫌疑的视频片段列表。
+     * Get Ocr 文字有涉敏嫌疑的视频片段列表。 
+     * @return SegmentSet Ocr 文字有涉敏嫌疑的视频片段列表。
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Ocr 文字有涉恐嫌疑的视频片段列表。
-     * @param SegmentSet Ocr 文字有涉恐嫌疑的视频片段列表。
+     * Set Ocr 文字有涉敏嫌疑的视频片段列表。
+     * @param SegmentSet Ocr 文字有涉敏嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

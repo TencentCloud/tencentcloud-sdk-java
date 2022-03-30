@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
 
     /**
-    * 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
+    * 该张截图对应视频文件中的时间偏移，单位为秒。
     */
     @SerializedName("TimeOffset")
     @Expose
@@ -44,16 +44,16 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。 
-     * @return TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
+     * Get 该张截图对应视频文件中的时间偏移，单位为秒。 
+     * @return TimeOffset 该张截图对应视频文件中的时间偏移，单位为秒。
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
-     * @param TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
+     * Set 该张截图对应视频文件中的时间偏移，单位为秒。
+     * @param TimeOffset 该张截图对应视频文件中的时间偏移，单位为秒。
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;

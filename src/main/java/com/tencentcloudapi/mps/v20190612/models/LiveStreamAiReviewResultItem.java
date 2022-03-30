@@ -25,8 +25,8 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     /**
     * 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
-<li>ImageTerrorism：图片鉴恐</li>
-<li>ImagePolitical：图片鉴政</li>
+<li>ImageTerrorism：图片涉敏</li>
+<li>ImagePolitical：图片涉敏</li>
 <li>PornVoice：声音鉴黄</li>
     */
     @SerializedName("Type")
@@ -41,14 +41,14 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     private LiveStreamAiReviewImagePornResult [] ImagePornResultSet;
 
     /**
-    * 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
+    * 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
     */
     @SerializedName("ImageTerrorismResultSet")
     @Expose
     private LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet;
 
     /**
-    * 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
+    * 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
     */
     @SerializedName("ImagePoliticalResultSet")
     @Expose
@@ -64,13 +64,13 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     /**
      * Get 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
-<li>ImageTerrorism：图片鉴恐</li>
-<li>ImagePolitical：图片鉴政</li>
+<li>ImageTerrorism：图片涉敏</li>
+<li>ImagePolitical：图片涉敏</li>
 <li>PornVoice：声音鉴黄</li> 
      * @return Type 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
-<li>ImageTerrorism：图片鉴恐</li>
-<li>ImagePolitical：图片鉴政</li>
+<li>ImageTerrorism：图片涉敏</li>
+<li>ImagePolitical：图片涉敏</li>
 <li>PornVoice：声音鉴黄</li>
      */
     public String getType() {
@@ -80,13 +80,13 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     /**
      * Set 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
-<li>ImageTerrorism：图片鉴恐</li>
-<li>ImagePolitical：图片鉴政</li>
+<li>ImageTerrorism：图片涉敏</li>
+<li>ImagePolitical：图片涉敏</li>
 <li>PornVoice：声音鉴黄</li>
      * @param Type 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
-<li>ImageTerrorism：图片鉴恐</li>
-<li>ImagePolitical：图片鉴政</li>
+<li>ImageTerrorism：图片涉敏</li>
+<li>ImagePolitical：图片涉敏</li>
 <li>PornVoice：声音鉴黄</li>
      */
     public void setType(String Type) {
@@ -110,32 +110,32 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     }
 
     /**
-     * Get 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。 
-     * @return ImageTerrorismResultSet 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
+     * Get 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。 
+     * @return ImageTerrorismResultSet 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
      */
     public LiveStreamAiReviewImageTerrorismResult [] getImageTerrorismResultSet() {
         return this.ImageTerrorismResultSet;
     }
 
     /**
-     * Set 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
-     * @param ImageTerrorismResultSet 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
+     * Set 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
+     * @param ImageTerrorismResultSet 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
      */
     public void setImageTerrorismResultSet(LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet) {
         this.ImageTerrorismResultSet = ImageTerrorismResultSet;
     }
 
     /**
-     * Get 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。 
-     * @return ImagePoliticalResultSet 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
+     * Get 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。 
+     * @return ImagePoliticalResultSet 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
      */
     public LiveStreamAiReviewImagePoliticalResult [] getImagePoliticalResultSet() {
         return this.ImagePoliticalResultSet;
     }
 
     /**
-     * Set 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
-     * @param ImagePoliticalResultSet 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
+     * Set 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
+     * @param ImagePoliticalResultSet 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
      */
     public void setImagePoliticalResultSet(LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet) {
         this.ImagePoliticalResultSet = ImagePoliticalResultSet;

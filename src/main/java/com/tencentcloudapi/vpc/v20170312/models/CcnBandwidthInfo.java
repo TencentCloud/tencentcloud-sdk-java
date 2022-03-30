@@ -71,6 +71,14 @@ public class CcnBandwidthInfo extends AbstractModel{
     private CcnRegionBandwidthLimit CcnRegionBandwidthLimit;
 
     /**
+    * 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MarketId")
+    @Expose
+    private String MarketId;
+
+    /**
      * Get 带宽所属的云联网ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CcnId 带宽所属的云联网ID。
@@ -190,6 +198,26 @@ public class CcnBandwidthInfo extends AbstractModel{
         this.CcnRegionBandwidthLimit = CcnRegionBandwidthLimit;
     }
 
+    /**
+     * Get 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MarketId 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMarketId() {
+        return this.MarketId;
+    }
+
+    /**
+     * Set 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MarketId 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMarketId(String MarketId) {
+        this.MarketId = MarketId;
+    }
+
     public CcnBandwidthInfo() {
     }
 
@@ -216,6 +244,9 @@ public class CcnBandwidthInfo extends AbstractModel{
         if (source.CcnRegionBandwidthLimit != null) {
             this.CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit(source.CcnRegionBandwidthLimit);
         }
+        if (source.MarketId != null) {
+            this.MarketId = new String(source.MarketId);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class CcnBandwidthInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionFlowControlId", this.RegionFlowControlId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
+        this.setParamSimple(map, prefix + "MarketId", this.MarketId);
 
     }
 }

@@ -159,6 +159,46 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口（CreateExportTask）用于创建导出任务
+     * @param req CreateExportTaskRequest
+     * @return CreateExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExportTaskResponse CreateExportTask(CreateExportTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateExportTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateExportTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateExportTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（CreateImportTask）用于创建导入任务
+     * @param req CreateImportTaskRequest
+     * @return CreateImportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImportTaskResponse CreateImportTask(CreateImportTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImportTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImportTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImportTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateScript）用于创建sql脚本。
      * @param req CreateScriptRequest
      * @return CreateScriptResponse

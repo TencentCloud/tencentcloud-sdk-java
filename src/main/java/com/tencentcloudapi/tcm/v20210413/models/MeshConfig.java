@@ -52,6 +52,22 @@ public class MeshConfig extends AbstractModel{
     private InjectConfig Inject;
 
     /**
+    * 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tracing")
+    @Expose
+    private TracingConfig Tracing;
+
+    /**
+    * Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SidecarResources")
+    @Expose
+    private ResourceRequirements SidecarResources;
+
+    /**
      * Get Istio配置 
      * @return Istio Istio配置
      */
@@ -119,6 +135,46 @@ public class MeshConfig extends AbstractModel{
         this.Inject = Inject;
     }
 
+    /**
+     * Get 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tracing 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TracingConfig getTracing() {
+        return this.Tracing;
+    }
+
+    /**
+     * Set 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tracing 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTracing(TracingConfig Tracing) {
+        this.Tracing = Tracing;
+    }
+
+    /**
+     * Get Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SidecarResources Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceRequirements getSidecarResources() {
+        return this.SidecarResources;
+    }
+
+    /**
+     * Set Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SidecarResources Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSidecarResources(ResourceRequirements SidecarResources) {
+        this.SidecarResources = SidecarResources;
+    }
+
     public MeshConfig() {
     }
 
@@ -139,6 +195,12 @@ public class MeshConfig extends AbstractModel{
         if (source.Inject != null) {
             this.Inject = new InjectConfig(source.Inject);
         }
+        if (source.Tracing != null) {
+            this.Tracing = new TracingConfig(source.Tracing);
+        }
+        if (source.SidecarResources != null) {
+            this.SidecarResources = new ResourceRequirements(source.SidecarResources);
+        }
     }
 
 
@@ -150,6 +212,8 @@ public class MeshConfig extends AbstractModel{
         this.setParamObj(map, prefix + "AccessLog.", this.AccessLog);
         this.setParamObj(map, prefix + "Prometheus.", this.Prometheus);
         this.setParamObj(map, prefix + "Inject.", this.Inject);
+        this.setParamObj(map, prefix + "Tracing.", this.Tracing);
+        this.setParamObj(map, prefix + "SidecarResources.", this.SidecarResources);
 
     }
 }

@@ -379,6 +379,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
+     * @param req CreateImageCacheRequest
+     * @return CreateImageCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageCacheResponse CreateImageCache(CreateImageCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageCacheResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageCacheResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImageCache");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建告警规则
      * @param req CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
@@ -631,6 +651,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteEKSContainerInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEKSContainerInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除镜像缓存
+     * @param req DeleteImageCachesRequest
+     * @return DeleteImageCachesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageCachesResponse DeleteImageCaches(DeleteImageCachesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageCachesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageCachesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteImageCaches");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1219,6 +1259,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询镜像缓存信息接口
+     * @param req DescribeImageCachesRequest
+     * @return DescribeImageCachesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageCachesResponse DescribeImageCaches(DescribeImageCachesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageCachesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageCachesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageCaches");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取镜像信息
      * @param req DescribeImagesRequest
      * @return DescribeImagesResponse
@@ -1611,6 +1671,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ForwardApplicationRequestV3Response>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ForwardApplicationRequestV3");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据镜像列表，查询匹配的镜像缓存
+     * @param req GetMostSuitableImageCacheRequest
+     * @return GetMostSuitableImageCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMostSuitableImageCacheResponse GetMostSuitableImageCache(GetMostSuitableImageCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetMostSuitableImageCacheResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetMostSuitableImageCacheResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetMostSuitableImageCache");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2031,6 +2111,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateEKSContainerInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateEKSContainerInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新镜像缓存接口
+     * @param req UpdateImageCacheRequest
+     * @return UpdateImageCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateImageCacheResponse UpdateImageCache(UpdateImageCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateImageCacheResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateImageCacheResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateImageCache");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

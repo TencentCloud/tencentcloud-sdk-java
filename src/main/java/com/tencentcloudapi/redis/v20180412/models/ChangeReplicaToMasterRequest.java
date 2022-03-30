@@ -30,7 +30,7 @@ public class ChangeReplicaToMasterRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 副本Id
+    * 副本组Id，多AZ实例必填
     */
     @SerializedName("GroupId")
     @Expose
@@ -53,16 +53,16 @@ public class ChangeReplicaToMasterRequest extends AbstractModel{
     }
 
     /**
-     * Get 副本Id 
-     * @return GroupId 副本Id
+     * Get 副本组Id，多AZ实例必填 
+     * @return GroupId 副本组Id，多AZ实例必填
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 副本Id
-     * @param GroupId 副本Id
+     * Set 副本组Id，多AZ实例必填
+     * @param GroupId 副本组Id，多AZ实例必填
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

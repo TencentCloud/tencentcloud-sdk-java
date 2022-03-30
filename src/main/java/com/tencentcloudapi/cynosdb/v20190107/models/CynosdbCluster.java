@@ -23,7 +23,16 @@ import java.util.HashMap;
 public class CynosdbCluster extends AbstractModel{
 
     /**
-    * 集群状态
+    * 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
     */
     @SerializedName("Status")
     @Expose
@@ -263,16 +272,52 @@ pause
     private NetAddr [] NetAddrs;
 
     /**
-     * Get 集群状态 
-     * @return Status 集群状态
+     * Get 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除 
+     * @return Status 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态
-     * @param Status 集群状态
+     * Set 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
+     * @param Status 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.iecp.v20210914.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewPaiDomainNameResponse extends AbstractModel{
+public class DescribeDracoEdgeNodeInstallerResponse extends AbstractModel{
 
     /**
-    * 可用的PAI域名
+    * 在线安装命名
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DomainName")
+    @SerializedName("OnlineInstallationCommand")
     @Expose
-    private String DomainName;
+    private String OnlineInstallationCommand;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class PreviewPaiDomainNameResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 可用的PAI域名 
-     * @return DomainName 可用的PAI域名
+     * Get 在线安装命名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OnlineInstallationCommand 在线安装命名
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDomainName() {
-        return this.DomainName;
+    public String getOnlineInstallationCommand() {
+        return this.OnlineInstallationCommand;
     }
 
     /**
-     * Set 可用的PAI域名
-     * @param DomainName 可用的PAI域名
+     * Set 在线安装命名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnlineInstallationCommand 在线安装命名
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDomainName(String DomainName) {
-        this.DomainName = DomainName;
+    public void setOnlineInstallationCommand(String OnlineInstallationCommand) {
+        this.OnlineInstallationCommand = OnlineInstallationCommand;
     }
 
     /**
@@ -68,16 +73,16 @@ public class PreviewPaiDomainNameResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public PreviewPaiDomainNameResponse() {
+    public DescribeDracoEdgeNodeInstallerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PreviewPaiDomainNameResponse(PreviewPaiDomainNameResponse source) {
-        if (source.DomainName != null) {
-            this.DomainName = new String(source.DomainName);
+    public DescribeDracoEdgeNodeInstallerResponse(DescribeDracoEdgeNodeInstallerResponse source) {
+        if (source.OnlineInstallationCommand != null) {
+            this.OnlineInstallationCommand = new String(source.OnlineInstallationCommand);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class PreviewPaiDomainNameResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "OnlineInstallationCommand", this.OnlineInstallationCommand);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

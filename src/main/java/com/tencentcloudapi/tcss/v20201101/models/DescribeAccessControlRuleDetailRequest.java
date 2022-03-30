@@ -37,6 +37,20 @@ public class DescribeAccessControlRuleDetailRequest extends AbstractModel{
     private String ImageId;
 
     /**
+    * 需要返回的数量，默认为10，最大值为100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 策略唯一id 
      * @return RuleId 策略唯一id
      */
@@ -68,6 +82,38 @@ public class DescribeAccessControlRuleDetailRequest extends AbstractModel{
         this.ImageId = ImageId;
     }
 
+    /**
+     * Get 需要返回的数量，默认为10，最大值为100 
+     * @return Limit 需要返回的数量，默认为10，最大值为100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 需要返回的数量，默认为10，最大值为100
+     * @param Limit 需要返回的数量，默认为10，最大值为100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeAccessControlRuleDetailRequest() {
     }
 
@@ -82,6 +128,12 @@ public class DescribeAccessControlRuleDetailRequest extends AbstractModel{
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class DescribeAccessControlRuleDetailRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

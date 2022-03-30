@@ -23,39 +23,32 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 实例ID组成的数组，数组下标从0开始
-    */
-    @SerializedName("InstanceIds")
-    @Expose
-    private String [] InstanceIds;
-
-    /**
-    * 实例名称组成的数组，数组下标从0开始
-    */
-    @SerializedName("InstanceNames")
-    @Expose
-    private String [] InstanceNames;
-
-    /**
-    * 实例列表的大小，参数默认值100
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * 偏移量，取Limit整数倍
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 枚举范围： AddTimeStamp, InstanceName, ProjectId
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
+
+    /**
+    * 查找的关键字
+    */
+    @SerializedName("SearchKeys")
+    @Expose
+    private String [] SearchKeys;
+
+    /**
+    * 子网ID列表
+    */
+    @SerializedName("UniqSubnetIds")
+    @Expose
+    private String [] UniqSubnetIds;
+
+    /**
+    * VIP列表
+    */
+    @SerializedName("Vips")
+    @Expose
+    private String [] Vips;
 
     /**
     * 0倒序，1正序，默认倒序
@@ -65,103 +58,46 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long OrderType;
 
     /**
-    * 项目ID组成的数组，数组下标从0开始
+    * 实例名称列表
     */
-    @SerializedName("ProjectIds")
+    @SerializedName("InstanceNames")
     @Expose
-    private Long [] ProjectIds;
+    private String [] InstanceNames;
 
     /**
-    * 搜索关键词：支持实例ID、实例名称、完整IP
-    */
-    @SerializedName("SearchKeys")
-    @Expose
-    private String [] SearchKeys;
-
-    /**
-    * 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-    */
-    @SerializedName("UniqSubnetIds")
-    @Expose
-    private String [] UniqSubnetIds;
-
-    /**
-    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+    * VPC ID列表
     */
     @SerializedName("UniqVpcIds")
     @Expose
     private String [] UniqVpcIds;
 
     /**
-    * 实例服务IP组成的数组，数组下标从0开始
+    * 项目ID列表
     */
-    @SerializedName("Vips")
+    @SerializedName("ProjectIds")
     @Expose
-    private String [] Vips;
+    private Long [] ProjectIds;
 
     /**
-     * Get 实例ID组成的数组，数组下标从0开始 
-     * @return InstanceIds 实例ID组成的数组，数组下标从0开始
-     */
-    public String [] getInstanceIds() {
-        return this.InstanceIds;
-    }
+    * 偏移量，取Limit整数倍
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
-     * Set 实例ID组成的数组，数组下标从0开始
-     * @param InstanceIds 实例ID组成的数组，数组下标从0开始
-     */
-    public void setInstanceIds(String [] InstanceIds) {
-        this.InstanceIds = InstanceIds;
-    }
+    * 实例列表的大小，参数默认值100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
-     * Get 实例名称组成的数组，数组下标从0开始 
-     * @return InstanceNames 实例名称组成的数组，数组下标从0开始
-     */
-    public String [] getInstanceNames() {
-        return this.InstanceNames;
-    }
-
-    /**
-     * Set 实例名称组成的数组，数组下标从0开始
-     * @param InstanceNames 实例名称组成的数组，数组下标从0开始
-     */
-    public void setInstanceNames(String [] InstanceNames) {
-        this.InstanceNames = InstanceNames;
-    }
-
-    /**
-     * Get 实例列表的大小，参数默认值100 
-     * @return Limit 实例列表的大小，参数默认值100
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 实例列表的大小，参数默认值100
-     * @param Limit 实例列表的大小，参数默认值100
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
+    * 实例ID列表
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
 
     /**
      * Get 枚举范围： AddTimeStamp, InstanceName, ProjectId 
@@ -177,6 +113,54 @@ public class DescribeInstancesRequest extends AbstractModel{
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 查找的关键字 
+     * @return SearchKeys 查找的关键字
+     */
+    public String [] getSearchKeys() {
+        return this.SearchKeys;
+    }
+
+    /**
+     * Set 查找的关键字
+     * @param SearchKeys 查找的关键字
+     */
+    public void setSearchKeys(String [] SearchKeys) {
+        this.SearchKeys = SearchKeys;
+    }
+
+    /**
+     * Get 子网ID列表 
+     * @return UniqSubnetIds 子网ID列表
+     */
+    public String [] getUniqSubnetIds() {
+        return this.UniqSubnetIds;
+    }
+
+    /**
+     * Set 子网ID列表
+     * @param UniqSubnetIds 子网ID列表
+     */
+    public void setUniqSubnetIds(String [] UniqSubnetIds) {
+        this.UniqSubnetIds = UniqSubnetIds;
+    }
+
+    /**
+     * Get VIP列表 
+     * @return Vips VIP列表
+     */
+    public String [] getVips() {
+        return this.Vips;
+    }
+
+    /**
+     * Set VIP列表
+     * @param Vips VIP列表
+     */
+    public void setVips(String [] Vips) {
+        this.Vips = Vips;
     }
 
     /**
@@ -196,83 +180,99 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目ID组成的数组，数组下标从0开始 
-     * @return ProjectIds 项目ID组成的数组，数组下标从0开始
+     * Get 实例名称列表 
+     * @return InstanceNames 实例名称列表
      */
-    public Long [] getProjectIds() {
-        return this.ProjectIds;
+    public String [] getInstanceNames() {
+        return this.InstanceNames;
     }
 
     /**
-     * Set 项目ID组成的数组，数组下标从0开始
-     * @param ProjectIds 项目ID组成的数组，数组下标从0开始
+     * Set 实例名称列表
+     * @param InstanceNames 实例名称列表
      */
-    public void setProjectIds(Long [] ProjectIds) {
-        this.ProjectIds = ProjectIds;
+    public void setInstanceNames(String [] InstanceNames) {
+        this.InstanceNames = InstanceNames;
     }
 
     /**
-     * Get 搜索关键词：支持实例ID、实例名称、完整IP 
-     * @return SearchKeys 搜索关键词：支持实例ID、实例名称、完整IP
-     */
-    public String [] getSearchKeys() {
-        return this.SearchKeys;
-    }
-
-    /**
-     * Set 搜索关键词：支持实例ID、实例名称、完整IP
-     * @param SearchKeys 搜索关键词：支持实例ID、实例名称、完整IP
-     */
-    public void setSearchKeys(String [] SearchKeys) {
-        this.SearchKeys = SearchKeys;
-    }
-
-    /**
-     * Get 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2 
-     * @return UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-     */
-    public String [] getUniqSubnetIds() {
-        return this.UniqSubnetIds;
-    }
-
-    /**
-     * Set 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-     * @param UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-     */
-    public void setUniqSubnetIds(String [] UniqSubnetIds) {
-        this.UniqSubnetIds = UniqSubnetIds;
-    }
-
-    /**
-     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk 
-     * @return UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Get VPC ID列表 
+     * @return UniqVpcIds VPC ID列表
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
-     * @param UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Set VPC ID列表
+     * @param UniqVpcIds VPC ID列表
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;
     }
 
     /**
-     * Get 实例服务IP组成的数组，数组下标从0开始 
-     * @return Vips 实例服务IP组成的数组，数组下标从0开始
+     * Get 项目ID列表 
+     * @return ProjectIds 项目ID列表
      */
-    public String [] getVips() {
-        return this.Vips;
+    public Long [] getProjectIds() {
+        return this.ProjectIds;
     }
 
     /**
-     * Set 实例服务IP组成的数组，数组下标从0开始
-     * @param Vips 实例服务IP组成的数组，数组下标从0开始
+     * Set 项目ID列表
+     * @param ProjectIds 项目ID列表
      */
-    public void setVips(String [] Vips) {
-        this.Vips = Vips;
+    public void setProjectIds(Long [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
+    /**
+     * Get 偏移量，取Limit整数倍 
+     * @return Offset 偏移量，取Limit整数倍
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，取Limit整数倍
+     * @param Offset 偏移量，取Limit整数倍
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 实例列表的大小，参数默认值100 
+     * @return Limit 实例列表的大小，参数默认值100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 实例列表的大小，参数默认值100
+     * @param Limit 实例列表的大小，参数默认值100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 实例ID列表 
+     * @return InstanceIds 实例ID列表
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 实例ID列表
+     * @param InstanceIds 实例ID列表
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     public DescribeInstancesRequest() {
@@ -283,35 +283,8 @@ public class DescribeInstancesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstancesRequest(DescribeInstancesRequest source) {
-        if (source.InstanceIds != null) {
-            this.InstanceIds = new String[source.InstanceIds.length];
-            for (int i = 0; i < source.InstanceIds.length; i++) {
-                this.InstanceIds[i] = new String(source.InstanceIds[i]);
-            }
-        }
-        if (source.InstanceNames != null) {
-            this.InstanceNames = new String[source.InstanceNames.length];
-            for (int i = 0; i < source.InstanceNames.length; i++) {
-                this.InstanceNames[i] = new String(source.InstanceNames[i]);
-            }
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
-        }
-        if (source.OrderType != null) {
-            this.OrderType = new Long(source.OrderType);
-        }
-        if (source.ProjectIds != null) {
-            this.ProjectIds = new Long[source.ProjectIds.length];
-            for (int i = 0; i < source.ProjectIds.length; i++) {
-                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
-            }
         }
         if (source.SearchKeys != null) {
             this.SearchKeys = new String[source.SearchKeys.length];
@@ -325,16 +298,43 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
             }
         }
+        if (source.Vips != null) {
+            this.Vips = new String[source.Vips.length];
+            for (int i = 0; i < source.Vips.length; i++) {
+                this.Vips[i] = new String(source.Vips[i]);
+            }
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.InstanceNames != null) {
+            this.InstanceNames = new String[source.InstanceNames.length];
+            for (int i = 0; i < source.InstanceNames.length; i++) {
+                this.InstanceNames[i] = new String(source.InstanceNames[i]);
+            }
+        }
         if (source.UniqVpcIds != null) {
             this.UniqVpcIds = new String[source.UniqVpcIds.length];
             for (int i = 0; i < source.UniqVpcIds.length; i++) {
                 this.UniqVpcIds[i] = new String(source.UniqVpcIds[i]);
             }
         }
-        if (source.Vips != null) {
-            this.Vips = new String[source.Vips.length];
-            for (int i = 0; i < source.Vips.length; i++) {
-                this.Vips[i] = new String(source.Vips[i]);
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
     }
@@ -344,17 +344,17 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-        this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
-        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
-        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
-        this.setParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
         this.setParamArraySimple(map, prefix + "Vips.", this.Vips);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
+        this.setParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

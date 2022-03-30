@@ -51,11 +51,18 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String Endpoint;
 
     /**
-    * 签署完成后H5引导页跳转URL
+    * 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
     */
     @SerializedName("JumpUrl")
     @Expose
     private String JumpUrl;
+
+    /**
+    * "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+    */
+    @SerializedName("AutoJumpBack")
+    @Expose
+    private Boolean AutoJumpBack;
 
     /**
      * Get 渠道应用相关信息 
@@ -122,19 +129,35 @@ public class CreateSignUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 签署完成后H5引导页跳转URL 
-     * @return JumpUrl 签署完成后H5引导页跳转URL
+     * Get 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效 
+     * @return JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
      */
     public String getJumpUrl() {
         return this.JumpUrl;
     }
 
     /**
-     * Set 签署完成后H5引导页跳转URL
-     * @param JumpUrl 签署完成后H5引导页跳转URL
+     * Set 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+     * @param JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;
+    }
+
+    /**
+     * Get "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP； 
+     * @return AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     */
+    public Boolean getAutoJumpBack() {
+        return this.AutoJumpBack;
+    }
+
+    /**
+     * Set "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     * @param AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     */
+    public void setAutoJumpBack(Boolean AutoJumpBack) {
+        this.AutoJumpBack = AutoJumpBack;
     }
 
     public CreateSignUrlsRequest() {
@@ -163,6 +186,9 @@ public class CreateSignUrlsRequest extends AbstractModel{
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
         }
+        if (source.AutoJumpBack != null) {
+            this.AutoJumpBack = new Boolean(source.AutoJumpBack);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+        this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
 
     }
 }

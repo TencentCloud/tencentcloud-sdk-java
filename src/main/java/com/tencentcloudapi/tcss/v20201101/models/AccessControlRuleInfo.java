@@ -66,6 +66,13 @@ public class AccessControlRuleInfo extends AbstractModel{
     private AccessControlSystemChildRuleInfo [] SystemChildRules;
 
     /**
+    * 是否是系统默认策略
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
      * Get 开关,true:开启，false:禁用 
      * @return IsEnable 开关,true:开启，false:禁用
      */
@@ -165,6 +172,22 @@ public class AccessControlRuleInfo extends AbstractModel{
         this.SystemChildRules = SystemChildRules;
     }
 
+    /**
+     * Get 是否是系统默认策略 
+     * @return IsDefault 是否是系统默认策略
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否是系统默认策略
+     * @param IsDefault 是否是系统默认策略
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
     public AccessControlRuleInfo() {
     }
 
@@ -200,6 +223,9 @@ public class AccessControlRuleInfo extends AbstractModel{
                 this.SystemChildRules[i] = new AccessControlSystemChildRuleInfo(source.SystemChildRules[i]);
             }
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
     }
 
 
@@ -213,6 +239,7 @@ public class AccessControlRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

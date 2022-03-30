@@ -279,6 +279,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *更新ES集群词典
+     * @param req UpdateDictionariesRequest
+     * @return UpdateDictionariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDictionariesResponse UpdateDictionaries(UpdateDictionariesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDictionariesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDictionariesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDictionaries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
 - InstanceName：修改实例名称(仅用于标识实例)
 - NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）

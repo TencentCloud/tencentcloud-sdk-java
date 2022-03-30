@@ -52,7 +52,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private PornConfigureInfo PornConfigure;
 
     /**
-    * 鉴恐控制参数。
+    * 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismConfigure")
@@ -60,7 +60,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * 鉴政控制参数。
+    * 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalConfigure")
@@ -168,9 +168,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 鉴恐控制参数。
+     * Get 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TerrorismConfigure 鉴恐控制参数。
+     * @return TerrorismConfigure 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
@@ -178,9 +178,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 鉴恐控制参数。
+     * Set 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TerrorismConfigure 鉴恐控制参数。
+     * @param TerrorismConfigure 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
@@ -188,9 +188,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 鉴政控制参数。
+     * Get 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PoliticalConfigure 鉴政控制参数。
+     * @return PoliticalConfigure 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
@@ -198,9 +198,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 鉴政控制参数。
+     * Set 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalConfigure 鉴政控制参数。
+     * @param PoliticalConfigure 涉敏控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {

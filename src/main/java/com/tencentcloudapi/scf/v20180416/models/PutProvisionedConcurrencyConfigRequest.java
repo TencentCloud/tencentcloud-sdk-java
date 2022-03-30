@@ -58,6 +58,39 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
     private TriggerAction [] TriggerActions;
 
     /**
+    * 预置类型，
+静态预置：Default
+动态追踪并发利用率指标预置：ConcurrencyUtilizationTracking
+预置类型二选一，设置静态预置时可以设置VersionProvisionedConcurrencyNum。
+
+动态利用率预置可以设置TrackingTarget，MinCapacity，MaxCapacity，保持向后兼容性此时VersionProvisionedConcurrencyNum设置为0.
+    */
+    @SerializedName("ProvisionedType")
+    @Expose
+    private String ProvisionedType;
+
+    /**
+    * 指标追踪的并发利用率。设置范围(0,1)
+    */
+    @SerializedName("TrackingTarget")
+    @Expose
+    private Float TrackingTarget;
+
+    /**
+    * 缩容时的最小值, 最小值为1
+    */
+    @SerializedName("MinCapacity")
+    @Expose
+    private Long MinCapacity;
+
+    /**
+    * 扩容时的最大值
+    */
+    @SerializedName("MaxCapacity")
+    @Expose
+    private Long MaxCapacity;
+
+    /**
      * Get 需要设置预置并发的函数的名称 
      * @return FunctionName 需要设置预置并发的函数的名称
      */
@@ -137,6 +170,90 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.TriggerActions = TriggerActions;
     }
 
+    /**
+     * Get 预置类型，
+静态预置：Default
+动态追踪并发利用率指标预置：ConcurrencyUtilizationTracking
+预置类型二选一，设置静态预置时可以设置VersionProvisionedConcurrencyNum。
+
+动态利用率预置可以设置TrackingTarget，MinCapacity，MaxCapacity，保持向后兼容性此时VersionProvisionedConcurrencyNum设置为0. 
+     * @return ProvisionedType 预置类型，
+静态预置：Default
+动态追踪并发利用率指标预置：ConcurrencyUtilizationTracking
+预置类型二选一，设置静态预置时可以设置VersionProvisionedConcurrencyNum。
+
+动态利用率预置可以设置TrackingTarget，MinCapacity，MaxCapacity，保持向后兼容性此时VersionProvisionedConcurrencyNum设置为0.
+     */
+    public String getProvisionedType() {
+        return this.ProvisionedType;
+    }
+
+    /**
+     * Set 预置类型，
+静态预置：Default
+动态追踪并发利用率指标预置：ConcurrencyUtilizationTracking
+预置类型二选一，设置静态预置时可以设置VersionProvisionedConcurrencyNum。
+
+动态利用率预置可以设置TrackingTarget，MinCapacity，MaxCapacity，保持向后兼容性此时VersionProvisionedConcurrencyNum设置为0.
+     * @param ProvisionedType 预置类型，
+静态预置：Default
+动态追踪并发利用率指标预置：ConcurrencyUtilizationTracking
+预置类型二选一，设置静态预置时可以设置VersionProvisionedConcurrencyNum。
+
+动态利用率预置可以设置TrackingTarget，MinCapacity，MaxCapacity，保持向后兼容性此时VersionProvisionedConcurrencyNum设置为0.
+     */
+    public void setProvisionedType(String ProvisionedType) {
+        this.ProvisionedType = ProvisionedType;
+    }
+
+    /**
+     * Get 指标追踪的并发利用率。设置范围(0,1) 
+     * @return TrackingTarget 指标追踪的并发利用率。设置范围(0,1)
+     */
+    public Float getTrackingTarget() {
+        return this.TrackingTarget;
+    }
+
+    /**
+     * Set 指标追踪的并发利用率。设置范围(0,1)
+     * @param TrackingTarget 指标追踪的并发利用率。设置范围(0,1)
+     */
+    public void setTrackingTarget(Float TrackingTarget) {
+        this.TrackingTarget = TrackingTarget;
+    }
+
+    /**
+     * Get 缩容时的最小值, 最小值为1 
+     * @return MinCapacity 缩容时的最小值, 最小值为1
+     */
+    public Long getMinCapacity() {
+        return this.MinCapacity;
+    }
+
+    /**
+     * Set 缩容时的最小值, 最小值为1
+     * @param MinCapacity 缩容时的最小值, 最小值为1
+     */
+    public void setMinCapacity(Long MinCapacity) {
+        this.MinCapacity = MinCapacity;
+    }
+
+    /**
+     * Get 扩容时的最大值 
+     * @return MaxCapacity 扩容时的最大值
+     */
+    public Long getMaxCapacity() {
+        return this.MaxCapacity;
+    }
+
+    /**
+     * Set 扩容时的最大值
+     * @param MaxCapacity 扩容时的最大值
+     */
+    public void setMaxCapacity(Long MaxCapacity) {
+        this.MaxCapacity = MaxCapacity;
+    }
+
     public PutProvisionedConcurrencyConfigRequest() {
     }
 
@@ -163,6 +280,18 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
                 this.TriggerActions[i] = new TriggerAction(source.TriggerActions[i]);
             }
         }
+        if (source.ProvisionedType != null) {
+            this.ProvisionedType = new String(source.ProvisionedType);
+        }
+        if (source.TrackingTarget != null) {
+            this.TrackingTarget = new Float(source.TrackingTarget);
+        }
+        if (source.MinCapacity != null) {
+            this.MinCapacity = new Long(source.MinCapacity);
+        }
+        if (source.MaxCapacity != null) {
+            this.MaxCapacity = new Long(source.MaxCapacity);
+        }
     }
 
 
@@ -175,6 +304,10 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
+        this.setParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
+        this.setParamSimple(map, prefix + "TrackingTarget", this.TrackingTarget);
+        this.setParamSimple(map, prefix + "MinCapacity", this.MinCapacity);
+        this.setParamSimple(map, prefix + "MaxCapacity", this.MaxCapacity);
 
     }
 }

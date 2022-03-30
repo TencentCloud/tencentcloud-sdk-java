@@ -288,4 +288,25 @@ public class EssbasicClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *此接口（UploadFiles）用于文件上传。
+调用时需要设置Domain 为 file.ess.tencent.cn
+     * @param req UploadFilesRequest
+     * @return UploadFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadFilesResponse UploadFiles(UploadFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

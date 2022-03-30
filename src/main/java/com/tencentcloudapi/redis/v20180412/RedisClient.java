@@ -199,7 +199,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *创建参数模板
+     *创建参数模板。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -719,7 +719,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询Redis节点信息
+     *查询Redis节点详细信息
      * @param req DescribeInstanceZoneInfoRequest
      * @return DescribeInstanceZoneInfoResponse
      * @throws TencentCloudSDKException
@@ -779,7 +779,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询参数模板详情
+     *查询参数模板详情。
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
      * @throws TencentCloudSDKException
@@ -891,6 +891,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProxySlowLogResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProxySlowLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询复制组
+     * @param req DescribeReplicationGroupRequest
+     * @return DescribeReplicationGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationGroupResponse DescribeReplicationGroup(DescribeReplicationGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1199,7 +1219,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *设置自动备份时间
+     *设置自动备份配置
      * @param req ModifyAutoBackupConfigRequest
      * @return ModifyAutoBackupConfigResponse
      * @throws TencentCloudSDKException
@@ -1219,7 +1239,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *修改实例的连接配置，包括带宽和最大连接数
+     *修改实例的连接配置，包括带宽和最大连接数。
      * @param req ModifyConnectionConfigRequest
      * @return ModifyConnectionConfigResponse
      * @throws TencentCloudSDKException

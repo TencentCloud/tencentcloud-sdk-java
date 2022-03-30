@@ -143,6 +143,13 @@ global：全球锁定
     private String Product;
 
     /**
+    * 主域名
+    */
+    @SerializedName("ParentHost")
+    @Expose
+    private String ParentHost;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -454,6 +461,22 @@ global：全球锁定
         this.Product = Product;
     }
 
+    /**
+     * Get 主域名 
+     * @return ParentHost 主域名
+     */
+    public String getParentHost() {
+        return this.ParentHost;
+    }
+
+    /**
+     * Set 主域名
+     * @param ParentHost 主域名
+     */
+    public void setParentHost(String ParentHost) {
+        this.ParentHost = ParentHost;
+    }
+
     public BriefDomain() {
     }
 
@@ -504,6 +527,9 @@ global：全球锁定
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.ParentHost != null) {
+            this.ParentHost = new String(source.ParentHost);
+        }
     }
 
 
@@ -525,6 +551,7 @@ global：全球锁定
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "ParentHost", this.ParentHost);
 
     }
 }

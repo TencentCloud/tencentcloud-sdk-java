@@ -143,6 +143,27 @@ ResetTaskConfig：任务更新回调。
     private String Comment;
 
     /**
+    * 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+    */
+    @SerializedName("BackupSourceType")
+    @Expose
+    private String BackupSourceType;
+
+    /**
+    * 备源 URL。
+只允许填一个备源 URL
+    */
+    @SerializedName("BackupSourceUrl")
+    @Expose
+    private String BackupSourceUrl;
+
+    /**
      * Get 任务Id。 
      * @return TaskId 任务Id。
      */
@@ -466,6 +487,66 @@ ResetTaskConfig：任务更新回调。
         this.Comment = Comment;
     }
 
+    /**
+     * Get 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。 
+     * @return BackupSourceType 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     */
+    public String getBackupSourceType() {
+        return this.BackupSourceType;
+    }
+
+    /**
+     * Set 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     * @param BackupSourceType 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     */
+    public void setBackupSourceType(String BackupSourceType) {
+        this.BackupSourceType = BackupSourceType;
+    }
+
+    /**
+     * Get 备源 URL。
+只允许填一个备源 URL 
+     * @return BackupSourceUrl 备源 URL。
+只允许填一个备源 URL
+     */
+    public String getBackupSourceUrl() {
+        return this.BackupSourceUrl;
+    }
+
+    /**
+     * Set 备源 URL。
+只允许填一个备源 URL
+     * @param BackupSourceUrl 备源 URL。
+只允许填一个备源 URL
+     */
+    public void setBackupSourceUrl(String BackupSourceUrl) {
+        this.BackupSourceUrl = BackupSourceUrl;
+    }
+
     public ModifyLivePullStreamTaskRequest() {
     }
 
@@ -519,6 +600,12 @@ ResetTaskConfig：任务更新回调。
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.BackupSourceType != null) {
+            this.BackupSourceType = new String(source.BackupSourceType);
+        }
+        if (source.BackupSourceUrl != null) {
+            this.BackupSourceUrl = new String(source.BackupSourceUrl);
+        }
     }
 
 
@@ -539,6 +626,8 @@ ResetTaskConfig：任务更新回调。
         this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
+        this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
 
     }
 }

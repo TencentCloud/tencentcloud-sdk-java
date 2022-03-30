@@ -135,6 +135,20 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String DiskType;
 
     /**
+    * 跨可用区，zoneIds必填
+    */
+    @SerializedName("MultiZoneFlag")
+    @Expose
+    private Boolean MultiZoneFlag;
+
+    /**
+    * 可用区列表
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
      * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
      * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
@@ -390,6 +404,38 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.DiskType = DiskType;
     }
 
+    /**
+     * Get 跨可用区，zoneIds必填 
+     * @return MultiZoneFlag 跨可用区，zoneIds必填
+     */
+    public Boolean getMultiZoneFlag() {
+        return this.MultiZoneFlag;
+    }
+
+    /**
+     * Set 跨可用区，zoneIds必填
+     * @param MultiZoneFlag 跨可用区，zoneIds必填
+     */
+    public void setMultiZoneFlag(Boolean MultiZoneFlag) {
+        this.MultiZoneFlag = MultiZoneFlag;
+    }
+
+    /**
+     * Get 可用区列表 
+     * @return ZoneIds 可用区列表
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param ZoneIds 可用区列表
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -449,6 +495,15 @@ public class CreateInstancePreRequest extends AbstractModel{
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.MultiZoneFlag != null) {
+            this.MultiZoneFlag = new Boolean(source.MultiZoneFlag);
+        }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
     }
 
 
@@ -472,6 +527,8 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Partition", this.Partition);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
 
     }
 }

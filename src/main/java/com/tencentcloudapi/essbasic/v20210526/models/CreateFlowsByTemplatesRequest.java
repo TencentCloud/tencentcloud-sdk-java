@@ -44,6 +44,13 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+    */
+    @SerializedName("NeedPreview")
+    @Expose
+    private Boolean NeedPreview;
+
+    /**
      * Get 渠道应用相关信息 
      * @return Agent 渠道应用相关信息
      */
@@ -91,6 +98,22 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls； 
+     * @return NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     */
+    public Boolean getNeedPreview() {
+        return this.NeedPreview;
+    }
+
+    /**
+     * Set 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * @param NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     */
+    public void setNeedPreview(Boolean NeedPreview) {
+        this.NeedPreview = NeedPreview;
+    }
+
     public CreateFlowsByTemplatesRequest() {
     }
 
@@ -111,6 +134,9 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.NeedPreview != null) {
+            this.NeedPreview = new Boolean(source.NeedPreview);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "FlowInfos.", this.FlowInfos);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
 
     }
 }

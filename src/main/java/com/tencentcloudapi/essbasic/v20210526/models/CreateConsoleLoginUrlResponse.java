@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateConsoleLoginUrlResponse extends AbstractModel{
 
     /**
-    * 控制台url
+    * 控制台url，此链接5分钟内有效，且只能访问一次
     */
     @SerializedName("ConsoleUrl")
     @Expose
@@ -45,16 +45,16 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 控制台url 
-     * @return ConsoleUrl 控制台url
+     * Get 控制台url，此链接5分钟内有效，且只能访问一次 
+     * @return ConsoleUrl 控制台url，此链接5分钟内有效，且只能访问一次
      */
     public String getConsoleUrl() {
         return this.ConsoleUrl;
     }
 
     /**
-     * Set 控制台url
-     * @param ConsoleUrl 控制台url
+     * Set 控制台url，此链接5分钟内有效，且只能访问一次
+     * @param ConsoleUrl 控制台url，此链接5分钟内有效，且只能访问一次
      */
     public void setConsoleUrl(String ConsoleUrl) {
         this.ConsoleUrl = ConsoleUrl;

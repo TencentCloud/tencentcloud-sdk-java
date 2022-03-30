@@ -44,6 +44,13 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
     private OffsiteFlag OffsiteFlag;
 
     /**
+    * 1: 提示7天信任设备 0: 不提示
+    */
+    @SerializedName("PromptTrust")
+    @Expose
+    private Long PromptTrust;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
     }
 
     /**
+     * Get 1: 提示7天信任设备 0: 不提示 
+     * @return PromptTrust 1: 提示7天信任设备 0: 不提示
+     */
+    public Long getPromptTrust() {
+        return this.PromptTrust;
+    }
+
+    /**
+     * Set 1: 提示7天信任设备 0: 不提示
+     * @param PromptTrust 1: 提示7天信任设备 0: 不提示
+     */
+    public void setPromptTrust(Long PromptTrust) {
+        this.PromptTrust = PromptTrust;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +154,9 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
         if (source.OffsiteFlag != null) {
             this.OffsiteFlag = new OffsiteFlag(source.OffsiteFlag);
         }
+        if (source.PromptTrust != null) {
+            this.PromptTrust = new Long(source.PromptTrust);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +170,7 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
         this.setParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
         this.setParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
         this.setParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+        this.setParamSimple(map, prefix + "PromptTrust", this.PromptTrust);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

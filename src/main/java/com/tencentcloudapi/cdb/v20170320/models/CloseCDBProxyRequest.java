@@ -37,7 +37,7 @@ public class CloseCDBProxyRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
-    * 是否只关闭读写分离，取值："true" | "false"
+    * 是否只关闭读写分离，取值："true" | "false"，默认为"false"
     */
     @SerializedName("OnlyCloseRW")
     @Expose
@@ -76,16 +76,16 @@ public class CloseCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否只关闭读写分离，取值："true" | "false" 
-     * @return OnlyCloseRW 是否只关闭读写分离，取值："true" | "false"
+     * Get 是否只关闭读写分离，取值："true" | "false"，默认为"false" 
+     * @return OnlyCloseRW 是否只关闭读写分离，取值："true" | "false"，默认为"false"
      */
     public Boolean getOnlyCloseRW() {
         return this.OnlyCloseRW;
     }
 
     /**
-     * Set 是否只关闭读写分离，取值："true" | "false"
-     * @param OnlyCloseRW 是否只关闭读写分离，取值："true" | "false"
+     * Set 是否只关闭读写分离，取值："true" | "false"，默认为"false"
+     * @param OnlyCloseRW 是否只关闭读写分离，取值："true" | "false"，默认为"false"
      */
     public void setOnlyCloseRW(Boolean OnlyCloseRW) {
         this.OnlyCloseRW = OnlyCloseRW;

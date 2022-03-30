@@ -38,6 +38,7 @@ public class QueryOpenBankDownLoadUrlResponse extends AbstractModel{
 
     /**
     * 查询对账文件下载响应对象。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -83,8 +84,10 @@ public class QueryOpenBankDownLoadUrlResponse extends AbstractModel{
     }
 
     /**
-     * Get 查询对账文件下载响应对象。 
+     * Get 查询对账文件下载响应对象。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 查询对账文件下载响应对象。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public QueryOpenBankDownLoadUrlResult getResult() {
         return this.Result;
@@ -92,7 +95,9 @@ public class QueryOpenBankDownLoadUrlResponse extends AbstractModel{
 
     /**
      * Set 查询对账文件下载响应对象。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 查询对账文件下载响应对象。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(QueryOpenBankDownLoadUrlResult Result) {
         this.Result = Result;

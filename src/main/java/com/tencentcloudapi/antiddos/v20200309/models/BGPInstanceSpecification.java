@@ -54,6 +54,22 @@ public class BGPInstanceSpecification extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnionPackFlag")
+    @Expose
+    private Long UnionPackFlag;
+
+    /**
+    * 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceBandWidth")
+    @Expose
+    private Long ServiceBandWidth;
+
+    /**
      * Get 保底防护峰值，单位Gbps 
      * @return ProtectBandwidth 保底防护峰值，单位Gbps
      */
@@ -129,6 +145,46 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    /**
+     * Get 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnionPackFlag 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUnionPackFlag() {
+        return this.UnionPackFlag;
+    }
+
+    /**
+     * Set 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnionPackFlag 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnionPackFlag(Long UnionPackFlag) {
+        this.UnionPackFlag = UnionPackFlag;
+    }
+
+    /**
+     * Get 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceBandWidth 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getServiceBandWidth() {
+        return this.ServiceBandWidth;
+    }
+
+    /**
+     * Set 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceBandWidth 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceBandWidth(Long ServiceBandWidth) {
+        this.ServiceBandWidth = ServiceBandWidth;
+    }
+
     public BGPInstanceSpecification() {
     }
 
@@ -149,6 +205,12 @@ public class BGPInstanceSpecification extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.UnionPackFlag != null) {
+            this.UnionPackFlag = new Long(source.UnionPackFlag);
+        }
+        if (source.ServiceBandWidth != null) {
+            this.ServiceBandWidth = new Long(source.ServiceBandWidth);
+        }
     }
 
 
@@ -160,6 +222,8 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtectCountLimit", this.ProtectCountLimit);
         this.setParamSimple(map, prefix + "ProtectIPNumberLimit", this.ProtectIPNumberLimit);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "UnionPackFlag", this.UnionPackFlag);
+        this.setParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
 
     }
 }

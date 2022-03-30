@@ -15,6 +15,9 @@ public enum ScfErrorCode {
     // 当前异步事件状态不支持此操作，请稍后重试。
      FAILEDOPERATION_ASYNCEVENTSTATUS("FailedOperation.AsyncEventStatus"),
      
+    // 请求role信息失败。
+     FAILEDOPERATION_CALLROLEFAILED("FailedOperation.CallRoleFailed"),
+     
     // 复制函数失败。
      FAILEDOPERATION_COPYFAILED("FailedOperation.CopyFailed"),
      
@@ -192,6 +195,9 @@ public enum ScfErrorCode {
     // Args 参数值有误。
      INVALIDPARAMETERVALUE_ARGS("InvalidParameterValue.Args"),
      
+    // AsyncRunEnable 取值不正确。
+     INVALIDPARAMETERVALUE_ASYNCRUNENABLE("InvalidParameterValue.AsyncRunEnable"),
+     
     // 函数异步重试配置参数无效。
      INVALIDPARAMETERVALUE_ASYNCTRIGGERCONFIG("InvalidParameterValue.AsyncTriggerConfig"),
      
@@ -270,6 +276,9 @@ public enum ScfErrorCode {
     // 环境变量DNS[OS_NAMESERVER]配置有误。
      INVALIDPARAMETERVALUE_DNSINFO("InvalidParameterValue.DnsInfo"),
      
+    // DynamicEnabled 参数传入错误。
+     INVALIDPARAMETERVALUE_DYNAMICENABLED("InvalidParameterValue.DynamicEnabled"),
+     
     // EipConfig参数错误。
      INVALIDPARAMETERVALUE_EIPCONFIG("InvalidParameterValue.EipConfig"),
      
@@ -324,6 +333,9 @@ public enum ScfErrorCode {
     // InlineZipFile非法。
      INVALIDPARAMETERVALUE_INLINEZIPFILE("InvalidParameterValue.InlineZipFile"),
      
+    // InstanceConcurrencyConfig 参数传入错误。
+     INVALIDPARAMETERVALUE_INSTANCECONCURRENCYCONFIG("InvalidParameterValue.InstanceConcurrencyConfig"),
+     
     // InvokeType取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_INVOKETYPE("InvalidParameterValue.InvokeType"),
      
@@ -341,6 +353,9 @@ public enum ScfErrorCode {
      
     // 参数超出长度限制。
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
+     
+    // MaxConcurrency 参数传入错误。
+     INVALIDPARAMETERVALUE_MAXCONCURRENCY("InvalidParameterValue.MaxConcurrency"),
      
     // Memory取值与规范不符，请修正后再试。可参考：https://tencentcs.com/5jXKFnBW。
      INVALIDPARAMETERVALUE_MEMORY("InvalidParameterValue.Memory"),
@@ -527,6 +542,9 @@ public enum ScfErrorCode {
      
     // 定时触发间隔小于最大限制。
      LIMITEXCEEDED_PROVISIONTRIGGERINTERVAL("LimitExceeded.ProvisionTriggerInterval"),
+     
+    // 配额超限。
+     LIMITEXCEEDED_QUOTA("LimitExceeded.Quota"),
      
     // 函数异步重试配置异步重试次数超过限制。
      LIMITEXCEEDED_RETRYNUM("LimitExceeded.RetryNum"),
@@ -716,6 +734,9 @@ public enum ScfErrorCode {
      
     // 资源还有别名绑定，不支持当前操作，请解绑别名后重试。
      UNSUPPORTEDOPERATION_ALIASBIND("UnsupportedOperation.AliasBind"),
+     
+    // 指定的配置AsyncRunEnable暂不支持，请修正后再试。
+     UNSUPPORTEDOPERATION_ASYNCRUNENABLE("UnsupportedOperation.AsyncRunEnable"),
      
     // Cdn不支持。
      UNSUPPORTEDOPERATION_CDN("UnsupportedOperation.Cdn"),

@@ -58,6 +58,13 @@ public class DescribeUsersRequest extends AbstractModel{
     private String Sorting;
 
     /**
+    * 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 指定查询的子用户uin，用户需要通过CreateUser接口创建。 
      * @return UserId 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      */
@@ -137,6 +144,22 @@ public class DescribeUsersRequest extends AbstractModel{
         this.Sorting = Sorting;
     }
 
+    /**
+     * Get 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。 
+     * @return Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     * @param Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeUsersRequest() {
     }
 
@@ -160,6 +183,12 @@ public class DescribeUsersRequest extends AbstractModel{
         if (source.Sorting != null) {
             this.Sorting = new String(source.Sorting);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class DescribeUsersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "Sorting", this.Sorting);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

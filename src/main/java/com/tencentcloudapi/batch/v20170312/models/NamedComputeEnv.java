@@ -90,7 +90,7 @@ public class NamedComputeEnv extends AbstractModel{
     */
     @SerializedName("Notifications")
     @Expose
-    private Notification Notifications;
+    private Notification [] Notifications;
 
     /**
     * 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
@@ -261,7 +261,7 @@ public class NamedComputeEnv extends AbstractModel{
      * Get 通知信息 
      * @return Notifications 通知信息
      */
-    public Notification getNotifications() {
+    public Notification [] getNotifications() {
         return this.Notifications;
     }
 
@@ -269,7 +269,7 @@ public class NamedComputeEnv extends AbstractModel{
      * Set 通知信息
      * @param Notifications 通知信息
      */
-    public void setNotifications(Notification Notifications) {
+    public void setNotifications(Notification [] Notifications) {
         this.Notifications = Notifications;
     }
 
@@ -366,7 +366,10 @@ public class NamedComputeEnv extends AbstractModel{
             this.AgentRunningMode = new AgentRunningMode(source.AgentRunningMode);
         }
         if (source.Notifications != null) {
-            this.Notifications = new Notification(source.Notifications);
+            this.Notifications = new Notification[source.Notifications.length];
+            for (int i = 0; i < source.Notifications.length; i++) {
+                this.Notifications[i] = new Notification(source.Notifications[i]);
+            }
         }
         if (source.ActionIfComputeNodeInactive != null) {
             this.ActionIfComputeNodeInactive = new String(source.ActionIfComputeNodeInactive);
@@ -396,7 +399,7 @@ public class NamedComputeEnv extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);
         this.setParamObj(map, prefix + "AgentRunningMode.", this.AgentRunningMode);
-        this.setParamObj(map, prefix + "Notifications.", this.Notifications);
+        this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
         this.setParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

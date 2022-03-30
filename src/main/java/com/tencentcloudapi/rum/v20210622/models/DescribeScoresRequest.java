@@ -44,6 +44,13 @@ public class DescribeScoresRequest extends AbstractModel{
     private Long ID;
 
     /**
+    * 该参数已废弃
+    */
+    @SerializedName("IsDemo")
+    @Expose
+    private Long IsDemo;
+
+    /**
      * Get 结束时间 
      * @return EndTime 结束时间
      */
@@ -91,6 +98,22 @@ public class DescribeScoresRequest extends AbstractModel{
         this.ID = ID;
     }
 
+    /**
+     * Get 该参数已废弃 
+     * @return IsDemo 该参数已废弃
+     */
+    public Long getIsDemo() {
+        return this.IsDemo;
+    }
+
+    /**
+     * Set 该参数已废弃
+     * @param IsDemo 该参数已废弃
+     */
+    public void setIsDemo(Long IsDemo) {
+        this.IsDemo = IsDemo;
+    }
+
     public DescribeScoresRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeScoresRequest extends AbstractModel{
         if (source.ID != null) {
             this.ID = new Long(source.ID);
         }
+        if (source.IsDemo != null) {
+            this.IsDemo = new Long(source.IsDemo);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeScoresRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "IsDemo", this.IsDemo);
 
     }
 }

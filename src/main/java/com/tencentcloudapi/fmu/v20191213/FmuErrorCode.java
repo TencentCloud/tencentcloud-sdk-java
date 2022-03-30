@@ -33,6 +33,9 @@ public enum FmuErrorCode {
     // 不支持灰色图。
      FAILEDOPERATION_IMAGEGRAYNOTSUPPORT("FailedOperation.ImageGrayNotSupport"),
      
+    // 不支持的图片文件。
+     FAILEDOPERATION_IMAGENOTSUPPORTED("FailedOperation.ImageNotSupported"),
+     
     // 图片分辨率过大。
      FAILEDOPERATION_IMAGERESOLUTIONEXCEED("FailedOperation.ImageResolutionExceed"),
      
@@ -51,6 +54,9 @@ public enum FmuErrorCode {
     // 内部错误。
      FAILEDOPERATION_INTERNALERROR("FailedOperation.InternalError"),
      
+    // 任务冲突。
+     FAILEDOPERATION_JOBCONFLICT("FailedOperation.JobConflict"),
+     
     // 任务已撤销，请重新提交任务。
      FAILEDOPERATION_JOBHASBEENCANCELED("FailedOperation.JobHasBeenCanceled"),
      
@@ -68,6 +74,9 @@ public enum FmuErrorCode {
      
     // 后端服务超时，请重试。
      FAILEDOPERATION_REQUESTTIMEOUT("FailedOperation.RequestTimeout"),
+     
+    // 系统内部错误。
+     FAILEDOPERATION_SERVERERROR("FailedOperation.ServerError"),
      
     // 内部错误。
      INTERNALERROR("InternalError"),
@@ -149,6 +158,9 @@ public enum FmuErrorCode {
      
     // 余额不足。
      RESOURCEUNAVAILABLE_LOWBALANCE("ResourceUnavailable.LowBalance"),
+     
+    // 计费状态未知，请确认是否已在控制台开通服务。
+     RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
     // 服务未开通。
      RESOURCEUNAVAILABLE_NOTREADY("ResourceUnavailable.NotReady"),

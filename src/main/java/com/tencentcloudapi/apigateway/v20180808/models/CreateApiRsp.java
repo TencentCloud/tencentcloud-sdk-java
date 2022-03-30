@@ -31,7 +31,7 @@ public class CreateApiRsp extends AbstractModel{
     private String ApiId;
 
     /**
-    * path
+    * 路径
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -39,7 +39,7 @@ public class CreateApiRsp extends AbstractModel{
     private String Path;
 
     /**
-    * method
+    * 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
@@ -53,6 +53,30 @@ public class CreateApiRsp extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
+
+    /**
+    * 导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * api name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiName")
+    @Expose
+    private String ApiName;
 
     /**
      * Get api id
@@ -75,9 +99,9 @@ public class CreateApiRsp extends AbstractModel{
     }
 
     /**
-     * Get path
+     * Get 路径
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path path
+     * @return Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -85,9 +109,9 @@ public class CreateApiRsp extends AbstractModel{
     }
 
     /**
-     * Set path
+     * Set 路径
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path path
+     * @param Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -95,9 +119,9 @@ public class CreateApiRsp extends AbstractModel{
     }
 
     /**
-     * Get method
+     * Get 请求方法
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Method method
+     * @return Method 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
@@ -105,9 +129,9 @@ public class CreateApiRsp extends AbstractModel{
     }
 
     /**
-     * Set method
+     * Set 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Method method
+     * @param Method 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
@@ -134,6 +158,66 @@ public class CreateApiRsp extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 导入状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 异常信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrMsg 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrMsg 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get api name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiName api name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApiName() {
+        return this.ApiName;
+    }
+
+    /**
+     * Set api name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiName api name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiName(String ApiName) {
+        this.ApiName = ApiName;
+    }
+
     public CreateApiRsp() {
     }
 
@@ -154,6 +238,15 @@ public class CreateApiRsp extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.ApiName != null) {
+            this.ApiName = new String(source.ApiName);
+        }
     }
 
 
@@ -165,6 +258,9 @@ public class CreateApiRsp extends AbstractModel{
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "ApiName", this.ApiName);
 
     }
 }

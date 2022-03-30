@@ -58,6 +58,13 @@ public class ServiceGovernanceInfo extends AbstractModel{
     private String [] Features;
 
     /**
+    * 主账户名默认为 polaris，该值为主账户的默认密码
+    */
+    @SerializedName("MainPassword")
+    @Expose
+    private String MainPassword;
+
+    /**
      * Get 引擎所在的地域 
      * @return EngineRegion 引擎所在的地域
      */
@@ -137,6 +144,22 @@ public class ServiceGovernanceInfo extends AbstractModel{
         this.Features = Features;
     }
 
+    /**
+     * Get 主账户名默认为 polaris，该值为主账户的默认密码 
+     * @return MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
+     */
+    public String getMainPassword() {
+        return this.MainPassword;
+    }
+
+    /**
+     * Set 主账户名默认为 polaris，该值为主账户的默认密码
+     * @param MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
+     */
+    public void setMainPassword(String MainPassword) {
+        this.MainPassword = MainPassword;
+    }
+
     public ServiceGovernanceInfo() {
     }
 
@@ -169,6 +192,9 @@ public class ServiceGovernanceInfo extends AbstractModel{
                 this.Features[i] = new String(source.Features[i]);
             }
         }
+        if (source.MainPassword != null) {
+            this.MainPassword = new String(source.MainPassword);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class ServiceGovernanceInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
         this.setParamSimple(map, prefix + "AuthOpen", this.AuthOpen);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
+        this.setParamSimple(map, prefix + "MainPassword", this.MainPassword);
 
     }
 }

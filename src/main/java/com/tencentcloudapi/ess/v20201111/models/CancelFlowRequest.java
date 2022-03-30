@@ -30,13 +30,6 @@ public class CancelFlowRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 应用相关信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
     * 流程id
     */
     @SerializedName("FlowId")
@@ -49,6 +42,13 @@ public class CancelFlowRequest extends AbstractModel{
     @SerializedName("CancelMessage")
     @Expose
     private String CancelMessage;
+
+    /**
+    * 应用相关信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
 
     /**
      * Get 操作用户id 
@@ -64,22 +64,6 @@ public class CancelFlowRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
     }
 
     /**
@@ -114,6 +98,22 @@ public class CancelFlowRequest extends AbstractModel{
         this.CancelMessage = CancelMessage;
     }
 
+    /**
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CancelFlowRequest() {
     }
 
@@ -125,14 +125,14 @@ public class CancelFlowRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
         if (source.CancelMessage != null) {
             this.CancelMessage = new String(source.CancelMessage);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -142,9 +142,9 @@ public class CancelFlowRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

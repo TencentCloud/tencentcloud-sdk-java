@@ -39,6 +39,14 @@ public class InjectConfig extends AbstractModel{
     private Boolean HoldApplicationUntilProxyStarts;
 
     /**
+    * 是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HoldProxyUntilApplicationEnds")
+    @Expose
+    private Boolean HoldProxyUntilApplicationEnds;
+
+    /**
      * Get 不需要进行代理的 ip 地址范围
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExcludeIPRanges 不需要进行代理的 ip 地址范围
@@ -78,6 +86,26 @@ public class InjectConfig extends AbstractModel{
         this.HoldApplicationUntilProxyStarts = HoldApplicationUntilProxyStarts;
     }
 
+    /**
+     * Get 是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HoldProxyUntilApplicationEnds 是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHoldProxyUntilApplicationEnds() {
+        return this.HoldProxyUntilApplicationEnds;
+    }
+
+    /**
+     * Set 是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HoldProxyUntilApplicationEnds 是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHoldProxyUntilApplicationEnds(Boolean HoldProxyUntilApplicationEnds) {
+        this.HoldProxyUntilApplicationEnds = HoldProxyUntilApplicationEnds;
+    }
+
     public InjectConfig() {
     }
 
@@ -95,6 +123,9 @@ public class InjectConfig extends AbstractModel{
         if (source.HoldApplicationUntilProxyStarts != null) {
             this.HoldApplicationUntilProxyStarts = new Boolean(source.HoldApplicationUntilProxyStarts);
         }
+        if (source.HoldProxyUntilApplicationEnds != null) {
+            this.HoldProxyUntilApplicationEnds = new Boolean(source.HoldProxyUntilApplicationEnds);
+        }
     }
 
 
@@ -104,6 +135,7 @@ public class InjectConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ExcludeIPRanges.", this.ExcludeIPRanges);
         this.setParamSimple(map, prefix + "HoldApplicationUntilProxyStarts", this.HoldApplicationUntilProxyStarts);
+        this.setParamSimple(map, prefix + "HoldProxyUntilApplicationEnds", this.HoldProxyUntilApplicationEnds);
 
     }
 }

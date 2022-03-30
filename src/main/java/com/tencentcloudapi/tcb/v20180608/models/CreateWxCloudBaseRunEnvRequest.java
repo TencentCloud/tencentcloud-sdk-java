@@ -67,6 +67,13 @@ Activity：活动来源
     private String [] SubNetIds;
 
     /**
+    * 是否打开云调用
+    */
+    @SerializedName("IsOpenCloudInvoke")
+    @Expose
+    private Boolean IsOpenCloudInvoke;
+
+    /**
      * Get wx应用Id 
      * @return WxAppId wx应用Id
      */
@@ -170,6 +177,22 @@ Activity：活动来源
         this.SubNetIds = SubNetIds;
     }
 
+    /**
+     * Get 是否打开云调用 
+     * @return IsOpenCloudInvoke 是否打开云调用
+     */
+    public Boolean getIsOpenCloudInvoke() {
+        return this.IsOpenCloudInvoke;
+    }
+
+    /**
+     * Set 是否打开云调用
+     * @param IsOpenCloudInvoke 是否打开云调用
+     */
+    public void setIsOpenCloudInvoke(Boolean IsOpenCloudInvoke) {
+        this.IsOpenCloudInvoke = IsOpenCloudInvoke;
+    }
+
     public CreateWxCloudBaseRunEnvRequest() {
     }
 
@@ -199,6 +222,9 @@ Activity：活动来源
                 this.SubNetIds[i] = new String(source.SubNetIds[i]);
             }
         }
+        if (source.IsOpenCloudInvoke != null) {
+            this.IsOpenCloudInvoke = new Boolean(source.IsOpenCloudInvoke);
+        }
     }
 
 
@@ -212,6 +238,7 @@ Activity：活动来源
         this.setParamSimple(map, prefix + "Flag", this.Flag);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "SubNetIds.", this.SubNetIds);
+        this.setParamSimple(map, prefix + "IsOpenCloudInvoke", this.IsOpenCloudInvoke);
 
     }
 }

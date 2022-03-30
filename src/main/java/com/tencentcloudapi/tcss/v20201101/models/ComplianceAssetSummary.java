@@ -162,6 +162,22 @@ CHECK_FAILED, 检测失败
     private CompliancePeriodTaskRule PeriodRule;
 
     /**
+    * 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpenPolicyItemCount")
+    @Expose
+    private Long OpenPolicyItemCount;
+
+    /**
+    * 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IgnoredPolicyItemCount")
+    @Expose
+    private Long IgnoredPolicyItemCount;
+
+    /**
      * Get 资产类别。 
      * @return AssetType 资产类别。
      */
@@ -501,6 +517,46 @@ CHECK_FAILED, 检测失败
         this.PeriodRule = PeriodRule;
     }
 
+    /**
+     * Get 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OpenPolicyItemCount 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOpenPolicyItemCount() {
+        return this.OpenPolicyItemCount;
+    }
+
+    /**
+     * Set 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenPolicyItemCount 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpenPolicyItemCount(Long OpenPolicyItemCount) {
+        this.OpenPolicyItemCount = OpenPolicyItemCount;
+    }
+
+    /**
+     * Get 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IgnoredPolicyItemCount 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIgnoredPolicyItemCount() {
+        return this.IgnoredPolicyItemCount;
+    }
+
+    /**
+     * Set 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IgnoredPolicyItemCount 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIgnoredPolicyItemCount(Long IgnoredPolicyItemCount) {
+        this.IgnoredPolicyItemCount = IgnoredPolicyItemCount;
+    }
+
     public ComplianceAssetSummary() {
     }
 
@@ -563,6 +619,12 @@ CHECK_FAILED, 检测失败
         if (source.PeriodRule != null) {
             this.PeriodRule = new CompliancePeriodTaskRule(source.PeriodRule);
         }
+        if (source.OpenPolicyItemCount != null) {
+            this.OpenPolicyItemCount = new Long(source.OpenPolicyItemCount);
+        }
+        if (source.IgnoredPolicyItemCount != null) {
+            this.IgnoredPolicyItemCount = new Long(source.IgnoredPolicyItemCount);
+        }
     }
 
 
@@ -588,6 +650,8 @@ CHECK_FAILED, 检测失败
         this.setParamSimple(map, prefix + "CheckCostTime", this.CheckCostTime);
         this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
         this.setParamObj(map, prefix + "PeriodRule.", this.PeriodRule);
+        this.setParamSimple(map, prefix + "OpenPolicyItemCount", this.OpenPolicyItemCount);
+        this.setParamSimple(map, prefix + "IgnoredPolicyItemCount", this.IgnoredPolicyItemCount);
 
     }
 }

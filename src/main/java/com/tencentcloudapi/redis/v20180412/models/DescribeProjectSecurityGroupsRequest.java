@@ -44,7 +44,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 拉取数量限制。
+    * 拉取数量限制，默认20
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 拉取数量限制。 
-     * @return Limit 拉取数量限制。
+     * Get 拉取数量限制，默认20 
+     * @return Limit 拉取数量限制，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 拉取数量限制。
-     * @param Limit 拉取数量限制。
+     * Set 拉取数量限制，默认20
+     * @param Limit 拉取数量限制，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

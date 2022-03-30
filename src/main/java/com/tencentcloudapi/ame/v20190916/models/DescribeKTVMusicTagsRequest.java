@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewPaiDomainNameRequest extends AbstractModel{
+public class DescribeKTVMusicTagsRequest extends AbstractModel{
 
-    /**
-    * 域名类型
-    */
-    @SerializedName("DomainNameType")
-    @Expose
-    private String DomainNameType;
-
-    /**
-     * Get 域名类型 
-     * @return DomainNameType 域名类型
-     */
-    public String getDomainNameType() {
-        return this.DomainNameType;
-    }
-
-    /**
-     * Set 域名类型
-     * @param DomainNameType 域名类型
-     */
-    public void setDomainNameType(String DomainNameType) {
-        this.DomainNameType = DomainNameType;
-    }
-
-    public PreviewPaiDomainNameRequest() {
+    public DescribeKTVMusicTagsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PreviewPaiDomainNameRequest(PreviewPaiDomainNameRequest source) {
-        if (source.DomainNameType != null) {
-            this.DomainNameType = new String(source.DomainNameType);
-        }
+    public DescribeKTVMusicTagsRequest(DescribeKTVMusicTagsRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class PreviewPaiDomainNameRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainNameType", this.DomainNameType);
 
     }
 }

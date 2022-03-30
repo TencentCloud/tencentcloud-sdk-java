@@ -1,5 +1,11 @@
 package com.tencentcloudapi.iai.v20180301;
 public enum IaiErrorCode {
+    // 认证失败。
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 该操作不支持跨算法模型版本。
      FAILEDOPERATION_ACROSSVERSIONSERROR("FailedOperation.AcrossVersionsError"),
      
@@ -227,6 +233,9 @@ public enum IaiErrorCode {
      
     // URL格式不合法。
      INVALIDPARAMETERVALUE_URLILLEGAL("InvalidParameterValue.UrlIllegal"),
+     
+    // 超过配额限制。
+     LIMITEXCEEDED("LimitExceeded"),
      
     // 人脸个数超过限制。
      LIMITEXCEEDED_ERRORFACENUMEXCEED("LimitExceeded.ErrorFaceNumExceed"),

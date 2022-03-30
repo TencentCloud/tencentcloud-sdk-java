@@ -44,6 +44,13 @@ public class DescribeApmInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * 是否查询官方demo实例
+    */
+    @SerializedName("DemoInstanceFlag")
+    @Expose
+    private Long DemoInstanceFlag;
+
+    /**
      * Get Tag列表 
      * @return Tags Tag列表
      */
@@ -91,6 +98,22 @@ public class DescribeApmInstancesRequest extends AbstractModel{
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get 是否查询官方demo实例 
+     * @return DemoInstanceFlag 是否查询官方demo实例
+     */
+    public Long getDemoInstanceFlag() {
+        return this.DemoInstanceFlag;
+    }
+
+    /**
+     * Set 是否查询官方demo实例
+     * @param DemoInstanceFlag 是否查询官方demo实例
+     */
+    public void setDemoInstanceFlag(Long DemoInstanceFlag) {
+        this.DemoInstanceFlag = DemoInstanceFlag;
+    }
+
     public DescribeApmInstancesRequest() {
     }
 
@@ -114,6 +137,9 @@ public class DescribeApmInstancesRequest extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.DemoInstanceFlag != null) {
+            this.DemoInstanceFlag = new Long(source.DemoInstanceFlag);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class DescribeApmInstancesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
 
     }
 }

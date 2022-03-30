@@ -147,6 +147,9 @@ public enum CdnErrorCode {
     // 域名状态不合法。
      INVALIDPARAMETER_CDNHOSTINVALIDSTATUS("InvalidParameter.CdnHostInvalidStatus"),
      
+    // 该域名为COS访问域名，无法接入，如需启动加速服务，请前往COS控制台启用默认 CDN 加速域。
+     INVALIDPARAMETER_CDNHOSTISCOSDEFAULTACCESS("InvalidParameter.CdnHostIsCosDefaultAccess"),
+     
     // 域名太长。
      INVALIDPARAMETER_CDNHOSTTOOLONGHOST("InvalidParameter.CdnHostTooLongHost"),
      
@@ -344,6 +347,9 @@ public enum CdnErrorCode {
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // 标签键不存在。
+     RESOURCENOTFOUND_CAMTAGKEYNOTEXIST("ResourceNotFound.CamTagKeyNotExist"),
      
     // 账号下无此域名，请确认后重试。
      RESOURCENOTFOUND_CDNHOSTNOTEXISTS("ResourceNotFound.CdnHostNotExists"),

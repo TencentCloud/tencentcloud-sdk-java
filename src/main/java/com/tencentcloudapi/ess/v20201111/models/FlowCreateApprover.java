@@ -60,18 +60,20 @@ public class FlowCreateApprover extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 签署方经办人证件类型，ID_CARD表示身份证
-    */
-    @SerializedName("ApproverIdCardType")
-    @Expose
-    private String ApproverIdCardType;
-
-    /**
     * 签署方经办人证件号码
     */
     @SerializedName("ApproverIdCardNumber")
     @Expose
     private String ApproverIdCardNumber;
+
+    /**
+    * 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+    */
+    @SerializedName("ApproverIdCardType")
+    @Expose
+    private String ApproverIdCardType;
 
     /**
     * 签署方经办人在模板中的角色ID
@@ -107,6 +109,13 @@ public class FlowCreateApprover extends AbstractModel{
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
+
+    /**
+    * 签署意愿确认渠道,WEIXINAPP:人脸识别
+    */
+    @SerializedName("VerifyChannel")
+    @Expose
+    private String [] VerifyChannel;
 
     /**
      * Get 签署方类型 (0为企业/1为个人) 
@@ -197,22 +206,6 @@ public class FlowCreateApprover extends AbstractModel{
     }
 
     /**
-     * Get 签署方经办人证件类型，ID_CARD表示身份证 
-     * @return ApproverIdCardType 签署方经办人证件类型，ID_CARD表示身份证
-     */
-    public String getApproverIdCardType() {
-        return this.ApproverIdCardType;
-    }
-
-    /**
-     * Set 签署方经办人证件类型，ID_CARD表示身份证
-     * @param ApproverIdCardType 签署方经办人证件类型，ID_CARD表示身份证
-     */
-    public void setApproverIdCardType(String ApproverIdCardType) {
-        this.ApproverIdCardType = ApproverIdCardType;
-    }
-
-    /**
      * Get 签署方经办人证件号码 
      * @return ApproverIdCardNumber 签署方经办人证件号码
      */
@@ -226,6 +219,30 @@ public class FlowCreateApprover extends AbstractModel{
      */
     public void setApproverIdCardNumber(String ApproverIdCardNumber) {
         this.ApproverIdCardNumber = ApproverIdCardNumber;
+    }
+
+    /**
+     * Get 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
+     * @return ApproverIdCardType 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+     */
+    public String getApproverIdCardType() {
+        return this.ApproverIdCardType;
+    }
+
+    /**
+     * Set 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+     * @param ApproverIdCardType 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+     */
+    public void setApproverIdCardType(String ApproverIdCardType) {
+        this.ApproverIdCardType = ApproverIdCardType;
     }
 
     /**
@@ -308,6 +325,22 @@ public class FlowCreateApprover extends AbstractModel{
         this.NotifyType = NotifyType;
     }
 
+    /**
+     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
+     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     */
+    public String [] getVerifyChannel() {
+        return this.VerifyChannel;
+    }
+
+    /**
+     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     */
+    public void setVerifyChannel(String [] VerifyChannel) {
+        this.VerifyChannel = VerifyChannel;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -331,11 +364,11 @@ public class FlowCreateApprover extends AbstractModel{
         if (source.ApproverMobile != null) {
             this.ApproverMobile = new String(source.ApproverMobile);
         }
-        if (source.ApproverIdCardType != null) {
-            this.ApproverIdCardType = new String(source.ApproverIdCardType);
-        }
         if (source.ApproverIdCardNumber != null) {
             this.ApproverIdCardNumber = new String(source.ApproverIdCardNumber);
+        }
+        if (source.ApproverIdCardType != null) {
+            this.ApproverIdCardType = new String(source.ApproverIdCardType);
         }
         if (source.RecipientId != null) {
             this.RecipientId = new String(source.RecipientId);
@@ -352,6 +385,12 @@ public class FlowCreateApprover extends AbstractModel{
         if (source.NotifyType != null) {
             this.NotifyType = new String(source.NotifyType);
         }
+        if (source.VerifyChannel != null) {
+            this.VerifyChannel = new String[source.VerifyChannel.length];
+            for (int i = 0; i < source.VerifyChannel.length; i++) {
+                this.VerifyChannel[i] = new String(source.VerifyChannel[i]);
+            }
+        }
     }
 
 
@@ -364,13 +403,14 @@ public class FlowCreateApprover extends AbstractModel{
         this.setParamSimple(map, prefix + "Required", this.Required);
         this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
         this.setParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
-        this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
         this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
+        this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "IsFullText", this.IsFullText);
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
 
     }
 }

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteAlarmNoticeRequest extends AbstractModel{
 
     /**
-    * 告警通知模板
+    * 通知渠道组ID
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-     * Get 告警通知模板 
-     * @return AlarmNoticeId 告警通知模板
+     * Get 通知渠道组ID 
+     * @return AlarmNoticeId 通知渠道组ID
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 告警通知模板
-     * @param AlarmNoticeId 告警通知模板
+     * Set 通知渠道组ID
+     * @param AlarmNoticeId 通知渠道组ID
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

@@ -66,6 +66,13 @@ public class DescribeAuditPoliciesRequest extends AbstractModel{
     private String RuleId;
 
     /**
+    * 实例名称
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -165,6 +172,22 @@ public class DescribeAuditPoliciesRequest extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 实例名称 
+     * @return InstanceName 实例名称
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称
+     * @param InstanceName 实例名称
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
     public DescribeAuditPoliciesRequest() {
     }
 
@@ -191,6 +214,9 @@ public class DescribeAuditPoliciesRequest extends AbstractModel{
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
     }
 
 
@@ -204,6 +230,7 @@ public class DescribeAuditPoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
 
     }
 }

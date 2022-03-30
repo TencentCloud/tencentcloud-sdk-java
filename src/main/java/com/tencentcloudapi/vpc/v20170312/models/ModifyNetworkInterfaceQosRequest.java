@@ -30,7 +30,7 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
     private String [] NetworkInterfaceIds;
 
     /**
-    * 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+    * 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
     */
     @SerializedName("QosLevel")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。 
-     * @return QosLevel 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+     * Get 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。 
+     * @return QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
-     * @param QosLevel 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+     * Set 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @param QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

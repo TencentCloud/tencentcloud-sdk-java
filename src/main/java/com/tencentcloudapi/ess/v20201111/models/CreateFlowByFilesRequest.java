@@ -106,6 +106,13 @@ MULTI_LINE_TEXT - 多行文本控件
     private CcInfo [] CcInfos;
 
     /**
+    * 是否需要预览，true：预览模式，false：非预览（默认）
+    */
+    @SerializedName("NeedPreview")
+    @Expose
+    private Boolean NeedPreview;
+
+    /**
      * Get 调用方用户信息 
      * @return Operator 调用方用户信息
      */
@@ -305,6 +312,22 @@ MULTI_LINE_TEXT - 多行文本控件
         this.CcInfos = CcInfos;
     }
 
+    /**
+     * Get 是否需要预览，true：预览模式，false：非预览（默认） 
+     * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）
+     */
+    public Boolean getNeedPreview() {
+        return this.NeedPreview;
+    }
+
+    /**
+     * Set 是否需要预览，true：预览模式，false：非预览（默认）
+     * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）
+     */
+    public void setNeedPreview(Boolean NeedPreview) {
+        this.NeedPreview = NeedPreview;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -358,6 +381,9 @@ MULTI_LINE_TEXT - 多行文本控件
                 this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
             }
         }
+        if (source.NeedPreview != null) {
+            this.NeedPreview = new Boolean(source.NeedPreview);
+        }
     }
 
 
@@ -376,6 +402,7 @@ MULTI_LINE_TEXT - 多行文本控件
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
 
     }
 }

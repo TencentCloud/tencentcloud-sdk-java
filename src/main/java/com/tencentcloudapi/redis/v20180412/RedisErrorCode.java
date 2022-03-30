@@ -78,6 +78,9 @@ public enum RedisErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // 没有找到对应接口。
+     INVALIDPARAMETER_ACTIONNOTFOUND("InvalidParameter.ActionNotFound"),
+     
     // 参数为空。
      INVALIDPARAMETER_EMPTYPARAM("InvalidParameter.EmptyParam"),
      

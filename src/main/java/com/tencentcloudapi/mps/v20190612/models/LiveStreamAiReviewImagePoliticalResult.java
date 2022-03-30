@@ -37,7 +37,7 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel{
     private Float EndPtsTime;
 
     /**
-    * 嫌疑片段涉政分数。
+    * 嫌疑片段敏感分数。
     */
     @SerializedName("Confidence")
     @Expose
@@ -54,8 +54,8 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+    * 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
     */
     @SerializedName("Label")
@@ -63,14 +63,14 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel{
     private String Label;
 
     /**
-    * 涉政人物、违规图标名字。
+    * 敏感人物、违规图标名字。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+    * 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -124,16 +124,16 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Get 嫌疑片段涉政分数。 
-     * @return Confidence 嫌疑片段涉政分数。
+     * Get 嫌疑片段敏感分数。 
+     * @return Confidence 嫌疑片段敏感分数。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 嫌疑片段涉政分数。
-     * @param Confidence 嫌疑片段涉政分数。
+     * Set 嫌疑片段敏感分数。
+     * @param Confidence 嫌疑片段敏感分数。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -168,11 +168,11 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Get 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * Get 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li> 
-     * @return Label 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * @return Label 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
      */
     public String getLabel() {
@@ -180,11 +180,11 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Set 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * Set 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
-     * @param Label 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * @param Label 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
      */
     public void setLabel(String Label) {
@@ -192,32 +192,32 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Get 涉政人物、违规图标名字。 
-     * @return Name 涉政人物、违规图标名字。
+     * Get 敏感人物、违规图标名字。 
+     * @return Name 敏感人物、违规图标名字。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 涉政人物、违规图标名字。
-     * @param Name 涉政人物、违规图标名字。
+     * Set 敏感人物、违规图标名字。
+     * @param Name 敏感人物、违规图标名字。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
-     * @return AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Get 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
+     * @return AreaCoordSet 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
-     * @param AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Set 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @param AreaCoordSet 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

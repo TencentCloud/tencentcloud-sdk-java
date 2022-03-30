@@ -55,6 +55,14 @@ public class AdaptiveStreamTemplate extends AbstractModel{
     private Long RemoveVideo;
 
     /**
+    * 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private TEHDConfig TEHDConfig;
+
+    /**
      * Get 视频参数信息。 
      * @return Video 视频参数信息。
      */
@@ -134,6 +142,26 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         this.RemoveVideo = RemoveVideo;
     }
 
+    /**
+     * Get 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TEHDConfig getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * Set 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTEHDConfig(TEHDConfig TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
     public AdaptiveStreamTemplate() {
     }
 
@@ -154,6 +182,9 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         if (source.RemoveVideo != null) {
             this.RemoveVideo = new Long(source.RemoveVideo);
         }
+        if (source.TEHDConfig != null) {
+            this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         this.setParamObj(map, prefix + "Audio.", this.Audio);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
 
     }
 }

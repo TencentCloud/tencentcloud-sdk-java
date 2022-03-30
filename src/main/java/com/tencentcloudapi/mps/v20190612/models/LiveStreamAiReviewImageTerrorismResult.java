@@ -37,14 +37,14 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel{
     private Float EndPtsTime;
 
     /**
-    * 嫌疑片段涉恐分数。
+    * 嫌疑片段涉敏分数。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 嫌疑片段鉴恐结果建议，取值范围：
+    * 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -54,15 +54,15 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 视频暴恐结果标签，取值范围：
+    * 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：涉敏人物。</li>
     */
     @SerializedName("Label")
     @Expose
@@ -116,27 +116,27 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Get 嫌疑片段涉恐分数。 
-     * @return Confidence 嫌疑片段涉恐分数。
+     * Get 嫌疑片段涉敏分数。 
+     * @return Confidence 嫌疑片段涉敏分数。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 嫌疑片段涉恐分数。
-     * @param Confidence 嫌疑片段涉恐分数。
+     * Set 嫌疑片段涉敏分数。
+     * @param Confidence 嫌疑片段涉敏分数。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 嫌疑片段鉴恐结果建议，取值范围：
+     * Get 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion 嫌疑片段鉴恐结果建议，取值范围：
+     * @return Suggestion 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -146,11 +146,11 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Set 嫌疑片段鉴恐结果建议，取值范围：
+     * Set 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion 嫌疑片段鉴恐结果建议，取值范围：
+     * @param Suggestion 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -160,48 +160,48 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Get 视频暴恐结果标签，取值范围：
+     * Get 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li> 
-     * @return Label 视频暴恐结果标签，取值范围：
+<li>terrorists：涉敏人物。</li> 
+     * @return Label 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：涉敏人物。</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 视频暴恐结果标签，取值范围：
+     * Set 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-     * @param Label 视频暴恐结果标签，取值范围：
+<li>terrorists：涉敏人物。</li>
+     * @param Label 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：涉敏人物。</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

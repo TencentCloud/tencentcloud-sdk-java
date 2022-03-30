@@ -30,14 +30,14 @@ public class QueryOpenBankPaymentOrderRequest extends AbstractModel{
     private String ChannelMerchantId;
 
     /**
-    * 外部商户订单号。与ChannelOrderId不能同时为空字符串。
+    * 外部商户订单号。与ChannelOrderId不能同时为空。
     */
     @SerializedName("OutOrderId")
     @Expose
     private String OutOrderId;
 
     /**
-    * 云平台订单号。与OutOrderId不能同时为空字符串。
+    * 云平台订单号。与OutOrderId不能同时为空。
     */
     @SerializedName("ChannelOrderId")
     @Expose
@@ -67,32 +67,32 @@ public class QueryOpenBankPaymentOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 外部商户订单号。与ChannelOrderId不能同时为空字符串。 
-     * @return OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空字符串。
+     * Get 外部商户订单号。与ChannelOrderId不能同时为空。 
+     * @return OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。
      */
     public String getOutOrderId() {
         return this.OutOrderId;
     }
 
     /**
-     * Set 外部商户订单号。与ChannelOrderId不能同时为空字符串。
-     * @param OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空字符串。
+     * Set 外部商户订单号。与ChannelOrderId不能同时为空。
+     * @param OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。
      */
     public void setOutOrderId(String OutOrderId) {
         this.OutOrderId = OutOrderId;
     }
 
     /**
-     * Get 云平台订单号。与OutOrderId不能同时为空字符串。 
-     * @return ChannelOrderId 云平台订单号。与OutOrderId不能同时为空字符串。
+     * Get 云平台订单号。与OutOrderId不能同时为空。 
+     * @return ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。
      */
     public String getChannelOrderId() {
         return this.ChannelOrderId;
     }
 
     /**
-     * Set 云平台订单号。与OutOrderId不能同时为空字符串。
-     * @param ChannelOrderId 云平台订单号。与OutOrderId不能同时为空字符串。
+     * Set 云平台订单号。与OutOrderId不能同时为空。
+     * @param ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。
      */
     public void setChannelOrderId(String ChannelOrderId) {
         this.ChannelOrderId = ChannelOrderId;

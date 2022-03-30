@@ -160,6 +160,26 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *添加收件人地址附带模板参数
+     * @param req CreateReceiverDetailWithDataRequest
+     * @return CreateReceiverDetailWithDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReceiverDetailWithDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailWithDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReceiverDetailWithData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
      * @param req DeleteBlackListRequest
      * @return DeleteBlackListResponse
@@ -232,6 +252,26 @@ public class SesClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteEmailTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEmailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据收件id删除收件人列表,同时删除列表中的所有收件邮箱
+     * @param req DeleteReceiverRequest
+     * @return DeleteReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReceiverResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReceiverResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReceiver");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

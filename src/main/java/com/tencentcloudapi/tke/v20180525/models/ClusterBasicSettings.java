@@ -93,6 +93,20 @@ public class ClusterBasicSettings extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 集群等级，针对托管集群生效
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * 自动变配集群等级，针对托管集群生效
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
+
+    /**
      * Get 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64 
      * @return ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      */
@@ -252,6 +266,38 @@ public class ClusterBasicSettings extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 集群等级，针对托管集群生效 
+     * @return ClusterLevel 集群等级，针对托管集群生效
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 集群等级，针对托管集群生效
+     * @param ClusterLevel 集群等级，针对托管集群生效
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get 自动变配集群等级，针对托管集群生效 
+     * @return AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+     */
+    public AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 自动变配集群等级，针对托管集群生效
+     * @param AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+     */
+    public void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
     public ClusterBasicSettings() {
     }
 
@@ -293,6 +339,12 @@ public class ClusterBasicSettings extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
+        }
     }
 
 
@@ -310,6 +362,8 @@ public class ClusterBasicSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
 
     }
 }

@@ -521,6 +521,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *ip防护状态查询
+     * @param req DescribeIPStatusListRequest
+     * @return DescribeIPStatusListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPStatusListResponse DescribeIPStatusList(DescribeIPStatusListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIPStatusListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIPStatusListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIPStatusList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取当前用户接入nat防火墙的所有子网数及natfw实例个数
      * @param req DescribeNatFwInfoCountRequest
      * @return DescribeNatFwInfoCountResponse

@@ -58,6 +58,13 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
     private Boolean ProxyLB;
 
     /**
+    * 连接用户集群k8s 的Config
+    */
+    @SerializedName("Kubeconfig")
+    @Expose
+    private String Kubeconfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
     }
 
     /**
+     * Get 连接用户集群k8s 的Config 
+     * @return Kubeconfig 连接用户集群k8s 的Config
+     */
+    public String getKubeconfig() {
+        return this.Kubeconfig;
+    }
+
+    /**
+     * Set 连接用户集群k8s 的Config
+     * @param Kubeconfig 连接用户集群k8s 的Config
+     */
+    public void setKubeconfig(String Kubeconfig) {
+        this.Kubeconfig = Kubeconfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -186,6 +209,9 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
         if (source.ProxyLB != null) {
             this.ProxyLB = new Boolean(source.ProxyLB);
         }
+        if (source.Kubeconfig != null) {
+            this.Kubeconfig = new String(source.Kubeconfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -201,6 +227,7 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
         this.setParamObj(map, prefix + "PublicLB.", this.PublicLB);
         this.setParamObj(map, prefix + "InternalLB.", this.InternalLB);
         this.setParamSimple(map, prefix + "ProxyLB", this.ProxyLB);
+        this.setParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

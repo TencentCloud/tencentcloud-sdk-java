@@ -70,7 +70,7 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     private String Nullable;
 
     /**
-    * 字段位置
+    * 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
@@ -210,9 +210,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     }
 
     /**
-     * Get 字段位置
+     * Get 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Position 字段位置
+     * @return Position 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPosition() {
@@ -220,9 +220,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     }
 
     /**
-     * Set 字段位置
+     * Set 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Position 字段位置
+     * @param Position 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(Long Position) {

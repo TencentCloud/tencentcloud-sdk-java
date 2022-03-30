@@ -61,14 +61,14 @@ public class KTVRobotInfo extends AbstractModel{
     private Long Position;
 
     /**
-    * 音频参数
+    * 音频参数。
     */
     @SerializedName("SetAudioParamInput")
     @Expose
     private SetAudioParamCommandInput SetAudioParamInput;
 
     /**
-    * 进房信息
+    * 进房信息。
     */
     @SerializedName("JoinRoomInput")
     @Expose
@@ -92,6 +92,13 @@ public class KTVRobotInfo extends AbstractModel{
     @SerializedName("SetPlayModeInput")
     @Expose
     private SetPlayModeCommandInput SetPlayModeInput;
+
+    /**
+    * 音量，范围 0~100，默认为 50。
+    */
+    @SerializedName("SetVolumeInput")
+    @Expose
+    private SetVolumeCommandInput SetVolumeInput;
 
     /**
      * Get 机器人Id。 
@@ -186,32 +193,32 @@ public class KTVRobotInfo extends AbstractModel{
     }
 
     /**
-     * Get 音频参数 
-     * @return SetAudioParamInput 音频参数
+     * Get 音频参数。 
+     * @return SetAudioParamInput 音频参数。
      */
     public SetAudioParamCommandInput getSetAudioParamInput() {
         return this.SetAudioParamInput;
     }
 
     /**
-     * Set 音频参数
-     * @param SetAudioParamInput 音频参数
+     * Set 音频参数。
+     * @param SetAudioParamInput 音频参数。
      */
     public void setSetAudioParamInput(SetAudioParamCommandInput SetAudioParamInput) {
         this.SetAudioParamInput = SetAudioParamInput;
     }
 
     /**
-     * Get 进房信息 
-     * @return JoinRoomInput 进房信息
+     * Get 进房信息。 
+     * @return JoinRoomInput 进房信息。
      */
     public JoinRoomInput getJoinRoomInput() {
         return this.JoinRoomInput;
     }
 
     /**
-     * Set 进房信息
-     * @param JoinRoomInput 进房信息
+     * Set 进房信息。
+     * @param JoinRoomInput 进房信息。
      */
     public void setJoinRoomInput(JoinRoomInput JoinRoomInput) {
         this.JoinRoomInput = JoinRoomInput;
@@ -269,6 +276,22 @@ public class KTVRobotInfo extends AbstractModel{
         this.SetPlayModeInput = SetPlayModeInput;
     }
 
+    /**
+     * Get 音量，范围 0~100，默认为 50。 
+     * @return SetVolumeInput 音量，范围 0~100，默认为 50。
+     */
+    public SetVolumeCommandInput getSetVolumeInput() {
+        return this.SetVolumeInput;
+    }
+
+    /**
+     * Set 音量，范围 0~100，默认为 50。
+     * @param SetVolumeInput 音量，范围 0~100，默认为 50。
+     */
+    public void setSetVolumeInput(SetVolumeCommandInput SetVolumeInput) {
+        this.SetVolumeInput = SetVolumeInput;
+    }
+
     public KTVRobotInfo() {
     }
 
@@ -307,6 +330,9 @@ public class KTVRobotInfo extends AbstractModel{
         if (source.SetPlayModeInput != null) {
             this.SetPlayModeInput = new SetPlayModeCommandInput(source.SetPlayModeInput);
         }
+        if (source.SetVolumeInput != null) {
+            this.SetVolumeInput = new SetVolumeCommandInput(source.SetVolumeInput);
+        }
     }
 
 
@@ -323,6 +349,7 @@ public class KTVRobotInfo extends AbstractModel{
         this.setParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
         this.setParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
         this.setParamObj(map, prefix + "SetPlayModeInput.", this.SetPlayModeInput);
+        this.setParamObj(map, prefix + "SetVolumeInput.", this.SetVolumeInput);
 
     }
 }

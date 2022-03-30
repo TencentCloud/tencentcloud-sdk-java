@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcInteractiveTimeResponse extends AbstractModel{
+public class CreateImageCacheResponse extends AbstractModel{
 
     /**
-    * 应用的用量信息数组。
+    * 镜像缓存Id
     */
-    @SerializedName("Usages")
+    @SerializedName("ImageCacheId")
     @Expose
-    private OneSdkAppIdUsagesInfo [] Usages;
+    private String ImageCacheId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeTrtcInteractiveTimeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 应用的用量信息数组。 
-     * @return Usages 应用的用量信息数组。
+     * Get 镜像缓存Id 
+     * @return ImageCacheId 镜像缓存Id
      */
-    public OneSdkAppIdUsagesInfo [] getUsages() {
-        return this.Usages;
+    public String getImageCacheId() {
+        return this.ImageCacheId;
     }
 
     /**
-     * Set 应用的用量信息数组。
-     * @param Usages 应用的用量信息数组。
+     * Set 镜像缓存Id
+     * @param ImageCacheId 镜像缓存Id
      */
-    public void setUsages(OneSdkAppIdUsagesInfo [] Usages) {
-        this.Usages = Usages;
+    public void setImageCacheId(String ImageCacheId) {
+        this.ImageCacheId = ImageCacheId;
     }
 
     /**
@@ -68,19 +68,16 @@ public class DescribeTrtcInteractiveTimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcInteractiveTimeResponse() {
+    public CreateImageCacheResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcInteractiveTimeResponse(DescribeTrtcInteractiveTimeResponse source) {
-        if (source.Usages != null) {
-            this.Usages = new OneSdkAppIdUsagesInfo[source.Usages.length];
-            for (int i = 0; i < source.Usages.length; i++) {
-                this.Usages[i] = new OneSdkAppIdUsagesInfo(source.Usages[i]);
-            }
+    public CreateImageCacheResponse(CreateImageCacheResponse source) {
+        if (source.ImageCacheId != null) {
+            this.ImageCacheId = new String(source.ImageCacheId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class DescribeTrtcInteractiveTimeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Usages.", this.Usages);
+        this.setParamSimple(map, prefix + "ImageCacheId", this.ImageCacheId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

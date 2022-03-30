@@ -297,6 +297,26 @@ public class DeployApplicationRequest extends AbstractModel{
     private HealthCheckConfig StartupProbe;
 
     /**
+    * 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+    */
+    @SerializedName("OsFlavour")
+    @Expose
+    private String OsFlavour;
+
+    /**
+    * 是否开启prometheus 业务指标监控
+    */
+    @SerializedName("EnablePrometheusConf")
+    @Expose
+    private EnablePrometheusConf EnablePrometheusConf;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -936,6 +956,62 @@ public class DeployApplicationRequest extends AbstractModel{
         this.StartupProbe = StartupProbe;
     }
 
+    /**
+     * Get 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS 
+     * @return OsFlavour 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     */
+    public String getOsFlavour() {
+        return this.OsFlavour;
+    }
+
+    /**
+     * Set 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     * @param OsFlavour 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     */
+    public void setOsFlavour(String OsFlavour) {
+        this.OsFlavour = OsFlavour;
+    }
+
+    /**
+     * Get 是否开启prometheus 业务指标监控 
+     * @return EnablePrometheusConf 是否开启prometheus 业务指标监控
+     */
+    public EnablePrometheusConf getEnablePrometheusConf() {
+        return this.EnablePrometheusConf;
+    }
+
+    /**
+     * Set 是否开启prometheus 业务指标监控
+     * @param EnablePrometheusConf 是否开启prometheus 业务指标监控
+     */
+    public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
+        this.EnablePrometheusConf = EnablePrometheusConf;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1085,6 +1161,12 @@ public class DeployApplicationRequest extends AbstractModel{
         if (source.StartupProbe != null) {
             this.StartupProbe = new HealthCheckConfig(source.StartupProbe);
         }
+        if (source.OsFlavour != null) {
+            this.OsFlavour = new String(source.OsFlavour);
+        }
+        if (source.EnablePrometheusConf != null) {
+            this.EnablePrometheusConf = new EnablePrometheusConf(source.EnablePrometheusConf);
+        }
     }
 
 
@@ -1130,6 +1212,8 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
         this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
         this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
+        this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
+        this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
 
     }
 }

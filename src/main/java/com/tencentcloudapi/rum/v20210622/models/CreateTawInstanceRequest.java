@@ -79,6 +79,13 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private String PeriodRetain;
 
     /**
+    * 实例购买渠道("cdn" 等)
+    */
+    @SerializedName("BuyingChannel")
+    @Expose
+    private String BuyingChannel;
+
+    /**
      * Get 片区Id，(至少大于0) 
      * @return AreaId 片区Id，(至少大于0)
      */
@@ -206,6 +213,22 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.PeriodRetain = PeriodRetain;
     }
 
+    /**
+     * Get 实例购买渠道("cdn" 等) 
+     * @return BuyingChannel 实例购买渠道("cdn" 等)
+     */
+    public String getBuyingChannel() {
+        return this.BuyingChannel;
+    }
+
+    /**
+     * Set 实例购买渠道("cdn" 等)
+     * @param BuyingChannel 实例购买渠道("cdn" 等)
+     */
+    public void setBuyingChannel(String BuyingChannel) {
+        this.BuyingChannel = BuyingChannel;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -241,6 +264,9 @@ public class CreateTawInstanceRequest extends AbstractModel{
         if (source.PeriodRetain != null) {
             this.PeriodRetain = new String(source.PeriodRetain);
         }
+        if (source.BuyingChannel != null) {
+            this.BuyingChannel = new String(source.BuyingChannel);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceDesc", this.InstanceDesc);
         this.setParamSimple(map, prefix + "CountNum", this.CountNum);
         this.setParamSimple(map, prefix + "PeriodRetain", this.PeriodRetain);
+        this.setParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
 
     }
 }

@@ -51,6 +51,20 @@ public class CreateResourceRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * 资源来源，目前支持：existing，已有资源；creating，自动创建
+    */
+    @SerializedName("ResourceFrom")
+    @Expose
+    private String ResourceFrom;
+
+    /**
+    * 设置 resource 的额外配置
+    */
+    @SerializedName("ResourceConfig")
+    @Expose
+    private String ResourceConfig;
+
+    /**
      * Get 环境 Id 
      * @return EnvironmentId 环境 Id
      */
@@ -114,6 +128,38 @@ public class CreateResourceRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get 资源来源，目前支持：existing，已有资源；creating，自动创建 
+     * @return ResourceFrom 资源来源，目前支持：existing，已有资源；creating，自动创建
+     */
+    public String getResourceFrom() {
+        return this.ResourceFrom;
+    }
+
+    /**
+     * Set 资源来源，目前支持：existing，已有资源；creating，自动创建
+     * @param ResourceFrom 资源来源，目前支持：existing，已有资源；creating，自动创建
+     */
+    public void setResourceFrom(String ResourceFrom) {
+        this.ResourceFrom = ResourceFrom;
+    }
+
+    /**
+     * Get 设置 resource 的额外配置 
+     * @return ResourceConfig 设置 resource 的额外配置
+     */
+    public String getResourceConfig() {
+        return this.ResourceConfig;
+    }
+
+    /**
+     * Set 设置 resource 的额外配置
+     * @param ResourceConfig 设置 resource 的额外配置
+     */
+    public void setResourceConfig(String ResourceConfig) {
+        this.ResourceConfig = ResourceConfig;
+    }
+
     public CreateResourceRequest() {
     }
 
@@ -134,6 +180,12 @@ public class CreateResourceRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.ResourceFrom != null) {
+            this.ResourceFrom = new String(source.ResourceFrom);
+        }
+        if (source.ResourceConfig != null) {
+            this.ResourceConfig = new String(source.ResourceConfig);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class CreateResourceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamSimple(map, prefix + "ResourceFrom", this.ResourceFrom);
+        this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
 
     }
 }

@@ -30,14 +30,14 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
-    * 是否开始延迟剔除，取值："true" | "false"
+    * 是否开始延迟剔除，默认false，取值："true" | "false"
     */
     @SerializedName("IsKickout")
     @Expose
     private Boolean IsKickout;
 
     /**
-    * 最少保留数
+    * 最少保留数，最小为0，最大为实例数量
     */
     @SerializedName("MinCount")
     @Expose
@@ -65,14 +65,14 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     private RoWeight RoWeightValues;
 
     /**
-    * 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："true" | "false"
+    * 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，默认false，取值："true" | "false"
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * 是否自动添加只读实例，取值："true" | "false"
+    * 是否自动添加只读实例，默认false，取值："true" | "false"
     */
     @SerializedName("AutoAddRo")
     @Expose
@@ -95,32 +95,32 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开始延迟剔除，取值："true" | "false" 
-     * @return IsKickout 是否开始延迟剔除，取值："true" | "false"
+     * Get 是否开始延迟剔除，默认false，取值："true" | "false" 
+     * @return IsKickout 是否开始延迟剔除，默认false，取值："true" | "false"
      */
     public Boolean getIsKickout() {
         return this.IsKickout;
     }
 
     /**
-     * Set 是否开始延迟剔除，取值："true" | "false"
-     * @param IsKickout 是否开始延迟剔除，取值："true" | "false"
+     * Set 是否开始延迟剔除，默认false，取值："true" | "false"
+     * @param IsKickout 是否开始延迟剔除，默认false，取值："true" | "false"
      */
     public void setIsKickout(Boolean IsKickout) {
         this.IsKickout = IsKickout;
     }
 
     /**
-     * Get 最少保留数 
-     * @return MinCount 最少保留数
+     * Get 最少保留数，最小为0，最大为实例数量 
+     * @return MinCount 最少保留数，最小为0，最大为实例数量
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set 最少保留数
-     * @param MinCount 最少保留数
+     * Set 最少保留数，最小为0，最大为实例数量
+     * @param MinCount 最少保留数，最小为0，最大为实例数量
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
@@ -175,32 +175,32 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："true" | "false" 
-     * @return FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："true" | "false"
+     * Get 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，默认false，取值："true" | "false" 
+     * @return FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，默认false，取值："true" | "false"
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："true" | "false"
-     * @param FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："true" | "false"
+     * Set 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，默认false，取值："true" | "false"
+     * @param FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，默认false，取值："true" | "false"
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否自动添加只读实例，取值："true" | "false" 
-     * @return AutoAddRo 是否自动添加只读实例，取值："true" | "false"
+     * Get 是否自动添加只读实例，默认false，取值："true" | "false" 
+     * @return AutoAddRo 是否自动添加只读实例，默认false，取值："true" | "false"
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加只读实例，取值："true" | "false"
-     * @param AutoAddRo 是否自动添加只读实例，取值："true" | "false"
+     * Set 是否自动添加只读实例，默认false，取值："true" | "false"
+     * @param AutoAddRo 是否自动添加只读实例，默认false，取值："true" | "false"
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;

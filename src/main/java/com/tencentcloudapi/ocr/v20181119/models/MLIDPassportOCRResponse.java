@@ -104,6 +104,20 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     private String AdvancedInfo;
 
     /**
+    * 最下方第一行 MRZ Code 序列
+    */
+    @SerializedName("CodeSet")
+    @Expose
+    private String CodeSet;
+
+    /**
+    * 最下方第二行 MRZ Code 序列
+    */
+    @SerializedName("CodeCrc")
+    @Expose
+    private String CodeCrc;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -315,6 +329,38 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 最下方第一行 MRZ Code 序列 
+     * @return CodeSet 最下方第一行 MRZ Code 序列
+     */
+    public String getCodeSet() {
+        return this.CodeSet;
+    }
+
+    /**
+     * Set 最下方第一行 MRZ Code 序列
+     * @param CodeSet 最下方第一行 MRZ Code 序列
+     */
+    public void setCodeSet(String CodeSet) {
+        this.CodeSet = CodeSet;
+    }
+
+    /**
+     * Get 最下方第二行 MRZ Code 序列 
+     * @return CodeCrc 最下方第二行 MRZ Code 序列
+     */
+    public String getCodeCrc() {
+        return this.CodeCrc;
+    }
+
+    /**
+     * Set 最下方第二行 MRZ Code 序列
+     * @param CodeCrc 最下方第二行 MRZ Code 序列
+     */
+    public void setCodeCrc(String CodeCrc) {
+        this.CodeCrc = CodeCrc;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -371,6 +417,12 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         if (source.AdvancedInfo != null) {
             this.AdvancedInfo = new String(source.AdvancedInfo);
         }
+        if (source.CodeSet != null) {
+            this.CodeSet = new String(source.CodeSet);
+        }
+        if (source.CodeCrc != null) {
+            this.CodeCrc = new String(source.CodeCrc);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -391,6 +443,8 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Warn.", this.Warn);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamSimple(map, prefix + "CodeSet", this.CodeSet);
+        this.setParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

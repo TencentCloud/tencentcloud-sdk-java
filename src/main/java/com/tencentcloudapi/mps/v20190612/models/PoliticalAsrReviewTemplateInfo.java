@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
 
     /**
-    * 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
+    * 语音涉敏任务开关，可选值：
+<li>ON：开启语音涉敏任务；</li>
+<li>OFF：关闭语音涉敏任务。</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,24 +46,24 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * Get 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li> 
-     * @return Switch 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
+     * Get 语音涉敏任务开关，可选值：
+<li>ON：开启语音涉敏任务；</li>
+<li>OFF：关闭语音涉敏任务。</li> 
+     * @return Switch 语音涉敏任务开关，可选值：
+<li>ON：开启语音涉敏任务；</li>
+<li>OFF：关闭语音涉敏任务。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
-     * @param Switch 语音鉴政任务开关，可选值：
-<li>ON：开启语音鉴政任务；</li>
-<li>OFF：关闭语音鉴政任务。</li>
+     * Set 语音涉敏任务开关，可选值：
+<li>ON：开启语音涉敏任务；</li>
+<li>OFF：关闭语音涉敏任务。</li>
+     * @param Switch 语音涉敏任务开关，可选值：
+<li>ON：开启语音涉敏任务；</li>
+<li>OFF：关闭语音涉敏任务。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

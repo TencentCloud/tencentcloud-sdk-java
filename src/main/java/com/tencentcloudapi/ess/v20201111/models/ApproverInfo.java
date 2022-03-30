@@ -69,7 +69,10 @@ public class ApproverInfo extends AbstractModel{
     private String ApproverIdCardNumber;
 
     /**
-    * 证件类型 ID_CARD 身份证
+    * 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     */
     @SerializedName("ApproverIdCardType")
     @Expose
@@ -90,12 +93,7 @@ public class ApproverInfo extends AbstractModel{
     private Long ApproverRole;
 
     /**
-    * 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+    * 签署意愿确认渠道,WEIXINAPP:人脸识别
     */
     @SerializedName("VerifyChannel")
     @Expose
@@ -221,16 +219,28 @@ VERIFYCODE - 验证码；
     }
 
     /**
-     * Get 证件类型 ID_CARD 身份证 
-     * @return ApproverIdCardType 证件类型 ID_CARD 身份证
+     * Get 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
+     * @return ApproverIdCardType 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public String getApproverIdCardType() {
         return this.ApproverIdCardType;
     }
 
     /**
-     * Set 证件类型 ID_CARD 身份证
-     * @param ApproverIdCardType 证件类型 ID_CARD 身份证
+     * Set 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+     * @param ApproverIdCardType 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public void setApproverIdCardType(String ApproverIdCardType) {
         this.ApproverIdCardType = ApproverIdCardType;
@@ -269,36 +279,16 @@ VERIFYCODE - 验证码；
     }
 
     /**
-     * Get 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"] 
-     * @return VerifyChannel 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
+     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
     public String [] getVerifyChannel() {
         return this.VerifyChannel;
     }
 
     /**
-     * Set 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
-     * @param VerifyChannel 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
     public void setVerifyChannel(String [] VerifyChannel) {
         this.VerifyChannel = VerifyChannel;

@@ -106,6 +106,16 @@ public class IngressInfo extends AbstractModel{
     private Boolean Mixed;
 
     /**
+    * 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RewriteType")
+    @Expose
+    private String RewriteType;
+
+    /**
      * Get 环境ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnvironmentId 环境ID
@@ -305,6 +315,34 @@ public class IngressInfo extends AbstractModel{
         this.Mixed = Mixed;
     }
 
+    /**
+     * Get 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RewriteType 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRewriteType() {
+        return this.RewriteType;
+    }
+
+    /**
+     * Set 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RewriteType 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRewriteType(String RewriteType) {
+        this.RewriteType = RewriteType;
+    }
+
     public IngressInfo() {
     }
 
@@ -352,6 +390,9 @@ public class IngressInfo extends AbstractModel{
         if (source.Mixed != null) {
             this.Mixed = new Boolean(source.Mixed);
         }
+        if (source.RewriteType != null) {
+            this.RewriteType = new String(source.RewriteType);
+        }
     }
 
 
@@ -370,6 +411,7 @@ public class IngressInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Mixed", this.Mixed);
+        this.setParamSimple(map, prefix + "RewriteType", this.RewriteType);
 
     }
 }

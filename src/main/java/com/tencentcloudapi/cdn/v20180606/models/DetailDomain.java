@@ -528,6 +528,14 @@ off：不支持
     private RuleEngine RuleEngine;
 
     /**
+    * 主域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentHost")
+    @Expose
+    private String ParentHost;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1815,6 +1823,26 @@ off：不支持
         this.RuleEngine = RuleEngine;
     }
 
+    /**
+     * Get 主域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentHost 主域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentHost() {
+        return this.ParentHost;
+    }
+
+    /**
+     * Set 主域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentHost 主域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentHost(String ParentHost) {
+        this.ParentHost = ParentHost;
+    }
+
     public DetailDomain() {
     }
 
@@ -2015,6 +2043,9 @@ off：不支持
         if (source.RuleEngine != null) {
             this.RuleEngine = new RuleEngine(source.RuleEngine);
         }
+        if (source.ParentHost != null) {
+            this.ParentHost = new String(source.ParentHost);
+        }
     }
 
 
@@ -2083,6 +2114,7 @@ off：不支持
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
         this.setParamObj(map, prefix + "RuleEngine.", this.RuleEngine);
+        this.setParamSimple(map, prefix + "ParentHost", this.ParentHost);
 
     }
 }

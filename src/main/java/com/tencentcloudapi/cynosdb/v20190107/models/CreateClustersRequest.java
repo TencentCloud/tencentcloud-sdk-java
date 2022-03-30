@@ -119,7 +119,7 @@ public class CreateClustersRequest extends AbstractModel{
     private Long PayMode;
 
     /**
-    * 购买个数，目前只支持传1（不传默认为1）
+    * 购买集群数，可选值范围[1,50]，默认为1
     */
     @SerializedName("Count")
     @Expose
@@ -545,16 +545,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 购买个数，目前只支持传1（不传默认为1） 
-     * @return Count 购买个数，目前只支持传1（不传默认为1）
+     * Get 购买集群数，可选值范围[1,50]，默认为1 
+     * @return Count 购买集群数，可选值范围[1,50]，默认为1
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 购买个数，目前只支持传1（不传默认为1）
-     * @param Count 购买个数，目前只支持传1（不传默认为1）
+     * Set 购买集群数，可选值范围[1,50]，默认为1
+     * @param Count 购买集群数，可选值范围[1,50]，默认为1
      */
     public void setCount(Long Count) {
         this.Count = Count;

@@ -88,6 +88,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
+    * 是否去除水印，类型为慢直播时此参数无效。
+    */
+    @SerializedName("RemoveWatermark")
+    @Expose
+    private Boolean RemoveWatermark;
+
+    /**
      * Get 模板名。仅支持中文、英文、数字、_、-。 
      * @return TemplateName 模板名。仅支持中文、英文、数字、_、-。
      */
@@ -239,6 +246,22 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         this.Mp3Param = Mp3Param;
     }
 
+    /**
+     * Get 是否去除水印，类型为慢直播时此参数无效。 
+     * @return RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
+     */
+    public Boolean getRemoveWatermark() {
+        return this.RemoveWatermark;
+    }
+
+    /**
+     * Set 是否去除水印，类型为慢直播时此参数无效。
+     * @param RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
+     */
+    public void setRemoveWatermark(Boolean RemoveWatermark) {
+        this.RemoveWatermark = RemoveWatermark;
+    }
+
     public CreateLiveRecordTemplateRequest() {
     }
 
@@ -274,6 +297,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         if (source.Mp3Param != null) {
             this.Mp3Param = new RecordParam(source.Mp3Param);
         }
+        if (source.RemoveWatermark != null) {
+            this.RemoveWatermark = new Boolean(source.RemoveWatermark);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+        this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
 
     }
 }

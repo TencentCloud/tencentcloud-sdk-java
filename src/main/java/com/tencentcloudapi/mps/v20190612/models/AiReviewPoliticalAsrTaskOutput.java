@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
 
     /**
-    * Asr 文字涉政、敏感评分，分值为0到100。
+    * Asr 文字敏感评分，分值为0到100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Asr 文字涉政、敏感结果建议，取值范围：
+    * Asr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -40,34 +40,34 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * Asr 文字有涉政、敏感嫌疑的视频片段列表。
+    * Asr 文字敏感嫌疑的视频片段列表。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Asr 文字涉政、敏感评分，分值为0到100。 
-     * @return Confidence Asr 文字涉政、敏感评分，分值为0到100。
+     * Get Asr 文字敏感评分，分值为0到100。 
+     * @return Confidence Asr 文字敏感评分，分值为0到100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Asr 文字涉政、敏感评分，分值为0到100。
-     * @param Confidence Asr 文字涉政、敏感评分，分值为0到100。
+     * Set Asr 文字敏感评分，分值为0到100。
+     * @param Confidence Asr 文字敏感评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Asr 文字涉政、敏感结果建议，取值范围：
+     * Get Asr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion Asr 文字涉政、敏感结果建议，取值范围：
+     * @return Suggestion Asr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -77,11 +77,11 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set Asr 文字涉政、敏感结果建议，取值范围：
+     * Set Asr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion Asr 文字涉政、敏感结果建议，取值范围：
+     * @param Suggestion Asr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -91,16 +91,16 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get Asr 文字有涉政、敏感嫌疑的视频片段列表。 
-     * @return SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Get Asr 文字敏感嫌疑的视频片段列表。 
+     * @return SegmentSet Asr 文字敏感嫌疑的视频片段列表。
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Asr 文字有涉政、敏感嫌疑的视频片段列表。
-     * @param SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Set Asr 文字敏感嫌疑的视频片段列表。
+     * @param SegmentSet Asr 文字敏感嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

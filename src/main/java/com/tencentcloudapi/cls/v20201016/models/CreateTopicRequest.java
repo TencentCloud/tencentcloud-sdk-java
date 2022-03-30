@@ -65,14 +65,14 @@ public class CreateTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
-    * 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
+    * 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 生命周期，单位天；可取值范围1~366。默认30天
+    * 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
     */
     @SerializedName("Period")
     @Expose
@@ -175,32 +175,32 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。 
-     * @return StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
+     * Get 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。 
+     * @return StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
-     * @param StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
+     * Set 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+     * @param StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 生命周期，单位天；可取值范围1~366。默认30天 
-     * @return Period 生命周期，单位天；可取值范围1~366。默认30天
+     * Get 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存 
+     * @return Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 生命周期，单位天；可取值范围1~366。默认30天
-     * @param Period 生命周期，单位天；可取值范围1~366。默认30天
+     * Set 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+     * @param Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

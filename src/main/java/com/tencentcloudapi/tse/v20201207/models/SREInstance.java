@@ -199,6 +199,22 @@ public class SREInstance extends AbstractModel{
     private Boolean EnableConsoleIntranet;
 
     /**
+    * 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigInfoVisible")
+    @Expose
+    private Boolean ConfigInfoVisible;
+
+    /**
+    * 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsoleDefaultPwd")
+    @Expose
+    private String ConsoleDefaultPwd;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -626,6 +642,46 @@ public class SREInstance extends AbstractModel{
         this.EnableConsoleIntranet = EnableConsoleIntranet;
     }
 
+    /**
+     * Get 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigInfoVisible 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getConfigInfoVisible() {
+        return this.ConfigInfoVisible;
+    }
+
+    /**
+     * Set 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigInfoVisible 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigInfoVisible(Boolean ConfigInfoVisible) {
+        this.ConfigInfoVisible = ConfigInfoVisible;
+    }
+
+    /**
+     * Get 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsoleDefaultPwd 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConsoleDefaultPwd() {
+        return this.ConsoleDefaultPwd;
+    }
+
+    /**
+     * Set 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsoleDefaultPwd 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsoleDefaultPwd(String ConsoleDefaultPwd) {
+        this.ConsoleDefaultPwd = ConsoleDefaultPwd;
+    }
+
     public SREInstance() {
     }
 
@@ -718,6 +774,12 @@ public class SREInstance extends AbstractModel{
         if (source.EnableConsoleIntranet != null) {
             this.EnableConsoleIntranet = new Boolean(source.EnableConsoleIntranet);
         }
+        if (source.ConfigInfoVisible != null) {
+            this.ConfigInfoVisible = new Boolean(source.ConfigInfoVisible);
+        }
+        if (source.ConsoleDefaultPwd != null) {
+            this.ConsoleDefaultPwd = new String(source.ConsoleDefaultPwd);
+        }
     }
 
 
@@ -748,6 +810,8 @@ public class SREInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "EnableConsoleInternet", this.EnableConsoleInternet);
         this.setParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
+        this.setParamSimple(map, prefix + "ConfigInfoVisible", this.ConfigInfoVisible);
+        this.setParamSimple(map, prefix + "ConsoleDefaultPwd", this.ConsoleDefaultPwd);
 
     }
 }

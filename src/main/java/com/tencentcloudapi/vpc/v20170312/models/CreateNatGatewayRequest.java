@@ -86,6 +86,27 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    */
+    @SerializedName("StockPublicIpAddressesBandwidthOut")
+    @Expose
+    private Long StockPublicIpAddressesBandwidthOut;
+
+    /**
+    * 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    */
+    @SerializedName("PublicIpAddressesBandwidthOut")
+    @Expose
+    private Long PublicIpAddressesBandwidthOut;
+
+    /**
+    * 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+    */
+    @SerializedName("PublicIpFromSameZone")
+    @Expose
+    private Boolean PublicIpFromSameZone;
+
+    /**
      * Get NAT网关名称 
      * @return NatGatewayName NAT网关名称
      */
@@ -229,6 +250,54 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
+     * @return StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public Long getStockPublicIpAddressesBandwidthOut() {
+        return this.StockPublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Set 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public void setStockPublicIpAddressesBandwidthOut(Long StockPublicIpAddressesBandwidthOut) {
+        this.StockPublicIpAddressesBandwidthOut = StockPublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Get 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
+     * @return PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public Long getPublicIpAddressesBandwidthOut() {
+        return this.PublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Set 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public void setPublicIpAddressesBandwidthOut(Long PublicIpAddressesBandwidthOut) {
+        this.PublicIpAddressesBandwidthOut = PublicIpAddressesBandwidthOut;
+    }
+
+    /**
+     * Get 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。 
+     * @return PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+     */
+    public Boolean getPublicIpFromSameZone() {
+        return this.PublicIpFromSameZone;
+    }
+
+    /**
+     * Set 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+     * @param PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+     */
+    public void setPublicIpFromSameZone(Boolean PublicIpFromSameZone) {
+        this.PublicIpFromSameZone = PublicIpFromSameZone;
+    }
+
     public CreateNatGatewayRequest() {
     }
 
@@ -270,6 +339,15 @@ public class CreateNatGatewayRequest extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.StockPublicIpAddressesBandwidthOut != null) {
+            this.StockPublicIpAddressesBandwidthOut = new Long(source.StockPublicIpAddressesBandwidthOut);
+        }
+        if (source.PublicIpAddressesBandwidthOut != null) {
+            this.PublicIpAddressesBandwidthOut = new Long(source.PublicIpAddressesBandwidthOut);
+        }
+        if (source.PublicIpFromSameZone != null) {
+            this.PublicIpFromSameZone = new Boolean(source.PublicIpFromSameZone);
+        }
     }
 
 
@@ -286,6 +364,9 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
+        this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
+        this.setParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
 
     }
 }

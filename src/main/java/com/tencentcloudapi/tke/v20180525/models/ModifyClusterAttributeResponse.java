@@ -47,6 +47,22 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
     private String ClusterDesc;
 
     /**
+    * 集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -114,6 +130,46 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
     }
 
     /**
+     * Get 集群等级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterLevel 集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterLevel 集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoUpgradeClusterLevel 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoUpgradeClusterLevel 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -146,6 +202,12 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         if (source.ClusterDesc != null) {
             this.ClusterDesc = new String(source.ClusterDesc);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -159,6 +221,8 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

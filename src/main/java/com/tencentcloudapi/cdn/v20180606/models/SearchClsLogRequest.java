@@ -58,7 +58,7 @@ public class SearchClsLogRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 接入渠道，默认值为cdn
+    * 接入渠道，cdn或者ecdn，默认值为cdn
     */
     @SerializedName("Channel")
     @Expose
@@ -166,16 +166,16 @@ public class SearchClsLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 接入渠道，默认值为cdn 
-     * @return Channel 接入渠道，默认值为cdn
+     * Get 接入渠道，cdn或者ecdn，默认值为cdn 
+     * @return Channel 接入渠道，cdn或者ecdn，默认值为cdn
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 接入渠道，默认值为cdn
-     * @param Channel 接入渠道，默认值为cdn
+     * Set 接入渠道，cdn或者ecdn，默认值为cdn
+     * @param Channel 接入渠道，cdn或者ecdn，默认值为cdn
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;

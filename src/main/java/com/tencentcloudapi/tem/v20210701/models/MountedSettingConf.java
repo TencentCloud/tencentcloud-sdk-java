@@ -44,6 +44,13 @@ public class MountedSettingConf extends AbstractModel{
     private Pair [] Data;
 
     /**
+    * 加密配置名称
+    */
+    @SerializedName("SecretDataName")
+    @Expose
+    private String SecretDataName;
+
+    /**
      * Get 配置名称 
      * @return ConfigDataName 配置名称
      */
@@ -91,6 +98,22 @@ public class MountedSettingConf extends AbstractModel{
         this.Data = Data;
     }
 
+    /**
+     * Get 加密配置名称 
+     * @return SecretDataName 加密配置名称
+     */
+    public String getSecretDataName() {
+        return this.SecretDataName;
+    }
+
+    /**
+     * Set 加密配置名称
+     * @param SecretDataName 加密配置名称
+     */
+    public void setSecretDataName(String SecretDataName) {
+        this.SecretDataName = SecretDataName;
+    }
+
     public MountedSettingConf() {
     }
 
@@ -111,6 +134,9 @@ public class MountedSettingConf extends AbstractModel{
                 this.Data[i] = new Pair(source.Data[i]);
             }
         }
+        if (source.SecretDataName != null) {
+            this.SecretDataName = new String(source.SecretDataName);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class MountedSettingConf extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
         this.setParamSimple(map, prefix + "MountedPath", this.MountedPath);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "SecretDataName", this.SecretDataName);
 
     }
 }

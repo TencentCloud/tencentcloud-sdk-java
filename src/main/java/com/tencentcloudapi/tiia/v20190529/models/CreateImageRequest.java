@@ -39,16 +39,16 @@ public class CreateImageRequest extends AbstractModel{
 
     /**
     * 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
     */
     @SerializedName("PicName")
     @Expose
     private String PicName;
 
     /**
-    * 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+    * 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -58,8 +58,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String ImageUrl;
 
     /**
-    * 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+    * 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("ImageBase64")
@@ -118,9 +118,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Get 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。 
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。 
      * @return PicName 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
      */
     public String getPicName() {
         return this.PicName;
@@ -128,24 +128,24 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Set 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
      * @param PicName 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
      */
     public void setPicName(String PicName) {
         this.PicName = PicName;
     }
 
     /**
-     * Get 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+     * Get 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-     * @return ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+     * @return ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -155,15 +155,15 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * Set 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+     * Set 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+     * @param ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -173,11 +173,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * Get 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+     * Get 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-     * @return ImageBase64 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+     * @return ImageBase64 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImageBase64() {
@@ -185,11 +185,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * Set 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+     * Set 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param ImageBase64 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+     * @param ImageBase64 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImageBase64(String ImageBase64) {

@@ -53,6 +53,14 @@ public class Pair extends AbstractModel{
     private String Config;
 
     /**
+    * 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Secret")
+    @Expose
+    private String Secret;
+
+    /**
      * Get 键 
      * @return Key 键
      */
@@ -124,6 +132,26 @@ public class Pair extends AbstractModel{
         this.Config = Config;
     }
 
+    /**
+     * Get 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Secret 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecret() {
+        return this.Secret;
+    }
+
+    /**
+     * Set 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Secret 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecret(String Secret) {
+        this.Secret = Secret;
+    }
+
     public Pair() {
     }
 
@@ -144,6 +172,9 @@ public class Pair extends AbstractModel{
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.Secret != null) {
+            this.Secret = new String(source.Secret);
+        }
     }
 
 
@@ -155,6 +186,7 @@ public class Pair extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "Secret", this.Secret);
 
     }
 }

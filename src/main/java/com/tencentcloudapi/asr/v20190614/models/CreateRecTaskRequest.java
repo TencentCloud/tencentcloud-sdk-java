@@ -45,7 +45,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private String EngineModelType;
 
     /**
-    * 识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
+    * 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
     */
     @SerializedName("ChannelNum")
     @Expose
@@ -110,11 +110,11 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long DataLen;
 
     /**
-    * 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+    * 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
     */
-    @SerializedName("HotwordId")
+    @SerializedName("ConvertNumMode")
     @Expose
-    private String HotwordId;
+    private Long ConvertNumMode;
 
     /**
     * 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -124,18 +124,18 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long FilterDirty;
 
     /**
-    * 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+    * 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
     */
-    @SerializedName("FilterModal")
+    @SerializedName("HotwordId")
     @Expose
-    private Long FilterModal;
+    private String HotwordId;
 
     /**
-    * 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+    * 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
     */
-    @SerializedName("ConvertNumMode")
+    @SerializedName("CustomizationId")
     @Expose
-    private Long ConvertNumMode;
+    private String CustomizationId;
 
     /**
     * 附加参数(该参数无意义，忽略即可)
@@ -150,6 +150,13 @@ public class CreateRecTaskRequest extends AbstractModel{
     @SerializedName("FilterPunc")
     @Expose
     private Long FilterPunc;
+
+    /**
+    * 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+    */
+    @SerializedName("FilterModal")
+    @Expose
+    private Long FilterModal;
 
     /**
      * Get 引擎模型类型。
@@ -228,16 +235,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数 
-     * @return ChannelNum 识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
+     * Get 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。 
+     * @return ChannelNum 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
      */
     public Long getChannelNum() {
         return this.ChannelNum;
     }
 
     /**
-     * Set 识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
-     * @param ChannelNum 识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
+     * Set 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
+     * @param ChannelNum 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
      */
     public void setChannelNum(Long ChannelNum) {
         this.ChannelNum = ChannelNum;
@@ -380,19 +387,19 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。 
-     * @return HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * Get 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。 
+     * @return ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      */
-    public String getHotwordId() {
-        return this.HotwordId;
+    public Long getConvertNumMode() {
+        return this.ConvertNumMode;
     }
 
     /**
-     * Set 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
-     * @param HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * Set 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+     * @param ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      */
-    public void setHotwordId(String HotwordId) {
-        this.HotwordId = HotwordId;
+    public void setConvertNumMode(Long ConvertNumMode) {
+        this.ConvertNumMode = ConvertNumMode;
     }
 
     /**
@@ -412,35 +419,35 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。 
-     * @return FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     * Get 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。 
+     * @return HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
      */
-    public Long getFilterModal() {
-        return this.FilterModal;
+    public String getHotwordId() {
+        return this.HotwordId;
     }
 
     /**
-     * Set 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
-     * @param FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     * Set 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+     * @param HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
      */
-    public void setFilterModal(Long FilterModal) {
-        this.FilterModal = FilterModal;
+    public void setHotwordId(String HotwordId) {
+        this.HotwordId = HotwordId;
     }
 
     /**
-     * Get 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。 
-     * @return ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+     * Get 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。 
+     * @return CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
      */
-    public Long getConvertNumMode() {
-        return this.ConvertNumMode;
+    public String getCustomizationId() {
+        return this.CustomizationId;
     }
 
     /**
-     * Set 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
-     * @param ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+     * Set 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * @param CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
      */
-    public void setConvertNumMode(Long ConvertNumMode) {
-        this.ConvertNumMode = ConvertNumMode;
+    public void setCustomizationId(String CustomizationId) {
+        this.CustomizationId = CustomizationId;
     }
 
     /**
@@ -473,6 +480,22 @@ public class CreateRecTaskRequest extends AbstractModel{
      */
     public void setFilterPunc(Long FilterPunc) {
         this.FilterPunc = FilterPunc;
+    }
+
+    /**
+     * Get 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。 
+     * @return FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     */
+    public Long getFilterModal() {
+        return this.FilterModal;
+    }
+
+    /**
+     * Set 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     * @param FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     */
+    public void setFilterModal(Long FilterModal) {
+        this.FilterModal = FilterModal;
     }
 
     public CreateRecTaskRequest() {
@@ -513,23 +536,26 @@ public class CreateRecTaskRequest extends AbstractModel{
         if (source.DataLen != null) {
             this.DataLen = new Long(source.DataLen);
         }
-        if (source.HotwordId != null) {
-            this.HotwordId = new String(source.HotwordId);
+        if (source.ConvertNumMode != null) {
+            this.ConvertNumMode = new Long(source.ConvertNumMode);
         }
         if (source.FilterDirty != null) {
             this.FilterDirty = new Long(source.FilterDirty);
         }
-        if (source.FilterModal != null) {
-            this.FilterModal = new Long(source.FilterModal);
+        if (source.HotwordId != null) {
+            this.HotwordId = new String(source.HotwordId);
         }
-        if (source.ConvertNumMode != null) {
-            this.ConvertNumMode = new Long(source.ConvertNumMode);
+        if (source.CustomizationId != null) {
+            this.CustomizationId = new String(source.CustomizationId);
         }
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
         if (source.FilterPunc != null) {
             this.FilterPunc = new Long(source.FilterPunc);
+        }
+        if (source.FilterModal != null) {
+            this.FilterModal = new Long(source.FilterModal);
         }
     }
 
@@ -548,12 +574,13 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "DataLen", this.DataLen);
-        this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
-        this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
-        this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
+        this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+        this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        this.setParamSimple(map, prefix + "CustomizationId", this.CustomizationId);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
+        this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
 
     }
 }

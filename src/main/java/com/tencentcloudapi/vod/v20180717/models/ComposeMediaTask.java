@@ -78,7 +78,7 @@ public class ComposeMediaTask extends AbstractModel{
     private ComposeMediaTaskOutput Output;
 
     /**
-    * 原始视频的元信息。
+    * 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
@@ -236,9 +236,9 @@ public class ComposeMediaTask extends AbstractModel{
     }
 
     /**
-     * Get 原始视频的元信息。
+     * Get 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetaData 原始视频的元信息。
+     * @return MetaData 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
@@ -246,9 +246,9 @@ public class ComposeMediaTask extends AbstractModel{
     }
 
     /**
-     * Set 原始视频的元信息。
+     * Set 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaData 原始视频的元信息。
+     * @param MetaData 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {

@@ -27,6 +27,9 @@ public enum TcbErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // API已经创建。
+     INVALIDPARAMETER_APICREATED("InvalidParameter.APICreated"),
+     
     // 接口名非法。
      INVALIDPARAMETER_ACTION("InvalidParameter.Action"),
      

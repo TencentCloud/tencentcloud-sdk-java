@@ -94,7 +94,7 @@ public class Cluster extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
-    * 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+    * 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -328,16 +328,16 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  ) 
-     * @return ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * Get 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  ) 
+     * @return ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
-     * @param ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * Set 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+     * @param ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;

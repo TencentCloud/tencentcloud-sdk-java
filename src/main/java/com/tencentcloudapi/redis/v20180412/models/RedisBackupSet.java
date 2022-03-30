@@ -65,6 +65,30 @@ public class RedisBackupSet extends AbstractModel{
     private Long Locked;
 
     /**
+    * 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupSize")
+    @Expose
+    private Long BackupSize;
+
+    /**
+    * 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullBackup")
+    @Expose
+    private Long FullBackup;
+
+    /**
+    * 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 开始备份的时间 
      * @return StartTime 开始备份的时间
      */
@@ -160,6 +184,66 @@ public class RedisBackupSet extends AbstractModel{
         this.Locked = Locked;
     }
 
+    /**
+     * Get 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupSize 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupSize() {
+        return this.BackupSize;
+    }
+
+    /**
+     * Set 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupSize 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupSize(Long BackupSize) {
+        this.BackupSize = BackupSize;
+    }
+
+    /**
+     * Get 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullBackup 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFullBackup() {
+        return this.FullBackup;
+    }
+
+    /**
+     * Set 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullBackup 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullBackup(Long FullBackup) {
+        this.FullBackup = FullBackup;
+    }
+
+    /**
+     * Get 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public RedisBackupSet() {
     }
 
@@ -186,6 +270,15 @@ public class RedisBackupSet extends AbstractModel{
         if (source.Locked != null) {
             this.Locked = new Long(source.Locked);
         }
+        if (source.BackupSize != null) {
+            this.BackupSize = new Long(source.BackupSize);
+        }
+        if (source.FullBackup != null) {
+            this.FullBackup = new Long(source.FullBackup);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -199,6 +292,9 @@ public class RedisBackupSet extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Locked", this.Locked);
+        this.setParamSimple(map, prefix + "BackupSize", this.BackupSize);
+        this.setParamSimple(map, prefix + "FullBackup", this.FullBackup);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -143,6 +143,14 @@ public class OrgMember extends AbstractModel{
     private MemberIdentity [] OrgIdentity;
 
     /**
+    * 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindStatus")
+    @Expose
+    private String BindStatus;
+
+    /**
      * Get 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemberUin 成员Uin
@@ -442,6 +450,26 @@ public class OrgMember extends AbstractModel{
         this.OrgIdentity = OrgIdentity;
     }
 
+    /**
+     * Get 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindStatus 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBindStatus() {
+        return this.BindStatus;
+    }
+
+    /**
+     * Set 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindStatus 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindStatus(String BindStatus) {
+        this.BindStatus = BindStatus;
+    }
+
     public OrgMember() {
     }
 
@@ -501,6 +529,9 @@ public class OrgMember extends AbstractModel{
                 this.OrgIdentity[i] = new MemberIdentity(source.OrgIdentity[i]);
             }
         }
+        if (source.BindStatus != null) {
+            this.BindStatus = new String(source.BindStatus);
+        }
     }
 
 
@@ -523,6 +554,7 @@ public class OrgMember extends AbstractModel{
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
         this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
+        this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
 
     }
 }

@@ -135,7 +135,7 @@ public class ImageRepository extends AbstractModel{
     private String ApplicationId;
 
     /**
-    * ApplicationName值
+    * ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
@@ -423,9 +423,9 @@ public class ImageRepository extends AbstractModel{
     }
 
     /**
-     * Get ApplicationName值
+     * Get ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationName ApplicationName值
+     * @return ApplicationName ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScalableRule getApplicationName() {
@@ -433,9 +433,9 @@ public class ImageRepository extends AbstractModel{
     }
 
     /**
-     * Set ApplicationName值
+     * Set ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationName ApplicationName值
+     * @param ApplicationName ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(ScalableRule ApplicationName) {

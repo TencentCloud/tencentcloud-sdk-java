@@ -163,6 +163,20 @@ public class PushQualityData extends AbstractModel{
     private String StreamParam;
 
     /**
+    * 带宽，单位Mbps。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Float Bandwidth;
+
+    /**
+    * 流量，单位MB。
+    */
+    @SerializedName("Flux")
+    @Expose
+    private Float Flux;
+
+    /**
      * Get 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
      * @return Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
@@ -482,6 +496,38 @@ public class PushQualityData extends AbstractModel{
         this.StreamParam = StreamParam;
     }
 
+    /**
+     * Get 带宽，单位Mbps。 
+     * @return Bandwidth 带宽，单位Mbps。
+     */
+    public Float getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 带宽，单位Mbps。
+     * @param Bandwidth 带宽，单位Mbps。
+     */
+    public void setBandwidth(Float Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 流量，单位MB。 
+     * @return Flux 流量，单位MB。
+     */
+    public Float getFlux() {
+        return this.Flux;
+    }
+
+    /**
+     * Set 流量，单位MB。
+     * @param Flux 流量，单位MB。
+     */
+    public void setFlux(Float Flux) {
+        this.Flux = Flux;
+    }
+
     public PushQualityData() {
     }
 
@@ -550,6 +596,12 @@ public class PushQualityData extends AbstractModel{
         if (source.StreamParam != null) {
             this.StreamParam = new String(source.StreamParam);
         }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Float(source.Bandwidth);
+        }
+        if (source.Flux != null) {
+            this.Flux = new Float(source.Flux);
+        }
     }
 
 
@@ -577,6 +629,8 @@ public class PushQualityData extends AbstractModel{
         this.setParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
         this.setParamSimple(map, prefix + "MateFps", this.MateFps);
         this.setParamSimple(map, prefix + "StreamParam", this.StreamParam);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "Flux", this.Flux);
 
     }
 }

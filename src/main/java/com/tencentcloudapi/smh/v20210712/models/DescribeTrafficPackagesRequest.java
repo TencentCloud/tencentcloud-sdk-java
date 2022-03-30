@@ -44,6 +44,27 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
     private Long PageSize;
 
     /**
+    * 对指定列进行排序
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 排序方式
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
+    * 来源类型筛选
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get 按照一个或者多个资源 ID 查询，每次请求的上限为 100 个。 
      * @return ResourceIds 按照一个或者多个资源 ID 查询，每次请求的上限为 100 个。
      */
@@ -91,6 +112,54 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 对指定列进行排序 
+     * @return OrderBy 对指定列进行排序
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 对指定列进行排序
+     * @param OrderBy 对指定列进行排序
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 排序方式 
+     * @return OrderByType 排序方式
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序方式
+     * @param OrderByType 排序方式
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
+    /**
+     * Get 来源类型筛选 
+     * @return Type 来源类型筛选
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 来源类型筛选
+     * @param Type 来源类型筛选
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public DescribeTrafficPackagesRequest() {
     }
 
@@ -111,6 +180,15 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -121,6 +199,9 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

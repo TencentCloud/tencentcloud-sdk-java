@@ -93,7 +93,7 @@ public class AgentBillElem extends AbstractModel{
     private String PayerMode;
 
     /**
-    * 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+    * 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientType")
@@ -277,9 +277,9 @@ public class AgentBillElem extends AbstractModel{
     }
 
     /**
-     * Get 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Get 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @return ClientType 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientType() {
@@ -287,9 +287,9 @@ public class AgentBillElem extends AbstractModel{
     }
 
     /**
-     * Set 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Set 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @param ClientType 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientType(String ClientType) {

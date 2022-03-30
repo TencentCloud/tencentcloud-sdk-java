@@ -36,8 +36,14 @@ public enum TemErrorCode {
     // 环境重复。
      INVALIDPARAMETERVALUE_NAMESPACEDUPLICATEERROR("InvalidParameterValue.NamespaceDuplicateError"),
      
+    // 命名空间不属于用户。
+     INVALIDPARAMETERVALUE_NAMESPACENOTBELONGTOAPPID("InvalidParameterValue.NamespaceNotBelongToAppid"),
+     
     // 环境创建失败，达到上限。
      INVALIDPARAMETERVALUE_NAMESPACEREACHMAXIMUM("InvalidParameterValue.NamespaceReachMaximum"),
+     
+    // 环境资源创建失败，达到上限。
+     INVALIDPARAMETERVALUE_NAMESPACERESOURCEREACHMAXIMUM("InvalidParameterValue.NamespaceResourceReachMaximum"),
      
     // 应用存在正在运行的实例。
      INVALIDPARAMETERVALUE_SERVICEFOUNDRUNNINGVERSION("InvalidParameterValue.ServiceFoundRunningVersion"),
@@ -54,8 +60,14 @@ public enum TemErrorCode {
     // 版本的路由流量不为0。
      INVALIDPARAMETERVALUE_VERSIONROUTERATENOTZERO("InvalidParameterValue.VersionRouteRateNotZero"),
      
+    // 部署版本不能为空。
+     MISSINGPARAMETER_DEPLOYVERSIONNULL("MissingParameter.DeployVersionNull"),
+     
     // 环境ID不能为空。
      MISSINGPARAMETER_NAMESPACEIDNULL("MissingParameter.NamespaceIdNull"),
+     
+    // 服务ID不能为空。
+     MISSINGPARAMETER_SERVICEIDNULL("MissingParameter.ServiceIdNull"),
      
     // 目标微服务已离线。
      RESOURCENOTFOUND_MICROSERVICEOFFLINE("ResourceNotFound.MicroserviceOffline"),

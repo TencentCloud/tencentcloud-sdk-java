@@ -128,6 +128,14 @@ public class Container extends AbstractModel{
     private Long GpuLimit;
 
     /**
+    * 容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityContext")
+    @Expose
+    private SecurityContext SecurityContext;
+
+    /**
      * Get 镜像 
      * @return Image 镜像
      */
@@ -379,6 +387,26 @@ public class Container extends AbstractModel{
         this.GpuLimit = GpuLimit;
     }
 
+    /**
+     * Get 容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityContext 容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityContext getSecurityContext() {
+        return this.SecurityContext;
+    }
+
+    /**
+     * Set 容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityContext 容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityContext(SecurityContext SecurityContext) {
+        this.SecurityContext = SecurityContext;
+    }
+
     public Container() {
     }
 
@@ -441,6 +469,9 @@ public class Container extends AbstractModel{
         if (source.GpuLimit != null) {
             this.GpuLimit = new Long(source.GpuLimit);
         }
+        if (source.SecurityContext != null) {
+            this.SecurityContext = new SecurityContext(source.SecurityContext);
+        }
     }
 
 
@@ -462,6 +493,7 @@ public class Container extends AbstractModel{
         this.setParamObj(map, prefix + "LivenessProbe.", this.LivenessProbe);
         this.setParamObj(map, prefix + "ReadinessProbe.", this.ReadinessProbe);
         this.setParamSimple(map, prefix + "GpuLimit", this.GpuLimit);
+        this.setParamObj(map, prefix + "SecurityContext.", this.SecurityContext);
 
     }
 }

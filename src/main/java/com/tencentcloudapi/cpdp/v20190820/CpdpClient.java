@@ -1207,6 +1207,27 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *调用该接口返回对账单下载地址，对账单下载URL通过GET方式访问，返回zip包，解压后为csv格式文件。文件首行如下：
+订单号,订单归属日期,机构编号,订单描述,交易类型,订单状态,支付场景,原始金额,折扣金额,实际交易金额,支付渠道优惠金额,抹零金额,币种,下单时间,付款成功时间,商户编号,门店编号,付款方式编号,付款方式名称,商户手续费T1,商户扣率,是否信用卡交易,原始订单号,用户账号,外部订单号,订单备注
+     * @param req GetBillDownloadUrlRequest
+     * @return GetBillDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBillDownloadUrlResponse GetBillDownloadUrl(GetBillDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBillDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBillDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetBillDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
      * @param req MigrateOrderRefundRequest
      * @return MigrateOrderRefundResponse
@@ -2068,6 +2089,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付-查询账户余额
+     * @param req QueryOpenBankBankAccountBalanceRequest
+     * @return QueryOpenBankBankAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalance(QueryOpenBankBankAccountBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankBankAccountBalanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankBankAccountBalanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankBankAccountBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *云企付-查询联行号
      * @param req QueryOpenBankBankBranchListRequest
      * @return QueryOpenBankBankBranchListResponse
@@ -2100,6 +2141,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankBindExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryOpenBankBindExternalSubMerchantBankAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云企付-按日期批量查询回单下载地址
+     * @param req QueryOpenBankDailyReceiptDownloadUrlRequest
+     * @return QueryOpenBankDailyReceiptDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrl(QueryOpenBankDailyReceiptDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankDailyReceiptDownloadUrl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

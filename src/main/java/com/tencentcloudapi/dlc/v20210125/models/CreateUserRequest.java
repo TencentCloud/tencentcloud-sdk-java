@@ -44,6 +44,20 @@ public class CreateUserRequest extends AbstractModel{
     private Policy [] PolicySet;
 
     /**
+    * 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
+
+    /**
+    * 绑定到用户的工作组ID集合。
+    */
+    @SerializedName("WorkGroupIds")
+    @Expose
+    private Long [] WorkGroupIds;
+
+    /**
      * Get 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。 
      * @return UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      */
@@ -91,6 +105,38 @@ public class CreateUserRequest extends AbstractModel{
         this.PolicySet = PolicySet;
     }
 
+    /**
+     * Get 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON 
+     * @return UserType 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+     * @param UserType 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
+    }
+
+    /**
+     * Get 绑定到用户的工作组ID集合。 
+     * @return WorkGroupIds 绑定到用户的工作组ID集合。
+     */
+    public Long [] getWorkGroupIds() {
+        return this.WorkGroupIds;
+    }
+
+    /**
+     * Set 绑定到用户的工作组ID集合。
+     * @param WorkGroupIds 绑定到用户的工作组ID集合。
+     */
+    public void setWorkGroupIds(Long [] WorkGroupIds) {
+        this.WorkGroupIds = WorkGroupIds;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -111,6 +157,15 @@ public class CreateUserRequest extends AbstractModel{
                 this.PolicySet[i] = new Policy(source.PolicySet[i]);
             }
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
+        if (source.WorkGroupIds != null) {
+            this.WorkGroupIds = new Long[source.WorkGroupIds.length];
+            for (int i = 0; i < source.WorkGroupIds.length; i++) {
+                this.WorkGroupIds[i] = new Long(source.WorkGroupIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +176,8 @@ public class CreateUserRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "UserDescription", this.UserDescription);
         this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamArraySimple(map, prefix + "WorkGroupIds.", this.WorkGroupIds);
 
     }
 }

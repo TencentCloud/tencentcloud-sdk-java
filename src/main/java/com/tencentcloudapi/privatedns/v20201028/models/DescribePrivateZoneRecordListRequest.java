@@ -44,7 +44,7 @@ public class DescribePrivateZoneRecordListRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 分页限制数目， 最大100，默认20
+    * 分页限制数目， 最大200，默认20
     */
     @SerializedName("Limit")
     @Expose
@@ -99,16 +99,16 @@ public class DescribePrivateZoneRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页限制数目， 最大100，默认20 
-     * @return Limit 分页限制数目， 最大100，默认20
+     * Get 分页限制数目， 最大200，默认20 
+     * @return Limit 分页限制数目， 最大200，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页限制数目， 最大100，默认20
-     * @param Limit 分页限制数目， 最大100，默认20
+     * Set 分页限制数目， 最大200，默认20
+     * @param Limit 分页限制数目， 最大200，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

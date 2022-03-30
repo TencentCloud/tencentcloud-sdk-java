@@ -47,6 +47,22 @@ public class DataDisk extends AbstractModel{
     private String SnapshotId;
 
     /**
+    * 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteWithInstance")
+    @Expose
+    private Boolean DeleteWithInstance;
+
+    /**
+    * 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
      * Get 数据盘类型。数据盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 数据盘类型。数据盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
@@ -106,6 +122,46 @@ public class DataDisk extends AbstractModel{
         this.SnapshotId = SnapshotId;
     }
 
+    /**
+     * Get 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.DeleteWithInstance;
+    }
+
+    /**
+     * Set 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteWithInstance 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
+        this.DeleteWithInstance = DeleteWithInstance;
+    }
+
+    /**
+     * Get 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encrypt 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encrypt 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
     public DataDisk() {
     }
 
@@ -123,6 +179,12 @@ public class DataDisk extends AbstractModel{
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
+        if (source.DeleteWithInstance != null) {
+            this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
     }
 
 
@@ -133,6 +195,8 @@ public class DataDisk extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
 
     }
 }

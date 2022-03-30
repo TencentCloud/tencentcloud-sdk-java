@@ -25,13 +25,13 @@ public class AiContentReviewResult extends AbstractModel{
     /**
     * 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
-<li>Terrorism：图片鉴恐</li>
-<li>Political：图片鉴政</li>
+<li>Terrorism：图片敏感</li>
+<li>Political：图片敏感</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li>
-<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Political.Asr：Asr 文字敏感</li>
+<li>Political.Ocr：Ocr 文字敏感</li>
+<li>Terrorism.Ocr：Ocr 文字敏感</li>
 <li>Prohibited.Asr：Asr 文字鉴违禁</li>
 <li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
     */
@@ -62,7 +62,7 @@ public class AiContentReviewResult extends AbstractModel{
     private AiReviewTaskPornResult PornTask;
 
     /**
-    * 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+    * 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismTask")
@@ -70,7 +70,7 @@ public class AiContentReviewResult extends AbstractModel{
     private AiReviewTaskTerrorismResult TerrorismTask;
 
     /**
-    * 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+    * 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalTask")
@@ -94,7 +94,7 @@ public class AiContentReviewResult extends AbstractModel{
     private AiReviewTaskPornOcrResult PornOcrTask;
 
     /**
-    * 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+    * 视频内容审核 Asr 文字敏感任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalAsrTask")
@@ -102,7 +102,7 @@ public class AiContentReviewResult extends AbstractModel{
     private AiReviewTaskPoliticalAsrResult PoliticalAsrTask;
 
     /**
-    * 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+    * 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalOcrTask")
@@ -110,7 +110,7 @@ public class AiContentReviewResult extends AbstractModel{
     private AiReviewTaskPoliticalOcrResult PoliticalOcrTask;
 
     /**
-    * 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+    * 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismOcrTask")
@@ -136,24 +136,24 @@ public class AiContentReviewResult extends AbstractModel{
     /**
      * Get 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
-<li>Terrorism：图片鉴恐</li>
-<li>Political：图片鉴政</li>
+<li>Terrorism：图片敏感</li>
+<li>Political：图片敏感</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li>
-<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Political.Asr：Asr 文字敏感</li>
+<li>Political.Ocr：Ocr 文字敏感</li>
+<li>Terrorism.Ocr：Ocr 文字敏感</li>
 <li>Prohibited.Asr：Asr 文字鉴违禁</li>
 <li>Prohibited.Ocr：Ocr 文字鉴违禁</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
-<li>Terrorism：图片鉴恐</li>
-<li>Political：图片鉴政</li>
+<li>Terrorism：图片敏感</li>
+<li>Political：图片敏感</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li>
-<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Political.Asr：Asr 文字敏感</li>
+<li>Political.Ocr：Ocr 文字敏感</li>
+<li>Terrorism.Ocr：Ocr 文字敏感</li>
 <li>Prohibited.Asr：Asr 文字鉴违禁</li>
 <li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
      */
@@ -164,24 +164,24 @@ public class AiContentReviewResult extends AbstractModel{
     /**
      * Set 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
-<li>Terrorism：图片鉴恐</li>
-<li>Political：图片鉴政</li>
+<li>Terrorism：图片敏感</li>
+<li>Political：图片敏感</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li>
-<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Political.Asr：Asr 文字敏感</li>
+<li>Political.Ocr：Ocr 文字敏感</li>
+<li>Terrorism.Ocr：Ocr 文字敏感</li>
 <li>Prohibited.Asr：Asr 文字鉴违禁</li>
 <li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
-<li>Terrorism：图片鉴恐</li>
-<li>Political：图片鉴政</li>
+<li>Terrorism：图片敏感</li>
+<li>Political：图片敏感</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
-<li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li>
-<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Political.Asr：Asr 文字敏感</li>
+<li>Political.Ocr：Ocr 文字敏感</li>
+<li>Terrorism.Ocr：Ocr 文字敏感</li>
 <li>Prohibited.Asr：Asr 文字鉴违禁</li>
 <li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
      */
@@ -242,9 +242,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+     * Get 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+     * @return TerrorismTask 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTaskTerrorismResult getTerrorismTask() {
@@ -252,9 +252,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Set 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+     * Set 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+     * @param TerrorismTask 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismTask(AiReviewTaskTerrorismResult TerrorismTask) {
@@ -262,9 +262,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+     * Get 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+     * @return PoliticalTask 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTaskPoliticalResult getPoliticalTask() {
@@ -272,9 +272,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Set 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+     * Set 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+     * @param PoliticalTask 视频内容审核智能画面敏感任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalTask(AiReviewTaskPoliticalResult PoliticalTask) {
@@ -322,9 +322,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+     * Get 视频内容审核 Asr 文字敏感任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PoliticalAsrTask 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+     * @return PoliticalAsrTask 视频内容审核 Asr 文字敏感任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTaskPoliticalAsrResult getPoliticalAsrTask() {
@@ -332,9 +332,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Set 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+     * Set 视频内容审核 Asr 文字敏感任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalAsrTask 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+     * @param PoliticalAsrTask 视频内容审核 Asr 文字敏感任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalAsrTask(AiReviewTaskPoliticalAsrResult PoliticalAsrTask) {
@@ -342,9 +342,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+     * Get 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PoliticalOcrTask 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+     * @return PoliticalOcrTask 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTaskPoliticalOcrResult getPoliticalOcrTask() {
@@ -352,9 +352,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Set 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+     * Set 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalOcrTask 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+     * @param PoliticalOcrTask 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult PoliticalOcrTask) {
@@ -362,9 +362,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Get 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+     * Get 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TerrorismOcrTask 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+     * @return TerrorismOcrTask 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() {
@@ -372,9 +372,9 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
-     * Set 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+     * Set 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TerrorismOcrTask 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+     * @param TerrorismOcrTask 视频内容审核 Ocr 文字敏感任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult TerrorismOcrTask) {

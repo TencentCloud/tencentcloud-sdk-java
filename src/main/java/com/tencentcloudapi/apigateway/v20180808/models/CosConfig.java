@@ -52,6 +52,18 @@ DELETE： DeleteObject。
     private Boolean Authorization;
 
     /**
+    * API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PathMatchMode")
+    @Expose
+    private String PathMatchMode;
+
+    /**
      * Get API调用后端COS的方式，前端请求方法与Action的可选值为：
 GET：GetObject
 PUT：PutObject
@@ -131,6 +143,42 @@ DELETE： DeleteObject。
         this.Authorization = Authorization;
     }
 
+    /**
+     * Get API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PathMatchMode API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPathMatchMode() {
+        return this.PathMatchMode;
+    }
+
+    /**
+     * Set API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathMatchMode API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathMatchMode(String PathMatchMode) {
+        this.PathMatchMode = PathMatchMode;
+    }
+
     public CosConfig() {
     }
 
@@ -148,6 +196,9 @@ DELETE： DeleteObject。
         if (source.Authorization != null) {
             this.Authorization = new Boolean(source.Authorization);
         }
+        if (source.PathMatchMode != null) {
+            this.PathMatchMode = new String(source.PathMatchMode);
+        }
     }
 
 
@@ -158,6 +209,7 @@ DELETE： DeleteObject。
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
         this.setParamSimple(map, prefix + "Authorization", this.Authorization);
+        this.setParamSimple(map, prefix + "PathMatchMode", this.PathMatchMode);
 
     }
 }

@@ -51,6 +51,20 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
     private String ClusterDesc;
 
     /**
+    * 集群等级
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * 自动变配集群等级
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -114,6 +128,38 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
         this.ClusterDesc = ClusterDesc;
     }
 
+    /**
+     * Get 集群等级 
+     * @return ClusterLevel 集群等级
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 集群等级
+     * @param ClusterLevel 集群等级
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get 自动变配集群等级 
+     * @return AutoUpgradeClusterLevel 自动变配集群等级
+     */
+    public AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 自动变配集群等级
+     * @param AutoUpgradeClusterLevel 自动变配集群等级
+     */
+    public void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
     public ModifyClusterAttributeRequest() {
     }
 
@@ -134,6 +180,12 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
         if (source.ClusterDesc != null) {
             this.ClusterDesc = new String(source.ClusterDesc);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
 
     }
 }

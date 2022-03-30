@@ -132,6 +132,14 @@ public class RumProject extends AbstractModel{
     private Long IsStar;
 
     /**
+    * 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectStatus")
+    @Expose
+    private Long ProjectStatus;
+
+    /**
      * Get 项目名 
      * @return Name 项目名
      */
@@ -387,6 +395,26 @@ public class RumProject extends AbstractModel{
         this.IsStar = IsStar;
     }
 
+    /**
+     * Get 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProjectStatus() {
+        return this.ProjectStatus;
+    }
+
+    /**
+     * Set 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectStatus(Long ProjectStatus) {
+        this.ProjectStatus = ProjectStatus;
+    }
+
     public RumProject() {
     }
 
@@ -440,6 +468,9 @@ public class RumProject extends AbstractModel{
         if (source.IsStar != null) {
             this.IsStar = new Long(source.IsStar);
         }
+        if (source.ProjectStatus != null) {
+            this.ProjectStatus = new Long(source.ProjectStatus);
+        }
     }
 
 
@@ -462,6 +493,7 @@ public class RumProject extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceKey", this.InstanceKey);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "IsStar", this.IsStar);
+        this.setParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
 
     }
 }

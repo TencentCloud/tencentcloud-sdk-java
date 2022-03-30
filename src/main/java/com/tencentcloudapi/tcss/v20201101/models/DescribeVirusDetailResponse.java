@@ -309,6 +309,78 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String ClientIP;
 
     /**
+    * 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PProcessStartUser")
+    @Expose
+    private String PProcessStartUser;
+
+    /**
+    * 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PProcessUserGroup")
+    @Expose
+    private String PProcessUserGroup;
+
+    /**
+    * 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PProcessPath")
+    @Expose
+    private String PProcessPath;
+
+    /**
+    * 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PProcessParam")
+    @Expose
+    private String PProcessParam;
+
+    /**
+    * 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AncestorProcessStartUser")
+    @Expose
+    private String AncestorProcessStartUser;
+
+    /**
+    * 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AncestorProcessUserGroup")
+    @Expose
+    private String AncestorProcessUserGroup;
+
+    /**
+    * 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AncestorProcessPath")
+    @Expose
+    private String AncestorProcessPath;
+
+    /**
+    * 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AncestorProcessParam")
+    @Expose
+    private String AncestorProcessParam;
+
+    /**
+    * 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationTime")
+    @Expose
+    private String OperationTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1052,6 +1124,186 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PProcessStartUser 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPProcessStartUser() {
+        return this.PProcessStartUser;
+    }
+
+    /**
+     * Set 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PProcessStartUser 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPProcessStartUser(String PProcessStartUser) {
+        this.PProcessStartUser = PProcessStartUser;
+    }
+
+    /**
+     * Get 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PProcessUserGroup 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPProcessUserGroup() {
+        return this.PProcessUserGroup;
+    }
+
+    /**
+     * Set 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PProcessUserGroup 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPProcessUserGroup(String PProcessUserGroup) {
+        this.PProcessUserGroup = PProcessUserGroup;
+    }
+
+    /**
+     * Get 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PProcessPath 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPProcessPath() {
+        return this.PProcessPath;
+    }
+
+    /**
+     * Set 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PProcessPath 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPProcessPath(String PProcessPath) {
+        this.PProcessPath = PProcessPath;
+    }
+
+    /**
+     * Get 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PProcessParam 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPProcessParam() {
+        return this.PProcessParam;
+    }
+
+    /**
+     * Set 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PProcessParam 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPProcessParam(String PProcessParam) {
+        this.PProcessParam = PProcessParam;
+    }
+
+    /**
+     * Get 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AncestorProcessStartUser 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAncestorProcessStartUser() {
+        return this.AncestorProcessStartUser;
+    }
+
+    /**
+     * Set 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AncestorProcessStartUser 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAncestorProcessStartUser(String AncestorProcessStartUser) {
+        this.AncestorProcessStartUser = AncestorProcessStartUser;
+    }
+
+    /**
+     * Get 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AncestorProcessUserGroup 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAncestorProcessUserGroup() {
+        return this.AncestorProcessUserGroup;
+    }
+
+    /**
+     * Set 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AncestorProcessUserGroup 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAncestorProcessUserGroup(String AncestorProcessUserGroup) {
+        this.AncestorProcessUserGroup = AncestorProcessUserGroup;
+    }
+
+    /**
+     * Get 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AncestorProcessPath 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAncestorProcessPath() {
+        return this.AncestorProcessPath;
+    }
+
+    /**
+     * Set 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AncestorProcessPath 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAncestorProcessPath(String AncestorProcessPath) {
+        this.AncestorProcessPath = AncestorProcessPath;
+    }
+
+    /**
+     * Get 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AncestorProcessParam 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAncestorProcessParam() {
+        return this.AncestorProcessParam;
+    }
+
+    /**
+     * Set 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AncestorProcessParam 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAncestorProcessParam(String AncestorProcessParam) {
+        this.AncestorProcessParam = AncestorProcessParam;
+    }
+
+    /**
+     * Get 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperationTime() {
+        return this.OperationTime;
+    }
+
+    /**
+     * Set 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationTime(String OperationTime) {
+        this.OperationTime = OperationTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1180,6 +1432,33 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.ClientIP != null) {
             this.ClientIP = new String(source.ClientIP);
         }
+        if (source.PProcessStartUser != null) {
+            this.PProcessStartUser = new String(source.PProcessStartUser);
+        }
+        if (source.PProcessUserGroup != null) {
+            this.PProcessUserGroup = new String(source.PProcessUserGroup);
+        }
+        if (source.PProcessPath != null) {
+            this.PProcessPath = new String(source.PProcessPath);
+        }
+        if (source.PProcessParam != null) {
+            this.PProcessParam = new String(source.PProcessParam);
+        }
+        if (source.AncestorProcessStartUser != null) {
+            this.AncestorProcessStartUser = new String(source.AncestorProcessStartUser);
+        }
+        if (source.AncestorProcessUserGroup != null) {
+            this.AncestorProcessUserGroup = new String(source.AncestorProcessUserGroup);
+        }
+        if (source.AncestorProcessPath != null) {
+            this.AncestorProcessPath = new String(source.AncestorProcessPath);
+        }
+        if (source.AncestorProcessParam != null) {
+            this.AncestorProcessParam = new String(source.AncestorProcessParam);
+        }
+        if (source.OperationTime != null) {
+            this.OperationTime = new String(source.OperationTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1224,6 +1503,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
+        this.setParamSimple(map, prefix + "PProcessStartUser", this.PProcessStartUser);
+        this.setParamSimple(map, prefix + "PProcessUserGroup", this.PProcessUserGroup);
+        this.setParamSimple(map, prefix + "PProcessPath", this.PProcessPath);
+        this.setParamSimple(map, prefix + "PProcessParam", this.PProcessParam);
+        this.setParamSimple(map, prefix + "AncestorProcessStartUser", this.AncestorProcessStartUser);
+        this.setParamSimple(map, prefix + "AncestorProcessUserGroup", this.AncestorProcessUserGroup);
+        this.setParamSimple(map, prefix + "AncestorProcessPath", this.AncestorProcessPath);
+        this.setParamSimple(map, prefix + "AncestorProcessParam", this.AncestorProcessParam);
+        this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

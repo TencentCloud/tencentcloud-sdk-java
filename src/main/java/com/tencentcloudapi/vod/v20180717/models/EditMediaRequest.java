@@ -46,7 +46,7 @@ public class EditMediaRequest extends AbstractModel{
     /**
     * 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
     */
     @SerializedName("Definition")
     @Expose
@@ -152,10 +152,10 @@ public class EditMediaRequest extends AbstractModel{
     /**
      * Get 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li> 
+<li>20：拼接时，以码率最高的输入为基准。</li> 
      * @return Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
      */
     public Long getDefinition() {
         return this.Definition;
@@ -164,10 +164,10 @@ public class EditMediaRequest extends AbstractModel{
     /**
      * Set 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
      * @param Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

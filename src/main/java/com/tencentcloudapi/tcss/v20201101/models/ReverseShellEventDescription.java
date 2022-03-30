@@ -52,6 +52,14 @@ public class ReverseShellEventDescription extends AbstractModel{
     private String DstAddress;
 
     /**
+    * 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationTime")
+    @Expose
+    private String OperationTime;
+
+    /**
      * Get 描述信息 
      * @return Description 描述信息
      */
@@ -119,6 +127,26 @@ public class ReverseShellEventDescription extends AbstractModel{
         this.DstAddress = DstAddress;
     }
 
+    /**
+     * Get 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperationTime() {
+        return this.OperationTime;
+    }
+
+    /**
+     * Set 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationTime(String OperationTime) {
+        this.OperationTime = OperationTime;
+    }
+
     public ReverseShellEventDescription() {
     }
 
@@ -139,6 +167,9 @@ public class ReverseShellEventDescription extends AbstractModel{
         if (source.DstAddress != null) {
             this.DstAddress = new String(source.DstAddress);
         }
+        if (source.OperationTime != null) {
+            this.OperationTime = new String(source.OperationTime);
+        }
     }
 
 
@@ -150,6 +181,7 @@ public class ReverseShellEventDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "Solution", this.Solution);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DstAddress", this.DstAddress);
+        this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
 
     }
 }

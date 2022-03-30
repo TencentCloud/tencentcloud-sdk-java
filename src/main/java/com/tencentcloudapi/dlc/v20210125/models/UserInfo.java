@@ -68,12 +68,20 @@ public class UserInfo extends AbstractModel{
     private WorkGroupMessage [] WorkGroupSet;
 
     /**
-    * 是否是管理员账号
+    * 是否是主账号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOwner")
     @Expose
     private Boolean IsOwner;
+
+    /**
+    * 用户类型。ADMIN：管理员 COMMON：普通用户。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
 
     /**
      * Get 用户Id，和子用户uin相同 
@@ -184,9 +192,9 @@ public class UserInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否是管理员账号
+     * Get 是否是主账号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsOwner 是否是管理员账号
+     * @return IsOwner 是否是主账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsOwner() {
@@ -194,13 +202,33 @@ public class UserInfo extends AbstractModel{
     }
 
     /**
-     * Set 是否是管理员账号
+     * Set 是否是主账号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsOwner 是否是管理员账号
+     * @param IsOwner 是否是主账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOwner(Boolean IsOwner) {
         this.IsOwner = IsOwner;
+    }
+
+    /**
+     * Get 用户类型。ADMIN：管理员 COMMON：普通用户。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserType 用户类型。ADMIN：管理员 COMMON：普通用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户类型。ADMIN：管理员 COMMON：普通用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserType 用户类型。ADMIN：管理员 COMMON：普通用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
     }
 
     public UserInfo() {
@@ -238,6 +266,9 @@ public class UserInfo extends AbstractModel{
         if (source.IsOwner != null) {
             this.IsOwner = new Boolean(source.IsOwner);
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
     }
 
 
@@ -252,6 +283,7 @@ public class UserInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArrayObj(map, prefix + "WorkGroupSet.", this.WorkGroupSet);
         this.setParamSimple(map, prefix + "IsOwner", this.IsOwner);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

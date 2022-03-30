@@ -484,6 +484,28 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *提供对中文文本的自动纠错功能，能够识别输入文本中的错误片段，定位错误并给出正确的文本结果；支持长度不超过128字符（含标点符号）的长文本纠错。
+
+此功能是基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升，是搜索引擎、语音识别、内容审核等功能更好运行的基础之一。
+     * @param req TextCorrectionProRequest
+     * @return TextCorrectionProResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextCorrectionProResponse TextCorrectionPro(TextCorrectionProRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextCorrectionProResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextCorrectionProResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TextCorrectionPro");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *句子相似度接口能够基于深度学习技术来计算一个源句子和多个目标句子的相似度，相似度分值越大的两个句子在语义上越相似。目前仅支持短文本（不超过500字符）的相似度计算，长文本的相似度计算也即将推出。
 
 鉴于句子相似度是一个应用非常广泛的功能，腾讯云自然语言处理团队在Bert等领先的深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于句子相似度，可以轻松实现诸如文本去重、相似推荐等功能。
@@ -500,6 +522,30 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TextSimilarityResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TextSimilarity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *句子相似度接口能够基于深度学习技术来计算一个源句子和多个目标句子的相似度，相似度分值越大的两个句子在语义上越相似。目前仅支持短文本（不超过128字符）的相似度计算，长文本的相似度计算也即将推出。
+
+鉴于句子相似度是一个应用非常广泛的功能，腾讯云自然语言处理团队在Bert等领先的深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于句子相似度，可以轻松实现诸如文本去重、相似推荐等功能。
+
+接口将以句子数量为单位消耗资源包，而不是调用接口次数为单位。
+     * @param req TextSimilarityProRequest
+     * @return TextSimilarityProResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextSimilarityProResponse TextSimilarityPro(TextSimilarityProRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextSimilarityProResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextSimilarityProResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TextSimilarityPro");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

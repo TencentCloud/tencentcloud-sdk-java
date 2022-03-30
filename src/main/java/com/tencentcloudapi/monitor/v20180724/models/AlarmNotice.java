@@ -103,6 +103,14 @@ public class AlarmNotice extends AbstractModel{
     private String [] PolicyIds;
 
     /**
+    * 推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CLSNotices")
+    @Expose
+    private CLSNotice [] CLSNotices;
+
+    /**
      * Get 告警通知模板 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 告警通知模板 ID
@@ -302,6 +310,26 @@ public class AlarmNotice extends AbstractModel{
         this.PolicyIds = PolicyIds;
     }
 
+    /**
+     * Get 推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CLSNotices 推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CLSNotice [] getCLSNotices() {
+        return this.CLSNotices;
+    }
+
+    /**
+     * Set 推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLSNotices 推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCLSNotices(CLSNotice [] CLSNotices) {
+        this.CLSNotices = CLSNotices;
+    }
+
     public AlarmNotice() {
     }
 
@@ -349,6 +377,12 @@ public class AlarmNotice extends AbstractModel{
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.CLSNotices != null) {
+            this.CLSNotices = new CLSNotice[source.CLSNotices.length];
+            for (int i = 0; i < source.CLSNotices.length; i++) {
+                this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
+            }
+        }
     }
 
 
@@ -366,6 +400,7 @@ public class AlarmNotice extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPreset", this.IsPreset);
         this.setParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
 
     }
 }

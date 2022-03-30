@@ -44,6 +44,13 @@ public class CreateWorkGroupRequest extends AbstractModel{
     private Policy [] PolicySet;
 
     /**
+    * 需要绑定到工作组的用户Id集合
+    */
+    @SerializedName("UserIds")
+    @Expose
+    private String [] UserIds;
+
+    /**
      * Get 工作组名称 
      * @return WorkGroupName 工作组名称
      */
@@ -91,6 +98,22 @@ public class CreateWorkGroupRequest extends AbstractModel{
         this.PolicySet = PolicySet;
     }
 
+    /**
+     * Get 需要绑定到工作组的用户Id集合 
+     * @return UserIds 需要绑定到工作组的用户Id集合
+     */
+    public String [] getUserIds() {
+        return this.UserIds;
+    }
+
+    /**
+     * Set 需要绑定到工作组的用户Id集合
+     * @param UserIds 需要绑定到工作组的用户Id集合
+     */
+    public void setUserIds(String [] UserIds) {
+        this.UserIds = UserIds;
+    }
+
     public CreateWorkGroupRequest() {
     }
 
@@ -111,6 +134,12 @@ public class CreateWorkGroupRequest extends AbstractModel{
                 this.PolicySet[i] = new Policy(source.PolicySet[i]);
             }
         }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class CreateWorkGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkGroupName", this.WorkGroupName);
         this.setParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
         this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
 
     }
 }

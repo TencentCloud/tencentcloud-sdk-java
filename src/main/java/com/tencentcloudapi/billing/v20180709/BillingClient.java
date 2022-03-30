@@ -379,6 +379,46 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取代金券相关信息
+     * @param req DescribeVoucherInfoRequest
+     * @return DescribeVoucherInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoucherInfoResponse DescribeVoucherInfo(DescribeVoucherInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVoucherInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVoucherInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVoucherInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取代金券使用记录
+     * @param req DescribeVoucherUsageDetailsRequest
+     * @return DescribeVoucherUsageDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(DescribeVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVoucherUsageDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVoucherUsageDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVoucherUsageDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *支付订单
      * @param req PayDealsRequest
      * @return PayDealsResponse

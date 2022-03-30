@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceConfig extends AbstractModel{
 
     /**
-    * 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
+    * 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream
     */
     @SerializedName("Product")
     @Expose
@@ -66,16 +66,16 @@ public class ServiceConfig extends AbstractModel{
     private CosConfig CosConfig;
 
     /**
-     * Get 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道 
-     * @return Product 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
+     * Get 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream 
+     * @return Product 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
-     * @param Product 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
+     * Set 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream
+     * @param Product 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream
      */
     public void setProduct(String Product) {
         this.Product = Product;

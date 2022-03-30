@@ -37,7 +37,7 @@ public class UpdateEmailTemplateRequest extends AbstractModel{
     private Long TemplateID;
 
     /**
-    * 模版名字
+    * 模板名字
     */
     @SerializedName("TemplateName")
     @Expose
@@ -76,16 +76,16 @@ public class UpdateEmailTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版名字 
-     * @return TemplateName 模版名字
+     * Get 模板名字 
+     * @return TemplateName 模板名字
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模版名字
-     * @param TemplateName 模版名字
+     * Set 模板名字
+     * @param TemplateName 模板名字
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

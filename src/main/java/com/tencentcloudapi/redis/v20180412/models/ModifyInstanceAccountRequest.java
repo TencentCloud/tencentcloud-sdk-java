@@ -51,7 +51,7 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 子账号路由策略：填写master或者slave，表示路由主节点，从节点
+    * 路由策略：填写master或者replication，表示主节点或者从节点
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
@@ -136,16 +136,16 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 子账号路由策略：填写master或者slave，表示路由主节点，从节点 
-     * @return ReadonlyPolicy 子账号路由策略：填写master或者slave，表示路由主节点，从节点
+     * Get 路由策略：填写master或者replication，表示主节点或者从节点 
+     * @return ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 子账号路由策略：填写master或者slave，表示路由主节点，从节点
-     * @param ReadonlyPolicy 子账号路由策略：填写master或者slave，表示路由主节点，从节点
+     * Set 路由策略：填写master或者replication，表示主节点或者从节点
+     * @param ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

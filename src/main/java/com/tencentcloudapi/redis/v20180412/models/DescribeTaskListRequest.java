@@ -37,7 +37,7 @@ public class DescribeTaskListRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 分页大小
+    * 分页大小,默认20，上限不大于100
     */
     @SerializedName("Limit")
     @Expose
@@ -118,16 +118,16 @@ public class DescribeTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get 分页大小,默认20，上限不大于100 
+     * @return Limit 分页大小,默认20，上限不大于100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set 分页大小,默认20，上限不大于100
+     * @param Limit 分页大小,默认20，上限不大于100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

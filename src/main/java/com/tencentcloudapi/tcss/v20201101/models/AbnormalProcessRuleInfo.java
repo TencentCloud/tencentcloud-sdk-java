@@ -66,6 +66,13 @@ public class AbnormalProcessRuleInfo extends AbstractModel{
     private AbnormalProcessSystemChildRuleInfo [] SystemChildRules;
 
     /**
+    * 是否是系统默认策略
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
      * Get true:策略启用，false:策略禁用 
      * @return IsEnable true:策略启用，false:策略禁用
      */
@@ -165,6 +172,22 @@ public class AbnormalProcessRuleInfo extends AbstractModel{
         this.SystemChildRules = SystemChildRules;
     }
 
+    /**
+     * Get 是否是系统默认策略 
+     * @return IsDefault 是否是系统默认策略
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否是系统默认策略
+     * @param IsDefault 是否是系统默认策略
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
     public AbnormalProcessRuleInfo() {
     }
 
@@ -200,6 +223,9 @@ public class AbnormalProcessRuleInfo extends AbstractModel{
                 this.SystemChildRules[i] = new AbnormalProcessSystemChildRuleInfo(source.SystemChildRules[i]);
             }
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
     }
 
 
@@ -213,6 +239,7 @@ public class AbnormalProcessRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }
