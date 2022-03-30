@@ -17,8 +17,6 @@ public class StartFlow {
             UserInfo userInfo = new UserInfo();
             // 管理员用户id或者员工用户id
             userInfo.setUserId(OperatorId);
-            // 请求客户端在公网的ip地址
-            userInfo.setClientIp("************");
             request.setOperator(userInfo);
 
             // 由CreateFlow返回

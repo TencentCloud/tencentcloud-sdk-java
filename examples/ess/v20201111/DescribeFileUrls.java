@@ -18,12 +18,10 @@ public class DescribeFileUrls {
             UserInfo userInfo = new UserInfo();
             // 管理员用户id或者员工用户id
             userInfo.setUserId(OperatorId);
-            // 请求客户端在公网的ip地址
-            userInfo.setClientIp("************");
             request.setOperator(userInfo);
 
             request.setBusinessType("FLOW");
-            // 传入flowId
+            // 传入FlowId，由CreateFlow或者CreateFlowByFiles返回
             request.setBusinessIds(new String[]{"************"});
 
             DescribeFileUrlsResponse response = client.DescribeFileUrls(request);
