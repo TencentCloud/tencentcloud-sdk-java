@@ -37,7 +37,7 @@ public class DeployStrategyConf extends AbstractModel{
     private Long BetaBatchNum;
 
     /**
-    * 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的
+    * 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的，3-首次发布
     */
     @SerializedName("DeployStrategyType")
     @Expose
@@ -97,16 +97,16 @@ public class DeployStrategyConf extends AbstractModel{
     }
 
     /**
-     * Get 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的 
-     * @return DeployStrategyType 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的
+     * Get 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的，3-首次发布 
+     * @return DeployStrategyType 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的，3-首次发布
      */
     public Long getDeployStrategyType() {
         return this.DeployStrategyType;
     }
 
     /**
-     * Set 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的
-     * @param DeployStrategyType 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的
+     * Set 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的，3-首次发布
+     * @param DeployStrategyType 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的，3-首次发布
      */
     public void setDeployStrategyType(Long DeployStrategyType) {
         this.DeployStrategyType = DeployStrategyType;

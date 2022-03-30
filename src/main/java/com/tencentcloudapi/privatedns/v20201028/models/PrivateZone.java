@@ -109,6 +109,14 @@ public class PrivateZone extends AbstractModel{
     private AccountVpcInfoOutput [] AccountVpcSet;
 
     /**
+    * 是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCustomTld")
+    @Expose
+    private Boolean IsCustomTld;
+
+    /**
      * Get 私有域id: zone-xxxxxxxx 
      * @return ZoneId 私有域id: zone-xxxxxxxx
      */
@@ -308,6 +316,26 @@ public class PrivateZone extends AbstractModel{
         this.AccountVpcSet = AccountVpcSet;
     }
 
+    /**
+     * Get 是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCustomTld 是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsCustomTld() {
+        return this.IsCustomTld;
+    }
+
+    /**
+     * Set 是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCustomTld 是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCustomTld(Boolean IsCustomTld) {
+        this.IsCustomTld = IsCustomTld;
+    }
+
     public PrivateZone() {
     }
 
@@ -361,6 +389,9 @@ public class PrivateZone extends AbstractModel{
                 this.AccountVpcSet[i] = new AccountVpcInfoOutput(source.AccountVpcSet[i]);
             }
         }
+        if (source.IsCustomTld != null) {
+            this.IsCustomTld = new Boolean(source.IsCustomTld);
+        }
     }
 
 
@@ -380,6 +411,7 @@ public class PrivateZone extends AbstractModel{
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+        this.setParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
 
     }
 }

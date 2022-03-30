@@ -93,6 +93,20 @@ public class ClusterOverview extends AbstractModel{
     private ManagerNodeOverview [] ManagerNodeSet;
 
     /**
+    * 登录节点概览。
+    */
+    @SerializedName("LoginNodeSet")
+    @Expose
+    private LoginNodeOverview [] LoginNodeSet;
+
+    /**
+    * 登录节点数量。
+    */
+    @SerializedName("LoginNodeCount")
+    @Expose
+    private Long LoginNodeCount;
+
+    /**
      * Get 集群ID。 
      * @return ClusterId 集群ID。
      */
@@ -252,6 +266,38 @@ public class ClusterOverview extends AbstractModel{
         this.ManagerNodeSet = ManagerNodeSet;
     }
 
+    /**
+     * Get 登录节点概览。 
+     * @return LoginNodeSet 登录节点概览。
+     */
+    public LoginNodeOverview [] getLoginNodeSet() {
+        return this.LoginNodeSet;
+    }
+
+    /**
+     * Set 登录节点概览。
+     * @param LoginNodeSet 登录节点概览。
+     */
+    public void setLoginNodeSet(LoginNodeOverview [] LoginNodeSet) {
+        this.LoginNodeSet = LoginNodeSet;
+    }
+
+    /**
+     * Get 登录节点数量。 
+     * @return LoginNodeCount 登录节点数量。
+     */
+    public Long getLoginNodeCount() {
+        return this.LoginNodeCount;
+    }
+
+    /**
+     * Set 登录节点数量。
+     * @param LoginNodeCount 登录节点数量。
+     */
+    public void setLoginNodeCount(Long LoginNodeCount) {
+        this.LoginNodeCount = LoginNodeCount;
+    }
+
     public ClusterOverview() {
     }
 
@@ -296,6 +342,15 @@ public class ClusterOverview extends AbstractModel{
                 this.ManagerNodeSet[i] = new ManagerNodeOverview(source.ManagerNodeSet[i]);
             }
         }
+        if (source.LoginNodeSet != null) {
+            this.LoginNodeSet = new LoginNodeOverview[source.LoginNodeSet.length];
+            for (int i = 0; i < source.LoginNodeSet.length; i++) {
+                this.LoginNodeSet[i] = new LoginNodeOverview(source.LoginNodeSet[i]);
+            }
+        }
+        if (source.LoginNodeCount != null) {
+            this.LoginNodeCount = new Long(source.LoginNodeCount);
+        }
     }
 
 
@@ -313,6 +368,8 @@ public class ClusterOverview extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ComputeNodeSet.", this.ComputeNodeSet);
         this.setParamSimple(map, prefix + "ManagerNodeCount", this.ManagerNodeCount);
         this.setParamArrayObj(map, prefix + "ManagerNodeSet.", this.ManagerNodeSet);
+        this.setParamArrayObj(map, prefix + "LoginNodeSet.", this.LoginNodeSet);
+        this.setParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
 
     }
 }

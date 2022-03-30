@@ -84,6 +84,13 @@ public class DescribeDealsByCondRequest extends AbstractModel{
     private String BigDealId;
 
     /**
+    * 资源id
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -243,6 +250,22 @@ public class DescribeDealsByCondRequest extends AbstractModel{
         this.BigDealId = BigDealId;
     }
 
+    /**
+     * Get 资源id 
+     * @return ResourceId 资源id
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源id
+     * @param ResourceId 资源id
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public DescribeDealsByCondRequest() {
     }
 
@@ -272,6 +295,9 @@ public class DescribeDealsByCondRequest extends AbstractModel{
         if (source.BigDealId != null) {
             this.BigDealId = new String(source.BigDealId);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
         this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

@@ -105,7 +105,7 @@ public class CreateApplicationRequest extends AbstractModel{
     private String DeployMode;
 
     /**
-    * 是否启用调用链功能
+    * 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
     */
     @SerializedName("EnableTracing")
     @Expose
@@ -308,16 +308,16 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否启用调用链功能 
-     * @return EnableTracing 是否启用调用链功能
+     * Get 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭 
+     * @return EnableTracing 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
     }
 
     /**
-     * Set 是否启用调用链功能
-     * @param EnableTracing 是否启用调用链功能
+     * Set 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
+     * @param EnableTracing 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;

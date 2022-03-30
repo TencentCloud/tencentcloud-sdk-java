@@ -310,6 +310,13 @@ public class DeployApplicationRequest extends AbstractModel{
     private String OsFlavour;
 
     /**
+    * 是否开启prometheus 业务指标监控
+    */
+    @SerializedName("EnablePrometheusConf")
+    @Expose
+    private EnablePrometheusConf EnablePrometheusConf;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -989,6 +996,22 @@ public class DeployApplicationRequest extends AbstractModel{
         this.OsFlavour = OsFlavour;
     }
 
+    /**
+     * Get 是否开启prometheus 业务指标监控 
+     * @return EnablePrometheusConf 是否开启prometheus 业务指标监控
+     */
+    public EnablePrometheusConf getEnablePrometheusConf() {
+        return this.EnablePrometheusConf;
+    }
+
+    /**
+     * Set 是否开启prometheus 业务指标监控
+     * @param EnablePrometheusConf 是否开启prometheus 业务指标监控
+     */
+    public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
+        this.EnablePrometheusConf = EnablePrometheusConf;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1141,6 +1164,9 @@ public class DeployApplicationRequest extends AbstractModel{
         if (source.OsFlavour != null) {
             this.OsFlavour = new String(source.OsFlavour);
         }
+        if (source.EnablePrometheusConf != null) {
+            this.EnablePrometheusConf = new EnablePrometheusConf(source.EnablePrometheusConf);
+        }
     }
 
 
@@ -1187,6 +1213,7 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
         this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
         this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
+        this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
 
     }
 }

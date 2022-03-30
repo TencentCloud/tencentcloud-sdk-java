@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iecp.v20210914.models;
+package com.tencentcloudapi.thpc.v20211109.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUserTokenRequest extends AbstractModel{
+public class LoginNodeOverview extends AbstractModel{
 
     /**
-    * token过期时间，有效值是1~300秒
+    * 登录节点ID。
     */
-    @SerializedName("Second")
+    @SerializedName("NodeId")
     @Expose
-    private Long Second;
+    private String NodeId;
 
     /**
-     * Get token过期时间，有效值是1~300秒 
-     * @return Second token过期时间，有效值是1~300秒
+     * Get 登录节点ID。 
+     * @return NodeId 登录节点ID。
      */
-    public Long getSecond() {
-        return this.Second;
+    public String getNodeId() {
+        return this.NodeId;
     }
 
     /**
-     * Set token过期时间，有效值是1~300秒
-     * @param Second token过期时间，有效值是1~300秒
+     * Set 登录节点ID。
+     * @param NodeId 登录节点ID。
      */
-    public void setSecond(Long Second) {
-        this.Second = Second;
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
     }
 
-    public CreateUserTokenRequest() {
+    public LoginNodeOverview() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateUserTokenRequest(CreateUserTokenRequest source) {
-        if (source.Second != null) {
-            this.Second = new Long(source.Second);
+    public LoginNodeOverview(LoginNodeOverview source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
         }
     }
 
@@ -63,7 +63,7 @@ public class CreateUserTokenRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Second", this.Second);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }
