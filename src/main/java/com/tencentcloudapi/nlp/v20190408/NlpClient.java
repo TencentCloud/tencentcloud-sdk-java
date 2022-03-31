@@ -221,66 +221,6 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
-     *此接口正在维护升级，后续上线另行通知。
-     * @param req DescribeEntityRequest
-     * @return DescribeEntityResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEntityResponse DescribeEntity(DescribeEntityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEntityResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEntityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEntity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *此接口正在维护升级，后续上线另行通知。
-     * @param req DescribeRelationRequest
-     * @return DescribeRelationResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRelationResponse DescribeRelation(DescribeRelationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRelationResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRelationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRelation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *此接口正在维护升级，后续上线另行通知。
-     * @param req DescribeTripleRequest
-     * @return DescribeTripleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTripleResponse DescribeTriple(DescribeTripleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTripleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTripleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTriple");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *依据自定义词库的ID，查询对应的词条信息。
      * @param req DescribeWordItemsRequest
      * @return DescribeWordItemsResponse

@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTripleRequest extends AbstractModel{
+public class TagWithCreate extends AbstractModel{
 
     /**
-    * 三元组查询条件
+    * 标签键
     */
-    @SerializedName("TripleCondition")
+    @SerializedName("TagKey")
     @Expose
-    private String TripleCondition;
+    private String TagKey;
 
     /**
-     * Get 三元组查询条件 
-     * @return TripleCondition 三元组查询条件
+    * 标签值
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
+     * Get 标签键 
+     * @return TagKey 标签键
      */
-    public String getTripleCondition() {
-        return this.TripleCondition;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set 三元组查询条件
-     * @param TripleCondition 三元组查询条件
+     * Set 标签键
+     * @param TagKey 标签键
      */
-    public void setTripleCondition(String TripleCondition) {
-        this.TripleCondition = TripleCondition;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
-    public DescribeTripleRequest() {
+    /**
+     * Get 标签值 
+     * @return TagValue 标签值
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set 标签值
+     * @param TagValue 标签值
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
+    }
+
+    public TagWithCreate() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTripleRequest(DescribeTripleRequest source) {
-        if (source.TripleCondition != null) {
-            this.TripleCondition = new String(source.TripleCondition);
+    public TagWithCreate(TagWithCreate source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
         }
     }
 
@@ -63,7 +89,8 @@ public class DescribeTripleRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TripleCondition", this.TripleCondition);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

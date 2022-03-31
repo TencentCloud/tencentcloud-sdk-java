@@ -63,7 +63,7 @@ public class DataDisk extends AbstractModel{
     private String MountTarget;
 
     /**
-    * 挂载设备名或分区名
+    * 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskPartition")
@@ -171,9 +171,9 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
-     * Get 挂载设备名或分区名
+     * Get 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskPartition 挂载设备名或分区名
+     * @return DiskPartition 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskPartition() {
@@ -181,9 +181,9 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
-     * Set 挂载设备名或分区名
+     * Set 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskPartition 挂载设备名或分区名
+     * @param DiskPartition 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskPartition(String DiskPartition) {

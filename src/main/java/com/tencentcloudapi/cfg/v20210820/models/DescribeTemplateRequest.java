@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEntityRequest extends AbstractModel{
+public class DescribeTemplateRequest extends AbstractModel{
 
     /**
-    * 实体名称
+    * 经验库ID
     */
-    @SerializedName("EntityName")
+    @SerializedName("TemplateId")
     @Expose
-    private String EntityName;
+    private Long TemplateId;
 
     /**
-     * Get 实体名称 
-     * @return EntityName 实体名称
+     * Get 经验库ID 
+     * @return TemplateId 经验库ID
      */
-    public String getEntityName() {
-        return this.EntityName;
+    public Long getTemplateId() {
+        return this.TemplateId;
     }
 
     /**
-     * Set 实体名称
-     * @param EntityName 实体名称
+     * Set 经验库ID
+     * @param TemplateId 经验库ID
      */
-    public void setEntityName(String EntityName) {
-        this.EntityName = EntityName;
+    public void setTemplateId(Long TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
-    public DescribeEntityRequest() {
+    public DescribeTemplateRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEntityRequest(DescribeEntityRequest source) {
-        if (source.EntityName != null) {
-            this.EntityName = new String(source.EntityName);
+    public DescribeTemplateRequest(DescribeTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeEntityRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EntityName", this.EntityName);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

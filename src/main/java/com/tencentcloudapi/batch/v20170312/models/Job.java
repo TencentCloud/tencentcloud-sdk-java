@@ -86,6 +86,16 @@ public class Job extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+    */
+    @SerializedName("NotificationTarget")
+    @Expose
+    private String NotificationTarget;
+
+    /**
      * Get 任务信息 
      * @return Tasks 任务信息
      */
@@ -229,6 +239,34 @@ public class Job extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860) 
+     * @return NotificationTarget 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+     */
+    public String getNotificationTarget() {
+        return this.NotificationTarget;
+    }
+
+    /**
+     * Set 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+     * @param NotificationTarget 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+     */
+    public void setNotificationTarget(String NotificationTarget) {
+        this.NotificationTarget = NotificationTarget;
+    }
+
     public Job() {
     }
 
@@ -276,6 +314,9 @@ public class Job extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NotificationTarget != null) {
+            this.NotificationTarget = new String(source.NotificationTarget);
+        }
     }
 
 
@@ -292,6 +333,7 @@ public class Job extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);
         this.setParamSimple(map, prefix + "StateIfCreateCvmFailed", this.StateIfCreateCvmFailed);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NotificationTarget", this.NotificationTarget);
 
     }
 }

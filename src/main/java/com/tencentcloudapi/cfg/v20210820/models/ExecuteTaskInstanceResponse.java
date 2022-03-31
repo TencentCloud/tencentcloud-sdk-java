@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRelationResponse extends AbstractModel{
-
-    /**
-    * 返回查询实体间的关系
-    */
-    @SerializedName("Content")
-    @Expose
-    private EntityRelationContent [] Content;
+public class ExecuteTaskInstanceResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class DescribeRelationResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 返回查询实体间的关系 
-     * @return Content 返回查询实体间的关系
-     */
-    public EntityRelationContent [] getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set 返回查询实体间的关系
-     * @param Content 返回查询实体间的关系
-     */
-    public void setContent(EntityRelationContent [] Content) {
-        this.Content = Content;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,20 +45,14 @@ public class DescribeRelationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRelationResponse() {
+    public ExecuteTaskInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRelationResponse(DescribeRelationResponse source) {
-        if (source.Content != null) {
-            this.Content = new EntityRelationContent[source.Content.length];
-            for (int i = 0; i < source.Content.length; i++) {
-                this.Content[i] = new EntityRelationContent(source.Content[i]);
-            }
-        }
+    public ExecuteTaskInstanceResponse(ExecuteTaskInstanceResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -92,7 +63,6 @@ public class DescribeRelationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

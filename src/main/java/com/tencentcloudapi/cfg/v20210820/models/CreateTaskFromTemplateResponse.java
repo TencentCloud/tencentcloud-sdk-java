@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEntityResponse extends AbstractModel{
+public class CreateTaskFromTemplateResponse extends AbstractModel{
 
     /**
-    * 返回查询实体相关信息
+    * 创建成功的演练ID
     */
-    @SerializedName("Content")
+    @SerializedName("TaskId")
     @Expose
-    private String Content;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeEntityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回查询实体相关信息 
-     * @return Content 返回查询实体相关信息
+     * Get 创建成功的演练ID 
+     * @return TaskId 创建成功的演练ID
      */
-    public String getContent() {
-        return this.Content;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 返回查询实体相关信息
-     * @param Content 返回查询实体相关信息
+     * Set 创建成功的演练ID
+     * @param TaskId 创建成功的演练ID
      */
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class DescribeEntityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeEntityResponse() {
+    public CreateTaskFromTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEntityResponse(DescribeEntityResponse source) {
-        if (source.Content != null) {
-            this.Content = new String(source.Content);
+    public CreateTaskFromTemplateResponse(CreateTaskFromTemplateResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class DescribeEntityResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

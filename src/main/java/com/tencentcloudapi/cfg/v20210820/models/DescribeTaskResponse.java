@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTripleResponse extends AbstractModel{
+public class DescribeTaskResponse extends AbstractModel{
 
     /**
-    * 返回三元组信息
+    * 任务信息
     */
-    @SerializedName("Content")
+    @SerializedName("Task")
     @Expose
-    private TripleContent [] Content;
+    private Task Task;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeTripleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回三元组信息 
-     * @return Content 返回三元组信息
+     * Get 任务信息 
+     * @return Task 任务信息
      */
-    public TripleContent [] getContent() {
-        return this.Content;
+    public Task getTask() {
+        return this.Task;
     }
 
     /**
-     * Set 返回三元组信息
-     * @param Content 返回三元组信息
+     * Set 任务信息
+     * @param Task 任务信息
      */
-    public void setContent(TripleContent [] Content) {
-        this.Content = Content;
+    public void setTask(Task Task) {
+        this.Task = Task;
     }
 
     /**
@@ -68,19 +68,16 @@ public class DescribeTripleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTripleResponse() {
+    public DescribeTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTripleResponse(DescribeTripleResponse source) {
-        if (source.Content != null) {
-            this.Content = new TripleContent[source.Content.length];
-            for (int i = 0; i < source.Content.length; i++) {
-                this.Content[i] = new TripleContent(source.Content[i]);
-            }
+    public DescribeTaskResponse(DescribeTaskResponse source) {
+        if (source.Task != null) {
+            this.Task = new Task(source.Task);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class DescribeTripleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Content.", this.Content);
+        this.setParamObj(map, prefix + "Task.", this.Task);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -72,11 +72,18 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel{
     private String [] OwnerUins;
 
     /**
-    * 订单号列表
+    * 子订单号列表
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
+
+    /**
+    * 大订单号列表
+    */
+    @SerializedName("BigDealIds")
+    @Expose
+    private String [] BigDealIds;
 
     /**
      * Get 偏移量 
@@ -191,19 +198,35 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel{
     }
 
     /**
-     * Get 订单号列表 
-     * @return DealNames 订单号列表
+     * Get 子订单号列表 
+     * @return DealNames 子订单号列表
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 订单号列表
-     * @param DealNames 订单号列表
+     * Set 子订单号列表
+     * @param DealNames 子订单号列表
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
+    }
+
+    /**
+     * Get 大订单号列表 
+     * @return BigDealIds 大订单号列表
+     */
+    public String [] getBigDealIds() {
+        return this.BigDealIds;
+    }
+
+    /**
+     * Set 大订单号列表
+     * @param BigDealIds 大订单号列表
+     */
+    public void setBigDealIds(String [] BigDealIds) {
+        this.BigDealIds = BigDealIds;
     }
 
     public DescribeAgentPayDealsV2Request() {
@@ -244,6 +267,12 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel{
                 this.DealNames[i] = new String(source.DealNames[i]);
             }
         }
+        if (source.BigDealIds != null) {
+            this.BigDealIds = new String[source.BigDealIds.length];
+            for (int i = 0; i < source.BigDealIds.length; i++) {
+                this.BigDealIds[i] = new String(source.BigDealIds[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "OwnerUins.", this.OwnerUins);
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+        this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
 
     }
 }

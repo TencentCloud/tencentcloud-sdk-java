@@ -319,6 +319,26 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *列出云拨测指标详细数据
+     * @param req DescribeProbeMetricDataRequest
+     * @return DescribeProbeMetricDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProbeMetricDataResponse DescribeProbeMetricData(DescribeProbeMetricDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProbeMetricDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProbeMetricDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProbeMetricData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询拨测节点
      * @param req DescribeProbeNodesRequest
      * @return DescribeProbeNodesResponse
