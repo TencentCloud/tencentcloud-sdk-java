@@ -1,268 +1,5 @@
 # 本版本更新包含以下内容：
 
-## 音频内容检测(ams) 版本：2020-12-29
-
-### 第 4 次发布
-
-发布时间：2022-04-01 06:03:20
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [MoanResult](https://cloud.tencent.com/document/api/1219/53259#MoanResult)
-
-	* 新增成员：SubLabel
-
-* [TextResult](https://cloud.tencent.com/document/api/1219/53259#TextResult)
-
-	* 新增成员：SubLabel
-
-
-
-
-## 音频内容检测(ams) 版本：2020-06-08
-
-
-
-## 二进制软件成分分析(bsca) 版本：2021-08-11
-
-### 第 1 次发布
-
-发布时间：2022-04-02 17:37:22
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeKBComponent](https://cloud.tencent.com/document/api/1483/72073)
-* [DescribeKBComponentVulnerability](https://cloud.tencent.com/document/api/1483/72072)
-* [DescribeKBLicense](https://cloud.tencent.com/document/api/1483/72071)
-* [DescribeKBVulnerability](https://cloud.tencent.com/document/api/1483/72070)
-
-新增数据结构：
-
-* [CVSSV2Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV2Info)
-* [CVSSV3Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV3Info)
-* [Component](https://cloud.tencent.com/document/api/1483/72074#Component)
-* [ComponentVulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilitySummary)
-* [ComponentVulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilityUnion)
-* [LicenseDetail](https://cloud.tencent.com/document/api/1483/72074#LicenseDetail)
-* [LicenseRestriction](https://cloud.tencent.com/document/api/1483/72074#LicenseRestriction)
-* [LicenseSummary](https://cloud.tencent.com/document/api/1483/72074#LicenseSummary)
-* [LicenseUnion](https://cloud.tencent.com/document/api/1483/72074#LicenseUnion)
-* [PURL](https://cloud.tencent.com/document/api/1483/72074#PURL)
-* [Qualifier](https://cloud.tencent.com/document/api/1483/72074#Qualifier)
-* [VulnerabilityDetail](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityDetail)
-* [VulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#VulnerabilitySummary)
-* [VulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityUnion)
-
-
-
-## 人脸核身(faceid) 版本：2018-03-01
-
-### 第 39 次发布
-
-发布时间：2022-04-01 06:09:09
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [IntentionVerifyData](https://cloud.tencent.com/document/api/1007/41958#IntentionVerifyData)
-
-	* 新增成员：AsrResultSimilarity
-
-
-
-
-## 物联网通信(iotcloud) 版本：2021-04-08
-
-### 第 2 次发布
-
-发布时间：2022-04-01 15:20:13
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DeleteProductPrivateCA](https://cloud.tencent.com/document/api/634/71963)
-* [ListLog](https://cloud.tencent.com/document/api/634/71956)
-* [ListLogPayload](https://cloud.tencent.com/document/api/634/71955)
-* [ListSDKLog](https://cloud.tencent.com/document/api/634/71954)
-* [PublishBroadcastMessage](https://cloud.tencent.com/document/api/634/71952)
-* [SetProductsForbiddenStatus](https://cloud.tencent.com/document/api/634/71960)
-* [UpdateDevicePSK](https://cloud.tencent.com/document/api/634/71945)
-* [UpdateProductDynamicRegister](https://cloud.tencent.com/document/api/634/71959)
-* [UpdateProductPrivateCA](https://cloud.tencent.com/document/api/634/71958)
-
-修改接口：
-
-* [DescribeDevice](https://cloud.tencent.com/document/api/634/71948)
-
-	* 新增出参：CreateUserId
-
-
-新增数据结构：
-
-* [CLSLogItem](https://cloud.tencent.com/document/api/634/71973#CLSLogItem)
-* [PayloadLogItem](https://cloud.tencent.com/document/api/634/71973#PayloadLogItem)
-* [SDKLogItem](https://cloud.tencent.com/document/api/634/71973#SDKLogItem)
-
-
-
-## 物联网通信(iotcloud) 版本：2018-06-14
-
-### 第 27 次发布
-
-发布时间：2022-04-01 15:19:16
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeProduct](https://cloud.tencent.com/document/api/634/71942)
-* [UpdateProductDynamicRegister](https://cloud.tencent.com/document/api/634/71941)
-
-
-
-## 轻量应用服务器(lighthouse) 版本：2020-03-24
-
-### 第 27 次发布
-
-发布时间：2022-04-01 06:11:10
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [Instance](https://cloud.tencent.com/document/api/1207/47576#Instance)
-
-	* 新增成员：InstanceRestrictState
-
-
-
-
-## 云数据库 MongoDB(mongodb) 版本：2019-07-25
-
-### 第 20 次发布
-
-发布时间：2022-04-01 06:11:50
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [ModifyDBInstanceNetworkAddress](https://cloud.tencent.com/document/api/240/71918)
-
-新增数据结构：
-
-* [ModifyNetworkAddress](https://cloud.tencent.com/document/api/240/38576#ModifyNetworkAddress)
-
-
-
-## 云数据库 MongoDB(mongodb) 版本：2018-04-08
-
-
-
-## 安全运营中心(ssa) 版本：2018-06-08
-
-### 第 7 次发布
-
-发布时间：2022-04-01 06:13:54
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [DescribeSocAlertList](https://cloud.tencent.com/document/api/664/64446)
-
-	* 新增入参：ExportFlag
-
-* [DescribeVulDetail](https://cloud.tencent.com/document/api/664/51980)
-
-	* 新增出参：VulPath
-
-
-修改数据结构：
-
-* [ConcernInfo](https://cloud.tencent.com/document/api/664/51406#ConcernInfo)
-
-	* 新增成员：SearchData, IpCountryIso, IpProvinceIso, IpCity, EventSubType
-
-* [VulItem](https://cloud.tencent.com/document/api/664/51406#VulItem)
-
-	* 新增成员：VulPath
-
-
-
-
-## 高性能计算平台(thpc) 版本：2021-11-09
-
-### 第 8 次发布
-
-发布时间：2022-04-01 06:15:33
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [CreateCluster](https://cloud.tencent.com/document/api/1527/64905)
-
-	* 新增入参：LoginNode, LoginNodeCount, Tags
-
-
-新增数据结构：
-
-* [LoginNode](https://cloud.tencent.com/document/api/1527/64906#LoginNode)
-* [Tag](https://cloud.tencent.com/document/api/1527/64906#Tag)
-
-
-
-## 容器服务(tke) 版本：2018-05-25
-
-### 第 95 次发布
-
-发布时间：2022-04-01 20:14:58
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeClusterLevelAttribute](https://cloud.tencent.com/document/api/457/72007)
-* [DescribeClusterLevelChangeRecords](https://cloud.tencent.com/document/api/457/72006)
-* [DescribeResourceUsage](https://cloud.tencent.com/document/api/457/72005)
-* [GetClusterLevelPrice](https://cloud.tencent.com/document/api/457/72004)
-
-新增数据结构：
-
-* [ClusterLevelAttribute](https://cloud.tencent.com/document/api/457/31866#ClusterLevelAttribute)
-* [ClusterLevelChangeRecord](https://cloud.tencent.com/document/api/457/31866#ClusterLevelChangeRecord)
-* [ResourceUsage](https://cloud.tencent.com/document/api/457/31866#ResourceUsage)
-* [ResourceUsageDetail](https://cloud.tencent.com/document/api/457/31866#ResourceUsageDetail)
-
-
-
 # 历次版本更新如下：
 
 ## 活动防刷(aa) 版本：2020-02-24
@@ -7476,27 +7213,27 @@
 
 新增接口：
 
-* [[DescribeKBComponent](https://cloud.tencent.com/document/api/1483/72073)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeKBComponentVulnerability](https://cloud.tencent.com/document/api/1483/72072)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeKBLicense](https://cloud.tencent.com/document/api/1483/72071)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeKBVulnerability](https://cloud.tencent.com/document/api/1483/72070)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeKBComponent](https://cloud.tencent.com/document/api/1483/72073)
+* [DescribeKBComponentVulnerability](https://cloud.tencent.com/document/api/1483/72072)
+* [DescribeKBLicense](https://cloud.tencent.com/document/api/1483/72071)
+* [DescribeKBVulnerability](https://cloud.tencent.com/document/api/1483/72070)
 
 新增数据结构：
 
-* [[CVSSV2Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV2Info)](https://cloud.tencent.com/document/api/1483/72074#[CVSSV2Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV2Info))
-* [[CVSSV3Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV3Info)](https://cloud.tencent.com/document/api/1483/72074#[CVSSV3Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV3Info))
-* [[Component](https://cloud.tencent.com/document/api/1483/72074#Component)](https://cloud.tencent.com/document/api/1483/72074#[Component](https://cloud.tencent.com/document/api/1483/72074#Component))
-* [[ComponentVulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilitySummary)](https://cloud.tencent.com/document/api/1483/72074#[ComponentVulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilitySummary))
-* [[ComponentVulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilityUnion)](https://cloud.tencent.com/document/api/1483/72074#[ComponentVulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilityUnion))
-* [[LicenseDetail](https://cloud.tencent.com/document/api/1483/72074#LicenseDetail)](https://cloud.tencent.com/document/api/1483/72074#[LicenseDetail](https://cloud.tencent.com/document/api/1483/72074#LicenseDetail))
-* [[LicenseRestriction](https://cloud.tencent.com/document/api/1483/72074#LicenseRestriction)](https://cloud.tencent.com/document/api/1483/72074#[LicenseRestriction](https://cloud.tencent.com/document/api/1483/72074#LicenseRestriction))
-* [[LicenseSummary](https://cloud.tencent.com/document/api/1483/72074#LicenseSummary)](https://cloud.tencent.com/document/api/1483/72074#[LicenseSummary](https://cloud.tencent.com/document/api/1483/72074#LicenseSummary))
-* [[LicenseUnion](https://cloud.tencent.com/document/api/1483/72074#LicenseUnion)](https://cloud.tencent.com/document/api/1483/72074#[LicenseUnion](https://cloud.tencent.com/document/api/1483/72074#LicenseUnion))
-* [[PURL](https://cloud.tencent.com/document/api/1483/72074#PURL)](https://cloud.tencent.com/document/api/1483/72074#[PURL](https://cloud.tencent.com/document/api/1483/72074#PURL))
-* [[Qualifier](https://cloud.tencent.com/document/api/1483/72074#Qualifier)](https://cloud.tencent.com/document/api/1483/72074#[Qualifier](https://cloud.tencent.com/document/api/1483/72074#Qualifier))
-* [[VulnerabilityDetail](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityDetail)](https://cloud.tencent.com/document/api/1483/72074#[VulnerabilityDetail](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityDetail))
-* [[VulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#VulnerabilitySummary)](https://cloud.tencent.com/document/api/1483/72074#[VulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#VulnerabilitySummary))
-* [[VulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityUnion)](https://cloud.tencent.com/document/api/1483/72074#[VulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityUnion))
+* [CVSSV2Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV2Info)
+* [CVSSV3Info](https://cloud.tencent.com/document/api/1483/72074#CVSSV3Info)
+* [Component](https://cloud.tencent.com/document/api/1483/72074#Component)
+* [ComponentVulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilitySummary)
+* [ComponentVulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#ComponentVulnerabilityUnion)
+* [LicenseDetail](https://cloud.tencent.com/document/api/1483/72074#LicenseDetail)
+* [LicenseRestriction](https://cloud.tencent.com/document/api/1483/72074#LicenseRestriction)
+* [LicenseSummary](https://cloud.tencent.com/document/api/1483/72074#LicenseSummary)
+* [LicenseUnion](https://cloud.tencent.com/document/api/1483/72074#LicenseUnion)
+* [PURL](https://cloud.tencent.com/document/api/1483/72074#PURL)
+* [Qualifier](https://cloud.tencent.com/document/api/1483/72074#Qualifier)
+* [VulnerabilityDetail](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityDetail)
+* [VulnerabilitySummary](https://cloud.tencent.com/document/api/1483/72074#VulnerabilitySummary)
+* [VulnerabilityUnion](https://cloud.tencent.com/document/api/1483/72074#VulnerabilityUnion)
 
 
 
@@ -37315,8 +37052,8 @@
 
 新增接口：
 
-* [[DescribeProduct](https://cloud.tencent.com/document/api/634/71942)](https://cloud.tencent.com/document/api/#/#)
-* [[UpdateProductDynamicRegister](https://cloud.tencent.com/document/api/634/71941)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeProduct](https://cloud.tencent.com/document/api/634/71942)
+* [UpdateProductDynamicRegister](https://cloud.tencent.com/document/api/634/71941)
 
 ### 第 26 次发布
 
@@ -37935,15 +37672,15 @@
 
 新增接口：
 
-* [[DeleteProductPrivateCA](https://cloud.tencent.com/document/api/634/71963)](https://cloud.tencent.com/document/api/#/#)
-* [[ListLog](https://cloud.tencent.com/document/api/634/71956)](https://cloud.tencent.com/document/api/#/#)
-* [[ListLogPayload](https://cloud.tencent.com/document/api/634/71955)](https://cloud.tencent.com/document/api/#/#)
-* [[ListSDKLog](https://cloud.tencent.com/document/api/634/71954)](https://cloud.tencent.com/document/api/#/#)
-* [[PublishBroadcastMessage](https://cloud.tencent.com/document/api/634/71952)](https://cloud.tencent.com/document/api/#/#)
-* [[SetProductsForbiddenStatus](https://cloud.tencent.com/document/api/634/71960)](https://cloud.tencent.com/document/api/#/#)
-* [[UpdateDevicePSK](https://cloud.tencent.com/document/api/634/71945)](https://cloud.tencent.com/document/api/#/#)
-* [[UpdateProductDynamicRegister](https://cloud.tencent.com/document/api/634/71959)](https://cloud.tencent.com/document/api/#/#)
-* [[UpdateProductPrivateCA](https://cloud.tencent.com/document/api/634/71958)](https://cloud.tencent.com/document/api/#/#)
+* [DeleteProductPrivateCA](https://cloud.tencent.com/document/api/634/71963)
+* [ListLog](https://cloud.tencent.com/document/api/634/71956)
+* [ListLogPayload](https://cloud.tencent.com/document/api/634/71955)
+* [ListSDKLog](https://cloud.tencent.com/document/api/634/71954)
+* [PublishBroadcastMessage](https://cloud.tencent.com/document/api/634/71952)
+* [SetProductsForbiddenStatus](https://cloud.tencent.com/document/api/634/71960)
+* [UpdateDevicePSK](https://cloud.tencent.com/document/api/634/71945)
+* [UpdateProductDynamicRegister](https://cloud.tencent.com/document/api/634/71959)
+* [UpdateProductPrivateCA](https://cloud.tencent.com/document/api/634/71958)
 
 修改接口：
 
@@ -37954,9 +37691,9 @@
 
 新增数据结构：
 
-* [[CLSLogItem](https://cloud.tencent.com/document/api/634/71973#CLSLogItem)](https://cloud.tencent.com/document/api/634/71973#[CLSLogItem](https://cloud.tencent.com/document/api/634/71973#CLSLogItem))
-* [[PayloadLogItem](https://cloud.tencent.com/document/api/634/71973#PayloadLogItem)](https://cloud.tencent.com/document/api/634/71973#[PayloadLogItem](https://cloud.tencent.com/document/api/634/71973#PayloadLogItem))
-* [[SDKLogItem](https://cloud.tencent.com/document/api/634/71973#SDKLogItem)](https://cloud.tencent.com/document/api/634/71973#[SDKLogItem](https://cloud.tencent.com/document/api/634/71973#SDKLogItem))
+* [CLSLogItem](https://cloud.tencent.com/document/api/634/71973#CLSLogItem)
+* [PayloadLogItem](https://cloud.tencent.com/document/api/634/71973#PayloadLogItem)
+* [SDKLogItem](https://cloud.tencent.com/document/api/634/71973#SDKLogItem)
 
 ### 第 1 次发布
 
@@ -44081,11 +43818,11 @@
 
 新增接口：
 
-* [[ModifyDBInstanceNetworkAddress](https://cloud.tencent.com/document/api/240/71918)](https://cloud.tencent.com/document/api/#/#)
+* [ModifyDBInstanceNetworkAddress](https://cloud.tencent.com/document/api/240/71918)
 
 新增数据结构：
 
-* [[ModifyNetworkAddress](https://cloud.tencent.com/document/api/240/38576#ModifyNetworkAddress)](https://cloud.tencent.com/document/api/240/38576#[ModifyNetworkAddress](https://cloud.tencent.com/document/api/240/38576#ModifyNetworkAddress))
+* [ModifyNetworkAddress](https://cloud.tencent.com/document/api/240/38576#ModifyNetworkAddress)
 
 ### 第 19 次发布
 
@@ -61632,8 +61369,8 @@
 
 新增数据结构：
 
-* [[LoginNode](https://cloud.tencent.com/document/api/1527/64906#LoginNode)](https://cloud.tencent.com/document/api/1527/64906#[LoginNode](https://cloud.tencent.com/document/api/1527/64906#LoginNode))
-* [[Tag](https://cloud.tencent.com/document/api/1527/64906#Tag)](https://cloud.tencent.com/document/api/1527/64906#[Tag](https://cloud.tencent.com/document/api/1527/64906#Tag))
+* [LoginNode](https://cloud.tencent.com/document/api/1527/64906#LoginNode)
+* [Tag](https://cloud.tencent.com/document/api/1527/64906#Tag)
 
 ### 第 7 次发布
 
@@ -63408,17 +63145,17 @@
 
 新增接口：
 
-* [[DescribeClusterLevelAttribute](https://cloud.tencent.com/document/api/457/72007)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeClusterLevelChangeRecords](https://cloud.tencent.com/document/api/457/72006)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeResourceUsage](https://cloud.tencent.com/document/api/457/72005)](https://cloud.tencent.com/document/api/#/#)
-* [[GetClusterLevelPrice](https://cloud.tencent.com/document/api/457/72004)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeClusterLevelAttribute](https://cloud.tencent.com/document/api/457/72007)
+* [DescribeClusterLevelChangeRecords](https://cloud.tencent.com/document/api/457/72006)
+* [DescribeResourceUsage](https://cloud.tencent.com/document/api/457/72005)
+* [GetClusterLevelPrice](https://cloud.tencent.com/document/api/457/72004)
 
 新增数据结构：
 
-* [[ClusterLevelAttribute](https://cloud.tencent.com/document/api/457/31866#ClusterLevelAttribute)](https://cloud.tencent.com/document/api/457/31866#[ClusterLevelAttribute](https://cloud.tencent.com/document/api/457/31866#ClusterLevelAttribute))
-* [[ClusterLevelChangeRecord](https://cloud.tencent.com/document/api/457/31866#ClusterLevelChangeRecord)](https://cloud.tencent.com/document/api/457/31866#[ClusterLevelChangeRecord](https://cloud.tencent.com/document/api/457/31866#ClusterLevelChangeRecord))
-* [[ResourceUsage](https://cloud.tencent.com/document/api/457/31866#ResourceUsage)](https://cloud.tencent.com/document/api/457/31866#[ResourceUsage](https://cloud.tencent.com/document/api/457/31866#ResourceUsage))
-* [[ResourceUsageDetail](https://cloud.tencent.com/document/api/457/31866#ResourceUsageDetail)](https://cloud.tencent.com/document/api/457/31866#[ResourceUsageDetail](https://cloud.tencent.com/document/api/457/31866#ResourceUsageDetail))
+* [ClusterLevelAttribute](https://cloud.tencent.com/document/api/457/31866#ClusterLevelAttribute)
+* [ClusterLevelChangeRecord](https://cloud.tencent.com/document/api/457/31866#ClusterLevelChangeRecord)
+* [ResourceUsage](https://cloud.tencent.com/document/api/457/31866#ResourceUsage)
+* [ResourceUsageDetail](https://cloud.tencent.com/document/api/457/31866#ResourceUsageDetail)
 
 ### 第 94 次发布
 

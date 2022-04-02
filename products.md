@@ -77,7 +77,7 @@
 | eis | [企业集成服务](https://cloud.tencent.com/document/product/1270) | 2022-02-21 08:06:46 |
 | emr | [弹性 MapReduce](https://cloud.tencent.com/document/product/589) | 2022-03-03 08:06:04 |
 | es | [Elasticsearch Service](https://cloud.tencent.com/document/product/845) | 2022-03-21 11:04:25 |
-| ess | [电子签服务](https://cloud.tencent.com/document/product/1323) | 2022-03-18 15:46:35 |
+| ess | [电子签服务](https://cloud.tencent.com/document/product/1323) | 2022-04-02 22:56:12 |
 | essbasic | [腾讯电子签（基础版）](https://cloud.tencent.com/document/product/1420) | 2022-04-01 06:09:04 |
 | facefusion | [人脸融合](https://cloud.tencent.com/document/product/670) | 2022-02-25 08:09:04 |
 | faceid | [人脸核身](https://cloud.tencent.com/document/product/1007) | 2022-04-01 06:09:09 |
