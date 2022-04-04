@@ -633,29 +633,6 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribePaiInstances）用于查询PAI实例信息。
-
-* 可以根据实例ID、实例域名等信息来查询PAI实例的详细信息。过滤信息详细请见过滤器`Filter`。
-* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的PAI实例。
-     * @param req DescribePaiInstancesRequest
-     * @return DescribePaiInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePaiInstancesResponse DescribePaiInstances(DescribePaiInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePaiInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePaiInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DescribeScalingPolicies）用于查询告警触发策略。
      * @param req DescribeScalingPoliciesRequest
      * @return DescribeScalingPoliciesResponse

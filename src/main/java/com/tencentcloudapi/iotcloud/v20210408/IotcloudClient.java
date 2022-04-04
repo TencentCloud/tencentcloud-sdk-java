@@ -139,6 +139,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *删除产品的私有CA证书
+     * @param req DeleteProductPrivateCARequest
+     * @return DeleteProductPrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProductPrivateCAResponse DeleteProductPrivateCA(DeleteProductPrivateCARequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteProductPrivateCAResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteProductPrivateCAResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteProductPrivateCA");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDevice）用于查看设备信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
@@ -279,6 +299,106 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（ListLog）用于查看日志信息 
+     * @param req ListLogRequest
+     * @return ListLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLogResponse ListLog(ListLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取日志内容列表
+     * @param req ListLogPayloadRequest
+     * @return ListLogPayloadResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLogPayloadResponse ListLogPayload(ListLogPayloadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLogPayloadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLogPayloadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListLogPayload");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备上报的日志
+     * @param req ListSDKLogRequest
+     * @return ListSDKLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSDKLogResponse ListSDKLog(ListSDKLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListSDKLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListSDKLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListSDKLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发布广播消息
+     * @param req PublishBroadcastMessageRequest
+     * @return PublishBroadcastMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishBroadcastMessageResponse PublishBroadcastMessage(PublishBroadcastMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishBroadcastMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishBroadcastMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PublishBroadcastMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量设置产品禁用状态
+     * @param req SetProductsForbiddenStatusRequest
+     * @return SetProductsForbiddenStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(SetProductsForbiddenStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetProductsForbiddenStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetProductsForbiddenStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置设备上报的日志级别  
      * @param req UpdateDeviceLogLevelRequest
      * @return UpdateDeviceLogLevelResponse
@@ -291,6 +411,26 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateDeviceLogLevelResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateDeviceLogLevel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpdateDevicePSK）用于更新设备的PSK 
+     * @param req UpdateDevicePSKRequest
+     * @return UpdateDevicePSKResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDevicePSKResponse UpdateDevicePSK(UpdateDevicePSKRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDevicePSKResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDevicePSKResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDevicePSK");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -331,6 +471,46 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdatePrivateCAResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdatePrivateCA");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新产品动态注册的配置 
+     * @param req UpdateProductDynamicRegisterRequest
+     * @return UpdateProductDynamicRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProductDynamicRegisterResponse UpdateProductDynamicRegister(UpdateProductDynamicRegisterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProductDynamicRegisterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProductDynamicRegister");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新产品的私有CA
+     * @param req UpdateProductPrivateCARequest
+     * @return UpdateProductPrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProductPrivateCAResponse UpdateProductPrivateCA(UpdateProductPrivateCARequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProductPrivateCAResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProductPrivateCAResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProductPrivateCA");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

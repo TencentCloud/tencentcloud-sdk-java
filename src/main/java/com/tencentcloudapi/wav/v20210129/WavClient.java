@@ -219,6 +219,46 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *通过接口拉取租户/指定成员/部门在指定日期范围内的CRM跟进统计数据
+     * @param req QueryCrmStatisticsRequest
+     * @return QueryCrmStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCrmStatisticsResponse QueryCrmStatistics(QueryCrmStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCrmStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCrmStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCrmStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过接口拉取SaaS内C端外部联系人在指定时间范围内的行为事件明细。此接口提供的数据以天为维度，查询的时间范围为[start_time,end_time]，即前后均为闭区间，支持的最大查询跨度为365天。
+     * @param req QueryCustomerEventDetailStatisticsRequest
+     * @return QueryCustomerEventDetailStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCustomerEventDetailStatisticsResponse QueryCustomerEventDetailStatistics(QueryCustomerEventDetailStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCustomerEventDetailStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCustomerEventDetailStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCustomerEventDetailStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
      * @param req QueryDealerInfoListRequest
      * @return QueryDealerInfoListResponse
@@ -279,6 +319,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *通过接口拉取租户在指定时间范围内的外部联系人添加/删除明细，此接口提供的数据以天为维度，查询的时间范围为[StarTime, EndTime]，即前后均为闭区间，支持的最大查询跨度为365天；
+     * @param req QueryExternalUserEventListRequest
+     * @return QueryExternalUserEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryExternalUserEventListResponse QueryExternalUserEventList(QueryExternalUserEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryExternalUserEventListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryExternalUserEventListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryExternalUserEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
      * @param req QueryExternalUserMappingInfoRequest
      * @return QueryExternalUserMappingInfoResponse
@@ -319,6 +379,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *通过接口按类型拉取租户当前的素材列表及关键信息
+     * @param req QueryMaterialListRequest
+     * @return QueryMaterialListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMaterialListResponse QueryMaterialList(QueryMaterialListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMaterialListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMaterialListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMaterialList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询小程序码列表接口
      * @param req QueryMiniAppCodeListRequest
      * @return QueryMiniAppCodeListResponse
@@ -331,6 +411,46 @@ public class WavClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryMiniAppCodeListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryMiniAppCodeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过接口拉取SaaS内企业成员在指定时间范围内的行为事件明细。此接口提供的数据以天为维度，查询的时间范围为[start_time,end_time]，即前后均为闭区间，支持的最大查询跨度为365天。
+     * @param req QueryStaffEventDetailStatisticsRequest
+     * @return QueryStaffEventDetailStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryStaffEventDetailStatisticsResponse QueryStaffEventDetailStatistics(QueryStaffEventDetailStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryStaffEventDetailStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryStaffEventDetailStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryStaffEventDetailStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询企业成员信息列表接口
+     * @param req QueryUserInfoListRequest
+     * @return QueryUserInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryUserInfoListResponse QueryUserInfoList(QueryUserInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryUserInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryUserInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryUserInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

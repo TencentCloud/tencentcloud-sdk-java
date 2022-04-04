@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * Lighthouse套餐ID。
+    * 套餐ID。
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * Lighthouse镜像ID。
+    * 镜像ID。
     */
     @SerializedName("BlueprintId")
     @Expose
     private String BlueprintId;
 
     /**
-    * 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+    * 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * Lighthouse实例显示名称。
+    * 实例显示名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+    * 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -97,80 +97,80 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private DockerContainerConfiguration [] Containers;
 
     /**
-     * Get Lighthouse套餐ID。 
-     * @return BundleId Lighthouse套餐ID。
+     * Get 套餐ID。 
+     * @return BundleId 套餐ID。
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set Lighthouse套餐ID。
-     * @param BundleId Lighthouse套餐ID。
+     * Set 套餐ID。
+     * @param BundleId 套餐ID。
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get Lighthouse镜像ID。 
-     * @return BlueprintId Lighthouse镜像ID。
+     * Get 镜像ID。 
+     * @return BlueprintId 镜像ID。
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set Lighthouse镜像ID。
-     * @param BlueprintId Lighthouse镜像ID。
+     * Set 镜像ID。
+     * @param BlueprintId 镜像ID。
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;
     }
 
     /**
-     * Get 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。 
-     * @return InstanceChargePrepaid 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+     * Get 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。 
+     * @return InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
-     * @param InstanceChargePrepaid 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+     * Set 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+     * @param InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get Lighthouse实例显示名称。 
-     * @return InstanceName Lighthouse实例显示名称。
+     * Get 实例显示名称。 
+     * @return InstanceName 实例显示名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Lighthouse实例显示名称。
-     * @param InstanceName Lighthouse实例显示名称。
+     * Set 实例显示名称。
+     * @param InstanceName 实例显示名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量 
-     * @return InstanceCount 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+     * Get 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量 
+     * @return InstanceCount 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
-     * @param InstanceCount 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+     * Set 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+     * @param InstanceCount 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;

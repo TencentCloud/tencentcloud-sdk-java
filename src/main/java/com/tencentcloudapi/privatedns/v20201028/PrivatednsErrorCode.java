@@ -184,7 +184,10 @@ public enum PrivatednsErrorCode {
      UNSUPPORTEDOPERATION_ACCOUNTNOTBOUND("UnsupportedOperation.AccountNotBound"),
      
     // 存在绑定的VPC资源。
-     UNSUPPORTEDOPERATION_EXISTBOUNDVPC("UnsupportedOperation.ExistBoundVpc");
+     UNSUPPORTEDOPERATION_EXISTBOUNDVPC("UnsupportedOperation.ExistBoundVpc"),
+     
+    // 接口调用超过限频。
+     UNSUPPORTEDOPERATION_FREQUENCYLIMIT("UnsupportedOperation.FrequencyLimit");
      
     private String value;
     private PrivatednsErrorCode (String value){

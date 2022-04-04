@@ -522,6 +522,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyDBInstanceNetworkAddress)用于修改云数据库实例的网络信息，可进行基础网络转VPC网络和VPC网络之间的变换。
+     * @param req ModifyDBInstanceNetworkAddressRequest
+     * @return ModifyDBInstanceNetworkAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(ModifyDBInstanceNetworkAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceNetworkAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNetworkAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceNetworkAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例绑定的安全组
      * @param req ModifyDBInstanceSecurityGroupRequest
      * @return ModifyDBInstanceSecurityGroupResponse

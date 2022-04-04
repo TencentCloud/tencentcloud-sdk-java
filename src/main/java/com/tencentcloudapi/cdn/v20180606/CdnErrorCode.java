@@ -240,6 +240,9 @@ public enum CdnErrorCode {
     // 参数错误。
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
+    // 正则子模式超出上限。
+     INVALIDPARAMETER_PATHREGEXTOOMANYSUBPATTERN("InvalidParameter.PathRegexTooManySubPattern"),
+     
     // 域名所在平台不支持远程鉴权。
      INVALIDPARAMETER_REMOTEAUTHINVALIDPLATFORM("InvalidParameter.RemoteAuthInvalidPlatform"),
      

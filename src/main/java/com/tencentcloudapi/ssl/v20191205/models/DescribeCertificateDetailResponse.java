@@ -231,7 +231,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private String [] SubjectAltName;
 
     /**
-    * 是否为 VIP 客户。
+    * 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVip")
@@ -271,7 +271,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private SubmittedData SubmittedData;
 
     /**
-    * 是否可重颁发证书。
+    * 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewAble")
@@ -822,9 +822,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否为 VIP 客户。
+     * Get 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsVip 是否为 VIP 客户。
+     * @return IsVip 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVip() {
@@ -832,9 +832,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否为 VIP 客户。
+     * Set 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsVip 是否为 VIP 客户。
+     * @param IsVip 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVip(Boolean IsVip) {
@@ -922,9 +922,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否可重颁发证书。
+     * Get 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewAble 是否可重颁发证书。
+     * @return RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewAble() {
@@ -932,9 +932,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否可重颁发证书。
+     * Set 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewAble 是否可重颁发证书。
+     * @param RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewAble(Boolean RenewAble) {

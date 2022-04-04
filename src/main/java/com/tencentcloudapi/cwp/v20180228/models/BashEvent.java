@@ -93,7 +93,7 @@ public class BashEvent extends AbstractModel{
     private Long RuleLevel;
 
     /**
-    * 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+    * 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
     */
     @SerializedName("Status")
     @Expose
@@ -322,16 +322,16 @@ public class BashEvent extends AbstractModel{
     }
 
     /**
-     * Get 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白 
-     * @return Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+     * Get 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略 
+     * @return Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
-     * @param Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+     * Set 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
+     * @param Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
      */
     public void setStatus(Long Status) {
         this.Status = Status;

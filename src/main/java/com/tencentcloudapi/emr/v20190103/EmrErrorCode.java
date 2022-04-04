@@ -84,9 +84,6 @@ public enum EmrErrorCode {
     // Master节点数量无效。
      INVALIDPARAMETER_INCORRECTMASTERCOUNT("InvalidParameter.IncorrectMasterCount"),
      
-    // core节点的数量不能超过20。
-     INVALIDPARAMETER_INVAILDCORECOUNT("InvalidParameter.InvaildCoreCount"),
-     
     // 无效参数，AppId。
      INVALIDPARAMETER_INVALIDAPPID("InvalidParameter.InvalidAppId"),
      
@@ -308,9 +305,6 @@ public enum EmrErrorCode {
      
     // 当前资源规格不存在默认规格。
      RESOURCEUNAVAILABLE_RESOURCESPECNOTDEFAULTSPEC("ResourceUnavailable.ResourceSpecNotDefaultSpec"),
-     
-    // 当前资源规格不存在默认规格。
-     RESOURCEUNAVAILABLE_RESOURCESPEC_NOTDEFAULTSPEC("ResourceUnavailable.ResourceSpec_NotDefaultSpec"),
      
     // 资源售罄。
      RESOURCESSOLDOUT("ResourcesSoldOut"),

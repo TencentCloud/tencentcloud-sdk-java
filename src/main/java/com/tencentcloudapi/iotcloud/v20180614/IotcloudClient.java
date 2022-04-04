@@ -719,6 +719,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeProduct）用于查看产品详情
+     * @param req DescribeProductRequest
+     * @return DescribeProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductResponse DescribeProduct(DescribeProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProductResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProductResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeProductResource）用于查询产品资源详情。 
      * @param req DescribeProductResourceRequest
      * @return DescribeProductResourceResponse
@@ -1331,6 +1351,26 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateDevicesEnableStateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateDevicesEnableState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新产品动态注册的配置 
+     * @param req UpdateProductDynamicRegisterRequest
+     * @return UpdateProductDynamicRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProductDynamicRegisterResponse UpdateProductDynamicRegister(UpdateProductDynamicRegisterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProductDynamicRegisterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProductDynamicRegister");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

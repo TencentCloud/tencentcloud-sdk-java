@@ -939,6 +939,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取集群规模
+     * @param req DescribeClusterLevelAttributeRequest
+     * @return DescribeClusterLevelAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(DescribeClusterLevelAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterLevelAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterLevelAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterLevelAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群变配记录
+     * @param req DescribeClusterLevelChangeRecordsRequest
+     * @return DescribeClusterLevelChangeRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecords(DescribeClusterLevelChangeRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterLevelChangeRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterLevelChangeRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterLevelChangeRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询节点池详情
      * @param req DescribeClusterNodePoolDetailRequest
      * @return DescribeClusterNodePoolDetailResponse
@@ -1499,6 +1539,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取集群资源使用量
+     * @param req DescribeResourceUsageRequest
+     * @return DescribeResourceUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceUsageResponse DescribeResourceUsage(DescribeResourceUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询路由表冲突列表
      * @param req DescribeRouteTableConflictsRequest
      * @return DescribeRouteTableConflictsResponse
@@ -1671,6 +1731,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ForwardApplicationRequestV3Response>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ForwardApplicationRequestV3");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取集群规模价格
+     * @param req GetClusterLevelPriceRequest
+     * @return GetClusterLevelPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetClusterLevelPriceResponse GetClusterLevelPrice(GetClusterLevelPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetClusterLevelPriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetClusterLevelPriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetClusterLevelPrice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

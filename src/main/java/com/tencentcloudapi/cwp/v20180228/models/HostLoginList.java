@@ -70,7 +70,7 @@ public class HostLoginList extends AbstractModel{
     private String SrcIp;
 
     /**
-    * 1:正常登录；2异地登录； 5已加白
+    * 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
     */
     @SerializedName("Status")
     @Expose
@@ -283,16 +283,16 @@ public class HostLoginList extends AbstractModel{
     }
 
     /**
-     * Get 1:正常登录；2异地登录； 5已加白 
-     * @return Status 1:正常登录；2异地登录； 5已加白
+     * Get 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。 
+     * @return Status 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1:正常登录；2异地登录； 5已加白
-     * @param Status 1:正常登录；2异地登录； 5已加白
+     * Set 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
+     * @param Status 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

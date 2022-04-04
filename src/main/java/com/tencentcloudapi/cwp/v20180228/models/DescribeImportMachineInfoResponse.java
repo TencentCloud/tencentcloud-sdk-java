@@ -31,7 +31,7 @@ public class DescribeImportMachineInfoResponse extends AbstractModel{
     private EffectiveMachineInfo [] EffectiveMachineInfoList;
 
     /**
-    * 用户批量导入失败的机器列表（比如机器不存在等...）
+    * 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvalidMachineList")
@@ -66,9 +66,9 @@ public class DescribeImportMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户批量导入失败的机器列表（比如机器不存在等...）
+     * Get 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InvalidMachineList 用户批量导入失败的机器列表（比如机器不存在等...）
+     * @return InvalidMachineList 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInvalidMachineList() {
@@ -76,9 +76,9 @@ public class DescribeImportMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 用户批量导入失败的机器列表（比如机器不存在等...）
+     * Set 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InvalidMachineList 用户批量导入失败的机器列表（比如机器不存在等...）
+     * @param InvalidMachineList 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvalidMachineList(String [] InvalidMachineList) {

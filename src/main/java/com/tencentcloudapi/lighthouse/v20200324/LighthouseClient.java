@@ -1044,7 +1044,7 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
-     *本接口（InquirePriceCreateInstances）用于续费实例询价。
+     *本接口（InquirePriceRenewInstances）用于续费实例询价。
      * @param req InquirePriceRenewInstancesRequest
      * @return InquirePriceRenewInstancesResponse
      * @throws TencentCloudSDKException

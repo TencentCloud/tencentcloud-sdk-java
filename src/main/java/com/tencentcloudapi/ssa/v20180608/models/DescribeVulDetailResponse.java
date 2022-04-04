@@ -191,6 +191,14 @@ public class DescribeVulDetailResponse extends AbstractModel{
     private Long SsaAssetCategory;
 
     /**
+    * 资产文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulPath")
+    @Expose
+    private String VulPath;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -618,6 +626,26 @@ public class DescribeVulDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 资产文件路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulPath 资产文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVulPath() {
+        return this.VulPath;
+    }
+
+    /**
+     * Set 资产文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulPath 资产文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulPath(String VulPath) {
+        this.VulPath = VulPath;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -704,6 +732,9 @@ public class DescribeVulDetailResponse extends AbstractModel{
         if (source.SsaAssetCategory != null) {
             this.SsaAssetCategory = new Long(source.SsaAssetCategory);
         }
+        if (source.VulPath != null) {
+            this.VulPath = new String(source.VulPath);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -735,6 +766,7 @@ public class DescribeVulDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "VulUrl", this.VulUrl);
         this.setParamSimple(map, prefix + "SsaAssetCategory", this.SsaAssetCategory);
+        this.setParamSimple(map, prefix + "VulPath", this.VulPath);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

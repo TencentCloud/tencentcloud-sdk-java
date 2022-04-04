@@ -58,6 +58,13 @@ public class DescribeSocAlertListRequest extends AbstractModel{
     private QuerySort [] Sorter;
 
     /**
+    * 是否导出
+    */
+    @SerializedName("ExportFlag")
+    @Expose
+    private Boolean ExportFlag;
+
+    /**
      * Get 页大小 
      * @return PageSize 页大小
      */
@@ -137,6 +144,22 @@ public class DescribeSocAlertListRequest extends AbstractModel{
         this.Sorter = Sorter;
     }
 
+    /**
+     * Get 是否导出 
+     * @return ExportFlag 是否导出
+     */
+    public Boolean getExportFlag() {
+        return this.ExportFlag;
+    }
+
+    /**
+     * Set 是否导出
+     * @param ExportFlag 是否导出
+     */
+    public void setExportFlag(Boolean ExportFlag) {
+        this.ExportFlag = ExportFlag;
+    }
+
     public DescribeSocAlertListRequest() {
     }
 
@@ -166,6 +189,9 @@ public class DescribeSocAlertListRequest extends AbstractModel{
                 this.Sorter[i] = new QuerySort(source.Sorter[i]);
             }
         }
+        if (source.ExportFlag != null) {
+            this.ExportFlag = new Boolean(source.ExportFlag);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class DescribeSocAlertListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Scenes", this.Scenes);
         this.setParamArrayObj(map, prefix + "Filter.", this.Filter);
         this.setParamArrayObj(map, prefix + "Sorter.", this.Sorter);
+        this.setParamSimple(map, prefix + "ExportFlag", this.ExportFlag);
 
     }
 }

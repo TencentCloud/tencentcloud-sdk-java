@@ -142,7 +142,7 @@ public class Task extends AbstractModel{
     private Boolean RestartComputeNode;
 
     /**
-    * 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+    * 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
     */
     @SerializedName("ResourceMaxRetryCount")
     @Expose
@@ -421,16 +421,16 @@ public class Task extends AbstractModel{
     }
 
     /**
-     * Get 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。 
-     * @return ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * Get 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。 
+     * @return ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
      */
     public Long getResourceMaxRetryCount() {
         return this.ResourceMaxRetryCount;
     }
 
     /**
-     * Set 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
-     * @param ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * Set 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
+     * @param ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
      */
     public void setResourceMaxRetryCount(Long ResourceMaxRetryCount) {
         this.ResourceMaxRetryCount = ResourceMaxRetryCount;

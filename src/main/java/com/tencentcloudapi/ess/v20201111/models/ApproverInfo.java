@@ -27,7 +27,7 @@ public class ApproverInfo extends AbstractModel{
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署，目前只支持第一方进行静默签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -111,12 +111,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署，目前只支持第一方进行静默签署。 
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。 
      * @return ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署，目前只支持第一方进行静默签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      */
     public Long getApproverType() {
         return this.ApproverType;
@@ -127,12 +127,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署，目前只支持第一方进行静默签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      * @param ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署，目前只支持第一方进行静默签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;

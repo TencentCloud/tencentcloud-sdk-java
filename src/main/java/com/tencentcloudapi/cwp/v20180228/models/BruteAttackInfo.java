@@ -182,6 +182,14 @@ public class BruteAttackInfo extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataStatus")
+    @Expose
+    private Long DataStatus;
+
+    /**
      * Get 唯一Id 
      * @return Id 唯一Id
      */
@@ -577,6 +585,26 @@ public class BruteAttackInfo extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataStatus 0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDataStatus() {
+        return this.DataStatus;
+    }
+
+    /**
+     * Set 0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataStatus 0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataStatus(Long DataStatus) {
+        this.DataStatus = DataStatus;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -645,6 +673,9 @@ public class BruteAttackInfo extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.DataStatus != null) {
+            this.DataStatus = new Long(source.DataStatus);
+        }
     }
 
 
@@ -672,6 +703,7 @@ public class BruteAttackInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "DataStatus", this.DataStatus);
 
     }
 }

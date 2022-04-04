@@ -255,6 +255,14 @@ public class VulItem extends AbstractModel{
     private String VulRepairPlan;
 
     /**
+    * 漏洞文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulPath")
+    @Expose
+    private String VulPath;
+
+    /**
      * Get 标识 
      * @return Id 标识
      */
@@ -810,6 +818,26 @@ public class VulItem extends AbstractModel{
         this.VulRepairPlan = VulRepairPlan;
     }
 
+    /**
+     * Get 漏洞文件路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulPath 漏洞文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVulPath() {
+        return this.VulPath;
+    }
+
+    /**
+     * Set 漏洞文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulPath 漏洞文件路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulPath(String VulPath) {
+        this.VulPath = VulPath;
+    }
+
     public VulItem() {
     }
 
@@ -920,6 +948,9 @@ public class VulItem extends AbstractModel{
         if (source.VulRepairPlan != null) {
             this.VulRepairPlan = new String(source.VulRepairPlan);
         }
+        if (source.VulPath != null) {
+            this.VulPath = new String(source.VulPath);
+        }
     }
 
 
@@ -958,6 +989,7 @@ public class VulItem extends AbstractModel{
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "YzHostId", this.YzHostId);
         this.setParamSimple(map, prefix + "VulRepairPlan", this.VulRepairPlan);
+        this.setParamSimple(map, prefix + "VulPath", this.VulPath);
 
     }
 }

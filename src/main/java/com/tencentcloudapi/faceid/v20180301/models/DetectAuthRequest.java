@@ -81,7 +81,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     private Encryption Encryption;
 
     /**
-    * 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+    * 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
     */
     @SerializedName("IntentionVerifyText")
     @Expose
@@ -224,16 +224,16 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     }
 
     /**
-     * Get 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。 
-     * @return IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     * Get 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。 
+     * @return IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     public String getIntentionVerifyText() {
         return this.IntentionVerifyText;
     }
 
     /**
-     * Set 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
-     * @param IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     * Set 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @param IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     public void setIntentionVerifyText(String IntentionVerifyText) {
         this.IntentionVerifyText = IntentionVerifyText;

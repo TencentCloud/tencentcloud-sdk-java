@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AlertType extends AbstractModel{
 
     /**
-    * 时间戳
+    * 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertTime")
@@ -223,9 +223,9 @@ public class AlertType extends AbstractModel{
     private String VictimAssetSub;
 
     /**
-     * Get 时间戳
+     * Get 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertTime 时间戳
+     * @return AlertTime 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlertTime() {
@@ -233,9 +233,9 @@ public class AlertType extends AbstractModel{
     }
 
     /**
-     * Set 时间戳
+     * Set 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertTime 时间戳
+     * @param AlertTime 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertTime(String AlertTime) {

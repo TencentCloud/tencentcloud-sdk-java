@@ -69,14 +69,12 @@ public class MLIDCardOCRResponse extends AbstractModel{
     private String Image;
 
     /**
-    * 扩展字段：
+    * 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
     */
     @SerializedName("AdvancedInfo")
@@ -224,23 +222,19 @@ MyKid 儿童卡
     }
 
     /**
-     * Get 扩展字段：
+     * Get 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 } 
-     * @return AdvancedInfo 扩展字段：
+     * @return AdvancedInfo 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
      */
     public String getAdvancedInfo() {
@@ -248,23 +242,19 @@ MyKid 儿童卡
     }
 
     /**
-     * Set 扩展字段：
+     * Set 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
-     * @param AdvancedInfo 扩展字段：
+     * @param AdvancedInfo 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
      */
     public void setAdvancedInfo(String AdvancedInfo) {

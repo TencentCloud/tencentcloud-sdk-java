@@ -200,6 +200,14 @@ public class DescribeDeviceResponse extends AbstractModel{
     private Long FirmwareUpdateTime;
 
     /**
+    * 创建者账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -627,6 +635,26 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
+     * Get 创建者账号ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUserId 创建者账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建者账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUserId 创建者账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -728,6 +756,9 @@ public class DescribeDeviceResponse extends AbstractModel{
         if (source.FirmwareUpdateTime != null) {
             this.FirmwareUpdateTime = new Long(source.FirmwareUpdateTime);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -762,6 +793,7 @@ public class DescribeDeviceResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
         this.setParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

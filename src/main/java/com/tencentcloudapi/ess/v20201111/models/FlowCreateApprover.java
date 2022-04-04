@@ -23,7 +23,11 @@ import java.util.HashMap;
 public class FlowCreateApprover extends AbstractModel{
 
     /**
-    * 签署方类型 (0为企业/1为个人)
+    * 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -118,16 +122,32 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String [] VerifyChannel;
 
     /**
-     * Get 签署方类型 (0为企业/1为个人) 
-     * @return ApproverType 签署方类型 (0为企业/1为个人)
+     * Get 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。 
+     * @return ApproverType 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      */
     public Long getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set 签署方类型 (0为企业/1为个人)
-     * @param ApproverType 签署方类型 (0为企业/1为个人)
+     * Set 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+     * @param ApproverType 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;

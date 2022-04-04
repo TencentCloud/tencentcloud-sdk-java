@@ -65,7 +65,7 @@ public class RiskDnsList extends AbstractModel{
     private Long UserRuleId;
 
     /**
-    * 状态；0-待处理，2-已加白，3-非信任状态
+    * 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
     */
     @SerializedName("Status")
     @Expose
@@ -275,16 +275,16 @@ public class RiskDnsList extends AbstractModel{
     }
 
     /**
-     * Get 状态；0-待处理，2-已加白，3-非信任状态 
-     * @return Status 状态；0-待处理，2-已加白，3-非信任状态
+     * Get 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略 
+     * @return Status 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态；0-待处理，2-已加白，3-非信任状态
-     * @param Status 状态；0-待处理，2-已加白，3-非信任状态
+     * Set 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
+     * @param Status 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
      */
     public void setStatus(Long Status) {
         this.Status = Status;

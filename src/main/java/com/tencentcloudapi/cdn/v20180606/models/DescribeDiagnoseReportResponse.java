@@ -79,6 +79,14 @@ public class DescribeDiagnoseReportResponse extends AbstractModel{
     private DiagnoseData OriginInfo;
 
     /**
+    * 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PurgeInfo")
+    @Expose
+    private DiagnoseData PurgeInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +222,26 @@ public class DescribeDiagnoseReportResponse extends AbstractModel{
     }
 
     /**
+     * Get 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PurgeInfo 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiagnoseData getPurgeInfo() {
+        return this.PurgeInfo;
+    }
+
+    /**
+     * Set 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PurgeInfo 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPurgeInfo(DiagnoseData PurgeInfo) {
+        this.PurgeInfo = PurgeInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -261,6 +289,9 @@ public class DescribeDiagnoseReportResponse extends AbstractModel{
         if (source.OriginInfo != null) {
             this.OriginInfo = new DiagnoseData(source.OriginInfo);
         }
+        if (source.PurgeInfo != null) {
+            this.PurgeInfo = new DiagnoseData(source.PurgeInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +310,7 @@ public class DescribeDiagnoseReportResponse extends AbstractModel{
         this.setParamObj(map, prefix + "OcNodeInfo.", this.OcNodeInfo);
         this.setParamObj(map, prefix + "MidNodeInfo.", this.MidNodeInfo);
         this.setParamObj(map, prefix + "OriginInfo.", this.OriginInfo);
+        this.setParamObj(map, prefix + "PurgeInfo.", this.PurgeInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

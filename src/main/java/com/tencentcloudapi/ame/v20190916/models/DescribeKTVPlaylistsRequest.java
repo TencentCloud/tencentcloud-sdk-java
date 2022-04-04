@@ -23,7 +23,18 @@ import java.util.HashMap;
 public class DescribeKTVPlaylistsRequest extends AbstractModel{
 
     /**
+    * 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
     */
     @SerializedName("Offset")
     @Expose
@@ -31,14 +42,45 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
 
     /**
     * 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。 
+     * Get 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec 
+     * @return Type 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
+     * @param Type 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000 
      * @return Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     public Long getOffset() {
         return this.Offset;
@@ -46,15 +88,19 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
 
     /**
      * Set 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      * @param Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。 
+     * Get 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000 
      * @return Limit 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     public Long getLimit() {
         return this.Limit;
@@ -62,7 +108,9 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
 
     /**
      * Set 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      * @param Limit 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -76,6 +124,9 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeKTVPlaylistsRequest(DescribeKTVPlaylistsRequest source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -89,6 +140,7 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

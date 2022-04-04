@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OpenProVersionRequest extends AbstractModel{
 
     /**
-    * 云主机类型。(当前参数已作废,可以留空值 )
+    * 云服务器类型。(当前参数已作废,可以留空值 )
     */
     @SerializedName("MachineType")
     @Expose
@@ -52,16 +52,16 @@ public class OpenProVersionRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-     * Get 云主机类型。(当前参数已作废,可以留空值 ) 
-     * @return MachineType 云主机类型。(当前参数已作废,可以留空值 )
+     * Get 云服务器类型。(当前参数已作废,可以留空值 ) 
+     * @return MachineType 云服务器类型。(当前参数已作废,可以留空值 )
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 云主机类型。(当前参数已作废,可以留空值 )
-     * @param MachineType 云主机类型。(当前参数已作废,可以留空值 )
+     * Set 云服务器类型。(当前参数已作废,可以留空值 )
+     * @param MachineType 云服务器类型。(当前参数已作废,可以留空值 )
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

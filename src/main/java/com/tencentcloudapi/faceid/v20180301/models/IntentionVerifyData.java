@@ -63,6 +63,14 @@ public class IntentionVerifyData extends AbstractModel{
     private String IntentionVerifyBestFrame;
 
     /**
+    * 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsrResultSimilarity")
+    @Expose
+    private String AsrResultSimilarity;
+
+    /**
      * Get 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
@@ -162,6 +170,26 @@ public class IntentionVerifyData extends AbstractModel{
         this.IntentionVerifyBestFrame = IntentionVerifyBestFrame;
     }
 
+    /**
+     * Get 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsrResultSimilarity 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsrResultSimilarity() {
+        return this.AsrResultSimilarity;
+    }
+
+    /**
+     * Set 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsrResultSimilarity 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsrResultSimilarity(String AsrResultSimilarity) {
+        this.AsrResultSimilarity = AsrResultSimilarity;
+    }
+
     public IntentionVerifyData() {
     }
 
@@ -185,6 +213,9 @@ public class IntentionVerifyData extends AbstractModel{
         if (source.IntentionVerifyBestFrame != null) {
             this.IntentionVerifyBestFrame = new String(source.IntentionVerifyBestFrame);
         }
+        if (source.AsrResultSimilarity != null) {
+            this.AsrResultSimilarity = new String(source.AsrResultSimilarity);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class IntentionVerifyData extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "IntentionVerifyBestFrame", this.IntentionVerifyBestFrame);
+        this.setParamSimple(map, prefix + "AsrResultSimilarity", this.AsrResultSimilarity);
 
     }
 }

@@ -128,7 +128,7 @@ public class ReverseShell extends AbstractModel{
     private String ParentProcPath;
 
     /**
-    * 处理状态：0-待处理 2-白名单
+    * 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
     */
     @SerializedName("Status")
     @Expose
@@ -403,16 +403,16 @@ public class ReverseShell extends AbstractModel{
     }
 
     /**
-     * Get 处理状态：0-待处理 2-白名单 
-     * @return Status 处理状态：0-待处理 2-白名单
+     * Get 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略 
+     * @return Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态：0-待处理 2-白名单
-     * @param Status 处理状态：0-待处理 2-白名单
+     * Set 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
+     * @param Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      */
     public void setStatus(Long Status) {
         this.Status = Status;

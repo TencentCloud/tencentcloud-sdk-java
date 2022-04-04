@@ -37,7 +37,7 @@ public class CreateClusterRequest extends AbstractModel{
     private ManagerNode ManagerNode;
 
     /**
-    * 指定管理节点的数量。目前仅支持一个管理节点。
+    * 指定管理节点的数量。默认取值：1。取值范围：1～2。
     */
     @SerializedName("ManagerNodeCount")
     @Expose
@@ -58,14 +58,14 @@ public class CreateClusterRequest extends AbstractModel{
     private Long ComputeNodeCount;
 
     /**
-    * 调度器类型。<br><li>SGE：SGE调度器。
+    * 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
     */
     @SerializedName("SchedulerType")
     @Expose
     private String SchedulerType;
 
     /**
-    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像。
     */
     @SerializedName("ImageId")
     @Expose
@@ -111,7 +111,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Boolean DryRun;
 
     /**
-    * 域名字服务类型。<br><li>NIS：NIS域名字服务。
+    * 域名字服务类型。默认值：NIS
+<li>NIS：NIS域名字服务。
     */
     @SerializedName("AccountType")
     @Expose
@@ -130,6 +131,29 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     @SerializedName("StorageOption")
     @Expose
     private StorageOption StorageOption;
+
+    /**
+    * 已废弃。
+指定登录节点。
+    */
+    @SerializedName("LoginNode")
+    @Expose
+    private LoginNode [] LoginNode;
+
+    /**
+    * 已废弃。
+指定登录节点的数量。默认取值：0。取值范围：0～10。
+    */
+    @SerializedName("LoginNodeCount")
+    @Expose
+    private Long LoginNodeCount;
+
+    /**
+    * 创建集群时同时绑定的标签对说明。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 集群中实例所在的位置。 
@@ -164,16 +188,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 指定管理节点的数量。目前仅支持一个管理节点。 
-     * @return ManagerNodeCount 指定管理节点的数量。目前仅支持一个管理节点。
+     * Get 指定管理节点的数量。默认取值：1。取值范围：1～2。 
+     * @return ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
      */
     public Long getManagerNodeCount() {
         return this.ManagerNodeCount;
     }
 
     /**
-     * Set 指定管理节点的数量。目前仅支持一个管理节点。
-     * @param ManagerNodeCount 指定管理节点的数量。目前仅支持一个管理节点。
+     * Set 指定管理节点的数量。默认取值：1。取值范围：1～2。
+     * @param ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
      */
     public void setManagerNodeCount(Long ManagerNodeCount) {
         this.ManagerNodeCount = ManagerNodeCount;
@@ -212,32 +236,32 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 调度器类型。<br><li>SGE：SGE调度器。 
-     * @return SchedulerType 调度器类型。<br><li>SGE：SGE调度器。
+     * Get 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。 
+     * @return SchedulerType 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
      */
     public String getSchedulerType() {
         return this.SchedulerType;
     }
 
     /**
-     * Set 调度器类型。<br><li>SGE：SGE调度器。
-     * @param SchedulerType 调度器类型。<br><li>SGE：SGE调度器。
+     * Set 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+     * @param SchedulerType 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
      */
     public void setSchedulerType(String SchedulerType) {
         this.SchedulerType = SchedulerType;
     }
 
     /**
-     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。 
-     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像。 
+     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像。
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
-     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像。
+     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
@@ -340,16 +364,20 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 域名字服务类型。<br><li>NIS：NIS域名字服务。 
-     * @return AccountType 域名字服务类型。<br><li>NIS：NIS域名字服务。
+     * Get 域名字服务类型。默认值：NIS
+<li>NIS：NIS域名字服务。 
+     * @return AccountType 域名字服务类型。默认值：NIS
+<li>NIS：NIS域名字服务。
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 域名字服务类型。<br><li>NIS：NIS域名字服务。
-     * @param AccountType 域名字服务类型。<br><li>NIS：NIS域名字服务。
+     * Set 域名字服务类型。默认值：NIS
+<li>NIS：NIS域名字服务。
+     * @param AccountType 域名字服务类型。默认值：NIS
+<li>NIS：NIS域名字服务。
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
@@ -385,6 +413,62 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      */
     public void setStorageOption(StorageOption StorageOption) {
         this.StorageOption = StorageOption;
+    }
+
+    /**
+     * Get 已废弃。
+指定登录节点。 
+     * @return LoginNode 已废弃。
+指定登录节点。
+     */
+    public LoginNode [] getLoginNode() {
+        return this.LoginNode;
+    }
+
+    /**
+     * Set 已废弃。
+指定登录节点。
+     * @param LoginNode 已废弃。
+指定登录节点。
+     */
+    public void setLoginNode(LoginNode [] LoginNode) {
+        this.LoginNode = LoginNode;
+    }
+
+    /**
+     * Get 已废弃。
+指定登录节点的数量。默认取值：0。取值范围：0～10。 
+     * @return LoginNodeCount 已废弃。
+指定登录节点的数量。默认取值：0。取值范围：0～10。
+     */
+    public Long getLoginNodeCount() {
+        return this.LoginNodeCount;
+    }
+
+    /**
+     * Set 已废弃。
+指定登录节点的数量。默认取值：0。取值范围：0～10。
+     * @param LoginNodeCount 已废弃。
+指定登录节点的数量。默认取值：0。取值范围：0～10。
+     */
+    public void setLoginNodeCount(Long LoginNodeCount) {
+        this.LoginNodeCount = LoginNodeCount;
+    }
+
+    /**
+     * Get 创建集群时同时绑定的标签对说明。 
+     * @return Tags 创建集群时同时绑定的标签对说明。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 创建集群时同时绑定的标签对说明。
+     * @param Tags 创建集群时同时绑定的标签对说明。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateClusterRequest() {
@@ -443,6 +527,21 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.StorageOption != null) {
             this.StorageOption = new StorageOption(source.StorageOption);
         }
+        if (source.LoginNode != null) {
+            this.LoginNode = new LoginNode[source.LoginNode.length];
+            for (int i = 0; i < source.LoginNode.length; i++) {
+                this.LoginNode[i] = new LoginNode(source.LoginNode[i]);
+            }
+        }
+        if (source.LoginNodeCount != null) {
+            this.LoginNodeCount = new Long(source.LoginNodeCount);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -465,6 +564,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamObj(map, prefix + "StorageOption.", this.StorageOption);
+        this.setParamArrayObj(map, prefix + "LoginNode.", this.LoginNode);
+        this.setParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

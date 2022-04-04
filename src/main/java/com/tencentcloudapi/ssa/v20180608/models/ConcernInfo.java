@@ -55,6 +55,46 @@ public class ConcernInfo extends AbstractModel{
     private Long StatisticsCount;
 
     /**
+    * 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SearchData")
+    @Expose
+    private String SearchData;
+
+    /**
+    * 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpCountryIso")
+    @Expose
+    private String IpCountryIso;
+
+    /**
+    * 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpProvinceIso")
+    @Expose
+    private String IpProvinceIso;
+
+    /**
+    * 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpCity")
+    @Expose
+    private String IpCity;
+
+    /**
+    * 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventSubType")
+    @Expose
+    private String EventSubType;
+
+    /**
      * Get 关注点类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConcernType 关注点类型
@@ -134,6 +174,106 @@ public class ConcernInfo extends AbstractModel{
         this.StatisticsCount = StatisticsCount;
     }
 
+    /**
+     * Get 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SearchData 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSearchData() {
+        return this.SearchData;
+    }
+
+    /**
+     * Set 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchData 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSearchData(String SearchData) {
+        this.SearchData = SearchData;
+    }
+
+    /**
+     * Get 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpCountryIso 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpCountryIso() {
+        return this.IpCountryIso;
+    }
+
+    /**
+     * Set 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpCountryIso 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpCountryIso(String IpCountryIso) {
+        this.IpCountryIso = IpCountryIso;
+    }
+
+    /**
+     * Get 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpProvinceIso 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpProvinceIso() {
+        return this.IpProvinceIso;
+    }
+
+    /**
+     * Set 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpProvinceIso 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpProvinceIso(String IpProvinceIso) {
+        this.IpProvinceIso = IpProvinceIso;
+    }
+
+    /**
+     * Get 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpCity 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpCity() {
+        return this.IpCity;
+    }
+
+    /**
+     * Set 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpCity 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpCity(String IpCity) {
+        this.IpCity = IpCity;
+    }
+
+    /**
+     * Get 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventSubType 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventSubType() {
+        return this.EventSubType;
+    }
+
+    /**
+     * Set 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventSubType 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventSubType(String EventSubType) {
+        this.EventSubType = EventSubType;
+    }
+
     public ConcernInfo() {
     }
 
@@ -154,6 +294,21 @@ public class ConcernInfo extends AbstractModel{
         if (source.StatisticsCount != null) {
             this.StatisticsCount = new Long(source.StatisticsCount);
         }
+        if (source.SearchData != null) {
+            this.SearchData = new String(source.SearchData);
+        }
+        if (source.IpCountryIso != null) {
+            this.IpCountryIso = new String(source.IpCountryIso);
+        }
+        if (source.IpProvinceIso != null) {
+            this.IpProvinceIso = new String(source.IpProvinceIso);
+        }
+        if (source.IpCity != null) {
+            this.IpCity = new String(source.IpCity);
+        }
+        if (source.EventSubType != null) {
+            this.EventSubType = new String(source.EventSubType);
+        }
     }
 
 
@@ -165,6 +320,11 @@ public class ConcernInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EntityType", this.EntityType);
         this.setParamSimple(map, prefix + "Concern", this.Concern);
         this.setParamSimple(map, prefix + "StatisticsCount", this.StatisticsCount);
+        this.setParamSimple(map, prefix + "SearchData", this.SearchData);
+        this.setParamSimple(map, prefix + "IpCountryIso", this.IpCountryIso);
+        this.setParamSimple(map, prefix + "IpProvinceIso", this.IpProvinceIso);
+        this.setParamSimple(map, prefix + "IpCity", this.IpCity);
+        this.setParamSimple(map, prefix + "EventSubType", this.EventSubType);
 
     }
 }

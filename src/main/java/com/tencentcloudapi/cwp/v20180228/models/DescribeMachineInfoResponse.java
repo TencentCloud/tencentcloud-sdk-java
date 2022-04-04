@@ -104,7 +104,7 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private String ProVersionOpenDate;
 
     /**
-    * 云主机类型。
+    * 云服务器类型。
 <li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
 <li>ECM: 边缘计算服务器</li>
@@ -373,13 +373,13 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 云主机类型。
+     * Get 云服务器类型。
 <li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
 <li>ECM: 边缘计算服务器</li>
 <li>LH: 轻量应用服务器</li>
 <li>Other: 混合云机器</li> 
-     * @return MachineType 云主机类型。
+     * @return MachineType 云服务器类型。
 <li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
 <li>ECM: 边缘计算服务器</li>
@@ -391,13 +391,13 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 云主机类型。
+     * Set 云服务器类型。
 <li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
 <li>ECM: 边缘计算服务器</li>
 <li>LH: 轻量应用服务器</li>
 <li>Other: 混合云机器</li>
-     * @param MachineType 云主机类型。
+     * @param MachineType 云服务器类型。
 <li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
 <li>ECM: 边缘计算服务器</li>

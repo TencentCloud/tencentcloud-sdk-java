@@ -37,7 +37,10 @@ public class CFSOption extends AbstractModel{
     private String RemotePath;
 
     /**
-    * 文件系统协议类型，默认值NFS 3.0
+    * 文件系统协议类型，默认值NFS 3.0。
+<li>NFS 3.0。
+<li>NFS 4.0。
+<li>TURBO。
     */
     @SerializedName("Protocol")
     @Expose
@@ -83,16 +86,28 @@ public class CFSOption extends AbstractModel{
     }
 
     /**
-     * Get 文件系统协议类型，默认值NFS 3.0 
-     * @return Protocol 文件系统协议类型，默认值NFS 3.0
+     * Get 文件系统协议类型，默认值NFS 3.0。
+<li>NFS 3.0。
+<li>NFS 4.0。
+<li>TURBO。 
+     * @return Protocol 文件系统协议类型，默认值NFS 3.0。
+<li>NFS 3.0。
+<li>NFS 4.0。
+<li>TURBO。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 文件系统协议类型，默认值NFS 3.0
-     * @param Protocol 文件系统协议类型，默认值NFS 3.0
+     * Set 文件系统协议类型，默认值NFS 3.0。
+<li>NFS 3.0。
+<li>NFS 4.0。
+<li>TURBO。
+     * @param Protocol 文件系统协议类型，默认值NFS 3.0。
+<li>NFS 3.0。
+<li>NFS 4.0。
+<li>TURBO。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

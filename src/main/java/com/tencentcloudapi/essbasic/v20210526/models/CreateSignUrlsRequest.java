@@ -58,7 +58,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String JumpUrl;
 
     /**
-    * "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+    * Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后后自动回跳至调用方小程序
     */
     @SerializedName("AutoJumpBack")
     @Expose
@@ -145,16 +145,16 @@ public class CreateSignUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP； 
-     * @return AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     * Get Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后后自动回跳至调用方小程序 
+     * @return AutoJumpBack Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后后自动回跳至调用方小程序
      */
     public Boolean getAutoJumpBack() {
         return this.AutoJumpBack;
     }
 
     /**
-     * Set "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
-     * @param AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     * Set Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后后自动回跳至调用方小程序
+     * @param AutoJumpBack Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后后自动回跳至调用方小程序
      */
     public void setAutoJumpBack(Boolean AutoJumpBack) {
         this.AutoJumpBack = AutoJumpBack;

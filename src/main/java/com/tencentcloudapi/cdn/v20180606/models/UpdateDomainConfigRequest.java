@@ -198,6 +198,14 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private MaxAge MaxAge;
 
     /**
+    * 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
+    */
+    @SerializedName("SpecificConfig")
+    @Expose
+    private SpecificConfig SpecificConfig;
+
+    /**
     * 域名业务类型
 web：静态加速
 download：下载加速
@@ -206,14 +214,6 @@ media：流媒体点播加速
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
-
-    /**
-    * 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
-    */
-    @SerializedName("SpecificConfig")
-    @Expose
-    private SpecificConfig SpecificConfig;
 
     /**
     * 域名加速区域
@@ -739,6 +739,26 @@ global：全球加速
     }
 
     /**
+     * Get 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景 
+     * @return SpecificConfig 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
+     */
+    public SpecificConfig getSpecificConfig() {
+        return this.SpecificConfig;
+    }
+
+    /**
+     * Set 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
+     * @param SpecificConfig 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
+     */
+    public void setSpecificConfig(SpecificConfig SpecificConfig) {
+        this.SpecificConfig = SpecificConfig;
+    }
+
+    /**
      * Get 域名业务类型
 web：静态加速
 download：下载加速
@@ -764,26 +784,6 @@ media：流媒体点播加速
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
-    }
-
-    /**
-     * Get 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景 
-     * @return SpecificConfig 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
-     */
-    public SpecificConfig getSpecificConfig() {
-        return this.SpecificConfig;
-    }
-
-    /**
-     * Set 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
-     * @param SpecificConfig 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
-     */
-    public void setSpecificConfig(SpecificConfig SpecificConfig) {
-        this.SpecificConfig = SpecificConfig;
     }
 
     /**
@@ -1157,11 +1157,11 @@ global：全球加速
         if (source.MaxAge != null) {
             this.MaxAge = new MaxAge(source.MaxAge);
         }
-        if (source.ServiceType != null) {
-            this.ServiceType = new String(source.ServiceType);
-        }
         if (source.SpecificConfig != null) {
             this.SpecificConfig = new SpecificConfig(source.SpecificConfig);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
         }
         if (source.Area != null) {
             this.Area = new String(source.Area);
@@ -1249,8 +1249,8 @@ global：全球加速
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamObj(map, prefix + "Referer.", this.Referer);
         this.setParamObj(map, prefix + "MaxAge.", this.MaxAge);
-        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
