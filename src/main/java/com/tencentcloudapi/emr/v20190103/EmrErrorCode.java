@@ -108,6 +108,9 @@ public enum EmrErrorCode {
     // Core节点数量无效。
      INVALIDPARAMETER_INVALIDCORECOUNT("InvalidParameter.InvalidCoreCount"),
      
+    // CosFileUri参数值无效。
+     INVALIDPARAMETER_INVALIDCOSFILEURI("InvalidParameter.InvalidCosFileURI"),
+     
     // 扩容数量必须大于0。
      INVALIDPARAMETER_INVALIDCOUNT("InvalidParameter.InvalidCount"),
      
@@ -215,6 +218,9 @@ public enum EmrErrorCode {
      
     // 无效的高可用参数。
      INVALIDPARAMETER_INVALIDSUPPORTHA("InvalidParameter.InvalidSupportHA"),
+     
+    // 参数错误。
+     INVALIDPARAMETER_INVALIDTAGSGROUP("InvalidParameter.InvalidTagsGroup"),
      
     // task的数量不能超过20。
      INVALIDPARAMETER_INVALIDTASKCOUNT("InvalidParameter.InvalidTaskCount"),

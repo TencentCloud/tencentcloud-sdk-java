@@ -117,6 +117,9 @@ public enum EssErrorCode {
     // 未通过个人实名认证。
      OPERATIONDENIED_NOIDENTITYVERIFY("OperationDenied.NoIdentityVerify"),
      
+    // 用户未登录,请先登录后再操作。
+     OPERATIONDENIED_NOLOGIN("OperationDenied.NoLogin"),
+     
     // 流程配额不足。
      OPERATIONDENIED_NOQUOTA("OperationDenied.NoQuota"),
      
