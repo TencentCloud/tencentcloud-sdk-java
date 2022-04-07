@@ -51,6 +51,13 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
     private Long EnabledCount;
 
     /**
+    * 付费流量包个数
+    */
+    @SerializedName("PaidCount")
+    @Expose
+    private Long PaidCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
     }
 
     /**
+     * Get 付费流量包个数 
+     * @return PaidCount 付费流量包个数
+     */
+    public Long getPaidCount() {
+        return this.PaidCount;
+    }
+
+    /**
+     * Set 付费流量包个数
+     * @param PaidCount 付费流量包个数
+     */
+    public void setPaidCount(Long PaidCount) {
+        this.PaidCount = PaidCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -160,6 +183,9 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
         if (source.EnabledCount != null) {
             this.EnabledCount = new Long(source.EnabledCount);
         }
+        if (source.PaidCount != null) {
+            this.PaidCount = new Long(source.PaidCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -174,6 +200,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TrafficPackages.", this.TrafficPackages);
         this.setParamSimple(map, prefix + "ExpiringCount", this.ExpiringCount);
         this.setParamSimple(map, prefix + "EnabledCount", this.EnabledCount);
+        this.setParamSimple(map, prefix + "PaidCount", this.PaidCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

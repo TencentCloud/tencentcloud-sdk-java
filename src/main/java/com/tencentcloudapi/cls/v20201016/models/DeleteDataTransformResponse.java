@@ -13,58 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSchedulingDomainRequest extends AbstractModel{
+public class DeleteDataTransformResponse extends AbstractModel{
 
     /**
-    * 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Product")
+    @SerializedName("RequestId")
     @Expose
-    private String Product;
+    private String RequestId;
 
     /**
-     * Get 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他 
-     * @return Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getProduct() {
-        return this.Product;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
-     * @param Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setProduct(String Product) {
-        this.Product = Product;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public CreateSchedulingDomainRequest() {
+    public DeleteDataTransformResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSchedulingDomainRequest(CreateSchedulingDomainRequest source) {
-        if (source.Product != null) {
-            this.Product = new String(source.Product);
+    public DeleteDataTransformResponse(DeleteDataTransformResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -73,7 +63,7 @@ hybrid: 宙斯盾本地化
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

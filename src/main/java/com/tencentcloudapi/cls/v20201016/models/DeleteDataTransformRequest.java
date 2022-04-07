@@ -13,58 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSchedulingDomainRequest extends AbstractModel{
+public class DeleteDataTransformRequest extends AbstractModel{
 
     /**
-    * 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+    * 数据加工任务id
     */
-    @SerializedName("Product")
+    @SerializedName("TaskId")
     @Expose
-    private String Product;
+    private String TaskId;
 
     /**
-     * Get 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他 
-     * @return Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * Get 数据加工任务id 
+     * @return TaskId 数据加工任务id
      */
-    public String getProduct() {
-        return this.Product;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
-     * @param Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * Set 数据加工任务id
+     * @param TaskId 数据加工任务id
      */
-    public void setProduct(String Product) {
-        this.Product = Product;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
-    public CreateSchedulingDomainRequest() {
+    public DeleteDataTransformRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSchedulingDomainRequest(CreateSchedulingDomainRequest source) {
-        if (source.Product != null) {
-            this.Product = new String(source.Product);
+    public DeleteDataTransformRequest(DeleteDataTransformRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
     }
 
@@ -73,7 +63,7 @@ hybrid: 宙斯盾本地化
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

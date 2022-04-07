@@ -164,6 +164,22 @@ public class Cluster extends AbstractModel{
     private Boolean EnableExternalNode;
 
     /**
+    * 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private Boolean AutoUpgradeClusterLevel;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -499,6 +515,46 @@ public class Cluster extends AbstractModel{
         this.EnableExternalNode = EnableExternalNode;
     }
 
+    /**
+     * Get 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterLevel 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterLevel 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
     public Cluster() {
     }
 
@@ -567,6 +623,12 @@ public class Cluster extends AbstractModel{
         if (source.EnableExternalNode != null) {
             this.EnableExternalNode = new Boolean(source.EnableExternalNode);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
+        }
     }
 
 
@@ -593,6 +655,8 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
 
     }
 }

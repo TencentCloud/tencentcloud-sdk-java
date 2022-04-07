@@ -30,7 +30,7 @@ public class WorkloadConfig extends AbstractModel{
     private Long Replicas;
 
     /**
-    * 资源限制
+    * 资源配置
     */
     @SerializedName("Resources")
     @Expose
@@ -67,16 +67,16 @@ public class WorkloadConfig extends AbstractModel{
     }
 
     /**
-     * Get 资源限制 
-     * @return Resources 资源限制
+     * Get 资源配置 
+     * @return Resources 资源配置
      */
     public ResourceRequirements getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源限制
-     * @param Resources 资源限制
+     * Set 资源配置
+     * @param Resources 资源配置
      */
     public void setResources(ResourceRequirements Resources) {
         this.Resources = Resources;

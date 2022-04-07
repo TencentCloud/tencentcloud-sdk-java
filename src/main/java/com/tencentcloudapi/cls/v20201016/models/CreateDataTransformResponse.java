@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddrTemplateListResponse extends AbstractModel{
+public class CreateDataTransformResponse extends AbstractModel{
 
     /**
-    * 模板总数
+    * 任务id
     */
-    @SerializedName("Total")
+    @SerializedName("TaskId")
     @Expose
-    private Long Total;
-
-    /**
-    * 模板列表数据
-    */
-    @SerializedName("Data")
-    @Expose
-    private TemplateListInfo [] Data;
-
-    /**
-    * 模板名称列表
-    */
-    @SerializedName("NameList")
-    @Expose
-    private String [] NameList;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DescribeAddrTemplateListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 模板总数 
-     * @return Total 模板总数
+     * Get 任务id 
+     * @return TaskId 任务id
      */
-    public Long getTotal() {
-        return this.Total;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 模板总数
-     * @param Total 模板总数
+     * Set 任务id
+     * @param TaskId 任务id
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 模板列表数据 
-     * @return Data 模板列表数据
-     */
-    public TemplateListInfo [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 模板列表数据
-     * @param Data 模板列表数据
-     */
-    public void setData(TemplateListInfo [] Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get 模板名称列表 
-     * @return NameList 模板名称列表
-     */
-    public String [] getNameList() {
-        return this.NameList;
-    }
-
-    /**
-     * Set 模板名称列表
-     * @param NameList 模板名称列表
-     */
-    public void setNameList(String [] NameList) {
-        this.NameList = NameList;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -114,28 +68,16 @@ public class DescribeAddrTemplateListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAddrTemplateListResponse() {
+    public CreateDataTransformResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAddrTemplateListResponse(DescribeAddrTemplateListResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.Data != null) {
-            this.Data = new TemplateListInfo[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TemplateListInfo(source.Data[i]);
-            }
-        }
-        if (source.NameList != null) {
-            this.NameList = new String[source.NameList.length];
-            for (int i = 0; i < source.NameList.length; i++) {
-                this.NameList[i] = new String(source.NameList[i]);
-            }
+    public CreateDataTransformResponse(CreateDataTransformResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -147,9 +89,7 @@ public class DescribeAddrTemplateListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamArraySimple(map, prefix + "NameList.", this.NameList);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

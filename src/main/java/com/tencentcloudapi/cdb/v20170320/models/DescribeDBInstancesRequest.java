@@ -121,7 +121,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long [] SubnetIds;
 
     /**
-    * 是否锁定标记。
+    * 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
     */
     @SerializedName("CdbErrors")
     @Expose
@@ -217,6 +217,27 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     @SerializedName("CageIds")
     @Expose
     private String [] CageIds;
+
+    /**
+    * 标签值
+    */
+    @SerializedName("TagValues")
+    @Expose
+    private String [] TagValues;
+
+    /**
+    * 私有网络字符型vpcId
+    */
+    @SerializedName("UniqueVpcIds")
+    @Expose
+    private String [] UniqueVpcIds;
+
+    /**
+    * 私有网络字符型subnetId
+    */
+    @SerializedName("UniqSubnetIds")
+    @Expose
+    private String [] UniqSubnetIds;
 
     /**
      * Get 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。 
@@ -443,16 +464,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否锁定标记。 
-     * @return CdbErrors 是否锁定标记。
+     * Get 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。 
+     * @return CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
      */
     public Long [] getCdbErrors() {
         return this.CdbErrors;
     }
 
     /**
-     * Set 是否锁定标记。
-     * @param CdbErrors 是否锁定标记。
+     * Set 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
+     * @param CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
      */
     public void setCdbErrors(Long [] CdbErrors) {
         this.CdbErrors = CdbErrors;
@@ -666,6 +687,54 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.CageIds = CageIds;
     }
 
+    /**
+     * Get 标签值 
+     * @return TagValues 标签值
+     */
+    public String [] getTagValues() {
+        return this.TagValues;
+    }
+
+    /**
+     * Set 标签值
+     * @param TagValues 标签值
+     */
+    public void setTagValues(String [] TagValues) {
+        this.TagValues = TagValues;
+    }
+
+    /**
+     * Get 私有网络字符型vpcId 
+     * @return UniqueVpcIds 私有网络字符型vpcId
+     */
+    public String [] getUniqueVpcIds() {
+        return this.UniqueVpcIds;
+    }
+
+    /**
+     * Set 私有网络字符型vpcId
+     * @param UniqueVpcIds 私有网络字符型vpcId
+     */
+    public void setUniqueVpcIds(String [] UniqueVpcIds) {
+        this.UniqueVpcIds = UniqueVpcIds;
+    }
+
+    /**
+     * Get 私有网络字符型subnetId 
+     * @return UniqSubnetIds 私有网络字符型subnetId
+     */
+    public String [] getUniqSubnetIds() {
+        return this.UniqSubnetIds;
+    }
+
+    /**
+     * Set 私有网络字符型subnetId
+     * @param UniqSubnetIds 私有网络字符型subnetId
+     */
+    public void setUniqSubnetIds(String [] UniqSubnetIds) {
+        this.UniqSubnetIds = UniqSubnetIds;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -803,6 +872,24 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.CageIds[i] = new String(source.CageIds[i]);
             }
         }
+        if (source.TagValues != null) {
+            this.TagValues = new String[source.TagValues.length];
+            for (int i = 0; i < source.TagValues.length; i++) {
+                this.TagValues[i] = new String(source.TagValues[i]);
+            }
+        }
+        if (source.UniqueVpcIds != null) {
+            this.UniqueVpcIds = new String[source.UniqueVpcIds.length];
+            for (int i = 0; i < source.UniqueVpcIds.length; i++) {
+                this.UniqueVpcIds[i] = new String(source.UniqueVpcIds[i]);
+            }
+        }
+        if (source.UniqSubnetIds != null) {
+            this.UniqSubnetIds = new String[source.UniqSubnetIds.length];
+            for (int i = 0; i < source.UniqSubnetIds.length; i++) {
+                this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
+            }
+        }
     }
 
 
@@ -838,6 +925,9 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
         this.setParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
         this.setParamArraySimple(map, prefix + "CageIds.", this.CageIds);
+        this.setParamArraySimple(map, prefix + "TagValues.", this.TagValues);
+        this.setParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
+        this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
 
     }
 }

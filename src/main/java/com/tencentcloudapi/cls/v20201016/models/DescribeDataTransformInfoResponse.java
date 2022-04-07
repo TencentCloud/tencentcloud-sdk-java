@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddrTemplateListResponse extends AbstractModel{
+public class DescribeDataTransformInfoResponse extends AbstractModel{
 
     /**
-    * 模板总数
+    * 数据加工任务列表信息
     */
-    @SerializedName("Total")
+    @SerializedName("DataTransformTaskInfos")
     @Expose
-    private Long Total;
+    private DataTransformTaskInfo [] DataTransformTaskInfos;
 
     /**
-    * 模板列表数据
+    * 任务总次数
     */
-    @SerializedName("Data")
+    @SerializedName("TotalCount")
     @Expose
-    private TemplateListInfo [] Data;
-
-    /**
-    * 模板名称列表
-    */
-    @SerializedName("NameList")
-    @Expose
-    private String [] NameList;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeAddrTemplateListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 模板总数 
-     * @return Total 模板总数
+     * Get 数据加工任务列表信息 
+     * @return DataTransformTaskInfos 数据加工任务列表信息
      */
-    public Long getTotal() {
-        return this.Total;
+    public DataTransformTaskInfo [] getDataTransformTaskInfos() {
+        return this.DataTransformTaskInfos;
     }
 
     /**
-     * Set 模板总数
-     * @param Total 模板总数
+     * Set 数据加工任务列表信息
+     * @param DataTransformTaskInfos 数据加工任务列表信息
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setDataTransformTaskInfos(DataTransformTaskInfo [] DataTransformTaskInfos) {
+        this.DataTransformTaskInfos = DataTransformTaskInfos;
     }
 
     /**
-     * Get 模板列表数据 
-     * @return Data 模板列表数据
+     * Get 任务总次数 
+     * @return TotalCount 任务总次数
      */
-    public TemplateListInfo [] getData() {
-        return this.Data;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 模板列表数据
-     * @param Data 模板列表数据
+     * Set 任务总次数
+     * @param TotalCount 任务总次数
      */
-    public void setData(TemplateListInfo [] Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get 模板名称列表 
-     * @return NameList 模板名称列表
-     */
-    public String [] getNameList() {
-        return this.NameList;
-    }
-
-    /**
-     * Set 模板名称列表
-     * @param NameList 模板名称列表
-     */
-    public void setNameList(String [] NameList) {
-        this.NameList = NameList;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -114,28 +91,22 @@ public class DescribeAddrTemplateListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAddrTemplateListResponse() {
+    public DescribeDataTransformInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAddrTemplateListResponse(DescribeAddrTemplateListResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.Data != null) {
-            this.Data = new TemplateListInfo[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TemplateListInfo(source.Data[i]);
+    public DescribeDataTransformInfoResponse(DescribeDataTransformInfoResponse source) {
+        if (source.DataTransformTaskInfos != null) {
+            this.DataTransformTaskInfos = new DataTransformTaskInfo[source.DataTransformTaskInfos.length];
+            for (int i = 0; i < source.DataTransformTaskInfos.length; i++) {
+                this.DataTransformTaskInfos[i] = new DataTransformTaskInfo(source.DataTransformTaskInfos[i]);
             }
         }
-        if (source.NameList != null) {
-            this.NameList = new String[source.NameList.length];
-            for (int i = 0; i < source.NameList.length; i++) {
-                this.NameList[i] = new String(source.NameList[i]);
-            }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -147,9 +118,8 @@ public class DescribeAddrTemplateListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamArraySimple(map, prefix + "NameList.", this.NameList);
+        this.setParamArrayObj(map, prefix + "DataTransformTaskInfos.", this.DataTransformTaskInfos);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

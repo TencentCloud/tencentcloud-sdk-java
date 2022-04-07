@@ -37,6 +37,19 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 流量包排序方式，支持以下值：
+expireTimeDesc：默认值，按过期时间倒序
+expireTimeAsc：按过期时间正序
+createTimeDesc：按创建时间倒序
+createTimeAsc：按创建时间正序
+status：按状态排序，正常抵扣>未生效>已用尽>已过期
+channel：按来源排序，主动购买>自动续订>CDN赠送
+    */
+    @SerializedName("SortBy")
+    @Expose
+    private String SortBy;
+
+    /**
      * Get 分页查询起始地址，默认 0 
      * @return Offset 分页查询起始地址，默认 0
      */
@@ -68,6 +81,46 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 流量包排序方式，支持以下值：
+expireTimeDesc：默认值，按过期时间倒序
+expireTimeAsc：按过期时间正序
+createTimeDesc：按创建时间倒序
+createTimeAsc：按创建时间正序
+status：按状态排序，正常抵扣>未生效>已用尽>已过期
+channel：按来源排序，主动购买>自动续订>CDN赠送 
+     * @return SortBy 流量包排序方式，支持以下值：
+expireTimeDesc：默认值，按过期时间倒序
+expireTimeAsc：按过期时间正序
+createTimeDesc：按创建时间倒序
+createTimeAsc：按创建时间正序
+status：按状态排序，正常抵扣>未生效>已用尽>已过期
+channel：按来源排序，主动购买>自动续订>CDN赠送
+     */
+    public String getSortBy() {
+        return this.SortBy;
+    }
+
+    /**
+     * Set 流量包排序方式，支持以下值：
+expireTimeDesc：默认值，按过期时间倒序
+expireTimeAsc：按过期时间正序
+createTimeDesc：按创建时间倒序
+createTimeAsc：按创建时间正序
+status：按状态排序，正常抵扣>未生效>已用尽>已过期
+channel：按来源排序，主动购买>自动续订>CDN赠送
+     * @param SortBy 流量包排序方式，支持以下值：
+expireTimeDesc：默认值，按过期时间倒序
+expireTimeAsc：按过期时间正序
+createTimeDesc：按创建时间倒序
+createTimeAsc：按创建时间正序
+status：按状态排序，正常抵扣>未生效>已用尽>已过期
+channel：按来源排序，主动购买>自动续订>CDN赠送
+     */
+    public void setSortBy(String SortBy) {
+        this.SortBy = SortBy;
+    }
+
     public DescribeTrafficPackagesRequest() {
     }
 
@@ -82,6 +135,9 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
     }
 
 
@@ -91,6 +147,7 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "SortBy", this.SortBy);
 
     }
 }

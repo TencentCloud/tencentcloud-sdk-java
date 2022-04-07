@@ -13,58 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSchedulingDomainRequest extends AbstractModel{
+public class DataTransformResouceInfo extends AbstractModel{
 
     /**
-    * 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+    * 目标主题id
     */
-    @SerializedName("Product")
+    @SerializedName("TopicId")
     @Expose
-    private String Product;
+    private String TopicId;
 
     /**
-     * Get 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他 
-     * @return Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+    * 别名
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
+     * Get 目标主题id 
+     * @return TopicId 目标主题id
      */
-    public String getProduct() {
-        return this.Product;
+    public String getTopicId() {
+        return this.TopicId;
     }
 
     /**
-     * Set 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
-     * @param Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * Set 目标主题id
+     * @param TopicId 目标主题id
      */
-    public void setProduct(String Product) {
-        this.Product = Product;
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
     }
 
-    public CreateSchedulingDomainRequest() {
+    /**
+     * Get 别名 
+     * @return Alias 别名
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 别名
+     * @param Alias 别名
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    public DataTransformResouceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSchedulingDomainRequest(CreateSchedulingDomainRequest source) {
-        if (source.Product != null) {
-            this.Product = new String(source.Product);
+    public DataTransformResouceInfo(DataTransformResouceInfo source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
         }
     }
 
@@ -73,7 +89,8 @@ hybrid: 宙斯盾本地化
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

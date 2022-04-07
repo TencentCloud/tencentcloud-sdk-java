@@ -30,7 +30,7 @@ public class ModifyCCLevelPolicyRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Ip地址
+    * IP地址
     */
     @SerializedName("Ip")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyCCLevelPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Ip地址 
-     * @return Ip Ip地址
+     * Get IP地址 
+     * @return Ip IP地址
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Ip地址
-     * @param Ip Ip地址
+     * Set IP地址
+     * @param Ip IP地址
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
