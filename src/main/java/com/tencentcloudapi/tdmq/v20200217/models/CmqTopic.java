@@ -137,6 +137,14 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     private String NamespaceName;
 
     /**
+    * 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicId 主题的 ID。
@@ -424,6 +432,26 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.NamespaceName = NamespaceName;
     }
 
+    /**
+     * Get 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public CmqTopic() {
     }
 
@@ -477,6 +505,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         if (source.NamespaceName != null) {
             this.NamespaceName = new String(source.NamespaceName);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -498,6 +529,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.setParamSimple(map, prefix + "Trace", this.Trace);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

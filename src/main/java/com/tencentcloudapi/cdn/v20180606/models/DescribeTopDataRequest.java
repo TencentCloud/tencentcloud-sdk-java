@@ -24,15 +24,19 @@ public class DescribeTopDataRequest extends AbstractModel{
 
     /**
     * 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的起点时刻
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
+仅支持 90 天内数据查询
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的结束时刻
+    * 查询结束日期：yyyy-MM-dd HH:mm:ss
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
+EndTime 需要大于等于 StartTime
     */
     @SerializedName("EndTime")
     @Expose
@@ -77,14 +81,16 @@ request：Metric 为 host 时指代访问请求数
     private Boolean Detail;
 
     /**
-    * 地域，目前可不填，默认是大陆
+    * 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 产品名，目前仅可使用cdn
+    * 指定查询的产品数据，目前仅可使用cdn
     */
     @SerializedName("Product")
     @Expose
@@ -92,9 +98,13 @@ request：Metric 为 host 时指代访问请求数
 
     /**
      * Get 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的起点时刻 
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
+仅支持 90 天内数据查询 
      * @return StartTime 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的起点时刻
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
+仅支持 90 天内数据查询
      */
     public String getStartTime() {
         return this.StartTime;
@@ -102,29 +112,41 @@ request：Metric 为 host 时指代访问请求数
 
     /**
      * Set 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的起点时刻
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
+仅支持 90 天内数据查询
      * @param StartTime 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的起点时刻
+仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
+仅支持 90 天内数据查询
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的结束时刻 
-     * @return EndTime 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的结束时刻
+     * Get 查询结束日期：yyyy-MM-dd HH:mm:ss
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
+EndTime 需要大于等于 StartTime 
+     * @return EndTime 查询结束日期：yyyy-MM-dd HH:mm:ss
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
+EndTime 需要大于等于 StartTime
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的结束时刻
-     * @param EndTime 查询起始日期：yyyy-MM-dd HH:mm:ss
-当前仅支持按天粒度的数据查询，参数需为某天的结束时刻
+     * Set 查询结束日期：yyyy-MM-dd HH:mm:ss
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
+EndTime 需要大于等于 StartTime
+     * @param EndTime 查询结束日期：yyyy-MM-dd HH:mm:ss
+仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
+EndTime 需要大于等于 StartTime
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -223,32 +245,40 @@ request：Metric 为 host 时指代访问请求数
     }
 
     /**
-     * Get 地域，目前可不填，默认是大陆 
-     * @return Area 地域，目前可不填，默认是大陆
+     * Get 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据 
+     * @return Area 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 地域，目前可不填，默认是大陆
-     * @param Area 地域，目前可不填，默认是大陆
+     * Set 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
+     * @param Area 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 产品名，目前仅可使用cdn 
-     * @return Product 产品名，目前仅可使用cdn
+     * Get 指定查询的产品数据，目前仅可使用cdn 
+     * @return Product 指定查询的产品数据，目前仅可使用cdn
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品名，目前仅可使用cdn
-     * @param Product 产品名，目前仅可使用cdn
+     * Set 指定查询的产品数据，目前仅可使用cdn
+     * @param Product 指定查询的产品数据，目前仅可使用cdn
      */
     public void setProduct(String Product) {
         this.Product = Product;

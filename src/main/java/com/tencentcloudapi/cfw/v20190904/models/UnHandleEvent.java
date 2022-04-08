@@ -51,6 +51,14 @@ public class UnHandleEvent extends AbstractModel{
     private Long BaseLineOutSwitch;
 
     /**
+    * vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcFwCount")
+    @Expose
+    private Long VpcFwCount;
+
+    /**
      * Get 伪攻击链类型 
      * @return EventTableListStruct 伪攻击链类型
      */
@@ -114,6 +122,26 @@ public class UnHandleEvent extends AbstractModel{
         this.BaseLineOutSwitch = BaseLineOutSwitch;
     }
 
+    /**
+     * Get vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcFwCount vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVpcFwCount() {
+        return this.VpcFwCount;
+    }
+
+    /**
+     * Set vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcFwCount vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcFwCount(Long VpcFwCount) {
+        this.VpcFwCount = VpcFwCount;
+    }
+
     public UnHandleEvent() {
     }
 
@@ -137,6 +165,9 @@ public class UnHandleEvent extends AbstractModel{
         if (source.BaseLineOutSwitch != null) {
             this.BaseLineOutSwitch = new Long(source.BaseLineOutSwitch);
         }
+        if (source.VpcFwCount != null) {
+            this.VpcFwCount = new Long(source.VpcFwCount);
+        }
     }
 
 
@@ -148,6 +179,7 @@ public class UnHandleEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "BaseLineUser", this.BaseLineUser);
         this.setParamSimple(map, prefix + "BaseLineInSwitch", this.BaseLineInSwitch);
         this.setParamSimple(map, prefix + "BaseLineOutSwitch", this.BaseLineOutSwitch);
+        this.setParamSimple(map, prefix + "VpcFwCount", this.VpcFwCount);
 
     }
 }

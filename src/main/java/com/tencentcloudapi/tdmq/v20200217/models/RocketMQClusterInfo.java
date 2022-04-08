@@ -73,6 +73,14 @@ public class RocketMQClusterInfo extends AbstractModel{
     private String VpcEndPoint;
 
     /**
+    * 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportNamespaceEndpoint")
+    @Expose
+    private Boolean SupportNamespaceEndpoint;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -188,6 +196,26 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.VpcEndPoint = VpcEndPoint;
     }
 
+    /**
+     * Get 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportNamespaceEndpoint 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportNamespaceEndpoint() {
+        return this.SupportNamespaceEndpoint;
+    }
+
+    /**
+     * Set 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportNamespaceEndpoint 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportNamespaceEndpoint(Boolean SupportNamespaceEndpoint) {
+        this.SupportNamespaceEndpoint = SupportNamespaceEndpoint;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -217,6 +245,9 @@ public class RocketMQClusterInfo extends AbstractModel{
         if (source.VpcEndPoint != null) {
             this.VpcEndPoint = new String(source.VpcEndPoint);
         }
+        if (source.SupportNamespaceEndpoint != null) {
+            this.SupportNamespaceEndpoint = new Boolean(source.SupportNamespaceEndpoint);
+        }
     }
 
 
@@ -231,6 +262,7 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+        this.setParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
 
     }
 }

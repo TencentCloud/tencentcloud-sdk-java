@@ -51,14 +51,14 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private String Randstr;
 
     /**
-    * 验证码应用ID
+    * 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
     */
     @SerializedName("CaptchaAppId")
     @Expose
     private Long CaptchaAppId;
 
     /**
-    * 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+    * 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
     */
     @SerializedName("AppSecretKey")
     @Expose
@@ -164,32 +164,32 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证码应用ID 
-     * @return CaptchaAppId 验证码应用ID
+     * Get 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。 
+     * @return CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
      */
     public Long getCaptchaAppId() {
         return this.CaptchaAppId;
     }
 
     /**
-     * Set 验证码应用ID
-     * @param CaptchaAppId 验证码应用ID
+     * Set 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+     * @param CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
      */
     public void setCaptchaAppId(Long CaptchaAppId) {
         this.CaptchaAppId = CaptchaAppId;
     }
 
     /**
-     * Get 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方 
-     * @return AppSecretKey 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+     * Get 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。 
+     * @return AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
      */
     public String getAppSecretKey() {
         return this.AppSecretKey;
     }
 
     /**
-     * Set 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
-     * @param AppSecretKey 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+     * Set 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+     * @param AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
      */
     public void setAppSecretKey(String AppSecretKey) {
         this.AppSecretKey = AppSecretKey;

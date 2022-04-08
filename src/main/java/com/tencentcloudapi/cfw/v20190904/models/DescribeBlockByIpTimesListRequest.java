@@ -65,6 +65,20 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel{
     private String Source;
 
     /**
+    * vpc间防火墙开关边id
+    */
+    @SerializedName("EdgeId")
+    @Expose
+    private String EdgeId;
+
+    /**
+    * 日志来源 move：vpc间防火墙
+    */
+    @SerializedName("LogSource")
+    @Expose
+    private String LogSource;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -160,6 +174,38 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel{
         this.Source = Source;
     }
 
+    /**
+     * Get vpc间防火墙开关边id 
+     * @return EdgeId vpc间防火墙开关边id
+     */
+    public String getEdgeId() {
+        return this.EdgeId;
+    }
+
+    /**
+     * Set vpc间防火墙开关边id
+     * @param EdgeId vpc间防火墙开关边id
+     */
+    public void setEdgeId(String EdgeId) {
+        this.EdgeId = EdgeId;
+    }
+
+    /**
+     * Get 日志来源 move：vpc间防火墙 
+     * @return LogSource 日志来源 move：vpc间防火墙
+     */
+    public String getLogSource() {
+        return this.LogSource;
+    }
+
+    /**
+     * Set 日志来源 move：vpc间防火墙
+     * @param LogSource 日志来源 move：vpc间防火墙
+     */
+    public void setLogSource(String LogSource) {
+        this.LogSource = LogSource;
+    }
+
     public DescribeBlockByIpTimesListRequest() {
     }
 
@@ -186,6 +232,12 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel{
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.LogSource != null) {
+            this.LogSource = new String(source.LogSource);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "EdgeId", this.EdgeId);
+        this.setParamSimple(map, prefix + "LogSource", this.LogSource);
 
     }
 }

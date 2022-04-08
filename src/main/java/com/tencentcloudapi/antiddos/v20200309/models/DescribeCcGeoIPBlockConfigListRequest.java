@@ -44,14 +44,14 @@ public class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 指定特定实例Id
+    * 指定特定实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * IP地址，普通高防ip要传该字段
+    * IP地址，普通高防IP要传该字段
     */
     @SerializedName("Ip")
     @Expose
@@ -120,32 +120,32 @@ public class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定特定实例Id 
-     * @return InstanceId 指定特定实例Id
+     * Get 指定特定实例ID 
+     * @return InstanceId 指定特定实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定特定实例Id
-     * @param InstanceId 指定特定实例Id
+     * Set 指定特定实例ID
+     * @param InstanceId 指定特定实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get IP地址，普通高防ip要传该字段 
-     * @return Ip IP地址，普通高防ip要传该字段
+     * Get IP地址，普通高防IP要传该字段 
+     * @return Ip IP地址，普通高防IP要传该字段
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP地址，普通高防ip要传该字段
-     * @param Ip IP地址，普通高防ip要传该字段
+     * Set IP地址，普通高防IP要传该字段
+     * @param Ip IP地址，普通高防IP要传该字段
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

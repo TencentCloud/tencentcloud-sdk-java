@@ -260,6 +260,14 @@ public class CmqQueue extends AbstractModel{
     private Long MaxMsgBacklogSize;
 
     /**
+    * 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionSizeInMB")
+    @Expose
+    private Long RetentionSizeInMB;
+
+    /**
      * Get 消息队列ID。 
      * @return QueueId 消息队列ID。
      */
@@ -847,6 +855,26 @@ public class CmqQueue extends AbstractModel{
         this.MaxMsgBacklogSize = MaxMsgBacklogSize;
     }
 
+    /**
+     * Get 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetentionSizeInMB() {
+        return this.RetentionSizeInMB;
+    }
+
+    /**
+     * Set 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionSizeInMB(Long RetentionSizeInMB) {
+        this.RetentionSizeInMB = RetentionSizeInMB;
+    }
+
     public CmqQueue() {
     }
 
@@ -951,6 +979,9 @@ public class CmqQueue extends AbstractModel{
         if (source.MaxMsgBacklogSize != null) {
             this.MaxMsgBacklogSize = new Long(source.MaxMsgBacklogSize);
         }
+        if (source.RetentionSizeInMB != null) {
+            this.RetentionSizeInMB = new Long(source.RetentionSizeInMB);
+        }
     }
 
 
@@ -988,6 +1019,7 @@ public class CmqQueue extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
         this.setParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
+        this.setParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
 
     }
 }

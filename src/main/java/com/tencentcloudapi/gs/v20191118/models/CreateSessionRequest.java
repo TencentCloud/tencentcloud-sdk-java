@@ -142,6 +142,15 @@ public class CreateSessionRequest extends AbstractModel{
     private String GameContext;
 
     /**
+    * 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+    */
+    @SerializedName("RunMode")
+    @Expose
+    private String RunMode;
+
+    /**
      * Get 客户端session信息，从JSSDK请求中获得 
      * @return ClientSession 客户端session信息，从JSSDK请求中获得
      */
@@ -413,6 +422,30 @@ public class CreateSessionRequest extends AbstractModel{
         this.GameContext = GameContext;
     }
 
+    /**
+     * Get 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。 
+     * @return RunMode 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     */
+    public String getRunMode() {
+        return this.RunMode;
+    }
+
+    /**
+     * Set 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     * @param RunMode 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     */
+    public void setRunMode(String RunMode) {
+        this.RunMode = RunMode;
+    }
+
     public CreateSessionRequest() {
     }
 
@@ -472,6 +505,9 @@ public class CreateSessionRequest extends AbstractModel{
         if (source.GameContext != null) {
             this.GameContext = new String(source.GameContext);
         }
+        if (source.RunMode != null) {
+            this.RunMode = new String(source.RunMode);
+        }
     }
 
 
@@ -496,6 +532,7 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "GameContext", this.GameContext);
+        this.setParamSimple(map, prefix + "RunMode", this.RunMode);
 
     }
 }

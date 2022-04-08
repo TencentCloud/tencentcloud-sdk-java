@@ -52,6 +52,22 @@ public class RocketMQNamespace extends AbstractModel{
     private String Remark;
 
     /**
+    * 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicEndpoint")
+    @Expose
+    private String PublicEndpoint;
+
+    /**
+    * VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcEndpoint")
+    @Expose
+    private String VpcEndpoint;
+
+    /**
      * Get 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_” 
      * @return NamespaceId 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
      */
@@ -119,6 +135,46 @@ public class RocketMQNamespace extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicEndpoint 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicEndpoint() {
+        return this.PublicEndpoint;
+    }
+
+    /**
+     * Set 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicEndpoint 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicEndpoint(String PublicEndpoint) {
+        this.PublicEndpoint = PublicEndpoint;
+    }
+
+    /**
+     * Get VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcEndpoint VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcEndpoint() {
+        return this.VpcEndpoint;
+    }
+
+    /**
+     * Set VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcEndpoint VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcEndpoint(String VpcEndpoint) {
+        this.VpcEndpoint = VpcEndpoint;
+    }
+
     public RocketMQNamespace() {
     }
 
@@ -139,6 +195,12 @@ public class RocketMQNamespace extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PublicEndpoint != null) {
+            this.PublicEndpoint = new String(source.PublicEndpoint);
+        }
+        if (source.VpcEndpoint != null) {
+            this.VpcEndpoint = new String(source.VpcEndpoint);
+        }
     }
 
 
@@ -150,6 +212,8 @@ public class RocketMQNamespace extends AbstractModel{
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
         this.setParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
+        this.setParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
 
     }
 }

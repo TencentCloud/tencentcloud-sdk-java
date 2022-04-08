@@ -99,6 +99,26 @@ public class TagClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建多对标签键和标签值
+     * @param req CreateTagsRequest
+     * @return CreateTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTagsResponse CreateTags(CreateTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于解除标签和资源的关联关系
      * @param req DeleteResourceTagRequest
      * @return DeleteResourceTagResponse
@@ -131,6 +151,26 @@ public class TagClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTagResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于删除一对标签键和标签值
+     * @param req DeleteTagsRequest
+     * @return DeleteTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTagsResponse DeleteTags(DeleteTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTags");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -382,6 +422,86 @@ public class TagClient extends AbstractClient{
     }
 
     /**
+     *查询绑定了标签的资源列表。
+     * @param req GetResourcesRequest
+     * @return GetResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetResourcesResponse GetResources(GetResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询标签键列表。
+     * @param req GetTagKeysRequest
+     * @return GetTagKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTagKeysResponse GetTagKeys(GetTagKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTagKeysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTagKeysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTagKeys");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询已建立的标签列表中的标签值。
+     * @param req GetTagValuesRequest
+     * @return GetTagValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTagValuesResponse GetTagValues(GetTagValuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTagValuesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTagValuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTagValues");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取已建立的标签列表。
+     * @param req GetTagsRequest
+     * @return GetTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTagsResponse GetTags(GetTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于修改资源关联的所有标签
      * @param req ModifyResourceTagsRequest
      * @return ModifyResourceTagsResponse
@@ -414,6 +534,46 @@ public class TagClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyResourcesTagValueResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyResourcesTagValue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为指定的多个云产品的多个云资源统一创建并绑定标签。
+     * @param req TagResourcesRequest
+     * @return TagResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TagResourcesResponse TagResources(TagResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TagResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TagResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TagResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *指定的多个云产品的多个云资源统一解绑标签。
+     * @param req UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnTagResourcesResponse UnTagResources(UnTagResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnTagResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnTagResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnTagResources");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

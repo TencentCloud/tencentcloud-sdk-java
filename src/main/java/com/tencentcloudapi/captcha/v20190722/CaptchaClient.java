@@ -159,7 +159,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *核查验证码小程序插件票据结果
+     *核查验证码票据结果(小程序插件) 
      * @param req DescribeCaptchaMiniResultRequest
      * @return DescribeCaptchaMiniResultResponse
      * @throws TencentCloudSDKException
@@ -219,7 +219,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *核查验证码票据结果
+     *核查验证码票据结果(Web|APP)
      * @param req DescribeCaptchaResultRequest
      * @return DescribeCaptchaResultResponse
      * @throws TencentCloudSDKException

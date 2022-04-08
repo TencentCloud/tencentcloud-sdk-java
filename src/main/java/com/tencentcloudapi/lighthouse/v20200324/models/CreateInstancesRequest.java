@@ -97,6 +97,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private DockerContainerConfiguration [] Containers;
 
     /**
+    * 是否自动使用代金券。默认不使用。
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Boolean AutoVoucher;
+
+    /**
      * Get 套餐ID。 
      * @return BundleId 套餐ID。
      */
@@ -272,6 +279,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.Containers = Containers;
     }
 
+    /**
+     * Get 是否自动使用代金券。默认不使用。 
+     * @return AutoVoucher 是否自动使用代金券。默认不使用。
+     */
+    public Boolean getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 是否自动使用代金券。默认不使用。
+     * @param AutoVoucher 是否自动使用代金券。默认不使用。
+     */
+    public void setAutoVoucher(Boolean AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -316,6 +339,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 this.Containers[i] = new DockerContainerConfiguration(source.Containers[i]);
             }
         }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Boolean(source.AutoVoucher);
+        }
     }
 
 
@@ -333,6 +359,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
 
     }
 }
