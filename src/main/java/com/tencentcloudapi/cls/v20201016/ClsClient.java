@@ -59,6 +59,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *关闭Kafka协议消费
+     * @param req CloseKafkaConsumerRequest
+     * @return CloseKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseKafkaConsumerResponse CloseKafkaConsumer(CloseKafkaConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseKafkaConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseKafkaConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseKafkaConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于创建告警策略。
      * @param req CreateAlarmRequest
      * @return CreateAlarmResponse
@@ -1192,6 +1212,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTopicResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *打开kafka协议消费
+     * @param req OpenKafkaConsumerRequest
+     * @return OpenKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenKafkaConsumerResponse OpenKafkaConsumer(OpenKafkaConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenKafkaConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenKafkaConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenKafkaConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

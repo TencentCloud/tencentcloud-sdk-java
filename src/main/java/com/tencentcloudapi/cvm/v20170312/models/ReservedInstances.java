@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReservedInstances extends AbstractModel{
 
     /**
-    * 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+    * （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
     */
     @SerializedName("ReservedInstancesId")
     @Expose
@@ -115,16 +115,30 @@ public class ReservedInstances extends AbstractModel{
     private String InstanceFamily;
 
     /**
-     * Get 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。 
-     * @return ReservedInstancesId 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+    * 已购买的预留实例计费ID。形如：ri-rtbh4han。
+    */
+    @SerializedName("ReservedInstanceId")
+    @Expose
+    private String ReservedInstanceId;
+
+    /**
+    * 预留实例显示名称。形如：riname-01
+    */
+    @SerializedName("ReservedInstanceName")
+    @Expose
+    private String ReservedInstanceName;
+
+    /**
+     * Get （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。 
+     * @return ReservedInstancesId （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
      */
     public String getReservedInstancesId() {
         return this.ReservedInstancesId;
     }
 
     /**
-     * Set 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
-     * @param ReservedInstancesId 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * Set （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
+     * @param ReservedInstancesId （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
      */
     public void setReservedInstancesId(String ReservedInstancesId) {
         this.ReservedInstancesId = ReservedInstancesId;
@@ -338,6 +352,38 @@ public class ReservedInstances extends AbstractModel{
         this.InstanceFamily = InstanceFamily;
     }
 
+    /**
+     * Get 已购买的预留实例计费ID。形如：ri-rtbh4han。 
+     * @return ReservedInstanceId 已购买的预留实例计费ID。形如：ri-rtbh4han。
+     */
+    public String getReservedInstanceId() {
+        return this.ReservedInstanceId;
+    }
+
+    /**
+     * Set 已购买的预留实例计费ID。形如：ri-rtbh4han。
+     * @param ReservedInstanceId 已购买的预留实例计费ID。形如：ri-rtbh4han。
+     */
+    public void setReservedInstanceId(String ReservedInstanceId) {
+        this.ReservedInstanceId = ReservedInstanceId;
+    }
+
+    /**
+     * Get 预留实例显示名称。形如：riname-01 
+     * @return ReservedInstanceName 预留实例显示名称。形如：riname-01
+     */
+    public String getReservedInstanceName() {
+        return this.ReservedInstanceName;
+    }
+
+    /**
+     * Set 预留实例显示名称。形如：riname-01
+     * @param ReservedInstanceName 预留实例显示名称。形如：riname-01
+     */
+    public void setReservedInstanceName(String ReservedInstanceName) {
+        this.ReservedInstanceName = ReservedInstanceName;
+    }
+
     public ReservedInstances() {
     }
 
@@ -382,6 +428,12 @@ public class ReservedInstances extends AbstractModel{
         if (source.InstanceFamily != null) {
             this.InstanceFamily = new String(source.InstanceFamily);
         }
+        if (source.ReservedInstanceId != null) {
+            this.ReservedInstanceId = new String(source.ReservedInstanceId);
+        }
+        if (source.ReservedInstanceName != null) {
+            this.ReservedInstanceName = new String(source.ReservedInstanceName);
+        }
     }
 
 
@@ -401,6 +453,8 @@ public class ReservedInstances extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrencyCode", this.CurrencyCode);
         this.setParamSimple(map, prefix + "OfferingType", this.OfferingType);
         this.setParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+        this.setParamSimple(map, prefix + "ReservedInstanceId", this.ReservedInstanceId);
+        this.setParamSimple(map, prefix + "ReservedInstanceName", this.ReservedInstanceName);
 
     }
 }

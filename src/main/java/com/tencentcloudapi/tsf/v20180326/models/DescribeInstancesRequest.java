@@ -13,120 +13,97 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetStudioProductListRequest extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 项目ID
+    * 过滤条件
     */
-    @SerializedName("ProjectId")
+    @SerializedName("Filters")
     @Expose
-    private String ProjectId;
+    private Filter [] Filters;
 
     /**
-    * 产品DevStatus
-    */
-    @SerializedName("DevStatus")
-    @Expose
-    private String DevStatus;
-
-    /**
-    * 偏移量
+    * 偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 数量限制
+    * 分页个数，默认为20，最大100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 过滤条件 
+     * @return Filters 过滤条件
      */
-    public String getProjectId() {
-        return this.ProjectId;
+    public Filter [] getFilters() {
+        return this.Filters;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 过滤条件
+     * @param Filters 过滤条件
      */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
-     * Get 产品DevStatus 
-     * @return DevStatus 产品DevStatus
-     */
-    public String getDevStatus() {
-        return this.DevStatus;
-    }
-
-    /**
-     * Set 产品DevStatus
-     * @param DevStatus 产品DevStatus
-     */
-    public void setDevStatus(String DevStatus) {
-        this.DevStatus = DevStatus;
-    }
-
-    /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认为0 
+     * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认为0
+     * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 数量限制 
-     * @return Limit 数量限制
+     * Get 分页个数，默认为20，最大100 
+     * @return Limit 分页个数，默认为20，最大100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数量限制
-     * @param Limit 数量限制
+     * Set 分页个数，默认为20，最大100
+     * @param Limit 分页个数，默认为20，最大100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
-    public GetStudioProductListRequest() {
+    public DescribeInstancesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetStudioProductListRequest(GetStudioProductListRequest source) {
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
-        }
-        if (source.DevStatus != null) {
-            this.DevStatus = new String(source.DevStatus);
+    public DescribeInstancesRequest(DescribeInstancesRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -141,8 +118,7 @@ public class GetStudioProductListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "DevStatus", this.DevStatus);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

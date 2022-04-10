@@ -110,6 +110,14 @@ public class AMQPQueueDetail extends AbstractModel{
     private String DeadLetterRoutingKey;
 
     /**
+    * Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get Queue名称 
      * @return Name Queue名称
      */
@@ -325,6 +333,26 @@ public class AMQPQueueDetail extends AbstractModel{
         this.DeadLetterRoutingKey = DeadLetterRoutingKey;
     }
 
+    /**
+     * Get Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicName Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicName Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public AMQPQueueDetail() {
     }
 
@@ -366,6 +394,9 @@ public class AMQPQueueDetail extends AbstractModel{
         if (source.DeadLetterRoutingKey != null) {
             this.DeadLetterRoutingKey = new String(source.DeadLetterRoutingKey);
         }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -384,6 +415,7 @@ public class AMQPQueueDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
         this.setParamSimple(map, prefix + "DeadLetterExchange", this.DeadLetterExchange);
         this.setParamSimple(map, prefix + "DeadLetterRoutingKey", this.DeadLetterRoutingKey);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

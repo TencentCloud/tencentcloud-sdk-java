@@ -37,7 +37,7 @@ public class QueryFilter extends AbstractModel{
     private String FilterValue;
 
     /**
-    * 匹配类型，枚举见pb
+    * 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
     */
     @SerializedName("FilterOperatorType")
     @Expose
@@ -76,16 +76,16 @@ public class QueryFilter extends AbstractModel{
     }
 
     /**
-     * Get 匹配类型，枚举见pb 
-     * @return FilterOperatorType 匹配类型，枚举见pb
+     * Get 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配 
+     * @return FilterOperatorType 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
      */
     public Long getFilterOperatorType() {
         return this.FilterOperatorType;
     }
 
     /**
-     * Set 匹配类型，枚举见pb
-     * @param FilterOperatorType 匹配类型，枚举见pb
+     * Set 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+     * @param FilterOperatorType 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
      */
     public void setFilterOperatorType(Long FilterOperatorType) {
         this.FilterOperatorType = FilterOperatorType;

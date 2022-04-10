@@ -45,6 +45,9 @@ public enum IotexplorerErrorCode {
     // DB操作错误。
      INTERNALERROR_DBOPERTAIONERROR("InternalError.DBOpertaionError"),
      
+    // 内部LoRaServer错误。
+     INTERNALERROR_INTERNALLORASERVERERROR("InternalError.InternalLoRaServerError"),
+     
     // 内部RPC错误。
      INTERNALERROR_INTERNALRPCERROR("InternalError.InternalRPCError"),
      

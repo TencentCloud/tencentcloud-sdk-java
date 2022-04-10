@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class LoRaGatewayLocation extends AbstractModel{
 
     /**
-    * 准确度
-    */
-    @SerializedName("Accuracy")
-    @Expose
-    private Float Accuracy;
-
-    /**
-    * 海拔
-    */
-    @SerializedName("Altitude")
-    @Expose
-    private Float Altitude;
-
-    /**
     * 纬度
     */
     @SerializedName("Latitude")
@@ -51,36 +37,18 @@ public class LoRaGatewayLocation extends AbstractModel{
     private Float Longitude;
 
     /**
-     * Get 准确度 
-     * @return Accuracy 准确度
-     */
-    public Float getAccuracy() {
-        return this.Accuracy;
-    }
+    * 准确度
+    */
+    @SerializedName("Accuracy")
+    @Expose
+    private Float Accuracy;
 
     /**
-     * Set 准确度
-     * @param Accuracy 准确度
-     */
-    public void setAccuracy(Float Accuracy) {
-        this.Accuracy = Accuracy;
-    }
-
-    /**
-     * Get 海拔 
-     * @return Altitude 海拔
-     */
-    public Float getAltitude() {
-        return this.Altitude;
-    }
-
-    /**
-     * Set 海拔
-     * @param Altitude 海拔
-     */
-    public void setAltitude(Float Altitude) {
-        this.Altitude = Altitude;
-    }
+    * 海拔
+    */
+    @SerializedName("Altitude")
+    @Expose
+    private Float Altitude;
 
     /**
      * Get 纬度 
@@ -114,6 +82,38 @@ public class LoRaGatewayLocation extends AbstractModel{
         this.Longitude = Longitude;
     }
 
+    /**
+     * Get 准确度 
+     * @return Accuracy 准确度
+     */
+    public Float getAccuracy() {
+        return this.Accuracy;
+    }
+
+    /**
+     * Set 准确度
+     * @param Accuracy 准确度
+     */
+    public void setAccuracy(Float Accuracy) {
+        this.Accuracy = Accuracy;
+    }
+
+    /**
+     * Get 海拔 
+     * @return Altitude 海拔
+     */
+    public Float getAltitude() {
+        return this.Altitude;
+    }
+
+    /**
+     * Set 海拔
+     * @param Altitude 海拔
+     */
+    public void setAltitude(Float Altitude) {
+        this.Altitude = Altitude;
+    }
+
     public LoRaGatewayLocation() {
     }
 
@@ -122,17 +122,17 @@ public class LoRaGatewayLocation extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LoRaGatewayLocation(LoRaGatewayLocation source) {
-        if (source.Accuracy != null) {
-            this.Accuracy = new Float(source.Accuracy);
-        }
-        if (source.Altitude != null) {
-            this.Altitude = new Float(source.Altitude);
-        }
         if (source.Latitude != null) {
             this.Latitude = new Float(source.Latitude);
         }
         if (source.Longitude != null) {
             this.Longitude = new Float(source.Longitude);
+        }
+        if (source.Accuracy != null) {
+            this.Accuracy = new Float(source.Accuracy);
+        }
+        if (source.Altitude != null) {
+            this.Altitude = new Float(source.Altitude);
         }
     }
 
@@ -141,10 +141,10 @@ public class LoRaGatewayLocation extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Accuracy", this.Accuracy);
-        this.setParamSimple(map, prefix + "Altitude", this.Altitude);
         this.setParamSimple(map, prefix + "Latitude", this.Latitude);
         this.setParamSimple(map, prefix + "Longitude", this.Longitude);
+        this.setParamSimple(map, prefix + "Accuracy", this.Accuracy);
+        this.setParamSimple(map, prefix + "Altitude", this.Altitude);
 
     }
 }

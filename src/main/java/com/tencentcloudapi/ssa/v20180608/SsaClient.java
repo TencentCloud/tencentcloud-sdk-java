@@ -259,6 +259,26 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
+     *获取测绘列表
+     * @param req DescribeMappingResultsRequest
+     * @return DescribeMappingResultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMappingResultsResponse DescribeMappingResults(DescribeMappingResultsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMappingResultsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMappingResultsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMappingResults");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全事件列表
      * @param req DescribeSafetyEventListRequest
      * @return DescribeSafetyEventListResponse

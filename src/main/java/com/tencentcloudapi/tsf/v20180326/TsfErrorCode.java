@@ -609,6 +609,9 @@ public enum TsfErrorCode {
     // 重装系统，无效的镜像id。
      INVALIDPARAMETERVALUE_INSTANCEINVALIDIMAGE("InvalidParameterValue.InstanceInvalidImage"),
      
+    // 参数 %s 取值错误。
+     INVALIDPARAMETERVALUE_INVALIDPARAMETER("InvalidParameterValue.InvalidParameter"),
+     
     // 参数格式异常。
      INVALIDPARAMETERVALUE_INVALIDPARAMETERFORMAT("InvalidParameterValue.InvalidParameterFormat"),
      

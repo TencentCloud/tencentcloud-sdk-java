@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetDeviceListRequest extends AbstractModel{
 
     /**
-    * 需要查看设备列表的产品 ID
+    * 需要查看设备列表的产品ID, -1代表ProjectId来筛选
     */
     @SerializedName("ProductId")
     @Expose
@@ -65,16 +65,16 @@ public class GetDeviceListRequest extends AbstractModel{
     private String ProjectId;
 
     /**
-     * Get 需要查看设备列表的产品 ID 
-     * @return ProductId 需要查看设备列表的产品 ID
+     * Get 需要查看设备列表的产品ID, -1代表ProjectId来筛选 
+     * @return ProductId 需要查看设备列表的产品ID, -1代表ProjectId来筛选
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 需要查看设备列表的产品 ID
-     * @param ProductId 需要查看设备列表的产品 ID
+     * Set 需要查看设备列表的产品ID, -1代表ProjectId来筛选
+     * @param ProductId 需要查看设备列表的产品ID, -1代表ProjectId来筛选
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
