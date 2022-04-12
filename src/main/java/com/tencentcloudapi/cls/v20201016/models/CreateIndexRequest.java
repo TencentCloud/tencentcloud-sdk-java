@@ -44,6 +44,20 @@ public class CreateIndexRequest extends AbstractModel{
     private Boolean Status;
 
     /**
+    * 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+    */
+    @SerializedName("IncludeInternalFields")
+    @Expose
+    private Boolean IncludeInternalFields;
+
+    /**
+    * 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+    */
+    @SerializedName("MetadataFlag")
+    @Expose
+    private Long MetadataFlag;
+
+    /**
      * Get 日志主题ID 
      * @return TopicId 日志主题ID
      */
@@ -91,6 +105,38 @@ public class CreateIndexRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段 
+     * @return IncludeInternalFields 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+     */
+    public Boolean getIncludeInternalFields() {
+        return this.IncludeInternalFields;
+    }
+
+    /**
+     * Set 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+     * @param IncludeInternalFields 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+     */
+    public void setIncludeInternalFields(Boolean IncludeInternalFields) {
+        this.IncludeInternalFields = IncludeInternalFields;
+    }
+
+    /**
+     * Get 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。 
+     * @return MetadataFlag 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+     */
+    public Long getMetadataFlag() {
+        return this.MetadataFlag;
+    }
+
+    /**
+     * Set 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+     * @param MetadataFlag 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+     */
+    public void setMetadataFlag(Long MetadataFlag) {
+        this.MetadataFlag = MetadataFlag;
+    }
+
     public CreateIndexRequest() {
     }
 
@@ -108,6 +154,12 @@ public class CreateIndexRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
         }
+        if (source.IncludeInternalFields != null) {
+            this.IncludeInternalFields = new Boolean(source.IncludeInternalFields);
+        }
+        if (source.MetadataFlag != null) {
+            this.MetadataFlag = new Long(source.MetadataFlag);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class CreateIndexRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+        this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
 
     }
 }

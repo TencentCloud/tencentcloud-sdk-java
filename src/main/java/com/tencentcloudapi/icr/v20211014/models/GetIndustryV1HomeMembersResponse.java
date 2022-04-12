@@ -13,38 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.icr.v20211014.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceBindGatewayResponse extends AbstractModel{
+public class GetIndustryV1HomeMembersResponse extends AbstractModel{
 
     /**
-    * 网关产品ID
+    * 无
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("GatewayProductId")
+    @SerializedName("Metadata")
     @Expose
-    private String GatewayProductId;
+    private RspMetadata Metadata;
 
     /**
-    * 网关设备名
+    * 无
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("GatewayDeviceName")
+    @SerializedName("Payload")
     @Expose
-    private String GatewayDeviceName;
-
-    /**
-    * 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("GatewayName")
-    @Expose
-    private String GatewayName;
+    private GetIndustryV1HomeMembersRespPayload Payload;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,63 +46,43 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 网关产品ID
+     * Get 无
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayProductId 网关产品ID
+     * @return Metadata 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getGatewayProductId() {
-        return this.GatewayProductId;
+    public RspMetadata getMetadata() {
+        return this.Metadata;
     }
 
     /**
-     * Set 网关产品ID
+     * Set 无
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayProductId 网关产品ID
+     * @param Metadata 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setGatewayProductId(String GatewayProductId) {
-        this.GatewayProductId = GatewayProductId;
+    public void setMetadata(RspMetadata Metadata) {
+        this.Metadata = Metadata;
     }
 
     /**
-     * Get 网关设备名
+     * Get 无
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayDeviceName 网关设备名
+     * @return Payload 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getGatewayDeviceName() {
-        return this.GatewayDeviceName;
+    public GetIndustryV1HomeMembersRespPayload getPayload() {
+        return this.Payload;
     }
 
     /**
-     * Set 网关设备名
+     * Set 无
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayDeviceName 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setGatewayDeviceName(String GatewayDeviceName) {
-        this.GatewayDeviceName = GatewayDeviceName;
-    }
-
-    /**
-     * Get 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayName 网关产品名称
+     * @param Payload 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getGatewayName() {
-        return this.GatewayName;
-    }
-
-    /**
-     * Set 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayName 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setGatewayName(String GatewayName) {
-        this.GatewayName = GatewayName;
+    public void setPayload(GetIndustryV1HomeMembersRespPayload Payload) {
+        this.Payload = Payload;
     }
 
     /**
@@ -129,22 +101,19 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDeviceBindGatewayResponse() {
+    public GetIndustryV1HomeMembersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeviceBindGatewayResponse(DescribeDeviceBindGatewayResponse source) {
-        if (source.GatewayProductId != null) {
-            this.GatewayProductId = new String(source.GatewayProductId);
+    public GetIndustryV1HomeMembersResponse(GetIndustryV1HomeMembersResponse source) {
+        if (source.Metadata != null) {
+            this.Metadata = new RspMetadata(source.Metadata);
         }
-        if (source.GatewayDeviceName != null) {
-            this.GatewayDeviceName = new String(source.GatewayDeviceName);
-        }
-        if (source.GatewayName != null) {
-            this.GatewayName = new String(source.GatewayName);
+        if (source.Payload != null) {
+            this.Payload = new GetIndustryV1HomeMembersRespPayload(source.Payload);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -156,9 +125,8 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GatewayProductId", this.GatewayProductId);
-        this.setParamSimple(map, prefix + "GatewayDeviceName", this.GatewayDeviceName);
-        this.setParamSimple(map, prefix + "GatewayName", this.GatewayName);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
+        this.setParamObj(map, prefix + "Payload.", this.Payload);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

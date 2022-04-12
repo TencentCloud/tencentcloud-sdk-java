@@ -143,6 +143,14 @@ public class ContainGroup extends AbstractModel{
     private String Alias;
 
     /**
+    * KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KubeInjectEnable")
+    @Expose
+    private Boolean KubeInjectEnable;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -442,6 +450,26 @@ public class ContainGroup extends AbstractModel{
         this.Alias = Alias;
     }
 
+    /**
+     * Get KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getKubeInjectEnable() {
+        return this.KubeInjectEnable;
+    }
+
+    /**
+     * Set KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKubeInjectEnable(Boolean KubeInjectEnable) {
+        this.KubeInjectEnable = KubeInjectEnable;
+    }
+
     public ContainGroup() {
     }
 
@@ -495,6 +523,9 @@ public class ContainGroup extends AbstractModel{
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.KubeInjectEnable != null) {
+            this.KubeInjectEnable = new Boolean(source.KubeInjectEnable);
+        }
     }
 
 
@@ -517,6 +548,7 @@ public class ContainGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "MemRequest", this.MemRequest);
         this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
 
     }
 }

@@ -79,6 +79,14 @@ public class SentenceDetail extends AbstractModel{
     private Float SpeechSpeed;
 
     /**
+    * 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpeakerId")
+    @Expose
+    private Long SpeakerId;
+
+    /**
      * Get 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalSentence 单句最终识别结果
@@ -218,6 +226,26 @@ public class SentenceDetail extends AbstractModel{
         this.SpeechSpeed = SpeechSpeed;
     }
 
+    /**
+     * Get 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSpeakerId() {
+        return this.SpeakerId;
+    }
+
+    /**
+     * Set 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpeakerId(Long SpeakerId) {
+        this.SpeakerId = SpeakerId;
+    }
+
     public SentenceDetail() {
     }
 
@@ -250,6 +278,9 @@ public class SentenceDetail extends AbstractModel{
         if (source.SpeechSpeed != null) {
             this.SpeechSpeed = new Float(source.SpeechSpeed);
         }
+        if (source.SpeakerId != null) {
+            this.SpeakerId = new Long(source.SpeakerId);
+        }
     }
 
 
@@ -264,6 +295,7 @@ public class SentenceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "WordsNum", this.WordsNum);
         this.setParamArrayObj(map, prefix + "Words.", this.Words);
         this.setParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
+        this.setParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
 
     }
 }

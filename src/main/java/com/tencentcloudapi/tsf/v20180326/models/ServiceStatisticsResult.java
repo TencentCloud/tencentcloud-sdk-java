@@ -193,6 +193,70 @@ public class ServiceStatisticsResult extends AbstractModel{
     private String DbType;
 
     /**
+    * Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Apdex")
+    @Expose
+    private Float Apdex;
+
+    /**
+    * Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Qps")
+    @Expose
+    private Float Qps;
+
+    /**
+    * 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceOnlineCount")
+    @Expose
+    private Long InstanceOnlineCount;
+
+    /**
+    * 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceTotalCount")
+    @Expose
+    private Long InstanceTotalCount;
+
+    /**
+    * normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorRateLevel")
+    @Expose
+    private String ErrorRateLevel;
+
+    /**
+    * normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvgTimeConsumingLevel")
+    @Expose
+    private String AvgTimeConsumingLevel;
+
+    /**
+    * normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApdexLevel")
+    @Expose
+    private String ApdexLevel;
+
+    /**
      * Get 请求模版路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 请求模版路径:type为接口时返回，服务时不返回
@@ -608,6 +672,166 @@ public class ServiceStatisticsResult extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get Apdex值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Apdex Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getApdex() {
+        return this.Apdex;
+    }
+
+    /**
+     * Set Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Apdex Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApdex(Float Apdex) {
+        this.Apdex = Apdex;
+    }
+
+    /**
+     * Get Qps值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Qps Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getQps() {
+        return this.Qps;
+    }
+
+    /**
+     * Set Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Qps Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQps(Float Qps) {
+        this.Qps = Qps;
+    }
+
+    /**
+     * Get 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceOnlineCount 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceOnlineCount() {
+        return this.InstanceOnlineCount;
+    }
+
+    /**
+     * Set 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceOnlineCount 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceOnlineCount(Long InstanceOnlineCount) {
+        this.InstanceOnlineCount = InstanceOnlineCount;
+    }
+
+    /**
+     * Get 实例总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceTotalCount 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceTotalCount() {
+        return this.InstanceTotalCount;
+    }
+
+    /**
+     * Set 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceTotalCount 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceTotalCount(Long InstanceTotalCount) {
+        this.InstanceTotalCount = InstanceTotalCount;
+    }
+
+    /**
+     * Get normal/error
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorRateLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorRateLevel() {
+        return this.ErrorRateLevel;
+    }
+
+    /**
+     * Set normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorRateLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorRateLevel(String ErrorRateLevel) {
+        this.ErrorRateLevel = ErrorRateLevel;
+    }
+
+    /**
+     * Get normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvgTimeConsumingLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAvgTimeConsumingLevel() {
+        return this.AvgTimeConsumingLevel;
+    }
+
+    /**
+     * Set normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvgTimeConsumingLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvgTimeConsumingLevel(String AvgTimeConsumingLevel) {
+        this.AvgTimeConsumingLevel = AvgTimeConsumingLevel;
+    }
+
+    /**
+     * Get normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApdexLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApdexLevel() {
+        return this.ApdexLevel;
+    }
+
+    /**
+     * Set normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApdexLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApdexLevel(String ApdexLevel) {
+        this.ApdexLevel = ApdexLevel;
+    }
+
     public ServiceStatisticsResult() {
     }
 
@@ -685,6 +909,30 @@ public class ServiceStatisticsResult extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.Apdex != null) {
+            this.Apdex = new Float(source.Apdex);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Float(source.Qps);
+        }
+        if (source.InstanceOnlineCount != null) {
+            this.InstanceOnlineCount = new Long(source.InstanceOnlineCount);
+        }
+        if (source.InstanceTotalCount != null) {
+            this.InstanceTotalCount = new Long(source.InstanceTotalCount);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrorRateLevel != null) {
+            this.ErrorRateLevel = new String(source.ErrorRateLevel);
+        }
+        if (source.AvgTimeConsumingLevel != null) {
+            this.AvgTimeConsumingLevel = new String(source.AvgTimeConsumingLevel);
+        }
+        if (source.ApdexLevel != null) {
+            this.ApdexLevel = new String(source.ApdexLevel);
+        }
     }
 
 
@@ -714,6 +962,14 @@ public class ServiceStatisticsResult extends AbstractModel{
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "Script", this.Script);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamSimple(map, prefix + "Apdex", this.Apdex);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
+        this.setParamSimple(map, prefix + "InstanceOnlineCount", this.InstanceOnlineCount);
+        this.setParamSimple(map, prefix + "InstanceTotalCount", this.InstanceTotalCount);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrorRateLevel", this.ErrorRateLevel);
+        this.setParamSimple(map, prefix + "AvgTimeConsumingLevel", this.AvgTimeConsumingLevel);
+        this.setParamSimple(map, prefix + "ApdexLevel", this.ApdexLevel);
 
     }
 }

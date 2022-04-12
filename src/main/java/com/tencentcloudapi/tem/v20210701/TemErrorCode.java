@@ -54,6 +54,9 @@ public enum TemErrorCode {
     // 应用存在正在运行的实例。
      INVALIDPARAMETERVALUE_SERVICEFOUNDRUNNINGVERSION("InvalidParameterValue.ServiceFoundRunningVersion"),
      
+    // 服务名必须小写。
+     INVALIDPARAMETERVALUE_SERVICELOWERCASE("InvalidParameterValue.ServiceLowerCase"),
+     
     // 应用名已存在。
      INVALIDPARAMETERVALUE_SERVICENAMEDUPLICATEERROR("InvalidParameterValue.ServiceNameDuplicateError"),
      

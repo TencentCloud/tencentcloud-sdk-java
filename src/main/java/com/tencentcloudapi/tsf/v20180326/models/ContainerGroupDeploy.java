@@ -295,6 +295,14 @@ public class ContainerGroupDeploy extends AbstractModel{
     private VolumeMountInfo [] VolumeMountInfos;
 
     /**
+    * KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KubeInjectEnable")
+    @Expose
+    private Boolean KubeInjectEnable;
+
+    /**
      * Get 部署组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组id
@@ -974,6 +982,26 @@ public class ContainerGroupDeploy extends AbstractModel{
         this.VolumeMountInfos = VolumeMountInfos;
     }
 
+    /**
+     * Get KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getKubeInjectEnable() {
+        return this.KubeInjectEnable;
+    }
+
+    /**
+     * Set KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKubeInjectEnable(Boolean KubeInjectEnable) {
+        this.KubeInjectEnable = KubeInjectEnable;
+    }
+
     public ContainerGroupDeploy() {
     }
 
@@ -1096,6 +1124,9 @@ public class ContainerGroupDeploy extends AbstractModel{
                 this.VolumeMountInfos[i] = new VolumeMountInfo(source.VolumeMountInfos[i]);
             }
         }
+        if (source.KubeInjectEnable != null) {
+            this.KubeInjectEnable = new Boolean(source.KubeInjectEnable);
+        }
     }
 
 
@@ -1137,6 +1168,7 @@ public class ContainerGroupDeploy extends AbstractModel{
         this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
         this.setParamArrayObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
         this.setParamArrayObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
+        this.setParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
 
     }
 }

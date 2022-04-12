@@ -37,7 +37,7 @@ public class ModifyConfigMapRequest extends AbstractModel{
     private String ConfigMapName;
 
     /**
-    * Yaml配置
+    * Yaml配置, base64之后的串
     */
     @SerializedName("Yaml")
     @Expose
@@ -83,16 +83,16 @@ public class ModifyConfigMapRequest extends AbstractModel{
     }
 
     /**
-     * Get Yaml配置 
-     * @return Yaml Yaml配置
+     * Get Yaml配置, base64之后的串 
+     * @return Yaml Yaml配置, base64之后的串
      */
     public String getYaml() {
         return this.Yaml;
     }
 
     /**
-     * Set Yaml配置
-     * @param Yaml Yaml配置
+     * Set Yaml配置, base64之后的串
+     * @param Yaml Yaml配置, base64之后的串
      */
     public void setYaml(String Yaml) {
         this.Yaml = Yaml;

@@ -219,7 +219,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *核查验证码票据结果(Web|APP)
+     *核查验证码票据结果(Web及APP)
      * @param req DescribeCaptchaResultRequest
      * @return DescribeCaptchaResultResponse
      * @throws TencentCloudSDKException

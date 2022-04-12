@@ -61,6 +61,23 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
     private String ResourceId;
 
     /**
+    * 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+    */
+    @SerializedName("BuyStatus")
+    @Expose
+    private String BuyStatus;
+
+    /**
+    * 是否曾经购买过(false:未曾 true:曾经购买过)
+    */
+    @SerializedName("IsPurchased")
+    @Expose
+    private Boolean IsPurchased;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -160,6 +177,50 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate 
+     * @return BuyStatus 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+     */
+    public String getBuyStatus() {
+        return this.BuyStatus;
+    }
+
+    /**
+     * Set 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+     * @param BuyStatus 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+     */
+    public void setBuyStatus(String BuyStatus) {
+        this.BuyStatus = BuyStatus;
+    }
+
+    /**
+     * Get 是否曾经购买过(false:未曾 true:曾经购买过) 
+     * @return IsPurchased 是否曾经购买过(false:未曾 true:曾经购买过)
+     */
+    public Boolean getIsPurchased() {
+        return this.IsPurchased;
+    }
+
+    /**
+     * Set 是否曾经购买过(false:未曾 true:曾经购买过)
+     * @param IsPurchased 是否曾经购买过(false:未曾 true:曾经购买过)
+     */
+    public void setIsPurchased(Boolean IsPurchased) {
+        this.IsPurchased = IsPurchased;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -198,6 +259,12 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.BuyStatus != null) {
+            this.BuyStatus = new String(source.BuyStatus);
+        }
+        if (source.IsPurchased != null) {
+            this.IsPurchased = new Boolean(source.IsPurchased);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -213,6 +280,8 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
         this.setParamSimple(map, prefix + "MaxPostPayCoresCnt", this.MaxPostPayCoresCnt);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "BuyStatus", this.BuyStatus);
+        this.setParamSimple(map, prefix + "IsPurchased", this.IsPurchased);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

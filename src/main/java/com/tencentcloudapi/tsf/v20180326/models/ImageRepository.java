@@ -135,12 +135,20 @@ public class ImageRepository extends AbstractModel{
     private String ApplicationId;
 
     /**
-    * ApplicationName值（类型是string）
+    * ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
     private ScalableRule ApplicationName;
+
+    /**
+    * ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationNameReal")
+    @Expose
+    private String ApplicationNameReal;
 
     /**
      * Get 仓库名,含命名空间,如tsf/nginx
@@ -423,9 +431,9 @@ public class ImageRepository extends AbstractModel{
     }
 
     /**
-     * Get ApplicationName值（类型是string）
+     * Get ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationName ApplicationName值（类型是string）
+     * @return ApplicationName ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScalableRule getApplicationName() {
@@ -433,13 +441,33 @@ public class ImageRepository extends AbstractModel{
     }
 
     /**
-     * Set ApplicationName值（类型是string）
+     * Set ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationName ApplicationName值（类型是string）
+     * @param ApplicationName ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(ScalableRule ApplicationName) {
         this.ApplicationName = ApplicationName;
+    }
+
+    /**
+     * Get ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationNameReal ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationNameReal() {
+        return this.ApplicationNameReal;
+    }
+
+    /**
+     * Set ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationNameReal ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationNameReal(String ApplicationNameReal) {
+        this.ApplicationNameReal = ApplicationNameReal;
     }
 
     public ImageRepository() {
@@ -495,6 +523,9 @@ public class ImageRepository extends AbstractModel{
         if (source.ApplicationName != null) {
             this.ApplicationName = new ScalableRule(source.ApplicationName);
         }
+        if (source.ApplicationNameReal != null) {
+            this.ApplicationNameReal = new String(source.ApplicationNameReal);
+        }
     }
 
 
@@ -517,6 +548,7 @@ public class ImageRepository extends AbstractModel{
         this.setParamSimple(map, prefix + "TcrBindingId", this.TcrBindingId);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
+        this.setParamSimple(map, prefix + "ApplicationNameReal", this.ApplicationNameReal);
 
     }
 }

@@ -135,6 +135,14 @@ public class Namespace extends AbstractModel{
     private String IsHaEnable;
 
     /**
+    * KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KubeInjectEnable")
+    @Expose
+    private Boolean KubeInjectEnable;
+
+    /**
      * Get 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
@@ -414,6 +422,26 @@ public class Namespace extends AbstractModel{
         this.IsHaEnable = IsHaEnable;
     }
 
+    /**
+     * Get KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getKubeInjectEnable() {
+        return this.KubeInjectEnable;
+    }
+
+    /**
+     * Set KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKubeInjectEnable(Boolean KubeInjectEnable) {
+        this.KubeInjectEnable = KubeInjectEnable;
+    }
+
     public Namespace() {
     }
 
@@ -467,6 +495,9 @@ public class Namespace extends AbstractModel{
         if (source.IsHaEnable != null) {
             this.IsHaEnable = new String(source.IsHaEnable);
         }
+        if (source.KubeInjectEnable != null) {
+            this.KubeInjectEnable = new Boolean(source.KubeInjectEnable);
+        }
     }
 
 
@@ -488,6 +519,7 @@ public class Namespace extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
         this.setParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
         this.setParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
+        this.setParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
 
     }
 }

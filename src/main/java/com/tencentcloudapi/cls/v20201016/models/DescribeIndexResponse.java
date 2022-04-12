@@ -52,6 +52,22 @@ public class DescribeIndexResponse extends AbstractModel{
     private String ModifyTime;
 
     /**
+    * 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IncludeInternalFields")
+    @Expose
+    private Boolean IncludeInternalFields;
+
+    /**
+    * 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetadataFlag")
+    @Expose
+    private Long MetadataFlag;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -127,6 +143,46 @@ public class DescribeIndexResponse extends AbstractModel{
     }
 
     /**
+     * Get 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IncludeInternalFields 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIncludeInternalFields() {
+        return this.IncludeInternalFields;
+    }
+
+    /**
+     * Set 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IncludeInternalFields 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIncludeInternalFields(Boolean IncludeInternalFields) {
+        this.IncludeInternalFields = IncludeInternalFields;
+    }
+
+    /**
+     * Get 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetadataFlag 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMetadataFlag() {
+        return this.MetadataFlag;
+    }
+
+    /**
+     * Set 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetadataFlag 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadataFlag(Long MetadataFlag) {
+        this.MetadataFlag = MetadataFlag;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -162,6 +218,12 @@ public class DescribeIndexResponse extends AbstractModel{
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.IncludeInternalFields != null) {
+            this.IncludeInternalFields = new Boolean(source.IncludeInternalFields);
+        }
+        if (source.MetadataFlag != null) {
+            this.MetadataFlag = new Long(source.MetadataFlag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -176,6 +238,8 @@ public class DescribeIndexResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+        this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
