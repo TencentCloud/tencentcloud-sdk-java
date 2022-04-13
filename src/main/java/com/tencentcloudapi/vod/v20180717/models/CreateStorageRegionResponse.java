@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dcdb.v20180411.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrdersResponse extends AbstractModel{
-
-    /**
-    * 返回的订单数量。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long [] TotalCount;
-
-    /**
-    * 订单信息列表。
-    */
-    @SerializedName("Deals")
-    @Expose
-    private Deal [] Deals;
+public class CreateStorageRegionResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeOrdersResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 返回的订单数量。 
-     * @return TotalCount 返回的订单数量。
-     */
-    public Long [] getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 返回的订单数量。
-     * @param TotalCount 返回的订单数量。
-     */
-    public void setTotalCount(Long [] TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 订单信息列表。 
-     * @return Deals 订单信息列表。
-     */
-    public Deal [] getDeals() {
-        return this.Deals;
-    }
-
-    /**
-     * Set 订单信息列表。
-     * @param Deals 订单信息列表。
-     */
-    public void setDeals(Deal [] Deals) {
-        this.Deals = Deals;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,26 +45,14 @@ public class DescribeOrdersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeOrdersResponse() {
+    public CreateStorageRegionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOrdersResponse(DescribeOrdersResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long[source.TotalCount.length];
-            for (int i = 0; i < source.TotalCount.length; i++) {
-                this.TotalCount[i] = new Long(source.TotalCount[i]);
-            }
-        }
-        if (source.Deals != null) {
-            this.Deals = new Deal[source.Deals.length];
-            for (int i = 0; i < source.Deals.length; i++) {
-                this.Deals[i] = new Deal(source.Deals[i]);
-            }
-        }
+    public CreateStorageRegionResponse(CreateStorageRegionResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,8 +63,6 @@ public class DescribeOrdersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TotalCount.", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Deals.", this.Deals);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

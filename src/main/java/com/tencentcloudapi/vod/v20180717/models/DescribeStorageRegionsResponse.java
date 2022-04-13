@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssa.v20180608.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SaDivulgeDataQueryPubResponse extends AbstractModel{
+public class DescribeStorageRegionsResponse extends AbstractModel{
 
     /**
-    * 自定义泄露事件列表
+    * 存储地域信息列表。
     */
-    @SerializedName("Data")
+    @SerializedName("StorageRegionInfos")
     @Expose
-    private SaDivulgeDataQueryPubList Data;
+    private StorageRegionInfo [] StorageRegionInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class SaDivulgeDataQueryPubResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 自定义泄露事件列表 
-     * @return Data 自定义泄露事件列表
+     * Get 存储地域信息列表。 
+     * @return StorageRegionInfos 存储地域信息列表。
      */
-    public SaDivulgeDataQueryPubList getData() {
-        return this.Data;
+    public StorageRegionInfo [] getStorageRegionInfos() {
+        return this.StorageRegionInfos;
     }
 
     /**
-     * Set 自定义泄露事件列表
-     * @param Data 自定义泄露事件列表
+     * Set 存储地域信息列表。
+     * @param StorageRegionInfos 存储地域信息列表。
      */
-    public void setData(SaDivulgeDataQueryPubList Data) {
-        this.Data = Data;
+    public void setStorageRegionInfos(StorageRegionInfo [] StorageRegionInfos) {
+        this.StorageRegionInfos = StorageRegionInfos;
     }
 
     /**
@@ -68,16 +68,19 @@ public class SaDivulgeDataQueryPubResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public SaDivulgeDataQueryPubResponse() {
+    public DescribeStorageRegionsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SaDivulgeDataQueryPubResponse(SaDivulgeDataQueryPubResponse source) {
-        if (source.Data != null) {
-            this.Data = new SaDivulgeDataQueryPubList(source.Data);
+    public DescribeStorageRegionsResponse(DescribeStorageRegionsResponse source) {
+        if (source.StorageRegionInfos != null) {
+            this.StorageRegionInfos = new StorageRegionInfo[source.StorageRegionInfos.length];
+            for (int i = 0; i < source.StorageRegionInfos.length; i++) {
+                this.StorageRegionInfos[i] = new StorageRegionInfo(source.StorageRegionInfos[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +92,7 @@ public class SaDivulgeDataQueryPubResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "StorageRegionInfos.", this.StorageRegionInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

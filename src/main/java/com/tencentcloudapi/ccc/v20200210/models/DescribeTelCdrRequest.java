@@ -37,6 +37,13 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private Long EndTimeStamp;
 
     /**
+    * 实例 ID（deprecated）
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private Long InstanceId;
+
+    /**
     * 返回数据条数，上限（deprecated）
     */
     @SerializedName("Limit")
@@ -49,13 +56,6 @@ public class DescribeTelCdrRequest extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Long Offset;
-
-    /**
-    * 实例 ID（deprecated）
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private Long InstanceId;
 
     /**
     * 应用 ID
@@ -125,6 +125,22 @@ public class DescribeTelCdrRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例 ID（deprecated） 
+     * @return InstanceId 实例 ID（deprecated）
+     */
+    public Long getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例 ID（deprecated）
+     * @param InstanceId 实例 ID（deprecated）
+     */
+    public void setInstanceId(Long InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Get 返回数据条数，上限（deprecated） 
      * @return Limit 返回数据条数，上限（deprecated）
      */
@@ -154,22 +170,6 @@ public class DescribeTelCdrRequest extends AbstractModel{
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
-    }
-
-    /**
-     * Get 实例 ID（deprecated） 
-     * @return InstanceId 实例 ID（deprecated）
-     */
-    public Long getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 实例 ID（deprecated）
-     * @param InstanceId 实例 ID（deprecated）
-     */
-    public void setInstanceId(Long InstanceId) {
-        this.InstanceId = InstanceId;
     }
 
     /**
@@ -266,14 +266,14 @@ public class DescribeTelCdrRequest extends AbstractModel{
         if (source.EndTimeStamp != null) {
             this.EndTimeStamp = new Long(source.EndTimeStamp);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new Long(source.InstanceId);
         }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
@@ -305,9 +305,9 @@ public class DescribeTelCdrRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeStamp", this.StartTimeStamp);
         this.setParamSimple(map, prefix + "EndTimeStamp", this.EndTimeStamp);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);

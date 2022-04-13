@@ -149,7 +149,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String ReadOnlyGroupId;
 
     /**
-    * 实例需要绑定的Tag信息，默认为空
+    * 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
     */
     @SerializedName("TagList")
     @Expose
@@ -451,16 +451,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例需要绑定的Tag信息，默认为空 
-     * @return TagList 实例需要绑定的Tag信息，默认为空
+     * Get 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型） 
+     * @return TagList 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例需要绑定的Tag信息，默认为空
-     * @param TagList 实例需要绑定的Tag信息，默认为空
+     * Set 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
+     * @param TagList 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;

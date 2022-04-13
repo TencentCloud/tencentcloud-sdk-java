@@ -44,6 +44,13 @@ public class CreateSnapshotRequest extends AbstractModel{
     private String Deadline;
 
     /**
+    * 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+    */
+    @SerializedName("DiskBackupId")
+    @Expose
+    private String DiskBackupId;
+
+    /**
      * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
@@ -91,6 +98,22 @@ public class CreateSnapshotRequest extends AbstractModel{
         this.Deadline = Deadline;
     }
 
+    /**
+     * Get 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。 
+     * @return DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+     */
+    public String getDiskBackupId() {
+        return this.DiskBackupId;
+    }
+
+    /**
+     * Set 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+     * @param DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+     */
+    public void setDiskBackupId(String DiskBackupId) {
+        this.DiskBackupId = DiskBackupId;
+    }
+
     public CreateSnapshotRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateSnapshotRequest extends AbstractModel{
         if (source.Deadline != null) {
             this.Deadline = new String(source.Deadline);
         }
+        if (source.DiskBackupId != null) {
+            this.DiskBackupId = new String(source.DiskBackupId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateSnapshotRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
 
     }
 }

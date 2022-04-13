@@ -288,6 +288,20 @@ public class Disk extends AbstractModel{
     private Long DeleteSnapshot;
 
     /**
+    * 云硬盘备份点已使用的数量。
+    */
+    @SerializedName("DiskBackupCount")
+    @Expose
+    private Long DiskBackupCount;
+
+    /**
+    * 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
@@ -915,6 +929,38 @@ public class Disk extends AbstractModel{
         this.DeleteSnapshot = DeleteSnapshot;
     }
 
+    /**
+     * Get 云硬盘备份点已使用的数量。 
+     * @return DiskBackupCount 云硬盘备份点已使用的数量。
+     */
+    public Long getDiskBackupCount() {
+        return this.DiskBackupCount;
+    }
+
+    /**
+     * Set 云硬盘备份点已使用的数量。
+     * @param DiskBackupCount 云硬盘备份点已使用的数量。
+     */
+    public void setDiskBackupCount(Long DiskBackupCount) {
+        this.DiskBackupCount = DiskBackupCount;
+    }
+
+    /**
+     * Get 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS 
+     * @return InstanceType 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+     * @param InstanceType 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public Disk() {
     }
 
@@ -1040,6 +1086,12 @@ public class Disk extends AbstractModel{
         if (source.DeleteSnapshot != null) {
             this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
+        if (source.DiskBackupCount != null) {
+            this.DiskBackupCount = new Long(source.DiskBackupCount);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -1083,6 +1135,8 @@ public class Disk extends AbstractModel{
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+        this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -128,6 +128,13 @@ public class CreateDisksRequest extends AbstractModel{
     private AutoMountConfiguration AutoMountConfiguration;
 
     /**
+    * 指定云硬盘备份点配额。
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
+
+    /**
      * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
      */
@@ -367,6 +374,22 @@ public class CreateDisksRequest extends AbstractModel{
         this.AutoMountConfiguration = AutoMountConfiguration;
     }
 
+    /**
+     * Get 指定云硬盘备份点配额。 
+     * @return DiskBackupQuota 指定云硬盘备份点配额。
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set 指定云硬盘备份点配额。
+     * @param DiskBackupQuota 指定云硬盘备份点配额。
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -423,6 +446,9 @@ public class CreateDisksRequest extends AbstractModel{
         if (source.AutoMountConfiguration != null) {
             this.AutoMountConfiguration = new AutoMountConfiguration(source.AutoMountConfiguration);
         }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
     }
 
 
@@ -445,6 +471,7 @@ public class CreateDisksRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
 
     }
 }

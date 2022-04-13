@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SaDivulgeDataQueryPubRequest extends AbstractModel{
 
     /**
-    * 模糊查询字段
+    * 模糊查询字段(针对appid或者uin)
     */
     @SerializedName("QueryKey")
     @Expose
@@ -37,7 +37,7 @@ public class SaDivulgeDataQueryPubRequest extends AbstractModel{
     private String EventName;
 
     /**
-    * 监控源
+    * 监控源  0:全部 1:GitHub 2:暗网 默认值1
     */
     @SerializedName("DivulgeSoure")
     @Expose
@@ -65,14 +65,14 @@ public class SaDivulgeDataQueryPubRequest extends AbstractModel{
     private String RuleId;
 
     /**
-    * 风险等级
+    * 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 安全事件状态
+    * 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
     */
     @SerializedName("Status")
     @Expose
@@ -107,16 +107,16 @@ public class SaDivulgeDataQueryPubRequest extends AbstractModel{
     private String Limit;
 
     /**
-     * Get 模糊查询字段 
-     * @return QueryKey 模糊查询字段
+     * Get 模糊查询字段(针对appid或者uin) 
+     * @return QueryKey 模糊查询字段(针对appid或者uin)
      */
     public String getQueryKey() {
         return this.QueryKey;
     }
 
     /**
-     * Set 模糊查询字段
-     * @param QueryKey 模糊查询字段
+     * Set 模糊查询字段(针对appid或者uin)
+     * @param QueryKey 模糊查询字段(针对appid或者uin)
      */
     public void setQueryKey(String QueryKey) {
         this.QueryKey = QueryKey;
@@ -139,16 +139,16 @@ public class SaDivulgeDataQueryPubRequest extends AbstractModel{
     }
 
     /**
-     * Get 监控源 
-     * @return DivulgeSoure 监控源
+     * Get 监控源  0:全部 1:GitHub 2:暗网 默认值1 
+     * @return DivulgeSoure 监控源  0:全部 1:GitHub 2:暗网 默认值1
      */
     public String getDivulgeSoure() {
         return this.DivulgeSoure;
     }
 
     /**
-     * Set 监控源
-     * @param DivulgeSoure 监控源
+     * Set 监控源  0:全部 1:GitHub 2:暗网 默认值1
+     * @param DivulgeSoure 监控源  0:全部 1:GitHub 2:暗网 默认值1
      */
     public void setDivulgeSoure(String DivulgeSoure) {
         this.DivulgeSoure = DivulgeSoure;
@@ -203,32 +203,32 @@ public class SaDivulgeDataQueryPubRequest extends AbstractModel{
     }
 
     /**
-     * Get 风险等级 
-     * @return Level 风险等级
+     * Get 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重 
+     * @return Level 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 风险等级
-     * @param Level 风险等级
+     * Set 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
+     * @param Level 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 安全事件状态 
-     * @return Status 安全事件状态
+     * Get 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任 
+     * @return Status 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 安全事件状态
-     * @param Status 安全事件状态
+     * Set 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
+     * @param Status 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
      */
     public void setStatus(String Status) {
         this.Status = Status;

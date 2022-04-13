@@ -86,7 +86,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+    * PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
     */
     @SerializedName("DBVersion")
     @Expose
@@ -170,14 +170,14 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+    * PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+    * PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
     */
     @SerializedName("DBKernelVersion")
     @Expose
@@ -189,6 +189,27 @@ public class CreateInstancesRequest extends AbstractModel{
     @SerializedName("DBNodeSet")
     @Expose
     private DBNode [] DBNodeSet;
+
+    /**
+    * 是否需要支持数据透明加密，1：是，0：否（默认）。
+    */
+    @SerializedName("NeedSupportTDE")
+    @Expose
+    private Long NeedSupportTDE;
+
+    /**
+    * 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+    */
+    @SerializedName("KMSKeyId")
+    @Expose
+    private String KMSKeyId;
+
+    /**
+    * 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+    */
+    @SerializedName("KMSRegion")
+    @Expose
+    private String KMSRegion;
 
     /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
@@ -335,16 +356,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例 
-     * @return DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * Get PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。 
+     * @return DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
-     * @param DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * Set PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
+     * @param DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -527,32 +548,32 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例 
-     * @return DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * Get PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。 
+     * @return DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
-     * @param DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * Set PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+     * @param DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例 
-     * @return DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+     * Get PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。 
+     * @return DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
-     * @param DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+     * Set PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
+     * @param DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
@@ -572,6 +593,54 @@ public class CreateInstancesRequest extends AbstractModel{
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;
+    }
+
+    /**
+     * Get 是否需要支持数据透明加密，1：是，0：否（默认）。 
+     * @return NeedSupportTDE 是否需要支持数据透明加密，1：是，0：否（默认）。
+     */
+    public Long getNeedSupportTDE() {
+        return this.NeedSupportTDE;
+    }
+
+    /**
+     * Set 是否需要支持数据透明加密，1：是，0：否（默认）。
+     * @param NeedSupportTDE 是否需要支持数据透明加密，1：是，0：否（默认）。
+     */
+    public void setNeedSupportTDE(Long NeedSupportTDE) {
+        this.NeedSupportTDE = NeedSupportTDE;
+    }
+
+    /**
+     * Get 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。 
+     * @return KMSKeyId 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+     */
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
+    /**
+     * Set 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+     * @param KMSKeyId 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+     */
+    public void setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+    }
+
+    /**
+     * Get 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。 
+     * @return KMSRegion 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+     */
+    public String getKMSRegion() {
+        return this.KMSRegion;
+    }
+
+    /**
+     * Set 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+     * @param KMSRegion 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+     */
+    public void setKMSRegion(String KMSRegion) {
+        this.KMSRegion = KMSRegion;
     }
 
     public CreateInstancesRequest() {
@@ -666,6 +735,15 @@ public class CreateInstancesRequest extends AbstractModel{
                 this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
             }
         }
+        if (source.NeedSupportTDE != null) {
+            this.NeedSupportTDE = new Long(source.NeedSupportTDE);
+        }
+        if (source.KMSKeyId != null) {
+            this.KMSKeyId = new String(source.KMSKeyId);
+        }
+        if (source.KMSRegion != null) {
+            this.KMSRegion = new String(source.KMSRegion);
+        }
     }
 
 
@@ -697,6 +775,9 @@ public class CreateInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+        this.setParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
+        this.setParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
+        this.setParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
 
     }
 }

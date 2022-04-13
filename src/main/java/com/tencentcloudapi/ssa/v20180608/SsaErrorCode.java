@@ -15,6 +15,9 @@ public enum SsaErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // DB错误。
+     INTERNALERROR_DBERROR("InternalError.DBError"),
+     
     // 参数校验失败。
      INTERNALERROR_PARAMERROR("InternalError.ParamError"),
      

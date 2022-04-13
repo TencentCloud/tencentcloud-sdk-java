@@ -284,6 +284,14 @@ public class DBInstance extends AbstractModel{
     private DBNode [] DBNodeSet;
 
     /**
+    * 实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportTDE")
+    @Expose
+    private Long IsSupportTDE;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -895,6 +903,26 @@ public class DBInstance extends AbstractModel{
         this.DBNodeSet = DBNodeSet;
     }
 
+    /**
+     * Get 实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportTDE 实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportTDE() {
+        return this.IsSupportTDE;
+    }
+
+    /**
+     * Set 实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportTDE 实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportTDE(Long IsSupportTDE) {
+        this.IsSupportTDE = IsSupportTDE;
+    }
+
     public DBInstance() {
     }
 
@@ -1023,6 +1051,9 @@ public class DBInstance extends AbstractModel{
                 this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
             }
         }
+        if (source.IsSupportTDE != null) {
+            this.IsSupportTDE = new Long(source.IsSupportTDE);
+        }
     }
 
 
@@ -1066,6 +1097,7 @@ public class DBInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+        this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
 
     }
 }

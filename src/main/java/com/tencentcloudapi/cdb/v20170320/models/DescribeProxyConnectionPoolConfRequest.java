@@ -30,14 +30,14 @@ public class DescribeProxyConnectionPoolConfRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 分页
+    * 分页查询偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制
+    * 分页查询限制
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeProxyConnectionPoolConfRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页 
-     * @return Offset 分页
+     * Get 分页查询偏移量 
+     * @return Offset 分页查询偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页
-     * @param Offset 分页
+     * Set 分页查询偏移量
+     * @param Offset 分页查询偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制 
-     * @return Limit 限制
+     * Get 分页查询限制 
+     * @return Limit 分页查询限制
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制
-     * @param Limit 限制
+     * Set 分页查询限制
+     * @param Limit 分页查询限制
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

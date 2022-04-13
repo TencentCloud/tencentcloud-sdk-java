@@ -44,7 +44,7 @@ public class GetProjectListRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 按项目D搜索
+    * 按项目ID搜索
     */
     @SerializedName("ProjectId")
     @Expose
@@ -120,16 +120,16 @@ public class GetProjectListRequest extends AbstractModel{
     }
 
     /**
-     * Get 按项目D搜索 
-     * @return ProjectId 按项目D搜索
+     * Get 按项目ID搜索 
+     * @return ProjectId 按项目ID搜索
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 按项目D搜索
-     * @param ProjectId 按项目D搜索
+     * Set 按项目ID搜索
+     * @param ProjectId 按项目ID搜索
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

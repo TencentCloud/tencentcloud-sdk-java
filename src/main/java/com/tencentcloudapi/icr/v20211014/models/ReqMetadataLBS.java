@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ReqMetadataLBS extends AbstractModel{
 
     /**
-    * 无
+    * 纬度
     */
     @SerializedName("Latitude")
     @Expose
     private Float Latitude;
 
     /**
-    * 无
+    * 经度
     */
     @SerializedName("Longitude")
     @Expose
     private Float Longitude;
 
     /**
-     * Get 无 
-     * @return Latitude 无
+     * Get 纬度 
+     * @return Latitude 纬度
      */
     public Float getLatitude() {
         return this.Latitude;
     }
 
     /**
-     * Set 无
-     * @param Latitude 无
+     * Set 纬度
+     * @param Latitude 纬度
      */
     public void setLatitude(Float Latitude) {
         this.Latitude = Latitude;
     }
 
     /**
-     * Get 无 
-     * @return Longitude 无
+     * Get 经度 
+     * @return Longitude 经度
      */
     public Float getLongitude() {
         return this.Longitude;
     }
 
     /**
-     * Set 无
-     * @param Longitude 无
+     * Set 经度
+     * @param Longitude 经度
      */
     public void setLongitude(Float Longitude) {
         this.Longitude = Longitude;

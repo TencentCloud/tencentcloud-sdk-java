@@ -58,14 +58,14 @@ public class CreateCmqQueueRequest extends AbstractModel{
     private Long MaxMsgSize;
 
     /**
-    * 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+    * 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
     private Long MsgRetentionSeconds;
 
     /**
-    * 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+    * 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
     */
     @SerializedName("RewindSeconds")
     @Expose
@@ -133,6 +133,13 @@ public class CreateCmqQueueRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+    */
+    @SerializedName("RetentionSizeInMB")
+    @Expose
+    private Long RetentionSizeInMB;
 
     /**
      * Get 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。 
@@ -215,32 +222,32 @@ public class CreateCmqQueueRequest extends AbstractModel{
     }
 
     /**
-     * Get 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。 
-     * @return MsgRetentionSeconds 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+     * Get 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。 
+     * @return MsgRetentionSeconds 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
     }
 
     /**
-     * Set 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
-     * @param MsgRetentionSeconds 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+     * Set 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
+     * @param MsgRetentionSeconds 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。 
-     * @return RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+     * Get 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。 
+     * @return RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
      */
     public Long getRewindSeconds() {
         return this.RewindSeconds;
     }
 
     /**
-     * Set 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
-     * @param RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+     * Set 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
+     * @param RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
      */
     public void setRewindSeconds(Long RewindSeconds) {
         this.RewindSeconds = RewindSeconds;
@@ -390,6 +397,22 @@ public class CreateCmqQueueRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启 
+     * @return RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     */
+    public Long getRetentionSizeInMB() {
+        return this.RetentionSizeInMB;
+    }
+
+    /**
+     * Set 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * @param RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     */
+    public void setRetentionSizeInMB(Long RetentionSizeInMB) {
+        this.RetentionSizeInMB = RetentionSizeInMB;
+    }
+
     public CreateCmqQueueRequest() {
     }
 
@@ -449,6 +472,9 @@ public class CreateCmqQueueRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.RetentionSizeInMB != null) {
+            this.RetentionSizeInMB = new Long(source.RetentionSizeInMB);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class CreateCmqQueueRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxTimeToLive", this.MaxTimeToLive);
         this.setParamSimple(map, prefix + "Trace", this.Trace);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
 
     }
 }

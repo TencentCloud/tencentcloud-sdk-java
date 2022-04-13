@@ -32,7 +32,7 @@ public class TextClassificationRequest extends AbstractModel{
     /**
     * 领域分类体系（默认取1值）：
 1、通用领域，二分类
-2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表
+2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表（注意：目前五分类已下线不可用）
     */
     @SerializedName("Flag")
     @Expose
@@ -57,10 +57,10 @@ public class TextClassificationRequest extends AbstractModel{
     /**
      * Get 领域分类体系（默认取1值）：
 1、通用领域，二分类
-2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表 
+2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表（注意：目前五分类已下线不可用） 
      * @return Flag 领域分类体系（默认取1值）：
 1、通用领域，二分类
-2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表
+2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表（注意：目前五分类已下线不可用）
      */
     public Long getFlag() {
         return this.Flag;
@@ -69,10 +69,10 @@ public class TextClassificationRequest extends AbstractModel{
     /**
      * Set 领域分类体系（默认取1值）：
 1、通用领域，二分类
-2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表
+2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表（注意：目前五分类已下线不可用）
      * @param Flag 领域分类体系（默认取1值）：
 1、通用领域，二分类
-2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表
+2、新闻领域，五分类。类别数据不一定全部返回，详情见类目映射表（注意：目前五分类已下线不可用）
      */
     public void setFlag(Long Flag) {
         this.Flag = Flag;

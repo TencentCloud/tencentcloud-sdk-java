@@ -412,6 +412,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于开通某地域的存储。
+  1. 用户开通点播业务时，系统默认为用户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通。
+  2. 通过 DescribeStorageRegions 接口可以查询到所有存储地域及已经开通的地域。
+     * @param req CreateStorageRegionRequest
+     * @return CreateStorageRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStorageRegionResponse CreateStorageRegion(CreateStorageRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStorageRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStorageRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStorageRegion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于创建点播子应用。
      * @param req CreateSubAppIdRequest
      * @return CreateSubAppIdResponse
@@ -1555,6 +1577,29 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于：
+  1. 查询点播可开通的所有存储园区列表。
+  2. 查询已经开通的园区列表。
+  3. 查询默认使用的存储园区。
+     * @param req DescribeStorageRegionsRequest
+     * @return DescribeStorageRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageRegionsResponse DescribeStorageRegions(DescribeStorageRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStorageRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStorageRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于获取当前账号的子应用列表，包含主应用。
      * @param req DescribeSubAppIdsRequest
      * @return DescribeSubAppIdsResponse
@@ -1970,6 +2015,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyContentReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于设置默认的存储地域。上传文件时如果没有指定地域，将上传到默认地域。
+     * @param req ModifyDefaultStorageRegionRequest
+     * @return ModifyDefaultStorageRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegion(ModifyDefaultStorageRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDefaultStorageRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDefaultStorageRegion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class InquiryPriceCreateDisksRequest extends AbstractModel{
 
     /**
+    * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+    */
+    @SerializedName("DiskChargeType")
+    @Expose
+    private String DiskChargeType;
+
+    /**
     * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
     */
     @SerializedName("DiskType")
@@ -37,18 +44,11 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
     private Long DiskSize;
 
     /**
-    * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+    * 云盘所属项目ID。
     */
-    @SerializedName("DiskChargeType")
+    @SerializedName("ProjectId")
     @Expose
-    private String DiskChargeType;
-
-    /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
-    */
-    @SerializedName("DiskChargePrepaid")
-    @Expose
-    private DiskChargePrepaid DiskChargePrepaid;
+    private Long ProjectId;
 
     /**
     * 购买云盘的数量。不填则默认为1。
@@ -58,18 +58,41 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
     private Long DiskCount;
 
     /**
-    * 云盘所属项目ID。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
-
-    /**
     * 额外购买的云硬盘性能值，单位MB/s。<br>目前仅支持增强型SSD云硬盘（CLOUD_HSSD）和极速型SSD云硬盘（CLOUD_TSSD）
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
+
+    /**
+    * 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+    */
+    @SerializedName("DiskChargePrepaid")
+    @Expose
+    private DiskChargePrepaid DiskChargePrepaid;
+
+    /**
+    * 指定云硬盘备份点配额。
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
+
+    /**
+     * Get 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费 
+     * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     */
+    public String getDiskChargeType() {
+        return this.DiskChargeType;
+    }
+
+    /**
+     * Set 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     */
+    public void setDiskChargeType(String DiskChargeType) {
+        this.DiskChargeType = DiskChargeType;
+    }
 
     /**
      * Get 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。 
@@ -104,35 +127,19 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费 
-     * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     * Get 云盘所属项目ID。 
+     * @return ProjectId 云盘所属项目ID。
      */
-    public String getDiskChargeType() {
-        return this.DiskChargeType;
+    public Long getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
-     * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     * Set 云盘所属项目ID。
+     * @param ProjectId 云盘所属项目ID。
      */
-    public void setDiskChargeType(String DiskChargeType) {
-        this.DiskChargeType = DiskChargeType;
-    }
-
-    /**
-     * Get 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。 
-     * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
-     */
-    public DiskChargePrepaid getDiskChargePrepaid() {
-        return this.DiskChargePrepaid;
-    }
-
-    /**
-     * Set 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
-     * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
-     */
-    public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
-        this.DiskChargePrepaid = DiskChargePrepaid;
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -152,22 +159,6 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get 云盘所属项目ID。 
-     * @return ProjectId 云盘所属项目ID。
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 云盘所属项目ID。
-     * @param ProjectId 云盘所属项目ID。
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
      * Get 额外购买的云硬盘性能值，单位MB/s。<br>目前仅支持增强型SSD云硬盘（CLOUD_HSSD）和极速型SSD云硬盘（CLOUD_TSSD） 
      * @return ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。<br>目前仅支持增强型SSD云硬盘（CLOUD_HSSD）和极速型SSD云硬盘（CLOUD_TSSD）
      */
@@ -183,6 +174,38 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    /**
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。 
+     * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     */
+    public DiskChargePrepaid getDiskChargePrepaid() {
+        return this.DiskChargePrepaid;
+    }
+
+    /**
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     */
+    public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
+        this.DiskChargePrepaid = DiskChargePrepaid;
+    }
+
+    /**
+     * Get 指定云硬盘备份点配额。 
+     * @return DiskBackupQuota 指定云硬盘备份点配额。
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set 指定云硬盘备份点配额。
+     * @param DiskBackupQuota 指定云硬盘备份点配额。
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
+    }
+
     public InquiryPriceCreateDisksRequest() {
     }
 
@@ -191,26 +214,29 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InquiryPriceCreateDisksRequest(InquiryPriceCreateDisksRequest source) {
+        if (source.DiskChargeType != null) {
+            this.DiskChargeType = new String(source.DiskChargeType);
+        }
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
-        if (source.DiskChargeType != null) {
-            this.DiskChargeType = new String(source.DiskChargeType);
-        }
-        if (source.DiskChargePrepaid != null) {
-            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
         }
         if (source.DiskCount != null) {
             this.DiskCount = new Long(source.DiskCount);
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
-        }
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+        if (source.DiskChargePrepaid != null) {
+            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
         }
     }
 
@@ -219,13 +245,14 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
-        this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-        this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
 
     }
 }

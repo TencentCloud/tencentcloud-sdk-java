@@ -44,6 +44,14 @@ public class SpecInfo extends AbstractModel{
     private SpecItemInfo [] SpecItemInfoList;
 
     /**
+    * 支持KMS的地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportKMSRegions")
+    @Expose
+    private String [] SupportKMSRegions;
+
+    /**
      * Get 地域英文编码，对应RegionSet的Region字段 
      * @return Region 地域英文编码，对应RegionSet的Region字段
      */
@@ -91,6 +99,26 @@ public class SpecInfo extends AbstractModel{
         this.SpecItemInfoList = SpecItemInfoList;
     }
 
+    /**
+     * Get 支持KMS的地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportKMSRegions 支持KMS的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSupportKMSRegions() {
+        return this.SupportKMSRegions;
+    }
+
+    /**
+     * Set 支持KMS的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportKMSRegions 支持KMS的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportKMSRegions(String [] SupportKMSRegions) {
+        this.SupportKMSRegions = SupportKMSRegions;
+    }
+
     public SpecInfo() {
     }
 
@@ -111,6 +139,12 @@ public class SpecInfo extends AbstractModel{
                 this.SpecItemInfoList[i] = new SpecItemInfo(source.SpecItemInfoList[i]);
             }
         }
+        if (source.SupportKMSRegions != null) {
+            this.SupportKMSRegions = new String[source.SupportKMSRegions.length];
+            for (int i = 0; i < source.SupportKMSRegions.length; i++) {
+                this.SupportKMSRegions[i] = new String(source.SupportKMSRegions[i]);
+            }
+        }
     }
 
 
@@ -121,6 +155,7 @@ public class SpecInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "SpecItemInfoList.", this.SpecItemInfoList);
+        this.setParamArraySimple(map, prefix + "SupportKMSRegions.", this.SupportKMSRegions);
 
     }
 }

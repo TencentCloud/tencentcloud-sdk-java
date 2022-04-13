@@ -109,6 +109,14 @@ public class SpecItemInfo extends AbstractModel{
     private String KernelVersion;
 
     /**
+    * 是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportTDE")
+    @Expose
+    private Long IsSupportTDE;
+
+    /**
      * Get 规格ID 
      * @return SpecCode 规格ID
      */
@@ -308,6 +316,26 @@ public class SpecItemInfo extends AbstractModel{
         this.KernelVersion = KernelVersion;
     }
 
+    /**
+     * Get 是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportTDE() {
+        return this.IsSupportTDE;
+    }
+
+    /**
+     * Set 是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportTDE(Long IsSupportTDE) {
+        this.IsSupportTDE = IsSupportTDE;
+    }
+
     public SpecItemInfo() {
     }
 
@@ -352,6 +380,9 @@ public class SpecItemInfo extends AbstractModel{
         if (source.KernelVersion != null) {
             this.KernelVersion = new String(source.KernelVersion);
         }
+        if (source.IsSupportTDE != null) {
+            this.IsSupportTDE = new Long(source.IsSupportTDE);
+        }
     }
 
 
@@ -371,6 +402,7 @@ public class SpecItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "MajorVersion", this.MajorVersion);
         this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+        this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
 
     }
 }

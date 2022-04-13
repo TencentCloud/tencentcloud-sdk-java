@@ -144,6 +144,34 @@ STATIC：静态
     private String CloudAttachId;
 
     /**
+    * 是否开启BFD
+    */
+    @SerializedName("BfdEnable")
+    @Expose
+    private Long BfdEnable;
+
+    /**
+    * 是否开启NQA
+    */
+    @SerializedName("NqaEnable")
+    @Expose
+    private Long NqaEnable;
+
+    /**
+    * BFD配置信息
+    */
+    @SerializedName("BfdInfo")
+    @Expose
+    private BFDInfo BfdInfo;
+
+    /**
+    * NQA配置信息
+    */
+    @SerializedName("NqaInfo")
+    @Expose
+    private NQAInfo NqaInfo;
+
+    /**
      * Get 专线 ID，例如：dc-kd7d06of 
      * @return DirectConnectId 专线 ID，例如：dc-kd7d06of
      */
@@ -435,6 +463,70 @@ STATIC：静态
         this.CloudAttachId = CloudAttachId;
     }
 
+    /**
+     * Get 是否开启BFD 
+     * @return BfdEnable 是否开启BFD
+     */
+    public Long getBfdEnable() {
+        return this.BfdEnable;
+    }
+
+    /**
+     * Set 是否开启BFD
+     * @param BfdEnable 是否开启BFD
+     */
+    public void setBfdEnable(Long BfdEnable) {
+        this.BfdEnable = BfdEnable;
+    }
+
+    /**
+     * Get 是否开启NQA 
+     * @return NqaEnable 是否开启NQA
+     */
+    public Long getNqaEnable() {
+        return this.NqaEnable;
+    }
+
+    /**
+     * Set 是否开启NQA
+     * @param NqaEnable 是否开启NQA
+     */
+    public void setNqaEnable(Long NqaEnable) {
+        this.NqaEnable = NqaEnable;
+    }
+
+    /**
+     * Get BFD配置信息 
+     * @return BfdInfo BFD配置信息
+     */
+    public BFDInfo getBfdInfo() {
+        return this.BfdInfo;
+    }
+
+    /**
+     * Set BFD配置信息
+     * @param BfdInfo BFD配置信息
+     */
+    public void setBfdInfo(BFDInfo BfdInfo) {
+        this.BfdInfo = BfdInfo;
+    }
+
+    /**
+     * Get NQA配置信息 
+     * @return NqaInfo NQA配置信息
+     */
+    public NQAInfo getNqaInfo() {
+        return this.NqaInfo;
+    }
+
+    /**
+     * Set NQA配置信息
+     * @param NqaInfo NQA配置信息
+     */
+    public void setNqaInfo(NQAInfo NqaInfo) {
+        this.NqaInfo = NqaInfo;
+    }
+
     public CreateDirectConnectTunnelRequest() {
     }
 
@@ -494,6 +586,18 @@ STATIC：静态
         if (source.CloudAttachId != null) {
             this.CloudAttachId = new String(source.CloudAttachId);
         }
+        if (source.BfdEnable != null) {
+            this.BfdEnable = new Long(source.BfdEnable);
+        }
+        if (source.NqaEnable != null) {
+            this.NqaEnable = new Long(source.NqaEnable);
+        }
+        if (source.BfdInfo != null) {
+            this.BfdInfo = new BFDInfo(source.BfdInfo);
+        }
+        if (source.NqaInfo != null) {
+            this.NqaInfo = new NQAInfo(source.NqaInfo);
+        }
     }
 
 
@@ -517,6 +621,10 @@ STATIC：静态
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
+        this.setParamSimple(map, prefix + "BfdEnable", this.BfdEnable);
+        this.setParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
+        this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
+        this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
 
     }
 }
