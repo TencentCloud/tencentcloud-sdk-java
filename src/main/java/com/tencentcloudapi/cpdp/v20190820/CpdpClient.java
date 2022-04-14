@@ -406,6 +406,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *通过此接口关闭此前已创建的订单。关闭后，用户将无法继续付款，仅能关闭创建后未支付的订单。
+     * @param req CloseCloudOrderRequest
+     * @return CloseCloudOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseCloudOrderResponse CloseCloudOrder(CloseCloudOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseCloudOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseCloudOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseCloudOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *云企付-关闭订单
      * @param req CloseOpenBankPaymentOrderRequest
      * @return CloseOpenBankPaymentOrderResponse
@@ -558,6 +578,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBatchPaymentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBatchPayment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建子商户
+     * @param req CreateCloudSubMerchantRequest
+     * @return CreateCloudSubMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudSubMerchantResponse CreateCloudSubMerchant(CreateCloudSubMerchantRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudSubMerchantResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudSubMerchantResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudSubMerchant");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1648,6 +1688,66 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *发起支付等渠道操作后，可以调用该接口查询渠道的数据。
+     * @param req QueryCloudChannelDataRequest
+     * @return QueryCloudChannelDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCloudChannelDataResponse QueryCloudChannelData(QueryCloudChannelDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCloudChannelDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCloudChannelDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCloudChannelData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据订单号或用户ID，查询支付订单状态。
+     * @param req QueryCloudOrderRequest
+     * @return QueryCloudOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCloudOrderResponse QueryCloudOrder(QueryCloudOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCloudOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCloudOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCloudOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
+     * @param req QueryCloudRefundOrderRequest
+     * @return QueryCloudRefundOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCloudRefundOrderResponse QueryCloudRefundOrder(QueryCloudRefundOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCloudRefundOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCloudRefundOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCloudRefundOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
      * @param req QueryCommonTransferRechargeRequest
      * @return QueryCommonTransferRechargeResponse
@@ -2669,6 +2769,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
+     * @param req RefundCloudOrderRequest
+     * @return RefundCloudOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefundCloudOrderResponse RefundCloudOrder(RefundCloudOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RefundCloudOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RefundCloudOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RefundCloudOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员间交易退款
      * @param req RefundMemberTransactionRequest
      * @return RefundMemberTransactionResponse
@@ -2981,6 +3101,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UnbindRelateAcctResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnbindRelateAcct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+     * @param req UnifiedCloudOrderRequest
+     * @return UnifiedCloudOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnifiedCloudOrderResponse UnifiedCloudOrder(UnifiedCloudOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnifiedCloudOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnifiedCloudOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnifiedCloudOrder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

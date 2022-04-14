@@ -39,7 +39,7 @@ public class CreateImageRequest extends AbstractModel{
 
     /**
     * 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
     */
     @SerializedName("PicName")
     @Expose
@@ -118,9 +118,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Get 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。 
+同一个EntityId，最大支持10张图。 
      * @return PicName 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
      */
     public String getPicName() {
         return this.PicName;
@@ -128,9 +128,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Set 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
      * @param PicName 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
      */
     public void setPicName(String PicName) {
         this.PicName = PicName;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ListEmailTemplatesRequest extends AbstractModel{
 
     /**
-    * 获取模版数据量，用于分页
+    * 获取模板数据量，用于分页
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 获取模版偏移值，用于分页
+    * 获取模板偏移值，用于分页
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 获取模版数据量，用于分页 
-     * @return Limit 获取模版数据量，用于分页
+     * Get 获取模板数据量，用于分页 
+     * @return Limit 获取模板数据量，用于分页
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 获取模版数据量，用于分页
-     * @param Limit 获取模版数据量，用于分页
+     * Set 获取模板数据量，用于分页
+     * @param Limit 获取模板数据量，用于分页
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 获取模版偏移值，用于分页 
-     * @return Offset 获取模版偏移值，用于分页
+     * Get 获取模板偏移值，用于分页 
+     * @return Offset 获取模板偏移值，用于分页
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 获取模版偏移值，用于分页
-     * @param Offset 获取模版偏移值，用于分页
+     * Set 获取模板偏移值，用于分页
+     * @param Offset 获取模板偏移值，用于分页
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

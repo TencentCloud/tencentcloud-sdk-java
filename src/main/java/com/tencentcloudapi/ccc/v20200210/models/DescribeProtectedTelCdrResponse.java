@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEmailTemplatesResponse extends AbstractModel{
+public class DescribeProtectedTelCdrResponse extends AbstractModel{
 
     /**
-    * 邮件模板列表
-    */
-    @SerializedName("TemplatesMetadata")
-    @Expose
-    private TemplatesMetadata [] TemplatesMetadata;
-
-    /**
-    * 模板总数量
+    * 话单记录总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 话单记录
+    */
+    @SerializedName("TelCdrs")
+    @Expose
+    private TelCdrInfo [] TelCdrs;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class ListEmailTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 邮件模板列表 
-     * @return TemplatesMetadata 邮件模板列表
-     */
-    public TemplatesMetadata [] getTemplatesMetadata() {
-        return this.TemplatesMetadata;
-    }
-
-    /**
-     * Set 邮件模板列表
-     * @param TemplatesMetadata 邮件模板列表
-     */
-    public void setTemplatesMetadata(TemplatesMetadata [] TemplatesMetadata) {
-        this.TemplatesMetadata = TemplatesMetadata;
-    }
-
-    /**
-     * Get 模板总数量 
-     * @return TotalCount 模板总数量
+     * Get 话单记录总数 
+     * @return TotalCount 话单记录总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 模板总数量
-     * @param TotalCount 模板总数量
+     * Set 话单记录总数
+     * @param TotalCount 话单记录总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 话单记录 
+     * @return TelCdrs 话单记录
+     */
+    public TelCdrInfo [] getTelCdrs() {
+        return this.TelCdrs;
+    }
+
+    /**
+     * Set 话单记录
+     * @param TelCdrs 话单记录
+     */
+    public void setTelCdrs(TelCdrInfo [] TelCdrs) {
+        this.TelCdrs = TelCdrs;
     }
 
     /**
@@ -91,22 +91,22 @@ public class ListEmailTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ListEmailTemplatesResponse() {
+    public DescribeProtectedTelCdrResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListEmailTemplatesResponse(ListEmailTemplatesResponse source) {
-        if (source.TemplatesMetadata != null) {
-            this.TemplatesMetadata = new TemplatesMetadata[source.TemplatesMetadata.length];
-            for (int i = 0; i < source.TemplatesMetadata.length; i++) {
-                this.TemplatesMetadata[i] = new TemplatesMetadata(source.TemplatesMetadata[i]);
-            }
-        }
+    public DescribeProtectedTelCdrResponse(DescribeProtectedTelCdrResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TelCdrs != null) {
+            this.TelCdrs = new TelCdrInfo[source.TelCdrs.length];
+            for (int i = 0; i < source.TelCdrs.length; i++) {
+                this.TelCdrs[i] = new TelCdrInfo(source.TelCdrs[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +118,8 @@ public class ListEmailTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TemplatesMetadata.", this.TemplatesMetadata);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TelCdrs.", this.TelCdrs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

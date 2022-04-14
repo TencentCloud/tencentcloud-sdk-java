@@ -256,6 +256,13 @@ appid，用来唯一标识网站或应用
     private String NameCryptoType;
 
     /**
+    * 是否使用旧回包
+    */
+    @SerializedName("OldResponseType")
+    @Expose
+    private String OldResponseType;
+
+    /**
      * Get 业务方账号 ID 
      * @return CustomerUin 业务方账号 ID
      */
@@ -851,6 +858,22 @@ appid，用来唯一标识网站或应用
         this.NameCryptoType = NameCryptoType;
     }
 
+    /**
+     * Get 是否使用旧回包 
+     * @return OldResponseType 是否使用旧回包
+     */
+    public String getOldResponseType() {
+        return this.OldResponseType;
+    }
+
+    /**
+     * Set 是否使用旧回包
+     * @param OldResponseType 是否使用旧回包
+     */
+    public void setOldResponseType(String OldResponseType) {
+        this.OldResponseType = OldResponseType;
+    }
+
     public AntiFraudFilter() {
     }
 
@@ -943,6 +966,9 @@ appid，用来唯一标识网站或应用
         if (source.NameCryptoType != null) {
             this.NameCryptoType = new String(source.NameCryptoType);
         }
+        if (source.OldResponseType != null) {
+            this.OldResponseType = new String(source.OldResponseType);
+        }
     }
 
 
@@ -978,6 +1004,7 @@ appid，用来唯一标识网站或应用
         this.setParamSimple(map, prefix + "IdCryptoType", this.IdCryptoType);
         this.setParamSimple(map, prefix + "PhoneCryptoType", this.PhoneCryptoType);
         this.setParamSimple(map, prefix + "NameCryptoType", this.NameCryptoType);
+        this.setParamSimple(map, prefix + "OldResponseType", this.OldResponseType);
 
     }
 }

@@ -204,7 +204,7 @@ public enum SesErrorCode {
     // 超出最大发信地址限制。
      OPERATIONDENIED_EXCEEDSENDERLIMIT("OperationDenied.ExceedSenderLimit"),
      
-    // 收件人列表正在被操作，请稍候操作。
+    // 收件人列表正在被操作，请稍后操作。
      OPERATIONDENIED_RECEIVERISOPERATING("OperationDenied.ReceiverIsOperating"),
      
     // 收件人列表不存在。

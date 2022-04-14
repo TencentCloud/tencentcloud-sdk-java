@@ -319,6 +319,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取主被叫受保护的电话服务记录与录音
+     * @param req DescribeProtectedTelCdrRequest
+     * @return DescribeProtectedTelCdrResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectedTelCdrResponse DescribeProtectedTelCdr(DescribeProtectedTelCdrRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProtectedTelCdrResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProtectedTelCdrResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProtectedTelCdr");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *废弃接口下架
 
 获取坐席用户列表（废弃）

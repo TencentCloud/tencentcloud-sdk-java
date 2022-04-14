@@ -138,6 +138,14 @@ IMPORTFAILED-导入失败
     private Snapshot [] SnapshotSet;
 
     /**
+    * 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 镜像ID 
      * @return ImageId 镜像ID
      */
@@ -417,6 +425,26 @@ IMPORTFAILED-导入失败
         this.SnapshotSet = SnapshotSet;
     }
 
+    /**
+     * Get 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Image() {
     }
 
@@ -473,6 +501,12 @@ IMPORTFAILED-导入失败
                 this.SnapshotSet[i] = new Snapshot(source.SnapshotSet[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -495,6 +529,7 @@ IMPORTFAILED-导入失败
         this.setParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
         this.setParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
         this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

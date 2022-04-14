@@ -23,56 +23,56 @@ import java.util.HashMap;
 public class DescribeTelCdrRequest extends AbstractModel{
 
     /**
-    * 起始时间戳，Unix 时间戳
+    * 起始时间戳，Unix 秒级时间戳
     */
     @SerializedName("StartTimeStamp")
     @Expose
     private Long StartTimeStamp;
 
     /**
-    * 结束时间戳，Unix 时间戳
+    * 结束时间戳，Unix 秒级时间戳
     */
     @SerializedName("EndTimeStamp")
     @Expose
     private Long EndTimeStamp;
 
     /**
-    * 实例 ID（deprecated）
+    * 实例 ID（废弃）
     */
     @SerializedName("InstanceId")
     @Expose
     private Long InstanceId;
 
     /**
-    * 返回数据条数，上限（deprecated）
+    * 返回数据条数，上限（废弃）
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移（deprecated）
+    * 偏移（废弃）
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 应用 ID
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 分页尺寸，上限 100
+    * 分页尺寸（必填），上限 100
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 分页页码，从 0 开始
+    * 分页页码（必填），从 0 开始
     */
     @SerializedName("PageNumber")
     @Expose
@@ -93,128 +93,128 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private String [] SessionIds;
 
     /**
-     * Get 起始时间戳，Unix 时间戳 
-     * @return StartTimeStamp 起始时间戳，Unix 时间戳
+     * Get 起始时间戳，Unix 秒级时间戳 
+     * @return StartTimeStamp 起始时间戳，Unix 秒级时间戳
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
     }
 
     /**
-     * Set 起始时间戳，Unix 时间戳
-     * @param StartTimeStamp 起始时间戳，Unix 时间戳
+     * Set 起始时间戳，Unix 秒级时间戳
+     * @param StartTimeStamp 起始时间戳，Unix 秒级时间戳
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get 结束时间戳，Unix 时间戳 
-     * @return EndTimeStamp 结束时间戳，Unix 时间戳
+     * Get 结束时间戳，Unix 秒级时间戳 
+     * @return EndTimeStamp 结束时间戳，Unix 秒级时间戳
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
     }
 
     /**
-     * Set 结束时间戳，Unix 时间戳
-     * @param EndTimeStamp 结束时间戳，Unix 时间戳
+     * Set 结束时间戳，Unix 秒级时间戳
+     * @param EndTimeStamp 结束时间戳，Unix 秒级时间戳
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;
     }
 
     /**
-     * Get 实例 ID（deprecated） 
-     * @return InstanceId 实例 ID（deprecated）
+     * Get 实例 ID（废弃） 
+     * @return InstanceId 实例 ID（废弃）
      */
     public Long getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID（deprecated）
-     * @param InstanceId 实例 ID（deprecated）
+     * Set 实例 ID（废弃）
+     * @param InstanceId 实例 ID（废弃）
      */
     public void setInstanceId(Long InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 返回数据条数，上限（deprecated） 
-     * @return Limit 返回数据条数，上限（deprecated）
+     * Get 返回数据条数，上限（废弃） 
+     * @return Limit 返回数据条数，上限（废弃）
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数据条数，上限（deprecated）
-     * @param Limit 返回数据条数，上限（deprecated）
+     * Set 返回数据条数，上限（废弃）
+     * @param Limit 返回数据条数，上限（废弃）
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移（deprecated） 
-     * @return Offset 偏移（deprecated）
+     * Get 偏移（废弃） 
+     * @return Offset 偏移（废弃）
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移（deprecated）
-     * @param Offset 偏移（deprecated）
+     * Set 偏移（废弃）
+     * @param Offset 偏移（废弃）
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 应用 ID 
-     * @return SdkAppId 应用 ID
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID
-     * @param SdkAppId 应用 ID
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 分页尺寸，上限 100 
-     * @return PageSize 分页尺寸，上限 100
+     * Get 分页尺寸（必填），上限 100 
+     * @return PageSize 分页尺寸（必填），上限 100
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页尺寸，上限 100
-     * @param PageSize 分页尺寸，上限 100
+     * Set 分页尺寸（必填），上限 100
+     * @param PageSize 分页尺寸（必填），上限 100
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 分页页码，从 0 开始 
-     * @return PageNumber 分页页码，从 0 开始
+     * Get 分页页码（必填），从 0 开始 
+     * @return PageNumber 分页页码（必填），从 0 开始
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页码，从 0 开始
-     * @param PageNumber 分页页码，从 0 开始
+     * Set 分页页码（必填），从 0 开始
+     * @param PageNumber 分页页码（必填），从 0 开始
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;

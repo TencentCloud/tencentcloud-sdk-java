@@ -45,6 +45,13 @@ public class CreateKTVRobotRequest extends AbstractModel{
     private ApplicationLicenseInput ApplicationLicenseInput;
 
     /**
+    * 创建机器人时初始化参数。
+    */
+    @SerializedName("SyncRobotCommands")
+    @Expose
+    private SyncRobotCommand [] SyncRobotCommands;
+
+    /**
      * Get RTC厂商类型，取值有：
 <li>TRTC</li> 
      * @return RTCSystem RTC厂商类型，取值有：
@@ -96,6 +103,22 @@ public class CreateKTVRobotRequest extends AbstractModel{
         this.ApplicationLicenseInput = ApplicationLicenseInput;
     }
 
+    /**
+     * Get 创建机器人时初始化参数。 
+     * @return SyncRobotCommands 创建机器人时初始化参数。
+     */
+    public SyncRobotCommand [] getSyncRobotCommands() {
+        return this.SyncRobotCommands;
+    }
+
+    /**
+     * Set 创建机器人时初始化参数。
+     * @param SyncRobotCommands 创建机器人时初始化参数。
+     */
+    public void setSyncRobotCommands(SyncRobotCommand [] SyncRobotCommands) {
+        this.SyncRobotCommands = SyncRobotCommands;
+    }
+
     public CreateKTVRobotRequest() {
     }
 
@@ -113,6 +136,12 @@ public class CreateKTVRobotRequest extends AbstractModel{
         if (source.ApplicationLicenseInput != null) {
             this.ApplicationLicenseInput = new ApplicationLicenseInput(source.ApplicationLicenseInput);
         }
+        if (source.SyncRobotCommands != null) {
+            this.SyncRobotCommands = new SyncRobotCommand[source.SyncRobotCommands.length];
+            for (int i = 0; i < source.SyncRobotCommands.length; i++) {
+                this.SyncRobotCommands[i] = new SyncRobotCommand(source.SyncRobotCommands[i]);
+            }
+        }
     }
 
 
@@ -123,6 +152,7 @@ public class CreateKTVRobotRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
         this.setParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
         this.setParamObj(map, prefix + "ApplicationLicenseInput.", this.ApplicationLicenseInput);
+        this.setParamArrayObj(map, prefix + "SyncRobotCommands.", this.SyncRobotCommands);
 
     }
 }

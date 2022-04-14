@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEmailTemplatesResponse extends AbstractModel{
+public class QueryCloudOrderResponse extends AbstractModel{
 
     /**
-    * 邮件模板列表
+    * 订单数量
     */
-    @SerializedName("TemplatesMetadata")
+    @SerializedName("TotalNum")
     @Expose
-    private TemplatesMetadata [] TemplatesMetadata;
+    private Long TotalNum;
 
     /**
-    * 模板总数量
+    * 订单列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("OrderList")
     @Expose
-    private Long TotalCount;
+    private CloudOrderReturn [] OrderList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class ListEmailTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 邮件模板列表 
-     * @return TemplatesMetadata 邮件模板列表
+     * Get 订单数量 
+     * @return TotalNum 订单数量
      */
-    public TemplatesMetadata [] getTemplatesMetadata() {
-        return this.TemplatesMetadata;
+    public Long getTotalNum() {
+        return this.TotalNum;
     }
 
     /**
-     * Set 邮件模板列表
-     * @param TemplatesMetadata 邮件模板列表
+     * Set 订单数量
+     * @param TotalNum 订单数量
      */
-    public void setTemplatesMetadata(TemplatesMetadata [] TemplatesMetadata) {
-        this.TemplatesMetadata = TemplatesMetadata;
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 模板总数量 
-     * @return TotalCount 模板总数量
+     * Get 订单列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderList 订单列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public CloudOrderReturn [] getOrderList() {
+        return this.OrderList;
     }
 
     /**
-     * Set 模板总数量
-     * @param TotalCount 模板总数量
+     * Set 订单列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderList 订单列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setOrderList(CloudOrderReturn [] OrderList) {
+        this.OrderList = OrderList;
     }
 
     /**
@@ -91,22 +96,22 @@ public class ListEmailTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ListEmailTemplatesResponse() {
+    public QueryCloudOrderResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListEmailTemplatesResponse(ListEmailTemplatesResponse source) {
-        if (source.TemplatesMetadata != null) {
-            this.TemplatesMetadata = new TemplatesMetadata[source.TemplatesMetadata.length];
-            for (int i = 0; i < source.TemplatesMetadata.length; i++) {
-                this.TemplatesMetadata[i] = new TemplatesMetadata(source.TemplatesMetadata[i]);
-            }
+    public QueryCloudOrderResponse(QueryCloudOrderResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.OrderList != null) {
+            this.OrderList = new CloudOrderReturn[source.OrderList.length];
+            for (int i = 0; i < source.OrderList.length; i++) {
+                this.OrderList[i] = new CloudOrderReturn(source.OrderList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +123,8 @@ public class ListEmailTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TemplatesMetadata.", this.TemplatesMetadata);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
+        this.setParamArrayObj(map, prefix + "OrderList.", this.OrderList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
