@@ -23,368 +23,368 @@ import java.util.HashMap;
 public class SaDivulgeDataQueryPub extends AbstractModel{
 
     /**
-    * Id
+    * Id信息
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Uin
+    * 用户Uin
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * AppId
+    * 用户AppId
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * EventName
+    * 事件名称
     */
     @SerializedName("EventName")
     @Expose
     private String EventName;
 
     /**
-    * DivulgeSoure
+    * 监控源 0:全部 1:GitHub 2:暗网 默认值1
     */
     @SerializedName("DivulgeSoure")
     @Expose
     private String DivulgeSoure;
 
     /**
-    * Asset
+    * 受影响资产
     */
     @SerializedName("Asset")
     @Expose
     private String Asset;
 
     /**
-    * RuleName
+    * 命中主题集下的规则topic名称
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * RuleId
+    * 命中主题集下的规则topic唯一id
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * RuleWord
+    * 命中主题集下的自定义规则策略
     */
     @SerializedName("RuleWord")
     @Expose
     private String RuleWord;
 
     /**
-    * ScanUrl
+    * 扫描监测url"
     */
     @SerializedName("ScanUrl")
     @Expose
     private String ScanUrl;
 
     /**
-    * ScanCount
+    * 扫描监测命中次数
     */
     @SerializedName("ScanCount")
     @Expose
     private String ScanCount;
 
     /**
-    * Level
+    * 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Status
+    * 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * EventTime
+    * 安全事件发生时间
     */
     @SerializedName("EventTime")
     @Expose
     private String EventTime;
 
     /**
-    * InsertTime
+    * 事件插入时间
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * UpdateTime
+    * 事件更新时间
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get Id信息 
+     * @return Id Id信息
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set Id信息
+     * @param Id Id信息
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Uin 
-     * @return Uin Uin
+     * Get 用户Uin 
+     * @return Uin 用户Uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Uin
-     * @param Uin Uin
+     * Set 用户Uin
+     * @param Uin 用户Uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get AppId 
-     * @return AppId AppId
+     * Get 用户AppId 
+     * @return AppId 用户AppId
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set AppId
-     * @param AppId AppId
+     * Set 用户AppId
+     * @param AppId 用户AppId
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get EventName 
-     * @return EventName EventName
+     * Get 事件名称 
+     * @return EventName 事件名称
      */
     public String getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set EventName
-     * @param EventName EventName
+     * Set 事件名称
+     * @param EventName 事件名称
      */
     public void setEventName(String EventName) {
         this.EventName = EventName;
     }
 
     /**
-     * Get DivulgeSoure 
-     * @return DivulgeSoure DivulgeSoure
+     * Get 监控源 0:全部 1:GitHub 2:暗网 默认值1 
+     * @return DivulgeSoure 监控源 0:全部 1:GitHub 2:暗网 默认值1
      */
     public String getDivulgeSoure() {
         return this.DivulgeSoure;
     }
 
     /**
-     * Set DivulgeSoure
-     * @param DivulgeSoure DivulgeSoure
+     * Set 监控源 0:全部 1:GitHub 2:暗网 默认值1
+     * @param DivulgeSoure 监控源 0:全部 1:GitHub 2:暗网 默认值1
      */
     public void setDivulgeSoure(String DivulgeSoure) {
         this.DivulgeSoure = DivulgeSoure;
     }
 
     /**
-     * Get Asset 
-     * @return Asset Asset
+     * Get 受影响资产 
+     * @return Asset 受影响资产
      */
     public String getAsset() {
         return this.Asset;
     }
 
     /**
-     * Set Asset
-     * @param Asset Asset
+     * Set 受影响资产
+     * @param Asset 受影响资产
      */
     public void setAsset(String Asset) {
         this.Asset = Asset;
     }
 
     /**
-     * Get RuleName 
-     * @return RuleName RuleName
+     * Get 命中主题集下的规则topic名称 
+     * @return RuleName 命中主题集下的规则topic名称
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set RuleName
-     * @param RuleName RuleName
+     * Set 命中主题集下的规则topic名称
+     * @param RuleName 命中主题集下的规则topic名称
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get RuleId 
-     * @return RuleId RuleId
+     * Get 命中主题集下的规则topic唯一id 
+     * @return RuleId 命中主题集下的规则topic唯一id
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set RuleId
-     * @param RuleId RuleId
+     * Set 命中主题集下的规则topic唯一id
+     * @param RuleId 命中主题集下的规则topic唯一id
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get RuleWord 
-     * @return RuleWord RuleWord
+     * Get 命中主题集下的自定义规则策略 
+     * @return RuleWord 命中主题集下的自定义规则策略
      */
     public String getRuleWord() {
         return this.RuleWord;
     }
 
     /**
-     * Set RuleWord
-     * @param RuleWord RuleWord
+     * Set 命中主题集下的自定义规则策略
+     * @param RuleWord 命中主题集下的自定义规则策略
      */
     public void setRuleWord(String RuleWord) {
         this.RuleWord = RuleWord;
     }
 
     /**
-     * Get ScanUrl 
-     * @return ScanUrl ScanUrl
+     * Get 扫描监测url" 
+     * @return ScanUrl 扫描监测url"
      */
     public String getScanUrl() {
         return this.ScanUrl;
     }
 
     /**
-     * Set ScanUrl
-     * @param ScanUrl ScanUrl
+     * Set 扫描监测url"
+     * @param ScanUrl 扫描监测url"
      */
     public void setScanUrl(String ScanUrl) {
         this.ScanUrl = ScanUrl;
     }
 
     /**
-     * Get ScanCount 
-     * @return ScanCount ScanCount
+     * Get 扫描监测命中次数 
+     * @return ScanCount 扫描监测命中次数
      */
     public String getScanCount() {
         return this.ScanCount;
     }
 
     /**
-     * Set ScanCount
-     * @param ScanCount ScanCount
+     * Set 扫描监测命中次数
+     * @param ScanCount 扫描监测命中次数
      */
     public void setScanCount(String ScanCount) {
         this.ScanCount = ScanCount;
     }
 
     /**
-     * Get Level 
-     * @return Level Level
+     * Get 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重 
+     * @return Level 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Level
-     * @param Level Level
+     * Set 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
+     * @param Level 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任 
+     * @return Status 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
+     * @param Status 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get EventTime 
-     * @return EventTime EventTime
+     * Get 安全事件发生时间 
+     * @return EventTime 安全事件发生时间
      */
     public String getEventTime() {
         return this.EventTime;
     }
 
     /**
-     * Set EventTime
-     * @param EventTime EventTime
+     * Set 安全事件发生时间
+     * @param EventTime 安全事件发生时间
      */
     public void setEventTime(String EventTime) {
         this.EventTime = EventTime;
     }
 
     /**
-     * Get InsertTime 
-     * @return InsertTime InsertTime
+     * Get 事件插入时间 
+     * @return InsertTime 事件插入时间
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set InsertTime
-     * @param InsertTime InsertTime
+     * Set 事件插入时间
+     * @param InsertTime 事件插入时间
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get UpdateTime 
-     * @return UpdateTime UpdateTime
+     * Get 事件更新时间 
+     * @return UpdateTime 事件更新时间
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set UpdateTime
-     * @param UpdateTime UpdateTime
+     * Set 事件更新时间
+     * @param UpdateTime 事件更新时间
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

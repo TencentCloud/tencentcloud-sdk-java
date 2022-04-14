@@ -20,72 +20,80 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSocCheckItemListResponse extends AbstractModel{
+public class DescribeSocCheckItemListRspRsp extends AbstractModel{
 
     /**
-    * 检查项列表
+    * 检查项详情列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("List")
     @Expose
-    private DescribeSocCheckItemListRspRsp Data;
+    private SocCheckItemV1 [] List;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RequestId")
+    @SerializedName("Total")
     @Expose
-    private String RequestId;
+    private Long Total;
 
     /**
-     * Get 检查项列表
+     * Get 检查项详情列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 检查项列表
+     * @return List 检查项详情列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DescribeSocCheckItemListRspRsp getData() {
-        return this.Data;
+    public SocCheckItemV1 [] getList() {
+        return this.List;
     }
 
     /**
-     * Set 检查项列表
+     * Set 检查项详情列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 检查项列表
+     * @param List 检查项详情列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(DescribeSocCheckItemListRspRsp Data) {
-        this.Data = Data;
+    public void setList(SocCheckItemV1 [] List) {
+        this.List = List;
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
-    public DescribeSocCheckItemListResponse() {
+    public DescribeSocCheckItemListRspRsp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSocCheckItemListResponse(DescribeSocCheckItemListResponse source) {
-        if (source.Data != null) {
-            this.Data = new DescribeSocCheckItemListRspRsp(source.Data);
+    public DescribeSocCheckItemListRspRsp(DescribeSocCheckItemListRspRsp source) {
+        if (source.List != null) {
+            this.List = new SocCheckItemV1[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new SocCheckItemV1(source.List[i]);
+            }
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
     }
 
@@ -94,8 +102,8 @@ public class DescribeSocCheckItemListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "Total", this.Total);
 
     }
 }

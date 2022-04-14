@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssa.v20180608.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSocCheckItemListResponse extends AbstractModel{
-
-    /**
-    * 检查项列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Data")
-    @Expose
-    private DescribeSocCheckItemListRspRsp Data;
+public class ResetRootAccountResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,26 +28,6 @@ public class DescribeSocCheckItemListResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 检查项列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 检查项列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public DescribeSocCheckItemListRspRsp getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 检查项列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 检查项列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setData(DescribeSocCheckItemListRspRsp Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -73,17 +45,14 @@ public class DescribeSocCheckItemListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeSocCheckItemListResponse() {
+    public ResetRootAccountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSocCheckItemListResponse(DescribeSocCheckItemListResponse source) {
-        if (source.Data != null) {
-            this.Data = new DescribeSocCheckItemListRspRsp(source.Data);
-        }
+    public ResetRootAccountResponse(ResetRootAccountResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ public class DescribeSocCheckItemListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

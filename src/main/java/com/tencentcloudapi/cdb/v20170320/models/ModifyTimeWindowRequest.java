@@ -44,6 +44,13 @@ public class ModifyTimeWindowRequest extends AbstractModel{
     private String [] Weekdays;
 
     /**
+    * 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -91,6 +98,22 @@ public class ModifyTimeWindowRequest extends AbstractModel{
         this.Weekdays = Weekdays;
     }
 
+    /**
+     * Get 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10 
+     * @return MaxDelayTime 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+     * @param MaxDelayTime 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public ModifyTimeWindowRequest() {
     }
 
@@ -114,6 +137,9 @@ public class ModifyTimeWindowRequest extends AbstractModel{
                 this.Weekdays[i] = new String(source.Weekdays[i]);
             }
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class ModifyTimeWindowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "TimeRanges.", this.TimeRanges);
         this.setParamArraySimple(map, prefix + "Weekdays.", this.Weekdays);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

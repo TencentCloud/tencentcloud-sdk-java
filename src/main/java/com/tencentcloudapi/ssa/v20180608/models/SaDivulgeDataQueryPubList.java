@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SaDivulgeDataQueryPubList extends AbstractModel{
 
     /**
-    * Count
+    * 数据条数
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * List
+    * 自定义泄露事件列表
     */
     @SerializedName("List")
     @Expose
     private SaDivulgeDataQueryPub [] List;
 
     /**
-     * Get Count 
-     * @return Count Count
+     * Get 数据条数 
+     * @return Count 数据条数
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Count
-     * @param Count Count
+     * Set 数据条数
+     * @param Count 数据条数
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get List 
-     * @return List List
+     * Get 自定义泄露事件列表 
+     * @return List 自定义泄露事件列表
      */
     public SaDivulgeDataQueryPub [] getList() {
         return this.List;
     }
 
     /**
-     * Set List
-     * @param List List
+     * Set 自定义泄露事件列表
+     * @param List 自定义泄露事件列表
      */
     public void setList(SaDivulgeDataQueryPub [] List) {
         this.List = List;

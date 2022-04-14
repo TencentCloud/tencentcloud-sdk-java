@@ -72,6 +72,13 @@ public class DescribeTimeWindowResponse extends AbstractModel{
     private String [] Sunday;
 
     /**
+    * 最大数据延迟阈值
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +198,22 @@ public class DescribeTimeWindowResponse extends AbstractModel{
     }
 
     /**
+     * Get 最大数据延迟阈值 
+     * @return MaxDelayTime 最大数据延迟阈值
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set 最大数据延迟阈值
+     * @param MaxDelayTime 最大数据延迟阈值
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -256,6 +279,9 @@ public class DescribeTimeWindowResponse extends AbstractModel{
                 this.Sunday[i] = new String(source.Sunday[i]);
             }
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -273,6 +299,7 @@ public class DescribeTimeWindowResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Friday.", this.Friday);
         this.setParamArraySimple(map, prefix + "Saturday.", this.Saturday);
         this.setParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -46,6 +46,22 @@ public class OssPrivateAccess extends AbstractModel{
     private String SecretKey;
 
     /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
+
+    /**
      * Get 开关， on/off。 
      * @return Switch 开关， on/off。
      */
@@ -101,6 +117,46 @@ public class OssPrivateAccess extends AbstractModel{
         this.SecretKey = SecretKey;
     }
 
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Bucketname
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Bucket Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Bucket Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
+    }
+
     public OssPrivateAccess() {
     }
 
@@ -118,6 +174,12 @@ public class OssPrivateAccess extends AbstractModel{
         if (source.SecretKey != null) {
             this.SecretKey = new String(source.SecretKey);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
     }
 
 
@@ -128,6 +190,8 @@ public class OssPrivateAccess extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
 
     }
 }

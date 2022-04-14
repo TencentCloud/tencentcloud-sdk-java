@@ -285,6 +285,20 @@ global：全球加速
     private OssPrivateAccess OssPrivateAccess;
 
     /**
+    * 华为云对象存储回源鉴权
+    */
+    @SerializedName("HwPrivateAccess")
+    @Expose
+    private HwPrivateAccess HwPrivateAccess;
+
+    /**
+    * 七牛云对象存储回源鉴权
+    */
+    @SerializedName("QnPrivateAccess")
+    @Expose
+    private QnPrivateAccess QnPrivateAccess;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -900,6 +914,38 @@ global：全球加速
         this.OssPrivateAccess = OssPrivateAccess;
     }
 
+    /**
+     * Get 华为云对象存储回源鉴权 
+     * @return HwPrivateAccess 华为云对象存储回源鉴权
+     */
+    public HwPrivateAccess getHwPrivateAccess() {
+        return this.HwPrivateAccess;
+    }
+
+    /**
+     * Set 华为云对象存储回源鉴权
+     * @param HwPrivateAccess 华为云对象存储回源鉴权
+     */
+    public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
+        this.HwPrivateAccess = HwPrivateAccess;
+    }
+
+    /**
+     * Get 七牛云对象存储回源鉴权 
+     * @return QnPrivateAccess 七牛云对象存储回源鉴权
+     */
+    public QnPrivateAccess getQnPrivateAccess() {
+        return this.QnPrivateAccess;
+    }
+
+    /**
+     * Set 七牛云对象存储回源鉴权
+     * @param QnPrivateAccess 七牛云对象存储回源鉴权
+     */
+    public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
+        this.QnPrivateAccess = QnPrivateAccess;
+    }
+
     public AddCdnDomainRequest() {
     }
 
@@ -1019,6 +1065,12 @@ global：全球加速
         if (source.OssPrivateAccess != null) {
             this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
         }
+        if (source.HwPrivateAccess != null) {
+            this.HwPrivateAccess = new HwPrivateAccess(source.HwPrivateAccess);
+        }
+        if (source.QnPrivateAccess != null) {
+            this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
+        }
     }
 
 
@@ -1062,6 +1114,8 @@ global：全球加速
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+        this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
 
     }
 }

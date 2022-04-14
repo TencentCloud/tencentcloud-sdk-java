@@ -156,6 +156,14 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     private AdvanceHttps AdvanceHttps;
 
     /**
+    * 对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginCompany")
+    @Expose
+    private String OriginCompany;
+
+    /**
      * Get 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -543,6 +551,26 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
         this.AdvanceHttps = AdvanceHttps;
     }
 
+    /**
+     * Get 对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginCompany 对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginCompany() {
+        return this.OriginCompany;
+    }
+
+    /**
+     * Set 对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginCompany 对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginCompany(String OriginCompany) {
+        this.OriginCompany = OriginCompany;
+    }
+
     public Origin() {
     }
 
@@ -599,6 +627,9 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
         if (source.AdvanceHttps != null) {
             this.AdvanceHttps = new AdvanceHttps(source.AdvanceHttps);
         }
+        if (source.OriginCompany != null) {
+            this.OriginCompany = new String(source.OriginCompany);
+        }
     }
 
 
@@ -618,6 +649,7 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
         this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         this.setParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
         this.setParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
+        this.setParamSimple(map, prefix + "OriginCompany", this.OriginCompany);
 
     }
 }

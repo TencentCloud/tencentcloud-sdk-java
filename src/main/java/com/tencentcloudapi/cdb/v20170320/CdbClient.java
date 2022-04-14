@@ -2415,6 +2415,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *重置实例ROOT账，初始化账号权限
+     * @param req ResetRootAccountRequest
+     * @return ResetRootAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRootAccountResponse ResetRootAccount(ResetRootAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetRootAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetRootAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetRootAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(RestartDBInstances)用于重启云数据库实例。
 
 注意：

@@ -339,6 +339,20 @@ global：全球加速
     private ShareCname ShareCname;
 
     /**
+    * 华为云对象存储回源鉴权
+    */
+    @SerializedName("HwPrivateAccess")
+    @Expose
+    private HwPrivateAccess HwPrivateAccess;
+
+    /**
+    * 七牛云对象存储回源鉴权
+    */
+    @SerializedName("QnPrivateAccess")
+    @Expose
+    private QnPrivateAccess QnPrivateAccess;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1074,6 +1088,38 @@ global：全球加速
         this.ShareCname = ShareCname;
     }
 
+    /**
+     * Get 华为云对象存储回源鉴权 
+     * @return HwPrivateAccess 华为云对象存储回源鉴权
+     */
+    public HwPrivateAccess getHwPrivateAccess() {
+        return this.HwPrivateAccess;
+    }
+
+    /**
+     * Set 华为云对象存储回源鉴权
+     * @param HwPrivateAccess 华为云对象存储回源鉴权
+     */
+    public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
+        this.HwPrivateAccess = HwPrivateAccess;
+    }
+
+    /**
+     * Get 七牛云对象存储回源鉴权 
+     * @return QnPrivateAccess 七牛云对象存储回源鉴权
+     */
+    public QnPrivateAccess getQnPrivateAccess() {
+        return this.QnPrivateAccess;
+    }
+
+    /**
+     * Set 七牛云对象存储回源鉴权
+     * @param QnPrivateAccess 七牛云对象存储回源鉴权
+     */
+    public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
+        this.QnPrivateAccess = QnPrivateAccess;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1217,6 +1263,12 @@ global：全球加速
         if (source.ShareCname != null) {
             this.ShareCname = new ShareCname(source.ShareCname);
         }
+        if (source.HwPrivateAccess != null) {
+            this.HwPrivateAccess = new HwPrivateAccess(source.HwPrivateAccess);
+        }
+        if (source.QnPrivateAccess != null) {
+            this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
+        }
     }
 
 
@@ -1268,6 +1320,8 @@ global：全球加速
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
+        this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+        this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
 
     }
 }

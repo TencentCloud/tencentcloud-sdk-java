@@ -20,17 +20,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AwsPrivateAccess extends AbstractModel{
+public class QnPrivateAccess extends AbstractModel{
 
     /**
-    * 开关，on/off。
+    * 开关 on/off
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 访问ID。
+    * 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessKey")
@@ -38,49 +38,32 @@ public class AwsPrivateAccess extends AbstractModel{
     private String AccessKey;
 
     /**
-    * 密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 密钥
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 地域
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Region")
-    @Expose
-    private String Region;
-
-    /**
-    * Bucketname
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Bucket")
-    @Expose
-    private String Bucket;
-
-    /**
-     * Get 开关，on/off。 
-     * @return Switch 开关，on/off。
+     * Get 开关 on/off 
+     * @return Switch 开关 on/off
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关，on/off。
-     * @param Switch 开关，on/off。
+     * Set 开关 on/off
+     * @param Switch 开关 on/off
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 访问ID。
+     * Get 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessKey 访问ID。
+     * @return AccessKey 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessKey() {
@@ -88,9 +71,9 @@ public class AwsPrivateAccess extends AbstractModel{
     }
 
     /**
-     * Set 访问ID。
+     * Set 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessKey 访问ID。
+     * @param AccessKey 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessKey(String AccessKey) {
@@ -98,73 +81,29 @@ public class AwsPrivateAccess extends AbstractModel{
     }
 
     /**
-     * Get 密钥。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretKey 密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 密钥 
+     * @return SecretKey 密钥
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 密钥。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretKey 密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 密钥
+     * @param SecretKey 密钥
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
-    /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRegion() {
-        return this.Region;
-    }
-
-    /**
-     * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRegion(String Region) {
-        this.Region = Region;
-    }
-
-    /**
-     * Get Bucketname
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bucket Bucketname
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getBucket() {
-        return this.Bucket;
-    }
-
-    /**
-     * Set Bucketname
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bucket Bucketname
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setBucket(String Bucket) {
-        this.Bucket = Bucket;
-    }
-
-    public AwsPrivateAccess() {
+    public QnPrivateAccess() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AwsPrivateAccess(AwsPrivateAccess source) {
+    public QnPrivateAccess(QnPrivateAccess source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
@@ -173,12 +112,6 @@ public class AwsPrivateAccess extends AbstractModel{
         }
         if (source.SecretKey != null) {
             this.SecretKey = new String(source.SecretKey);
-        }
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
-        }
-        if (source.Bucket != null) {
-            this.Bucket = new String(source.Bucket);
         }
     }
 
@@ -190,8 +123,6 @@ public class AwsPrivateAccess extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
-        this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
 
     }
 }

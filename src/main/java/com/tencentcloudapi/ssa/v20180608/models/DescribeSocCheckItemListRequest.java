@@ -22,6 +22,98 @@ import java.util.HashMap;
 
 public class DescribeSocCheckItemListRequest extends AbstractModel{
 
+    /**
+    * 查询参数,可支持的排序字段:Name,Type,AssetType,Level,Standard,IsFree
+    */
+    @SerializedName("Filter")
+    @Expose
+    private QueryFilter [] Filter;
+
+    /**
+    * 排序参数:无
+    */
+    @SerializedName("Sorter")
+    @Expose
+    private QuerySort [] Sorter;
+
+    /**
+    * 当前页码数据，默认值为10
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * 当前页面索引，默认值为0
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
+
+    /**
+     * Get 查询参数,可支持的排序字段:Name,Type,AssetType,Level,Standard,IsFree 
+     * @return Filter 查询参数,可支持的排序字段:Name,Type,AssetType,Level,Standard,IsFree
+     */
+    public QueryFilter [] getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set 查询参数,可支持的排序字段:Name,Type,AssetType,Level,Standard,IsFree
+     * @param Filter 查询参数,可支持的排序字段:Name,Type,AssetType,Level,Standard,IsFree
+     */
+    public void setFilter(QueryFilter [] Filter) {
+        this.Filter = Filter;
+    }
+
+    /**
+     * Get 排序参数:无 
+     * @return Sorter 排序参数:无
+     */
+    public QuerySort [] getSorter() {
+        return this.Sorter;
+    }
+
+    /**
+     * Set 排序参数:无
+     * @param Sorter 排序参数:无
+     */
+    public void setSorter(QuerySort [] Sorter) {
+        this.Sorter = Sorter;
+    }
+
+    /**
+     * Get 当前页码数据，默认值为10 
+     * @return PageSize 当前页码数据，默认值为10
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 当前页码数据，默认值为10
+     * @param PageSize 当前页码数据，默认值为10
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 当前页面索引，默认值为0 
+     * @return PageIndex 当前页面索引，默认值为0
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set 当前页面索引，默认值为0
+     * @param PageIndex 当前页面索引，默认值为0
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
+    }
+
     public DescribeSocCheckItemListRequest() {
     }
 
@@ -30,6 +122,24 @@ public class DescribeSocCheckItemListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSocCheckItemListRequest(DescribeSocCheckItemListRequest source) {
+        if (source.Filter != null) {
+            this.Filter = new QueryFilter[source.Filter.length];
+            for (int i = 0; i < source.Filter.length; i++) {
+                this.Filter[i] = new QueryFilter(source.Filter[i]);
+            }
+        }
+        if (source.Sorter != null) {
+            this.Sorter = new QuerySort[source.Sorter.length];
+            for (int i = 0; i < source.Sorter.length; i++) {
+                this.Sorter[i] = new QuerySort(source.Sorter[i]);
+            }
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
     }
 
 
@@ -37,6 +147,10 @@ public class DescribeSocCheckItemListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "Sorter.", this.Sorter);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
 
     }
 }

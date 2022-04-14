@@ -79,6 +79,13 @@ public class AddTimeWindowRequest extends AbstractModel{
     private String [] Sunday;
 
     /**
+    * 最大延迟阈值，仅对主实例和灾备实例有效
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -206,6 +213,22 @@ public class AddTimeWindowRequest extends AbstractModel{
         this.Sunday = Sunday;
     }
 
+    /**
+     * Get 最大延迟阈值，仅对主实例和灾备实例有效 
+     * @return MaxDelayTime 最大延迟阈值，仅对主实例和灾备实例有效
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set 最大延迟阈值，仅对主实例和灾备实例有效
+     * @param MaxDelayTime 最大延迟阈值，仅对主实例和灾备实例有效
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public AddTimeWindowRequest() {
     }
 
@@ -259,6 +282,9 @@ public class AddTimeWindowRequest extends AbstractModel{
                 this.Sunday[i] = new String(source.Sunday[i]);
             }
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -274,6 +300,7 @@ public class AddTimeWindowRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Friday.", this.Friday);
         this.setParamArraySimple(map, prefix + "Saturday.", this.Saturday);
         this.setParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

@@ -231,6 +231,22 @@ public class MainlandConfig extends AbstractModel{
     private OssPrivateAccess OssPrivateAccess;
 
     /**
+    * 华为云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HwPrivateAccess")
+    @Expose
+    private HwPrivateAccess HwPrivateAccess;
+
+    /**
+    * 七牛云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QnPrivateAccess")
+    @Expose
+    private QnPrivateAccess QnPrivateAccess;
+
+    /**
      * Get 时间戳防盗链配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Authentication 时间戳防盗链配置。
@@ -750,6 +766,46 @@ public class MainlandConfig extends AbstractModel{
         this.OssPrivateAccess = OssPrivateAccess;
     }
 
+    /**
+     * Get 华为云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HwPrivateAccess 华为云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HwPrivateAccess getHwPrivateAccess() {
+        return this.HwPrivateAccess;
+    }
+
+    /**
+     * Set 华为云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HwPrivateAccess 华为云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
+        this.HwPrivateAccess = HwPrivateAccess;
+    }
+
+    /**
+     * Get 七牛云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QnPrivateAccess 七牛云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QnPrivateAccess getQnPrivateAccess() {
+        return this.QnPrivateAccess;
+    }
+
+    /**
+     * Set 七牛云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QnPrivateAccess 七牛云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
+        this.QnPrivateAccess = QnPrivateAccess;
+    }
+
     public MainlandConfig() {
     }
 
@@ -836,6 +892,12 @@ public class MainlandConfig extends AbstractModel{
         if (source.OssPrivateAccess != null) {
             this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
         }
+        if (source.HwPrivateAccess != null) {
+            this.HwPrivateAccess = new HwPrivateAccess(source.HwPrivateAccess);
+        }
+        if (source.QnPrivateAccess != null) {
+            this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
+        }
     }
 
 
@@ -869,6 +931,8 @@ public class MainlandConfig extends AbstractModel{
         this.setParamObj(map, prefix + "VideoSeek.", this.VideoSeek);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+        this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
 
     }
 }

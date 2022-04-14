@@ -191,7 +191,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String DeployGroupId;
 
     /**
-    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
     */
     @SerializedName("ClientToken")
     @Expose
@@ -266,6 +266,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
+
+    /**
+    * 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+    */
+    @SerializedName("Vips")
+    @Expose
+    private String [] Vips;
 
     /**
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
@@ -652,16 +659,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
-     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
+     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
@@ -827,6 +834,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。 
+     * @return Vips 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+     */
+    public String [] getVips() {
+        return this.Vips;
+    }
+
+    /**
+     * Set 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+     * @param Vips 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+     */
+    public void setVips(String [] Vips) {
+        this.Vips = Vips;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -955,6 +978,12 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.Vips != null) {
+            this.Vips = new String[source.Vips.length];
+            for (int i = 0; i < source.Vips.length; i++) {
+                this.Vips[i] = new String(source.Vips[i]);
+            }
+        }
     }
 
 
@@ -997,6 +1026,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamArraySimple(map, prefix + "Vips.", this.Vips);
 
     }
 }
