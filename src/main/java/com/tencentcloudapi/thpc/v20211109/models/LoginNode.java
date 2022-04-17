@@ -59,7 +59,7 @@ public class LoginNode extends AbstractModel{
     private DataDisk [] DataDisks;
 
     /**
-    * 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+    * 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -159,16 +159,16 @@ public class LoginNode extends AbstractModel{
     }
 
     /**
-     * Get 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。 
-     * @return InternetAccessible 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+     * Get 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。 
+     * @return InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
      */
     public InternetAccessible [] getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
-     * @param InternetAccessible 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+     * Set 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+     * @param InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
      */
     public void setInternetAccessible(InternetAccessible [] InternetAccessible) {
         this.InternetAccessible = InternetAccessible;

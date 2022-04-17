@@ -1220,7 +1220,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *打开kafka协议消费
+     *打开Kafka协议消费功能
      * @param req OpenKafkaConsumerRequest
      * @return OpenKafkaConsumerResponse
      * @throws TencentCloudSDKException

@@ -359,6 +359,26 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
+     *云安全配置检查项结果列表
+     * @param req DescribeSocCheckResultListRequest
+     * @return DescribeSocCheckResultListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSocCheckResultListResponse DescribeSocCheckResultList(DescribeSocCheckResultListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSocCheckResultListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSocCheckResultListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSocCheckResultList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *合规详情项
      * @param req DescribeSocCspmComplianceRequest
      * @return DescribeSocCspmComplianceResponse

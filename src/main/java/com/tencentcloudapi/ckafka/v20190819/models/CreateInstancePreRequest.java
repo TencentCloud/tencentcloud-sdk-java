@@ -44,7 +44,8 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String Period;
 
     /**
-    * 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
+    * 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -86,14 +87,14 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long RenewFlag;
 
     /**
-    * 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
+    * CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+    * 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
     */
     @SerializedName("SpecificationsType")
     @Expose
@@ -197,16 +198,20 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。 
-     * @return InstanceType 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
+     * Get 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。 
+     * @return InstanceType 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
-     * @param InstanceType 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
+     * Set 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
+     * @param InstanceType 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
@@ -293,32 +298,32 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro 
-     * @return KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
+     * Get CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1 
+     * @return KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
-     * @param KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
+     * Set CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+     * @param KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession 
-     * @return SpecificationsType 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     * Get 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession 
+     * @return SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
-     * @param SpecificationsType 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     * Set 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
+     * @param SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
