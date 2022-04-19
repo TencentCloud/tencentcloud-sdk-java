@@ -30,7 +30,7 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+    * 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
     */
     @SerializedName("ExpireDays")
     @Expose
@@ -51,7 +51,7 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private String BackupMethod;
 
     /**
-    * binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+    * binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
     */
     @SerializedName("BinlogExpireDays")
     @Expose
@@ -123,16 +123,16 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。 
-     * @return ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+     * Get 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。 
+     * @return ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
      */
     public Long getExpireDays() {
         return this.ExpireDays;
     }
 
     /**
-     * Set 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
-     * @param ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+     * Set 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
+     * @param ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
      */
     public void setExpireDays(Long ExpireDays) {
         this.ExpireDays = ExpireDays;
@@ -171,16 +171,16 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。 
-     * @return BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     * Get binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。 
+     * @return BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
      */
     public Long getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
     /**
-     * Set binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
-     * @param BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     * Set binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
+     * @param BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
      */
     public void setBinlogExpireDays(Long BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;

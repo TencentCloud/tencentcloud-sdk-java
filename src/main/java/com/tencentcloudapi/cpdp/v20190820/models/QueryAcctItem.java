@@ -40,7 +40,7 @@ public class QueryAcctItem extends AbstractModel{
     private String SubMchName;
 
     /**
-    * 子账号号
+    * 子账号
     */
     @SerializedName("SubAcctNo")
     @Expose
@@ -154,16 +154,16 @@ merchant:商户子账户
     }
 
     /**
-     * Get 子账号号 
-     * @return SubAcctNo 子账号号
+     * Get 子账号 
+     * @return SubAcctNo 子账号
      */
     public String getSubAcctNo() {
         return this.SubAcctNo;
     }
 
     /**
-     * Set 子账号号
-     * @param SubAcctNo 子账号号
+     * Set 子账号
+     * @param SubAcctNo 子账号
      */
     public void setSubAcctNo(String SubAcctNo) {
         this.SubAcctNo = SubAcctNo;

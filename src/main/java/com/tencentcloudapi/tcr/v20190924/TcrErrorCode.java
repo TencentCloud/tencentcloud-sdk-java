@@ -6,8 +6,23 @@ public enum TcrErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 获取数据库数据错误。
+     FAILEDOPERATION_GETDBDATAERROR("FailedOperation.GetDBDataError"),
+     
+    // 获取安全组策略错误。
+     FAILEDOPERATION_GETSECURITYPOLICYFAIL("FailedOperation.GetSecurityPolicyFail"),
+     
+    // 获取TcrClient错误。
+     FAILEDOPERATION_GETTCRCLIENT("FailedOperation.GetTcrClient"),
+     
     // 交易失败。
      FAILEDOPERATION_TRADEFAILED("FailedOperation.TradeFailed"),
+     
+    // 校验仓库名称失败。
+     FAILEDOPERATION_VALIDATEREGISTRYNAMEFAIL("FailedOperation.ValidateRegistryNameFail"),
+     
+    // 校验支持地域错误。
+     FAILEDOPERATION_VALIDATESUPPORTEDREGIONFAIL("FailedOperation.ValidateSupportedRegionFail"),
      
     // 内部错误。
      INTERNALERROR("InternalError"),
@@ -131,6 +146,9 @@ public enum TcrErrorCode {
      
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
+     
+    // 配额超限。
+     OPERATIONDENIED_QUOTAOVERLIMIT("OperationDenied.QuotaOverLimit"),
      
     // 实例状态异常。
      RESOURCEINSUFFICIENT_ERRORINSTANCENOTRUNNING("ResourceInsufficient.ErrorInstanceNotRunning"),

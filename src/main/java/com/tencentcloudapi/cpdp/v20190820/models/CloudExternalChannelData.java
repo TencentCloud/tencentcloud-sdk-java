@@ -35,7 +35,7 @@ PAYMENT_ORDER_EXTERNAL_NOTIFY_DATA: 支付通知数据
 
     /**
     * 第三方渠道数据值。
-当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://midas-juxin-next.pages.woa.com/apidocs/external-channel-data/QueryExternalChannelData.html#ExternalChannelPaymentDataValue)
+当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://dev.tke.midas.qq.com/juxin-doc-next/apidocs/external-channel-data/QueryExternalChannelData.html#externalchannelpaymentdatavalue)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalChannelDataValue")
@@ -76,10 +76,10 @@ PAYMENT_ORDER_EXTERNAL_NOTIFY_DATA: 支付通知数据
 
     /**
      * Get 第三方渠道数据值。
-当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://midas-juxin-next.pages.woa.com/apidocs/external-channel-data/QueryExternalChannelData.html#ExternalChannelPaymentDataValue)
+当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://dev.tke.midas.qq.com/juxin-doc-next/apidocs/external-channel-data/QueryExternalChannelData.html#externalchannelpaymentdatavalue)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExternalChannelDataValue 第三方渠道数据值。
-当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://midas-juxin-next.pages.woa.com/apidocs/external-channel-data/QueryExternalChannelData.html#ExternalChannelPaymentDataValue)
+当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://dev.tke.midas.qq.com/juxin-doc-next/apidocs/external-channel-data/QueryExternalChannelData.html#externalchannelpaymentdatavalue)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExternalChannelDataValue() {
@@ -88,10 +88,10 @@ PAYMENT_ORDER_EXTERNAL_NOTIFY_DATA: 支付通知数据
 
     /**
      * Set 第三方渠道数据值。
-当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://midas-juxin-next.pages.woa.com/apidocs/external-channel-data/QueryExternalChannelData.html#ExternalChannelPaymentDataValue)
+当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://dev.tke.midas.qq.com/juxin-doc-next/apidocs/external-channel-data/QueryExternalChannelData.html#externalchannelpaymentdatavalue)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalChannelDataValue 第三方渠道数据值。
-当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://midas-juxin-next.pages.woa.com/apidocs/external-channel-data/QueryExternalChannelData.html#ExternalChannelPaymentDataValue)
+当ExternalChannelDataType=PAYMENT时，反序列化格式请参考[ExternalChannelPaymentDataValue](https://dev.tke.midas.qq.com/juxin-doc-next/apidocs/external-channel-data/QueryExternalChannelData.html#externalchannelpaymentdatavalue)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalChannelDataValue(String ExternalChannelDataValue) {

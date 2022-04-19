@@ -30,7 +30,7 @@ public class CreateKillTaskRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 任务持续时间时间，单位秒，手动关闭任务传-1。
+    * 任务持续时间，单位秒，手动关闭任务传-1。
     */
     @SerializedName("Duration")
     @Expose
@@ -102,16 +102,16 @@ public class CreateKillTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务持续时间时间，单位秒，手动关闭任务传-1。 
-     * @return Duration 任务持续时间时间，单位秒，手动关闭任务传-1。
+     * Get 任务持续时间，单位秒，手动关闭任务传-1。 
+     * @return Duration 任务持续时间，单位秒，手动关闭任务传-1。
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 任务持续时间时间，单位秒，手动关闭任务传-1。
-     * @param Duration 任务持续时间时间，单位秒，手动关闭任务传-1。
+     * Set 任务持续时间，单位秒，手动关闭任务传-1。
+     * @param Duration 任务持续时间，单位秒，手动关闭任务传-1。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;

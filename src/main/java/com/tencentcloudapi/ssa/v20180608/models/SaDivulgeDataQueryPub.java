@@ -86,7 +86,7 @@ public class SaDivulgeDataQueryPub extends AbstractModel{
     private String RuleWord;
 
     /**
-    * 扫描监测url"
+    * 扫描监测url
     */
     @SerializedName("ScanUrl")
     @Expose
@@ -279,16 +279,16 @@ public class SaDivulgeDataQueryPub extends AbstractModel{
     }
 
     /**
-     * Get 扫描监测url" 
-     * @return ScanUrl 扫描监测url"
+     * Get 扫描监测url 
+     * @return ScanUrl 扫描监测url
      */
     public String getScanUrl() {
         return this.ScanUrl;
     }
 
     /**
-     * Set 扫描监测url"
-     * @param ScanUrl 扫描监测url"
+     * Set 扫描监测url
+     * @param ScanUrl 扫描监测url
      */
     public void setScanUrl(String ScanUrl) {
         this.ScanUrl = ScanUrl;

@@ -6,6 +6,9 @@ public enum EccErrorCode {
     // 批改错误。
      INTERNALERROR_CORRECTERROR("InternalError.CorrectError"),
      
+    // 数据格式错误。
+     INTERNALERROR_DATAFORMATABNORMALERROR("InternalError.DataFormatAbnormalError"),
+     
     // 识别错误。
      INTERNALERROR_OCRERROR("InternalError.OcrError"),
      

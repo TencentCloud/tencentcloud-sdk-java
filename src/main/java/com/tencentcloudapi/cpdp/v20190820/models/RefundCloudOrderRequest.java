@@ -45,7 +45,7 @@ public class RefundCloudOrderRequest extends AbstractModel{
 
     /**
     * 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
     */
     @SerializedName("TotalRefundAmt")
     @Expose
@@ -169,9 +169,9 @@ _不填默认为生产环境_
 
     /**
      * Get 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额 
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额 
      * @return TotalRefundAmt 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
      */
     public Long getTotalRefundAmt() {
         return this.TotalRefundAmt;
@@ -179,9 +179,9 @@ _不填默认为生产环境_
 
     /**
      * Set 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
      * @param TotalRefundAmt 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
      */
     public void setTotalRefundAmt(Long TotalRefundAmt) {
         this.TotalRefundAmt = TotalRefundAmt;

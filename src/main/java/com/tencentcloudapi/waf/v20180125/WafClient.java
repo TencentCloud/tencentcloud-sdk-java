@@ -79,6 +79,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *添加Spart防护域名
+     * @param req AddSpartaProtectionRequest
+     * @return AddSpartaProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddSpartaProtectionResponse AddSpartaProtection(AddSpartaProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddSpartaProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddSpartaProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddSpartaProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于创建访问日志导出
      * @param req CreateAccessExportRequest
      * @return CreateAccessExportResponse

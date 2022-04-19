@@ -2415,7 +2415,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *重置实例ROOT账，初始化账号权限
+     *重置实例ROOT账号，初始化账号权限
      * @param req ResetRootAccountRequest
      * @return ResetRootAccountResponse
      * @throws TencentCloudSDKException
