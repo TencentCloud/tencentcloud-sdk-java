@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class RecognizeHealthCodeOCRResponse extends AbstractModel{
 
     /**
-    * 持码人姓名
+    * 持码人姓名，如：王*
     */
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * 持码人身份证号，如：11**************01
+    */
+    @SerializedName("IDNumber")
+    @Expose
+    private String IDNumber;
 
     /**
     * 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
@@ -44,6 +51,27 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     private String Color;
 
     /**
+    * 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+    */
+    @SerializedName("TestingInterval")
+    @Expose
+    private String TestingInterval;
+
+    /**
+    * 核酸检测结果：阴性、阳性、暂无核酸检测记录
+    */
+    @SerializedName("TestingResult")
+    @Expose
+    private String TestingResult;
+
+    /**
+    * 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+    */
+    @SerializedName("TestingTime")
+    @Expose
+    private String TestingTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,19 +79,35 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 持码人姓名 
-     * @return Name 持码人姓名
+     * Get 持码人姓名，如：王* 
+     * @return Name 持码人姓名，如：王*
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 持码人姓名
-     * @param Name 持码人姓名
+     * Set 持码人姓名，如：王*
+     * @param Name 持码人姓名，如：王*
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 持码人身份证号，如：11**************01 
+     * @return IDNumber 持码人身份证号，如：11**************01
+     */
+    public String getIDNumber() {
+        return this.IDNumber;
+    }
+
+    /**
+     * Set 持码人身份证号，如：11**************01
+     * @param IDNumber 持码人身份证号，如：11**************01
+     */
+    public void setIDNumber(String IDNumber) {
+        this.IDNumber = IDNumber;
     }
 
     /**
@@ -99,6 +143,54 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录 
+     * @return TestingInterval 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+     */
+    public String getTestingInterval() {
+        return this.TestingInterval;
+    }
+
+    /**
+     * Set 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+     * @param TestingInterval 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+     */
+    public void setTestingInterval(String TestingInterval) {
+        this.TestingInterval = TestingInterval;
+    }
+
+    /**
+     * Get 核酸检测结果：阴性、阳性、暂无核酸检测记录 
+     * @return TestingResult 核酸检测结果：阴性、阳性、暂无核酸检测记录
+     */
+    public String getTestingResult() {
+        return this.TestingResult;
+    }
+
+    /**
+     * Set 核酸检测结果：阴性、阳性、暂无核酸检测记录
+     * @param TestingResult 核酸检测结果：阴性、阳性、暂无核酸检测记录
+     */
+    public void setTestingResult(String TestingResult) {
+        this.TestingResult = TestingResult;
+    }
+
+    /**
+     * Get 核酸检测时间，格式为：XXXX-XX-XX XX:XX 
+     * @return TestingTime 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+     */
+    public String getTestingTime() {
+        return this.TestingTime;
+    }
+
+    /**
+     * Set 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+     * @param TestingTime 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+     */
+    public void setTestingTime(String TestingTime) {
+        this.TestingTime = TestingTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -125,11 +217,23 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.IDNumber != null) {
+            this.IDNumber = new String(source.IDNumber);
+        }
         if (source.Time != null) {
             this.Time = new String(source.Time);
         }
         if (source.Color != null) {
             this.Color = new String(source.Color);
+        }
+        if (source.TestingInterval != null) {
+            this.TestingInterval = new String(source.TestingInterval);
+        }
+        if (source.TestingResult != null) {
+            this.TestingResult = new String(source.TestingResult);
+        }
+        if (source.TestingTime != null) {
+            this.TestingTime = new String(source.TestingTime);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -142,8 +246,12 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "IDNumber", this.IDNumber);
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Color", this.Color);
+        this.setParamSimple(map, prefix + "TestingInterval", this.TestingInterval);
+        this.setParamSimple(map, prefix + "TestingResult", this.TestingResult);
+        this.setParamSimple(map, prefix + "TestingTime", this.TestingTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

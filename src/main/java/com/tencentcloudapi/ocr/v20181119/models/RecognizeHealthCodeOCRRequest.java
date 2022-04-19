@@ -44,6 +44,19 @@ public class RecognizeHealthCodeOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+1:粤康码
+
+2:随申码
+
+3:健康宝
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -103,6 +116,46 @@ public class RecognizeHealthCodeOCRRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+1:粤康码
+
+2:随申码
+
+3:健康宝 
+     * @return Type 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+1:粤康码
+
+2:随申码
+
+3:健康宝
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+1:粤康码
+
+2:随申码
+
+3:健康宝
+     * @param Type 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+1:粤康码
+
+2:随申码
+
+3:健康宝
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public RecognizeHealthCodeOCRRequest() {
     }
 
@@ -117,6 +170,9 @@ public class RecognizeHealthCodeOCRRequest extends AbstractModel{
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -126,6 +182,7 @@ public class RecognizeHealthCodeOCRRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
