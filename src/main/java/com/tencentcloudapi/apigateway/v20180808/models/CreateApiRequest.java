@@ -387,6 +387,13 @@ public class CreateApiRequest extends AbstractModel{
     private String EIAMAppId;
 
     /**
+    * 资源的Owner
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
      * Get API 所在的服务唯一 ID。 
      * @return ServiceId API 所在的服务唯一 ID。
      */
@@ -1218,6 +1225,22 @@ public class CreateApiRequest extends AbstractModel{
         this.EIAMAppId = EIAMAppId;
     }
 
+    /**
+     * Get 资源的Owner 
+     * @return Owner 资源的Owner
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 资源的Owner
+     * @param Owner 资源的Owner
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public CreateApiRequest() {
     }
 
@@ -1400,6 +1423,9 @@ public class CreateApiRequest extends AbstractModel{
         if (source.EIAMAppId != null) {
             this.EIAMAppId = new String(source.EIAMAppId);
         }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
     }
 
 
@@ -1459,6 +1485,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
         this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
         this.setParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
 
     }
 }

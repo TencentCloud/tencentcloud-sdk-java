@@ -30,10 +30,7 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
     private String [] EventIdSet;
 
     /**
-    * 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
+    * 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
     */
     @SerializedName("Status")
     @Expose
@@ -63,28 +60,16 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除 
-     * @return Status 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
+     * Get 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除 
+     * @return Status 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
-     * @param Status 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
+     * Set 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
+     * @param Status 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
      */
     public void setStatus(String Status) {
         this.Status = Status;

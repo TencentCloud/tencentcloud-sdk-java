@@ -30,7 +30,7 @@ public class DescribeUpstreamBindApis extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 绑定的api信息
+    * 绑定的API信息
     */
     @SerializedName("BindApiSet")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeUpstreamBindApis extends AbstractModel{
     }
 
     /**
-     * Get 绑定的api信息 
-     * @return BindApiSet 绑定的api信息
+     * Get 绑定的API信息 
+     * @return BindApiSet 绑定的API信息
      */
     public BindApiInfo [] getBindApiSet() {
         return this.BindApiSet;
     }
 
     /**
-     * Set 绑定的api信息
-     * @param BindApiSet 绑定的api信息
+     * Set 绑定的API信息
+     * @param BindApiSet 绑定的API信息
      */
     public void setBindApiSet(BindApiInfo [] BindApiSet) {
         this.BindApiSet = BindApiSet;

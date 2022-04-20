@@ -58,6 +58,14 @@ public class ServiceConfig extends AbstractModel{
     private String Method;
 
     /**
+    * 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpstreamId")
+    @Expose
+    private String UpstreamId;
+
+    /**
     * API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -146,6 +154,26 @@ public class ServiceConfig extends AbstractModel{
     }
 
     /**
+     * Get 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpstreamId 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpstreamId() {
+        return this.UpstreamId;
+    }
+
+    /**
+     * Set 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpstreamId 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpstreamId(String UpstreamId) {
+        this.UpstreamId = UpstreamId;
+    }
+
+    /**
      * Get API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CosConfig API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
@@ -188,6 +216,9 @@ public class ServiceConfig extends AbstractModel{
         if (source.Method != null) {
             this.Method = new String(source.Method);
         }
+        if (source.UpstreamId != null) {
+            this.UpstreamId = new String(source.UpstreamId);
+        }
         if (source.CosConfig != null) {
             this.CosConfig = new CosConfig(source.CosConfig);
         }
@@ -203,6 +234,7 @@ public class ServiceConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
         this.setParamObj(map, prefix + "CosConfig.", this.CosConfig);
 
     }

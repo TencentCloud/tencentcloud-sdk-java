@@ -37,7 +37,7 @@ public class DescribeEscapeEventInfoRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+    * 过滤参数,Status：EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
     */
     @SerializedName("Filters")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeEscapeEventInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * Get 过滤参数,Status：EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略 
+     * @return Filters 过滤参数,Status：EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * Set 过滤参数,Status：EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
+     * @param Filters 过滤参数,Status：EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

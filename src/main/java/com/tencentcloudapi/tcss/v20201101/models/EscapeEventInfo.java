@@ -50,10 +50,7 @@ public class EscapeEventInfo extends AbstractModel{
     private String ImageName;
 
     /**
-    * 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
+    * 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
     */
     @SerializedName("Status")
     @Expose
@@ -143,6 +140,22 @@ MountNamespace逃逸、
     private String LatestFoundTime;
 
     /**
+    * 节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeIP")
+    @Expose
+    private String NodeIP;
+
+    /**
+    * 主机IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostID")
+    @Expose
+    private String HostID;
+
+    /**
      * Get 事件类型
    ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
@@ -215,28 +228,16 @@ MountNamespace逃逸、
     }
 
     /**
-     * Get 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略 
-     * @return Status 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
+     * Get 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略 
+     * @return Status 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     * @param Status 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
+     * Set 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
+     * @param Status 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -442,6 +443,46 @@ MountNamespace逃逸、
         this.LatestFoundTime = LatestFoundTime;
     }
 
+    /**
+     * Get 节点IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeIP 节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeIP() {
+        return this.NodeIP;
+    }
+
+    /**
+     * Set 节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeIP 节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeIP(String NodeIP) {
+        this.NodeIP = NodeIP;
+    }
+
+    /**
+     * Get 主机IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostID 主机IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostID() {
+        return this.HostID;
+    }
+
+    /**
+     * Set 主机IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostID 主机IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostID(String HostID) {
+        this.HostID = HostID;
+    }
+
     public EscapeEventInfo() {
     }
 
@@ -495,6 +536,12 @@ MountNamespace逃逸、
         if (source.LatestFoundTime != null) {
             this.LatestFoundTime = new String(source.LatestFoundTime);
         }
+        if (source.NodeIP != null) {
+            this.NodeIP = new String(source.NodeIP);
+        }
+        if (source.HostID != null) {
+            this.HostID = new String(source.HostID);
+        }
     }
 
 
@@ -517,6 +564,8 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "EventCount", this.EventCount);
         this.setParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
+        this.setParamSimple(map, prefix + "NodeIP", this.NodeIP);
+        this.setParamSimple(map, prefix + "HostID", this.HostID);
 
     }
 }

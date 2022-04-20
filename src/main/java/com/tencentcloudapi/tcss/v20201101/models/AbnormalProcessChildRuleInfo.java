@@ -47,6 +47,14 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel{
     private String RuleId;
 
     /**
+    * 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleLevel")
+    @Expose
+    private String RuleLevel;
+
+    /**
      * Get 策略模式，   RULE_MODE_RELEASE: 放行
    RULE_MODE_ALERT: 告警
    RULE_MODE_HOLDUP:拦截 
@@ -106,6 +114,26 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleLevel() {
+        return this.RuleLevel;
+    }
+
+    /**
+     * Set 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleLevel(String RuleLevel) {
+        this.RuleLevel = RuleLevel;
+    }
+
     public AbnormalProcessChildRuleInfo() {
     }
 
@@ -123,6 +151,9 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel{
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.RuleLevel != null) {
+            this.RuleLevel = new String(source.RuleLevel);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
 
     }
 }

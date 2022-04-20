@@ -56,6 +56,13 @@ MountNamespace逃逸、
     private Boolean IsEnable;
 
     /**
+    * 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+    */
+    @SerializedName("Group")
+    @Expose
+    private String Group;
+
+    /**
      * Get 规则类型   
 ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
@@ -151,6 +158,22 @@ MountNamespace逃逸、
         this.IsEnable = IsEnable;
     }
 
+    /**
+     * Get 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸 
+     * @return Group 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+     */
+    public String getGroup() {
+        return this.Group;
+    }
+
+    /**
+     * Set 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+     * @param Group 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+     */
+    public void setGroup(String Group) {
+        this.Group = Group;
+    }
+
     public EscapeRule() {
     }
 
@@ -168,6 +191,9 @@ MountNamespace逃逸、
         if (source.IsEnable != null) {
             this.IsEnable = new Boolean(source.IsEnable);
         }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
     }
 
 
@@ -178,6 +204,7 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
+        this.setParamSimple(map, prefix + "Group", this.Group);
 
     }
 }

@@ -37,7 +37,7 @@ public class AbnormalProcessEventInfo extends AbstractModel{
     private String EventType;
 
     /**
-    * 命中规则
+    * 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
     */
     @SerializedName("MatchRuleName")
     @Expose
@@ -172,6 +172,20 @@ RULE_MODE_HOLDUP 拦截
     private String RuleId;
 
     /**
+    * 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+    */
+    @SerializedName("MatchGroupName")
+    @Expose
+    private String MatchGroupName;
+
+    /**
+    * 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+    */
+    @SerializedName("MatchRuleLevel")
+    @Expose
+    private String MatchRuleLevel;
+
+    /**
      * Get 进程目录 
      * @return ProcessPath 进程目录
      */
@@ -204,16 +218,16 @@ RULE_MODE_HOLDUP 拦截
     }
 
     /**
-     * Get 命中规则 
-     * @return MatchRuleName 命中规则
+     * Get 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则 
+     * @return MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
      */
     public String getMatchRuleName() {
         return this.MatchRuleName;
     }
 
     /**
-     * Set 命中规则
-     * @param MatchRuleName 命中规则
+     * Set 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+     * @param MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
      */
     public void setMatchRuleName(String MatchRuleName) {
         this.MatchRuleName = MatchRuleName;
@@ -527,6 +541,38 @@ RULE_MODE_HOLDUP 拦截
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字 
+     * @return MatchGroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     */
+    public String getMatchGroupName() {
+        return this.MatchGroupName;
+    }
+
+    /**
+     * Set 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     * @param MatchGroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     */
+    public void setMatchGroupName(String MatchGroupName) {
+        this.MatchGroupName = MatchGroupName;
+    }
+
+    /**
+     * Get 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。 
+     * @return MatchRuleLevel 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     */
+    public String getMatchRuleLevel() {
+        return this.MatchRuleLevel;
+    }
+
+    /**
+     * Set 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     * @param MatchRuleLevel 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     */
+    public void setMatchRuleLevel(String MatchRuleLevel) {
+        this.MatchRuleLevel = MatchRuleLevel;
+    }
+
     public AbnormalProcessEventInfo() {
     }
 
@@ -595,6 +641,12 @@ RULE_MODE_HOLDUP 拦截
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.MatchGroupName != null) {
+            this.MatchGroupName = new String(source.MatchGroupName);
+        }
+        if (source.MatchRuleLevel != null) {
+            this.MatchRuleLevel = new String(source.MatchRuleLevel);
+        }
     }
 
 
@@ -622,6 +674,8 @@ RULE_MODE_HOLDUP 拦截
         this.setParamSimple(map, prefix + "EventCount", this.EventCount);
         this.setParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "MatchGroupName", this.MatchGroupName);
+        this.setParamSimple(map, prefix + "MatchRuleLevel", this.MatchRuleLevel);
 
     }
 }
