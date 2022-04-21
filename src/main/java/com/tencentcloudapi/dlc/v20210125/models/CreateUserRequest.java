@@ -58,6 +58,13 @@ public class CreateUserRequest extends AbstractModel{
     private Long [] WorkGroupIds;
 
     /**
+    * 用户别名，字符长度小50
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
      * Get 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。 
      * @return UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      */
@@ -137,6 +144,22 @@ public class CreateUserRequest extends AbstractModel{
         this.WorkGroupIds = WorkGroupIds;
     }
 
+    /**
+     * Get 用户别名，字符长度小50 
+     * @return UserAlias 用户别名，字符长度小50
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 用户别名，字符长度小50
+     * @param UserAlias 用户别名，字符长度小50
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -166,6 +189,9 @@ public class CreateUserRequest extends AbstractModel{
                 this.WorkGroupIds[i] = new Long(source.WorkGroupIds[i]);
             }
         }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class CreateUserRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamArraySimple(map, prefix + "WorkGroupIds.", this.WorkGroupIds);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
 
     }
 }

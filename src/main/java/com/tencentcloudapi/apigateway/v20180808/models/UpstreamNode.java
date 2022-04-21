@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpstreamNode extends AbstractModel{
 
     /**
-    * IP（domain）
+    * IP或域名
     */
     @SerializedName("Host")
     @Expose
@@ -44,7 +44,7 @@ public class UpstreamNode extends AbstractModel{
     private Long Weight;
 
     /**
-    * vm实例id
+    * CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VmInstanceId")
@@ -60,7 +60,7 @@ public class UpstreamNode extends AbstractModel{
     private String [] Tags;
 
     /**
-    * 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+    * 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Healthy")
@@ -68,7 +68,7 @@ public class UpstreamNode extends AbstractModel{
     private String Healthy;
 
     /**
-    * k8s服务名字
+    * K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
@@ -76,7 +76,7 @@ public class UpstreamNode extends AbstractModel{
     private String ServiceName;
 
     /**
-    * k8s命名空间
+    * K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameSpace")
@@ -92,7 +92,7 @@ public class UpstreamNode extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Node的来源
+    * Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
@@ -108,16 +108,16 @@ public class UpstreamNode extends AbstractModel{
     private String UniqueServiceName;
 
     /**
-     * Get IP（domain） 
-     * @return Host IP（domain）
+     * Get IP或域名 
+     * @return Host IP或域名
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set IP（domain）
-     * @param Host IP（domain）
+     * Set IP或域名
+     * @param Host IP或域名
      */
     public void setHost(String Host) {
         this.Host = Host;
@@ -156,9 +156,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Get vm实例id
+     * Get CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VmInstanceId vm实例id
+     * @return VmInstanceId CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVmInstanceId() {
@@ -166,9 +166,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Set vm实例id
+     * Set CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VmInstanceId vm实例id
+     * @param VmInstanceId CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVmInstanceId(String VmInstanceId) {
@@ -196,9 +196,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Get 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+     * Get 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Healthy 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+     * @return Healthy 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthy() {
@@ -206,9 +206,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Set 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+     * Set 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Healthy 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+     * @param Healthy 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthy(String Healthy) {
@@ -216,9 +216,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Get k8s服务名字
+     * Get K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceName k8s服务名字
+     * @return ServiceName K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
@@ -226,9 +226,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Set k8s服务名字
+     * Set K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceName k8s服务名字
+     * @param ServiceName K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
@@ -236,9 +236,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Get k8s命名空间
+     * Get K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NameSpace k8s命名空间
+     * @return NameSpace K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameSpace() {
@@ -246,9 +246,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Set k8s命名空间
+     * Set K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NameSpace k8s命名空间
+     * @param NameSpace K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameSpace(String NameSpace) {
@@ -276,9 +276,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Get Node的来源
+     * Get Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Source Node的来源
+     * @return Source Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
@@ -286,9 +286,9 @@ public class UpstreamNode extends AbstractModel{
     }
 
     /**
-     * Set Node的来源
+     * Set Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Source Node的来源
+     * @param Source Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {

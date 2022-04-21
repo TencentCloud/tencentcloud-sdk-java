@@ -23,35 +23,42 @@ import java.util.HashMap;
 public class ModifyUpstreamRequest extends AbstractModel{
 
     /**
-    * VPC通道唯一ID
+    * 后端通道唯一ID
     */
     @SerializedName("UpstreamId")
     @Expose
     private String UpstreamId;
 
     /**
-    * VPC通道名字
+    * 后端通道名字
     */
     @SerializedName("UpstreamName")
     @Expose
     private String UpstreamName;
 
     /**
-    * VPC通道描述
+    * 后端通道描述
     */
     @SerializedName("UpstreamDescription")
     @Expose
     private String UpstreamDescription;
 
     /**
-    * 后端协议，HTTP, HTTPS其中之一
+    * 后端协议，取值范围：HTTP, HTTPS
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 负载均衡算法目前支持ROUND_ROBIN
+    * 后端访问类型，取值范围：IP_PORT, K8S
+    */
+    @SerializedName("UpstreamType")
+    @Expose
+    private String UpstreamType;
+
+    /**
+    * 负载均衡算法，取值范围：ROUND_ROBIN
     */
     @SerializedName("Algorithm")
     @Expose
@@ -72,7 +79,7 @@ public class ModifyUpstreamRequest extends AbstractModel{
     private Long Retries;
 
     /**
-    * 请求到后端的，host头
+    * 网关转发到后端的 Host 请求头
     */
     @SerializedName("UpstreamHost")
     @Expose
@@ -86,87 +93,110 @@ public class ModifyUpstreamRequest extends AbstractModel{
     private UpstreamNode [] Nodes;
 
     /**
-    * k8s服务配置
+    * 健康检查配置，目前只支持VPC通道
+    */
+    @SerializedName("HealthChecker")
+    @Expose
+    private UpstreamHealthChecker HealthChecker;
+
+    /**
+    * 容器服务配置
     */
     @SerializedName("K8sService")
     @Expose
     private K8sService [] K8sService;
 
     /**
-     * Get VPC通道唯一ID 
-     * @return UpstreamId VPC通道唯一ID
+     * Get 后端通道唯一ID 
+     * @return UpstreamId 后端通道唯一ID
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set VPC通道唯一ID
-     * @param UpstreamId VPC通道唯一ID
+     * Set 后端通道唯一ID
+     * @param UpstreamId 后端通道唯一ID
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;
     }
 
     /**
-     * Get VPC通道名字 
-     * @return UpstreamName VPC通道名字
+     * Get 后端通道名字 
+     * @return UpstreamName 后端通道名字
      */
     public String getUpstreamName() {
         return this.UpstreamName;
     }
 
     /**
-     * Set VPC通道名字
-     * @param UpstreamName VPC通道名字
+     * Set 后端通道名字
+     * @param UpstreamName 后端通道名字
      */
     public void setUpstreamName(String UpstreamName) {
         this.UpstreamName = UpstreamName;
     }
 
     /**
-     * Get VPC通道描述 
-     * @return UpstreamDescription VPC通道描述
+     * Get 后端通道描述 
+     * @return UpstreamDescription 后端通道描述
      */
     public String getUpstreamDescription() {
         return this.UpstreamDescription;
     }
 
     /**
-     * Set VPC通道描述
-     * @param UpstreamDescription VPC通道描述
+     * Set 后端通道描述
+     * @param UpstreamDescription 后端通道描述
      */
     public void setUpstreamDescription(String UpstreamDescription) {
         this.UpstreamDescription = UpstreamDescription;
     }
 
     /**
-     * Get 后端协议，HTTP, HTTPS其中之一 
-     * @return Scheme 后端协议，HTTP, HTTPS其中之一
+     * Get 后端协议，取值范围：HTTP, HTTPS 
+     * @return Scheme 后端协议，取值范围：HTTP, HTTPS
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 后端协议，HTTP, HTTPS其中之一
-     * @param Scheme 后端协议，HTTP, HTTPS其中之一
+     * Set 后端协议，取值范围：HTTP, HTTPS
+     * @param Scheme 后端协议，取值范围：HTTP, HTTPS
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get 负载均衡算法目前支持ROUND_ROBIN 
-     * @return Algorithm 负载均衡算法目前支持ROUND_ROBIN
+     * Get 后端访问类型，取值范围：IP_PORT, K8S 
+     * @return UpstreamType 后端访问类型，取值范围：IP_PORT, K8S
+     */
+    public String getUpstreamType() {
+        return this.UpstreamType;
+    }
+
+    /**
+     * Set 后端访问类型，取值范围：IP_PORT, K8S
+     * @param UpstreamType 后端访问类型，取值范围：IP_PORT, K8S
+     */
+    public void setUpstreamType(String UpstreamType) {
+        this.UpstreamType = UpstreamType;
+    }
+
+    /**
+     * Get 负载均衡算法，取值范围：ROUND_ROBIN 
+     * @return Algorithm 负载均衡算法，取值范围：ROUND_ROBIN
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set 负载均衡算法目前支持ROUND_ROBIN
-     * @param Algorithm 负载均衡算法目前支持ROUND_ROBIN
+     * Set 负载均衡算法，取值范围：ROUND_ROBIN
+     * @param Algorithm 负载均衡算法，取值范围：ROUND_ROBIN
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
@@ -205,16 +235,16 @@ public class ModifyUpstreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 请求到后端的，host头 
-     * @return UpstreamHost 请求到后端的，host头
+     * Get 网关转发到后端的 Host 请求头 
+     * @return UpstreamHost 网关转发到后端的 Host 请求头
      */
     public String getUpstreamHost() {
         return this.UpstreamHost;
     }
 
     /**
-     * Set 请求到后端的，host头
-     * @param UpstreamHost 请求到后端的，host头
+     * Set 网关转发到后端的 Host 请求头
+     * @param UpstreamHost 网关转发到后端的 Host 请求头
      */
     public void setUpstreamHost(String UpstreamHost) {
         this.UpstreamHost = UpstreamHost;
@@ -237,16 +267,32 @@ public class ModifyUpstreamRequest extends AbstractModel{
     }
 
     /**
-     * Get k8s服务配置 
-     * @return K8sService k8s服务配置
+     * Get 健康检查配置，目前只支持VPC通道 
+     * @return HealthChecker 健康检查配置，目前只支持VPC通道
+     */
+    public UpstreamHealthChecker getHealthChecker() {
+        return this.HealthChecker;
+    }
+
+    /**
+     * Set 健康检查配置，目前只支持VPC通道
+     * @param HealthChecker 健康检查配置，目前只支持VPC通道
+     */
+    public void setHealthChecker(UpstreamHealthChecker HealthChecker) {
+        this.HealthChecker = HealthChecker;
+    }
+
+    /**
+     * Get 容器服务配置 
+     * @return K8sService 容器服务配置
      */
     public K8sService [] getK8sService() {
         return this.K8sService;
     }
 
     /**
-     * Set k8s服务配置
-     * @param K8sService k8s服务配置
+     * Set 容器服务配置
+     * @param K8sService 容器服务配置
      */
     public void setK8sService(K8sService [] K8sService) {
         this.K8sService = K8sService;
@@ -272,6 +318,9 @@ public class ModifyUpstreamRequest extends AbstractModel{
         if (source.Scheme != null) {
             this.Scheme = new String(source.Scheme);
         }
+        if (source.UpstreamType != null) {
+            this.UpstreamType = new String(source.UpstreamType);
+        }
         if (source.Algorithm != null) {
             this.Algorithm = new String(source.Algorithm);
         }
@@ -290,6 +339,9 @@ public class ModifyUpstreamRequest extends AbstractModel{
                 this.Nodes[i] = new UpstreamNode(source.Nodes[i]);
             }
         }
+        if (source.HealthChecker != null) {
+            this.HealthChecker = new UpstreamHealthChecker(source.HealthChecker);
+        }
         if (source.K8sService != null) {
             this.K8sService = new K8sService[source.K8sService.length];
             for (int i = 0; i < source.K8sService.length; i++) {
@@ -307,11 +359,13 @@ public class ModifyUpstreamRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpstreamName", this.UpstreamName);
         this.setParamSimple(map, prefix + "UpstreamDescription", this.UpstreamDescription);
         this.setParamSimple(map, prefix + "Scheme", this.Scheme);
+        this.setParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "Retries", this.Retries);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamArrayObj(map, prefix + "Nodes.", this.Nodes);
+        this.setParamObj(map, prefix + "HealthChecker.", this.HealthChecker);
         this.setParamArrayObj(map, prefix + "K8sService.", this.K8sService);
 
     }

@@ -30,6 +30,20 @@ public class DrmStreamingsInfo extends AbstractModel{
     private Long SimpleAesDefinition;
 
     /**
+    * 保护类型为 Widevine 的转自适应码流模板 ID。
+    */
+    @SerializedName("WidevineDefinition")
+    @Expose
+    private Long WidevineDefinition;
+
+    /**
+    * 保护类型为 FairPlay 的转自适应码流模板 ID。
+    */
+    @SerializedName("FairPlayDefinition")
+    @Expose
+    private Long FairPlayDefinition;
+
+    /**
      * Get 保护类型为 SimpleAES 的转自适应码流模板 ID。 
      * @return SimpleAesDefinition 保护类型为 SimpleAES 的转自适应码流模板 ID。
      */
@@ -45,6 +59,38 @@ public class DrmStreamingsInfo extends AbstractModel{
         this.SimpleAesDefinition = SimpleAesDefinition;
     }
 
+    /**
+     * Get 保护类型为 Widevine 的转自适应码流模板 ID。 
+     * @return WidevineDefinition 保护类型为 Widevine 的转自适应码流模板 ID。
+     */
+    public Long getWidevineDefinition() {
+        return this.WidevineDefinition;
+    }
+
+    /**
+     * Set 保护类型为 Widevine 的转自适应码流模板 ID。
+     * @param WidevineDefinition 保护类型为 Widevine 的转自适应码流模板 ID。
+     */
+    public void setWidevineDefinition(Long WidevineDefinition) {
+        this.WidevineDefinition = WidevineDefinition;
+    }
+
+    /**
+     * Get 保护类型为 FairPlay 的转自适应码流模板 ID。 
+     * @return FairPlayDefinition 保护类型为 FairPlay 的转自适应码流模板 ID。
+     */
+    public Long getFairPlayDefinition() {
+        return this.FairPlayDefinition;
+    }
+
+    /**
+     * Set 保护类型为 FairPlay 的转自适应码流模板 ID。
+     * @param FairPlayDefinition 保护类型为 FairPlay 的转自适应码流模板 ID。
+     */
+    public void setFairPlayDefinition(Long FairPlayDefinition) {
+        this.FairPlayDefinition = FairPlayDefinition;
+    }
+
     public DrmStreamingsInfo() {
     }
 
@@ -56,6 +102,12 @@ public class DrmStreamingsInfo extends AbstractModel{
         if (source.SimpleAesDefinition != null) {
             this.SimpleAesDefinition = new Long(source.SimpleAesDefinition);
         }
+        if (source.WidevineDefinition != null) {
+            this.WidevineDefinition = new Long(source.WidevineDefinition);
+        }
+        if (source.FairPlayDefinition != null) {
+            this.FairPlayDefinition = new Long(source.FairPlayDefinition);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class DrmStreamingsInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SimpleAesDefinition", this.SimpleAesDefinition);
+        this.setParamSimple(map, prefix + "WidevineDefinition", this.WidevineDefinition);
+        this.setParamSimple(map, prefix + "FairPlayDefinition", this.FairPlayDefinition);
 
     }
 }

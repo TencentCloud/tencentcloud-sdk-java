@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeUpstreamBindApisRequest extends AbstractModel{
 
     /**
-    * 分页
+    * 分页大小
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页
+    * 分页起始位置
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * vpc通道Id
+    * 后端通道ID
     */
     @SerializedName("UpstreamId")
     @Expose
@@ -51,48 +51,48 @@ public class DescribeUpstreamBindApisRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * Get 分页 
-     * @return Limit 分页
+     * Get 分页大小 
+     * @return Limit 分页大小
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页
-     * @param Limit 分页
+     * Set 分页大小
+     * @param Limit 分页大小
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页 
-     * @return Offset 分页
+     * Get 分页起始位置 
+     * @return Offset 分页起始位置
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页
-     * @param Offset 分页
+     * Set 分页起始位置
+     * @param Offset 分页起始位置
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get vpc通道Id 
-     * @return UpstreamId vpc通道Id
+     * Get 后端通道ID 
+     * @return UpstreamId 后端通道ID
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set vpc通道Id
-     * @param UpstreamId vpc通道Id
+     * Set 后端通道ID
+     * @param UpstreamId 后端通道ID
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;

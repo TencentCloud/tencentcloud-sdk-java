@@ -84,6 +84,14 @@ public class UserInfo extends AbstractModel{
     private String UserType;
 
     /**
+    * 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
      * Get 用户Id，和子用户uin相同 
      * @return UserId 用户Id，和子用户uin相同
      */
@@ -231,6 +239,26 @@ public class UserInfo extends AbstractModel{
         this.UserType = UserType;
     }
 
+    /**
+     * Get 用户别名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserAlias 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserAlias 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
     public UserInfo() {
     }
 
@@ -269,6 +297,9 @@ public class UserInfo extends AbstractModel{
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
     }
 
 
@@ -284,6 +315,7 @@ public class UserInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "WorkGroupSet.", this.WorkGroupSet);
         this.setParamSimple(map, prefix + "IsOwner", this.IsOwner);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
 
     }
 }

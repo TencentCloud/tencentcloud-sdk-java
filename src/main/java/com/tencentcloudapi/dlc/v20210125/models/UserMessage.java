@@ -52,6 +52,13 @@ public class UserMessage extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 用户别名
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
      * Get 用户Id，和CAM侧子用户Uin匹配 
      * @return UserId 用户Id，和CAM侧子用户Uin匹配
      */
@@ -119,6 +126,22 @@ public class UserMessage extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 用户别名 
+     * @return UserAlias 用户别名
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 用户别名
+     * @param UserAlias 用户别名
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
     public UserMessage() {
     }
 
@@ -139,6 +162,9 @@ public class UserMessage extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
     }
 
 
@@ -150,6 +176,7 @@ public class UserMessage extends AbstractModel{
         this.setParamSimple(map, prefix + "UserDescription", this.UserDescription);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
 
     }
 }

@@ -383,6 +383,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询用户所有域名的详细信息
+     * @param req DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取waf流量访问趋势
      * @param req DescribeFlowTrendRequest
      * @return DescribeFlowTrendResponse

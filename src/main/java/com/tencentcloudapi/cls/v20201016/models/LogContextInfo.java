@@ -65,6 +65,14 @@ public class LogContextInfo extends AbstractModel{
     private Long BTime;
 
     /**
+    * 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
      * Get 日志来源设备 
      * @return Source 日志来源设备
      */
@@ -160,6 +168,26 @@ public class LogContextInfo extends AbstractModel{
         this.BTime = BTime;
     }
 
+    /**
+     * Get 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostName 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostName 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
     public LogContextInfo() {
     }
 
@@ -186,6 +214,9 @@ public class LogContextInfo extends AbstractModel{
         if (source.BTime != null) {
             this.BTime = new Long(source.BTime);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class LogContextInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         this.setParamSimple(map, prefix + "BTime", this.BTime);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

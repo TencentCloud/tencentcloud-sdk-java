@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeUpstreamsRequest extends AbstractModel{
 
     /**
-    * 分页
+    * 分页大小
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页
+    * 分页起始位置
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件
+    * 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 分页 
-     * @return Limit 分页
+     * Get 分页大小 
+     * @return Limit 分页大小
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页
-     * @param Limit 分页
+     * Set 分页大小
+     * @param Limit 分页大小
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页 
-     * @return Offset 分页
+     * Get 分页起始位置 
+     * @return Offset 分页起始位置
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页
-     * @param Offset 分页
+     * Set 分页起始位置
+     * @param Offset 分页起始位置
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询 
+     * @return Filters 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
+     * @param Filters 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyUpstreamResponse extends AbstractModel{
 
     /**
-    * 返回修改后的vpc通道信息
+    * 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -38,9 +38,9 @@ public class ModifyUpstreamResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回修改后的vpc通道信息
+     * Get 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 返回修改后的vpc通道信息
+     * @return Result 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamInfo getResult() {
@@ -48,9 +48,9 @@ public class ModifyUpstreamResponse extends AbstractModel{
     }
 
     /**
-     * Set 返回修改后的vpc通道信息
+     * Set 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 返回修改后的vpc通道信息
+     * @param Result 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(UpstreamInfo Result) {

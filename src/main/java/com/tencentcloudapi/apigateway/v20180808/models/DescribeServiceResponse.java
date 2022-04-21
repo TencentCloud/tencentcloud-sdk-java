@@ -209,7 +209,7 @@ public class DescribeServiceResponse extends AbstractModel{
     private String DeploymentType;
 
     /**
-    * 特殊用途
+    * 特殊用途, NULL和DEFAULT表示无特殊用途，其他用途如HTTP_DNS等
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecialUse")
@@ -668,9 +668,9 @@ public class DescribeServiceResponse extends AbstractModel{
     }
 
     /**
-     * Get 特殊用途
+     * Get 特殊用途, NULL和DEFAULT表示无特殊用途，其他用途如HTTP_DNS等
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecialUse 特殊用途
+     * @return SpecialUse 特殊用途, NULL和DEFAULT表示无特殊用途，其他用途如HTTP_DNS等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecialUse() {
@@ -678,9 +678,9 @@ public class DescribeServiceResponse extends AbstractModel{
     }
 
     /**
-     * Set 特殊用途
+     * Set 特殊用途, NULL和DEFAULT表示无特殊用途，其他用途如HTTP_DNS等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecialUse 特殊用途
+     * @param SpecialUse 特殊用途, NULL和DEFAULT表示无特殊用途，其他用途如HTTP_DNS等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecialUse(String SpecialUse) {

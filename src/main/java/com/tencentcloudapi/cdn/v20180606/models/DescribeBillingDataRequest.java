@@ -105,6 +105,13 @@ bandwidth：计费带宽
     private String Product;
 
     /**
+    * 指定查询时间的时区，默认UTC+08:00
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度参数不同，会进行向前取整，如指定起始时间为 2018-09-04 10:40:00 按小时粒度查询，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天 
@@ -324,6 +331,22 @@ bandwidth：计费带宽
         this.Product = Product;
     }
 
+    /**
+     * Get 指定查询时间的时区，默认UTC+08:00 
+     * @return TimeZone 指定查询时间的时区，默认UTC+08:00
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 指定查询时间的时区，默认UTC+08:00
+     * @param TimeZone 指定查询时间的时区，默认UTC+08:00
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public DescribeBillingDataRequest() {
     }
 
@@ -359,6 +382,9 @@ bandwidth：计费带宽
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -375,6 +401,7 @@ bandwidth：计费带宽
         this.setParamSimple(map, prefix + "District", this.District);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

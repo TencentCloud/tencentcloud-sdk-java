@@ -324,7 +324,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
-     *用于创建创建VPC通道
+     *用于创建创建后端通道
      * @param req CreateUpstreamRequest
      * @return CreateUpstreamResponse
      * @throws TencentCloudSDKException
@@ -526,7 +526,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
-     *删除VPC通道，需要注意有api绑定时，不允许删除
+     *删除后端通道，需要注意有API绑定时，不允许删除
      * @param req DeleteUpstreamRequest
      * @return DeleteUpstreamResponse
      * @throws TencentCloudSDKException
@@ -1256,7 +1256,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
-     *查询VPC通道绑定的api列表
+     *查询后端通道所绑定的API列表
      * @param req DescribeUpstreamBindApisRequest
      * @return DescribeUpstreamBindApisResponse
      * @throws TencentCloudSDKException
@@ -1276,7 +1276,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
-     *查询VPC通道列表详情
+     *查询后端通道列表详情
      * @param req DescribeUpstreamsRequest
      * @return DescribeUpstreamsResponse
      * @throws TencentCloudSDKException
@@ -1678,7 +1678,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
-     *修改VPC通道
+     *修改后端通道
      * @param req ModifyUpstreamRequest
      * @return ModifyUpstreamResponse
      * @throws TencentCloudSDKException

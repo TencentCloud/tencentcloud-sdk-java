@@ -103,6 +103,13 @@ overseas：指定查询中国境外 CDN 数据
     private String Area;
 
     /**
+    * 指定查询时间的时区，默认UTC+08:00
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天 
@@ -326,6 +333,22 @@ overseas：指定查询中国境外 CDN 数据
         this.Area = Area;
     }
 
+    /**
+     * Get 指定查询时间的时区，默认UTC+08:00 
+     * @return TimeZone 指定查询时间的时区，默认UTC+08:00
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 指定查询时间的时区，默认UTC+08:00
+     * @param TimeZone 指定查询时间的时区，默认UTC+08:00
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public DescribeOriginDataRequest() {
     }
 
@@ -361,6 +384,9 @@ overseas：指定查询中国境外 CDN 数据
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -376,6 +402,7 @@ overseas：指定查询中国境外 CDN 数据
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "Detail", this.Detail);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

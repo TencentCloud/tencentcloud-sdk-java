@@ -208,6 +208,14 @@ public class TaskResponseInfo extends AbstractModel{
     private Boolean CanDownload;
 
     /**
+    * 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -647,6 +655,26 @@ public class TaskResponseInfo extends AbstractModel{
         this.CanDownload = CanDownload;
     }
 
+    /**
+     * Get 用户别名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserAlias 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserAlias 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -730,6 +758,9 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.CanDownload != null) {
             this.CanDownload = new Boolean(source.CanDownload);
         }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
     }
 
 
@@ -762,6 +793,7 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InputConf", this.InputConf);
         this.setParamSimple(map, prefix + "DataNumber", this.DataNumber);
         this.setParamSimple(map, prefix + "CanDownload", this.CanDownload);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
 
     }
 }

@@ -94,7 +94,7 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] SourceTypes;
 
     /**
-    * 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+    * 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
     */
     @SerializedName("StreamIds")
@@ -212,7 +212,7 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
     * （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
     */
     @SerializedName("StreamId")
     @Expose
@@ -437,9 +437,9 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * Get 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li> 
-     * @return StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * @return StreamIds 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      */
     public String [] getStreamIds() {
@@ -447,9 +447,9 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Set 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * Set 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
-     * @param StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * @param StreamIds 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      */
     public void setStreamIds(String [] StreamIds) {
@@ -750,9 +750,9 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Get （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。 
+推流直播码。 
      * @return StreamId （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      */
     public String getStreamId() {
         return this.StreamId;
@@ -760,9 +760,9 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Set （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      * @param StreamId （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

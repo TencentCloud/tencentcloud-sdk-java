@@ -176,6 +176,13 @@ public class InputManageMarketingRisk extends AbstractModel{
     private OnlineScamInfo OnlineScam;
 
     /**
+    * 平台: 1android
+    */
+    @SerializedName("Platform")
+    @Expose
+    private String Platform;
+
+    /**
      * Get 账号信息。 
      * @return Account 账号信息。
      */
@@ -535,6 +542,22 @@ public class InputManageMarketingRisk extends AbstractModel{
         this.OnlineScam = OnlineScam;
     }
 
+    /**
+     * Get 平台: 1android 
+     * @return Platform 平台: 1android
+     */
+    public String getPlatform() {
+        return this.Platform;
+    }
+
+    /**
+     * Set 平台: 1android
+     * @param Platform 平台: 1android
+     */
+    public void setPlatform(String Platform) {
+        this.Platform = Platform;
+    }
+
     public InputManageMarketingRisk() {
     }
 
@@ -609,6 +632,9 @@ public class InputManageMarketingRisk extends AbstractModel{
         if (source.OnlineScam != null) {
             this.OnlineScam = new OnlineScamInfo(source.OnlineScam);
         }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
     }
 
 
@@ -637,6 +663,7 @@ public class InputManageMarketingRisk extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Details.", this.Details);
         this.setParamObj(map, prefix + "Sponsor.", this.Sponsor);
         this.setParamObj(map, prefix + "OnlineScam.", this.OnlineScam);
+        this.setParamSimple(map, prefix + "Platform", this.Platform);
 
     }
 }

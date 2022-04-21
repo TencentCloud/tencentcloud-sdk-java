@@ -30,6 +30,20 @@ public class DeleteImagesRequest extends AbstractModel{
     private String [] ImageIds;
 
     /**
+    * 是否删除镜像关联的快照
+    */
+    @SerializedName("DeleteBindedSnap")
+    @Expose
+    private Boolean DeleteBindedSnap;
+
+    /**
+    * 检测是否支持删除镜像
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 准备删除的镜像Id列表 
      * @return ImageIds 准备删除的镜像Id列表
      */
@@ -43,6 +57,38 @@ public class DeleteImagesRequest extends AbstractModel{
      */
     public void setImageIds(String [] ImageIds) {
         this.ImageIds = ImageIds;
+    }
+
+    /**
+     * Get 是否删除镜像关联的快照 
+     * @return DeleteBindedSnap 是否删除镜像关联的快照
+     */
+    public Boolean getDeleteBindedSnap() {
+        return this.DeleteBindedSnap;
+    }
+
+    /**
+     * Set 是否删除镜像关联的快照
+     * @param DeleteBindedSnap 是否删除镜像关联的快照
+     */
+    public void setDeleteBindedSnap(Boolean DeleteBindedSnap) {
+        this.DeleteBindedSnap = DeleteBindedSnap;
+    }
+
+    /**
+     * Get 检测是否支持删除镜像 
+     * @return DryRun 检测是否支持删除镜像
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 检测是否支持删除镜像
+     * @param DryRun 检测是否支持删除镜像
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
     }
 
     public DeleteImagesRequest() {
@@ -59,6 +105,12 @@ public class DeleteImagesRequest extends AbstractModel{
                 this.ImageIds[i] = new String(source.ImageIds[i]);
             }
         }
+        if (source.DeleteBindedSnap != null) {
+            this.DeleteBindedSnap = new Boolean(source.DeleteBindedSnap);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -67,6 +119,8 @@ public class DeleteImagesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamSimple(map, prefix + "DeleteBindedSnap", this.DeleteBindedSnap);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

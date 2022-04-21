@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteUpstreamResponse extends AbstractModel{
 
     /**
-    * 成功删除的vpc通道id
+    * 成功删除的后端通道ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamId")
@@ -38,9 +38,9 @@ public class DeleteUpstreamResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 成功删除的vpc通道id
+     * Get 成功删除的后端通道ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamId 成功删除的vpc通道id
+     * @return UpstreamId 成功删除的后端通道ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamId() {
@@ -48,9 +48,9 @@ public class DeleteUpstreamResponse extends AbstractModel{
     }
 
     /**
-     * Set 成功删除的vpc通道id
+     * Set 成功删除的后端通道ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamId 成功删除的vpc通道id
+     * @param UpstreamId 成功删除的后端通道ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamId(String UpstreamId) {

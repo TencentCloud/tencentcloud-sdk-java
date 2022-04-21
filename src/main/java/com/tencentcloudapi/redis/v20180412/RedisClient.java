@@ -59,6 +59,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *开通外网
+     * @param req AllocateWanAddressRequest
+     * @return AllocateWanAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateWanAddressResponse AllocateWanAddress(AllocateWanAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AllocateWanAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AllocateWanAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AllocateWanAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *应用参数模板到实例
      * @param req ApplyParamsTemplateRequest
      * @return ApplyParamsTemplateResponse
@@ -1391,6 +1411,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *关闭外网
+     * @param req ReleaseWanAddressRequest
+     * @return ReleaseWanAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseWanAddressResponse ReleaseWanAddress(ReleaseWanAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseWanAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

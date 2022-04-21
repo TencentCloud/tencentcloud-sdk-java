@@ -32,6 +32,14 @@ off：关闭
     private String Switch;
 
     /**
+    * 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeuristicCache")
+    @Expose
+    private HeuristicCache HeuristicCache;
+
+    /**
      * Get 遵循源站配置开关
 on：开启
 off：关闭 
@@ -55,6 +63,26 @@ off：关闭
         this.Switch = Switch;
     }
 
+    /**
+     * Get 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeuristicCache 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HeuristicCache getHeuristicCache() {
+        return this.HeuristicCache;
+    }
+
+    /**
+     * Set 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeuristicCache 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeuristicCache(HeuristicCache HeuristicCache) {
+        this.HeuristicCache = HeuristicCache;
+    }
+
     public CacheConfigFollowOrigin() {
     }
 
@@ -66,6 +94,9 @@ off：关闭
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.HeuristicCache != null) {
+            this.HeuristicCache = new HeuristicCache(source.HeuristicCache);
+        }
     }
 
 
@@ -74,6 +105,7 @@ off：关闭
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamObj(map, prefix + "HeuristicCache.", this.HeuristicCache);
 
     }
 }

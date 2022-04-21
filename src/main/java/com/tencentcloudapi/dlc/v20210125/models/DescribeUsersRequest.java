@@ -58,7 +58,7 @@ public class DescribeUsersRequest extends AbstractModel{
     private String Sorting;
 
     /**
-    * 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+    * 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
     */
     @SerializedName("Filters")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。 
-     * @return Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     * Get 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤 
+     * @return Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
-     * @param Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     * Set 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
+     * @param Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

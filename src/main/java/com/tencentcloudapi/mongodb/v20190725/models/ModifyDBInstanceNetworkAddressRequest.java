@@ -37,14 +37,14 @@ public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel{
     private Long OldIpExpiredTime;
 
     /**
-    * 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
+    * 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
     */
     @SerializedName("NewUniqVpcId")
     @Expose
     private String NewUniqVpcId;
 
     /**
-    * 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+    * 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
     */
     @SerializedName("NewUniqSubnetId")
     @Expose
@@ -90,32 +90,32 @@ public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空 
-     * @return NewUniqVpcId 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
+     * Get 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空 
+     * @return NewUniqVpcId 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
      */
     public String getNewUniqVpcId() {
         return this.NewUniqVpcId;
     }
 
     /**
-     * Set 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
-     * @param NewUniqVpcId 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
+     * Set 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+     * @param NewUniqVpcId 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
      */
     public void setNewUniqVpcId(String NewUniqVpcId) {
         this.NewUniqVpcId = NewUniqVpcId;
     }
 
     /**
-     * Get 切换后IP地址所属子网统一ID，若为基础网络，该字段为空 
-     * @return NewUniqSubnetId 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+     * Get 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空 
+     * @return NewUniqSubnetId 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
      */
     public String getNewUniqSubnetId() {
         return this.NewUniqSubnetId;
     }
 
     /**
-     * Set 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
-     * @param NewUniqSubnetId 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+     * Set 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+     * @param NewUniqSubnetId 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
      */
     public void setNewUniqSubnetId(String NewUniqSubnetId) {
         this.NewUniqSubnetId = NewUniqSubnetId;

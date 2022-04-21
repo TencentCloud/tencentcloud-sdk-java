@@ -60,6 +60,9 @@ public enum DlcErrorCode {
     // 无效的taskid。
      INVALIDPARAMETER_INVALIDTASKID("InvalidParameter.InvalidTaskId"),
      
+    // 无效用户名称。
+     INVALIDPARAMETER_INVALIDUSERALIAS("InvalidParameter.InvalidUserAlias"),
+     
     // 无效的用户名。
      INVALIDPARAMETER_INVALIDUSERNAME("InvalidParameter.InvalidUserName"),
      

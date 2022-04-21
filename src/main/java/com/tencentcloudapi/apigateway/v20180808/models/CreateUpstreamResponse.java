@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateUpstreamResponse extends AbstractModel{
 
     /**
-    * 创建返回的唯一id
+    * 创建返回的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamId")
@@ -38,9 +38,9 @@ public class CreateUpstreamResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建返回的唯一id
+     * Get 创建返回的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamId 创建返回的唯一id
+     * @return UpstreamId 创建返回的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamId() {
@@ -48,9 +48,9 @@ public class CreateUpstreamResponse extends AbstractModel{
     }
 
     /**
-     * Set 创建返回的唯一id
+     * Set 创建返回的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamId 创建返回的唯一id
+     * @param UpstreamId 创建返回的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamId(String UpstreamId) {

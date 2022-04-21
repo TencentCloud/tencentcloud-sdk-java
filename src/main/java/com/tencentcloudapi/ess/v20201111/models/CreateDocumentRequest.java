@@ -30,7 +30,7 @@ public class CreateDocumentRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 用户上传的模版ID
+    * 用户上传的模板ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -72,7 +72,8 @@ public class CreateDocumentRequest extends AbstractModel{
     private String ClientToken;
 
     /**
-    * 是否需要生成预览文件 默认不生成
+    * 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
     */
     @SerializedName("NeedPreview")
     @Expose
@@ -95,16 +96,16 @@ public class CreateDocumentRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户上传的模版ID 
-     * @return TemplateId 用户上传的模版ID
+     * Get 用户上传的模板ID 
+     * @return TemplateId 用户上传的模板ID
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 用户上传的模版ID
-     * @param TemplateId 用户上传的模版ID
+     * Set 用户上传的模板ID
+     * @param TemplateId 用户上传的模板ID
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -191,16 +192,20 @@ public class CreateDocumentRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否需要生成预览文件 默认不生成 
-     * @return NeedPreview 是否需要生成预览文件 默认不生成
+     * Get 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒； 
+     * @return NeedPreview 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
      */
     public Boolean getNeedPreview() {
         return this.NeedPreview;
     }
 
     /**
-     * Set 是否需要生成预览文件 默认不生成
-     * @param NeedPreview 是否需要生成预览文件 默认不生成
+     * Set 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
+     * @param NeedPreview 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
      */
     public void setNeedPreview(Boolean NeedPreview) {
         this.NeedPreview = NeedPreview;

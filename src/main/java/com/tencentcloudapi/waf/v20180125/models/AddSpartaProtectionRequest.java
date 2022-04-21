@@ -128,7 +128,7 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private String UpstreamDomain;
 
     /**
-    * UpstreamType=0时，填次字段表示回源ip
+    * UpstreamType=0时，填次字段表示回源IP
     */
     @SerializedName("SrcList")
     @Expose
@@ -177,11 +177,18 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private String InstanceID;
 
     /**
-    * anycast ip类型开关： 0 普通ip 1 Anycast ip
+    * anycast IP类型开关： 0 普通IP 1 Anycast IP
     */
     @SerializedName("Anycast")
     @Expose
     private Long Anycast;
+
+    /**
+    * src权重
+    */
+    @SerializedName("Weights")
+    @Expose
+    private Long [] Weights;
 
     /**
      * Get 需要防御的域名 
@@ -424,16 +431,16 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get UpstreamType=0时，填次字段表示回源ip 
-     * @return SrcList UpstreamType=0时，填次字段表示回源ip
+     * Get UpstreamType=0时，填次字段表示回源IP 
+     * @return SrcList UpstreamType=0时，填次字段表示回源IP
      */
     public String [] getSrcList() {
         return this.SrcList;
     }
 
     /**
-     * Set UpstreamType=0时，填次字段表示回源ip
-     * @param SrcList UpstreamType=0时，填次字段表示回源ip
+     * Set UpstreamType=0时，填次字段表示回源IP
+     * @param SrcList UpstreamType=0时，填次字段表示回源IP
      */
     public void setSrcList(String [] SrcList) {
         this.SrcList = SrcList;
@@ -536,19 +543,35 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get anycast ip类型开关： 0 普通ip 1 Anycast ip 
-     * @return Anycast anycast ip类型开关： 0 普通ip 1 Anycast ip
+     * Get anycast IP类型开关： 0 普通IP 1 Anycast IP 
+     * @return Anycast anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
     public Long getAnycast() {
         return this.Anycast;
     }
 
     /**
-     * Set anycast ip类型开关： 0 普通ip 1 Anycast ip
-     * @param Anycast anycast ip类型开关： 0 普通ip 1 Anycast ip
+     * Set anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param Anycast anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
     public void setAnycast(Long Anycast) {
         this.Anycast = Anycast;
+    }
+
+    /**
+     * Get src权重 
+     * @return Weights src权重
+     */
+    public Long [] getWeights() {
+        return this.Weights;
+    }
+
+    /**
+     * Set src权重
+     * @param Weights src权重
+     */
+    public void setWeights(Long [] Weights) {
+        this.Weights = Weights;
     }
 
     public AddSpartaProtectionRequest() {
@@ -637,6 +660,12 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         if (source.Anycast != null) {
             this.Anycast = new Long(source.Anycast);
         }
+        if (source.Weights != null) {
+            this.Weights = new Long[source.Weights.length];
+            for (int i = 0; i < source.Weights.length; i++) {
+                this.Weights[i] = new Long(source.Weights[i]);
+            }
+        }
     }
 
 
@@ -667,6 +696,7 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Anycast", this.Anycast);
+        this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
 
     }
 }

@@ -37,6 +37,13 @@ public class SyncImagesRequest extends AbstractModel{
     private String [] DestinationRegions;
 
     /**
+    * 检测是否支持发起同步镜像
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。 
      * @return ImageIds 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。
      */
@@ -68,6 +75,22 @@ public class SyncImagesRequest extends AbstractModel{
         this.DestinationRegions = DestinationRegions;
     }
 
+    /**
+     * Get 检测是否支持发起同步镜像 
+     * @return DryRun 检测是否支持发起同步镜像
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 检测是否支持发起同步镜像
+     * @param DryRun 检测是否支持发起同步镜像
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public SyncImagesRequest() {
     }
 
@@ -88,6 +111,9 @@ public class SyncImagesRequest extends AbstractModel{
                 this.DestinationRegions[i] = new String(source.DestinationRegions[i]);
             }
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class SyncImagesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
         this.setParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

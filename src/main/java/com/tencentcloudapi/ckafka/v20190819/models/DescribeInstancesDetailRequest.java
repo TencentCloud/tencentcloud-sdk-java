@@ -65,7 +65,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String TagKey;
 
     /**
-    * 过滤器。
+    * 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
     */
     @SerializedName("Filters")
     @Expose
@@ -77,6 +77,13 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String InstanceIds;
+
+    /**
+    * 按照实例ID过滤
+    */
+    @SerializedName("InstanceIdList")
+    @Expose
+    private String [] InstanceIdList;
 
     /**
      * Get （过滤条件）按照实例ID过滤 
@@ -175,16 +182,16 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤器。 
-     * @return Filters 过滤器。
+     * Get 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值. 
+     * @return Filters 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器。
-     * @param Filters 过滤器。
+     * Set 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
+     * @param Filters 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -204,6 +211,22 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
      */
     public void setInstanceIds(String InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 按照实例ID过滤 
+     * @return InstanceIdList 按照实例ID过滤
+     */
+    public String [] getInstanceIdList() {
+        return this.InstanceIdList;
+    }
+
+    /**
+     * Set 按照实例ID过滤
+     * @param InstanceIdList 按照实例ID过滤
+     */
+    public void setInstanceIdList(String [] InstanceIdList) {
+        this.InstanceIdList = InstanceIdList;
     }
 
     public DescribeInstancesDetailRequest() {
@@ -244,6 +267,12 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         if (source.InstanceIds != null) {
             this.InstanceIds = new String(source.InstanceIds);
         }
+        if (source.InstanceIdList != null) {
+            this.InstanceIdList = new String[source.InstanceIdList.length];
+            for (int i = 0; i < source.InstanceIdList.length; i++) {
+                this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
 
     }
 }

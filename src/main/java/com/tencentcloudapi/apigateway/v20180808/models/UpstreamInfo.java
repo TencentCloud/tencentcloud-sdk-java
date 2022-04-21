@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class UpstreamInfo extends AbstractModel{
 
     /**
-    * VPC通道唯一ID
+    * 后端通道唯一ID
     */
     @SerializedName("UpstreamId")
     @Expose
     private String UpstreamId;
 
     /**
-    * VPC通道名字
+    * 后端通道名字
     */
     @SerializedName("UpstreamName")
     @Expose
     private String UpstreamName;
 
     /**
-    * VPC通道描述
+    * 后端通道描述
     */
     @SerializedName("UpstreamDescription")
     @Expose
     private String UpstreamDescription;
 
     /**
-    * 写意
+    * 后端协议，取值范围：HTTP, HTTPS
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 负载均衡算法
+    * 负载均衡算法，取值范围：ROUND_ROBIN
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-    * vpc唯一ID
+    * VPC唯一ID
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 请求重拾次数
+    * 请求重试次数
     */
     @SerializedName("Retries")
     @Expose
@@ -102,14 +102,14 @@ public class UpstreamInfo extends AbstractModel{
     private UpstreamHealthChecker HealthChecker;
 
     /**
-    * Upstream的类型
+    * 后端的类型，取值范围：IP_PORT, K8S
     */
     @SerializedName("UpstreamType")
     @Expose
     private String UpstreamType;
 
     /**
-    * k8s服务配置
+    * K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("K8sServices")
@@ -117,7 +117,7 @@ public class UpstreamInfo extends AbstractModel{
     private K8sService [] K8sServices;
 
     /**
-    * vpc通道的Host
+    * 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamHost")
@@ -125,112 +125,112 @@ public class UpstreamInfo extends AbstractModel{
     private String UpstreamHost;
 
     /**
-     * Get VPC通道唯一ID 
-     * @return UpstreamId VPC通道唯一ID
+     * Get 后端通道唯一ID 
+     * @return UpstreamId 后端通道唯一ID
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set VPC通道唯一ID
-     * @param UpstreamId VPC通道唯一ID
+     * Set 后端通道唯一ID
+     * @param UpstreamId 后端通道唯一ID
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;
     }
 
     /**
-     * Get VPC通道名字 
-     * @return UpstreamName VPC通道名字
+     * Get 后端通道名字 
+     * @return UpstreamName 后端通道名字
      */
     public String getUpstreamName() {
         return this.UpstreamName;
     }
 
     /**
-     * Set VPC通道名字
-     * @param UpstreamName VPC通道名字
+     * Set 后端通道名字
+     * @param UpstreamName 后端通道名字
      */
     public void setUpstreamName(String UpstreamName) {
         this.UpstreamName = UpstreamName;
     }
 
     /**
-     * Get VPC通道描述 
-     * @return UpstreamDescription VPC通道描述
+     * Get 后端通道描述 
+     * @return UpstreamDescription 后端通道描述
      */
     public String getUpstreamDescription() {
         return this.UpstreamDescription;
     }
 
     /**
-     * Set VPC通道描述
-     * @param UpstreamDescription VPC通道描述
+     * Set 后端通道描述
+     * @param UpstreamDescription 后端通道描述
      */
     public void setUpstreamDescription(String UpstreamDescription) {
         this.UpstreamDescription = UpstreamDescription;
     }
 
     /**
-     * Get 写意 
-     * @return Scheme 写意
+     * Get 后端协议，取值范围：HTTP, HTTPS 
+     * @return Scheme 后端协议，取值范围：HTTP, HTTPS
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 写意
-     * @param Scheme 写意
+     * Set 后端协议，取值范围：HTTP, HTTPS
+     * @param Scheme 后端协议，取值范围：HTTP, HTTPS
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get 负载均衡算法 
-     * @return Algorithm 负载均衡算法
+     * Get 负载均衡算法，取值范围：ROUND_ROBIN 
+     * @return Algorithm 负载均衡算法，取值范围：ROUND_ROBIN
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set 负载均衡算法
-     * @param Algorithm 负载均衡算法
+     * Set 负载均衡算法，取值范围：ROUND_ROBIN
+     * @param Algorithm 负载均衡算法，取值范围：ROUND_ROBIN
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get vpc唯一ID 
-     * @return UniqVpcId vpc唯一ID
+     * Get VPC唯一ID 
+     * @return UniqVpcId VPC唯一ID
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set vpc唯一ID
-     * @param UniqVpcId vpc唯一ID
+     * Set VPC唯一ID
+     * @param UniqVpcId VPC唯一ID
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 请求重拾次数 
-     * @return Retries 请求重拾次数
+     * Get 请求重试次数 
+     * @return Retries 请求重试次数
      */
     public Long getRetries() {
         return this.Retries;
     }
 
     /**
-     * Set 请求重拾次数
-     * @param Retries 请求重拾次数
+     * Set 请求重试次数
+     * @param Retries 请求重试次数
      */
     public void setRetries(Long Retries) {
         this.Retries = Retries;
@@ -309,25 +309,25 @@ public class UpstreamInfo extends AbstractModel{
     }
 
     /**
-     * Get Upstream的类型 
-     * @return UpstreamType Upstream的类型
+     * Get 后端的类型，取值范围：IP_PORT, K8S 
+     * @return UpstreamType 后端的类型，取值范围：IP_PORT, K8S
      */
     public String getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set Upstream的类型
-     * @param UpstreamType Upstream的类型
+     * Set 后端的类型，取值范围：IP_PORT, K8S
+     * @param UpstreamType 后端的类型，取值范围：IP_PORT, K8S
      */
     public void setUpstreamType(String UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get k8s服务配置
+     * Get K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return K8sServices k8s服务配置
+     * @return K8sServices K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public K8sService [] getK8sServices() {
@@ -335,9 +335,9 @@ public class UpstreamInfo extends AbstractModel{
     }
 
     /**
-     * Set k8s服务配置
+     * Set K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param K8sServices k8s服务配置
+     * @param K8sServices K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setK8sServices(K8sService [] K8sServices) {
@@ -345,9 +345,9 @@ public class UpstreamInfo extends AbstractModel{
     }
 
     /**
-     * Get vpc通道的Host
+     * Get 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamHost vpc通道的Host
+     * @return UpstreamHost 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamHost() {
@@ -355,9 +355,9 @@ public class UpstreamInfo extends AbstractModel{
     }
 
     /**
-     * Set vpc通道的Host
+     * Set 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamHost vpc通道的Host
+     * @param UpstreamHost 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamHost(String UpstreamHost) {

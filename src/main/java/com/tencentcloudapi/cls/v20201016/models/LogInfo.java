@@ -80,6 +80,14 @@ public class LogInfo extends AbstractModel{
     private String LogJson;
 
     /**
+    * 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
      * Get 日志时间，单位ms 
      * @return Time 日志时间，单位ms
      */
@@ -211,6 +219,26 @@ public class LogInfo extends AbstractModel{
         this.LogJson = LogJson;
     }
 
+    /**
+     * Get 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostName 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostName 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
     public LogInfo() {
     }
 
@@ -243,6 +271,9 @@ public class LogInfo extends AbstractModel{
         if (source.LogJson != null) {
             this.LogJson = new String(source.LogJson);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
     }
 
 
@@ -258,6 +289,7 @@ public class LogInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         this.setParamSimple(map, prefix + "LogJson", this.LogJson);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

@@ -304,6 +304,13 @@ global：全球加速
     private OriginCombine OriginCombine;
 
     /**
+    * POST请求传输配置
+    */
+    @SerializedName("PostMaxSize")
+    @Expose
+    private PostSize PostMaxSize;
+
+    /**
     * Quic访问（收费服务，详见计费说明和产品文档）
     */
     @SerializedName("Quic")
@@ -1009,6 +1016,22 @@ global：全球加速
     }
 
     /**
+     * Get POST请求传输配置 
+     * @return PostMaxSize POST请求传输配置
+     */
+    public PostSize getPostMaxSize() {
+        return this.PostMaxSize;
+    }
+
+    /**
+     * Set POST请求传输配置
+     * @param PostMaxSize POST请求传输配置
+     */
+    public void setPostMaxSize(PostSize PostMaxSize) {
+        this.PostMaxSize = PostMaxSize;
+    }
+
+    /**
      * Get Quic访问（收费服务，详见计费说明和产品文档） 
      * @return Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
@@ -1248,6 +1271,9 @@ global：全球加速
         if (source.OriginCombine != null) {
             this.OriginCombine = new OriginCombine(source.OriginCombine);
         }
+        if (source.PostMaxSize != null) {
+            this.PostMaxSize = new PostSize(source.PostMaxSize);
+        }
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
@@ -1315,6 +1341,7 @@ global：全球加速
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+        this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);

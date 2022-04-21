@@ -245,7 +245,7 @@ public class InstanceInfo extends AbstractModel{
     private Long Vport;
 
     /**
-    * 是否锁定标记
+    * 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
     */
     @SerializedName("CdbError")
     @Expose
@@ -849,16 +849,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否锁定标记 
-     * @return CdbError 是否锁定标记
+     * Get 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定 
+     * @return CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
      */
     public Long getCdbError() {
         return this.CdbError;
     }
 
     /**
-     * Set 是否锁定标记
-     * @param CdbError 是否锁定标记
+     * Set 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+     * @param CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
      */
     public void setCdbError(Long CdbError) {
         this.CdbError = CdbError;

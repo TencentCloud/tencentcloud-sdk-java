@@ -301,6 +301,26 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *获取域名实名信息详情
+     * @param req DescribeDomainSimpleInfoRequest
+     * @return DescribeDomainSimpleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainSimpleInfoResponse DescribeDomainSimpleInfo(DescribeDomainSimpleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainSimpleInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainSimpleInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainSimpleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取已验证的手机邮箱列表
      * @param req DescribePhoneEmailListRequest
      * @return DescribePhoneEmailListResponse

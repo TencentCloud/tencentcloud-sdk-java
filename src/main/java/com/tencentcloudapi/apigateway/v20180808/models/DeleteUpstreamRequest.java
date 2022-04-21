@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteUpstreamRequest extends AbstractModel{
 
     /**
-    * 待删除的VPC通道唯一ID
+    * 待删除的后端通道ID
     */
     @SerializedName("UpstreamId")
     @Expose
     private String UpstreamId;
 
     /**
-     * Get 待删除的VPC通道唯一ID 
-     * @return UpstreamId 待删除的VPC通道唯一ID
+     * Get 待删除的后端通道ID 
+     * @return UpstreamId 待删除的后端通道ID
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set 待删除的VPC通道唯一ID
-     * @param UpstreamId 待删除的VPC通道唯一ID
+     * Set 待删除的后端通道ID
+     * @param UpstreamId 待删除的后端通道ID
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;
