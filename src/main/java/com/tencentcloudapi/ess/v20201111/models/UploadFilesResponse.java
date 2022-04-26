@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
+public class UploadFilesResponse extends AbstractModel{
 
     /**
-    * 人员查重任务信息列表。
+    * 文件id数组
     */
-    @SerializedName("JobIdInfos")
+    @SerializedName("FileIds")
     @Expose
-    private JobIdInfo [] JobIdInfos;
+    private String [] FileIds;
 
     /**
-    * 查重任务总数量。
+    * 上传成功文件数量
     */
-    @SerializedName("JobIdNum")
+    @SerializedName("TotalCount")
     @Expose
-    private Long JobIdNum;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 人员查重任务信息列表。 
-     * @return JobIdInfos 人员查重任务信息列表。
+     * Get 文件id数组 
+     * @return FileIds 文件id数组
      */
-    public JobIdInfo [] getJobIdInfos() {
-        return this.JobIdInfos;
+    public String [] getFileIds() {
+        return this.FileIds;
     }
 
     /**
-     * Set 人员查重任务信息列表。
-     * @param JobIdInfos 人员查重任务信息列表。
+     * Set 文件id数组
+     * @param FileIds 文件id数组
      */
-    public void setJobIdInfos(JobIdInfo [] JobIdInfos) {
-        this.JobIdInfos = JobIdInfos;
+    public void setFileIds(String [] FileIds) {
+        this.FileIds = FileIds;
     }
 
     /**
-     * Get 查重任务总数量。 
-     * @return JobIdNum 查重任务总数量。
+     * Get 上传成功文件数量 
+     * @return TotalCount 上传成功文件数量
      */
-    public Long getJobIdNum() {
-        return this.JobIdNum;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 查重任务总数量。
-     * @param JobIdNum 查重任务总数量。
+     * Set 上传成功文件数量
+     * @param TotalCount 上传成功文件数量
      */
-    public void setJobIdNum(Long JobIdNum) {
-        this.JobIdNum = JobIdNum;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -91,22 +91,22 @@ public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetCheckSimilarPersonJobIdListResponse() {
+    public UploadFilesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetCheckSimilarPersonJobIdListResponse(GetCheckSimilarPersonJobIdListResponse source) {
-        if (source.JobIdInfos != null) {
-            this.JobIdInfos = new JobIdInfo[source.JobIdInfos.length];
-            for (int i = 0; i < source.JobIdInfos.length; i++) {
-                this.JobIdInfos[i] = new JobIdInfo(source.JobIdInfos[i]);
+    public UploadFilesResponse(UploadFilesResponse source) {
+        if (source.FileIds != null) {
+            this.FileIds = new String[source.FileIds.length];
+            for (int i = 0; i < source.FileIds.length; i++) {
+                this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
-        if (source.JobIdNum != null) {
-            this.JobIdNum = new Long(source.JobIdNum);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +118,8 @@ public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "JobIdInfos.", this.JobIdInfos);
-        this.setParamSimple(map, prefix + "JobIdNum", this.JobIdNum);
+        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

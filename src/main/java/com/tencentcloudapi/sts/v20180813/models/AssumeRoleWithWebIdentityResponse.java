@@ -13,21 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.sts.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckSimilarPersonResponse extends AbstractModel{
+public class AssumeRoleWithWebIdentityResponse extends AbstractModel{
 
     /**
-    * 查重任务ID，用于查询、获取查重的进度和结果。
+    * 临时秘钥过期时间(时间戳)
     */
-    @SerializedName("JobId")
+    @SerializedName("ExpiredTime")
     @Expose
-    private String JobId;
+    private Long ExpiredTime;
+
+    /**
+    * 临时秘钥过期时间
+    */
+    @SerializedName("Expiration")
+    @Expose
+    private String Expiration;
+
+    /**
+    * 临时秘钥
+    */
+    @SerializedName("Credentials")
+    @Expose
+    private Credentials Credentials;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +51,51 @@ public class CheckSimilarPersonResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查重任务ID，用于查询、获取查重的进度和结果。 
-     * @return JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * Get 临时秘钥过期时间(时间戳) 
+     * @return ExpiredTime 临时秘钥过期时间(时间戳)
      */
-    public String getJobId() {
-        return this.JobId;
+    public Long getExpiredTime() {
+        return this.ExpiredTime;
     }
 
     /**
-     * Set 查重任务ID，用于查询、获取查重的进度和结果。
-     * @param JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * Set 临时秘钥过期时间(时间戳)
+     * @param ExpiredTime 临时秘钥过期时间(时间戳)
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setExpiredTime(Long ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
+    /**
+     * Get 临时秘钥过期时间 
+     * @return Expiration 临时秘钥过期时间
+     */
+    public String getExpiration() {
+        return this.Expiration;
+    }
+
+    /**
+     * Set 临时秘钥过期时间
+     * @param Expiration 临时秘钥过期时间
+     */
+    public void setExpiration(String Expiration) {
+        this.Expiration = Expiration;
+    }
+
+    /**
+     * Get 临时秘钥 
+     * @return Credentials 临时秘钥
+     */
+    public Credentials getCredentials() {
+        return this.Credentials;
+    }
+
+    /**
+     * Set 临时秘钥
+     * @param Credentials 临时秘钥
+     */
+    public void setCredentials(Credentials Credentials) {
+        this.Credentials = Credentials;
     }
 
     /**
@@ -68,16 +114,22 @@ public class CheckSimilarPersonResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CheckSimilarPersonResponse() {
+    public AssumeRoleWithWebIdentityResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CheckSimilarPersonResponse(CheckSimilarPersonResponse source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public AssumeRoleWithWebIdentityResponse(AssumeRoleWithWebIdentityResponse source) {
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
+        if (source.Expiration != null) {
+            this.Expiration = new String(source.Expiration);
+        }
+        if (source.Credentials != null) {
+            this.Credentials = new Credentials(source.Credentials);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +141,9 @@ public class CheckSimilarPersonResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "Expiration", this.Expiration);
+        this.setParamObj(map, prefix + "Credentials.", this.Credentials);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -139,7 +139,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
+     *传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
      * @param req CheckIdCardInformationRequest
      * @return CheckIdCardInformationResponse
      * @throws TencentCloudSDKException
@@ -522,7 +522,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
+     *传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人。
      * @param req ImageRecognitionRequest
      * @return ImageRecognitionResponse
      * @throws TencentCloudSDKException
@@ -582,7 +582,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与公安权威库的证件照是否属于同一个人。
+     *传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与权威库的证件照是否属于同一个人。
      * @param req LivenessRecognitionRequest
      * @return LivenessRecognitionResponse
      * @throws TencentCloudSDKException

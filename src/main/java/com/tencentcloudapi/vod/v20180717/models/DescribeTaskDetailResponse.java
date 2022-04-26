@@ -31,6 +31,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
+<li>FastClipMedia：快速剪辑任务。</li>
 
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -186,6 +187,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
+<li>FastClipMedia：快速剪辑任务。</li>
 
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -201,6 +203,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
+<li>FastClipMedia：快速剪辑任务。</li>
 
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -222,6 +225,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
+<li>FastClipMedia：快速剪辑任务。</li>
 
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -237,6 +241,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
+<li>FastClipMedia：快速剪辑任务。</li>
 
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>

@@ -58,7 +58,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * vip保留时间，单位：天
+    * vip保留时间，单位：天，注：需要最新版SDK支持
     */
     @SerializedName("Recycle")
     @Expose
@@ -145,16 +145,16 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get vip保留时间，单位：天 
-     * @return Recycle vip保留时间，单位：天
+     * Get vip保留时间，单位：天，注：需要最新版SDK支持 
+     * @return Recycle vip保留时间，单位：天，注：需要最新版SDK支持
      */
     public Long getRecycle() {
         return this.Recycle;
     }
 
     /**
-     * Set vip保留时间，单位：天
-     * @param Recycle vip保留时间，单位：天
+     * Set vip保留时间，单位：天，注：需要最新版SDK支持
+     * @param Recycle vip保留时间，单位：天，注：需要最新版SDK支持
      */
     public void setRecycle(Long Recycle) {
         this.Recycle = Recycle;

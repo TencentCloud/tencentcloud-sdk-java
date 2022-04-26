@@ -97,6 +97,20 @@ public class CreateMigrateJobRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+    */
+    @SerializedName("SrcNodeType")
+    @Expose
+    private String SrcNodeType;
+
+    /**
+    * 源实例信息，具体内容跟迁移任务类型相关
+    */
+    @SerializedName("SrcInfoMulti")
+    @Expose
+    private SrcInfo [] SrcInfoMulti;
+
+    /**
      * Get 数据迁移任务名称 
      * @return JobName 数据迁移任务名称
      */
@@ -272,6 +286,38 @@ public class CreateMigrateJobRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点 
+     * @return SrcNodeType 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     */
+    public String getSrcNodeType() {
+        return this.SrcNodeType;
+    }
+
+    /**
+     * Set 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     * @param SrcNodeType 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     */
+    public void setSrcNodeType(String SrcNodeType) {
+        this.SrcNodeType = SrcNodeType;
+    }
+
+    /**
+     * Get 源实例信息，具体内容跟迁移任务类型相关 
+     * @return SrcInfoMulti 源实例信息，具体内容跟迁移任务类型相关
+     */
+    public SrcInfo [] getSrcInfoMulti() {
+        return this.SrcInfoMulti;
+    }
+
+    /**
+     * Set 源实例信息，具体内容跟迁移任务类型相关
+     * @param SrcInfoMulti 源实例信息，具体内容跟迁移任务类型相关
+     */
+    public void setSrcInfoMulti(SrcInfo [] SrcInfoMulti) {
+        this.SrcInfoMulti = SrcInfoMulti;
+    }
+
     public CreateMigrateJobRequest() {
     }
 
@@ -313,6 +359,15 @@ public class CreateMigrateJobRequest extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.SrcNodeType != null) {
+            this.SrcNodeType = new String(source.SrcNodeType);
+        }
+        if (source.SrcInfoMulti != null) {
+            this.SrcInfoMulti = new SrcInfo[source.SrcInfoMulti.length];
+            for (int i = 0; i < source.SrcInfoMulti.length; i++) {
+                this.SrcInfoMulti[i] = new SrcInfo(source.SrcInfoMulti[i]);
+            }
+        }
     }
 
 
@@ -330,6 +385,8 @@ public class CreateMigrateJobRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+        this.setParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
 
     }
 }

@@ -215,6 +215,38 @@ public class SREInstance extends AbstractModel{
     private String ConsoleDefaultPwd;
 
     /**
+    * 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TradeType")
+    @Expose
+    private Long TradeType;
+
+    /**
+    * 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
+    * 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurDeadline")
+    @Expose
+    private String CurDeadline;
+
+    /**
+    * 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateTime")
+    @Expose
+    private String IsolateTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -682,6 +714,86 @@ public class SREInstance extends AbstractModel{
         this.ConsoleDefaultPwd = ConsoleDefaultPwd;
     }
 
+    /**
+     * Get 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TradeType 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTradeType() {
+        return this.TradeType;
+    }
+
+    /**
+     * Set 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TradeType 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTradeType(Long TradeType) {
+        this.TradeType = TradeType;
+    }
+
+    /**
+     * Get 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
+     * Get 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurDeadline 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCurDeadline() {
+        return this.CurDeadline;
+    }
+
+    /**
+     * Set 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurDeadline 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurDeadline(String CurDeadline) {
+        this.CurDeadline = CurDeadline;
+    }
+
+    /**
+     * Get 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateTime 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolateTime() {
+        return this.IsolateTime;
+    }
+
+    /**
+     * Set 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateTime 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateTime(String IsolateTime) {
+        this.IsolateTime = IsolateTime;
+    }
+
     public SREInstance() {
     }
 
@@ -780,6 +892,18 @@ public class SREInstance extends AbstractModel{
         if (source.ConsoleDefaultPwd != null) {
             this.ConsoleDefaultPwd = new String(source.ConsoleDefaultPwd);
         }
+        if (source.TradeType != null) {
+            this.TradeType = new Long(source.TradeType);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.CurDeadline != null) {
+            this.CurDeadline = new String(source.CurDeadline);
+        }
+        if (source.IsolateTime != null) {
+            this.IsolateTime = new String(source.IsolateTime);
+        }
     }
 
 
@@ -812,6 +936,10 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
         this.setParamSimple(map, prefix + "ConfigInfoVisible", this.ConfigInfoVisible);
         this.setParamSimple(map, prefix + "ConsoleDefaultPwd", this.ConsoleDefaultPwd);
+        this.setParamSimple(map, prefix + "TradeType", this.TradeType);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
+        this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
 
     }
 }

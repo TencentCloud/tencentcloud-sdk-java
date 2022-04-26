@@ -579,6 +579,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *获取实例的密钥信息列表。
+     * @param req DescribeEncryptionKeysRequest
+     * @return DescribeEncryptionKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEncryptionKeysResponse DescribeEncryptionKeys(DescribeEncryptionKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEncryptionKeysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEncryptionKeysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEncryptionKeys");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeOrders）用于获取订单信息。
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse

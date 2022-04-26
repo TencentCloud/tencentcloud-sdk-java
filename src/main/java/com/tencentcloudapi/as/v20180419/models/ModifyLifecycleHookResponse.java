@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20180301.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
-
-    /**
-    * 人员查重任务预估需要耗费时间。 单位为分钟。
-    */
-    @SerializedName("EstimatedTimeCost")
-    @Expose
-    private Long EstimatedTimeCost;
+public class ModifyLifecycleHookResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 人员查重任务预估需要耗费时间。 单位为分钟。 
-     * @return EstimatedTimeCost 人员查重任务预估需要耗费时间。 单位为分钟。
-     */
-    public Long getEstimatedTimeCost() {
-        return this.EstimatedTimeCost;
-    }
-
-    /**
-     * Set 人员查重任务预估需要耗费时间。 单位为分钟。
-     * @param EstimatedTimeCost 人员查重任务预估需要耗费时间。 单位为分钟。
-     */
-    public void setEstimatedTimeCost(Long EstimatedTimeCost) {
-        this.EstimatedTimeCost = EstimatedTimeCost;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public EstimateCheckSimilarPersonCostTimeResponse() {
+    public ModifyLifecycleHookResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EstimateCheckSimilarPersonCostTimeResponse(EstimateCheckSimilarPersonCostTimeResponse source) {
-        if (source.EstimatedTimeCost != null) {
-            this.EstimatedTimeCost = new Long(source.EstimatedTimeCost);
-        }
+    public ModifyLifecycleHookResponse(ModifyLifecycleHookResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EstimatedTimeCost", this.EstimatedTimeCost);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -37,7 +37,7 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     private String IDNumber;
 
     /**
-    * 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
+    * 健康码更新时间
     */
     @SerializedName("Time")
     @Expose
@@ -65,7 +65,7 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     private String TestingResult;
 
     /**
-    * 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+    * 核酸检测时间
     */
     @SerializedName("TestingTime")
     @Expose
@@ -111,16 +111,16 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX 
-     * @return Time 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
+     * Get 健康码更新时间 
+     * @return Time 健康码更新时间
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
-     * @param Time 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
+     * Set 健康码更新时间
+     * @param Time 健康码更新时间
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -175,16 +175,16 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 核酸检测时间，格式为：XXXX-XX-XX XX:XX 
-     * @return TestingTime 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+     * Get 核酸检测时间 
+     * @return TestingTime 核酸检测时间
      */
     public String getTestingTime() {
         return this.TestingTime;
     }
 
     /**
-     * Set 核酸检测时间，格式为：XXXX-XX-XX XX:XX
-     * @param TestingTime 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+     * Set 核酸检测时间
+     * @param TestingTime 核酸检测时间
      */
     public void setTestingTime(String TestingTime) {
         this.TestingTime = TestingTime;

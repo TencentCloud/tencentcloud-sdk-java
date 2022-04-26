@@ -37,7 +37,7 @@ public class PersonInfo extends AbstractModel{
     private String PersonId;
 
     /**
-    * 包含的人体轨迹图片信息列表。
+    * 包含的人体动作轨迹图片信息列表。
     */
     @SerializedName("TraceInfos")
     @Expose
@@ -76,16 +76,16 @@ public class PersonInfo extends AbstractModel{
     }
 
     /**
-     * Get 包含的人体轨迹图片信息列表。 
-     * @return TraceInfos 包含的人体轨迹图片信息列表。
+     * Get 包含的人体动作轨迹图片信息列表。 
+     * @return TraceInfos 包含的人体动作轨迹图片信息列表。
      */
     public TraceInfo [] getTraceInfos() {
         return this.TraceInfos;
     }
 
     /**
-     * Set 包含的人体轨迹图片信息列表。
-     * @param TraceInfos 包含的人体轨迹图片信息列表。
+     * Set 包含的人体动作轨迹图片信息列表。
+     * @param TraceInfos 包含的人体动作轨迹图片信息列表。
      */
     public void setTraceInfos(TraceInfo [] TraceInfos) {
         this.TraceInfos = TraceInfos;

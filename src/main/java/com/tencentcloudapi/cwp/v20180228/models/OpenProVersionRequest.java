@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class OpenProVersionRequest extends AbstractModel{
 
     /**
-    * 云服务器类型。(当前参数已作废,可以留空值 )
+    * 云服务器类型（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 机器所属地域。(当前参数已作废,可以留空值 )
+    * 机器所属地域（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
     */
     @SerializedName("MachineRegion")
     @Expose
@@ -52,32 +52,32 @@ public class OpenProVersionRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-     * Get 云服务器类型。(当前参数已作废,可以留空值 ) 
-     * @return MachineType 云服务器类型。(当前参数已作废,可以留空值 )
+     * Get 云服务器类型（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号） 
+     * @return MachineType 云服务器类型（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 云服务器类型。(当前参数已作废,可以留空值 )
-     * @param MachineType 云服务器类型。(当前参数已作废,可以留空值 )
+     * Set 云服务器类型（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
+     * @param MachineType 云服务器类型（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 机器所属地域。(当前参数已作废,可以留空值 ) 
-     * @return MachineRegion 机器所属地域。(当前参数已作废,可以留空值 )
+     * Get 机器所属地域（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号） 
+     * @return MachineRegion 机器所属地域（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set 机器所属地域。(当前参数已作废,可以留空值 )
-     * @param MachineRegion 机器所属地域。(当前参数已作废,可以留空值 )
+     * Set 机器所属地域（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
+     * @param MachineRegion 机器所属地域（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;

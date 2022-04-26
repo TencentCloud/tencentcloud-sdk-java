@@ -44,13 +44,16 @@ public class RecognizeHealthCodeOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+    * 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
+
+4.穗康码
     */
     @SerializedName("Type")
     @Expose
@@ -117,40 +120,52 @@ public class RecognizeHealthCodeOCRRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
-
-1:粤康码
-
-2:随申码
-
-3:健康宝 
-     * @return Type 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+     * Get 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
+
+4.穗康码 
+     * @return Type 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
+
+1:粤康码
+
+2:随申码
+
+3:健康宝
+
+4.穗康码
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+     * Set 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
-     * @param Type 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+4.穗康码
+     * @param Type 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
+
+4.穗康码
      */
     public void setType(Long Type) {
         this.Type = Type;

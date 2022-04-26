@@ -37,11 +37,18 @@ public class SendSmsCodeRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+    * 将作为超级管理员账号的手机号码
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
+
+    /**
+    * 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+    */
+    @SerializedName("CountryCode")
+    @Expose
+    private String CountryCode;
 
     /**
      * Get 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。 
@@ -76,19 +83,35 @@ public class SendSmsCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。 
-     * @return PhoneNumber 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+     * Get 将作为超级管理员账号的手机号码 
+     * @return PhoneNumber 将作为超级管理员账号的手机号码
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
-     * @param PhoneNumber 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+     * Set 将作为超级管理员账号的手机号码
+     * @param PhoneNumber 将作为超级管理员账号的手机号码
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
+    }
+
+    /**
+     * Get 将作为超级管理员账号的手机号码的国家代码。默认为 +86。 
+     * @return CountryCode 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+     */
+    public String getCountryCode() {
+        return this.CountryCode;
+    }
+
+    /**
+     * Set 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+     * @param CountryCode 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+     */
+    public void setCountryCode(String CountryCode) {
+        this.CountryCode = CountryCode;
     }
 
     public SendSmsCodeRequest() {
@@ -108,6 +131,9 @@ public class SendSmsCodeRequest extends AbstractModel{
         if (source.PhoneNumber != null) {
             this.PhoneNumber = new String(source.PhoneNumber);
         }
+        if (source.CountryCode != null) {
+            this.CountryCode = new String(source.CountryCode);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class SendSmsCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Purpose", this.Purpose);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+        this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
 
     }
 }

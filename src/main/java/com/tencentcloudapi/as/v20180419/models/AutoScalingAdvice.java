@@ -30,6 +30,16 @@ public class AutoScalingAdvice extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
+    * 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
     * 伸缩组配置建议集合。
     */
     @SerializedName("Advices")
@@ -50,6 +60,34 @@ public class AutoScalingAdvice extends AbstractModel{
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
+    }
+
+    /**
+     * Get 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br> 
+     * @return Level 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     * @param Level 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
     }
 
     /**
@@ -79,6 +117,9 @@ public class AutoScalingAdvice extends AbstractModel{
         if (source.AutoScalingGroupId != null) {
             this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
         }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
         if (source.Advices != null) {
             this.Advices = new Advice[source.Advices.length];
             for (int i = 0; i < source.Advices.length; i++) {
@@ -93,6 +134,7 @@ public class AutoScalingAdvice extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+        this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamArrayObj(map, prefix + "Advices.", this.Advices);
 
     }

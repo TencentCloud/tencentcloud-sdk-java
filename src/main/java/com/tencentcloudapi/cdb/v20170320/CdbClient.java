@@ -902,7 +902,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *查询数据库代理
+     *查询数据库代理（待下线，替换接口QueryCDBProxy）
      * @param req DescribeCDBProxyRequest
      * @return DescribeCDBProxyResponse
      * @throws TencentCloudSDKException

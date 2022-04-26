@@ -79,6 +79,26 @@ public class StsClient extends AbstractClient{
     }
 
     /**
+     *申请OIDC角色临时密钥
+     * @param req AssumeRoleWithWebIdentityRequest
+     * @return AssumeRoleWithWebIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssumeRoleWithWebIdentityResponse AssumeRoleWithWebIdentity(AssumeRoleWithWebIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssumeRoleWithWebIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取当前调用者的身份信息。
 接口支持主账号，子账号长期密钥以及AssumeRole，GetFederationToken生成的临时凭据的身份获取。
      * @param req GetCallerIdentityRequest

@@ -858,6 +858,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *此接口用于修改生命周期挂钩。
+     * @param req ModifyLifecycleHookRequest
+     * @return ModifyLifecycleHookResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLifecycleHookResponse ModifyLifecycleHook(ModifyLifecycleHookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLifecycleHookResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLifecycleHookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLifecycleHook");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
      * @param req ModifyLoadBalancerTargetAttributesRequest
      * @return ModifyLoadBalancerTargetAttributesResponse

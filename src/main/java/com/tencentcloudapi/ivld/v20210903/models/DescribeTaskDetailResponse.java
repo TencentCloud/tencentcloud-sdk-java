@@ -24,6 +24,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 
     /**
     * 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskInfo")
     @Expose
@@ -44,8 +45,10 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务信息，不包含任务结果 
+     * Get 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskInfo 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskInfo getTaskInfo() {
         return this.TaskInfo;
@@ -53,7 +56,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 
     /**
      * Set 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskInfo 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskInfo(TaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;

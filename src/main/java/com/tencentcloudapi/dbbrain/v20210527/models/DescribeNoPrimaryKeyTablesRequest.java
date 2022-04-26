@@ -30,7 +30,7 @@ public class DescribeNoPrimaryKeyTablesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 查询日期，最早为30天前的日期。
+    * 查询日期，如2021-05-27，最早为30天前的日期。
     */
     @SerializedName("Date")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeNoPrimaryKeyTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询日期，最早为30天前的日期。 
-     * @return Date 查询日期，最早为30天前的日期。
+     * Get 查询日期，如2021-05-27，最早为30天前的日期。 
+     * @return Date 查询日期，如2021-05-27，最早为30天前的日期。
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 查询日期，最早为30天前的日期。
-     * @param Date 查询日期，最早为30天前的日期。
+     * Set 查询日期，如2021-05-27，最早为30天前的日期。
+     * @param Date 查询日期，如2021-05-27，最早为30天前的日期。
      */
     public void setDate(String Date) {
         this.Date = Date;

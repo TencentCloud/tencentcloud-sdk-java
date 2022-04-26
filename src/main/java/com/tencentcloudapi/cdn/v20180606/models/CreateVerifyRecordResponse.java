@@ -44,6 +44,14 @@ public class CreateVerifyRecordResponse extends AbstractModel{
     private String RecordType;
 
     /**
+    * 文件验证 URL 指引
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileVerifyUrl")
+    @Expose
+    private String FileVerifyUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +107,26 @@ public class CreateVerifyRecordResponse extends AbstractModel{
     }
 
     /**
+     * Get 文件验证 URL 指引
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileVerifyUrl 文件验证 URL 指引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileVerifyUrl() {
+        return this.FileVerifyUrl;
+    }
+
+    /**
+     * Set 文件验证 URL 指引
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileVerifyUrl 文件验证 URL 指引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileVerifyUrl(String FileVerifyUrl) {
+        this.FileVerifyUrl = FileVerifyUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +159,9 @@ public class CreateVerifyRecordResponse extends AbstractModel{
         if (source.RecordType != null) {
             this.RecordType = new String(source.RecordType);
         }
+        if (source.FileVerifyUrl != null) {
+            this.FileVerifyUrl = new String(source.FileVerifyUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +175,7 @@ public class CreateVerifyRecordResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
         this.setParamSimple(map, prefix + "Record", this.Record);
         this.setParamSimple(map, prefix + "RecordType", this.RecordType);
+        this.setParamSimple(map, prefix + "FileVerifyUrl", this.FileVerifyUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

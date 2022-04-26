@@ -43,6 +43,7 @@ __ALIPAY__: 支付宝
     * 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
     */
     @SerializedName("PaymentMethod")
     @Expose
@@ -224,10 +225,12 @@ __ALIPAY__: 支付宝
     /**
      * Get 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
-__OPENBANK_PAYMENT__:B2C  openbank付款 
+__OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发 
      * @return PaymentMethod 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
      */
     public String getPaymentMethod() {
         return this.PaymentMethod;
@@ -237,9 +240,11 @@ __OPENBANK_PAYMENT__:B2C  openbank付款
      * Set 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
      * @param PaymentMethod 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
      */
     public void setPaymentMethod(String PaymentMethod) {
         this.PaymentMethod = PaymentMethod;

@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20180301.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckSimilarPersonResponse extends AbstractModel{
+public class ChannelCreateFlowByFilesResponse extends AbstractModel{
 
     /**
-    * 查重任务ID，用于查询、获取查重的进度和结果。
+    * 合同流程ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("JobId")
+    @SerializedName("FlowId")
     @Expose
-    private String JobId;
+    private String FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class CheckSimilarPersonResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查重任务ID，用于查询、获取查重的进度和结果。 
-     * @return JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * Get 合同流程ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowId 合同流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 查重任务ID，用于查询、获取查重的进度和结果。
-     * @param JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * Set 合同流程ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowId 合同流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -68,16 +73,16 @@ public class CheckSimilarPersonResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CheckSimilarPersonResponse() {
+    public ChannelCreateFlowByFilesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CheckSimilarPersonResponse(CheckSimilarPersonResponse source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public ChannelCreateFlowByFilesResponse(ChannelCreateFlowByFilesResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class CheckSimilarPersonResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

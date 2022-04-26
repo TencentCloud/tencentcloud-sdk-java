@@ -679,7 +679,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *查询SQL模版。
+     *查询SQL模板。
      * @param req DescribeSqlTemplateRequest
      * @return DescribeSqlTemplateResponse
      * @throws TencentCloudSDKException

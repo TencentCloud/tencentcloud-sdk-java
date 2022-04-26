@@ -30,7 +30,7 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 查询日期，最早可为前30天的日期。
+    * 查询日期，如2021-05-27，最早可为前30天的日期。
     */
     @SerializedName("Date")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel{
     private String Product;
 
     /**
-    * 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+    * 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
     */
     @SerializedName("SortBy")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询日期，最早可为前30天的日期。 
-     * @return Date 查询日期，最早可为前30天的日期。
+     * Get 查询日期，如2021-05-27，最早可为前30天的日期。 
+     * @return Date 查询日期，如2021-05-27，最早可为前30天的日期。
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 查询日期，最早可为前30天的日期。
-     * @param Date 查询日期，最早可为前30天的日期。
+     * Set 查询日期，如2021-05-27，最早可为前30天的日期。
+     * @param Date 查询日期，如2021-05-27，最早可为前30天的日期。
      */
     public void setDate(String Date) {
         this.Date = Date;
@@ -113,16 +113,16 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。 
-     * @return SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+     * Get 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。 
+     * @return SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
-     * @param SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+     * Set 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
+     * @param SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

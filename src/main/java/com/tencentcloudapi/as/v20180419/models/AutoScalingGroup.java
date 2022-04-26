@@ -37,7 +37,17 @@ public class AutoScalingGroup extends AbstractModel{
     private String AutoScalingGroupName;
 
     /**
-    * 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+    * 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
     */
     @SerializedName("AutoScalingGroupStatus")
     @Expose
@@ -279,16 +289,56 @@ public class AutoScalingGroup extends AbstractModel{
     }
 
     /**
-     * Get 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br> 
-     * @return AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+     * Get 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配 
+     * @return AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
      */
     public String getAutoScalingGroupStatus() {
         return this.AutoScalingGroupStatus;
     }
 
     /**
-     * Set 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
-     * @param AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+     * Set 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
+     * @param AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
      */
     public void setAutoScalingGroupStatus(String AutoScalingGroupStatus) {
         this.AutoScalingGroupStatus = AutoScalingGroupStatus;

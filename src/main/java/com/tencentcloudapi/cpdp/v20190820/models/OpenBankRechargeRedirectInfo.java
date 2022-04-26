@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20180301.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSimilarPersonResultRequest extends AbstractModel{
+public class OpenBankRechargeRedirectInfo extends AbstractModel{
 
     /**
-    * 查重任务ID，用于查询、获取查重的进度和结果。
+    * 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("JobId")
+    @SerializedName("Url")
     @Expose
-    private String JobId;
+    private String Url;
 
     /**
-     * Get 查重任务ID，用于查询、获取查重的进度和结果。 
-     * @return JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * Get 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Url 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 查重任务ID，用于查询、获取查重的进度和结果。
-     * @param JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * Set 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Url 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
-    public GetSimilarPersonResultRequest() {
+    public OpenBankRechargeRedirectInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSimilarPersonResultRequest(GetSimilarPersonResultRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public OpenBankRechargeRedirectInfo(OpenBankRechargeRedirectInfo source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
         }
     }
 
@@ -63,7 +68,7 @@ public class GetSimilarPersonResultRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

@@ -38,11 +38,22 @@ public class OpenBankPayerInfo extends AbstractModel{
     private String PayerName;
 
     /**
-    * 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+    * 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
     */
     @SerializedName("BindSerialNo")
     @Expose
     private String BindSerialNo;
+
+    /**
+    * 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get 付款方唯一标识。当TENPAY时，必填上送
@@ -81,19 +92,51 @@ public class OpenBankPayerInfo extends AbstractModel{
     }
 
     /**
-     * Get 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。 
-     * @return BindSerialNo 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+     * Get 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。 
+     * @return BindSerialNo 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
      */
     public String getBindSerialNo() {
         return this.BindSerialNo;
     }
 
     /**
-     * Set 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
-     * @param BindSerialNo 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+     * Set 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+     * @param BindSerialNo 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
      */
     public void setBindSerialNo(String BindSerialNo) {
         this.BindSerialNo = BindSerialNo;
+    }
+
+    /**
+     * Get 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。 
+     * @return AccountType 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+     * @param AccountType 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public OpenBankPayerInfo() {
@@ -113,6 +156,9 @@ public class OpenBankPayerInfo extends AbstractModel{
         if (source.BindSerialNo != null) {
             this.BindSerialNo = new String(source.BindSerialNo);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -123,6 +169,7 @@ public class OpenBankPayerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PayerId", this.PayerId);
         this.setParamSimple(map, prefix + "PayerName", this.PayerName);
         this.setParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

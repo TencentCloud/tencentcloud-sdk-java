@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TraceInfo extends AbstractModel{
 
     /**
-    * 人体轨迹ID。
+    * 人体动作轨迹ID。
     */
     @SerializedName("TraceId")
     @Expose
     private String TraceId;
 
     /**
-    * 包含的人体轨迹图片Id列表。
+    * 包含的人体动作轨迹图片Id列表。
     */
     @SerializedName("BodyIds")
     @Expose
     private String [] BodyIds;
 
     /**
-     * Get 人体轨迹ID。 
-     * @return TraceId 人体轨迹ID。
+     * Get 人体动作轨迹ID。 
+     * @return TraceId 人体动作轨迹ID。
      */
     public String getTraceId() {
         return this.TraceId;
     }
 
     /**
-     * Set 人体轨迹ID。
-     * @param TraceId 人体轨迹ID。
+     * Set 人体动作轨迹ID。
+     * @param TraceId 人体动作轨迹ID。
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;
     }
 
     /**
-     * Get 包含的人体轨迹图片Id列表。 
-     * @return BodyIds 包含的人体轨迹图片Id列表。
+     * Get 包含的人体动作轨迹图片Id列表。 
+     * @return BodyIds 包含的人体动作轨迹图片Id列表。
      */
     public String [] getBodyIds() {
         return this.BodyIds;
     }
 
     /**
-     * Set 包含的人体轨迹图片Id列表。
-     * @param BodyIds 包含的人体轨迹图片Id列表。
+     * Set 包含的人体动作轨迹图片Id列表。
+     * @param BodyIds 包含的人体动作轨迹图片Id列表。
      */
     public void setBodyIds(String [] BodyIds) {
         this.BodyIds = BodyIds;

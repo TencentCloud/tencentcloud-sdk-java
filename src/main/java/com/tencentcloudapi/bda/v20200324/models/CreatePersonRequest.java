@@ -45,7 +45,7 @@ public class CreatePersonRequest extends AbstractModel{
     private String PersonId;
 
     /**
-    * 人体轨迹信息。
+    * 人体动作轨迹信息。
     */
     @SerializedName("Trace")
     @Expose
@@ -104,16 +104,16 @@ public class CreatePersonRequest extends AbstractModel{
     }
 
     /**
-     * Get 人体轨迹信息。 
-     * @return Trace 人体轨迹信息。
+     * Get 人体动作轨迹信息。 
+     * @return Trace 人体动作轨迹信息。
      */
     public Trace getTrace() {
         return this.Trace;
     }
 
     /**
-     * Set 人体轨迹信息。
-     * @param Trace 人体轨迹信息。
+     * Set 人体动作轨迹信息。
+     * @param Trace 人体动作轨迹信息。
      */
     public void setTrace(Trace Trace) {
         this.Trace = Trace;

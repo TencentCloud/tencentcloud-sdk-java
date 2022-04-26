@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSimilarPersonResultRequest extends AbstractModel{
+public class DescribeEncryptionKeysRequest extends AbstractModel{
 
     /**
-    * 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+    * 实例ID。
     */
-    @SerializedName("JobId")
+    @SerializedName("DBInstanceId")
     @Expose
-    private String JobId;
+    private String DBInstanceId;
 
     /**
-     * Get 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId 
-     * @return JobId 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+     * Get 实例ID。 
+     * @return DBInstanceId 实例ID。
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     /**
-     * Set 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
-     * @param JobId 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+     * Set 实例ID。
+     * @param DBInstanceId 实例ID。
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
     }
 
-    public GetSimilarPersonResultRequest() {
+    public DescribeEncryptionKeysRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSimilarPersonResultRequest(GetSimilarPersonResultRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public DescribeEncryptionKeysRequest(DescribeEncryptionKeysRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class GetSimilarPersonResultRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
 
     }
 }

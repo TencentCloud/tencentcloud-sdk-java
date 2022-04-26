@@ -30,7 +30,7 @@ public class Candidate extends AbstractModel{
     private String PersonId;
 
     /**
-    * 人体轨迹ID。
+    * 人体动作轨迹ID。
     */
     @SerializedName("TraceId")
     @Expose
@@ -65,16 +65,16 @@ public class Candidate extends AbstractModel{
     }
 
     /**
-     * Get 人体轨迹ID。 
-     * @return TraceId 人体轨迹ID。
+     * Get 人体动作轨迹ID。 
+     * @return TraceId 人体动作轨迹ID。
      */
     public String getTraceId() {
         return this.TraceId;
     }
 
     /**
-     * Set 人体轨迹ID。
-     * @param TraceId 人体轨迹ID。
+     * Set 人体动作轨迹ID。
+     * @param TraceId 人体动作轨迹ID。
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

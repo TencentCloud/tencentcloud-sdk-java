@@ -30,6 +30,15 @@ public class VerifyDomainRecordRequest extends AbstractModel{
     private String Domain;
 
     /**
+    * 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
+    */
+    @SerializedName("VerifyType")
+    @Expose
+    private String VerifyType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -45,6 +54,30 @@ public class VerifyDomainRecordRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证 
+     * @return VerifyType 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
+     */
+    public String getVerifyType() {
+        return this.VerifyType;
+    }
+
+    /**
+     * Set 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
+     * @param VerifyType 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
+     */
+    public void setVerifyType(String VerifyType) {
+        this.VerifyType = VerifyType;
+    }
+
     public VerifyDomainRecordRequest() {
     }
 
@@ -56,6 +89,9 @@ public class VerifyDomainRecordRequest extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.VerifyType != null) {
+            this.VerifyType = new String(source.VerifyType);
+        }
     }
 
 
@@ -64,6 +100,7 @@ public class VerifyDomainRecordRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "VerifyType", this.VerifyType);
 
     }
 }

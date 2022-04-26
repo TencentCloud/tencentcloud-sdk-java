@@ -31,7 +31,7 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
     * 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
     */
     @SerializedName("PayeeName")
     @Expose
@@ -60,11 +60,23 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
     * 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号；当渠道为ALIPAY，付款方式为SAFT_ISV时，必填，根据收款账户标识类型上送。
     */
     @SerializedName("BindSerialNo")
     @Expose
     private String BindSerialNo;
+
+    /**
+    * 收款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID
+ALIPAY_USER_ID：支付宝的会员ID
+ALIPAY_LOGON_ID：支付宝登录号。
+付款方式为SAFT_ISV时，必填。
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID 
@@ -84,9 +96,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
      * Get 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称 
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。 
      * @return PayeeName 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
      */
     public String getPayeeName() {
         return this.PayeeName;
@@ -94,9 +106,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
      * Set 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
      * @param PayeeName 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
      */
     public void setPayeeName(String PayeeName) {
         this.PayeeName = PayeeName;
@@ -152,9 +164,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
      * Get 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。 
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号；当渠道为ALIPAY，付款方式为SAFT_ISV时，必填，根据收款账户标识类型上送。 
      * @return BindSerialNo 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号；当渠道为ALIPAY，付款方式为SAFT_ISV时，必填，根据收款账户标识类型上送。
      */
     public String getBindSerialNo() {
         return this.BindSerialNo;
@@ -162,12 +174,48 @@ public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
      * Set 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号；当渠道为ALIPAY，付款方式为SAFT_ISV时，必填，根据收款账户标识类型上送。
      * @param BindSerialNo 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号；当渠道为ALIPAY，付款方式为SAFT_ISV时，必填，根据收款账户标识类型上送。
      */
     public void setBindSerialNo(String BindSerialNo) {
         this.BindSerialNo = BindSerialNo;
+    }
+
+    /**
+     * Get 收款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID
+ALIPAY_USER_ID：支付宝的会员ID
+ALIPAY_LOGON_ID：支付宝登录号。
+付款方式为SAFT_ISV时，必填。 
+     * @return AccountType 收款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID
+ALIPAY_USER_ID：支付宝的会员ID
+ALIPAY_LOGON_ID：支付宝登录号。
+付款方式为SAFT_ISV时，必填。
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 收款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID
+ALIPAY_USER_ID：支付宝的会员ID
+ALIPAY_LOGON_ID：支付宝登录号。
+付款方式为SAFT_ISV时，必填。
+     * @param AccountType 收款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID
+ALIPAY_USER_ID：支付宝的会员ID
+ALIPAY_LOGON_ID：支付宝登录号。
+付款方式为SAFT_ISV时，必填。
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public OpenBankPayeeInfo() {
@@ -196,6 +244,9 @@ public class OpenBankPayeeInfo extends AbstractModel{
         if (source.BindSerialNo != null) {
             this.BindSerialNo = new String(source.BindSerialNo);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -209,6 +260,7 @@ public class OpenBankPayeeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BankBranchName", this.BankBranchName);
         this.setParamSimple(map, prefix + "BankBranchId", this.BankBranchId);
         this.setParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

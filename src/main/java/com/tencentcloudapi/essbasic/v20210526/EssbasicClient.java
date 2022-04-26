@@ -39,6 +39,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建流程。此接口不可直接使用，需要运营申请
+     * @param req ChannelCreateFlowByFilesRequest
+     * @return ChannelCreateFlowByFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(ChannelCreateFlowByFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateFlowByFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowByFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateFlowByFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（CreateConsoleLoginUrl）用于创建电子签控制台登录链接。若企业未激活，调用同步企业信息、同步经办人信息
 
      * @param req CreateConsoleLoginUrlRequest
@@ -72,6 +92,26 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateFlowsByTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateFlowsByTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *渠道通过图片为子客代创建印章，图片最大5m；此接口不可直接使用，需要运营申请
+     * @param req CreateSealByImageRequest
+     * @return CreateSealByImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSealByImageResponse CreateSealByImage(CreateSealByImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSealByImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSealByImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSealByImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

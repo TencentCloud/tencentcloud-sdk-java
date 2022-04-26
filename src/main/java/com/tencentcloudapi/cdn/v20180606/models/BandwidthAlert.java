@@ -94,6 +94,14 @@ off：关闭
     private String Metric;
 
     /**
+    * 累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatisticItems")
+    @Expose
+    private StatisticItem [] StatisticItems;
+
+    /**
      * Get 用量封顶配置开关
 on：开启
 off：关闭 
@@ -281,6 +289,26 @@ off：关闭
         this.Metric = Metric;
     }
 
+    /**
+     * Get 累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatisticItems 累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StatisticItem [] getStatisticItems() {
+        return this.StatisticItems;
+    }
+
+    /**
+     * Set 累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatisticItems 累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatisticItems(StatisticItem [] StatisticItems) {
+        this.StatisticItems = StatisticItems;
+    }
+
     public BandwidthAlert() {
     }
 
@@ -313,6 +341,12 @@ off：关闭
         if (source.Metric != null) {
             this.Metric = new String(source.Metric);
         }
+        if (source.StatisticItems != null) {
+            this.StatisticItems = new StatisticItem[source.StatisticItems.length];
+            for (int i = 0; i < source.StatisticItems.length; i++) {
+                this.StatisticItems[i] = new StatisticItem(source.StatisticItems[i]);
+            }
+        }
     }
 
 
@@ -328,6 +362,7 @@ off：关闭
         this.setParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
         this.setParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
+        this.setParamArrayObj(map, prefix + "StatisticItems.", this.StatisticItems);
 
     }
 }

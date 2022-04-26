@@ -82,36 +82,6 @@ public class IaiClient extends AbstractClient{
     }
 
     /**
-     *对指定的人员库进行人员查重，给出疑似相同人的信息。
-
-可以使用本接口对已有的单个人员库进行人员查重，避免同一人在单个人员库中拥有多个身份；也可以使用本接口对已有的多个人员库进行人员查重，查询同一人是否同时存在多个人员库中。
-
-不支持跨算法模型版本查重，且目前仅支持算法模型为3.0的人员库使用查重功能。
-
->     
-- 若对完全相同的指定人员库进行查重操作，需等待上次操作完成才可。即，若两次请求输入的 GroupIds 相同，第一次请求若未完成，第二次请求将返回失败。
-
->     
-- 查重的人员库状态为腾讯云开始进行查重任务的那一刻，即您可以理解为当您发起查重请求后，若您的查重任务需要排队，在排队期间您对人员库的增删操作均会会影响查重的结果。腾讯云将以开始进行查重任务的那一刻人员库的状态进行查重。查重任务开始后，您对人员库的任何操作均不影响查重任务的进行。但建议查重任务开始后，请不要对人员库中人员和人脸进行增删操作。
-     * @param req CheckSimilarPersonRequest
-     * @return CheckSimilarPersonResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckSimilarPersonResponse CheckSimilarPerson(CheckSimilarPersonRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckSimilarPersonResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CheckSimilarPersonResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckSimilarPerson");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
 
 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/32806)或[人员验证](https://cloud.tencent.com/document/product/867/38879)接口。
@@ -420,52 +390,6 @@ public class IaiClient extends AbstractClient{
     }
 
     /**
-     *获取若要开始一个人员查重任务，这个任务结束的预估时间。
-
-若EndTimestamp符合您预期，请您尽快发起人员查重请求，否则导致可能需要更多处理时间。
-
-若预估时间超过5小时，则无法使用人员查重功能。
-     * @param req EstimateCheckSimilarPersonCostTimeRequest
-     * @return EstimateCheckSimilarPersonCostTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public EstimateCheckSimilarPersonCostTimeResponse EstimateCheckSimilarPersonCostTime(EstimateCheckSimilarPersonCostTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EstimateCheckSimilarPersonCostTime");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *获取人员查重任务列表，按任务创建时间逆序（最新的在前面）。
-
-只保留最近1年的数据。
-     * @param req GetCheckSimilarPersonJobIdListRequest
-     * @return GetCheckSimilarPersonJobIdListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCheckSimilarPersonJobIdListResponse GetCheckSimilarPersonJobIdList(GetCheckSimilarPersonJobIdListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCheckSimilarPersonJobIdListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCheckSimilarPersonJobIdListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCheckSimilarPersonJobIdList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取人员库信息。
      * @param req GetGroupInfoRequest
      * @return GetGroupInfoResponse
@@ -578,26 +502,6 @@ public class IaiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetPersonListNumResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetPersonListNum");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *获取人员查重接口（CheckSimilarPerson）结果。
-     * @param req GetSimilarPersonResultRequest
-     * @return GetSimilarPersonResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetSimilarPersonResultResponse GetSimilarPersonResult(GetSimilarPersonResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSimilarPersonResultResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetSimilarPersonResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSimilarPersonResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

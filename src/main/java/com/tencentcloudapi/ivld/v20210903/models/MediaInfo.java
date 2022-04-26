@@ -86,6 +86,14 @@ public class MediaInfo extends AbstractModel{
     private String Label;
 
     /**
+    * 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallbackURL")
+    @Expose
+    private String CallbackURL;
+
+    /**
      * Get 媒资ID 
      * @return MediaId 媒资ID
      */
@@ -241,6 +249,26 @@ public class MediaInfo extends AbstractModel{
         this.Label = Label;
     }
 
+    /**
+     * Get 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CallbackURL 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallbackURL() {
+        return this.CallbackURL;
+    }
+
+    /**
+     * Set 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallbackURL 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallbackURL(String CallbackURL) {
+        this.CallbackURL = CallbackURL;
+    }
+
     public MediaInfo() {
     }
 
@@ -273,6 +301,9 @@ public class MediaInfo extends AbstractModel{
         if (source.Label != null) {
             this.Label = new String(source.Label);
         }
+        if (source.CallbackURL != null) {
+            this.CallbackURL = new String(source.CallbackURL);
+        }
     }
 
 
@@ -288,6 +319,7 @@ public class MediaInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
 
     }
 }

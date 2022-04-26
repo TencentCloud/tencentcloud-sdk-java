@@ -60,6 +60,22 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     private String ConsoleIntranetAddress;
 
     /**
+    * 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternetBandWidth")
+    @Expose
+    private Long InternetBandWidth;
+
+    /**
+    * 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsoleInternetBandWidth")
+    @Expose
+    private Long ConsoleInternetBandWidth;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,6 +171,46 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     }
 
     /**
+     * Get 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternetBandWidth 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInternetBandWidth() {
+        return this.InternetBandWidth;
+    }
+
+    /**
+     * Set 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternetBandWidth 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternetBandWidth(Long InternetBandWidth) {
+        this.InternetBandWidth = InternetBandWidth;
+    }
+
+    /**
+     * Get 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsoleInternetBandWidth 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConsoleInternetBandWidth() {
+        return this.ConsoleInternetBandWidth;
+    }
+
+    /**
+     * Set 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsoleInternetBandWidth 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsoleInternetBandWidth(Long ConsoleInternetBandWidth) {
+        this.ConsoleInternetBandWidth = ConsoleInternetBandWidth;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -196,6 +252,12 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         if (source.ConsoleIntranetAddress != null) {
             this.ConsoleIntranetAddress = new String(source.ConsoleIntranetAddress);
         }
+        if (source.InternetBandWidth != null) {
+            this.InternetBandWidth = new Long(source.InternetBandWidth);
+        }
+        if (source.ConsoleInternetBandWidth != null) {
+            this.ConsoleInternetBandWidth = new Long(source.ConsoleInternetBandWidth);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -211,6 +273,8 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "EnvAddressInfos.", this.EnvAddressInfos);
         this.setParamSimple(map, prefix + "ConsoleInternetAddress", this.ConsoleInternetAddress);
         this.setParamSimple(map, prefix + "ConsoleIntranetAddress", this.ConsoleIntranetAddress);
+        this.setParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
+        this.setParamSimple(map, prefix + "ConsoleInternetBandWidth", this.ConsoleInternetBandWidth);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

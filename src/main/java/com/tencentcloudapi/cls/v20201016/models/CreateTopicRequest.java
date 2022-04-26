@@ -65,7 +65,7 @@ public class CreateTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
-    * 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+    * 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
     */
     @SerializedName("StorageType")
     @Expose
@@ -175,16 +175,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。 
-     * @return StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+     * Get 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。 
+     * @return StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
-     * @param StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+     * Set 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
+     * @param StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

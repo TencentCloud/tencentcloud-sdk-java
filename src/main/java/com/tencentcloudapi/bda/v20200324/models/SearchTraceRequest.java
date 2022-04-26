@@ -30,14 +30,14 @@ public class SearchTraceRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * 人体轨迹信息。
+    * 人体动作轨迹信息。
     */
     @SerializedName("Trace")
     @Expose
     private Trace Trace;
 
     /**
-    * 单张被识别的人体轨迹返回的最相似人员数量。
+    * 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
     */
@@ -70,26 +70,26 @@ public class SearchTraceRequest extends AbstractModel{
     }
 
     /**
-     * Get 人体轨迹信息。 
-     * @return Trace 人体轨迹信息。
+     * Get 人体动作轨迹信息。 
+     * @return Trace 人体动作轨迹信息。
      */
     public Trace getTrace() {
         return this.Trace;
     }
 
     /**
-     * Set 人体轨迹信息。
-     * @param Trace 人体轨迹信息。
+     * Set 人体动作轨迹信息。
+     * @param Trace 人体动作轨迹信息。
      */
     public void setTrace(Trace Trace) {
         this.Trace = Trace;
     }
 
     /**
-     * Get 单张被识别的人体轨迹返回的最相似人员数量。
+     * Get 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。 
-     * @return MaxPersonNum 单张被识别的人体轨迹返回的最相似人员数量。
+     * @return MaxPersonNum 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
      */
@@ -98,10 +98,10 @@ public class SearchTraceRequest extends AbstractModel{
     }
 
     /**
-     * Set 单张被识别的人体轨迹返回的最相似人员数量。
+     * Set 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
-     * @param MaxPersonNum 单张被识别的人体轨迹返回的最相似人员数量。
+     * @param MaxPersonNum 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
      */

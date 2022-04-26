@@ -31,6 +31,7 @@ public class RecognizeCarProResponse extends AbstractModel{
 
     /**
     * 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
     */
     @SerializedName("CarTags")
     @Expose
@@ -60,8 +61,10 @@ public class RecognizeCarProResponse extends AbstractModel{
     }
 
     /**
-     * Get 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。 
+     * Get 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。 
      * @return CarTags 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
      */
     public CarTagItem [] getCarTags() {
         return this.CarTags;
@@ -69,7 +72,9 @@ public class RecognizeCarProResponse extends AbstractModel{
 
     /**
      * Set 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
      * @param CarTags 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
      */
     public void setCarTags(CarTagItem [] CarTags) {
         this.CarTags = CarTags;
