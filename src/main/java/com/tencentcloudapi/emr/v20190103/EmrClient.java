@@ -159,6 +159,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取yarn资源调度页面的数据
+     * @param req DescribeResourceScheduleRequest
+     * @return DescribeResourceScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *集群续费询价。
      * @param req InquirePriceRenewEmrRequest
      * @return InquirePriceRenewEmrResponse
@@ -251,6 +271,66 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquiryPriceUpdateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *刷新动态资源池
+     * @param req ModifyResourcePoolsRequest
+     * @return ModifyResourcePoolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourcePoolsResponse ModifyResourcePools(ModifyResourcePoolsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourcePoolsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourcePoolsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyResourcePools");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改yarn资源调度的资源配置
+     * @param req ModifyResourceScheduleConfigRequest
+     * @return ModifyResourceScheduleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceScheduleConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyResourceScheduleConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改了yarn的资源调度器，点击部署生效
+     * @param req ModifyResourceSchedulerRequest
+     * @return ModifyResourceSchedulerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceSchedulerResponse ModifyResourceScheduler(ModifyResourceSchedulerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyResourceScheduler");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

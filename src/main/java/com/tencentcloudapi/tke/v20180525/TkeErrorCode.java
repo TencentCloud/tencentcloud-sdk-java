@@ -3,11 +3,17 @@ public enum TkeErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 获取用户认证信息失败。
+     FAILEDOPERATION_ACCOUNTCOMMON("FailedOperation.AccountCommon"),
+     
     // 账户未通过认证。
      FAILEDOPERATION_ACCOUNTUSERNOTAUTHENTICATED("FailedOperation.AccountUserNotAuthenticated"),
      
     // 伸缩组资源创建报错。
      FAILEDOPERATION_ASCOMMON("FailedOperation.AsCommon"),
+     
+    // CLB 未知错误。
+     FAILEDOPERATION_CLBUNEXPECTEDERROR("FailedOperation.CLBUnexpectedError"),
      
     // 无该接口CAM权限。
      FAILEDOPERATION_CAMNOAUTH("FailedOperation.CamNoAuth"),
@@ -42,6 +48,9 @@ public enum TkeErrorCode {
     // 记录未找到。
      FAILEDOPERATION_DBRECORDNOTFOUND("FailedOperation.DbRecordNotFound"),
      
+    // 获得安全组配额失败。
+     FAILEDOPERATION_DFWGETUSGQUOTA("FailedOperation.DfwGetUSGQuota"),
+     
     // 连接用户Kubernetes集群失败。
      FAILEDOPERATION_KUBECLIENTCONNECTION("FailedOperation.KubeClientConnection"),
      
@@ -50,6 +59,15 @@ public enum TkeErrorCode {
      
     // 创建集群Client出错。
      FAILEDOPERATION_KUBERNETESCREATEOPERATIONERROR("FailedOperation.KubernetesCreateOperationError"),
+     
+    // Kubernetes未知错误。
+     FAILEDOPERATION_KUBERNETESINTERNAL("FailedOperation.KubernetesInternal"),
+     
+    // 底层调用CLB未知错误。
+     FAILEDOPERATION_LBCOMMON("FailedOperation.LbCommon"),
+     
+    // 网络扩展错误。
+     FAILEDOPERATION_NETWORKSCALEERROR("FailedOperation.NetworkScaleError"),
      
     // 镜像OS不支持。
      FAILEDOPERATION_OSNOTSUPPORT("FailedOperation.OsNotSupport"),
@@ -74,6 +92,9 @@ public enum TkeErrorCode {
      
     // 询价错误。
      FAILEDOPERATION_TRADECOMMON("FailedOperation.TradeCommon"),
+     
+    // 未发现vpc记录。
+     FAILEDOPERATION_VPCRECODRNOTFOUND("FailedOperation.VpcRecodrNotFound"),
      
     // 内部错误。
      INTERNALERROR("InternalError"),

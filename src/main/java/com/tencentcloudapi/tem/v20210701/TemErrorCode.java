@@ -106,7 +106,10 @@ public enum TemErrorCode {
      RESOURCEUNAVAILABLE_WAITFORKRUISE("ResourceUnavailable.WaitForKruise"),
      
     // 未授权。
-     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATION("UnauthorizedOperation.UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATION("UnauthorizedOperation.UnauthorizedOperation"),
+     
+    // 不支持的ACTION。
+     UNSUPPORTEDOPERATION_UNSUPPORTACTION("UnsupportedOperation.UnsupportAction");
      
     private String value;
     private TemErrorCode (String value){

@@ -61,7 +61,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long SourceType;
 
     /**
-    * 识别音频的音频格式。mp3、wav。
+    * 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
     */
     @SerializedName("VoiceFormat")
     @Expose
@@ -242,16 +242,16 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别音频的音频格式。mp3、wav。 
-     * @return VoiceFormat 识别音频的音频格式。mp3、wav。
+     * Get 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。 
+     * @return VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
      */
     public String getVoiceFormat() {
         return this.VoiceFormat;
     }
 
     /**
-     * Set 识别音频的音频格式。mp3、wav。
-     * @param VoiceFormat 识别音频的音频格式。mp3、wav。
+     * Set 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+     * @param VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
      */
     public void setVoiceFormat(String VoiceFormat) {
         this.VoiceFormat = VoiceFormat;

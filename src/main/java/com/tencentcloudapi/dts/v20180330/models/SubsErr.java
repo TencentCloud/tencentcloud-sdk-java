@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenProVersionResponse extends AbstractModel{
+public class SubsErr extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RequestId")
+    @SerializedName("Message")
     @Expose
-    private String RequestId;
+    private String Message;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getMessage() {
+        return this.Message;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
-    public OpenProVersionResponse() {
+    public SubsErr() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OpenProVersionResponse(OpenProVersionResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public SubsErr(SubsErr source) {
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
         }
     }
 
@@ -63,7 +68,7 @@ public class OpenProVersionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

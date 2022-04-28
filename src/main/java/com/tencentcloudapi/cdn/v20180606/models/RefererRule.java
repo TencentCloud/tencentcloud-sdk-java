@@ -62,8 +62,8 @@ blacklist：黑名单
 
     /**
     * 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
     */
     @SerializedName("AllowEmpty")
     @Expose
@@ -175,11 +175,11 @@ blacklist：黑名单
 
     /**
      * Get 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer 
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer； 
      * @return AllowEmpty 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
      */
     public Boolean getAllowEmpty() {
         return this.AllowEmpty;
@@ -187,11 +187,11 @@ false：不允许空 referer
 
     /**
      * Set 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
      * @param AllowEmpty 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
      */
     public void setAllowEmpty(Boolean AllowEmpty) {
         this.AllowEmpty = AllowEmpty;

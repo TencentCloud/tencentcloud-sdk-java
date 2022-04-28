@@ -207,6 +207,21 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * 数据订阅版本。老版订阅填txdts，kafka版填kafka
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
+    * 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Errors")
+    @Expose
+    private SubsErr [] Errors;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -638,6 +653,42 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
     }
 
     /**
+     * Get 数据订阅版本。老版订阅填txdts，kafka版填kafka 
+     * @return SubscribeVersion 数据订阅版本。老版订阅填txdts，kafka版填kafka
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set 数据订阅版本。老版订阅填txdts，kafka版填kafka
+     * @param SubscribeVersion 数据订阅版本。老版订阅填txdts，kafka版填kafka
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Errors 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubsErr [] getErrors() {
+        return this.Errors;
+    }
+
+    /**
+     * Set 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Errors 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrors(SubsErr [] Errors) {
+        this.Errors = Errors;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -745,6 +796,15 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.SubscribeVersion != null) {
+            this.SubscribeVersion = new String(source.SubscribeVersion);
+        }
+        if (source.Errors != null) {
+            this.Errors = new SubsErr[source.Errors.length];
+            for (int i = 0; i < source.Errors.length; i++) {
+                this.Errors[i] = new SubsErr(source.Errors[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -781,6 +841,8 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
+        this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

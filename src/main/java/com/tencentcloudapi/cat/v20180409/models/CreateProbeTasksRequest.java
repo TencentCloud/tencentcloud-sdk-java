@@ -81,6 +81,20 @@ public class CreateProbeTasksRequest extends AbstractModel{
     private Tag [] Tag;
 
     /**
+    * 测试类型，包含定时测试与即时测试
+    */
+    @SerializedName("ProbeType")
+    @Expose
+    private Long ProbeType;
+
+    /**
+    * 插件类型
+    */
+    @SerializedName("PluginSource")
+    @Expose
+    private String PluginSource;
+
+    /**
      * Get 批量任务名-地址 
      * @return BatchTasks 批量任务名-地址
      */
@@ -216,6 +230,38 @@ public class CreateProbeTasksRequest extends AbstractModel{
         this.Tag = Tag;
     }
 
+    /**
+     * Get 测试类型，包含定时测试与即时测试 
+     * @return ProbeType 测试类型，包含定时测试与即时测试
+     */
+    public Long getProbeType() {
+        return this.ProbeType;
+    }
+
+    /**
+     * Set 测试类型，包含定时测试与即时测试
+     * @param ProbeType 测试类型，包含定时测试与即时测试
+     */
+    public void setProbeType(Long ProbeType) {
+        this.ProbeType = ProbeType;
+    }
+
+    /**
+     * Get 插件类型 
+     * @return PluginSource 插件类型
+     */
+    public String getPluginSource() {
+        return this.PluginSource;
+    }
+
+    /**
+     * Set 插件类型
+     * @param PluginSource 插件类型
+     */
+    public void setPluginSource(String PluginSource) {
+        this.PluginSource = PluginSource;
+    }
+
     public CreateProbeTasksRequest() {
     }
 
@@ -257,6 +303,12 @@ public class CreateProbeTasksRequest extends AbstractModel{
                 this.Tag[i] = new Tag(source.Tag[i]);
             }
         }
+        if (source.ProbeType != null) {
+            this.ProbeType = new Long(source.ProbeType);
+        }
+        if (source.PluginSource != null) {
+            this.PluginSource = new String(source.PluginSource);
+        }
     }
 
 
@@ -272,6 +324,8 @@ public class CreateProbeTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskCategory", this.TaskCategory);
         this.setParamSimple(map, prefix + "Cron", this.Cron);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "ProbeType", this.ProbeType);
+        this.setParamSimple(map, prefix + "PluginSource", this.PluginSource);
 
     }
 }

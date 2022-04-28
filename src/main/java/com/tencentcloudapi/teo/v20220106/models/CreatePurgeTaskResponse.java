@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeployServerlessGroupResponse extends AbstractModel{
+public class CreatePurgeTaskResponse extends AbstractModel{
 
     /**
-    * 结果true：成功；false：失败；
+    * 任务ID
     */
-    @SerializedName("Result")
+    @SerializedName("JobId")
     @Expose
-    private Boolean Result;
+    private String JobId;
+
+    /**
+    * 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailedList")
+    @Expose
+    private FailReason [] FailedList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class DeployServerlessGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 结果true：成功；false：失败； 
-     * @return Result 结果true：成功；false：失败；
+     * Get 任务ID 
+     * @return JobId 任务ID
      */
-    public Boolean getResult() {
-        return this.Result;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 结果true：成功；false：失败；
-     * @param Result 结果true：成功；false：失败；
+     * Set 任务ID
+     * @param JobId 任务ID
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
+
+    /**
+     * Get 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailedList 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FailReason [] getFailedList() {
+        return this.FailedList;
+    }
+
+    /**
+     * Set 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailedList 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailedList(FailReason [] FailedList) {
+        this.FailedList = FailedList;
     }
 
     /**
@@ -68,16 +96,22 @@ public class DeployServerlessGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeployServerlessGroupResponse() {
+    public CreatePurgeTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeployServerlessGroupResponse(DeployServerlessGroupResponse source) {
-        if (source.Result != null) {
-            this.Result = new Boolean(source.Result);
+    public CreatePurgeTaskResponse(CreatePurgeTaskResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.FailedList != null) {
+            this.FailedList = new FailReason[source.FailedList.length];
+            for (int i = 0; i < source.FailedList.length; i++) {
+                this.FailedList[i] = new FailReason(source.FailedList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class DeployServerlessGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamArrayObj(map, prefix + "FailedList.", this.FailedList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

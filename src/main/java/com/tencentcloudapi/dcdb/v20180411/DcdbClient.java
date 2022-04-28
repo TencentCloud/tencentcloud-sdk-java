@@ -924,6 +924,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstanceName）用于修改实例名字
+     * @param req ModifyDBInstanceNameRequest
+     * @return ModifyDBInstanceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

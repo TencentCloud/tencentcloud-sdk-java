@@ -99,26 +99,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (CloseProVersion) 已全面改为授权模式,该接口只能解绑授权.
-     * @param req CloseProVersionRequest
-     * @return CloseProVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public CloseProVersionResponse CloseProVersion(CloseProVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloseProVersionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CloseProVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CloseProVersion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *根据策略信息创建基线策略
      * @param req CreateBaselineStrategyRequest
      * @return CreateBaselineStrategyResponse
@@ -3759,26 +3739,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
-     * @param req InquiryPriceOpenProVersionPrepaidRequest
-     * @return InquiryPriceOpenProVersionPrepaidResponse
-     * @throws TencentCloudSDKException
-     */
-    public InquiryPriceOpenProVersionPrepaidResponse InquiryPriceOpenProVersionPrepaid(InquiryPriceOpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceOpenProVersionPrepaid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      * 用于设置新增主机自动开通专业防护配置。
      * @param req ModifyAutoOpenProVersionConfigRequest
      * @return ModifyAutoOpenProVersionConfigResponse
@@ -3879,26 +3839,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
-     * @param req ModifyProVersionRenewFlagRequest
-     * @return ModifyProVersionRenewFlagResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyProVersionRenewFlagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyProVersionRenewFlag");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改告警设置
      * @param req ModifyWarningSettingRequest
      * @return ModifyWarningSettingResponse
@@ -3979,46 +3919,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (OpenProVersion) 用于开通专业版。
-     * @param req OpenProVersionRequest
-     * @return OpenProVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public OpenProVersionResponse OpenProVersion(OpenProVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenProVersionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<OpenProVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OpenProVersion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
-     * @param req OpenProVersionPrepaidRequest
-     * @return OpenProVersionPrepaidResponse
-     * @throws TencentCloudSDKException
-     */
-    public OpenProVersionPrepaidResponse OpenProVersionPrepaid(OpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenProVersionPrepaidResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<OpenProVersionPrepaidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OpenProVersionPrepaid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
      * @param req RecoverMalwaresRequest
      * @return RecoverMalwaresResponse
@@ -4031,26 +3931,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RecoverMalwaresResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RecoverMalwares");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (RenewProVersion) 用于续费专业版(包年包月)。
-     * @param req RenewProVersionRequest
-     * @return RenewProVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenewProVersionResponse RenewProVersion(RenewProVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RenewProVersionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RenewProVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RenewProVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

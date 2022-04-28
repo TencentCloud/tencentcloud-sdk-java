@@ -499,26 +499,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建Serverless部署组
-     * @param req CreateServerlessGroupRequest
-     * @return CreateServerlessGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateServerlessGroupResponse CreateServerlessGroup(CreateServerlessGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateServerlessGroupResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateServerlessGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateServerlessGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建任务
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
@@ -972,26 +952,6 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeployGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeployGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *部署Serverless应用
-     * @param req DeployServerlessGroupRequest
-     * @return DeployServerlessGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeployServerlessGroupResponse DeployServerlessGroup(DeployServerlessGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeployServerlessGroupResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeployServerlessGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeployServerlessGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2293,46 +2253,6 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeRepositoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRepository");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询Serverless部署组明细
-     * @param req DescribeServerlessGroupRequest
-     * @return DescribeServerlessGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeServerlessGroupResponse DescribeServerlessGroup(DescribeServerlessGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServerlessGroupResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServerlessGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServerlessGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询Serverless部署组列表
-     * @param req DescribeServerlessGroupsRequest
-     * @return DescribeServerlessGroupsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeServerlessGroupsResponse DescribeServerlessGroups(DescribeServerlessGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServerlessGroupsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServerlessGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServerlessGroups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

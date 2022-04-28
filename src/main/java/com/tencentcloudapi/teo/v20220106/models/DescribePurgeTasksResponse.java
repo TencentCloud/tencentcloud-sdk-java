@@ -13,14 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenewProVersionResponse extends AbstractModel{
+public class DescribePurgeTasksResponse extends AbstractModel{
+
+    /**
+    * 该查询条件总共条目数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 任务结果列表
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private Task [] Tasks;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +42,38 @@ public class RenewProVersionResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 该查询条件总共条目数 
+     * @return TotalCount 该查询条件总共条目数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 该查询条件总共条目数
+     * @param TotalCount 该查询条件总共条目数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 任务结果列表 
+     * @return Tasks 任务结果列表
+     */
+    public Task [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set 任务结果列表
+     * @param Tasks 任务结果列表
+     */
+    public void setTasks(Task [] Tasks) {
+        this.Tasks = Tasks;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +91,23 @@ public class RenewProVersionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public RenewProVersionResponse() {
+    public DescribePurgeTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RenewProVersionResponse(RenewProVersionResponse source) {
+    public DescribePurgeTasksResponse(DescribePurgeTasksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new Task[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new Task(source.Tasks[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class RenewProVersionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

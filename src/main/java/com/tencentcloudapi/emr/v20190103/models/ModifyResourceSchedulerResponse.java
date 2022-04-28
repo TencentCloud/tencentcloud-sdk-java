@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServerlessGroupRequest extends AbstractModel{
+public class ModifyResourceSchedulerResponse extends AbstractModel{
 
     /**
-    * 部署组ID
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("GroupId")
+    @SerializedName("RequestId")
     @Expose
-    private String GroupId;
+    private String RequestId;
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getGroupId() {
-        return this.GroupId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setGroupId(String GroupId) {
-        this.GroupId = GroupId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeServerlessGroupRequest() {
+    public ModifyResourceSchedulerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServerlessGroupRequest(DescribeServerlessGroupRequest source) {
-        if (source.GroupId != null) {
-            this.GroupId = new String(source.GroupId);
+    public ModifyResourceSchedulerResponse(ModifyResourceSchedulerResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeServerlessGroupRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

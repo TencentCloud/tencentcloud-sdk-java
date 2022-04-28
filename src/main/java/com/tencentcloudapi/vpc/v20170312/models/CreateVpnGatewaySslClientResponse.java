@@ -30,6 +30,13 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel{
     private Long TaskId;
 
     /**
+    * SSL-VPN client 唯一ID
+    */
+    @SerializedName("SslVpnClientId")
+    @Expose
+    private String SslVpnClientId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel{
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get SSL-VPN client 唯一ID 
+     * @return SslVpnClientId SSL-VPN client 唯一ID
+     */
+    public String getSslVpnClientId() {
+        return this.SslVpnClientId;
+    }
+
+    /**
+     * Set SSL-VPN client 唯一ID
+     * @param SslVpnClientId SSL-VPN client 唯一ID
+     */
+    public void setSslVpnClientId(String SslVpnClientId) {
+        this.SslVpnClientId = SslVpnClientId;
     }
 
     /**
@@ -79,6 +102,9 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.SslVpnClientId != null) {
+            this.SslVpnClientId = new String(source.SslVpnClientId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

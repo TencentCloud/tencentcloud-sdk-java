@@ -143,6 +143,14 @@ public class MigrateJobInfo extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * 源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SrcInfoMulti")
+    @Expose
+    private SrcInfo [] SrcInfoMulti;
+
+    /**
      * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
      */
@@ -418,6 +426,26 @@ public class MigrateJobInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SrcInfoMulti 源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SrcInfo [] getSrcInfoMulti() {
+        return this.SrcInfoMulti;
+    }
+
+    /**
+     * Set 源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SrcInfoMulti 源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSrcInfoMulti(SrcInfo [] SrcInfoMulti) {
+        this.SrcInfoMulti = SrcInfoMulti;
+    }
+
     public MigrateJobInfo() {
     }
 
@@ -483,6 +511,12 @@ public class MigrateJobInfo extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.SrcInfoMulti != null) {
+            this.SrcInfoMulti = new SrcInfo[source.SrcInfoMulti.length];
+            for (int i = 0; i < source.SrcInfoMulti.length; i++) {
+                this.SrcInfoMulti[i] = new SrcInfo(source.SrcInfoMulti[i]);
+            }
+        }
     }
 
 
@@ -507,6 +541,7 @@ public class MigrateJobInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
 
     }
 }

@@ -188,6 +188,14 @@ public class EnvInfo extends AbstractModel{
     private String EnvType;
 
     /**
+    * 是否是dau新套餐
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDauPackage")
+    @Expose
+    private Boolean IsDauPackage;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -595,6 +603,26 @@ public class EnvInfo extends AbstractModel{
         this.EnvType = EnvType;
     }
 
+    /**
+     * Get 是否是dau新套餐
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDauPackage 是否是dau新套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDauPackage() {
+        return this.IsDauPackage;
+    }
+
+    /**
+     * Set 是否是dau新套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDauPackage 是否是dau新套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDauPackage(Boolean IsDauPackage) {
+        this.IsDauPackage = IsDauPackage;
+    }
+
     public EnvInfo() {
     }
 
@@ -687,6 +715,9 @@ public class EnvInfo extends AbstractModel{
         if (source.EnvType != null) {
             this.EnvType = new String(source.EnvType);
         }
+        if (source.IsDauPackage != null) {
+            this.IsDauPackage = new Boolean(source.IsDauPackage);
+        }
     }
 
 
@@ -715,6 +746,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "CustomLogServices.", this.CustomLogServices);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "IsDauPackage", this.IsDauPackage);
 
     }
 }

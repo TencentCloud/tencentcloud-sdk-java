@@ -70,6 +70,22 @@ public class BGPInstanceSpecification extends AbstractModel{
     private Long ServiceBandWidth;
 
     /**
+    * 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BattleEditionFlag")
+    @Expose
+    private Long BattleEditionFlag;
+
+    /**
+    * 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelEditionFlag")
+    @Expose
+    private Long ChannelEditionFlag;
+
+    /**
      * Get 保底防护峰值，单位Gbps 
      * @return ProtectBandwidth 保底防护峰值，单位Gbps
      */
@@ -185,6 +201,46 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.ServiceBandWidth = ServiceBandWidth;
     }
 
+    /**
+     * Get 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BattleEditionFlag 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBattleEditionFlag() {
+        return this.BattleEditionFlag;
+    }
+
+    /**
+     * Set 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BattleEditionFlag 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBattleEditionFlag(Long BattleEditionFlag) {
+        this.BattleEditionFlag = BattleEditionFlag;
+    }
+
+    /**
+     * Get 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelEditionFlag 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChannelEditionFlag() {
+        return this.ChannelEditionFlag;
+    }
+
+    /**
+     * Set 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelEditionFlag 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelEditionFlag(Long ChannelEditionFlag) {
+        this.ChannelEditionFlag = ChannelEditionFlag;
+    }
+
     public BGPInstanceSpecification() {
     }
 
@@ -211,6 +267,12 @@ public class BGPInstanceSpecification extends AbstractModel{
         if (source.ServiceBandWidth != null) {
             this.ServiceBandWidth = new Long(source.ServiceBandWidth);
         }
+        if (source.BattleEditionFlag != null) {
+            this.BattleEditionFlag = new Long(source.BattleEditionFlag);
+        }
+        if (source.ChannelEditionFlag != null) {
+            this.ChannelEditionFlag = new Long(source.ChannelEditionFlag);
+        }
     }
 
 
@@ -224,6 +286,8 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "UnionPackFlag", this.UnionPackFlag);
         this.setParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
+        this.setParamSimple(map, prefix + "BattleEditionFlag", this.BattleEditionFlag);
+        this.setParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
 
     }
 }

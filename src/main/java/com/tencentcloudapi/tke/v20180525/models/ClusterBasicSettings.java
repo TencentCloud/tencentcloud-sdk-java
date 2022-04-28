@@ -79,7 +79,7 @@ public class ClusterBasicSettings extends AbstractModel{
     private String OsCustomizeType;
 
     /**
-    * 是否开启节点的默认安全组(默认: 否，Aphla特性)
+    * 是否开启节点的默认安全组(默认: 否，Alpha特性)
     */
     @SerializedName("NeedWorkSecurityGroup")
     @Expose
@@ -235,16 +235,16 @@ public class ClusterBasicSettings extends AbstractModel{
     }
 
     /**
-     * Get 是否开启节点的默认安全组(默认: 否，Aphla特性) 
-     * @return NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * Get 是否开启节点的默认安全组(默认: 否，Alpha特性) 
+     * @return NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Alpha特性)
      */
     public Boolean getNeedWorkSecurityGroup() {
         return this.NeedWorkSecurityGroup;
     }
 
     /**
-     * Set 是否开启节点的默认安全组(默认: 否，Aphla特性)
-     * @param NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * Set 是否开启节点的默认安全组(默认: 否，Alpha特性)
+     * @param NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Alpha特性)
      */
     public void setNeedWorkSecurityGroup(Boolean NeedWorkSecurityGroup) {
         this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;

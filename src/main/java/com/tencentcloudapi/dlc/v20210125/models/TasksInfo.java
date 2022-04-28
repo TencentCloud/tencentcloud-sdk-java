@@ -51,6 +51,13 @@ public class TasksInfo extends AbstractModel{
     private KVPair [] Config;
 
     /**
+    * 任务的用户自定义参数信息
+    */
+    @SerializedName("Params")
+    @Expose
+    private KVPair [] Params;
+
+    /**
      * Get 任务类型，SQLTask：SQL查询任务。SparkSQLTask：Spark SQL查询任务 
      * @return TaskType 任务类型，SQLTask：SQL查询任务。SparkSQLTask：Spark SQL查询任务
      */
@@ -114,6 +121,22 @@ public class TasksInfo extends AbstractModel{
         this.Config = Config;
     }
 
+    /**
+     * Get 任务的用户自定义参数信息 
+     * @return Params 任务的用户自定义参数信息
+     */
+    public KVPair [] getParams() {
+        return this.Params;
+    }
+
+    /**
+     * Set 任务的用户自定义参数信息
+     * @param Params 任务的用户自定义参数信息
+     */
+    public void setParams(KVPair [] Params) {
+        this.Params = Params;
+    }
+
     public TasksInfo() {
     }
 
@@ -137,6 +160,12 @@ public class TasksInfo extends AbstractModel{
                 this.Config[i] = new KVPair(source.Config[i]);
             }
         }
+        if (source.Params != null) {
+            this.Params = new KVPair[source.Params.length];
+            for (int i = 0; i < source.Params.length; i++) {
+                this.Params[i] = new KVPair(source.Params[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class TasksInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FailureTolerance", this.FailureTolerance);
         this.setParamSimple(map, prefix + "SQL", this.SQL);
         this.setParamArrayObj(map, prefix + "Config.", this.Config);
+        this.setParamArrayObj(map, prefix + "Params.", this.Params);
 
     }
 }

@@ -13,74 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel{
+public class FailReason extends AbstractModel{
 
     /**
-    * wx应用Id
+    * 失败原因
     */
-    @SerializedName("WxAppId")
+    @SerializedName("Reason")
     @Expose
-    private String WxAppId;
+    private String Reason;
 
     /**
-    * 是否查询全地域
+    * 失败列表
     */
-    @SerializedName("AllRegions")
+    @SerializedName("Targets")
     @Expose
-    private Boolean AllRegions;
+    private String [] Targets;
 
     /**
-     * Get wx应用Id 
-     * @return WxAppId wx应用Id
+     * Get 失败原因 
+     * @return Reason 失败原因
      */
-    public String getWxAppId() {
-        return this.WxAppId;
+    public String getReason() {
+        return this.Reason;
     }
 
     /**
-     * Set wx应用Id
-     * @param WxAppId wx应用Id
+     * Set 失败原因
+     * @param Reason 失败原因
      */
-    public void setWxAppId(String WxAppId) {
-        this.WxAppId = WxAppId;
+    public void setReason(String Reason) {
+        this.Reason = Reason;
     }
 
     /**
-     * Get 是否查询全地域 
-     * @return AllRegions 是否查询全地域
+     * Get 失败列表 
+     * @return Targets 失败列表
      */
-    public Boolean getAllRegions() {
-        return this.AllRegions;
+    public String [] getTargets() {
+        return this.Targets;
     }
 
     /**
-     * Set 是否查询全地域
-     * @param AllRegions 是否查询全地域
+     * Set 失败列表
+     * @param Targets 失败列表
      */
-    public void setAllRegions(Boolean AllRegions) {
-        this.AllRegions = AllRegions;
+    public void setTargets(String [] Targets) {
+        this.Targets = Targets;
     }
 
-    public DescribeWxCloudBaseRunEnvsRequest() {
+    public FailReason() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeWxCloudBaseRunEnvsRequest(DescribeWxCloudBaseRunEnvsRequest source) {
-        if (source.WxAppId != null) {
-            this.WxAppId = new String(source.WxAppId);
+    public FailReason(FailReason source) {
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
         }
-        if (source.AllRegions != null) {
-            this.AllRegions = new Boolean(source.AllRegions);
+        if (source.Targets != null) {
+            this.Targets = new String[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new String(source.Targets[i]);
+            }
         }
     }
 
@@ -89,8 +92,8 @@ public class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
-        this.setParamSimple(map, prefix + "AllRegions", this.AllRegions);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
 
     }
 }

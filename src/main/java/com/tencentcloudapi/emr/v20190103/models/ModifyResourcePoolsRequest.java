@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel{
+public class ModifyResourcePoolsRequest extends AbstractModel{
 
     /**
-    * wx应用Id
+    * emr集群id
     */
-    @SerializedName("WxAppId")
+    @SerializedName("InstanceId")
     @Expose
-    private String WxAppId;
+    private String InstanceId;
 
     /**
-    * 是否查询全地域
+    * 标识是fair还是capacity
     */
-    @SerializedName("AllRegions")
+    @SerializedName("Key")
     @Expose
-    private Boolean AllRegions;
+    private String Key;
 
     /**
-     * Get wx应用Id 
-     * @return WxAppId wx应用Id
+     * Get emr集群id 
+     * @return InstanceId emr集群id
      */
-    public String getWxAppId() {
-        return this.WxAppId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set wx应用Id
-     * @param WxAppId wx应用Id
+     * Set emr集群id
+     * @param InstanceId emr集群id
      */
-    public void setWxAppId(String WxAppId) {
-        this.WxAppId = WxAppId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否查询全地域 
-     * @return AllRegions 是否查询全地域
+     * Get 标识是fair还是capacity 
+     * @return Key 标识是fair还是capacity
      */
-    public Boolean getAllRegions() {
-        return this.AllRegions;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 是否查询全地域
-     * @param AllRegions 是否查询全地域
+     * Set 标识是fair还是capacity
+     * @param Key 标识是fair还是capacity
      */
-    public void setAllRegions(Boolean AllRegions) {
-        this.AllRegions = AllRegions;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DescribeWxCloudBaseRunEnvsRequest() {
+    public ModifyResourcePoolsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeWxCloudBaseRunEnvsRequest(DescribeWxCloudBaseRunEnvsRequest source) {
-        if (source.WxAppId != null) {
-            this.WxAppId = new String(source.WxAppId);
+    public ModifyResourcePoolsRequest(ModifyResourcePoolsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
-        if (source.AllRegions != null) {
-            this.AllRegions = new Boolean(source.AllRegions);
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
-        this.setParamSimple(map, prefix + "AllRegions", this.AllRegions);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
 
     }
 }

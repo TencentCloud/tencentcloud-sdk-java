@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenProVersionPrepaidResponse extends AbstractModel{
+public class ModifyResourceScheduleConfigResponse extends AbstractModel{
 
     /**
-    * 订单ID列表。
+    * true为草稿，表示还没有刷新资源池
     */
-    @SerializedName("DealIds")
+    @SerializedName("IsDraft")
     @Expose
-    private String [] DealIds;
+    private Boolean IsDraft;
+
+    /**
+    * 校验错误信息，如果不为空，则说明校验失败，配置没有成功
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class OpenProVersionPrepaidResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单ID列表。 
-     * @return DealIds 订单ID列表。
+     * Get true为草稿，表示还没有刷新资源池 
+     * @return IsDraft true为草稿，表示还没有刷新资源池
      */
-    public String [] getDealIds() {
-        return this.DealIds;
+    public Boolean getIsDraft() {
+        return this.IsDraft;
     }
 
     /**
-     * Set 订单ID列表。
-     * @param DealIds 订单ID列表。
+     * Set true为草稿，表示还没有刷新资源池
+     * @param IsDraft true为草稿，表示还没有刷新资源池
      */
-    public void setDealIds(String [] DealIds) {
-        this.DealIds = DealIds;
+    public void setIsDraft(Boolean IsDraft) {
+        this.IsDraft = IsDraft;
+    }
+
+    /**
+     * Get 校验错误信息，如果不为空，则说明校验失败，配置没有成功
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMsg 校验错误信息，如果不为空，则说明校验失败，配置没有成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 校验错误信息，如果不为空，则说明校验失败，配置没有成功
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMsg 校验错误信息，如果不为空，则说明校验失败，配置没有成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -68,19 +96,19 @@ public class OpenProVersionPrepaidResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public OpenProVersionPrepaidResponse() {
+    public ModifyResourceScheduleConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OpenProVersionPrepaidResponse(OpenProVersionPrepaidResponse source) {
-        if (source.DealIds != null) {
-            this.DealIds = new String[source.DealIds.length];
-            for (int i = 0; i < source.DealIds.length; i++) {
-                this.DealIds[i] = new String(source.DealIds[i]);
-            }
+    public ModifyResourceScheduleConfigResponse(ModifyResourceScheduleConfigResponse source) {
+        if (source.IsDraft != null) {
+            this.IsDraft = new Boolean(source.IsDraft);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +120,8 @@ public class OpenProVersionPrepaidResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+        this.setParamSimple(map, prefix + "IsDraft", this.IsDraft);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

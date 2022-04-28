@@ -51,6 +51,9 @@ public enum TsfErrorCode {
     // 部署组查询失败。
      FAILEDOPERATION_GROUPQUERYFAILD("FailedOperation.GroupQueryFaild"),
      
+    // 机器实例删除失败。
+     FAILEDOPERATION_INSTANCEDELETEFAILED("FailedOperation.InstanceDeleteFailed"),
+     
     // 查询机器实例部分失败。
      FAILEDOPERATION_INSTANCEQUERYFAILED("FailedOperation.InstanceQueryFailed"),
      
@@ -128,9 +131,6 @@ public enum TsfErrorCode {
      
     // TSF应用性能管理CTSDB客户端调用失败。
      FAILEDOPERATION_TSFAPMCTSDBCLIENTREQUESTERROR("FailedOperation.TsfApmCtsdbClientRequestError"),
-     
-    // resource服务错误。
-     FAILEDOPERATION_TSFASRESOURCESERVERERROR("FailedOperation.TsfAsResourceServerError"),
      
     // ctsdb数据库请求失败。
      FAILEDOPERATION_TSFCMONITORCTSDBCLIENTREQUESTFAIL("FailedOperation.TsfCmonitorCtsdbClientRequestFail"),
@@ -372,9 +372,6 @@ public enum TsfErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 所属应用ID不能为空。
-     INVALIDPARAMETERVALUE_APPLICATIONIDNULL("InvalidParameterValue.ApplicationIdNull"),
-     
     // 无效的微服务类型。
      INVALIDPARAMETERVALUE_APPLICATIONMICROTYPEINVALID("InvalidParameterValue.ApplicationMicroTypeInvalid"),
      
@@ -585,9 +582,6 @@ public enum TsfErrorCode {
     // 部署组名不能大于50个字符。
      INVALIDPARAMETERVALUE_GROUPNAMELENGTH("InvalidParameterValue.GroupNameLength"),
      
-    // 部署组名不能为空。
-     INVALIDPARAMETERVALUE_GROUPNAMENULL("InvalidParameterValue.GroupNameNull"),
-     
     // 部署组名称格式不正确,只能包含小写字母、数字及分隔符("-"),且必须以小写字母开头，数字或小写字母结尾。
      INVALIDPARAMETERVALUE_GROUPNAMEREGXMISMATCH("InvalidParameterValue.GroupNameRegxMismatch"),
      
@@ -596,9 +590,6 @@ public enum TsfErrorCode {
      
     // 分组无效的分业参数。
      INVALIDPARAMETERVALUE_GROUPPAGELIMITINVALID("InvalidParameterValue.GroupPageLimitInvalid"),
-     
-    // 程序包不能为空。
-     INVALIDPARAMETERVALUE_GROUPPKGNULL("InvalidParameterValue.GroupPkgNull"),
      
     // 无效的部署组状态过滤字段。
      INVALIDPARAMETERVALUE_GROUPSTATUSINVALID("InvalidParameterValue.GroupStatusInvalid"),
@@ -809,9 +800,6 @@ public enum TsfErrorCode {
      
     // 限流规则已存在，请检查规则名和规则配置。
      RESOURCEINUSE_RATELIMITRULEEXISTERROR("ResourceInUse.RatelimitRuleExistError"),
-     
-    // 实例数已达上限。
-     RESOURCEINSUFFICIENT_INSTANCEEXCESSLIMIT("ResourceInsufficient.InstanceExcessLimit"),
      
     // 仓库空间达到上限。
      RESOURCEINSUFFICIENT_PACKAGESPACEFULL("ResourceInsufficient.PackageSpaceFull"),

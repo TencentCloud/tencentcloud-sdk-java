@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.apm.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServerlessGroupResponse extends AbstractModel{
+public class DescribeServiceOverviewResponse extends AbstractModel{
 
     /**
-    * 创建成功的部署组ID，返回null表示失败
+    * 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("Records")
     @Expose
-    private String Result;
+    private ApmMetricRecord [] Records;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class CreateServerlessGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建成功的部署组ID，返回null表示失败
+     * Get 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 创建成功的部署组ID，返回null表示失败
+     * @return Records 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getResult() {
-        return this.Result;
+    public ApmMetricRecord [] getRecords() {
+        return this.Records;
     }
 
     /**
-     * Set 创建成功的部署组ID，返回null表示失败
+     * Set 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 创建成功的部署组ID，返回null表示失败
+     * @param Records 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(String Result) {
-        this.Result = Result;
+    public void setRecords(ApmMetricRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
@@ -73,16 +73,19 @@ public class CreateServerlessGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateServerlessGroupResponse() {
+    public DescribeServiceOverviewResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateServerlessGroupResponse(CreateServerlessGroupResponse source) {
-        if (source.Result != null) {
-            this.Result = new String(source.Result);
+    public DescribeServiceOverviewResponse(DescribeServiceOverviewResponse source) {
+        if (source.Records != null) {
+            this.Records = new ApmMetricRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new ApmMetricRecord(source.Records[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +97,7 @@ public class CreateServerlessGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

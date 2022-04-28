@@ -1299,6 +1299,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口(RenewInstances)用于续费一个或多个轻量应用服务器实例。
+     * @param req RenewInstancesRequest
+     * @return RenewInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstancesResponse RenewInstances(RenewInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenewInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
      * @param req ResetAttachCcnRequest
      * @return ResetAttachCcnResponse

@@ -44,6 +44,13 @@ public class BindAutoScalingGroupRequest extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
+    * 队列名称。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
     * 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
     */
     @SerializedName("ExpansionBusyTime")
@@ -128,6 +135,22 @@ false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
+    }
+
+    /**
+     * Get 队列名称。 
+     * @return QueueName 队列名称。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 队列名称。
+     * @param QueueName 队列名称。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
     }
 
     /**
@@ -243,6 +266,9 @@ false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩
         if (source.AutoScalingGroupId != null) {
             this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
         if (source.ExpansionBusyTime != null) {
             this.ExpansionBusyTime = new Long(source.ExpansionBusyTime);
         }
@@ -268,6 +294,7 @@ false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "ExpansionBusyTime", this.ExpansionBusyTime);
         this.setParamSimple(map, prefix + "ShrinkIdleTime", this.ShrinkIdleTime);
         this.setParamSimple(map, prefix + "EnableAutoExpansion", this.EnableAutoExpansion);

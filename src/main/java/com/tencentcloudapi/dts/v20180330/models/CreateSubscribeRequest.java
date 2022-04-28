@@ -65,6 +65,13 @@ public class CreateSubscribeRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * 用户自定义实例名
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 订阅的数据库类型，目前支持的有 mysql 
      * @return Product 订阅的数据库类型，目前支持的有 mysql
      */
@@ -160,6 +167,22 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 用户自定义实例名 
+     * @return Name 用户自定义实例名
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 用户自定义实例名
+     * @param Name 用户自定义实例名
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public CreateSubscribeRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateSubscribeRequest extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }
