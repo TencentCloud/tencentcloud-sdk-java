@@ -65,6 +65,27 @@ public class CreateSchemeUrlRequest extends AbstractModel{
     private String FlowId;
 
     /**
+    * 企业名称
+    */
+    @SerializedName("OrganizationName")
+    @Expose
+    private String OrganizationName;
+
+    /**
+    * 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+    */
+    @SerializedName("EndPoint")
+    @Expose
+    private String EndPoint;
+
+    /**
+    * 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+    */
+    @SerializedName("AutoJumpBack")
+    @Expose
+    private Boolean AutoJumpBack;
+
+    /**
      * Get 调用方用户信息，参考通用结构 
      * @return Operator 调用方用户信息，参考通用结构
      */
@@ -160,6 +181,54 @@ public class CreateSchemeUrlRequest extends AbstractModel{
         this.FlowId = FlowId;
     }
 
+    /**
+     * Get 企业名称 
+     * @return OrganizationName 企业名称
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set 企业名称
+     * @param OrganizationName 企业名称
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
+    }
+
+    /**
+     * Get 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型 
+     * @return EndPoint 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     */
+    public String getEndPoint() {
+        return this.EndPoint;
+    }
+
+    /**
+     * Set 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     * @param EndPoint 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     */
+    public void setEndPoint(String EndPoint) {
+        this.EndPoint = EndPoint;
+    }
+
+    /**
+     * Get 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效 
+     * @return AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+     */
+    public Boolean getAutoJumpBack() {
+        return this.AutoJumpBack;
+    }
+
+    /**
+     * Set 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+     * @param AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+     */
+    public void setAutoJumpBack(Boolean AutoJumpBack) {
+        this.AutoJumpBack = AutoJumpBack;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -186,6 +255,15 @@ public class CreateSchemeUrlRequest extends AbstractModel{
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
+        if (source.EndPoint != null) {
+            this.EndPoint = new String(source.EndPoint);
+        }
+        if (source.AutoJumpBack != null) {
+            this.AutoJumpBack = new Boolean(source.AutoJumpBack);
+        }
     }
 
 
@@ -199,6 +277,9 @@ public class CreateSchemeUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "PathType", this.PathType);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamSimple(map, prefix + "EndPoint", this.EndPoint);
+        this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
 
     }
 }

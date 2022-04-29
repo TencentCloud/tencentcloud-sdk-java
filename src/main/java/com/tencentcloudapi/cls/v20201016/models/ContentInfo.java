@@ -46,6 +46,14 @@ public class ContentInfo extends AbstractModel{
     private JsonInfo Json;
 
     /**
+    * parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Parquet")
+    @Expose
+    private ParquetInfo Parquet;
+
+    /**
      * Get 内容格式，支持json、csv 
      * @return Format 内容格式，支持json、csv
      */
@@ -101,6 +109,26 @@ public class ContentInfo extends AbstractModel{
         this.Json = Json;
     }
 
+    /**
+     * Get parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Parquet parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ParquetInfo getParquet() {
+        return this.Parquet;
+    }
+
+    /**
+     * Set parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Parquet parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParquet(ParquetInfo Parquet) {
+        this.Parquet = Parquet;
+    }
+
     public ContentInfo() {
     }
 
@@ -118,6 +146,9 @@ public class ContentInfo extends AbstractModel{
         if (source.Json != null) {
             this.Json = new JsonInfo(source.Json);
         }
+        if (source.Parquet != null) {
+            this.Parquet = new ParquetInfo(source.Parquet);
+        }
     }
 
 
@@ -128,6 +159,7 @@ public class ContentInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamObj(map, prefix + "Csv.", this.Csv);
         this.setParamObj(map, prefix + "Json.", this.Json);
+        this.setParamObj(map, prefix + "Parquet.", this.Parquet);
 
     }
 }

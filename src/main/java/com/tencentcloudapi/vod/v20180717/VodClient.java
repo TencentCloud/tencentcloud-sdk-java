@@ -1312,6 +1312,30 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口返回查询时间范围内每天使用的图片智能识别用量信息。
+   1. 可以查询最近365天内的图片智能识别统计数据。
+   2. 查询时间跨度不超过90天。
+   3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+
+     * @param req DescribeImageReviewUsageDataRequest
+     * @return DescribeImageReviewUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(DescribeImageReviewUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageReviewUsageDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageReviewUsageData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询雪碧图模板，支持根据条件，分页查询。
      * @param req DescribeImageSpriteTemplatesRequest
      * @return DescribeImageSpriteTemplatesResponse
@@ -2585,6 +2609,31 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
+
+><li>图片文件大小支持：文件 < 5M；</li>
+><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响智能识别效果；</li>
+><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+
+     * @param req ReviewImageRequest
+     * @return ReviewImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReviewImageResponse ReviewImage(ReviewImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReviewImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReviewImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReviewImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
