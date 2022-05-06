@@ -1381,6 +1381,86 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *拉取防护概览攻击趋势
+     * @param req DescribeOverviewAttackTrendRequest
+     * @return DescribeOverviewAttackTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrend(DescribeOverviewAttackTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewAttackTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewAttackTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewAttackTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+     * @param req DescribeOverviewCCTrendRequest
+     * @return DescribeOverviewCCTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewCCTrendResponse DescribeOverviewCCTrend(DescribeOverviewCCTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewCCTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewCCTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewCCTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取防护概览DDoS攻击流量带宽和攻击包速率数据
+     * @param req DescribeOverviewDDoSTrendRequest
+     * @return DescribeOverviewDDoSTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrend(DescribeOverviewDDoSTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewDDoSTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewDDoSTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewDDoSTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取防护概览指标
+     * @param req DescribeOverviewIndexRequest
+     * @return DescribeOverviewIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewIndexResponse DescribeOverviewIndex(DescribeOverviewIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
      * @param req DisassociateDDoSEipAddressRequest
      * @return DisassociateDDoSEipAddressResponse

@@ -39,7 +39,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *AddCdnDomain 用于新增内容分发网络加速域名。
+     *AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
      * @param req AddCdnDomainRequest
      * @return AddCdnDomainResponse
      * @throws TencentCloudSDKException

@@ -165,6 +165,9 @@ public enum CdnErrorCode {
     // ServiceType字段不合法，请确认后重试。
      INVALIDPARAMETER_CDNINVALIDPARAMSERVICETYPE("InvalidParameter.CdnInvalidParamServiceType"),
      
+    // 配置暂不支持开启该配置。
+     INVALIDPARAMETER_CDNKEYRULESEXCLUDECUSTOMREQUIRESFULLLEGO("InvalidParameter.CdnKeyRulesExcludeCustomRequiresFullLego"),
+     
     // QueryString字段不合法，请确认后重试。
      INVALIDPARAMETER_CDNKEYRULESINVALIDQUERYSTRINGVALUE("InvalidParameter.CdnKeyRulesInvalidQueryStringValue"),
      

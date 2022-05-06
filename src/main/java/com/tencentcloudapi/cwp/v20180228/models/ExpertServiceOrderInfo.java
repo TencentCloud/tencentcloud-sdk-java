@@ -30,7 +30,7 @@ public class ExpertServiceOrderInfo extends AbstractModel{
     private Long OrderId;
 
     /**
-    * 订单类型 1应急 2 旗舰护网 3 安全管家
+    * 订单类型 1应急 2 旗舰重保 3 安全管家
     */
     @SerializedName("InquireType")
     @Expose
@@ -88,16 +88,16 @@ public class ExpertServiceOrderInfo extends AbstractModel{
     }
 
     /**
-     * Get 订单类型 1应急 2 旗舰护网 3 安全管家 
-     * @return InquireType 订单类型 1应急 2 旗舰护网 3 安全管家
+     * Get 订单类型 1应急 2 旗舰重保 3 安全管家 
+     * @return InquireType 订单类型 1应急 2 旗舰重保 3 安全管家
      */
     public Long getInquireType() {
         return this.InquireType;
     }
 
     /**
-     * Set 订单类型 1应急 2 旗舰护网 3 安全管家
-     * @param InquireType 订单类型 1应急 2 旗舰护网 3 安全管家
+     * Set 订单类型 1应急 2 旗舰重保 3 安全管家
+     * @param InquireType 订单类型 1应急 2 旗舰重保 3 安全管家
      */
     public void setInquireType(Long InquireType) {
         this.InquireType = InquireType;

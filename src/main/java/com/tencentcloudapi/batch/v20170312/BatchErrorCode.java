@@ -111,6 +111,9 @@ public enum BatchErrorCode {
     // Filter参数不正确。
      INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
+    // 可用区和地域不匹配。
+     INVALIDPARAMETERVALUE_INVALIDZONEMISMATCHREGION("InvalidParameterValue.InvalidZoneMismatchRegion"),
+     
     // Filter参数值数量超过限制。
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      

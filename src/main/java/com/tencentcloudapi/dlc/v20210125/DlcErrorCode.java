@@ -144,6 +144,9 @@ public enum DlcErrorCode {
     // 子用户不存在。
      UNAUTHORIZEDOPERATION_USERNOTEXIST("UnauthorizedOperation.UserNotExist"),
      
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
     // 无法修改主账号。
      UNSUPPORTEDOPERATION_MODIFYOWNERUNSUPPORTED("UnsupportedOperation.ModifyOwnerUnsupported");
      

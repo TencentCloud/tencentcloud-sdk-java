@@ -78,4 +78,24 @@ public class TeoClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *用户查询用户站点信息列表，支持分页
+     * @param req DescribeZonesRequest
+     * @return DescribeZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

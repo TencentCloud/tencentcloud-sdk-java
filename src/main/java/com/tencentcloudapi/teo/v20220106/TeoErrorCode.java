@@ -31,7 +31,13 @@ public enum TeoErrorCode {
      LIMITEXCEEDED_BATCHQUOTA("LimitExceeded.BatchQuota"),
      
     // 当天提交的资源数超过上限。
-     LIMITEXCEEDED_DAILYQUOTA("LimitExceeded.DailyQuota");
+     LIMITEXCEEDED_DAILYQUOTA("LimitExceeded.DailyQuota"),
+     
+    // Cam 未授权。
+     UNAUTHORIZEDOPERATION_CAMUNAUTHORIZED("UnauthorizedOperation.CamUnauthorized"),
+     
+    // 子账户没有操作权限，请添加权限后继续操作。
+     UNAUTHORIZEDOPERATION_NOPERMISSION("UnauthorizedOperation.NoPermission");
      
     private String value;
     private TeoErrorCode (String value){

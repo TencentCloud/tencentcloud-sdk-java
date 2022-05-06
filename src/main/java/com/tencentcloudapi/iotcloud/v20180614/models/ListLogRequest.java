@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListLogRequest extends AbstractModel{
 
     /**
-    * 日志开始时间
+    * 日志开始时间，毫秒级时间戳
     */
     @SerializedName("MinTime")
     @Expose
     private Long MinTime;
 
     /**
-    * 日志结束时间
+    * 日志结束时间，毫秒级时间戳
     */
     @SerializedName("MaxTime")
     @Expose
@@ -59,32 +59,32 @@ public class ListLogRequest extends AbstractModel{
     private Long MaxNum;
 
     /**
-     * Get 日志开始时间 
-     * @return MinTime 日志开始时间
+     * Get 日志开始时间，毫秒级时间戳 
+     * @return MinTime 日志开始时间，毫秒级时间戳
      */
     public Long getMinTime() {
         return this.MinTime;
     }
 
     /**
-     * Set 日志开始时间
-     * @param MinTime 日志开始时间
+     * Set 日志开始时间，毫秒级时间戳
+     * @param MinTime 日志开始时间，毫秒级时间戳
      */
     public void setMinTime(Long MinTime) {
         this.MinTime = MinTime;
     }
 
     /**
-     * Get 日志结束时间 
-     * @return MaxTime 日志结束时间
+     * Get 日志结束时间，毫秒级时间戳 
+     * @return MaxTime 日志结束时间，毫秒级时间戳
      */
     public Long getMaxTime() {
         return this.MaxTime;
     }
 
     /**
-     * Set 日志结束时间
-     * @param MaxTime 日志结束时间
+     * Set 日志结束时间，毫秒级时间戳
+     * @param MaxTime 日志结束时间，毫秒级时间戳
      */
     public void setMaxTime(Long MaxTime) {
         this.MaxTime = MaxTime;

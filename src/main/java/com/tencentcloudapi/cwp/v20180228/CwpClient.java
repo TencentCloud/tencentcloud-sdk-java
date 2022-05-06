@@ -2439,7 +2439,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *专家服务-旗舰护网列表
+     *专家服务-旗舰重保列表
      * @param req DescribeProtectNetListRequest
      * @return DescribeProtectNetListResponse
      * @throws TencentCloudSDKException
