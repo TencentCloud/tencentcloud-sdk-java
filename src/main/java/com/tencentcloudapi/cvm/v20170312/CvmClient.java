@@ -923,6 +923,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *提供导出自定义镜像到指定COS存储桶的能力
+     * @param req ExportImagesRequest
+     * @return ExportImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportImagesResponse ExportImages(ExportImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportImagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportImagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportImages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
      * @param req ImportImageRequest
      * @return ImportImageResponse

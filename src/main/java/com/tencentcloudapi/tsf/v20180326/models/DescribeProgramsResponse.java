@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterAsGroupResponse extends AbstractModel{
+public class DescribeProgramsResponse extends AbstractModel{
 
     /**
-    * 启动配置ID
+    * 数据集列表
     */
-    @SerializedName("LaunchConfigurationId")
+    @SerializedName("Result")
     @Expose
-    private String LaunchConfigurationId;
-
-    /**
-    * 伸缩组ID
-    */
-    @SerializedName("AutoScalingGroupId")
-    @Expose
-    private String AutoScalingGroupId;
+    private PagedProgram Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 启动配置ID 
-     * @return LaunchConfigurationId 启动配置ID
+     * Get 数据集列表 
+     * @return Result 数据集列表
      */
-    public String getLaunchConfigurationId() {
-        return this.LaunchConfigurationId;
+    public PagedProgram getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 启动配置ID
-     * @param LaunchConfigurationId 启动配置ID
+     * Set 数据集列表
+     * @param Result 数据集列表
      */
-    public void setLaunchConfigurationId(String LaunchConfigurationId) {
-        this.LaunchConfigurationId = LaunchConfigurationId;
-    }
-
-    /**
-     * Get 伸缩组ID 
-     * @return AutoScalingGroupId 伸缩组ID
-     */
-    public String getAutoScalingGroupId() {
-        return this.AutoScalingGroupId;
-    }
-
-    /**
-     * Set 伸缩组ID
-     * @param AutoScalingGroupId 伸缩组ID
-     */
-    public void setAutoScalingGroupId(String AutoScalingGroupId) {
-        this.AutoScalingGroupId = AutoScalingGroupId;
+    public void setResult(PagedProgram Result) {
+        this.Result = Result;
     }
 
     /**
@@ -91,19 +68,16 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateClusterAsGroupResponse() {
+    public DescribeProgramsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterAsGroupResponse(CreateClusterAsGroupResponse source) {
-        if (source.LaunchConfigurationId != null) {
-            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
-        }
-        if (source.AutoScalingGroupId != null) {
-            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+    public DescribeProgramsResponse(DescribeProgramsResponse source) {
+        if (source.Result != null) {
+            this.Result = new PagedProgram(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +89,7 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
-        this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

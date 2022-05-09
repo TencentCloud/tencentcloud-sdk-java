@@ -140,6 +140,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] UidSet;
 
     /**
+    * 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -427,6 +434,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.UidSet = UidSet;
     }
 
+    /**
+     * Get 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务 
+     * @return InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * @param InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -498,6 +521,9 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.UidSet[i] = new String(source.UidSet[i]);
             }
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -520,6 +546,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamArraySimple(map, prefix + "UidSet.", this.UidSet);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

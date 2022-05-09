@@ -58,14 +58,14 @@ public class UpdateDictionariesRequest extends AbstractModel{
     private String [] QQDict;
 
     /**
-    * 0：安装；1：删除
+    * 0：安装；1：删除。默认值0
     */
     @SerializedName("UpdateType")
     @Expose
     private Long UpdateType;
 
     /**
-    * 是否强制重启集群
+    * 是否强制重启集群。默认值false
     */
     @SerializedName("ForceRestart")
     @Expose
@@ -152,32 +152,32 @@ public class UpdateDictionariesRequest extends AbstractModel{
     }
 
     /**
-     * Get 0：安装；1：删除 
-     * @return UpdateType 0：安装；1：删除
+     * Get 0：安装；1：删除。默认值0 
+     * @return UpdateType 0：安装；1：删除。默认值0
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 0：安装；1：删除
-     * @param UpdateType 0：安装；1：删除
+     * Set 0：安装；1：删除。默认值0
+     * @param UpdateType 0：安装；1：删除。默认值0
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get 是否强制重启集群 
-     * @return ForceRestart 是否强制重启集群
+     * Get 是否强制重启集群。默认值false 
+     * @return ForceRestart 是否强制重启集群。默认值false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set 是否强制重启集群
-     * @param ForceRestart 是否强制重启集群
+     * Set 是否强制重启集群。默认值false
+     * @param ForceRestart 是否强制重启集群。默认值false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;

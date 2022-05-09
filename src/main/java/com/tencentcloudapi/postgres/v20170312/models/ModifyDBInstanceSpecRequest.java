@@ -65,21 +65,21 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+    * 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
     */
     @SerializedName("SwitchTag")
     @Expose
     private Long SwitchTag;
 
     /**
-    * 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
+    * 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+    * 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
     */
     @SerializedName("SwitchEndTime")
     @Expose
@@ -182,48 +182,48 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。 
-     * @return SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     * Get 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。 
+     * @return SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
-     * @param SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     * Set 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+     * @param SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
     }
 
     /**
-     * Get 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。 
-     * @return SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
+     * Get 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。 
+     * @return SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
-     * @param SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
+     * Set 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+     * @param SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。 
-     * @return SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+     * Get 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。 
+     * @return SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
-     * @param SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+     * Set 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+     * @param SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;

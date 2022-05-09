@@ -100,7 +100,7 @@ public class InstanceInfo extends AbstractModel{
     private Long ChargePeriod;
 
     /**
-    * 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+    * 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -755,16 +755,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。 
-     * @return RenewFlag 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * Get 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。 
+     * @return RenewFlag 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
-     * @param RenewFlag 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * Set 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * @param RenewFlag 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;

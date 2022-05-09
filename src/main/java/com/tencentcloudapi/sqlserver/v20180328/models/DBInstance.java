@@ -295,6 +295,42 @@ public class DBInstance extends AbstractModel{
     private String BackupModel;
 
     /**
+    * 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceNote")
+    @Expose
+    private String InstanceNote;
+
+    /**
+    * 备份周期
+    */
+    @SerializedName("BackupCycle")
+    @Expose
+    private Long [] BackupCycle;
+
+    /**
+    * 备份周期类型，[daily、weekly、monthly]
+    */
+    @SerializedName("BackupCycleType")
+    @Expose
+    private String BackupCycleType;
+
+    /**
+    * 数据(日志)备份保留时间
+    */
+    @SerializedName("BackupSaveDays")
+    @Expose
+    private Long BackupSaveDays;
+
+    /**
+    * 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -926,6 +962,90 @@ public class DBInstance extends AbstractModel{
         this.BackupModel = BackupModel;
     }
 
+    /**
+     * Get 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceNote 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceNote() {
+        return this.InstanceNote;
+    }
+
+    /**
+     * Set 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceNote 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceNote(String InstanceNote) {
+        this.InstanceNote = InstanceNote;
+    }
+
+    /**
+     * Get 备份周期 
+     * @return BackupCycle 备份周期
+     */
+    public Long [] getBackupCycle() {
+        return this.BackupCycle;
+    }
+
+    /**
+     * Set 备份周期
+     * @param BackupCycle 备份周期
+     */
+    public void setBackupCycle(Long [] BackupCycle) {
+        this.BackupCycle = BackupCycle;
+    }
+
+    /**
+     * Get 备份周期类型，[daily、weekly、monthly] 
+     * @return BackupCycleType 备份周期类型，[daily、weekly、monthly]
+     */
+    public String getBackupCycleType() {
+        return this.BackupCycleType;
+    }
+
+    /**
+     * Set 备份周期类型，[daily、weekly、monthly]
+     * @param BackupCycleType 备份周期类型，[daily、weekly、monthly]
+     */
+    public void setBackupCycleType(String BackupCycleType) {
+        this.BackupCycleType = BackupCycleType;
+    }
+
+    /**
+     * Get 数据(日志)备份保留时间 
+     * @return BackupSaveDays 数据(日志)备份保留时间
+     */
+    public Long getBackupSaveDays() {
+        return this.BackupSaveDays;
+    }
+
+    /**
+     * Set 数据(日志)备份保留时间
+     * @param BackupSaveDays 数据(日志)备份保留时间
+     */
+    public void setBackupSaveDays(Long BackupSaveDays) {
+        this.BackupSaveDays = BackupSaveDays;
+    }
+
+    /**
+     * Get 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务 
+     * @return InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * @param InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DBInstance() {
     }
 
@@ -1051,6 +1171,24 @@ public class DBInstance extends AbstractModel{
         if (source.BackupModel != null) {
             this.BackupModel = new String(source.BackupModel);
         }
+        if (source.InstanceNote != null) {
+            this.InstanceNote = new String(source.InstanceNote);
+        }
+        if (source.BackupCycle != null) {
+            this.BackupCycle = new Long[source.BackupCycle.length];
+            for (int i = 0; i < source.BackupCycle.length; i++) {
+                this.BackupCycle[i] = new Long(source.BackupCycle[i]);
+            }
+        }
+        if (source.BackupCycleType != null) {
+            this.BackupCycleType = new String(source.BackupCycleType);
+        }
+        if (source.BackupSaveDays != null) {
+            this.BackupSaveDays = new Long(source.BackupSaveDays);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -1096,6 +1234,11 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "HAFlag", this.HAFlag);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
+        this.setParamSimple(map, prefix + "InstanceNote", this.InstanceNote);
+        this.setParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+        this.setParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
+        this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

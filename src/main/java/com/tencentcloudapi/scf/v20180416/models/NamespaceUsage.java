@@ -52,12 +52,20 @@ public class NamespaceUsage extends AbstractModel{
     private Long TotalConcurrencyMem;
 
     /**
-    * 命名空间配额使用量
+    * 命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalAllocatedConcurrencyMem")
     @Expose
     private Long TotalAllocatedConcurrencyMem;
+
+    /**
+    * 命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalAllocatedProvisionedMem")
+    @Expose
+    private Long TotalAllocatedProvisionedMem;
 
     /**
      * Get 函数数组 
@@ -128,9 +136,9 @@ public class NamespaceUsage extends AbstractModel{
     }
 
     /**
-     * Get 命名空间配额使用量
+     * Get 命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalAllocatedConcurrencyMem 命名空间配额使用量
+     * @return TotalAllocatedConcurrencyMem 命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalAllocatedConcurrencyMem() {
@@ -138,13 +146,33 @@ public class NamespaceUsage extends AbstractModel{
     }
 
     /**
-     * Set 命名空间配额使用量
+     * Set 命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalAllocatedConcurrencyMem 命名空间配额使用量
+     * @param TotalAllocatedConcurrencyMem 命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalAllocatedConcurrencyMem(Long TotalAllocatedConcurrencyMem) {
         this.TotalAllocatedConcurrencyMem = TotalAllocatedConcurrencyMem;
+    }
+
+    /**
+     * Get 命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalAllocatedProvisionedMem 命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalAllocatedProvisionedMem() {
+        return this.TotalAllocatedProvisionedMem;
+    }
+
+    /**
+     * Set 命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalAllocatedProvisionedMem 命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalAllocatedProvisionedMem(Long TotalAllocatedProvisionedMem) {
+        this.TotalAllocatedProvisionedMem = TotalAllocatedProvisionedMem;
     }
 
     public NamespaceUsage() {
@@ -173,6 +201,9 @@ public class NamespaceUsage extends AbstractModel{
         if (source.TotalAllocatedConcurrencyMem != null) {
             this.TotalAllocatedConcurrencyMem = new Long(source.TotalAllocatedConcurrencyMem);
         }
+        if (source.TotalAllocatedProvisionedMem != null) {
+            this.TotalAllocatedProvisionedMem = new Long(source.TotalAllocatedProvisionedMem);
+        }
     }
 
 
@@ -185,6 +216,7 @@ public class NamespaceUsage extends AbstractModel{
         this.setParamSimple(map, prefix + "FunctionsCount", this.FunctionsCount);
         this.setParamSimple(map, prefix + "TotalConcurrencyMem", this.TotalConcurrencyMem);
         this.setParamSimple(map, prefix + "TotalAllocatedConcurrencyMem", this.TotalAllocatedConcurrencyMem);
+        this.setParamSimple(map, prefix + "TotalAllocatedProvisionedMem", this.TotalAllocatedProvisionedMem);
 
     }
 }

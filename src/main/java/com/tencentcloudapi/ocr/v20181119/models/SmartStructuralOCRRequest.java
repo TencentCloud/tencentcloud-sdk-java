@@ -44,7 +44,7 @@ public class SmartStructuralOCRRequest extends AbstractModel{
     private String ImageBase64;
 
     /**
-    * 需返回的字段名称，例：
+    * 自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
     */
@@ -113,10 +113,10 @@ ItemNames=["姓名","性别"]
     }
 
     /**
-     * Get 需返回的字段名称，例：
+     * Get 自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"] 
-     * @return ItemNames 需返回的字段名称，例：
+     * @return ItemNames 自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
      */
@@ -125,10 +125,10 @@ ItemNames=["姓名","性别"]
     }
 
     /**
-     * Set 需返回的字段名称，例：
+     * Set 自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
-     * @param ItemNames 需返回的字段名称，例：
+     * @param ItemNames 自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
      */

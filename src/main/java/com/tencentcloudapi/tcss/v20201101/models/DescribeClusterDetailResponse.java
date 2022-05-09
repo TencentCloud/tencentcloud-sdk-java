@@ -135,6 +135,62 @@ public class DescribeClusterDetailResponse extends AbstractModel{
     private String TaskCreateTime;
 
     /**
+    * 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * API Server地址
+    */
+    @SerializedName("ApiServerAddress")
+    @Expose
+    private String ApiServerAddress;
+
+    /**
+    * 节点数
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
+    * 命名空间数
+    */
+    @SerializedName("NamespaceCount")
+    @Expose
+    private Long NamespaceCount;
+
+    /**
+    * 工作负载数
+    */
+    @SerializedName("WorkloadCount")
+    @Expose
+    private Long WorkloadCount;
+
+    /**
+    * Pod数量
+    */
+    @SerializedName("PodCount")
+    @Expose
+    private Long PodCount;
+
+    /**
+    * Service数量
+    */
+    @SerializedName("ServiceCount")
+    @Expose
+    private Long ServiceCount;
+
+    /**
+    * Ingress数量
+    */
+    @SerializedName("IngressCount")
+    @Expose
+    private Long IngressCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -398,6 +454,134 @@ public class DescribeClusterDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络 
+     * @return NetworkType 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+     * @param NetworkType 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get API Server地址 
+     * @return ApiServerAddress API Server地址
+     */
+    public String getApiServerAddress() {
+        return this.ApiServerAddress;
+    }
+
+    /**
+     * Set API Server地址
+     * @param ApiServerAddress API Server地址
+     */
+    public void setApiServerAddress(String ApiServerAddress) {
+        this.ApiServerAddress = ApiServerAddress;
+    }
+
+    /**
+     * Get 节点数 
+     * @return NodeCount 节点数
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set 节点数
+     * @param NodeCount 节点数
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get 命名空间数 
+     * @return NamespaceCount 命名空间数
+     */
+    public Long getNamespaceCount() {
+        return this.NamespaceCount;
+    }
+
+    /**
+     * Set 命名空间数
+     * @param NamespaceCount 命名空间数
+     */
+    public void setNamespaceCount(Long NamespaceCount) {
+        this.NamespaceCount = NamespaceCount;
+    }
+
+    /**
+     * Get 工作负载数 
+     * @return WorkloadCount 工作负载数
+     */
+    public Long getWorkloadCount() {
+        return this.WorkloadCount;
+    }
+
+    /**
+     * Set 工作负载数
+     * @param WorkloadCount 工作负载数
+     */
+    public void setWorkloadCount(Long WorkloadCount) {
+        this.WorkloadCount = WorkloadCount;
+    }
+
+    /**
+     * Get Pod数量 
+     * @return PodCount Pod数量
+     */
+    public Long getPodCount() {
+        return this.PodCount;
+    }
+
+    /**
+     * Set Pod数量
+     * @param PodCount Pod数量
+     */
+    public void setPodCount(Long PodCount) {
+        this.PodCount = PodCount;
+    }
+
+    /**
+     * Get Service数量 
+     * @return ServiceCount Service数量
+     */
+    public Long getServiceCount() {
+        return this.ServiceCount;
+    }
+
+    /**
+     * Set Service数量
+     * @param ServiceCount Service数量
+     */
+    public void setServiceCount(Long ServiceCount) {
+        this.ServiceCount = ServiceCount;
+    }
+
+    /**
+     * Get Ingress数量 
+     * @return IngressCount Ingress数量
+     */
+    public Long getIngressCount() {
+        return this.IngressCount;
+    }
+
+    /**
+     * Set Ingress数量
+     * @param IngressCount Ingress数量
+     */
+    public void setIngressCount(Long IngressCount) {
+        this.IngressCount = IngressCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -469,6 +653,30 @@ public class DescribeClusterDetailResponse extends AbstractModel{
         if (source.TaskCreateTime != null) {
             this.TaskCreateTime = new String(source.TaskCreateTime);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.ApiServerAddress != null) {
+            this.ApiServerAddress = new String(source.ApiServerAddress);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.NamespaceCount != null) {
+            this.NamespaceCount = new Long(source.NamespaceCount);
+        }
+        if (source.WorkloadCount != null) {
+            this.WorkloadCount = new Long(source.WorkloadCount);
+        }
+        if (source.PodCount != null) {
+            this.PodCount = new Long(source.PodCount);
+        }
+        if (source.ServiceCount != null) {
+            this.ServiceCount = new Long(source.ServiceCount);
+        }
+        if (source.IngressCount != null) {
+            this.IngressCount = new Long(source.IngressCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -495,6 +703,14 @@ public class DescribeClusterDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "DefenderStatus", this.DefenderStatus);
         this.setParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "ApiServerAddress", this.ApiServerAddress);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "NamespaceCount", this.NamespaceCount);
+        this.setParamSimple(map, prefix + "WorkloadCount", this.WorkloadCount);
+        this.setParamSimple(map, prefix + "PodCount", this.PodCount);
+        this.setParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
+        this.setParamSimple(map, prefix + "IngressCount", this.IngressCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,7 +31,7 @@ public class UploadFilesRequest extends AbstractModel{
 
     /**
     * 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模版； 文件类型：.pdf/.html
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
 3. FLOW - 签署过程 文件类型：.pdf/.html
 4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
@@ -98,14 +98,14 @@ HTML-- .html文件
 
     /**
      * Get 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模版； 文件类型：.pdf/.html
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
 3. FLOW - 签署过程 文件类型：.pdf/.html
 4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
 5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
 6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png 
      * @return BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模版； 文件类型：.pdf/.html
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
 3. FLOW - 签署过程 文件类型：.pdf/.html
 4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
@@ -118,14 +118,14 @@ HTML-- .html文件
 
     /**
      * Set 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模版； 文件类型：.pdf/.html
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
 3. FLOW - 签署过程 文件类型：.pdf/.html
 4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
 5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
 6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
      * @param BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模版； 文件类型：.pdf/.html
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
 3. FLOW - 签署过程 文件类型：.pdf/.html
 4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png

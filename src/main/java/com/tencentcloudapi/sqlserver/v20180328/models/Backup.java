@@ -114,6 +114,13 @@ public class Backup extends AbstractModel{
     private String GroupId;
 
     /**
+    * 备份文件形式（pkg-打包备份文件，single-单库备份文件）
+    */
+    @SerializedName("BackupFormat")
+    @Expose
+    private String BackupFormat;
+
+    /**
      * Get 文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名 
      * @return FileName 文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
      */
@@ -321,6 +328,22 @@ public class Backup extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 备份文件形式（pkg-打包备份文件，single-单库备份文件） 
+     * @return BackupFormat 备份文件形式（pkg-打包备份文件，single-单库备份文件）
+     */
+    public String getBackupFormat() {
+        return this.BackupFormat;
+    }
+
+    /**
+     * Set 备份文件形式（pkg-打包备份文件，single-单库备份文件）
+     * @param BackupFormat 备份文件形式（pkg-打包备份文件，single-单库备份文件）
+     */
+    public void setBackupFormat(String BackupFormat) {
+        this.BackupFormat = BackupFormat;
+    }
+
     public Backup() {
     }
 
@@ -371,6 +394,9 @@ public class Backup extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.BackupFormat != null) {
+            this.BackupFormat = new String(source.BackupFormat);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class Backup extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
 
     }
 }

@@ -44,14 +44,14 @@ public class UpdatePluginsRequest extends AbstractModel{
     private String [] RemovePluginList;
 
     /**
-    * 是否强制重启
+    * 是否强制重启，默认值false
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-    * 是否重新安装
+    * 是否重新安装，默认值false
     */
     @SerializedName("ForceUpdate")
     @Expose
@@ -113,32 +113,32 @@ public class UpdatePluginsRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否强制重启 
-     * @return ForceRestart 是否强制重启
+     * Get 是否强制重启，默认值false 
+     * @return ForceRestart 是否强制重启，默认值false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set 是否强制重启
-     * @param ForceRestart 是否强制重启
+     * Set 是否强制重启，默认值false
+     * @param ForceRestart 是否强制重启，默认值false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;
     }
 
     /**
-     * Get 是否重新安装 
-     * @return ForceUpdate 是否重新安装
+     * Get 是否重新安装，默认值false 
+     * @return ForceUpdate 是否重新安装，默认值false
      */
     public Boolean getForceUpdate() {
         return this.ForceUpdate;
     }
 
     /**
-     * Set 是否重新安装
-     * @param ForceUpdate 是否重新安装
+     * Set 是否重新安装，默认值false
+     * @param ForceUpdate 是否重新安装，默认值false
      */
     public void setForceUpdate(Boolean ForceUpdate) {
         this.ForceUpdate = ForceUpdate;

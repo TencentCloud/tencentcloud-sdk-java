@@ -58,6 +58,13 @@ public class DescribeBackupFilesRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
+    * 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
      * Get 实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 实例ID，形如mssql-njj2mtpl
      */
@@ -137,6 +144,22 @@ public class DescribeBackupFilesRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    /**
+     * Get 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc 
+     * @return OrderBy 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     * @param OrderBy 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
     public DescribeBackupFilesRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeBackupFilesRequest extends AbstractModel{
         if (source.DatabaseName != null) {
             this.DatabaseName = new String(source.DatabaseName);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeBackupFilesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

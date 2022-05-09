@@ -2101,6 +2101,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询数据集列表
+     * @param req DescribeProgramsRequest
+     * @return DescribeProgramsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProgramsResponse DescribePrograms(DescribeProgramsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProgramsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProgramsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrograms");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询公共配置（单条）
      * @param req DescribePublicConfigRequest
      * @return DescribePublicConfigResponse

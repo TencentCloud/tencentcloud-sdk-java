@@ -30,7 +30,7 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 备份类型，当前只支持按天备份，取值为daily
+    * 备份类型，当length(BackupDay) <=7 && length(BackupDay) >=2时，取值为weekly，当length(BackupDay)=1时，取值daily，默认daily
     */
     @SerializedName("BackupType")
     @Expose
@@ -58,6 +58,20 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private String BackupModel;
 
     /**
+    * BackupType取值为weekly时，表示每周的星期N做备份。（如果数据备份保留时间<7天，则取值[1,2,3,4,5,6,7]。如果数据备份保留时间>=7天，则备份周期取值至少是一周的任意2天）
+    */
+    @SerializedName("BackupCycle")
+    @Expose
+    private Long [] BackupCycle;
+
+    /**
+    * 数据(日志)备份保留时间，取值[3-1830]天，默认7天
+    */
+    @SerializedName("BackupSaveDays")
+    @Expose
+    private Long BackupSaveDays;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -74,16 +88,16 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份类型，当前只支持按天备份，取值为daily 
-     * @return BackupType 备份类型，当前只支持按天备份，取值为daily
+     * Get 备份类型，当length(BackupDay) <=7 && length(BackupDay) >=2时，取值为weekly，当length(BackupDay)=1时，取值daily，默认daily 
+     * @return BackupType 备份类型，当length(BackupDay) <=7 && length(BackupDay) >=2时，取值为weekly，当length(BackupDay)=1时，取值daily，默认daily
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份类型，当前只支持按天备份，取值为daily
-     * @param BackupType 备份类型，当前只支持按天备份，取值为daily
+     * Set 备份类型，当length(BackupDay) <=7 && length(BackupDay) >=2时，取值为weekly，当length(BackupDay)=1时，取值daily，默认daily
+     * @param BackupType 备份类型，当length(BackupDay) <=7 && length(BackupDay) >=2时，取值为weekly，当length(BackupDay)=1时，取值daily，默认daily
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
@@ -137,6 +151,38 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupModel = BackupModel;
     }
 
+    /**
+     * Get BackupType取值为weekly时，表示每周的星期N做备份。（如果数据备份保留时间<7天，则取值[1,2,3,4,5,6,7]。如果数据备份保留时间>=7天，则备份周期取值至少是一周的任意2天） 
+     * @return BackupCycle BackupType取值为weekly时，表示每周的星期N做备份。（如果数据备份保留时间<7天，则取值[1,2,3,4,5,6,7]。如果数据备份保留时间>=7天，则备份周期取值至少是一周的任意2天）
+     */
+    public Long [] getBackupCycle() {
+        return this.BackupCycle;
+    }
+
+    /**
+     * Set BackupType取值为weekly时，表示每周的星期N做备份。（如果数据备份保留时间<7天，则取值[1,2,3,4,5,6,7]。如果数据备份保留时间>=7天，则备份周期取值至少是一周的任意2天）
+     * @param BackupCycle BackupType取值为weekly时，表示每周的星期N做备份。（如果数据备份保留时间<7天，则取值[1,2,3,4,5,6,7]。如果数据备份保留时间>=7天，则备份周期取值至少是一周的任意2天）
+     */
+    public void setBackupCycle(Long [] BackupCycle) {
+        this.BackupCycle = BackupCycle;
+    }
+
+    /**
+     * Get 数据(日志)备份保留时间，取值[3-1830]天，默认7天 
+     * @return BackupSaveDays 数据(日志)备份保留时间，取值[3-1830]天，默认7天
+     */
+    public Long getBackupSaveDays() {
+        return this.BackupSaveDays;
+    }
+
+    /**
+     * Set 数据(日志)备份保留时间，取值[3-1830]天，默认7天
+     * @param BackupSaveDays 数据(日志)备份保留时间，取值[3-1830]天，默认7天
+     */
+    public void setBackupSaveDays(Long BackupSaveDays) {
+        this.BackupSaveDays = BackupSaveDays;
+    }
+
     public ModifyBackupStrategyRequest() {
     }
 
@@ -160,6 +206,15 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         if (source.BackupModel != null) {
             this.BackupModel = new String(source.BackupModel);
         }
+        if (source.BackupCycle != null) {
+            this.BackupCycle = new Long[source.BackupCycle.length];
+            for (int i = 0; i < source.BackupCycle.length; i++) {
+                this.BackupCycle[i] = new Long(source.BackupCycle[i]);
+            }
+        }
+        if (source.BackupSaveDays != null) {
+            this.BackupSaveDays = new Long(source.BackupSaveDays);
+        }
     }
 
 
@@ -172,6 +227,8 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
         this.setParamSimple(map, prefix + "BackupDay", this.BackupDay);
         this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
+        this.setParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+        this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
 
     }
 }

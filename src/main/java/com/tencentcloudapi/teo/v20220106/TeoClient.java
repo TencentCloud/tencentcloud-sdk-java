@@ -39,6 +39,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *创建预热任务
+     * @param req CreatePrefetchTaskRequest
+     * @return CreatePrefetchTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrefetchTaskResponse CreatePrefetchTask(CreatePrefetchTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrefetchTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrefetchTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建清除缓存任务
      * @param req CreatePurgeTaskRequest
      * @return CreatePurgeTaskResponse
@@ -51,6 +71,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePurgeTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePurgeTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询预热任务状态
+     * @param req DescribePrefetchTasksRequest
+     * @return DescribePrefetchTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrefetchTasksResponse DescribePrefetchTasks(DescribePrefetchTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrefetchTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrefetchTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

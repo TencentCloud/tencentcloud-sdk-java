@@ -103,6 +103,16 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     private Long Vcrf;
 
     /**
+    * 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
+    */
+    @SerializedName("ContentAdaptStream")
+    @Expose
+    private Long ContentAdaptStream;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -314,6 +324,34 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
         this.Vcrf = Vcrf;
     }
 
+    /**
+     * Get 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。 
+     * @return ContentAdaptStream 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
+     */
+    public Long getContentAdaptStream() {
+        return this.ContentAdaptStream;
+    }
+
+    /**
+     * Set 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
+     * @param ContentAdaptStream 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
+     */
+    public void setContentAdaptStream(Long ContentAdaptStream) {
+        this.ContentAdaptStream = ContentAdaptStream;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -349,6 +387,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
         if (source.Vcrf != null) {
             this.Vcrf = new Long(source.Vcrf);
         }
+        if (source.ContentAdaptStream != null) {
+            this.ContentAdaptStream = new Long(source.ContentAdaptStream);
+        }
     }
 
 
@@ -365,6 +406,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
         this.setParamSimple(map, prefix + "Gop", this.Gop);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
+        this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
 
     }
 }

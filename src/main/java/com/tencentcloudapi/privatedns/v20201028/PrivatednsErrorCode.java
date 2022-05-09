@@ -184,7 +184,10 @@ public enum PrivatednsErrorCode {
      UNSUPPORTEDOPERATION_EXISTBOUNDVPC("UnsupportedOperation.ExistBoundVpc"),
      
     // 接口调用超过限频。
-     UNSUPPORTEDOPERATION_FREQUENCYLIMIT("UnsupportedOperation.FrequencyLimit");
+     UNSUPPORTEDOPERATION_FREQUENCYLIMIT("UnsupportedOperation.FrequencyLimit"),
+     
+    // 不支持设置子域名递归解析。
+     UNSUPPORTEDOPERATION_NOTSUPPORTDNSFORWARD("UnsupportedOperation.NotSupportDnsForward");
      
     private String value;
     private PrivatednsErrorCode (String value){

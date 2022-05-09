@@ -58,7 +58,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * vip保留时间，单位：天，注：需要最新版SDK支持
+    * 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
     */
     @SerializedName("Recycle")
     @Expose
@@ -145,16 +145,16 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get vip保留时间，单位：天，注：需要最新版SDK支持 
-     * @return Recycle vip保留时间，单位：天，注：需要最新版SDK支持
+     * Get 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk) 
+     * @return Recycle 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
      */
     public Long getRecycle() {
         return this.Recycle;
     }
 
     /**
-     * Set vip保留时间，单位：天，注：需要最新版SDK支持
-     * @param Recycle vip保留时间，单位：天，注：需要最新版SDK支持
+     * Set 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+     * @param Recycle 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
      */
     public void setRecycle(Long Recycle) {
         this.Recycle = Recycle;

@@ -100,6 +100,20 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long Group;
 
     /**
+    * 备份类型，1-数据备份，2-日志备份，默认值为1
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+    */
+    @SerializedName("BackupFormat")
+    @Expose
+    private String BackupFormat;
+
+    /**
      * Get 开始时间(yyyy-MM-dd HH:mm:ss) 
      * @return StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
@@ -275,6 +289,38 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.Group = Group;
     }
 
+    /**
+     * Get 备份类型，1-数据备份，2-日志备份，默认值为1 
+     * @return Type 备份类型，1-数据备份，2-日志备份，默认值为1
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 备份类型，1-数据备份，2-日志备份，默认值为1
+     * @param Type 备份类型，1-数据备份，2-日志备份，默认值为1
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件 
+     * @return BackupFormat 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+     */
+    public String getBackupFormat() {
+        return this.BackupFormat;
+    }
+
+    /**
+     * Set 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+     * @param BackupFormat 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+     */
+    public void setBackupFormat(String BackupFormat) {
+        this.BackupFormat = BackupFormat;
+    }
+
     public DescribeBackupsRequest() {
     }
 
@@ -316,6 +362,12 @@ public class DescribeBackupsRequest extends AbstractModel{
         if (source.Group != null) {
             this.Group = new Long(source.Group);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.BackupFormat != null) {
+            this.BackupFormat = new String(source.BackupFormat);
+        }
     }
 
 
@@ -334,6 +386,8 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "Group", this.Group);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
 
     }
 }

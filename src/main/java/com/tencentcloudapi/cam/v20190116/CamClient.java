@@ -179,6 +179,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *创建角色OIDC配置
+     * @param req CreateOIDCConfigRequest
+     * @return CreateOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOIDCConfigResponse CreateOIDCConfig(CreateOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOIDCConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreatePolicy）可用于创建策略。
      * @param req CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -339,6 +359,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *删除OIDC身份提供商
+     * @param req DeleteOIDCConfigRequest
+     * @return DeleteOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOIDCConfigResponse DeleteOIDCConfig(DeleteOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteOIDCConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeletePolicy）可用于删除策略。
      * @param req DeletePolicyRequest
      * @return DeletePolicyResponse
@@ -491,6 +531,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteUserPermissionsBoundary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询角色OIDC配置
+     * @param req DescribeOIDCConfigRequest
+     * @return DescribeOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOIDCConfigResponse DescribeOIDCConfig(DescribeOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOIDCConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1431,6 +1491,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改角色OIDC配置
+     * @param req UpdateOIDCConfigRequest
+     * @return UpdateOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOIDCConfigResponse UpdateOIDCConfig(UpdateOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateOIDCConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

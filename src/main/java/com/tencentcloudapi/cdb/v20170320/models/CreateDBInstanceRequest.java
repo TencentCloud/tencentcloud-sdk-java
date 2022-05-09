@@ -275,6 +275,13 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Boolean DryRun;
 
     /**
+    * 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
     * 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
     */
     @SerializedName("Vips")
@@ -858,6 +865,22 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。 
+     * @return EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     * @param EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
      * Get 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。 
      * @return Vips 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
      */
@@ -1004,6 +1027,9 @@ public class CreateDBInstanceRequest extends AbstractModel{
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
         if (source.Vips != null) {
             this.Vips = new String[source.Vips.length];
             for (int i = 0; i < source.Vips.length; i++) {
@@ -1053,6 +1079,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamArraySimple(map, prefix + "Vips.", this.Vips);
 
     }
