@@ -9,6 +9,9 @@ public enum EccErrorCode {
     // 数据格式错误。
      INTERNALERROR_DATAFORMATABNORMALERROR("InternalError.DataFormatAbnormalError"),
      
+    // 服务内部错误。
+     INTERNALERROR_DATABASESERVERINTERNALERROR("InternalError.DatabaseServerInternalError"),
+     
     // 识别错误。
      INTERNALERROR_OCRERROR("InternalError.OcrError"),
      

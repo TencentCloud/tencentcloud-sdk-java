@@ -729,7 +729,6 @@ public class CdnClient extends AbstractClient{
 
     /**
      *DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
-接口灰度中，暂未全量开放，敬请期待。
      * @param req DescribePushTasksRequest
      * @return DescribePushTasksResponse
      * @throws TencentCloudSDKException

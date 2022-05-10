@@ -37,7 +37,7 @@ public class ModifyCCPrecisionPolicyRequest extends AbstractModel{
     private String PolicyId;
 
     /**
-    * 策略方式，可取值alg表示验证码，drop表示丢弃
+    * 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
     */
     @SerializedName("PolicyAction")
     @Expose
@@ -83,16 +83,16 @@ public class ModifyCCPrecisionPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略方式，可取值alg表示验证码，drop表示丢弃 
-     * @return PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃
+     * Get 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。 
+     * @return PolicyAction 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
      */
     public String getPolicyAction() {
         return this.PolicyAction;
     }
 
     /**
-     * Set 策略方式，可取值alg表示验证码，drop表示丢弃
-     * @param PolicyAction 策略方式，可取值alg表示验证码，drop表示丢弃
+     * Set 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
+     * @param PolicyAction 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
      */
     public void setPolicyAction(String PolicyAction) {
         this.PolicyAction = PolicyAction;

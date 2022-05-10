@@ -151,6 +151,14 @@ public class HealthCheck extends AbstractModel{
     private Long SourceIpType;
 
     /**
+    * GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtendedCode")
+    @Expose
+    private String ExtendedCode;
+
+    /**
      * Get 是否开启健康检查：1（开启）、0（关闭）。 
      * @return HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      */
@@ -470,6 +478,26 @@ public class HealthCheck extends AbstractModel{
         this.SourceIpType = SourceIpType;
     }
 
+    /**
+     * Get GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtendedCode GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtendedCode() {
+        return this.ExtendedCode;
+    }
+
+    /**
+     * Set GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendedCode GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtendedCode(String ExtendedCode) {
+        this.ExtendedCode = ExtendedCode;
+    }
+
     public HealthCheck() {
     }
 
@@ -526,6 +554,9 @@ public class HealthCheck extends AbstractModel{
         if (source.SourceIpType != null) {
             this.SourceIpType = new Long(source.SourceIpType);
         }
+        if (source.ExtendedCode != null) {
+            this.ExtendedCode = new String(source.ExtendedCode);
+        }
     }
 
 
@@ -549,6 +580,7 @@ public class HealthCheck extends AbstractModel{
         this.setParamSimple(map, prefix + "CheckType", this.CheckType);
         this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
         this.setParamSimple(map, prefix + "SourceIpType", this.SourceIpType);
+        this.setParamSimple(map, prefix + "ExtendedCode", this.ExtendedCode);
 
     }
 }
