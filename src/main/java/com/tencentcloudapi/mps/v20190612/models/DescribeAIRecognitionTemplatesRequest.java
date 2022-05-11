@@ -44,6 +44,15 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 视频内容识别模板唯一标识过滤条件，数组长度限制：10。 
      * @return Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
      */
@@ -91,6 +100,30 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。 
+     * @return Type 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+     * @param Type 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DescribeAIRecognitionTemplatesRequest() {
     }
 
@@ -111,6 +144,9 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -121,6 +157,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

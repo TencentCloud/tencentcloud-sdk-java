@@ -51,7 +51,7 @@ public class CreateSubscribeRequest extends AbstractModel{
     private Long Count;
 
     /**
-    * 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+    * 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -136,16 +136,16 @@ public class CreateSubscribeRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。 
-     * @return AutoRenew 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+     * Get 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。 
+     * @return AutoRenew 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
-     * @param AutoRenew 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+     * Set 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
+     * @param AutoRenew 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;

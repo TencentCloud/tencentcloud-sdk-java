@@ -93,6 +93,16 @@ public class AIRecognitionTemplateItem extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 视频内容识别模板唯一标识。 
      * @return Definition 视频内容识别模板唯一标识。
      */
@@ -252,6 +262,34 @@ public class AIRecognitionTemplateItem extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public AIRecognitionTemplateItem() {
     }
 
@@ -290,6 +328,9 @@ public class AIRecognitionTemplateItem extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -307,6 +348,7 @@ public class AIRecognitionTemplateItem extends AbstractModel{
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

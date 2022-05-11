@@ -73,6 +73,14 @@ public class PrometheusStatus extends AbstractModel{
     private GrafanaInfo Grafana;
 
     /**
+    * Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Prometheus Id 
      * @return PrometheusId Prometheus Id
      */
@@ -188,6 +196,26 @@ public class PrometheusStatus extends AbstractModel{
         this.Grafana = Grafana;
     }
 
+    /**
+     * Get Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public PrometheusStatus() {
     }
 
@@ -217,6 +245,9 @@ public class PrometheusStatus extends AbstractModel{
         if (source.Grafana != null) {
             this.Grafana = new GrafanaInfo(source.Grafana);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -231,6 +262,7 @@ public class PrometheusStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamObj(map, prefix + "Grafana.", this.Grafana);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

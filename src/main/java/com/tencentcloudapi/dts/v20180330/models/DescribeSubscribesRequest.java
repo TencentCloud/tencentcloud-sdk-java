@@ -79,14 +79,14 @@ public class DescribeSubscribesRequest extends AbstractModel{
     private String [] SubsStatus;
 
     /**
-    * 返回记录的起始偏移量
+    * 返回记录的起始偏移量，默认为0。请输入非负整数
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单次返回的记录数量
+    * 单次返回的记录数量，默认20。请输入1到100的整数
     */
     @SerializedName("Limit")
     @Expose
@@ -242,32 +242,32 @@ public class DescribeSubscribesRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回记录的起始偏移量 
-     * @return Offset 返回记录的起始偏移量
+     * Get 返回记录的起始偏移量，默认为0。请输入非负整数 
+     * @return Offset 返回记录的起始偏移量，默认为0。请输入非负整数
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回记录的起始偏移量
-     * @param Offset 返回记录的起始偏移量
+     * Set 返回记录的起始偏移量，默认为0。请输入非负整数
+     * @param Offset 返回记录的起始偏移量，默认为0。请输入非负整数
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单次返回的记录数量 
-     * @return Limit 单次返回的记录数量
+     * Get 单次返回的记录数量，默认20。请输入1到100的整数 
+     * @return Limit 单次返回的记录数量，默认20。请输入1到100的整数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次返回的记录数量
-     * @param Limit 单次返回的记录数量
+     * Set 单次返回的记录数量，默认20。请输入1到100的整数
+     * @param Limit 单次返回的记录数量，默认20。请输入1到100的整数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

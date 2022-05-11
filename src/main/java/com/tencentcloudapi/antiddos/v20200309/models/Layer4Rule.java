@@ -54,11 +54,18 @@ UDP(UDP协议)
     private SourceServer [] RealServers;
 
     /**
-    * 规则所属的资源实例
+    * 资源实例
     */
     @SerializedName("InstanceDetails")
     @Expose
     private InstanceRelation [] InstanceDetails;
+
+    /**
+    * 规则所属的资源实例
+    */
+    @SerializedName("InstanceDetailRule")
+    @Expose
+    private RuleInstanceRelation [] InstanceDetailRule;
 
     /**
      * Get 源站端口，取值1~65535 
@@ -137,19 +144,35 @@ UDP(UDP协议)
     }
 
     /**
-     * Get 规则所属的资源实例 
-     * @return InstanceDetails 规则所属的资源实例
+     * Get 资源实例 
+     * @return InstanceDetails 资源实例
      */
     public InstanceRelation [] getInstanceDetails() {
         return this.InstanceDetails;
     }
 
     /**
-     * Set 规则所属的资源实例
-     * @param InstanceDetails 规则所属的资源实例
+     * Set 资源实例
+     * @param InstanceDetails 资源实例
      */
     public void setInstanceDetails(InstanceRelation [] InstanceDetails) {
         this.InstanceDetails = InstanceDetails;
+    }
+
+    /**
+     * Get 规则所属的资源实例 
+     * @return InstanceDetailRule 规则所属的资源实例
+     */
+    public RuleInstanceRelation [] getInstanceDetailRule() {
+        return this.InstanceDetailRule;
+    }
+
+    /**
+     * Set 规则所属的资源实例
+     * @param InstanceDetailRule 规则所属的资源实例
+     */
+    public void setInstanceDetailRule(RuleInstanceRelation [] InstanceDetailRule) {
+        this.InstanceDetailRule = InstanceDetailRule;
     }
 
     public Layer4Rule() {
@@ -181,6 +204,12 @@ UDP(UDP协议)
                 this.InstanceDetails[i] = new InstanceRelation(source.InstanceDetails[i]);
             }
         }
+        if (source.InstanceDetailRule != null) {
+            this.InstanceDetailRule = new RuleInstanceRelation[source.InstanceDetailRule.length];
+            for (int i = 0; i < source.InstanceDetailRule.length; i++) {
+                this.InstanceDetailRule[i] = new RuleInstanceRelation(source.InstanceDetailRule[i]);
+            }
+        }
     }
 
 
@@ -193,6 +222,7 @@ UDP(UDP协议)
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "RealServers.", this.RealServers);
         this.setParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
+        this.setParamArrayObj(map, prefix + "InstanceDetailRule.", this.InstanceDetailRule);
 
     }
 }
