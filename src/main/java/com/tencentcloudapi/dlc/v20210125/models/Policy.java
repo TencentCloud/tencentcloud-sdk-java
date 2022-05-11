@@ -130,6 +130,22 @@ public class Policy extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceId")
+    @Expose
+    private Long SourceId;
+
+    /**
+    * 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceName")
+    @Expose
+    private String SourceName;
+
+    /**
      * Get 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。 
      * @return Database 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      */
@@ -389,6 +405,46 @@ public class Policy extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceId 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSourceId() {
+        return this.SourceId;
+    }
+
+    /**
+     * Set 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceId 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceId(Long SourceId) {
+        this.SourceId = SourceId;
+    }
+
+    /**
+     * Get 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceName 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceName() {
+        return this.SourceName;
+    }
+
+    /**
+     * Set 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceName 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceName(String SourceName) {
+        this.SourceName = SourceName;
+    }
+
     public Policy() {
     }
 
@@ -439,6 +495,12 @@ public class Policy extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.SourceId != null) {
+            this.SourceId = new Long(source.SourceId);
+        }
+        if (source.SourceName != null) {
+            this.SourceName = new String(source.SourceName);
+        }
     }
 
 
@@ -460,6 +522,8 @@ public class Policy extends AbstractModel{
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SourceId", this.SourceId);
+        this.setParamSimple(map, prefix + "SourceName", this.SourceName);
 
     }
 }

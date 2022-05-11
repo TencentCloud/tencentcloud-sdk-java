@@ -61,6 +61,13 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
     private String FilterIp;
 
     /**
+    * 高防IP实例资源的cname
+    */
+    @SerializedName("FilterCname")
+    @Expose
+    private String FilterCname;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -152,6 +159,22 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
         this.FilterIp = FilterIp;
     }
 
+    /**
+     * Get 高防IP实例资源的cname 
+     * @return FilterCname 高防IP实例资源的cname
+     */
+    public String getFilterCname() {
+        return this.FilterCname;
+    }
+
+    /**
+     * Set 高防IP实例资源的cname
+     * @param FilterCname 高防IP实例资源的cname
+     */
+    public void setFilterCname(String FilterCname) {
+        this.FilterCname = FilterCname;
+    }
+
     public DescribeListIPAlarmConfigRequest() {
     }
 
@@ -175,6 +198,9 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
         if (source.FilterIp != null) {
             this.FilterIp = new String(source.FilterIp);
         }
+        if (source.FilterCname != null) {
+            this.FilterCname = new String(source.FilterCname);
+        }
     }
 
 
@@ -187,6 +213,7 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterInstanceId", this.FilterInstanceId);
         this.setParamSimple(map, prefix + "FilterAlarmType", this.FilterAlarmType);
         this.setParamSimple(map, prefix + "FilterIp", this.FilterIp);
+        this.setParamSimple(map, prefix + "FilterCname", this.FilterCname);
 
     }
 }

@@ -1421,6 +1421,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *获取防护概览的ddos攻击事件
+     * @param req DescribeOverviewDDoSEventListRequest
+     * @return DescribeOverviewDDoSEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(DescribeOverviewDDoSEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewDDoSEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取防护概览DDoS攻击流量带宽和攻击包速率数据
      * @param req DescribeOverviewDDoSTrendRequest
      * @return DescribeOverviewDDoSTrendResponse

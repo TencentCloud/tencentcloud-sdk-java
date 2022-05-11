@@ -106,6 +106,20 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private String FilterStatus;
 
     /**
+    * 获取特定的实例Cname
+    */
+    @SerializedName("FilterCname")
+    @Expose
+    private String FilterCname;
+
+    /**
+    * 批量查询实例ID对应的高防IP实例资源
+    */
+    @SerializedName("FilterInstanceIdList")
+    @Expose
+    private String [] FilterInstanceIdList;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -305,6 +319,38 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterStatus = FilterStatus;
     }
 
+    /**
+     * Get 获取特定的实例Cname 
+     * @return FilterCname 获取特定的实例Cname
+     */
+    public String getFilterCname() {
+        return this.FilterCname;
+    }
+
+    /**
+     * Set 获取特定的实例Cname
+     * @param FilterCname 获取特定的实例Cname
+     */
+    public void setFilterCname(String FilterCname) {
+        this.FilterCname = FilterCname;
+    }
+
+    /**
+     * Get 批量查询实例ID对应的高防IP实例资源 
+     * @return FilterInstanceIdList 批量查询实例ID对应的高防IP实例资源
+     */
+    public String [] getFilterInstanceIdList() {
+        return this.FilterInstanceIdList;
+    }
+
+    /**
+     * Set 批量查询实例ID对应的高防IP实例资源
+     * @param FilterInstanceIdList 批量查询实例ID对应的高防IP实例资源
+     */
+    public void setFilterInstanceIdList(String [] FilterInstanceIdList) {
+        this.FilterInstanceIdList = FilterInstanceIdList;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -349,6 +395,15 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         if (source.FilterStatus != null) {
             this.FilterStatus = new String(source.FilterStatus);
         }
+        if (source.FilterCname != null) {
+            this.FilterCname = new String(source.FilterCname);
+        }
+        if (source.FilterInstanceIdList != null) {
+            this.FilterInstanceIdList = new String[source.FilterInstanceIdList.length];
+            for (int i = 0; i < source.FilterInstanceIdList.length; i++) {
+                this.FilterInstanceIdList[i] = new String(source.FilterInstanceIdList[i]);
+            }
+        }
     }
 
 
@@ -367,6 +422,8 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
         this.setParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
         this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
+        this.setParamSimple(map, prefix + "FilterCname", this.FilterCname);
+        this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
 
     }
 }

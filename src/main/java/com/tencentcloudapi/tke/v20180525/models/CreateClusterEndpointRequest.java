@@ -44,6 +44,27 @@ public class CreateClusterEndpointRequest extends AbstractModel{
     private Boolean IsExtranet;
 
     /**
+    * 设置域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 使用的安全组，只有外网访问需要传递
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
+    * 创建lb参数，只有外网访问需要设置
+    */
+    @SerializedName("ExtensiveParameters")
+    @Expose
+    private String ExtensiveParameters;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -91,6 +112,54 @@ public class CreateClusterEndpointRequest extends AbstractModel{
         this.IsExtranet = IsExtranet;
     }
 
+    /**
+     * Get 设置域名 
+     * @return Domain 设置域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 设置域名
+     * @param Domain 设置域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get 使用的安全组，只有外网访问需要传递 
+     * @return SecurityGroup 使用的安全组，只有外网访问需要传递
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 使用的安全组，只有外网访问需要传递
+     * @param SecurityGroup 使用的安全组，只有外网访问需要传递
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
+     * Get 创建lb参数，只有外网访问需要设置 
+     * @return ExtensiveParameters 创建lb参数，只有外网访问需要设置
+     */
+    public String getExtensiveParameters() {
+        return this.ExtensiveParameters;
+    }
+
+    /**
+     * Set 创建lb参数，只有外网访问需要设置
+     * @param ExtensiveParameters 创建lb参数，只有外网访问需要设置
+     */
+    public void setExtensiveParameters(String ExtensiveParameters) {
+        this.ExtensiveParameters = ExtensiveParameters;
+    }
+
     public CreateClusterEndpointRequest() {
     }
 
@@ -108,6 +177,15 @@ public class CreateClusterEndpointRequest extends AbstractModel{
         if (source.IsExtranet != null) {
             this.IsExtranet = new Boolean(source.IsExtranet);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
+        if (source.ExtensiveParameters != null) {
+            this.ExtensiveParameters = new String(source.ExtensiveParameters);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class CreateClusterEndpointRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "ExtensiveParameters", this.ExtensiveParameters);
 
     }
 }

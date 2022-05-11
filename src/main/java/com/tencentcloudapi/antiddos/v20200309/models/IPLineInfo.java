@@ -43,6 +43,20 @@ public class IPLineInfo extends AbstractModel{
     private String Eip;
 
     /**
+    * 实例对应的cname
+    */
+    @SerializedName("Cname")
+    @Expose
+    private String Cname;
+
+    /**
+    * 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
+    */
+    @SerializedName("ResourceFlag")
+    @Expose
+    private Long ResourceFlag;
+
+    /**
      * Get IP线路类型，取值[
 "bgp"：BGP线路IP
 "ctcc"：电信线路IP
@@ -98,6 +112,38 @@ public class IPLineInfo extends AbstractModel{
         this.Eip = Eip;
     }
 
+    /**
+     * Get 实例对应的cname 
+     * @return Cname 实例对应的cname
+     */
+    public String getCname() {
+        return this.Cname;
+    }
+
+    /**
+     * Set 实例对应的cname
+     * @param Cname 实例对应的cname
+     */
+    public void setCname(String Cname) {
+        this.Cname = Cname;
+    }
+
+    /**
+     * Get 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP 
+     * @return ResourceFlag 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
+     */
+    public Long getResourceFlag() {
+        return this.ResourceFlag;
+    }
+
+    /**
+     * Set 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
+     * @param ResourceFlag 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
+     */
+    public void setResourceFlag(Long ResourceFlag) {
+        this.ResourceFlag = ResourceFlag;
+    }
+
     public IPLineInfo() {
     }
 
@@ -112,6 +158,12 @@ public class IPLineInfo extends AbstractModel{
         if (source.Eip != null) {
             this.Eip = new String(source.Eip);
         }
+        if (source.Cname != null) {
+            this.Cname = new String(source.Cname);
+        }
+        if (source.ResourceFlag != null) {
+            this.ResourceFlag = new Long(source.ResourceFlag);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class IPLineInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Eip", this.Eip);
+        this.setParamSimple(map, prefix + "Cname", this.Cname);
+        this.setParamSimple(map, prefix + "ResourceFlag", this.ResourceFlag);
 
     }
 }

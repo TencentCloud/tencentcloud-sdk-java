@@ -44,10 +44,11 @@ public class EncryptedPhoneVerificationRequest extends AbstractModel{
     private String Phone;
 
     /**
-    * 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+    * 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
+1:   使用MD5加密
+2:   使用SHA256
     */
     @SerializedName("EncryptionMode")
     @Expose
@@ -102,28 +103,32 @@ public class EncryptedPhoneVerificationRequest extends AbstractModel{
     }
 
     /**
-     * Get 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+     * Get 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密 
-     * @return EncryptionMode 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+1:   使用MD5加密
+2:   使用SHA256 
+     * @return EncryptionMode 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
+1:   使用MD5加密
+2:   使用SHA256
      */
     public String getEncryptionMode() {
         return this.EncryptionMode;
     }
 
     /**
-     * Set 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+     * Set 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
-     * @param EncryptionMode 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+1:   使用MD5加密
+2:   使用SHA256
+     * @param EncryptionMode 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
+1:   使用MD5加密
+2:   使用SHA256
      */
     public void setEncryptionMode(String EncryptionMode) {
         this.EncryptionMode = EncryptionMode;

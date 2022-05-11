@@ -95,6 +95,13 @@ table-id - String - （过滤条件）table id形如：12342。
     private String TableType;
 
     /**
+    * 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+    */
+    @SerializedName("TableFormat")
+    @Expose
+    private String TableFormat;
+
+    /**
      * Get 列出该数据库下所属数据表。 
      * @return DatabaseName 列出该数据库下所属数据表。
      */
@@ -262,6 +269,22 @@ table-id - String - （过滤条件）table id形如：12342。
         this.TableType = TableType;
     }
 
+    /**
+     * Get 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它； 
+     * @return TableFormat 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+     */
+    public String getTableFormat() {
+        return this.TableFormat;
+    }
+
+    /**
+     * Set 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+     * @param TableFormat 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+     */
+    public void setTableFormat(String TableFormat) {
+        this.TableFormat = TableFormat;
+    }
+
     public DescribeTablesRequest() {
     }
 
@@ -303,6 +326,9 @@ table-id - String - （过滤条件）table id形如：12342。
         if (source.TableType != null) {
             this.TableType = new String(source.TableType);
         }
+        if (source.TableFormat != null) {
+            this.TableFormat = new String(source.TableFormat);
+        }
     }
 
 
@@ -320,6 +346,7 @@ table-id - String - （过滤条件）table id形如：12342。
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamSimple(map, prefix + "TableType", this.TableType);
+        this.setParamSimple(map, prefix + "TableFormat", this.TableFormat);
 
     }
 }

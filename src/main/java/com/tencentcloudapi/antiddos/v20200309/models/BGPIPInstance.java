@@ -176,6 +176,14 @@ public class BGPIPInstance extends AbstractModel{
     private Long V6Flag;
 
     /**
+    * 是否渠道版高防IP，是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BGPIPChannelFlag")
+    @Expose
+    private Long BGPIPChannelFlag;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -559,6 +567,26 @@ public class BGPIPInstance extends AbstractModel{
         this.V6Flag = V6Flag;
     }
 
+    /**
+     * Get 是否渠道版高防IP，是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BGPIPChannelFlag 是否渠道版高防IP，是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBGPIPChannelFlag() {
+        return this.BGPIPChannelFlag;
+    }
+
+    /**
+     * Set 是否渠道版高防IP，是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BGPIPChannelFlag 是否渠道版高防IP，是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBGPIPChannelFlag(Long BGPIPChannelFlag) {
+        this.BGPIPChannelFlag = BGPIPChannelFlag;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -624,6 +652,9 @@ public class BGPIPInstance extends AbstractModel{
         if (source.V6Flag != null) {
             this.V6Flag = new Long(source.V6Flag);
         }
+        if (source.BGPIPChannelFlag != null) {
+            this.BGPIPChannelFlag = new Long(source.BGPIPChannelFlag);
+        }
     }
 
 
@@ -650,6 +681,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
         this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
+        this.setParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
 
     }
 }

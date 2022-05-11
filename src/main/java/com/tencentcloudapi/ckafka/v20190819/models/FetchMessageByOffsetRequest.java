@@ -44,7 +44,7 @@ public class FetchMessageByOffsetRequest extends AbstractModel{
     private Long Partition;
 
     /**
-    * 位点信息
+    * 位点信息，必填
     */
     @SerializedName("Offset")
     @Expose
@@ -99,16 +99,16 @@ public class FetchMessageByOffsetRequest extends AbstractModel{
     }
 
     /**
-     * Get 位点信息 
-     * @return Offset 位点信息
+     * Get 位点信息，必填 
+     * @return Offset 位点信息，必填
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 位点信息
-     * @param Offset 位点信息
+     * Set 位点信息，必填
+     * @param Offset 位点信息，必填
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

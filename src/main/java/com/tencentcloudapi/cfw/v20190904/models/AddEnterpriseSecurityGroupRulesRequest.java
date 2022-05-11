@@ -44,6 +44,13 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel{
     private String ClientToken;
 
     /**
+    * 是否延迟下发，1则延迟下发，否则立即下发
+    */
+    @SerializedName("IsDelay")
+    @Expose
+    private Long IsDelay;
+
+    /**
      * Get 创建规则数据 
      * @return Data 创建规则数据
      */
@@ -91,6 +98,22 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 是否延迟下发，1则延迟下发，否则立即下发 
+     * @return IsDelay 是否延迟下发，1则延迟下发，否则立即下发
+     */
+    public Long getIsDelay() {
+        return this.IsDelay;
+    }
+
+    /**
+     * Set 是否延迟下发，1则延迟下发，否则立即下发
+     * @param IsDelay 是否延迟下发，1则延迟下发，否则立即下发
+     */
+    public void setIsDelay(Long IsDelay) {
+        this.IsDelay = IsDelay;
+    }
+
     public AddEnterpriseSecurityGroupRulesRequest() {
     }
 
@@ -111,6 +134,9 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel{
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.IsDelay != null) {
+            this.IsDelay = new Long(source.IsDelay);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "IsDelay", this.IsDelay);
 
     }
 }

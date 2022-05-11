@@ -44,6 +44,30 @@ public class Partition extends AbstractModel{
     private String Comment;
 
     /**
+    * 隐式分区转换策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Transform")
+    @Expose
+    private String Transform;
+
+    /**
+    * 转换策略参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransformArgs")
+    @Expose
+    private String [] TransformArgs;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 分区列名。 
      * @return Name 分区列名。
      */
@@ -91,6 +115,66 @@ public class Partition extends AbstractModel{
         this.Comment = Comment;
     }
 
+    /**
+     * Get 隐式分区转换策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Transform 隐式分区转换策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransform() {
+        return this.Transform;
+    }
+
+    /**
+     * Set 隐式分区转换策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Transform 隐式分区转换策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransform(String Transform) {
+        this.Transform = Transform;
+    }
+
+    /**
+     * Get 转换策略参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransformArgs 转换策略参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTransformArgs() {
+        return this.TransformArgs;
+    }
+
+    /**
+     * Set 转换策略参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransformArgs 转换策略参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransformArgs(String [] TransformArgs) {
+        this.TransformArgs = TransformArgs;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public Partition() {
     }
 
@@ -108,6 +192,18 @@ public class Partition extends AbstractModel{
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Transform != null) {
+            this.Transform = new String(source.Transform);
+        }
+        if (source.TransformArgs != null) {
+            this.TransformArgs = new String[source.TransformArgs.length];
+            for (int i = 0; i < source.TransformArgs.length; i++) {
+                this.TransformArgs[i] = new String(source.TransformArgs[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -118,6 +214,9 @@ public class Partition extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Transform", this.Transform);
+        this.setParamArraySimple(map, prefix + "TransformArgs.", this.TransformArgs);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

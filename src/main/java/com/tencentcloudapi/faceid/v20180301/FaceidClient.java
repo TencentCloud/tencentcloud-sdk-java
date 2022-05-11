@@ -241,7 +241,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
+     *本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
      * @param req EncryptedPhoneVerificationRequest
      * @return EncryptedPhoneVerificationResponse
      * @throws TencentCloudSDKException
