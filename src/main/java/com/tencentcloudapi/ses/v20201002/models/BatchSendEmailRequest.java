@@ -67,7 +67,7 @@ public class BatchSendEmailRequest extends AbstractModel{
     private Template Template;
 
     /**
-    * 使用API直接发送内容时，填写的邮件内容（暂未支持）
+    * 已废弃
     */
     @SerializedName("Simple")
     @Expose
@@ -213,16 +213,16 @@ public class BatchSendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 使用API直接发送内容时，填写的邮件内容（暂未支持） 
-     * @return Simple 使用API直接发送内容时，填写的邮件内容（暂未支持）
+     * Get 已废弃 
+     * @return Simple 已废弃
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set 使用API直接发送内容时，填写的邮件内容（暂未支持）
-     * @param Simple 使用API直接发送内容时，填写的邮件内容（暂未支持）
+     * Set 已废弃
+     * @param Simple 已废弃
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;

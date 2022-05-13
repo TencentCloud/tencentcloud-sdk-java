@@ -30,28 +30,28 @@ public class WaterMarkParams extends AbstractModel{
     private Long WaterMarkId;
 
     /**
-    * 混流-水印宽。单位为像素值。
+    * 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
     */
     @SerializedName("WaterMarkWidth")
     @Expose
     private Long WaterMarkWidth;
 
     /**
-    * 混流-水印高。单位为像素值。
+    * 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
     */
     @SerializedName("WaterMarkHeight")
     @Expose
     private Long WaterMarkHeight;
 
     /**
-    * 水印在输出时的X偏移。单位为像素值。
+    * 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
     */
     @SerializedName("LocationX")
     @Expose
     private Long LocationX;
 
     /**
-    * 水印在输出时的Y偏移。单位为像素值。
+    * 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
     */
     @SerializedName("LocationY")
     @Expose
@@ -81,64 +81,64 @@ public class WaterMarkParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-水印宽。单位为像素值。 
-     * @return WaterMarkWidth 混流-水印宽。单位为像素值。
+     * Get 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。 
+     * @return WaterMarkWidth 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
      */
     public Long getWaterMarkWidth() {
         return this.WaterMarkWidth;
     }
 
     /**
-     * Set 混流-水印宽。单位为像素值。
-     * @param WaterMarkWidth 混流-水印宽。单位为像素值。
+     * Set 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+     * @param WaterMarkWidth 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
      */
     public void setWaterMarkWidth(Long WaterMarkWidth) {
         this.WaterMarkWidth = WaterMarkWidth;
     }
 
     /**
-     * Get 混流-水印高。单位为像素值。 
-     * @return WaterMarkHeight 混流-水印高。单位为像素值。
+     * Get 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。 
+     * @return WaterMarkHeight 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
      */
     public Long getWaterMarkHeight() {
         return this.WaterMarkHeight;
     }
 
     /**
-     * Set 混流-水印高。单位为像素值。
-     * @param WaterMarkHeight 混流-水印高。单位为像素值。
+     * Set 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
+     * @param WaterMarkHeight 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
      */
     public void setWaterMarkHeight(Long WaterMarkHeight) {
         this.WaterMarkHeight = WaterMarkHeight;
     }
 
     /**
-     * Get 水印在输出时的X偏移。单位为像素值。 
-     * @return LocationX 水印在输出时的X偏移。单位为像素值。
+     * Get 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。 
+     * @return LocationX 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
      */
     public Long getLocationX() {
         return this.LocationX;
     }
 
     /**
-     * Set 水印在输出时的X偏移。单位为像素值。
-     * @param LocationX 水印在输出时的X偏移。单位为像素值。
+     * Set 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+     * @param LocationX 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
      */
     public void setLocationX(Long LocationX) {
         this.LocationX = LocationX;
     }
 
     /**
-     * Get 水印在输出时的Y偏移。单位为像素值。 
-     * @return LocationY 水印在输出时的Y偏移。单位为像素值。
+     * Get 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。 
+     * @return LocationY 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
      */
     public Long getLocationY() {
         return this.LocationY;
     }
 
     /**
-     * Set 水印在输出时的Y偏移。单位为像素值。
-     * @param LocationY 水印在输出时的Y偏移。单位为像素值。
+     * Set 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
+     * @param LocationY 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
      */
     public void setLocationY(Long LocationY) {
         this.LocationY = LocationY;

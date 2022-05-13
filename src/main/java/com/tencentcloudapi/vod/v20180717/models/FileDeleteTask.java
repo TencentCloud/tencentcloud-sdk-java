@@ -30,6 +30,13 @@ public class FileDeleteTask extends AbstractModel{
     private String [] FileIdSet;
 
     /**
+    * 删除文件结果信息列表。
+    */
+    @SerializedName("FileDeleteResultInfo")
+    @Expose
+    private FileDeleteResultItem [] FileDeleteResultInfo;
+
+    /**
      * Get 删除文件 ID 列表。 
      * @return FileIdSet 删除文件 ID 列表。
      */
@@ -43,6 +50,22 @@ public class FileDeleteTask extends AbstractModel{
      */
     public void setFileIdSet(String [] FileIdSet) {
         this.FileIdSet = FileIdSet;
+    }
+
+    /**
+     * Get 删除文件结果信息列表。 
+     * @return FileDeleteResultInfo 删除文件结果信息列表。
+     */
+    public FileDeleteResultItem [] getFileDeleteResultInfo() {
+        return this.FileDeleteResultInfo;
+    }
+
+    /**
+     * Set 删除文件结果信息列表。
+     * @param FileDeleteResultInfo 删除文件结果信息列表。
+     */
+    public void setFileDeleteResultInfo(FileDeleteResultItem [] FileDeleteResultInfo) {
+        this.FileDeleteResultInfo = FileDeleteResultInfo;
     }
 
     public FileDeleteTask() {
@@ -59,6 +82,12 @@ public class FileDeleteTask extends AbstractModel{
                 this.FileIdSet[i] = new String(source.FileIdSet[i]);
             }
         }
+        if (source.FileDeleteResultInfo != null) {
+            this.FileDeleteResultInfo = new FileDeleteResultItem[source.FileDeleteResultInfo.length];
+            for (int i = 0; i < source.FileDeleteResultInfo.length; i++) {
+                this.FileDeleteResultInfo[i] = new FileDeleteResultItem(source.FileDeleteResultInfo[i]);
+            }
+        }
     }
 
 
@@ -67,6 +96,7 @@ public class FileDeleteTask extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);
+        this.setParamArrayObj(map, prefix + "FileDeleteResultInfo.", this.FileDeleteResultInfo);
 
     }
 }

@@ -41,13 +41,6 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     private Long TimeSpan;
 
     /**
-    * 询价的节点规格。
-    */
-    @SerializedName("ResourceSpec")
-    @Expose
-    private NewResourceSpec ResourceSpec;
-
-    /**
     * 货币种类。取值范围：
 <li>CNY：表示人民币。</li>
     */
@@ -83,6 +76,13 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     @SerializedName("Software")
     @Expose
     private String [] Software;
+
+    /**
+    * 询价的节点规格。
+    */
+    @SerializedName("ResourceSpec")
+    @Expose
+    private NewResourceSpec ResourceSpec;
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -152,6 +152,20 @@ Hadoop-Hbase
     private ExternalService [] ExternalService;
 
     /**
+    * 当前默认值为0，跨AZ特性支持后为1
+    */
+    @SerializedName("VersionID")
+    @Expose
+    private Long VersionID;
+
+    /**
+    * 可用区的规格信息
+    */
+    @SerializedName("MultiZoneSettings")
+    @Expose
+    private MultiZoneSetting [] MultiZoneSettings;
+
+    /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -197,22 +211,6 @@ Hadoop-Hbase
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
-    }
-
-    /**
-     * Get 询价的节点规格。 
-     * @return ResourceSpec 询价的节点规格。
-     */
-    public NewResourceSpec getResourceSpec() {
-        return this.ResourceSpec;
-    }
-
-    /**
-     * Set 询价的节点规格。
-     * @param ResourceSpec 询价的节点规格。
-     */
-    public void setResourceSpec(NewResourceSpec ResourceSpec) {
-        this.ResourceSpec = ResourceSpec;
     }
 
     /**
@@ -313,6 +311,22 @@ Hadoop-Hbase
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
+    }
+
+    /**
+     * Get 询价的节点规格。 
+     * @return ResourceSpec 询价的节点规格。
+     */
+    public NewResourceSpec getResourceSpec() {
+        return this.ResourceSpec;
+    }
+
+    /**
+     * Set 询价的节点规格。
+     * @param ResourceSpec 询价的节点规格。
+     */
+    public void setResourceSpec(NewResourceSpec ResourceSpec) {
+        this.ResourceSpec = ResourceSpec;
     }
 
     /**
@@ -487,6 +501,38 @@ Hadoop-Hbase
         this.ExternalService = ExternalService;
     }
 
+    /**
+     * Get 当前默认值为0，跨AZ特性支持后为1 
+     * @return VersionID 当前默认值为0，跨AZ特性支持后为1
+     */
+    public Long getVersionID() {
+        return this.VersionID;
+    }
+
+    /**
+     * Set 当前默认值为0，跨AZ特性支持后为1
+     * @param VersionID 当前默认值为0，跨AZ特性支持后为1
+     */
+    public void setVersionID(Long VersionID) {
+        this.VersionID = VersionID;
+    }
+
+    /**
+     * Get 可用区的规格信息 
+     * @return MultiZoneSettings 可用区的规格信息
+     */
+    public MultiZoneSetting [] getMultiZoneSettings() {
+        return this.MultiZoneSettings;
+    }
+
+    /**
+     * Set 可用区的规格信息
+     * @param MultiZoneSettings 可用区的规格信息
+     */
+    public void setMultiZoneSettings(MultiZoneSetting [] MultiZoneSettings) {
+        this.MultiZoneSettings = MultiZoneSettings;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -500,9 +546,6 @@ Hadoop-Hbase
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
-        }
-        if (source.ResourceSpec != null) {
-            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
         }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
@@ -518,6 +561,9 @@ Hadoop-Hbase
             for (int i = 0; i < source.Software.length; i++) {
                 this.Software[i] = new String(source.Software[i]);
             }
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
         }
         if (source.Placement != null) {
             this.Placement = new Placement(source.Placement);
@@ -546,6 +592,15 @@ Hadoop-Hbase
                 this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
             }
         }
+        if (source.VersionID != null) {
+            this.VersionID = new Long(source.VersionID);
+        }
+        if (source.MultiZoneSettings != null) {
+            this.MultiZoneSettings = new MultiZoneSetting[source.MultiZoneSettings.length];
+            for (int i = 0; i < source.MultiZoneSettings.length; i++) {
+                this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
+            }
+        }
     }
 
 
@@ -555,11 +610,11 @@ Hadoop-Hbase
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "SupportHA", this.SupportHA);
         this.setParamArraySimple(map, prefix + "Software.", this.Software);
+        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
@@ -568,6 +623,8 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
         this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+        this.setParamSimple(map, prefix + "VersionID", this.VersionID);
+        this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
 
     }
 }

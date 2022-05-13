@@ -344,6 +344,38 @@ public class NodeHardwareInfo extends AbstractModel{
     private Long SupportModifyPayMode;
 
     /**
+    * 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RootStorageType")
+    @Expose
+    private Long RootStorageType;
+
+    /**
+    * 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 子网
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetInfo")
+    @Expose
+    private SubnetInfo SubnetInfo;
+
+    /**
+    * 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Clients")
+    @Expose
+    private String Clients;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1147,6 +1179,86 @@ public class NodeHardwareInfo extends AbstractModel{
         this.SupportModifyPayMode = SupportModifyPayMode;
     }
 
+    /**
+     * Get 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RootStorageType 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRootStorageType() {
+        return this.RootStorageType;
+    }
+
+    /**
+     * Set 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RootStorageType 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRootStorageType(Long RootStorageType) {
+        this.RootStorageType = RootStorageType;
+    }
+
+    /**
+     * Get 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 子网
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetInfo 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubnetInfo getSubnetInfo() {
+        return this.SubnetInfo;
+    }
+
+    /**
+     * Set 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetInfo 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetInfo(SubnetInfo SubnetInfo) {
+        this.SubnetInfo = SubnetInfo;
+    }
+
+    /**
+     * Get 客户端
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Clients 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClients() {
+        return this.Clients;
+    }
+
+    /**
+     * Set 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Clients 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClients(String Clients) {
+        this.Clients = Clients;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1281,6 +1393,18 @@ public class NodeHardwareInfo extends AbstractModel{
         if (source.SupportModifyPayMode != null) {
             this.SupportModifyPayMode = new Long(source.SupportModifyPayMode);
         }
+        if (source.RootStorageType != null) {
+            this.RootStorageType = new Long(source.RootStorageType);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SubnetInfo != null) {
+            this.SubnetInfo = new SubnetInfo(source.SubnetInfo);
+        }
+        if (source.Clients != null) {
+            this.Clients = new String(source.Clients);
+        }
     }
 
 
@@ -1328,6 +1452,10 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
         this.setParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
         this.setParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
+        this.setParamSimple(map, prefix + "RootStorageType", this.RootStorageType);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
+        this.setParamSimple(map, prefix + "Clients", this.Clients);
 
     }
 }

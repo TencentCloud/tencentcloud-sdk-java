@@ -50,26 +50,12 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long ProductId;
 
     /**
-    * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-    */
-    @SerializedName("VPCSettings")
-    @Expose
-    private VPCSettings VPCSettings;
-
-    /**
     * 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
 填写实例值：hive、flink。
     */
     @SerializedName("Software")
     @Expose
     private String [] Software;
-
-    /**
-    * 节点资源的规格。
-    */
-    @SerializedName("ResourceSpec")
-    @Expose
-    private NewResourceSpec ResourceSpec;
 
     /**
     * 是否开启节点高可用。取值范围：
@@ -99,13 +85,6 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long PayMode;
 
     /**
-    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-    */
-    @SerializedName("Placement")
-    @Expose
-    private Placement Placement;
-
-    /**
     * 购买实例的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
@@ -133,11 +112,32 @@ public class CreateInstanceRequest extends AbstractModel{
     private LoginSettings LoginSettings;
 
     /**
+    * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+    */
+    @SerializedName("VPCSettings")
+    @Expose
+    private VPCSettings VPCSettings;
+
+    /**
+    * 节点资源的规格。
+    */
+    @SerializedName("ResourceSpec")
+    @Expose
+    private NewResourceSpec ResourceSpec;
+
+    /**
     * 开启COS访问需要设置的参数。
     */
     @SerializedName("COSSettings")
     @Expose
     private COSSettings COSSettings;
+
+    /**
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+    */
+    @SerializedName("Placement")
+    @Expose
+    private Placement Placement;
 
     /**
     * 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
@@ -271,6 +271,27 @@ Hadoop-Hbase
     private ExternalService [] ExternalService;
 
     /**
+    * 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+    */
+    @SerializedName("VersionID")
+    @Expose
+    private Long VersionID;
+
+    /**
+    * true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+    */
+    @SerializedName("MultiZone")
+    @Expose
+    private Boolean MultiZone;
+
+    /**
+    * 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+    */
+    @SerializedName("MultiZoneSettings")
+    @Expose
+    private MultiZoneSetting [] MultiZoneSettings;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -367,22 +388,6 @@ Hadoop-Hbase
     }
 
     /**
-     * Get 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。 
-     * @return VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     */
-    public VPCSettings getVPCSettings() {
-        return this.VPCSettings;
-    }
-
-    /**
-     * Set 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     * @param VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     */
-    public void setVPCSettings(VPCSettings VPCSettings) {
-        this.VPCSettings = VPCSettings;
-    }
-
-    /**
      * Get 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
 填写实例值：hive、flink。 
      * @return Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
@@ -400,22 +405,6 @@ Hadoop-Hbase
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
-    }
-
-    /**
-     * Get 节点资源的规格。 
-     * @return ResourceSpec 节点资源的规格。
-     */
-    public NewResourceSpec getResourceSpec() {
-        return this.ResourceSpec;
-    }
-
-    /**
-     * Set 节点资源的规格。
-     * @param ResourceSpec 节点资源的规格。
-     */
-    public void setResourceSpec(NewResourceSpec ResourceSpec) {
-        this.ResourceSpec = ResourceSpec;
     }
 
     /**
@@ -491,22 +480,6 @@ Hadoop-Hbase
     }
 
     /**
-     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
-     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     */
-    public Placement getPlacement() {
-        return this.Placement;
-    }
-
-    /**
-     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     */
-    public void setPlacement(Placement Placement) {
-        this.Placement = Placement;
-    }
-
-    /**
      * Get 购买实例的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
@@ -579,6 +552,38 @@ Hadoop-Hbase
     }
 
     /**
+     * Get 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。 
+     * @return VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     */
+    public VPCSettings getVPCSettings() {
+        return this.VPCSettings;
+    }
+
+    /**
+     * Set 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * @param VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     */
+    public void setVPCSettings(VPCSettings VPCSettings) {
+        this.VPCSettings = VPCSettings;
+    }
+
+    /**
+     * Get 节点资源的规格。 
+     * @return ResourceSpec 节点资源的规格。
+     */
+    public NewResourceSpec getResourceSpec() {
+        return this.ResourceSpec;
+    }
+
+    /**
+     * Set 节点资源的规格。
+     * @param ResourceSpec 节点资源的规格。
+     */
+    public void setResourceSpec(NewResourceSpec ResourceSpec) {
+        this.ResourceSpec = ResourceSpec;
+    }
+
+    /**
      * Get 开启COS访问需要设置的参数。 
      * @return COSSettings 开启COS访问需要设置的参数。
      */
@@ -592,6 +597,22 @@ Hadoop-Hbase
      */
     public void setCOSSettings(COSSettings COSSettings) {
         this.COSSettings = COSSettings;
+    }
+
+    /**
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     */
+    public Placement getPlacement() {
+        return this.Placement;
+    }
+
+    /**
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     */
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
     }
 
     /**
@@ -914,6 +935,54 @@ Hadoop-Hbase
         this.ExternalService = ExternalService;
     }
 
+    /**
+     * Get 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。 
+     * @return VersionID 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+     */
+    public Long getVersionID() {
+        return this.VersionID;
+    }
+
+    /**
+     * Set 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+     * @param VersionID 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+     */
+    public void setVersionID(Long VersionID) {
+        this.VersionID = VersionID;
+    }
+
+    /**
+     * Get true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。 
+     * @return MultiZone true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+     */
+    public Boolean getMultiZone() {
+        return this.MultiZone;
+    }
+
+    /**
+     * Set true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+     * @param MultiZone true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+     */
+    public void setMultiZone(Boolean MultiZone) {
+        this.MultiZone = MultiZone;
+    }
+
+    /**
+     * Get 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。 
+     * @return MultiZoneSettings 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     */
+    public MultiZoneSetting [] getMultiZoneSettings() {
+        return this.MultiZoneSettings;
+    }
+
+    /**
+     * Set 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * @param MultiZoneSettings 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     */
+    public void setMultiZoneSettings(MultiZoneSetting [] MultiZoneSettings) {
+        this.MultiZoneSettings = MultiZoneSettings;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -925,17 +994,11 @@ Hadoop-Hbase
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
-        if (source.VPCSettings != null) {
-            this.VPCSettings = new VPCSettings(source.VPCSettings);
-        }
         if (source.Software != null) {
             this.Software = new String[source.Software.length];
             for (int i = 0; i < source.Software.length; i++) {
                 this.Software[i] = new String(source.Software[i]);
             }
-        }
-        if (source.ResourceSpec != null) {
-            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
         }
         if (source.SupportHA != null) {
             this.SupportHA = new Long(source.SupportHA);
@@ -946,9 +1009,6 @@ Hadoop-Hbase
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
-        if (source.Placement != null) {
-            this.Placement = new Placement(source.Placement);
-        }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
@@ -958,8 +1018,17 @@ Hadoop-Hbase
         if (source.LoginSettings != null) {
             this.LoginSettings = new LoginSettings(source.LoginSettings);
         }
+        if (source.VPCSettings != null) {
+            this.VPCSettings = new VPCSettings(source.VPCSettings);
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
+        }
         if (source.COSSettings != null) {
             this.COSSettings = new COSSettings(source.COSSettings);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
         }
         if (source.SgId != null) {
             this.SgId = new String(source.SgId);
@@ -1024,6 +1093,18 @@ Hadoop-Hbase
                 this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
             }
         }
+        if (source.VersionID != null) {
+            this.VersionID = new Long(source.VersionID);
+        }
+        if (source.MultiZone != null) {
+            this.MultiZone = new Boolean(source.MultiZone);
+        }
+        if (source.MultiZoneSettings != null) {
+            this.MultiZoneSettings = new MultiZoneSetting[source.MultiZoneSettings.length];
+            for (int i = 0; i < source.MultiZoneSettings.length; i++) {
+                this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
+            }
+        }
     }
 
 
@@ -1032,17 +1113,17 @@ Hadoop-Hbase
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
-        this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
         this.setParamArraySimple(map, prefix + "Software.", this.Software);
-        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamSimple(map, prefix + "SupportHA", this.SupportHA);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+        this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamObj(map, prefix + "COSSettings.", this.COSSettings);
+        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "SgId", this.SgId);
         this.setParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
@@ -1060,6 +1141,9 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
         this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+        this.setParamSimple(map, prefix + "VersionID", this.VersionID);
+        this.setParamSimple(map, prefix + "MultiZone", this.MultiZone);
+        this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
 
     }
 }

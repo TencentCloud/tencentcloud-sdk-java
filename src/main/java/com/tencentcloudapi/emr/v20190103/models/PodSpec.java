@@ -110,6 +110,14 @@ public class PodSpec extends AbstractModel{
     private String SubnetId;
 
     /**
+    * pod name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
      * Get 外部资源提供者的标识符，例如"cls-a1cd23fa"。 
      * @return ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
      */
@@ -313,6 +321,26 @@ public class PodSpec extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get pod name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodName pod name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set pod name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodName pod name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
     public PodSpec() {
     }
 
@@ -363,6 +391,9 @@ public class PodSpec extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
     }
 
 
@@ -382,6 +413,7 @@ public class PodSpec extends AbstractModel{
         this.setParamObj(map, prefix + "DynamicPodSpec.", this.DynamicPodSpec);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
 
     }
 }

@@ -188,6 +188,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private String StartServiceAfterScaleOut;
 
     /**
+    * 可用区，默认是集群的主可用区
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
+    * 子网，默认是集群创建时的子网
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -583,6 +597,38 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.StartServiceAfterScaleOut = StartServiceAfterScaleOut;
     }
 
+    /**
+     * Get 可用区，默认是集群的主可用区 
+     * @return ZoneId 可用区，默认是集群的主可用区
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 可用区，默认是集群的主可用区
+     * @param ZoneId 可用区，默认是集群的主可用区
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 子网，默认是集群创建时的子网 
+     * @return SubnetId 子网，默认是集群创建时的子网
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网，默认是集群创建时的子网
+     * @param SubnetId 子网，默认是集群创建时的子网
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -675,6 +721,12 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         if (source.StartServiceAfterScaleOut != null) {
             this.StartServiceAfterScaleOut = new String(source.StartServiceAfterScaleOut);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -704,6 +756,8 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PodParameter.", this.PodParameter);
         this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
         this.setParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

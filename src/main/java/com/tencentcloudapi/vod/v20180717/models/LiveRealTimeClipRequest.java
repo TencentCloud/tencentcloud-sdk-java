@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LiveRealTimeClipRequest extends AbstractModel{
 
     /**
-    * 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+    * 推流直播码。
     */
     @SerializedName("StreamId")
     @Expose
@@ -93,16 +93,16 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。 
-     * @return StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * Get 推流直播码。 
+     * @return StreamId 推流直播码。
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
-     * @param StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * Set 推流直播码。
+     * @param StreamId 推流直播码。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

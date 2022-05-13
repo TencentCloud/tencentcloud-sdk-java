@@ -37,7 +37,7 @@ public class CreateGroupRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * 该库的容量限制。
+    * 图库可容纳的最大图片数量。
     */
     @SerializedName("MaxCapacity")
     @Expose
@@ -51,7 +51,7 @@ public class CreateGroupRequest extends AbstractModel{
     private String Brief;
 
     /**
-    * 该库的访问限频 ，默认10。
+    * 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
     */
     @SerializedName("MaxQps")
     @Expose
@@ -101,16 +101,16 @@ public class CreateGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 该库的容量限制。 
-     * @return MaxCapacity 该库的容量限制。
+     * Get 图库可容纳的最大图片数量。 
+     * @return MaxCapacity 图库可容纳的最大图片数量。
      */
     public Long getMaxCapacity() {
         return this.MaxCapacity;
     }
 
     /**
-     * Set 该库的容量限制。
-     * @param MaxCapacity 该库的容量限制。
+     * Set 图库可容纳的最大图片数量。
+     * @param MaxCapacity 图库可容纳的最大图片数量。
      */
     public void setMaxCapacity(Long MaxCapacity) {
         this.MaxCapacity = MaxCapacity;
@@ -133,16 +133,16 @@ public class CreateGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 该库的访问限频 ，默认10。 
-     * @return MaxQps 该库的访问限频 ，默认10。
+     * Get 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。 
+     * @return MaxQps 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
      */
     public Long getMaxQps() {
         return this.MaxQps;
     }
 
     /**
-     * Set 该库的访问限频 ，默认10。
-     * @param MaxQps 该库的访问限频 ，默认10。
+     * Set 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
+     * @param MaxQps 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
      */
     public void setMaxQps(Long MaxQps) {
         this.MaxQps = MaxQps;
