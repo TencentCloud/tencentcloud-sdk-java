@@ -261,6 +261,26 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
+     * @param req CreateFirstLinkSessionRequest
+     * @return CreateFirstLinkSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFirstLinkSessionResponse CreateFirstLinkSession(CreateFirstLinkSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFirstLinkSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFirstLinkSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFirstLinkSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
      * @param req CreateHTTPListenerRequest
      * @return CreateHTTPListenerResponse
@@ -513,6 +533,26 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainErrorPageInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDomainErrorPageInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
+     * @param req DeleteFirstLinkSessionRequest
+     * @return DeleteFirstLinkSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFirstLinkSessionResponse DeleteFirstLinkSession(DeleteFirstLinkSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFirstLinkSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFirstLinkSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFirstLinkSession");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -813,6 +853,26 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDomainErrorPageInfoByIds");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
+     * @param req DescribeFirstLinkSessionRequest
+     * @return DescribeFirstLinkSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirstLinkSessionResponse DescribeFirstLinkSession(DescribeFirstLinkSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirstLinkSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirstLinkSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFirstLinkSession");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -303,6 +303,14 @@ public class ContainerGroupDeploy extends AbstractModel{
     private Boolean KubeInjectEnable;
 
     /**
+    * 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private String RepoType;
+
+    /**
      * Get 部署组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组id
@@ -1002,6 +1010,26 @@ public class ContainerGroupDeploy extends AbstractModel{
         this.KubeInjectEnable = KubeInjectEnable;
     }
 
+    /**
+     * Get 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepoType 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepoType 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepoType(String RepoType) {
+        this.RepoType = RepoType;
+    }
+
     public ContainerGroupDeploy() {
     }
 
@@ -1127,6 +1155,9 @@ public class ContainerGroupDeploy extends AbstractModel{
         if (source.KubeInjectEnable != null) {
             this.KubeInjectEnable = new Boolean(source.KubeInjectEnable);
         }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
     }
 
 
@@ -1169,6 +1200,7 @@ public class ContainerGroupDeploy extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
         this.setParamArrayObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
         this.setParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
 
     }
 }

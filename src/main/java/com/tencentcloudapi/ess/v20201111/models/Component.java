@@ -37,14 +37,14 @@ SIGN_SIGNATURE - 手写签名控件
     private String ComponentType;
 
     /**
-    * 参数控件宽度，单位px
+    * 参数控件宽度，单位pt
     */
     @SerializedName("ComponentWidth")
     @Expose
     private Float ComponentWidth;
 
     /**
-    * 参数控件高度，单位px
+    * 参数控件高度，单位pt
     */
     @SerializedName("ComponentHeight")
     @Expose
@@ -58,14 +58,14 @@ SIGN_SIGNATURE - 手写签名控件
     private Long ComponentPage;
 
     /**
-    * 参数控件X位置，单位px
+    * 参数控件X位置，单位pt
     */
     @SerializedName("ComponentPosX")
     @Expose
     private Float ComponentPosX;
 
     /**
-    * 参数控件Y位置，单位px
+    * 参数控件Y位置，单位pt
     */
     @SerializedName("ComponentPosY")
     @Expose
@@ -79,14 +79,14 @@ SIGN_SIGNATURE - 手写签名控件
     private Long FileIndex;
 
     /**
-    * 控件编号
+    * GenerateMode==KEYWORD 指定关键字
     */
     @SerializedName("ComponentId")
     @Expose
     private String ComponentId;
 
     /**
-    * 控件名称
+    * GenerateMode==FIELD 指定表单域名称
     */
     @SerializedName("ComponentName")
     @Expose
@@ -100,7 +100,15 @@ SIGN_SIGNATURE - 手写签名控件
     private Boolean ComponentRequired;
 
     /**
-    * 参数控件样式
+    * 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
     */
     @SerializedName("ComponentExtra")
     @Expose
@@ -142,6 +150,20 @@ KEYWORD 关键字，使用ComponentId指定关键字
     @SerializedName("ComponentDateFontSize")
     @Expose
     private Long ComponentDateFontSize;
+
+    /**
+    * 指定关键字时横坐标偏移量
+    */
+    @SerializedName("OffsetX")
+    @Expose
+    private Float OffsetX;
+
+    /**
+    * 指定关键字时纵坐标偏移量
+    */
+    @SerializedName("OffsetY")
+    @Expose
+    private Float OffsetY;
 
     /**
      * Get 如果是 Component 控件类型，则可选类型为：
@@ -188,32 +210,32 @@ SIGN_SIGNATURE - 手写签名控件
     }
 
     /**
-     * Get 参数控件宽度，单位px 
-     * @return ComponentWidth 参数控件宽度，单位px
+     * Get 参数控件宽度，单位pt 
+     * @return ComponentWidth 参数控件宽度，单位pt
      */
     public Float getComponentWidth() {
         return this.ComponentWidth;
     }
 
     /**
-     * Set 参数控件宽度，单位px
-     * @param ComponentWidth 参数控件宽度，单位px
+     * Set 参数控件宽度，单位pt
+     * @param ComponentWidth 参数控件宽度，单位pt
      */
     public void setComponentWidth(Float ComponentWidth) {
         this.ComponentWidth = ComponentWidth;
     }
 
     /**
-     * Get 参数控件高度，单位px 
-     * @return ComponentHeight 参数控件高度，单位px
+     * Get 参数控件高度，单位pt 
+     * @return ComponentHeight 参数控件高度，单位pt
      */
     public Float getComponentHeight() {
         return this.ComponentHeight;
     }
 
     /**
-     * Set 参数控件高度，单位px
-     * @param ComponentHeight 参数控件高度，单位px
+     * Set 参数控件高度，单位pt
+     * @param ComponentHeight 参数控件高度，单位pt
      */
     public void setComponentHeight(Float ComponentHeight) {
         this.ComponentHeight = ComponentHeight;
@@ -236,32 +258,32 @@ SIGN_SIGNATURE - 手写签名控件
     }
 
     /**
-     * Get 参数控件X位置，单位px 
-     * @return ComponentPosX 参数控件X位置，单位px
+     * Get 参数控件X位置，单位pt 
+     * @return ComponentPosX 参数控件X位置，单位pt
      */
     public Float getComponentPosX() {
         return this.ComponentPosX;
     }
 
     /**
-     * Set 参数控件X位置，单位px
-     * @param ComponentPosX 参数控件X位置，单位px
+     * Set 参数控件X位置，单位pt
+     * @param ComponentPosX 参数控件X位置，单位pt
      */
     public void setComponentPosX(Float ComponentPosX) {
         this.ComponentPosX = ComponentPosX;
     }
 
     /**
-     * Get 参数控件Y位置，单位px 
-     * @return ComponentPosY 参数控件Y位置，单位px
+     * Get 参数控件Y位置，单位pt 
+     * @return ComponentPosY 参数控件Y位置，单位pt
      */
     public Float getComponentPosY() {
         return this.ComponentPosY;
     }
 
     /**
-     * Set 参数控件Y位置，单位px
-     * @param ComponentPosY 参数控件Y位置，单位px
+     * Set 参数控件Y位置，单位pt
+     * @param ComponentPosY 参数控件Y位置，单位pt
      */
     public void setComponentPosY(Float ComponentPosY) {
         this.ComponentPosY = ComponentPosY;
@@ -284,32 +306,32 @@ SIGN_SIGNATURE - 手写签名控件
     }
 
     /**
-     * Get 控件编号 
-     * @return ComponentId 控件编号
+     * Get GenerateMode==KEYWORD 指定关键字 
+     * @return ComponentId GenerateMode==KEYWORD 指定关键字
      */
     public String getComponentId() {
         return this.ComponentId;
     }
 
     /**
-     * Set 控件编号
-     * @param ComponentId 控件编号
+     * Set GenerateMode==KEYWORD 指定关键字
+     * @param ComponentId GenerateMode==KEYWORD 指定关键字
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * Get 控件名称 
-     * @return ComponentName 控件名称
+     * Get GenerateMode==FIELD 指定表单域名称 
+     * @return ComponentName GenerateMode==FIELD 指定表单域名称
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 控件名称
-     * @param ComponentName 控件名称
+     * Set GenerateMode==FIELD 指定表单域名称
+     * @param ComponentName GenerateMode==FIELD 指定表单域名称
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
@@ -332,16 +354,48 @@ SIGN_SIGNATURE - 手写签名控件
     }
 
     /**
-     * Get 参数控件样式 
-     * @return ComponentExtra 参数控件样式
+     * Get 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]} 
+     * @return ComponentExtra 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
      */
     public String getComponentExtra() {
         return this.ComponentExtra;
     }
 
     /**
-     * Set 参数控件样式
-     * @param ComponentExtra 参数控件样式
+     * Set 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+     * @param ComponentExtra 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
      */
     public void setComponentExtra(String ComponentExtra) {
         this.ComponentExtra = ComponentExtra;
@@ -435,6 +489,38 @@ KEYWORD 关键字，使用ComponentId指定关键字
         this.ComponentDateFontSize = ComponentDateFontSize;
     }
 
+    /**
+     * Get 指定关键字时横坐标偏移量 
+     * @return OffsetX 指定关键字时横坐标偏移量
+     */
+    public Float getOffsetX() {
+        return this.OffsetX;
+    }
+
+    /**
+     * Set 指定关键字时横坐标偏移量
+     * @param OffsetX 指定关键字时横坐标偏移量
+     */
+    public void setOffsetX(Float OffsetX) {
+        this.OffsetX = OffsetX;
+    }
+
+    /**
+     * Get 指定关键字时纵坐标偏移量 
+     * @return OffsetY 指定关键字时纵坐标偏移量
+     */
+    public Float getOffsetY() {
+        return this.OffsetY;
+    }
+
+    /**
+     * Set 指定关键字时纵坐标偏移量
+     * @param OffsetY 指定关键字时纵坐标偏移量
+     */
+    public void setOffsetY(Float OffsetY) {
+        this.OffsetY = OffsetY;
+    }
+
     public Component() {
     }
 
@@ -491,6 +577,12 @@ KEYWORD 关键字，使用ComponentId指定关键字
         if (source.ComponentDateFontSize != null) {
             this.ComponentDateFontSize = new Long(source.ComponentDateFontSize);
         }
+        if (source.OffsetX != null) {
+            this.OffsetX = new Float(source.OffsetX);
+        }
+        if (source.OffsetY != null) {
+            this.OffsetY = new Float(source.OffsetY);
+        }
     }
 
 
@@ -514,6 +606,8 @@ KEYWORD 关键字，使用ComponentId指定关键字
         this.setParamSimple(map, prefix + "IsFormType", this.IsFormType);
         this.setParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
         this.setParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
+        this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
+        this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
 
     }
 }

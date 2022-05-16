@@ -921,6 +921,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *预付费实例变配接口，调整磁盘，带宽
+     * @param req ModifyInstancePreRequest
+     * @return ModifyInstancePreResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePreResponse ModifyInstancePre(ModifyInstancePreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstancePreResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstancePreResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstancePre");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改密码
      * @param req ModifyPasswordRequest
      * @return ModifyPasswordResponse
