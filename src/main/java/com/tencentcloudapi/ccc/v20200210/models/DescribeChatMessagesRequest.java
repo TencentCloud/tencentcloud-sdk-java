@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeChatMessagesRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例 ID（废弃）
     */
     @SerializedName("InstanceId")
     @Expose
     private Long InstanceId;
 
     /**
-    * 应用ID
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -72,32 +72,32 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     private String SessionId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID（废弃） 
+     * @return InstanceId 实例 ID（废弃）
      */
     public Long getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID（废弃）
+     * @param InstanceId 实例 ID（废弃）
      */
     public void setInstanceId(Long InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 应用ID 
-     * @return SdkAppId 应用ID
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用ID
-     * @param SdkAppId 应用ID
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

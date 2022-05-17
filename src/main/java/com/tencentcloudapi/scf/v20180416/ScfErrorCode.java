@@ -21,6 +21,9 @@ public enum ScfErrorCode {
     // 请求role信息失败。
      FAILEDOPERATION_CALLROLEFAILED("FailedOperation.CallRoleFailed"),
      
+    // CopyAsyncRun 传参异常。
+     FAILEDOPERATION_COPYASYNCRUN("FailedOperation.CopyAsyncRun"),
+     
     // 复制函数失败。
      FAILEDOPERATION_COPYFAILED("FailedOperation.CopyFailed"),
      
@@ -78,6 +81,9 @@ public enum ScfErrorCode {
     // 获取函数代码地址失败。
      FAILEDOPERATION_GETFUNCTIONADDRESS("FailedOperation.GetFunctionAddress"),
      
+    // InstanceNotFound 实例不存在。
+     FAILEDOPERATION_INSTANCENOTFOUND("FailedOperation.InstanceNotFound"),
+     
     // 当前账号或命名空间处于欠费状态，请在可用时重试。
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
@@ -99,6 +105,12 @@ public enum ScfErrorCode {
     // 删除定时预置任务失败。
      FAILEDOPERATION_PROVISIONDELETETIMER("FailedOperation.ProvisionDeleteTimer"),
      
+    // 预置超过可用。
+     FAILEDOPERATION_PROVISIONEDEXCEEDAVAILABLE("FailedOperation.ProvisionedExceedAvailable"),
+     
+    // 预置超限。
+     FAILEDOPERATION_PROVISIONEDEXCEEDRESERVED("FailedOperation.ProvisionedExceedReserved"),
+     
     // 当前函数版本已有预置任务处于进行中，请稍后重试。
      FAILEDOPERATION_PROVISIONEDINPROGRESS("FailedOperation.ProvisionedInProgress"),
      
@@ -110,6 +122,9 @@ public enum ScfErrorCode {
      
     // 角色不存在。
      FAILEDOPERATION_QCSROLENOTFOUND("FailedOperation.QcsRoleNotFound"),
+     
+    // ReservedExceedTotal 总保留超限。
+     FAILEDOPERATION_RESERVEDEXCEEDTOTAL("FailedOperation.ReservedExceedTotal"),
      
     // 当前函数已有保留并发设置任务处于进行中，请稍后重试。
      FAILEDOPERATION_RESERVEDINPROGRESS("FailedOperation.ReservedInProgress"),
@@ -170,6 +185,9 @@ public enum ScfErrorCode {
      
     // 请求参数不合法。
      INVALIDPARAMETER_PAYLOAD("InvalidParameter.Payload"),
+     
+    // RoleCheck 传参有误。
+     INVALIDPARAMETER_ROLECHECK("InvalidParameter.RoleCheck"),
      
     // RoutingConfig参数传入错误。
      INVALIDPARAMETER_ROUTINGCONFIG("InvalidParameter.RoutingConfig"),
@@ -333,11 +351,17 @@ public enum ScfErrorCode {
     // GitPassword不符合规范。
      INVALIDPARAMETERVALUE_GITPASSWORD("InvalidParameterValue.GitPassword"),
      
+    // GitPasswordSecret 传参有误。
+     INVALIDPARAMETERVALUE_GITPASSWORDSECRET("InvalidParameterValue.GitPasswordSecret"),
+     
     // GitUrl不符合规范。
      INVALIDPARAMETERVALUE_GITURL("InvalidParameterValue.GitUrl"),
      
     // GitUserName不符合规范。
      INVALIDPARAMETERVALUE_GITUSERNAME("InvalidParameterValue.GitUserName"),
+     
+    // GitUserNameSecret 传参有误。
+     INVALIDPARAMETERVALUE_GITUSERNAMESECRET("InvalidParameterValue.GitUserNameSecret"),
      
     // Handler传入错误。
      INVALIDPARAMETERVALUE_HANDLER("InvalidParameterValue.Handler"),
@@ -647,6 +671,9 @@ public enum ScfErrorCode {
      
     // 指定的cfs下未找到您所指定的挂载点。
      RESOURCENOTFOUND_CFSMOUNTINSNOTMATCH("ResourceNotFound.CfsMountInsNotMatch"),
+     
+    // CfsProtocolError 参数异常。
+     RESOURCENOTFOUND_CFSPROTOCOLERROR("ResourceNotFound.CfsProtocolError"),
      
     // 检测cfs状态为不可用。
      RESOURCENOTFOUND_CFSSTATUSERROR("ResourceNotFound.CfsStatusError"),

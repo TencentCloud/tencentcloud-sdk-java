@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeStaffStatusMetricsRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel{
     private String [] StaffList;
 
     /**
-     * Get 实例ID 
-     * @return SdkAppId 实例ID
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 实例ID
-     * @param SdkAppId 实例ID
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

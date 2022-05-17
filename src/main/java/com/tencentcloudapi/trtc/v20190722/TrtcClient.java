@@ -39,6 +39,37 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *###接口说明：
+启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制有或者多路视频画面混流一路。
+
+###您可以通过此接口实现如下目标：
+* 指定订阅流参数（RecordParams）来指定需要录制的主播的黑名单或者白名单。
+* 指定第三方存储的参数（StorageParams）来指定上传到您希望的云存储
+* 指定混流模式下的音视频转码详细参数（MixTranscodeParams），包括视频分辨率、视频码率、视频帧率、以及声音质量等
+* 指定混流模式各路画面的位置和布局或者也可以指定自动模板的方式来配置。
+
+###关键名词：
+* 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件（M3U8/TS）上传至云存储。
+* 混流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件（M3U8/TS）上传至云存储。
+     * @param req CreateCloudRecordingRequest
+     * @return CreateCloudRecordingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudRecordingResponse CreateCloudRecording(CreateCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudRecordingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudRecording");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
      * @param req CreatePictureRequest
      * @return CreatePictureResponse
@@ -71,6 +102,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTroubleInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTroubleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *成功开启录制后，可以使用此接口来停止录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+     * @param req DeleteCloudRecordingRequest
+     * @return DeleteCloudRecordingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCloudRecordingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -132,6 +183,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCallDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCallDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
+     * @param req DescribeCloudRecordingRequest
+     * @return DescribeCloudRecordingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudRecordingResponse DescribeCloudRecording(DescribeCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudRecordingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -323,6 +394,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DismissRoomByStrRoomIdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DismissRoomByStrRoomId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
+     * @param req ModifyCloudRecordingRequest
+     * @return ModifyCloudRecordingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudRecordingResponse ModifyCloudRecording(ModifyCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCloudRecordingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

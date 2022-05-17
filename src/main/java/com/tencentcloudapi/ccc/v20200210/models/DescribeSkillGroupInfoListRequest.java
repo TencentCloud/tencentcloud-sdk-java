@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSkillGroupInfoListRequest extends AbstractModel{
 
     /**
-    * 应用ID
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel{
     private Long ModifiedTime;
 
     /**
-     * Get 应用ID 
-     * @return SdkAppId 应用ID
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用ID
-     * @param SdkAppId 应用ID
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

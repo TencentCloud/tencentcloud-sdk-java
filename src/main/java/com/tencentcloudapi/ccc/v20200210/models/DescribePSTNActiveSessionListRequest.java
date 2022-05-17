@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePSTNActiveSessionListRequest extends AbstractModel{
 
     /**
-    * 应用 ID
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -44,16 +44,16 @@ public class DescribePSTNActiveSessionListRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 应用 ID 
-     * @return SdkAppId 应用 ID
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID
-     * @param SdkAppId 应用 ID
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSDKLoginTokenRequest extends AbstractModel{
 
     /**
-    * 应用ID。
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateSDKLoginTokenRequest extends AbstractModel{
     private String SeatUserId;
 
     /**
-     * Get 应用ID。 
-     * @return SdkAppId 应用ID。
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用ID。
-     * @param SdkAppId 应用ID。
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

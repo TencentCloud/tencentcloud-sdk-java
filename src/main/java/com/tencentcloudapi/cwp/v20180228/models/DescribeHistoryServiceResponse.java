@@ -65,6 +65,13 @@ public class DescribeHistoryServiceResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +175,22 @@ public class DescribeHistoryServiceResponse extends AbstractModel{
     }
 
     /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +232,9 @@ public class DescribeHistoryServiceResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +251,7 @@ public class DescribeHistoryServiceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAutoOpenRenew", this.IsAutoOpenRenew);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

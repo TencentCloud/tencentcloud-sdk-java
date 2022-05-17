@@ -1356,6 +1356,30 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口返回查询时间范围内每天 License 请求次数信息。
+   1. 可以查询最近365天内的 License 请求次数统计数据。
+   2. 查询时间跨度不超过90天。
+   3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+
+     * @param req DescribeLicenseUsageDataRequest
+     * @return DescribeLicenseUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLicenseUsageDataResponse DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLicenseUsageDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLicenseUsageData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *1. 该接口可以获取多个媒体文件的多种信息，包括：
     1. 基础信息（basicInfo）：包括媒体名称、分类、播放地址、封面图片等。
     2. 元信息（metaData）：包括大小、时长、视频流信息、音频流信息等。

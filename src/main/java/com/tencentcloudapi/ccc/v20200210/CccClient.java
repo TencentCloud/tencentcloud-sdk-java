@@ -79,7 +79,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *创建外呼会话
+     *创建外呼会话，当前仅支持双呼，即先使用平台号码呼出到坐席手机上，坐席接听后，然后再外呼用户，而且由于运营商频率限制，坐席手机号必须先加白名单，避免频控导致外呼失败。
      * @param req CreateCallOutSessionRequest
      * @return CreateCallOutSessionResponse
      * @throws TencentCloudSDKException

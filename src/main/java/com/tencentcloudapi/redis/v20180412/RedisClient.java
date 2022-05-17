@@ -1359,6 +1359,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *设置实例输入模式
+     * @param req ModifyInstanceReadOnlyRequest
+     * @return ModifyInstanceReadOnlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(ModifyInstanceReadOnlyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceReadOnlyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceReadOnly");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
      * @param req ModifyMaintenanceWindowRequest
      * @return ModifyMaintenanceWindowResponse

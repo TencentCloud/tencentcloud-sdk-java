@@ -39,7 +39,8 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     private Long RoomId;
 
     /**
-    * 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+    * 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
     */
     @SerializedName("PushUserId")
     @Expose
@@ -193,6 +194,30 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     private String TRTCRoomIdStr;
 
     /**
+    * 内测参数，需开通白名单进行体验。
+
+IM鉴权信息参数，用于IM鉴权。
+当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板信令的传输通道，否则使用公共参数中的SdkAppId作为白板信令的传输通道。
+    */
+    @SerializedName("IMAuthParam")
+    @Expose
+    private AuthParam IMAuthParam;
+
+    /**
+    * 内测参数，需开通白名单进行体验。
+
+TRTC鉴权信息参数，用于TRTC进房推流鉴权。
+当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
+    */
+    @SerializedName("TRTCAuthParam")
+    @Expose
+    private AuthParam TRTCAuthParam;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -233,16 +258,20 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     }
 
     /**
-     * Get 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。 
-     * @return PushUserId 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+     * Get 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。 
+     * @return PushUserId 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
      */
     public String getPushUserId() {
         return this.PushUserId;
     }
 
     /**
-     * Set 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
-     * @param PushUserId 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+     * Set 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+     * @param PushUserId 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
      */
     public void setPushUserId(String PushUserId) {
         this.PushUserId = PushUserId;
@@ -656,6 +685,78 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         this.TRTCRoomIdStr = TRTCRoomIdStr;
     }
 
+    /**
+     * Get 内测参数，需开通白名单进行体验。
+
+IM鉴权信息参数，用于IM鉴权。
+当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板信令的传输通道，否则使用公共参数中的SdkAppId作为白板信令的传输通道。 
+     * @return IMAuthParam 内测参数，需开通白名单进行体验。
+
+IM鉴权信息参数，用于IM鉴权。
+当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板信令的传输通道，否则使用公共参数中的SdkAppId作为白板信令的传输通道。
+     */
+    public AuthParam getIMAuthParam() {
+        return this.IMAuthParam;
+    }
+
+    /**
+     * Set 内测参数，需开通白名单进行体验。
+
+IM鉴权信息参数，用于IM鉴权。
+当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板信令的传输通道，否则使用公共参数中的SdkAppId作为白板信令的传输通道。
+     * @param IMAuthParam 内测参数，需开通白名单进行体验。
+
+IM鉴权信息参数，用于IM鉴权。
+当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板信令的传输通道，否则使用公共参数中的SdkAppId作为白板信令的传输通道。
+     */
+    public void setIMAuthParam(AuthParam IMAuthParam) {
+        this.IMAuthParam = IMAuthParam;
+    }
+
+    /**
+     * Get 内测参数，需开通白名单进行体验。
+
+TRTC鉴权信息参数，用于TRTC进房推流鉴权。
+当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。 
+     * @return TRTCAuthParam 内测参数，需开通白名单进行体验。
+
+TRTC鉴权信息参数，用于TRTC进房推流鉴权。
+当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
+     */
+    public AuthParam getTRTCAuthParam() {
+        return this.TRTCAuthParam;
+    }
+
+    /**
+     * Set 内测参数，需开通白名单进行体验。
+
+TRTC鉴权信息参数，用于TRTC进房推流鉴权。
+当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
+     * @param TRTCAuthParam 内测参数，需开通白名单进行体验。
+
+TRTC鉴权信息参数，用于TRTC进房推流鉴权。
+当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
+
+如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
+     */
+    public void setTRTCAuthParam(AuthParam TRTCAuthParam) {
+        this.TRTCAuthParam = TRTCAuthParam;
+    }
+
     public StartWhiteboardPushRequest() {
     }
 
@@ -718,6 +819,12 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         if (source.TRTCRoomIdStr != null) {
             this.TRTCRoomIdStr = new String(source.TRTCRoomIdStr);
         }
+        if (source.IMAuthParam != null) {
+            this.IMAuthParam = new AuthParam(source.IMAuthParam);
+        }
+        if (source.TRTCAuthParam != null) {
+            this.TRTCAuthParam = new AuthParam(source.TRTCAuthParam);
+        }
     }
 
 
@@ -743,6 +850,8 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
         this.setParamSimple(map, prefix + "TRTCRoomId", this.TRTCRoomId);
         this.setParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
+        this.setParamObj(map, prefix + "IMAuthParam.", this.IMAuthParam);
+        this.setParamObj(map, prefix + "TRTCAuthParam.", this.TRTCAuthParam);
 
     }
 }
