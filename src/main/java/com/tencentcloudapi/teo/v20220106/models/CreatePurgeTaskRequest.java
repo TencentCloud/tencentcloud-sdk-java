@@ -41,7 +41,15 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     private String Type;
 
     /**
-    * 内容，一行一个
+    * 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
     */
     @SerializedName("Targets")
     @Expose
@@ -49,7 +57,7 @@ public class CreatePurgeTaskRequest extends AbstractModel{
 
     /**
     * 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
     */
     @SerializedName("EncodeUrl")
     @Expose
@@ -104,16 +112,48 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 内容，一行一个 
-     * @return Targets 内容，一行一个
+     * Get 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写 
+     * @return Targets 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 内容，一行一个
-     * @param Targets 内容，一行一个
+     * Set 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
+     * @param Targets 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;
@@ -121,9 +161,9 @@ public class CreatePurgeTaskRequest extends AbstractModel{
 
     /**
      * Get 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986） 
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986） 
      * @return EncodeUrl 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     public Boolean getEncodeUrl() {
         return this.EncodeUrl;
@@ -131,9 +171,9 @@ public class CreatePurgeTaskRequest extends AbstractModel{
 
     /**
      * Set 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      * @param EncodeUrl 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     public void setEncodeUrl(Boolean EncodeUrl) {
         this.EncodeUrl = EncodeUrl;

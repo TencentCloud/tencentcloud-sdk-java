@@ -379,6 +379,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建告警策略
+     * @param req CreatePrometheusAlertPolicyRequest
+     * @return CreatePrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(CreatePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建告警规则
      * @param req CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
@@ -411,6 +431,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusDashboardResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePrometheusDashboard");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建一个云原生Prometheus模板
+     * @param req CreatePrometheusTempRequest
+     * @return CreatePrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusTempResponse CreatePrometheusTemp(CreatePrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusTemp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -659,6 +699,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除2.0实例告警策略
+     * @param req DeletePrometheusAlertPolicyRequest
+     * @return DeletePrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(DeletePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除告警规则
      * @param req DeletePrometheusAlertRuleRequest
      * @return DeletePrometheusAlertRuleResponse
@@ -671,6 +731,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeletePrometheusAlertRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除一个云原生Prometheus配置模板
+     * @param req DeletePrometheusTempRequest
+     * @return DeletePrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusTempResponse DeletePrometheusTemp(DeletePrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解除模板同步，这将会删除目标中该模板所生产的配置，针对V2版本实例
+     * @param req DeletePrometheusTempSyncRequest
+     * @return DeletePrometheusTempSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusTempSyncResponse DeletePrometheusTempSync(DeletePrometheusTempSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusTempSyncResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempSyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusTempSync");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1379,6 +1479,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取2.0实例告警策略列表
+     * @param req DescribePrometheusAlertPolicyRequest
+     * @return DescribePrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(DescribePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取告警规则列表
      * @param req DescribePrometheusAlertRuleRequest
      * @return DescribePrometheusAlertRuleResponse
@@ -1391,6 +1511,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePrometheusAlertRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取2.0实例关联集群列表
+     * @param req DescribePrometheusClusterAgentsRequest
+     * @return DescribePrometheusClusterAgentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(DescribePrometheusClusterAgentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusClusterAgentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusClusterAgentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusClusterAgents");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1419,6 +1559,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取与云监控融合实例列表
+     * @param req DescribePrometheusInstancesOverviewRequest
+     * @return DescribePrometheusInstancesOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(DescribePrometheusInstancesOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstancesOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstancesOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取实例列表
      * @param req DescribePrometheusOverviewsRequest
      * @return DescribePrometheusOverviewsResponse
@@ -1439,6 +1599,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取聚合规则列表，包含关联集群内crd资源创建的record rule
+     * @param req DescribePrometheusRecordRulesRequest
+     * @return DescribePrometheusRecordRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(DescribePrometheusRecordRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusRecordRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusRecordRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取targets信息
      * @param req DescribePrometheusTargetsRequest
      * @return DescribePrometheusTargetsResponse
@@ -1451,6 +1631,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTargetsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePrometheusTargets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取模板列表，默认模板将总是在最前面
+     * @param req DescribePrometheusTempRequest
+     * @return DescribePrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusTempResponse DescribePrometheusTemp(DescribePrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取模板关联实例信息，针对V2版本实例
+     * @param req DescribePrometheusTempSyncRequest
+     * @return DescribePrometheusTempSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusTempSyncResponse DescribePrometheusTempSync(DescribePrometheusTempSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusTempSyncResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempSyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusTempSync");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1619,6 +1839,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *关闭集群审计
+     * @param req DisableClusterAuditRequest
+     * @return DisableClusterAuditResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClusterAuditResponse DisableClusterAudit(DisableClusterAuditRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableClusterAuditResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableClusterAuditResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableClusterAudit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *关闭集群删除保护
      * @param req DisableClusterDeletionProtectionRequest
      * @return DisableClusterDeletionProtectionResponse
@@ -1631,6 +1871,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisableClusterDeletionProtectionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *关闭事件持久化功能
+     * @param req DisableEventPersistenceRequest
+     * @return DisableEventPersistenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableEventPersistenceResponse DisableEventPersistence(DisableEventPersistenceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableEventPersistenceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableEventPersistenceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableEventPersistence");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1659,6 +1919,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *开启集群审计
+     * @param req EnableClusterAuditRequest
+     * @return EnableClusterAuditResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClusterAuditResponse EnableClusterAudit(EnableClusterAuditRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableClusterAuditResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableClusterAuditResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableClusterAudit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启用集群删除保护
      * @param req EnableClusterDeletionProtectionRequest
      * @return EnableClusterDeletionProtectionResponse
@@ -1671,6 +1951,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableClusterDeletionProtectionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开启事件持久化功能
+     * @param req EnableEventPersistenceRequest
+     * @return EnableEventPersistenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableEventPersistenceResponse EnableEventPersistence(EnableEventPersistenceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableEventPersistenceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableEventPersistenceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableEventPersistence");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1791,6 +2091,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetUpgradeInstanceProgressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetUpgradeInstanceProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在TKE集群中安装CLS日志采集组件
+     * @param req InstallLogAgentRequest
+     * @return InstallLogAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallLogAgentResponse InstallLogAgent(InstallLogAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstallLogAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstallLogAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstallLogAgent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1959,6 +2279,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改2.0实例告警策略
+     * @param req ModifyPrometheusAlertPolicyRequest
+     * @return ModifyPrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(ModifyPrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改告警规则 
      * @param req ModifyPrometheusAlertRuleRequest
      * @return ModifyPrometheusAlertRuleResponse
@@ -2099,6 +2439,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *同步模板到实例或者集群，针对V2版本实例
+     * @param req SyncPrometheusTempRequest
+     * @return SyncPrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncPrometheusTempResponse SyncPrometheusTemp(SyncPrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncPrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncPrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncPrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *同步模板到实例或者集群
      * @param req SyncPrometheusTemplateRequest
      * @return SyncPrometheusTemplateResponse
@@ -2111,6 +2471,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SyncPrometheusTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *从TKE集群中卸载CLS日志采集组件
+     * @param req UninstallLogAgentRequest
+     * @return UninstallLogAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallLogAgentResponse UninstallLogAgent(UninstallLogAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UninstallLogAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UninstallLogAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UninstallLogAgent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

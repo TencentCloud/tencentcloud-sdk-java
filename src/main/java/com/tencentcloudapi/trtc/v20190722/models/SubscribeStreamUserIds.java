@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class SubscribeStreamUserIds extends AbstractModel{
 
     /**
-    * 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流，默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
+    * 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流；["1.*$"], 代表订阅UserId前缀为1的音频流。默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
     */
     @SerializedName("SubscribeAudioUserIds")
     @Expose
     private String [] SubscribeAudioUserIds;
 
     /**
-    * 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流，默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
+    * 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流；["1.*$"], 代表不订阅UserId前缀为1的音频流。默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
     */
     @SerializedName("UnSubscribeAudioUserIds")
     @Expose
     private String [] UnSubscribeAudioUserIds;
 
     /**
-    * 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+    * 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流；["1.*$"], 代表订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
     */
     @SerializedName("SubscribeVideoUserIds")
     @Expose
     private String [] SubscribeVideoUserIds;
 
     /**
-    * 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+    * 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流；["1.*$"], 代表不订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
     */
     @SerializedName("UnSubscribeVideoUserIds")
     @Expose
     private String [] UnSubscribeVideoUserIds;
 
     /**
-     * Get 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流，默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。 
-     * @return SubscribeAudioUserIds 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流，默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
+     * Get 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流；["1.*$"], 代表订阅UserId前缀为1的音频流。默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。 
+     * @return SubscribeAudioUserIds 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流；["1.*$"], 代表订阅UserId前缀为1的音频流。默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
      */
     public String [] getSubscribeAudioUserIds() {
         return this.SubscribeAudioUserIds;
     }
 
     /**
-     * Set 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流，默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
-     * @param SubscribeAudioUserIds 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流，默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
+     * Set 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流；["1.*$"], 代表订阅UserId前缀为1的音频流。默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
+     * @param SubscribeAudioUserIds 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流；["1.*$"], 代表订阅UserId前缀为1的音频流。默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
      */
     public void setSubscribeAudioUserIds(String [] SubscribeAudioUserIds) {
         this.SubscribeAudioUserIds = SubscribeAudioUserIds;
     }
 
     /**
-     * Get 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流，默认不填订阅房间内所有音频流，订阅列表用户数不超过32。 
-     * @return UnSubscribeAudioUserIds 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流，默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
+     * Get 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流；["1.*$"], 代表不订阅UserId前缀为1的音频流。默认不填订阅房间内所有音频流，订阅列表用户数不超过32。 
+     * @return UnSubscribeAudioUserIds 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流；["1.*$"], 代表不订阅UserId前缀为1的音频流。默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
      */
     public String [] getUnSubscribeAudioUserIds() {
         return this.UnSubscribeAudioUserIds;
     }
 
     /**
-     * Set 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流，默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
-     * @param UnSubscribeAudioUserIds 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流，默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
+     * Set 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流；["1.*$"], 代表不订阅UserId前缀为1的音频流。默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
+     * @param UnSubscribeAudioUserIds 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流；["1.*$"], 代表不订阅UserId前缀为1的音频流。默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
      */
     public void setUnSubscribeAudioUserIds(String [] UnSubscribeAudioUserIds) {
         this.UnSubscribeAudioUserIds = UnSubscribeAudioUserIds;
     }
 
     /**
-     * Get 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。 
-     * @return SubscribeVideoUserIds 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+     * Get 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流；["1.*$"], 代表订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。 
+     * @return SubscribeVideoUserIds 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流；["1.*$"], 代表订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
      */
     public String [] getSubscribeVideoUserIds() {
         return this.SubscribeVideoUserIds;
     }
 
     /**
-     * Set 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
-     * @param SubscribeVideoUserIds 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+     * Set 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流；["1.*$"], 代表订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+     * @param SubscribeVideoUserIds 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流；["1.*$"], 代表订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
      */
     public void setSubscribeVideoUserIds(String [] SubscribeVideoUserIds) {
         this.SubscribeVideoUserIds = SubscribeVideoUserIds;
     }
 
     /**
-     * Get 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。 
-     * @return UnSubscribeVideoUserIds 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+     * Get 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流；["1.*$"], 代表不订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。 
+     * @return UnSubscribeVideoUserIds 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流；["1.*$"], 代表不订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
      */
     public String [] getUnSubscribeVideoUserIds() {
         return this.UnSubscribeVideoUserIds;
     }
 
     /**
-     * Set 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
-     * @param UnSubscribeVideoUserIds 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+     * Set 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流；["1.*$"], 代表不订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+     * @param UnSubscribeVideoUserIds 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流；["1.*$"], 代表不订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
      */
     public void setUnSubscribeVideoUserIds(String [] UnSubscribeVideoUserIds) {
         this.UnSubscribeVideoUserIds = UnSubscribeVideoUserIds;

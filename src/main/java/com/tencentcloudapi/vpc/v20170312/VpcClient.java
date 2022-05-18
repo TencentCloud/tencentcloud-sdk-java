@@ -3754,6 +3754,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DisableFlowLogs）用于停止流日志。
+     * @param req DisableFlowLogsRequest
+     * @return DisableFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableFlowLogsResponse DisableFlowLogs(DisableFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableFlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableFlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableFlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
      * @param req DisableGatewayFlowMonitorRequest
      * @return DisableGatewayFlowMonitorResponse
@@ -4013,6 +4033,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<EnableCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（EnableFlowLogs）用于启动流日志。
+     * @param req EnableFlowLogsRequest
+     * @return EnableFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableFlowLogsResponse EnableFlowLogs(EnableFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableFlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableFlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableFlowLogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

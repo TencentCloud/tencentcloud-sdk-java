@@ -30,7 +30,8 @@ public class FailReason extends AbstractModel{
     private String Reason;
 
     /**
-    * 失败列表
+    * 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
     */
     @SerializedName("Targets")
     @Expose
@@ -53,16 +54,20 @@ public class FailReason extends AbstractModel{
     }
 
     /**
-     * Get 失败列表 
-     * @return Targets 失败列表
+     * Get 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致 
+     * @return Targets 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 失败列表
-     * @param Targets 失败列表
+     * Set 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
+     * @param Targets 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

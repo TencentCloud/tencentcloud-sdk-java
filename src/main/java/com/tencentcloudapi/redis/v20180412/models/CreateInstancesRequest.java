@@ -180,6 +180,13 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private String TemplateId;
 
     /**
+    * false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。 
      * @return TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      */
@@ -543,6 +550,22 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。 
+     * @return DryRun false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+     * @param DryRun false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -626,6 +649,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -655,6 +681,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

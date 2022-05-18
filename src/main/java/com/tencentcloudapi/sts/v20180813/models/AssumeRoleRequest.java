@@ -68,6 +68,13 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
     private String ExternalId;
 
     /**
+    * 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 角色的资源描述，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 普通角色：
 qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
@@ -187,6 +194,22 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.ExternalId = ExternalId;
     }
 
+    /**
+     * Get 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。 
+     * @return Tags 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+     * @param Tags 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AssumeRoleRequest() {
     }
 
@@ -210,6 +233,12 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         if (source.ExternalId != null) {
             this.ExternalId = new String(source.ExternalId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -222,6 +251,7 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.setParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

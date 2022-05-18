@@ -99,6 +99,27 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
+接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
+     * @param req DescribeGeneralMetricDataRequest
+     * @return DescribeGeneralMetricDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGeneralMetricDataResponse DescribeGeneralMetricData(DescribeGeneralMetricDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGeneralMetricDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGeneralMetricDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGeneralMetricData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *拉取通用指标列表
      * @param req DescribeMetricRecordsRequest
      * @return DescribeMetricRecordsResponse

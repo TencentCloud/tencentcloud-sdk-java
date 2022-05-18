@@ -138,4 +138,24 @@ public class TeoClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *查询七层离线日志
+     * @param req DownloadL7LogsRequest
+     * @return DownloadL7LogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadL7LogsResponse DownloadL7Logs(DownloadL7LogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadL7LogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadL7LogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadL7Logs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

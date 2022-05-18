@@ -30,7 +30,8 @@ public class CreatePrefetchTaskRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 预热的资源列表
+    * 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
     */
     @SerializedName("Targets")
     @Expose
@@ -38,6 +39,7 @@ public class CreatePrefetchTaskRequest extends AbstractModel{
 
     /**
     * 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
     */
     @SerializedName("EncodeUrl")
     @Expose
@@ -67,24 +69,30 @@ public class CreatePrefetchTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 预热的资源列表 
-     * @return Targets 预热的资源列表
+     * Get 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt 
+     * @return Targets 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 预热的资源列表
-     * @param Targets 预热的资源列表
+     * Set 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
+     * @param Targets 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 是否对url进行encode 
+     * Get 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986） 
      * @return EncodeUrl 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     public Boolean getEncodeUrl() {
         return this.EncodeUrl;
@@ -92,7 +100,9 @@ public class CreatePrefetchTaskRequest extends AbstractModel{
 
     /**
      * Set 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      * @param EncodeUrl 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     public void setEncodeUrl(Boolean EncodeUrl) {
         this.EncodeUrl = EncodeUrl;

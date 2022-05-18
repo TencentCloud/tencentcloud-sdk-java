@@ -39,6 +39,48 @@ public class TmtClient extends AbstractClient{
     }
 
     /**
+     *提交文档原文内容，输出任务ID， 支持原文为单一语种文档（如出现多语言文档，仅支持以选定的源语言相关内容翻译）,文件格式有pdf、docx、pptx、xlsx，支持的文本格式有txt、xml、html、markdown、properties。
+     * @param req FileTranslateRequest
+     * @return FileTranslateResponse
+     * @throws TencentCloudSDKException
+     */
+    public FileTranslateResponse FileTranslate(FileTranslateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FileTranslateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FileTranslateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FileTranslate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在调用文档翻译请求接口后，有回调和轮询两种方式获取识别结果。
+•当采用回调方式时，翻译完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见文档翻译结果回调 。
+• 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见参数说明。
+     * @param req GetFileTranslateRequest
+     * @return GetFileTranslateResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFileTranslateResponse GetFileTranslate(GetFileTranslateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFileTranslateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFileTranslateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFileTranslate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供13种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。<br />
 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
      * @param req ImageTranslateRequest

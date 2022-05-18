@@ -23,19 +23,21 @@ import java.util.HashMap;
 public class OpenBankPayeeInfo extends AbstractModel{
 
     /**
-    * 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+    * 收款方唯一标识。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；
+付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送微信OPEN_ID；
     */
     @SerializedName("PayeeId")
     @Expose
     private String PayeeId;
 
     /**
-    * 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+    * 支行名称。
     */
-    @SerializedName("PayeeName")
+    @SerializedName("BankBranchName")
     @Expose
-    private String PayeeName;
+    private String BankBranchName;
 
     /**
     * 银行账号。渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选
@@ -45,11 +47,15 @@ public class OpenBankPayeeInfo extends AbstractModel{
     private String BankAccountNumber;
 
     /**
-    * 支行名称。
+    * 收款方名称。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；
+渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送收款人姓名。
     */
-    @SerializedName("BankBranchName")
+    @SerializedName("PayeeName")
     @Expose
-    private String BankBranchName;
+    private String PayeeName;
 
     /**
     * 联行号。渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选
@@ -79,39 +85,47 @@ ALIPAY_LOGON_ID：支付宝登录号。
     private String AccountType;
 
     /**
-     * Get 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID 
-     * @return PayeeId 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+     * Get 收款方唯一标识。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；
+付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送微信OPEN_ID； 
+     * @return PayeeId 收款方唯一标识。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；
+付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送微信OPEN_ID；
      */
     public String getPayeeId() {
         return this.PayeeId;
     }
 
     /**
-     * Set 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
-     * @param PayeeId 收款方唯一标识。当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+     * Set 收款方唯一标识。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；
+付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送微信OPEN_ID；
+     * @param PayeeId 收款方唯一标识。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT，必填，上送收款方入驻云企付商户ID；
+付款方式为OPENBANK_PAYMENT时，非必填，输入外部收款方的标识ID
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送微信OPEN_ID；
      */
     public void setPayeeId(String PayeeId) {
         this.PayeeId = PayeeId;
     }
 
     /**
-     * Get 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。 
-     * @return PayeeName 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+     * Get 支行名称。 
+     * @return BankBranchName 支行名称。
      */
-    public String getPayeeName() {
-        return this.PayeeName;
+    public String getBankBranchName() {
+        return this.BankBranchName;
     }
 
     /**
-     * Set 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
-     * @param PayeeName 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+     * Set 支行名称。
+     * @param BankBranchName 支行名称。
      */
-    public void setPayeeName(String PayeeName) {
-        this.PayeeName = PayeeName;
+    public void setBankBranchName(String BankBranchName) {
+        this.BankBranchName = BankBranchName;
     }
 
     /**
@@ -131,19 +145,35 @@ ALIPAY_LOGON_ID：支付宝登录号。
     }
 
     /**
-     * Get 支行名称。 
-     * @return BankBranchName 支行名称。
+     * Get 收款方名称。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；
+渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送收款人姓名。 
+     * @return PayeeName 收款方名称。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；
+渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送收款人姓名。
      */
-    public String getBankBranchName() {
-        return this.BankBranchName;
+    public String getPayeeName() {
+        return this.PayeeName;
     }
 
     /**
-     * Set 支行名称。
-     * @param BankBranchName 支行名称。
+     * Set 收款方名称。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；
+渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送收款人姓名。
+     * @param PayeeName 收款方名称。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
+渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；
+渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
+渠道为WECHAT，付款方式为TRANS_TO_CHANGE时，上送收款人姓名。
      */
-    public void setBankBranchName(String BankBranchName) {
-        this.BankBranchName = BankBranchName;
+    public void setPayeeName(String PayeeName) {
+        this.PayeeName = PayeeName;
     }
 
     /**
@@ -229,14 +259,14 @@ ALIPAY_LOGON_ID：支付宝登录号。
         if (source.PayeeId != null) {
             this.PayeeId = new String(source.PayeeId);
         }
-        if (source.PayeeName != null) {
-            this.PayeeName = new String(source.PayeeName);
+        if (source.BankBranchName != null) {
+            this.BankBranchName = new String(source.BankBranchName);
         }
         if (source.BankAccountNumber != null) {
             this.BankAccountNumber = new String(source.BankAccountNumber);
         }
-        if (source.BankBranchName != null) {
-            this.BankBranchName = new String(source.BankBranchName);
+        if (source.PayeeName != null) {
+            this.PayeeName = new String(source.PayeeName);
         }
         if (source.BankBranchId != null) {
             this.BankBranchId = new String(source.BankBranchId);
@@ -255,9 +285,9 @@ ALIPAY_LOGON_ID：支付宝登录号。
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
-        this.setParamSimple(map, prefix + "PayeeName", this.PayeeName);
-        this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
         this.setParamSimple(map, prefix + "BankBranchName", this.BankBranchName);
+        this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
+        this.setParamSimple(map, prefix + "PayeeName", this.PayeeName);
         this.setParamSimple(map, prefix + "BankBranchId", this.BankBranchId);
         this.setParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);

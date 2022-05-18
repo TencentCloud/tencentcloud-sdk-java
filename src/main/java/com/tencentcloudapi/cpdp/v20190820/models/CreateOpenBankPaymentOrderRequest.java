@@ -34,6 +34,7 @@ public class CreateOpenBankPaymentOrderRequest extends AbstractModel{
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
+__WECHAT__: 微信支付
     */
     @SerializedName("ChannelName")
     @Expose
@@ -44,6 +45,7 @@ __ALIPAY__: 支付宝
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
     */
     @SerializedName("PaymentMethod")
     @Expose
@@ -198,11 +200,13 @@ __sandbox__:沙箱环境
      * Get 渠道名称。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
-__ALIPAY__: 支付宝 
+__ALIPAY__: 支付宝
+__WECHAT__: 微信支付 
      * @return ChannelName 渠道名称。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
+__WECHAT__: 微信支付
      */
     public String getChannelName() {
         return this.ChannelName;
@@ -213,10 +217,12 @@ __ALIPAY__: 支付宝
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
+__WECHAT__: 微信支付
      * @param ChannelName 渠道名称。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
+__WECHAT__: 微信支付
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
@@ -226,11 +232,13 @@ __ALIPAY__: 支付宝
      * Get 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
-__SAFT_ISV__:支付宝安心发 
+__SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2 
      * @return PaymentMethod 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
      */
     public String getPaymentMethod() {
         return this.PaymentMethod;
@@ -241,10 +249,12 @@ __SAFT_ISV__:支付宝安心发
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
      * @param PaymentMethod 付款方式。如
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
      */
     public void setPaymentMethod(String PaymentMethod) {
         this.PaymentMethod = PaymentMethod;
