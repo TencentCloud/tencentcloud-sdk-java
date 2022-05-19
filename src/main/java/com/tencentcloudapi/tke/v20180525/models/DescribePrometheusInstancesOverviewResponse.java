@@ -23,11 +23,62 @@ import java.util.HashMap;
 public class DescribePrometheusInstancesOverviewResponse extends AbstractModel{
 
     /**
+    * 实例列表
+    */
+    @SerializedName("Instances")
+    @Expose
+    private PrometheusInstancesOverview [] Instances;
+
+    /**
+    * 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 实例列表 
+     * @return Instances 实例列表
+     */
+    public PrometheusInstancesOverview [] getInstances() {
+        return this.Instances;
+    }
+
+    /**
+     * Set 实例列表
+     * @param Instances 实例列表
+     */
+    public void setInstances(PrometheusInstancesOverview [] Instances) {
+        this.Instances = Instances;
+    }
+
+    /**
+     * Get 实例总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +104,15 @@ public class DescribePrometheusInstancesOverviewResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusInstancesOverviewResponse(DescribePrometheusInstancesOverviewResponse source) {
+        if (source.Instances != null) {
+            this.Instances = new PrometheusInstancesOverview[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new PrometheusInstancesOverview(source.Instances[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +123,8 @@ public class DescribePrometheusInstancesOverviewResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

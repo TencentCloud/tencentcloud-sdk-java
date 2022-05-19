@@ -22,6 +22,85 @@ import java.util.HashMap;
 
 public class DescribePrometheusInstancesOverviewRequest extends AbstractModel{
 
+    /**
+    * 用于分页
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 用于分页
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get 用于分页 
+     * @return Offset 用于分页
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 用于分页
+     * @param Offset 用于分页
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 用于分页 
+     * @return Limit 用于分页
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 用于分页
+     * @param Limit 用于分页
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤 
+     * @return Filters 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
+     * @param Filters 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribePrometheusInstancesOverviewRequest() {
     }
 
@@ -30,6 +109,18 @@ public class DescribePrometheusInstancesOverviewRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusInstancesOverviewRequest(DescribePrometheusInstancesOverviewRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -37,6 +128,9 @@ public class DescribePrometheusInstancesOverviewRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -867,6 +867,66 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *务工卡-核身预下单
+     * @param req CreatePayRollPreOrderRequest
+     * @return CreatePayRollPreOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePayRollPreOrderResponse CreatePayRollPreOrder(CreatePayRollPreOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePayRollPreOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePayRollPreOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePayRollPreOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *务工卡-核身预下单带授权
+     * @param req CreatePayRollPreOrderWithAuthRequest
+     * @return CreatePayRollPreOrderWithAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePayRollPreOrderWithAuthResponse CreatePayRollPreOrderWithAuth(CreatePayRollPreOrderWithAuthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePayRollPreOrderWithAuthResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePayRollPreOrderWithAuthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePayRollPreOrderWithAuth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *务工卡-生成授权令牌
+     * @param req CreatePayRollTokenRequest
+     * @return CreatePayRollTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePayRollTokenResponse CreatePayRollToken(CreatePayRollTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePayRollTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePayRollTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePayRollToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *智慧零售-发票红冲
      * @param req CreateRedInvoiceRequest
      * @return CreateRedInvoiceResponse
@@ -1341,6 +1401,66 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDistributeBillDownloadUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetDistributeBillDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *务工卡-查询授权关系
+     * @param req GetPayRollAuthRequest
+     * @return GetPayRollAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPayRollAuthResponse GetPayRollAuth(GetPayRollAuthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPayRollAuthResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPayRollAuthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetPayRollAuth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *务工卡-查询核身记录
+     * @param req GetPayRollAuthListRequest
+     * @return GetPayRollAuthListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPayRollAuthListResponse GetPayRollAuthList(GetPayRollAuthListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPayRollAuthListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPayRollAuthListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetPayRollAuthList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *务工卡-获取核身结果
+     * @param req GetPayRollAuthResultRequest
+     * @return GetPayRollAuthResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPayRollAuthResultResponse GetPayRollAuthResult(GetPayRollAuthResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPayRollAuthResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPayRollAuthResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetPayRollAuthResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

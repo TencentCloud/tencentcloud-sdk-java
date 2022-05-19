@@ -86,6 +86,20 @@ public class AccountDetail extends AbstractModel{
     private Boolean IsAdmin;
 
     /**
+    * win-windows鉴权,sql-sqlserver鉴权
+    */
+    @SerializedName("Authentication")
+    @Expose
+    private String Authentication;
+
+    /**
+    * win-windows鉴权账户需要host
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
      * Get 账户名 
      * @return Name 账户名
      */
@@ -229,6 +243,38 @@ public class AccountDetail extends AbstractModel{
         this.IsAdmin = IsAdmin;
     }
 
+    /**
+     * Get win-windows鉴权,sql-sqlserver鉴权 
+     * @return Authentication win-windows鉴权,sql-sqlserver鉴权
+     */
+    public String getAuthentication() {
+        return this.Authentication;
+    }
+
+    /**
+     * Set win-windows鉴权,sql-sqlserver鉴权
+     * @param Authentication win-windows鉴权,sql-sqlserver鉴权
+     */
+    public void setAuthentication(String Authentication) {
+        this.Authentication = Authentication;
+    }
+
+    /**
+     * Get win-windows鉴权账户需要host 
+     * @return Host win-windows鉴权账户需要host
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set win-windows鉴权账户需要host
+     * @param Host win-windows鉴权账户需要host
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
     public AccountDetail() {
     }
 
@@ -267,6 +313,12 @@ public class AccountDetail extends AbstractModel{
         if (source.IsAdmin != null) {
             this.IsAdmin = new Boolean(source.IsAdmin);
         }
+        if (source.Authentication != null) {
+            this.Authentication = new String(source.Authentication);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class AccountDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
         this.setParamArrayObj(map, prefix + "Dbs.", this.Dbs);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+        this.setParamSimple(map, prefix + "Authentication", this.Authentication);
+        this.setParamSimple(map, prefix + "Host", this.Host);
 
     }
 }

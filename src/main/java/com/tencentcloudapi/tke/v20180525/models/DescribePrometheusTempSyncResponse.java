@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class DescribePrometheusTempSyncResponse extends AbstractModel{
 
     /**
+    * 同步目标详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Targets")
+    @Expose
+    private PrometheusTemplateSyncTarget [] Targets;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 同步目标详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Targets 同步目标详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrometheusTemplateSyncTarget [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set 同步目标详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Targets 同步目标详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargets(PrometheusTemplateSyncTarget [] Targets) {
+        this.Targets = Targets;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,12 @@ public class DescribePrometheusTempSyncResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusTempSyncResponse(DescribePrometheusTempSyncResponse source) {
+        if (source.Targets != null) {
+            this.Targets = new PrometheusTemplateSyncTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new PrometheusTemplateSyncTarget(source.Targets[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +97,7 @@ public class DescribePrometheusTempSyncResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

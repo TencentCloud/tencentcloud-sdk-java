@@ -205,6 +205,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private LaunchTemplate LaunchTemplate;
 
     /**
+    * 指定专用集群创建。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
     * 指定CHC物理服务器来创建CHC云主机。
     */
     @SerializedName("ChcIds")
@@ -647,6 +654,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
+     * Get 指定专用集群创建。 
+     * @return DedicatedClusterId 指定专用集群创建。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 指定专用集群创建。
+     * @param DedicatedClusterId 指定专用集群创建。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
      * Get 指定CHC物理服务器来创建CHC云主机。 
      * @return ChcIds 指定CHC物理服务器来创建CHC云主机。
      */
@@ -773,6 +796,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.LaunchTemplate != null) {
             this.LaunchTemplate = new LaunchTemplate(source.LaunchTemplate);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
         if (source.ChcIds != null) {
             this.ChcIds = new String[source.ChcIds.length];
             for (int i = 0; i < source.ChcIds.length; i++) {
@@ -814,6 +840,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
 

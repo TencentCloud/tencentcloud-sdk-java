@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class ModifyPrometheusTempRequest extends AbstractModel{
 
+    /**
+    * 模板ID
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+    * 修改内容
+    */
+    @SerializedName("Template")
+    @Expose
+    private PrometheusTempModify Template;
+
+    /**
+     * Get 模板ID 
+     * @return TemplateId 模板ID
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板ID
+     * @param TemplateId 模板ID
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get 修改内容 
+     * @return Template 修改内容
+     */
+    public PrometheusTempModify getTemplate() {
+        return this.Template;
+    }
+
+    /**
+     * Set 修改内容
+     * @param Template 修改内容
+     */
+    public void setTemplate(PrometheusTempModify Template) {
+        this.Template = Template;
+    }
+
     public ModifyPrometheusTempRequest() {
     }
 
@@ -30,6 +76,12 @@ public class ModifyPrometheusTempRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyPrometheusTempRequest(ModifyPrometheusTempRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Template != null) {
+            this.Template = new PrometheusTempModify(source.Template);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class ModifyPrometheusTempRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamObj(map, prefix + "Template.", this.Template);
 
     }
 }

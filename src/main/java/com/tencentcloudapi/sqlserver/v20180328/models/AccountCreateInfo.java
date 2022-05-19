@@ -58,6 +58,13 @@ public class AccountCreateInfo extends AbstractModel{
     private Boolean IsAdmin;
 
     /**
+    * win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+    */
+    @SerializedName("Authentication")
+    @Expose
+    private String Authentication;
+
+    /**
      * Get 实例用户名 
      * @return UserName 实例用户名
      */
@@ -137,6 +144,22 @@ public class AccountCreateInfo extends AbstractModel{
         this.IsAdmin = IsAdmin;
     }
 
+    /**
+     * Get win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权 
+     * @return Authentication win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     */
+    public String getAuthentication() {
+        return this.Authentication;
+    }
+
+    /**
+     * Set win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     * @param Authentication win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     */
+    public void setAuthentication(String Authentication) {
+        this.Authentication = Authentication;
+    }
+
     public AccountCreateInfo() {
     }
 
@@ -163,6 +186,9 @@ public class AccountCreateInfo extends AbstractModel{
         if (source.IsAdmin != null) {
             this.IsAdmin = new Boolean(source.IsAdmin);
         }
+        if (source.Authentication != null) {
+            this.Authentication = new String(source.Authentication);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class AccountCreateInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+        this.setParamSimple(map, prefix + "Authentication", this.Authentication);
 
     }
 }

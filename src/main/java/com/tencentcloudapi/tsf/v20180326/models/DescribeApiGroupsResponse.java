@@ -24,6 +24,7 @@ public class DescribeApiGroupsResponse extends AbstractModel{
 
     /**
     * 翻页结构体
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -37,8 +38,10 @@ public class DescribeApiGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 翻页结构体 
+     * Get 翻页结构体
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 翻页结构体
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TsfPageApiGroupInfo getResult() {
         return this.Result;
@@ -46,7 +49,9 @@ public class DescribeApiGroupsResponse extends AbstractModel{
 
     /**
      * Set 翻页结构体
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 翻页结构体
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(TsfPageApiGroupInfo Result) {
         this.Result = Result;

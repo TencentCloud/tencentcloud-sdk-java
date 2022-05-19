@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreatePrometheusAlertPolicyResponse extends AbstractModel{
 
     /**
+    * 告警id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 告警id 
+     * @return Id 告警id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 告警id
+     * @param Id 告警id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreatePrometheusAlertPolicyResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrometheusAlertPolicyResponse(CreatePrometheusAlertPolicyResponse source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreatePrometheusAlertPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreatePrometheusTempResponse extends AbstractModel{
 
     /**
+    * 模板Id
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 模板Id 
+     * @return TemplateId 模板Id
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板Id
+     * @param TemplateId 模板Id
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreatePrometheusTempResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrometheusTempResponse(CreatePrometheusTempResponse source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreatePrometheusTempResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

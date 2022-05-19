@@ -30,6 +30,12 @@ public enum SslErrorCode {
     // 证书已存在。
      FAILEDOPERATION_CERTIFICATEEXISTS("FailedOperation.CertificateExists"),
      
+    // 已替换证书，无法进行托管。
+     FAILEDOPERATION_CERTIFICATEHASRENEWED("FailedOperation.CertificateHasRenewed"),
+     
+    // 证书资源托管数量超过限制。
+     FAILEDOPERATION_CERTIFICATEHOSTINGTYPENUMBERLIMIT("FailedOperation.CertificateHostingTypeNumberLimit"),
+     
     // 证书不符合标准。
      FAILEDOPERATION_CERTIFICATEINVALID("FailedOperation.CertificateInvalid"),
      

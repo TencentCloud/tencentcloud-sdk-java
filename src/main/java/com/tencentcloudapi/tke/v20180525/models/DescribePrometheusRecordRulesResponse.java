@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribePrometheusRecordRulesResponse extends AbstractModel{
 
     /**
+    * 聚合规则
+    */
+    @SerializedName("Records")
+    @Expose
+    private PrometheusRecordRuleYamlItem [] Records;
+
+    /**
+    * 总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 聚合规则 
+     * @return Records 聚合规则
+     */
+    public PrometheusRecordRuleYamlItem [] getRecords() {
+        return this.Records;
+    }
+
+    /**
+     * Set 聚合规则
+     * @param Records 聚合规则
+     */
+    public void setRecords(PrometheusRecordRuleYamlItem [] Records) {
+        this.Records = Records;
+    }
+
+    /**
+     * Get 总数 
+     * @return Total 总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数
+     * @param Total 总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribePrometheusRecordRulesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusRecordRulesResponse(DescribePrometheusRecordRulesResponse source) {
+        if (source.Records != null) {
+            this.Records = new PrometheusRecordRuleYamlItem[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new PrometheusRecordRuleYamlItem(source.Records[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribePrometheusRecordRulesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class CreatePrometheusTempRequest extends AbstractModel{
 
+    /**
+    * 模板设置
+    */
+    @SerializedName("Template")
+    @Expose
+    private PrometheusTemp Template;
+
+    /**
+     * Get 模板设置 
+     * @return Template 模板设置
+     */
+    public PrometheusTemp getTemplate() {
+        return this.Template;
+    }
+
+    /**
+     * Set 模板设置
+     * @param Template 模板设置
+     */
+    public void setTemplate(PrometheusTemp Template) {
+        this.Template = Template;
+    }
+
     public CreatePrometheusTempRequest() {
     }
 
@@ -30,6 +53,9 @@ public class CreatePrometheusTempRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrometheusTempRequest(CreatePrometheusTempRequest source) {
+        if (source.Template != null) {
+            this.Template = new PrometheusTemp(source.Template);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class CreatePrometheusTempRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Template.", this.Template);
 
     }
 }

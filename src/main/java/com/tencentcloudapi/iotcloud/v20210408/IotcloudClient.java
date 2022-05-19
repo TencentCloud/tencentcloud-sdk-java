@@ -939,6 +939,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（GetAllVersion）用于获取所有的版本列表 
+     * @param req GetAllVersionRequest
+     * @return GetAllVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAllVersionResponse GetAllVersion(GetAllVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAllVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAllVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAllVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（GetCOSURL）用于获取固件存储在COS的URL 
      * @param req GetCOSURLRequest
      * @return GetCOSURLResponse
@@ -971,6 +991,26 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetUserResourceInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetUserResourceInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ListFirmwares）用于获取固件列表 
+     * @param req ListFirmwaresRequest
+     * @return ListFirmwaresResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListFirmwaresResponse ListFirmwares(ListFirmwaresRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListFirmwaresResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListFirmwaresResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListFirmwares");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -31,6 +31,7 @@ public class DescribeMigrationDatabasesResponse extends AbstractModel{
 
     /**
     * 数据库名称数组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MigrateDBSet")
     @Expose
@@ -60,8 +61,10 @@ public class DescribeMigrationDatabasesResponse extends AbstractModel{
     }
 
     /**
-     * Get 数据库名称数组 
+     * Get 数据库名称数组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MigrateDBSet 数据库名称数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMigrateDBSet() {
         return this.MigrateDBSet;
@@ -69,7 +72,9 @@ public class DescribeMigrationDatabasesResponse extends AbstractModel{
 
     /**
      * Set 数据库名称数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MigrateDBSet 数据库名称数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigrateDBSet(String [] MigrateDBSet) {
         this.MigrateDBSet = MigrateDBSet;

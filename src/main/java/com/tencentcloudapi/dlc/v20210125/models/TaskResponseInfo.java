@@ -216,6 +216,38 @@ public class TaskResponseInfo extends AbstractModel{
     private String UserAlias;
 
     /**
+    * spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkJobName")
+    @Expose
+    private String SparkJobName;
+
+    /**
+    * spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkJobId")
+    @Expose
+    private String SparkJobId;
+
+    /**
+    * spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkJobFile")
+    @Expose
+    private String SparkJobFile;
+
+    /**
+    * spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UiUrl")
+    @Expose
+    private String UiUrl;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -675,6 +707,86 @@ public class TaskResponseInfo extends AbstractModel{
         this.UserAlias = UserAlias;
     }
 
+    /**
+     * Get spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkJobName spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSparkJobName() {
+        return this.SparkJobName;
+    }
+
+    /**
+     * Set spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkJobName spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkJobName(String SparkJobName) {
+        this.SparkJobName = SparkJobName;
+    }
+
+    /**
+     * Get spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkJobId spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSparkJobId() {
+        return this.SparkJobId;
+    }
+
+    /**
+     * Set spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkJobId spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkJobId(String SparkJobId) {
+        this.SparkJobId = SparkJobId;
+    }
+
+    /**
+     * Get spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkJobFile spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSparkJobFile() {
+        return this.SparkJobFile;
+    }
+
+    /**
+     * Set spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkJobFile spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkJobFile(String SparkJobFile) {
+        this.SparkJobFile = SparkJobFile;
+    }
+
+    /**
+     * Get spark ui url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UiUrl spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUiUrl() {
+        return this.UiUrl;
+    }
+
+    /**
+     * Set spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UiUrl spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUiUrl(String UiUrl) {
+        this.UiUrl = UiUrl;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -761,6 +873,18 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.UserAlias != null) {
             this.UserAlias = new String(source.UserAlias);
         }
+        if (source.SparkJobName != null) {
+            this.SparkJobName = new String(source.SparkJobName);
+        }
+        if (source.SparkJobId != null) {
+            this.SparkJobId = new String(source.SparkJobId);
+        }
+        if (source.SparkJobFile != null) {
+            this.SparkJobFile = new String(source.SparkJobFile);
+        }
+        if (source.UiUrl != null) {
+            this.UiUrl = new String(source.UiUrl);
+        }
     }
 
 
@@ -794,6 +918,10 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DataNumber", this.DataNumber);
         this.setParamSimple(map, prefix + "CanDownload", this.CanDownload);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "SparkJobName", this.SparkJobName);
+        this.setParamSimple(map, prefix + "SparkJobId", this.SparkJobId);
+        this.setParamSimple(map, prefix + "SparkJobFile", this.SparkJobFile);
+        this.setParamSimple(map, prefix + "UiUrl", this.UiUrl);
 
     }
 }

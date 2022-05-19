@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
 
     /**
+    * 被关联集群信息
+    */
+    @SerializedName("Agents")
+    @Expose
+    private PrometheusAgentOverview [] Agents;
+
+    /**
+    * 被关联集群总量
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 被关联集群信息 
+     * @return Agents 被关联集群信息
+     */
+    public PrometheusAgentOverview [] getAgents() {
+        return this.Agents;
+    }
+
+    /**
+     * Set 被关联集群信息
+     * @param Agents 被关联集群信息
+     */
+    public void setAgents(PrometheusAgentOverview [] Agents) {
+        this.Agents = Agents;
+    }
+
+    /**
+     * Get 被关联集群总量 
+     * @return Total 被关联集群总量
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 被关联集群总量
+     * @param Total 被关联集群总量
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusClusterAgentsResponse(DescribePrometheusClusterAgentsResponse source) {
+        if (source.Agents != null) {
+            this.Agents = new PrometheusAgentOverview[source.Agents.length];
+            for (int i = 0; i < source.Agents.length; i++) {
+                this.Agents[i] = new PrometheusAgentOverview(source.Agents[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

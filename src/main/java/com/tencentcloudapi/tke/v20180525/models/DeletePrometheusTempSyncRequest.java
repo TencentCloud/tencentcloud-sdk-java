@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class DeletePrometheusTempSyncRequest extends AbstractModel{
 
+    /**
+    * 模板id
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+    * 取消同步的对象列表
+    */
+    @SerializedName("Targets")
+    @Expose
+    private PrometheusTemplateSyncTarget [] Targets;
+
+    /**
+     * Get 模板id 
+     * @return TemplateId 模板id
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板id
+     * @param TemplateId 模板id
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get 取消同步的对象列表 
+     * @return Targets 取消同步的对象列表
+     */
+    public PrometheusTemplateSyncTarget [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set 取消同步的对象列表
+     * @param Targets 取消同步的对象列表
+     */
+    public void setTargets(PrometheusTemplateSyncTarget [] Targets) {
+        this.Targets = Targets;
+    }
+
     public DeletePrometheusTempSyncRequest() {
     }
 
@@ -30,6 +76,15 @@ public class DeletePrometheusTempSyncRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeletePrometheusTempSyncRequest(DeletePrometheusTempSyncRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Targets != null) {
+            this.Targets = new PrometheusTemplateSyncTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new PrometheusTemplateSyncTarget(source.Targets[i]);
+            }
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class DeletePrometheusTempSyncRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
 
     }
 }

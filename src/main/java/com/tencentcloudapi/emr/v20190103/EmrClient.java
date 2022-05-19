@@ -39,6 +39,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *新增用户列表（用户管理）
+     * @param req AddUsersForUserManagerRequest
+     * @return AddUsersForUserManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUsersForUserManagerResponse AddUsersForUserManager(AddUsersForUserManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddUsersForUserManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddUsersForUserManager");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建EMR集群实例
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -131,6 +151,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *EMR集群实例列表查询
+     * @param req DescribeInstancesListRequest
+     * @return DescribeInstancesListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesListResponse DescribeInstancesList(DescribeInstancesListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstancesList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class SyncPrometheusTempRequest extends AbstractModel{
 
+    /**
+    * 实例id
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+    * 同步目标
+    */
+    @SerializedName("Targets")
+    @Expose
+    private PrometheusTemplateSyncTarget [] Targets;
+
+    /**
+     * Get 实例id 
+     * @return TemplateId 实例id
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 实例id
+     * @param TemplateId 实例id
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get 同步目标 
+     * @return Targets 同步目标
+     */
+    public PrometheusTemplateSyncTarget [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set 同步目标
+     * @param Targets 同步目标
+     */
+    public void setTargets(PrometheusTemplateSyncTarget [] Targets) {
+        this.Targets = Targets;
+    }
+
     public SyncPrometheusTempRequest() {
     }
 
@@ -30,6 +76,15 @@ public class SyncPrometheusTempRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SyncPrometheusTempRequest(SyncPrometheusTempRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Targets != null) {
+            this.Targets = new PrometheusTemplateSyncTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new PrometheusTemplateSyncTarget(source.Targets[i]);
+            }
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class SyncPrometheusTempRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
 
     }
 }

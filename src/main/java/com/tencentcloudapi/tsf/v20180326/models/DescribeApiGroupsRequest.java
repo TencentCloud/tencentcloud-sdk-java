@@ -51,7 +51,7 @@ public class DescribeApiGroupsRequest extends AbstractModel{
     private String GroupType;
 
     /**
-    * 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+    * 鉴权类型。 secret： 密钥鉴权； none:无鉴权
     */
     @SerializedName("AuthType")
     @Expose
@@ -150,16 +150,16 @@ public class DescribeApiGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 鉴权类型。 secret： 秘钥鉴权； none:无鉴权 
-     * @return AuthType 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * Get 鉴权类型。 secret： 密钥鉴权； none:无鉴权 
+     * @return AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
-     * @param AuthType 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * Set 鉴权类型。 secret： 密钥鉴权； none:无鉴权
+     * @param AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;

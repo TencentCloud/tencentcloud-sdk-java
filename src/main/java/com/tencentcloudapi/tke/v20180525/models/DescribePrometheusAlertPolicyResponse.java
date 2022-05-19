@@ -23,11 +23,62 @@ import java.util.HashMap;
 public class DescribePrometheusAlertPolicyResponse extends AbstractModel{
 
     /**
+    * 告警详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlertRules")
+    @Expose
+    private PrometheusAlertPolicyItem [] AlertRules;
+
+    /**
+    * 总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 告警详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlertRules 告警详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrometheusAlertPolicyItem [] getAlertRules() {
+        return this.AlertRules;
+    }
+
+    /**
+     * Set 告警详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlertRules 告警详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlertRules(PrometheusAlertPolicyItem [] AlertRules) {
+        this.AlertRules = AlertRules;
+    }
+
+    /**
+     * Get 总数 
+     * @return Total 总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数
+     * @param Total 总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +104,15 @@ public class DescribePrometheusAlertPolicyResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusAlertPolicyResponse(DescribePrometheusAlertPolicyResponse source) {
+        if (source.AlertRules != null) {
+            this.AlertRules = new PrometheusAlertPolicyItem[source.AlertRules.length];
+            for (int i = 0; i < source.AlertRules.length; i++) {
+                this.AlertRules[i] = new PrometheusAlertPolicyItem(source.AlertRules[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +123,8 @@ public class DescribePrometheusAlertPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AlertRules.", this.AlertRules);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

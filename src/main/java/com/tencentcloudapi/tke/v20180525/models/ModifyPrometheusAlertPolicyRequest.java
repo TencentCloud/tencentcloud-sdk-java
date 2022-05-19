@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class ModifyPrometheusAlertPolicyRequest extends AbstractModel{
 
+    /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 告警配置
+    */
+    @SerializedName("AlertRule")
+    @Expose
+    private PrometheusAlertPolicyItem AlertRule;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 告警配置 
+     * @return AlertRule 告警配置
+     */
+    public PrometheusAlertPolicyItem getAlertRule() {
+        return this.AlertRule;
+    }
+
+    /**
+     * Set 告警配置
+     * @param AlertRule 告警配置
+     */
+    public void setAlertRule(PrometheusAlertPolicyItem AlertRule) {
+        this.AlertRule = AlertRule;
+    }
+
     public ModifyPrometheusAlertPolicyRequest() {
     }
 
@@ -30,6 +76,12 @@ public class ModifyPrometheusAlertPolicyRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyPrometheusAlertPolicyRequest(ModifyPrometheusAlertPolicyRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AlertRule != null) {
+            this.AlertRule = new PrometheusAlertPolicyItem(source.AlertRule);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class ModifyPrometheusAlertPolicyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "AlertRule.", this.AlertRule);
 
     }
 }

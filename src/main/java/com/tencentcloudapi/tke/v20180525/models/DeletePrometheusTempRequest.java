@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DeletePrometheusTempRequest extends AbstractModel{
 
+    /**
+    * 模板id
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+     * Get 模板id 
+     * @return TemplateId 模板id
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板id
+     * @param TemplateId 模板id
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public DeletePrometheusTempRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DeletePrometheusTempRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeletePrometheusTempRequest(DeletePrometheusTempRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DeletePrometheusTempRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

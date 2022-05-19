@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class DeletePrometheusAlertPolicyRequest extends AbstractModel{
 
+    /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 告警策略id列表
+    */
+    @SerializedName("AlertIds")
+    @Expose
+    private String [] AlertIds;
+
+    /**
+    * 告警策略名称
+    */
+    @SerializedName("Names")
+    @Expose
+    private String [] Names;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 告警策略id列表 
+     * @return AlertIds 告警策略id列表
+     */
+    public String [] getAlertIds() {
+        return this.AlertIds;
+    }
+
+    /**
+     * Set 告警策略id列表
+     * @param AlertIds 告警策略id列表
+     */
+    public void setAlertIds(String [] AlertIds) {
+        this.AlertIds = AlertIds;
+    }
+
+    /**
+     * Get 告警策略名称 
+     * @return Names 告警策略名称
+     */
+    public String [] getNames() {
+        return this.Names;
+    }
+
+    /**
+     * Set 告警策略名称
+     * @param Names 告警策略名称
+     */
+    public void setNames(String [] Names) {
+        this.Names = Names;
+    }
+
     public DeletePrometheusAlertPolicyRequest() {
     }
 
@@ -30,6 +99,21 @@ public class DeletePrometheusAlertPolicyRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeletePrometheusAlertPolicyRequest(DeletePrometheusAlertPolicyRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AlertIds != null) {
+            this.AlertIds = new String[source.AlertIds.length];
+            for (int i = 0; i < source.AlertIds.length; i++) {
+                this.AlertIds[i] = new String(source.AlertIds[i]);
+            }
+        }
+        if (source.Names != null) {
+            this.Names = new String[source.Names.length];
+            for (int i = 0; i < source.Names.length; i++) {
+                this.Names[i] = new String(source.Names[i]);
+            }
+        }
     }
 
 
@@ -37,6 +121,9 @@ public class DeletePrometheusAlertPolicyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "AlertIds.", this.AlertIds);
+        this.setParamArraySimple(map, prefix + "Names.", this.Names);
 
     }
 }

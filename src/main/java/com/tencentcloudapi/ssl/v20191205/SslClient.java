@@ -359,6 +359,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *云资源托管
+     * @param req HostCertificateRequest
+     * @return HostCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public HostCertificateResponse HostCertificate(HostCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<HostCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<HostCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "HostCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户传入证书id和备注来修改证书备注。
      * @param req ModifyCertificateAliasRequest
      * @return ModifyCertificateAliasResponse

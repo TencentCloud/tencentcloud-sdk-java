@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribePrometheusTempResponse extends AbstractModel{
 
     /**
+    * 模板列表
+    */
+    @SerializedName("Templates")
+    @Expose
+    private PrometheusTemp [] Templates;
+
+    /**
+    * 总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 模板列表 
+     * @return Templates 模板列表
+     */
+    public PrometheusTemp [] getTemplates() {
+        return this.Templates;
+    }
+
+    /**
+     * Set 模板列表
+     * @param Templates 模板列表
+     */
+    public void setTemplates(PrometheusTemp [] Templates) {
+        this.Templates = Templates;
+    }
+
+    /**
+     * Get 总数 
+     * @return Total 总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数
+     * @param Total 总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribePrometheusTempResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusTempResponse(DescribePrometheusTempResponse source) {
+        if (source.Templates != null) {
+            this.Templates = new PrometheusTemp[source.Templates.length];
+            for (int i = 0; i < source.Templates.length; i++) {
+                this.Templates[i] = new PrometheusTemp(source.Templates[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribePrometheusTempResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Templates.", this.Templates);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
