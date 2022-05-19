@@ -96,6 +96,14 @@ public class RoleInfo extends AbstractModel{
     private String DeletionTaskId;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get 角色ID 
      * @return RoleId 角色ID
      */
@@ -267,6 +275,26 @@ public class RoleInfo extends AbstractModel{
         this.DeletionTaskId = DeletionTaskId;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RoleInfo() {
     }
 
@@ -305,6 +333,12 @@ public class RoleInfo extends AbstractModel{
         if (source.DeletionTaskId != null) {
             this.DeletionTaskId = new String(source.DeletionTaskId);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -322,6 +356,7 @@ public class RoleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleType", this.RoleType);
         this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
         this.setParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

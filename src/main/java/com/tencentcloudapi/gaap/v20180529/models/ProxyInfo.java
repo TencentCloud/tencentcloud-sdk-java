@@ -244,7 +244,7 @@ RECOVERING表示通道维护中。
     private String IPAddressVersion;
 
     /**
-    * 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+    * 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkType")
@@ -843,9 +843,9 @@ RECOVERING表示通道维护中。
     }
 
     /**
-     * Get 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * Get 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @return NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkType() {
@@ -853,9 +853,9 @@ RECOVERING表示通道维护中。
     }
 
     /**
-     * Set 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * Set 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @param NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkType(String NetworkType) {

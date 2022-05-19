@@ -30,7 +30,10 @@ public class ValueInfo extends AbstractModel{
     private String Type;
 
     /**
-    * 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
+    * 字段的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+long及double类型字段需为空；
+text类型字段推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\\ 作为分词符；
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -68,16 +71,28 @@ public class ValueInfo extends AbstractModel{
     }
 
     /**
-     * Get 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符 
-     * @return Tokenizer 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
+     * Get 字段的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+long及double类型字段需为空；
+text类型字段推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\\ 作为分词符； 
+     * @return Tokenizer 字段的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+long及double类型字段需为空；
+text类型字段推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\\ 作为分词符；
      */
     public String getTokenizer() {
         return this.Tokenizer;
     }
 
     /**
-     * Set 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-     * @param Tokenizer 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
+     * Set 字段的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+long及double类型字段需为空；
+text类型字段推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\\ 作为分词符；
+     * @param Tokenizer 字段的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+long及double类型字段需为空；
+text类型字段推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\\ 作为分词符；
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;

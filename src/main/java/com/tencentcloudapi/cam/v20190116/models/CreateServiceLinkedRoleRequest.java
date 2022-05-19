@@ -44,6 +44,13 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 角色绑定标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get 授权服务，附加了此角色的腾讯云服务主体。 
      * @return QCSServiceName 授权服务，附加了此角色的腾讯云服务主体。
      */
@@ -91,6 +98,22 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 角色绑定标签。 
+     * @return Tags 角色绑定标签。
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 角色绑定标签。
+     * @param Tags 角色绑定标签。
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateServiceLinkedRoleRequest() {
     }
 
@@ -111,6 +134,12 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "QCSServiceName.", this.QCSServiceName);
         this.setParamSimple(map, prefix + "CustomSuffix", this.CustomSuffix);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

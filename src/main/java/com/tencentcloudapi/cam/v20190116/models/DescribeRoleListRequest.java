@@ -37,6 +37,13 @@ public class DescribeRoleListRequest extends AbstractModel{
     private Long Rp;
 
     /**
+    * 标签筛选
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get 页码，从1开始 
      * @return Page 页码，从1开始
      */
@@ -68,6 +75,22 @@ public class DescribeRoleListRequest extends AbstractModel{
         this.Rp = Rp;
     }
 
+    /**
+     * Get 标签筛选 
+     * @return Tags 标签筛选
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签筛选
+     * @param Tags 标签筛选
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeRoleListRequest() {
     }
 
@@ -82,6 +105,12 @@ public class DescribeRoleListRequest extends AbstractModel{
         if (source.Rp != null) {
             this.Rp = new Long(source.Rp);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class DescribeRoleListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Rp", this.Rp);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

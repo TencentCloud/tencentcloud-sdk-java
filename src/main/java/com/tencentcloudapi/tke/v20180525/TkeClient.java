@@ -2320,6 +2320,26 @@ public class TkeClient extends AbstractClient{
 
     /**
      *修改模板内容
+     * @param req ModifyPrometheusTempRequest
+     * @return ModifyPrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusTempResponse ModifyPrometheusTemp(ModifyPrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改模板内容
      * @param req ModifyPrometheusTemplateRequest
      * @return ModifyPrometheusTemplateResponse
      * @throws TencentCloudSDKException

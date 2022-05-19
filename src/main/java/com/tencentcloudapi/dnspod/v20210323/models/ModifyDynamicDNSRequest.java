@@ -72,6 +72,13 @@ public class ModifyDynamicDNSRequest extends AbstractModel{
     private String RecordLineId;
 
     /**
+    * TTL值，如果不传，默认为域名的TTL值。
+    */
+    @SerializedName("Ttl")
+    @Expose
+    private Long Ttl;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -183,6 +190,22 @@ public class ModifyDynamicDNSRequest extends AbstractModel{
         this.RecordLineId = RecordLineId;
     }
 
+    /**
+     * Get TTL值，如果不传，默认为域名的TTL值。 
+     * @return Ttl TTL值，如果不传，默认为域名的TTL值。
+     */
+    public Long getTtl() {
+        return this.Ttl;
+    }
+
+    /**
+     * Set TTL值，如果不传，默认为域名的TTL值。
+     * @param Ttl TTL值，如果不传，默认为域名的TTL值。
+     */
+    public void setTtl(Long Ttl) {
+        this.Ttl = Ttl;
+    }
+
     public ModifyDynamicDNSRequest() {
     }
 
@@ -212,6 +235,9 @@ public class ModifyDynamicDNSRequest extends AbstractModel{
         if (source.RecordLineId != null) {
             this.RecordLineId = new String(source.RecordLineId);
         }
+        if (source.Ttl != null) {
+            this.Ttl = new Long(source.Ttl);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class ModifyDynamicDNSRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
         this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
         this.setParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
+        this.setParamSimple(map, prefix + "Ttl", this.Ttl);
 
     }
 }
