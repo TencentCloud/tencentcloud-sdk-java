@@ -95,6 +95,13 @@ public class CreateProbeTasksRequest extends AbstractModel{
     private String PluginSource;
 
     /**
+    * 客户度ID
+    */
+    @SerializedName("ClientNum")
+    @Expose
+    private String ClientNum;
+
+    /**
      * Get 批量任务名-地址 
      * @return BatchTasks 批量任务名-地址
      */
@@ -262,6 +269,22 @@ public class CreateProbeTasksRequest extends AbstractModel{
         this.PluginSource = PluginSource;
     }
 
+    /**
+     * Get 客户度ID 
+     * @return ClientNum 客户度ID
+     */
+    public String getClientNum() {
+        return this.ClientNum;
+    }
+
+    /**
+     * Set 客户度ID
+     * @param ClientNum 客户度ID
+     */
+    public void setClientNum(String ClientNum) {
+        this.ClientNum = ClientNum;
+    }
+
     public CreateProbeTasksRequest() {
     }
 
@@ -309,6 +332,9 @@ public class CreateProbeTasksRequest extends AbstractModel{
         if (source.PluginSource != null) {
             this.PluginSource = new String(source.PluginSource);
         }
+        if (source.ClientNum != null) {
+            this.ClientNum = new String(source.ClientNum);
+        }
     }
 
 
@@ -326,6 +352,7 @@ public class CreateProbeTasksRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "ProbeType", this.ProbeType);
         this.setParamSimple(map, prefix + "PluginSource", this.PluginSource);
+        this.setParamSimple(map, prefix + "ClientNum", this.ClientNum);
 
     }
 }

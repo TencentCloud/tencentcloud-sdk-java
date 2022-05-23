@@ -107,6 +107,13 @@ public class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractMod
     private String MasterInstanceId;
 
     /**
+    * 主实例的地域ID
+    */
+    @SerializedName("MasterRegionId")
+    @Expose
+    private String MasterRegionId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -306,6 +313,22 @@ public class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractMod
     }
 
     /**
+     * Get 主实例的地域ID 
+     * @return MasterRegionId 主实例的地域ID
+     */
+    public String getMasterRegionId() {
+        return this.MasterRegionId;
+    }
+
+    /**
+     * Set 主实例的地域ID
+     * @param MasterRegionId 主实例的地域ID
+     */
+    public void setMasterRegionId(String MasterRegionId) {
+        this.MasterRegionId = MasterRegionId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -365,6 +388,9 @@ public class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractMod
         if (source.MasterInstanceId != null) {
             this.MasterInstanceId = new String(source.MasterInstanceId);
         }
+        if (source.MasterRegionId != null) {
+            this.MasterRegionId = new String(source.MasterRegionId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -387,6 +413,7 @@ public class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractMod
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);
+        this.setParamSimple(map, prefix + "MasterRegionId", this.MasterRegionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

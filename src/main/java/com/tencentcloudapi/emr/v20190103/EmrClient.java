@@ -219,6 +219,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *批量导出用户
+     * @param req DescribeUsersForUserManagerRequest
+     * @return DescribeUsersForUserManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsersForUserManagerResponse DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsersForUserManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUsersForUserManager");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *集群续费询价。
      * @param req InquirePriceRenewEmrRequest
      * @return InquirePriceRenewEmrResponse

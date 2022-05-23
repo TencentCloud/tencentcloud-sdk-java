@@ -23,164 +23,210 @@ import java.util.HashMap;
 public class HostResource extends AbstractModel{
 
     /**
-    * cdh实例总cpu核数
+    * 专用宿主机实例总cpu核数
     */
     @SerializedName("CpuTotal")
     @Expose
     private Long CpuTotal;
 
     /**
-    * cdh实例可用cpu核数
+    * 专用宿主机实例可用cpu核数
     */
     @SerializedName("CpuAvailable")
     @Expose
     private Long CpuAvailable;
 
     /**
-    * cdh实例总内存大小（单位为:GiB）
+    * 专用宿主机实例总内存大小（单位为:GiB）
     */
     @SerializedName("MemTotal")
     @Expose
     private Float MemTotal;
 
     /**
-    * cdh实例可用内存大小（单位为:GiB）
+    * 专用宿主机实例可用内存大小（单位为:GiB）
     */
     @SerializedName("MemAvailable")
     @Expose
     private Float MemAvailable;
 
     /**
-    * cdh实例总磁盘大小（单位为:GiB）
+    * 专用宿主机实例总磁盘大小（单位为:GiB）
     */
     @SerializedName("DiskTotal")
     @Expose
     private Long DiskTotal;
 
     /**
-    * cdh实例可用磁盘大小（单位为:GiB）
+    * 专用宿主机实例可用磁盘大小（单位为:GiB）
     */
     @SerializedName("DiskAvailable")
     @Expose
     private Long DiskAvailable;
 
     /**
-    * cdh实例磁盘类型
+    * 专用宿主机实例磁盘类型
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-     * Get cdh实例总cpu核数 
-     * @return CpuTotal cdh实例总cpu核数
+    * 专用宿主机实例总GPU卡数
+    */
+    @SerializedName("GpuTotal")
+    @Expose
+    private Long GpuTotal;
+
+    /**
+    * 专用宿主机实例可用GPU卡数
+    */
+    @SerializedName("GpuAvailable")
+    @Expose
+    private Long GpuAvailable;
+
+    /**
+     * Get 专用宿主机实例总cpu核数 
+     * @return CpuTotal 专用宿主机实例总cpu核数
      */
     public Long getCpuTotal() {
         return this.CpuTotal;
     }
 
     /**
-     * Set cdh实例总cpu核数
-     * @param CpuTotal cdh实例总cpu核数
+     * Set 专用宿主机实例总cpu核数
+     * @param CpuTotal 专用宿主机实例总cpu核数
      */
     public void setCpuTotal(Long CpuTotal) {
         this.CpuTotal = CpuTotal;
     }
 
     /**
-     * Get cdh实例可用cpu核数 
-     * @return CpuAvailable cdh实例可用cpu核数
+     * Get 专用宿主机实例可用cpu核数 
+     * @return CpuAvailable 专用宿主机实例可用cpu核数
      */
     public Long getCpuAvailable() {
         return this.CpuAvailable;
     }
 
     /**
-     * Set cdh实例可用cpu核数
-     * @param CpuAvailable cdh实例可用cpu核数
+     * Set 专用宿主机实例可用cpu核数
+     * @param CpuAvailable 专用宿主机实例可用cpu核数
      */
     public void setCpuAvailable(Long CpuAvailable) {
         this.CpuAvailable = CpuAvailable;
     }
 
     /**
-     * Get cdh实例总内存大小（单位为:GiB） 
-     * @return MemTotal cdh实例总内存大小（单位为:GiB）
+     * Get 专用宿主机实例总内存大小（单位为:GiB） 
+     * @return MemTotal 专用宿主机实例总内存大小（单位为:GiB）
      */
     public Float getMemTotal() {
         return this.MemTotal;
     }
 
     /**
-     * Set cdh实例总内存大小（单位为:GiB）
-     * @param MemTotal cdh实例总内存大小（单位为:GiB）
+     * Set 专用宿主机实例总内存大小（单位为:GiB）
+     * @param MemTotal 专用宿主机实例总内存大小（单位为:GiB）
      */
     public void setMemTotal(Float MemTotal) {
         this.MemTotal = MemTotal;
     }
 
     /**
-     * Get cdh实例可用内存大小（单位为:GiB） 
-     * @return MemAvailable cdh实例可用内存大小（单位为:GiB）
+     * Get 专用宿主机实例可用内存大小（单位为:GiB） 
+     * @return MemAvailable 专用宿主机实例可用内存大小（单位为:GiB）
      */
     public Float getMemAvailable() {
         return this.MemAvailable;
     }
 
     /**
-     * Set cdh实例可用内存大小（单位为:GiB）
-     * @param MemAvailable cdh实例可用内存大小（单位为:GiB）
+     * Set 专用宿主机实例可用内存大小（单位为:GiB）
+     * @param MemAvailable 专用宿主机实例可用内存大小（单位为:GiB）
      */
     public void setMemAvailable(Float MemAvailable) {
         this.MemAvailable = MemAvailable;
     }
 
     /**
-     * Get cdh实例总磁盘大小（单位为:GiB） 
-     * @return DiskTotal cdh实例总磁盘大小（单位为:GiB）
+     * Get 专用宿主机实例总磁盘大小（单位为:GiB） 
+     * @return DiskTotal 专用宿主机实例总磁盘大小（单位为:GiB）
      */
     public Long getDiskTotal() {
         return this.DiskTotal;
     }
 
     /**
-     * Set cdh实例总磁盘大小（单位为:GiB）
-     * @param DiskTotal cdh实例总磁盘大小（单位为:GiB）
+     * Set 专用宿主机实例总磁盘大小（单位为:GiB）
+     * @param DiskTotal 专用宿主机实例总磁盘大小（单位为:GiB）
      */
     public void setDiskTotal(Long DiskTotal) {
         this.DiskTotal = DiskTotal;
     }
 
     /**
-     * Get cdh实例可用磁盘大小（单位为:GiB） 
-     * @return DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
+     * Get 专用宿主机实例可用磁盘大小（单位为:GiB） 
+     * @return DiskAvailable 专用宿主机实例可用磁盘大小（单位为:GiB）
      */
     public Long getDiskAvailable() {
         return this.DiskAvailable;
     }
 
     /**
-     * Set cdh实例可用磁盘大小（单位为:GiB）
-     * @param DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
+     * Set 专用宿主机实例可用磁盘大小（单位为:GiB）
+     * @param DiskAvailable 专用宿主机实例可用磁盘大小（单位为:GiB）
      */
     public void setDiskAvailable(Long DiskAvailable) {
         this.DiskAvailable = DiskAvailable;
     }
 
     /**
-     * Get cdh实例磁盘类型 
-     * @return DiskType cdh实例磁盘类型
+     * Get 专用宿主机实例磁盘类型 
+     * @return DiskType 专用宿主机实例磁盘类型
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set cdh实例磁盘类型
-     * @param DiskType cdh实例磁盘类型
+     * Set 专用宿主机实例磁盘类型
+     * @param DiskType 专用宿主机实例磁盘类型
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
+    }
+
+    /**
+     * Get 专用宿主机实例总GPU卡数 
+     * @return GpuTotal 专用宿主机实例总GPU卡数
+     */
+    public Long getGpuTotal() {
+        return this.GpuTotal;
+    }
+
+    /**
+     * Set 专用宿主机实例总GPU卡数
+     * @param GpuTotal 专用宿主机实例总GPU卡数
+     */
+    public void setGpuTotal(Long GpuTotal) {
+        this.GpuTotal = GpuTotal;
+    }
+
+    /**
+     * Get 专用宿主机实例可用GPU卡数 
+     * @return GpuAvailable 专用宿主机实例可用GPU卡数
+     */
+    public Long getGpuAvailable() {
+        return this.GpuAvailable;
+    }
+
+    /**
+     * Set 专用宿主机实例可用GPU卡数
+     * @param GpuAvailable 专用宿主机实例可用GPU卡数
+     */
+    public void setGpuAvailable(Long GpuAvailable) {
+        this.GpuAvailable = GpuAvailable;
     }
 
     public HostResource() {
@@ -212,6 +258,12 @@ public class HostResource extends AbstractModel{
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.GpuTotal != null) {
+            this.GpuTotal = new Long(source.GpuTotal);
+        }
+        if (source.GpuAvailable != null) {
+            this.GpuAvailable = new Long(source.GpuAvailable);
+        }
     }
 
 
@@ -226,6 +278,8 @@ public class HostResource extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
         this.setParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "GpuTotal", this.GpuTotal);
+        this.setParamSimple(map, prefix + "GpuAvailable", this.GpuAvailable);
 
     }
 }

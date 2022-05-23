@@ -39,6 +39,26 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *检查快照是否可用
+     * @param req CheckSavepointRequest
+     * @return CheckSavepointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckSavepointResponse CheckSavepoint(CheckSavepointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckSavepointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckSavepointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckSavepoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新建作业接口，一个 AppId 最多允许创建1000个作业
      * @param req CreateJobRequest
      * @return CreateJobResponse
@@ -191,6 +211,26 @@ public class OceanusClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeJobConfigsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeJobConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查找Savepoint列表
+     * @param req DescribeJobSavepointRequest
+     * @return DescribeJobSavepointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobSavepointResponse DescribeJobSavepoint(DescribeJobSavepointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobSavepointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobSavepointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJobSavepoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

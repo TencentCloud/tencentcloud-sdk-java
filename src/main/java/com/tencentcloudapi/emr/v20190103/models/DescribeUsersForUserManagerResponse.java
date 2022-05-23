@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cat.v20180409.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProbeTasksResponse extends AbstractModel{
-
-    /**
-    * 任务ID列表
-    */
-    @SerializedName("TaskIDs")
-    @Expose
-    private String [] TaskIDs;
+public class DescribeUsersForUserManagerResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateProbeTasksResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 任务ID列表 
-     * @return TaskIDs 任务ID列表
-     */
-    public String [] getTaskIDs() {
-        return this.TaskIDs;
-    }
-
-    /**
-     * Set 任务ID列表
-     * @param TaskIDs 任务ID列表
-     */
-    public void setTaskIDs(String [] TaskIDs) {
-        this.TaskIDs = TaskIDs;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,20 +45,14 @@ public class CreateProbeTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateProbeTasksResponse() {
+    public DescribeUsersForUserManagerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateProbeTasksResponse(CreateProbeTasksResponse source) {
-        if (source.TaskIDs != null) {
-            this.TaskIDs = new String[source.TaskIDs.length];
-            for (int i = 0; i < source.TaskIDs.length; i++) {
-                this.TaskIDs[i] = new String(source.TaskIDs[i]);
-            }
-        }
+    public DescribeUsersForUserManagerResponse(DescribeUsersForUserManagerResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -92,7 +63,6 @@ public class CreateProbeTasksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TaskIDs.", this.TaskIDs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

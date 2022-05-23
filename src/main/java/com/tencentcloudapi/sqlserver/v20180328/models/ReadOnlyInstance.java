@@ -191,6 +191,20 @@ SyncNormal:正常
     private String IsolateTime;
 
     /**
+    * 只读副本所在地域
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
+    * 只读副本所在可用区
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
      * Get 只读副本ID，格式如：mssqlro-3l3fgqn7 
      * @return InstanceId 只读副本ID，格式如：mssqlro-3l3fgqn7
      */
@@ -598,6 +612,38 @@ SyncNormal:正常
         this.IsolateTime = IsolateTime;
     }
 
+    /**
+     * Get 只读副本所在地域 
+     * @return RegionId 只读副本所在地域
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 只读副本所在地域
+     * @param RegionId 只读副本所在地域
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
+     * Get 只读副本所在可用区 
+     * @return ZoneId 只读副本所在可用区
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 只读副本所在可用区
+     * @param ZoneId 只读副本所在可用区
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
     public ReadOnlyInstance() {
     }
 
@@ -672,6 +718,12 @@ SyncNormal:正常
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
     }
 
 
@@ -701,6 +753,8 @@ SyncNormal:正常
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

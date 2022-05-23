@@ -89,6 +89,22 @@ public class NodeDefine extends AbstractModel{
     private Long Location;
 
     /**
+    * 节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CodeType")
+    @Expose
+    private String CodeType;
+
+    /**
+    * 节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeDefineStatus")
+    @Expose
+    private Long NodeDefineStatus;
+
+    /**
      * Get 节点名称 
      * @return Name 节点名称
      */
@@ -256,6 +272,46 @@ public class NodeDefine extends AbstractModel{
         this.Location = Location;
     }
 
+    /**
+     * Get 节点类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodeType 节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCodeType() {
+        return this.CodeType;
+    }
+
+    /**
+     * Set 节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodeType 节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodeType(String CodeType) {
+        this.CodeType = CodeType;
+    }
+
+    /**
+     * Get 节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeDefineStatus 节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNodeDefineStatus() {
+        return this.NodeDefineStatus;
+    }
+
+    /**
+     * Set 节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeDefineStatus 节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeDefineStatus(Long NodeDefineStatus) {
+        this.NodeDefineStatus = NodeDefineStatus;
+    }
+
     public NodeDefine() {
     }
 
@@ -288,6 +344,12 @@ public class NodeDefine extends AbstractModel{
         if (source.Location != null) {
             this.Location = new Long(source.Location);
         }
+        if (source.CodeType != null) {
+            this.CodeType = new String(source.CodeType);
+        }
+        if (source.NodeDefineStatus != null) {
+            this.NodeDefineStatus = new Long(source.NodeDefineStatus);
+        }
     }
 
 
@@ -303,6 +365,8 @@ public class NodeDefine extends AbstractModel{
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "IPType", this.IPType);
         this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "CodeType", this.CodeType);
+        this.setParamSimple(map, prefix + "NodeDefineStatus", this.NodeDefineStatus);
 
     }
 }
