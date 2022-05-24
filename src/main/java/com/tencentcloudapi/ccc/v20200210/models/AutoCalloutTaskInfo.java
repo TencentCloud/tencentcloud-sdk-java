@@ -73,6 +73,13 @@ public class AutoCalloutTaskInfo extends AbstractModel{
     private Long State;
 
     /**
+    * 任务Id
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
      * Get 任务名 
      * @return Name 任务名
      */
@@ -188,6 +195,22 @@ public class AutoCalloutTaskInfo extends AbstractModel{
         this.State = State;
     }
 
+    /**
+     * Get 任务Id 
+     * @return TaskId 任务Id
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务Id
+     * @param TaskId 任务Id
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public AutoCalloutTaskInfo() {
     }
 
@@ -220,6 +243,9 @@ public class AutoCalloutTaskInfo extends AbstractModel{
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
     }
 
 
@@ -234,6 +260,7 @@ public class AutoCalloutTaskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NotAfter", this.NotAfter);
         this.setParamSimple(map, prefix + "IvrId", this.IvrId);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

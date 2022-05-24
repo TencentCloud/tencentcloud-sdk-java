@@ -37,21 +37,21 @@ public class CreateWorkflowRequest extends AbstractModel{
     private WorkflowTrigger Trigger;
 
     /**
-    * 视频处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
+    * 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+    * 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * 视频处理类型任务参数。
+    * 媒体处理类型任务参数。
     */
     @SerializedName("MediaProcessTask")
     @Expose
@@ -125,48 +125,48 @@ public class CreateWorkflowRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。 
-     * @return OutputStorage 视频处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
+     * Get 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。 
+     * @return OutputStorage 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 视频处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
-     * @param OutputStorage 视频处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
+     * Set 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
+     * @param OutputStorage 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。 
-     * @return OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * Get 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。 
+     * @return OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
-     * @param OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * Set 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * @param OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get 视频处理类型任务参数。 
-     * @return MediaProcessTask 视频处理类型任务参数。
+     * Get 媒体处理类型任务参数。 
+     * @return MediaProcessTask 媒体处理类型任务参数。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set 视频处理类型任务参数。
-     * @param MediaProcessTask 视频处理类型任务参数。
+     * Set 媒体处理类型任务参数。
+     * @param MediaProcessTask 媒体处理类型任务参数。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;

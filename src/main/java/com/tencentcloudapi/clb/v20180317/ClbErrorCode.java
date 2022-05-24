@@ -85,7 +85,10 @@ public enum ClbErrorCode {
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
     // 未授权操作。
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private ClbErrorCode (String value){

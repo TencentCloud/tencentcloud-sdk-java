@@ -30,14 +30,14 @@ public class MediaInputInfo extends AbstractModel{
     private String Type;
 
     /**
-    * 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
+    * 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
     */
     @SerializedName("CosInputInfo")
     @Expose
     private CosInputInfo CosInputInfo;
 
     /**
-    * 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+    * 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlInputInfo")
@@ -61,25 +61,25 @@ public class MediaInputInfo extends AbstractModel{
     }
 
     /**
-     * Get 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。 
-     * @return CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
+     * Get 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。 
+     * @return CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
      */
     public CosInputInfo getCosInputInfo() {
         return this.CosInputInfo;
     }
 
     /**
-     * Set 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
-     * @param CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
+     * Set 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
+     * @param CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
      */
     public void setCosInputInfo(CosInputInfo CosInputInfo) {
         this.CosInputInfo = CosInputInfo;
     }
 
     /**
-     * Get 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+     * Get 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+     * @return UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UrlInputInfo getUrlInputInfo() {
@@ -87,9 +87,9 @@ public class MediaInputInfo extends AbstractModel{
     }
 
     /**
-     * Set 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+     * Set 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+     * @param UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {

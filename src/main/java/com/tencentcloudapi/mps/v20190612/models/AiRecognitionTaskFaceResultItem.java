@@ -53,6 +53,84 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel{
     private AiRecognitionTaskFaceSegmentItem [] SegmentSet;
 
     /**
+    * 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Gender")
+    @Expose
+    private String Gender;
+
+    /**
+    * 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Birthday")
+    @Expose
+    private String Birthday;
+
+    /**
+    * 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Profession")
+    @Expose
+    private String Profession;
+
+    /**
+    * 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchoolOfGraduation")
+    @Expose
+    private String SchoolOfGraduation;
+
+    /**
+    * 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Abstract")
+    @Expose
+    private String Abstract;
+
+    /**
+    * 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlaceOfBirth")
+    @Expose
+    private String PlaceOfBirth;
+
+    /**
+    * 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PersonType")
+    @Expose
+    private String PersonType;
+
+    /**
+    * 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 截图链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get 人物唯一标识 ID。 
      * @return Id 人物唯一标识 ID。
      */
@@ -124,6 +202,210 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel{
         this.SegmentSet = SegmentSet;
     }
 
+    /**
+     * Get 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Gender 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGender() {
+        return this.Gender;
+    }
+
+    /**
+     * Set 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Gender 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGender(String Gender) {
+        this.Gender = Gender;
+    }
+
+    /**
+     * Get 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Birthday 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBirthday() {
+        return this.Birthday;
+    }
+
+    /**
+     * Set 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Birthday 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBirthday(String Birthday) {
+        this.Birthday = Birthday;
+    }
+
+    /**
+     * Get 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Profession 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProfession() {
+        return this.Profession;
+    }
+
+    /**
+     * Set 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Profession 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProfession(String Profession) {
+        this.Profession = Profession;
+    }
+
+    /**
+     * Get 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchoolOfGraduation 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchoolOfGraduation() {
+        return this.SchoolOfGraduation;
+    }
+
+    /**
+     * Set 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchoolOfGraduation 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchoolOfGraduation(String SchoolOfGraduation) {
+        this.SchoolOfGraduation = SchoolOfGraduation;
+    }
+
+    /**
+     * Get 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Abstract 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAbstract() {
+        return this.Abstract;
+    }
+
+    /**
+     * Set 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Abstract 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbstract(String Abstract) {
+        this.Abstract = Abstract;
+    }
+
+    /**
+     * Get 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlaceOfBirth 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPlaceOfBirth() {
+        return this.PlaceOfBirth;
+    }
+
+    /**
+     * Set 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlaceOfBirth 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlaceOfBirth(String PlaceOfBirth) {
+        this.PlaceOfBirth = PlaceOfBirth;
+    }
+
+    /**
+     * Get 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PersonType 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPersonType() {
+        return this.PersonType;
+    }
+
+    /**
+     * Set 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PersonType 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPersonType(String PersonType) {
+        this.PersonType = PersonType;
+    }
+
+    /**
+     * Get 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 截图链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Url 截图链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 截图链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Url 截图链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public AiRecognitionTaskFaceResultItem() {
     }
 
@@ -147,6 +429,33 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel{
                 this.SegmentSet[i] = new AiRecognitionTaskFaceSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.Gender != null) {
+            this.Gender = new String(source.Gender);
+        }
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.Profession != null) {
+            this.Profession = new String(source.Profession);
+        }
+        if (source.SchoolOfGraduation != null) {
+            this.SchoolOfGraduation = new String(source.SchoolOfGraduation);
+        }
+        if (source.Abstract != null) {
+            this.Abstract = new String(source.Abstract);
+        }
+        if (source.PlaceOfBirth != null) {
+            this.PlaceOfBirth = new String(source.PlaceOfBirth);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new String(source.PersonType);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -158,6 +467,15 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamSimple(map, prefix + "Birthday", this.Birthday);
+        this.setParamSimple(map, prefix + "Profession", this.Profession);
+        this.setParamSimple(map, prefix + "SchoolOfGraduation", this.SchoolOfGraduation);
+        this.setParamSimple(map, prefix + "Abstract", this.Abstract);
+        this.setParamSimple(map, prefix + "PlaceOfBirth", this.PlaceOfBirth);
+        this.setParamSimple(map, prefix + "PersonType", this.PersonType);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

@@ -102,6 +102,9 @@ public enum TkeErrorCode {
     // VPC未知错误。
      FAILEDOPERATION_VPCUNEXPECTEDERROR("FailedOperation.VPCUnexpectedError"),
      
+    // VPC报错。
+     FAILEDOPERATION_VPCCOMMON("FailedOperation.VpcCommon"),
+     
     // 未发现vpc记录。
      FAILEDOPERATION_VPCRECODRNOTFOUND("FailedOperation.VpcRecodrNotFound"),
      

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class WorkflowTask extends AbstractModel{
 
     /**
-    * 视频处理任务 ID。
+    * 媒体处理任务 ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,7 +53,7 @@ public class WorkflowTask extends AbstractModel{
     private String Message;
 
     /**
-    * 视频处理的目标文件信息。
+    * 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
@@ -69,7 +69,7 @@ public class WorkflowTask extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-    * 视频处理任务的执行状态与结果。
+    * 媒体处理任务的执行状态与结果。
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
@@ -97,16 +97,16 @@ public class WorkflowTask extends AbstractModel{
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-     * Get 视频处理任务 ID。 
-     * @return TaskId 视频处理任务 ID。
+     * Get 媒体处理任务 ID。 
+     * @return TaskId 媒体处理任务 ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 视频处理任务 ID。
-     * @param TaskId 视频处理任务 ID。
+     * Set 媒体处理任务 ID。
+     * @param TaskId 媒体处理任务 ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -169,9 +169,9 @@ public class WorkflowTask extends AbstractModel{
     }
 
     /**
-     * Get 视频处理的目标文件信息。
+     * Get 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputInfo 视频处理的目标文件信息。
+     * @return InputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInputInfo getInputInfo() {
@@ -179,9 +179,9 @@ public class WorkflowTask extends AbstractModel{
     }
 
     /**
-     * Set 视频处理的目标文件信息。
+     * Set 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputInfo 视频处理的目标文件信息。
+     * @param InputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
@@ -209,16 +209,16 @@ public class WorkflowTask extends AbstractModel{
     }
 
     /**
-     * Get 视频处理任务的执行状态与结果。 
-     * @return MediaProcessResultSet 视频处理任务的执行状态与结果。
+     * Get 媒体处理任务的执行状态与结果。 
+     * @return MediaProcessResultSet 媒体处理任务的执行状态与结果。
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set 视频处理任务的执行状态与结果。
-     * @param MediaProcessResultSet 视频处理任务的执行状态与结果。
+     * Set 媒体处理任务的执行状态与结果。
+     * @param MediaProcessResultSet 媒体处理任务的执行状态与结果。
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;

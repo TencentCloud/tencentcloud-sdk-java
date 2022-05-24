@@ -23,32 +23,32 @@ import java.util.HashMap;
 public class TaskNotifyConfig extends AbstractModel{
 
     /**
-    * CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+    * CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
     */
     @SerializedName("CmqModel")
     @Expose
     private String CmqModel;
 
     /**
-    * CMQ 的园区，如 sh，bj 等。
+    * CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-    * 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
-    */
-    @SerializedName("QueueName")
-    @Expose
-    private String QueueName;
-
-    /**
-    * 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+    * 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
+
+    /**
+    * 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
 
     /**
     * 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
@@ -58,7 +58,11 @@ public class TaskNotifyConfig extends AbstractModel{
     private String NotifyMode;
 
     /**
-    * 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+    * 通知类型，可选值：
+<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
+<li>TDMQ-CMQ：消息队列</li>
+<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+目前 默认CMQ。
     */
     @SerializedName("NotifyType")
     @Expose
@@ -72,67 +76,67 @@ public class TaskNotifyConfig extends AbstractModel{
     private String NotifyUrl;
 
     /**
-     * Get CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。 
-     * @return CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * Get CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。 
+     * @return CmqModel CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * Set CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
-     * @param CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * Set CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
+     * @param CmqModel CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;
     }
 
     /**
-     * Get CMQ 的园区，如 sh，bj 等。 
-     * @return CmqRegion CMQ 的园区，如 sh，bj 等。
+     * Get CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。 
+     * @return CmqRegion CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set CMQ 的园区，如 sh，bj 等。
-     * @param CmqRegion CMQ 的园区，如 sh，bj 等。
+     * Set CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
+     * @param CmqRegion CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
     }
 
     /**
-     * Get 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。 
-     * @return QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
-     */
-    public String getQueueName() {
-        return this.QueueName;
-    }
-
-    /**
-     * Set 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
-     * @param QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
-     */
-    public void setQueueName(String QueueName) {
-        this.QueueName = QueueName;
-    }
-
-    /**
-     * Get 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。 
-     * @return TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * Get 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。 
+     * @return TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
-     * @param TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * Set 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
+     * @param TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。 
+     * @return QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+     * @param QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
     }
 
     /**
@@ -152,16 +156,32 @@ public class TaskNotifyConfig extends AbstractModel{
     }
 
     /**
-     * Get 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。 
-     * @return NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     * Get 通知类型，可选值：
+<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
+<li>TDMQ-CMQ：消息队列</li>
+<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+目前 默认CMQ。 
+     * @return NotifyType 通知类型，可选值：
+<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
+<li>TDMQ-CMQ：消息队列</li>
+<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+目前 默认CMQ。
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
-     * @param NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     * Set 通知类型，可选值：
+<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
+<li>TDMQ-CMQ：消息队列</li>
+<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+目前 默认CMQ。
+     * @param NotifyType 通知类型，可选值：
+<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
+<li>TDMQ-CMQ：消息队列</li>
+<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+目前 默认CMQ。
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -197,11 +217,11 @@ public class TaskNotifyConfig extends AbstractModel{
         if (source.CmqRegion != null) {
             this.CmqRegion = new String(source.CmqRegion);
         }
-        if (source.QueueName != null) {
-            this.QueueName = new String(source.QueueName);
-        }
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
         }
         if (source.NotifyMode != null) {
             this.NotifyMode = new String(source.NotifyMode);
@@ -221,8 +241,8 @@ public class TaskNotifyConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CmqModel", this.CmqModel);
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
-        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);

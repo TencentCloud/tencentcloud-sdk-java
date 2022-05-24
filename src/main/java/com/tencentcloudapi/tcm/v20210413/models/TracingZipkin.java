@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mps.v20190612.models;
+package com.tencentcloudapi.tcm.v20210413.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteContentReviewTemplateRequest extends AbstractModel{
+public class TracingZipkin extends AbstractModel{
 
     /**
-    * 内容审核模板唯一标识。
+    * Zipkin调用地址
     */
-    @SerializedName("Definition")
+    @SerializedName("Address")
     @Expose
-    private Long Definition;
+    private String Address;
 
     /**
-     * Get 内容审核模板唯一标识。 
-     * @return Definition 内容审核模板唯一标识。
+     * Get Zipkin调用地址 
+     * @return Address Zipkin调用地址
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public String getAddress() {
+        return this.Address;
     }
 
     /**
-     * Set 内容审核模板唯一标识。
-     * @param Definition 内容审核模板唯一标识。
+     * Set Zipkin调用地址
+     * @param Address Zipkin调用地址
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setAddress(String Address) {
+        this.Address = Address;
     }
 
-    public DeleteContentReviewTemplateRequest() {
+    public TracingZipkin() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteContentReviewTemplateRequest(DeleteContentReviewTemplateRequest source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public TracingZipkin(TracingZipkin source) {
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteContentReviewTemplateRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "Address", this.Address);
 
     }
 }

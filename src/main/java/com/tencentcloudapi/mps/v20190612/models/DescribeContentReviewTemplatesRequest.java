@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeContentReviewTemplatesRequest extends AbstractModel{
 
     /**
-    * 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+    * 智能审核模板唯一标识过滤条件，数组长度限制：50。
     */
     @SerializedName("Definitions")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeContentReviewTemplatesRequest extends AbstractModel{
     private String Type;
 
     /**
-     * Get 内容智能识别模板唯一标识过滤条件，数组长度限制：50。 
-     * @return Definitions 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+     * Get 智能审核模板唯一标识过滤条件，数组长度限制：50。 
+     * @return Definitions 智能审核模板唯一标识过滤条件，数组长度限制：50。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
-     * @param Definitions 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+     * Set 智能审核模板唯一标识过滤条件，数组长度限制：50。
+     * @param Definitions 智能审核模板唯一标识过滤条件，数组长度限制：50。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

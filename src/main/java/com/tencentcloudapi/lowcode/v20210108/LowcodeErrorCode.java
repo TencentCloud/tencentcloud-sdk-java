@@ -10,7 +10,10 @@ public enum LowcodeErrorCode {
      INVALIDPARAMETER("InvalidParameter"),
      
     // 参数取值错误。
-     INVALIDPARAMETERVALUE("InvalidParameterValue");
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;
     private LowcodeErrorCode (String value){

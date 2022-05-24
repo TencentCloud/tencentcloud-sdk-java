@@ -44,6 +44,13 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
     private Boolean TransferDns;
 
     /**
+    * 转入账户的appid。
+    */
+    @SerializedName("NewOwnerAppId")
+    @Expose
+    private String NewOwnerAppId;
+
+    /**
      * Get 要过户的域名。 
      * @return Domains 要过户的域名。
      */
@@ -91,6 +98,22 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
         this.TransferDns = TransferDns;
     }
 
+    /**
+     * Get 转入账户的appid。 
+     * @return NewOwnerAppId 转入账户的appid。
+     */
+    public String getNewOwnerAppId() {
+        return this.NewOwnerAppId;
+    }
+
+    /**
+     * Set 转入账户的appid。
+     * @param NewOwnerAppId 转入账户的appid。
+     */
+    public void setNewOwnerAppId(String NewOwnerAppId) {
+        this.NewOwnerAppId = NewOwnerAppId;
+    }
+
     public ModifyDomainOwnerBatchRequest() {
     }
 
@@ -111,6 +134,9 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
         if (source.TransferDns != null) {
             this.TransferDns = new Boolean(source.TransferDns);
         }
+        if (source.NewOwnerAppId != null) {
+            this.NewOwnerAppId = new String(source.NewOwnerAppId);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "NewOwnerUin", this.NewOwnerUin);
         this.setParamSimple(map, prefix + "TransferDns", this.TransferDns);
+        this.setParamSimple(map, prefix + "NewOwnerAppId", this.NewOwnerAppId);
 
     }
 }

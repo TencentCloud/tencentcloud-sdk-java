@@ -53,7 +53,7 @@ public class WorkflowInfo extends AbstractModel{
     private WorkflowTrigger Trigger;
 
     /**
-    * 视频处理的文件输出存储位置。
+    * 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
@@ -61,7 +61,7 @@ public class WorkflowInfo extends AbstractModel{
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 视频处理类型任务参数。
+    * 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaProcessTask")
@@ -108,7 +108,7 @@ public class WorkflowInfo extends AbstractModel{
     private Long TaskPriority;
 
     /**
-    * 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+    * 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
     */
     @SerializedName("OutputDir")
     @Expose
@@ -201,9 +201,9 @@ public class WorkflowInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频处理的文件输出存储位置。
+     * Get 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputStorage 视频处理的文件输出存储位置。
+     * @return OutputStorage 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -211,9 +211,9 @@ public class WorkflowInfo extends AbstractModel{
     }
 
     /**
-     * Set 视频处理的文件输出存储位置。
+     * Set 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputStorage 视频处理的文件输出存储位置。
+     * @param OutputStorage 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -221,9 +221,9 @@ public class WorkflowInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频处理类型任务参数。
+     * Get 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaProcessTask 视频处理类型任务参数。
+     * @return MediaProcessTask 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
@@ -231,9 +231,9 @@ public class WorkflowInfo extends AbstractModel{
     }
 
     /**
-     * Set 视频处理类型任务参数。
+     * Set 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTask 视频处理类型任务参数。
+     * @param MediaProcessTask 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
@@ -337,16 +337,16 @@ public class WorkflowInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频处理生成的文件输出的目标目录，如`/movie/201907/`。 
-     * @return OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * Get 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。 
+     * @return OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
-     * @param OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * Set 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * @param OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;

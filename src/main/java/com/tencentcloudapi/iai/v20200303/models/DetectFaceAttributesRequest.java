@@ -55,7 +55,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
     * 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
@@ -170,14 +170,14 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Get 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
 关于各属性的详细描述，参见下文出参。 
 最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 AttributesInfo 不具备参考意义。 
      * @return FaceAttributesType 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
@@ -190,14 +190,14 @@ None为不需要返回。默认为 None。
 
     /**
      * Set 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
 关于各属性的详细描述，参见下文出参。 
 最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 AttributesInfo 不具备参考意义。
      * @param FaceAttributesType 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 

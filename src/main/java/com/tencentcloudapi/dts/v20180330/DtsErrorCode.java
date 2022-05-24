@@ -12,6 +12,9 @@ public enum DtsErrorCode {
     // 当前状态冲突，不能执行该操作。
      FAILEDOPERATION_STATUSINCONFLICT("FailedOperation.StatusInConflict"),
      
+    // 当前状态不允许操作。
+     FAILEDOPERATION_STATUSINCONFLICTERROR("FailedOperation.StatusInConflictError"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -29,6 +32,9 @@ public enum DtsErrorCode {
      
     // 迁移任务冲突。
      INTERNALERROR_DUPLICATEJOB("InternalError.DuplicateJob"),
+     
+    // 内部组件访问错误。
+     INTERNALERROR_INTERNALINNERCOMMONERROR("InternalError.InternalInnerCommonError"),
      
     // 锁冲突。
      INTERNALERROR_LOCKERROR("InternalError.LockError"),

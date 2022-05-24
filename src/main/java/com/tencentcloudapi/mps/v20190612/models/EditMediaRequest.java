@@ -30,14 +30,14 @@ public class EditMediaRequest extends AbstractModel{
     private EditMediaFileInfo [] FileInfos;
 
     /**
-    * 视频处理输出文件的目标存储。
+    * 媒体处理输出文件的目标存储。
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 视频处理输出文件的目标路径。
+    * 媒体处理输出文件的目标路径。
     */
     @SerializedName("OutputObjectPath")
     @Expose
@@ -95,32 +95,32 @@ public class EditMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频处理输出文件的目标存储。 
-     * @return OutputStorage 视频处理输出文件的目标存储。
+     * Get 媒体处理输出文件的目标存储。 
+     * @return OutputStorage 媒体处理输出文件的目标存储。
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 视频处理输出文件的目标存储。
-     * @param OutputStorage 视频处理输出文件的目标存储。
+     * Set 媒体处理输出文件的目标存储。
+     * @param OutputStorage 媒体处理输出文件的目标存储。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 视频处理输出文件的目标路径。 
-     * @return OutputObjectPath 视频处理输出文件的目标路径。
+     * Get 媒体处理输出文件的目标路径。 
+     * @return OutputObjectPath 媒体处理输出文件的目标路径。
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set 视频处理输出文件的目标路径。
-     * @param OutputObjectPath 视频处理输出文件的目标路径。
+     * Set 媒体处理输出文件的目标路径。
+     * @param OutputObjectPath 媒体处理输出文件的目标路径。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;

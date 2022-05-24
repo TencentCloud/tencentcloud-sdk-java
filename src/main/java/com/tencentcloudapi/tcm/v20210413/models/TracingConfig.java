@@ -44,6 +44,13 @@ public class TracingConfig extends AbstractModel{
     private APM APM;
 
     /**
+    * 启动第三方服务器的地址
+    */
+    @SerializedName("Zipkin")
+    @Expose
+    private TracingZipkin Zipkin;
+
+    /**
      * Get 调用链采样率，百分比 
      * @return Sampling 调用链采样率，百分比
      */
@@ -91,6 +98,22 @@ public class TracingConfig extends AbstractModel{
         this.APM = APM;
     }
 
+    /**
+     * Get 启动第三方服务器的地址 
+     * @return Zipkin 启动第三方服务器的地址
+     */
+    public TracingZipkin getZipkin() {
+        return this.Zipkin;
+    }
+
+    /**
+     * Set 启动第三方服务器的地址
+     * @param Zipkin 启动第三方服务器的地址
+     */
+    public void setZipkin(TracingZipkin Zipkin) {
+        this.Zipkin = Zipkin;
+    }
+
     public TracingConfig() {
     }
 
@@ -108,6 +131,9 @@ public class TracingConfig extends AbstractModel{
         if (source.APM != null) {
             this.APM = new APM(source.APM);
         }
+        if (source.Zipkin != null) {
+            this.Zipkin = new TracingZipkin(source.Zipkin);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class TracingConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Sampling", this.Sampling);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamObj(map, prefix + "APM.", this.APM);
+        this.setParamObj(map, prefix + "Zipkin.", this.Zipkin);
 
     }
 }

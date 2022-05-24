@@ -96,7 +96,7 @@ MyKid 儿童卡
     private String Type;
 
     /**
-    * 出生日期（目前该字段仅支持IKAD劳工证）
+    * 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
     */
     @SerializedName("Birthday")
     @Expose
@@ -306,16 +306,16 @@ MyKid 儿童卡
     }
 
     /**
-     * Get 出生日期（目前该字段仅支持IKAD劳工证） 
-     * @return Birthday 出生日期（目前该字段仅支持IKAD劳工证）
+     * Get 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证） 
+     * @return Birthday 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set 出生日期（目前该字段仅支持IKAD劳工证）
-     * @param Birthday 出生日期（目前该字段仅支持IKAD劳工证）
+     * Set 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
+     * @param Birthday 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;

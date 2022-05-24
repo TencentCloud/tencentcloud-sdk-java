@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class TaskOutputStorage extends AbstractModel{
 
     /**
-    * 视频处理输出对象存储位置的类型，现在仅支持 COS。
+    * 媒体处理输出对象存储位置的类型，现在仅支持 COS。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+    * 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosOutputStorage")
@@ -38,25 +38,25 @@ public class TaskOutputStorage extends AbstractModel{
     private CosOutputStorage CosOutputStorage;
 
     /**
-     * Get 视频处理输出对象存储位置的类型，现在仅支持 COS。 
-     * @return Type 视频处理输出对象存储位置的类型，现在仅支持 COS。
+     * Get 媒体处理输出对象存储位置的类型，现在仅支持 COS。 
+     * @return Type 媒体处理输出对象存储位置的类型，现在仅支持 COS。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 视频处理输出对象存储位置的类型，现在仅支持 COS。
-     * @param Type 视频处理输出对象存储位置的类型，现在仅支持 COS。
+     * Set 媒体处理输出对象存储位置的类型，现在仅支持 COS。
+     * @param Type 媒体处理输出对象存储位置的类型，现在仅支持 COS。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * Get 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * @return CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosOutputStorage getCosOutputStorage() {
@@ -64,9 +64,9 @@ public class TaskOutputStorage extends AbstractModel{
     }
 
     /**
-     * Set 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * Set 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * @param CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosOutputStorage(CosOutputStorage CosOutputStorage) {
