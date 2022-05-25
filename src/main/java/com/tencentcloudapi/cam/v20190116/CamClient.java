@@ -1459,6 +1459,46 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *角色绑定标签
+     * @param req TagRoleRequest
+     * @return TagRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public TagRoleResponse TagRole(TagRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TagRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TagRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TagRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *角色解绑标签。
+     * @param req UntagRoleRequest
+     * @return UntagRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UntagRoleResponse UntagRole(UntagRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UntagRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UntagRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UntagRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
      * @param req UpdateAssumeRolePolicyRequest
      * @return UpdateAssumeRolePolicyResponse

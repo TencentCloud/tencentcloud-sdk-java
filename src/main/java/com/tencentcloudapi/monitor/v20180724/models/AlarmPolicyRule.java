@@ -129,6 +129,30 @@ re=正则匹配
     private String RuleType;
 
     /**
+    * 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAdvanced")
+    @Expose
+    private Long IsAdvanced;
+
+    /**
+    * 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Long IsOpen;
+
+    /**
+    * 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
      * Get 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
@@ -420,6 +444,66 @@ re=正则匹配
         this.RuleType = RuleType;
     }
 
+    /**
+     * Get 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAdvanced 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAdvanced() {
+        return this.IsAdvanced;
+    }
+
+    /**
+     * Set 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAdvanced 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAdvanced(Long IsAdvanced) {
+        this.IsAdvanced = IsAdvanced;
+    }
+
+    /**
+     * Get 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsOpen 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsOpen 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsOpen(Long IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public AlarmPolicyRule() {
     }
 
@@ -461,6 +545,15 @@ re=正则匹配
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
         }
+        if (source.IsAdvanced != null) {
+            this.IsAdvanced = new Long(source.IsAdvanced);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Long(source.IsOpen);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -479,6 +572,9 @@ re=正则匹配
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

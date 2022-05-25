@@ -58,7 +58,7 @@ public class DescribeCmqTopicsRequest extends AbstractModel{
     private Boolean IsTagFilter;
 
     /**
-    * 过滤器。目前支持按标签过滤。
+    * 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
     */
     @SerializedName("Filters")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeCmqTopicsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤器。目前支持按标签过滤。 
-     * @return Filters 过滤器。目前支持按标签过滤。
+     * Get 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务 
+     * @return Filters 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器。目前支持按标签过滤。
-     * @param Filters 过滤器。目前支持按标签过滤。
+     * Set 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
+     * @param Filters 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

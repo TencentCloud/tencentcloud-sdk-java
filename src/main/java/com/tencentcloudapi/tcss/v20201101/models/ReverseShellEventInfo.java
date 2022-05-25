@@ -138,6 +138,40 @@ public class ReverseShellEventInfo extends AbstractModel{
     private String DstAddress;
 
     /**
+    * 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+    */
+    @SerializedName("ContainerNetStatus")
+    @Expose
+    private String ContainerNetStatus;
+
+    /**
+    * 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+    */
+    @SerializedName("ContainerNetSubStatus")
+    @Expose
+    private String ContainerNetSubStatus;
+
+    /**
+    * 容器隔离操作来源
+    */
+    @SerializedName("ContainerIsolateOperationSrc")
+    @Expose
+    private String ContainerIsolateOperationSrc;
+
+    /**
      * Get 进程名称 
      * @return ProcessName 进程名称
      */
@@ -405,6 +439,106 @@ public class ReverseShellEventInfo extends AbstractModel{
         this.DstAddress = DstAddress;
     }
 
+    /**
+     * Get 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED 
+     * @return ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public String getContainerNetStatus() {
+        return this.ContainerNetStatus;
+    }
+
+    /**
+     * Set 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public void setContainerNetStatus(String ContainerNetStatus) {
+        this.ContainerNetStatus = ContainerNetStatus;
+    }
+
+    /**
+     * Get 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知 
+     * @return ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public String getContainerNetSubStatus() {
+        return this.ContainerNetSubStatus;
+    }
+
+    /**
+     * Set 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     * @param ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public void setContainerNetSubStatus(String ContainerNetSubStatus) {
+        this.ContainerNetSubStatus = ContainerNetSubStatus;
+    }
+
+    /**
+     * Get 容器隔离操作来源 
+     * @return ContainerIsolateOperationSrc 容器隔离操作来源
+     */
+    public String getContainerIsolateOperationSrc() {
+        return this.ContainerIsolateOperationSrc;
+    }
+
+    /**
+     * Set 容器隔离操作来源
+     * @param ContainerIsolateOperationSrc 容器隔离操作来源
+     */
+    public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
+        this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
+    }
+
     public ReverseShellEventInfo() {
     }
 
@@ -461,6 +595,15 @@ public class ReverseShellEventInfo extends AbstractModel{
         if (source.DstAddress != null) {
             this.DstAddress = new String(source.DstAddress);
         }
+        if (source.ContainerNetStatus != null) {
+            this.ContainerNetStatus = new String(source.ContainerNetStatus);
+        }
+        if (source.ContainerNetSubStatus != null) {
+            this.ContainerNetSubStatus = new String(source.ContainerNetSubStatus);
+        }
+        if (source.ContainerIsolateOperationSrc != null) {
+            this.ContainerIsolateOperationSrc = new String(source.ContainerIsolateOperationSrc);
+        }
     }
 
 
@@ -484,6 +627,9 @@ public class ReverseShellEventInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EventCount", this.EventCount);
         this.setParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
         this.setParamSimple(map, prefix + "DstAddress", this.DstAddress);
+        this.setParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
+        this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
+        this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
 
     }
 }

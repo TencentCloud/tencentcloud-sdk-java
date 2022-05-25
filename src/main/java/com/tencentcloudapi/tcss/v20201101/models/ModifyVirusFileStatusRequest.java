@@ -33,9 +33,11 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
     * 标记事件的状态，   
     EVENT_DEALED:事件处理
     EVENT_INGNORE"：事件忽略
-     EVENT_DEL:事件删除
-     EVENT_ADD_WHITE:事件加白
-     EVENT_PENDING: 事件待处理
+    EVENT_DEL:事件删除
+    EVENT_ADD_WHITE:事件加白
+    EVENT_PENDING: 事件待处理
+	EVENT_ISOLATE_CONTAINER: 隔离容器
+	EVENT_RESOTRE_CONTAINER: 恢复容器
     */
     @SerializedName("Status")
     @Expose
@@ -47,6 +49,13 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * 是否后续自动隔离相同MD5文件
+    */
+    @SerializedName("AutoIsolate")
+    @Expose
+    private Boolean AutoIsolate;
 
     /**
      * Get 处理事件id 
@@ -68,15 +77,19 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
      * Get 标记事件的状态，   
     EVENT_DEALED:事件处理
     EVENT_INGNORE"：事件忽略
-     EVENT_DEL:事件删除
-     EVENT_ADD_WHITE:事件加白
-     EVENT_PENDING: 事件待处理 
+    EVENT_DEL:事件删除
+    EVENT_ADD_WHITE:事件加白
+    EVENT_PENDING: 事件待处理
+	EVENT_ISOLATE_CONTAINER: 隔离容器
+	EVENT_RESOTRE_CONTAINER: 恢复容器 
      * @return Status 标记事件的状态，   
     EVENT_DEALED:事件处理
     EVENT_INGNORE"：事件忽略
-     EVENT_DEL:事件删除
-     EVENT_ADD_WHITE:事件加白
-     EVENT_PENDING: 事件待处理
+    EVENT_DEL:事件删除
+    EVENT_ADD_WHITE:事件加白
+    EVENT_PENDING: 事件待处理
+	EVENT_ISOLATE_CONTAINER: 隔离容器
+	EVENT_RESOTRE_CONTAINER: 恢复容器
      */
     public String getStatus() {
         return this.Status;
@@ -86,15 +99,19 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
      * Set 标记事件的状态，   
     EVENT_DEALED:事件处理
     EVENT_INGNORE"：事件忽略
-     EVENT_DEL:事件删除
-     EVENT_ADD_WHITE:事件加白
-     EVENT_PENDING: 事件待处理
+    EVENT_DEL:事件删除
+    EVENT_ADD_WHITE:事件加白
+    EVENT_PENDING: 事件待处理
+	EVENT_ISOLATE_CONTAINER: 隔离容器
+	EVENT_RESOTRE_CONTAINER: 恢复容器
      * @param Status 标记事件的状态，   
     EVENT_DEALED:事件处理
     EVENT_INGNORE"：事件忽略
-     EVENT_DEL:事件删除
-     EVENT_ADD_WHITE:事件加白
-     EVENT_PENDING: 事件待处理
+    EVENT_DEL:事件删除
+    EVENT_ADD_WHITE:事件加白
+    EVENT_PENDING: 事件待处理
+	EVENT_ISOLATE_CONTAINER: 隔离容器
+	EVENT_RESOTRE_CONTAINER: 恢复容器
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -114,6 +131,22 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get 是否后续自动隔离相同MD5文件 
+     * @return AutoIsolate 是否后续自动隔离相同MD5文件
+     */
+    public Boolean getAutoIsolate() {
+        return this.AutoIsolate;
+    }
+
+    /**
+     * Set 是否后续自动隔离相同MD5文件
+     * @param AutoIsolate 是否后续自动隔离相同MD5文件
+     */
+    public void setAutoIsolate(Boolean AutoIsolate) {
+        this.AutoIsolate = AutoIsolate;
     }
 
     public ModifyVirusFileStatusRequest() {
@@ -136,6 +169,9 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.AutoIsolate != null) {
+            this.AutoIsolate = new Boolean(source.AutoIsolate);
+        }
     }
 
 
@@ -146,6 +182,7 @@ public class ModifyVirusFileStatusRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "EventIdSet.", this.EventIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "AutoIsolate", this.AutoIsolate);
 
     }
 }

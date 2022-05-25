@@ -232,6 +232,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private String CerebroPrivateAccess;
 
     /**
+    * 新增或修改的配置组信息
+    */
+    @SerializedName("EsConfigSet")
+    @Expose
+    private EsConfigSetInfo EsConfigSet;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -719,6 +726,22 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.CerebroPrivateAccess = CerebroPrivateAccess;
     }
 
+    /**
+     * Get 新增或修改的配置组信息 
+     * @return EsConfigSet 新增或修改的配置组信息
+     */
+    public EsConfigSetInfo getEsConfigSet() {
+        return this.EsConfigSet;
+    }
+
+    /**
+     * Set 新增或修改的配置组信息
+     * @param EsConfigSet 新增或修改的配置组信息
+     */
+    public void setEsConfigSet(EsConfigSetInfo EsConfigSet) {
+        this.EsConfigSet = EsConfigSet;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -820,6 +843,9 @@ public class UpdateInstanceRequest extends AbstractModel{
         if (source.CerebroPrivateAccess != null) {
             this.CerebroPrivateAccess = new String(source.CerebroPrivateAccess);
         }
+        if (source.EsConfigSet != null) {
+            this.EsConfigSet = new EsConfigSetInfo(source.EsConfigSet);
+        }
     }
 
 
@@ -856,6 +882,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableCerebro", this.EnableCerebro);
         this.setParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
         this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
+        this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
 
     }
 }

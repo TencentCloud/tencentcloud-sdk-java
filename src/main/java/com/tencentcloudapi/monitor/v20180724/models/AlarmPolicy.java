@@ -282,6 +282,14 @@ public class AlarmPolicy extends AbstractModel{
     private Long OneClickStatus;
 
     /**
+    * 高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedMetricNumber")
+    @Expose
+    private Long AdvancedMetricNumber;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -933,6 +941,26 @@ public class AlarmPolicy extends AbstractModel{
         this.OneClickStatus = OneClickStatus;
     }
 
+    /**
+     * Get 高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedMetricNumber 高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAdvancedMetricNumber() {
+        return this.AdvancedMetricNumber;
+    }
+
+    /**
+     * Set 高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedMetricNumber 高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedMetricNumber(Long AdvancedMetricNumber) {
+        this.AdvancedMetricNumber = AdvancedMetricNumber;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1052,6 +1080,9 @@ public class AlarmPolicy extends AbstractModel{
         if (source.OneClickStatus != null) {
             this.OneClickStatus = new Long(source.OneClickStatus);
         }
+        if (source.AdvancedMetricNumber != null) {
+            this.AdvancedMetricNumber = new Long(source.AdvancedMetricNumber);
+        }
     }
 
 
@@ -1091,6 +1122,7 @@ public class AlarmPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
+        this.setParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
 
     }
 }

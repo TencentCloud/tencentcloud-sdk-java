@@ -2599,7 +2599,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *运行时文件查杀事件列表
+     *查询运行时文件查杀事件列表
      * @param req DescribeVirusListRequest
      * @return DescribeVirusListResponse
      * @throws TencentCloudSDKException

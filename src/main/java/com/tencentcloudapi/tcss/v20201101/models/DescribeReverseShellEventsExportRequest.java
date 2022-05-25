@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeReverseShellEventsExportRequest extends AbstractModel{
 
     /**
-    * 导出字段
-    */
-    @SerializedName("ExportField")
-    @Expose
-    private String [] ExportField;
-
-    /**
     * 需要返回的数量，默认为10，最大值为100
     */
     @SerializedName("Limit")
@@ -65,20 +58,11 @@ public class DescribeReverseShellEventsExportRequest extends AbstractModel{
     private String By;
 
     /**
-     * Get 导出字段 
-     * @return ExportField 导出字段
-     */
-    public String [] getExportField() {
-        return this.ExportField;
-    }
-
-    /**
-     * Set 导出字段
-     * @param ExportField 导出字段
-     */
-    public void setExportField(String [] ExportField) {
-        this.ExportField = ExportField;
-    }
+    * 导出字段
+    */
+    @SerializedName("ExportField")
+    @Expose
+    private String [] ExportField;
 
     /**
      * Get 需要返回的数量，默认为10，最大值为100 
@@ -160,6 +144,22 @@ public class DescribeReverseShellEventsExportRequest extends AbstractModel{
         this.By = By;
     }
 
+    /**
+     * Get 导出字段 
+     * @return ExportField 导出字段
+     */
+    public String [] getExportField() {
+        return this.ExportField;
+    }
+
+    /**
+     * Set 导出字段
+     * @param ExportField 导出字段
+     */
+    public void setExportField(String [] ExportField) {
+        this.ExportField = ExportField;
+    }
+
     public DescribeReverseShellEventsExportRequest() {
     }
 
@@ -168,12 +168,6 @@ public class DescribeReverseShellEventsExportRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeReverseShellEventsExportRequest(DescribeReverseShellEventsExportRequest source) {
-        if (source.ExportField != null) {
-            this.ExportField = new String[source.ExportField.length];
-            for (int i = 0; i < source.ExportField.length; i++) {
-                this.ExportField[i] = new String(source.ExportField[i]);
-            }
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -192,6 +186,12 @@ public class DescribeReverseShellEventsExportRequest extends AbstractModel{
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.ExportField != null) {
+            this.ExportField = new String[source.ExportField.length];
+            for (int i = 0; i < source.ExportField.length; i++) {
+                this.ExportField[i] = new String(source.ExportField[i]);
+            }
+        }
     }
 
 
@@ -199,12 +199,12 @@ public class DescribeReverseShellEventsExportRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
 
     }
 }

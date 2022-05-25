@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateContentReviewTemplateResponse extends AbstractModel{
 
     /**
-    * 内容智能识别模板唯一标识。
+    * 内容审核模板唯一标识。
     */
     @SerializedName("Definition")
     @Expose
@@ -37,16 +37,16 @@ public class CreateContentReviewTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 内容智能识别模板唯一标识。 
-     * @return Definition 内容智能识别模板唯一标识。
+     * Get 内容审核模板唯一标识。 
+     * @return Definition 内容审核模板唯一标识。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 内容智能识别模板唯一标识。
-     * @param Definition 内容智能识别模板唯一标识。
+     * Set 内容审核模板唯一标识。
+     * @param Definition 内容审核模板唯一标识。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -148,6 +148,48 @@ VALIDATION: 参数非法
     private String SubStatus;
 
     /**
+    * 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+    */
+    @SerializedName("ContainerNetStatus")
+    @Expose
+    private String ContainerNetStatus;
+
+    /**
+    * 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+    */
+    @SerializedName("ContainerNetSubStatus")
+    @Expose
+    private String ContainerNetSubStatus;
+
+    /**
+    * 容器隔离操作来源
+    */
+    @SerializedName("ContainerIsolateOperationSrc")
+    @Expose
+    private String ContainerIsolateOperationSrc;
+
+    /**
+    * md5值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MD5")
+    @Expose
+    private String MD5;
+
+    /**
      * Get 文件名称 
      * @return FileName 文件名称
      */
@@ -467,6 +509,126 @@ VALIDATION: 参数非法
         this.SubStatus = SubStatus;
     }
 
+    /**
+     * Get 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED 
+     * @return ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public String getContainerNetStatus() {
+        return this.ContainerNetStatus;
+    }
+
+    /**
+     * Set 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public void setContainerNetStatus(String ContainerNetStatus) {
+        this.ContainerNetStatus = ContainerNetStatus;
+    }
+
+    /**
+     * Get 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知 
+     * @return ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public String getContainerNetSubStatus() {
+        return this.ContainerNetSubStatus;
+    }
+
+    /**
+     * Set 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     * @param ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public void setContainerNetSubStatus(String ContainerNetSubStatus) {
+        this.ContainerNetSubStatus = ContainerNetSubStatus;
+    }
+
+    /**
+     * Get 容器隔离操作来源 
+     * @return ContainerIsolateOperationSrc 容器隔离操作来源
+     */
+    public String getContainerIsolateOperationSrc() {
+        return this.ContainerIsolateOperationSrc;
+    }
+
+    /**
+     * Set 容器隔离操作来源
+     * @param ContainerIsolateOperationSrc 容器隔离操作来源
+     */
+    public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
+        this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
+    }
+
+    /**
+     * Get md5值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MD5 md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMD5() {
+        return this.MD5;
+    }
+
+    /**
+     * Set md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MD5 md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMD5(String MD5) {
+        this.MD5 = MD5;
+    }
+
     public VirusInfo() {
     }
 
@@ -520,6 +682,18 @@ VALIDATION: 参数非法
         if (source.SubStatus != null) {
             this.SubStatus = new String(source.SubStatus);
         }
+        if (source.ContainerNetStatus != null) {
+            this.ContainerNetStatus = new String(source.ContainerNetStatus);
+        }
+        if (source.ContainerNetSubStatus != null) {
+            this.ContainerNetSubStatus = new String(source.ContainerNetSubStatus);
+        }
+        if (source.ContainerIsolateOperationSrc != null) {
+            this.ContainerIsolateOperationSrc = new String(source.ContainerIsolateOperationSrc);
+        }
+        if (source.MD5 != null) {
+            this.MD5 = new String(source.MD5);
+        }
     }
 
 
@@ -542,6 +716,10 @@ VALIDATION: 参数非法
         this.setParamSimple(map, prefix + "HarmDescribe", this.HarmDescribe);
         this.setParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
+        this.setParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
+        this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
+        this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+        this.setParamSimple(map, prefix + "MD5", this.MD5);
 
     }
 }

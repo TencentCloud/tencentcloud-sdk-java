@@ -184,6 +184,42 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
     private String HostStatus;
 
     /**
+    * 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+    */
+    @SerializedName("NetStatus")
+    @Expose
+    private String NetStatus;
+
+    /**
+    * 网络子状态
+    */
+    @SerializedName("NetSubStatus")
+    @Expose
+    private String NetSubStatus;
+
+    /**
+    * 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateSource")
+    @Expose
+    private String IsolateSource;
+
+    /**
+    * 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateTime")
+    @Expose
+    private String IsolateTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -559,6 +595,102 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED 
+     * @return NetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public String getNetStatus() {
+        return this.NetStatus;
+    }
+
+    /**
+     * Set 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param NetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public void setNetStatus(String NetStatus) {
+        this.NetStatus = NetStatus;
+    }
+
+    /**
+     * Get 网络子状态 
+     * @return NetSubStatus 网络子状态
+     */
+    public String getNetSubStatus() {
+        return this.NetSubStatus;
+    }
+
+    /**
+     * Set 网络子状态
+     * @param NetSubStatus 网络子状态
+     */
+    public void setNetSubStatus(String NetSubStatus) {
+        this.NetSubStatus = NetSubStatus;
+    }
+
+    /**
+     * Get 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateSource 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolateSource() {
+        return this.IsolateSource;
+    }
+
+    /**
+     * Set 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateSource 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateSource(String IsolateSource) {
+        this.IsolateSource = IsolateSource;
+    }
+
+    /**
+     * Get 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateTime 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolateTime() {
+        return this.IsolateTime;
+    }
+
+    /**
+     * Set 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateTime 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateTime(String IsolateTime) {
+        this.IsolateTime = IsolateTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -654,6 +786,18 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
         if (source.HostStatus != null) {
             this.HostStatus = new String(source.HostStatus);
         }
+        if (source.NetStatus != null) {
+            this.NetStatus = new String(source.NetStatus);
+        }
+        if (source.NetSubStatus != null) {
+            this.NetSubStatus = new String(source.NetSubStatus);
+        }
+        if (source.IsolateSource != null) {
+            this.IsolateSource = new String(source.IsolateSource);
+        }
+        if (source.IsolateTime != null) {
+            this.IsolateTime = new String(source.IsolateTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -687,6 +831,10 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
         this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
         this.setParamSimple(map, prefix + "HostStatus", this.HostStatus);
+        this.setParamSimple(map, prefix + "NetStatus", this.NetStatus);
+        this.setParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
+        this.setParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
+        this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -80,6 +80,30 @@ public class Metric extends AbstractModel{
     private MetricConfig MetricConfig;
 
     /**
+    * 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAdvanced")
+    @Expose
+    private Long IsAdvanced;
+
+    /**
+    * 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Long IsOpen;
+
+    /**
+    * 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
+
+    /**
      * Get 告警策略类型 
      * @return Namespace 告警策略类型
      */
@@ -211,6 +235,66 @@ public class Metric extends AbstractModel{
         this.MetricConfig = MetricConfig;
     }
 
+    /**
+     * Get 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAdvanced 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAdvanced() {
+        return this.IsAdvanced;
+    }
+
+    /**
+     * Set 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAdvanced 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAdvanced(Long IsAdvanced) {
+        this.IsAdvanced = IsAdvanced;
+    }
+
+    /**
+     * Get 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsOpen 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsOpen 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsOpen(Long IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public Metric() {
     }
 
@@ -246,6 +330,15 @@ public class Metric extends AbstractModel{
         if (source.MetricConfig != null) {
             this.MetricConfig = new MetricConfig(source.MetricConfig);
         }
+        if (source.IsAdvanced != null) {
+            this.IsAdvanced = new Long(source.IsAdvanced);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Long(source.IsOpen);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
     }
 
 
@@ -261,6 +354,9 @@ public class Metric extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamObj(map, prefix + "MetricConfig.", this.MetricConfig);
+        this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

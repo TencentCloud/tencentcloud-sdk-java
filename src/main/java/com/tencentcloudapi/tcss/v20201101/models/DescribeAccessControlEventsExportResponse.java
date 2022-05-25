@@ -31,6 +31,14 @@ public class DescribeAccessControlEventsExportResponse extends AbstractModel{
     private String DownloadUrl;
 
     /**
+    * 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ public class DescribeAccessControlEventsExportResponse extends AbstractModel{
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * Get 任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -84,6 +112,9 @@ public class DescribeAccessControlEventsExportResponse extends AbstractModel{
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +126,7 @@ public class DescribeAccessControlEventsExportResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

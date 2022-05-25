@@ -44,6 +44,22 @@ public class PositionItem extends AbstractModel{
     private Float Latitude;
 
     /**
+    * 位置点的定位类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocationType")
+    @Expose
+    private String LocationType;
+
+    /**
+    * 位置点的精度预估，单位为米
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Accuracy")
+    @Expose
+    private Float Accuracy;
+
+    /**
      * Get 位置点的时间 
      * @return CreateTime 位置点的时间
      */
@@ -91,6 +107,46 @@ public class PositionItem extends AbstractModel{
         this.Latitude = Latitude;
     }
 
+    /**
+     * Get 位置点的定位类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocationType 位置点的定位类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocationType() {
+        return this.LocationType;
+    }
+
+    /**
+     * Set 位置点的定位类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocationType 位置点的定位类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocationType(String LocationType) {
+        this.LocationType = LocationType;
+    }
+
+    /**
+     * Get 位置点的精度预估，单位为米
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Accuracy 位置点的精度预估，单位为米
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getAccuracy() {
+        return this.Accuracy;
+    }
+
+    /**
+     * Set 位置点的精度预估，单位为米
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Accuracy 位置点的精度预估，单位为米
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccuracy(Float Accuracy) {
+        this.Accuracy = Accuracy;
+    }
+
     public PositionItem() {
     }
 
@@ -108,6 +164,12 @@ public class PositionItem extends AbstractModel{
         if (source.Latitude != null) {
             this.Latitude = new Float(source.Latitude);
         }
+        if (source.LocationType != null) {
+            this.LocationType = new String(source.LocationType);
+        }
+        if (source.Accuracy != null) {
+            this.Accuracy = new Float(source.Accuracy);
+        }
     }
 
 
@@ -118,6 +180,8 @@ public class PositionItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Longitude", this.Longitude);
         this.setParamSimple(map, prefix + "Latitude", this.Latitude);
+        this.setParamSimple(map, prefix + "LocationType", this.LocationType);
+        this.setParamSimple(map, prefix + "Accuracy", this.Accuracy);
 
     }
 }

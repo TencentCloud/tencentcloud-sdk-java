@@ -381,6 +381,30 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String OperationTime;
 
     /**
+    * 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerNetStatus")
+    @Expose
+    private String ContainerNetStatus;
+
+    /**
+    * 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerNetSubStatus")
+    @Expose
+    private String ContainerNetSubStatus;
+
+    /**
+    * 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerIsolateOperationSrc")
+    @Expose
+    private String ContainerIsolateOperationSrc;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1304,6 +1328,66 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerNetStatus 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerNetStatus() {
+        return this.ContainerNetStatus;
+    }
+
+    /**
+     * Set 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerNetStatus 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerNetStatus(String ContainerNetStatus) {
+        this.ContainerNetStatus = ContainerNetStatus;
+    }
+
+    /**
+     * Get 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerNetSubStatus 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerNetSubStatus() {
+        return this.ContainerNetSubStatus;
+    }
+
+    /**
+     * Set 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerNetSubStatus 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerNetSubStatus(String ContainerNetSubStatus) {
+        this.ContainerNetSubStatus = ContainerNetSubStatus;
+    }
+
+    /**
+     * Get 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerIsolateOperationSrc 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerIsolateOperationSrc() {
+        return this.ContainerIsolateOperationSrc;
+    }
+
+    /**
+     * Set 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerIsolateOperationSrc 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
+        this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1459,6 +1543,15 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.OperationTime != null) {
             this.OperationTime = new String(source.OperationTime);
         }
+        if (source.ContainerNetStatus != null) {
+            this.ContainerNetStatus = new String(source.ContainerNetStatus);
+        }
+        if (source.ContainerNetSubStatus != null) {
+            this.ContainerNetSubStatus = new String(source.ContainerNetSubStatus);
+        }
+        if (source.ContainerIsolateOperationSrc != null) {
+            this.ContainerIsolateOperationSrc = new String(source.ContainerIsolateOperationSrc);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1512,6 +1605,9 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "AncestorProcessPath", this.AncestorProcessPath);
         this.setParamSimple(map, prefix + "AncestorProcessParam", this.AncestorProcessParam);
         this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
+        this.setParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
+        this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
+        this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
