@@ -51,6 +51,14 @@ public class Event extends AbstractModel{
     private String Subject;
 
     /**
+    * 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
+    */
+    @SerializedName("Time")
+    @Expose
+    private Long Time;
+
+    /**
      * Get 事件源的信息,新产品上报必须符合EB的规范 
      * @return Source 事件源的信息,新产品上报必须符合EB的规范
      */
@@ -114,6 +122,26 @@ public class Event extends AbstractModel{
         this.Subject = Subject;
     }
 
+    /**
+     * Get 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6 
+     * @return Time 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
+     */
+    public Long getTime() {
+        return this.Time;
+    }
+
+    /**
+     * Set 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
+     * @param Time 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
+     */
+    public void setTime(Long Time) {
+        this.Time = Time;
+    }
+
     public Event() {
     }
 
@@ -134,6 +162,9 @@ public class Event extends AbstractModel{
         if (source.Subject != null) {
             this.Subject = new String(source.Subject);
         }
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class Event extends AbstractModel{
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
+        this.setParamSimple(map, prefix + "Time", this.Time);
 
     }
 }

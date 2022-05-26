@@ -30,6 +30,13 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     private String PersonId;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 名称，长度限制：128 个字符。
     */
     @SerializedName("Name")
@@ -68,13 +75,6 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 素材 ID。 
      * @return PersonId 素材 ID。
      */
@@ -88,6 +88,22 @@ public class ModifyPersonSampleRequest extends AbstractModel{
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -182,22 +198,6 @@ public class ModifyPersonSampleRequest extends AbstractModel{
         this.TagOperationInfo = TagOperationInfo;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyPersonSampleRequest() {
     }
 
@@ -208,6 +208,9 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     public ModifyPersonSampleRequest(ModifyPersonSampleRequest source) {
         if (source.PersonId != null) {
             this.PersonId = new String(source.PersonId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -227,9 +230,6 @@ public class ModifyPersonSampleRequest extends AbstractModel{
         if (source.TagOperationInfo != null) {
             this.TagOperationInfo = new AiSampleTagOperation(source.TagOperationInfo);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -238,12 +238,12 @@ public class ModifyPersonSampleRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "Usages.", this.Usages);
         this.setParamObj(map, prefix + "FaceOperationInfo.", this.FaceOperationInfo);
         this.setParamObj(map, prefix + "TagOperationInfo.", this.TagOperationInfo);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

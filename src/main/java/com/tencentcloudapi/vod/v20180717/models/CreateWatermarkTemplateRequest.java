@@ -33,6 +33,13 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
     private String Type;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 水印模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
@@ -100,13 +107,6 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
     private SvgWatermarkInput SvgTemplate;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 水印类型，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
@@ -132,6 +132,22 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -306,22 +322,6 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
         this.SvgTemplate = SvgTemplate;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public CreateWatermarkTemplateRequest() {
     }
 
@@ -332,6 +332,9 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
     public CreateWatermarkTemplateRequest(CreateWatermarkTemplateRequest source) {
         if (source.Type != null) {
             this.Type = new String(source.Type);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -357,9 +360,6 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
         if (source.SvgTemplate != null) {
             this.SvgTemplate = new SvgWatermarkInput(source.SvgTemplate);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -368,6 +368,7 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
@@ -376,7 +377,6 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
         this.setParamObj(map, prefix + "TextTemplate.", this.TextTemplate);
         this.setParamObj(map, prefix + "SvgTemplate.", this.SvgTemplate);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }
