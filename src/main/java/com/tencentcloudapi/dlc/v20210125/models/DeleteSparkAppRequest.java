@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeServerlessRequest extends AbstractModel{
+public class DeleteSparkAppRequest extends AbstractModel{
 
     /**
-    * 集群ID
+    * spark应用名
     */
-    @SerializedName("ClusterId")
+    @SerializedName("AppName")
     @Expose
-    private String ClusterId;
+    private String AppName;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get spark应用名 
+     * @return AppName spark应用名
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getAppName() {
+        return this.AppName;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set spark应用名
+     * @param AppName spark应用名
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
     }
 
-    public ResumeServerlessRequest() {
+    public DeleteSparkAppRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResumeServerlessRequest(ResumeServerlessRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public DeleteSparkAppRequest(DeleteSparkAppRequest source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
         }
     }
 
@@ -63,7 +63,7 @@ public class ResumeServerlessRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
 
     }
 }

@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeServerlessResponse extends AbstractModel{
+public class DescribeSparkAppJobResponse extends AbstractModel{
 
     /**
-    * 异步流程ID
+    * spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FlowId")
+    @SerializedName("Job")
     @Expose
-    private Long FlowId;
+    private SparkJobInfo Job;
+
+    /**
+    * 查询的spark作业是否存在
+    */
+    @SerializedName("IsExists")
+    @Expose
+    private Boolean IsExists;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class ResumeServerlessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
+     * Get spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Job spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public SparkJobInfo getJob() {
+        return this.Job;
     }
 
     /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
+     * Set spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Job spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setJob(SparkJobInfo Job) {
+        this.Job = Job;
+    }
+
+    /**
+     * Get 查询的spark作业是否存在 
+     * @return IsExists 查询的spark作业是否存在
+     */
+    public Boolean getIsExists() {
+        return this.IsExists;
+    }
+
+    /**
+     * Set 查询的spark作业是否存在
+     * @param IsExists 查询的spark作业是否存在
+     */
+    public void setIsExists(Boolean IsExists) {
+        this.IsExists = IsExists;
     }
 
     /**
@@ -68,16 +96,19 @@ public class ResumeServerlessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ResumeServerlessResponse() {
+    public DescribeSparkAppJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResumeServerlessResponse(ResumeServerlessResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public DescribeSparkAppJobResponse(DescribeSparkAppJobResponse source) {
+        if (source.Job != null) {
+            this.Job = new SparkJobInfo(source.Job);
+        }
+        if (source.IsExists != null) {
+            this.IsExists = new Boolean(source.IsExists);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +120,8 @@ public class ResumeServerlessResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamObj(map, prefix + "Job.", this.Job);
+        this.setParamSimple(map, prefix + "IsExists", this.IsExists);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

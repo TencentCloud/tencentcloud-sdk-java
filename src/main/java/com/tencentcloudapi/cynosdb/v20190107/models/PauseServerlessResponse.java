@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PauseServerlessResponse extends AbstractModel{
 
     /**
-    * 异步流程Id
+    * 异步流程ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -37,16 +37,16 @@ public class PauseServerlessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程Id 
-     * @return FlowId 异步流程Id
+     * Get 异步流程ID 
+     * @return FlowId 异步流程ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步流程Id
-     * @param FlowId 异步流程Id
+     * Set 异步流程ID
+     * @param FlowId 异步流程ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

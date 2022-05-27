@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeServerlessResponse extends AbstractModel{
+public class DescribeSparkAppJobsResponse extends AbstractModel{
 
     /**
-    * 异步流程ID
+    * spark作业列表详情
     */
-    @SerializedName("FlowId")
+    @SerializedName("SparkAppJobs")
     @Expose
-    private Long FlowId;
+    private SparkJobInfo [] SparkAppJobs;
+
+    /**
+    * spark作业总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class ResumeServerlessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
+     * Get spark作业列表详情 
+     * @return SparkAppJobs spark作业列表详情
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public SparkJobInfo [] getSparkAppJobs() {
+        return this.SparkAppJobs;
     }
 
     /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
+     * Set spark作业列表详情
+     * @param SparkAppJobs spark作业列表详情
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setSparkAppJobs(SparkJobInfo [] SparkAppJobs) {
+        this.SparkAppJobs = SparkAppJobs;
+    }
+
+    /**
+     * Get spark作业总数 
+     * @return TotalCount spark作业总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set spark作业总数
+     * @param TotalCount spark作业总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -68,16 +91,22 @@ public class ResumeServerlessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ResumeServerlessResponse() {
+    public DescribeSparkAppJobsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResumeServerlessResponse(ResumeServerlessResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public DescribeSparkAppJobsResponse(DescribeSparkAppJobsResponse source) {
+        if (source.SparkAppJobs != null) {
+            this.SparkAppJobs = new SparkJobInfo[source.SparkAppJobs.length];
+            for (int i = 0; i < source.SparkAppJobs.length; i++) {
+                this.SparkAppJobs[i] = new SparkJobInfo(source.SparkAppJobs[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class ResumeServerlessResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamArrayObj(map, prefix + "SparkAppJobs.", this.SparkAppJobs);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

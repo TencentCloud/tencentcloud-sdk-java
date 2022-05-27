@@ -219,6 +219,46 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建spark应用
+     * @param req CreateSparkAppRequest
+     * @return CreateSparkAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSparkAppResponse CreateSparkApp(CreateSparkAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSparkAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSparkAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSparkApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建spark任务
+     * @param req CreateSparkAppTaskRequest
+     * @return CreateSparkAppTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSparkAppTaskResponse CreateSparkAppTask(CreateSparkAppTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSparkAppTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSparkAppTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSparkAppTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
      * @param req CreateStoreLocationRequest
      * @return CreateStoreLocationResponse
@@ -379,6 +419,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除spark应用
+     * @param req DeleteSparkAppRequest
+     * @return DeleteSparkAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSparkAppResponse DeleteSparkApp(DeleteSparkAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSparkAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSparkAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSparkApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除用户
      * @param req DeleteUserRequest
      * @return DeleteUserResponse
@@ -471,6 +531,66 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeScriptsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeScripts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询具体的spark应用
+     * @param req DescribeSparkAppJobRequest
+     * @return DescribeSparkAppJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkAppJobResponse DescribeSparkAppJob(DescribeSparkAppJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSparkAppJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSparkAppJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSparkAppJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取spark应用列表
+     * @param req DescribeSparkAppJobsRequest
+     * @return DescribeSparkAppJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkAppJobsResponse DescribeSparkAppJobs(DescribeSparkAppJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSparkAppJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSparkAppJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSparkAppJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询spark应用的运行任务实例列表
+     * @param req DescribeSparkAppTasksRequest
+     * @return DescribeSparkAppTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkAppTasksResponse DescribeSparkAppTasks(DescribeSparkAppTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSparkAppTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSparkAppTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSparkAppTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -671,6 +791,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetachWorkGroupPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DetachWorkGroupPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新spark应用
+     * @param req ModifySparkAppRequest
+     * @return ModifySparkAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySparkAppResponse ModifySparkApp(ModifySparkAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySparkAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySparkAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySparkApp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

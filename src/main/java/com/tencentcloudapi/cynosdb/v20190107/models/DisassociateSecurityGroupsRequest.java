@@ -30,7 +30,7 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+    * 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -60,16 +60,16 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。 
-     * @return SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+     * Get 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。 
+     * @return SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
-     * @param SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+     * Set 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
+     * @param SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

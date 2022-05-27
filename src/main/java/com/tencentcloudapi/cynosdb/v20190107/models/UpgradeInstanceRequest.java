@@ -37,7 +37,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * 数据库内存
+    * 数据库内存，单位GB
     */
     @SerializedName("Memory")
     @Expose
@@ -112,16 +112,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库内存 
-     * @return Memory 数据库内存
+     * Get 数据库内存，单位GB 
+     * @return Memory 数据库内存，单位GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 数据库内存
-     * @param Memory 数据库内存
+     * Set 数据库内存，单位GB
+     * @param Memory 数据库内存，单位GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;

@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeServerlessResponse extends AbstractModel{
-
-    /**
-    * 异步流程ID
-    */
-    @SerializedName("FlowId")
-    @Expose
-    private Long FlowId;
+public class CreateSparkAppResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class ResumeServerlessResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
-     */
-    public Long getFlowId() {
-        return this.FlowId;
-    }
-
-    /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
-     */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class ResumeServerlessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ResumeServerlessResponse() {
+    public CreateSparkAppResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResumeServerlessResponse(ResumeServerlessResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
-        }
+    public CreateSparkAppResponse(CreateSparkAppResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class ResumeServerlessResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

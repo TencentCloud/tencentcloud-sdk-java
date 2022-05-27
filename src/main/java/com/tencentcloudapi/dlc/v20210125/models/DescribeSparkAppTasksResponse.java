@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeServerlessResponse extends AbstractModel{
+public class DescribeSparkAppTasksResponse extends AbstractModel{
 
     /**
-    * 异步流程ID
+    * 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FlowId")
+    @SerializedName("Tasks")
     @Expose
-    private Long FlowId;
+    private TaskResponseInfo Tasks;
+
+    /**
+    * 任务总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class ResumeServerlessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
+     * Get 任务列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tasks 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public TaskResponseInfo getTasks() {
+        return this.Tasks;
     }
 
     /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
+     * Set 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tasks 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setTasks(TaskResponseInfo Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get 任务总数 
+     * @return TotalCount 任务总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 任务总数
+     * @param TotalCount 任务总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -68,16 +96,19 @@ public class ResumeServerlessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ResumeServerlessResponse() {
+    public DescribeSparkAppTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResumeServerlessResponse(ResumeServerlessResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public DescribeSparkAppTasksResponse(DescribeSparkAppTasksResponse source) {
+        if (source.Tasks != null) {
+            this.Tasks = new TaskResponseInfo(source.Tasks);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +120,8 @@ public class ResumeServerlessResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

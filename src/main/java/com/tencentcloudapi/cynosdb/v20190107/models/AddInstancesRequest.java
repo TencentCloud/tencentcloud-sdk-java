@@ -37,14 +37,14 @@ public class AddInstancesRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * 内存
+    * 内存，单位为GB
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 新增只读实例数
+    * 新增只读实例数，取值范围为(0,16]
     */
     @SerializedName("ReadOnlyCount")
     @Expose
@@ -65,21 +65,21 @@ public class AddInstancesRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * 所属子网ID
+    * 所属子网ID，如果设置了VpcId，则SubnetId必填
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 新增RO组时使用的Port
+    * 新增RO组时使用的Port，取值范围为[0,65535)
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 实例名称
+    * 实例名称，字符串长度范围为[0,64)
     */
     @SerializedName("InstanceName")
     @Expose
@@ -101,7 +101,7 @@ public class AddInstancesRequest extends AbstractModel{
     private String DbType;
 
     /**
-    * 订单来源
+    * 订单来源，字符串长度范围为[0,64)
     */
     @SerializedName("OrderSource")
     @Expose
@@ -147,32 +147,32 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 内存 
-     * @return Memory 内存
+     * Get 内存，单位为GB 
+     * @return Memory 内存，单位为GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存
-     * @param Memory 内存
+     * Set 内存，单位为GB
+     * @param Memory 内存，单位为GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 新增只读实例数 
-     * @return ReadOnlyCount 新增只读实例数
+     * Get 新增只读实例数，取值范围为(0,16] 
+     * @return ReadOnlyCount 新增只读实例数，取值范围为(0,16]
      */
     public Long getReadOnlyCount() {
         return this.ReadOnlyCount;
     }
 
     /**
-     * Set 新增只读实例数
-     * @param ReadOnlyCount 新增只读实例数
+     * Set 新增只读实例数，取值范围为(0,16]
+     * @param ReadOnlyCount 新增只读实例数，取值范围为(0,16]
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;
@@ -211,48 +211,48 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 所属子网ID 
-     * @return SubnetId 所属子网ID
+     * Get 所属子网ID，如果设置了VpcId，则SubnetId必填 
+     * @return SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 所属子网ID
-     * @param SubnetId 所属子网ID
+     * Set 所属子网ID，如果设置了VpcId，则SubnetId必填
+     * @param SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 新增RO组时使用的Port 
-     * @return Port 新增RO组时使用的Port
+     * Get 新增RO组时使用的Port，取值范围为[0,65535) 
+     * @return Port 新增RO组时使用的Port，取值范围为[0,65535)
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 新增RO组时使用的Port
-     * @param Port 新增RO组时使用的Port
+     * Set 新增RO组时使用的Port，取值范围为[0,65535)
+     * @param Port 新增RO组时使用的Port，取值范围为[0,65535)
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称，字符串长度范围为[0,64) 
+     * @return InstanceName 实例名称，字符串长度范围为[0,64)
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称，字符串长度范围为[0,64)
+     * @param InstanceName 实例名称，字符串长度范围为[0,64)
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -295,16 +295,16 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 订单来源 
-     * @return OrderSource 订单来源
+     * Get 订单来源，字符串长度范围为[0,64) 
+     * @return OrderSource 订单来源，字符串长度范围为[0,64)
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set 订单来源
-     * @param OrderSource 订单来源
+     * Set 订单来源，字符串长度范围为[0,64)
+     * @param OrderSource 订单来源，字符串长度范围为[0,64)
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;

@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeServerlessResponse extends AbstractModel{
+public class ListTopicRulesResponse extends AbstractModel{
 
     /**
-    * 异步流程ID
+    * 规则总数量
     */
-    @SerializedName("FlowId")
+    @SerializedName("TotalCnt")
     @Expose
-    private Long FlowId;
+    private Long TotalCnt;
+
+    /**
+    * 规则列表
+    */
+    @SerializedName("Rules")
+    @Expose
+    private TopicRuleInfo [] Rules;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class ResumeServerlessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
+     * Get 规则总数量 
+     * @return TotalCnt 规则总数量
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public Long getTotalCnt() {
+        return this.TotalCnt;
     }
 
     /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
+     * Set 规则总数量
+     * @param TotalCnt 规则总数量
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setTotalCnt(Long TotalCnt) {
+        this.TotalCnt = TotalCnt;
+    }
+
+    /**
+     * Get 规则列表 
+     * @return Rules 规则列表
+     */
+    public TopicRuleInfo [] getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 规则列表
+     * @param Rules 规则列表
+     */
+    public void setRules(TopicRuleInfo [] Rules) {
+        this.Rules = Rules;
     }
 
     /**
@@ -68,16 +91,22 @@ public class ResumeServerlessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ResumeServerlessResponse() {
+    public ListTopicRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResumeServerlessResponse(ResumeServerlessResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public ListTopicRulesResponse(ListTopicRulesResponse source) {
+        if (source.TotalCnt != null) {
+            this.TotalCnt = new Long(source.TotalCnt);
+        }
+        if (source.Rules != null) {
+            this.Rules = new TopicRuleInfo[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new TopicRuleInfo(source.Rules[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class ResumeServerlessResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

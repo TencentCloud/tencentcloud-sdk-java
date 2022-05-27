@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PauseServerlessRequest extends AbstractModel{
 
     /**
-    * 集群id
+    * 集群ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -37,16 +37,16 @@ public class PauseServerlessRequest extends AbstractModel{
     private Long ForcePause;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get 集群ID 
+     * @return ClusterId 集群ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set 集群ID
+     * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

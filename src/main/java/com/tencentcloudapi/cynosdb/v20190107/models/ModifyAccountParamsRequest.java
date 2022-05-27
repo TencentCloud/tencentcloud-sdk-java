@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAccountParamsRequest extends AbstractModel{
 
     /**
-    * 集群id
+    * 集群id，不超过32个字符
     */
     @SerializedName("ClusterId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyAccountParamsRequest extends AbstractModel{
     private AccountParam [] AccountParams;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get 集群id，不超过32个字符 
+     * @return ClusterId 集群id，不超过32个字符
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set 集群id，不超过32个字符
+     * @param ClusterId 集群id，不超过32个字符
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

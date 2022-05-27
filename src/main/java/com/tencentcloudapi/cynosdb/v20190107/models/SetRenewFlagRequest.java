@@ -30,7 +30,7 @@ public class SetRenewFlagRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * 自动续费标志位
+    * 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -53,16 +53,16 @@ public class SetRenewFlagRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动续费标志位 
-     * @return AutoRenewFlag 自动续费标志位
+     * Get 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续 
+     * @return AutoRenewFlag 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标志位
-     * @param AutoRenewFlag 自动续费标志位
+     * Set 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
+     * @param AutoRenewFlag 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

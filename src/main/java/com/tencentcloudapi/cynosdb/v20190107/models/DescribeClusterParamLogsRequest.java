@@ -30,14 +30,14 @@ public class DescribeClusterParamLogsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 返回数量，默认为 20，最大值为 100
+    * 返回数量，默认为 20，取值范围为(0,100]
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 记录偏移量，默认值为0
+    * 记录偏移量，默认值为0，取值范围为[0,INF)
     */
     @SerializedName("Offset")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeClusterParamLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回数量，默认为 20，最大值为 100 
-     * @return Limit 返回数量，默认为 20，最大值为 100
+     * Get 返回数量，默认为 20，取值范围为(0,100] 
+     * @return Limit 返回数量，默认为 20，取值范围为(0,100]
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 20，最大值为 100
-     * @param Limit 返回数量，默认为 20，最大值为 100
+     * Set 返回数量，默认为 20，取值范围为(0,100]
+     * @param Limit 返回数量，默认为 20，取值范围为(0,100]
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 记录偏移量，默认值为0 
-     * @return Offset 记录偏移量，默认值为0
+     * Get 记录偏移量，默认值为0，取值范围为[0,INF) 
+     * @return Offset 记录偏移量，默认值为0，取值范围为[0,INF)
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 记录偏移量，默认值为0
-     * @param Offset 记录偏移量，默认值为0
+     * Set 记录偏移量，默认值为0，取值范围为[0,INF)
+     * @param Offset 记录偏移量，默认值为0，取值范围为[0,INF)
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
