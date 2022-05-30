@@ -1599,6 +1599,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *实例proxy版本升级
+     * @param req UpgradeProxyVersionRequest
+     * @return UpgradeProxyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeProxyVersionResponse UpgradeProxyVersion(UpgradeProxyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeProxyVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeProxyVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例小版本升级
+     * @param req UpgradeSmallVersionRequest
+     * @return UpgradeSmallVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeSmallVersionResponse UpgradeSmallVersion(UpgradeSmallVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeSmallVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeSmallVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *升级实例支持多AZ
      * @param req UpgradeVersionToMultiAvailabilityZonesRequest
      * @return UpgradeVersionToMultiAvailabilityZonesResponse

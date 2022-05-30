@@ -12,6 +12,9 @@ public enum OrganizationErrorCode {
     // 账号实名认证超过上限。
      FAILEDOPERATION_CREATEMEMBERAUTHOVERLIMIT("FailedOperation.CreateMemberAuthOverLimit"),
      
+    // 创建测试失败。
+     FAILEDOPERATION_CREATEPOLICY("FailedOperation.CreatePolicy"),
+     
     // 创建已成功。
      FAILEDOPERATION_CREATERECORDALREADYSUCCESS("FailedOperation.CreateRecordAlreadySuccess"),
      
@@ -23,6 +26,9 @@ public enum OrganizationErrorCode {
      
     // 名字已经被使用。
      FAILEDOPERATION_MEMBERNAMEUSED("FailedOperation.MemberNameUsed"),
+     
+    // 成员授权策略名已存在。
+     FAILEDOPERATION_MEMBERPOLICYNAMEEXIST("FailedOperation.MemberPolicyNameExist"),
      
     // 操作计费侧成员权限错误。
      FAILEDOPERATION_OPERATEBILLINGPERMISSIONERR("FailedOperation.OperateBillingPermissionErr"),
@@ -62,6 +68,9 @@ public enum OrganizationErrorCode {
      
     // 成员超过上限。
      LIMITEXCEEDED_ORGANIZATIONMEMBEROVERLIMIT("LimitExceeded.OrganizationMemberOverLimit"),
+     
+    // 成员可授权身份不存在。
+     RESOURCENOTFOUND_MEMBERIDENTITYNOTEXIST("ResourceNotFound.MemberIdentityNotExist"),
      
     // 成员不存在。
      RESOURCENOTFOUND_MEMBERNOTEXIST("ResourceNotFound.MemberNotExist"),

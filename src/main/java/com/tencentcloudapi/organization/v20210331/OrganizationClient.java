@@ -79,6 +79,26 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *创建组织成员的授权策略
+     * @param req CreateOrganizationMemberPolicyRequest
+     * @return CreateOrganizationMemberPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrganizationMemberPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrganizationMemberPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取企业组织信息
      * @param req DescribeOrganizationRequest
      * @return DescribeOrganizationResponse
