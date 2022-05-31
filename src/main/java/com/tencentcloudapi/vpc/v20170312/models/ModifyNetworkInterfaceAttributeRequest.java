@@ -51,6 +51,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
+    * 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+    */
+    @SerializedName("TrunkingFlag")
+    @Expose
+    private String TrunkingFlag;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-pxir56ns。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
      */
@@ -114,6 +121,22 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。 
+     * @return TrunkingFlag 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+     */
+    public String getTrunkingFlag() {
+        return this.TrunkingFlag;
+    }
+
+    /**
+     * Set 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+     * @param TrunkingFlag 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+     */
+    public void setTrunkingFlag(String TrunkingFlag) {
+        this.TrunkingFlag = TrunkingFlag;
+    }
+
     public ModifyNetworkInterfaceAttributeRequest() {
     }
 
@@ -137,6 +160,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.TrunkingFlag != null) {
+            this.TrunkingFlag = new String(source.TrunkingFlag);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceName", this.NetworkInterfaceName);
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
 
     }
 }

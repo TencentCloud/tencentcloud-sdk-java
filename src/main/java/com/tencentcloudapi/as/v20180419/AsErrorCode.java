@@ -421,7 +421,10 @@ public enum AsErrorCode {
      RESOURCEUNAVAILABLE_TDMQCMQTOPICHASNOSUBSCRIBER("ResourceUnavailable.TDMQCMQTopicHasNoSubscriber"),
      
     // 指定的可用区不可用。
-     RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable");
+     RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private AsErrorCode (String value){

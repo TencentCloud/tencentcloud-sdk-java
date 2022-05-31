@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
 
     /**
-    * 要解绑定期快照策略的云盘ID列表。
-    */
-    @SerializedName("DiskIds")
-    @Expose
-    private String [] DiskIds;
-
-    /**
     * 要解绑的定期快照策略ID。
     */
     @SerializedName("AutoSnapshotPolicyId")
@@ -37,20 +30,11 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
     private String AutoSnapshotPolicyId;
 
     /**
-     * Get 要解绑定期快照策略的云盘ID列表。 
-     * @return DiskIds 要解绑定期快照策略的云盘ID列表。
-     */
-    public String [] getDiskIds() {
-        return this.DiskIds;
-    }
-
-    /**
-     * Set 要解绑定期快照策略的云盘ID列表。
-     * @param DiskIds 要解绑定期快照策略的云盘ID列表。
-     */
-    public void setDiskIds(String [] DiskIds) {
-        this.DiskIds = DiskIds;
-    }
+    * 要解绑定期快照策略的云盘ID列表。
+    */
+    @SerializedName("DiskIds")
+    @Expose
+    private String [] DiskIds;
 
     /**
      * Get 要解绑的定期快照策略ID。 
@@ -68,6 +52,22 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
+    /**
+     * Get 要解绑定期快照策略的云盘ID列表。 
+     * @return DiskIds 要解绑定期快照策略的云盘ID列表。
+     */
+    public String [] getDiskIds() {
+        return this.DiskIds;
+    }
+
+    /**
+     * Set 要解绑定期快照策略的云盘ID列表。
+     * @param DiskIds 要解绑定期快照策略的云盘ID列表。
+     */
+    public void setDiskIds(String [] DiskIds) {
+        this.DiskIds = DiskIds;
+    }
+
     public UnbindAutoSnapshotPolicyRequest() {
     }
 
@@ -76,14 +76,14 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UnbindAutoSnapshotPolicyRequest(UnbindAutoSnapshotPolicyRequest source) {
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
         if (source.DiskIds != null) {
             this.DiskIds = new String[source.DiskIds.length];
             for (int i = 0; i < source.DiskIds.length; i++) {
                 this.DiskIds[i] = new String(source.DiskIds[i]);
             }
-        }
-        if (source.AutoSnapshotPolicyId != null) {
-            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
         }
     }
 
@@ -92,8 +92,8 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
 
     }
 }

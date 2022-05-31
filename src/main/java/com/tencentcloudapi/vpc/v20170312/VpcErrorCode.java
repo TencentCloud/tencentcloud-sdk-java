@@ -639,6 +639,9 @@ public enum VpcErrorCode {
     // 指定的终端节点服务所创建的终端节点不支持绑定安全组。
      UNSUPPORTEDOPERATION_SPECIALENDPOINTSERVICE("UnsupportedOperation.SpecialEndPointService"),
      
+    // 中继网卡不支持该操作。
+     UNSUPPORTEDOPERATION_SUBENINOTSUPPORTTRUNKING("UnsupportedOperation.SubEniNotSupportTrunking"),
+     
     // 系统路由，禁止操作。
      UNSUPPORTEDOPERATION_SYSTEMROUTE("UnsupportedOperation.SystemRoute"),
      

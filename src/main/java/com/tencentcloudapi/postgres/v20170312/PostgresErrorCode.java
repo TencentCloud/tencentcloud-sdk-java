@@ -492,6 +492,9 @@ public enum PostgresErrorCode {
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),
      
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
     // VPC相关错误。
      VPCERROR("VpcError");
      

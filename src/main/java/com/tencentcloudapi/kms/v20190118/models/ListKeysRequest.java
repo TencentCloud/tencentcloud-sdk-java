@@ -44,6 +44,13 @@ public class ListKeysRequest extends AbstractModel{
     private Long Role;
 
     /**
+    * KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
      * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
@@ -91,6 +98,22 @@ public class ListKeysRequest extends AbstractModel{
         this.Role = Role;
     }
 
+    /**
+     * Get KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。 
+     * @return HsmClusterId KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     * @param HsmClusterId KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public ListKeysRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ListKeysRequest extends AbstractModel{
         if (source.Role != null) {
             this.Role = new Long(source.Role);
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ListKeysRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

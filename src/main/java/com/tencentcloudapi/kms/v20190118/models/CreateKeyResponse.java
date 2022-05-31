@@ -82,6 +82,14 @@ public class CreateKeyResponse extends AbstractModel{
     private String TagMsg;
 
     /**
+    * HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -229,6 +237,26 @@ public class CreateKeyResponse extends AbstractModel{
     }
 
     /**
+     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -276,6 +304,9 @@ public class CreateKeyResponse extends AbstractModel{
         if (source.TagMsg != null) {
             this.TagMsg = new String(source.TagMsg);
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -294,6 +325,7 @@ public class CreateKeyResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamSimple(map, prefix + "TagCode", this.TagCode);
         this.setParamSimple(map, prefix + "TagMsg", this.TagMsg);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

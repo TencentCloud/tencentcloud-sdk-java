@@ -4,7 +4,10 @@ public enum ApiErrorCode {
      INVALIDPARAMETER("InvalidParameter"),
      
     // 请求的次数超过了频率限制。
-     REQUESTLIMITEXCEEDED("RequestLimitExceeded");
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private ApiErrorCode (String value){

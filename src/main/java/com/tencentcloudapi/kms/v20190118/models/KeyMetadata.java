@@ -131,6 +131,14 @@ public class KeyMetadata extends AbstractModel{
     private String ResourceId;
 
     /**
+    * HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
@@ -382,6 +390,26 @@ public class KeyMetadata extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public KeyMetadata() {
     }
 
@@ -435,6 +463,9 @@ public class KeyMetadata extends AbstractModel{
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -457,6 +488,7 @@ public class KeyMetadata extends AbstractModel{
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

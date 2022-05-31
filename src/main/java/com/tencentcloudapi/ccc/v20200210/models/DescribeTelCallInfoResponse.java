@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTelCallInfoResponse extends AbstractModel{
 
     /**
-    * 电话呼出统计分钟数
+    * 呼出套餐包消耗分钟数
     */
     @SerializedName("TelCallOutCount")
     @Expose
     private Long TelCallOutCount;
 
     /**
-    * 电话呼入统计分钟数
+    * 呼入套餐包消耗分钟数
     */
     @SerializedName("TelCallInCount")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 电话呼出统计分钟数 
-     * @return TelCallOutCount 电话呼出统计分钟数
+     * Get 呼出套餐包消耗分钟数 
+     * @return TelCallOutCount 呼出套餐包消耗分钟数
      */
     public Long getTelCallOutCount() {
         return this.TelCallOutCount;
     }
 
     /**
-     * Set 电话呼出统计分钟数
-     * @param TelCallOutCount 电话呼出统计分钟数
+     * Set 呼出套餐包消耗分钟数
+     * @param TelCallOutCount 呼出套餐包消耗分钟数
      */
     public void setTelCallOutCount(Long TelCallOutCount) {
         this.TelCallOutCount = TelCallOutCount;
     }
 
     /**
-     * Get 电话呼入统计分钟数 
-     * @return TelCallInCount 电话呼入统计分钟数
+     * Get 呼入套餐包消耗分钟数 
+     * @return TelCallInCount 呼入套餐包消耗分钟数
      */
     public Long getTelCallInCount() {
         return this.TelCallInCount;
     }
 
     /**
-     * Set 电话呼入统计分钟数
-     * @param TelCallInCount 电话呼入统计分钟数
+     * Set 呼入套餐包消耗分钟数
+     * @param TelCallInCount 呼入套餐包消耗分钟数
      */
     public void setTelCallInCount(Long TelCallInCount) {
         this.TelCallInCount = TelCallInCount;

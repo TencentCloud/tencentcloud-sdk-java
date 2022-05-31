@@ -58,7 +58,7 @@ public class AccountCreateInfo extends AbstractModel{
     private Boolean IsAdmin;
 
     /**
-    * win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+    * win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
     */
     @SerializedName("Authentication")
     @Expose
@@ -145,16 +145,16 @@ public class AccountCreateInfo extends AbstractModel{
     }
 
     /**
-     * Get win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权 
-     * @return Authentication win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     * Get win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权 
+     * @return Authentication win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
      */
     public String getAuthentication() {
         return this.Authentication;
     }
 
     /**
-     * Set win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
-     * @param Authentication win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     * Set win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
+     * @param Authentication win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
      */
     public void setAuthentication(String Authentication) {
         this.Authentication = Authentication;

@@ -51,6 +51,13 @@ public class CreateSnapshotRequest extends AbstractModel{
     private String DiskBackupId;
 
     /**
+    * 快照绑定的标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
@@ -114,6 +121,22 @@ public class CreateSnapshotRequest extends AbstractModel{
         this.DiskBackupId = DiskBackupId;
     }
 
+    /**
+     * Get 快照绑定的标签。 
+     * @return Tags 快照绑定的标签。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 快照绑定的标签。
+     * @param Tags 快照绑定的标签。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateSnapshotRequest() {
     }
 
@@ -134,6 +157,12 @@ public class CreateSnapshotRequest extends AbstractModel{
         if (source.DiskBackupId != null) {
             this.DiskBackupId = new String(source.DiskBackupId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class CreateSnapshotRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

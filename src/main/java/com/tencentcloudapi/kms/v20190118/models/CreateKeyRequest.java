@@ -58,6 +58,13 @@ public class CreateKeyRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。 
      * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
      */
@@ -137,6 +144,22 @@ public class CreateKeyRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。 
+     * @return HsmClusterId KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     * @param HsmClusterId KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public CreateKeyRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CreateKeyRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateKeyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

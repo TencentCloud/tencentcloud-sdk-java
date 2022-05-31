@@ -69,6 +69,22 @@ public class GetServiceStatusResponse extends AbstractModel{
     private String ProResourceId;
 
     /**
+    * 是否开通 KMS 托管版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExclusiveVSMEnabled")
+    @Expose
+    private Boolean ExclusiveVSMEnabled;
+
+    /**
+    * 是否开通 KMS 独享版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExclusiveHSMEnabled")
+    @Expose
+    private Boolean ExclusiveHSMEnabled;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -188,6 +204,46 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开通 KMS 托管版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExclusiveVSMEnabled 是否开通 KMS 托管版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getExclusiveVSMEnabled() {
+        return this.ExclusiveVSMEnabled;
+    }
+
+    /**
+     * Set 是否开通 KMS 托管版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveVSMEnabled 是否开通 KMS 托管版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusiveVSMEnabled(Boolean ExclusiveVSMEnabled) {
+        this.ExclusiveVSMEnabled = ExclusiveVSMEnabled;
+    }
+
+    /**
+     * Get 是否开通 KMS 独享版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExclusiveHSMEnabled 是否开通 KMS 独享版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getExclusiveHSMEnabled() {
+        return this.ExclusiveHSMEnabled;
+    }
+
+    /**
+     * Set 是否开通 KMS 独享版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveHSMEnabled 是否开通 KMS 独享版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusiveHSMEnabled(Boolean ExclusiveHSMEnabled) {
+        this.ExclusiveHSMEnabled = ExclusiveHSMEnabled;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -229,6 +285,12 @@ public class GetServiceStatusResponse extends AbstractModel{
         if (source.ProResourceId != null) {
             this.ProResourceId = new String(source.ProResourceId);
         }
+        if (source.ExclusiveVSMEnabled != null) {
+            this.ExclusiveVSMEnabled = new Boolean(source.ExclusiveVSMEnabled);
+        }
+        if (source.ExclusiveHSMEnabled != null) {
+            this.ExclusiveHSMEnabled = new Boolean(source.ExclusiveHSMEnabled);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -245,6 +307,8 @@ public class GetServiceStatusResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ProExpireTime", this.ProExpireTime);
         this.setParamSimple(map, prefix + "ProRenewFlag", this.ProRenewFlag);
         this.setParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
+        this.setParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
+        this.setParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

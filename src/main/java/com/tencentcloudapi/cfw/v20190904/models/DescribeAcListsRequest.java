@@ -58,7 +58,7 @@ public class DescribeAcListsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 出站还是入站，0：入站，1：出站
+    * 出站还是入站，1：入站，0：出站
     */
     @SerializedName("Direction")
     @Expose
@@ -173,16 +173,16 @@ public class DescribeAcListsRequest extends AbstractModel{
     }
 
     /**
-     * Get 出站还是入站，0：入站，1：出站 
-     * @return Direction 出站还是入站，0：入站，1：出站
+     * Get 出站还是入站，1：入站，0：出站 
+     * @return Direction 出站还是入站，1：入站，0：出站
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 出站还是入站，0：入站，1：出站
-     * @param Direction 出站还是入站，0：入站，1：出站
+     * Set 出站还是入站，1：入站，0：出站
+     * @param Direction 出站还是入站，1：入站，0：出站
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;

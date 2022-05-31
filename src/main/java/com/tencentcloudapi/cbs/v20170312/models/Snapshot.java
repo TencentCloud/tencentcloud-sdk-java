@@ -156,6 +156,13 @@ public class Snapshot extends AbstractModel{
     private String TimeStartShare;
 
     /**
+    * 快照绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 快照所在的位置。 
      * @return Placement 快照所在的位置。
      */
@@ -459,6 +466,22 @@ public class Snapshot extends AbstractModel{
         this.TimeStartShare = TimeStartShare;
     }
 
+    /**
+     * Get 快照绑定的标签列表。 
+     * @return Tags 快照绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 快照绑定的标签列表。
+     * @param Tags 快照绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Snapshot() {
     }
 
@@ -530,6 +553,12 @@ public class Snapshot extends AbstractModel{
         if (source.TimeStartShare != null) {
             this.TimeStartShare = new String(source.TimeStartShare);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -556,6 +585,7 @@ public class Snapshot extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

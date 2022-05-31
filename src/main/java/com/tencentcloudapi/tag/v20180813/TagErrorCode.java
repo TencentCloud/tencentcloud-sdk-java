@@ -118,7 +118,10 @@ public enum TagErrorCode {
      RESOURCENOTFOUND_ATTACHEDTAGKEYNOTFOUND("ResourceNotFound.AttachedTagKeyNotFound"),
      
     // 标签不存在。
-     RESOURCENOTFOUND_TAGNONEXIST("ResourceNotFound.TagNonExist");
+     RESOURCENOTFOUND_TAGNONEXIST("ResourceNotFound.TagNonExist"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TagErrorCode (String value){

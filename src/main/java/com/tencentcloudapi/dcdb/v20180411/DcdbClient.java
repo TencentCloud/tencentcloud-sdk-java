@@ -1170,6 +1170,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享分布式数据库实例。
+     * @param req TerminateDedicatedDBInstanceRequest
+     * @return TerminateDedicatedDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateDedicatedDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpgradeDCDBInstance）用于升级分布式数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
      * @param req UpgradeDCDBInstanceRequest
      * @return UpgradeDCDBInstanceResponse

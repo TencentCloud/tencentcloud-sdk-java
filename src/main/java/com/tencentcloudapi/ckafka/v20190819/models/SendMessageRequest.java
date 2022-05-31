@@ -30,7 +30,7 @@ public class SendMessageRequest extends AbstractModel{
     private String DataHubId;
 
     /**
-    * 发送消息内容
+    * 发送消息内容(单次请求最多500条)
     */
     @SerializedName("Message")
     @Expose
@@ -53,16 +53,16 @@ public class SendMessageRequest extends AbstractModel{
     }
 
     /**
-     * Get 发送消息内容 
-     * @return Message 发送消息内容
+     * Get 发送消息内容(单次请求最多500条) 
+     * @return Message 发送消息内容(单次请求最多500条)
      */
     public BatchContent [] getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 发送消息内容
-     * @param Message 发送消息内容
+     * Set 发送消息内容(单次请求最多500条)
+     * @param Message 发送消息内容(单次请求最多500条)
      */
     public void setMessage(BatchContent [] Message) {
         this.Message = Message;

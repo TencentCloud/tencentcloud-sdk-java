@@ -53,6 +53,22 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     private Long ExtendEniPrivateIpAddressQuantity;
 
     /**
+    * 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubEniQuantity")
+    @Expose
+    private Long SubEniQuantity;
+
+    /**
+    * 每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubEniPrivateIpAddressQuantity")
+    @Expose
+    private Long SubEniPrivateIpAddressQuantity;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -132,6 +148,46 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     }
 
     /**
+     * Get 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubEniQuantity 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubEniQuantity() {
+        return this.SubEniQuantity;
+    }
+
+    /**
+     * Set 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubEniQuantity 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubEniQuantity(Long SubEniQuantity) {
+        this.SubEniQuantity = SubEniQuantity;
+    }
+
+    /**
+     * Get 每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubEniPrivateIpAddressQuantity 每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubEniPrivateIpAddressQuantity() {
+        return this.SubEniPrivateIpAddressQuantity;
+    }
+
+    /**
+     * Set 每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubEniPrivateIpAddressQuantity 每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubEniPrivateIpAddressQuantity(Long SubEniPrivateIpAddressQuantity) {
+        this.SubEniPrivateIpAddressQuantity = SubEniPrivateIpAddressQuantity;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -167,6 +223,12 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
         if (source.ExtendEniPrivateIpAddressQuantity != null) {
             this.ExtendEniPrivateIpAddressQuantity = new Long(source.ExtendEniPrivateIpAddressQuantity);
         }
+        if (source.SubEniQuantity != null) {
+            this.SubEniQuantity = new Long(source.SubEniQuantity);
+        }
+        if (source.SubEniPrivateIpAddressQuantity != null) {
+            this.SubEniPrivateIpAddressQuantity = new Long(source.SubEniPrivateIpAddressQuantity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -181,6 +243,8 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
         this.setParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
+        this.setParamSimple(map, prefix + "SubEniQuantity", this.SubEniQuantity);
+        this.setParamSimple(map, prefix + "SubEniPrivateIpAddressQuantity", this.SubEniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
