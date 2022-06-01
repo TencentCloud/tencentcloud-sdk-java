@@ -295,6 +295,30 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private Tags [] Tags;
 
     /**
+    * 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RootCert")
+    @Expose
+    private RootCertificates RootCert;
+
+    /**
+    * 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptCert")
+    @Expose
+    private String EncryptCert;
+
+    /**
+    * 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptPrivateKey")
+    @Expose
+    private String EncryptPrivateKey;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -982,6 +1006,66 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 根证书。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RootCert 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RootCertificates getRootCert() {
+        return this.RootCert;
+    }
+
+    /**
+     * Set 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RootCert 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRootCert(RootCertificates RootCert) {
+        this.RootCert = RootCert;
+    }
+
+    /**
+     * Get 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptCert 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptCert() {
+        return this.EncryptCert;
+    }
+
+    /**
+     * Set 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptCert 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptCert(String EncryptCert) {
+        this.EncryptCert = EncryptCert;
+    }
+
+    /**
+     * Get 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptPrivateKey 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptPrivateKey() {
+        return this.EncryptPrivateKey;
+    }
+
+    /**
+     * Set 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptPrivateKey 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptPrivateKey(String EncryptPrivateKey) {
+        this.EncryptPrivateKey = EncryptPrivateKey;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1113,6 +1197,15 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.RootCert != null) {
+            this.RootCert = new RootCertificates(source.RootCert);
+        }
+        if (source.EncryptCert != null) {
+            this.EncryptCert = new String(source.EncryptCert);
+        }
+        if (source.EncryptPrivateKey != null) {
+            this.EncryptPrivateKey = new String(source.EncryptPrivateKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1157,6 +1250,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewAble", this.RenewAble);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "RootCert.", this.RootCert);
+        this.setParamSimple(map, prefix + "EncryptCert", this.EncryptCert);
+        this.setParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

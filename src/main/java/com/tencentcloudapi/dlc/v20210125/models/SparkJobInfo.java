@@ -207,6 +207,22 @@ public class SparkJobInfo extends AbstractModel{
     private String DataSource;
 
     /**
+    * pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLocalPythonFiles")
+    @Expose
+    private String IsLocalPythonFiles;
+
+    /**
+    * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppPythonFiles")
+    @Expose
+    private String AppPythonFiles;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -630,6 +646,46 @@ public class SparkJobInfo extends AbstractModel{
         this.DataSource = DataSource;
     }
 
+    /**
+     * Get pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsLocalPythonFiles() {
+        return this.IsLocalPythonFiles;
+    }
+
+    /**
+     * Set pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLocalPythonFiles(String IsLocalPythonFiles) {
+        this.IsLocalPythonFiles = IsLocalPythonFiles;
+    }
+
+    /**
+     * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppPythonFiles() {
+        return this.AppPythonFiles;
+    }
+
+    /**
+     * Set pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppPythonFiles(String AppPythonFiles) {
+        this.AppPythonFiles = AppPythonFiles;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -716,6 +772,12 @@ public class SparkJobInfo extends AbstractModel{
         if (source.DataSource != null) {
             this.DataSource = new String(source.DataSource);
         }
+        if (source.IsLocalPythonFiles != null) {
+            this.IsLocalPythonFiles = new String(source.IsLocalPythonFiles);
+        }
+        if (source.AppPythonFiles != null) {
+            this.AppPythonFiles = new String(source.AppPythonFiles);
+        }
     }
 
 
@@ -749,6 +811,8 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
         this.setParamObj(map, prefix + "StreamingStat.", this.StreamingStat);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
+        this.setParamSimple(map, prefix + "IsLocalPythonFiles", this.IsLocalPythonFiles);
+        this.setParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
 
     }
 }

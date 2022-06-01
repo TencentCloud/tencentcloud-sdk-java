@@ -30,6 +30,13 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     private Long Definition;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 视频内容分析模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
@@ -79,13 +86,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     private HighlightsConfigureInfoForUpdate HighlightConfigure;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 视频内容分析模板唯一标识。 
      * @return Definition 视频内容分析模板唯一标识。
      */
@@ -99,6 +99,22 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -213,22 +229,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         this.HighlightConfigure = HighlightConfigure;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyAIAnalysisTemplateRequest() {
     }
 
@@ -239,6 +239,9 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     public ModifyAIAnalysisTemplateRequest(ModifyAIAnalysisTemplateRequest source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -261,9 +264,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         if (source.HighlightConfigure != null) {
             this.HighlightConfigure = new HighlightsConfigureInfoForUpdate(source.HighlightConfigure);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -272,6 +272,7 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "ClassificationConfigure.", this.ClassificationConfigure);
@@ -279,7 +280,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
         this.setParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
         this.setParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

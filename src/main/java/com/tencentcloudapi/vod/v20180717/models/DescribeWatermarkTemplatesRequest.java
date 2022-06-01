@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DescribeWatermarkTemplatesRequest extends AbstractModel{
 
     /**
-    * 水印模板唯一标识过滤条件，数组长度限制：100。
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
     */
-    @SerializedName("Definitions")
+    @SerializedName("SubAppId")
     @Expose
-    private Long [] Definitions;
+    private Long SubAppId;
 
     /**
     * 水印类型过滤条件，可选值：
@@ -47,6 +47,13 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 水印模板唯一标识过滤条件，数组长度限制：100。
+    */
+    @SerializedName("Definitions")
+    @Expose
+    private Long [] Definitions;
+
+    /**
     * 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
@@ -56,26 +63,19 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
-     * Get 水印模板唯一标识过滤条件，数组长度限制：100。 
-     * @return Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
-    public Long [] getDefinitions() {
-        return this.Definitions;
+    public Long getSubAppId() {
+        return this.SubAppId;
     }
 
     /**
-     * Set 水印模板唯一标识过滤条件，数组长度限制：100。
-     * @param Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
-    public void setDefinitions(Long [] Definitions) {
-        this.Definitions = Definitions;
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -123,6 +123,22 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     }
 
     /**
+     * Get 水印模板唯一标识过滤条件，数组长度限制：100。 
+     * @return Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
+     */
+    public Long [] getDefinitions() {
+        return this.Definitions;
+    }
+
+    /**
+     * Set 水印模板唯一标识过滤条件，数组长度限制：100。
+     * @param Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
+     */
+    public void setDefinitions(Long [] Definitions) {
+        this.Definitions = Definitions;
+    }
+
+    /**
      * Get 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li> 
@@ -146,22 +162,6 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public DescribeWatermarkTemplatesRequest() {
     }
 
@@ -170,11 +170,8 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeWatermarkTemplatesRequest(DescribeWatermarkTemplatesRequest source) {
-        if (source.Definitions != null) {
-            this.Definitions = new Long[source.Definitions.length];
-            for (int i = 0; i < source.Definitions.length; i++) {
-                this.Definitions[i] = new Long(source.Definitions[i]);
-            }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -182,11 +179,14 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Definitions != null) {
+            this.Definitions = new Long[source.Definitions.length];
+            for (int i = 0; i < source.Definitions.length; i++) {
+                this.Definitions[i] = new Long(source.Definitions[i]);
+            }
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
     }
 
@@ -195,11 +195,11 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

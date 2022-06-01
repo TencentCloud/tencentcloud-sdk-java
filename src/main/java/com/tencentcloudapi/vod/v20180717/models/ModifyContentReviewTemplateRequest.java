@@ -30,6 +30,13 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private Long Definition;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 内容智能识别模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
@@ -97,13 +104,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private String ReviewWallSwitch;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 内容智能识别模板唯一标识。 
      * @return Definition 内容智能识别模板唯一标识。
      */
@@ -117,6 +117,22 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -279,22 +295,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.ReviewWallSwitch = ReviewWallSwitch;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyContentReviewTemplateRequest() {
     }
 
@@ -305,6 +305,9 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     public ModifyContentReviewTemplateRequest(ModifyContentReviewTemplateRequest source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -333,9 +336,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         if (source.ReviewWallSwitch != null) {
             this.ReviewWallSwitch = new String(source.ReviewWallSwitch);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -344,6 +344,7 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
@@ -353,7 +354,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamSimple(map, prefix + "ReviewWallSwitch", this.ReviewWallSwitch);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

@@ -30,6 +30,13 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 模板描述信息，长度限制 256 个字符。
     */
     @SerializedName("Comment")
@@ -63,13 +70,6 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
     private String FillType;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 模板名，长度限制 64 个字符。 
      * @return Name 模板名，长度限制 64 个字符。
      */
@@ -83,6 +83,22 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -169,22 +185,6 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
         this.FillType = FillType;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public CreateHeadTailTemplateRequest() {
     }
 
@@ -195,6 +195,9 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
     public CreateHeadTailTemplateRequest(CreateHeadTailTemplateRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
@@ -214,9 +217,6 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
         if (source.FillType != null) {
             this.FillType = new String(source.FillType);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -225,11 +225,11 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArraySimple(map, prefix + "HeadCandidateSet.", this.HeadCandidateSet);
         this.setParamArraySimple(map, prefix + "TailCandidateSet.", this.TailCandidateSet);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

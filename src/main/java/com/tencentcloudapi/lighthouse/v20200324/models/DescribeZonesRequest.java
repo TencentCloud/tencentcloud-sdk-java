@@ -25,7 +25,7 @@ public class DescribeZonesRequest extends AbstractModel{
     /**
     * 可用区列表排序的依据字段。取值范围：
 <li>ZONE：依据可用区排序。
-<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序, 可用区展示标签按可选择程度, 升序排列为: ['HIDDEN', 'NORMAL', 'SELECTED']。
+<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序，可用区展示标签包括：HIDDEN（隐藏）、NORMAL（普通）、SELECTED（默认选中），默认采用的升序排列为：['HIDDEN', 'NORMAL', 'SELECTED']。
 默认按可用区排序。
     */
     @SerializedName("OrderField")
@@ -45,11 +45,11 @@ public class DescribeZonesRequest extends AbstractModel{
     /**
      * Get 可用区列表排序的依据字段。取值范围：
 <li>ZONE：依据可用区排序。
-<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序, 可用区展示标签按可选择程度, 升序排列为: ['HIDDEN', 'NORMAL', 'SELECTED']。
+<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序，可用区展示标签包括：HIDDEN（隐藏）、NORMAL（普通）、SELECTED（默认选中），默认采用的升序排列为：['HIDDEN', 'NORMAL', 'SELECTED']。
 默认按可用区排序。 
      * @return OrderField 可用区列表排序的依据字段。取值范围：
 <li>ZONE：依据可用区排序。
-<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序, 可用区展示标签按可选择程度, 升序排列为: ['HIDDEN', 'NORMAL', 'SELECTED']。
+<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序，可用区展示标签包括：HIDDEN（隐藏）、NORMAL（普通）、SELECTED（默认选中），默认采用的升序排列为：['HIDDEN', 'NORMAL', 'SELECTED']。
 默认按可用区排序。
      */
     public String getOrderField() {
@@ -59,11 +59,11 @@ public class DescribeZonesRequest extends AbstractModel{
     /**
      * Set 可用区列表排序的依据字段。取值范围：
 <li>ZONE：依据可用区排序。
-<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序, 可用区展示标签按可选择程度, 升序排列为: ['HIDDEN', 'NORMAL', 'SELECTED']。
+<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序，可用区展示标签包括：HIDDEN（隐藏）、NORMAL（普通）、SELECTED（默认选中），默认采用的升序排列为：['HIDDEN', 'NORMAL', 'SELECTED']。
 默认按可用区排序。
      * @param OrderField 可用区列表排序的依据字段。取值范围：
 <li>ZONE：依据可用区排序。
-<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序, 可用区展示标签按可选择程度, 升序排列为: ['HIDDEN', 'NORMAL', 'SELECTED']。
+<li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序，可用区展示标签包括：HIDDEN（隐藏）、NORMAL（普通）、SELECTED（默认选中），默认采用的升序排列为：['HIDDEN', 'NORMAL', 'SELECTED']。
 默认按可用区排序。
      */
     public void setOrderField(String OrderField) {

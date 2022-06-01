@@ -142,6 +142,20 @@ public class ModifySparkAppRequest extends AbstractModel{
     private String AppFiles;
 
     /**
+    * pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+    */
+    @SerializedName("IsLocalPythonFiles")
+    @Expose
+    private String IsLocalPythonFiles;
+
+    /**
+    * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+    */
+    @SerializedName("AppPythonFiles")
+    @Expose
+    private String AppPythonFiles;
+
+    /**
     * spark作业命令行参数
     */
     @SerializedName("CmdArgs")
@@ -435,6 +449,38 @@ public class ModifySparkAppRequest extends AbstractModel{
     }
 
     /**
+     * Get pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public String getIsLocalPythonFiles() {
+        return this.IsLocalPythonFiles;
+    }
+
+    /**
+     * Set pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public void setIsLocalPythonFiles(String IsLocalPythonFiles) {
+        this.IsLocalPythonFiles = IsLocalPythonFiles;
+    }
+
+    /**
+     * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔 
+     * @return AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     */
+    public String getAppPythonFiles() {
+        return this.AppPythonFiles;
+    }
+
+    /**
+     * Set pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @param AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     */
+    public void setAppPythonFiles(String AppPythonFiles) {
+        this.AppPythonFiles = AppPythonFiles;
+    }
+
+    /**
      * Get spark作业命令行参数 
      * @return CmdArgs spark作业命令行参数
      */
@@ -541,6 +587,12 @@ public class ModifySparkAppRequest extends AbstractModel{
         if (source.AppFiles != null) {
             this.AppFiles = new String(source.AppFiles);
         }
+        if (source.IsLocalPythonFiles != null) {
+            this.IsLocalPythonFiles = new String(source.IsLocalPythonFiles);
+        }
+        if (source.AppPythonFiles != null) {
+            this.AppPythonFiles = new String(source.AppPythonFiles);
+        }
         if (source.CmdArgs != null) {
             this.CmdArgs = new String(source.CmdArgs);
         }
@@ -574,6 +626,8 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppJars", this.AppJars);
         this.setParamSimple(map, prefix + "IsLocalFiles", this.IsLocalFiles);
         this.setParamSimple(map, prefix + "AppFiles", this.AppFiles);
+        this.setParamSimple(map, prefix + "IsLocalPythonFiles", this.IsLocalPythonFiles);
+        this.setParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
         this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
         this.setParamSimple(map, prefix + "MaxRetries", this.MaxRetries);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
