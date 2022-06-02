@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CmdTemplate extends AbstractModel{
 
     /**
-    * 模板ID
+    * 高危命令模板ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 模板名称
+    * 高危命令模板名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 命令列表，\n分隔
+    * 命令列表，命令之间用换行符（"\n"）分隔
     */
     @SerializedName("CmdList")
     @Expose
     private String CmdList;
 
     /**
-     * Get 模板ID 
-     * @return Id 模板ID
+     * Get 高危命令模板ID 
+     * @return Id 高危命令模板ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 模板ID
-     * @param Id 模板ID
+     * Set 高危命令模板ID
+     * @param Id 高危命令模板ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 模板名称 
-     * @return Name 模板名称
+     * Get 高危命令模板名称 
+     * @return Name 高危命令模板名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称
-     * @param Name 模板名称
+     * Set 高危命令模板名称
+     * @param Name 高危命令模板名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 命令列表，\n分隔 
-     * @return CmdList 命令列表，\n分隔
+     * Get 命令列表，命令之间用换行符（"\n"）分隔 
+     * @return CmdList 命令列表，命令之间用换行符（"\n"）分隔
      */
     public String getCmdList() {
         return this.CmdList;
     }
 
     /**
-     * Set 命令列表，\n分隔
-     * @param CmdList 命令列表，\n分隔
+     * Set 命令列表，命令之间用换行符（"\n"）分隔
+     * @param CmdList 命令列表，命令之间用换行符（"\n"）分隔
      */
     public void setCmdList(String CmdList) {
         this.CmdList = CmdList;

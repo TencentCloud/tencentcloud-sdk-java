@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDevicesRequest extends AbstractModel{
 
     /**
-    * 主机ID集合，非必需
+    * 资产ID集合
     */
     @SerializedName("IdSet")
     @Expose
     private Long [] IdSet;
 
     /**
-    * 主机名或主机IP，模糊查询
+    * 资产名或资产IP，模糊查询
     */
     @SerializedName("Name")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeDevicesRequest extends AbstractModel{
     private String [] ApCodeSet;
 
     /**
-    * 操作系统类型
+    * 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
     */
     @SerializedName("Kind")
     @Expose
@@ -72,53 +72,53 @@ public class DescribeDevicesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 有该主机访问权限的用户ID集合
+    * 有该资产访问权限的用户ID集合
     */
     @SerializedName("AuthorizedUserIdSet")
     @Expose
     private Long [] AuthorizedUserIdSet;
 
     /**
-    * 过滤条件，主机绑定的堡垒机服务ID集合
+    * 过滤条件，资产绑定的堡垒机服务ID集合
     */
     @SerializedName("ResourceIdSet")
     @Expose
     private String [] ResourceIdSet;
 
     /**
-    * 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+    * 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
     */
     @SerializedName("KindSet")
     @Expose
     private Long [] KindSet;
 
     /**
-     * Get 主机ID集合，非必需 
-     * @return IdSet 主机ID集合，非必需
+     * Get 资产ID集合 
+     * @return IdSet 资产ID集合
      */
     public Long [] getIdSet() {
         return this.IdSet;
     }
 
     /**
-     * Set 主机ID集合，非必需
-     * @param IdSet 主机ID集合，非必需
+     * Set 资产ID集合
+     * @param IdSet 资产ID集合
      */
     public void setIdSet(Long [] IdSet) {
         this.IdSet = IdSet;
     }
 
     /**
-     * Get 主机名或主机IP，模糊查询 
-     * @return Name 主机名或主机IP，模糊查询
+     * Get 资产名或资产IP，模糊查询 
+     * @return Name 资产名或资产IP，模糊查询
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 主机名或主机IP，模糊查询
-     * @param Name 主机名或主机IP，模糊查询
+     * Set 资产名或资产IP，模糊查询
+     * @param Name 资产名或资产IP，模糊查询
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -157,16 +157,16 @@ public class DescribeDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作系统类型 
-     * @return Kind 操作系统类型
+     * Get 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
+     * @return Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public Long getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 操作系统类型
-     * @param Kind 操作系统类型
+     * Set 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public void setKind(Long Kind) {
         this.Kind = Kind;
@@ -205,48 +205,48 @@ public class DescribeDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 有该主机访问权限的用户ID集合 
-     * @return AuthorizedUserIdSet 有该主机访问权限的用户ID集合
+     * Get 有该资产访问权限的用户ID集合 
+     * @return AuthorizedUserIdSet 有该资产访问权限的用户ID集合
      */
     public Long [] getAuthorizedUserIdSet() {
         return this.AuthorizedUserIdSet;
     }
 
     /**
-     * Set 有该主机访问权限的用户ID集合
-     * @param AuthorizedUserIdSet 有该主机访问权限的用户ID集合
+     * Set 有该资产访问权限的用户ID集合
+     * @param AuthorizedUserIdSet 有该资产访问权限的用户ID集合
      */
     public void setAuthorizedUserIdSet(Long [] AuthorizedUserIdSet) {
         this.AuthorizedUserIdSet = AuthorizedUserIdSet;
     }
 
     /**
-     * Get 过滤条件，主机绑定的堡垒机服务ID集合 
-     * @return ResourceIdSet 过滤条件，主机绑定的堡垒机服务ID集合
+     * Get 过滤条件，资产绑定的堡垒机服务ID集合 
+     * @return ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
      */
     public String [] getResourceIdSet() {
         return this.ResourceIdSet;
     }
 
     /**
-     * Set 过滤条件，主机绑定的堡垒机服务ID集合
-     * @param ResourceIdSet 过滤条件，主机绑定的堡垒机服务ID集合
+     * Set 过滤条件，资产绑定的堡垒机服务ID集合
+     * @param ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
      */
     public void setResourceIdSet(String [] ResourceIdSet) {
         this.ResourceIdSet = ResourceIdSet;
     }
 
     /**
-     * Get 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL 
-     * @return KindSet 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+     * Get 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
+     * @return KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public Long [] getKindSet() {
         return this.KindSet;
     }
 
     /**
-     * Set 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
-     * @param KindSet 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+     * Set 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public void setKindSet(Long [] KindSet) {
         this.KindSet = KindSet;

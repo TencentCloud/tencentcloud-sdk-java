@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Resource extends AbstractModel{
 
     /**
-    * 资源实例id，如bh-saas-s3ed4r5e
+    * 服务实例ID，如bh-saas-s3ed4r5e
     */
     @SerializedName("ResourceId")
     @Expose
@@ -37,28 +37,28 @@ public class Resource extends AbstractModel{
     private String ApCode;
 
     /**
-    * 实例规格信息（询价参数）
+    * 服务实例规格信息
     */
     @SerializedName("SvArgs")
     @Expose
     private String SvArgs;
 
     /**
-    * vpc id
+    * VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 堡垒机规格对应的资产数
+    * 服务规格对应的资产数
     */
     @SerializedName("Nodes")
     @Expose
     private Long Nodes;
 
     /**
-    * 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+    * 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -72,14 +72,14 @@ public class Resource extends AbstractModel{
     private String ExpireTime;
 
     /**
-    * 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
+    * 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例名，如T-Sec-堡垒机（SaaS型）
+    * 服务实例名，如T-Sec-堡垒机（SaaS型）
     */
     @SerializedName("ResourceName")
     @Expose
@@ -135,14 +135,14 @@ public class Resource extends AbstractModel{
     private Boolean Deployed;
 
     /**
-    * 开通服务的VPC名称
+    * 开通服务的 VPC 名称
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 开通服务的VPC对应的网段
+    * 开通服务的 VPC 对应的网段
     */
     @SerializedName("VpcCidrBlock")
     @Expose
@@ -184,7 +184,7 @@ public class Resource extends AbstractModel{
     private String [] PrivateIpSet;
 
     /**
-    * 资源开通的高级功能列表，如:[DB]
+    * 服务开通的高级功能列表，如:[DB]
     */
     @SerializedName("ModuleSet")
     @Expose
@@ -219,16 +219,16 @@ public class Resource extends AbstractModel{
     private Long PackageNode;
 
     /**
-     * Get 资源实例id，如bh-saas-s3ed4r5e 
-     * @return ResourceId 资源实例id，如bh-saas-s3ed4r5e
+     * Get 服务实例ID，如bh-saas-s3ed4r5e 
+     * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源实例id，如bh-saas-s3ed4r5e
-     * @param ResourceId 资源实例id，如bh-saas-s3ed4r5e
+     * Set 服务实例ID，如bh-saas-s3ed4r5e
+     * @param ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -251,64 +251,64 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 实例规格信息（询价参数） 
-     * @return SvArgs 实例规格信息（询价参数）
+     * Get 服务实例规格信息 
+     * @return SvArgs 服务实例规格信息
      */
     public String getSvArgs() {
         return this.SvArgs;
     }
 
     /**
-     * Set 实例规格信息（询价参数）
-     * @param SvArgs 实例规格信息（询价参数）
+     * Set 服务实例规格信息
+     * @param SvArgs 服务实例规格信息
      */
     public void setSvArgs(String SvArgs) {
         this.SvArgs = SvArgs;
     }
 
     /**
-     * Get vpc id 
-     * @return VpcId vpc id
+     * Get VPC ID 
+     * @return VpcId VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc id
-     * @param VpcId vpc id
+     * Set VPC ID
+     * @param VpcId VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 堡垒机规格对应的资产数 
-     * @return Nodes 堡垒机规格对应的资产数
+     * Get 服务规格对应的资产数 
+     * @return Nodes 服务规格对应的资产数
      */
     public Long getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 堡垒机规格对应的资产数
-     * @param Nodes 堡垒机规格对应的资产数
+     * Set 服务规格对应的资产数
+     * @param Nodes 服务规格对应的资产数
      */
     public void setNodes(Long Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费 
-     * @return RenewFlag 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+     * Get 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费 
+     * @return RenewFlag 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
-     * @param RenewFlag 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+     * Set 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+     * @param RenewFlag 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -331,32 +331,32 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中 
-     * @return Status 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
+     * Get 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中 
+     * @return Status 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
-     * @param Status 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
+     * Set 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+     * @param Status 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例名，如T-Sec-堡垒机（SaaS型） 
-     * @return ResourceName 实例名，如T-Sec-堡垒机（SaaS型）
+     * Get 服务实例名，如T-Sec-堡垒机（SaaS型） 
+     * @return ResourceName 服务实例名，如T-Sec-堡垒机（SaaS型）
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 实例名，如T-Sec-堡垒机（SaaS型）
-     * @param ResourceName 实例名，如T-Sec-堡垒机（SaaS型）
+     * Set 服务实例名，如T-Sec-堡垒机（SaaS型）
+     * @param ResourceName 服务实例名，如T-Sec-堡垒机（SaaS型）
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
@@ -475,32 +475,32 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 开通服务的VPC名称 
-     * @return VpcName 开通服务的VPC名称
+     * Get 开通服务的 VPC 名称 
+     * @return VpcName 开通服务的 VPC 名称
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 开通服务的VPC名称
-     * @param VpcName 开通服务的VPC名称
+     * Set 开通服务的 VPC 名称
+     * @param VpcName 开通服务的 VPC 名称
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 开通服务的VPC对应的网段 
-     * @return VpcCidrBlock 开通服务的VPC对应的网段
+     * Get 开通服务的 VPC 对应的网段 
+     * @return VpcCidrBlock 开通服务的 VPC 对应的网段
      */
     public String getVpcCidrBlock() {
         return this.VpcCidrBlock;
     }
 
     /**
-     * Set 开通服务的VPC对应的网段
-     * @param VpcCidrBlock 开通服务的VPC对应的网段
+     * Set 开通服务的 VPC 对应的网段
+     * @param VpcCidrBlock 开通服务的 VPC 对应的网段
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
@@ -587,16 +587,16 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 资源开通的高级功能列表，如:[DB] 
-     * @return ModuleSet 资源开通的高级功能列表，如:[DB]
+     * Get 服务开通的高级功能列表，如:[DB] 
+     * @return ModuleSet 服务开通的高级功能列表，如:[DB]
      */
     public String [] getModuleSet() {
         return this.ModuleSet;
     }
 
     /**
-     * Set 资源开通的高级功能列表，如:[DB]
-     * @param ModuleSet 资源开通的高级功能列表，如:[DB]
+     * Set 服务开通的高级功能列表，如:[DB]
+     * @param ModuleSet 服务开通的高级功能列表，如:[DB]
      */
     public void setModuleSet(String [] ModuleSet) {
         this.ModuleSet = ModuleSet;

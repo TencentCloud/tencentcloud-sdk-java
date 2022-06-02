@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class Device extends AbstractModel{
 
     /**
-    * 主机记录ID
+    * 资产ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 主机ID，对应cvm实例id
+    * 实例ID，对应CVM、CDB等实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主机名
+    * 资产名
     */
     @SerializedName("Name")
     @Expose
@@ -72,7 +72,7 @@ public class Device extends AbstractModel{
     private String OsName;
 
     /**
-    * 主机类型，1-Linux, 2-Windows
+    * 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
     */
     @SerializedName("Kind")
     @Expose
@@ -86,14 +86,14 @@ public class Device extends AbstractModel{
     private Long Port;
 
     /**
-    * 所属主机组信息列表
+    * 所属资产组列表
     */
     @SerializedName("GroupSet")
     @Expose
     private Group [] GroupSet;
 
     /**
-    * 主机绑定的账号数
+    * 资产绑定的账号数
     */
     @SerializedName("AccountCount")
     @Expose
@@ -122,48 +122,48 @@ public class Device extends AbstractModel{
     private Resource Resource;
 
     /**
-     * Get 主机记录ID 
-     * @return Id 主机记录ID
+     * Get 资产ID 
+     * @return Id 资产ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主机记录ID
-     * @param Id 主机记录ID
+     * Set 资产ID
+     * @param Id 资产ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 主机ID，对应cvm实例id 
-     * @return InstanceId 主机ID，对应cvm实例id
+     * Get 实例ID，对应CVM、CDB等实例ID 
+     * @return InstanceId 实例ID，对应CVM、CDB等实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 主机ID，对应cvm实例id
-     * @param InstanceId 主机ID，对应cvm实例id
+     * Set 实例ID，对应CVM、CDB等实例ID
+     * @param InstanceId 实例ID，对应CVM、CDB等实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主机名 
-     * @return Name 主机名
+     * Get 资产名 
+     * @return Name 资产名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 主机名
-     * @param Name 主机名
+     * Set 资产名
+     * @param Name 资产名
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -234,16 +234,16 @@ public class Device extends AbstractModel{
     }
 
     /**
-     * Get 主机类型，1-Linux, 2-Windows 
-     * @return Kind 主机类型，1-Linux, 2-Windows
+     * Get 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
+     * @return Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public Long getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 主机类型，1-Linux, 2-Windows
-     * @param Kind 主机类型，1-Linux, 2-Windows
+     * Set 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public void setKind(Long Kind) {
         this.Kind = Kind;
@@ -266,32 +266,32 @@ public class Device extends AbstractModel{
     }
 
     /**
-     * Get 所属主机组信息列表 
-     * @return GroupSet 所属主机组信息列表
+     * Get 所属资产组列表 
+     * @return GroupSet 所属资产组列表
      */
     public Group [] getGroupSet() {
         return this.GroupSet;
     }
 
     /**
-     * Set 所属主机组信息列表
-     * @param GroupSet 所属主机组信息列表
+     * Set 所属资产组列表
+     * @param GroupSet 所属资产组列表
      */
     public void setGroupSet(Group [] GroupSet) {
         this.GroupSet = GroupSet;
     }
 
     /**
-     * Get 主机绑定的账号数 
-     * @return AccountCount 主机绑定的账号数
+     * Get 资产绑定的账号数 
+     * @return AccountCount 资产绑定的账号数
      */
     public Long getAccountCount() {
         return this.AccountCount;
     }
 
     /**
-     * Set 主机绑定的账号数
-     * @param AccountCount 主机绑定的账号数
+     * Set 资产绑定的账号数
+     * @param AccountCount 资产绑定的账号数
      */
     public void setAccountCount(Long AccountCount) {
         this.AccountCount = AccountCount;

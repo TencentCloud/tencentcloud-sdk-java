@@ -30,6 +30,27 @@ public class DescribeTemplatesResponse extends AbstractModel{
     private TemplateInfo [] Templates;
 
     /**
+    * 查询总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 查询数量
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 查询起始偏移
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +71,54 @@ public class DescribeTemplatesResponse extends AbstractModel{
      */
     public void setTemplates(TemplateInfo [] Templates) {
         this.Templates = Templates;
+    }
+
+    /**
+     * Get 查询总数 
+     * @return TotalCount 查询总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 查询总数
+     * @param TotalCount 查询总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 查询数量 
+     * @return Limit 查询数量
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 查询数量
+     * @param Limit 查询数量
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 查询起始偏移 
+     * @return Offset 查询起始偏移
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询起始偏移
+     * @param Offset 查询起始偏移
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -82,6 +151,15 @@ public class DescribeTemplatesResponse extends AbstractModel{
                 this.Templates[i] = new TemplateInfo(source.Templates[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +171,9 @@ public class DescribeTemplatesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Templates.", this.Templates);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

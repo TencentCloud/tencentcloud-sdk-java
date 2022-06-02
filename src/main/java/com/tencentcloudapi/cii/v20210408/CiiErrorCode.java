@@ -28,7 +28,10 @@ public enum CiiErrorCode {
      MISSINGPARAMETER("MissingParameter"),
      
     // 操作被拒绝。
-     OPERATIONDENIED("OperationDenied");
+     OPERATIONDENIED("OperationDenied"),
+     
+    // 请求的次数超过了频率限制。
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded");
      
     private String value;
     private CiiErrorCode (String value){

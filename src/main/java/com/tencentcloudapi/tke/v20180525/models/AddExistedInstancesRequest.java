@@ -95,6 +95,13 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
 
     /**
+    * 节点镜像（节点选项时，该参数是必传参数）
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -262,6 +269,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
     }
 
+    /**
+     * Get 节点镜像（节点选项时，该参数是必传参数） 
+     * @return ImageId 节点镜像（节点选项时，该参数是必传参数）
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 节点镜像（节点选项时，该参数是必传参数）
+     * @param ImageId 节点镜像（节点选项时，该参数是必传参数）
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
     public AddExistedInstancesRequest() {
     }
 
@@ -312,6 +335,9 @@ public class AddExistedInstancesRequest extends AbstractModel{
                 this.InstanceAdvancedSettingsOverrides[i] = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverrides[i]);
             }
         }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
     }
 
 
@@ -329,6 +355,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "NodePool.", this.NodePool);
         this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
         this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

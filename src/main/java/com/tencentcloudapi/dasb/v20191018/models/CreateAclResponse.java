@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAclResponse extends AbstractModel{
 
     /**
-    * 访问权限ID
+    * 新建成功的访问权限ID
     */
     @SerializedName("Id")
     @Expose
@@ -37,16 +37,16 @@ public class CreateAclResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 访问权限ID 
-     * @return Id 访问权限ID
+     * Get 新建成功的访问权限ID 
+     * @return Id 新建成功的访问权限ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 访问权限ID
-     * @param Id 访问权限ID
+     * Set 新建成功的访问权限ID
+     * @param Id 新建成功的访问权限ID
      */
     public void setId(Long Id) {
         this.Id = Id;

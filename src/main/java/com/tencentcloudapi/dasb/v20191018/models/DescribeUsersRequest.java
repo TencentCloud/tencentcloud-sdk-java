@@ -44,7 +44,7 @@ public class DescribeUsersRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 每页条目数量，默认20
+    * 每页条目数量，默认20, 最大500
     */
     @SerializedName("Limit")
     @Expose
@@ -58,21 +58,22 @@ public class DescribeUsersRequest extends AbstractModel{
     private String UserName;
 
     /**
-    * 精确查询，IdSet、UserName为空时才生效
+    * 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 有访问权限的主机ID集合
+    * 查询具有指定资产ID访问权限的用户
     */
     @SerializedName("AuthorizedDeviceIdSet")
     @Expose
     private Long [] AuthorizedDeviceIdSet;
 
     /**
-    * 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+    * 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
     */
     @SerializedName("AuthTypeSet")
     @Expose
@@ -127,16 +128,16 @@ public class DescribeUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页条目数量，默认20 
-     * @return Limit 每页条目数量，默认20
+     * Get 每页条目数量，默认20, 最大500 
+     * @return Limit 每页条目数量，默认20, 最大500
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条目数量，默认20
-     * @param Limit 每页条目数量，默认20
+     * Set 每页条目数量，默认20, 最大500
+     * @param Limit 每页条目数量，默认20, 最大500
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -159,48 +160,52 @@ public class DescribeUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 精确查询，IdSet、UserName为空时才生效 
-     * @return Phone 精确查询，IdSet、UserName为空时才生效
+     * Get 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx" 
+     * @return Phone 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 精确查询，IdSet、UserName为空时才生效
-     * @param Phone 精确查询，IdSet、UserName为空时才生效
+     * Set 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @param Phone 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 有访问权限的主机ID集合 
-     * @return AuthorizedDeviceIdSet 有访问权限的主机ID集合
+     * Get 查询具有指定资产ID访问权限的用户 
+     * @return AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      */
     public Long [] getAuthorizedDeviceIdSet() {
         return this.AuthorizedDeviceIdSet;
     }
 
     /**
-     * Set 有访问权限的主机ID集合
-     * @param AuthorizedDeviceIdSet 有访问权限的主机ID集合
+     * Set 查询具有指定资产ID访问权限的用户
+     * @param AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      */
     public void setAuthorizedDeviceIdSet(Long [] AuthorizedDeviceIdSet) {
         this.AuthorizedDeviceIdSet = AuthorizedDeviceIdSet;
     }
 
     /**
-     * Get 认证方式，0-本地，1-ldap, 2-oauth 不传为全部 
-     * @return AuthTypeSet 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+     * Get 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部 
+     * @return AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      */
     public Long [] getAuthTypeSet() {
         return this.AuthTypeSet;
     }
 
     /**
-     * Set 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
-     * @param AuthTypeSet 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+     * Set 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+     * @param AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      */
     public void setAuthTypeSet(Long [] AuthTypeSet) {
         this.AuthTypeSet = AuthTypeSet;

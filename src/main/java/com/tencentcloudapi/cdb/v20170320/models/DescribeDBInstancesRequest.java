@@ -240,6 +240,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] UniqSubnetIds;
 
     /**
+    * 标签键值
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。 
      * @return ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
@@ -735,6 +742,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
+    /**
+     * Get 标签键值 
+     * @return Tags 标签键值
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键值
+     * @param Tags 标签键值
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -890,6 +913,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -928,6 +957,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TagValues.", this.TagValues);
         this.setParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
         this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

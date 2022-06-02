@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAclRequest extends AbstractModel{
 
     /**
-    * 权限名称，最大32字符，不能包含空白字符
+    * 访问权限名称，最大32字符，不能包含空白字符
     */
     @SerializedName("Name")
     @Expose
@@ -37,7 +37,7 @@ public class ModifyAclRequest extends AbstractModel{
     private Boolean AllowDiskRedirect;
 
     /**
-    * 是否允许任意账号登陆
+    * 是否允许任意账号登录
     */
     @SerializedName("AllowAnyAccount")
     @Expose
@@ -65,14 +65,14 @@ public class ModifyAclRequest extends AbstractModel{
     private Boolean AllowClipFileDown;
 
     /**
-    * 是否开启剪贴板text（含图片）上行
+    * 是否开启剪贴板文本（含图片）上行
     */
     @SerializedName("AllowClipTextUp")
     @Expose
     private Boolean AllowClipTextUp;
 
     /**
-    * 是否开启剪贴板text（含图片）下行
+    * 是否开启剪贴板文本（含图片）下行
     */
     @SerializedName("AllowClipTextDown")
     @Expose
@@ -86,7 +86,7 @@ public class ModifyAclRequest extends AbstractModel{
     private Boolean AllowFileUp;
 
     /**
-    * 文件传输上传大小限制
+    * 文件传输上传大小限制（预留参数，目前暂未使用）
     */
     @SerializedName("MaxFileUpSize")
     @Expose
@@ -100,7 +100,7 @@ public class ModifyAclRequest extends AbstractModel{
     private Boolean AllowFileDown;
 
     /**
-    * 文件传输下载大小限制
+    * 文件传输下载大小限制（预留参数，目前暂未使用）
     */
     @SerializedName("MaxFileDownSize")
     @Expose
@@ -121,21 +121,21 @@ public class ModifyAclRequest extends AbstractModel{
     private Long [] UserGroupIdSet;
 
     /**
-    * 关联的主机ID
+    * 关联的资产ID
     */
     @SerializedName("DeviceIdSet")
     @Expose
     private Long [] DeviceIdSet;
 
     /**
-    * 关联的主机组ID
+    * 关联的资产组ID
     */
     @SerializedName("DeviceGroupIdSet")
     @Expose
     private Long [] DeviceGroupIdSet;
 
     /**
-    * 关联的账号，账号name
+    * 关联的账号
     */
     @SerializedName("AccountSet")
     @Expose
@@ -149,14 +149,14 @@ public class ModifyAclRequest extends AbstractModel{
     private Long [] CmdTemplateIdSet;
 
     /**
-    * 是否开启rdp磁盘映射文件上传
+    * 是否开启 RDP 磁盘映射文件上传
     */
     @SerializedName("AllowDiskFileUp")
     @Expose
     private Boolean AllowDiskFileUp;
 
     /**
-    * 是否开启rdp磁盘映射文件下载
+    * 是否开启 RDP 磁盘映射文件下载
     */
     @SerializedName("AllowDiskFileDown")
     @Expose
@@ -177,37 +177,39 @@ public class ModifyAclRequest extends AbstractModel{
     private Boolean AllowShellFileDown;
 
     /**
-    * 是否开启SFTP文件删除
+    * 是否开启 SFTP 文件删除
     */
     @SerializedName("AllowFileDel")
     @Expose
     private Boolean AllowFileDel;
 
     /**
-    * 生效日期，如果为空，默认1970-01-01T08:00:01+08:00
+    * 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
     */
     @SerializedName("ValidateFrom")
     @Expose
     private String ValidateFrom;
 
     /**
-    * 失效日期，如果为空，默认1970-01-01T08:00:01+08:00
+    * 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
     */
     @SerializedName("ValidateTo")
     @Expose
     private String ValidateTo;
 
     /**
-     * Get 权限名称，最大32字符，不能包含空白字符 
-     * @return Name 权限名称，最大32字符，不能包含空白字符
+     * Get 访问权限名称，最大32字符，不能包含空白字符 
+     * @return Name 访问权限名称，最大32字符，不能包含空白字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 权限名称，最大32字符，不能包含空白字符
-     * @param Name 权限名称，最大32字符，不能包含空白字符
+     * Set 访问权限名称，最大32字符，不能包含空白字符
+     * @param Name 访问权限名称，最大32字符，不能包含空白字符
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -230,16 +232,16 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否允许任意账号登陆 
-     * @return AllowAnyAccount 是否允许任意账号登陆
+     * Get 是否允许任意账号登录 
+     * @return AllowAnyAccount 是否允许任意账号登录
      */
     public Boolean getAllowAnyAccount() {
         return this.AllowAnyAccount;
     }
 
     /**
-     * Set 是否允许任意账号登陆
-     * @param AllowAnyAccount 是否允许任意账号登陆
+     * Set 是否允许任意账号登录
+     * @param AllowAnyAccount 是否允许任意账号登录
      */
     public void setAllowAnyAccount(Boolean AllowAnyAccount) {
         this.AllowAnyAccount = AllowAnyAccount;
@@ -294,32 +296,32 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启剪贴板text（含图片）上行 
-     * @return AllowClipTextUp 是否开启剪贴板text（含图片）上行
+     * Get 是否开启剪贴板文本（含图片）上行 
+     * @return AllowClipTextUp 是否开启剪贴板文本（含图片）上行
      */
     public Boolean getAllowClipTextUp() {
         return this.AllowClipTextUp;
     }
 
     /**
-     * Set 是否开启剪贴板text（含图片）上行
-     * @param AllowClipTextUp 是否开启剪贴板text（含图片）上行
+     * Set 是否开启剪贴板文本（含图片）上行
+     * @param AllowClipTextUp 是否开启剪贴板文本（含图片）上行
      */
     public void setAllowClipTextUp(Boolean AllowClipTextUp) {
         this.AllowClipTextUp = AllowClipTextUp;
     }
 
     /**
-     * Get 是否开启剪贴板text（含图片）下行 
-     * @return AllowClipTextDown 是否开启剪贴板text（含图片）下行
+     * Get 是否开启剪贴板文本（含图片）下行 
+     * @return AllowClipTextDown 是否开启剪贴板文本（含图片）下行
      */
     public Boolean getAllowClipTextDown() {
         return this.AllowClipTextDown;
     }
 
     /**
-     * Set 是否开启剪贴板text（含图片）下行
-     * @param AllowClipTextDown 是否开启剪贴板text（含图片）下行
+     * Set 是否开启剪贴板文本（含图片）下行
+     * @param AllowClipTextDown 是否开启剪贴板文本（含图片）下行
      */
     public void setAllowClipTextDown(Boolean AllowClipTextDown) {
         this.AllowClipTextDown = AllowClipTextDown;
@@ -342,16 +344,16 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件传输上传大小限制 
-     * @return MaxFileUpSize 文件传输上传大小限制
+     * Get 文件传输上传大小限制（预留参数，目前暂未使用） 
+     * @return MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用）
      */
     public Long getMaxFileUpSize() {
         return this.MaxFileUpSize;
     }
 
     /**
-     * Set 文件传输上传大小限制
-     * @param MaxFileUpSize 文件传输上传大小限制
+     * Set 文件传输上传大小限制（预留参数，目前暂未使用）
+     * @param MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用）
      */
     public void setMaxFileUpSize(Long MaxFileUpSize) {
         this.MaxFileUpSize = MaxFileUpSize;
@@ -374,16 +376,16 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件传输下载大小限制 
-     * @return MaxFileDownSize 文件传输下载大小限制
+     * Get 文件传输下载大小限制（预留参数，目前暂未使用） 
+     * @return MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用）
      */
     public Long getMaxFileDownSize() {
         return this.MaxFileDownSize;
     }
 
     /**
-     * Set 文件传输下载大小限制
-     * @param MaxFileDownSize 文件传输下载大小限制
+     * Set 文件传输下载大小限制（预留参数，目前暂未使用）
+     * @param MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用）
      */
     public void setMaxFileDownSize(Long MaxFileDownSize) {
         this.MaxFileDownSize = MaxFileDownSize;
@@ -422,48 +424,48 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 关联的主机ID 
-     * @return DeviceIdSet 关联的主机ID
+     * Get 关联的资产ID 
+     * @return DeviceIdSet 关联的资产ID
      */
     public Long [] getDeviceIdSet() {
         return this.DeviceIdSet;
     }
 
     /**
-     * Set 关联的主机ID
-     * @param DeviceIdSet 关联的主机ID
+     * Set 关联的资产ID
+     * @param DeviceIdSet 关联的资产ID
      */
     public void setDeviceIdSet(Long [] DeviceIdSet) {
         this.DeviceIdSet = DeviceIdSet;
     }
 
     /**
-     * Get 关联的主机组ID 
-     * @return DeviceGroupIdSet 关联的主机组ID
+     * Get 关联的资产组ID 
+     * @return DeviceGroupIdSet 关联的资产组ID
      */
     public Long [] getDeviceGroupIdSet() {
         return this.DeviceGroupIdSet;
     }
 
     /**
-     * Set 关联的主机组ID
-     * @param DeviceGroupIdSet 关联的主机组ID
+     * Set 关联的资产组ID
+     * @param DeviceGroupIdSet 关联的资产组ID
      */
     public void setDeviceGroupIdSet(Long [] DeviceGroupIdSet) {
         this.DeviceGroupIdSet = DeviceGroupIdSet;
     }
 
     /**
-     * Get 关联的账号，账号name 
-     * @return AccountSet 关联的账号，账号name
+     * Get 关联的账号 
+     * @return AccountSet 关联的账号
      */
     public String [] getAccountSet() {
         return this.AccountSet;
     }
 
     /**
-     * Set 关联的账号，账号name
-     * @param AccountSet 关联的账号，账号name
+     * Set 关联的账号
+     * @param AccountSet 关联的账号
      */
     public void setAccountSet(String [] AccountSet) {
         this.AccountSet = AccountSet;
@@ -486,32 +488,32 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启rdp磁盘映射文件上传 
-     * @return AllowDiskFileUp 是否开启rdp磁盘映射文件上传
+     * Get 是否开启 RDP 磁盘映射文件上传 
+     * @return AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
      */
     public Boolean getAllowDiskFileUp() {
         return this.AllowDiskFileUp;
     }
 
     /**
-     * Set 是否开启rdp磁盘映射文件上传
-     * @param AllowDiskFileUp 是否开启rdp磁盘映射文件上传
+     * Set 是否开启 RDP 磁盘映射文件上传
+     * @param AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
      */
     public void setAllowDiskFileUp(Boolean AllowDiskFileUp) {
         this.AllowDiskFileUp = AllowDiskFileUp;
     }
 
     /**
-     * Get 是否开启rdp磁盘映射文件下载 
-     * @return AllowDiskFileDown 是否开启rdp磁盘映射文件下载
+     * Get 是否开启 RDP 磁盘映射文件下载 
+     * @return AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
      */
     public Boolean getAllowDiskFileDown() {
         return this.AllowDiskFileDown;
     }
 
     /**
-     * Set 是否开启rdp磁盘映射文件下载
-     * @param AllowDiskFileDown 是否开启rdp磁盘映射文件下载
+     * Set 是否开启 RDP 磁盘映射文件下载
+     * @param AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
      */
     public void setAllowDiskFileDown(Boolean AllowDiskFileDown) {
         this.AllowDiskFileDown = AllowDiskFileDown;
@@ -550,48 +552,56 @@ public class ModifyAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启SFTP文件删除 
-     * @return AllowFileDel 是否开启SFTP文件删除
+     * Get 是否开启 SFTP 文件删除 
+     * @return AllowFileDel 是否开启 SFTP 文件删除
      */
     public Boolean getAllowFileDel() {
         return this.AllowFileDel;
     }
 
     /**
-     * Set 是否开启SFTP文件删除
-     * @param AllowFileDel 是否开启SFTP文件删除
+     * Set 是否开启 SFTP 文件删除
+     * @param AllowFileDel 是否开启 SFTP 文件删除
      */
     public void setAllowFileDel(Boolean AllowFileDel) {
         this.AllowFileDel = AllowFileDel;
     }
 
     /**
-     * Get 生效日期，如果为空，默认1970-01-01T08:00:01+08:00 
-     * @return ValidateFrom 生效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * Get 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效 
+     * @return ValidateFrom 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public String getValidateFrom() {
         return this.ValidateFrom;
     }
 
     /**
-     * Set 生效日期，如果为空，默认1970-01-01T08:00:01+08:00
-     * @param ValidateFrom 生效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * Set 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+     * @param ValidateFrom 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public void setValidateFrom(String ValidateFrom) {
         this.ValidateFrom = ValidateFrom;
     }
 
     /**
-     * Get 失效日期，如果为空，默认1970-01-01T08:00:01+08:00 
-     * @return ValidateTo 失效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * Get 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效 
+     * @return ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public String getValidateTo() {
         return this.ValidateTo;
     }
 
     /**
-     * Set 失效日期，如果为空，默认1970-01-01T08:00:01+08:00
-     * @param ValidateTo 失效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * Set 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+     * @param ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public void setValidateTo(String ValidateTo) {
         this.ValidateTo = ValidateTo;

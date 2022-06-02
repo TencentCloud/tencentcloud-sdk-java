@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateUserResponse extends AbstractModel{
 
     /**
-    * 新建成功后返回的记录ID
+    * 新建用户的ID
     */
     @SerializedName("Id")
     @Expose
@@ -37,16 +37,16 @@ public class CreateUserResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 新建成功后返回的记录ID 
-     * @return Id 新建成功后返回的记录ID
+     * Get 新建用户的ID 
+     * @return Id 新建用户的ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 新建成功后返回的记录ID
-     * @param Id 新建成功后返回的记录ID
+     * Set 新建用户的ID
+     * @param Id 新建用户的ID
      */
     public void setId(Long Id) {
         this.Id = Id;

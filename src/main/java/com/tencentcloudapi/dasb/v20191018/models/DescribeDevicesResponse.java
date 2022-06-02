@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDevicesResponse extends AbstractModel{
 
     /**
-    * 记录总数
+    * 资产总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 主机信息列表
+    * 资产信息列表
     */
     @SerializedName("DeviceSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDevicesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 记录总数 
-     * @return TotalCount 记录总数
+     * Get 资产总数 
+     * @return TotalCount 资产总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录总数
-     * @param TotalCount 记录总数
+     * Set 资产总数
+     * @param TotalCount 资产总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 主机信息列表 
-     * @return DeviceSet 主机信息列表
+     * Get 资产信息列表 
+     * @return DeviceSet 资产信息列表
      */
     public Device [] getDeviceSet() {
         return this.DeviceSet;
     }
 
     /**
-     * Set 主机信息列表
-     * @param DeviceSet 主机信息列表
+     * Set 资产信息列表
+     * @param DeviceSet 资产信息列表
      */
     public void setDeviceSet(Device [] DeviceSet) {
         this.DeviceSet = DeviceSet;

@@ -95,6 +95,14 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private String PreStartUserScript;
 
     /**
+    * 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Taints")
+    @Expose
+    private Taint [] Taints;
+
+    /**
      * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -274,6 +282,26 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.PreStartUserScript = PreStartUserScript;
     }
 
+    /**
+     * Get 节点污点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Taints 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Taint [] getTaints() {
+        return this.Taints;
+    }
+
+    /**
+     * Set 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Taints 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaints(Taint [] Taints) {
+        this.Taints = Taints;
+    }
+
     public InstanceAdvancedSettings() {
     }
 
@@ -315,6 +343,12 @@ public class InstanceAdvancedSettings extends AbstractModel{
         if (source.PreStartUserScript != null) {
             this.PreStartUserScript = new String(source.PreStartUserScript);
         }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
     }
 
 
@@ -331,6 +365,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
+        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAclsRequest extends AbstractModel{
 
     /**
-    * 访问权限ID集合，非必需
+    * 访问权限ID集合
     */
     @SerializedName("IdSet")
     @Expose
@@ -37,58 +37,58 @@ public class DescribeAclsRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 分页，偏移位置
+    * 分页偏移位置
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条目数量，默认20
+    * 每页条目数量，默认20，最大500
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否根据Name进行精确查询,默认值false
+    * 是否根据Name进行精确查询，默认值false
     */
     @SerializedName("Exact")
     @Expose
     private Boolean Exact;
 
     /**
-    * 有权限的用户ID集合
+    * 有访问权限的用户ID集合
     */
     @SerializedName("AuthorizedUserIdSet")
     @Expose
     private Long [] AuthorizedUserIdSet;
 
     /**
-    * 有权限的主机ID集合
+    * 有访问权限的资产ID集合
     */
     @SerializedName("AuthorizedDeviceIdSet")
     @Expose
     private Long [] AuthorizedDeviceIdSet;
 
     /**
-    * 策略状态，0-不限，1-已生效，2-未生效，3-已过期
+    * 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 访问权限ID集合，非必需 
-     * @return IdSet 访问权限ID集合，非必需
+     * Get 访问权限ID集合 
+     * @return IdSet 访问权限ID集合
      */
     public Long [] getIdSet() {
         return this.IdSet;
     }
 
     /**
-     * Set 访问权限ID集合，非必需
-     * @param IdSet 访问权限ID集合，非必需
+     * Set 访问权限ID集合
+     * @param IdSet 访问权限ID集合
      */
     public void setIdSet(Long [] IdSet) {
         this.IdSet = IdSet;
@@ -111,96 +111,96 @@ public class DescribeAclsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页，偏移位置 
-     * @return Offset 分页，偏移位置
+     * Get 分页偏移位置 
+     * @return Offset 分页偏移位置
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页，偏移位置
-     * @param Offset 分页，偏移位置
+     * Set 分页偏移位置
+     * @param Offset 分页偏移位置
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条目数量，默认20 
-     * @return Limit 每页条目数量，默认20
+     * Get 每页条目数量，默认20，最大500 
+     * @return Limit 每页条目数量，默认20，最大500
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条目数量，默认20
-     * @param Limit 每页条目数量，默认20
+     * Set 每页条目数量，默认20，最大500
+     * @param Limit 每页条目数量，默认20，最大500
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否根据Name进行精确查询,默认值false 
-     * @return Exact 是否根据Name进行精确查询,默认值false
+     * Get 是否根据Name进行精确查询，默认值false 
+     * @return Exact 是否根据Name进行精确查询，默认值false
      */
     public Boolean getExact() {
         return this.Exact;
     }
 
     /**
-     * Set 是否根据Name进行精确查询,默认值false
-     * @param Exact 是否根据Name进行精确查询,默认值false
+     * Set 是否根据Name进行精确查询，默认值false
+     * @param Exact 是否根据Name进行精确查询，默认值false
      */
     public void setExact(Boolean Exact) {
         this.Exact = Exact;
     }
 
     /**
-     * Get 有权限的用户ID集合 
-     * @return AuthorizedUserIdSet 有权限的用户ID集合
+     * Get 有访问权限的用户ID集合 
+     * @return AuthorizedUserIdSet 有访问权限的用户ID集合
      */
     public Long [] getAuthorizedUserIdSet() {
         return this.AuthorizedUserIdSet;
     }
 
     /**
-     * Set 有权限的用户ID集合
-     * @param AuthorizedUserIdSet 有权限的用户ID集合
+     * Set 有访问权限的用户ID集合
+     * @param AuthorizedUserIdSet 有访问权限的用户ID集合
      */
     public void setAuthorizedUserIdSet(Long [] AuthorizedUserIdSet) {
         this.AuthorizedUserIdSet = AuthorizedUserIdSet;
     }
 
     /**
-     * Get 有权限的主机ID集合 
-     * @return AuthorizedDeviceIdSet 有权限的主机ID集合
+     * Get 有访问权限的资产ID集合 
+     * @return AuthorizedDeviceIdSet 有访问权限的资产ID集合
      */
     public Long [] getAuthorizedDeviceIdSet() {
         return this.AuthorizedDeviceIdSet;
     }
 
     /**
-     * Set 有权限的主机ID集合
-     * @param AuthorizedDeviceIdSet 有权限的主机ID集合
+     * Set 有访问权限的资产ID集合
+     * @param AuthorizedDeviceIdSet 有访问权限的资产ID集合
      */
     public void setAuthorizedDeviceIdSet(Long [] AuthorizedDeviceIdSet) {
         this.AuthorizedDeviceIdSet = AuthorizedDeviceIdSet;
     }
 
     /**
-     * Get 策略状态，0-不限，1-已生效，2-未生效，3-已过期 
-     * @return Status 策略状态，0-不限，1-已生效，2-未生效，3-已过期
+     * Get 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期 
+     * @return Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 策略状态，0-不限，1-已生效，2-未生效，3-已过期
-     * @param Status 策略状态，0-不限，1-已生效，2-未生效，3-已过期
+     * Set 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     * @param Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
     public void setStatus(Long Status) {
         this.Status = Status;

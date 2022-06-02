@@ -44,6 +44,27 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private String TemplateId;
 
     /**
+    * 查询内容：0-模版列表及详情（默认），1-仅模版列表
+    */
+    @SerializedName("ContentType")
+    @Expose
+    private Long ContentType;
+
+    /**
+    * 查询个数，默认20，最大100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 查询偏移位置，默认0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 渠道应用相关信息 
      * @return Agent 渠道应用相关信息
      */
@@ -91,6 +112,54 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get 查询内容：0-模版列表及详情（默认），1-仅模版列表 
+     * @return ContentType 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     */
+    public Long getContentType() {
+        return this.ContentType;
+    }
+
+    /**
+     * Set 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     * @param ContentType 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     */
+    public void setContentType(Long ContentType) {
+        this.ContentType = ContentType;
+    }
+
+    /**
+     * Get 查询个数，默认20，最大100 
+     * @return Limit 查询个数，默认20，最大100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 查询个数，默认20，最大100
+     * @param Limit 查询个数，默认20，最大100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 查询偏移位置，默认0 
+     * @return Offset 查询偏移位置，默认0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询偏移位置，默认0
+     * @param Offset 查询偏移位置，默认0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -108,6 +177,15 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -40,7 +40,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +74,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。 
+ISOLATED表示已隔离；
+MOVING表示迁移中。 
      * @return Status 通道状态。
 其中：
 RUNNING表示运行中；
@@ -84,7 +86,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
      */
     public String getStatus() {
         return this.Status;
@@ -101,7 +104,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
      * @param Status 通道状态。
 其中：
 RUNNING表示运行中；
@@ -112,7 +116,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
      */
     public void setStatus(String Status) {
         this.Status = Status;

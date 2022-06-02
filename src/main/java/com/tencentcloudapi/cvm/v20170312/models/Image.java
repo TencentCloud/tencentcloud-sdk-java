@@ -146,6 +146,13 @@ IMPORTFAILED-导入失败
     private Tag [] Tags;
 
     /**
+    * 镜像许可类型
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get 镜像ID 
      * @return ImageId 镜像ID
      */
@@ -445,6 +452,22 @@ IMPORTFAILED-导入失败
         this.Tags = Tags;
     }
 
+    /**
+     * Get 镜像许可类型 
+     * @return LicenseType 镜像许可类型
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 镜像许可类型
+     * @param LicenseType 镜像许可类型
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public Image() {
     }
 
@@ -507,6 +530,9 @@ IMPORTFAILED-导入失败
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -530,6 +556,7 @@ IMPORTFAILED-导入失败
         this.setParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
         this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

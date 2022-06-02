@@ -100,6 +100,13 @@ public class EnvInfo extends AbstractModel{
     private Long RunningCount;
 
     /**
+    * 环境别名
+    */
+    @SerializedName("AliasEnvName")
+    @Expose
+    private String AliasEnvName;
+
+    /**
      * Get 环境名称 
      * @return EnvName 环境名称
      */
@@ -275,6 +282,22 @@ public class EnvInfo extends AbstractModel{
         this.RunningCount = RunningCount;
     }
 
+    /**
+     * Get 环境别名 
+     * @return AliasEnvName 环境别名
+     */
+    public String getAliasEnvName() {
+        return this.AliasEnvName;
+    }
+
+    /**
+     * Set 环境别名
+     * @param AliasEnvName 环境别名
+     */
+    public void setAliasEnvName(String AliasEnvName) {
+        this.AliasEnvName = AliasEnvName;
+    }
+
     public EnvInfo() {
     }
 
@@ -319,6 +342,9 @@ public class EnvInfo extends AbstractModel{
         if (source.RunningCount != null) {
             this.RunningCount = new Long(source.RunningCount);
         }
+        if (source.AliasEnvName != null) {
+            this.AliasEnvName = new String(source.AliasEnvName);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);
         this.setParamSimple(map, prefix + "EnvReplica", this.EnvReplica);
         this.setParamSimple(map, prefix + "RunningCount", this.RunningCount);
+        this.setParamSimple(map, prefix + "AliasEnvName", this.AliasEnvName);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeUsersResponse extends AbstractModel{
 
     /**
-    * 记录总数
+    * 用户总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 用户信息列表
+    * 用户列表
     */
     @SerializedName("UserSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeUsersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 记录总数 
-     * @return TotalCount 记录总数
+     * Get 用户总数 
+     * @return TotalCount 用户总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录总数
-     * @param TotalCount 记录总数
+     * Set 用户总数
+     * @param TotalCount 用户总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 用户信息列表 
-     * @return UserSet 用户信息列表
+     * Get 用户列表 
+     * @return UserSet 用户列表
      */
     public User [] getUserSet() {
         return this.UserSet;
     }
 
     /**
-     * Set 用户信息列表
-     * @param UserSet 用户信息列表
+     * Set 用户列表
+     * @param UserSet 用户列表
      */
     public void setUserSet(User [] UserSet) {
         this.UserSet = UserSet;

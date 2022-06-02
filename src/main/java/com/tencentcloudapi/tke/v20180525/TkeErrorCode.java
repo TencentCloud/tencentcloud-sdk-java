@@ -309,6 +309,9 @@ public enum TkeErrorCode {
     // 未发现vpc记录。
      INTERNALERROR_VPCRECODRNOTFOUND("InternalError.VpcRecodrNotFound"),
      
+    // VstationError。
+     INTERNALERROR_VSTATIONERROR("InternalError.VstationError"),
+     
     // 白名单未知错误。
      INTERNALERROR_WHITELISTUNEXPECTEDERROR("InternalError.WhitelistUnexpectedError"),
      

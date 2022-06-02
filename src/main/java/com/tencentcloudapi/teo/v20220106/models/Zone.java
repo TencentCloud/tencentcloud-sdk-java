@@ -92,6 +92,16 @@ public class Zone extends AbstractModel{
     private String ModifiedOn;
 
     /**
+    * cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CnameStatus")
+    @Expose
+    private String CnameStatus;
+
+    /**
      * Get 站点ID 
      * @return Id 站点ID
      */
@@ -259,6 +269,34 @@ public class Zone extends AbstractModel{
         this.ModifiedOn = ModifiedOn;
     }
 
+    /**
+     * Get cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CnameStatus cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCnameStatus() {
+        return this.CnameStatus;
+    }
+
+    /**
+     * Set cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CnameStatus cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCnameStatus(String CnameStatus) {
+        this.CnameStatus = CnameStatus;
+    }
+
     public Zone() {
     }
 
@@ -300,6 +338,9 @@ public class Zone extends AbstractModel{
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
         }
+        if (source.CnameStatus != null) {
+            this.CnameStatus = new String(source.CnameStatus);
+        }
     }
 
 
@@ -316,6 +357,7 @@ public class Zone extends AbstractModel{
         this.setParamSimple(map, prefix + "Paused", this.Paused);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
 
     }
 }

@@ -39,6 +39,66 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *添加资产组成员
+     * @param req AddDeviceGroupMembersRequest
+     * @return AddDeviceGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddDeviceGroupMembersResponse AddDeviceGroupMembers(AddDeviceGroupMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddDeviceGroupMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddDeviceGroupMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddDeviceGroupMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加用户组成员
+     * @param req AddUserGroupMembersRequest
+     * @return AddUserGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUserGroupMembersResponse AddUserGroupMembers(AddUserGroupMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddUserGroupMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddUserGroupMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddUserGroupMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改资产绑定的堡垒机服务
+     * @param req BindDeviceResourceRequest
+     * @return BindDeviceResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindDeviceResourceResponse BindDeviceResource(BindDeviceResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindDeviceResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindDeviceResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindDeviceResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新建访问权限
      * @param req CreateAclRequest
      * @return CreateAclResponse
@@ -51,6 +111,26 @@ public class DasbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateAclResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新建资产组
+     * @param req CreateDeviceGroupRequest
+     * @return CreateDeviceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceGroupResponse CreateDeviceGroup(CreateDeviceGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDeviceGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDeviceGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDeviceGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -79,6 +159,26 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *新建用户组
+     * @param req CreateUserGroupRequest
+     * @return CreateUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUserGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除访问权限
      * @param req DeleteAclsRequest
      * @return DeleteAclsResponse
@@ -91,6 +191,86 @@ public class DasbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAclsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAcls");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除资产组成员
+     * @param req DeleteDeviceGroupMembersRequest
+     * @return DeleteDeviceGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceGroupMembersResponse DeleteDeviceGroupMembers(DeleteDeviceGroupMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeviceGroupMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDeviceGroupMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除资产组
+     * @param req DeleteDeviceGroupsRequest
+     * @return DeleteDeviceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceGroupsResponse DeleteDeviceGroups(DeleteDeviceGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeviceGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDeviceGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户组成员
+     * @param req DeleteUserGroupMembersRequest
+     * @return DeleteUserGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserGroupMembersResponse DeleteUserGroupMembers(DeleteUserGroupMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserGroupMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserGroupMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUserGroupMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户组
+     * @param req DeleteUserGroupsRequest
+     * @return DeleteUserGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserGroupsResponse DeleteUserGroups(DeleteUserGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUserGroups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,6 +339,46 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *查询资产组成员列表
+     * @param req DescribeDeviceGroupMembersRequest
+     * @return DescribeDeviceGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceGroupMembersResponse DescribeDeviceGroupMembers(DescribeDeviceGroupMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceGroupMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeviceGroupMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资产组列表
+     * @param req DescribeDeviceGroupsRequest
+     * @return DescribeDeviceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceGroupsResponse DescribeDeviceGroups(DescribeDeviceGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeviceGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询资产列表
      * @param req DescribeDevicesRequest
      * @return DescribeDevicesResponse
@@ -171,6 +391,66 @@ public class DasbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
+     * @param req DescribeResourcesRequest
+     * @return DescribeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcesResponse DescribeResources(DescribeResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户组成员列表
+     * @param req DescribeUserGroupMembersRequest
+     * @return DescribeUserGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserGroupMembersResponse DescribeUserGroupMembers(DescribeUserGroupMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserGroupMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserGroupMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserGroupMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户组列表
+     * @param req DescribeUserGroupsRequest
+     * @return DescribeUserGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserGroupsResponse DescribeUserGroups(DescribeUserGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserGroups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

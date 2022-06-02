@@ -49,6 +49,7 @@ public class ProxyGroupDetail extends AbstractModel{
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
     */
     @SerializedName("Status")
     @Expose
@@ -222,12 +223,14 @@ public class ProxyGroupDetail extends AbstractModel{
 0表示正常运行；
 1表示创建中；
 4表示销毁中；
-11表示迁移中； 
+11表示迁移中；
+12表示部分部署中。 
      * @return Status 通道组状态：
 0表示正常运行；
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      */
     public Long getStatus() {
         return this.Status;
@@ -239,11 +242,13 @@ public class ProxyGroupDetail extends AbstractModel{
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      * @param Status 通道组状态：
 0表示正常运行；
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -281,6 +281,13 @@ public class Instance extends AbstractModel{
     private GPUInfo GPUInfo;
 
     /**
+    * 实例的操作系统许可类型，默认为TencentCloud
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -892,6 +899,22 @@ public class Instance extends AbstractModel{
         this.GPUInfo = GPUInfo;
     }
 
+    /**
+     * Get 实例的操作系统许可类型，默认为TencentCloud 
+     * @return LicenseType 实例的操作系统许可类型，默认为TencentCloud
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 实例的操作系统许可类型，默认为TencentCloud
+     * @param LicenseType 实例的操作系统许可类型，默认为TencentCloud
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public Instance() {
     }
 
@@ -1026,6 +1049,9 @@ public class Instance extends AbstractModel{
         if (source.GPUInfo != null) {
             this.GPUInfo = new GPUInfo(source.GPUInfo);
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -1068,6 +1094,7 @@ public class Instance extends AbstractModel{
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAclsResponse extends AbstractModel{
 
     /**
-    * 记录总数
+    * 访问权限总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 访问权限记录集合，当前分页
+    * 访问权限列表
     */
     @SerializedName("AclSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeAclsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 记录总数 
-     * @return TotalCount 记录总数
+     * Get 访问权限总数 
+     * @return TotalCount 访问权限总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录总数
-     * @param TotalCount 记录总数
+     * Set 访问权限总数
+     * @param TotalCount 访问权限总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 访问权限记录集合，当前分页 
-     * @return AclSet 访问权限记录集合，当前分页
+     * Get 访问权限列表 
+     * @return AclSet 访问权限列表
      */
     public Acl [] getAclSet() {
         return this.AclSet;
     }
 
     /**
-     * Set 访问权限记录集合，当前分页
-     * @param AclSet 访问权限记录集合，当前分页
+     * Set 访问权限列表
+     * @param AclSet 访问权限列表
      */
     public void setAclSet(Acl [] AclSet) {
         this.AclSet = AclSet;

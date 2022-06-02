@@ -65,7 +65,8 @@ public class ProxyGroupInfo extends AbstractModel{
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
     */
     @SerializedName("Status")
     @Expose
@@ -104,8 +105,8 @@ MOVING表示通道迁移中。
 
     /**
     * 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Http3Supported")
@@ -206,13 +207,15 @@ MOVING表示通道迁移中。
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。 
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。 
      * @return Status 通道组状态。
 其中，
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
      */
     public String getStatus() {
         return this.Status;
@@ -224,13 +227,15 @@ MOVING表示通道迁移中。
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
      * @param Status 通道组状态。
 其中，
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -314,12 +319,12 @@ MOVING表示通道迁移中。
 
     /**
      * Get 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Http3Supported 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttp3Supported() {
@@ -328,12 +333,12 @@ MOVING表示通道迁移中。
 
     /**
      * Set 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Http3Supported 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttp3Supported(Long Http3Supported) {

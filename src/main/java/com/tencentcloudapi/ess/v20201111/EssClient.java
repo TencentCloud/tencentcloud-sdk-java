@@ -120,6 +120,11 @@ public class EssClient extends AbstractClient{
 
     /**
      *获取小程序跳转链接
+
+跳转到小程序的实现，参考官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式）
+
+
+如您需要自主配置小程序跳转链接，请参考: <a href="https://tcloud-doc.isd.com/document/product/1323/74774">跳转小程序链接配置说明</a>
      * @param req CreateSchemeUrlRequest
      * @return CreateSchemeUrlResponse
      * @throws TencentCloudSDKException
@@ -171,6 +176,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowBriefsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlowBriefs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *二期接口-查询模板
+     * @param req DescribeFlowTemplatesRequest
+     * @return DescribeFlowTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowTemplatesResponse DescribeFlowTemplates(DescribeFlowTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlowTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
