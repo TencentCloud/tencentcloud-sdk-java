@@ -23,11 +23,49 @@ import java.util.HashMap;
 public class CreateImageResponse extends AbstractModel{
 
     /**
+    * 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Object")
+    @Expose
+    private ObjectInfo Object;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Object 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ObjectInfo getObject() {
+        return this.Object;
+    }
+
+    /**
+     * Set 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Object 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObject(ObjectInfo Object) {
+        this.Object = Object;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +91,9 @@ public class CreateImageResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateImageResponse(CreateImageResponse source) {
+        if (source.Object != null) {
+            this.Object = new ObjectInfo(source.Object);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +104,7 @@ public class CreateImageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Object.", this.Object);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

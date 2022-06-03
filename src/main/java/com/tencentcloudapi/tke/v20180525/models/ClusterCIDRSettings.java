@@ -72,6 +72,13 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Long ClaimExpiredSeconds;
 
     /**
+    * 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+    */
+    @SerializedName("IgnoreServiceCIDRConflict")
+    @Expose
+    private Boolean IgnoreServiceCIDRConflict;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      */
@@ -183,6 +190,22 @@ public class ClusterCIDRSettings extends AbstractModel{
         this.ClaimExpiredSeconds = ClaimExpiredSeconds;
     }
 
+    /**
+     * Get 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略 
+     * @return IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+     */
+    public Boolean getIgnoreServiceCIDRConflict() {
+        return this.IgnoreServiceCIDRConflict;
+    }
+
+    /**
+     * Set 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+     * @param IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+     */
+    public void setIgnoreServiceCIDRConflict(Boolean IgnoreServiceCIDRConflict) {
+        this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
+    }
+
     public ClusterCIDRSettings() {
     }
 
@@ -215,6 +238,9 @@ public class ClusterCIDRSettings extends AbstractModel{
         if (source.ClaimExpiredSeconds != null) {
             this.ClaimExpiredSeconds = new Long(source.ClaimExpiredSeconds);
         }
+        if (source.IgnoreServiceCIDRConflict != null) {
+            this.IgnoreServiceCIDRConflict = new Boolean(source.IgnoreServiceCIDRConflict);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class ClusterCIDRSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
         this.setParamArraySimple(map, prefix + "EniSubnetIds.", this.EniSubnetIds);
         this.setParamSimple(map, prefix + "ClaimExpiredSeconds", this.ClaimExpiredSeconds);
+        this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
 
     }
 }

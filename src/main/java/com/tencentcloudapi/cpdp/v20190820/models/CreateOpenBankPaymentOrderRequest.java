@@ -110,16 +110,14 @@ __FREEZE__:担保支付
     private String ExpireTime;
 
     /**
-    * 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+    * 前端成功回调URL。条件可选。
     */
     @SerializedName("FrontUrl")
     @Expose
     private String FrontUrl;
 
     /**
-    * 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+    * 前端刷新 URL。条件可选。
     */
     @SerializedName("RefreshUrl")
     @Expose
@@ -397,40 +395,32 @@ __FREEZE__:担保支付
     }
 
     /**
-     * Get 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填 
-     * @return FrontUrl 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * Get 前端成功回调URL。条件可选。 
+     * @return FrontUrl 前端成功回调URL。条件可选。
      */
     public String getFrontUrl() {
         return this.FrontUrl;
     }
 
     /**
-     * Set 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
-     * @param FrontUrl 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * Set 前端成功回调URL。条件可选。
+     * @param FrontUrl 前端成功回调URL。条件可选。
      */
     public void setFrontUrl(String FrontUrl) {
         this.FrontUrl = FrontUrl;
     }
 
     /**
-     * Get 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填 
-     * @return RefreshUrl 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * Get 前端刷新 URL。条件可选。 
+     * @return RefreshUrl 前端刷新 URL。条件可选。
      */
     public String getRefreshUrl() {
         return this.RefreshUrl;
     }
 
     /**
-     * Set 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
-     * @param RefreshUrl 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * Set 前端刷新 URL。条件可选。
+     * @param RefreshUrl 前端刷新 URL。条件可选。
      */
     public void setRefreshUrl(String RefreshUrl) {
         this.RefreshUrl = RefreshUrl;

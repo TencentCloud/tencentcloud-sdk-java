@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OpenBankGoodsInfo extends AbstractModel{
 
     /**
-    * 商品名称，默认值“商品支付”
+    * 商品标题，默认值“商品支付”
     */
     @SerializedName("GoodsName")
     @Expose
@@ -37,23 +37,23 @@ public class OpenBankGoodsInfo extends AbstractModel{
     private String GoodsDetail;
 
     /**
-    * 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+    * 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
     */
     @SerializedName("GoodsDescription")
     @Expose
     private String GoodsDescription;
 
     /**
-     * Get 商品名称，默认值“商品支付” 
-     * @return GoodsName 商品名称，默认值“商品支付”
+     * Get 商品标题，默认值“商品支付” 
+     * @return GoodsName 商品标题，默认值“商品支付”
      */
     public String getGoodsName() {
         return this.GoodsName;
     }
 
     /**
-     * Set 商品名称，默认值“商品支付”
-     * @param GoodsName 商品名称，默认值“商品支付”
+     * Set 商品标题，默认值“商品支付”
+     * @param GoodsName 商品标题，默认值“商品支付”
      */
     public void setGoodsName(String GoodsName) {
         this.GoodsName = GoodsName;
@@ -76,16 +76,16 @@ public class OpenBankGoodsInfo extends AbstractModel{
     }
 
     /**
-     * Get 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值 
-     * @return GoodsDescription 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+     * Get 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号 
+     * @return GoodsDescription 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     public String getGoodsDescription() {
         return this.GoodsDescription;
     }
 
     /**
-     * Set 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
-     * @param GoodsDescription 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+     * Set 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * @param GoodsDescription 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     public void setGoodsDescription(String GoodsDescription) {
         this.GoodsDescription = GoodsDescription;

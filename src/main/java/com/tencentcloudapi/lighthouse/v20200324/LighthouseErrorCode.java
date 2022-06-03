@@ -435,6 +435,9 @@ public enum LighthouseErrorCode {
     // 快照忙。
      UNSUPPORTEDOPERATION_SNAPSHOTBUSY("UnsupportedOperation.SnapshotBusy"),
      
+    // 系统忙。
+     UNSUPPORTEDOPERATION_SYSTEMBUSY("UnsupportedOperation.SystemBusy"),
+     
     // Windows实例不支持绑定密钥对。
      UNSUPPORTEDOPERATION_WINDOWSNOTALLOWTOASSOCIATEKEYPAIR("UnsupportedOperation.WindowsNotAllowToAssociateKeyPair");
      

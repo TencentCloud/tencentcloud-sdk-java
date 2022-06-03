@@ -96,6 +96,14 @@ public class ClusterNetworkSettings extends AbstractModel{
     private String [] Subnets;
 
     /**
+    * 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IgnoreServiceCIDRConflict")
+    @Expose
+    private Boolean IgnoreServiceCIDRConflict;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -267,6 +275,26 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.Subnets = Subnets;
     }
 
+    /**
+     * Get 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIgnoreServiceCIDRConflict() {
+        return this.IgnoreServiceCIDRConflict;
+    }
+
+    /**
+     * Set 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIgnoreServiceCIDRConflict(Boolean IgnoreServiceCIDRConflict) {
+        this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -308,6 +336,9 @@ public class ClusterNetworkSettings extends AbstractModel{
                 this.Subnets[i] = new String(source.Subnets[i]);
             }
         }
+        if (source.IgnoreServiceCIDRConflict != null) {
+            this.IgnoreServiceCIDRConflict = new Boolean(source.IgnoreServiceCIDRConflict);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
+        this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
 
     }
 }

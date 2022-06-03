@@ -38,6 +38,16 @@ public class SearchImageResponse extends AbstractModel{
     private ImageInfo [] ImageInfos;
 
     /**
+    * 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Object")
+    @Expose
+    private ObjectInfo Object;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +91,34 @@ public class SearchImageResponse extends AbstractModel{
     }
 
     /**
+     * Get 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Object 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ObjectInfo getObject() {
+        return this.Object;
+    }
+
+    /**
+     * Set 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Object 输入图的主体信息。
+若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObject(ObjectInfo Object) {
+        this.Object = Object;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +151,9 @@ public class SearchImageResponse extends AbstractModel{
                 this.ImageInfos[i] = new ImageInfo(source.ImageInfos[i]);
             }
         }
+        if (source.Object != null) {
+            this.Object = new ObjectInfo(source.Object);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +166,7 @@ public class SearchImageResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+        this.setParamObj(map, prefix + "Object.", this.Object);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
