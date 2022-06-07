@@ -177,7 +177,7 @@ HttpProfile httpProfile = new HttpProfile();
 // httpProfile.setProxyPort(真实代理端口);
 // get请求(默认为post请求)
 httpProfile.setReqMethod("GET"); // get请求(默认为post请求)
-httpProfile.setProtocol("https://");  // 在外网互通的网络环境下支持http协议(默认是https协议),请选择(https:// or http://)
+httpProfile.setProtocol("https://");  // 合法值：https:// 或者 http:// ，公有云只能使用 https。
 httpProfile.setConnTimeout(30); // 请求连接超时时间，单位为秒(默认60秒)
 httpProfile.setWriteTimeout(30);  // 设置写入超时时间，单位为秒(默认0秒)
 httpProfile.setReadTimeout(30);  // 设置读取超时时间，单位为秒(默认0秒)
