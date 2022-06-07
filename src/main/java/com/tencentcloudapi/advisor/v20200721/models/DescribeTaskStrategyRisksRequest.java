@@ -44,6 +44,20 @@ public class DescribeTaskStrategyRisksRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 环境
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
+    * 任务类型
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
      * Get 评估项ID 
      * @return StrategyId 评估项ID
      */
@@ -91,6 +105,38 @@ public class DescribeTaskStrategyRisksRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 环境 
+     * @return Env 环境
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 环境
+     * @param Env 环境
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
+    /**
+     * Get 任务类型 
+     * @return TaskType 任务类型
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型
+     * @param TaskType 任务类型
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public DescribeTaskStrategyRisksRequest() {
     }
 
@@ -108,6 +154,12 @@ public class DescribeTaskStrategyRisksRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class DescribeTaskStrategyRisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

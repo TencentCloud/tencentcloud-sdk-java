@@ -95,6 +95,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private Boolean RemoveWatermark;
 
     /**
+    * FLV 录制特殊参数。
+    */
+    @SerializedName("FlvSpecialParam")
+    @Expose
+    private FlvSpecialParam FlvSpecialParam;
+
+    /**
      * Get 模板名。仅支持中文、英文、数字、_、-。 
      * @return TemplateName 模板名。仅支持中文、英文、数字、_、-。
      */
@@ -262,6 +269,22 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         this.RemoveWatermark = RemoveWatermark;
     }
 
+    /**
+     * Get FLV 录制特殊参数。 
+     * @return FlvSpecialParam FLV 录制特殊参数。
+     */
+    public FlvSpecialParam getFlvSpecialParam() {
+        return this.FlvSpecialParam;
+    }
+
+    /**
+     * Set FLV 录制特殊参数。
+     * @param FlvSpecialParam FLV 录制特殊参数。
+     */
+    public void setFlvSpecialParam(FlvSpecialParam FlvSpecialParam) {
+        this.FlvSpecialParam = FlvSpecialParam;
+    }
+
     public CreateLiveRecordTemplateRequest() {
     }
 
@@ -300,6 +323,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         if (source.RemoveWatermark != null) {
             this.RemoveWatermark = new Boolean(source.RemoveWatermark);
         }
+        if (source.FlvSpecialParam != null) {
+            this.FlvSpecialParam = new FlvSpecialParam(source.FlvSpecialParam);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
         this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+        this.setParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
 
     }
 }

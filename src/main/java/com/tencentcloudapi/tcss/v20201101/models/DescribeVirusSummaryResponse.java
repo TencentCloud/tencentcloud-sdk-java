@@ -70,6 +70,22 @@ public class DescribeVirusSummaryResponse extends AbstractModel{
     private Long RiskIncrease;
 
     /**
+    * 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateIncrease")
+    @Expose
+    private Long IsolateIncrease;
+
+    /**
+    * 隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateCnt")
+    @Expose
+    private Long IsolateCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -193,6 +209,46 @@ public class DescribeVirusSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateIncrease 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsolateIncrease() {
+        return this.IsolateIncrease;
+    }
+
+    /**
+     * Set 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateIncrease 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateIncrease(Long IsolateIncrease) {
+        this.IsolateIncrease = IsolateIncrease;
+    }
+
+    /**
+     * Get 隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateCnt 隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsolateCnt() {
+        return this.IsolateCnt;
+    }
+
+    /**
+     * Set 隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateCnt 隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateCnt(Long IsolateCnt) {
+        this.IsolateCnt = IsolateCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -234,6 +290,12 @@ public class DescribeVirusSummaryResponse extends AbstractModel{
         if (source.RiskIncrease != null) {
             this.RiskIncrease = new Long(source.RiskIncrease);
         }
+        if (source.IsolateIncrease != null) {
+            this.IsolateIncrease = new Long(source.IsolateIncrease);
+        }
+        if (source.IsolateCnt != null) {
+            this.IsolateCnt = new Long(source.IsolateCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -250,6 +312,8 @@ public class DescribeVirusSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "VirusDataBaseModifyTime", this.VirusDataBaseModifyTime);
         this.setParamSimple(map, prefix + "RiskContainerIncrease", this.RiskContainerIncrease);
         this.setParamSimple(map, prefix + "RiskIncrease", this.RiskIncrease);
+        this.setParamSimple(map, prefix + "IsolateIncrease", this.IsolateIncrease);
+        this.setParamSimple(map, prefix + "IsolateCnt", this.IsolateCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -48,6 +48,9 @@ public enum TeoErrorCode {
     // 参数错误。
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
      
+    // 安全参数错误。
+     INVALIDPARAMETER_SECURITY("InvalidParameter.Security"),
+     
     // 域名配置错误。
      INVALIDPARAMETER_SETTINGINVALIDPARAM("InvalidParameter.SettingInvalidParam"),
      

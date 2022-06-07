@@ -23,11 +23,67 @@ import java.util.HashMap;
 public class AddUsersForUserManagerResponse extends AbstractModel{
 
     /**
+    * 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuccessUserList")
+    @Expose
+    private String [] SuccessUserList;
+
+    /**
+    * 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailedUserList")
+    @Expose
+    private String [] FailedUserList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuccessUserList 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSuccessUserList() {
+        return this.SuccessUserList;
+    }
+
+    /**
+     * Set 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuccessUserList 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuccessUserList(String [] SuccessUserList) {
+        this.SuccessUserList = SuccessUserList;
+    }
+
+    /**
+     * Get 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailedUserList 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFailedUserList() {
+        return this.FailedUserList;
+    }
+
+    /**
+     * Set 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailedUserList 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailedUserList(String [] FailedUserList) {
+        this.FailedUserList = FailedUserList;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +109,18 @@ public class AddUsersForUserManagerResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddUsersForUserManagerResponse(AddUsersForUserManagerResponse source) {
+        if (source.SuccessUserList != null) {
+            this.SuccessUserList = new String[source.SuccessUserList.length];
+            for (int i = 0; i < source.SuccessUserList.length; i++) {
+                this.SuccessUserList[i] = new String(source.SuccessUserList[i]);
+            }
+        }
+        if (source.FailedUserList != null) {
+            this.FailedUserList = new String[source.FailedUserList.length];
+            for (int i = 0; i < source.FailedUserList.length; i++) {
+                this.FailedUserList[i] = new String(source.FailedUserList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +131,8 @@ public class AddUsersForUserManagerResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "SuccessUserList.", this.SuccessUserList);
+        this.setParamArraySimple(map, prefix + "FailedUserList.", this.FailedUserList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

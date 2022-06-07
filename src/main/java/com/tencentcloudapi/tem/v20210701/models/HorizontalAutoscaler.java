@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class HorizontalAutoscaler extends AbstractModel{
 
     /**
-    * 最小实例数
+    * 最小实例数（可以不传）
     */
     @SerializedName("MinReplicas")
     @Expose
     private Long MinReplicas;
 
     /**
-    * 最大实例数
+    * 最大实例数（可以不传）
     */
     @SerializedName("MaxReplicas")
     @Expose
@@ -51,32 +51,39 @@ public class HorizontalAutoscaler extends AbstractModel{
     private Long Threshold;
 
     /**
-     * Get 最小实例数 
-     * @return MinReplicas 最小实例数
+    * 是否启用
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
+
+    /**
+     * Get 最小实例数（可以不传） 
+     * @return MinReplicas 最小实例数（可以不传）
      */
     public Long getMinReplicas() {
         return this.MinReplicas;
     }
 
     /**
-     * Set 最小实例数
-     * @param MinReplicas 最小实例数
+     * Set 最小实例数（可以不传）
+     * @param MinReplicas 最小实例数（可以不传）
      */
     public void setMinReplicas(Long MinReplicas) {
         this.MinReplicas = MinReplicas;
     }
 
     /**
-     * Get 最大实例数 
-     * @return MaxReplicas 最大实例数
+     * Get 最大实例数（可以不传） 
+     * @return MaxReplicas 最大实例数（可以不传）
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
     }
 
     /**
-     * Set 最大实例数
-     * @param MaxReplicas 最大实例数
+     * Set 最大实例数（可以不传）
+     * @param MaxReplicas 最大实例数（可以不传）
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;
@@ -114,6 +121,22 @@ public class HorizontalAutoscaler extends AbstractModel{
         this.Threshold = Threshold;
     }
 
+    /**
+     * Get 是否启用 
+     * @return Enabled 是否启用
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set 是否启用
+     * @param Enabled 是否启用
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
+    }
+
     public HorizontalAutoscaler() {
     }
 
@@ -134,6 +157,9 @@ public class HorizontalAutoscaler extends AbstractModel{
         if (source.Threshold != null) {
             this.Threshold = new Long(source.Threshold);
         }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class HorizontalAutoscaler extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
         this.setParamSimple(map, prefix + "Metrics", this.Metrics);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

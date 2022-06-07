@@ -56,10 +56,21 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
     */
     @SerializedName("Types")
     @Expose
     private Long [] Types;
+
+    /**
+    * 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
+    */
+    @SerializedName("ReturnOther")
+    @Expose
+    private String ReturnOther;
 
     /**
      * Get 图片的 Base64 值。
@@ -133,7 +144,9 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
-13：过路过桥费发票 
+13：过路过桥费发票
+15：非税发票
+16：全电发票 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -146,6 +159,8 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
      */
     public Long [] getTypes() {
         return this.Types;
@@ -164,6 +179,8 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
      * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -176,9 +193,35 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
      */
     public void setTypes(Long [] Types) {
         this.Types = Types;
+    }
+
+    /**
+     * Get 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票 
+     * @return ReturnOther 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
+     */
+    public String getReturnOther() {
+        return this.ReturnOther;
+    }
+
+    /**
+     * Set 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
+     * @param ReturnOther 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
+     */
+    public void setReturnOther(String ReturnOther) {
+        this.ReturnOther = ReturnOther;
     }
 
     public MixedInvoiceOCRRequest() {
@@ -201,6 +244,9 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
                 this.Types[i] = new Long(source.Types[i]);
             }
         }
+        if (source.ReturnOther != null) {
+            this.ReturnOther = new String(source.ReturnOther);
+        }
     }
 
 
@@ -211,6 +257,7 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamArraySimple(map, prefix + "Types.", this.Types);
+        this.setParamSimple(map, prefix + "ReturnOther", this.ReturnOther);
 
     }
 }

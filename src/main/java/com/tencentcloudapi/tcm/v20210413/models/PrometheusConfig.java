@@ -51,6 +51,14 @@ public class PrometheusConfig extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomProm")
+    @Expose
+    private CustomPromConfig CustomProm;
+
+    /**
      * Get 虚拟网络Id 
      * @return VpcId 虚拟网络Id
      */
@@ -114,6 +122,26 @@ public class PrometheusConfig extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomProm 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CustomPromConfig getCustomProm() {
+        return this.CustomProm;
+    }
+
+    /**
+     * Set 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomProm 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomProm(CustomPromConfig CustomProm) {
+        this.CustomProm = CustomProm;
+    }
+
     public PrometheusConfig() {
     }
 
@@ -134,6 +162,9 @@ public class PrometheusConfig extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.CustomProm != null) {
+            this.CustomProm = new CustomPromConfig(source.CustomProm);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class PrometheusConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "CustomProm.", this.CustomProm);
 
     }
 }

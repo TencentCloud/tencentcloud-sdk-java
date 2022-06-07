@@ -65,6 +65,27 @@ public class AccessLogConfig extends AbstractModel{
     private String Format;
 
     /**
+    * GRPC第三方服务器地址
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
+
+    /**
+    * 是否启用GRPC第三方服务器
+    */
+    @SerializedName("EnableServer")
+    @Expose
+    private Boolean EnableServer;
+
+    /**
+    * 是否启用标准输出
+    */
+    @SerializedName("EnableStdout")
+    @Expose
+    private Boolean EnableStdout;
+
+    /**
      * Get 是否启用 
      * @return Enable 是否启用
      */
@@ -160,6 +181,54 @@ public class AccessLogConfig extends AbstractModel{
         this.Format = Format;
     }
 
+    /**
+     * Get GRPC第三方服务器地址 
+     * @return Address GRPC第三方服务器地址
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set GRPC第三方服务器地址
+     * @param Address GRPC第三方服务器地址
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    /**
+     * Get 是否启用GRPC第三方服务器 
+     * @return EnableServer 是否启用GRPC第三方服务器
+     */
+    public Boolean getEnableServer() {
+        return this.EnableServer;
+    }
+
+    /**
+     * Set 是否启用GRPC第三方服务器
+     * @param EnableServer 是否启用GRPC第三方服务器
+     */
+    public void setEnableServer(Boolean EnableServer) {
+        this.EnableServer = EnableServer;
+    }
+
+    /**
+     * Get 是否启用标准输出 
+     * @return EnableStdout 是否启用标准输出
+     */
+    public Boolean getEnableStdout() {
+        return this.EnableStdout;
+    }
+
+    /**
+     * Set 是否启用标准输出
+     * @param EnableStdout 是否启用标准输出
+     */
+    public void setEnableStdout(Boolean EnableStdout) {
+        this.EnableStdout = EnableStdout;
+    }
+
     public AccessLogConfig() {
     }
 
@@ -186,6 +255,15 @@ public class AccessLogConfig extends AbstractModel{
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.EnableServer != null) {
+            this.EnableServer = new Boolean(source.EnableServer);
+        }
+        if (source.EnableStdout != null) {
+            this.EnableStdout = new Boolean(source.EnableStdout);
+        }
     }
 
 
@@ -199,6 +277,9 @@ public class AccessLogConfig extends AbstractModel{
         this.setParamObj(map, prefix + "CLS.", this.CLS);
         this.setParamSimple(map, prefix + "Encoding", this.Encoding);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "EnableServer", this.EnableServer);
+        this.setParamSimple(map, prefix + "EnableStdout", this.EnableStdout);
 
     }
 }

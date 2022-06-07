@@ -159,6 +159,62 @@ public class BillDetailComponent extends AbstractModel{
     private String ContractPrice;
 
     /**
+    * 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiTimeSpan")
+    @Expose
+    private String RiTimeSpan;
+
+    /**
+    * 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalCostWithRI")
+    @Expose
+    private String OriginalCostWithRI;
+
+    /**
+    * 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeductionRate")
+    @Expose
+    private String SPDeductionRate;
+
+    /**
+    * 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalCostWithSP")
+    @Expose
+    private String OriginalCostWithSP;
+
+    /**
+    * 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlendedDiscount")
+    @Expose
+    private String BlendedDiscount;
+
+    /**
      * Get 组件类型:资源组件类型的名称，如内存、硬盘等 
      * @return ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      */
@@ -474,6 +530,146 @@ public class BillDetailComponent extends AbstractModel{
         this.ContractPrice = ContractPrice;
     }
 
+    /**
+     * Get 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiTimeSpan 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiTimeSpan() {
+        return this.RiTimeSpan;
+    }
+
+    /**
+     * Set 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiTimeSpan 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiTimeSpan(String RiTimeSpan) {
+        this.RiTimeSpan = RiTimeSpan;
+    }
+
+    /**
+     * Get 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginalCostWithRI() {
+        return this.OriginalCostWithRI;
+    }
+
+    /**
+     * Set 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalCostWithRI(String OriginalCostWithRI) {
+        this.OriginalCostWithRI = OriginalCostWithRI;
+    }
+
+    /**
+     * Get 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeductionRate 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeductionRate() {
+        return this.SPDeductionRate;
+    }
+
+    /**
+     * Set 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeductionRate 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeductionRate(String SPDeductionRate) {
+        this.SPDeductionRate = SPDeductionRate;
+    }
+
+    /**
+     * Get 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeduction 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeduction 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginalCostWithSP() {
+        return this.OriginalCostWithSP;
+    }
+
+    /**
+     * Set 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalCostWithSP(String OriginalCostWithSP) {
+        this.OriginalCostWithSP = OriginalCostWithSP;
+    }
+
+    /**
+     * Get 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlendedDiscount 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBlendedDiscount() {
+        return this.BlendedDiscount;
+    }
+
+    /**
+     * Set 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlendedDiscount 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlendedDiscount(String BlendedDiscount) {
+        this.BlendedDiscount = BlendedDiscount;
+    }
+
     public BillDetailComponent() {
     }
 
@@ -539,6 +735,27 @@ public class BillDetailComponent extends AbstractModel{
         if (source.ContractPrice != null) {
             this.ContractPrice = new String(source.ContractPrice);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.RiTimeSpan != null) {
+            this.RiTimeSpan = new String(source.RiTimeSpan);
+        }
+        if (source.OriginalCostWithRI != null) {
+            this.OriginalCostWithRI = new String(source.OriginalCostWithRI);
+        }
+        if (source.SPDeductionRate != null) {
+            this.SPDeductionRate = new String(source.SPDeductionRate);
+        }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.OriginalCostWithSP != null) {
+            this.OriginalCostWithSP = new String(source.OriginalCostWithSP);
+        }
+        if (source.BlendedDiscount != null) {
+            this.BlendedDiscount = new String(source.BlendedDiscount);
+        }
     }
 
 
@@ -565,6 +782,13 @@ public class BillDetailComponent extends AbstractModel{
         this.setParamSimple(map, prefix + "ItemCode", this.ItemCode);
         this.setParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
         this.setParamSimple(map, prefix + "ContractPrice", this.ContractPrice);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "RiTimeSpan", this.RiTimeSpan);
+        this.setParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+        this.setParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+        this.setParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
 
     }
 }

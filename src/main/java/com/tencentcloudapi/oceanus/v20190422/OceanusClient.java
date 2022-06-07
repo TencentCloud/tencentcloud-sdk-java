@@ -378,4 +378,24 @@ public class OceanusClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *触发Savepoint
+     * @param req TriggerJobSavepointRequest
+     * @return TriggerJobSavepointResponse
+     * @throws TencentCloudSDKException
+     */
+    public TriggerJobSavepointResponse TriggerJobSavepoint(TriggerJobSavepointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TriggerJobSavepointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TriggerJobSavepointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TriggerJobSavepoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

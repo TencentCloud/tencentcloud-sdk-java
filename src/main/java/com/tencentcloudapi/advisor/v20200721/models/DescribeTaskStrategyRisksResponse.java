@@ -56,6 +56,14 @@ public class DescribeTaskStrategyRisksResponse extends AbstractModel{
     private String Risks;
 
     /**
+    * 巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceCount")
+    @Expose
+    private Long ResourceCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -147,6 +155,26 @@ public class DescribeTaskStrategyRisksResponse extends AbstractModel{
     }
 
     /**
+     * Get 巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceCount 巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceCount() {
+        return this.ResourceCount;
+    }
+
+    /**
+     * Set 巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceCount 巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceCount(Long ResourceCount) {
+        this.ResourceCount = ResourceCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -185,6 +213,9 @@ public class DescribeTaskStrategyRisksResponse extends AbstractModel{
         if (source.Risks != null) {
             this.Risks = new String(source.Risks);
         }
+        if (source.ResourceCount != null) {
+            this.ResourceCount = new Long(source.ResourceCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +230,7 @@ public class DescribeTaskStrategyRisksResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
         this.setParamSimple(map, prefix + "RiskTotalCount", this.RiskTotalCount);
         this.setParamSimple(map, prefix + "Risks", this.Risks);
+        this.setParamSimple(map, prefix + "ResourceCount", this.ResourceCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class AddUsersForUserManagerRequest extends AbstractModel{
 
     /**
+    * 集群字符串ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 用户信息列表
     */
     @SerializedName("UserManagerUserList")
     @Expose
     private UserInfoForUserManager [] UserManagerUserList;
+
+    /**
+     * Get 集群字符串ID 
+     * @return InstanceId 集群字符串ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群字符串ID
+     * @param InstanceId 集群字符串ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
 
     /**
      * Get 用户信息列表 
@@ -53,6 +76,9 @@ public class AddUsersForUserManagerRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddUsersForUserManagerRequest(AddUsersForUserManagerRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.UserManagerUserList != null) {
             this.UserManagerUserList = new UserInfoForUserManager[source.UserManagerUserList.length];
             for (int i = 0; i < source.UserManagerUserList.length; i++) {
@@ -66,6 +92,7 @@ public class AddUsersForUserManagerRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "UserManagerUserList.", this.UserManagerUserList);
 
     }

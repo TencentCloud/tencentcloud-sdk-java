@@ -137,6 +137,14 @@ public class SellConfig extends AbstractModel{
     private String DeviceTypeName;
 
     /**
+    * 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 设备类型（废弃） 
      * @return Device 设备类型（废弃）
      */
@@ -400,6 +408,26 @@ public class SellConfig extends AbstractModel{
         this.DeviceTypeName = DeviceTypeName;
     }
 
+    /**
+     * Get 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public SellConfig() {
     }
 
@@ -456,6 +484,9 @@ public class SellConfig extends AbstractModel{
         if (source.DeviceTypeName != null) {
             this.DeviceTypeName = new String(source.DeviceTypeName);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -479,6 +510,7 @@ public class SellConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

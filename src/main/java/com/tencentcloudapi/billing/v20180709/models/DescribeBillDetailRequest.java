@@ -120,10 +120,6 @@ public class DescribeBillDetailRequest extends AbstractModel{
 小时费用
 预留实例退款
 按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 包年包月转按量
     */
     @SerializedName("ActionType")
@@ -336,10 +332,6 @@ public class DescribeBillDetailRequest extends AbstractModel{
 小时费用
 预留实例退款
 按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 包年包月转按量 
      * @return ActionType 查询交易类型，如下：
 包年包月新购
@@ -366,10 +358,6 @@ public class DescribeBillDetailRequest extends AbstractModel{
 预付费用
 小时费用
 预留实例退款
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 按量计费冲正
 包年包月转按量
      */
@@ -404,10 +392,6 @@ public class DescribeBillDetailRequest extends AbstractModel{
 小时费用
 预留实例退款
 按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 包年包月转按量
      * @param ActionType 查询交易类型，如下：
 包年包月新购
@@ -434,10 +418,6 @@ public class DescribeBillDetailRequest extends AbstractModel{
 预付费用
 小时费用
 预留实例退款
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 按量计费冲正
 包年包月转按量
      */

@@ -31,6 +31,14 @@ public class ImageToObjectResponse extends AbstractModel{
     private Template Template;
 
     /**
+    * 多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextTypeList")
+    @Expose
+    private TextType [] TextTypeList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ public class ImageToObjectResponse extends AbstractModel{
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
+    }
+
+    /**
+     * Get 多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TextTypeList 多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextType [] getTextTypeList() {
+        return this.TextTypeList;
+    }
+
+    /**
+     * Set 多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextTypeList 多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextTypeList(TextType [] TextTypeList) {
+        this.TextTypeList = TextTypeList;
     }
 
     /**
@@ -84,6 +112,12 @@ public class ImageToObjectResponse extends AbstractModel{
         if (source.Template != null) {
             this.Template = new Template(source.Template);
         }
+        if (source.TextTypeList != null) {
+            this.TextTypeList = new TextType[source.TextTypeList.length];
+            for (int i = 0; i < source.TextTypeList.length; i++) {
+                this.TextTypeList[i] = new TextType(source.TextTypeList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +129,7 @@ public class ImageToObjectResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Template.", this.Template);
+        this.setParamArrayObj(map, prefix + "TextTypeList.", this.TextTypeList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

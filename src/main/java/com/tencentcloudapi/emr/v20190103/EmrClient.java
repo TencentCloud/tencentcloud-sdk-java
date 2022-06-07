@@ -219,7 +219,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *批量导出用户
+     *批量导出用户。对于kerberos集群，如果需要kertab文件下载地址，可以将NeedKeytabInfo设置为true；注意SupportDownLoadKeyTab为true，但是DownLoadKeyTabUrl为空字符串，表示keytab文件在后台没有准备好（正在生成）
      * @param req DescribeUsersForUserManagerRequest
      * @return DescribeUsersForUserManagerResponse
      * @throws TencentCloudSDKException

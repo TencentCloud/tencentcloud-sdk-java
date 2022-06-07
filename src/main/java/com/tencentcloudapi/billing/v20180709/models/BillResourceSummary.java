@@ -256,6 +256,42 @@ public class BillResourceSummary extends AbstractModel{
     private Long RegionId;
 
     /**
+    * 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 按组件原价的口径换算的预留实例抵扣金额
+    */
+    @SerializedName("OriginalCostWithRI")
+    @Expose
+    private String OriginalCostWithRI;
+
+    /**
+    * 节省计划抵扣的SP包面值
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * 按组件原价的口径换算的节省计划抵扣金额
+    */
+    @SerializedName("OriginalCostWithSP")
+    @Expose
+    private String OriginalCostWithSP;
+
+    /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -791,6 +827,102 @@ public class BillResourceSummary extends AbstractModel{
         this.RegionId = RegionId;
     }
 
+    /**
+     * Get 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack 
+     * @return InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     * @param InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 按组件原价的口径换算的预留实例抵扣金额 
+     * @return OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     */
+    public String getOriginalCostWithRI() {
+        return this.OriginalCostWithRI;
+    }
+
+    /**
+     * Set 按组件原价的口径换算的预留实例抵扣金额
+     * @param OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     */
+    public void setOriginalCostWithRI(String OriginalCostWithRI) {
+        this.OriginalCostWithRI = OriginalCostWithRI;
+    }
+
+    /**
+     * Get 节省计划抵扣的SP包面值 
+     * @return SPDeduction 节省计划抵扣的SP包面值
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set 节省计划抵扣的SP包面值
+     * @param SPDeduction 节省计划抵扣的SP包面值
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get 按组件原价的口径换算的节省计划抵扣金额 
+     * @return OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+     */
+    public String getOriginalCostWithSP() {
+        return this.OriginalCostWithSP;
+    }
+
+    /**
+     * Set 按组件原价的口径换算的节省计划抵扣金额
+     * @param OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+     */
+    public void setOriginalCostWithSP(String OriginalCostWithSP) {
+        this.OriginalCostWithSP = OriginalCostWithSP;
+    }
+
     public BillResourceSummary() {
     }
 
@@ -901,6 +1033,18 @@ public class BillResourceSummary extends AbstractModel{
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.OriginalCostWithRI != null) {
+            this.OriginalCostWithRI = new String(source.OriginalCostWithRI);
+        }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.OriginalCostWithSP != null) {
+            this.OriginalCostWithSP = new String(source.OriginalCostWithSP);
+        }
     }
 
 
@@ -941,6 +1085,10 @@ public class BillResourceSummary extends AbstractModel{
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
 
     }
 }
