@@ -44,6 +44,13 @@ public class SpecificationInfo extends AbstractModel{
     private SpecItem [] SpecItems;
 
     /**
+    * 是否支持跨可用区部署 1-支持，0-不支持
+    */
+    @SerializedName("SupportMultiAZ")
+    @Expose
+    private Long SupportMultiAZ;
+
+    /**
      * Get 地域信息 
      * @return Region 地域信息
      */
@@ -91,6 +98,22 @@ public class SpecificationInfo extends AbstractModel{
         this.SpecItems = SpecItems;
     }
 
+    /**
+     * Get 是否支持跨可用区部署 1-支持，0-不支持 
+     * @return SupportMultiAZ 是否支持跨可用区部署 1-支持，0-不支持
+     */
+    public Long getSupportMultiAZ() {
+        return this.SupportMultiAZ;
+    }
+
+    /**
+     * Set 是否支持跨可用区部署 1-支持，0-不支持
+     * @param SupportMultiAZ 是否支持跨可用区部署 1-支持，0-不支持
+     */
+    public void setSupportMultiAZ(Long SupportMultiAZ) {
+        this.SupportMultiAZ = SupportMultiAZ;
+    }
+
     public SpecificationInfo() {
     }
 
@@ -111,6 +134,9 @@ public class SpecificationInfo extends AbstractModel{
                 this.SpecItems[i] = new SpecItem(source.SpecItems[i]);
             }
         }
+        if (source.SupportMultiAZ != null) {
+            this.SupportMultiAZ = new Long(source.SupportMultiAZ);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class SpecificationInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "SpecItems.", this.SpecItems);
+        this.setParamSimple(map, prefix + "SupportMultiAZ", this.SupportMultiAZ);
 
     }
 }

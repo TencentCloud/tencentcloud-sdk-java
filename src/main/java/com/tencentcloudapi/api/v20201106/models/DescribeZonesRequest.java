@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeZonesRequest extends AbstractModel{
 
     /**
-    * 待查询产品的名称，例如cvm
+    * 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 待查询产品的名称，例如cvm 
-     * @return Product 待查询产品的名称，例如cvm
+     * Get 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口 
+     * @return Product 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 待查询产品的名称，例如cvm
-     * @param Product 待查询产品的名称，例如cvm
+     * Set 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
+     * @param Product 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
      */
     public void setProduct(String Product) {
         this.Product = Product;

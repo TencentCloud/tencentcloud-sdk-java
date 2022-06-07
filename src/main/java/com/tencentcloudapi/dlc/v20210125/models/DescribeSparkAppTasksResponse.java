@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSparkAppTasksResponse extends AbstractModel{
 
     /**
-    * 任务列表
+    * 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -38,6 +38,14 @@ public class DescribeSparkAppTasksResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkAppTasks")
+    @Expose
+    private TaskResponseInfo [] SparkAppTasks;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -45,9 +53,9 @@ public class DescribeSparkAppTasksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务列表
+     * Get 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 任务列表
+     * @return Tasks 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskResponseInfo getTasks() {
@@ -55,9 +63,9 @@ public class DescribeSparkAppTasksResponse extends AbstractModel{
     }
 
     /**
-     * Set 任务列表
+     * Set 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 任务列表
+     * @param Tasks 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(TaskResponseInfo Tasks) {
@@ -78,6 +86,26 @@ public class DescribeSparkAppTasksResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkAppTasks 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskResponseInfo [] getSparkAppTasks() {
+        return this.SparkAppTasks;
+    }
+
+    /**
+     * Set 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkAppTasks 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkAppTasks(TaskResponseInfo [] SparkAppTasks) {
+        this.SparkAppTasks = SparkAppTasks;
     }
 
     /**
@@ -110,6 +138,12 @@ public class DescribeSparkAppTasksResponse extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.SparkAppTasks != null) {
+            this.SparkAppTasks = new TaskResponseInfo[source.SparkAppTasks.length];
+            for (int i = 0; i < source.SparkAppTasks.length; i++) {
+                this.SparkAppTasks[i] = new TaskResponseInfo(source.SparkAppTasks[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,6 +156,7 @@ public class DescribeSparkAppTasksResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "SparkAppTasks.", this.SparkAppTasks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

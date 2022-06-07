@@ -231,6 +231,26 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据
+     * @param req DescribeExternalTrtcMeasureRequest
+     * @return DescribeExternalTrtcMeasureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalTrtcMeasureResponse DescribeExternalTrtcMeasure(DescribeExternalTrtcMeasureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExternalTrtcMeasureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExternalTrtcMeasure");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。 
      * @param req DescribeHistoryScaleRequest
      * @return DescribeHistoryScaleResponse
@@ -394,6 +414,30 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DismissRoomByStrRoomIdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DismissRoomByStrRoomId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询旁路转码计费时长。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过2天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+     * @param req MeasureTrtcMcuExternalRequest
+     * @return MeasureTrtcMcuExternalResponse
+     * @throws TencentCloudSDKException
+     */
+    public MeasureTrtcMcuExternalResponse MeasureTrtcMcuExternal(MeasureTrtcMcuExternalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MeasureTrtcMcuExternalResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<MeasureTrtcMcuExternalResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "MeasureTrtcMcuExternal");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

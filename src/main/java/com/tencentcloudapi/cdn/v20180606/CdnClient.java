@@ -39,6 +39,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *AddCLSTopicDomains 用于新增域名到某日志主题下
+     * @param req AddCLSTopicDomainsRequest
+     * @return AddCLSTopicDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCLSTopicDomainsResponse AddCLSTopicDomains(AddCLSTopicDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCLSTopicDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCLSTopicDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddCLSTopicDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
      * @param req AddCdnDomainRequest
      * @return AddCdnDomainResponse
