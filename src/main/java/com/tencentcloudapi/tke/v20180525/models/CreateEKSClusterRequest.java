@@ -93,6 +93,13 @@ public class CreateEKSClusterRequest extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
+    * 子网信息列表
+    */
+    @SerializedName("SubnetInfos")
+    @Expose
+    private SubnetInfos [] SubnetInfos;
+
+    /**
      * Get k8s版本号。可为1.14.4, 1.12.8。 
      * @return K8SVersion k8s版本号。可为1.14.4, 1.12.8。
      */
@@ -252,6 +259,22 @@ public class CreateEKSClusterRequest extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 子网信息列表 
+     * @return SubnetInfos 子网信息列表
+     */
+    public SubnetInfos [] getSubnetInfos() {
+        return this.SubnetInfos;
+    }
+
+    /**
+     * Set 子网信息列表
+     * @param SubnetInfos 子网信息列表
+     */
+    public void setSubnetInfos(SubnetInfos [] SubnetInfos) {
+        this.SubnetInfos = SubnetInfos;
+    }
+
     public CreateEKSClusterRequest() {
     }
 
@@ -299,6 +322,12 @@ public class CreateEKSClusterRequest extends AbstractModel{
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.SubnetInfos != null) {
+            this.SubnetInfos = new SubnetInfos[source.SubnetInfos.length];
+            for (int i = 0; i < source.SubnetInfos.length; i++) {
+                this.SubnetInfos[i] = new SubnetInfos(source.SubnetInfos[i]);
+            }
+        }
     }
 
 
@@ -316,6 +345,7 @@ public class CreateEKSClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         this.setParamSimple(map, prefix + "EnableVpcCoreDNS", this.EnableVpcCoreDNS);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamArrayObj(map, prefix + "SubnetInfos.", this.SubnetInfos);
 
     }
 }

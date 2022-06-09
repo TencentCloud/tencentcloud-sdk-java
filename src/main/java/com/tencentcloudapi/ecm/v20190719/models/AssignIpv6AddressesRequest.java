@@ -51,6 +51,16 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
     private Long Ipv6AddressCount;
 
     /**
+    * ipv6运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+    */
+    @SerializedName("Ipv6ISP")
+    @Expose
+    private String Ipv6ISP;
+
+    /**
      * Get ECM 地域 
      * @return EcmRegion ECM 地域
      */
@@ -114,6 +124,34 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
+    /**
+     * Get ipv6运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动 
+     * @return Ipv6ISP ipv6运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+     */
+    public String getIpv6ISP() {
+        return this.Ipv6ISP;
+    }
+
+    /**
+     * Set ipv6运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+     * @param Ipv6ISP ipv6运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+     */
+    public void setIpv6ISP(String Ipv6ISP) {
+        this.Ipv6ISP = Ipv6ISP;
+    }
+
     public AssignIpv6AddressesRequest() {
     }
 
@@ -137,6 +175,9 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         if (source.Ipv6AddressCount != null) {
             this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
         }
+        if (source.Ipv6ISP != null) {
+            this.Ipv6ISP = new String(source.Ipv6ISP);
+        }
     }
 
 
@@ -148,6 +189,7 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamArrayObj(map, prefix + "Ipv6Addresses.", this.Ipv6Addresses);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamSimple(map, prefix + "Ipv6ISP", this.Ipv6ISP);
 
     }
 }

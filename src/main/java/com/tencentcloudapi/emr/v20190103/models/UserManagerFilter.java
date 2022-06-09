@@ -22,6 +22,34 @@ import java.util.HashMap;
 
 public class UserManagerFilter extends AbstractModel{
 
+    /**
+    * 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+     * Get 用户名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserName 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserName 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
     public UserManagerFilter() {
     }
 
@@ -30,6 +58,9 @@ public class UserManagerFilter extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UserManagerFilter(UserManagerFilter source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
     }
 
 
@@ -37,6 +68,7 @@ public class UserManagerFilter extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

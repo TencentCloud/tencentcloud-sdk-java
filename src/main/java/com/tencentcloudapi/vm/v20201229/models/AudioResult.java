@@ -120,6 +120,14 @@ public class AudioResult extends AbstractModel{
     private String SubLabel;
 
     /**
+    * 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecognitionResults")
+    @Expose
+    private RecognitionResult [] RecognitionResults;
+
+    /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
@@ -363,6 +371,26 @@ public class AudioResult extends AbstractModel{
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecognitionResults 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RecognitionResult [] getRecognitionResults() {
+        return this.RecognitionResults;
+    }
+
+    /**
+     * Set 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecognitionResults 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
+        this.RecognitionResults = RecognitionResults;
+    }
+
     public AudioResult() {
     }
 
@@ -416,6 +444,12 @@ public class AudioResult extends AbstractModel{
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.RecognitionResults != null) {
+            this.RecognitionResults = new RecognitionResult[source.RecognitionResults.length];
+            for (int i = 0; i < source.RecognitionResults.length; i++) {
+                this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
+            }
+        }
     }
 
 
@@ -435,6 +469,7 @@ public class AudioResult extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
         this.setParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
 
     }
 }

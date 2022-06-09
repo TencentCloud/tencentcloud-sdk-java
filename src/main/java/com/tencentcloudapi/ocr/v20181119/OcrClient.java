@@ -1188,6 +1188,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *印尼身份证识别
+     * @param req RecognizeIndonesiaIDCardOCRRequest
+     * @return RecognizeIndonesiaIDCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeIndonesiaIDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
      * @param req RecognizeOnlineTaxiItineraryOCRRequest
      * @return RecognizeOnlineTaxiItineraryOCRResponse
@@ -1200,6 +1220,46 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RecognizeOnlineTaxiItineraryOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *菲律宾驾驶证识别
+     * @param req RecognizePhilippinesDrivingLicenseOCRRequest
+     * @return RecognizePhilippinesDrivingLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *菲律宾VoteID识别
+     * @param req RecognizePhilippinesVoteIDOCRRequest
+     * @return RecognizePhilippinesVoteIDOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesVoteIDOCR");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
