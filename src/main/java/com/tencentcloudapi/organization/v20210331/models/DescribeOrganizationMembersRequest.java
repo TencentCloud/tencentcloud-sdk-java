@@ -51,6 +51,20 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
     private String SearchKey;
 
     /**
+    * 主体名称
+    */
+    @SerializedName("AuthName")
+    @Expose
+    private String AuthName;
+
+    /**
+    * 集团服务（服务管理员查询时，必须指定）
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -114,6 +128,38 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
         this.SearchKey = SearchKey;
     }
 
+    /**
+     * Get 主体名称 
+     * @return AuthName 主体名称
+     */
+    public String getAuthName() {
+        return this.AuthName;
+    }
+
+    /**
+     * Set 主体名称
+     * @param AuthName 主体名称
+     */
+    public void setAuthName(String AuthName) {
+        this.AuthName = AuthName;
+    }
+
+    /**
+     * Get 集团服务（服务管理员查询时，必须指定） 
+     * @return Product 集团服务（服务管理员查询时，必须指定）
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 集团服务（服务管理员查询时，必须指定）
+     * @param Product 集团服务（服务管理员查询时，必须指定）
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeOrganizationMembersRequest() {
     }
 
@@ -134,6 +180,12 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
         if (source.SearchKey != null) {
             this.SearchKey = new String(source.SearchKey);
         }
+        if (source.AuthName != null) {
+            this.AuthName = new String(source.AuthName);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Lang", this.Lang);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamSimple(map, prefix + "AuthName", this.AuthName);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

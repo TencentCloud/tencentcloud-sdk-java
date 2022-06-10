@@ -2604,6 +2604,7 @@ public class VodClient extends AbstractClient{
      *1. 预热指定的 URL 列表。
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。
+4. 默认预热配额为每天10000个 URL。
      * @param req PushUrlCacheRequest
      * @return PushUrlCacheResponse
      * @throws TencentCloudSDKException

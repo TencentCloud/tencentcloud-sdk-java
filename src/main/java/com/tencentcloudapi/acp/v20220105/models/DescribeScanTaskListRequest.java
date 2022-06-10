@@ -37,14 +37,14 @@ public class DescribeScanTaskListRequest extends AbstractModel{
     private Long Platform;
 
     /**
-    * 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+    * 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
     */
     @SerializedName("TaskStatuses")
     @Expose
     private String TaskStatuses;
 
     /**
-    * 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
+    * 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
     */
     @SerializedName("TaskTypes")
     @Expose
@@ -118,32 +118,32 @@ public class DescribeScanTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中; 
-     * @return TaskStatuses 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+     * Get 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中; 
+     * @return TaskStatuses 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
      */
     public String getTaskStatuses() {
         return this.TaskStatuses;
     }
 
     /**
-     * Set 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
-     * @param TaskStatuses 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+     * Set 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+     * @param TaskStatuses 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
      */
     public void setTaskStatuses(String TaskStatuses) {
         this.TaskStatuses = TaskStatuses;
     }
 
     /**
-     * Get 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化 
-     * @return TaskTypes 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
+     * Get 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化 
+     * @return TaskTypes 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
      */
     public String getTaskTypes() {
         return this.TaskTypes;
     }
 
     /**
-     * Set 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
-     * @param TaskTypes 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
+     * Set 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
+     * @param TaskTypes 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
      */
     public void setTaskTypes(String TaskTypes) {
         this.TaskTypes = TaskTypes;

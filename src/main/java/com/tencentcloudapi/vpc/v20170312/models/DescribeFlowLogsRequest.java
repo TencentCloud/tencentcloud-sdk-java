@@ -116,6 +116,13 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Filter Filters;
 
     /**
+    * 流日志存储ID对应的地域信息
+    */
+    @SerializedName("CloudLogRegion")
+    @Expose
+    private String CloudLogRegion;
+
+    /**
      * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
@@ -331,6 +338,22 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 流日志存储ID对应的地域信息 
+     * @return CloudLogRegion 流日志存储ID对应的地域信息
+     */
+    public String getCloudLogRegion() {
+        return this.CloudLogRegion;
+    }
+
+    /**
+     * Set 流日志存储ID对应的地域信息
+     * @param CloudLogRegion 流日志存储ID对应的地域信息
+     */
+    public void setCloudLogRegion(String CloudLogRegion) {
+        this.CloudLogRegion = CloudLogRegion;
+    }
+
     public DescribeFlowLogsRequest() {
     }
 
@@ -378,6 +401,9 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         if (source.Filters != null) {
             this.Filters = new Filter(source.Filters);
         }
+        if (source.CloudLogRegion != null) {
+            this.CloudLogRegion = new String(source.CloudLogRegion);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
 
     }
 }

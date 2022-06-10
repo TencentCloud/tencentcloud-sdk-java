@@ -55,6 +55,20 @@ public class DescribeBruteAttackListRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 排序方式：根据请求次数排序：asc-升序/desc-降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 排序字段：CreateTime-首次攻击时间
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
      * Get 需要返回的数量，最大值为100 
      * @return Limit 需要返回的数量，最大值为100
      */
@@ -146,6 +160,38 @@ public class DescribeBruteAttackListRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 排序方式：根据请求次数排序：asc-升序/desc-降序 
+     * @return Order 排序方式：根据请求次数排序：asc-升序/desc-降序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式：根据请求次数排序：asc-升序/desc-降序
+     * @param Order 排序方式：根据请求次数排序：asc-升序/desc-降序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 排序字段：CreateTime-首次攻击时间 
+     * @return By 排序字段：CreateTime-首次攻击时间
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序字段：CreateTime-首次攻击时间
+     * @param By 排序字段：CreateTime-首次攻击时间
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public DescribeBruteAttackListRequest() {
     }
 
@@ -166,6 +212,12 @@ public class DescribeBruteAttackListRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class DescribeBruteAttackListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

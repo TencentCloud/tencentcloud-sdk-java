@@ -39,6 +39,46 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建引擎实例
+     * @param req CreateEngineRequest
+     * @return CreateEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEngineResponse CreateEngine(CreateEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEngineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除引擎实例
+     * @param req DeleteEngineRequest
+     * @return DeleteEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEngineResponse DeleteEngine(DeleteEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEngineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询引擎实例访问地址
      * @param req DescribeSREInstanceAccessAddressRequest
      * @return DescribeSREInstanceAccessAddressResponse

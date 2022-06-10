@@ -56,7 +56,7 @@ public class DescribeRiskDnsListRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 排序字段：AccessCount-请求次数
+    * 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
     */
     @SerializedName("By")
     @Expose
@@ -147,16 +147,16 @@ public class DescribeRiskDnsListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段：AccessCount-请求次数 
-     * @return By 排序字段：AccessCount-请求次数
+     * Get 排序字段：AccessCount-请求次数。MergeTime-最近请求时间 
+     * @return By 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段：AccessCount-请求次数
-     * @param By 排序字段：AccessCount-请求次数
+     * Set 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
+     * @param By 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
      */
     public void setBy(String By) {
         this.By = By;

@@ -30,6 +30,13 @@ public class DescribeOrganizationRequest extends AbstractModel{
     private String Lang;
 
     /**
+    * 产品简称（查询是否集团服务委派管理员必须）
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 国际站：en，国内站：zh 
      * @return Lang 国际站：en，国内站：zh
      */
@@ -45,6 +52,22 @@ public class DescribeOrganizationRequest extends AbstractModel{
         this.Lang = Lang;
     }
 
+    /**
+     * Get 产品简称（查询是否集团服务委派管理员必须） 
+     * @return Product 产品简称（查询是否集团服务委派管理员必须）
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 产品简称（查询是否集团服务委派管理员必须）
+     * @param Product 产品简称（查询是否集团服务委派管理员必须）
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeOrganizationRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeOrganizationRequest extends AbstractModel{
         if (source.Lang != null) {
             this.Lang = new String(source.Lang);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeOrganizationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Lang", this.Lang);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

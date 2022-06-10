@@ -32,11 +32,29 @@ public class ProjectStreamConnectStatusChangedEvent extends AbstractModel{
     /**
     * 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputInterruptInfo")
+    @Expose
+    private StreamConnectInputInterruptInfo InputInterruptInfo;
+
+    /**
+    * 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutputInterruptInfo")
+    @Expose
+    private StreamConnectOutputInterruptInfo OutputInterruptInfo;
 
     /**
      * Get 项目 Id。 
@@ -57,10 +75,14 @@ public class ProjectStreamConnectStatusChangedEvent extends AbstractModel{
     /**
      * Get 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li> 
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li> 
      * @return Status 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
      */
     public String getStatus() {
         return this.Status;
@@ -69,13 +91,57 @@ public class ProjectStreamConnectStatusChangedEvent extends AbstractModel{
     /**
      * Set 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
      * @param Status 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputInterruptInfo 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StreamConnectInputInterruptInfo getInputInterruptInfo() {
+        return this.InputInterruptInfo;
+    }
+
+    /**
+     * Set 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputInterruptInfo 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputInterruptInfo(StreamConnectInputInterruptInfo InputInterruptInfo) {
+        this.InputInterruptInfo = InputInterruptInfo;
+    }
+
+    /**
+     * Get 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutputInterruptInfo 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StreamConnectOutputInterruptInfo getOutputInterruptInfo() {
+        return this.OutputInterruptInfo;
+    }
+
+    /**
+     * Set 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutputInterruptInfo 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutputInterruptInfo(StreamConnectOutputInterruptInfo OutputInterruptInfo) {
+        this.OutputInterruptInfo = OutputInterruptInfo;
     }
 
     public ProjectStreamConnectStatusChangedEvent() {
@@ -92,6 +158,12 @@ public class ProjectStreamConnectStatusChangedEvent extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.InputInterruptInfo != null) {
+            this.InputInterruptInfo = new StreamConnectInputInterruptInfo(source.InputInterruptInfo);
+        }
+        if (source.OutputInterruptInfo != null) {
+            this.OutputInterruptInfo = new StreamConnectOutputInterruptInfo(source.OutputInterruptInfo);
+        }
     }
 
 
@@ -101,6 +173,8 @@ public class ProjectStreamConnectStatusChangedEvent extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "InputInterruptInfo.", this.InputInterruptInfo);
+        this.setParamObj(map, prefix + "OutputInterruptInfo.", this.OutputInterruptInfo);
 
     }
 }

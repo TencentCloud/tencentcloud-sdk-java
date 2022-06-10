@@ -123,6 +123,14 @@ public class FlowLog extends AbstractModel{
     private FlowLogStorage FlowLogStorage;
 
     /**
+    * 流日志存储ID对应的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudLogRegion")
+    @Expose
+    private String CloudLogRegion;
+
+    /**
      * Get 私用网络ID或者统一ID，建议使用统一ID。 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID。
      */
@@ -354,6 +362,26 @@ public class FlowLog extends AbstractModel{
         this.FlowLogStorage = FlowLogStorage;
     }
 
+    /**
+     * Get 流日志存储ID对应的地域信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudLogRegion 流日志存储ID对应的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudLogRegion() {
+        return this.CloudLogRegion;
+    }
+
+    /**
+     * Set 流日志存储ID对应的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudLogRegion 流日志存储ID对应的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudLogRegion(String CloudLogRegion) {
+        this.CloudLogRegion = CloudLogRegion;
+    }
+
     public FlowLog() {
     }
 
@@ -407,6 +435,9 @@ public class FlowLog extends AbstractModel{
         if (source.FlowLogStorage != null) {
             this.FlowLogStorage = new FlowLogStorage(source.FlowLogStorage);
         }
+        if (source.CloudLogRegion != null) {
+            this.CloudLogRegion = new String(source.CloudLogRegion);
+        }
     }
 
 
@@ -428,6 +459,7 @@ public class FlowLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
+        this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
 
     }
 }
