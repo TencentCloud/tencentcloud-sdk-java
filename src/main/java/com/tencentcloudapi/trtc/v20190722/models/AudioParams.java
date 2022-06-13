@@ -34,7 +34,7 @@ public class AudioParams extends AbstractModel{
 
     /**
     * 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
     */
     @SerializedName("Channel")
@@ -78,10 +78,10 @@ public class AudioParams extends AbstractModel{
 
     /**
      * Get 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。 
      * @return Channel 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
      */
     public Long getChannel() {
@@ -90,10 +90,10 @@ public class AudioParams extends AbstractModel{
 
     /**
      * Set 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
      * @param Channel 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
      */
     public void setChannel(Long Channel) {

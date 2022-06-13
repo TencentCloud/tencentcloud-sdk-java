@@ -59,6 +59,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
+     * @param req CancelMultiFlowSignQRCodeRequest
+     * @return CancelMultiFlowSignQRCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelMultiFlowSignQRCodeResponse CancelMultiFlowSignQRCode(CancelMultiFlowSignQRCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelMultiFlowSignQRCodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelMultiFlowSignQRCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelMultiFlowSignQRCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建电子文档
      * @param req CreateDocumentRequest
      * @return CreateDocumentResponse
@@ -111,6 +131,27 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateFlowByFilesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateFlowByFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口（CreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
+适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
+     * @param req CreateMultiFlowSignQRCodeRequest
+     * @return CreateMultiFlowSignQRCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiFlowSignQRCodeResponse CreateMultiFlowSignQRCode(CreateMultiFlowSignQRCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMultiFlowSignQRCodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMultiFlowSignQRCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMultiFlowSignQRCode");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

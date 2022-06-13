@@ -164,6 +164,22 @@ disabled：未启用
     private Long ExtensionMode;
 
     /**
+    * 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrueEnableTime")
+    @Expose
+    private String TrueEnableTime;
+
+    /**
+    * 流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrueExpireTime")
+    @Expose
+    private String TrueExpireTime;
+
+    /**
      * Get 流量包 Id 
      * @return Id 流量包 Id
      */
@@ -511,6 +527,46 @@ disabled：未启用
         this.ExtensionMode = ExtensionMode;
     }
 
+    /**
+     * Get 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrueEnableTime 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrueEnableTime() {
+        return this.TrueEnableTime;
+    }
+
+    /**
+     * Set 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrueEnableTime 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrueEnableTime(String TrueEnableTime) {
+        this.TrueEnableTime = TrueEnableTime;
+    }
+
+    /**
+     * Get 流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrueExpireTime 流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrueExpireTime() {
+        return this.TrueExpireTime;
+    }
+
+    /**
+     * Set 流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrueExpireTime 流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrueExpireTime(String TrueExpireTime) {
+        this.TrueExpireTime = TrueExpireTime;
+    }
+
     public TrafficPackage() {
     }
 
@@ -573,6 +629,12 @@ disabled：未启用
         if (source.ExtensionMode != null) {
             this.ExtensionMode = new Long(source.ExtensionMode);
         }
+        if (source.TrueEnableTime != null) {
+            this.TrueEnableTime = new String(source.TrueEnableTime);
+        }
+        if (source.TrueExpireTime != null) {
+            this.TrueExpireTime = new String(source.TrueExpireTime);
+        }
     }
 
 
@@ -598,6 +660,8 @@ disabled：未启用
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
         this.setParamSimple(map, prefix + "ExtensionMode", this.ExtensionMode);
+        this.setParamSimple(map, prefix + "TrueEnableTime", this.TrueEnableTime);
+        this.setParamSimple(map, prefix + "TrueExpireTime", this.TrueExpireTime);
 
     }
 }

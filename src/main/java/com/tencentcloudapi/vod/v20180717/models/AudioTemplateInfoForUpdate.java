@@ -37,8 +37,9 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
     */
     @SerializedName("Codec")
     @Expose
@@ -88,8 +89,9 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li> 
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li> 
      * @return Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -104,8 +106,9 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
      */
     public String getCodec() {
         return this.Codec;
@@ -126,8 +129,9 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
      * @param Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -142,8 +146,9 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

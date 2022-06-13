@@ -37,6 +37,13 @@ public class DeleteInstanceRequest extends AbstractModel{
     private Boolean DeleteBucket;
 
     /**
+    * 是否dryRun模式，缺省值：false
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 实例id 
      * @return RegistryId 实例id
      */
@@ -68,6 +75,22 @@ public class DeleteInstanceRequest extends AbstractModel{
         this.DeleteBucket = DeleteBucket;
     }
 
+    /**
+     * Get 是否dryRun模式，缺省值：false 
+     * @return DryRun 是否dryRun模式，缺省值：false
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否dryRun模式，缺省值：false
+     * @param DryRun 是否dryRun模式，缺省值：false
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public DeleteInstanceRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DeleteInstanceRequest extends AbstractModel{
         if (source.DeleteBucket != null) {
             this.DeleteBucket = new Boolean(source.DeleteBucket);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DeleteInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "DeleteBucket", this.DeleteBucket);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

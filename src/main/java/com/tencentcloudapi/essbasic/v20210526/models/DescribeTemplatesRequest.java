@@ -44,7 +44,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 查询内容：0-模版列表及详情（默认），1-仅模版列表
+    * 查询内容：0-模板列表及详情（默认），1-仅模板列表
     */
     @SerializedName("ContentType")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询内容：0-模版列表及详情（默认），1-仅模版列表 
-     * @return ContentType 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
+     * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
     public Long getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 查询内容：0-模版列表及详情（默认），1-仅模版列表
-     * @param ContentType 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     * Set 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * @param ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;

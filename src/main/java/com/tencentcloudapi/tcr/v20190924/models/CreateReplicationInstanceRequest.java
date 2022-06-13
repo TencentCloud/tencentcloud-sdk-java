@@ -44,6 +44,13 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
     private String ReplicationRegionName;
 
     /**
+    * 是否同步TCR云标签至生成的COS Bucket
+    */
+    @SerializedName("SyncTag")
+    @Expose
+    private Boolean SyncTag;
+
+    /**
      * Get 主实例iD 
      * @return RegistryId 主实例iD
      */
@@ -91,6 +98,22 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         this.ReplicationRegionName = ReplicationRegionName;
     }
 
+    /**
+     * Get 是否同步TCR云标签至生成的COS Bucket 
+     * @return SyncTag 是否同步TCR云标签至生成的COS Bucket
+     */
+    public Boolean getSyncTag() {
+        return this.SyncTag;
+    }
+
+    /**
+     * Set 是否同步TCR云标签至生成的COS Bucket
+     * @param SyncTag 是否同步TCR云标签至生成的COS Bucket
+     */
+    public void setSyncTag(Boolean SyncTag) {
+        this.SyncTag = SyncTag;
+    }
+
     public CreateReplicationInstanceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         if (source.ReplicationRegionName != null) {
             this.ReplicationRegionName = new String(source.ReplicationRegionName);
         }
+        if (source.SyncTag != null) {
+            this.SyncTag = new Boolean(source.SyncTag);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
         this.setParamSimple(map, prefix + "ReplicationRegionName", this.ReplicationRegionName);
+        this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
 
     }
 }

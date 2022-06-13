@@ -24,7 +24,8 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
     * 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
     */
     @SerializedName("Format")
     @Expose
@@ -92,9 +93,11 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Get 自适应转码格式，取值范围：
-<li>HLS。</li> 
+<li>HLS；</li>
+<li>MPEG-DASH。</li> 
      * @return Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public String getFormat() {
         return this.Format;
@@ -102,9 +105,11 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Set 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      * @param Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;

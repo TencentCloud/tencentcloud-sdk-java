@@ -30,14 +30,14 @@ public class PublishCmqMsgRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * 消息内容
+    * 消息内容，消息总大小需不大于1024K
     */
     @SerializedName("MsgContent")
     @Expose
     private String MsgContent;
 
     /**
-    * 消息标签
+    * 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
     */
     @SerializedName("MsgTag")
     @Expose
@@ -60,32 +60,32 @@ public class PublishCmqMsgRequest extends AbstractModel{
     }
 
     /**
-     * Get 消息内容 
-     * @return MsgContent 消息内容
+     * Get 消息内容，消息总大小需不大于1024K 
+     * @return MsgContent 消息内容，消息总大小需不大于1024K
      */
     public String getMsgContent() {
         return this.MsgContent;
     }
 
     /**
-     * Set 消息内容
-     * @param MsgContent 消息内容
+     * Set 消息内容，消息总大小需不大于1024K
+     * @param MsgContent 消息内容，消息总大小需不大于1024K
      */
     public void setMsgContent(String MsgContent) {
         this.MsgContent = MsgContent;
     }
 
     /**
-     * Get 消息标签 
-     * @return MsgTag 消息标签
+     * Get 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。 
+     * @return MsgTag 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
      */
     public String [] getMsgTag() {
         return this.MsgTag;
     }
 
     /**
-     * Set 消息标签
-     * @param MsgTag 消息标签
+     * Set 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
+     * @param MsgTag 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
      */
     public void setMsgTag(String [] MsgTag) {
         this.MsgTag = MsgTag;

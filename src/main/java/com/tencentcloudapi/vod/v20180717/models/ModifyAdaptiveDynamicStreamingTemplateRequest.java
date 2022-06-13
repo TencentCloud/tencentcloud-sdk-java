@@ -30,6 +30,13 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     private Long Definition;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
@@ -38,7 +45,8 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
     * 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
     */
     @SerializedName("Format")
     @Expose
@@ -78,13 +86,6 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     private String Comment;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 自适应转码模板唯一标识。 
      * @return Definition 自适应转码模板唯一标识。
      */
@@ -98,6 +99,22 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -118,9 +135,11 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Get 自适应转码格式，取值范围：
-<li>HLS。</li> 
+<li>HLS；</li>
+<li>MPEG-DASH。</li> 
      * @return Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public String getFormat() {
         return this.Format;
@@ -128,9 +147,11 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Set 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      * @param Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
@@ -220,22 +241,6 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.Comment = Comment;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyAdaptiveDynamicStreamingTemplateRequest() {
     }
 
@@ -246,6 +251,9 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public ModifyAdaptiveDynamicStreamingTemplateRequest(ModifyAdaptiveDynamicStreamingTemplateRequest source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -268,9 +276,6 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -279,13 +284,13 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

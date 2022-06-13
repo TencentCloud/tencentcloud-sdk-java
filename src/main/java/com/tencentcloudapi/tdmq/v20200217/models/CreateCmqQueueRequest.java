@@ -135,7 +135,7 @@ public class CreateCmqQueueRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+    * 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
     */
     @SerializedName("RetentionSizeInMB")
     @Expose
@@ -398,16 +398,16 @@ public class CreateCmqQueueRequest extends AbstractModel{
     }
 
     /**
-     * Get 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启 
-     * @return RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * Get 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0 
+     * @return RetentionSizeInMB 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     public Long getRetentionSizeInMB() {
         return this.RetentionSizeInMB;
     }
 
     /**
-     * Set 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
-     * @param RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * Set 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
+     * @param RetentionSizeInMB 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     public void setRetentionSizeInMB(Long RetentionSizeInMB) {
         this.RetentionSizeInMB = RetentionSizeInMB;

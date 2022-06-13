@@ -22,6 +22,90 @@ import java.util.HashMap;
 
 public class RootCertificates extends AbstractModel{
 
+    /**
+    * 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Sign")
+    @Expose
+    private String Sign;
+
+    /**
+    * 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private String Encrypt;
+
+    /**
+    * 标准证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Standard")
+    @Expose
+    private String Standard;
+
+    /**
+     * Get 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Sign 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSign() {
+        return this.Sign;
+    }
+
+    /**
+     * Set 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Sign 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSign(String Sign) {
+        this.Sign = Sign;
+    }
+
+    /**
+     * Get 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encrypt 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encrypt 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncrypt(String Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get 标准证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Standard 标准证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStandard() {
+        return this.Standard;
+    }
+
+    /**
+     * Set 标准证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Standard 标准证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandard(String Standard) {
+        this.Standard = Standard;
+    }
+
     public RootCertificates() {
     }
 
@@ -30,6 +114,15 @@ public class RootCertificates extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RootCertificates(RootCertificates source) {
+        if (source.Sign != null) {
+            this.Sign = new String(source.Sign);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new String(source.Encrypt);
+        }
+        if (source.Standard != null) {
+            this.Standard = new String(source.Standard);
+        }
     }
 
 
@@ -37,6 +130,9 @@ public class RootCertificates extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Sign", this.Sign);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "Standard", this.Standard);
 
     }
 }

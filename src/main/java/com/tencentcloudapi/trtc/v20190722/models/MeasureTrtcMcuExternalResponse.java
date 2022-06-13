@@ -23,11 +23,67 @@ import java.util.HashMap;
 public class MeasureTrtcMcuExternalResponse extends AbstractModel{
 
     /**
+    * 应用的用量信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Usages")
+    @Expose
+    private OneSdkAppIdTranscodeTimeUsagesNewInfo [] Usages;
+
+    /**
+    * 用户计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 应用的用量信息数组。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Usages 应用的用量信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OneSdkAppIdTranscodeTimeUsagesNewInfo [] getUsages() {
+        return this.Usages;
+    }
+
+    /**
+     * Set 应用的用量信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Usages 应用的用量信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsages(OneSdkAppIdTranscodeTimeUsagesNewInfo [] Usages) {
+        this.Usages = Usages;
+    }
+
+    /**
+     * Get 用户计费类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 用户计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 用户计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 用户计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +109,15 @@ public class MeasureTrtcMcuExternalResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public MeasureTrtcMcuExternalResponse(MeasureTrtcMcuExternalResponse source) {
+        if (source.Usages != null) {
+            this.Usages = new OneSdkAppIdTranscodeTimeUsagesNewInfo[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new OneSdkAppIdTranscodeTimeUsagesNewInfo(source.Usages[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +128,8 @@ public class MeasureTrtcMcuExternalResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Usages.", this.Usages);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

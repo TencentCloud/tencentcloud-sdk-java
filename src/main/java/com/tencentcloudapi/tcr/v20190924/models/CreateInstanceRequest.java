@@ -51,6 +51,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long RegistryChargeType;
 
     /**
+    * 是否同步TCR云标签至生成的COS Bucket
+    */
+    @SerializedName("SyncTag")
+    @Expose
+    private Boolean SyncTag;
+
+    /**
      * Get 企业版实例名称 
      * @return RegistryName 企业版实例名称
      */
@@ -114,6 +121,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.RegistryChargeType = RegistryChargeType;
     }
 
+    /**
+     * Get 是否同步TCR云标签至生成的COS Bucket 
+     * @return SyncTag 是否同步TCR云标签至生成的COS Bucket
+     */
+    public Boolean getSyncTag() {
+        return this.SyncTag;
+    }
+
+    /**
+     * Set 是否同步TCR云标签至生成的COS Bucket
+     * @param SyncTag 是否同步TCR云标签至生成的COS Bucket
+     */
+    public void setSyncTag(Boolean SyncTag) {
+        this.SyncTag = SyncTag;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.RegistryChargeType != null) {
             this.RegistryChargeType = new Long(source.RegistryChargeType);
         }
+        if (source.SyncTag != null) {
+            this.SyncTag = new Boolean(source.SyncTag);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
+        this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
 
     }
 }
