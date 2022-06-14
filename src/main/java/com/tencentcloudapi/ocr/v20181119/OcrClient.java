@@ -1391,7 +1391,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *印章识别已支持各类印章，包括发票章，财务章等，适用于公文，票据等场景。
+     *本接口支持各类印章识别，包括发票章，财务章等，适用于公文，票据等场景。
      * @param req SealOCRRequest
      * @return SealOCRResponse
      * @throws TencentCloudSDKException

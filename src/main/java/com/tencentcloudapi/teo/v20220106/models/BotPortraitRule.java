@@ -63,6 +63,14 @@ public class BotPortraitRule extends AbstractModel{
     private Long [] DropManagedIds;
 
     /**
+    * 本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
+
+    /**
      * Get 本规则的id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleID 本规则的id
@@ -162,6 +170,26 @@ public class BotPortraitRule extends AbstractModel{
         this.DropManagedIds = DropManagedIds;
     }
 
+    /**
+     * Get 本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Switch 本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set 本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Switch 本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
     public BotPortraitRule() {
     }
 
@@ -197,6 +225,9 @@ public class BotPortraitRule extends AbstractModel{
                 this.DropManagedIds[i] = new Long(source.DropManagedIds[i]);
             }
         }
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
     }
 
 
@@ -209,6 +240,7 @@ public class BotPortraitRule extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CapManagedIds.", this.CapManagedIds);
         this.setParamArraySimple(map, prefix + "MonManagedIds.", this.MonManagedIds);
         this.setParamArraySimple(map, prefix + "DropManagedIds.", this.DropManagedIds);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

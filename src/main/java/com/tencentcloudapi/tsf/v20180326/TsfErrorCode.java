@@ -495,6 +495,9 @@ public enum TsfErrorCode {
     // 公网访问方式下，协议需要一致。
      INVALIDPARAMETERVALUE_CONTAINERGROUPPROTOCOLMIXERROR("InvalidParameterValue.ContainergroupProtocolMixError"),
      
+    // 协议不能为空。
+     INVALIDPARAMETERVALUE_CONTAINERGROUPPROTOCOLNULL("InvalidParameterValue.ContainergroupProtocolNull"),
+     
     // 协议端口不能为空。
      INVALIDPARAMETERVALUE_CONTAINERGROUPPROTOCOLPORTSNULL("InvalidParameterValue.ContainergroupProtocolPortsNull"),
      
@@ -734,6 +737,9 @@ public enum TsfErrorCode {
      
     // 应用类型不能为空。
      MISSINGPARAMETER_APPLICATIONTYPENULL("MissingParameter.ApplicationTypeNull"),
+     
+    // 集群ID未填写。
+     MISSINGPARAMETER_CLUSTERIDREQUIRED("MissingParameter.ClusterIdRequired"),
      
     // 集群所属子网不能为空。
      MISSINGPARAMETER_CLUSTERSUBNETREQUIRED("MissingParameter.ClusterSubnetRequired"),

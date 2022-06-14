@@ -9,6 +9,9 @@ public enum EcdnErrorCode {
     // 获取用户信息失败，请联系腾讯云工程师进一步排查。
      INTERNALERROR_ACCOUNTSYSTEMERROR("InternalError.AccountSystemError"),
      
+    // CAM鉴权错误，请稍后重试。
+     INTERNALERROR_CAMSYSTEMERROR("InternalError.CamSystemError"),
+     
     // 数据查询错误，请联系腾讯云工程师进一步排查。
      INTERNALERROR_DATASYSTEMERROR("InternalError.DataSystemError"),
      

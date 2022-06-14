@@ -12,6 +12,9 @@ public enum TagErrorCode {
     // 资源标签正在处理中。
      FAILEDOPERATION_RESOURCETAGPROCESSING("FailedOperation.ResourceTagProcessing"),
      
+    // 标签已经关联配额。
+     FAILEDOPERATION_TAGATTACHEDQUOTA("FailedOperation.TagAttachedQuota"),
+     
     // 已关联资源的标签无法删除。
      FAILEDOPERATION_TAGATTACHEDRESOURCE("FailedOperation.TagAttachedResource"),
      

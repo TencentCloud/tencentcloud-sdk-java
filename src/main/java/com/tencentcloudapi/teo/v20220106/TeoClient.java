@@ -839,6 +839,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *查询Bot用户画像规则
+     * @param req DescribeSecurityPortraitRulesRequest
+     * @return DescribeSecurityPortraitRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(DescribeSecurityPortraitRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityPortraitRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询所有DDoS防护分区
      * @param req DescribeZoneDDoSPolicyRequest
      * @return DescribeZoneDDoSPolicyResponse

@@ -33,6 +33,9 @@ public enum IotexplorerErrorCode {
     // 产品尚未发布。
      FAILEDOPERATION_PRODUCTNOTRELEASED("FailedOperation.ProductNotReleased"),
      
+    // RRPC接口未收到设备端响应。
+     FAILEDOPERATION_RRPCTIMEOUT("FailedOperation.RRPCTimeout"),
+     
     // 转发已经停止。
      FAILEDOPERATION_RULEALREADYDISABLED("FailedOperation.RuleAlreadyDisabled"),
      

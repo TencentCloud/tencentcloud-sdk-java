@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SealOCRResponse extends AbstractModel{
+public class SealInfo extends AbstractModel{
 
     /**
-    * 印章内容
+    * 印章主体内容
     */
     @SerializedName("SealBody")
     @Expose
@@ -37,37 +37,23 @@ public class SealOCRResponse extends AbstractModel{
     private Rect Location;
 
     /**
-    * 其它文本内容
+    * 印章其它文本内容
     */
     @SerializedName("OtherTexts")
     @Expose
     private String [] OtherTexts;
 
     /**
-    * 全部印章信息
-    */
-    @SerializedName("SealInfos")
-    @Expose
-    private SealInfo [] SealInfos;
-
-    /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get 印章内容 
-     * @return SealBody 印章内容
+     * Get 印章主体内容 
+     * @return SealBody 印章主体内容
      */
     public String getSealBody() {
         return this.SealBody;
     }
 
     /**
-     * Set 印章内容
-     * @param SealBody 印章内容
+     * Set 印章主体内容
+     * @param SealBody 印章主体内容
      */
     public void setSealBody(String SealBody) {
         this.SealBody = SealBody;
@@ -90,61 +76,29 @@ public class SealOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 其它文本内容 
-     * @return OtherTexts 其它文本内容
+     * Get 印章其它文本内容 
+     * @return OtherTexts 印章其它文本内容
      */
     public String [] getOtherTexts() {
         return this.OtherTexts;
     }
 
     /**
-     * Set 其它文本内容
-     * @param OtherTexts 其它文本内容
+     * Set 印章其它文本内容
+     * @param OtherTexts 印章其它文本内容
      */
     public void setOtherTexts(String [] OtherTexts) {
         this.OtherTexts = OtherTexts;
     }
 
-    /**
-     * Get 全部印章信息 
-     * @return SealInfos 全部印章信息
-     */
-    public SealInfo [] getSealInfos() {
-        return this.SealInfos;
-    }
-
-    /**
-     * Set 全部印章信息
-     * @param SealInfos 全部印章信息
-     */
-    public void setSealInfos(SealInfo [] SealInfos) {
-        this.SealInfos = SealInfos;
-    }
-
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public SealOCRResponse() {
+    public SealInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SealOCRResponse(SealOCRResponse source) {
+    public SealInfo(SealInfo source) {
         if (source.SealBody != null) {
             this.SealBody = new String(source.SealBody);
         }
@@ -157,15 +111,6 @@ public class SealOCRResponse extends AbstractModel{
                 this.OtherTexts[i] = new String(source.OtherTexts[i]);
             }
         }
-        if (source.SealInfos != null) {
-            this.SealInfos = new SealInfo[source.SealInfos.length];
-            for (int i = 0; i < source.SealInfos.length; i++) {
-                this.SealInfos[i] = new SealInfo(source.SealInfos[i]);
-            }
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
-        }
     }
 
 
@@ -176,8 +121,6 @@ public class SealOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SealBody", this.SealBody);
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamArraySimple(map, prefix + "OtherTexts.", this.OtherTexts);
-        this.setParamArrayObj(map, prefix + "SealInfos.", this.SealInfos);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

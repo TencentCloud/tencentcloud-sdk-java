@@ -911,6 +911,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *查询专享实例列表（新）
+     * @param req DescribeExclusiveInstancesStatusRequest
+     * @return DescribeExclusiveInstancesStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(DescribeExclusiveInstancesStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExclusiveInstancesStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstancesStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExclusiveInstancesStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeIPStrategy）用于查询IP策略详情。
      * @param req DescribeIPStrategyRequest
      * @return DescribeIPStrategyResponse

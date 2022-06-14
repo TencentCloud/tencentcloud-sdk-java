@@ -1584,6 +1584,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *提供给客户对账，按天统计，维度：推流域名、时移文件时长（累加）、配置天数（不累加）、时移总时长（累加）。
+     * @param req DescribeLiveTimeShiftBillInfoListRequest
+     * @return DescribeLiveTimeShiftBillInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(DescribeLiveTimeShiftBillInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftBillInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *支持查询某天或某段时间的转码详细信息。
      * @param req DescribeLiveTranscodeDetailInfoRequest
      * @return DescribeLiveTranscodeDetailInfoResponse

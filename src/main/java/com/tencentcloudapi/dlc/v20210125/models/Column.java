@@ -94,6 +94,14 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     private String ModifiedTime;
 
     /**
+    * 是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsPartition")
+    @Expose
+    private Boolean IsPartition;
+
+    /**
      * Get 列名称，不区分大小写，最大支持25个字符。 
      * @return Name 列名称，不区分大小写，最大支持25个字符。
      */
@@ -269,6 +277,26 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsPartition 是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsPartition() {
+        return this.IsPartition;
+    }
+
+    /**
+     * Set 是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsPartition 是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsPartition(Boolean IsPartition) {
+        this.IsPartition = IsPartition;
+    }
+
     public Column() {
     }
 
@@ -304,6 +332,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
+        if (source.IsPartition != null) {
+            this.IsPartition = new Boolean(source.IsPartition);
+        }
     }
 
 
@@ -320,6 +351,7 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.setParamSimple(map, prefix + "Position", this.Position);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "IsPartition", this.IsPartition);
 
     }
 }
