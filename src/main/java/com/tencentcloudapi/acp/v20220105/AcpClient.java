@@ -99,6 +99,26 @@ public class AcpClient extends AbstractClient{
     }
 
     /**
+     *查询应用合规平台用户资源的使用情况
+     * @param req DescribeResourceUsageInfoRequest
+     * @return DescribeResourceUsageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceUsageInfoResponse DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceUsageInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取App隐私合规诊断任务列表
      * @param req DescribeScanTaskListRequest
      * @return DescribeScanTaskListResponse

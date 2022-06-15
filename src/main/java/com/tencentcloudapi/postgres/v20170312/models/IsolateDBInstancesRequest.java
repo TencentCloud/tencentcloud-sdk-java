@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class IsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * 实例ID集合
+    * 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-     * Get 实例ID集合 
-     * @return DBInstanceIdSet 实例ID集合
+     * Get 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。 
+     * @return DBInstanceIdSet 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 实例ID集合
-     * @param DBInstanceIdSet 实例ID集合
+     * Set 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @param DBInstanceIdSet 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

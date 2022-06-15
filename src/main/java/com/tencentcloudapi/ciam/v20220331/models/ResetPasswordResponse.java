@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.ciam.v20220331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
+public class ResetPasswordResponse extends AbstractModel{
 
     /**
-    * 原始价格，单位：分
+    * 重置后的用户密码
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("Password")
     @Expose
-    private Long OriginalPrice;
-
-    /**
-    * 折后价格，单位：分
-    */
-    @SerializedName("Price")
-    @Expose
-    private Long Price;
-
-    /**
-    * 币种。例如，CNY：人民币。
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
+    private String Password;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 原始价格，单位：分 
-     * @return OriginalPrice 原始价格，单位：分
+     * Get 重置后的用户密码 
+     * @return Password 重置后的用户密码
      */
-    public Long getOriginalPrice() {
-        return this.OriginalPrice;
+    public String getPassword() {
+        return this.Password;
     }
 
     /**
-     * Set 原始价格，单位：分
-     * @param OriginalPrice 原始价格，单位：分
+     * Set 重置后的用户密码
+     * @param Password 重置后的用户密码
      */
-    public void setOriginalPrice(Long OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
-    }
-
-    /**
-     * Get 折后价格，单位：分 
-     * @return Price 折后价格，单位：分
-     */
-    public Long getPrice() {
-        return this.Price;
-    }
-
-    /**
-     * Set 折后价格，单位：分
-     * @param Price 折后价格，单位：分
-     */
-    public void setPrice(Long Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get 币种。例如，CNY：人民币。 
-     * @return Currency 币种。例如，CNY：人民币。
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set 币种。例如，CNY：人民币。
-     * @param Currency 币种。例如，CNY：人民币。
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setPassword(String Password) {
+        this.Password = Password;
     }
 
     /**
@@ -114,22 +68,16 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDBInstancesResponse() {
+    public ResetPasswordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDBInstancesResponse(InquiryPriceCreateDBInstancesResponse source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Long(source.OriginalPrice);
-        }
-        if (source.Price != null) {
-            this.Price = new Long(source.Price);
-        }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
+    public ResetPasswordResponse(ResetPasswordResponse source) {
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +89,7 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "Price", this.Price);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -37,6 +37,13 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     private Long Price;
 
     /**
+    * 币种。例如，CNY：人民币。
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get 币种。例如，CNY：人民币。 
+     * @return Currency 币种。例如，CNY：人民币。
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set 币种。例如，CNY：人民币。
+     * @param Currency 币种。例如，CNY：人民币。
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,9 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
         if (source.Price != null) {
             this.Price = new Long(source.Price);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

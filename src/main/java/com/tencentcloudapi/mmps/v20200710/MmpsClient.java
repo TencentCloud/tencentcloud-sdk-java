@@ -119,6 +119,26 @@ public class MmpsClient extends AbstractClient{
     }
 
     /**
+     *查询翼扬安全基础诊断资源使用情况
+     * @param req DescribeBasicDiagnosisResourceUsageInfoRequest
+     * @return DescribeBasicDiagnosisResourceUsageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBasicDiagnosisResourceUsageInfoResponse DescribeBasicDiagnosisResourceUsageInfo(DescribeBasicDiagnosisResourceUsageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBasicDiagnosisResourceUsageInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取翼扬诊断任务报告链接地址
      * @param req DescribeFlySecMiniAppReportUrlRequest
      * @return DescribeFlySecMiniAppReportUrlResponse
@@ -191,6 +211,26 @@ public class MmpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlySecMiniAppScanTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询翼扬安全资源使用情况
+     * @param req DescribeResourceUsageInfoRequest
+     * @return DescribeResourceUsageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceUsageInfoResponse DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceUsageInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -66,7 +66,7 @@ public class FaceFusionRequest extends AbstractModel{
     private Long CelebrityIdentify;
 
     /**
-    * 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
+    * 图片Url地址
     */
     @SerializedName("Url")
     @Expose
@@ -173,16 +173,16 @@ public class FaceFusionRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口 
-     * @return Url 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
+     * Get 图片Url地址 
+     * @return Url 图片Url地址
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
-     * @param Url 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
+     * Set 图片Url地址
+     * @param Url 图片Url地址
      */
     public void setUrl(String Url) {
         this.Url = Url;

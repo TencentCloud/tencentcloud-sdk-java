@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.acp.v20220105.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
+public class DescribeResourceUsageInfoResponse extends AbstractModel{
 
     /**
-    * 原始价格，单位：分
+    * 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("Result")
     @Expose
-    private Long OriginalPrice;
+    private Long Result;
 
     /**
-    * 折后价格，单位：分
+    * 资源使用信息
     */
-    @SerializedName("Price")
+    @SerializedName("Data")
     @Expose
-    private Long Price;
-
-    /**
-    * 币种。例如，CNY：人民币。
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
+    private ResourceUsageInfoData Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 原始价格，单位：分 
-     * @return OriginalPrice 原始价格，单位：分
+     * Get 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定 
+     * @return Result 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
      */
-    public Long getOriginalPrice() {
-        return this.OriginalPrice;
+    public Long getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 原始价格，单位：分
-     * @param OriginalPrice 原始价格，单位：分
+     * Set 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
+     * @param Result 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
      */
-    public void setOriginalPrice(Long OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
+    public void setResult(Long Result) {
+        this.Result = Result;
     }
 
     /**
-     * Get 折后价格，单位：分 
-     * @return Price 折后价格，单位：分
+     * Get 资源使用信息 
+     * @return Data 资源使用信息
      */
-    public Long getPrice() {
-        return this.Price;
+    public ResourceUsageInfoData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 折后价格，单位：分
-     * @param Price 折后价格，单位：分
+     * Set 资源使用信息
+     * @param Data 资源使用信息
      */
-    public void setPrice(Long Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get 币种。例如，CNY：人民币。 
-     * @return Currency 币种。例如，CNY：人民币。
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set 币种。例如，CNY：人民币。
-     * @param Currency 币种。例如，CNY：人民币。
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setData(ResourceUsageInfoData Data) {
+        this.Data = Data;
     }
 
     /**
@@ -114,22 +91,19 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDBInstancesResponse() {
+    public DescribeResourceUsageInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDBInstancesResponse(InquiryPriceCreateDBInstancesResponse source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Long(source.OriginalPrice);
+    public DescribeResourceUsageInfoResponse(DescribeResourceUsageInfoResponse source) {
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
         }
-        if (source.Price != null) {
-            this.Price = new Long(source.Price);
-        }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
+        if (source.Data != null) {
+            this.Data = new ResourceUsageInfoData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +115,8 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "Price", this.Price);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

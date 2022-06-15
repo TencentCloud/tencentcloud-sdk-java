@@ -57,6 +57,9 @@ public enum MariadbErrorCode {
     // 标签键值校验或鉴权失败。
      FAILEDOPERATION_TAGDRYRUNERROR("FailedOperation.TagDryRunError"),
      
+    // 标签配额不足。
+     FAILEDOPERATION_TAGQUOTAEXCEEDLIMIT("FailedOperation.TagQuotaExceedLimit"),
+     
     // 实例安全组信息更新失败。
      FAILEDOPERATION_UPDATEINSTANCEINFOFAILED("FailedOperation.UpdateInstanceInfoFailed"),
      
@@ -302,6 +305,9 @@ public enum MariadbErrorCode {
      
     // 临时实例已经存在。
      RESOURCEINUSE_TEMPINSTANCEEXIST("ResourceInUse.TempInstanceExist"),
+     
+    // 资源不足。
+     RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
     // 指定的账号不存在。
      RESOURCENOTFOUND_ACCOUNTDOESNOTEXIST("ResourceNotFound.AccountDoesNotExist"),

@@ -42,18 +42,18 @@ db-tag-key：按照标签键过滤，类型为string
     private Long Limit;
 
     /**
+    * 数据偏移量，从0开始。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
-
-    /**
-    * 页码偏移量，从0开始。
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
 
     /**
     * 排序方式，包括升序：asc、降序：desc。
@@ -115,6 +115,22 @@ db-tag-key：按照标签键过滤，类型为string
     }
 
     /**
+     * Get 数据偏移量，从0开始。 
+     * @return Offset 数据偏移量，从0开始。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 数据偏移量，从0开始。
+     * @param Offset 数据偏移量，从0开始。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Get 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime 
      * @return OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
      */
@@ -128,22 +144,6 @@ db-tag-key：按照标签键过滤，类型为string
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
-    }
-
-    /**
-     * Get 页码偏移量，从0开始。 
-     * @return Offset 页码偏移量，从0开始。
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 页码偏移量，从0开始。
-     * @param Offset 页码偏移量，从0开始。
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
     }
 
     /**
@@ -179,11 +179,11 @@ db-tag-key：按照标签键过滤，类型为string
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.OrderBy != null) {
-            this.OrderBy = new String(source.OrderBy);
-        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
         }
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
@@ -197,8 +197,8 @@ db-tag-key：按照标签键过滤，类型为string
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }

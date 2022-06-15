@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyDBInstancesProjectRequest extends AbstractModel{
 
     /**
-    * postgresql实例ID数组
+    * 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * postgresql实例所属新项目的ID
+    * 所属新项目的ID
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get postgresql实例ID数组 
-     * @return DBInstanceIdSet postgresql实例ID数组
+     * Get 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。 
+     * @return DBInstanceIdSet 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set postgresql实例ID数组
-     * @param DBInstanceIdSet postgresql实例ID数组
+     * Set 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+     * @param DBInstanceIdSet 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get postgresql实例所属新项目的ID 
-     * @return ProjectId postgresql实例所属新项目的ID
+     * Get 所属新项目的ID 
+     * @return ProjectId 所属新项目的ID
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set postgresql实例所属新项目的ID
-     * @param ProjectId postgresql实例所属新项目的ID
+     * Set 所属新项目的ID
+     * @param ProjectId 所属新项目的ID
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

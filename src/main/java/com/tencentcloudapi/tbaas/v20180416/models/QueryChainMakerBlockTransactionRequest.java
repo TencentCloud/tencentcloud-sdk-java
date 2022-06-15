@@ -37,7 +37,7 @@ public class QueryChainMakerBlockTransactionRequest extends AbstractModel{
     private String ChainId;
 
     /**
-    * 区块高度，-1表示最新区块
+    * 区块高度
     */
     @SerializedName("BlockHeight")
     @Expose
@@ -76,16 +76,16 @@ public class QueryChainMakerBlockTransactionRequest extends AbstractModel{
     }
 
     /**
-     * Get 区块高度，-1表示最新区块 
-     * @return BlockHeight 区块高度，-1表示最新区块
+     * Get 区块高度 
+     * @return BlockHeight 区块高度
      */
     public Long getBlockHeight() {
         return this.BlockHeight;
     }
 
     /**
-     * Set 区块高度，-1表示最新区块
-     * @param BlockHeight 区块高度，-1表示最新区块
+     * Set 区块高度
+     * @param BlockHeight 区块高度
      */
     public void setBlockHeight(Long BlockHeight) {
         this.BlockHeight = BlockHeight;
