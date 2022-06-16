@@ -839,7 +839,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *获取CC防护等级列表
+     *获取边界防护CC防护等级列表
      * @param req DescribeCCLevelListRequest
      * @return DescribeCCLevelListResponse
      * @throws TencentCloudSDKException

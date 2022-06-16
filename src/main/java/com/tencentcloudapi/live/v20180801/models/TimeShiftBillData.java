@@ -30,7 +30,7 @@ public class TimeShiftBillData extends AbstractModel{
     private String Domain;
 
     /**
-    * 时移时长,单位分钟。
+    * 时移文件时长,单位分钟。
     */
     @SerializedName("Duration")
     @Expose
@@ -67,16 +67,16 @@ public class TimeShiftBillData extends AbstractModel{
     }
 
     /**
-     * Get 时移时长,单位分钟。 
-     * @return Duration 时移时长,单位分钟。
+     * Get 时移文件时长,单位分钟。 
+     * @return Duration 时移文件时长,单位分钟。
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 时移时长,单位分钟。
-     * @param Duration 时移时长,单位分钟。
+     * Set 时移文件时长,单位分钟。
+     * @param Duration 时移文件时长,单位分钟。
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;

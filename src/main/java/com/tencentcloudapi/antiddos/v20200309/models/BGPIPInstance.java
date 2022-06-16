@@ -184,6 +184,14 @@ public class BGPIPInstance extends AbstractModel{
     private Long BGPIPChannelFlag;
 
     /**
+    * 资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagInfoList")
+    @Expose
+    private TagInfo [] TagInfoList;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -587,6 +595,26 @@ public class BGPIPInstance extends AbstractModel{
         this.BGPIPChannelFlag = BGPIPChannelFlag;
     }
 
+    /**
+     * Get 资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagInfoList 资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfo [] getTagInfoList() {
+        return this.TagInfoList;
+    }
+
+    /**
+     * Set 资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagInfoList 资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagInfoList(TagInfo [] TagInfoList) {
+        this.TagInfoList = TagInfoList;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -655,6 +683,12 @@ public class BGPIPInstance extends AbstractModel{
         if (source.BGPIPChannelFlag != null) {
             this.BGPIPChannelFlag = new Long(source.BGPIPChannelFlag);
         }
+        if (source.TagInfoList != null) {
+            this.TagInfoList = new TagInfo[source.TagInfoList.length];
+            for (int i = 0; i < source.TagInfoList.length; i++) {
+                this.TagInfoList[i] = new TagInfo(source.TagInfoList[i]);
+            }
+        }
     }
 
 
@@ -682,6 +716,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
         this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
         this.setParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
+        this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
 
     }
 }

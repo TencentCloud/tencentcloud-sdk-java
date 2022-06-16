@@ -65,6 +65,20 @@ public class AbstractRuntimeMC extends AbstractModel{
     private String Addr;
 
     /**
+    * 运行时状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 运行时过期时间
+    */
+    @SerializedName("ExpiredAt")
+    @Expose
+    private Long ExpiredAt;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -160,6 +174,38 @@ public class AbstractRuntimeMC extends AbstractModel{
         this.Addr = Addr;
     }
 
+    /**
+     * Get 运行时状态 
+     * @return Status 运行时状态
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 运行时状态
+     * @param Status 运行时状态
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 运行时过期时间 
+     * @return ExpiredAt 运行时过期时间
+     */
+    public Long getExpiredAt() {
+        return this.ExpiredAt;
+    }
+
+    /**
+     * Set 运行时过期时间
+     * @param ExpiredAt 运行时过期时间
+     */
+    public void setExpiredAt(Long ExpiredAt) {
+        this.ExpiredAt = ExpiredAt;
+    }
+
     public AbstractRuntimeMC() {
     }
 
@@ -186,6 +232,12 @@ public class AbstractRuntimeMC extends AbstractModel{
         if (source.Addr != null) {
             this.Addr = new String(source.Addr);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ExpiredAt != null) {
+            this.ExpiredAt = new Long(source.ExpiredAt);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class AbstractRuntimeMC extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Addr", this.Addr);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
 
     }
 }

@@ -58,6 +58,13 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
     private CCReqLimitPolicyRecord Policy;
 
     /**
+    * 是否为兜底频控
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Long IsGlobal;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -137,6 +144,22 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
         this.Policy = Policy;
     }
 
+    /**
+     * Get 是否为兜底频控 
+     * @return IsGlobal 是否为兜底频控
+     */
+    public Long getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set 是否为兜底频控
+     * @param IsGlobal 是否为兜底频控
+     */
+    public void setIsGlobal(Long IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
     public CreateCCReqLimitPolicyRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
         if (source.Policy != null) {
             this.Policy = new CCReqLimitPolicyRecord(source.Policy);
         }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamObj(map, prefix + "Policy.", this.Policy);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
 
     }
 }

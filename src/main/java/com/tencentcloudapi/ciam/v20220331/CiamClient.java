@@ -39,6 +39,126 @@ public class CiamClient extends AbstractClient{
     }
 
     /**
+     *创建用户
+     * @param req CreateUserRequest
+     * @return CreateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除用户
+     * @param req DeleteUsersRequest
+     * @return DeleteUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据ID查询用户信息
+     * @param req DescribeUserByIdRequest
+     * @return DescribeUserByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserByIdResponse DescribeUserById(DescribeUserByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserByIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *账号融合
+     * @param req LinkAccountRequest
+     * @return LinkAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public LinkAccountResponse LinkAccount(LinkAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<LinkAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<LinkAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "LinkAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户列表
+     * @param req ListUserRequest
+     * @return ListUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUserResponse ListUser(ListUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据属性查询用户列表
+     * @param req ListUserByPropertyRequest
+     * @return ListUserByPropertyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUserByPropertyResponse ListUserByProperty(ListUserByPropertyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListUserByPropertyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListUserByPropertyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListUserByProperty");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重置用户密码
      * @param req ResetPasswordRequest
      * @return ResetPasswordResponse
@@ -51,6 +171,66 @@ public class CiamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置用户密码
+     * @param req SetPasswordRequest
+     * @return SetPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetPasswordResponse SetPassword(SetPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新用户
+     * @param req UpdateUserRequest
+     * @return UpdateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserResponse UpdateUser(UpdateUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新用户状态
+     * @param req UpdateUserStatusRequest
+     * @return UpdateUserStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserStatusResponse UpdateUserStatus(UpdateUserStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateUserStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateUserStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateUserStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

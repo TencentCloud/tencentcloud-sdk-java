@@ -799,6 +799,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+     * @param req ListTaskJobLogDetailRequest
+     * @return ListTaskJobLogDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTaskJobLogDetailResponse ListTaskJobLogDetail(ListTaskJobLogDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListTaskJobLogDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListTaskJobLogDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListTaskJobLogDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新spark应用
      * @param req ModifySparkAppRequest
      * @return ModifySparkAppResponse

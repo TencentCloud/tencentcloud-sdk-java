@@ -79,6 +79,14 @@ public class KeyPair extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 密钥关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 密钥对的`ID`，是密钥对的唯一标识。 
      * @return KeyId 密钥对的`ID`，是密钥对的唯一标识。
      */
@@ -206,6 +214,26 @@ public class KeyPair extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 密钥关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 密钥关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 密钥关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 密钥关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public KeyPair() {
     }
 
@@ -241,6 +269,12 @@ public class KeyPair extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -256,6 +290,7 @@ public class KeyPair extends AbstractModel{
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

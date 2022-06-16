@@ -37,6 +37,13 @@ public class PacketFilterRelation extends AbstractModel{
     private InstanceRelation [] InstanceDetailList;
 
     /**
+    * 修改时间
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
      * Get 特征过滤配置 
      * @return PacketFilterConfig 特征过滤配置
      */
@@ -68,6 +75,22 @@ public class PacketFilterRelation extends AbstractModel{
         this.InstanceDetailList = InstanceDetailList;
     }
 
+    /**
+     * Get 修改时间 
+     * @return ModifyTime 修改时间
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+     * @param ModifyTime 修改时间
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public PacketFilterRelation() {
     }
 
@@ -85,6 +108,9 @@ public class PacketFilterRelation extends AbstractModel{
                 this.InstanceDetailList[i] = new InstanceRelation(source.InstanceDetailList[i]);
             }
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class PacketFilterRelation extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "PacketFilterConfig.", this.PacketFilterConfig);
         this.setParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

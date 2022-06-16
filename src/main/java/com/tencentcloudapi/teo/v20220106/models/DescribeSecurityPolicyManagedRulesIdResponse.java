@@ -37,6 +37,13 @@ public class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel{
     private ManagedRule [] Rules;
 
     /**
+    * 返回总数
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel{
     }
 
     /**
+     * Get 返回总数 
+     * @return Count 返回总数
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 返回总数
+     * @param Count 返回总数
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +131,9 @@ public class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel{
                 this.Rules[i] = new ManagedRule(source.Rules[i]);
             }
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

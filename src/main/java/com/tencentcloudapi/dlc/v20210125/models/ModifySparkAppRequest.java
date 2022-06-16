@@ -114,7 +114,7 @@ public class ModifySparkAppRequest extends AbstractModel{
     private String AppConf;
 
     /**
-    * 是否本地上传，可去cos,lakefs
+    * jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocalJars")
     @Expose
@@ -128,7 +128,7 @@ public class ModifySparkAppRequest extends AbstractModel{
     private String AppJars;
 
     /**
-    * 是否本地上传，可去cos,lakefs
+    * file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocalFiles")
     @Expose
@@ -385,16 +385,16 @@ public class ModifySparkAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否本地上传，可去cos,lakefs 
-     * @return IsLocalJars 是否本地上传，可去cos,lakefs
+     * Get jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalJars jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocalJars() {
         return this.IsLocalJars;
     }
 
     /**
-     * Set 是否本地上传，可去cos,lakefs
-     * @param IsLocalJars 是否本地上传，可去cos,lakefs
+     * Set jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalJars jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocalJars(String IsLocalJars) {
         this.IsLocalJars = IsLocalJars;
@@ -417,16 +417,16 @@ public class ModifySparkAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否本地上传，可去cos,lakefs 
-     * @return IsLocalFiles 是否本地上传，可去cos,lakefs
+     * Get file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalFiles file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocalFiles() {
         return this.IsLocalFiles;
     }
 
     /**
-     * Set 是否本地上传，可去cos,lakefs
-     * @param IsLocalFiles 是否本地上传，可去cos,lakefs
+     * Set file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalFiles file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocalFiles(String IsLocalFiles) {
         this.IsLocalFiles = IsLocalFiles;

@@ -65,6 +65,13 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * 1:3.0版本新控制台传1；否则传0
+    */
+    @SerializedName("ApiVersion")
+    @Expose
+    private Long ApiVersion;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -160,6 +167,22 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get 1:3.0版本新控制台传1；否则传0 
+     * @return ApiVersion 1:3.0版本新控制台传1；否则传0
+     */
+    public Long getApiVersion() {
+        return this.ApiVersion;
+    }
+
+    /**
+     * Set 1:3.0版本新控制台传1；否则传0
+     * @param ApiVersion 1:3.0版本新控制台传1；否则传0
+     */
+    public void setApiVersion(Long ApiVersion) {
+        this.ApiVersion = ApiVersion;
+    }
+
     public ListRuntimeDeployedInstancesMCRequest() {
     }
 
@@ -186,6 +209,9 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.ApiVersion != null) {
+            this.ApiVersion = new Long(source.ApiVersion);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SortType", this.SortType);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
 
     }
 }

@@ -419,6 +419,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *查询Bot攻击日志
+     * @param req DescribeBotLogRequest
+     * @return DescribeBotLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBotLogResponse DescribeBotLog(DescribeBotLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBotLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBotLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBotLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *分页查询Bot托管规则
      * @param req DescribeBotManagedRulesRequest
      * @return DescribeBotManagedRulesResponse
@@ -471,6 +491,126 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDDoSPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DDos攻击数据
+     * @param req DescribeDDosAttackDataRequest
+     * @return DescribeDDosAttackDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDosAttackDataResponse DescribeDDosAttackData(DescribeDDosAttackDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDosAttackDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDosAttackData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DDos攻击事件
+     * @param req DescribeDDosAttackEventRequest
+     * @return DescribeDDosAttackEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDosAttackEventResponse DescribeDDosAttackEvent(DescribeDDosAttackEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDosAttackEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDosAttackEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DDos攻击事件详情
+     * @param req DescribeDDosAttackEventDetailRequest
+     * @return DescribeDDosAttackEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDosAttackEventDetailResponse DescribeDDosAttackEventDetail(DescribeDDosAttackEventDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDosAttackEventDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackEventDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDosAttackEventDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DDos攻击源
+     * @param req DescribeDDosAttackSourceEventRequest
+     * @return DescribeDDosAttackSourceEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDosAttackSourceEventResponse DescribeDDosAttackSourceEvent(DescribeDDosAttackSourceEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDosAttackSourceEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackSourceEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDosAttackSourceEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DDos攻击Top数据
+     * @param req DescribeDDosAttackTopDataRequest
+     * @return DescribeDDosAttackTopDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDosAttackTopDataResponse DescribeDDosAttackTopData(DescribeDDosAttackTopDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDosAttackTopDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackTopDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDosAttackTopData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DDos主攻击事件
+     * @param req DescribeDDosMajorAttackEventRequest
+     * @return DescribeDDosMajorAttackEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEvent(DescribeDDosMajorAttackEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDosMajorAttackEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDosMajorAttackEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDosMajorAttackEvent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -699,6 +839,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *查询七层监控类时序流量数据
+     * @param req DescribeOverviewL7DataRequest
+     * @return DescribeOverviewL7DataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewL7DataResponse DescribeOverviewL7Data(DescribeOverviewL7DataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewL7DataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewL7DataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewL7Data");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询预热任务状态
      * @param req DescribePrefetchTasksRequest
      * @return DescribePrefetchTasksResponse
@@ -851,6 +1011,206 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSecurityPortraitRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *四层时序流量数据查询
+     * @param req DescribeTimingL4DataRequest
+     * @return DescribeTimingL4DataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL4DataResponse DescribeTimingL4Data(DescribeTimingL4DataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL4DataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL4DataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL4Data");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询七层数据分析类时序流量数据
+     * @param req DescribeTimingL7AnalysisDataRequest
+     * @return DescribeTimingL7AnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(DescribeTimingL7AnalysisDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL7AnalysisDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL7AnalysisDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL7AnalysisData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询top类流量数据
+     * @param req DescribeTopL7AnalysisDataRequest
+     * @return DescribeTopL7AnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(DescribeTopL7AnalysisDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopL7AnalysisDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopL7AnalysisData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Web托管攻击事件
+     * @param req DescribeWebManagedRulesAttackEventsRequest
+     * @return DescribeWebManagedRulesAttackEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEvents(DescribeWebManagedRulesAttackEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebManagedRulesAttackEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Web托管规则数据
+     * @param req DescribeWebManagedRulesDataRequest
+     * @return DescribeWebManagedRulesDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebManagedRulesDataResponse DescribeWebManagedRulesData(DescribeWebManagedRulesDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebManagedRulesDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebManagedRulesData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Web托管日志
+     * @param req DescribeWebManagedRulesLogRequest
+     * @return DescribeWebManagedRulesLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLog(DescribeWebManagedRulesLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebManagedRulesLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebManagedRulesLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Web托管规则Top数据
+     * @param req DescribeWebManagedRulesTopDataRequest
+     * @return DescribeWebManagedRulesTopDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopData(DescribeWebManagedRulesTopDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebManagedRulesTopDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesTopDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebManagedRulesTopData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询web防护攻击事件
+     * @param req DescribeWebProtectionAttackEventsRequest
+     * @return DescribeWebProtectionAttackEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebProtectionAttackEventsResponse DescribeWebProtectionAttackEvents(DescribeWebProtectionAttackEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebProtectionAttackEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebProtectionAttackEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebProtectionAttackEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询web防护数据
+     * @param req DescribeWebProtectionDataRequest
+     * @return DescribeWebProtectionDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebProtectionDataResponse DescribeWebProtectionData(DescribeWebProtectionDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebProtectionDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebProtectionDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebProtectionData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询web防护日志
+     * @param req DescribeWebProtectionLogRequest
+     * @return DescribeWebProtectionLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebProtectionLogResponse DescribeWebProtectionLog(DescribeWebProtectionLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebProtectionLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebProtectionLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWebProtectionLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

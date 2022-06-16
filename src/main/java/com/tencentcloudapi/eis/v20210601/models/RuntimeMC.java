@@ -128,6 +128,38 @@ public class RuntimeMC extends AbstractModel{
     private Float MemoryLimit;
 
     /**
+    * 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpiredAt")
+    @Expose
+    private Long ExpiredAt;
+
+    /**
+    * 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private Long ChargeType;
+
+    /**
+    * 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceLimitType")
+    @Expose
+    private Long ResourceLimitType;
+
+    /**
+    * 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenewal")
+    @Expose
+    private Boolean AutoRenewal;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -367,6 +399,86 @@ public class RuntimeMC extends AbstractModel{
         this.MemoryLimit = MemoryLimit;
     }
 
+    /**
+     * Get 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpiredAt 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExpiredAt() {
+        return this.ExpiredAt;
+    }
+
+    /**
+     * Set 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpiredAt 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpiredAt(Long ExpiredAt) {
+        this.ExpiredAt = ExpiredAt;
+    }
+
+    /**
+     * Get 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChargeType 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChargeType 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChargeType(Long ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
+     * Get 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceLimitType 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceLimitType() {
+        return this.ResourceLimitType;
+    }
+
+    /**
+     * Set 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceLimitType 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceLimitType(Long ResourceLimitType) {
+        this.ResourceLimitType = ResourceLimitType;
+    }
+
+    /**
+     * Get 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenewal 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoRenewal() {
+        return this.AutoRenewal;
+    }
+
+    /**
+     * Set 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenewal 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenewal(Boolean AutoRenewal) {
+        this.AutoRenewal = AutoRenewal;
+    }
+
     public RuntimeMC() {
     }
 
@@ -420,6 +532,18 @@ public class RuntimeMC extends AbstractModel{
         if (source.MemoryLimit != null) {
             this.MemoryLimit = new Float(source.MemoryLimit);
         }
+        if (source.ExpiredAt != null) {
+            this.ExpiredAt = new Long(source.ExpiredAt);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new Long(source.ChargeType);
+        }
+        if (source.ResourceLimitType != null) {
+            this.ResourceLimitType = new Long(source.ResourceLimitType);
+        }
+        if (source.AutoRenewal != null) {
+            this.AutoRenewal = new Boolean(source.AutoRenewal);
+        }
     }
 
 
@@ -442,6 +566,10 @@ public class RuntimeMC extends AbstractModel{
         this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
         this.setParamSimple(map, prefix + "MemoryUsed", this.MemoryUsed);
         this.setParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
+        this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "ResourceLimitType", this.ResourceLimitType);
+        this.setParamSimple(map, prefix + "AutoRenewal", this.AutoRenewal);
 
     }
 }

@@ -81,7 +81,7 @@ table-id - String - （过滤条件）table id形如：12342。
     private String Sort;
 
     /**
-    * 排序字段，false：降序（默认）；true
+    * 排序字段，false：降序（默认）；true：升序
     */
     @SerializedName("Asc")
     @Expose
@@ -238,16 +238,16 @@ table-id - String - （过滤条件）table id形如：12342。
     }
 
     /**
-     * Get 排序字段，false：降序（默认）；true 
-     * @return Asc 排序字段，false：降序（默认）；true
+     * Get 排序字段，false：降序（默认）；true：升序 
+     * @return Asc 排序字段，false：降序（默认）；true：升序
      */
     public Boolean getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set 排序字段，false：降序（默认）；true
-     * @param Asc 排序字段，false：降序（默认）；true
+     * Set 排序字段，false：降序（默认）；true：升序
+     * @param Asc 排序字段，false：降序（默认）；true：升序
      */
     public void setAsc(Boolean Asc) {
         this.Asc = Asc;

@@ -32,7 +32,11 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     /**
     * 过滤条件。
 <li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
-<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>参数不支持同时指定 `KeyIds` 和 `Filters`。
+<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对过滤。tag-key使用具体的标签键进行替换。</li>
+参数不支持同时指定 `KeyIds` 和 `Filters`。
     */
     @SerializedName("Filters")
     @Expose
@@ -71,10 +75,18 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     /**
      * Get 过滤条件。
 <li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
-<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>参数不支持同时指定 `KeyIds` 和 `Filters`。 
+<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对过滤。tag-key使用具体的标签键进行替换。</li>
+参数不支持同时指定 `KeyIds` 和 `Filters`。 
      * @return Filters 过滤条件。
 <li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
-<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>参数不支持同时指定 `KeyIds` 和 `Filters`。
+<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对过滤。tag-key使用具体的标签键进行替换。</li>
+参数不支持同时指定 `KeyIds` 和 `Filters`。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -83,10 +95,18 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     /**
      * Set 过滤条件。
 <li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
-<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>参数不支持同时指定 `KeyIds` 和 `Filters`。
+<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对过滤。tag-key使用具体的标签键进行替换。</li>
+参数不支持同时指定 `KeyIds` 和 `Filters`。
      * @param Filters 过滤条件。
 <li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
-<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>参数不支持同时指定 `KeyIds` 和 `Filters`。
+<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对过滤。tag-key使用具体的标签键进行替换。</li>
+参数不支持同时指定 `KeyIds` 和 `Filters`。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

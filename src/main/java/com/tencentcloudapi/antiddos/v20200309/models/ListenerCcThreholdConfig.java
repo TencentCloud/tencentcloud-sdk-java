@@ -30,7 +30,7 @@ public class ListenerCcThreholdConfig extends AbstractModel{
     private String Domain;
 
     /**
-    * 协议（可取值htttps）
+    * 协议（可取值https）
     */
     @SerializedName("Protocol")
     @Expose
@@ -67,16 +67,16 @@ public class ListenerCcThreholdConfig extends AbstractModel{
     }
 
     /**
-     * Get 协议（可取值htttps） 
-     * @return Protocol 协议（可取值htttps）
+     * Get 协议（可取值https） 
+     * @return Protocol 协议（可取值https）
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议（可取值htttps）
-     * @param Protocol 协议（可取值htttps）
+     * Set 协议（可取值https）
+     * @param Protocol 协议（可取值https）
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

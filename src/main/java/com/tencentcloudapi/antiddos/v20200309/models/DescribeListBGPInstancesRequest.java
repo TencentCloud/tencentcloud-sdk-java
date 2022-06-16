@@ -100,6 +100,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long FilterEnterpriseFlag;
 
     /**
+    * 标签搜索
+    */
+    @SerializedName("FilterTag")
+    @Expose
+    private TagFilter FilterTag;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -275,6 +282,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.FilterEnterpriseFlag = FilterEnterpriseFlag;
     }
 
+    /**
+     * Get 标签搜索 
+     * @return FilterTag 标签搜索
+     */
+    public TagFilter getFilterTag() {
+        return this.FilterTag;
+    }
+
+    /**
+     * Set 标签搜索
+     * @param FilterTag 标签搜索
+     */
+    public void setFilterTag(TagFilter FilterTag) {
+        this.FilterTag = FilterTag;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -319,6 +342,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterEnterpriseFlag != null) {
             this.FilterEnterpriseFlag = new Long(source.FilterEnterpriseFlag);
         }
+        if (source.FilterTag != null) {
+            this.FilterTag = new TagFilter(source.FilterTag);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
         this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         this.setParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
+        this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
 
     }
 }

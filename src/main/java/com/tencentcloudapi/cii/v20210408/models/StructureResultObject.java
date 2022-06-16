@@ -58,6 +58,14 @@ public class StructureResultObject extends AbstractModel{
     private String [] TaskFiles;
 
     /**
+    * 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultFields")
+    @Expose
+    private OcrRecognise [] ResultFields;
+
+    /**
      * Get 0表示正常返回；1代表结果未生成；2代表任务执行失败 
      * @return Code 0表示正常返回；1代表结果未生成；2代表任务执行失败
      */
@@ -137,6 +145,26 @@ public class StructureResultObject extends AbstractModel{
         this.TaskFiles = TaskFiles;
     }
 
+    /**
+     * Get 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultFields 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OcrRecognise [] getResultFields() {
+        return this.ResultFields;
+    }
+
+    /**
+     * Set 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultFields 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultFields(OcrRecognise [] ResultFields) {
+        this.ResultFields = ResultFields;
+    }
+
     public StructureResultObject() {
     }
 
@@ -163,6 +191,12 @@ public class StructureResultObject extends AbstractModel{
                 this.TaskFiles[i] = new String(source.TaskFiles[i]);
             }
         }
+        if (source.ResultFields != null) {
+            this.ResultFields = new OcrRecognise[source.ResultFields.length];
+            for (int i = 0; i < source.ResultFields.length; i++) {
+                this.ResultFields[i] = new OcrRecognise(source.ResultFields[i]);
+            }
+        }
     }
 
 
@@ -175,6 +209,7 @@ public class StructureResultObject extends AbstractModel{
         this.setParamSimple(map, prefix + "StructureResult", this.StructureResult);
         this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
         this.setParamArraySimple(map, prefix + "TaskFiles.", this.TaskFiles);
+        this.setParamArrayObj(map, prefix + "ResultFields.", this.ResultFields);
 
     }
 }

@@ -67,21 +67,21 @@ view-id - String - （过滤条件）view id形如：12342。
     private String Sort;
 
     /**
-    * 排序规则
+    * 排序规则，true:升序；false:降序
     */
     @SerializedName("Asc")
     @Expose
     private Boolean Asc;
 
     /**
-    * 开始时间
+    * 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
     */
     @SerializedName("EndTime")
     @Expose
@@ -192,48 +192,48 @@ view-id - String - （过滤条件）view id形如：12342。
     }
 
     /**
-     * Get 排序规则 
-     * @return Asc 排序规则
+     * Get 排序规则，true:升序；false:降序 
+     * @return Asc 排序规则，true:升序；false:降序
      */
     public Boolean getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set 排序规则
-     * @param Asc 排序规则
+     * Set 排序规则，true:升序；false:降序
+     * @param Asc 排序规则，true:升序；false:降序
      */
     public void setAsc(Boolean Asc) {
         this.Asc = Asc;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00 
+     * @return StartTime 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
+     * @param StartTime 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00 
+     * @return EndTime 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
+     * @param EndTime 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
