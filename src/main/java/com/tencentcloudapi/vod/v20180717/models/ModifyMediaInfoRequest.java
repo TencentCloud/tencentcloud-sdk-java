@@ -30,6 +30,13 @@ public class ModifyMediaInfoRequest extends AbstractModel{
     private String FileId;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 媒体文件名称，最长 64 个字符。
     */
     @SerializedName("Name")
@@ -131,13 +138,6 @@ public class ModifyMediaInfoRequest extends AbstractModel{
     private Long ClearSubtitles;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 媒体文件唯一标识。 
      * @return FileId 媒体文件唯一标识。
      */
@@ -151,6 +151,22 @@ public class ModifyMediaInfoRequest extends AbstractModel{
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -389,22 +405,6 @@ public class ModifyMediaInfoRequest extends AbstractModel{
         this.ClearSubtitles = ClearSubtitles;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyMediaInfoRequest() {
     }
 
@@ -415,6 +415,9 @@ public class ModifyMediaInfoRequest extends AbstractModel{
     public ModifyMediaInfoRequest(ModifyMediaInfoRequest source) {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -476,9 +479,6 @@ public class ModifyMediaInfoRequest extends AbstractModel{
         if (source.ClearSubtitles != null) {
             this.ClearSubtitles = new Long(source.ClearSubtitles);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -487,6 +487,7 @@ public class ModifyMediaInfoRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
@@ -501,7 +502,6 @@ public class ModifyMediaInfoRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
         this.setParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
         this.setParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

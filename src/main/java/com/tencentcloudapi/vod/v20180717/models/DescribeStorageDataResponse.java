@@ -37,6 +37,13 @@ public class DescribeStorageDataResponse extends AbstractModel{
     private Long TotalStorage;
 
     /**
+    * 当前标准存储量，单位是字节。
+    */
+    @SerializedName("StandardStorage")
+    @Expose
+    private Long StandardStorage;
+
+    /**
     * 当前低频存储量，单位是字节。
     */
     @SerializedName("InfrequentStorage")
@@ -44,11 +51,18 @@ public class DescribeStorageDataResponse extends AbstractModel{
     private Long InfrequentStorage;
 
     /**
-    * 当前标准存储量，单位是字节。
+    * 当前归档存储量，单位是字节。
     */
-    @SerializedName("StandardStorage")
+    @SerializedName("ArchiveStorage")
     @Expose
-    private Long StandardStorage;
+    private Long ArchiveStorage;
+
+    /**
+    * 当前深度归档存储量，单位是字节。
+    */
+    @SerializedName("DeepArchiveStorage")
+    @Expose
+    private Long DeepArchiveStorage;
 
     /**
     * 各计费区域的存储用量。
@@ -97,6 +111,22 @@ public class DescribeStorageDataResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前标准存储量，单位是字节。 
+     * @return StandardStorage 当前标准存储量，单位是字节。
+     */
+    public Long getStandardStorage() {
+        return this.StandardStorage;
+    }
+
+    /**
+     * Set 当前标准存储量，单位是字节。
+     * @param StandardStorage 当前标准存储量，单位是字节。
+     */
+    public void setStandardStorage(Long StandardStorage) {
+        this.StandardStorage = StandardStorage;
+    }
+
+    /**
      * Get 当前低频存储量，单位是字节。 
      * @return InfrequentStorage 当前低频存储量，单位是字节。
      */
@@ -113,19 +143,35 @@ public class DescribeStorageDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前标准存储量，单位是字节。 
-     * @return StandardStorage 当前标准存储量，单位是字节。
+     * Get 当前归档存储量，单位是字节。 
+     * @return ArchiveStorage 当前归档存储量，单位是字节。
      */
-    public Long getStandardStorage() {
-        return this.StandardStorage;
+    public Long getArchiveStorage() {
+        return this.ArchiveStorage;
     }
 
     /**
-     * Set 当前标准存储量，单位是字节。
-     * @param StandardStorage 当前标准存储量，单位是字节。
+     * Set 当前归档存储量，单位是字节。
+     * @param ArchiveStorage 当前归档存储量，单位是字节。
      */
-    public void setStandardStorage(Long StandardStorage) {
-        this.StandardStorage = StandardStorage;
+    public void setArchiveStorage(Long ArchiveStorage) {
+        this.ArchiveStorage = ArchiveStorage;
+    }
+
+    /**
+     * Get 当前深度归档存储量，单位是字节。 
+     * @return DeepArchiveStorage 当前深度归档存储量，单位是字节。
+     */
+    public Long getDeepArchiveStorage() {
+        return this.DeepArchiveStorage;
+    }
+
+    /**
+     * Set 当前深度归档存储量，单位是字节。
+     * @param DeepArchiveStorage 当前深度归档存储量，单位是字节。
+     */
+    public void setDeepArchiveStorage(Long DeepArchiveStorage) {
+        this.DeepArchiveStorage = DeepArchiveStorage;
     }
 
     /**
@@ -174,11 +220,17 @@ public class DescribeStorageDataResponse extends AbstractModel{
         if (source.TotalStorage != null) {
             this.TotalStorage = new Long(source.TotalStorage);
         }
+        if (source.StandardStorage != null) {
+            this.StandardStorage = new Long(source.StandardStorage);
+        }
         if (source.InfrequentStorage != null) {
             this.InfrequentStorage = new Long(source.InfrequentStorage);
         }
-        if (source.StandardStorage != null) {
-            this.StandardStorage = new Long(source.StandardStorage);
+        if (source.ArchiveStorage != null) {
+            this.ArchiveStorage = new Long(source.ArchiveStorage);
+        }
+        if (source.DeepArchiveStorage != null) {
+            this.DeepArchiveStorage = new Long(source.DeepArchiveStorage);
         }
         if (source.StorageStat != null) {
             this.StorageStat = new StorageStatData[source.StorageStat.length];
@@ -198,8 +250,10 @@ public class DescribeStorageDataResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MediaCount", this.MediaCount);
         this.setParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
-        this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
         this.setParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+        this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
+        this.setParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+        this.setParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
         this.setParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

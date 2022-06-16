@@ -51,7 +51,7 @@ public class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel{
     private Long PageNo;
 
     /**
-    * ddos策略组id 集合
+    * ddos策略组id列表
     */
     @SerializedName("PolicyIds")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel{
     private String [] ZoneIds;
 
     /**
-    * 协议类型,{tcp,udp,all}
+    * 子域名列表
     */
     @SerializedName("Domains")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get ddos策略组id 集合 
-     * @return PolicyIds ddos策略组id 集合
+     * Get ddos策略组id列表 
+     * @return PolicyIds ddos策略组id列表
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set ddos策略组id 集合
-     * @param PolicyIds ddos策略组id 集合
+     * Set ddos策略组id列表
+     * @param PolicyIds ddos策略组id列表
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
@@ -175,16 +175,16 @@ public class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 协议类型,{tcp,udp,all} 
-     * @return Domains 协议类型,{tcp,udp,all}
+     * Get 子域名列表 
+     * @return Domains 子域名列表
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 协议类型,{tcp,udp,all}
-     * @param Domains 协议类型,{tcp,udp,all}
+     * Set 子域名列表
+     * @param Domains 子域名列表
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

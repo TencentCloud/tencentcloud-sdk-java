@@ -39,6 +39,46 @@ public class CiamClient extends AbstractClient{
     }
 
     /**
+     *新建接口导入用户任务
+     * @param req CreateApiImportUserJobRequest
+     * @return CreateApiImportUserJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiImportUserJobResponse CreateApiImportUserJob(CreateApiImportUserJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApiImportUserJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApiImportUserJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApiImportUserJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新建文件导出用户任务
+     * @param req CreateFileExportUserJobRequest
+     * @return CreateFileExportUserJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFileExportUserJobResponse CreateFileExportUserJob(CreateFileExportUserJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFileExportUserJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFileExportUserJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFileExportUserJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse
@@ -111,6 +151,26 @@ public class CiamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<LinkAccountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "LinkAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询任务详情
+     * @param req ListJobsRequest
+     * @return ListJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListJobsResponse ListJobs(ListJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListJobs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifySubAppIdInfoRequest extends AbstractModel{
 
     /**
-    * 子应用 ID。
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifySubAppIdInfoRequest extends AbstractModel{
     private String Description;
 
     /**
-     * Get 子应用 ID。 
-     * @return SubAppId 子应用 ID。
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 子应用 ID。
-     * @param SubAppId 子应用 ID。
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

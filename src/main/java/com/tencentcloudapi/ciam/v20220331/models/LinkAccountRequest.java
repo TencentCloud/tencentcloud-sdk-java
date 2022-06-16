@@ -44,7 +44,10 @@ public class LinkAccountRequest extends AbstractModel{
     private String SecondaryUserId;
 
     /**
-    * 融合属性(PHONENUMBER,EMAIL)
+    * 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
     */
     @SerializedName("UserLinkedOnAttribute")
     @Expose
@@ -99,16 +102,28 @@ public class LinkAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 融合属性(PHONENUMBER,EMAIL) 
-     * @return UserLinkedOnAttribute 融合属性(PHONENUMBER,EMAIL)
+     * Get 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱 
+     * @return UserLinkedOnAttribute 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
      */
     public String getUserLinkedOnAttribute() {
         return this.UserLinkedOnAttribute;
     }
 
     /**
-     * Set 融合属性(PHONENUMBER,EMAIL)
-     * @param UserLinkedOnAttribute 融合属性(PHONENUMBER,EMAIL)
+     * Set 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
+     * @param UserLinkedOnAttribute 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
      */
     public void setUserLinkedOnAttribute(String UserLinkedOnAttribute) {
         this.UserLinkedOnAttribute = UserLinkedOnAttribute;

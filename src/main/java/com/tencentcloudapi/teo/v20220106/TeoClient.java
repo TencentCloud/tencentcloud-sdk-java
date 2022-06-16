@@ -1059,6 +1059,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *七层查询缓存分析时序类流量数据
+     * @param req DescribeTimingL7CacheDataRequest
+     * @return DescribeTimingL7CacheDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(DescribeTimingL7CacheDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL7CacheDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL7CacheData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询top类流量数据
      * @param req DescribeTopL7AnalysisDataRequest
      * @return DescribeTopL7AnalysisDataResponse
@@ -1071,6 +1091,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTopL7AnalysisData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *七层查询缓存分析top类流量数据
+     * @param req DescribeTopL7CacheDataRequest
+     * @return DescribeTopL7CacheDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopL7CacheDataResponse DescribeTopL7CacheData(DescribeTopL7CacheDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopL7CacheDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopL7CacheData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

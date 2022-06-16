@@ -37,7 +37,11 @@ public class UpdateUserStatusRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+    * 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
     */
     @SerializedName("Status")
     @Expose
@@ -76,16 +80,32 @@ public class UpdateUserStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母 
-     * @return Status NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+     * Get 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结 
+     * @return Status 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
-     * @param Status NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+     * Set 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
+     * @param Status 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
      */
     public void setStatus(String Status) {
         this.Status = Status;

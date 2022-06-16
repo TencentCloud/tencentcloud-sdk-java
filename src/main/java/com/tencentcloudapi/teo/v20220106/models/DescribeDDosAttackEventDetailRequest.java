@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeDDosAttackEventDetailRequest extends AbstractModel{
 
     /**
-    * 时间id
+    * 事件id
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-     * Get 时间id 
-     * @return EventId 时间id
+     * Get 事件id 
+     * @return EventId 事件id
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 时间id
-     * @param EventId 时间id
+     * Set 事件id
+     * @param EventId 事件id
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;

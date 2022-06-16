@@ -47,6 +47,13 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。
     */
     @SerializedName("DomainNames")
@@ -137,13 +144,6 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
     private Long DataInterval;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
@@ -201,6 +201,22 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -503,22 +519,6 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
         this.DataInterval = DataInterval;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public DescribeCDNStatDetailsRequest() {
     }
 
@@ -535,6 +535,9 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.DomainNames != null) {
             this.DomainNames = new String[source.DomainNames.length];
@@ -560,9 +563,6 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
         if (source.DataInterval != null) {
             this.DataInterval = new Long(source.DataInterval);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -573,12 +573,12 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArraySimple(map, prefix + "Districts.", this.Districts);
         this.setParamArraySimple(map, prefix + "Isps.", this.Isps);
         this.setParamSimple(map, prefix + "DataInterval", this.DataInterval);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

@@ -44,7 +44,7 @@ public class DescribeScriptsRequest extends AbstractModel{
     private String SortBy;
 
     /**
-    * 排序方式，desc表示正序，asc表示反序
+    * 排序方式，desc表示正序，asc表示反序，默认asc
     */
     @SerializedName("Sorting")
     @Expose
@@ -108,16 +108,16 @@ script-name-keyword - String - （过滤条件）数据表名称,形如：script
     }
 
     /**
-     * Get 排序方式，desc表示正序，asc表示反序 
-     * @return Sorting 排序方式，desc表示正序，asc表示反序
+     * Get 排序方式，desc表示正序，asc表示反序，默认asc 
+     * @return Sorting 排序方式，desc表示正序，asc表示反序，默认asc
      */
     public String getSorting() {
         return this.Sorting;
     }
 
     /**
-     * Set 排序方式，desc表示正序，asc表示反序
-     * @param Sorting 排序方式，desc表示正序，asc表示反序
+     * Set 排序方式，desc表示正序，asc表示反序，默认asc
+     * @param Sorting 排序方式，desc表示正序，asc表示反序，默认asc
      */
     public void setSorting(String Sorting) {
         this.Sorting = Sorting;

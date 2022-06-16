@@ -30,7 +30,10 @@ public class ListUserByPropertyRequest extends AbstractModel{
     private String UserStoreId;
 
     /**
-    * 查询的属性（支持phoneNumber，email）
+    * 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
     */
     @SerializedName("PropertyCode")
     @Expose
@@ -60,16 +63,28 @@ public class ListUserByPropertyRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询的属性（支持phoneNumber，email） 
-     * @return PropertyCode 查询的属性（支持phoneNumber，email）
+     * Get 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱 
+     * @return PropertyCode 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
      */
     public String getPropertyCode() {
         return this.PropertyCode;
     }
 
     /**
-     * Set 查询的属性（支持phoneNumber，email）
-     * @param PropertyCode 查询的属性（支持phoneNumber，email）
+     * Set 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
+     * @param PropertyCode 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
      */
     public void setPropertyCode(String PropertyCode) {
         this.PropertyCode = PropertyCode;

@@ -2624,6 +2624,29 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *1. 刷新指定的 URL 列表。
+2. URL 的域名必须已在云点播中注册。
+3. 单次请求最多指定20个 URL。
+4. 默认刷新配额为每天100000个 URL。
+     * @param req RefreshUrlCacheRequest
+     * @return RefreshUrlCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshUrlCacheResponse RefreshUrlCache(RefreshUrlCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RefreshUrlCacheResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RefreshUrlCache");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重新设置用户自定义任务流模板的内容。  
      * @param req ResetProcedureTemplateRequest
      * @return ResetProcedureTemplateResponse
@@ -2636,6 +2659,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *当媒体文件的存储类型是归档存储或深度归档存储时，是不可访问的。如需访问，则需要调用本接口进行解冻，解冻后可访问的媒体文件是临时的，在有效期过后，则不可访问。
+     * @param req RestoreMediaRequest
+     * @return RestoreMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreMediaResponse RestoreMedia(RestoreMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestoreMediaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestoreMediaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestoreMedia");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
