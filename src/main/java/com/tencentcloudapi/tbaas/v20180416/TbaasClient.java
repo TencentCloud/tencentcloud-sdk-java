@@ -629,6 +629,26 @@ Bcos分页查询当前群组的交易信息列表
     }
 
     /**
+     *调用长安链体验网络合约执行交易
+     * @param req InvokeChainMakerDemoContractRequest
+     * @return InvokeChainMakerDemoContractResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeChainMakerDemoContractResponse InvokeChainMakerDemoContract(InvokeChainMakerDemoContractRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InvokeChainMakerDemoContractResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InvokeChainMakerDemoContractResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InvokeChainMakerDemoContract");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询交易
      * @param req QueryRequest
      * @return QueryResponse
@@ -681,6 +701,66 @@ Bcos分页查询当前群组的交易信息列表
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerContractResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryChainMakerContract");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询长安链体验网络指定高度区块的交易
+     * @param req QueryChainMakerDemoBlockTransactionRequest
+     * @return QueryChainMakerDemoBlockTransactionResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryChainMakerDemoBlockTransactionResponse QueryChainMakerDemoBlockTransaction(QueryChainMakerDemoBlockTransactionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryChainMakerDemoBlockTransactionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryChainMakerDemoBlockTransactionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryChainMakerDemoBlockTransaction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *调用长安链体验网络合约查询
+     * @param req QueryChainMakerDemoContractRequest
+     * @return QueryChainMakerDemoContractResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryChainMakerDemoContractResponse QueryChainMakerDemoContract(QueryChainMakerDemoContractRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryChainMakerDemoContractResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryChainMakerDemoContractResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryChainMakerDemoContract");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过交易ID查询长安链体验网络交易
+     * @param req QueryChainMakerDemoTransactionRequest
+     * @return QueryChainMakerDemoTransactionResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryChainMakerDemoTransactionResponse QueryChainMakerDemoTransaction(QueryChainMakerDemoTransactionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryChainMakerDemoTransactionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryChainMakerDemoTransactionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryChainMakerDemoTransaction");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
