@@ -302,6 +302,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *统计各个域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况
+     * @param req DescribeDomainAnalyticsRequest
+     * @return DescribeDomainAnalyticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainAnalyticsResponse DescribeDomainAnalytics(DescribeDomainAnalyticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainAnalyticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainAnalyticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainAnalytics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取域名列表
      * @param req DescribeDomainListRequest
      * @return DescribeDomainListResponse
@@ -454,6 +474,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordTypeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRecordType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *统计子域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况。仅付费套餐域名可用。
+     * @param req DescribeSubdomainAnalyticsRequest
+     * @return DescribeSubdomainAnalyticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalytics(DescribeSubdomainAnalyticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubdomainAnalyticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubdomainAnalyticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubdomainAnalytics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

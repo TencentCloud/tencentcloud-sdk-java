@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class SaltLocation extends AbstractModel{
 
+    /**
+    * 密码加盐的类型（HEAD，TAIL，OTHER）
+    */
+    @SerializedName("SaltLocationTypeEnum")
+    @Expose
+    private String SaltLocationTypeEnum;
+
+    /**
+    * 加盐规则
+    */
+    @SerializedName("SaltLocationRule")
+    @Expose
+    private SaltLocationRule SaltLocationRule;
+
+    /**
+     * Get 密码加盐的类型（HEAD，TAIL，OTHER） 
+     * @return SaltLocationTypeEnum 密码加盐的类型（HEAD，TAIL，OTHER）
+     */
+    public String getSaltLocationTypeEnum() {
+        return this.SaltLocationTypeEnum;
+    }
+
+    /**
+     * Set 密码加盐的类型（HEAD，TAIL，OTHER）
+     * @param SaltLocationTypeEnum 密码加盐的类型（HEAD，TAIL，OTHER）
+     */
+    public void setSaltLocationTypeEnum(String SaltLocationTypeEnum) {
+        this.SaltLocationTypeEnum = SaltLocationTypeEnum;
+    }
+
+    /**
+     * Get 加盐规则 
+     * @return SaltLocationRule 加盐规则
+     */
+    public SaltLocationRule getSaltLocationRule() {
+        return this.SaltLocationRule;
+    }
+
+    /**
+     * Set 加盐规则
+     * @param SaltLocationRule 加盐规则
+     */
+    public void setSaltLocationRule(SaltLocationRule SaltLocationRule) {
+        this.SaltLocationRule = SaltLocationRule;
+    }
+
     public SaltLocation() {
     }
 
@@ -30,6 +76,12 @@ public class SaltLocation extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SaltLocation(SaltLocation source) {
+        if (source.SaltLocationTypeEnum != null) {
+            this.SaltLocationTypeEnum = new String(source.SaltLocationTypeEnum);
+        }
+        if (source.SaltLocationRule != null) {
+            this.SaltLocationRule = new SaltLocationRule(source.SaltLocationRule);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class SaltLocation extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SaltLocationTypeEnum", this.SaltLocationTypeEnum);
+        this.setParamObj(map, prefix + "SaltLocationRule.", this.SaltLocationRule);
 
     }
 }

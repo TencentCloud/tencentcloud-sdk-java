@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquiryPriceBuyVsmResponse extends AbstractModel{
 
     /**
-    * 原始总金额
+    * 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
@@ -55,7 +55,7 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     private String TimeUnit;
 
     /**
-    * 应付总金额
+    * 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
@@ -70,9 +70,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 原始总金额
+     * Get 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCost 原始总金额
+     * @return TotalCost 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCost() {
@@ -80,9 +80,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Set 原始总金额
+     * Set 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCost 原始总金额
+     * @param TotalCost 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Float TotalCost) {
@@ -150,9 +150,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Get 应付总金额
+     * Get 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCost 应付总金额
+     * @return OriginalCost 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
@@ -160,9 +160,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Set 应付总金额
+     * Set 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCost 应付总金额
+     * @param OriginalCost 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {

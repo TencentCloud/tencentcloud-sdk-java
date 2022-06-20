@@ -37,7 +37,7 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
     private Long PayMode;
 
     /**
-    * 商品的时间大小
+    * 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -63,6 +63,13 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * Hsm服务类型，可选值virtualization、physical、GHSM、EHSM、SHSM
+    */
+    @SerializedName("HsmType")
+    @Expose
+    private String HsmType;
 
     /**
      * Get 需购买实例的数量 
@@ -97,16 +104,16 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
     }
 
     /**
-     * Get 商品的时间大小 
-     * @return TimeSpan 商品的时间大小
+     * Get 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格 
+     * @return TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
      */
     public String getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 商品的时间大小
-     * @param TimeSpan 商品的时间大小
+     * Set 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
+     * @param TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
      */
     public void setTimeSpan(String TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -160,6 +167,22 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get Hsm服务类型，可选值virtualization、physical、GHSM、EHSM、SHSM 
+     * @return HsmType Hsm服务类型，可选值virtualization、physical、GHSM、EHSM、SHSM
+     */
+    public String getHsmType() {
+        return this.HsmType;
+    }
+
+    /**
+     * Set Hsm服务类型，可选值virtualization、physical、GHSM、EHSM、SHSM
+     * @param HsmType Hsm服务类型，可选值virtualization、physical、GHSM、EHSM、SHSM
+     */
+    public void setHsmType(String HsmType) {
+        this.HsmType = HsmType;
+    }
+
     public InquiryPriceBuyVsmRequest() {
     }
 
@@ -186,6 +209,9 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.HsmType != null) {
+            this.HsmType = new String(source.HsmType);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "HsmType", this.HsmType);
 
     }
 }

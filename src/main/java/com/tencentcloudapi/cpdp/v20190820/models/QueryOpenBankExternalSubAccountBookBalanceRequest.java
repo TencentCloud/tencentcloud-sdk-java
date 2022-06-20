@@ -71,6 +71,16 @@ __SAFT_ISV__: 安心发支付
     private String ChannelAccountBookId;
 
     /**
+    * 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 渠道商户ID 
      * @return ChannelMerchantId 渠道商户ID
      */
@@ -190,6 +200,34 @@ __SAFT_ISV__: 安心发支付
         this.ChannelAccountBookId = ChannelAccountBookId;
     }
 
+    /**
+     * Get 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_ 
+     * @return Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     * @param Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryOpenBankExternalSubAccountBookBalanceRequest() {
     }
 
@@ -216,6 +254,9 @@ __SAFT_ISV__: 安心发支付
         if (source.ChannelAccountBookId != null) {
             this.ChannelAccountBookId = new String(source.ChannelAccountBookId);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -229,6 +270,7 @@ __SAFT_ISV__: 安心发支付
         this.setParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
         this.setParamSimple(map, prefix + "OutAccountBookId", this.OutAccountBookId);
         this.setParamSimple(map, prefix + "ChannelAccountBookId", this.ChannelAccountBookId);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

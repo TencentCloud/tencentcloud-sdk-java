@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudhsm.v20191112.models;
+package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSupportedHsmResponse extends AbstractModel{
+public class DescribeApplicationsStatusResponse extends AbstractModel{
 
     /**
-    * 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回结果
     */
-    @SerializedName("DeviceTypes")
+    @SerializedName("Result")
     @Expose
-    private DeviceInfo [] DeviceTypes;
+    private ServiceVersionBrief [] Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class DescribeSupportedHsmResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceTypes 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回结果 
+     * @return Result 返回结果
      */
-    public DeviceInfo [] getDeviceTypes() {
-        return this.DeviceTypes;
+    public ServiceVersionBrief [] getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceTypes 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回结果
+     * @param Result 返回结果
      */
-    public void setDeviceTypes(DeviceInfo [] DeviceTypes) {
-        this.DeviceTypes = DeviceTypes;
+    public void setResult(ServiceVersionBrief [] Result) {
+        this.Result = Result;
     }
 
     /**
@@ -73,18 +68,18 @@ public class DescribeSupportedHsmResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeSupportedHsmResponse() {
+    public DescribeApplicationsStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSupportedHsmResponse(DescribeSupportedHsmResponse source) {
-        if (source.DeviceTypes != null) {
-            this.DeviceTypes = new DeviceInfo[source.DeviceTypes.length];
-            for (int i = 0; i < source.DeviceTypes.length; i++) {
-                this.DeviceTypes[i] = new DeviceInfo(source.DeviceTypes[i]);
+    public DescribeApplicationsStatusResponse(DescribeApplicationsStatusResponse source) {
+        if (source.Result != null) {
+            this.Result = new ServiceVersionBrief[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new ServiceVersionBrief(source.Result[i]);
             }
         }
         if (source.RequestId != null) {
@@ -97,7 +92,7 @@ public class DescribeSupportedHsmResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DeviceTypes.", this.DeviceTypes);
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

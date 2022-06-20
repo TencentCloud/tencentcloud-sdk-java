@@ -263,6 +263,14 @@ public class Certificates extends AbstractModel{
     private Tags [] Tags;
 
     /**
+    * 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsIgnore")
+    @Expose
+    private Boolean IsIgnore;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -862,6 +870,26 @@ public class Certificates extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsIgnore 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsIgnore() {
+        return this.IsIgnore;
+    }
+
+    /**
+     * Set 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsIgnore 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsIgnore(Boolean IsIgnore) {
+        this.IsIgnore = IsIgnore;
+    }
+
     public Certificates() {
     }
 
@@ -969,6 +997,9 @@ public class Certificates extends AbstractModel{
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.IsIgnore != null) {
+            this.IsIgnore = new Boolean(source.IsIgnore);
+        }
     }
 
 
@@ -1006,6 +1037,7 @@ public class Certificates extends AbstractModel{
         this.setParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
 
     }
 }

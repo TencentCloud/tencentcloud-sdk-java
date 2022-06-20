@@ -106,6 +106,16 @@ __ALIPAY__: 支付宝
     private String Remark;
 
     /**
+    * 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 云企付渠道商户号。外部接入平台入驻云企付平台后下发。 
      * @return ChannelMerchantId 云企付渠道商户号。外部接入平台入驻云企付平台后下发。
      */
@@ -305,6 +315,34 @@ __ALIPAY__: 支付宝
         this.Remark = Remark;
     }
 
+    /**
+     * Get 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_ 
+     * @return Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     * @param Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public CreateOpenBankRechargeOrderRequest() {
     }
 
@@ -346,6 +384,9 @@ __ALIPAY__: 支付宝
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -364,6 +405,7 @@ __ALIPAY__: 支付宝
         this.setParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

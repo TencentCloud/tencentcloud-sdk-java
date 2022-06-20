@@ -51,7 +51,7 @@ span.kind:
     private String InstanceId;
 
     /**
-    * 视图名称
+    * 视图名称，不可自定义输入。支持：service_metric
     */
     @SerializedName("ViewName")
     @Expose
@@ -162,16 +162,16 @@ span.kind:
     }
 
     /**
-     * Get 视图名称 
-     * @return ViewName 视图名称
+     * Get 视图名称，不可自定义输入。支持：service_metric 
+     * @return ViewName 视图名称，不可自定义输入。支持：service_metric
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图名称
-     * @param ViewName 视图名称
+     * Set 视图名称，不可自定义输入。支持：service_metric
+     * @param ViewName 视图名称，不可自定义输入。支持：service_metric
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;

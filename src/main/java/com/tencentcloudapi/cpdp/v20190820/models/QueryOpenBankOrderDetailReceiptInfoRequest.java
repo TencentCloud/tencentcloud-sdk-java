@@ -65,6 +65,16 @@ public class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel{
     private String ChannelApplyId;
 
     /**
+    * 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 渠道商户ID 
      * @return ChannelMerchantId 渠道商户ID
      */
@@ -160,6 +170,34 @@ public class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel{
         this.ChannelApplyId = ChannelApplyId;
     }
 
+    /**
+     * Get 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_ 
+     * @return Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     * @param Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryOpenBankOrderDetailReceiptInfoRequest() {
     }
 
@@ -186,6 +224,9 @@ public class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel{
         if (source.ChannelApplyId != null) {
             this.ChannelApplyId = new String(source.ChannelApplyId);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -199,6 +240,7 @@ public class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
         this.setParamSimple(map, prefix + "OutApplyId", this.OutApplyId);
         this.setParamSimple(map, prefix + "ChannelApplyId", this.ChannelApplyId);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

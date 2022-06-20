@@ -584,6 +584,14 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String EsPrivateDomain;
 
     /**
+    * 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsConfigSets")
+    @Expose
+    private EsConfigSetInfo [] EsConfigSets;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1939,6 +1947,26 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.EsPrivateDomain = EsPrivateDomain;
     }
 
+    /**
+     * Get 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsConfigSets 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EsConfigSetInfo [] getEsConfigSets() {
+        return this.EsConfigSets;
+    }
+
+    /**
+     * Set 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsConfigSets 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsConfigSets(EsConfigSetInfo [] EsConfigSets) {
+        this.EsConfigSets = EsConfigSets;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2181,6 +2209,12 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.EsPrivateDomain != null) {
             this.EsPrivateDomain = new String(source.EsPrivateDomain);
         }
+        if (source.EsConfigSets != null) {
+            this.EsConfigSets = new EsConfigSetInfo[source.EsConfigSets.length];
+            for (int i = 0; i < source.EsConfigSets.length; i++) {
+                this.EsConfigSets[i] = new EsConfigSetInfo(source.EsConfigSets[i]);
+            }
+        }
     }
 
 
@@ -2262,6 +2296,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
         this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
+        this.setParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
 
     }
 }

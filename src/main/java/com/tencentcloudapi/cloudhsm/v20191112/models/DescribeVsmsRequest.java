@@ -58,6 +58,13 @@ public class DescribeVsmsRequest extends AbstractModel{
     private String Manufacturer;
 
     /**
+    * Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+    */
+    @SerializedName("HsmType")
+    @Expose
+    private String HsmType;
+
+    /**
      * Get 偏移 
      * @return Offset 偏移
      */
@@ -137,6 +144,22 @@ public class DescribeVsmsRequest extends AbstractModel{
         this.Manufacturer = Manufacturer;
     }
 
+    /**
+     * Get Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all 
+     * @return HsmType Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+     */
+    public String getHsmType() {
+        return this.HsmType;
+    }
+
+    /**
+     * Set Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+     * @param HsmType Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+     */
+    public void setHsmType(String HsmType) {
+        this.HsmType = HsmType;
+    }
+
     public DescribeVsmsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeVsmsRequest extends AbstractModel{
         if (source.Manufacturer != null) {
             this.Manufacturer = new String(source.Manufacturer);
         }
+        if (source.HsmType != null) {
+            this.HsmType = new String(source.HsmType);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeVsmsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+        this.setParamSimple(map, prefix + "HsmType", this.HsmType);
 
     }
 }

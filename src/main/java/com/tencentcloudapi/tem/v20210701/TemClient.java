@@ -202,6 +202,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *单环境下所有应用状态查看
+     * @param req DescribeApplicationsStatusRequest
+     * @return DescribeApplicationsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationsStatusResponse DescribeApplicationsStatus(DescribeApplicationsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取分批发布详情
      * @param req DescribeDeployApplicationDetailRequest
      * @return DescribeDeployApplicationDetailResponse

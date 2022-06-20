@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudhsm.v20191112.models;
+package com.tencentcloudapi.ciam.v20220331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSupportedHsmRequest extends AbstractModel{
+public class SaltLocationRule extends AbstractModel{
 
     /**
-    * Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+    * 表达式
     */
-    @SerializedName("HsmType")
+    @SerializedName("Regex")
     @Expose
-    private String HsmType;
+    private String Regex;
 
     /**
-     * Get Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM 
-     * @return HsmType Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     * Get 表达式 
+     * @return Regex 表达式
      */
-    public String getHsmType() {
-        return this.HsmType;
+    public String getRegex() {
+        return this.Regex;
     }
 
     /**
-     * Set Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
-     * @param HsmType Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     * Set 表达式
+     * @param Regex 表达式
      */
-    public void setHsmType(String HsmType) {
-        this.HsmType = HsmType;
+    public void setRegex(String Regex) {
+        this.Regex = Regex;
     }
 
-    public DescribeSupportedHsmRequest() {
+    public SaltLocationRule() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSupportedHsmRequest(DescribeSupportedHsmRequest source) {
-        if (source.HsmType != null) {
-            this.HsmType = new String(source.HsmType);
+    public SaltLocationRule(SaltLocationRule source) {
+        if (source.Regex != null) {
+            this.Regex = new String(source.Regex);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeSupportedHsmRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HsmType", this.HsmType);
+        this.setParamSimple(map, prefix + "Regex", this.Regex);
 
     }
 }

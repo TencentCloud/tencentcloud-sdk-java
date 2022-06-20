@@ -58,7 +58,9 @@ public class DescribeTimingL7CacheDataRequest extends AbstractModel{
     private String [] ZoneIds;
 
     /**
-    * 筛选条件
+    * 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
     */
     @SerializedName("Filters")
     @Expose
@@ -145,16 +147,24 @@ public class DescribeTimingL7CacheDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 筛选条件 
-     * @return Filters 筛选条件
+     * Get 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"} 
+     * @return Filters 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选条件
-     * @param Filters 筛选条件
+     * Set 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
+     * @param Filters 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

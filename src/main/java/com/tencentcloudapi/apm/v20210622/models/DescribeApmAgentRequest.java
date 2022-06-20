@@ -51,6 +51,13 @@ public class DescribeApmAgentRequest extends AbstractModel{
     private String LanguageEnvironment;
 
     /**
+    * 上报方式
+    */
+    @SerializedName("ReportMethod")
+    @Expose
+    private String ReportMethod;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -114,6 +121,22 @@ public class DescribeApmAgentRequest extends AbstractModel{
         this.LanguageEnvironment = LanguageEnvironment;
     }
 
+    /**
+     * Get 上报方式 
+     * @return ReportMethod 上报方式
+     */
+    public String getReportMethod() {
+        return this.ReportMethod;
+    }
+
+    /**
+     * Set 上报方式
+     * @param ReportMethod 上报方式
+     */
+    public void setReportMethod(String ReportMethod) {
+        this.ReportMethod = ReportMethod;
+    }
+
     public DescribeApmAgentRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeApmAgentRequest extends AbstractModel{
         if (source.LanguageEnvironment != null) {
             this.LanguageEnvironment = new String(source.LanguageEnvironment);
         }
+        if (source.ReportMethod != null) {
+            this.ReportMethod = new String(source.ReportMethod);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeApmAgentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);
         this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
         this.setParamSimple(map, prefix + "LanguageEnvironment", this.LanguageEnvironment);
+        this.setParamSimple(map, prefix + "ReportMethod", this.ReportMethod);
 
     }
 }

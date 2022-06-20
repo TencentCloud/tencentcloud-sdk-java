@@ -103,7 +103,7 @@ public class VulEffectHostList extends AbstractModel{
     private String Description;
 
     /**
-    * 版本信息 0=普通版本 1=专业版 2=旗舰版
+    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostVersion")
@@ -125,6 +125,22 @@ public class VulEffectHostList extends AbstractModel{
     @SerializedName("FixStatusMsg")
     @Expose
     private String FixStatusMsg;
+
+    /**
+    * 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstDiscoveryTime")
+    @Expose
+    private String FirstDiscoveryTime;
+
+    /**
+    * 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
 
     /**
      * Get 事件id
@@ -327,9 +343,9 @@ public class VulEffectHostList extends AbstractModel{
     }
 
     /**
-     * Get 版本信息 0=普通版本 1=专业版 2=旗舰版
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostVersion 版本信息 0=普通版本 1=专业版 2=旗舰版
+     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostVersion() {
@@ -337,9 +353,9 @@ public class VulEffectHostList extends AbstractModel{
     }
 
     /**
-     * Set 版本信息 0=普通版本 1=专业版 2=旗舰版
+     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostVersion 版本信息 0=普通版本 1=专业版 2=旗舰版
+     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostVersion(Long HostVersion) {
@@ -384,6 +400,46 @@ public class VulEffectHostList extends AbstractModel{
      */
     public void setFixStatusMsg(String FixStatusMsg) {
         this.FixStatusMsg = FixStatusMsg;
+    }
+
+    /**
+     * Get 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstDiscoveryTime 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFirstDiscoveryTime() {
+        return this.FirstDiscoveryTime;
+    }
+
+    /**
+     * Set 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstDiscoveryTime 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstDiscoveryTime(String FirstDiscoveryTime) {
+        this.FirstDiscoveryTime = FirstDiscoveryTime;
+    }
+
+    /**
+     * Get 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
     }
 
     public VulEffectHostList() {
@@ -436,6 +492,12 @@ public class VulEffectHostList extends AbstractModel{
         if (source.FixStatusMsg != null) {
             this.FixStatusMsg = new String(source.FixStatusMsg);
         }
+        if (source.FirstDiscoveryTime != null) {
+            this.FirstDiscoveryTime = new String(source.FirstDiscoveryTime);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
     }
 
 
@@ -456,6 +518,8 @@ public class VulEffectHostList extends AbstractModel{
         this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
         this.setParamSimple(map, prefix + "IsSupportAutoFix", this.IsSupportAutoFix);
         this.setParamSimple(map, prefix + "FixStatusMsg", this.FixStatusMsg);
+        this.setParamSimple(map, prefix + "FirstDiscoveryTime", this.FirstDiscoveryTime);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
 
     }
 }
