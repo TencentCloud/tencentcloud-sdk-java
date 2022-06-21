@@ -44,6 +44,13 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 执行实例id
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
      * Get spark作业Id 
      * @return JobId spark作业Id
      */
@@ -91,6 +98,22 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 执行实例id 
+     * @return TaskId 执行实例id
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 执行实例id
+     * @param TaskId 执行实例id
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public DescribeSparkAppTasksRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

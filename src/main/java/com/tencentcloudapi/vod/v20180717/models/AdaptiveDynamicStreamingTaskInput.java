@@ -37,6 +37,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 溯源水印。
+    */
+    @SerializedName("TraceWatermark")
+    @Expose
+    private TraceWatermarkInput TraceWatermark;
+
+    /**
     * 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
     */
     @SerializedName("SubtitleSet")
@@ -76,6 +83,22 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     }
 
     /**
+     * Get 溯源水印。 
+     * @return TraceWatermark 溯源水印。
+     */
+    public TraceWatermarkInput getTraceWatermark() {
+        return this.TraceWatermark;
+    }
+
+    /**
+     * Set 溯源水印。
+     * @param TraceWatermark 溯源水印。
+     */
+    public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
+        this.TraceWatermark = TraceWatermark;
+    }
+
+    /**
      * Get 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。 
      * @return SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
@@ -108,6 +131,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
+        if (source.TraceWatermark != null) {
+            this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
+        }
         if (source.SubtitleSet != null) {
             this.SubtitleSet = new String[source.SubtitleSet.length];
             for (int i = 0; i < source.SubtitleSet.length; i++) {
@@ -123,6 +149,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }

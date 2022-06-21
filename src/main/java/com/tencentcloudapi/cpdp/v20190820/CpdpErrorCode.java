@@ -282,6 +282,9 @@ public enum CpdpErrorCode {
     // 超出商户单日转账额度。
      FAILEDOPERATION_QUOTAEXCEED("FailedOperation.QuotaExceed"),
      
+    // 退款信息重复。
+     FAILEDOPERATION_REFUNDINFODUPLICATE("FailedOperation.RefundInfoDuplicate"),
+     
     // 不可重试退款。
      FAILEDOPERATION_REFUNDNOTRETRIEABLE("FailedOperation.RefundNotRetrieable"),
      

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.eis.v20210601;
 public enum EisErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 鉴权失败。
      FAILEDOPERATION_AUTHENTICATIONFAILED("FailedOperation.AuthenticationFailed"),
      

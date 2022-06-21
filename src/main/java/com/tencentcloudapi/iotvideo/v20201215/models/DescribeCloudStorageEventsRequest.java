@@ -58,7 +58,7 @@ public class DescribeCloudStorageEventsRequest extends AbstractModel{
     private String Context;
 
     /**
-    * 单次获取的历史数据项目的最大数量, 缺省10
+    * 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
     */
     @SerializedName("Size")
     @Expose
@@ -166,16 +166,16 @@ public class DescribeCloudStorageEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 单次获取的历史数据项目的最大数量, 缺省10 
-     * @return Size 单次获取的历史数据项目的最大数量, 缺省10
+     * Get 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。 
+     * @return Size 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 单次获取的历史数据项目的最大数量, 缺省10
-     * @param Size 单次获取的历史数据项目的最大数量, 缺省10
+     * Set 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
+     * @param Size 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
      */
     public void setSize(Long Size) {
         this.Size = Size;

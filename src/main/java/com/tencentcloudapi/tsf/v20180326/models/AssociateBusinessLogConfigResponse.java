@@ -13,30 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MeasureTrtcMcuExternalResponse extends AbstractModel{
+public class AssociateBusinessLogConfigResponse extends AbstractModel{
 
     /**
-    * 应用的用量信息数组。
+    * 操作结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Usages")
+    @SerializedName("Result")
     @Expose
-    private OneSdkAppIdTranscodeTimeUsagesNewInfo [] Usages;
-
-    /**
-    * 用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Type")
-    @Expose
-    private String Type;
+    private Boolean Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +38,23 @@ public class MeasureTrtcMcuExternalResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 应用的用量信息数组。
+     * Get 操作结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Usages 应用的用量信息数组。
+     * @return Result 操作结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public OneSdkAppIdTranscodeTimeUsagesNewInfo [] getUsages() {
-        return this.Usages;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 应用的用量信息数组。
+     * Set 操作结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Usages 应用的用量信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setUsages(OneSdkAppIdTranscodeTimeUsagesNewInfo [] Usages) {
-        this.Usages = Usages;
-    }
-
-    /**
-     * Get 用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 用户计费类型
+     * @param Result 操作结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
     /**
@@ -101,22 +73,16 @@ public class MeasureTrtcMcuExternalResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public MeasureTrtcMcuExternalResponse() {
+    public AssociateBusinessLogConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public MeasureTrtcMcuExternalResponse(MeasureTrtcMcuExternalResponse source) {
-        if (source.Usages != null) {
-            this.Usages = new OneSdkAppIdTranscodeTimeUsagesNewInfo[source.Usages.length];
-            for (int i = 0; i < source.Usages.length; i++) {
-                this.Usages[i] = new OneSdkAppIdTranscodeTimeUsagesNewInfo(source.Usages[i]);
-            }
-        }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+    public AssociateBusinessLogConfigResponse(AssociateBusinessLogConfigResponse source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +94,7 @@ public class MeasureTrtcMcuExternalResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Usages.", this.Usages);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

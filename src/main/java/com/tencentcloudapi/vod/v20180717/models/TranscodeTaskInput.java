@@ -37,11 +37,11 @@ public class TranscodeTaskInput extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 马赛克列表，最大可支持 10 张。
+    * 溯源水印。
     */
-    @SerializedName("MosaicSet")
+    @SerializedName("TraceWatermark")
     @Expose
-    private MosaicInput [] MosaicSet;
+    private TraceWatermarkInput TraceWatermark;
 
     /**
     * 片头片尾列表，支持多片头片尾，最大可支持 10 个。
@@ -51,14 +51,11 @@ public class TranscodeTaskInput extends AbstractModel{
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+    * 马赛克列表，最大可支持 10 张。
     */
-    @SerializedName("StartTimeOffset")
+    @SerializedName("MosaicSet")
     @Expose
-    private Float StartTimeOffset;
+    private MosaicInput [] MosaicSet;
 
     /**
     * 转码后视频的终止时间偏移，单位：秒。
@@ -69,6 +66,16 @@ public class TranscodeTaskInput extends AbstractModel{
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
+
+    /**
+    * 转码后的视频的起始时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+    */
+    @SerializedName("StartTimeOffset")
+    @Expose
+    private Float StartTimeOffset;
 
     /**
      * Get 视频转码模板 ID。 
@@ -103,19 +110,19 @@ public class TranscodeTaskInput extends AbstractModel{
     }
 
     /**
-     * Get 马赛克列表，最大可支持 10 张。 
-     * @return MosaicSet 马赛克列表，最大可支持 10 张。
+     * Get 溯源水印。 
+     * @return TraceWatermark 溯源水印。
      */
-    public MosaicInput [] getMosaicSet() {
-        return this.MosaicSet;
+    public TraceWatermarkInput getTraceWatermark() {
+        return this.TraceWatermark;
     }
 
     /**
-     * Set 马赛克列表，最大可支持 10 张。
-     * @param MosaicSet 马赛克列表，最大可支持 10 张。
+     * Set 溯源水印。
+     * @param TraceWatermark 溯源水印。
      */
-    public void setMosaicSet(MosaicInput [] MosaicSet) {
-        this.MosaicSet = MosaicSet;
+    public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
+        this.TraceWatermark = TraceWatermark;
     }
 
     /**
@@ -135,31 +142,19 @@ public class TranscodeTaskInput extends AbstractModel{
     }
 
     /**
-     * Get 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li> 
-     * @return StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * Get 马赛克列表，最大可支持 10 张。 
+     * @return MosaicSet 马赛克列表，最大可支持 10 张。
      */
-    public Float getStartTimeOffset() {
-        return this.StartTimeOffset;
+    public MosaicInput [] getMosaicSet() {
+        return this.MosaicSet;
     }
 
     /**
-     * Set 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
-     * @param StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * Set 马赛克列表，最大可支持 10 张。
+     * @param MosaicSet 马赛克列表，最大可支持 10 张。
      */
-    public void setStartTimeOffset(Float StartTimeOffset) {
-        this.StartTimeOffset = StartTimeOffset;
+    public void setMosaicSet(MosaicInput [] MosaicSet) {
+        this.MosaicSet = MosaicSet;
     }
 
     /**
@@ -190,6 +185,34 @@ public class TranscodeTaskInput extends AbstractModel{
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    /**
+     * Get 转码后的视频的起始时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li> 
+     * @return StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     */
+    public Float getStartTimeOffset() {
+        return this.StartTimeOffset;
+    }
+
+    /**
+     * Set 转码后的视频的起始时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * @param StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     */
+    public void setStartTimeOffset(Float StartTimeOffset) {
+        this.StartTimeOffset = StartTimeOffset;
+    }
+
     public TranscodeTaskInput() {
     }
 
@@ -207,11 +230,8 @@ public class TranscodeTaskInput extends AbstractModel{
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
-        if (source.MosaicSet != null) {
-            this.MosaicSet = new MosaicInput[source.MosaicSet.length];
-            for (int i = 0; i < source.MosaicSet.length; i++) {
-                this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
-            }
+        if (source.TraceWatermark != null) {
+            this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
         }
         if (source.HeadTailSet != null) {
             this.HeadTailSet = new HeadTailTaskInput[source.HeadTailSet.length];
@@ -219,11 +239,17 @@ public class TranscodeTaskInput extends AbstractModel{
                 this.HeadTailSet[i] = new HeadTailTaskInput(source.HeadTailSet[i]);
             }
         }
-        if (source.StartTimeOffset != null) {
-            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        if (source.MosaicSet != null) {
+            this.MosaicSet = new MosaicInput[source.MosaicSet.length];
+            for (int i = 0; i < source.MosaicSet.length; i++) {
+                this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
+            }
         }
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
         }
     }
 
@@ -234,10 +260,11 @@ public class TranscodeTaskInput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
-        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+        this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
-        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
 
     }
 }

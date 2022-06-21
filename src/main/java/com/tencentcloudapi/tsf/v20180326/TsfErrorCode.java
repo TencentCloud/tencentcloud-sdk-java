@@ -129,6 +129,12 @@ public enum TsfErrorCode {
     // TKE 集群查询失败。
      FAILEDOPERATION_TKECLUSTERQUERYFAILED("FailedOperation.TkeClusterQueryFailed"),
      
+    // TSF应用性能管理业务日志配置解析规则查询失败。
+     FAILEDOPERATION_TSFAPMBUSILOGCFGSCHEMAQUERYERROR("FailedOperation.TsfApmBusiLogCfgSchemaQueryError"),
+     
+    // TSF应用性能管理业务日志配置数据库写入失败。
+     FAILEDOPERATION_TSFAPMBUSILOGCFGWRITEERROR("FailedOperation.TsfApmBusiLogCfgWriteError"),
+     
     // TSF应用性能管理CTSDB客户端调用失败。
      FAILEDOPERATION_TSFAPMCTSDBCLIENTREQUESTERROR("FailedOperation.TsfApmCtsdbClientRequestError"),
      
@@ -246,6 +252,12 @@ public enum TsfErrorCode {
     // 调用 TKE 接口失败，%s。
      INTERNALERROR_TKEAPIFAILEDOPERATION("InternalError.TkeApiFailedOperation"),
      
+    // TSF应用性能管理业务日志配置与应用关联处理错误。
+     INTERNALERROR_TSFAPMBUSILOGCFGAPPRELATIONMASTERERROR("InternalError.TsfApmBusiLogCfgAppRelationMasterError"),
+     
+    // TSF应用性能管理通用异常。
+     INTERNALERROR_TSFAPMCOMMONERROR("InternalError.TsfApmCommonError"),
+     
     // TSF应用性能管理ES客户端响应状态异常。
      INTERNALERROR_TSFAPMESRESPONSESTATUSEXCEPTION("InternalError.TsfApmEsResponseStatusException"),
      
@@ -350,6 +362,15 @@ public enum TsfErrorCode {
      
     // TSF应用性能管理业务日志配置与应用关联参数错误。
      INVALIDPARAMETER_TSFAPMBUSILOGCFGAPPRELATIONPARAMERROR("InvalidParameter.TsfApmBusiLogCfgAppRelationParamError"),
+     
+    // TSF应用性能管理业务日志配置云账户参数错误。
+     INVALIDPARAMETER_TSFAPMBUSILOGCFGCLOUDPARAMERROR("InvalidParameter.TsfApmBusiLogCfgCloudParamError"),
+     
+    // TSF应用性能管理业务日志配置标识参数错误。
+     INVALIDPARAMETER_TSFAPMBUSILOGCFGIDPARAMERROR("InvalidParameter.TsfApmBusiLogCfgIdParamError"),
+     
+    // TSF应用性能管理业务日志配置数目参数错误。
+     INVALIDPARAMETER_TSFAPMBUSILOGCFGLIMITPARAMERROR("InvalidParameter.TsfApmBusiLogCfgLimitParamError"),
      
     // TSF应用性能管理业务日志搜索请求参数错误。
      INVALIDPARAMETER_TSFAPMBUSILOGSEARCHREQUESTPARAMERROR("InvalidParameter.TsfApmBusiLogSearchRequestParamError"),

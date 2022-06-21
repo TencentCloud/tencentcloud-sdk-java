@@ -294,6 +294,9 @@ public enum CvmErrorCode {
     // 参数值重复。
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
+    // 重复标签。
+     INVALIDPARAMETERVALUE_DUPLICATETAGS("InvalidParameterValue.DuplicateTags"),
+     
     // 非GPU实例不允许转为GPU实例。
      INVALIDPARAMETERVALUE_GPUINSTANCEFAMILY("InvalidParameterValue.GPUInstanceFamily"),
      
@@ -449,6 +452,9 @@ public enum CvmErrorCode {
      
     // 指定的标签不存在。
      INVALIDPARAMETERVALUE_TAGKEYNOTFOUND("InvalidParameterValue.TagKeyNotFound"),
+     
+    // 标签配额超限。
+     INVALIDPARAMETERVALUE_TAGQUOTALIMITEXCEEDED("InvalidParameterValue.TagQuotaLimitExceeded"),
      
     // 每核心线程数不合法。
      INVALIDPARAMETERVALUE_THREADPERCOREVALUE("InvalidParameterValue.ThreadPerCoreValue"),
@@ -620,6 +626,9 @@ public enum CvmErrorCode {
      
     // 指定的置放群组不存在。
      RESOURCENOTFOUND_INVALIDPLACEMENTSET("ResourceNotFound.InvalidPlacementSet"),
+     
+    // 可用区不支持此机型。
+     RESOURCENOTFOUND_INVALIDZONEINSTANCETYPE("ResourceNotFound.InvalidZoneInstanceType"),
      
     // 无可用的缺省类型的CBS资源。
      RESOURCENOTFOUND_NODEFAULTCBS("ResourceNotFound.NoDefaultCbs"),
@@ -821,6 +830,9 @@ public enum CvmErrorCode {
      
     // 请求不支持特殊机型的实例
      UNSUPPORTEDOPERATION_SPECIALINSTANCETYPE("UnsupportedOperation.SpecialInstanceType"),
+     
+    // 该地域不支持竞价实例。
+     UNSUPPORTEDOPERATION_SPOTUNSUPPORTEDREGION("UnsupportedOperation.SpotUnsupportedRegion"),
      
     // 不支持关机不收费特性
      UNSUPPORTEDOPERATION_STOPPEDMODESTOPCHARGING("UnsupportedOperation.StoppedModeStopCharging"),

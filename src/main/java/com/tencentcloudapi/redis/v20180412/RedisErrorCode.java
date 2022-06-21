@@ -264,6 +264,9 @@ public enum RedisErrorCode {
     // 请求的区域暂时不提供请求类型的redis服务。
      RESOURCEUNAVAILABLE_NOTYPEIDREDISSERVICE("ResourceUnavailable.NoTypeIdRedisService"),
      
+    // 地域对应类型已售罄。
+     RESOURCEUNAVAILABLE_SALEOUT("ResourceUnavailable.SaleOut"),
+     
     // 产品还没有接入安全组。
      RESOURCEUNAVAILABLE_SECURITYGROUPNOTSUPPORTED("ResourceUnavailable.SecurityGroupNotSupported"),
      

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cloudaudit.v20190319;
 public enum CloudauditErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 创建COS存储桶失败
      FAILEDOPERATION_CREATEBUCKETFAIL("FailedOperation.CreateBucketFail"),
      

@@ -150,6 +150,30 @@ public class ClusterCheckItem extends AbstractModel{
     private String AffectedVersion;
 
     /**
+    * 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IgnoredAssetNum")
+    @Expose
+    private Long IgnoredAssetNum;
+
+    /**
+    * 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsIgnored")
+    @Expose
+    private Boolean IsIgnored;
+
+    /**
+    * 受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskAssessment")
+    @Expose
+    private String RiskAssessment;
+
+    /**
      * Get 唯一的检测项的ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CheckItemId 唯一的检测项的ID
@@ -465,6 +489,66 @@ public class ClusterCheckItem extends AbstractModel{
         this.AffectedVersion = AffectedVersion;
     }
 
+    /**
+     * Get 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IgnoredAssetNum 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIgnoredAssetNum() {
+        return this.IgnoredAssetNum;
+    }
+
+    /**
+     * Set 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IgnoredAssetNum 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIgnoredAssetNum(Long IgnoredAssetNum) {
+        this.IgnoredAssetNum = IgnoredAssetNum;
+    }
+
+    /**
+     * Get 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsIgnored 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsIgnored() {
+        return this.IsIgnored;
+    }
+
+    /**
+     * Set 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsIgnored 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsIgnored(Boolean IsIgnored) {
+        this.IsIgnored = IsIgnored;
+    }
+
+    /**
+     * Get 受影响评估
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskAssessment 受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskAssessment() {
+        return this.RiskAssessment;
+    }
+
+    /**
+     * Set 受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskAssessment 受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskAssessment(String RiskAssessment) {
+        this.RiskAssessment = RiskAssessment;
+    }
+
     public ClusterCheckItem() {
     }
 
@@ -521,6 +605,15 @@ public class ClusterCheckItem extends AbstractModel{
         if (source.AffectedVersion != null) {
             this.AffectedVersion = new String(source.AffectedVersion);
         }
+        if (source.IgnoredAssetNum != null) {
+            this.IgnoredAssetNum = new Long(source.IgnoredAssetNum);
+        }
+        if (source.IsIgnored != null) {
+            this.IsIgnored = new Boolean(source.IsIgnored);
+        }
+        if (source.RiskAssessment != null) {
+            this.RiskAssessment = new String(source.RiskAssessment);
+        }
     }
 
 
@@ -544,6 +637,9 @@ public class ClusterCheckItem extends AbstractModel{
         this.setParamSimple(map, prefix + "RelateLink", this.RelateLink);
         this.setParamSimple(map, prefix + "AffectedType", this.AffectedType);
         this.setParamSimple(map, prefix + "AffectedVersion", this.AffectedVersion);
+        this.setParamSimple(map, prefix + "IgnoredAssetNum", this.IgnoredAssetNum);
+        this.setParamSimple(map, prefix + "IsIgnored", this.IsIgnored);
+        this.setParamSimple(map, prefix + "RiskAssessment", this.RiskAssessment);
 
     }
 }

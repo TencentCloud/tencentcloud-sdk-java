@@ -62,7 +62,7 @@ public class ApmInstanceDetail extends AbstractModel{
     private String CreateUin;
 
     /**
-    * 该实例已上报的服务数
+    * 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceCount")
@@ -197,6 +197,22 @@ public class ApmInstanceDetail extends AbstractModel{
     private String LogTopicID;
 
     /**
+    * 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientCount")
+    @Expose
+    private Long ClientCount;
+
+    /**
+    * 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -293,9 +309,9 @@ public class ApmInstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 该实例已上报的服务数
+     * Get 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceCount 该实例已上报的服务数
+     * @return ServiceCount 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceCount() {
@@ -303,9 +319,9 @@ public class ApmInstanceDetail extends AbstractModel{
     }
 
     /**
-     * Set 该实例已上报的服务数
+     * Set 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceCount 该实例已上报的服务数
+     * @param ServiceCount 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceCount(Long ServiceCount) {
@@ -628,6 +644,46 @@ public class ApmInstanceDetail extends AbstractModel{
         this.LogTopicID = LogTopicID;
     }
 
+    /**
+     * Get 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientCount 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientCount() {
+        return this.ClientCount;
+    }
+
+    /**
+     * Set 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientCount 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientCount(Long ClientCount) {
+        this.ClientCount = ClientCount;
+    }
+
+    /**
+     * Get 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -705,6 +761,12 @@ public class ApmInstanceDetail extends AbstractModel{
         if (source.LogTopicID != null) {
             this.LogTopicID = new String(source.LogTopicID);
         }
+        if (source.ClientCount != null) {
+            this.ClientCount = new Long(source.ClientCount);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
     }
 
 
@@ -734,6 +796,8 @@ public class ApmInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "LogSource", this.LogSource);
         this.setParamSimple(map, prefix + "IsRelatedLog", this.IsRelatedLog);
         this.setParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
+        this.setParamSimple(map, prefix + "ClientCount", this.ClientCount);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }
 }

@@ -79,6 +79,46 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *关联日志配置项到应用
+     * @param req AssociateBusinessLogConfigRequest
+     * @return AssociateBusinessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateBusinessLogConfigResponse AssociateBusinessLogConfig(AssociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateBusinessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateBusinessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateBusinessLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *关联投递配置到部署组
+     * @param req AssociateConfigWithGroupRequest
+     * @return AssociateConfigWithGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateConfigWithGroupResponse AssociateConfigWithGroup(AssociateConfigWithGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateConfigWithGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateConfigWithGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateConfigWithGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *网关与API分组批量绑定
      * @param req BindApiGroupRequest
      * @return BindApiGroupResponse
@@ -1120,6 +1160,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *查询应用关联日志配置项信息
+     * @param req DescribeApplicationBusinessLogConfigRequest
+     * @return DescribeApplicationBusinessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(DescribeApplicationBusinessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationBusinessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationBusinessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationBusinessLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取应用列表
      * @param req DescribeApplicationsRequest
      * @return DescribeApplicationsResponse
@@ -1152,6 +1212,46 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicResourceUsageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBasicResourceUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询业务日志配置项信息
+     * @param req DescribeBusinessLogConfigRequest
+     * @return DescribeBusinessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBusinessLogConfigResponse DescribeBusinessLogConfig(DescribeBusinessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBusinessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBusinessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBusinessLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询日志配置项列表
+     * @param req DescribeBusinessLogConfigsRequest
+     * @return DescribeBusinessLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBusinessLogConfigsResponse DescribeBusinessLogConfigs(DescribeBusinessLogConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBusinessLogConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBusinessLogConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBusinessLogConfigs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1380,6 +1480,66 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *获取单个投递项配置信息
+     * @param req DescribeDeliveryConfigRequest
+     * @return DescribeDeliveryConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliveryConfigResponse DescribeDeliveryConfig(DescribeDeliveryConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeliveryConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeliveryConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeliveryConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用部署组id获取绑定信息
+     * @param req DescribeDeliveryConfigByGroupIdRequest
+     * @return DescribeDeliveryConfigByGroupIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliveryConfigByGroupIdResponse DescribeDeliveryConfigByGroupId(DescribeDeliveryConfigByGroupIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeliveryConfigByGroupId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取多个投递项配置 
+     * @param req DescribeDeliveryConfigsRequest
+     * @return DescribeDeliveryConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliveryConfigsResponse DescribeDeliveryConfigs(DescribeDeliveryConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeliveryConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeliveryConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeliveryConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
      * @param req DescribeDownloadInfoRequest
@@ -1573,6 +1733,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupBindedGatewaysResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeGroupBindedGateways");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询分组管理日志配置列表
+     * @param req DescribeGroupBusinessLogConfigsRequest
+     * @return DescribeGroupBusinessLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupBusinessLogConfigsResponse DescribeGroupBusinessLogConfigs(DescribeGroupBusinessLogConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupBusinessLogConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupBusinessLogConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupBusinessLogConfigs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2642,6 +2822,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *取消关联业务日志配置项和应用
+     * @param req DisassociateBusinessLogConfigRequest
+     * @return DisassociateBusinessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfig(DisassociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateBusinessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateBusinessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateBusinessLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *取消关联投递信息和部署组
+     * @param req DisassociateKafkaConfigRequest
+     * @return DisassociateKafkaConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateKafkaConfigResponse DisassociateKafkaConfig(DisassociateKafkaConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateKafkaConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateKafkaConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateKafkaConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *下线Api分组
      * @param req DraftApiGroupRequest
      * @return DraftApiGroupResponse
@@ -2975,6 +3195,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<OperateApplicationTcrBindingResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OperateApplicationTcrBinding");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重关联业务日志配置
+     * @param req ReassociateBusinessLogConfigRequest
+     * @return ReassociateBusinessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(ReassociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReassociateBusinessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReassociateBusinessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReassociateBusinessLogConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
