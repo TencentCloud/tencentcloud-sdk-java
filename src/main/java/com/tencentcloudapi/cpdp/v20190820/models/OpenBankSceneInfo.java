@@ -23,95 +23,123 @@ import java.util.HashMap;
 public class OpenBankSceneInfo extends AbstractModel{
 
     /**
-    * 用户端实际 ip，示例值：14.17.22.32
+    * 用户端实际 ip。汇付渠道必填。
     */
     @SerializedName("PayerClientIp")
     @Expose
     private String PayerClientIp;
 
     /**
-    * 浏览器 User-Agent
+    * 浏览器 User-Agent。
     */
     @SerializedName("PayerUa")
     @Expose
     private String PayerUa;
 
     /**
-    * 用户下单时间，若不上送，服务端默认当前时间
+    * 用户下单时间。若不上送，服务端默认当前时间。
     */
     @SerializedName("OrderTime")
     @Expose
     private String OrderTime;
 
     /**
-    * 终端设备号（门店号或收银设备 ID），示例值：POS1:1
+    * 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-     * Get 用户端实际 ip，示例值：14.17.22.32 
-     * @return PayerClientIp 用户端实际 ip，示例值：14.17.22.32
+    * 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
+     * Get 用户端实际 ip。汇付渠道必填。 
+     * @return PayerClientIp 用户端实际 ip。汇付渠道必填。
      */
     public String getPayerClientIp() {
         return this.PayerClientIp;
     }
 
     /**
-     * Set 用户端实际 ip，示例值：14.17.22.32
-     * @param PayerClientIp 用户端实际 ip，示例值：14.17.22.32
+     * Set 用户端实际 ip。汇付渠道必填。
+     * @param PayerClientIp 用户端实际 ip。汇付渠道必填。
      */
     public void setPayerClientIp(String PayerClientIp) {
         this.PayerClientIp = PayerClientIp;
     }
 
     /**
-     * Get 浏览器 User-Agent 
-     * @return PayerUa 浏览器 User-Agent
+     * Get 浏览器 User-Agent。 
+     * @return PayerUa 浏览器 User-Agent。
      */
     public String getPayerUa() {
         return this.PayerUa;
     }
 
     /**
-     * Set 浏览器 User-Agent
-     * @param PayerUa 浏览器 User-Agent
+     * Set 浏览器 User-Agent。
+     * @param PayerUa 浏览器 User-Agent。
      */
     public void setPayerUa(String PayerUa) {
         this.PayerUa = PayerUa;
     }
 
     /**
-     * Get 用户下单时间，若不上送，服务端默认当前时间 
-     * @return OrderTime 用户下单时间，若不上送，服务端默认当前时间
+     * Get 用户下单时间。若不上送，服务端默认当前时间。 
+     * @return OrderTime 用户下单时间。若不上送，服务端默认当前时间。
      */
     public String getOrderTime() {
         return this.OrderTime;
     }
 
     /**
-     * Set 用户下单时间，若不上送，服务端默认当前时间
-     * @param OrderTime 用户下单时间，若不上送，服务端默认当前时间
+     * Set 用户下单时间。若不上送，服务端默认当前时间。
+     * @param OrderTime 用户下单时间。若不上送，服务端默认当前时间。
      */
     public void setOrderTime(String OrderTime) {
         this.OrderTime = OrderTime;
     }
 
     /**
-     * Get 终端设备号（门店号或收银设备 ID），示例值：POS1:1 
-     * @return DeviceId 终端设备号（门店号或收银设备 ID），示例值：POS1:1
+     * Get 终端设备号（门店号或收银设备 ID），示例值：POS1:1。 
+     * @return DeviceId 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 终端设备号（门店号或收银设备 ID），示例值：POS1:1
-     * @param DeviceId 终端设备号（门店号或收银设备 ID），示例值：POS1:1
+     * Set 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
+     * @param DeviceId 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。 
+     * @return DeviceType 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
+     * @param DeviceType 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
     }
 
     public OpenBankSceneInfo() {
@@ -134,6 +162,9 @@ public class OpenBankSceneInfo extends AbstractModel{
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class OpenBankSceneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PayerUa", this.PayerUa);
         this.setParamSimple(map, prefix + "OrderTime", this.OrderTime);
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

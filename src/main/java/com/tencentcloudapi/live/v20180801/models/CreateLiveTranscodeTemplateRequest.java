@@ -191,6 +191,22 @@ baseline/main/high。默认baseline
     private Long ShortEdgeAsHeight;
 
     /**
+    * DRM 加密类型，可选值：fairplay、normalaes、widevine。
+不传递或着为空字符串，清空之前的DRM配置。
+    */
+    @SerializedName("DRMType")
+    @Expose
+    private String DRMType;
+
+    /**
+    * DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+不传递或着为空字符串，清空之前的DRM配置。
+    */
+    @SerializedName("DRMTracks")
+    @Expose
+    private String DRMTracks;
+
+    /**
      * Get 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
@@ -622,6 +638,46 @@ baseline/main/high。默认baseline
         this.ShortEdgeAsHeight = ShortEdgeAsHeight;
     }
 
+    /**
+     * Get DRM 加密类型，可选值：fairplay、normalaes、widevine。
+不传递或着为空字符串，清空之前的DRM配置。 
+     * @return DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
+不传递或着为空字符串，清空之前的DRM配置。
+     */
+    public String getDRMType() {
+        return this.DRMType;
+    }
+
+    /**
+     * Set DRM 加密类型，可选值：fairplay、normalaes、widevine。
+不传递或着为空字符串，清空之前的DRM配置。
+     * @param DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
+不传递或着为空字符串，清空之前的DRM配置。
+     */
+    public void setDRMType(String DRMType) {
+        this.DRMType = DRMType;
+    }
+
+    /**
+     * Get DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+不传递或着为空字符串，清空之前的DRM配置。 
+     * @return DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+不传递或着为空字符串，清空之前的DRM配置。
+     */
+    public String getDRMTracks() {
+        return this.DRMTracks;
+    }
+
+    /**
+     * Set DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+不传递或着为空字符串，清空之前的DRM配置。
+     * @param DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+不传递或着为空字符串，清空之前的DRM配置。
+     */
+    public void setDRMTracks(String DRMTracks) {
+        this.DRMTracks = DRMTracks;
+    }
+
     public CreateLiveTranscodeTemplateRequest() {
     }
 
@@ -690,6 +746,12 @@ baseline/main/high。默认baseline
         if (source.ShortEdgeAsHeight != null) {
             this.ShortEdgeAsHeight = new Long(source.ShortEdgeAsHeight);
         }
+        if (source.DRMType != null) {
+            this.DRMType = new String(source.DRMType);
+        }
+        if (source.DRMTracks != null) {
+            this.DRMTracks = new String(source.DRMTracks);
+        }
     }
 
 
@@ -717,6 +779,8 @@ baseline/main/high。默认baseline
         this.setParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
         this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
         this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
+        this.setParamSimple(map, prefix + "DRMType", this.DRMType);
+        this.setParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
 
     }
 }

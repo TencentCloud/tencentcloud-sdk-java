@@ -23,72 +23,95 @@ import java.util.HashMap;
 public class OpenBankGoodsInfo extends AbstractModel{
 
     /**
-    * 商品标题，默认值“商品支付”
+    * 商品标题。默认值“商品支付”。
     */
     @SerializedName("GoodsName")
     @Expose
     private String GoodsName;
 
     /**
-    * 商品详细描述（商品列表）
+    * 商品详细描述（商品列表）。
     */
     @SerializedName("GoodsDetail")
     @Expose
     private String GoodsDetail;
 
     /**
-    * 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+    * 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
     */
     @SerializedName("GoodsDescription")
     @Expose
     private String GoodsDescription;
 
     /**
-     * Get 商品标题，默认值“商品支付” 
-     * @return GoodsName 商品标题，默认值“商品支付”
+    * 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+    */
+    @SerializedName("GoodsBizType")
+    @Expose
+    private String GoodsBizType;
+
+    /**
+     * Get 商品标题。默认值“商品支付”。 
+     * @return GoodsName 商品标题。默认值“商品支付”。
      */
     public String getGoodsName() {
         return this.GoodsName;
     }
 
     /**
-     * Set 商品标题，默认值“商品支付”
-     * @param GoodsName 商品标题，默认值“商品支付”
+     * Set 商品标题。默认值“商品支付”。
+     * @param GoodsName 商品标题。默认值“商品支付”。
      */
     public void setGoodsName(String GoodsName) {
         this.GoodsName = GoodsName;
     }
 
     /**
-     * Get 商品详细描述（商品列表） 
-     * @return GoodsDetail 商品详细描述（商品列表）
+     * Get 商品详细描述（商品列表）。 
+     * @return GoodsDetail 商品详细描述（商品列表）。
      */
     public String getGoodsDetail() {
         return this.GoodsDetail;
     }
 
     /**
-     * Set 商品详细描述（商品列表）
-     * @param GoodsDetail 商品详细描述（商品列表）
+     * Set 商品详细描述（商品列表）。
+     * @param GoodsDetail 商品详细描述（商品列表）。
      */
     public void setGoodsDetail(String GoodsDetail) {
         this.GoodsDetail = GoodsDetail;
     }
 
     /**
-     * Get 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号 
-     * @return GoodsDescription 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * Get 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号 
+     * @return GoodsDescription 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     public String getGoodsDescription() {
         return this.GoodsDescription;
     }
 
     /**
-     * Set 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
-     * @param GoodsDescription 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * Set 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * @param GoodsDescription 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     public void setGoodsDescription(String GoodsDescription) {
         this.GoodsDescription = GoodsDescription;
+    }
+
+    /**
+     * Get 业务类型。汇付渠道必填，汇付渠道传入固定值100099。 
+     * @return GoodsBizType 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+     */
+    public String getGoodsBizType() {
+        return this.GoodsBizType;
+    }
+
+    /**
+     * Set 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+     * @param GoodsBizType 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+     */
+    public void setGoodsBizType(String GoodsBizType) {
+        this.GoodsBizType = GoodsBizType;
     }
 
     public OpenBankGoodsInfo() {
@@ -108,6 +131,9 @@ public class OpenBankGoodsInfo extends AbstractModel{
         if (source.GoodsDescription != null) {
             this.GoodsDescription = new String(source.GoodsDescription);
         }
+        if (source.GoodsBizType != null) {
+            this.GoodsBizType = new String(source.GoodsBizType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class OpenBankGoodsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "GoodsName", this.GoodsName);
         this.setParamSimple(map, prefix + "GoodsDetail", this.GoodsDetail);
         this.setParamSimple(map, prefix + "GoodsDescription", this.GoodsDescription);
+        this.setParamSimple(map, prefix + "GoodsBizType", this.GoodsBizType);
 
     }
 }

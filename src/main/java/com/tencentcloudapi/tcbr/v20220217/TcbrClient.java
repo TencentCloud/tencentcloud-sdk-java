@@ -159,6 +159,46 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *操作发布单
+     * @param req OperateServerManageRequest
+     * @return OperateServerManageResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateServerManageResponse OperateServerManage(OperateServerManageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OperateServerManageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OperateServerManageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OperateServerManage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *灰度发布
+     * @param req ReleaseGrayRequest
+     * @return ReleaseGrayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseGrayResponse ReleaseGray(ReleaseGrayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseGrayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseGrayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseGray");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新云托管服务
      * @param req UpdateCloudRunServerRequest
      * @return UpdateCloudRunServerResponse

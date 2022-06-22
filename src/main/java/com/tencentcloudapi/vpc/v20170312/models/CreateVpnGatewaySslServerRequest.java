@@ -86,6 +86,27 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel{
     private Boolean Compress;
 
     /**
+    * 是否开启SSO认证
+    */
+    @SerializedName("SsoEnabled")
+    @Expose
+    private Boolean SsoEnabled;
+
+    /**
+    * 是否开启策略访问控制
+    */
+    @SerializedName("AccessPolicyEnabled")
+    @Expose
+    private Boolean AccessPolicyEnabled;
+
+    /**
+    * SAML-DATA
+    */
+    @SerializedName("SamlData")
+    @Expose
+    private String SamlData;
+
+    /**
      * Get VPN实例ID 
      * @return VpnGatewayId VPN实例ID
      */
@@ -229,6 +250,54 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel{
         this.Compress = Compress;
     }
 
+    /**
+     * Get 是否开启SSO认证 
+     * @return SsoEnabled 是否开启SSO认证
+     */
+    public Boolean getSsoEnabled() {
+        return this.SsoEnabled;
+    }
+
+    /**
+     * Set 是否开启SSO认证
+     * @param SsoEnabled 是否开启SSO认证
+     */
+    public void setSsoEnabled(Boolean SsoEnabled) {
+        this.SsoEnabled = SsoEnabled;
+    }
+
+    /**
+     * Get 是否开启策略访问控制 
+     * @return AccessPolicyEnabled 是否开启策略访问控制
+     */
+    public Boolean getAccessPolicyEnabled() {
+        return this.AccessPolicyEnabled;
+    }
+
+    /**
+     * Set 是否开启策略访问控制
+     * @param AccessPolicyEnabled 是否开启策略访问控制
+     */
+    public void setAccessPolicyEnabled(Boolean AccessPolicyEnabled) {
+        this.AccessPolicyEnabled = AccessPolicyEnabled;
+    }
+
+    /**
+     * Get SAML-DATA 
+     * @return SamlData SAML-DATA
+     */
+    public String getSamlData() {
+        return this.SamlData;
+    }
+
+    /**
+     * Set SAML-DATA
+     * @param SamlData SAML-DATA
+     */
+    public void setSamlData(String SamlData) {
+        this.SamlData = SamlData;
+    }
+
     public CreateVpnGatewaySslServerRequest() {
     }
 
@@ -267,6 +336,15 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel{
         if (source.Compress != null) {
             this.Compress = new Boolean(source.Compress);
         }
+        if (source.SsoEnabled != null) {
+            this.SsoEnabled = new Boolean(source.SsoEnabled);
+        }
+        if (source.AccessPolicyEnabled != null) {
+            this.AccessPolicyEnabled = new Boolean(source.AccessPolicyEnabled);
+        }
+        if (source.SamlData != null) {
+            this.SamlData = new String(source.SamlData);
+        }
     }
 
 
@@ -283,6 +361,9 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IntegrityAlgorithm", this.IntegrityAlgorithm);
         this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
+        this.setParamSimple(map, prefix + "SsoEnabled", this.SsoEnabled);
+        this.setParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
+        this.setParamSimple(map, prefix + "SamlData", this.SamlData);
 
     }
 }

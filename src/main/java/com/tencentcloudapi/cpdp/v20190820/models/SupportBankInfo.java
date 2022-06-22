@@ -55,6 +55,23 @@ __WORKING__: 正常工作
     private String BankNotice;
 
     /**
+    * 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BankId")
+    @Expose
+    private String BankId;
+
+    /**
+    * 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CardType")
+    @Expose
+    private String CardType;
+
+    /**
      * Get 银行简称。 
      * @return BankCode 银行简称。
      */
@@ -134,6 +151,50 @@ __WORKING__: 正常工作
         this.BankNotice = BankNotice;
     }
 
+    /**
+     * Get 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BankId 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBankId() {
+        return this.BankId;
+    }
+
+    /**
+     * Set 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BankId 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBankId(String BankId) {
+        this.BankId = BankId;
+    }
+
+    /**
+     * Get 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CardType 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCardType() {
+        return this.CardType;
+    }
+
+    /**
+     * Set 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CardType 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCardType(String CardType) {
+        this.CardType = CardType;
+    }
+
     public SupportBankInfo() {
     }
 
@@ -154,6 +215,12 @@ __WORKING__: 正常工作
         if (source.BankNotice != null) {
             this.BankNotice = new String(source.BankNotice);
         }
+        if (source.BankId != null) {
+            this.BankId = new String(source.BankId);
+        }
+        if (source.CardType != null) {
+            this.CardType = new String(source.CardType);
+        }
     }
 
 
@@ -165,6 +232,8 @@ __WORKING__: 正常工作
         this.setParamSimple(map, prefix + "BankName", this.BankName);
         this.setParamSimple(map, prefix + "MaintainStatus", this.MaintainStatus);
         this.setParamSimple(map, prefix + "BankNotice", this.BankNotice);
+        this.setParamSimple(map, prefix + "BankId", this.BankId);
+        this.setParamSimple(map, prefix + "CardType", this.CardType);
 
     }
 }

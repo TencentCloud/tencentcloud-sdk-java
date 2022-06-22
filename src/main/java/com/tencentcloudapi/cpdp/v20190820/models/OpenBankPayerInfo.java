@@ -39,7 +39,7 @@ public class OpenBankPayerInfo extends AbstractModel{
 
     /**
     * 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
     */
     @SerializedName("BindSerialNo")
     @Expose
@@ -54,6 +54,15 @@ ACCOUNT_BOOK_ID：电子记账本ID。
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
+
+    /**
+    * 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
+    */
+    @SerializedName("BankCardType")
+    @Expose
+    private String BankCardType;
 
     /**
      * Get 付款方唯一标识。当TENPAY时，必填上送
@@ -93,9 +102,9 @@ ACCOUNT_BOOK_ID：电子记账本ID。
 
     /**
      * Get 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。 
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。 
      * @return BindSerialNo 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
      */
     public String getBindSerialNo() {
         return this.BindSerialNo;
@@ -103,9 +112,9 @@ ACCOUNT_BOOK_ID：电子记账本ID。
 
     /**
      * Set 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
      * @param BindSerialNo 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
      */
     public void setBindSerialNo(String BindSerialNo) {
         this.BindSerialNo = BindSerialNo;
@@ -139,6 +148,30 @@ ACCOUNT_BOOK_ID：电子记账本ID。
         this.AccountType = AccountType;
     }
 
+    /**
+     * Get 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡 
+     * @return BankCardType 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
+     */
+    public String getBankCardType() {
+        return this.BankCardType;
+    }
+
+    /**
+     * Set 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
+     * @param BankCardType 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
+     */
+    public void setBankCardType(String BankCardType) {
+        this.BankCardType = BankCardType;
+    }
+
     public OpenBankPayerInfo() {
     }
 
@@ -159,6 +192,9 @@ ACCOUNT_BOOK_ID：电子记账本ID。
         if (source.AccountType != null) {
             this.AccountType = new String(source.AccountType);
         }
+        if (source.BankCardType != null) {
+            this.BankCardType = new String(source.BankCardType);
+        }
     }
 
 
@@ -170,6 +206,7 @@ ACCOUNT_BOOK_ID：电子记账本ID。
         this.setParamSimple(map, prefix + "PayerName", this.PayerName);
         this.setParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
+        this.setParamSimple(map, prefix + "BankCardType", this.BankCardType);
 
     }
 }

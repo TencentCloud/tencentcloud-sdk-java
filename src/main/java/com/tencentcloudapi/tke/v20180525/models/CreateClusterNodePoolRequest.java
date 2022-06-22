@@ -93,7 +93,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private String RuntimeVersion;
 
     /**
-    * 节点池os
+    * 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
     */
     @SerializedName("NodePoolOs")
     @Expose
@@ -274,16 +274,16 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点池os 
-     * @return NodePoolOs 节点池os
+     * Get 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName 
+     * @return NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
      */
     public String getNodePoolOs() {
         return this.NodePoolOs;
     }
 
     /**
-     * Set 节点池os
-     * @param NodePoolOs 节点池os
+     * Set 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+     * @param NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
      */
     public void setNodePoolOs(String NodePoolOs) {
         this.NodePoolOs = NodePoolOs;

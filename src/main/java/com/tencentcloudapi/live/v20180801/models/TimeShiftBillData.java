@@ -30,7 +30,7 @@ public class TimeShiftBillData extends AbstractModel{
     private String Domain;
 
     /**
-    * 时移文件时长,单位分钟。
+    * 时移文件时长，单位分钟。
     */
     @SerializedName("Duration")
     @Expose
@@ -51,6 +51,13 @@ public class TimeShiftBillData extends AbstractModel{
     private String Time;
 
     /**
+    * 时移总时长，单位分钟。
+    */
+    @SerializedName("TotalDuration")
+    @Expose
+    private Float TotalDuration;
+
+    /**
      * Get 推流域名。 
      * @return Domain 推流域名。
      */
@@ -67,16 +74,16 @@ public class TimeShiftBillData extends AbstractModel{
     }
 
     /**
-     * Get 时移文件时长,单位分钟。 
-     * @return Duration 时移文件时长,单位分钟。
+     * Get 时移文件时长，单位分钟。 
+     * @return Duration 时移文件时长，单位分钟。
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 时移文件时长,单位分钟。
-     * @param Duration 时移文件时长,单位分钟。
+     * Set 时移文件时长，单位分钟。
+     * @param Duration 时移文件时长，单位分钟。
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -114,6 +121,22 @@ public class TimeShiftBillData extends AbstractModel{
         this.Time = Time;
     }
 
+    /**
+     * Get 时移总时长，单位分钟。 
+     * @return TotalDuration 时移总时长，单位分钟。
+     */
+    public Float getTotalDuration() {
+        return this.TotalDuration;
+    }
+
+    /**
+     * Set 时移总时长，单位分钟。
+     * @param TotalDuration 时移总时长，单位分钟。
+     */
+    public void setTotalDuration(Float TotalDuration) {
+        this.TotalDuration = TotalDuration;
+    }
+
     public TimeShiftBillData() {
     }
 
@@ -134,6 +157,9 @@ public class TimeShiftBillData extends AbstractModel{
         if (source.Time != null) {
             this.Time = new String(source.Time);
         }
+        if (source.TotalDuration != null) {
+            this.TotalDuration = new Float(source.TotalDuration);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class TimeShiftBillData extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "StoragePeriod", this.StoragePeriod);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "TotalDuration", this.TotalDuration);
 
     }
 }

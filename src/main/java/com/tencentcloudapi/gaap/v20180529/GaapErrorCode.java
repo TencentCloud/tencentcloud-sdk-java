@@ -150,6 +150,12 @@ public enum GaapErrorCode {
     // Session不存在或已经被取消。
      FAILEDOPERATION_SESSIONNOTEXIST("FailedOperation.SessionNotExist"),
      
+    // 标签资源绑定失败。
+     FAILEDOPERATION_TAGRESOURCESFAILED("FailedOperation.TagResourcesFailed"),
+     
+    // 标签资源解绑失败。
+     FAILEDOPERATION_UNTAGRESOURCESFAILED("FailedOperation.UnTagResourcesFailed"),
+     
     // 用户未认证。
      FAILEDOPERATION_USERNOTAUTHENTICATED("FailedOperation.UserNotAuthenticated"),
      
@@ -239,6 +245,9 @@ public enum GaapErrorCode {
      
     // 超过配额限制。
      LIMITEXCEEDED("LimitExceeded"),
+     
+    // 标签配额不足。
+     LIMITEXCEEDED_TAGQUOTA("LimitExceeded.TagQuota"),
      
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),

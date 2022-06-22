@@ -64,6 +64,7 @@ public class SearchLogRequest extends AbstractModel{
     /**
     * 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
 注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
     */
@@ -189,10 +190,12 @@ public class SearchLogRequest extends AbstractModel{
     /**
      * Get 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
 注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a> 
      * @return Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
 注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
      */
@@ -203,10 +206,12 @@ public class SearchLogRequest extends AbstractModel{
     /**
      * Set 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
 注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
      * @param Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
 注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
      */
