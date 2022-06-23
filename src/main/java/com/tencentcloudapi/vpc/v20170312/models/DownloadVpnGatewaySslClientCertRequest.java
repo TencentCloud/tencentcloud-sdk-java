@@ -30,6 +30,20 @@ public class DownloadVpnGatewaySslClientCertRequest extends AbstractModel{
     private String SslVpnClientId;
 
     /**
+    * SAML-TOKEN
+    */
+    @SerializedName("SamlToken")
+    @Expose
+    private String SamlToken;
+
+    /**
+    * VPN门户网站使用。默认Flase
+    */
+    @SerializedName("IsVpnPortal")
+    @Expose
+    private Boolean IsVpnPortal;
+
+    /**
      * Get SSL-VPN-CLIENT 实例ID。 
      * @return SslVpnClientId SSL-VPN-CLIENT 实例ID。
      */
@@ -45,6 +59,38 @@ public class DownloadVpnGatewaySslClientCertRequest extends AbstractModel{
         this.SslVpnClientId = SslVpnClientId;
     }
 
+    /**
+     * Get SAML-TOKEN 
+     * @return SamlToken SAML-TOKEN
+     */
+    public String getSamlToken() {
+        return this.SamlToken;
+    }
+
+    /**
+     * Set SAML-TOKEN
+     * @param SamlToken SAML-TOKEN
+     */
+    public void setSamlToken(String SamlToken) {
+        this.SamlToken = SamlToken;
+    }
+
+    /**
+     * Get VPN门户网站使用。默认Flase 
+     * @return IsVpnPortal VPN门户网站使用。默认Flase
+     */
+    public Boolean getIsVpnPortal() {
+        return this.IsVpnPortal;
+    }
+
+    /**
+     * Set VPN门户网站使用。默认Flase
+     * @param IsVpnPortal VPN门户网站使用。默认Flase
+     */
+    public void setIsVpnPortal(Boolean IsVpnPortal) {
+        this.IsVpnPortal = IsVpnPortal;
+    }
+
     public DownloadVpnGatewaySslClientCertRequest() {
     }
 
@@ -56,6 +102,12 @@ public class DownloadVpnGatewaySslClientCertRequest extends AbstractModel{
         if (source.SslVpnClientId != null) {
             this.SslVpnClientId = new String(source.SslVpnClientId);
         }
+        if (source.SamlToken != null) {
+            this.SamlToken = new String(source.SamlToken);
+        }
+        if (source.IsVpnPortal != null) {
+            this.IsVpnPortal = new Boolean(source.IsVpnPortal);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class DownloadVpnGatewaySslClientCertRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
+        this.setParamSimple(map, prefix + "SamlToken", this.SamlToken);
+        this.setParamSimple(map, prefix + "IsVpnPortal", this.IsVpnPortal);
 
     }
 }

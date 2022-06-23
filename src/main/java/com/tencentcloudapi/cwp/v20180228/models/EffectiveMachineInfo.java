@@ -87,6 +87,14 @@ public class EffectiveMachineInfo extends AbstractModel{
     private String MachineStatus;
 
     /**
+    * 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LicenseOrder")
+    @Expose
+    private LicenseOrder LicenseOrder;
+
+    /**
      * Get 机器名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MachineName 机器名称
@@ -246,6 +254,26 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.MachineStatus = MachineStatus;
     }
 
+    /**
+     * Get 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LicenseOrder 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LicenseOrder getLicenseOrder() {
+        return this.LicenseOrder;
+    }
+
+    /**
+     * Set 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LicenseOrder 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLicenseOrder(LicenseOrder LicenseOrder) {
+        this.LicenseOrder = LicenseOrder;
+    }
+
     public EffectiveMachineInfo() {
     }
 
@@ -281,6 +309,9 @@ public class EffectiveMachineInfo extends AbstractModel{
         if (source.MachineStatus != null) {
             this.MachineStatus = new String(source.MachineStatus);
         }
+        if (source.LicenseOrder != null) {
+            this.LicenseOrder = new LicenseOrder(source.LicenseOrder);
+        }
     }
 
 
@@ -296,6 +327,7 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+        this.setParamObj(map, prefix + "LicenseOrder.", this.LicenseOrder);
 
     }
 }

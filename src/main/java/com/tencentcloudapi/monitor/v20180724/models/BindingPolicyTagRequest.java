@@ -44,13 +44,6 @@ public class BindingPolicyTagRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * 策略标签
-    */
-    @SerializedName("Tag")
-    @Expose
-    private PolicyTag Tag;
-
-    /**
     * 产品类型
     */
     @SerializedName("ServiceType")
@@ -58,11 +51,25 @@ public class BindingPolicyTagRequest extends AbstractModel{
     private String ServiceType;
 
     /**
+    * 策略标签
+    */
+    @SerializedName("Tag")
+    @Expose
+    private PolicyTag Tag;
+
+    /**
     * 实例分组ID
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
+
+    /**
+    * 批量绑定标签
+    */
+    @SerializedName("BatchTag")
+    @Expose
+    private PolicyTag [] BatchTag;
 
     /**
      * Get 固定取值 monitor 
@@ -113,22 +120,6 @@ public class BindingPolicyTagRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略标签 
-     * @return Tag 策略标签
-     */
-    public PolicyTag getTag() {
-        return this.Tag;
-    }
-
-    /**
-     * Set 策略标签
-     * @param Tag 策略标签
-     */
-    public void setTag(PolicyTag Tag) {
-        this.Tag = Tag;
-    }
-
-    /**
      * Get 产品类型 
      * @return ServiceType 产品类型
      */
@@ -145,6 +136,22 @@ public class BindingPolicyTagRequest extends AbstractModel{
     }
 
     /**
+     * Get 策略标签 
+     * @return Tag 策略标签
+     */
+    public PolicyTag getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 策略标签
+     * @param Tag 策略标签
+     */
+    public void setTag(PolicyTag Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Get 实例分组ID 
      * @return InstanceGroupId 实例分组ID
      */
@@ -158,6 +165,22 @@ public class BindingPolicyTagRequest extends AbstractModel{
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
+    }
+
+    /**
+     * Get 批量绑定标签 
+     * @return BatchTag 批量绑定标签
+     */
+    public PolicyTag [] getBatchTag() {
+        return this.BatchTag;
+    }
+
+    /**
+     * Set 批量绑定标签
+     * @param BatchTag 批量绑定标签
+     */
+    public void setBatchTag(PolicyTag [] BatchTag) {
+        this.BatchTag = BatchTag;
     }
 
     public BindingPolicyTagRequest() {
@@ -177,14 +200,20 @@ public class BindingPolicyTagRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
-        if (source.Tag != null) {
-            this.Tag = new PolicyTag(source.Tag);
-        }
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.Tag != null) {
+            this.Tag = new PolicyTag(source.Tag);
+        }
         if (source.InstanceGroupId != null) {
             this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
+        if (source.BatchTag != null) {
+            this.BatchTag = new PolicyTag[source.BatchTag.length];
+            for (int i = 0; i < source.BatchTag.length; i++) {
+                this.BatchTag[i] = new PolicyTag(source.BatchTag[i]);
+            }
         }
     }
 
@@ -196,9 +225,10 @@ public class BindingPolicyTagRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
-        this.setParamObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+        this.setParamArrayObj(map, prefix + "BatchTag.", this.BatchTag);
 
     }
 }

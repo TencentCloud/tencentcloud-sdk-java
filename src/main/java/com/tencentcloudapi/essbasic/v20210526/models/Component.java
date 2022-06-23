@@ -164,6 +164,20 @@ TEXT控件可以指定字体
     private String ComponentDescription;
 
     /**
+    * 指定关键字时横坐标偏移量
+    */
+    @SerializedName("OffsetX")
+    @Expose
+    private Float OffsetX;
+
+    /**
+    * 指定关键字时纵坐标偏移量
+    */
+    @SerializedName("OffsetY")
+    @Expose
+    private Float OffsetY;
+
+    /**
      * Get 控件编号
 
 注：
@@ -535,6 +549,38 @@ TEXT控件可以指定字体
         this.ComponentDescription = ComponentDescription;
     }
 
+    /**
+     * Get 指定关键字时横坐标偏移量 
+     * @return OffsetX 指定关键字时横坐标偏移量
+     */
+    public Float getOffsetX() {
+        return this.OffsetX;
+    }
+
+    /**
+     * Set 指定关键字时横坐标偏移量
+     * @param OffsetX 指定关键字时横坐标偏移量
+     */
+    public void setOffsetX(Float OffsetX) {
+        this.OffsetX = OffsetX;
+    }
+
+    /**
+     * Get 指定关键字时纵坐标偏移量 
+     * @return OffsetY 指定关键字时纵坐标偏移量
+     */
+    public Float getOffsetY() {
+        return this.OffsetY;
+    }
+
+    /**
+     * Set 指定关键字时纵坐标偏移量
+     * @param OffsetY 指定关键字时纵坐标偏移量
+     */
+    public void setOffsetY(Float OffsetY) {
+        this.OffsetY = OffsetY;
+    }
+
     public Component() {
     }
 
@@ -591,6 +637,12 @@ TEXT控件可以指定字体
         if (source.ComponentDescription != null) {
             this.ComponentDescription = new String(source.ComponentDescription);
         }
+        if (source.OffsetX != null) {
+            this.OffsetX = new Float(source.OffsetX);
+        }
+        if (source.OffsetY != null) {
+            this.OffsetY = new Float(source.OffsetY);
+        }
     }
 
 
@@ -614,6 +666,8 @@ TEXT控件可以指定字体
         this.setParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
         this.setParamSimple(map, prefix + "DocumentId", this.DocumentId);
         this.setParamSimple(map, prefix + "ComponentDescription", this.ComponentDescription);
+        this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
+        this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
 
     }
 }

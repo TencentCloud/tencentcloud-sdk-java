@@ -56,6 +56,13 @@ public class DescribeVpnGatewaySslClientsRequest extends AbstractModel{
     private String [] SslVpnClientIds;
 
     /**
+    * VPN门户网站使用。默认是False。
+    */
+    @SerializedName("IsVpnPortal")
+    @Expose
+    private Boolean IsVpnPortal;
+
+    /**
      * Get 过滤条件，参数不支持同时指定SslVpnClientIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
@@ -139,6 +146,22 @@ public class DescribeVpnGatewaySslClientsRequest extends AbstractModel{
         this.SslVpnClientIds = SslVpnClientIds;
     }
 
+    /**
+     * Get VPN门户网站使用。默认是False。 
+     * @return IsVpnPortal VPN门户网站使用。默认是False。
+     */
+    public Boolean getIsVpnPortal() {
+        return this.IsVpnPortal;
+    }
+
+    /**
+     * Set VPN门户网站使用。默认是False。
+     * @param IsVpnPortal VPN门户网站使用。默认是False。
+     */
+    public void setIsVpnPortal(Boolean IsVpnPortal) {
+        this.IsVpnPortal = IsVpnPortal;
+    }
+
     public DescribeVpnGatewaySslClientsRequest() {
     }
 
@@ -165,6 +188,9 @@ public class DescribeVpnGatewaySslClientsRequest extends AbstractModel{
                 this.SslVpnClientIds[i] = new String(source.SslVpnClientIds[i]);
             }
         }
+        if (source.IsVpnPortal != null) {
+            this.IsVpnPortal = new Boolean(source.IsVpnPortal);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribeVpnGatewaySslClientsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
+        this.setParamSimple(map, prefix + "IsVpnPortal", this.IsVpnPortal);
 
     }
 }

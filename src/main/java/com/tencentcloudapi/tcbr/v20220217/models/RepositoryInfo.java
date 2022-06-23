@@ -37,7 +37,7 @@ public class RepositoryInfo extends AbstractModel{
     private String Repo;
 
     /**
-    * 分之名
+    * 分支名
     */
     @SerializedName("Branch")
     @Expose
@@ -76,16 +76,16 @@ public class RepositoryInfo extends AbstractModel{
     }
 
     /**
-     * Get 分之名 
-     * @return Branch 分之名
+     * Get 分支名 
+     * @return Branch 分支名
      */
     public String getBranch() {
         return this.Branch;
     }
 
     /**
-     * Set 分之名
-     * @param Branch 分之名
+     * Set 分支名
+     * @param Branch 分支名
      */
     public void setBranch(String Branch) {
         this.Branch = Branch;

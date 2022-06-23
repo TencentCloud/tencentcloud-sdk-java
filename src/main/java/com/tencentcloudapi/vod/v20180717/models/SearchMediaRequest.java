@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class SearchMediaRequest extends AbstractModel{
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -68,7 +75,7 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
     * 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
     */
     @SerializedName("Tags")
@@ -177,13 +184,6 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] StorageRegions;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
     * 存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -247,6 +247,22 @@ public class SearchMediaRequest extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
 
     /**
      * Get 文件 ID 集合，匹配集合中的任意元素。
@@ -366,10 +382,10 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Get 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li> 
      * @return Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public String [] getTags() {
@@ -378,10 +394,10 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Set 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      * @param Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public void setTags(String [] Tags) {
@@ -661,22 +677,6 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
-    /**
      * Get 存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -860,6 +860,9 @@ public class SearchMediaRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SearchMediaRequest(SearchMediaRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.FileIds != null) {
             this.FileIds = new String[source.FileIds.length];
             for (int i = 0; i < source.FileIds.length; i++) {
@@ -947,9 +950,6 @@ public class SearchMediaRequest extends AbstractModel{
                 this.StorageRegions[i] = new String(source.StorageRegions[i]);
             }
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
         if (source.StorageClasses != null) {
             this.StorageClasses = new String[source.StorageClasses.length];
             for (int i = 0; i < source.StorageClasses.length; i++) {
@@ -981,6 +981,7 @@ public class SearchMediaRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamArraySimple(map, prefix + "NamePrefixes.", this.NamePrefixes);
@@ -998,7 +999,6 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);

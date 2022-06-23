@@ -137,6 +137,34 @@ public class SslVpnSever extends AbstractModel{
     private Long State;
 
     /**
+    * 是否开启SSO认证。1：开启  0： 不开启
+    */
+    @SerializedName("SsoEnabled")
+    @Expose
+    private Long SsoEnabled;
+
+    /**
+    * EIAM应用ID
+    */
+    @SerializedName("EiamApplicationId")
+    @Expose
+    private String EiamApplicationId;
+
+    /**
+    * 是否开启策略控制。0：不开启 1： 开启
+    */
+    @SerializedName("AccessPolicyEnabled")
+    @Expose
+    private Long AccessPolicyEnabled;
+
+    /**
+    * 策略信息
+    */
+    @SerializedName("AccessPolicy")
+    @Expose
+    private AccessPolicy [] AccessPolicy;
+
+    /**
      * Get VPC实例ID.
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId VPC实例ID.
@@ -412,6 +440,70 @@ public class SslVpnSever extends AbstractModel{
         this.State = State;
     }
 
+    /**
+     * Get 是否开启SSO认证。1：开启  0： 不开启 
+     * @return SsoEnabled 是否开启SSO认证。1：开启  0： 不开启
+     */
+    public Long getSsoEnabled() {
+        return this.SsoEnabled;
+    }
+
+    /**
+     * Set 是否开启SSO认证。1：开启  0： 不开启
+     * @param SsoEnabled 是否开启SSO认证。1：开启  0： 不开启
+     */
+    public void setSsoEnabled(Long SsoEnabled) {
+        this.SsoEnabled = SsoEnabled;
+    }
+
+    /**
+     * Get EIAM应用ID 
+     * @return EiamApplicationId EIAM应用ID
+     */
+    public String getEiamApplicationId() {
+        return this.EiamApplicationId;
+    }
+
+    /**
+     * Set EIAM应用ID
+     * @param EiamApplicationId EIAM应用ID
+     */
+    public void setEiamApplicationId(String EiamApplicationId) {
+        this.EiamApplicationId = EiamApplicationId;
+    }
+
+    /**
+     * Get 是否开启策略控制。0：不开启 1： 开启 
+     * @return AccessPolicyEnabled 是否开启策略控制。0：不开启 1： 开启
+     */
+    public Long getAccessPolicyEnabled() {
+        return this.AccessPolicyEnabled;
+    }
+
+    /**
+     * Set 是否开启策略控制。0：不开启 1： 开启
+     * @param AccessPolicyEnabled 是否开启策略控制。0：不开启 1： 开启
+     */
+    public void setAccessPolicyEnabled(Long AccessPolicyEnabled) {
+        this.AccessPolicyEnabled = AccessPolicyEnabled;
+    }
+
+    /**
+     * Get 策略信息 
+     * @return AccessPolicy 策略信息
+     */
+    public AccessPolicy [] getAccessPolicy() {
+        return this.AccessPolicy;
+    }
+
+    /**
+     * Set 策略信息
+     * @param AccessPolicy 策略信息
+     */
+    public void setAccessPolicy(AccessPolicy [] AccessPolicy) {
+        this.AccessPolicy = AccessPolicy;
+    }
+
     public SslVpnSever() {
     }
 
@@ -468,6 +560,21 @@ public class SslVpnSever extends AbstractModel{
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.SsoEnabled != null) {
+            this.SsoEnabled = new Long(source.SsoEnabled);
+        }
+        if (source.EiamApplicationId != null) {
+            this.EiamApplicationId = new String(source.EiamApplicationId);
+        }
+        if (source.AccessPolicyEnabled != null) {
+            this.AccessPolicyEnabled = new Long(source.AccessPolicyEnabled);
+        }
+        if (source.AccessPolicy != null) {
+            this.AccessPolicy = new AccessPolicy[source.AccessPolicy.length];
+            for (int i = 0; i < source.AccessPolicy.length; i++) {
+                this.AccessPolicy[i] = new AccessPolicy(source.AccessPolicy[i]);
+            }
+        }
     }
 
 
@@ -490,6 +597,10 @@ public class SslVpnSever extends AbstractModel{
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "SsoEnabled", this.SsoEnabled);
+        this.setParamSimple(map, prefix + "EiamApplicationId", this.EiamApplicationId);
+        this.setParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
+        this.setParamArrayObj(map, prefix + "AccessPolicy.", this.AccessPolicy);
 
     }
 }

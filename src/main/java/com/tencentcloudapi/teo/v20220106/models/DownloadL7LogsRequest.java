@@ -51,14 +51,14 @@ public class DownloadL7LogsRequest extends AbstractModel{
     private Long PageNo;
 
     /**
-    * 站点集合
+    * 站点名集合
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * 域名集合
+    * 子域名集合
     */
     @SerializedName("Domains")
     @Expose
@@ -129,32 +129,32 @@ public class DownloadL7LogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 站点集合 
-     * @return Zones 站点集合
+     * Get 站点名集合 
+     * @return Zones 站点名集合
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 站点集合
-     * @param Zones 站点集合
+     * Set 站点名集合
+     * @param Zones 站点名集合
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get 域名集合 
-     * @return Domains 域名集合
+     * Get 子域名集合 
+     * @return Domains 子域名集合
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 域名集合
-     * @param Domains 域名集合
+     * Set 子域名集合
+     * @param Domains 子域名集合
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

@@ -58,7 +58,8 @@ public class MediaTranscodeItem extends AbstractModel{
     private Long Width;
 
     /**
-    * 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+    * 媒体文件总大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
     */
     @SerializedName("Size")
     @Expose
@@ -72,13 +73,6 @@ public class MediaTranscodeItem extends AbstractModel{
     private Float Duration;
 
     /**
-    * 容器类型，例如 m4a，mp4 等。
-    */
-    @SerializedName("Container")
-    @Expose
-    private String Container;
-
-    /**
     * 视频的 md5 值。
     */
     @SerializedName("Md5")
@@ -86,11 +80,11 @@ public class MediaTranscodeItem extends AbstractModel{
     private String Md5;
 
     /**
-    * 音频流信息。
+    * 容器类型，例如 m4a，mp4 等。
     */
-    @SerializedName("AudioStreamSet")
+    @SerializedName("Container")
     @Expose
-    private MediaAudioStreamItem [] AudioStreamSet;
+    private String Container;
 
     /**
     * 视频流信息。
@@ -98,6 +92,13 @@ public class MediaTranscodeItem extends AbstractModel{
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
+
+    /**
+    * 音频流信息。
+    */
+    @SerializedName("AudioStreamSet")
+    @Expose
+    private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
      * Get 转码后的视频文件地址。 
@@ -180,16 +181,20 @@ public class MediaTranscodeItem extends AbstractModel{
     }
 
     /**
-     * Get 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。 
-     * @return Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Get 媒体文件总大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li> 
+     * @return Size 媒体文件总大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-     * @param Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Set 媒体文件总大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+     * @param Size 媒体文件总大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -212,22 +217,6 @@ public class MediaTranscodeItem extends AbstractModel{
     }
 
     /**
-     * Get 容器类型，例如 m4a，mp4 等。 
-     * @return Container 容器类型，例如 m4a，mp4 等。
-     */
-    public String getContainer() {
-        return this.Container;
-    }
-
-    /**
-     * Set 容器类型，例如 m4a，mp4 等。
-     * @param Container 容器类型，例如 m4a，mp4 等。
-     */
-    public void setContainer(String Container) {
-        this.Container = Container;
-    }
-
-    /**
      * Get 视频的 md5 值。 
      * @return Md5 视频的 md5 值。
      */
@@ -244,19 +233,19 @@ public class MediaTranscodeItem extends AbstractModel{
     }
 
     /**
-     * Get 音频流信息。 
-     * @return AudioStreamSet 音频流信息。
+     * Get 容器类型，例如 m4a，mp4 等。 
+     * @return Container 容器类型，例如 m4a，mp4 等。
      */
-    public MediaAudioStreamItem [] getAudioStreamSet() {
-        return this.AudioStreamSet;
+    public String getContainer() {
+        return this.Container;
     }
 
     /**
-     * Set 音频流信息。
-     * @param AudioStreamSet 音频流信息。
+     * Set 容器类型，例如 m4a，mp4 等。
+     * @param Container 容器类型，例如 m4a，mp4 等。
      */
-    public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
-        this.AudioStreamSet = AudioStreamSet;
+    public void setContainer(String Container) {
+        this.Container = Container;
     }
 
     /**
@@ -273,6 +262,22 @@ public class MediaTranscodeItem extends AbstractModel{
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
+    }
+
+    /**
+     * Get 音频流信息。 
+     * @return AudioStreamSet 音频流信息。
+     */
+    public MediaAudioStreamItem [] getAudioStreamSet() {
+        return this.AudioStreamSet;
+    }
+
+    /**
+     * Set 音频流信息。
+     * @param AudioStreamSet 音频流信息。
+     */
+    public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
+        this.AudioStreamSet = AudioStreamSet;
     }
 
     public MediaTranscodeItem() {
@@ -304,22 +309,22 @@ public class MediaTranscodeItem extends AbstractModel{
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
-        if (source.Container != null) {
-            this.Container = new String(source.Container);
-        }
         if (source.Md5 != null) {
             this.Md5 = new String(source.Md5);
         }
-        if (source.AudioStreamSet != null) {
-            this.AudioStreamSet = new MediaAudioStreamItem[source.AudioStreamSet.length];
-            for (int i = 0; i < source.AudioStreamSet.length; i++) {
-                this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
-            }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
         }
         if (source.VideoStreamSet != null) {
             this.VideoStreamSet = new MediaVideoStreamItem[source.VideoStreamSet.length];
             for (int i = 0; i < source.VideoStreamSet.length; i++) {
                 this.VideoStreamSet[i] = new MediaVideoStreamItem(source.VideoStreamSet[i]);
+            }
+        }
+        if (source.AudioStreamSet != null) {
+            this.AudioStreamSet = new MediaAudioStreamItem[source.AudioStreamSet.length];
+            for (int i = 0; i < source.AudioStreamSet.length; i++) {
+                this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
             }
         }
     }
@@ -336,10 +341,10 @@ public class MediaTranscodeItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
-        this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
-        this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
+        this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+        this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
 
     }
 }

@@ -31,7 +31,7 @@ public class L7OfflineLog extends AbstractModel{
     private Long LogTime;
 
     /**
-    * 站点名称
+    * 子域名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
@@ -83,9 +83,9 @@ public class L7OfflineLog extends AbstractModel{
     }
 
     /**
-     * Get 站点名称
+     * Get 子域名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Domain 站点名称
+     * @return Domain 子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
@@ -93,9 +93,9 @@ public class L7OfflineLog extends AbstractModel{
     }
 
     /**
-     * Set 站点名称
+     * Set 子域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 站点名称
+     * @param Domain 子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {

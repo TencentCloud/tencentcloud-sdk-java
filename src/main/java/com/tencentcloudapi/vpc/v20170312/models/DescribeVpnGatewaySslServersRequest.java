@@ -56,6 +56,13 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
     private FilterObject [] Filters;
 
     /**
+    * vpn门户使用。 默认Flase
+    */
+    @SerializedName("IsVpnPortal")
+    @Expose
+    private Boolean IsVpnPortal;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -139,6 +146,22 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get vpn门户使用。 默认Flase 
+     * @return IsVpnPortal vpn门户使用。 默认Flase
+     */
+    public Boolean getIsVpnPortal() {
+        return this.IsVpnPortal;
+    }
+
+    /**
+     * Set vpn门户使用。 默认Flase
+     * @param IsVpnPortal vpn门户使用。 默认Flase
+     */
+    public void setIsVpnPortal(Boolean IsVpnPortal) {
+        this.IsVpnPortal = IsVpnPortal;
+    }
+
     public DescribeVpnGatewaySslServersRequest() {
     }
 
@@ -165,6 +188,9 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
                 this.Filters[i] = new FilterObject(source.Filters[i]);
             }
         }
+        if (source.IsVpnPortal != null) {
+            this.IsVpnPortal = new Boolean(source.IsVpnPortal);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "SslVpnServerIds.", this.SslVpnServerIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "IsVpnPortal", this.IsVpnPortal);
 
     }
 }
