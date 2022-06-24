@@ -30,7 +30,7 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
     private IPAddress [] Addresses;
 
     /**
-    * 集群的认证信息
+    * 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
     */
     @SerializedName("Credential")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
     }
 
     /**
-     * Get 集群的认证信息 
-     * @return Credential 集群的认证信息
+     * Get 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig） 
+     * @return Credential 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
      */
     public ClusterCredential getCredential() {
         return this.Credential;
     }
 
     /**
-     * Set 集群的认证信息
-     * @param Credential 集群的认证信息
+     * Set 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
+     * @param Credential 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
      */
     public void setCredential(ClusterCredential Credential) {
         this.Credential = Credential;

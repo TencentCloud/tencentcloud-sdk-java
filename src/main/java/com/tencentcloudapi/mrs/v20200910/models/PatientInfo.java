@@ -191,6 +191,14 @@ public class PatientInfo extends AbstractModel{
     private String MedicalInsuranceTypeCode;
 
     /**
+    * 床号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BedNo")
+    @Expose
+    private String BedNo;
+
+    /**
      * Get 患者姓名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 患者姓名
@@ -610,6 +618,26 @@ public class PatientInfo extends AbstractModel{
         this.MedicalInsuranceTypeCode = MedicalInsuranceTypeCode;
     }
 
+    /**
+     * Get 床号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BedNo 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBedNo() {
+        return this.BedNo;
+    }
+
+    /**
+     * Set 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BedNo 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBedNo(String BedNo) {
+        this.BedNo = BedNo;
+    }
+
     public PatientInfo() {
     }
 
@@ -681,6 +709,9 @@ public class PatientInfo extends AbstractModel{
         if (source.MedicalInsuranceTypeCode != null) {
             this.MedicalInsuranceTypeCode = new String(source.MedicalInsuranceTypeCode);
         }
+        if (source.BedNo != null) {
+            this.BedNo = new String(source.BedNo);
+        }
     }
 
 
@@ -709,6 +740,7 @@ public class PatientInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MarriedCode", this.MarriedCode);
         this.setParamSimple(map, prefix + "ProfessionCode", this.ProfessionCode);
         this.setParamSimple(map, prefix + "MedicalInsuranceTypeCode", this.MedicalInsuranceTypeCode);
+        this.setParamSimple(map, prefix + "BedNo", this.BedNo);
 
     }
 }

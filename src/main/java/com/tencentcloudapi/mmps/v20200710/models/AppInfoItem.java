@@ -85,6 +85,14 @@ public class AppInfoItem extends AbstractModel{
     private String BehaviorTitle;
 
     /**
+    * 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighRiskCount")
+    @Expose
+    private Long HighRiskCount;
+
+    /**
      * Get 小程序apiiid 
      * @return AppPackage 小程序apiiid
      */
@@ -236,6 +244,26 @@ public class AppInfoItem extends AbstractModel{
         this.BehaviorTitle = BehaviorTitle;
     }
 
+    /**
+     * Get 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HighRiskCount 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHighRiskCount() {
+        return this.HighRiskCount;
+    }
+
+    /**
+     * Set 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighRiskCount 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighRiskCount(Long HighRiskCount) {
+        this.HighRiskCount = HighRiskCount;
+    }
+
     public AppInfoItem() {
     }
 
@@ -268,6 +296,9 @@ public class AppInfoItem extends AbstractModel{
         if (source.BehaviorTitle != null) {
             this.BehaviorTitle = new String(source.BehaviorTitle);
         }
+        if (source.HighRiskCount != null) {
+            this.HighRiskCount = new Long(source.HighRiskCount);
+        }
     }
 
 
@@ -283,6 +314,7 @@ public class AppInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ReportTitle", this.ReportTitle);
         this.setParamSimple(map, prefix + "BehaviorUrl", this.BehaviorUrl);
         this.setParamSimple(map, prefix + "BehaviorTitle", this.BehaviorTitle);
+        this.setParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
 
     }
 }

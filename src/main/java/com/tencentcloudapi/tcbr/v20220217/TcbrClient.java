@@ -159,6 +159,26 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *查询服务管理任务信息
+     * @param req DescribeServerManageTaskRequest
+     * @return DescribeServerManageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerManageTaskResponse DescribeServerManageTask(DescribeServerManageTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServerManageTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServerManageTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServerManageTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *操作发布单
      * @param req OperateServerManageRequest
      * @return OperateServerManageResponse

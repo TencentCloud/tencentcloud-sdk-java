@@ -167,6 +167,62 @@ public class ReportInfo extends AbstractModel{
     private String Diagnose;
 
     /**
+    * 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckItem")
+    @Expose
+    private String CheckItem;
+
+    /**
+    * 检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckMethod")
+    @Expose
+    private String CheckMethod;
+
+    /**
+    * 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiagnoseTime")
+    @Expose
+    private String DiagnoseTime;
+
+    /**
+    * 体检号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheckupNum")
+    @Expose
+    private String HealthCheckupNum;
+
+    /**
+    * 其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OtherTime")
+    @Expose
+    private String OtherTime;
+
+    /**
+    * 打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrintTime")
+    @Expose
+    private String PrintTime;
+
+    /**
+    * 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Times")
+    @Expose
+    private Time [] Times;
+
+    /**
      * Get 医院名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Hospital 医院名称
@@ -526,6 +582,146 @@ public class ReportInfo extends AbstractModel{
         this.Diagnose = Diagnose;
     }
 
+    /**
+     * Get 检查项目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckItem 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckItem() {
+        return this.CheckItem;
+    }
+
+    /**
+     * Set 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckItem 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckItem(String CheckItem) {
+        this.CheckItem = CheckItem;
+    }
+
+    /**
+     * Get 检查方法
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckMethod 检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckMethod() {
+        return this.CheckMethod;
+    }
+
+    /**
+     * Set 检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckMethod 检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckMethod(String CheckMethod) {
+        this.CheckMethod = CheckMethod;
+    }
+
+    /**
+     * Get 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiagnoseTime 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiagnoseTime() {
+        return this.DiagnoseTime;
+    }
+
+    /**
+     * Set 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiagnoseTime 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiagnoseTime(String DiagnoseTime) {
+        this.DiagnoseTime = DiagnoseTime;
+    }
+
+    /**
+     * Get 体检号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheckupNum 体检号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHealthCheckupNum() {
+        return this.HealthCheckupNum;
+    }
+
+    /**
+     * Set 体检号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckupNum 体检号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheckupNum(String HealthCheckupNum) {
+        this.HealthCheckupNum = HealthCheckupNum;
+    }
+
+    /**
+     * Get 其它时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OtherTime 其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOtherTime() {
+        return this.OtherTime;
+    }
+
+    /**
+     * Set 其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherTime 其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOtherTime(String OtherTime) {
+        this.OtherTime = OtherTime;
+    }
+
+    /**
+     * Get 打印时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrintTime 打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrintTime() {
+        return this.PrintTime;
+    }
+
+    /**
+     * Set 打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrintTime 打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrintTime(String PrintTime) {
+        this.PrintTime = PrintTime;
+    }
+
+    /**
+     * Get 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Times 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Time [] getTimes() {
+        return this.Times;
+    }
+
+    /**
+     * Set 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Times 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimes(Time [] Times) {
+        this.Times = Times;
+    }
+
     public ReportInfo() {
     }
 
@@ -588,6 +784,30 @@ public class ReportInfo extends AbstractModel{
         if (source.Diagnose != null) {
             this.Diagnose = new String(source.Diagnose);
         }
+        if (source.CheckItem != null) {
+            this.CheckItem = new String(source.CheckItem);
+        }
+        if (source.CheckMethod != null) {
+            this.CheckMethod = new String(source.CheckMethod);
+        }
+        if (source.DiagnoseTime != null) {
+            this.DiagnoseTime = new String(source.DiagnoseTime);
+        }
+        if (source.HealthCheckupNum != null) {
+            this.HealthCheckupNum = new String(source.HealthCheckupNum);
+        }
+        if (source.OtherTime != null) {
+            this.OtherTime = new String(source.OtherTime);
+        }
+        if (source.PrintTime != null) {
+            this.PrintTime = new String(source.PrintTime);
+        }
+        if (source.Times != null) {
+            this.Times = new Time[source.Times.length];
+            for (int i = 0; i < source.Times.length; i++) {
+                this.Times[i] = new Time(source.Times[i]);
+            }
+        }
     }
 
 
@@ -613,6 +833,13 @@ public class ReportInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ReportName", this.ReportName);
         this.setParamSimple(map, prefix + "UltraNum", this.UltraNum);
         this.setParamSimple(map, prefix + "Diagnose", this.Diagnose);
+        this.setParamSimple(map, prefix + "CheckItem", this.CheckItem);
+        this.setParamSimple(map, prefix + "CheckMethod", this.CheckMethod);
+        this.setParamSimple(map, prefix + "DiagnoseTime", this.DiagnoseTime);
+        this.setParamSimple(map, prefix + "HealthCheckupNum", this.HealthCheckupNum);
+        this.setParamSimple(map, prefix + "OtherTime", this.OtherTime);
+        this.setParamSimple(map, prefix + "PrintTime", this.PrintTime);
+        this.setParamArrayObj(map, prefix + "Times.", this.Times);
 
     }
 }

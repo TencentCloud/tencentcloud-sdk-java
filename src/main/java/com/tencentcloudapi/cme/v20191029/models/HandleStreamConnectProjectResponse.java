@@ -30,6 +30,14 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
     private String StreamInputRtmpPushUrl;
 
     /**
+    * 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VodPullInputPlayInfo")
+    @Expose
+    private VodPullInputPlayInfo VodPullInputPlayInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
      */
     public void setStreamInputRtmpPushUrl(String StreamInputRtmpPushUrl) {
         this.StreamInputRtmpPushUrl = StreamInputRtmpPushUrl;
+    }
+
+    /**
+     * Get 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VodPullInputPlayInfo 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VodPullInputPlayInfo getVodPullInputPlayInfo() {
+        return this.VodPullInputPlayInfo;
+    }
+
+    /**
+     * Set 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VodPullInputPlayInfo 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVodPullInputPlayInfo(VodPullInputPlayInfo VodPullInputPlayInfo) {
+        this.VodPullInputPlayInfo = VodPullInputPlayInfo;
     }
 
     /**
@@ -79,6 +107,9 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
         if (source.StreamInputRtmpPushUrl != null) {
             this.StreamInputRtmpPushUrl = new String(source.StreamInputRtmpPushUrl);
         }
+        if (source.VodPullInputPlayInfo != null) {
+            this.VodPullInputPlayInfo = new VodPullInputPlayInfo(source.VodPullInputPlayInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamInputRtmpPushUrl", this.StreamInputRtmpPushUrl);
+        this.setParamObj(map, prefix + "VodPullInputPlayInfo.", this.VodPullInputPlayInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

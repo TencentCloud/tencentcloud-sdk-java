@@ -44,7 +44,7 @@ public class CreateOpenBankExternalSubMerchantRegistrationRequest extends Abstra
     private String OutSubMerchantId;
 
     /**
-    * 渠道名称。
+    * 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
@@ -54,7 +54,7 @@ __ALIPAY__: 支付宝
     private String ChannelName;
 
     /**
-    * 支付方式。
+    * 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
     */
@@ -170,11 +170,11 @@ _不填默认为生产环境_
     }
 
     /**
-     * Get 渠道名称。
+     * Get 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝 
-     * @return ChannelName 渠道名称。
+     * @return ChannelName 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
@@ -184,11 +184,11 @@ __ALIPAY__: 支付宝
     }
 
     /**
-     * Set 渠道名称。
+     * Set 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
-     * @param ChannelName 渠道名称。
+     * @param ChannelName 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
@@ -198,10 +198,10 @@ __ALIPAY__: 支付宝
     }
 
     /**
-     * Get 支付方式。
+     * Get 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付 
-     * @return PaymentMethod 支付方式。
+     * @return PaymentMethod 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
      */
@@ -210,10 +210,10 @@ __OPENBANK_PAYMENT__: openbank支付
     }
 
     /**
-     * Set 支付方式。
+     * Set 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
-     * @param PaymentMethod 支付方式。
+     * @param PaymentMethod 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
      */

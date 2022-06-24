@@ -30,7 +30,7 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     private String NetworkAclId;
 
     /**
-    * 网络ACL规则集。
+    * 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
     */
     @SerializedName("NetworkAclEntrySet")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 网络ACL规则集。 
-     * @return NetworkAclEntrySet 网络ACL规则集。
+     * Get 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。 
+     * @return NetworkAclEntrySet 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
      */
     public NetworkAclEntrySet getNetworkAclEntrySet() {
         return this.NetworkAclEntrySet;
     }
 
     /**
-     * Set 网络ACL规则集。
-     * @param NetworkAclEntrySet 网络ACL规则集。
+     * Set 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+     * @param NetworkAclEntrySet 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
      */
     public void setNetworkAclEntrySet(NetworkAclEntrySet NetworkAclEntrySet) {
         this.NetworkAclEntrySet = NetworkAclEntrySet;
