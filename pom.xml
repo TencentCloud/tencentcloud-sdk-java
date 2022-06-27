@@ -61,30 +61,13 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
+        <version>1.6.13</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>Releases</serverId>
           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>com.thoughtworks.xstream</groupId>
-            <artifactId>xstream</artifactId>
-            <version>1.4.17</version>
-          </dependency>
-          <dependency>
-            <groupId>org.sonatype.nexus</groupId>
-            <artifactId>nexus-client-core</artifactId>
-            <version>2.14.20-02</version>
-          </dependency>
-          <dependency>
-            <groupId>xpp3</groupId>
-            <artifactId>xpp3_min</artifactId>
-            <version>1.1.4c</version>
-          </dependency>
-        </dependencies>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
