@@ -2399,6 +2399,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *操作TKEEdge集群的addon
+     * @param req ForwardTKEEdgeApplicationRequestV3Request
+     * @return ForwardTKEEdgeApplicationRequestV3Response
+     * @throws TencentCloudSDKException
+     */
+    public ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(ForwardTKEEdgeApplicationRequestV3Request req) throws TencentCloudSDKException{
+        JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ForwardTKEEdgeApplicationRequestV3");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取集群规模价格
      * @param req GetClusterLevelPriceRequest
      * @return GetClusterLevelPriceResponse

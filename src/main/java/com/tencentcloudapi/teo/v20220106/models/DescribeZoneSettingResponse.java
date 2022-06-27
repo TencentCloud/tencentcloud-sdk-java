@@ -149,6 +149,14 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private ClientIp ClientIpHeader;
 
     /**
+    * 缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CachePrefresh")
+    @Expose
+    private CachePrefresh CachePrefresh;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -468,6 +476,26 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
+     * Get 缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CachePrefresh 缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CachePrefresh getCachePrefresh() {
+        return this.CachePrefresh;
+    }
+
+    /**
+     * Set 缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CachePrefresh 缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCachePrefresh(CachePrefresh CachePrefresh) {
+        this.CachePrefresh = CachePrefresh;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -539,6 +567,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         if (source.ClientIpHeader != null) {
             this.ClientIpHeader = new ClientIp(source.ClientIpHeader);
         }
+        if (source.CachePrefresh != null) {
+            this.CachePrefresh = new CachePrefresh(source.CachePrefresh);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -565,6 +596,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
+        this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -128,6 +128,13 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private ClientIp ClientIpHeader;
 
     /**
+    * 缓存预刷新配置
+    */
+    @SerializedName("CachePrefresh")
+    @Expose
+    private CachePrefresh CachePrefresh;
+
+    /**
      * Get 待变更的站点ID 
      * @return ZoneId 待变更的站点ID
      */
@@ -367,6 +374,22 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.ClientIpHeader = ClientIpHeader;
     }
 
+    /**
+     * Get 缓存预刷新配置 
+     * @return CachePrefresh 缓存预刷新配置
+     */
+    public CachePrefresh getCachePrefresh() {
+        return this.CachePrefresh;
+    }
+
+    /**
+     * Set 缓存预刷新配置
+     * @param CachePrefresh 缓存预刷新配置
+     */
+    public void setCachePrefresh(CachePrefresh CachePrefresh) {
+        this.CachePrefresh = CachePrefresh;
+    }
+
     public ModifyZoneSettingRequest() {
     }
 
@@ -420,6 +443,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         if (source.ClientIpHeader != null) {
             this.ClientIpHeader = new ClientIp(source.ClientIpHeader);
         }
+        if (source.CachePrefresh != null) {
+            this.CachePrefresh = new CachePrefresh(source.CachePrefresh);
+        }
     }
 
 
@@ -442,6 +468,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SmartRouting.", this.SmartRouting);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
+        this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
 
     }
 }

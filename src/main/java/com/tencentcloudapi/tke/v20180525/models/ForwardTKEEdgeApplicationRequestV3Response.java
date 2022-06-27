@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
+public class ForwardTKEEdgeApplicationRequestV3Response extends AbstractModel{
 
     /**
-    * 刊例价费用
+    * 请求集群addon后返回的数据
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("ResponseBody")
     @Expose
-    private Long OriginalPrice;
-
-    /**
-    * 折后实际付款金额
-    */
-    @SerializedName("Price")
-    @Expose
-    private Long Price;
-
-    /**
-    * 币种。例如，CNY：人民币。
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
+    private String ResponseBody;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 刊例价费用 
-     * @return OriginalPrice 刊例价费用
+     * Get 请求集群addon后返回的数据 
+     * @return ResponseBody 请求集群addon后返回的数据
      */
-    public Long getOriginalPrice() {
-        return this.OriginalPrice;
+    public String getResponseBody() {
+        return this.ResponseBody;
     }
 
     /**
-     * Set 刊例价费用
-     * @param OriginalPrice 刊例价费用
+     * Set 请求集群addon后返回的数据
+     * @param ResponseBody 请求集群addon后返回的数据
      */
-    public void setOriginalPrice(Long OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
-    }
-
-    /**
-     * Get 折后实际付款金额 
-     * @return Price 折后实际付款金额
-     */
-    public Long getPrice() {
-        return this.Price;
-    }
-
-    /**
-     * Set 折后实际付款金额
-     * @param Price 折后实际付款金额
-     */
-    public void setPrice(Long Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get 币种。例如，CNY：人民币。 
-     * @return Currency 币种。例如，CNY：人民币。
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set 币种。例如，CNY：人民币。
-     * @param Currency 币种。例如，CNY：人民币。
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setResponseBody(String ResponseBody) {
+        this.ResponseBody = ResponseBody;
     }
 
     /**
@@ -114,22 +68,16 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceUpgradeDBInstanceResponse() {
+    public ForwardTKEEdgeApplicationRequestV3Response() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceUpgradeDBInstanceResponse(InquiryPriceUpgradeDBInstanceResponse source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Long(source.OriginalPrice);
-        }
-        if (source.Price != null) {
-            this.Price = new Long(source.Price);
-        }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
+    public ForwardTKEEdgeApplicationRequestV3Response(ForwardTKEEdgeApplicationRequestV3Response source) {
+        if (source.ResponseBody != null) {
+            this.ResponseBody = new String(source.ResponseBody);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +89,7 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "Price", this.Price);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "ResponseBody", this.ResponseBody);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

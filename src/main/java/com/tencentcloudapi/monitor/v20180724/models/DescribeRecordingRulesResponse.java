@@ -13,35 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
+public class DescribeRecordingRulesResponse extends AbstractModel{
 
     /**
-    * 刊例价费用
+    * 规则组数量
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("TotalCount")
     @Expose
-    private Long OriginalPrice;
+    private Long TotalCount;
 
     /**
-    * 折后实际付款金额
+    * 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Price")
+    @SerializedName("RecordingRuleSet")
     @Expose
-    private Long Price;
-
-    /**
-    * 币种。例如，CNY：人民币。
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
+    private RecordingRuleSet [] RecordingRuleSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +45,39 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 刊例价费用 
-     * @return OriginalPrice 刊例价费用
+     * Get 规则组数量 
+     * @return TotalCount 规则组数量
      */
-    public Long getOriginalPrice() {
-        return this.OriginalPrice;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 刊例价费用
-     * @param OriginalPrice 刊例价费用
+     * Set 规则组数量
+     * @param TotalCount 规则组数量
      */
-    public void setOriginalPrice(Long OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 折后实际付款金额 
-     * @return Price 折后实际付款金额
+     * Get 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordingRuleSet 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPrice() {
-        return this.Price;
+    public RecordingRuleSet [] getRecordingRuleSet() {
+        return this.RecordingRuleSet;
     }
 
     /**
-     * Set 折后实际付款金额
-     * @param Price 折后实际付款金额
+     * Set 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordingRuleSet 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPrice(Long Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get 币种。例如，CNY：人民币。 
-     * @return Currency 币种。例如，CNY：人民币。
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set 币种。例如，CNY：人民币。
-     * @param Currency 币种。例如，CNY：人民币。
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setRecordingRuleSet(RecordingRuleSet [] RecordingRuleSet) {
+        this.RecordingRuleSet = RecordingRuleSet;
     }
 
     /**
@@ -114,22 +96,22 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceUpgradeDBInstanceResponse() {
+    public DescribeRecordingRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceUpgradeDBInstanceResponse(InquiryPriceUpgradeDBInstanceResponse source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Long(source.OriginalPrice);
+    public DescribeRecordingRulesResponse(DescribeRecordingRulesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Price != null) {
-            this.Price = new Long(source.Price);
-        }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
+        if (source.RecordingRuleSet != null) {
+            this.RecordingRuleSet = new RecordingRuleSet[source.RecordingRuleSet.length];
+            for (int i = 0; i < source.RecordingRuleSet.length; i++) {
+                this.RecordingRuleSet[i] = new RecordingRuleSet(source.RecordingRuleSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +123,8 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "Price", this.Price);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "RecordingRuleSet.", this.RecordingRuleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

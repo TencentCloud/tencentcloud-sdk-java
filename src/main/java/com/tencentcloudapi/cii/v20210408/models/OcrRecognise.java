@@ -51,6 +51,13 @@ public class OcrRecognise extends AbstractModel{
     private Location Location;
 
     /**
+    * 字段名
+    */
+    @SerializedName("Field")
+    @Expose
+    private String Field;
+
+    /**
      * Get 原文字段 
      * @return OriginalField 原文字段
      */
@@ -114,6 +121,22 @@ public class OcrRecognise extends AbstractModel{
         this.Location = Location;
     }
 
+    /**
+     * Get 字段名 
+     * @return Field 字段名
+     */
+    public String getField() {
+        return this.Field;
+    }
+
+    /**
+     * Set 字段名
+     * @param Field 字段名
+     */
+    public void setField(String Field) {
+        this.Field = Field;
+    }
+
     public OcrRecognise() {
     }
 
@@ -134,6 +157,9 @@ public class OcrRecognise extends AbstractModel{
         if (source.Location != null) {
             this.Location = new Location(source.Location);
         }
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class OcrRecognise extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamObj(map, prefix + "Location.", this.Location);
+        this.setParamSimple(map, prefix + "Field", this.Field);
 
     }
 }
