@@ -16,10 +16,8 @@ public class DescribeFileUrls {
 
             DescribeFileUrlsRequest request = new DescribeFileUrlsRequest();
             UserInfo userInfo = new UserInfo();
-            // 管理员用户id或者员工用户id
+            // 发起人用户id，在控制台查询获取
             userInfo.setUserId(OperatorId);
-            // 请求客户端在公网的ip地址
-            userInfo.setClientIp("************");
             request.setOperator(userInfo);
 
             request.setBusinessType("FLOW");

@@ -14,9 +14,6 @@ public class ClientConfig {
     public static final String Ak = "************";
     public static final String Sk = "************";
 
-    // Appid 电子签侧应用id,电子签提供
-    public static final String Appid = "************";
-
     // 管理员用户id或者员工用户id
     public static final String OperatorId = "************";
 

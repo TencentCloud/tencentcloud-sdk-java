@@ -19,13 +19,11 @@ public class CreateFlow {
             CreateFlowRequest request = new CreateFlowRequest();
 
             UserInfo userInfo = new UserInfo();
-            // 管理员用户id或者员工用户id
+            // 发起人用户id，在控制台查询获取
             userInfo.setUserId(OperatorId);
-            // 请求客户端在公网的ip地址
-            userInfo.setClientIp("************");
             request.setOperator(userInfo);
 
-            // 企业方 静默签署时type为3/非静默签署type为0（仅支持处于第一位的签署方进行静默签，且合同为顺序签署，请于控制台调整好模板）
+            // 企业方 静默签署时type为3/非静默签署type为0
             FlowCreateApprover enterpriseInfo = new FlowCreateApprover();
             enterpriseInfo.setApproverType(3L);
             enterpriseInfo.setOrganizationName("************");
