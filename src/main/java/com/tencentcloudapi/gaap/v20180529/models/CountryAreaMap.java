@@ -65,6 +65,14 @@ public class CountryAreaMap extends AbstractModel{
     private String ContinentInnerCode;
 
     /**
+    * 标注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 国家名称。 
      * @return NationCountryName 国家名称。
      */
@@ -160,6 +168,26 @@ public class CountryAreaMap extends AbstractModel{
         this.ContinentInnerCode = ContinentInnerCode;
     }
 
+    /**
+     * Get 标注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 标注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 标注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 标注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public CountryAreaMap() {
     }
 
@@ -186,6 +214,9 @@ public class CountryAreaMap extends AbstractModel{
         if (source.ContinentInnerCode != null) {
             this.ContinentInnerCode = new String(source.ContinentInnerCode);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class CountryAreaMap extends AbstractModel{
         this.setParamSimple(map, prefix + "GeographicalZoneInnerCode", this.GeographicalZoneInnerCode);
         this.setParamSimple(map, prefix + "ContinentName", this.ContinentName);
         this.setParamSimple(map, prefix + "ContinentInnerCode", this.ContinentInnerCode);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

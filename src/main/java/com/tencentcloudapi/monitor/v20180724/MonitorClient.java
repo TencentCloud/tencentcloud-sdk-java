@@ -221,6 +221,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *创建按量 Prometheus 实例，根据用量收费实例
+     * @param req CreatePrometheusMultiTenantInstancePostPayModeRequest
+     * @return CreatePrometheusMultiTenantInstancePostPayModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusMultiTenantInstancePostPayModeResponse CreatePrometheusMultiTenantInstancePostPayMode(CreatePrometheusMultiTenantInstancePostPayModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusMultiTenantInstancePostPayMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建 Prometheus 抓取任务
      * @param req CreatePrometheusScrapeJobRequest
      * @return CreatePrometheusScrapeJobResponse

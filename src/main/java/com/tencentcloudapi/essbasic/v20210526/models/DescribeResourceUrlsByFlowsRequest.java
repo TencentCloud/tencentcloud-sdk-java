@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
 
     /**
-    * 渠道应用相关信息
+    * 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
@@ -44,16 +45,20 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
-     * Get 渠道应用相关信息 
-     * @return Agent 渠道应用相关信息
+     * Get 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息
-     * @param Agent 渠道应用相关信息
+     * Set 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

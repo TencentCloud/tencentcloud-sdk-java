@@ -66,6 +66,9 @@ public enum TkeErrorCode {
     // 查询主题集失败。
      FAILEDOPERATION_GETCLSLOGSET("FailedOperation.GetClsLogSet"),
      
+    // 获取CLS机器组失败。
+     FAILEDOPERATION_GETCLSMACHINEGROUP("FailedOperation.GetClsMachineGroup"),
+     
     // 连接用户Kubernetes集群失败。
      FAILEDOPERATION_KUBECLIENTCONNECTION("FailedOperation.KubeClientConnection"),
      

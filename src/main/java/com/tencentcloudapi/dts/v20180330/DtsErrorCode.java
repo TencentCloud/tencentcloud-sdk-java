@@ -69,6 +69,9 @@ public enum DtsErrorCode {
     // 参数值错误。
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUE("InvalidParameterValue.InvalidParameterValue"),
      
+    // 非法参数。
+     INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUEERROR("InvalidParameterValue.InvalidParameterValueError"),
+     
     // 闲置迁移任务数目超过限制。
      LIMITEXCEEDED_MAXUNUSEDJOBS("LimitExceeded.MaxUnusedJobs"),
      

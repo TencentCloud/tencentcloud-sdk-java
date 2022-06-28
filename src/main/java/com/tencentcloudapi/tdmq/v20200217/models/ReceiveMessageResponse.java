@@ -60,6 +60,22 @@ public class ReceiveMessageResponse extends AbstractModel{
     private String SubName;
 
     /**
+    * BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessageIDList")
+    @Expose
+    private String MessageIDList;
+
+    /**
+    * BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessagesPayload")
+    @Expose
+    private String MessagesPayload;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,6 +171,46 @@ public class ReceiveMessageResponse extends AbstractModel{
     }
 
     /**
+     * Get BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessageIDList BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessageIDList() {
+        return this.MessageIDList;
+    }
+
+    /**
+     * Set BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessageIDList BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessageIDList(String MessageIDList) {
+        this.MessageIDList = MessageIDList;
+    }
+
+    /**
+     * Get BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessagesPayload BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessagesPayload() {
+        return this.MessagesPayload;
+    }
+
+    /**
+     * Set BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessagesPayload BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessagesPayload(String MessagesPayload) {
+        this.MessagesPayload = MessagesPayload;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -193,6 +249,12 @@ public class ReceiveMessageResponse extends AbstractModel{
         if (source.SubName != null) {
             this.SubName = new String(source.SubName);
         }
+        if (source.MessageIDList != null) {
+            this.MessageIDList = new String(source.MessageIDList);
+        }
+        if (source.MessagesPayload != null) {
+            this.MessagesPayload = new String(source.MessagesPayload);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -208,6 +270,8 @@ public class ReceiveMessageResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AckTopic", this.AckTopic);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "SubName", this.SubName);
+        this.setParamSimple(map, prefix + "MessageIDList", this.MessageIDList);
+        this.setParamSimple(map, prefix + "MessagesPayload", this.MessagesPayload);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

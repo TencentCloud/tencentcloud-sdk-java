@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ListTargetsRequest extends AbstractModel{
 
     /**
-    * 事件规则ID
-    */
-    @SerializedName("RuleId")
-    @Expose
-    private String RuleId;
-
-    /**
     * 事件集ID
     */
     @SerializedName("EventBusId")
@@ -42,6 +35,13 @@ public class ListTargetsRequest extends AbstractModel{
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
+
+    /**
+    * 事件规则ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
 
     /**
     * 返回数量，默认为20，最大值为100。
@@ -63,22 +63,6 @@ public class ListTargetsRequest extends AbstractModel{
     @SerializedName("Order")
     @Expose
     private String Order;
-
-    /**
-     * Get 事件规则ID 
-     * @return RuleId 事件规则ID
-     */
-    public String getRuleId() {
-        return this.RuleId;
-    }
-
-    /**
-     * Set 事件规则ID
-     * @param RuleId 事件规则ID
-     */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
-    }
 
     /**
      * Get 事件集ID 
@@ -110,6 +94,22 @@ public class ListTargetsRequest extends AbstractModel{
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 事件规则ID 
+     * @return RuleId 事件规则ID
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 事件规则ID
+     * @param RuleId 事件规则ID
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
     }
 
     /**
@@ -168,14 +168,14 @@ public class ListTargetsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListTargetsRequest(ListTargetsRequest source) {
-        if (source.RuleId != null) {
-            this.RuleId = new String(source.RuleId);
-        }
         if (source.EventBusId != null) {
             this.EventBusId = new String(source.EventBusId);
         }
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -193,9 +193,9 @@ public class ListTargetsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Order", this.Order);

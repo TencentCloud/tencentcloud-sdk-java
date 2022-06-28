@@ -51,6 +51,27 @@ public class ReceiveMessageRequest extends AbstractModel{
     private String SubInitialPosition;
 
     /**
+    * 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
+    */
+    @SerializedName("MaxNumMessages")
+    @Expose
+    private Long MaxNumMessages;
+
+    /**
+    * 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
+    */
+    @SerializedName("MaxNumBytes")
+    @Expose
+    private Long MaxNumBytes;
+
+    /**
+    * 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
      * Get 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default 
      * @return Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
      */
@@ -114,6 +135,54 @@ public class ReceiveMessageRequest extends AbstractModel{
         this.SubInitialPosition = SubInitialPosition;
     }
 
+    /**
+     * Get 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy 
+     * @return MaxNumMessages 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
+     */
+    public Long getMaxNumMessages() {
+        return this.MaxNumMessages;
+    }
+
+    /**
+     * Set 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
+     * @param MaxNumMessages 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
+     */
+    public void setMaxNumMessages(Long MaxNumMessages) {
+        this.MaxNumMessages = MaxNumMessages;
+    }
+
+    /**
+     * Get 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy 
+     * @return MaxNumBytes 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
+     */
+    public Long getMaxNumBytes() {
+        return this.MaxNumBytes;
+    }
+
+    /**
+     * Set 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
+     * @param MaxNumBytes 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
+     */
+    public void setMaxNumBytes(Long MaxNumBytes) {
+        this.MaxNumBytes = MaxNumBytes;
+    }
+
+    /**
+     * Get 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy 
+     * @return Timeout 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy
+     * @param Timeout 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public ReceiveMessageRequest() {
     }
 
@@ -134,6 +203,15 @@ public class ReceiveMessageRequest extends AbstractModel{
         if (source.SubInitialPosition != null) {
             this.SubInitialPosition = new String(source.SubInitialPosition);
         }
+        if (source.MaxNumMessages != null) {
+            this.MaxNumMessages = new Long(source.MaxNumMessages);
+        }
+        if (source.MaxNumBytes != null) {
+            this.MaxNumBytes = new Long(source.MaxNumBytes);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -145,6 +223,9 @@ public class ReceiveMessageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
         this.setParamSimple(map, prefix + "ReceiverQueueSize", this.ReceiverQueueSize);
         this.setParamSimple(map, prefix + "SubInitialPosition", this.SubInitialPosition);
+        this.setParamSimple(map, prefix + "MaxNumMessages", this.MaxNumMessages);
+        this.setParamSimple(map, prefix + "MaxNumBytes", this.MaxNumBytes);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

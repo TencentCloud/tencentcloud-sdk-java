@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OperateChannelTemplateRequest extends AbstractModel{
 
     /**
-    * 应用信息
+    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
@@ -65,16 +65,16 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     private String ProxyOrganizationOpenIds;
 
     /**
-     * Get 应用信息 
-     * @return Agent 应用信息
+     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用信息
-     * @param Agent 应用信息
+     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

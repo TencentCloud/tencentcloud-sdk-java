@@ -103,6 +103,22 @@ public class IndicatorItem extends AbstractModel{
     private String ItemString;
 
     /**
+    * 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
+    * 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Coords")
+    @Expose
+    private Coordinate Coords;
+
+    /**
      * Get 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 英文缩写
@@ -302,6 +318,46 @@ public class IndicatorItem extends AbstractModel{
         this.ItemString = ItemString;
     }
 
+    /**
+     * Get 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Coords 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coordinate getCoords() {
+        return this.Coords;
+    }
+
+    /**
+     * Set 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coords 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoords(Coordinate Coords) {
+        this.Coords = Coords;
+    }
+
     public IndicatorItem() {
     }
 
@@ -340,6 +396,12 @@ public class IndicatorItem extends AbstractModel{
         if (source.ItemString != null) {
             this.ItemString = new String(source.ItemString);
         }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Coords != null) {
+            this.Coords = new Coordinate(source.Coords);
+        }
     }
 
 
@@ -357,6 +419,8 @@ public class IndicatorItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Arrow", this.Arrow);
         this.setParamSimple(map, prefix + "Normal", this.Normal);
         this.setParamSimple(map, prefix + "ItemString", this.ItemString);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamObj(map, prefix + "Coords.", this.Coords);
 
     }
 }

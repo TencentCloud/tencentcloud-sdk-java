@@ -159,6 +159,26 @@ public class MmpsClient extends AbstractClient{
     }
 
     /**
+     *查询指定小程序版本的翼扬诊断安全得分
+     * @param req DescribeFlySecMiniAppScanReportListRequest
+     * @return DescribeFlySecMiniAppScanReportListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlySecMiniAppScanReportListResponse DescribeFlySecMiniAppScanReportList(DescribeFlySecMiniAppScanReportListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlySecMiniAppScanReportList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取翼扬安全诊断任务列表
      * @param req DescribeFlySecMiniAppScanTaskListRequest
      * @return DescribeFlySecMiniAppScanTaskListResponse

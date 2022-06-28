@@ -39,6 +39,14 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel{
     private ServerBaseConfig ServerConfig;
 
     /**
+    * 在线版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OnlineVersionInfos")
+    @Expose
+    private OnlineVersionInfo [] OnlineVersionInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 在线版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OnlineVersionInfos 在线版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OnlineVersionInfo [] getOnlineVersionInfos() {
+        return this.OnlineVersionInfos;
+    }
+
+    /**
+     * Set 在线版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnlineVersionInfos 在线版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOnlineVersionInfos(OnlineVersionInfo [] OnlineVersionInfos) {
+        this.OnlineVersionInfos = OnlineVersionInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -115,6 +143,12 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel{
         if (source.ServerConfig != null) {
             this.ServerConfig = new ServerBaseConfig(source.ServerConfig);
         }
+        if (source.OnlineVersionInfos != null) {
+            this.OnlineVersionInfos = new OnlineVersionInfo[source.OnlineVersionInfos.length];
+            for (int i = 0; i < source.OnlineVersionInfos.length; i++) {
+                this.OnlineVersionInfos[i] = new OnlineVersionInfo(source.OnlineVersionInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +161,7 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BaseInfo.", this.BaseInfo);
         this.setParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
+        this.setParamArrayObj(map, prefix + "OnlineVersionInfos.", this.OnlineVersionInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -79,6 +79,46 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询Nacos类型引擎实例副本信息
+     * @param req DescribeNacosReplicasRequest
+     * @return DescribeNacosReplicasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNacosReplicasResponse DescribeNacosReplicas(DescribeNacosReplicasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNacosReplicasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNacosReplicasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNacosReplicas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询nacos服务接口列表
+     * @param req DescribeNacosServerInterfacesRequest
+     * @return DescribeNacosServerInterfacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(DescribeNacosServerInterfacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNacosServerInterfacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNacosServerInterfacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNacosServerInterfaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询引擎实例访问地址
      * @param req DescribeSREInstanceAccessAddressRequest
      * @return DescribeSREInstanceAccessAddressResponse
@@ -111,6 +151,46 @@ public class TseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSREInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSREInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Zookeeper类型注册引擎实例副本信息
+     * @param req DescribeZookeeperReplicasRequest
+     * @return DescribeZookeeperReplicasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZookeeperReplicasResponse DescribeZookeeperReplicas(DescribeZookeeperReplicasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZookeeperReplicasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZookeeperReplicasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZookeeperReplicas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询zookeeper服务接口列表
+     * @param req DescribeZookeeperServerInterfacesRequest
+     * @return DescribeZookeeperServerInterfacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(DescribeZookeeperServerInterfacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZookeeperServerInterfacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZookeeperServerInterfacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZookeeperServerInterfaces");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
