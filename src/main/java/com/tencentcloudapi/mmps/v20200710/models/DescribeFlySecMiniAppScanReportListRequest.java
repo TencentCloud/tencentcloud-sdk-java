@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFlySecMiniAppScanReportListRequest extends AbstractModel{
 
     /**
-    * 任务id
+    * 小程序AppID
     */
     @SerializedName("MiniAppID")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeFlySecMiniAppScanReportListRequest extends AbstractModel{
     private String MiniAppVersion;
 
     /**
-     * Get 任务id 
-     * @return MiniAppID 任务id
+     * Get 小程序AppID 
+     * @return MiniAppID 小程序AppID
      */
     public String getMiniAppID() {
         return this.MiniAppID;
     }
 
     /**
-     * Set 任务id
-     * @param MiniAppID 任务id
+     * Set 小程序AppID
+     * @param MiniAppID 小程序AppID
      */
     public void setMiniAppID(String MiniAppID) {
         this.MiniAppID = MiniAppID;

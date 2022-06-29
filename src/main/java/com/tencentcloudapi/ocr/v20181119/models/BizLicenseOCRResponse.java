@@ -95,6 +95,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
     /**
     * Code 告警码列表和释义：
 -20001 非营业执照
+-9102 黑白复印件告警
 注：告警码可以同时存在多个
     */
     @SerializedName("RecognizeWarnCode")
@@ -104,6 +105,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
     /**
     * 告警码说明：
 OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个
     */
     @SerializedName("RecognizeWarnMsg")
@@ -280,9 +282,11 @@ OCR_WARNING_TPYE_NOT_MATCH 非营业执照
     /**
      * Get Code 告警码列表和释义：
 -20001 非营业执照
+-9102 黑白复印件告警
 注：告警码可以同时存在多个 
      * @return RecognizeWarnCode Code 告警码列表和释义：
 -20001 非营业执照
+-9102 黑白复印件告警
 注：告警码可以同时存在多个
      */
     public Long [] getRecognizeWarnCode() {
@@ -292,9 +296,11 @@ OCR_WARNING_TPYE_NOT_MATCH 非营业执照
     /**
      * Set Code 告警码列表和释义：
 -20001 非营业执照
+-9102 黑白复印件告警
 注：告警码可以同时存在多个
      * @param RecognizeWarnCode Code 告警码列表和释义：
 -20001 非营业执照
+-9102 黑白复印件告警
 注：告警码可以同时存在多个
      */
     public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
@@ -304,9 +310,11 @@ OCR_WARNING_TPYE_NOT_MATCH 非营业执照
     /**
      * Get 告警码说明：
 OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个 
      * @return RecognizeWarnMsg 告警码说明：
 OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个
      */
     public String [] getRecognizeWarnMsg() {
@@ -316,9 +324,11 @@ OCR_WARNING_TPYE_NOT_MATCH 非营业执照
     /**
      * Set 告警码说明：
 OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个
      * @param RecognizeWarnMsg 告警码说明：
 OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个
      */
     public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {

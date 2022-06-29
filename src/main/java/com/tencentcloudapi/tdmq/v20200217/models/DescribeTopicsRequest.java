@@ -52,12 +52,10 @@ public class DescribeTopicsRequest extends AbstractModel{
 
     /**
     * topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
     */
     @SerializedName("TopicType")
     @Expose
@@ -79,6 +77,15 @@ public class DescribeTopicsRequest extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 创建来源：
+1：用户创建
+2：系统创建
+    */
+    @SerializedName("TopicCreator")
+    @Expose
+    private Long TopicCreator;
 
     /**
      * Get 环境（命名空间）名称。 
@@ -146,19 +153,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
     /**
      * Get topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。 
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型； 
      * @return TopicType topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
      */
     public Long getTopicType() {
         return this.TopicType;
@@ -166,19 +169,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
     /**
      * Set topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
      * @param TopicType topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;
@@ -228,6 +227,30 @@ public class DescribeTopicsRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 创建来源：
+1：用户创建
+2：系统创建 
+     * @return TopicCreator 创建来源：
+1：用户创建
+2：系统创建
+     */
+    public Long getTopicCreator() {
+        return this.TopicCreator;
+    }
+
+    /**
+     * Set 创建来源：
+1：用户创建
+2：系统创建
+     * @param TopicCreator 创建来源：
+1：用户创建
+2：系统创建
+     */
+    public void setTopicCreator(Long TopicCreator) {
+        this.TopicCreator = TopicCreator;
+    }
+
     public DescribeTopicsRequest() {
     }
 
@@ -260,6 +283,9 @@ public class DescribeTopicsRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.TopicCreator != null) {
+            this.TopicCreator = new Long(source.TopicCreator);
+        }
     }
 
 
@@ -274,6 +300,7 @@ public class DescribeTopicsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
 
     }
 }

@@ -39,7 +39,7 @@ public class GroupPod extends AbstractModel{
     private String PodId;
 
     /**
-    * 实例状态，请参考后面的实例以及容器的状态定义
+    * 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -175,9 +175,9 @@ public class GroupPod extends AbstractModel{
     }
 
     /**
-     * Get 实例状态，请参考后面的实例以及容器的状态定义
+     * Get 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 实例状态，请参考后面的实例以及容器的状态定义
+     * @return Status 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -185,9 +185,9 @@ public class GroupPod extends AbstractModel{
     }
 
     /**
-     * Set 实例状态，请参考后面的实例以及容器的状态定义
+     * Set 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 实例状态，请参考后面的实例以及容器的状态定义
+     * @param Status 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

@@ -37,7 +37,7 @@ public class CreateTopicResponse extends AbstractModel{
     private String TopicName;
 
     /**
-    * 0：非分区topic，无分区；非0：具体分区topic的分区数。
+    * 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
     */
     @SerializedName("Partitions")
     @Expose
@@ -57,7 +57,6 @@ public class CreateTopicResponse extends AbstractModel{
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-5 ：事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicType")
@@ -104,16 +103,16 @@ public class CreateTopicResponse extends AbstractModel{
     }
 
     /**
-     * Get 0：非分区topic，无分区；非0：具体分区topic的分区数。 
-     * @return Partitions 0：非分区topic，无分区；非0：具体分区topic的分区数。
+     * Get 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1） 
+     * @return Partitions 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set 0：非分区topic，无分区；非0：具体分区topic的分区数。
-     * @param Partitions 0：非分区topic，无分区；非0：具体分区topic的分区数。
+     * Set 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
+     * @param Partitions 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
@@ -145,14 +144,12 @@ public class CreateTopicResponse extends AbstractModel{
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-5 ：事务消息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicType 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-5 ：事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicType() {
@@ -165,14 +162,12 @@ public class CreateTopicResponse extends AbstractModel{
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-5 ：事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicType 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-5 ：事务消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicType(Long TopicType) {

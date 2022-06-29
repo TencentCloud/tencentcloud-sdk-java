@@ -37,7 +37,7 @@ public class CreateTopicRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
+    * 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
     */
     @SerializedName("Partitions")
     @Expose
@@ -51,7 +51,8 @@ public class CreateTopicRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 0： 普通消息；
+    * 该入参将逐步弃用，可切换至PulsarTopicType参数
+0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
@@ -112,16 +113,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。 
-     * @return Partitions 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
+     * Get 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。 
+     * @return Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
-     * @param Partitions 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
+     * Set 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+     * @param Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
@@ -144,12 +145,14 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 0： 普通消息；
+     * Get 该入参将逐步弃用，可切换至PulsarTopicType参数
+0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列。 
-     * @return TopicType 0： 普通消息；
+     * @return TopicType 该入参将逐步弃用，可切换至PulsarTopicType参数
+0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
@@ -160,12 +163,14 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Set 0： 普通消息；
+     * Set 该入参将逐步弃用，可切换至PulsarTopicType参数
+0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列。
-     * @param TopicType 0： 普通消息；
+     * @param TopicType 该入参将逐步弃用，可切换至PulsarTopicType参数
+0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
