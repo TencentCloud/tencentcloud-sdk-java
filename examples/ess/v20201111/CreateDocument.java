@@ -29,9 +29,9 @@ public class CreateDocument {
             // 后台配置后查询获取
             request.setTemplateId("************");
 
-            // 普通控件
+            // 发起人填写控件
             FormField formField = new FormField();
-            // 在模板配置拖入控件的界面可以查询到（ComponentName或者ComponentId选一填写，建议填写ComponentName）
+            // 控制台配置模板时，于"指定签约区域"步骤，查看控件属性可以获取
             formField.setComponentName("************");
             formField.setComponentValue("************");
 
