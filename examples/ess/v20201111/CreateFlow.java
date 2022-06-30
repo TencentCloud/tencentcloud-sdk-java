@@ -42,7 +42,7 @@ public class CreateFlow {
             request.setApprovers(new FlowCreateApprover[]{enterpriseInfo, clientInfo});
 
             // 请设置合理的时间（秒级时间戳），否则容易造成合同过期
-            request.setDeadLine(1682474522L);
+            request.setDeadLine(System.currentTimeMillis() / 1000 + 7 * 24 * 3600);
             request.setFlowName("************");
 
             CreateFlowResponse resp = client.CreateFlow(request);

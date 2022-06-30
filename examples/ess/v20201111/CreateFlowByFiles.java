@@ -60,6 +60,8 @@ public class CreateFlowByFiles {
             request.setApprovers(new ApproverInfo[]{enterpriseInfo, clientInfo});
             // 设置合同名
             request.setFlowName("************");
+            // 请设置合理的时间（秒级时间戳），否则容易造成合同过期
+            request.setDeadline(System.currentTimeMillis() / 1000 + 7 * 24 * 3600);
 
             CreateFlowByFilesResponse response = client.CreateFlowByFiles(request);
             System.out.println(new GsonBuilder().disableHtmlEscaping().create().toJson(response));
