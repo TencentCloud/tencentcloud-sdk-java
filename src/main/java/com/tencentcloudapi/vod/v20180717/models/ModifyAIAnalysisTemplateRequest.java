@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
 
     /**
-    * 视频内容分析模板唯一标识。
+    * 音视频内容分析模板唯一标识。
     */
     @SerializedName("Definition")
     @Expose
@@ -37,14 +37,14 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * 视频内容分析模板名称，长度限制：64 个字符。
+    * 音视频内容分析模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 视频内容分析模板描述信息，长度限制：256 个字符。
+    * 音视频内容分析模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
     @Expose
@@ -86,16 +86,16 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     private HighlightsConfigureInfoForUpdate HighlightConfigure;
 
     /**
-     * Get 视频内容分析模板唯一标识。 
-     * @return Definition 视频内容分析模板唯一标识。
+     * Get 音视频内容分析模板唯一标识。 
+     * @return Definition 音视频内容分析模板唯一标识。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 视频内容分析模板唯一标识。
-     * @param Definition 视频内容分析模板唯一标识。
+     * Set 音视频内容分析模板唯一标识。
+     * @param Definition 音视频内容分析模板唯一标识。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -118,32 +118,32 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频内容分析模板名称，长度限制：64 个字符。 
-     * @return Name 视频内容分析模板名称，长度限制：64 个字符。
+     * Get 音视频内容分析模板名称，长度限制：64 个字符。 
+     * @return Name 音视频内容分析模板名称，长度限制：64 个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 视频内容分析模板名称，长度限制：64 个字符。
-     * @param Name 视频内容分析模板名称，长度限制：64 个字符。
+     * Set 音视频内容分析模板名称，长度限制：64 个字符。
+     * @param Name 音视频内容分析模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 视频内容分析模板描述信息，长度限制：256 个字符。 
-     * @return Comment 视频内容分析模板描述信息，长度限制：256 个字符。
+     * Get 音视频内容分析模板描述信息，长度限制：256 个字符。 
+     * @return Comment 音视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 视频内容分析模板描述信息，长度限制：256 个字符。
-     * @param Comment 视频内容分析模板描述信息，长度限制：256 个字符。
+     * Set 音视频内容分析模板描述信息，长度限制：256 个字符。
+     * @param Comment 音视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

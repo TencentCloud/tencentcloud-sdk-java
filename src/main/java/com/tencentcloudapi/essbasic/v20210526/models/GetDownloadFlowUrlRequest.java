@@ -30,18 +30,18 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
     private Agent Agent;
 
     /**
+    * 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+    */
+    @SerializedName("DownLoadFlows")
+    @Expose
+    private DownloadFlowInfo [] DownLoadFlows;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-    * 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
-    */
-    @SerializedName("DownLoadFlows")
-    @Expose
-    private DownloadFlowInfo [] DownLoadFlows;
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -60,6 +60,22 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
     }
 
     /**
+     * Get 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程 
+     * @return DownLoadFlows 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+     */
+    public DownloadFlowInfo [] getDownLoadFlows() {
+        return this.DownLoadFlows;
+    }
+
+    /**
+     * Set 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+     * @param DownLoadFlows 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+     */
+    public void setDownLoadFlows(DownloadFlowInfo [] DownLoadFlows) {
+        this.DownLoadFlows = DownLoadFlows;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -75,22 +91,6 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
-    /**
-     * Get 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程）， 
-     * @return DownLoadFlows 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
-     */
-    public DownloadFlowInfo [] getDownLoadFlows() {
-        return this.DownLoadFlows;
-    }
-
-    /**
-     * Set 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
-     * @param DownLoadFlows 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
-     */
-    public void setDownLoadFlows(DownloadFlowInfo [] DownLoadFlows) {
-        this.DownLoadFlows = DownLoadFlows;
-    }
-
     public GetDownloadFlowUrlRequest() {
     }
 
@@ -102,14 +102,14 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.DownLoadFlows != null) {
             this.DownLoadFlows = new DownloadFlowInfo[source.DownLoadFlows.length];
             for (int i = 0; i < source.DownLoadFlows.length; i++) {
                 this.DownLoadFlows[i] = new DownloadFlowInfo(source.DownLoadFlows[i]);
             }
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -119,8 +119,8 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "DownLoadFlows.", this.DownLoadFlows);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

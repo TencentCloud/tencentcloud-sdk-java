@@ -30,11 +30,18 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 操作者的信息
+    * 签署流程名称，长度不超过200个字符
     */
-    @SerializedName("Operator")
+    @SerializedName("FlowName")
     @Expose
-    private UserInfo Operator;
+    private String FlowName;
+
+    /**
+    * 签署流程签约方列表，最多不超过5个参与方
+    */
+    @SerializedName("FlowApprovers")
+    @Expose
+    private FlowApproverInfo [] FlowApprovers;
 
     /**
     * 签署文件资源Id列表，目前仅支持单个文件
@@ -44,46 +51,25 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String [] FileIds;
 
     /**
-    * 流程名称，长度不超过200个字符
+    * 签署文件中的控件，如：填写控件等
     */
-    @SerializedName("FlowName")
+    @SerializedName("Components")
     @Expose
-    private String FlowName;
+    private Component [] Components;
 
     /**
-    * 流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+    * 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
     */
     @SerializedName("Deadline")
     @Expose
     private Long Deadline;
 
     /**
-    * 流程的描述，长度不超过1000个字符
-    */
-    @SerializedName("FlowDescription")
-    @Expose
-    private String FlowDescription;
-
-    /**
-    * 流程的类型，长度不超过255个字符
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
-    * 流程回调地址，长度不超过255个字符
+    * 签署流程回调地址，长度不超过255个字符
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
-
-    /**
-    * 流程签约方列表，最多不超过5个参与方
-    */
-    @SerializedName("FlowApprovers")
-    @Expose
-    private FlowApproverInfo [] FlowApprovers;
 
     /**
     * 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
@@ -93,11 +79,32 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private Boolean Unordered;
 
     /**
-    * 签署文件中的控件，如：填写控件等
+    * 签署流程的类型，长度不超过255个字符
     */
-    @SerializedName("Components")
+    @SerializedName("FlowType")
     @Expose
-    private Component [] Components;
+    private String FlowType;
+
+    /**
+    * 签署流程的描述，长度不超过1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
+
+    /**
+    * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+    */
+    @SerializedName("CustomShowMap")
+    @Expose
+    private String CustomShowMap;
+
+    /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 渠道应用相关信息 
@@ -116,19 +123,35 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
+     * Get 签署流程名称，长度不超过200个字符 
+     * @return FlowName 签署流程名称，长度不超过200个字符
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public String getFlowName() {
+        return this.FlowName;
     }
 
     /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
+     * Set 签署流程名称，长度不超过200个字符
+     * @param FlowName 签署流程名称，长度不超过200个字符
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
+    }
+
+    /**
+     * Get 签署流程签约方列表，最多不超过5个参与方 
+     * @return FlowApprovers 签署流程签约方列表，最多不超过5个参与方
+     */
+    public FlowApproverInfo [] getFlowApprovers() {
+        return this.FlowApprovers;
+    }
+
+    /**
+     * Set 签署流程签约方列表，最多不超过5个参与方
+     * @param FlowApprovers 签署流程签约方列表，最多不超过5个参与方
+     */
+    public void setFlowApprovers(FlowApproverInfo [] FlowApprovers) {
+        this.FlowApprovers = FlowApprovers;
     }
 
     /**
@@ -148,99 +171,51 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 流程名称，长度不超过200个字符 
-     * @return FlowName 流程名称，长度不超过200个字符
+     * Get 签署文件中的控件，如：填写控件等 
+     * @return Components 签署文件中的控件，如：填写控件等
      */
-    public String getFlowName() {
-        return this.FlowName;
+    public Component [] getComponents() {
+        return this.Components;
     }
 
     /**
-     * Set 流程名称，长度不超过200个字符
-     * @param FlowName 流程名称，长度不超过200个字符
+     * Set 签署文件中的控件，如：填写控件等
+     * @param Components 签署文件中的控件，如：填写控件等
      */
-    public void setFlowName(String FlowName) {
-        this.FlowName = FlowName;
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
     }
 
     /**
-     * Get 流程截止时间，十位数时间戳，最大值为33162419560，即3020年 
-     * @return Deadline 流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+     * Get 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年 
+     * @return Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 流程截止时间，十位数时间戳，最大值为33162419560，即3020年
-     * @param Deadline 流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+     * Set 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+     * @param Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 流程的描述，长度不超过1000个字符 
-     * @return FlowDescription 流程的描述，长度不超过1000个字符
-     */
-    public String getFlowDescription() {
-        return this.FlowDescription;
-    }
-
-    /**
-     * Set 流程的描述，长度不超过1000个字符
-     * @param FlowDescription 流程的描述，长度不超过1000个字符
-     */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
-    }
-
-    /**
-     * Get 流程的类型，长度不超过255个字符 
-     * @return FlowType 流程的类型，长度不超过255个字符
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 流程的类型，长度不超过255个字符
-     * @param FlowType 流程的类型，长度不超过255个字符
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 流程回调地址，长度不超过255个字符 
-     * @return CallbackUrl 流程回调地址，长度不超过255个字符
+     * Get 签署流程回调地址，长度不超过255个字符 
+     * @return CallbackUrl 签署流程回调地址，长度不超过255个字符
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 流程回调地址，长度不超过255个字符
-     * @param CallbackUrl 流程回调地址，长度不超过255个字符
+     * Set 签署流程回调地址，长度不超过255个字符
+     * @param CallbackUrl 签署流程回调地址，长度不超过255个字符
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
-    }
-
-    /**
-     * Get 流程签约方列表，最多不超过5个参与方 
-     * @return FlowApprovers 流程签约方列表，最多不超过5个参与方
-     */
-    public FlowApproverInfo [] getFlowApprovers() {
-        return this.FlowApprovers;
-    }
-
-    /**
-     * Set 流程签约方列表，最多不超过5个参与方
-     * @param FlowApprovers 流程签约方列表，最多不超过5个参与方
-     */
-    public void setFlowApprovers(FlowApproverInfo [] FlowApprovers) {
-        this.FlowApprovers = FlowApprovers;
     }
 
     /**
@@ -260,19 +235,67 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 签署文件中的控件，如：填写控件等 
-     * @return Components 签署文件中的控件，如：填写控件等
+     * Get 签署流程的类型，长度不超过255个字符 
+     * @return FlowType 签署流程的类型，长度不超过255个字符
      */
-    public Component [] getComponents() {
-        return this.Components;
+    public String getFlowType() {
+        return this.FlowType;
     }
 
     /**
-     * Set 签署文件中的控件，如：填写控件等
-     * @param Components 签署文件中的控件，如：填写控件等
+     * Set 签署流程的类型，长度不超过255个字符
+     * @param FlowType 签署流程的类型，长度不超过255个字符
      */
-    public void setComponents(Component [] Components) {
-        this.Components = Components;
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
+    }
+
+    /**
+     * Get 签署流程的描述，长度不超过1000个字符 
+     * @return FlowDescription 签署流程的描述，长度不超过1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程的描述，长度不超过1000个字符
+     * @param FlowDescription 签署流程的描述，长度不超过1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
+    }
+
+    /**
+     * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
+     * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public String getCustomShowMap() {
+        return this.CustomShowMap;
+    }
+
+    /**
+     * Set 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     * @param CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public void setCustomShowMap(String CustomShowMap) {
+        this.CustomShowMap = CustomShowMap;
+    }
+
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelCreateFlowByFilesRequest() {
@@ -286,29 +309,8 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.FileIds != null) {
-            this.FileIds = new String[source.FileIds.length];
-            for (int i = 0; i < source.FileIds.length; i++) {
-                this.FileIds[i] = new String(source.FileIds[i]);
-            }
-        }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
-        }
-        if (source.Deadline != null) {
-            this.Deadline = new Long(source.Deadline);
-        }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
-        }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
-        }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
         }
         if (source.FlowApprovers != null) {
             this.FlowApprovers = new FlowApproverInfo[source.FlowApprovers.length];
@@ -316,14 +318,38 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
                 this.FlowApprovers[i] = new FlowApproverInfo(source.FlowApprovers[i]);
             }
         }
-        if (source.Unordered != null) {
-            this.Unordered = new Boolean(source.Unordered);
+        if (source.FileIds != null) {
+            this.FileIds = new String[source.FileIds.length];
+            for (int i = 0; i < source.FileIds.length; i++) {
+                this.FileIds[i] = new String(source.FileIds[i]);
+            }
         }
         if (source.Components != null) {
             this.Components = new Component[source.Components.length];
             for (int i = 0; i < source.Components.length; i++) {
                 this.Components[i] = new Component(source.Components[i]);
             }
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Unordered != null) {
+            this.Unordered = new Boolean(source.Unordered);
+        }
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
+        }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
+        if (source.CustomShowMap != null) {
+            this.CustomShowMap = new String(source.CustomShowMap);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -333,16 +359,17 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
-        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
-        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
+        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
+        this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

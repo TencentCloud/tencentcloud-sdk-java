@@ -30,6 +30,22 @@ public class DescribeCloudRunServersRequest extends AbstractModel{
     private String EnvId;
 
     /**
+    * 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * 不传或传0时 会默认为1
+    */
+    @SerializedName("PageNum")
+    @Expose
+    private Long PageNum;
+
+    /**
      * Get 环境Id 
      * @return EnvId 环境Id
      */
@@ -45,6 +61,46 @@ public class DescribeCloudRunServersRequest extends AbstractModel{
         this.EnvId = EnvId;
     }
 
+    /**
+     * Get 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30 
+     * @return PageSize 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+     * @param PageSize 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 不传或传0时 会默认为1 
+     * @return PageNum 不传或传0时 会默认为1
+     */
+    public Long getPageNum() {
+        return this.PageNum;
+    }
+
+    /**
+     * Set 不传或传0时 会默认为1
+     * @param PageNum 不传或传0时 会默认为1
+     */
+    public void setPageNum(Long PageNum) {
+        this.PageNum = PageNum;
+    }
+
     public DescribeCloudRunServersRequest() {
     }
 
@@ -56,6 +112,12 @@ public class DescribeCloudRunServersRequest extends AbstractModel{
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
     }
 
 
@@ -64,6 +126,8 @@ public class DescribeCloudRunServersRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
 
     }
 }

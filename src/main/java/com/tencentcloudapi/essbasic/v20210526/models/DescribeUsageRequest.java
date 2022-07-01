@@ -30,19 +30,42 @@ public class DescribeUsageRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 开始时间 eg:2021-03-21
+    * 开始时间，例如：2021-03-21
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
+    * 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
+
+    /**
+    * 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+    */
+    @SerializedName("NeedAggregate")
+    @Expose
+    private Boolean NeedAggregate;
+
+    /**
+    * 单次返回的最多条目数量。默认为1000，且不能超过1000。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移量，默认是0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 操作者的信息
@@ -50,29 +73,6 @@ public class DescribeUsageRequest extends AbstractModel{
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-    * 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
-    */
-    @SerializedName("NeedAggregate")
-    @Expose
-    private Boolean NeedAggregate;
-
-    /**
-    * 单次返回的最多条目数量,默认为1000,且不能超过1000
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * 偏移量,默认是0
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
 
     /**
      * Get 应用信息 
@@ -91,39 +91,95 @@ public class DescribeUsageRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始时间 eg:2021-03-21 
-     * @return StartDate 开始时间 eg:2021-03-21
+     * Get 开始时间，例如：2021-03-21 
+     * @return StartDate 开始时间，例如：2021-03-21
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 开始时间 eg:2021-03-21
-     * @param StartDate 开始时间 eg:2021-03-21
+     * Set 开始时间，例如：2021-03-21
+     * @param StartDate 开始时间，例如：2021-03-21
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天 
-     * @return EndDate 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
+     * Get 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。 
+     * @return EndDate 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
-     * @param EndDate 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
+     * Set 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
+     * @param EndDate 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
+    }
+
+    /**
+     * Get 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据； 
+     * @return NeedAggregate 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+     */
+    public Boolean getNeedAggregate() {
+        return this.NeedAggregate;
+    }
+
+    /**
+     * Set 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+     * @param NeedAggregate 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+     */
+    public void setNeedAggregate(Boolean NeedAggregate) {
+        this.NeedAggregate = NeedAggregate;
+    }
+
+    /**
+     * Get 单次返回的最多条目数量。默认为1000，且不能超过1000。 
+     * @return Limit 单次返回的最多条目数量。默认为1000，且不能超过1000。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 单次返回的最多条目数量。默认为1000，且不能超过1000。
+     * @param Limit 单次返回的最多条目数量。默认为1000，且不能超过1000。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认是0。 
+     * @return Offset 偏移量，默认是0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认是0。
+     * @param Offset 偏移量，默认是0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -140,62 +196,6 @@ public class DescribeUsageRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据 
-     * @return NeedAggregate 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
-     */
-    public Boolean getNeedAggregate() {
-        return this.NeedAggregate;
-    }
-
-    /**
-     * Set 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
-     * @param NeedAggregate 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
-     */
-    public void setNeedAggregate(Boolean NeedAggregate) {
-        this.NeedAggregate = NeedAggregate;
-    }
-
-    /**
-     * Get 单次返回的最多条目数量,默认为1000,且不能超过1000 
-     * @return Limit 单次返回的最多条目数量,默认为1000,且不能超过1000
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 单次返回的最多条目数量,默认为1000,且不能超过1000
-     * @param Limit 单次返回的最多条目数量,默认为1000,且不能超过1000
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get 偏移量,默认是0 
-     * @return Offset 偏移量,默认是0
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量,默认是0
-     * @param Offset 偏移量,默认是0
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
     }
 
     public DescribeUsageRequest() {
@@ -215,9 +215,6 @@ public class DescribeUsageRequest extends AbstractModel{
         if (source.EndDate != null) {
             this.EndDate = new String(source.EndDate);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.NeedAggregate != null) {
             this.NeedAggregate = new Boolean(source.NeedAggregate);
         }
@@ -226,6 +223,9 @@ public class DescribeUsageRequest extends AbstractModel{
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -237,10 +237,10 @@ public class DescribeUsageRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "StartDate", this.StartDate);
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "NeedAggregate", this.NeedAggregate);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

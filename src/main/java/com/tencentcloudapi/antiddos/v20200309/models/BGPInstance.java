@@ -133,6 +133,13 @@ public class BGPInstance extends AbstractModel{
     private TagInfo [] TagInfoList;
 
     /**
+    * 新版本1ip高防包
+    */
+    @SerializedName("IpCountNewFlag")
+    @Expose
+    private Long IpCountNewFlag;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -404,6 +411,22 @@ public class BGPInstance extends AbstractModel{
         this.TagInfoList = TagInfoList;
     }
 
+    /**
+     * Get 新版本1ip高防包 
+     * @return IpCountNewFlag 新版本1ip高防包
+     */
+    public Long getIpCountNewFlag() {
+        return this.IpCountNewFlag;
+    }
+
+    /**
+     * Set 新版本1ip高防包
+     * @param IpCountNewFlag 新版本1ip高防包
+     */
+    public void setIpCountNewFlag(Long IpCountNewFlag) {
+        this.IpCountNewFlag = IpCountNewFlag;
+    }
+
     public BGPInstance() {
     }
 
@@ -460,6 +483,9 @@ public class BGPInstance extends AbstractModel{
                 this.TagInfoList[i] = new TagInfo(source.TagInfoList[i]);
             }
         }
+        if (source.IpCountNewFlag != null) {
+            this.IpCountNewFlag = new Long(source.IpCountNewFlag);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class BGPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
         this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+        this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
 
     }
 }

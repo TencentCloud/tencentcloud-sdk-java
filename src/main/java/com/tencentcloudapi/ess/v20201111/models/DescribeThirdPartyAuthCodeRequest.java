@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeThirdPartyAuthCodeRequest extends AbstractModel{
 
     /**
-    * AuthCode 值
+    * 电子签小程序跳转客户小程序时携带的授权查看码
     */
     @SerializedName("AuthCode")
     @Expose
     private String AuthCode;
 
     /**
-     * Get AuthCode 值 
-     * @return AuthCode AuthCode 值
+     * Get 电子签小程序跳转客户小程序时携带的授权查看码 
+     * @return AuthCode 电子签小程序跳转客户小程序时携带的授权查看码
      */
     public String getAuthCode() {
         return this.AuthCode;
     }
 
     /**
-     * Set AuthCode 值
-     * @param AuthCode AuthCode 值
+     * Set 电子签小程序跳转客户小程序时携带的授权查看码
+     * @param AuthCode 电子签小程序跳转客户小程序时携带的授权查看码
      */
     public void setAuthCode(String AuthCode) {
         this.AuthCode = AuthCode;

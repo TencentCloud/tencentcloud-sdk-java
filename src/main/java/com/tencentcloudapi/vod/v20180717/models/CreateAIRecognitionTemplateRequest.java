@@ -30,14 +30,14 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * 视频内容识别模板名称，长度限制：64 个字符。
+    * 音视频内容识别模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 视频内容识别模板描述信息，长度限制：256 个字符。
+    * 音视频内容识别模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
     @Expose
@@ -123,32 +123,32 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频内容识别模板名称，长度限制：64 个字符。 
-     * @return Name 视频内容识别模板名称，长度限制：64 个字符。
+     * Get 音视频内容识别模板名称，长度限制：64 个字符。 
+     * @return Name 音视频内容识别模板名称，长度限制：64 个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 视频内容识别模板名称，长度限制：64 个字符。
-     * @param Name 视频内容识别模板名称，长度限制：64 个字符。
+     * Set 音视频内容识别模板名称，长度限制：64 个字符。
+     * @param Name 音视频内容识别模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 视频内容识别模板描述信息，长度限制：256 个字符。 
-     * @return Comment 视频内容识别模板描述信息，长度限制：256 个字符。
+     * Get 音视频内容识别模板描述信息，长度限制：256 个字符。 
+     * @return Comment 音视频内容识别模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 视频内容识别模板描述信息，长度限制：256 个字符。
-     * @param Comment 视频内容识别模板描述信息，长度限制：256 个字符。
+     * Set 音视频内容识别模板描述信息，长度限制：256 个字符。
+     * @param Comment 音视频内容识别模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

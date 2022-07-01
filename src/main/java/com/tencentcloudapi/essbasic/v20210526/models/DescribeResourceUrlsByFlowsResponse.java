@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeResourceUrlsByFlowsResponse extends AbstractModel{
 
     /**
-    * 流程资源对应链接信息
+    * 签署流程资源对应链接信息
     */
     @SerializedName("FlowResourceUrlInfos")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeResourceUrlsByFlowsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流程资源对应链接信息 
-     * @return FlowResourceUrlInfos 流程资源对应链接信息
+     * Get 签署流程资源对应链接信息 
+     * @return FlowResourceUrlInfos 签署流程资源对应链接信息
      */
     public FlowResourceUrlInfo [] getFlowResourceUrlInfos() {
         return this.FlowResourceUrlInfos;
     }
 
     /**
-     * Set 流程资源对应链接信息
-     * @param FlowResourceUrlInfos 流程资源对应链接信息
+     * Set 签署流程资源对应链接信息
+     * @param FlowResourceUrlInfos 签署流程资源对应链接信息
      */
     public void setFlowResourceUrlInfos(FlowResourceUrlInfo [] FlowResourceUrlInfos) {
         this.FlowResourceUrlInfos = FlowResourceUrlInfos;

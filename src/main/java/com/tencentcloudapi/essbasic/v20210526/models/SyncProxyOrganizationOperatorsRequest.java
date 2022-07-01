@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class SyncProxyOrganizationOperatorsRequest extends AbstractModel{
 
     /**
+    * 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
     * 操作类型，新增:"CREATE"，修改:"UPDATE"，离职:"RESIGN"
     */
     @SerializedName("OperatorType")
@@ -30,14 +37,7 @@ public class SyncProxyOrganizationOperatorsRequest extends AbstractModel{
     private String OperatorType;
 
     /**
-    * 应用信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
-    * 经办人信息列表
+    * 经办人信息列表，最大长度200
     */
     @SerializedName("ProxyOrganizationOperators")
     @Expose
@@ -49,6 +49,22 @@ public class SyncProxyOrganizationOperatorsRequest extends AbstractModel{
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+     * Get 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。 
+     * @return Agent 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+     * @param Agent 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
 
     /**
      * Get 操作类型，新增:"CREATE"，修改:"UPDATE"，离职:"RESIGN" 
@@ -67,32 +83,16 @@ public class SyncProxyOrganizationOperatorsRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用信息 
-     * @return Agent 应用信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用信息
-     * @param Agent 应用信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 经办人信息列表 
-     * @return ProxyOrganizationOperators 经办人信息列表
+     * Get 经办人信息列表，最大长度200 
+     * @return ProxyOrganizationOperators 经办人信息列表，最大长度200
      */
     public ProxyOrganizationOperator [] getProxyOrganizationOperators() {
         return this.ProxyOrganizationOperators;
     }
 
     /**
-     * Set 经办人信息列表
-     * @param ProxyOrganizationOperators 经办人信息列表
+     * Set 经办人信息列表，最大长度200
+     * @param ProxyOrganizationOperators 经办人信息列表，最大长度200
      */
     public void setProxyOrganizationOperators(ProxyOrganizationOperator [] ProxyOrganizationOperators) {
         this.ProxyOrganizationOperators = ProxyOrganizationOperators;
@@ -122,11 +122,11 @@ public class SyncProxyOrganizationOperatorsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SyncProxyOrganizationOperatorsRequest(SyncProxyOrganizationOperatorsRequest source) {
-        if (source.OperatorType != null) {
-            this.OperatorType = new String(source.OperatorType);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.OperatorType != null) {
+            this.OperatorType = new String(source.OperatorType);
         }
         if (source.ProxyOrganizationOperators != null) {
             this.ProxyOrganizationOperators = new ProxyOrganizationOperator[source.ProxyOrganizationOperators.length];
@@ -144,8 +144,8 @@ public class SyncProxyOrganizationOperatorsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OperatorType", this.OperatorType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "OperatorType", this.OperatorType);
         this.setParamArrayObj(map, prefix + "ProxyOrganizationOperators.", this.ProxyOrganizationOperators);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 

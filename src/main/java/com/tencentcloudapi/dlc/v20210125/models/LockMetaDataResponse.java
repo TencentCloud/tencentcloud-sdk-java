@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnhanceTaDegreeResponse extends AbstractModel{
+public class LockMetaDataResponse extends AbstractModel{
 
     /**
-    * 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+    * 锁id
     */
-    @SerializedName("Data")
+    @SerializedName("LockId")
     @Expose
-    private OutputTaData Data;
+    private Long LockId;
+
+    /**
+    * 锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
+    */
+    @SerializedName("LockState")
+    @Expose
+    private String LockState;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class EnhanceTaDegreeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回包数据
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 锁id 
+     * @return LockId 锁id
      */
-    public OutputTaData getData() {
-        return this.Data;
+    public Long getLockId() {
+        return this.LockId;
     }
 
     /**
-     * Set 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 锁id
+     * @param LockId 锁id
      */
-    public void setData(OutputTaData Data) {
-        this.Data = Data;
+    public void setLockId(Long LockId) {
+        this.LockId = LockId;
+    }
+
+    /**
+     * Get 锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED 
+     * @return LockState 锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
+     */
+    public String getLockState() {
+        return this.LockState;
+    }
+
+    /**
+     * Set 锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
+     * @param LockState 锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
+     */
+    public void setLockState(String LockState) {
+        this.LockState = LockState;
     }
 
     /**
@@ -73,16 +91,19 @@ public class EnhanceTaDegreeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public EnhanceTaDegreeResponse() {
+    public LockMetaDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnhanceTaDegreeResponse(EnhanceTaDegreeResponse source) {
-        if (source.Data != null) {
-            this.Data = new OutputTaData(source.Data);
+    public LockMetaDataResponse(LockMetaDataResponse source) {
+        if (source.LockId != null) {
+            this.LockId = new Long(source.LockId);
+        }
+        if (source.LockState != null) {
+            this.LockState = new String(source.LockState);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +115,8 @@ public class EnhanceTaDegreeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "LockId", this.LockId);
+        this.setParamSimple(map, prefix + "LockState", this.LockState);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

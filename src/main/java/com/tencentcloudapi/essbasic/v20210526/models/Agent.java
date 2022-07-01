@@ -30,18 +30,11 @@ public class Agent extends AbstractModel{
     private String AppId;
 
     /**
-    * 腾讯电子签颁发给渠道侧合作企业的企业ID
+    * 渠道/平台合作企业的企业ID
     */
-    @SerializedName("ProxyOrganizationId")
+    @SerializedName("ProxyOrganizationOpenId")
     @Expose
-    private String ProxyOrganizationId;
-
-    /**
-    * 腾讯电子签颁发给渠道侧合作企业的应用ID
-    */
-    @SerializedName("ProxyAppId")
-    @Expose
-    private String ProxyAppId;
+    private String ProxyOrganizationOpenId;
 
     /**
     * 渠道/平台合作企业经办人（操作员）
@@ -51,11 +44,18 @@ public class Agent extends AbstractModel{
     private UserInfo ProxyOperator;
 
     /**
-    * 渠道/平台合作企业的企业ID
+    * 腾讯电子签颁发给渠道侧合作企业的应用ID
     */
-    @SerializedName("ProxyOrganizationOpenId")
+    @SerializedName("ProxyAppId")
     @Expose
-    private String ProxyOrganizationOpenId;
+    private String ProxyAppId;
+
+    /**
+    * 腾讯电子签颁发给渠道侧合作企业的企业ID
+    */
+    @SerializedName("ProxyOrganizationId")
+    @Expose
+    private String ProxyOrganizationId;
 
     /**
      * Get 腾讯电子签颁发给渠道的应用ID，32位字符串 
@@ -74,35 +74,19 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 腾讯电子签颁发给渠道侧合作企业的企业ID 
-     * @return ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
+     * Get 渠道/平台合作企业的企业ID 
+     * @return ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
      */
-    public String getProxyOrganizationId() {
-        return this.ProxyOrganizationId;
+    public String getProxyOrganizationOpenId() {
+        return this.ProxyOrganizationOpenId;
     }
 
     /**
-     * Set 腾讯电子签颁发给渠道侧合作企业的企业ID
-     * @param ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
+     * Set 渠道/平台合作企业的企业ID
+     * @param ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
      */
-    public void setProxyOrganizationId(String ProxyOrganizationId) {
-        this.ProxyOrganizationId = ProxyOrganizationId;
-    }
-
-    /**
-     * Get 腾讯电子签颁发给渠道侧合作企业的应用ID 
-     * @return ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
-     */
-    public String getProxyAppId() {
-        return this.ProxyAppId;
-    }
-
-    /**
-     * Set 腾讯电子签颁发给渠道侧合作企业的应用ID
-     * @param ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
-     */
-    public void setProxyAppId(String ProxyAppId) {
-        this.ProxyAppId = ProxyAppId;
+    public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
+        this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;
     }
 
     /**
@@ -122,19 +106,35 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 渠道/平台合作企业的企业ID 
-     * @return ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
+     * Get 腾讯电子签颁发给渠道侧合作企业的应用ID 
+     * @return ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
      */
-    public String getProxyOrganizationOpenId() {
-        return this.ProxyOrganizationOpenId;
+    public String getProxyAppId() {
+        return this.ProxyAppId;
     }
 
     /**
-     * Set 渠道/平台合作企业的企业ID
-     * @param ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
+     * Set 腾讯电子签颁发给渠道侧合作企业的应用ID
+     * @param ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
      */
-    public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
-        this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;
+    public void setProxyAppId(String ProxyAppId) {
+        this.ProxyAppId = ProxyAppId;
+    }
+
+    /**
+     * Get 腾讯电子签颁发给渠道侧合作企业的企业ID 
+     * @return ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
+     */
+    public String getProxyOrganizationId() {
+        return this.ProxyOrganizationId;
+    }
+
+    /**
+     * Set 腾讯电子签颁发给渠道侧合作企业的企业ID
+     * @param ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
+     */
+    public void setProxyOrganizationId(String ProxyOrganizationId) {
+        this.ProxyOrganizationId = ProxyOrganizationId;
     }
 
     public Agent() {
@@ -148,17 +148,17 @@ public class Agent extends AbstractModel{
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
-        if (source.ProxyOrganizationId != null) {
-            this.ProxyOrganizationId = new String(source.ProxyOrganizationId);
-        }
-        if (source.ProxyAppId != null) {
-            this.ProxyAppId = new String(source.ProxyAppId);
+        if (source.ProxyOrganizationOpenId != null) {
+            this.ProxyOrganizationOpenId = new String(source.ProxyOrganizationOpenId);
         }
         if (source.ProxyOperator != null) {
             this.ProxyOperator = new UserInfo(source.ProxyOperator);
         }
-        if (source.ProxyOrganizationOpenId != null) {
-            this.ProxyOrganizationOpenId = new String(source.ProxyOrganizationOpenId);
+        if (source.ProxyAppId != null) {
+            this.ProxyAppId = new String(source.ProxyAppId);
+        }
+        if (source.ProxyOrganizationId != null) {
+            this.ProxyOrganizationId = new String(source.ProxyOrganizationId);
         }
     }
 
@@ -168,10 +168,10 @@ public class Agent extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamSimple(map, prefix + "ProxyOrganizationId", this.ProxyOrganizationId);
-        this.setParamSimple(map, prefix + "ProxyAppId", this.ProxyAppId);
-        this.setParamObj(map, prefix + "ProxyOperator.", this.ProxyOperator);
         this.setParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
+        this.setParamObj(map, prefix + "ProxyOperator.", this.ProxyOperator);
+        this.setParamSimple(map, prefix + "ProxyAppId", this.ProxyAppId);
+        this.setParamSimple(map, prefix + "ProxyOrganizationId", this.ProxyOrganizationId);
 
     }
 }

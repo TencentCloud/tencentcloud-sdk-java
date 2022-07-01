@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiContentReviewTaskInput extends AbstractModel{
 
     /**
-    * 智能识别模板 ID。
+    * 音视频审核模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 智能识别模板 ID。 
-     * @return Definition 智能识别模板 ID。
+     * Get 音视频审核模板 ID。 
+     * @return Definition 音视频审核模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 智能识别模板 ID。
-     * @param Definition 智能识别模板 ID。
+     * Set 音视频审核模板 ID。
+     * @param Definition 音视频审核模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

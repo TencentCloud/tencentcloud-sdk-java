@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class PrepareFlowsRequest extends AbstractModel{
 
     /**
-    * 渠道应用相关信息
+    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 多个合同（流程）信息
+    * 多个合同（签署流程）信息，最大支持20个签署流程。
     */
     @SerializedName("FlowInfos")
     @Expose
     private FlowInfo [] FlowInfos;
 
     /**
-    * 操作完成后的跳转地址
+    * 操作完成后的跳转地址，最大长度200
     */
     @SerializedName("JumpUrl")
     @Expose
@@ -51,48 +51,48 @@ public class PrepareFlowsRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-     * Get 渠道应用相关信息 
-     * @return Agent 渠道应用相关信息
+     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息
-     * @param Agent 渠道应用相关信息
+     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 多个合同（流程）信息 
-     * @return FlowInfos 多个合同（流程）信息
+     * Get 多个合同（签署流程）信息，最大支持20个签署流程。 
+     * @return FlowInfos 多个合同（签署流程）信息，最大支持20个签署流程。
      */
     public FlowInfo [] getFlowInfos() {
         return this.FlowInfos;
     }
 
     /**
-     * Set 多个合同（流程）信息
-     * @param FlowInfos 多个合同（流程）信息
+     * Set 多个合同（签署流程）信息，最大支持20个签署流程。
+     * @param FlowInfos 多个合同（签署流程）信息，最大支持20个签署流程。
      */
     public void setFlowInfos(FlowInfo [] FlowInfos) {
         this.FlowInfos = FlowInfos;
     }
 
     /**
-     * Get 操作完成后的跳转地址 
-     * @return JumpUrl 操作完成后的跳转地址
+     * Get 操作完成后的跳转地址，最大长度200 
+     * @return JumpUrl 操作完成后的跳转地址，最大长度200
      */
     public String getJumpUrl() {
         return this.JumpUrl;
     }
 
     /**
-     * Set 操作完成后的跳转地址
-     * @param JumpUrl 操作完成后的跳转地址
+     * Set 操作完成后的跳转地址，最大长度200
+     * @param JumpUrl 操作完成后的跳转地址，最大长度200
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;

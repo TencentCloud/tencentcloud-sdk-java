@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewElem extends AbstractModel{
 
     /**
-    * 智能识别类型。 
+    * 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -37,7 +37,7 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
     private String Type;
 
     /**
-    * 智能识别意见。
+    * 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
@@ -47,14 +47,14 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 智能识别结果置信度。取值 0~100。
+    * 音视频审核结果置信度。取值 0~100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get 智能识别类型。 
+     * Get 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -62,7 +62,7 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
 <li>Political：画面涉及令人不适宜的信息，</li>
 <li>Political.Ocr：文字涉及令人不适宜的信息，</li>
 <li>Political.Asr：声音涉及令人不适宜的信息。</li> 
-     * @return Type 智能识别类型。 
+     * @return Type 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -76,7 +76,7 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
     }
 
     /**
-     * Set 智能识别类型。 
+     * Set 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -84,7 +84,7 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
 <li>Political：画面涉及令人不适宜的信息，</li>
 <li>Political.Ocr：文字涉及令人不适宜的信息，</li>
 <li>Political.Asr：声音涉及令人不适宜的信息。</li>
-     * @param Type 智能识别类型。 
+     * @param Type 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -98,11 +98,11 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
     }
 
     /**
-     * Get 智能识别意见。
+     * Get 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li> 
-     * @return Suggestion 智能识别意见。
+     * @return Suggestion 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
@@ -112,11 +112,11 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
     }
 
     /**
-     * Set 智能识别意见。
+     * Set 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
-     * @param Suggestion 智能识别意见。
+     * @param Suggestion 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
@@ -126,16 +126,16 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
     }
 
     /**
-     * Get 智能识别结果置信度。取值 0~100。 
-     * @return Confidence 智能识别结果置信度。取值 0~100。
+     * Get 音视频审核结果置信度。取值 0~100。 
+     * @return Confidence 音视频审核结果置信度。取值 0~100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 智能识别结果置信度。取值 0~100。
-     * @param Confidence 智能识别结果置信度。取值 0~100。
+     * Set 音视频审核结果置信度。取值 0~100。
+     * @param Confidence 音视频审核结果置信度。取值 0~100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

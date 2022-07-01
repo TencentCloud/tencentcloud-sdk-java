@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateDocumentResponse extends AbstractModel{
 
     /**
-    * 返回的电子文档ID
+    * 签署流程电子文档ID
     */
     @SerializedName("DocumentId")
     @Expose
     private String DocumentId;
 
     /**
-    * 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+    * 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewFileUrl")
@@ -45,25 +45,25 @@ public class CreateDocumentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的电子文档ID 
-     * @return DocumentId 返回的电子文档ID
+     * Get 签署流程电子文档ID 
+     * @return DocumentId 签署流程电子文档ID
      */
     public String getDocumentId() {
         return this.DocumentId;
     }
 
     /**
-     * Set 返回的电子文档ID
-     * @param DocumentId 返回的电子文档ID
+     * Set 签署流程电子文档ID
+     * @param DocumentId 签署流程电子文档ID
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;
     }
 
     /**
-     * Get 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+     * Get 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+     * @return PreviewFileUrl 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewFileUrl() {
@@ -71,9 +71,9 @@ public class CreateDocumentResponse extends AbstractModel{
     }
 
     /**
-     * Set 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+     * Set 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+     * @param PreviewFileUrl 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewFileUrl(String PreviewFileUrl) {

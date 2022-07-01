@@ -30,11 +30,12 @@ public class UsageDetail extends AbstractModel{
     private String ProxyOrganizationOpenId;
 
     /**
-    * 消耗量
+    * 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Usage")
+    @SerializedName("ProxyOrganizationName")
     @Expose
-    private Long Usage;
+    private String ProxyOrganizationName;
 
     /**
     * 日期，当需要汇总数据时日期为空
@@ -45,12 +46,11 @@ public class UsageDetail extends AbstractModel{
     private String Date;
 
     /**
-    * 渠道侧合作企业名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 消耗量
     */
-    @SerializedName("ProxyOrganizationName")
+    @SerializedName("Usage")
     @Expose
-    private String ProxyOrganizationName;
+    private Long Usage;
 
     /**
      * Get 渠道侧合作企业唯一标识 
@@ -69,19 +69,23 @@ public class UsageDetail extends AbstractModel{
     }
 
     /**
-     * Get 消耗量 
-     * @return Usage 消耗量
+     * Get 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyOrganizationName 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getUsage() {
-        return this.Usage;
+    public String getProxyOrganizationName() {
+        return this.ProxyOrganizationName;
     }
 
     /**
-     * Set 消耗量
-     * @param Usage 消耗量
+     * Set 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyOrganizationName 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUsage(Long Usage) {
-        this.Usage = Usage;
+    public void setProxyOrganizationName(String ProxyOrganizationName) {
+        this.ProxyOrganizationName = ProxyOrganizationName;
     }
 
     /**
@@ -105,23 +109,19 @@ public class UsageDetail extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧合作企业名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyOrganizationName 渠道侧合作企业名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 消耗量 
+     * @return Usage 消耗量
      */
-    public String getProxyOrganizationName() {
-        return this.ProxyOrganizationName;
+    public Long getUsage() {
+        return this.Usage;
     }
 
     /**
-     * Set 渠道侧合作企业名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyOrganizationName 渠道侧合作企业名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 消耗量
+     * @param Usage 消耗量
      */
-    public void setProxyOrganizationName(String ProxyOrganizationName) {
-        this.ProxyOrganizationName = ProxyOrganizationName;
+    public void setUsage(Long Usage) {
+        this.Usage = Usage;
     }
 
     public UsageDetail() {
@@ -135,14 +135,14 @@ public class UsageDetail extends AbstractModel{
         if (source.ProxyOrganizationOpenId != null) {
             this.ProxyOrganizationOpenId = new String(source.ProxyOrganizationOpenId);
         }
-        if (source.Usage != null) {
-            this.Usage = new Long(source.Usage);
+        if (source.ProxyOrganizationName != null) {
+            this.ProxyOrganizationName = new String(source.ProxyOrganizationName);
         }
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
-        if (source.ProxyOrganizationName != null) {
-            this.ProxyOrganizationName = new String(source.ProxyOrganizationName);
+        if (source.Usage != null) {
+            this.Usage = new Long(source.Usage);
         }
     }
 
@@ -152,9 +152,9 @@ public class UsageDetail extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
-        this.setParamSimple(map, prefix + "Usage", this.Usage);
-        this.setParamSimple(map, prefix + "Date", this.Date);
         this.setParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
+        this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "Usage", this.Usage);
 
     }
 }

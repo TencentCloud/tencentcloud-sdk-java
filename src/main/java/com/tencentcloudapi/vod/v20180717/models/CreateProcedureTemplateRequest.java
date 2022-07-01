@@ -30,6 +30,13 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
@@ -44,14 +51,14 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 智能识别类型任务参数。
+    * AI 内容审核类型任务参数。
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * AI 智能内容分析类型任务参数。
+    * AI 内容分析类型任务参数。
     */
     @SerializedName("AiAnalysisTask")
     @Expose
@@ -63,13 +70,6 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
-
-    /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
 
     /**
      * Get 任务流名字（支持中文，不超过20个字）。 
@@ -85,6 +85,22 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -120,32 +136,32 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get AI 智能识别类型任务参数。 
-     * @return AiContentReviewTask AI 智能识别类型任务参数。
+     * Get AI 内容审核类型任务参数。 
+     * @return AiContentReviewTask AI 内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set AI 智能识别类型任务参数。
-     * @param AiContentReviewTask AI 智能识别类型任务参数。
+     * Set AI 内容审核类型任务参数。
+     * @param AiContentReviewTask AI 内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get AI 智能内容分析类型任务参数。 
-     * @return AiAnalysisTask AI 智能内容分析类型任务参数。
+     * Get AI 内容分析类型任务参数。 
+     * @return AiAnalysisTask AI 内容分析类型任务参数。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set AI 智能内容分析类型任务参数。
-     * @param AiAnalysisTask AI 智能内容分析类型任务参数。
+     * Set AI 内容分析类型任务参数。
+     * @param AiAnalysisTask AI 内容分析类型任务参数。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
@@ -167,22 +183,6 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public CreateProcedureTemplateRequest() {
     }
 
@@ -193,6 +193,9 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     public CreateProcedureTemplateRequest(CreateProcedureTemplateRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
@@ -209,9 +212,6 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -220,12 +220,12 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

@@ -61,7 +61,7 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
     private String Name;
 
     /**
-    * 嫌疑片段涉及令人不适宜的信息的结果标签。智能识别模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+    * 嫌疑片段涉及令人不适宜的信息的结果标签。音视频审核模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -212,7 +212,7 @@ military：
     }
 
     /**
-     * Get 嫌疑片段涉及令人不适宜的信息的结果标签。智能识别模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * Get 嫌疑片段涉及令人不适宜的信息的结果标签。音视频审核模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -236,7 +236,7 @@ celebrity：
 <li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：违规相关人物。</li> 
-     * @return Label 嫌疑片段涉及令人不适宜的信息的结果标签。智能识别模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * @return Label 嫌疑片段涉及令人不适宜的信息的结果标签。音视频审核模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -266,7 +266,7 @@ military：
     }
 
     /**
-     * Set 嫌疑片段涉及令人不适宜的信息的结果标签。智能识别模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * Set 嫌疑片段涉及令人不适宜的信息的结果标签。音视频审核模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：
@@ -290,7 +290,7 @@ celebrity：
 <li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：违规相关人物。</li>
-     * @param Label 嫌疑片段涉及令人不适宜的信息的结果标签。智能识别模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+     * @param Label 嫌疑片段涉及令人不适宜的信息的结果标签。音视频审核模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 politician：

@@ -38,7 +38,7 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
     private String ThirdPayOrderId;
 
     /**
-    * 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+    * 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RedirectInfo")
@@ -89,9 +89,9 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
     }
 
     /**
-     * Get 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+     * Get 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RedirectInfo 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+     * @return RedirectInfo 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OpenBankRedirectInfo getRedirectInfo() {
@@ -99,9 +99,9 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
     }
 
     /**
-     * Set 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+     * Set 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RedirectInfo 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+     * @param RedirectInfo 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedirectInfo(OpenBankRedirectInfo RedirectInfo) {

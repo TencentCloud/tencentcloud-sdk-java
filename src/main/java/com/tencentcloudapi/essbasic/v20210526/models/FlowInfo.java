@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FlowInfo extends AbstractModel{
 
     /**
-    * 合同名字
+    * 合同名字，最大长度200个字符
     */
     @SerializedName("FlowName")
     @Expose
@@ -44,25 +44,7 @@ public class FlowInfo extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
-    * 回调地址
-    */
-    @SerializedName("CallbackUrl")
-    @Expose
-    private String CallbackUrl;
-
-    /**
-    * 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+    * 多个签署人信息，最大支持50个签署方
     */
     @SerializedName("FlowApprovers")
     @Expose
@@ -76,18 +58,39 @@ public class FlowInfo extends AbstractModel{
     private FormField [] FormFields;
 
     /**
-    * 合同描述
+    * 回调地址，最大长度1000个字符
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
+    * 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+    */
+    @SerializedName("FlowType")
+    @Expose
+    private String FlowType;
+
+    /**
+    * 合同描述，最大长度1000个字符
     */
     @SerializedName("FlowDescription")
     @Expose
     private String FlowDescription;
 
     /**
-    * 渠道的业务信息，限制1024字符
+    * 渠道的业务信息，最大长度1000个字符
     */
     @SerializedName("CustomerData")
     @Expose
     private String CustomerData;
+
+    /**
+    * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+    */
+    @SerializedName("CustomShowMap")
+    @Expose
+    private String CustomShowMap;
 
     /**
     * 被抄送人的信息列表，抄送功能暂不开放
@@ -97,16 +100,16 @@ public class FlowInfo extends AbstractModel{
     private CcInfo [] CcInfos;
 
     /**
-     * Get 合同名字 
-     * @return FlowName 合同名字
+     * Get 合同名字，最大长度200个字符 
+     * @return FlowName 合同名字，最大长度200个字符
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 合同名字
-     * @param FlowName 合同名字
+     * Set 合同名字，最大长度200个字符
+     * @param FlowName 合同名字，最大长度200个字符
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
@@ -145,64 +148,16 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他” 
-     * @return FlowType 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     * @param FlowType 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 回调地址 
-     * @return CallbackUrl 回调地址
-     */
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
-    }
-
-    /**
-     * Set 回调地址
-     * @param CallbackUrl 回调地址
-     */
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
-    }
-
-    /**
-     * Get 多个签署人信息，渠道侧目前不支持超过5个签署方信息 
-     * @return FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * Get 多个签署人信息，最大支持50个签署方 
+     * @return FlowApprovers 多个签署人信息，最大支持50个签署方
      */
     public FlowApproverInfo [] getFlowApprovers() {
         return this.FlowApprovers;
     }
 
     /**
-     * Set 多个签署人信息，渠道侧目前不支持超过5个签署方信息
-     * @param FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * Set 多个签署人信息，最大支持50个签署方
+     * @param FlowApprovers 多个签署人信息，最大支持50个签署方
      */
     public void setFlowApprovers(FlowApproverInfo [] FlowApprovers) {
         this.FlowApprovers = FlowApprovers;
@@ -225,35 +180,83 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同描述 
-     * @return FlowDescription 合同描述
+     * Get 回调地址，最大长度1000个字符 
+     * @return CallbackUrl 回调地址，最大长度1000个字符
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址，最大长度1000个字符
+     * @param CallbackUrl 回调地址，最大长度1000个字符
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
+    /**
+     * Get 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符 
+     * @return FlowType 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     */
+    public String getFlowType() {
+        return this.FlowType;
+    }
+
+    /**
+     * Set 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     * @param FlowType 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     */
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
+    }
+
+    /**
+     * Get 合同描述，最大长度1000个字符 
+     * @return FlowDescription 合同描述，最大长度1000个字符
      */
     public String getFlowDescription() {
         return this.FlowDescription;
     }
 
     /**
-     * Set 合同描述
-     * @param FlowDescription 合同描述
+     * Set 合同描述，最大长度1000个字符
+     * @param FlowDescription 合同描述，最大长度1000个字符
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
     }
 
     /**
-     * Get 渠道的业务信息，限制1024字符 
-     * @return CustomerData 渠道的业务信息，限制1024字符
+     * Get 渠道的业务信息，最大长度1000个字符 
+     * @return CustomerData 渠道的业务信息，最大长度1000个字符
      */
     public String getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set 渠道的业务信息，限制1024字符
-     * @param CustomerData 渠道的业务信息，限制1024字符
+     * Set 渠道的业务信息，最大长度1000个字符
+     * @param CustomerData 渠道的业务信息，最大长度1000个字符
      */
     public void setCustomerData(String CustomerData) {
         this.CustomerData = CustomerData;
+    }
+
+    /**
+     * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
+     * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public String getCustomShowMap() {
+        return this.CustomShowMap;
+    }
+
+    /**
+     * Set 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     * @param CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public void setCustomShowMap(String CustomShowMap) {
+        this.CustomShowMap = CustomShowMap;
     }
 
     /**
@@ -289,12 +292,6 @@ public class FlowInfo extends AbstractModel{
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
-        }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
-        }
         if (source.FlowApprovers != null) {
             this.FlowApprovers = new FlowApproverInfo[source.FlowApprovers.length];
             for (int i = 0; i < source.FlowApprovers.length; i++) {
@@ -307,11 +304,20 @@ public class FlowInfo extends AbstractModel{
                 this.FormFields[i] = new FormField(source.FormFields[i]);
             }
         }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
+        }
         if (source.FlowDescription != null) {
             this.FlowDescription = new String(source.FlowDescription);
         }
         if (source.CustomerData != null) {
             this.CustomerData = new String(source.CustomerData);
+        }
+        if (source.CustomShowMap != null) {
+            this.CustomShowMap = new String(source.CustomShowMap);
         }
         if (source.CcInfos != null) {
             this.CcInfos = new CcInfo[source.CcInfos.length];
@@ -329,12 +335,13 @@ public class FlowInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "CustomerData", this.CustomerData);
+        this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
 
     }

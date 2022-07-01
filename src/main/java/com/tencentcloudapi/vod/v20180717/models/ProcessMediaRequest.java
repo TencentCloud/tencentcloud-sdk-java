@@ -44,21 +44,21 @@ public class ProcessMediaRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * 视频智能识别类型任务参数。
+    * 音视频内容审核类型任务参数。
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * 视频内容分析类型任务参数。
+    * 音视频内容分析类型任务参数。
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 视频内容识别类型任务参数。
+    * 音视频内容识别类型任务参数。
     */
     @SerializedName("AiRecognitionTask")
     @Expose
@@ -148,48 +148,48 @@ public class ProcessMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频智能识别类型任务参数。 
-     * @return AiContentReviewTask 视频智能识别类型任务参数。
+     * Get 音视频内容审核类型任务参数。 
+     * @return AiContentReviewTask 音视频内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set 视频智能识别类型任务参数。
-     * @param AiContentReviewTask 视频智能识别类型任务参数。
+     * Set 音视频内容审核类型任务参数。
+     * @param AiContentReviewTask 音视频内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get 视频内容分析类型任务参数。 
-     * @return AiAnalysisTask 视频内容分析类型任务参数。
+     * Get 音视频内容分析类型任务参数。 
+     * @return AiAnalysisTask 音视频内容分析类型任务参数。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set 视频内容分析类型任务参数。
-     * @param AiAnalysisTask 视频内容分析类型任务参数。
+     * Set 音视频内容分析类型任务参数。
+     * @param AiAnalysisTask 音视频内容分析类型任务参数。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get 视频内容识别类型任务参数。 
-     * @return AiRecognitionTask 视频内容识别类型任务参数。
+     * Get 音视频内容识别类型任务参数。 
+     * @return AiRecognitionTask 音视频内容识别类型任务参数。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set 视频内容识别类型任务参数。
-     * @param AiRecognitionTask 视频内容识别类型任务参数。
+     * Set 音视频内容识别类型任务参数。
+     * @param AiRecognitionTask 音视频内容识别类型任务参数。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;

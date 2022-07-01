@@ -23,6 +23,20 @@ import java.util.HashMap;
 public class CancelFlowRequest extends AbstractModel{
 
     /**
+    * 签署流程id
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
+    * 撤销原因，最长200个字符；
+    */
+    @SerializedName("CancelMessage")
+    @Expose
+    private String CancelMessage;
+
+    /**
     * 操作用户id
     */
     @SerializedName("Operator")
@@ -30,25 +44,43 @@ public class CancelFlowRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 流程id
-    */
-    @SerializedName("FlowId")
-    @Expose
-    private String FlowId;
-
-    /**
-    * 撤销原因
-    */
-    @SerializedName("CancelMessage")
-    @Expose
-    private String CancelMessage;
-
-    /**
     * 应用相关信息
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
+
+    /**
+     * Get 签署流程id 
+     * @return FlowId 签署流程id
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 签署流程id
+     * @param FlowId 签署流程id
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 撤销原因，最长200个字符； 
+     * @return CancelMessage 撤销原因，最长200个字符；
+     */
+    public String getCancelMessage() {
+        return this.CancelMessage;
+    }
+
+    /**
+     * Set 撤销原因，最长200个字符；
+     * @param CancelMessage 撤销原因，最长200个字符；
+     */
+    public void setCancelMessage(String CancelMessage) {
+        this.CancelMessage = CancelMessage;
+    }
 
     /**
      * Get 操作用户id 
@@ -64,38 +96,6 @@ public class CancelFlowRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 流程id 
-     * @return FlowId 流程id
-     */
-    public String getFlowId() {
-        return this.FlowId;
-    }
-
-    /**
-     * Set 流程id
-     * @param FlowId 流程id
-     */
-    public void setFlowId(String FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 撤销原因 
-     * @return CancelMessage 撤销原因
-     */
-    public String getCancelMessage() {
-        return this.CancelMessage;
-    }
-
-    /**
-     * Set 撤销原因
-     * @param CancelMessage 撤销原因
-     */
-    public void setCancelMessage(String CancelMessage) {
-        this.CancelMessage = CancelMessage;
     }
 
     /**
@@ -122,14 +122,14 @@ public class CancelFlowRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CancelFlowRequest(CancelFlowRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
         if (source.CancelMessage != null) {
             this.CancelMessage = new String(source.CancelMessage);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -141,9 +141,9 @@ public class CancelFlowRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ProxyOrganizationOperator extends AbstractModel{
 
     /**
-    * 经办人ID（渠道颁发）
+    * 经办人ID（渠道颁发），最大长度64个字符
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 经办人姓名
+    * 经办人姓名，最大长度50个字符
     */
     @SerializedName("Name")
     @Expose
@@ -38,56 +38,55 @@ public class ProxyOrganizationOperator extends AbstractModel{
 
     /**
     * 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * 经办人身份证号
+    * 经办人证件号
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-    * 经办人手机号
+    * 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-     * Get 经办人ID（渠道颁发） 
-     * @return Id 经办人ID（渠道颁发）
+     * Get 经办人ID（渠道颁发），最大长度64个字符 
+     * @return Id 经办人ID（渠道颁发），最大长度64个字符
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 经办人ID（渠道颁发）
-     * @param Id 经办人ID（渠道颁发）
+     * Set 经办人ID（渠道颁发），最大长度64个字符
+     * @param Id 经办人ID（渠道颁发），最大长度64个字符
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 经办人姓名 
-     * @return Name 经办人姓名
+     * Get 经办人姓名，最大长度50个字符 
+     * @return Name 经办人姓名，最大长度50个字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 经办人姓名
-     * @param Name 经办人姓名
+     * Set 经办人姓名，最大长度50个字符
+     * @param Name 经办人姓名，最大长度50个字符
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -95,15 +94,13 @@ public class ProxyOrganizationOperator extends AbstractModel{
 
     /**
      * Get 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证 
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证 
      * @return IdCardType 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
      */
     public String getIdCardType() {
         return this.IdCardType;
@@ -111,47 +108,45 @@ public class ProxyOrganizationOperator extends AbstractModel{
 
     /**
      * Set 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
      * @param IdCardType 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 经办人身份证号 
-     * @return IdCardNumber 经办人身份证号
+     * Get 经办人证件号 
+     * @return IdCardNumber 经办人证件号
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 经办人身份证号
-     * @param IdCardNumber 经办人身份证号
+     * Set 经办人证件号
+     * @param IdCardNumber 经办人证件号
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 经办人手机号 
-     * @return Mobile 经办人手机号
+     * Get 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。 
+     * @return Mobile 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 经办人手机号
-     * @param Mobile 经办人手机号
+     * Set 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
+     * @param Mobile 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

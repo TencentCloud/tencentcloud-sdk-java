@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewInfo extends AbstractModel{
 
     /**
-    * 智能识别信息列表。
+    * 音视频审核信息列表。
     */
     @SerializedName("MiniProgramReviewList")
     @Expose
     private MediaMiniProgramReviewInfoItem [] MiniProgramReviewList;
 
     /**
-     * Get 智能识别信息列表。 
-     * @return MiniProgramReviewList 智能识别信息列表。
+     * Get 音视频审核信息列表。 
+     * @return MiniProgramReviewList 音视频审核信息列表。
      */
     public MediaMiniProgramReviewInfoItem [] getMiniProgramReviewList() {
         return this.MiniProgramReviewList;
     }
 
     /**
-     * Set 智能识别信息列表。
-     * @param MiniProgramReviewList 智能识别信息列表。
+     * Set 音视频审核信息列表。
+     * @param MiniProgramReviewList 音视频审核信息列表。
      */
     public void setMiniProgramReviewList(MediaMiniProgramReviewInfoItem [] MiniProgramReviewList) {
         this.MiniProgramReviewList = MiniProgramReviewList;

@@ -23,25 +23,11 @@ import java.util.HashMap;
 public class CreateFlowByFilesRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 流程名称
+    * 签署流程名称,最大长度200个字符
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
-
-    /**
-    * 签署pdf文件的资源编号列表
-    */
-    @SerializedName("FileIds")
-    @Expose
-    private String [] FileIds;
 
     /**
     * 签署参与者信息
@@ -51,35 +37,18 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private ApproverInfo [] Approvers;
 
     /**
-    * 流程描述
+    * 签署pdf文件的资源编号列表，通过UploadFiles接口获取
     */
-    @SerializedName("FlowDescription")
+    @SerializedName("FileIds")
     @Expose
-    private String FlowDescription;
+    private String [] FileIds;
 
     /**
-    * 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签）
+    * 调用方用户信息
     */
-    @SerializedName("Unordered")
+    @SerializedName("Operator")
     @Expose
-    private Boolean Unordered;
-
-    /**
-    * 流程的类型
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
-    * 流程的签署截止时间
-    */
-    @SerializedName("Deadline")
-    @Expose
-    private Long Deadline;
+    private UserInfo Operator;
 
     /**
     * 应用号信息
@@ -92,6 +61,7 @@ false：有序签
     * 经办人内容控件配置。可选类型为：
 TEXT - 内容文本控件
 MULTI_LINE_TEXT - 多行文本控件
+CHECK_BOX - 勾选框控件
 注：默认字体大小为 字号12
     */
     @SerializedName("Components")
@@ -99,65 +69,74 @@ MULTI_LINE_TEXT - 多行文本控件
     private Component [] Components;
 
     /**
-    * 被抄送人的信息列表
+    * 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
     */
-    @SerializedName("CcInfos")
+    @SerializedName("Deadline")
     @Expose
-    private CcInfo [] CcInfos;
+    private Long Deadline;
 
     /**
-    * 是否需要预览，true：预览模式，false：非预览（默认）
+    * 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签）
+    */
+    @SerializedName("Unordered")
+    @Expose
+    private Boolean Unordered;
+
+    /**
+    * 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
     */
     @SerializedName("NeedPreview")
     @Expose
     private Boolean NeedPreview;
 
     /**
-     * Get 调用方用户信息 
-     * @return Operator 调用方用户信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
+    * 签署流程描述,最大长度1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
 
     /**
-     * Set 调用方用户信息
-     * @param Operator 调用方用户信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
+    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+    */
+    @SerializedName("FlowType")
+    @Expose
+    private String FlowType;
 
     /**
-     * Get 流程名称 
-     * @return FlowName 流程名称
+    * 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo [] CcInfos;
+
+    /**
+    * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+    */
+    @SerializedName("CustomShowMap")
+    @Expose
+    private String CustomShowMap;
+
+    /**
+     * Get 签署流程名称,最大长度200个字符 
+     * @return FlowName 签署流程名称,最大长度200个字符
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 流程名称
-     * @param FlowName 流程名称
+     * Set 签署流程名称,最大长度200个字符
+     * @param FlowName 签署流程名称,最大长度200个字符
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
-    }
-
-    /**
-     * Get 签署pdf文件的资源编号列表 
-     * @return FileIds 签署pdf文件的资源编号列表
-     */
-    public String [] getFileIds() {
-        return this.FileIds;
-    }
-
-    /**
-     * Set 签署pdf文件的资源编号列表
-     * @param FileIds 签署pdf文件的资源编号列表
-     */
-    public void setFileIds(String [] FileIds) {
-        this.FileIds = FileIds;
     }
 
     /**
@@ -177,19 +156,103 @@ MULTI_LINE_TEXT - 多行文本控件
     }
 
     /**
-     * Get 流程描述 
-     * @return FlowDescription 流程描述
+     * Get 签署pdf文件的资源编号列表，通过UploadFiles接口获取 
+     * @return FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
      */
-    public String getFlowDescription() {
-        return this.FlowDescription;
+    public String [] getFileIds() {
+        return this.FileIds;
     }
 
     /**
-     * Set 流程描述
-     * @param FlowDescription 流程描述
+     * Set 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+     * @param FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
      */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
+    public void setFileIds(String [] FileIds) {
+        this.FileIds = FileIds;
+    }
+
+    /**
+     * Get 调用方用户信息 
+     * @return Operator 调用方用户信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 调用方用户信息
+     * @param Operator 调用方用户信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get 应用号信息 
+     * @return Agent 应用号信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用号信息
+     * @param Agent 应用号信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
+    /**
+     * Get 经办人内容控件配置。可选类型为：
+TEXT - 内容文本控件
+MULTI_LINE_TEXT - 多行文本控件
+CHECK_BOX - 勾选框控件
+注：默认字体大小为 字号12 
+     * @return Components 经办人内容控件配置。可选类型为：
+TEXT - 内容文本控件
+MULTI_LINE_TEXT - 多行文本控件
+CHECK_BOX - 勾选框控件
+注：默认字体大小为 字号12
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 经办人内容控件配置。可选类型为：
+TEXT - 内容文本控件
+MULTI_LINE_TEXT - 多行文本控件
+CHECK_BOX - 勾选框控件
+注：默认字体大小为 字号12
+     * @param Components 经办人内容控件配置。可选类型为：
+TEXT - 内容文本控件
+MULTI_LINE_TEXT - 多行文本控件
+CHECK_BOX - 勾选框控件
+注：默认字体大小为 字号12
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
+    /**
+     * Get 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后 
+     * @return Deadline 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     * @param Deadline 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
     }
 
     /**
@@ -221,111 +284,91 @@ false：有序签
     }
 
     /**
-     * Get 流程的类型 
-     * @return FlowType 流程的类型
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 流程的类型
-     * @param FlowType 流程的类型
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 流程的签署截止时间 
-     * @return Deadline 流程的签署截止时间
-     */
-    public Long getDeadline() {
-        return this.Deadline;
-    }
-
-    /**
-     * Set 流程的签署截止时间
-     * @param Deadline 流程的签署截止时间
-     */
-    public void setDeadline(Long Deadline) {
-        this.Deadline = Deadline;
-    }
-
-    /**
-     * Get 应用号信息 
-     * @return Agent 应用号信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用号信息
-     * @param Agent 应用号信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-注：默认字体大小为 字号12 
-     * @return Components 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-注：默认字体大小为 字号12
-     */
-    public Component [] getComponents() {
-        return this.Components;
-    }
-
-    /**
-     * Set 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-注：默认字体大小为 字号12
-     * @param Components 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-注：默认字体大小为 字号12
-     */
-    public void setComponents(Component [] Components) {
-        this.Components = Components;
-    }
-
-    /**
-     * Get 被抄送人的信息列表 
-     * @return CcInfos 被抄送人的信息列表
-     */
-    public CcInfo [] getCcInfos() {
-        return this.CcInfos;
-    }
-
-    /**
-     * Set 被抄送人的信息列表
-     * @param CcInfos 被抄送人的信息列表
-     */
-    public void setCcInfos(CcInfo [] CcInfos) {
-        this.CcInfos = CcInfos;
-    }
-
-    /**
-     * Get 是否需要预览，true：预览模式，false：非预览（默认） 
-     * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）
+     * Get 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒； 
+     * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
      */
     public Boolean getNeedPreview() {
         return this.NeedPreview;
     }
 
     /**
-     * Set 是否需要预览，true：预览模式，false：非预览（默认）
-     * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）
+     * Set 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
+     * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
      */
     public void setNeedPreview(Boolean NeedPreview) {
         this.NeedPreview = NeedPreview;
+    }
+
+    /**
+     * Get 签署流程描述,最大长度1000个字符 
+     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程描述,最大长度1000个字符
+     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
+    }
+
+    /**
+     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
+     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     */
+    public String getFlowType() {
+        return this.FlowType;
+    }
+
+    /**
+     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     */
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
+    }
+
+    /**
+     * Get 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用 
+     * @return CcInfos 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+     */
+    public CcInfo [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+     * @param CcInfos 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+     */
+    public void setCcInfos(CcInfo [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
+    /**
+     * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
+     * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public String getCustomShowMap() {
+        return this.CustomShowMap;
+    }
+
+    /**
+     * Set 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     * @param CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public void setCustomShowMap(String CustomShowMap) {
+        this.CustomShowMap = CustomShowMap;
     }
 
     public CreateFlowByFilesRequest() {
@@ -336,17 +379,8 @@ MULTI_LINE_TEXT - 多行文本控件
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowByFilesRequest(CreateFlowByFilesRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
-        }
-        if (source.FileIds != null) {
-            this.FileIds = new String[source.FileIds.length];
-            for (int i = 0; i < source.FileIds.length; i++) {
-                this.FileIds[i] = new String(source.FileIds[i]);
-            }
         }
         if (source.Approvers != null) {
             this.Approvers = new ApproverInfo[source.Approvers.length];
@@ -354,17 +388,14 @@ MULTI_LINE_TEXT - 多行文本控件
                 this.Approvers[i] = new ApproverInfo(source.Approvers[i]);
             }
         }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
+        if (source.FileIds != null) {
+            this.FileIds = new String[source.FileIds.length];
+            for (int i = 0; i < source.FileIds.length; i++) {
+                this.FileIds[i] = new String(source.FileIds[i]);
+            }
         }
-        if (source.Unordered != null) {
-            this.Unordered = new Boolean(source.Unordered);
-        }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
-        }
-        if (source.Deadline != null) {
-            this.Deadline = new Long(source.Deadline);
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -375,14 +406,29 @@ MULTI_LINE_TEXT - 多行文本控件
                 this.Components[i] = new Component(source.Components[i]);
             }
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
+        if (source.Unordered != null) {
+            this.Unordered = new Boolean(source.Unordered);
+        }
+        if (source.NeedPreview != null) {
+            this.NeedPreview = new Boolean(source.NeedPreview);
+        }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
+        }
         if (source.CcInfos != null) {
             this.CcInfos = new CcInfo[source.CcInfos.length];
             for (int i = 0; i < source.CcInfos.length; i++) {
                 this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
             }
         }
-        if (source.NeedPreview != null) {
-            this.NeedPreview = new Boolean(source.NeedPreview);
+        if (source.CustomShowMap != null) {
+            this.CustomShowMap = new String(source.CustomShowMap);
         }
     }
 
@@ -391,18 +437,19 @@ MULTI_LINE_TEXT - 多行文本控件
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
-        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
-        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
-        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
-        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
 
     }
 }

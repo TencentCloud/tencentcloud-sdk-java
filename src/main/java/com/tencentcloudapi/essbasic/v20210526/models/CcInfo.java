@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CcInfo extends AbstractModel{
 
     /**
-    * 被抄送人手机号
+    * 被抄送人手机号，大陆11位手机号
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-     * Get 被抄送人手机号 
-     * @return Mobile 被抄送人手机号
+     * Get 被抄送人手机号，大陆11位手机号 
+     * @return Mobile 被抄送人手机号，大陆11位手机号
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 被抄送人手机号
-     * @param Mobile 被抄送人手机号
+     * Set 被抄送人手机号，大陆11位手机号
+     * @param Mobile 被抄送人手机号，大陆11位手机号
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

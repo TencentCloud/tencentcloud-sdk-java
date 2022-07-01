@@ -59,7 +59,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建流程。此接口不可直接使用，需要运营申请
+     *接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建签署流程。此接口不可直接使用，需要运营申请
      * @param req ChannelCreateFlowByFilesRequest
      * @return ChannelCreateFlowByFilesResponse
      * @throws TencentCloudSDKException
@@ -79,7 +79,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
+     *此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫签署流程二维码。
 适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
      * @param req ChannelCreateMultiFlowSignQRCodeRequest
      * @return ChannelCreateMultiFlowSignQRCodeResponse
@@ -121,7 +121,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *接口（CreateFlowsByTemplates）用于使用多个模板批量创建流程。当前可批量发起合同（流程）数量最大为20个。
+     *接口（CreateFlowsByTemplates）用于使用多个模板批量创建签署流程。当前可批量发起合同（签署流程）数量最大为20个。
      * @param req CreateFlowsByTemplatesRequest
      * @return CreateFlowsByTemplatesResponse
      * @throws TencentCloudSDKException
@@ -181,7 +181,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *此接口（DescribeFlowDetailInfo）用于查询合同(流程)的详细信息。
+     *此接口（DescribeFlowDetailInfo）用于查询合同(签署流程)的详细信息。
      * @param req DescribeFlowDetailInfoRequest
      * @return DescribeFlowDetailInfoResponse
      * @throws TencentCloudSDKException
@@ -201,8 +201,8 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *根据流程信息批量获取资源下载链接，可直接下载
-限制：只能下载合作企业授权过的、单方签署的流程文件（若合作企业与渠道是同一企业，可以下载所有流程文件）
+     *根据签署流程信息批量获取资源下载链接，可直接下载
+限制：只能下载合作企业授权过的、单方签署的签署流程文件（若合作企业与渠道是同一企业，可以下载所有签署流程文件）
      * @param req DescribeResourceUrlsByFlowsRequest
      * @return DescribeResourceUrlsByFlowsResponse
      * @throws TencentCloudSDKException
@@ -310,7 +310,7 @@ public class EssbasicClient extends AbstractClient{
 
     /**
      *该接口 (PrepareFlows) 用于创建待发起文件
-用户通过该接口进入流程发起的确认页面，进行发起信息二次确认， 如果确认则进行正常发起。
+用户通过该接口进入签署流程发起的确认页面，进行发起信息二次确认， 如果确认则进行正常发起。
 目前该接口只支持B2C，不建议使用。
      * @param req PrepareFlowsRequest
      * @return PrepareFlowsResponse

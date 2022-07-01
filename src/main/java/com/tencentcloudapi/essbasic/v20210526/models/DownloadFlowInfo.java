@@ -30,7 +30,7 @@ public class DownloadFlowInfo extends AbstractModel{
     private String FileName;
 
     /**
-    * 合同（流程）的标识数组
+    * 签署流程的标识数组
     */
     @SerializedName("FlowIdList")
     @Expose
@@ -53,16 +53,16 @@ public class DownloadFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同（流程）的标识数组 
-     * @return FlowIdList 合同（流程）的标识数组
+     * Get 签署流程的标识数组 
+     * @return FlowIdList 签署流程的标识数组
      */
     public String [] getFlowIdList() {
         return this.FlowIdList;
     }
 
     /**
-     * Set 合同（流程）的标识数组
-     * @param FlowIdList 合同（流程）的标识数组
+     * Set 签署流程的标识数组
+     * @param FlowIdList 签署流程的标识数组
      */
     public void setFlowIdList(String [] FlowIdList) {
         this.FlowIdList = FlowIdList;

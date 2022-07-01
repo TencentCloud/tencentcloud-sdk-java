@@ -125,6 +125,14 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel{
     private Boolean StoppingAll;
 
     /**
+    * 扫描出漏洞个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulCount")
+    @Expose
+    private Long VulCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -372,6 +380,26 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel{
     }
 
     /**
+     * Get 扫描出漏洞个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulCount 扫描出漏洞个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVulCount() {
+        return this.VulCount;
+    }
+
+    /**
+     * Set 扫描出漏洞个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulCount 扫描出漏洞个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulCount(Long VulCount) {
+        this.VulCount = VulCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -446,6 +474,9 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel{
         if (source.StoppingAll != null) {
             this.StoppingAll = new Boolean(source.StoppingAll);
         }
+        if (source.VulCount != null) {
+            this.VulCount = new Long(source.VulCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -470,6 +501,7 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RiskEventCount", this.RiskEventCount);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "StoppingAll", this.StoppingAll);
+        this.setParamSimple(map, prefix + "VulCount", this.VulCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -56,7 +56,6 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
     * 源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
     */
     @SerializedName("OriginType")
     @Expose
@@ -68,7 +67,6 @@ load_balancing：负载均衡
 IP:端口
 域名:端口
 当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
     */
     @SerializedName("OriginValue")
     @Expose
@@ -170,12 +168,10 @@ OFF：不传递
     /**
      * Get 源站类型，取值：
 custom：手动添加
-origins：源站组
-load_balancing：负载均衡 
+origins：源站组 
      * @return OriginType 源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
      */
     public String getOriginType() {
         return this.OriginType;
@@ -185,11 +181,9 @@ load_balancing：负载均衡
      * Set 源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
      * @param OriginType 源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
@@ -200,14 +194,12 @@ load_balancing：负载均衡
 当OriginType=custom时，表示多个：
 IP:端口
 域名:端口
-当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID 
+当OriginType=origins时，包含一个元素，表示源站组ID 
      * @return OriginValue 源站信息：
 当OriginType=custom时，表示多个：
 IP:端口
 域名:端口
 当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
      */
     public String [] getOriginValue() {
         return this.OriginValue;
@@ -219,13 +211,11 @@ IP:端口
 IP:端口
 域名:端口
 当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
      * @param OriginValue 源站信息：
 当OriginType=custom时，表示多个：
 IP:端口
 域名:端口
 当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;

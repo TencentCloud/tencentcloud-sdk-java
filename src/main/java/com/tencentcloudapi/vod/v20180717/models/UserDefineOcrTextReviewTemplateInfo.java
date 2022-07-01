@@ -23,16 +23,16 @@ import java.util.HashMap;
 public class UserDefineOcrTextReviewTemplateInfo extends AbstractModel{
 
     /**
-    * 用户自定文本智能识别任务开关，可选值：
-<li>ON：开启自定义文本智能识别任务；</li>
-<li>OFF：关闭自定义文本智能识别任务。</li>
+    * 用户自定文本音视频审核任务开关，可选值：
+<li>ON：开启自定义文本音视频审核任务；</li>
+<li>OFF：关闭自定义文本音视频审核任务。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 用户自定义文本过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+    * 用户自定义文本过滤标签，音视频审核结果包含选择的标签则返回结果，如果过滤标签为空，则音视频审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
     */
     @SerializedName("LabelSet")
@@ -40,47 +40,47 @@ public class UserDefineOcrTextReviewTemplateInfo extends AbstractModel{
     private String [] LabelSet;
 
     /**
-    * 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+    * 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+    * 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get 用户自定文本智能识别任务开关，可选值：
-<li>ON：开启自定义文本智能识别任务；</li>
-<li>OFF：关闭自定义文本智能识别任务。</li> 
-     * @return Switch 用户自定文本智能识别任务开关，可选值：
-<li>ON：开启自定义文本智能识别任务；</li>
-<li>OFF：关闭自定义文本智能识别任务。</li>
+     * Get 用户自定文本音视频审核任务开关，可选值：
+<li>ON：开启自定义文本音视频审核任务；</li>
+<li>OFF：关闭自定义文本音视频审核任务。</li> 
+     * @return Switch 用户自定文本音视频审核任务开关，可选值：
+<li>ON：开启自定义文本音视频审核任务；</li>
+<li>OFF：关闭自定义文本音视频审核任务。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 用户自定文本智能识别任务开关，可选值：
-<li>ON：开启自定义文本智能识别任务；</li>
-<li>OFF：关闭自定义文本智能识别任务。</li>
-     * @param Switch 用户自定文本智能识别任务开关，可选值：
-<li>ON：开启自定义文本智能识别任务；</li>
-<li>OFF：关闭自定义文本智能识别任务。</li>
+     * Set 用户自定文本音视频审核任务开关，可选值：
+<li>ON：开启自定义文本音视频审核任务；</li>
+<li>OFF：关闭自定义文本音视频审核任务。</li>
+     * @param Switch 用户自定文本音视频审核任务开关，可选值：
+<li>ON：开启自定义文本音视频审核任务；</li>
+<li>OFF：关闭自定义文本音视频审核任务。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 用户自定义文本过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+     * Get 用户自定义文本过滤标签，音视频审核结果包含选择的标签则返回结果，如果过滤标签为空，则音视频审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。 
-     * @return LabelSet 用户自定义文本过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+     * @return LabelSet 用户自定义文本过滤标签，音视频审核结果包含选择的标签则返回结果，如果过滤标签为空，则音视频审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
     public String [] getLabelSet() {
@@ -88,9 +88,9 @@ public class UserDefineOcrTextReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户自定义文本过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+     * Set 用户自定义文本过滤标签，音视频审核结果包含选择的标签则返回结果，如果过滤标签为空，则音视频审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
-     * @param LabelSet 用户自定义文本过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
+     * @param LabelSet 用户自定义文本过滤标签，音视频审核结果包含选择的标签则返回结果，如果过滤标签为空，则音视频审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
     public void setLabelSet(String [] LabelSet) {
@@ -98,32 +98,32 @@ public class UserDefineOcrTextReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。 
-     * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     * Get 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。 
+     * @return BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
-     * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     * Set 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     * @param BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。 
-     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。 
+     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
-     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -44,7 +44,7 @@ public class MediaContentReviewOcrTextSegmentItem extends AbstractModel{
     private Float Confidence;
 
     /**
-    * 嫌疑片段智能识别的结果建议，取值范围：
+    * 嫌疑片段音视频审核的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -131,11 +131,11 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Get 嫌疑片段智能识别的结果建议，取值范围：
+     * Get 嫌疑片段音视频审核的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li> 
-     * @return Suggestion 嫌疑片段智能识别的结果建议，取值范围：
+     * @return Suggestion 嫌疑片段音视频审核的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -145,11 +145,11 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * Set 嫌疑片段智能识别的结果建议，取值范围：
+     * Set 嫌疑片段音视频审核的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param Suggestion 嫌疑片段智能识别的结果建议，取值范围：
+     * @param Suggestion 嫌疑片段音视频审核的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>

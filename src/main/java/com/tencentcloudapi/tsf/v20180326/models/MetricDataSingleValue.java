@@ -47,6 +47,14 @@ public class MetricDataSingleValue extends AbstractModel{
     private String MetricDataValue;
 
     /**
+    * 日环比
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DailyPercent")
+    @Expose
+    private Float DailyPercent;
+
+    /**
      * Get 指标
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetricName 指标
@@ -106,6 +114,26 @@ public class MetricDataSingleValue extends AbstractModel{
         this.MetricDataValue = MetricDataValue;
     }
 
+    /**
+     * Get 日环比
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DailyPercent 日环比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDailyPercent() {
+        return this.DailyPercent;
+    }
+
+    /**
+     * Set 日环比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DailyPercent 日环比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDailyPercent(Float DailyPercent) {
+        this.DailyPercent = DailyPercent;
+    }
+
     public MetricDataSingleValue() {
     }
 
@@ -123,6 +151,9 @@ public class MetricDataSingleValue extends AbstractModel{
         if (source.MetricDataValue != null) {
             this.MetricDataValue = new String(source.MetricDataValue);
         }
+        if (source.DailyPercent != null) {
+            this.DailyPercent = new Float(source.DailyPercent);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class MetricDataSingleValue extends AbstractModel{
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "MetricFunction", this.MetricFunction);
         this.setParamSimple(map, prefix + "MetricDataValue", this.MetricDataValue);
+        this.setParamSimple(map, prefix + "DailyPercent", this.DailyPercent);
 
     }
 }

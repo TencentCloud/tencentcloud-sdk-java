@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class StartFlowRequest extends AbstractModel{
 
     /**
+    * 签署流程编号，由CreateFlow接口返回
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
     * 用户信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-    * 流程编号
-    */
-    @SerializedName("FlowId")
-    @Expose
-    private String FlowId;
 
     /**
     * 应用相关信息
@@ -44,11 +44,27 @@ public class StartFlowRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 客户端Token，保持接口幂等性
+    * 客户端Token，保持接口幂等性,最大长度64个字符
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+     * Get 签署流程编号，由CreateFlow接口返回 
+     * @return FlowId 签署流程编号，由CreateFlow接口返回
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 签署流程编号，由CreateFlow接口返回
+     * @param FlowId 签署流程编号，由CreateFlow接口返回
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
 
     /**
      * Get 用户信息 
@@ -64,22 +80,6 @@ public class StartFlowRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 流程编号 
-     * @return FlowId 流程编号
-     */
-    public String getFlowId() {
-        return this.FlowId;
-    }
-
-    /**
-     * Set 流程编号
-     * @param FlowId 流程编号
-     */
-    public void setFlowId(String FlowId) {
-        this.FlowId = FlowId;
     }
 
     /**
@@ -99,16 +99,16 @@ public class StartFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户端Token，保持接口幂等性 
-     * @return ClientToken 客户端Token，保持接口幂等性
+     * Get 客户端Token，保持接口幂等性,最大长度64个字符 
+     * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端Token，保持接口幂等性
-     * @param ClientToken 客户端Token，保持接口幂等性
+     * Set 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
@@ -122,11 +122,11 @@ public class StartFlowRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public StartFlowRequest(StartFlowRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -141,8 +141,8 @@ public class StartFlowRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 

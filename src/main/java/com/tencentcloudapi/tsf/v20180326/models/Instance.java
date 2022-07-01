@@ -327,6 +327,14 @@ public class Instance extends AbstractModel{
     private String AgentVersion;
 
     /**
+    * 容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeInstanceId")
+    @Expose
+    private String NodeInstanceId;
+
+    /**
      * Get 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID
@@ -1086,6 +1094,26 @@ public class Instance extends AbstractModel{
         this.AgentVersion = AgentVersion;
     }
 
+    /**
+     * Get 容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeInstanceId 容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeInstanceId() {
+        return this.NodeInstanceId;
+    }
+
+    /**
+     * Set 容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeInstanceId 容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeInstanceId(String NodeInstanceId) {
+        this.NodeInstanceId = NodeInstanceId;
+    }
+
     public Instance() {
     }
 
@@ -1208,6 +1236,9 @@ public class Instance extends AbstractModel{
         if (source.AgentVersion != null) {
             this.AgentVersion = new String(source.AgentVersion);
         }
+        if (source.NodeInstanceId != null) {
+            this.NodeInstanceId = new String(source.NodeInstanceId);
+        }
     }
 
 
@@ -1253,6 +1284,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+        this.setParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
 
     }
 }

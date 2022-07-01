@@ -44,6 +44,13 @@ public class TargetDescription extends AbstractModel{
     private CkafkaTargetParams CkafkaTargetParams;
 
     /**
+    * ElasticSearch参数
+    */
+    @SerializedName("ESTargetParams")
+    @Expose
+    private ESTargetParams ESTargetParams;
+
+    /**
      * Get QCS资源六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606) 
      * @return ResourceDescription QCS资源六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606)
      */
@@ -91,6 +98,22 @@ public class TargetDescription extends AbstractModel{
         this.CkafkaTargetParams = CkafkaTargetParams;
     }
 
+    /**
+     * Get ElasticSearch参数 
+     * @return ESTargetParams ElasticSearch参数
+     */
+    public ESTargetParams getESTargetParams() {
+        return this.ESTargetParams;
+    }
+
+    /**
+     * Set ElasticSearch参数
+     * @param ESTargetParams ElasticSearch参数
+     */
+    public void setESTargetParams(ESTargetParams ESTargetParams) {
+        this.ESTargetParams = ESTargetParams;
+    }
+
     public TargetDescription() {
     }
 
@@ -108,6 +131,9 @@ public class TargetDescription extends AbstractModel{
         if (source.CkafkaTargetParams != null) {
             this.CkafkaTargetParams = new CkafkaTargetParams(source.CkafkaTargetParams);
         }
+        if (source.ESTargetParams != null) {
+            this.ESTargetParams = new ESTargetParams(source.ESTargetParams);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class TargetDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceDescription", this.ResourceDescription);
         this.setParamObj(map, prefix + "SCFParams.", this.SCFParams);
         this.setParamObj(map, prefix + "CkafkaTargetParams.", this.CkafkaTargetParams);
+        this.setParamObj(map, prefix + "ESTargetParams.", this.ESTargetParams);
 
     }
 }

@@ -30,7 +30,7 @@ public class UploadFile extends AbstractModel{
     private String FileBody;
 
     /**
-    * 文件名
+    * 文件名，最大长度不超过200字符
     */
     @SerializedName("FileName")
     @Expose
@@ -53,16 +53,16 @@ public class UploadFile extends AbstractModel{
     }
 
     /**
-     * Get 文件名 
-     * @return FileName 文件名
+     * Get 文件名，最大长度不超过200字符 
+     * @return FileName 文件名，最大长度不超过200字符
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名
-     * @param FileName 文件名
+     * Set 文件名，最大长度不超过200字符
+     * @param FileName 文件名，最大长度不超过200字符
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

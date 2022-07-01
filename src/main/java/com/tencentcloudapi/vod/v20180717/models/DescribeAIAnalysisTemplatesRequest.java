@@ -30,7 +30,7 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
+    * 音视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
     */
     @SerializedName("Definitions")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。 
-     * @return Definitions 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
+     * Get 音视频内容分析模板唯一标识过滤条件，数组长度最大值：100。 
+     * @return Definitions 音视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
-     * @param Definitions 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
+     * Set 音视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
+     * @param Definitions 音视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

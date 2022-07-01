@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeBasicResourceUsageRequest extends AbstractModel{
 
+    /**
+    * 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+    */
+    @SerializedName("All")
+    @Expose
+    private Boolean All;
+
+    /**
+     * Get 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的 
+     * @return All 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+     */
+    public Boolean getAll() {
+        return this.All;
+    }
+
+    /**
+     * Set 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+     * @param All 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+     */
+    public void setAll(Boolean All) {
+        this.All = All;
+    }
+
     public DescribeBasicResourceUsageRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeBasicResourceUsageRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBasicResourceUsageRequest(DescribeBasicResourceUsageRequest source) {
+        if (source.All != null) {
+            this.All = new Boolean(source.All);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeBasicResourceUsageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "All", this.All);
 
     }
 }

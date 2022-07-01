@@ -23,67 +23,25 @@ import java.util.HashMap;
 public class CreateFlowRequest extends AbstractModel{
 
     /**
-    * 操作人信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 流程的名字, 长度不能超过200，中文字母数字下划线
+    * 签署流程名称,最大长度200个字符
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 参与者信息
+    * 签署流程参与者信息
     */
     @SerializedName("Approvers")
     @Expose
     private FlowCreateApprover [] Approvers;
 
     /**
-    * 流程的描述, 长度不能超过1000
+    * 操作人信息
     */
-    @SerializedName("FlowDescription")
+    @SerializedName("Operator")
     @Expose
-    private String FlowDescription;
-
-    /**
-    * 发送类型(true为无序签,false为顺序签)
-    */
-    @SerializedName("Unordered")
-    @Expose
-    private Boolean Unordered;
-
-    /**
-    * 流程的种类(如销售合同/入职合同等)
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
-    * 过期时间戳,如果是0则为不过期
-    */
-    @SerializedName("DeadLine")
-    @Expose
-    private Long DeadLine;
-
-    /**
-    * 执行结果的回调URL(需要以http://或者https://)开头
-    */
-    @SerializedName("CallbackUrl")
-    @Expose
-    private String CallbackUrl;
-
-    /**
-    * 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
-    */
-    @SerializedName("UserData")
-    @Expose
-    private String UserData;
+    private UserInfo Operator;
 
     /**
     * 应用相关信息
@@ -93,11 +51,100 @@ public class CreateFlowRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 客户端Token，保持接口幂等性
+    * 发送类型(true为无序签,false为顺序签)
+    */
+    @SerializedName("Unordered")
+    @Expose
+    private Boolean Unordered;
+
+    /**
+    * 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+    */
+    @SerializedName("DeadLine")
+    @Expose
+    private Long DeadLine;
+
+    /**
+    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+    */
+    @SerializedName("FlowType")
+    @Expose
+    private String FlowType;
+
+    /**
+    * 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
+    * 签署流程描述,最大长度1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
+
+    /**
+    * 客户端Token，保持接口幂等性,最大长度64个字符
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+    */
+    @SerializedName("CustomShowMap")
+    @Expose
+    private String CustomShowMap;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("RelatedFlowId")
+    @Expose
+    private String RelatedFlowId;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
+     * Get 签署流程名称,最大长度200个字符 
+     * @return FlowName 签署流程名称,最大长度200个字符
+     */
+    public String getFlowName() {
+        return this.FlowName;
+    }
+
+    /**
+     * Set 签署流程名称,最大长度200个字符
+     * @param FlowName 签署流程名称,最大长度200个字符
+     */
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
+    }
+
+    /**
+     * Get 签署流程参与者信息 
+     * @return Approvers 签署流程参与者信息
+     */
+    public FlowCreateApprover [] getApprovers() {
+        return this.Approvers;
+    }
+
+    /**
+     * Set 签署流程参与者信息
+     * @param Approvers 签署流程参与者信息
+     */
+    public void setApprovers(FlowCreateApprover [] Approvers) {
+        this.Approvers = Approvers;
+    }
 
     /**
      * Get 操作人信息 
@@ -113,134 +160,6 @@ public class CreateFlowRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 流程的名字, 长度不能超过200，中文字母数字下划线 
-     * @return FlowName 流程的名字, 长度不能超过200，中文字母数字下划线
-     */
-    public String getFlowName() {
-        return this.FlowName;
-    }
-
-    /**
-     * Set 流程的名字, 长度不能超过200，中文字母数字下划线
-     * @param FlowName 流程的名字, 长度不能超过200，中文字母数字下划线
-     */
-    public void setFlowName(String FlowName) {
-        this.FlowName = FlowName;
-    }
-
-    /**
-     * Get 参与者信息 
-     * @return Approvers 参与者信息
-     */
-    public FlowCreateApprover [] getApprovers() {
-        return this.Approvers;
-    }
-
-    /**
-     * Set 参与者信息
-     * @param Approvers 参与者信息
-     */
-    public void setApprovers(FlowCreateApprover [] Approvers) {
-        this.Approvers = Approvers;
-    }
-
-    /**
-     * Get 流程的描述, 长度不能超过1000 
-     * @return FlowDescription 流程的描述, 长度不能超过1000
-     */
-    public String getFlowDescription() {
-        return this.FlowDescription;
-    }
-
-    /**
-     * Set 流程的描述, 长度不能超过1000
-     * @param FlowDescription 流程的描述, 长度不能超过1000
-     */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
-    }
-
-    /**
-     * Get 发送类型(true为无序签,false为顺序签) 
-     * @return Unordered 发送类型(true为无序签,false为顺序签)
-     */
-    public Boolean getUnordered() {
-        return this.Unordered;
-    }
-
-    /**
-     * Set 发送类型(true为无序签,false为顺序签)
-     * @param Unordered 发送类型(true为无序签,false为顺序签)
-     */
-    public void setUnordered(Boolean Unordered) {
-        this.Unordered = Unordered;
-    }
-
-    /**
-     * Get 流程的种类(如销售合同/入职合同等) 
-     * @return FlowType 流程的种类(如销售合同/入职合同等)
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 流程的种类(如销售合同/入职合同等)
-     * @param FlowType 流程的种类(如销售合同/入职合同等)
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 过期时间戳,如果是0则为不过期 
-     * @return DeadLine 过期时间戳,如果是0则为不过期
-     */
-    public Long getDeadLine() {
-        return this.DeadLine;
-    }
-
-    /**
-     * Set 过期时间戳,如果是0则为不过期
-     * @param DeadLine 过期时间戳,如果是0则为不过期
-     */
-    public void setDeadLine(Long DeadLine) {
-        this.DeadLine = DeadLine;
-    }
-
-    /**
-     * Get 执行结果的回调URL(需要以http://或者https://)开头 
-     * @return CallbackUrl 执行结果的回调URL(需要以http://或者https://)开头
-     */
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
-    }
-
-    /**
-     * Set 执行结果的回调URL(需要以http://或者https://)开头
-     * @param CallbackUrl 执行结果的回调URL(需要以http://或者https://)开头
-     */
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
-    }
-
-    /**
-     * Get 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480 
-     * @return UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
-     */
-    public String getUserData() {
-        return this.UserData;
-    }
-
-    /**
-     * Set 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
-     * @param UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
-     */
-    public void setUserData(String UserData) {
-        this.UserData = UserData;
     }
 
     /**
@@ -260,19 +179,151 @@ public class CreateFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户端Token，保持接口幂等性 
-     * @return ClientToken 客户端Token，保持接口幂等性
+     * Get 发送类型(true为无序签,false为顺序签) 
+     * @return Unordered 发送类型(true为无序签,false为顺序签)
+     */
+    public Boolean getUnordered() {
+        return this.Unordered;
+    }
+
+    /**
+     * Set 发送类型(true为无序签,false为顺序签)
+     * @param Unordered 发送类型(true为无序签,false为顺序签)
+     */
+    public void setUnordered(Boolean Unordered) {
+        this.Unordered = Unordered;
+    }
+
+    /**
+     * Get 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后 
+     * @return DeadLine 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     */
+    public Long getDeadLine() {
+        return this.DeadLine;
+    }
+
+    /**
+     * Set 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     * @param DeadLine 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     */
+    public void setDeadLine(Long DeadLine) {
+        this.DeadLine = DeadLine;
+    }
+
+    /**
+     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
+     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     */
+    public String getFlowType() {
+        return this.FlowType;
+    }
+
+    /**
+     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     */
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
+    }
+
+    /**
+     * Get 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480 
+     * @return UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     * @param UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
+     * Get 签署流程描述,最大长度1000个字符 
+     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程描述,最大长度1000个字符
+     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
+    }
+
+    /**
+     * Get 客户端Token，保持接口幂等性,最大长度64个字符 
+     * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端Token，保持接口幂等性
-     * @param ClientToken 客户端Token，保持接口幂等性
+     * Set 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
+     * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public String getCustomShowMap() {
+        return this.CustomShowMap;
+    }
+
+    /**
+     * Set 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     * @param CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public void setCustomShowMap(String CustomShowMap) {
+        this.CustomShowMap = CustomShowMap;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return RelatedFlowId 暂未开放
+     */
+    public String getRelatedFlowId() {
+        return this.RelatedFlowId;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param RelatedFlowId 暂未开放
+     */
+    public void setRelatedFlowId(String RelatedFlowId) {
+        this.RelatedFlowId = RelatedFlowId;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return CallbackUrl 暂未开放
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param CallbackUrl 暂未开放
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
     }
 
     public CreateFlowRequest() {
@@ -283,9 +334,6 @@ public class CreateFlowRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowRequest(CreateFlowRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
@@ -295,29 +343,38 @@ public class CreateFlowRequest extends AbstractModel{
                 this.Approvers[i] = new FlowCreateApprover(source.Approvers[i]);
             }
         }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
-        }
-        if (source.Unordered != null) {
-            this.Unordered = new Boolean(source.Unordered);
-        }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
-        }
-        if (source.DeadLine != null) {
-            this.DeadLine = new Long(source.DeadLine);
-        }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
-        }
-        if (source.UserData != null) {
-            this.UserData = new String(source.UserData);
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.Unordered != null) {
+            this.Unordered = new Boolean(source.Unordered);
+        }
+        if (source.DeadLine != null) {
+            this.DeadLine = new Long(source.DeadLine);
+        }
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
+        }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.CustomShowMap != null) {
+            this.CustomShowMap = new String(source.CustomShowMap);
+        }
+        if (source.RelatedFlowId != null) {
+            this.RelatedFlowId = new String(source.RelatedFlowId);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
         }
     }
 
@@ -326,17 +383,19 @@ public class CreateFlowRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
-        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
-        this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-        this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
+        this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+        this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

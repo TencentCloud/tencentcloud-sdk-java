@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ApplicationProxy extends AbstractModel{
 
     /**
-    * 实例ID
+    * 代理ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyId")
@@ -31,7 +31,9 @@ public class ApplicationProxy extends AbstractModel{
     private String ProxyId;
 
     /**
-    * 实例名称
+    * 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
     */
     @SerializedName("ProxyName")
     @Expose
@@ -136,8 +138,8 @@ fail：部署失败/停用失败
 
     /**
     * 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyType")
@@ -145,7 +147,9 @@ instance：实例
     private String ProxyType;
 
     /**
-    * 七层实例ID
+    * 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostId")
@@ -153,9 +157,9 @@ instance：实例
     private String HostId;
 
     /**
-     * Get 实例ID
+     * Get 代理ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyId 实例ID
+     * @return ProxyId 代理ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyId() {
@@ -163,9 +167,9 @@ instance：实例
     }
 
     /**
-     * Set 实例ID
+     * Set 代理ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyId 实例ID
+     * @param ProxyId 代理ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyId(String ProxyId) {
@@ -173,16 +177,24 @@ instance：实例
     }
 
     /**
-     * Get 实例名称 
-     * @return ProxyName 实例名称
+     * Get 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称 
+     * @return ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 实例名称
-     * @param ProxyName 实例名称
+     * Set 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+     * @param ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -434,12 +446,12 @@ fail：部署失败/停用失败
 
     /**
      * Get 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyType() {
@@ -448,12 +460,12 @@ instance：实例
 
     /**
      * Set 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyType(String ProxyType) {
@@ -461,9 +473,13 @@ instance：实例
     }
 
     /**
-     * Get 七层实例ID
+     * Get 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostId 七层实例ID
+     * @return HostId 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostId() {
@@ -471,9 +487,13 @@ instance：实例
     }
 
     /**
-     * Set 七层实例ID
+     * Set 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostId 七层实例ID
+     * @param HostId 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostId(String HostId) {

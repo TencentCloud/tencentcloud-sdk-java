@@ -46,6 +46,17 @@ delete：刷新全部资源
     private Boolean UrlEncode;
 
     /**
+    * 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 目录列表，需要包含协议头部 http:// 或 https:// 
      * @return Paths 目录列表，需要包含协议头部 http:// 或 https://
      */
@@ -101,6 +112,38 @@ delete：刷新全部资源
         this.UrlEncode = UrlEncode;
     }
 
+    /**
+     * Get 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配 
+     * @return Area 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+     * @param Area 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public PurgePathCacheRequest() {
     }
 
@@ -121,6 +164,9 @@ delete：刷新全部资源
         if (source.UrlEncode != null) {
             this.UrlEncode = new Boolean(source.UrlEncode);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -131,6 +177,7 @@ delete：刷新全部资源
         this.setParamArraySimple(map, prefix + "Paths.", this.Paths);
         this.setParamSimple(map, prefix + "FlushType", this.FlushType);
         this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

@@ -121,6 +121,13 @@ public class DescribeStatisticsRequest extends AbstractModel{
     private String DbName;
 
     /**
+    * 命名空间id数组
+    */
+    @SerializedName("NamespaceIdList")
+    @Expose
+    private String [] NamespaceIdList;
+
+    /**
      * Get 类型：Interface、Service、Group、Instance、SQL、NoSQL 
      * @return Type 类型：Interface、Service、Group、Instance、SQL、NoSQL
      */
@@ -344,6 +351,22 @@ public class DescribeStatisticsRequest extends AbstractModel{
         this.DbName = DbName;
     }
 
+    /**
+     * Get 命名空间id数组 
+     * @return NamespaceIdList 命名空间id数组
+     */
+    public String [] getNamespaceIdList() {
+        return this.NamespaceIdList;
+    }
+
+    /**
+     * Set 命名空间id数组
+     * @param NamespaceIdList 命名空间id数组
+     */
+    public void setNamespaceIdList(String [] NamespaceIdList) {
+        this.NamespaceIdList = NamespaceIdList;
+    }
+
     public DescribeStatisticsRequest() {
     }
 
@@ -397,6 +420,12 @@ public class DescribeStatisticsRequest extends AbstractModel{
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
         }
+        if (source.NamespaceIdList != null) {
+            this.NamespaceIdList = new String[source.NamespaceIdList.length];
+            for (int i = 0; i < source.NamespaceIdList.length; i++) {
+                this.NamespaceIdList[i] = new String(source.NamespaceIdList[i]);
+            }
+        }
     }
 
 
@@ -418,6 +447,7 @@ public class DescribeStatisticsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MetricDimensionValues.", this.MetricDimensionValues);
         this.setParamSimple(map, prefix + "BucketKey", this.BucketKey);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
 
     }
 }

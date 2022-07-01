@@ -143,6 +143,14 @@ public class VulEffectHostList extends AbstractModel{
     private String InstanceState;
 
     /**
+    * 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicIpAddresses")
+    @Expose
+    private String PublicIpAddresses;
+
+    /**
      * Get 事件id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventId 事件id
@@ -442,6 +450,26 @@ public class VulEffectHostList extends AbstractModel{
         this.InstanceState = InstanceState;
     }
 
+    /**
+     * Get 外网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicIpAddresses 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicIpAddresses() {
+        return this.PublicIpAddresses;
+    }
+
+    /**
+     * Set 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicIpAddresses 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicIpAddresses(String PublicIpAddresses) {
+        this.PublicIpAddresses = PublicIpAddresses;
+    }
+
     public VulEffectHostList() {
     }
 
@@ -498,6 +526,9 @@ public class VulEffectHostList extends AbstractModel{
         if (source.InstanceState != null) {
             this.InstanceState = new String(source.InstanceState);
         }
+        if (source.PublicIpAddresses != null) {
+            this.PublicIpAddresses = new String(source.PublicIpAddresses);
+        }
     }
 
 
@@ -520,6 +551,7 @@ public class VulEffectHostList extends AbstractModel{
         this.setParamSimple(map, prefix + "FixStatusMsg", this.FixStatusMsg);
         this.setParamSimple(map, prefix + "FirstDiscoveryTime", this.FirstDiscoveryTime);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
 
     }
 }

@@ -24,25 +24,18 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
 
     /**
     * 应用信息
-此接口Agent.ProxyOrganizationOpenId必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 渠道侧合作企业名称
+    * 渠道侧合作企业名称，最大长度64个字符
     */
     @SerializedName("ProxyOrganizationName")
     @Expose
     private String ProxyOrganizationName;
-
-    /**
-    * 渠道侧合作企业统一社会信用代码
-    */
-    @SerializedName("UniformSocialCreditCode")
-    @Expose
-    private String UniformSocialCreditCode;
 
     /**
     * 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
@@ -50,6 +43,13 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     @SerializedName("BusinessLicense")
     @Expose
     private String BusinessLicense;
+
+    /**
+    * 渠道侧合作企业统一社会信用代码，最大长度200个字符
+    */
+    @SerializedName("UniformSocialCreditCode")
+    @Expose
+    private String UniformSocialCreditCode;
 
     /**
     * 操作者的信息
@@ -60,9 +60,9 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
 
     /**
      * Get 应用信息
-此接口Agent.ProxyOrganizationOpenId必填 
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填 
      * @return Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
      */
     public Agent getAgent() {
         return this.Agent;
@@ -70,44 +70,28 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
 
     /**
      * Set 应用信息
-此接口Agent.ProxyOrganizationOpenId必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
      * @param Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 渠道侧合作企业名称 
-     * @return ProxyOrganizationName 渠道侧合作企业名称
+     * Get 渠道侧合作企业名称，最大长度64个字符 
+     * @return ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
      */
     public String getProxyOrganizationName() {
         return this.ProxyOrganizationName;
     }
 
     /**
-     * Set 渠道侧合作企业名称
-     * @param ProxyOrganizationName 渠道侧合作企业名称
+     * Set 渠道侧合作企业名称，最大长度64个字符
+     * @param ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {
         this.ProxyOrganizationName = ProxyOrganizationName;
-    }
-
-    /**
-     * Get 渠道侧合作企业统一社会信用代码 
-     * @return UniformSocialCreditCode 渠道侧合作企业统一社会信用代码
-     */
-    public String getUniformSocialCreditCode() {
-        return this.UniformSocialCreditCode;
-    }
-
-    /**
-     * Set 渠道侧合作企业统一社会信用代码
-     * @param UniformSocialCreditCode 渠道侧合作企业统一社会信用代码
-     */
-    public void setUniformSocialCreditCode(String UniformSocialCreditCode) {
-        this.UniformSocialCreditCode = UniformSocialCreditCode;
     }
 
     /**
@@ -124,6 +108,22 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
      */
     public void setBusinessLicense(String BusinessLicense) {
         this.BusinessLicense = BusinessLicense;
+    }
+
+    /**
+     * Get 渠道侧合作企业统一社会信用代码，最大长度200个字符 
+     * @return UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     */
+    public String getUniformSocialCreditCode() {
+        return this.UniformSocialCreditCode;
+    }
+
+    /**
+     * Set 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * @param UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     */
+    public void setUniformSocialCreditCode(String UniformSocialCreditCode) {
+        this.UniformSocialCreditCode = UniformSocialCreditCode;
     }
 
     /**
@@ -156,11 +156,11 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
         if (source.ProxyOrganizationName != null) {
             this.ProxyOrganizationName = new String(source.ProxyOrganizationName);
         }
-        if (source.UniformSocialCreditCode != null) {
-            this.UniformSocialCreditCode = new String(source.UniformSocialCreditCode);
-        }
         if (source.BusinessLicense != null) {
             this.BusinessLicense = new String(source.BusinessLicense);
+        }
+        if (source.UniformSocialCreditCode != null) {
+            this.UniformSocialCreditCode = new String(source.UniformSocialCreditCode);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
@@ -174,8 +174,8 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
-        this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+        this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

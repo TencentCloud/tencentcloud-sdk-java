@@ -31,7 +31,7 @@ public class OriginRecord extends AbstractModel{
 
     /**
     * 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
     */
     @SerializedName("Area")
     @Expose
@@ -39,6 +39,8 @@ public class OriginRecord extends AbstractModel{
 
     /**
     * 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
     */
     @SerializedName("Weight")
     @Expose
@@ -94,9 +96,9 @@ public class OriginRecord extends AbstractModel{
 
     /**
      * Get 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域 
+为空表示默认区域 
      * @return Area 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
      */
     public String [] getArea() {
         return this.Area;
@@ -104,17 +106,21 @@ public class OriginRecord extends AbstractModel{
 
     /**
      * Set 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
      * @param Area 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
      */
     public void setArea(String [] Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 当源站配置类型Type=weight时，表示权重 
+     * Get 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100 
      * @return Weight 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
      */
     public Long getWeight() {
         return this.Weight;
@@ -122,7 +128,11 @@ public class OriginRecord extends AbstractModel{
 
     /**
      * Set 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
      * @param Weight 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

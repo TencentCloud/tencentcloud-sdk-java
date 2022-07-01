@@ -34,6 +34,14 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     private String BusinessType;
 
     /**
+    * 业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
+    */
+    @SerializedName("BusinessIds")
+    @Expose
+    private String [] BusinessIds;
+
+    /**
     * 操作者信息
     */
     @SerializedName("Operator")
@@ -41,18 +49,11 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 业务编号的数组，如模板编号、文档编号、印章编号
+    * 应用相关信息
     */
-    @SerializedName("BusinessIds")
+    @SerializedName("Agent")
     @Expose
-    private String [] BusinessIds;
-
-    /**
-    * 文件类型，"JPG", "PDF","ZIP"等
-    */
-    @SerializedName("FileType")
-    @Expose
-    private String FileType;
+    private Agent Agent;
 
     /**
     * 下载后的文件命名，只有fileType为zip的时候生效
@@ -62,7 +63,14 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     private String FileName;
 
     /**
-    * 指定资源起始偏移量
+    * 文件类型，"JPG", "PDF","ZIP"等
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
+
+    /**
+    * 指定资源起始偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
@@ -76,32 +84,25 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 应用相关信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
-    * 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+    * 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
     */
     @SerializedName("UrlTtl")
     @Expose
     private Long UrlTtl;
 
     /**
-    * 流程校验发送邮件权限
-    */
-    @SerializedName("CcToken")
-    @Expose
-    private String CcToken;
-
-    /**
-    * 场景
+    * 暂不开放
     */
     @SerializedName("Scene")
     @Expose
     private String Scene;
+
+    /**
+    * 暂不开放
+    */
+    @SerializedName("CcToken")
+    @Expose
+    private String CcToken;
 
     /**
      * Get 文件对应的业务类型，目前支持：
@@ -136,6 +137,26 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
+     * Get 业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源 
+     * @return BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
+     */
+    public String [] getBusinessIds() {
+        return this.BusinessIds;
+    }
+
+    /**
+     * Set 业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
+     * @param BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
+     */
+    public void setBusinessIds(String [] BusinessIds) {
+        this.BusinessIds = BusinessIds;
+    }
+
+    /**
      * Get 操作者信息 
      * @return Operator 操作者信息
      */
@@ -152,35 +173,19 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 业务编号的数组，如模板编号、文档编号、印章编号 
-     * @return BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
      */
-    public String [] getBusinessIds() {
-        return this.BusinessIds;
+    public Agent getAgent() {
+        return this.Agent;
     }
 
     /**
-     * Set 业务编号的数组，如模板编号、文档编号、印章编号
-     * @param BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
      */
-    public void setBusinessIds(String [] BusinessIds) {
-        this.BusinessIds = BusinessIds;
-    }
-
-    /**
-     * Get 文件类型，"JPG", "PDF","ZIP"等 
-     * @return FileType 文件类型，"JPG", "PDF","ZIP"等
-     */
-    public String getFileType() {
-        return this.FileType;
-    }
-
-    /**
-     * Set 文件类型，"JPG", "PDF","ZIP"等
-     * @param FileType 文件类型，"JPG", "PDF","ZIP"等
-     */
-    public void setFileType(String FileType) {
-        this.FileType = FileType;
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     /**
@@ -200,16 +205,32 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定资源起始偏移量 
-     * @return Offset 指定资源起始偏移量
+     * Get 文件类型，"JPG", "PDF","ZIP"等 
+     * @return FileType 文件类型，"JPG", "PDF","ZIP"等
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set 文件类型，"JPG", "PDF","ZIP"等
+     * @param FileType 文件类型，"JPG", "PDF","ZIP"等
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
+
+    /**
+     * Get 指定资源起始偏移量，默认0 
+     * @return Offset 指定资源起始偏移量，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定资源起始偏移量
-     * @param Offset 指定资源起始偏移量
+     * Set 指定资源起始偏移量，默认0
+     * @param Offset 指定资源起始偏移量，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -232,67 +253,51 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天) 
-     * @return UrlTtl 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * Get 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天) 
+     * @return UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
      */
     public Long getUrlTtl() {
         return this.UrlTtl;
     }
 
     /**
-     * Set 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
-     * @param UrlTtl 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * Set 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * @param UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
      */
     public void setUrlTtl(Long UrlTtl) {
         this.UrlTtl = UrlTtl;
     }
 
     /**
-     * Get 流程校验发送邮件权限 
-     * @return CcToken 流程校验发送邮件权限
-     */
-    public String getCcToken() {
-        return this.CcToken;
-    }
-
-    /**
-     * Set 流程校验发送邮件权限
-     * @param CcToken 流程校验发送邮件权限
-     */
-    public void setCcToken(String CcToken) {
-        this.CcToken = CcToken;
-    }
-
-    /**
-     * Get 场景 
-     * @return Scene 场景
+     * Get 暂不开放 
+     * @return Scene 暂不开放
      */
     public String getScene() {
         return this.Scene;
     }
 
     /**
-     * Set 场景
-     * @param Scene 场景
+     * Set 暂不开放
+     * @param Scene 暂不开放
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
+    }
+
+    /**
+     * Get 暂不开放 
+     * @return CcToken 暂不开放
+     */
+    public String getCcToken() {
+        return this.CcToken;
+    }
+
+    /**
+     * Set 暂不开放
+     * @param CcToken 暂不开放
+     */
+    public void setCcToken(String CcToken) {
+        this.CcToken = CcToken;
     }
 
     public DescribeFileUrlsRequest() {
@@ -306,20 +311,23 @@ public class DescribeFileUrlsRequest extends AbstractModel{
         if (source.BusinessType != null) {
             this.BusinessType = new String(source.BusinessType);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.BusinessIds != null) {
             this.BusinessIds = new String[source.BusinessIds.length];
             for (int i = 0; i < source.BusinessIds.length; i++) {
                 this.BusinessIds[i] = new String(source.BusinessIds[i]);
             }
         }
-        if (source.FileType != null) {
-            this.FileType = new String(source.FileType);
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -327,17 +335,14 @@ public class DescribeFileUrlsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.UrlTtl != null) {
             this.UrlTtl = new Long(source.UrlTtl);
         }
-        if (source.CcToken != null) {
-            this.CcToken = new String(source.CcToken);
-        }
         if (source.Scene != null) {
             this.Scene = new String(source.Scene);
+        }
+        if (source.CcToken != null) {
+            this.CcToken = new String(source.CcToken);
         }
     }
 
@@ -347,16 +352,16 @@ public class DescribeFileUrlsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "BusinessIds.", this.BusinessIds);
-        this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "UrlTtl", this.UrlTtl);
-        this.setParamSimple(map, prefix + "CcToken", this.CcToken);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamSimple(map, prefix + "CcToken", this.CcToken);
 
     }
 }

@@ -37,7 +37,7 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
     private String ProxyOrganizationOpenId;
 
     /**
-    * 合同(流程)的具体详细描述信息
+    * 合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowInfo")
@@ -84,9 +84,9 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)的具体详细描述信息
+     * Get 合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowInfo 合同(流程)的具体详细描述信息
+     * @return FlowInfo 合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FlowDetailInfo [] getFlowInfo() {
@@ -94,9 +94,9 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 合同(流程)的具体详细描述信息
+     * Set 合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowInfo 合同(流程)的具体详细描述信息
+     * @param FlowInfo 合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowInfo(FlowDetailInfo [] FlowInfo) {

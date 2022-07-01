@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAIRecognitionTemplateResponse extends AbstractModel{
 
     /**
-    * 视频内容识别模板唯一标识。
+    * 音视频内容识别模板唯一标识。
     */
     @SerializedName("Definition")
     @Expose
@@ -37,16 +37,16 @@ public class CreateAIRecognitionTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 视频内容识别模板唯一标识。 
-     * @return Definition 视频内容识别模板唯一标识。
+     * Get 音视频内容识别模板唯一标识。 
+     * @return Definition 音视频内容识别模板唯一标识。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 视频内容识别模板唯一标识。
-     * @param Definition 视频内容识别模板唯一标识。
+     * Set 音视频内容识别模板唯一标识。
+     * @param Definition 音视频内容识别模板唯一标识。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

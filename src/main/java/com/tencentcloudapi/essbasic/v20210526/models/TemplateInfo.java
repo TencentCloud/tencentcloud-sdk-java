@@ -58,6 +58,27 @@ public class TemplateInfo extends AbstractModel{
     private Component [] SignComponents;
 
     /**
+    * 模板中的流程参与人信息
+    */
+    @SerializedName("Recipients")
+    @Expose
+    private Recipient [] Recipients;
+
+    /**
+    * 模板类型：1-静默签；2-静默签授权；3-普通模板
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private Long TemplateType;
+
+    /**
+    * 是否是发起人
+    */
+    @SerializedName("IsPromoter")
+    @Expose
+    private Boolean IsPromoter;
+
+    /**
     * 模板的创建者信息
     */
     @SerializedName("Creator")
@@ -70,27 +91,6 @@ public class TemplateInfo extends AbstractModel{
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
-
-    /**
-    * 模板类型：1-静默签；2-静默签授权；3-普通模板
-    */
-    @SerializedName("TemplateType")
-    @Expose
-    private Long TemplateType;
-
-    /**
-    * 模板中的流程参与人信息
-    */
-    @SerializedName("Recipients")
-    @Expose
-    private Recipient [] Recipients;
-
-    /**
-    * 是否是发起人
-    */
-    @SerializedName("IsPromoter")
-    @Expose
-    private Boolean IsPromoter;
 
     /**
      * Get 模板ID 
@@ -173,6 +173,54 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
+     * Get 模板中的流程参与人信息 
+     * @return Recipients 模板中的流程参与人信息
+     */
+    public Recipient [] getRecipients() {
+        return this.Recipients;
+    }
+
+    /**
+     * Set 模板中的流程参与人信息
+     * @param Recipients 模板中的流程参与人信息
+     */
+    public void setRecipients(Recipient [] Recipients) {
+        this.Recipients = Recipients;
+    }
+
+    /**
+     * Get 模板类型：1-静默签；2-静默签授权；3-普通模板 
+     * @return TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
+     */
+    public Long getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 模板类型：1-静默签；2-静默签授权；3-普通模板
+     * @param TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
+     */
+    public void setTemplateType(Long TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
+    /**
+     * Get 是否是发起人 
+     * @return IsPromoter 是否是发起人
+     */
+    public Boolean getIsPromoter() {
+        return this.IsPromoter;
+    }
+
+    /**
+     * Set 是否是发起人
+     * @param IsPromoter 是否是发起人
+     */
+    public void setIsPromoter(Boolean IsPromoter) {
+        this.IsPromoter = IsPromoter;
+    }
+
+    /**
      * Get 模板的创建者信息 
      * @return Creator 模板的创建者信息
      */
@@ -204,54 +252,6 @@ public class TemplateInfo extends AbstractModel{
         this.CreatedOn = CreatedOn;
     }
 
-    /**
-     * Get 模板类型：1-静默签；2-静默签授权；3-普通模板 
-     * @return TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
-     */
-    public Long getTemplateType() {
-        return this.TemplateType;
-    }
-
-    /**
-     * Set 模板类型：1-静默签；2-静默签授权；3-普通模板
-     * @param TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
-     */
-    public void setTemplateType(Long TemplateType) {
-        this.TemplateType = TemplateType;
-    }
-
-    /**
-     * Get 模板中的流程参与人信息 
-     * @return Recipients 模板中的流程参与人信息
-     */
-    public Recipient [] getRecipients() {
-        return this.Recipients;
-    }
-
-    /**
-     * Set 模板中的流程参与人信息
-     * @param Recipients 模板中的流程参与人信息
-     */
-    public void setRecipients(Recipient [] Recipients) {
-        this.Recipients = Recipients;
-    }
-
-    /**
-     * Get 是否是发起人 
-     * @return IsPromoter 是否是发起人
-     */
-    public Boolean getIsPromoter() {
-        return this.IsPromoter;
-    }
-
-    /**
-     * Set 是否是发起人
-     * @param IsPromoter 是否是发起人
-     */
-    public void setIsPromoter(Boolean IsPromoter) {
-        this.IsPromoter = IsPromoter;
-    }
-
     public TemplateInfo() {
     }
 
@@ -281,23 +281,23 @@ public class TemplateInfo extends AbstractModel{
                 this.SignComponents[i] = new Component(source.SignComponents[i]);
             }
         }
-        if (source.Creator != null) {
-            this.Creator = new String(source.Creator);
-        }
-        if (source.CreatedOn != null) {
-            this.CreatedOn = new Long(source.CreatedOn);
-        }
-        if (source.TemplateType != null) {
-            this.TemplateType = new Long(source.TemplateType);
-        }
         if (source.Recipients != null) {
             this.Recipients = new Recipient[source.Recipients.length];
             for (int i = 0; i < source.Recipients.length; i++) {
                 this.Recipients[i] = new Recipient(source.Recipients[i]);
             }
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new Long(source.TemplateType);
+        }
         if (source.IsPromoter != null) {
             this.IsPromoter = new Boolean(source.IsPromoter);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new Long(source.CreatedOn);
         }
     }
 
@@ -311,11 +311,11 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
+        this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
-        this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
-        this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
 
     }
 }

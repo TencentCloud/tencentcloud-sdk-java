@@ -30,6 +30,13 @@ public class DescribeCloudRunServersResponse extends AbstractModel{
     private ServerBaseInfo [] ServerList;
 
     /**
+    * 服务总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeCloudRunServersResponse extends AbstractModel{
      */
     public void setServerList(ServerBaseInfo [] ServerList) {
         this.ServerList = ServerList;
+    }
+
+    /**
+     * Get 服务总数 
+     * @return Total 服务总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 服务总数
+     * @param Total 服务总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -82,6 +105,9 @@ public class DescribeCloudRunServersResponse extends AbstractModel{
                 this.ServerList[i] = new ServerBaseInfo(source.ServerList[i]);
             }
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +119,7 @@ public class DescribeCloudRunServersResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,13 +30,6 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 渠道方模板库模板唯一标识
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private String TemplateId;
-
-    /**
     * 操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
     */
     @SerializedName("OperateType")
@@ -44,11 +37,18 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     private String OperateType;
 
     /**
-    * 操作者的信息
+    * 渠道方模板库模板唯一标识
     */
-    @SerializedName("Operator")
+    @SerializedName("TemplateId")
     @Expose
-    private UserInfo Operator;
+    private String TemplateId;
+
+    /**
+    * 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+    */
+    @SerializedName("ProxyOrganizationOpenIds")
+    @Expose
+    private String ProxyOrganizationOpenIds;
 
     /**
     * 模板可见性, 全部可见-"all", 部分可见-"part"
@@ -58,11 +58,11 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     private String AuthTag;
 
     /**
-    * 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+    * 操作者的信息
     */
-    @SerializedName("ProxyOrganizationOpenIds")
+    @SerializedName("Operator")
     @Expose
-    private String ProxyOrganizationOpenIds;
+    private UserInfo Operator;
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -78,22 +78,6 @@ public class OperateChannelTemplateRequest extends AbstractModel{
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
-    }
-
-    /**
-     * Get 渠道方模板库模板唯一标识 
-     * @return TemplateId 渠道方模板库模板唯一标识
-     */
-    public String getTemplateId() {
-        return this.TemplateId;
-    }
-
-    /**
-     * Set 渠道方模板库模板唯一标识
-     * @param TemplateId 渠道方模板库模板唯一标识
-     */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
     }
 
     /**
@@ -113,19 +97,35 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
+     * Get 渠道方模板库模板唯一标识 
+     * @return TemplateId 渠道方模板库模板唯一标识
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public String getTemplateId() {
+        return this.TemplateId;
     }
 
     /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
+     * Set 渠道方模板库模板唯一标识
+     * @param TemplateId 渠道方模板库模板唯一标识
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔 
+     * @return ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+     */
+    public String getProxyOrganizationOpenIds() {
+        return this.ProxyOrganizationOpenIds;
+    }
+
+    /**
+     * Set 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+     * @param ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+     */
+    public void setProxyOrganizationOpenIds(String ProxyOrganizationOpenIds) {
+        this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
     }
 
     /**
@@ -145,19 +145,19 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔 
-     * @return ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
      */
-    public String getProxyOrganizationOpenIds() {
-        return this.ProxyOrganizationOpenIds;
+    public UserInfo getOperator() {
+        return this.Operator;
     }
 
     /**
-     * Set 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
-     * @param ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
      */
-    public void setProxyOrganizationOpenIds(String ProxyOrganizationOpenIds) {
-        this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public OperateChannelTemplateRequest() {
@@ -171,20 +171,20 @@ public class OperateChannelTemplateRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
-        }
         if (source.OperateType != null) {
             this.OperateType = new String(source.OperateType);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.ProxyOrganizationOpenIds != null) {
+            this.ProxyOrganizationOpenIds = new String(source.ProxyOrganizationOpenIds);
         }
         if (source.AuthTag != null) {
             this.AuthTag = new String(source.AuthTag);
         }
-        if (source.ProxyOrganizationOpenIds != null) {
-            this.ProxyOrganizationOpenIds = new String(source.ProxyOrganizationOpenIds);
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -194,11 +194,11 @@ public class OperateChannelTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "OperateType", this.OperateType);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamSimple(map, prefix + "AuthTag", this.AuthTag);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "ProxyOrganizationOpenIds", this.ProxyOrganizationOpenIds);
+        this.setParamSimple(map, prefix + "AuthTag", this.AuthTag);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

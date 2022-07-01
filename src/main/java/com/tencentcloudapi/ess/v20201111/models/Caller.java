@@ -37,18 +37,18 @@ public class Caller extends AbstractModel{
     private String OrganizationId;
 
     /**
-    * 下属机构ID
-    */
-    @SerializedName("SubOrganizationId")
-    @Expose
-    private String SubOrganizationId;
-
-    /**
     * 经办人的用户ID
     */
     @SerializedName("OperatorId")
     @Expose
     private String OperatorId;
+
+    /**
+    * 下属机构ID
+    */
+    @SerializedName("SubOrganizationId")
+    @Expose
+    private String SubOrganizationId;
 
     /**
      * Get 应用号 
@@ -83,22 +83,6 @@ public class Caller extends AbstractModel{
     }
 
     /**
-     * Get 下属机构ID 
-     * @return SubOrganizationId 下属机构ID
-     */
-    public String getSubOrganizationId() {
-        return this.SubOrganizationId;
-    }
-
-    /**
-     * Set 下属机构ID
-     * @param SubOrganizationId 下属机构ID
-     */
-    public void setSubOrganizationId(String SubOrganizationId) {
-        this.SubOrganizationId = SubOrganizationId;
-    }
-
-    /**
      * Get 经办人的用户ID 
      * @return OperatorId 经办人的用户ID
      */
@@ -112,6 +96,22 @@ public class Caller extends AbstractModel{
      */
     public void setOperatorId(String OperatorId) {
         this.OperatorId = OperatorId;
+    }
+
+    /**
+     * Get 下属机构ID 
+     * @return SubOrganizationId 下属机构ID
+     */
+    public String getSubOrganizationId() {
+        return this.SubOrganizationId;
+    }
+
+    /**
+     * Set 下属机构ID
+     * @param SubOrganizationId 下属机构ID
+     */
+    public void setSubOrganizationId(String SubOrganizationId) {
+        this.SubOrganizationId = SubOrganizationId;
     }
 
     public Caller() {
@@ -128,11 +128,11 @@ public class Caller extends AbstractModel{
         if (source.OrganizationId != null) {
             this.OrganizationId = new String(source.OrganizationId);
         }
-        if (source.SubOrganizationId != null) {
-            this.SubOrganizationId = new String(source.SubOrganizationId);
-        }
         if (source.OperatorId != null) {
             this.OperatorId = new String(source.OperatorId);
+        }
+        if (source.SubOrganizationId != null) {
+            this.SubOrganizationId = new String(source.SubOrganizationId);
         }
     }
 
@@ -143,8 +143,8 @@ public class Caller extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
-        this.setParamSimple(map, prefix + "SubOrganizationId", this.SubOrganizationId);
         this.setParamSimple(map, prefix + "OperatorId", this.OperatorId);
+        this.setParamSimple(map, prefix + "SubOrganizationId", this.SubOrganizationId);
 
     }
 }

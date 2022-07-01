@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class UploadFilesRequest extends AbstractModel{
 
     /**
+    * 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
     * 文件对应业务类型，用于区分文件存储路径：
 1. TEMPLATE - 模板； 文件类型：.pdf
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
@@ -30,13 +37,6 @@ public class UploadFilesRequest extends AbstractModel{
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
-
-    /**
-    * 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
 
     /**
     * 上传文件内容数组，最多支持20个文件
@@ -51,6 +51,22 @@ public class UploadFilesRequest extends AbstractModel{
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+     * Get 应用相关信息，若是渠道版调用 appid 和proxyappid 必填 
+     * @return Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+     * @param Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
 
     /**
      * Get 文件对应业务类型，用于区分文件存储路径：
@@ -74,22 +90,6 @@ public class UploadFilesRequest extends AbstractModel{
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
-    }
-
-    /**
-     * Get 应用相关信息，若是渠道版调用 appid 和proxyappid 必填 
-     * @return Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
-     * @param Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
     }
 
     /**
@@ -132,11 +132,11 @@ public class UploadFilesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UploadFilesRequest(UploadFilesRequest source) {
-        if (source.BusinessType != null) {
-            this.BusinessType = new String(source.BusinessType);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
         }
         if (source.FileInfos != null) {
             this.FileInfos = new UploadFile[source.FileInfos.length];
@@ -154,8 +154,8 @@ public class UploadFilesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 

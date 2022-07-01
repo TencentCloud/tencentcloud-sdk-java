@@ -111,6 +111,22 @@ public class EmergencyVul extends AbstractModel{
     private Long HostCount;
 
     /**
+    * 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportDefense")
+    @Expose
+    private Long IsSupportDefense;
+
+    /**
+    * 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefenseAttackCount")
+    @Expose
+    private Long DefenseAttackCount;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -318,6 +334,46 @@ public class EmergencyVul extends AbstractModel{
         this.HostCount = HostCount;
     }
 
+    /**
+     * Get 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportDefense() {
+        return this.IsSupportDefense;
+    }
+
+    /**
+     * Set 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportDefense(Long IsSupportDefense) {
+        this.IsSupportDefense = IsSupportDefense;
+    }
+
+    /**
+     * Get 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefenseAttackCount() {
+        return this.DefenseAttackCount;
+    }
+
+    /**
+     * Set 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefenseAttackCount(Long DefenseAttackCount) {
+        this.DefenseAttackCount = DefenseAttackCount;
+    }
+
     public EmergencyVul() {
     }
 
@@ -362,6 +418,12 @@ public class EmergencyVul extends AbstractModel{
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.IsSupportDefense != null) {
+            this.IsSupportDefense = new Long(source.IsSupportDefense);
+        }
+        if (source.DefenseAttackCount != null) {
+            this.DefenseAttackCount = new Long(source.DefenseAttackCount);
+        }
     }
 
 
@@ -381,6 +443,8 @@ public class EmergencyVul extends AbstractModel{
         this.setParamSimple(map, prefix + "CvssScore", this.CvssScore);
         this.setParamSimple(map, prefix + "Labels", this.Labels);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamSimple(map, prefix + "IsSupportDefense", this.IsSupportDefense);
+        this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
 
     }
 }

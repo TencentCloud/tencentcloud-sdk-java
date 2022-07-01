@@ -38,21 +38,21 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 合同名称
+    * 签署流程名称，最大长度200个字符。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 用户信息
+    * 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
     */
-    @SerializedName("Operator")
+    @SerializedName("MaxFlowNum")
     @Expose
-    private UserInfo Operator;
+    private Long MaxFlowNum;
 
     /**
-    * 合同有效天数 默认7天 最高设置不超过30天
+    * 签署流程有效天数 默认7天 最高设置不超过30天
     */
     @SerializedName("FlowEffectiveDay")
     @Expose
@@ -66,18 +66,20 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private Long QrEffectiveDay;
 
     /**
-    * 最大合同份数，默认5份 超过此上限 二维码自动失效
-    */
-    @SerializedName("MaxFlowNum")
-    @Expose
-    private Long MaxFlowNum;
-
-    /**
-    * 回调地址
+    * 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
+
+    /**
+    * 用户信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 渠道应用相关信息。
@@ -116,48 +118,48 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同名称 
-     * @return FlowName 合同名称
+     * Get 签署流程名称，最大长度200个字符。 
+     * @return FlowName 签署流程名称，最大长度200个字符。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 合同名称
-     * @param FlowName 合同名称
+     * Set 签署流程名称，最大长度200个字符。
+     * @param FlowName 签署流程名称，最大长度200个字符。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 用户信息 
-     * @return Operator 用户信息
+     * Get 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。 
+     * @return MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public Long getMaxFlowNum() {
+        return this.MaxFlowNum;
     }
 
     /**
-     * Set 用户信息
-     * @param Operator 用户信息
+     * Set 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+     * @param MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setMaxFlowNum(Long MaxFlowNum) {
+        this.MaxFlowNum = MaxFlowNum;
     }
 
     /**
-     * Get 合同有效天数 默认7天 最高设置不超过30天 
-     * @return FlowEffectiveDay 合同有效天数 默认7天 最高设置不超过30天
+     * Get 签署流程有效天数 默认7天 最高设置不超过30天 
+     * @return FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      */
     public Long getFlowEffectiveDay() {
         return this.FlowEffectiveDay;
     }
 
     /**
-     * Set 合同有效天数 默认7天 最高设置不超过30天
-     * @param FlowEffectiveDay 合同有效天数 默认7天 最高设置不超过30天
+     * Set 签署流程有效天数 默认7天 最高设置不超过30天
+     * @param FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      */
     public void setFlowEffectiveDay(Long FlowEffectiveDay) {
         this.FlowEffectiveDay = FlowEffectiveDay;
@@ -180,35 +182,43 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 最大合同份数，默认5份 超过此上限 二维码自动失效 
-     * @return MaxFlowNum 最大合同份数，默认5份 超过此上限 二维码自动失效
-     */
-    public Long getMaxFlowNum() {
-        return this.MaxFlowNum;
-    }
-
-    /**
-     * Set 最大合同份数，默认5份 超过此上限 二维码自动失效
-     * @param MaxFlowNum 最大合同份数，默认5份 超过此上限 二维码自动失效
-     */
-    public void setMaxFlowNum(Long MaxFlowNum) {
-        this.MaxFlowNum = MaxFlowNum;
-    }
-
-    /**
-     * Get 回调地址 
-     * @return CallbackUrl 回调地址
+     * Get 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败 
+     * @return CallbackUrl 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调地址
-     * @param CallbackUrl 回调地址
+     * Set 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+     * @param CallbackUrl 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
+    }
+
+    /**
+     * Get 用户信息 
+     * @return Operator 用户信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 用户信息
+     * @param Operator 用户信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelCreateMultiFlowSignQRCodeRequest() {
@@ -228,8 +238,8 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
+        if (source.MaxFlowNum != null) {
+            this.MaxFlowNum = new Long(source.MaxFlowNum);
         }
         if (source.FlowEffectiveDay != null) {
             this.FlowEffectiveDay = new Long(source.FlowEffectiveDay);
@@ -237,11 +247,11 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.QrEffectiveDay != null) {
             this.QrEffectiveDay = new Long(source.QrEffectiveDay);
         }
-        if (source.MaxFlowNum != null) {
-            this.MaxFlowNum = new Long(source.MaxFlowNum);
-        }
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -253,11 +263,11 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
         this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
-        this.setParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

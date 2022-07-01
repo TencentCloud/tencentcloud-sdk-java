@@ -41,15 +41,6 @@ public class FlowCreateApprover extends AbstractModel{
     private String OrganizationName;
 
     /**
-    * 是否需要签署
-- `false`: 不需要签署
--  `true`:  需要签署
-    */
-    @SerializedName("Required")
-    @Expose
-    private Boolean Required;
-
-    /**
     * 签署方经办人姓名
     */
     @SerializedName("ApproverName")
@@ -64,13 +55,6 @@ public class FlowCreateApprover extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 签署方经办人证件号码
-    */
-    @SerializedName("ApproverIdCardNumber")
-    @Expose
-    private String ApproverIdCardNumber;
-
-    /**
     * 签署方经办人证件类型ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
@@ -80,6 +64,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String ApproverIdCardType;
 
     /**
+    * 签署方经办人证件号码
+    */
+    @SerializedName("ApproverIdCardNumber")
+    @Expose
+    private String ApproverIdCardNumber;
+
+    /**
     * 签署方经办人在模板中的角色ID
     */
     @SerializedName("RecipientId")
@@ -87,11 +78,18 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String RecipientId;
 
     /**
-    * 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+    * 签署意愿确认渠道,WEIXINAPP:人脸识别
     */
-    @SerializedName("UserId")
+    @SerializedName("VerifyChannel")
     @Expose
-    private String UserId;
+    private String [] VerifyChannel;
+
+    /**
+    * 是否发送短信，sms--短信通知，none--不通知，默认为sms
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
 
     /**
     * 签署前置条件：是否需要阅读全文，默认为不需要
@@ -108,18 +106,18 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long PreReadTime;
 
     /**
-    * 是否发送短信，sms--短信通知，none--不通知，默认为sms
+    * 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
     */
-    @SerializedName("NotifyType")
+    @SerializedName("UserId")
     @Expose
-    private String NotifyType;
+    private String UserId;
 
     /**
-    * 签署意愿确认渠道,WEIXINAPP:人脸识别
+    * 当前只支持true，默认为true
     */
-    @SerializedName("VerifyChannel")
+    @SerializedName("Required")
     @Expose
-    private String [] VerifyChannel;
+    private Boolean Required;
 
     /**
      * Get 参与者类型：
@@ -170,30 +168,6 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 是否需要签署
-- `false`: 不需要签署
--  `true`:  需要签署 
-     * @return Required 是否需要签署
-- `false`: 不需要签署
--  `true`:  需要签署
-     */
-    public Boolean getRequired() {
-        return this.Required;
-    }
-
-    /**
-     * Set 是否需要签署
-- `false`: 不需要签署
--  `true`:  需要签署
-     * @param Required 是否需要签署
-- `false`: 不需要签署
--  `true`:  需要签署
-     */
-    public void setRequired(Boolean Required) {
-        this.Required = Required;
-    }
-
-    /**
      * Get 签署方经办人姓名 
      * @return ApproverName 签署方经办人姓名
      */
@@ -226,22 +200,6 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人证件号码 
-     * @return ApproverIdCardNumber 签署方经办人证件号码
-     */
-    public String getApproverIdCardNumber() {
-        return this.ApproverIdCardNumber;
-    }
-
-    /**
-     * Set 签署方经办人证件号码
-     * @param ApproverIdCardNumber 签署方经办人证件号码
-     */
-    public void setApproverIdCardNumber(String ApproverIdCardNumber) {
-        this.ApproverIdCardNumber = ApproverIdCardNumber;
-    }
-
-    /**
      * Get 签署方经办人证件类型ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
@@ -266,6 +224,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
+     * Get 签署方经办人证件号码 
+     * @return ApproverIdCardNumber 签署方经办人证件号码
+     */
+    public String getApproverIdCardNumber() {
+        return this.ApproverIdCardNumber;
+    }
+
+    /**
+     * Set 签署方经办人证件号码
+     * @param ApproverIdCardNumber 签署方经办人证件号码
+     */
+    public void setApproverIdCardNumber(String ApproverIdCardNumber) {
+        this.ApproverIdCardNumber = ApproverIdCardNumber;
+    }
+
+    /**
      * Get 签署方经办人在模板中的角色ID 
      * @return RecipientId 签署方经办人在模板中的角色ID
      */
@@ -282,19 +256,35 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个 
-     * @return UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
+     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
-    public String getUserId() {
-        return this.UserId;
+    public String [] getVerifyChannel() {
+        return this.VerifyChannel;
     }
 
     /**
-     * Set 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
-     * @param UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setVerifyChannel(String [] VerifyChannel) {
+        this.VerifyChannel = VerifyChannel;
+    }
+
+    /**
+     * Get 是否发送短信，sms--短信通知，none--不通知，默认为sms 
+     * @return NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     * @param NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
     }
 
     /**
@@ -330,35 +320,35 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 是否发送短信，sms--短信通知，none--不通知，默认为sms 
-     * @return NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     * Get 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个 
+     * @return UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
      */
-    public String getNotifyType() {
-        return this.NotifyType;
+    public String getUserId() {
+        return this.UserId;
     }
 
     /**
-     * Set 是否发送短信，sms--短信通知，none--不通知，默认为sms
-     * @param NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     * Set 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+     * @param UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
      */
-    public void setNotifyType(String NotifyType) {
-        this.NotifyType = NotifyType;
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
     /**
-     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
-     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * Get 当前只支持true，默认为true 
+     * @return Required 当前只支持true，默认为true
      */
-    public String [] getVerifyChannel() {
-        return this.VerifyChannel;
+    public Boolean getRequired() {
+        return this.Required;
     }
 
     /**
-     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
-     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * Set 当前只支持true，默认为true
+     * @param Required 当前只支持true，默认为true
      */
-    public void setVerifyChannel(String [] VerifyChannel) {
-        this.VerifyChannel = VerifyChannel;
+    public void setRequired(Boolean Required) {
+        this.Required = Required;
     }
 
     public FlowCreateApprover() {
@@ -375,26 +365,29 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.OrganizationName != null) {
             this.OrganizationName = new String(source.OrganizationName);
         }
-        if (source.Required != null) {
-            this.Required = new Boolean(source.Required);
-        }
         if (source.ApproverName != null) {
             this.ApproverName = new String(source.ApproverName);
         }
         if (source.ApproverMobile != null) {
             this.ApproverMobile = new String(source.ApproverMobile);
         }
-        if (source.ApproverIdCardNumber != null) {
-            this.ApproverIdCardNumber = new String(source.ApproverIdCardNumber);
-        }
         if (source.ApproverIdCardType != null) {
             this.ApproverIdCardType = new String(source.ApproverIdCardType);
+        }
+        if (source.ApproverIdCardNumber != null) {
+            this.ApproverIdCardNumber = new String(source.ApproverIdCardNumber);
         }
         if (source.RecipientId != null) {
             this.RecipientId = new String(source.RecipientId);
         }
-        if (source.UserId != null) {
-            this.UserId = new String(source.UserId);
+        if (source.VerifyChannel != null) {
+            this.VerifyChannel = new String[source.VerifyChannel.length];
+            for (int i = 0; i < source.VerifyChannel.length; i++) {
+                this.VerifyChannel[i] = new String(source.VerifyChannel[i]);
+            }
+        }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
         }
         if (source.IsFullText != null) {
             this.IsFullText = new Boolean(source.IsFullText);
@@ -402,14 +395,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.PreReadTime != null) {
             this.PreReadTime = new Long(source.PreReadTime);
         }
-        if (source.NotifyType != null) {
-            this.NotifyType = new String(source.NotifyType);
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
         }
-        if (source.VerifyChannel != null) {
-            this.VerifyChannel = new String[source.VerifyChannel.length];
-            for (int i = 0; i < source.VerifyChannel.length; i++) {
-                this.VerifyChannel[i] = new String(source.VerifyChannel[i]);
-            }
+        if (source.Required != null) {
+            this.Required = new Boolean(source.Required);
         }
     }
 
@@ -420,17 +410,17 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
-        this.setParamSimple(map, prefix + "Required", this.Required);
         this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
         this.setParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
-        this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
         this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
+        this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "IsFullText", this.IsFullText);
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
-        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
-        this.setParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "Required", this.Required);
 
     }
 }

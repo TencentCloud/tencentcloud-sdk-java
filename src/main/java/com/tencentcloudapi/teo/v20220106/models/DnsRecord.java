@@ -125,10 +125,10 @@ pending: 不生效
     private String Cname;
 
     /**
-    * 域名是否开启了lb，四层，安全
+    * 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainStatus")
@@ -376,15 +376,15 @@ pending: 不生效
     }
 
     /**
-     * Get 域名是否开启了lb，四层，安全
+     * Get 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomainStatus 域名是否开启了lb，四层，安全
+     * @return DomainStatus 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDomainStatus() {
@@ -392,15 +392,15 @@ pending: 不生效
     }
 
     /**
-     * Set 域名是否开启了lb，四层，安全
+     * Set 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomainStatus 域名是否开启了lb，四层，安全
+     * @param DomainStatus 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainStatus(String [] DomainStatus) {

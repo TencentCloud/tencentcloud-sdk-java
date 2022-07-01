@@ -13,84 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputTaValue extends AbstractModel{
+public class OpenBankFormInfo extends AbstractModel{
 
     /**
-    * 是否查得[0：未查得；1：查得]
+    * 网银页面提交html
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("IsCheck")
+    @SerializedName("FormHtml")
     @Expose
-    private Long IsCheck;
+    private String FormHtml;
 
     /**
-    * 是否符合[0：不符合；1：符合]
+    * 网银提交页面字符集
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("IsMatch")
+    @SerializedName("FormEncoding")
     @Expose
-    private Long IsMatch;
+    private String FormEncoding;
 
     /**
-     * Get 是否查得[0：未查得；1：查得]
+     * Get 网银页面提交html
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsCheck 是否查得[0：未查得；1：查得]
+     * @return FormHtml 网银页面提交html
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getIsCheck() {
-        return this.IsCheck;
+    public String getFormHtml() {
+        return this.FormHtml;
     }
 
     /**
-     * Set 是否查得[0：未查得；1：查得]
+     * Set 网银页面提交html
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsCheck 是否查得[0：未查得；1：查得]
+     * @param FormHtml 网银页面提交html
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIsCheck(Long IsCheck) {
-        this.IsCheck = IsCheck;
+    public void setFormHtml(String FormHtml) {
+        this.FormHtml = FormHtml;
     }
 
     /**
-     * Get 是否符合[0：不符合；1：符合]
+     * Get 网银提交页面字符集
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsMatch 是否符合[0：不符合；1：符合]
+     * @return FormEncoding 网银提交页面字符集
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getIsMatch() {
-        return this.IsMatch;
+    public String getFormEncoding() {
+        return this.FormEncoding;
     }
 
     /**
-     * Set 是否符合[0：不符合；1：符合]
+     * Set 网银提交页面字符集
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsMatch 是否符合[0：不符合；1：符合]
+     * @param FormEncoding 网银提交页面字符集
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIsMatch(Long IsMatch) {
-        this.IsMatch = IsMatch;
+    public void setFormEncoding(String FormEncoding) {
+        this.FormEncoding = FormEncoding;
     }
 
-    public OutputTaValue() {
+    public OpenBankFormInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OutputTaValue(OutputTaValue source) {
-        if (source.IsCheck != null) {
-            this.IsCheck = new Long(source.IsCheck);
+    public OpenBankFormInfo(OpenBankFormInfo source) {
+        if (source.FormHtml != null) {
+            this.FormHtml = new String(source.FormHtml);
         }
-        if (source.IsMatch != null) {
-            this.IsMatch = new Long(source.IsMatch);
+        if (source.FormEncoding != null) {
+            this.FormEncoding = new String(source.FormEncoding);
         }
     }
 
@@ -99,8 +99,8 @@ public class OutputTaValue extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsCheck", this.IsCheck);
-        this.setParamSimple(map, prefix + "IsMatch", this.IsMatch);
+        this.setParamSimple(map, prefix + "FormHtml", this.FormHtml);
+        this.setParamSimple(map, prefix + "FormEncoding", this.FormEncoding);
 
     }
 }

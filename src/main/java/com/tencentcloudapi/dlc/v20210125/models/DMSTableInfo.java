@@ -13,110 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputTaData extends AbstractModel{
+public class DMSTableInfo extends AbstractModel{
 
     /**
-    * 错误码[0:成功；非0：失败的错误码]
-    */
-    @SerializedName("Code")
-    @Expose
-    private Long Code;
-
-    /**
-    * 错误信息
+    * DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Message")
+    @SerializedName("Table")
     @Expose
-    private String Message;
+    private DMSTable Table;
 
     /**
-    * 结果数据
+    * 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Value")
+    @SerializedName("Asset")
     @Expose
-    private OutputTaValue Value;
+    private Asset Asset;
 
     /**
-     * Get 错误码[0:成功；非0：失败的错误码] 
-     * @return Code 错误码[0:成功；非0：失败的错误码]
-     */
-    public Long getCode() {
-        return this.Code;
-    }
-
-    /**
-     * Set 错误码[0:成功；非0：失败的错误码]
-     * @param Code 错误码[0:成功；非0：失败的错误码]
-     */
-    public void setCode(Long Code) {
-        this.Code = Code;
-    }
-
-    /**
-     * Get 错误信息
+     * Get DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 错误信息
+     * @return Table DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMessage() {
-        return this.Message;
+    public DMSTable getTable() {
+        return this.Table;
     }
 
     /**
-     * Set 错误信息
+     * Set DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 错误信息
+     * @param Table DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public void setTable(DMSTable Table) {
+        this.Table = Table;
     }
 
     /**
-     * Get 结果数据
+     * Get 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 结果数据
+     * @return Asset 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public OutputTaValue getValue() {
-        return this.Value;
+    public Asset getAsset() {
+        return this.Asset;
     }
 
     /**
-     * Set 结果数据
+     * Set 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 结果数据
+     * @param Asset 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValue(OutputTaValue Value) {
-        this.Value = Value;
+    public void setAsset(Asset Asset) {
+        this.Asset = Asset;
     }
 
-    public OutputTaData() {
+    public DMSTableInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OutputTaData(OutputTaData source) {
-        if (source.Code != null) {
-            this.Code = new Long(source.Code);
+    public DMSTableInfo(DMSTableInfo source) {
+        if (source.Table != null) {
+            this.Table = new DMSTable(source.Table);
         }
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
-        }
-        if (source.Value != null) {
-            this.Value = new OutputTaValue(source.Value);
+        if (source.Asset != null) {
+            this.Asset = new Asset(source.Asset);
         }
     }
 
@@ -125,9 +99,8 @@ public class OutputTaData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Code", this.Code);
-        this.setParamSimple(map, prefix + "Message", this.Message);
-        this.setParamObj(map, prefix + "Value.", this.Value);
+        this.setParamObj(map, prefix + "Table.", this.Table);
+        this.setParamObj(map, prefix + "Asset.", this.Asset);
 
     }
 }

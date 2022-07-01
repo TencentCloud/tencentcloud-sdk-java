@@ -32,14 +32,14 @@ public class PornAsrReviewTemplateInfoForUpdate extends AbstractModel{
     private String Switch;
 
     /**
-    * 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+    * 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+    * 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -70,32 +70,32 @@ public class PornAsrReviewTemplateInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Get 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。 
-     * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * Get 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。 
+     * @return BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
-     * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * Set 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * @param BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。 
-     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。 
+     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
-     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
+     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

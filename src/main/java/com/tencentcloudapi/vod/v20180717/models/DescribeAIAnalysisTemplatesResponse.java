@@ -30,7 +30,7 @@ public class DescribeAIAnalysisTemplatesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 视频内容分析模板详情列表。
+    * 音视频内容分析模板详情列表。
     */
     @SerializedName("AIAnalysisTemplateSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeAIAnalysisTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 视频内容分析模板详情列表。 
-     * @return AIAnalysisTemplateSet 视频内容分析模板详情列表。
+     * Get 音视频内容分析模板详情列表。 
+     * @return AIAnalysisTemplateSet 音视频内容分析模板详情列表。
      */
     public AIAnalysisTemplateItem [] getAIAnalysisTemplateSet() {
         return this.AIAnalysisTemplateSet;
     }
 
     /**
-     * Set 视频内容分析模板详情列表。
-     * @param AIAnalysisTemplateSet 视频内容分析模板详情列表。
+     * Set 音视频内容分析模板详情列表。
+     * @param AIAnalysisTemplateSet 音视频内容分析模板详情列表。
      */
     public void setAIAnalysisTemplateSet(AIAnalysisTemplateItem [] AIAnalysisTemplateSet) {
         this.AIAnalysisTemplateSet = AIAnalysisTemplateSet;

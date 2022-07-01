@@ -30,7 +30,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+    * 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
     */
     @SerializedName("Definitions")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频内容识别模板唯一标识过滤条件，数组长度限制：100。 
-     * @return Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+     * Get 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。 
+     * @return Definitions 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
-     * @param Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+     * Set 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+     * @param Definitions 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

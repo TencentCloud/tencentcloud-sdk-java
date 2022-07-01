@@ -30,7 +30,9 @@ public class DescribeApplicationProxyDetailResponse extends AbstractModel{
     private String ProxyId;
 
     /**
-    * 实例名称
+    * 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
     */
     @SerializedName("ProxyName")
     @Expose
@@ -127,15 +129,17 @@ progress：部署中
 
     /**
     * 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-    * 七层实例ID
+    * 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
     */
     @SerializedName("HostId")
     @Expose
@@ -165,16 +169,24 @@ instance：实例
     }
 
     /**
-     * Get 实例名称 
-     * @return ProxyName 实例名称
+     * Get 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称 
+     * @return ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 实例名称
-     * @param ProxyName 实例名称
+     * Set 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+     * @param ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -394,11 +406,11 @@ progress：部署中
 
     /**
      * Get 服务类型
-hostname：子域名
-instance：实例 
+hostname：子域名模式
+instance：实例模式 
      * @return ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public String getProxyType() {
         return this.ProxyType;
@@ -406,27 +418,35 @@ instance：实例
 
     /**
      * Set 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      * @param ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get 七层实例ID 
-     * @return HostId 七层实例ID
+     * Get 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识 
+     * @return HostId 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set 七层实例ID
-     * @param HostId 七层实例ID
+     * Set 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
+     * @param HostId 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;

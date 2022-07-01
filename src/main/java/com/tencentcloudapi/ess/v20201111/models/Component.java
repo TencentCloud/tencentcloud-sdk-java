@@ -26,7 +26,7 @@ public class Component extends AbstractModel{
     * 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -152,14 +152,14 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Long ComponentDateFontSize;
 
     /**
-    * 指定关键字时横坐标偏移量
+    * 指定关键字时横坐标偏移量，单位pt
     */
     @SerializedName("OffsetX")
     @Expose
     private Float OffsetX;
 
     /**
-    * 指定关键字时纵坐标偏移量
+    * 指定关键字时纵坐标偏移量，单位pt
     */
     @SerializedName("OffsetY")
     @Expose
@@ -169,7 +169,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
      * Get 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -177,7 +177,7 @@ SIGN_SIGNATURE - 手写签名控件
      * @return ComponentType 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -191,7 +191,7 @@ SIGN_SIGNATURE - 手写签名控件
      * Set 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -199,7 +199,7 @@ SIGN_SIGNATURE - 手写签名控件
      * @param ComponentType 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -490,32 +490,32 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 指定关键字时横坐标偏移量 
-     * @return OffsetX 指定关键字时横坐标偏移量
+     * Get 指定关键字时横坐标偏移量，单位pt 
+     * @return OffsetX 指定关键字时横坐标偏移量，单位pt
      */
     public Float getOffsetX() {
         return this.OffsetX;
     }
 
     /**
-     * Set 指定关键字时横坐标偏移量
-     * @param OffsetX 指定关键字时横坐标偏移量
+     * Set 指定关键字时横坐标偏移量，单位pt
+     * @param OffsetX 指定关键字时横坐标偏移量，单位pt
      */
     public void setOffsetX(Float OffsetX) {
         this.OffsetX = OffsetX;
     }
 
     /**
-     * Get 指定关键字时纵坐标偏移量 
-     * @return OffsetY 指定关键字时纵坐标偏移量
+     * Get 指定关键字时纵坐标偏移量，单位pt 
+     * @return OffsetY 指定关键字时纵坐标偏移量，单位pt
      */
     public Float getOffsetY() {
         return this.OffsetY;
     }
 
     /**
-     * Set 指定关键字时纵坐标偏移量
-     * @param OffsetY 指定关键字时纵坐标偏移量
+     * Set 指定关键字时纵坐标偏移量，单位pt
+     * @param OffsetY 指定关键字时纵坐标偏移量，单位pt
      */
     public void setOffsetY(Float OffsetY) {
         this.OffsetY = OffsetY;

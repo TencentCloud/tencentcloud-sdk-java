@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProcedureTask extends AbstractModel{
 
     /**
-    * 视频处理任务 ID。
+    * 音视频处理任务 ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -80,7 +80,7 @@ public class ProcedureTask extends AbstractModel{
     private String FileUrl;
 
     /**
-    * 原始视频的元信息。
+    * 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
@@ -88,28 +88,28 @@ public class ProcedureTask extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-    * 视频处理任务的执行状态与结果。
+    * 音视频处理任务的执行状态与结果。
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * 视频智能识别任务的执行状态与结果。
+    * 音视频审核任务的执行状态与结果。
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * 视频内容分析任务的执行状态与结果。
+    * 音视频内容分析任务的执行状态与结果。
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
-    * 视频内容识别任务的执行状态与结果。
+    * 音视频内容识别任务的执行状态与结果。
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
@@ -147,16 +147,16 @@ public class ProcedureTask extends AbstractModel{
     private String SessionId;
 
     /**
-     * Get 视频处理任务 ID。 
-     * @return TaskId 视频处理任务 ID。
+     * Get 音视频处理任务 ID。 
+     * @return TaskId 音视频处理任务 ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 视频处理任务 ID。
-     * @param TaskId 视频处理任务 ID。
+     * Set 音视频处理任务 ID。
+     * @param TaskId 音视频处理任务 ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -291,9 +291,9 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 原始视频的元信息。
+     * Get 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetaData 原始视频的元信息。
+     * @return MetaData 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
@@ -301,9 +301,9 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Set 原始视频的元信息。
+     * Set 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaData 原始视频的元信息。
+     * @param MetaData 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
@@ -311,64 +311,64 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 视频处理任务的执行状态与结果。 
-     * @return MediaProcessResultSet 视频处理任务的执行状态与结果。
+     * Get 音视频处理任务的执行状态与结果。 
+     * @return MediaProcessResultSet 音视频处理任务的执行状态与结果。
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set 视频处理任务的执行状态与结果。
-     * @param MediaProcessResultSet 视频处理任务的执行状态与结果。
+     * Set 音视频处理任务的执行状态与结果。
+     * @param MediaProcessResultSet 音视频处理任务的执行状态与结果。
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get 视频智能识别任务的执行状态与结果。 
-     * @return AiContentReviewResultSet 视频智能识别任务的执行状态与结果。
+     * Get 音视频审核任务的执行状态与结果。 
+     * @return AiContentReviewResultSet 音视频审核任务的执行状态与结果。
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set 视频智能识别任务的执行状态与结果。
-     * @param AiContentReviewResultSet 视频智能识别任务的执行状态与结果。
+     * Set 音视频审核任务的执行状态与结果。
+     * @param AiContentReviewResultSet 音视频审核任务的执行状态与结果。
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get 视频内容分析任务的执行状态与结果。 
-     * @return AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+     * Get 音视频内容分析任务的执行状态与结果。 
+     * @return AiAnalysisResultSet 音视频内容分析任务的执行状态与结果。
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set 视频内容分析任务的执行状态与结果。
-     * @param AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+     * Set 音视频内容分析任务的执行状态与结果。
+     * @param AiAnalysisResultSet 音视频内容分析任务的执行状态与结果。
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get 视频内容识别任务的执行状态与结果。 
-     * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     * Get 音视频内容识别任务的执行状态与结果。 
+     * @return AiRecognitionResultSet 音视频内容识别任务的执行状态与结果。
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
     }
 
     /**
-     * Set 视频内容识别任务的执行状态与结果。
-     * @param AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     * Set 音视频内容识别任务的执行状态与结果。
+     * @param AiRecognitionResultSet 音视频内容识别任务的执行状态与结果。
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;

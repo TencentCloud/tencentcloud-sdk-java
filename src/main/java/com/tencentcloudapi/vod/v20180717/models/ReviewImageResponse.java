@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReviewImageResponse extends AbstractModel{
 
     /**
-    * 图片智能识别任务结果。
+    * 图片审核任务结果。
     */
     @SerializedName("ReviewResultSet")
     @Expose
@@ -37,16 +37,16 @@ public class ReviewImageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 图片智能识别任务结果。 
-     * @return ReviewResultSet 图片智能识别任务结果。
+     * Get 图片审核任务结果。 
+     * @return ReviewResultSet 图片审核任务结果。
      */
     public ContentReviewResult [] getReviewResultSet() {
         return this.ReviewResultSet;
     }
 
     /**
-     * Set 图片智能识别任务结果。
-     * @param ReviewResultSet 图片智能识别任务结果。
+     * Set 图片审核任务结果。
+     * @param ReviewResultSet 图片审核任务结果。
      */
     public void setReviewResultSet(ContentReviewResult [] ReviewResultSet) {
         this.ReviewResultSet = ReviewResultSet;

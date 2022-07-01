@@ -30,7 +30,7 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 合同(流程)编号数组
+    * 合同(流程)编号数组，最多支持100个。
     */
     @SerializedName("FlowIds")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)编号数组 
-     * @return FlowIds 合同(流程)编号数组
+     * Get 合同(流程)编号数组，最多支持100个。 
+     * @return FlowIds 合同(流程)编号数组，最多支持100个。
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 合同(流程)编号数组
-     * @param FlowIds 合同(流程)编号数组
+     * Set 合同(流程)编号数组，最多支持100个。
+     * @param FlowIds 合同(流程)编号数组，最多支持100个。
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

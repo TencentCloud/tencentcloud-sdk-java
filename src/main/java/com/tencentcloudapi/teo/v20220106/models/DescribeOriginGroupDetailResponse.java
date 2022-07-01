@@ -37,7 +37,9 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     private String OriginName;
 
     /**
-    * 配置类型
+    * 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
     */
     @SerializedName("Type")
     @Expose
@@ -80,7 +82,7 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     private String OriginType;
 
     /**
-    * 是否被四层代理使用
+    * 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationProxyUsed")
@@ -88,12 +90,24 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     private Boolean ApplicationProxyUsed;
 
     /**
-    * 是否被负载均衡使用
+    * 当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancingUsed")
     @Expose
     private Boolean LoadBalancingUsed;
+
+    /**
+    * 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancingUsedType")
+    @Expose
+    private String LoadBalancingUsedType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -135,16 +149,24 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 配置类型 
-     * @return Type 配置类型
+     * Get 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。 
+     * @return Type 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 配置类型
-     * @param Type 配置类型
+     * Set 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
+     * @param Type 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -235,9 +257,9 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否被四层代理使用
+     * Get 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationProxyUsed 是否被四层代理使用
+     * @return ApplicationProxyUsed 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getApplicationProxyUsed() {
@@ -245,9 +267,9 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否被四层代理使用
+     * Set 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationProxyUsed 是否被四层代理使用
+     * @param ApplicationProxyUsed 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationProxyUsed(Boolean ApplicationProxyUsed) {
@@ -255,9 +277,9 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否被负载均衡使用
+     * Get 当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadBalancingUsed 是否被负载均衡使用
+     * @return LoadBalancingUsed 当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLoadBalancingUsed() {
@@ -265,13 +287,49 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否被负载均衡使用
+     * Set 当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadBalancingUsed 是否被负载均衡使用
+     * @param LoadBalancingUsed 当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancingUsed(Boolean LoadBalancingUsed) {
         this.LoadBalancingUsed = LoadBalancingUsed;
+    }
+
+    /**
+     * Get 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancingUsedType 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancingUsedType() {
+        return this.LoadBalancingUsedType;
+    }
+
+    /**
+     * Set 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancingUsedType 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancingUsedType(String LoadBalancingUsedType) {
+        this.LoadBalancingUsedType = LoadBalancingUsedType;
     }
 
     /**
@@ -331,6 +389,9 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
         if (source.LoadBalancingUsed != null) {
             this.LoadBalancingUsed = new Boolean(source.LoadBalancingUsed);
         }
+        if (source.LoadBalancingUsedType != null) {
+            this.LoadBalancingUsedType = new String(source.LoadBalancingUsedType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -351,6 +412,7 @@ public class DescribeOriginGroupDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginType", this.OriginType);
         this.setParamSimple(map, prefix + "ApplicationProxyUsed", this.ApplicationProxyUsed);
         this.setParamSimple(map, prefix + "LoadBalancingUsed", this.LoadBalancingUsed);
+        this.setParamSimple(map, prefix + "LoadBalancingUsedType", this.LoadBalancingUsedType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

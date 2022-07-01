@@ -33,7 +33,7 @@ public class CreateOriginGroupRequest extends AbstractModel{
     * 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
     */
     @SerializedName("Type")
     @Expose
@@ -57,6 +57,7 @@ weight: 按权重配置
     * 源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
     */
     @SerializedName("OriginType")
     @Expose
@@ -82,11 +83,11 @@ third_party：第三方源站
      * Get 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写 
+当OriginType=third_party/cos 时，不需要填写 
      * @return Type 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
      */
     public String getType() {
         return this.Type;
@@ -96,11 +97,11 @@ weight: 按权重配置
      * Set 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
      * @param Type 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -141,10 +142,12 @@ weight: 按权重配置
     /**
      * Get 源站类型
 self：自有源站
-third_party：第三方源站 
+third_party：第三方源站
+cos：腾讯云COS源站 
      * @return OriginType 源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
      */
     public String getOriginType() {
         return this.OriginType;
@@ -154,9 +157,11 @@ third_party：第三方源站
      * Set 源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
      * @param OriginType 源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;

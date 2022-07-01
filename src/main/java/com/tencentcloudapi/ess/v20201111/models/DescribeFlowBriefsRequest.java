@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeFlowBriefsRequest extends AbstractModel{
 
     /**
-    * 操作人信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 需要查询的流程ID列表
     */
     @SerializedName("FlowIds")
@@ -37,27 +30,18 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
-    * 代理商信息
+    * 操作人信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
+    * 应用相关信息
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
-
-    /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
 
     /**
      * Get 需要查询的流程ID列表 
@@ -76,16 +60,32 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理商信息 
-     * @return Agent 代理商信息
+     * Get 操作人信息 
+     * @return Operator 操作人信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作人信息
+     * @param Operator 操作人信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理商信息
-     * @param Agent 代理商信息
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -99,14 +99,14 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFlowBriefsRequest(DescribeFlowBriefsRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FlowIds != null) {
             this.FlowIds = new String[source.FlowIds.length];
             for (int i = 0; i < source.FlowIds.length; i++) {
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -118,8 +118,8 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

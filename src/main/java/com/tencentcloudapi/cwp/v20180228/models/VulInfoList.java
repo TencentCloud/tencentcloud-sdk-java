@@ -167,6 +167,38 @@ public class VulInfoList extends AbstractModel{
     private Long TaskId;
 
     /**
+    * 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportDefense")
+    @Expose
+    private Long IsSupportDefense;
+
+    /**
+    * 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefenseAttackCount")
+    @Expose
+    private Long DefenseAttackCount;
+
+    /**
+    * 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstAppearTime")
+    @Expose
+    private String FirstAppearTime;
+
+    /**
+    * 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulCategory")
+    @Expose
+    private Long VulCategory;
+
+    /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
      * @return Ids 漏洞包含的事件id串，多个用“,”分割
      */
@@ -514,6 +546,86 @@ public class VulInfoList extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportDefense() {
+        return this.IsSupportDefense;
+    }
+
+    /**
+     * Set 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportDefense(Long IsSupportDefense) {
+        this.IsSupportDefense = IsSupportDefense;
+    }
+
+    /**
+     * Get 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefenseAttackCount() {
+        return this.DefenseAttackCount;
+    }
+
+    /**
+     * Set 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefenseAttackCount(Long DefenseAttackCount) {
+        this.DefenseAttackCount = DefenseAttackCount;
+    }
+
+    /**
+     * Get 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstAppearTime 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFirstAppearTime() {
+        return this.FirstAppearTime;
+    }
+
+    /**
+     * Set 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstAppearTime 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstAppearTime(String FirstAppearTime) {
+        this.FirstAppearTime = FirstAppearTime;
+    }
+
+    /**
+     * Get 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVulCategory() {
+        return this.VulCategory;
+    }
+
+    /**
+     * Set 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulCategory(Long VulCategory) {
+        this.VulCategory = VulCategory;
+    }
+
     public VulInfoList() {
     }
 
@@ -579,6 +691,18 @@ public class VulInfoList extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.IsSupportDefense != null) {
+            this.IsSupportDefense = new Long(source.IsSupportDefense);
+        }
+        if (source.DefenseAttackCount != null) {
+            this.DefenseAttackCount = new Long(source.DefenseAttackCount);
+        }
+        if (source.FirstAppearTime != null) {
+            this.FirstAppearTime = new String(source.FirstAppearTime);
+        }
+        if (source.VulCategory != null) {
+            this.VulCategory = new Long(source.VulCategory);
+        }
     }
 
 
@@ -605,6 +729,10 @@ public class VulInfoList extends AbstractModel{
         this.setParamSimple(map, prefix + "Labels", this.Labels);
         this.setParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "IsSupportDefense", this.IsSupportDefense);
+        this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
+        this.setParamSimple(map, prefix + "FirstAppearTime", this.FirstAppearTime);
+        this.setParamSimple(map, prefix + "VulCategory", this.VulCategory);
 
     }
 }

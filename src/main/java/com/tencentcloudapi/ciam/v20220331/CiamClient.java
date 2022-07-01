@@ -179,6 +179,26 @@ public class CiamClient extends AbstractClient{
     }
 
     /**
+     *查询日志信息
+     * @param req ListLogMessageByConditionRequest
+     * @return ListLogMessageByConditionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLogMessageByConditionResponse ListLogMessageByCondition(ListLogMessageByConditionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLogMessageByConditionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLogMessageByConditionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListLogMessageByCondition");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询用户列表
      * @param req ListUserRequest
      * @return ListUserResponse

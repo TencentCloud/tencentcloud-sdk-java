@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class DescribeVulLevelCountRequest extends AbstractModel{
 
     /**
-    * 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+    * 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞，不填或者填0时返回 1，2，4，5 的总统计数据
     */
     @SerializedName("VulCategory")
     @Expose
     private Long VulCategory;
 
     /**
-     * Get 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞 
-     * @return VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+    * 是否仅统计重点关注漏洞 1=仅统计重点关注漏洞, 0=统计全部漏洞
+    */
+    @SerializedName("IsFollowVul")
+    @Expose
+    private Long IsFollowVul;
+
+    /**
+     * Get 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞，不填或者填0时返回 1，2，4，5 的总统计数据 
+     * @return VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞，不填或者填0时返回 1，2，4，5 的总统计数据
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
-     * @param VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * Set 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞，不填或者填0时返回 1，2，4，5 的总统计数据
+     * @param VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞，不填或者填0时返回 1，2，4，5 的总统计数据
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;
+    }
+
+    /**
+     * Get 是否仅统计重点关注漏洞 1=仅统计重点关注漏洞, 0=统计全部漏洞 
+     * @return IsFollowVul 是否仅统计重点关注漏洞 1=仅统计重点关注漏洞, 0=统计全部漏洞
+     */
+    public Long getIsFollowVul() {
+        return this.IsFollowVul;
+    }
+
+    /**
+     * Set 是否仅统计重点关注漏洞 1=仅统计重点关注漏洞, 0=统计全部漏洞
+     * @param IsFollowVul 是否仅统计重点关注漏洞 1=仅统计重点关注漏洞, 0=统计全部漏洞
+     */
+    public void setIsFollowVul(Long IsFollowVul) {
+        this.IsFollowVul = IsFollowVul;
     }
 
     public DescribeVulLevelCountRequest() {
@@ -56,6 +79,9 @@ public class DescribeVulLevelCountRequest extends AbstractModel{
         if (source.VulCategory != null) {
             this.VulCategory = new Long(source.VulCategory);
         }
+        if (source.IsFollowVul != null) {
+            this.IsFollowVul = new Long(source.IsFollowVul);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeVulLevelCountRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulCategory", this.VulCategory);
+        this.setParamSimple(map, prefix + "IsFollowVul", this.IsFollowVul);
 
     }
 }

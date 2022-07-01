@@ -30,7 +30,7 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 内容智能识别模板详情列表。
+    * 内容审核模板详情列表。
     */
     @SerializedName("ContentReviewTemplateSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 内容智能识别模板详情列表。 
-     * @return ContentReviewTemplateSet 内容智能识别模板详情列表。
+     * Get 内容审核模板详情列表。 
+     * @return ContentReviewTemplateSet 内容审核模板详情列表。
      */
     public ContentReviewTemplateItem [] getContentReviewTemplateSet() {
         return this.ContentReviewTemplateSet;
     }
 
     /**
-     * Set 内容智能识别模板详情列表。
-     * @param ContentReviewTemplateSet 内容智能识别模板详情列表。
+     * Set 内容审核模板详情列表。
+     * @param ContentReviewTemplateSet 内容审核模板详情列表。
      */
     public void setContentReviewTemplateSet(ContentReviewTemplateItem [] ContentReviewTemplateSet) {
         this.ContentReviewTemplateSet = ContentReviewTemplateSet;

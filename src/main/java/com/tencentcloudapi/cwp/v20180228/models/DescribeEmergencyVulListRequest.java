@@ -42,6 +42,7 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -55,7 +56,7 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 排序字段 PublishDate
+    * 排序字段 PublishDate  LastScanTime HostCount
     */
     @SerializedName("By")
     @Expose
@@ -98,12 +99,14 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
 <li>Status - String - 是否必填：是 - 漏洞状态筛选，0//未检测 1有风险 ，2无风险 ，3 检查中展示progress</li>
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
-<li>Uuids- String - 是否必填：否 - 主机uuid</li> 
+<li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li> 
      * @return Filters 过滤条件。
 <li>Status - String - 是否必填：是 - 漏洞状态筛选，0//未检测 1有风险 ，2无风险 ，3 检查中展示progress</li>
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
@@ -115,11 +118,13 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
      * @param Filters 过滤条件。
 <li>Status - String - 是否必填：是 - 漏洞状态筛选，0//未检测 1有风险 ，2无风险 ，3 检查中展示progress</li>
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
@@ -142,16 +147,16 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段 PublishDate 
-     * @return By 排序字段 PublishDate
+     * Get 排序字段 PublishDate  LastScanTime HostCount 
+     * @return By 排序字段 PublishDate  LastScanTime HostCount
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段 PublishDate
-     * @param By 排序字段 PublishDate
+     * Set 排序字段 PublishDate  LastScanTime HostCount
+     * @param By 排序字段 PublishDate  LastScanTime HostCount
      */
     public void setBy(String By) {
         this.By = By;

@@ -30,13 +30,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 模板唯一标识
     */
     @SerializedName("TemplateId")
@@ -65,6 +58,13 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -78,22 +78,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
-    }
-
-    /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
     }
 
     /**
@@ -160,6 +144,22 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -170,9 +170,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
     public DescribeTemplatesRequest(DescribeTemplatesRequest source) {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
-        }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
         }
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
@@ -186,6 +183,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
     }
 
 
@@ -194,11 +194,11 @@ public class DescribeTemplatesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

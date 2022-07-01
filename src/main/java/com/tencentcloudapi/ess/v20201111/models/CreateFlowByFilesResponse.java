@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateFlowByFilesResponse extends AbstractModel{
 
     /**
-    * 流程编号
+    * 签署流程编号
     */
     @SerializedName("FlowId")
     @Expose
@@ -45,16 +45,16 @@ public class CreateFlowByFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流程编号 
-     * @return FlowId 流程编号
+     * Get 签署流程编号 
+     * @return FlowId 签署流程编号
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程编号
-     * @param FlowId 流程编号
+     * Set 签署流程编号
+     * @param FlowId 签署流程编号
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

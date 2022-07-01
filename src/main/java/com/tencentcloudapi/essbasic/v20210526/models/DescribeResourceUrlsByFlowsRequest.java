@@ -31,18 +31,18 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
     private Agent Agent;
 
     /**
+    * 查询资源所对应的签署流程Id，最多支持50个。
+    */
+    @SerializedName("FlowIds")
+    @Expose
+    private String [] FlowIds;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-    * 查询资源所对应的流程Id
-    */
-    @SerializedName("FlowIds")
-    @Expose
-    private String [] FlowIds;
 
     /**
      * Get 渠道应用相关信息。
@@ -65,6 +65,22 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
     }
 
     /**
+     * Get 查询资源所对应的签署流程Id，最多支持50个。 
+     * @return FlowIds 查询资源所对应的签署流程Id，最多支持50个。
+     */
+    public String [] getFlowIds() {
+        return this.FlowIds;
+    }
+
+    /**
+     * Set 查询资源所对应的签署流程Id，最多支持50个。
+     * @param FlowIds 查询资源所对应的签署流程Id，最多支持50个。
+     */
+    public void setFlowIds(String [] FlowIds) {
+        this.FlowIds = FlowIds;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -80,22 +96,6 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
-    /**
-     * Get 查询资源所对应的流程Id 
-     * @return FlowIds 查询资源所对应的流程Id
-     */
-    public String [] getFlowIds() {
-        return this.FlowIds;
-    }
-
-    /**
-     * Set 查询资源所对应的流程Id
-     * @param FlowIds 查询资源所对应的流程Id
-     */
-    public void setFlowIds(String [] FlowIds) {
-        this.FlowIds = FlowIds;
-    }
-
     public DescribeResourceUrlsByFlowsRequest() {
     }
 
@@ -107,14 +107,14 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FlowIds != null) {
             this.FlowIds = new String[source.FlowIds.length];
             for (int i = 0; i < source.FlowIds.length; i++) {
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -124,8 +124,8 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

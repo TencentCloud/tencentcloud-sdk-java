@@ -135,6 +135,14 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     private String Labels;
 
     /**
+    * 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefenseAttackCount")
+    @Expose
+    private Long DefenseAttackCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -422,6 +430,26 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
+     * Get 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefenseAttackCount() {
+        return this.DefenseAttackCount;
+    }
+
+    /**
+     * Set 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefenseAttackCount(Long DefenseAttackCount) {
+        this.DefenseAttackCount = DefenseAttackCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -487,6 +515,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
         if (source.Labels != null) {
             this.Labels = new String(source.Labels);
         }
+        if (source.DefenseAttackCount != null) {
+            this.DefenseAttackCount = new Long(source.DefenseAttackCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -511,6 +542,7 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CveInfo", this.CveInfo);
         this.setParamSimple(map, prefix + "CvssScoreFloat", this.CvssScoreFloat);
         this.setParamSimple(map, prefix + "Labels", this.Labels);
+        this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

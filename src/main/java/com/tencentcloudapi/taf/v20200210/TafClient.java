@@ -59,26 +59,6 @@ public class TafClient extends AbstractClient{
     }
 
     /**
-     *流量反欺诈-虚假TA识别
-     * @param req EnhanceTaDegreeRequest
-     * @return EnhanceTaDegreeResponse
-     * @throws TencentCloudSDKException
-     */
-    public EnhanceTaDegreeResponse EnhanceTaDegree(EnhanceTaDegreeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnhanceTaDegreeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EnhanceTaDegreeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnhanceTaDegree");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *流量反欺诈-流量验准定制版
      * @param req RecognizeCustomizedAudienceRequest
      * @return RecognizeCustomizedAudienceResponse

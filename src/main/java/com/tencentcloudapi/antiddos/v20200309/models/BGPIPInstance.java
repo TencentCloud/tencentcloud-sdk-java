@@ -192,6 +192,15 @@ public class BGPIPInstance extends AbstractModel{
     private TagInfo [] TagInfoList;
 
     /**
+    * 资产实例所属的全力防护套餐包详情，
+注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnycastOutPackRelation")
+    @Expose
+    private AnycastOutPackRelation AnycastOutPackRelation;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -615,6 +624,30 @@ public class BGPIPInstance extends AbstractModel{
         this.TagInfoList = TagInfoList;
     }
 
+    /**
+     * Get 资产实例所属的全力防护套餐包详情，
+注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnycastOutPackRelation 资产实例所属的全力防护套餐包详情，
+注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AnycastOutPackRelation getAnycastOutPackRelation() {
+        return this.AnycastOutPackRelation;
+    }
+
+    /**
+     * Set 资产实例所属的全力防护套餐包详情，
+注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnycastOutPackRelation 资产实例所属的全力防护套餐包详情，
+注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnycastOutPackRelation(AnycastOutPackRelation AnycastOutPackRelation) {
+        this.AnycastOutPackRelation = AnycastOutPackRelation;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -689,6 +722,9 @@ public class BGPIPInstance extends AbstractModel{
                 this.TagInfoList[i] = new TagInfo(source.TagInfoList[i]);
             }
         }
+        if (source.AnycastOutPackRelation != null) {
+            this.AnycastOutPackRelation = new AnycastOutPackRelation(source.AnycastOutPackRelation);
+        }
     }
 
 
@@ -717,6 +753,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
         this.setParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+        this.setParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
 
     }
 }

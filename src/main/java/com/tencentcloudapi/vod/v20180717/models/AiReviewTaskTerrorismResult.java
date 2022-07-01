@@ -51,14 +51,14 @@ public class AiReviewTaskTerrorismResult extends AbstractModel{
     private String Message;
 
     /**
-    * 智能识别涉及令人不安全的信息的任务输入。
+    * 音视频审核涉及令人不安全的信息的任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismTaskInput Input;
 
     /**
-    * 智能识别涉及令人不安全的信息的任务输出。
+    * 音视频审核涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -130,25 +130,25 @@ public class AiReviewTaskTerrorismResult extends AbstractModel{
     }
 
     /**
-     * Get 智能识别涉及令人不安全的信息的任务输入。 
-     * @return Input 智能识别涉及令人不安全的信息的任务输入。
+     * Get 音视频审核涉及令人不安全的信息的任务输入。 
+     * @return Input 音视频审核涉及令人不安全的信息的任务输入。
      */
     public AiReviewTerrorismTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 智能识别涉及令人不安全的信息的任务输入。
-     * @param Input 智能识别涉及令人不安全的信息的任务输入。
+     * Set 音视频审核涉及令人不安全的信息的任务输入。
+     * @param Input 音视频审核涉及令人不安全的信息的任务输入。
      */
     public void setInput(AiReviewTerrorismTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 智能识别涉及令人不安全的信息的任务输出。
+     * Get 音视频审核涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 智能识别涉及令人不安全的信息的任务输出。
+     * @return Output 音视频审核涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTerrorismTaskOutput getOutput() {
@@ -156,9 +156,9 @@ public class AiReviewTaskTerrorismResult extends AbstractModel{
     }
 
     /**
-     * Set 智能识别涉及令人不安全的信息的任务输出。
+     * Set 音视频审核涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 智能识别涉及令人不安全的信息的任务输出。
+     * @param Output 音视频审核涉及令人不安全的信息的任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewTerrorismTaskOutput Output) {

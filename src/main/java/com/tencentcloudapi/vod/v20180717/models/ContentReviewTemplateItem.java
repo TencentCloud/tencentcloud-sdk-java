@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
-    * 智能识别模板唯一标识。
+    * 音视频审核模板唯一标识。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 智能识别模板名称，长度限制：64 个字符。
+    * 音视频审核模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 智能识别模板描述信息，长度限制：256 个字符。
+    * 音视频审核模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
     @Expose
@@ -78,7 +78,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * 用户自定义智能识别控制参数。
+    * 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefineConfigure")
@@ -86,7 +86,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+    * 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
     */
@@ -116,48 +116,48 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get 智能识别模板唯一标识。 
-     * @return Definition 智能识别模板唯一标识。
+     * Get 音视频审核模板唯一标识。 
+     * @return Definition 音视频审核模板唯一标识。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 智能识别模板唯一标识。
-     * @param Definition 智能识别模板唯一标识。
+     * Set 音视频审核模板唯一标识。
+     * @param Definition 音视频审核模板唯一标识。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 智能识别模板名称，长度限制：64 个字符。 
-     * @return Name 智能识别模板名称，长度限制：64 个字符。
+     * Get 音视频审核模板名称，长度限制：64 个字符。 
+     * @return Name 音视频审核模板名称，长度限制：64 个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 智能识别模板名称，长度限制：64 个字符。
-     * @param Name 智能识别模板名称，长度限制：64 个字符。
+     * Set 音视频审核模板名称，长度限制：64 个字符。
+     * @param Name 音视频审核模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 智能识别模板描述信息，长度限制：256 个字符。 
-     * @return Comment 智能识别模板描述信息，长度限制：256 个字符。
+     * Get 音视频审核模板描述信息，长度限制：256 个字符。 
+     * @return Comment 音视频审核模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 智能识别模板描述信息，长度限制：256 个字符。
-     * @param Comment 智能识别模板描述信息，长度限制：256 个字符。
+     * Set 音视频审核模板描述信息，长度限制：256 个字符。
+     * @param Comment 音视频审核模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
@@ -252,9 +252,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义智能识别控制参数。
+     * Get 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserDefineConfigure 用户自定义智能识别控制参数。
+     * @return UserDefineConfigure 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
@@ -262,9 +262,9 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 用户自定义智能识别控制参数。
+     * Set 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefineConfigure 用户自定义智能识别控制参数。
+     * @param UserDefineConfigure 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
@@ -272,10 +272,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+     * Get 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li> 
-     * @return ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+     * @return ReviewWallSwitch 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */
@@ -284,10 +284,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Set 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+     * Set 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
-     * @param ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+     * @param ReviewWallSwitch 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */

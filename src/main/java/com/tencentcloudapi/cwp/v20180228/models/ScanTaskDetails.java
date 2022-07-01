@@ -107,6 +107,13 @@ public class ScanTaskDetails extends AbstractModel{
     private Long FailType;
 
     /**
+    * 外网ip
+    */
+    @SerializedName("MachineWanIp")
+    @Expose
+    private String MachineWanIp;
+
+    /**
      * Get 服务器IP 
      * @return HostIp 服务器IP
      */
@@ -298,6 +305,22 @@ public class ScanTaskDetails extends AbstractModel{
         this.FailType = FailType;
     }
 
+    /**
+     * Get 外网ip 
+     * @return MachineWanIp 外网ip
+     */
+    public String getMachineWanIp() {
+        return this.MachineWanIp;
+    }
+
+    /**
+     * Set 外网ip
+     * @param MachineWanIp 外网ip
+     */
+    public void setMachineWanIp(String MachineWanIp) {
+        this.MachineWanIp = MachineWanIp;
+    }
+
     public ScanTaskDetails() {
     }
 
@@ -342,6 +365,9 @@ public class ScanTaskDetails extends AbstractModel{
         if (source.FailType != null) {
             this.FailType = new Long(source.FailType);
         }
+        if (source.MachineWanIp != null) {
+            this.MachineWanIp = new String(source.MachineWanIp);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class ScanTaskDetails extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "FailType", this.FailType);
+        this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
 
     }
 }

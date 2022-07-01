@@ -30,14 +30,16 @@ public class ModifyApplicationProxyRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 四层代理ID
+    * 代理ID
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 四层代理名称
+    * 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
     */
     @SerializedName("ProxyName")
     @Expose
@@ -66,8 +68,8 @@ public class ModifyApplicationProxyRequest extends AbstractModel{
 
     /**
     * 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
     */
     @SerializedName("ProxyType")
     @Expose
@@ -90,32 +92,40 @@ instance：实例
     }
 
     /**
-     * Get 四层代理ID 
-     * @return ProxyId 四层代理ID
+     * Get 代理ID 
+     * @return ProxyId 代理ID
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 四层代理ID
-     * @param ProxyId 四层代理ID
+     * Set 代理ID
+     * @param ProxyId 代理ID
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 四层代理名称 
-     * @return ProxyName 四层代理名称
+     * Get 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称 
+     * @return ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 四层代理名称
-     * @param ProxyName 四层代理名称
+     * Set 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+     * @param ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -171,11 +181,11 @@ instance：实例
 
     /**
      * Get 服务类型
-hostname：子域名
-instance：实例 
+hostname：子域名模式
+instance：实例模式 
      * @return ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public String getProxyType() {
         return this.ProxyType;
@@ -183,11 +193,11 @@ instance：实例
 
     /**
      * Set 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      * @param ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;

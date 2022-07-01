@@ -32,7 +32,7 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
     private String Switch;
 
     /**
-    * 画面鉴别涉及令人不安全的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+    * 画面鉴别涉及令人不安全的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -48,14 +48,14 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
     private String [] LabelSet;
 
     /**
-    * 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+    * 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+    * 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -86,7 +86,7 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 画面鉴别涉及令人不安全的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+     * Get 画面鉴别涉及令人不安全的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -96,7 +96,7 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>explosion：爆炸火灾；</li>
 <li>terrorists：暴恐人物；</li>
 <li>scenario：暴恐画面。</li> 
-     * @return LabelSet 画面鉴别涉及令人不安全的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+     * @return LabelSet 画面鉴别涉及令人不安全的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -112,7 +112,7 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 画面鉴别涉及令人不安全的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+     * Set 画面鉴别涉及令人不安全的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -122,7 +122,7 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>explosion：爆炸火灾；</li>
 <li>terrorists：暴恐人物；</li>
 <li>scenario：暴恐画面。</li>
-     * @param LabelSet 画面鉴别涉及令人不安全的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+     * @param LabelSet 画面鉴别涉及令人不安全的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -138,32 +138,32 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。 
-     * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * Get 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。 
+     * @return BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
-     * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * Set 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * @param BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。 
-     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。 
+     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
-     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
+     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 80 分。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -73,6 +73,14 @@ public class OpenBankRedirectInfo extends AbstractModel{
     private String MpUserName;
 
     /**
+    * 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FormInfo")
+    @Expose
+    private OpenBankFormInfo FormInfo;
+
+    /**
      * Get 生成二维码，引导用户扫码 
      * @return QRCodeUrl 生成二维码，引导用户扫码
      */
@@ -188,6 +196,26 @@ public class OpenBankRedirectInfo extends AbstractModel{
         this.MpUserName = MpUserName;
     }
 
+    /**
+     * Get 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FormInfo 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OpenBankFormInfo getFormInfo() {
+        return this.FormInfo;
+    }
+
+    /**
+     * Set 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FormInfo 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFormInfo(OpenBankFormInfo FormInfo) {
+        this.FormInfo = FormInfo;
+    }
+
     public OpenBankRedirectInfo() {
     }
 
@@ -217,6 +245,9 @@ public class OpenBankRedirectInfo extends AbstractModel{
         if (source.MpUserName != null) {
             this.MpUserName = new String(source.MpUserName);
         }
+        if (source.FormInfo != null) {
+            this.FormInfo = new OpenBankFormInfo(source.FormInfo);
+        }
     }
 
 
@@ -231,6 +262,7 @@ public class OpenBankRedirectInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MpAppId", this.MpAppId);
         this.setParamSimple(map, prefix + "MpPath", this.MpPath);
         this.setParamSimple(map, prefix + "MpUserName", this.MpUserName);
+        this.setParamObj(map, prefix + "FormInfo.", this.FormInfo);
 
     }
 }

@@ -30,7 +30,7 @@ public class ReviewImageRequest extends AbstractModel{
     private String FileId;
 
     /**
-    * 图片智能识别模板 ID，当前固定填 10。
+    * 图片审核模板 ID，当前固定填 10。
     */
     @SerializedName("Definition")
     @Expose
@@ -60,16 +60,16 @@ public class ReviewImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片智能识别模板 ID，当前固定填 10。 
-     * @return Definition 图片智能识别模板 ID，当前固定填 10。
+     * Get 图片审核模板 ID，当前固定填 10。 
+     * @return Definition 图片审核模板 ID，当前固定填 10。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 图片智能识别模板 ID，当前固定填 10。
-     * @param Definition 图片智能识别模板 ID，当前固定填 10。
+     * Set 图片审核模板 ID，当前固定填 10。
+     * @param Definition 图片审核模板 ID，当前固定填 10。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

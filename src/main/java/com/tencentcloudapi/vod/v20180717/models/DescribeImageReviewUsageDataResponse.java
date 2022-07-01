@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeImageReviewUsageDataResponse extends AbstractModel{
 
     /**
-    * 图片智能识别次数统计数据，展示查询时间范围内的图片智能识别次数的概览数据。
+    * 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。
     */
     @SerializedName("ImageReviewUsageDataSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeImageReviewUsageDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 图片智能识别次数统计数据，展示查询时间范围内的图片智能识别次数的概览数据。 
-     * @return ImageReviewUsageDataSet 图片智能识别次数统计数据，展示查询时间范围内的图片智能识别次数的概览数据。
+     * Get 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。 
+     * @return ImageReviewUsageDataSet 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。
      */
     public ImageReviewUsageDataItem [] getImageReviewUsageDataSet() {
         return this.ImageReviewUsageDataSet;
     }
 
     /**
-     * Set 图片智能识别次数统计数据，展示查询时间范围内的图片智能识别次数的概览数据。
-     * @param ImageReviewUsageDataSet 图片智能识别次数统计数据，展示查询时间范围内的图片智能识别次数的概览数据。
+     * Set 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。
+     * @param ImageReviewUsageDataSet 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。
      */
     public void setImageReviewUsageDataSet(ImageReviewUsageDataItem [] ImageReviewUsageDataSet) {
         this.ImageReviewUsageDataSet = ImageReviewUsageDataSet;

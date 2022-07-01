@@ -39,12 +39,28 @@ public class DescribeApplicationProxyResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 当ZoneId不为空时，表示当前站点允许创建的实例数量
+    * 字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quota")
     @Expose
     private Long Quota;
+
+    /**
+    * 表示套餐内PlatType为ip的Anycast IP实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpCount")
+    @Expose
+    private Long IpCount;
+
+    /**
+    * 表示套餐内PlatType为domain的CNAME实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainCount")
+    @Expose
+    private Long DomainCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -94,9 +110,9 @@ public class DescribeApplicationProxyResponse extends AbstractModel{
     }
 
     /**
-     * Get 当ZoneId不为空时，表示当前站点允许创建的实例数量
+     * Get 字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Quota 当ZoneId不为空时，表示当前站点允许创建的实例数量
+     * @return Quota 字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQuota() {
@@ -104,13 +120,53 @@ public class DescribeApplicationProxyResponse extends AbstractModel{
     }
 
     /**
-     * Set 当ZoneId不为空时，表示当前站点允许创建的实例数量
+     * Set 字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Quota 当ZoneId不为空时，表示当前站点允许创建的实例数量
+     * @param Quota 字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuota(Long Quota) {
         this.Quota = Quota;
+    }
+
+    /**
+     * Get 表示套餐内PlatType为ip的Anycast IP实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpCount 表示套餐内PlatType为ip的Anycast IP实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIpCount() {
+        return this.IpCount;
+    }
+
+    /**
+     * Set 表示套餐内PlatType为ip的Anycast IP实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpCount 表示套餐内PlatType为ip的Anycast IP实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpCount(Long IpCount) {
+        this.IpCount = IpCount;
+    }
+
+    /**
+     * Get 表示套餐内PlatType为domain的CNAME实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainCount 表示套餐内PlatType为domain的CNAME实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDomainCount() {
+        return this.DomainCount;
+    }
+
+    /**
+     * Set 表示套餐内PlatType为domain的CNAME实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainCount 表示套餐内PlatType为domain的CNAME实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainCount(Long DomainCount) {
+        this.DomainCount = DomainCount;
     }
 
     /**
@@ -149,6 +205,12 @@ public class DescribeApplicationProxyResponse extends AbstractModel{
         if (source.Quota != null) {
             this.Quota = new Long(source.Quota);
         }
+        if (source.IpCount != null) {
+            this.IpCount = new Long(source.IpCount);
+        }
+        if (source.DomainCount != null) {
+            this.DomainCount = new Long(source.DomainCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -162,6 +224,8 @@ public class DescribeApplicationProxyResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "Quota", this.Quota);
+        this.setParamSimple(map, prefix + "IpCount", this.IpCount);
+        this.setParamSimple(map, prefix + "DomainCount", this.DomainCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

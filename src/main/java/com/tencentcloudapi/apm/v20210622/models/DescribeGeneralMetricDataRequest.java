@@ -23,21 +23,24 @@ import java.util.HashMap;
 public class DescribeGeneralMetricDataRequest extends AbstractModel{
 
     /**
-    * 要过滤的维度信息，支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
-
+    * 要过滤的维度信息
+service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
-
-       server:服务端视角
-       client:客户端视角
-
+	server:服务端视角
+	client:客户端视角
 默认为服务端视角进行查询。
+runtime_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）维度进行过滤。
     */
     @SerializedName("Filters")
     @Expose
     private GeneralFilter [] Filters;
 
     /**
-    * 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
+    * 需要查询的指标，不可自定义输入。
+service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+runtime_metric视图支持：service_gc_full_count（Full GC）。
+sql_metric视图支持：service_slow_sql_count（慢sql）。
     */
     @SerializedName("Metrics")
     @Expose
@@ -51,14 +54,17 @@ span.kind:
     private String InstanceId;
 
     /**
-    * 视图名称，不可自定义输入。支持：service_metric
+    * 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+    * 聚合维度
+service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+runtime_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）维度进行聚合。
     */
     @SerializedName("GroupBy")
     @Expose
@@ -86,60 +92,72 @@ span.kind:
     private Long Period;
 
     /**
-     * Get 要过滤的维度信息，支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
-
+     * Get 要过滤的维度信息
+service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
-
-       server:服务端视角
-       client:客户端视角
-
-默认为服务端视角进行查询。 
-     * @return Filters 要过滤的维度信息，支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
-
-span.kind:
-
-       server:服务端视角
-       client:客户端视角
-
+	server:服务端视角
+	client:客户端视角
 默认为服务端视角进行查询。
+runtime_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）维度进行过滤。 
+     * @return Filters 要过滤的维度信息
+service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
+span.kind:
+	server:服务端视角
+	client:客户端视角
+默认为服务端视角进行查询。
+runtime_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）维度进行过滤。
      */
     public GeneralFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 要过滤的维度信息，支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
-
+     * Set 要过滤的维度信息
+service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
-
-       server:服务端视角
-       client:客户端视角
-
+	server:服务端视角
+	client:客户端视角
 默认为服务端视角进行查询。
-     * @param Filters 要过滤的维度信息，支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
-
+runtime_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）维度进行过滤。
+     * @param Filters 要过滤的维度信息
+service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
-
-       server:服务端视角
-       client:客户端视角
-
+	server:服务端视角
+	client:客户端视角
 默认为服务端视角进行查询。
+runtime_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）维度进行过滤。
      */
     public void setFilters(GeneralFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。 
-     * @return Metrics 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
+     * Get 需要查询的指标，不可自定义输入。
+service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+runtime_metric视图支持：service_gc_full_count（Full GC）。
+sql_metric视图支持：service_slow_sql_count（慢sql）。 
+     * @return Metrics 需要查询的指标，不可自定义输入。
+service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+runtime_metric视图支持：service_gc_full_count（Full GC）。
+sql_metric视图支持：service_slow_sql_count（慢sql）。
      */
     public String [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
-     * @param Metrics 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
+     * Set 需要查询的指标，不可自定义输入。
+service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+runtime_metric视图支持：service_gc_full_count（Full GC）。
+sql_metric视图支持：service_slow_sql_count（慢sql）。
+     * @param Metrics 需要查询的指标，不可自定义输入。
+service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+runtime_metric视图支持：service_gc_full_count（Full GC）。
+sql_metric视图支持：service_slow_sql_count（慢sql）。
      */
     public void setMetrics(String [] Metrics) {
         this.Metrics = Metrics;
@@ -162,32 +180,44 @@ span.kind:
     }
 
     /**
-     * Get 视图名称，不可自定义输入。支持：service_metric 
-     * @return ViewName 视图名称，不可自定义输入。支持：service_metric
+     * Get 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。 
+     * @return ViewName 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图名称，不可自定义输入。支持：service_metric
-     * @param ViewName 视图名称，不可自定义输入。支持：service_metric
+     * Set 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
+     * @param ViewName 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。 
-     * @return GroupBy 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+     * Get 聚合维度
+service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+runtime_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）维度进行聚合。 
+     * @return GroupBy 聚合维度
+service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+runtime_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）维度进行聚合。
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
-     * @param GroupBy 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+     * Set 聚合维度
+service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+runtime_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）维度进行聚合。
+     * @param GroupBy 聚合维度
+service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+runtime_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）维度进行聚合。
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;

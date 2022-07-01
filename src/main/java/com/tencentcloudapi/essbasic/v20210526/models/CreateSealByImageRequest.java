@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateSealByImageRequest extends AbstractModel{
 
     /**
-    * 渠道应用相关信息
+    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 印章名称
+    * 印章名称，最大长度不超过30字符
     */
     @SerializedName("SealName")
     @Expose
@@ -51,32 +51,32 @@ public class CreateSealByImageRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-     * Get 渠道应用相关信息 
-     * @return Agent 渠道应用相关信息
+     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息
-     * @param Agent 渠道应用相关信息
+     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 印章名称 
-     * @return SealName 印章名称
+     * Get 印章名称，最大长度不超过30字符 
+     * @return SealName 印章名称，最大长度不超过30字符
      */
     public String getSealName() {
         return this.SealName;
     }
 
     /**
-     * Set 印章名称
-     * @param SealName 印章名称
+     * Set 印章名称，最大长度不超过30字符
+     * @param SealName 印章名称，最大长度不超过30字符
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;

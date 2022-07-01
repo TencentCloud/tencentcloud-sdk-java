@@ -55,7 +55,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     private String ComponentType;
 
     /**
-    * 控件简称
+    * 控件简称，不能超过30个字符
     */
     @SerializedName("ComponentName")
     @Expose
@@ -69,7 +69,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     private Boolean ComponentRequired;
 
     /**
-    * 控件所属文件的序号 (文档中文件的排列序号)
+    * 控件所属文件的序号 (文档中文件的排列序号，从0开始)
     */
     @SerializedName("FileIndex")
     @Expose
@@ -102,7 +102,7 @@ KEYWORD - 关键字
     private Float ComponentHeight;
 
     /**
-    * 参数控件所在页码
+    * 参数控件所在页码，从1开始
     */
     @SerializedName("ComponentPage")
     @Expose
@@ -157,21 +157,21 @@ TEXT控件可以指定字体
     private String DocumentId;
 
     /**
-    * 控件描述
+    * 控件描述，不能超过30个字符
     */
     @SerializedName("ComponentDescription")
     @Expose
     private String ComponentDescription;
 
     /**
-    * 指定关键字时横坐标偏移量
+    * 指定关键字时横坐标偏移量，单位pt
     */
     @SerializedName("OffsetX")
     @Expose
     private Float OffsetX;
 
     /**
-    * 指定关键字时纵坐标偏移量
+    * 指定关键字时纵坐标偏移量，单位pt
     */
     @SerializedName("OffsetY")
     @Expose
@@ -282,16 +282,16 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     }
 
     /**
-     * Get 控件简称 
-     * @return ComponentName 控件简称
+     * Get 控件简称，不能超过30个字符 
+     * @return ComponentName 控件简称，不能超过30个字符
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 控件简称
-     * @param ComponentName 控件简称
+     * Set 控件简称，不能超过30个字符
+     * @param ComponentName 控件简称，不能超过30个字符
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
@@ -314,16 +314,16 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     }
 
     /**
-     * Get 控件所属文件的序号 (文档中文件的排列序号) 
-     * @return FileIndex 控件所属文件的序号 (文档中文件的排列序号)
+     * Get 控件所属文件的序号 (文档中文件的排列序号，从0开始) 
+     * @return FileIndex 控件所属文件的序号 (文档中文件的排列序号，从0开始)
      */
     public Long getFileIndex() {
         return this.FileIndex;
     }
 
     /**
-     * Set 控件所属文件的序号 (文档中文件的排列序号)
-     * @param FileIndex 控件所属文件的序号 (文档中文件的排列序号)
+     * Set 控件所属文件的序号 (文档中文件的排列序号，从0开始)
+     * @param FileIndex 控件所属文件的序号 (文档中文件的排列序号，从0开始)
      */
     public void setFileIndex(Long FileIndex) {
         this.FileIndex = FileIndex;
@@ -398,16 +398,16 @@ KEYWORD - 关键字
     }
 
     /**
-     * Get 参数控件所在页码 
-     * @return ComponentPage 参数控件所在页码
+     * Get 参数控件所在页码，从1开始 
+     * @return ComponentPage 参数控件所在页码，从1开始
      */
     public Long getComponentPage() {
         return this.ComponentPage;
     }
 
     /**
-     * Set 参数控件所在页码
-     * @param ComponentPage 参数控件所在页码
+     * Set 参数控件所在页码，从1开始
+     * @param ComponentPage 参数控件所在页码，从1开始
      */
     public void setComponentPage(Long ComponentPage) {
         this.ComponentPage = ComponentPage;
@@ -534,48 +534,48 @@ TEXT控件可以指定字体
     }
 
     /**
-     * Get 控件描述 
-     * @return ComponentDescription 控件描述
+     * Get 控件描述，不能超过30个字符 
+     * @return ComponentDescription 控件描述，不能超过30个字符
      */
     public String getComponentDescription() {
         return this.ComponentDescription;
     }
 
     /**
-     * Set 控件描述
-     * @param ComponentDescription 控件描述
+     * Set 控件描述，不能超过30个字符
+     * @param ComponentDescription 控件描述，不能超过30个字符
      */
     public void setComponentDescription(String ComponentDescription) {
         this.ComponentDescription = ComponentDescription;
     }
 
     /**
-     * Get 指定关键字时横坐标偏移量 
-     * @return OffsetX 指定关键字时横坐标偏移量
+     * Get 指定关键字时横坐标偏移量，单位pt 
+     * @return OffsetX 指定关键字时横坐标偏移量，单位pt
      */
     public Float getOffsetX() {
         return this.OffsetX;
     }
 
     /**
-     * Set 指定关键字时横坐标偏移量
-     * @param OffsetX 指定关键字时横坐标偏移量
+     * Set 指定关键字时横坐标偏移量，单位pt
+     * @param OffsetX 指定关键字时横坐标偏移量，单位pt
      */
     public void setOffsetX(Float OffsetX) {
         this.OffsetX = OffsetX;
     }
 
     /**
-     * Get 指定关键字时纵坐标偏移量 
-     * @return OffsetY 指定关键字时纵坐标偏移量
+     * Get 指定关键字时纵坐标偏移量，单位pt 
+     * @return OffsetY 指定关键字时纵坐标偏移量，单位pt
      */
     public Float getOffsetY() {
         return this.OffsetY;
     }
 
     /**
-     * Set 指定关键字时纵坐标偏移量
-     * @param OffsetY 指定关键字时纵坐标偏移量
+     * Set 指定关键字时纵坐标偏移量，单位pt
+     * @param OffsetY 指定关键字时纵坐标偏移量，单位pt
      */
     public void setOffsetY(Float OffsetY) {
         this.OffsetY = OffsetY;

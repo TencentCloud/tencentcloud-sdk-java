@@ -30,7 +30,7 @@ public class DescribeAIRecognitionTemplatesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 视频内容识别模板详情列表。
+    * 音视频内容识别模板详情列表。
     */
     @SerializedName("AIRecognitionTemplateSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeAIRecognitionTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 视频内容识别模板详情列表。 
-     * @return AIRecognitionTemplateSet 视频内容识别模板详情列表。
+     * Get 音视频内容识别模板详情列表。 
+     * @return AIRecognitionTemplateSet 音视频内容识别模板详情列表。
      */
     public AIRecognitionTemplateItem [] getAIRecognitionTemplateSet() {
         return this.AIRecognitionTemplateSet;
     }
 
     /**
-     * Set 视频内容识别模板详情列表。
-     * @param AIRecognitionTemplateSet 视频内容识别模板详情列表。
+     * Set 音视频内容识别模板详情列表。
+     * @param AIRecognitionTemplateSet 音视频内容识别模板详情列表。
      */
     public void setAIRecognitionTemplateSet(AIRecognitionTemplateItem [] AIRecognitionTemplateSet) {
         this.AIRecognitionTemplateSet = AIRecognitionTemplateSet;

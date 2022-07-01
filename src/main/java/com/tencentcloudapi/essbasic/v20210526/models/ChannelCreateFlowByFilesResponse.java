@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelCreateFlowByFilesResponse extends AbstractModel{
 
     /**
-    * 合同流程ID
+    * 合同签署流程ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
@@ -38,9 +38,9 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 合同流程ID
+     * Get 合同签署流程ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowId 合同流程ID
+     * @return FlowId 合同签署流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
@@ -48,9 +48,9 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel{
     }
 
     /**
-     * Set 合同流程ID
+     * Set 合同签署流程ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowId 合同流程ID
+     * @param FlowId 合同签署流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {

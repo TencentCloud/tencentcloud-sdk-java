@@ -37,7 +37,7 @@ public class FormField extends AbstractModel{
     private String ComponentId;
 
     /**
-    * 控件名字
+    * 控件名字，最大长度不超过30字符
     */
     @SerializedName("ComponentName")
     @Expose
@@ -76,16 +76,16 @@ public class FormField extends AbstractModel{
     }
 
     /**
-     * Get 控件名字 
-     * @return ComponentName 控件名字
+     * Get 控件名字，最大长度不超过30字符 
+     * @return ComponentName 控件名字，最大长度不超过30字符
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 控件名字
-     * @param ComponentName 控件名字
+     * Set 控件名字，最大长度不超过30字符
+     * @param ComponentName 控件名字，最大长度不超过30字符
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;

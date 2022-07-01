@@ -30,7 +30,7 @@ public class ModifyApplicationProxyRuleStatusRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 四层代理ID
+    * 代理ID
     */
     @SerializedName("ProxyId")
     @Expose
@@ -69,16 +69,16 @@ online: 启用
     }
 
     /**
-     * Get 四层代理ID 
-     * @return ProxyId 四层代理ID
+     * Get 代理ID 
+     * @return ProxyId 代理ID
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 四层代理ID
-     * @param ProxyId 四层代理ID
+     * Set 代理ID
+     * @param ProxyId 代理ID
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

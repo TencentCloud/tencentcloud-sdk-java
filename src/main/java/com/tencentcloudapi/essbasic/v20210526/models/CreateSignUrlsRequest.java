@@ -30,28 +30,21 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 所签署合同ID数组
+    * 签署流程编号数组，最多支持100个。
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
+    * 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-    * 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+    * 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
     */
     @SerializedName("JumpUrl")
     @Expose
@@ -63,6 +56,13 @@ public class CreateSignUrlsRequest extends AbstractModel{
     @SerializedName("AutoJumpBack")
     @Expose
     private Boolean AutoJumpBack;
+
+    /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -81,64 +81,48 @@ public class CreateSignUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 所签署合同ID数组 
-     * @return FlowIds 所签署合同ID数组
+     * Get 签署流程编号数组，最多支持100个。 
+     * @return FlowIds 签署流程编号数组，最多支持100个。
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 所签署合同ID数组
-     * @param FlowIds 所签署合同ID数组
+     * Set 签署流程编号数组，最多支持100个。
+     * @param FlowIds 签署流程编号数组，最多支持100个。
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
-     * Get 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序; 
-     * @return Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
+     * Get 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。 
+     * @return Endpoint 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
-     * @param Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
+     * Set 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。
+     * @param Endpoint 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
     }
 
     /**
-     * Get 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效 
-     * @return JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+     * Get 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。 
+     * @return JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
      */
     public String getJumpUrl() {
         return this.JumpUrl;
     }
 
     /**
-     * Set 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
-     * @param JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+     * Set 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
+     * @param JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;
@@ -160,6 +144,22 @@ public class CreateSignUrlsRequest extends AbstractModel{
         this.AutoJumpBack = AutoJumpBack;
     }
 
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public CreateSignUrlsRequest() {
     }
 
@@ -177,9 +177,6 @@ public class CreateSignUrlsRequest extends AbstractModel{
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Endpoint != null) {
             this.Endpoint = new String(source.Endpoint);
         }
@@ -188,6 +185,9 @@ public class CreateSignUrlsRequest extends AbstractModel{
         }
         if (source.AutoJumpBack != null) {
             this.AutoJumpBack = new Boolean(source.AutoJumpBack);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -198,10 +198,10 @@ public class CreateSignUrlsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

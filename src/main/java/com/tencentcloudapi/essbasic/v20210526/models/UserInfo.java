@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel{
 
     /**
-    * 自定义用户编号
+    * 用户在渠道的编号
     */
-    @SerializedName("CustomUserId")
+    @SerializedName("OpenId")
     @Expose
-    private String CustomUserId;
+    private String OpenId;
 
     /**
     * 用户的来源渠道
@@ -37,11 +37,11 @@ public class UserInfo extends AbstractModel{
     private String Channel;
 
     /**
-    * 用户在渠道的编号
+    * 自定义用户编号
     */
-    @SerializedName("OpenId")
+    @SerializedName("CustomUserId")
     @Expose
-    private String OpenId;
+    private String CustomUserId;
 
     /**
     * 用户真实IP
@@ -58,19 +58,19 @@ public class UserInfo extends AbstractModel{
     private String ProxyIp;
 
     /**
-     * Get 自定义用户编号 
-     * @return CustomUserId 自定义用户编号
+     * Get 用户在渠道的编号 
+     * @return OpenId 用户在渠道的编号
      */
-    public String getCustomUserId() {
-        return this.CustomUserId;
+    public String getOpenId() {
+        return this.OpenId;
     }
 
     /**
-     * Set 自定义用户编号
-     * @param CustomUserId 自定义用户编号
+     * Set 用户在渠道的编号
+     * @param OpenId 用户在渠道的编号
      */
-    public void setCustomUserId(String CustomUserId) {
-        this.CustomUserId = CustomUserId;
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
     }
 
     /**
@@ -90,19 +90,19 @@ public class UserInfo extends AbstractModel{
     }
 
     /**
-     * Get 用户在渠道的编号 
-     * @return OpenId 用户在渠道的编号
+     * Get 自定义用户编号 
+     * @return CustomUserId 自定义用户编号
      */
-    public String getOpenId() {
-        return this.OpenId;
+    public String getCustomUserId() {
+        return this.CustomUserId;
     }
 
     /**
-     * Set 用户在渠道的编号
-     * @param OpenId 用户在渠道的编号
+     * Set 自定义用户编号
+     * @param CustomUserId 自定义用户编号
      */
-    public void setOpenId(String OpenId) {
-        this.OpenId = OpenId;
+    public void setCustomUserId(String CustomUserId) {
+        this.CustomUserId = CustomUserId;
     }
 
     /**
@@ -145,14 +145,14 @@ public class UserInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UserInfo(UserInfo source) {
-        if (source.CustomUserId != null) {
-            this.CustomUserId = new String(source.CustomUserId);
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
         }
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
-        if (source.OpenId != null) {
-            this.OpenId = new String(source.OpenId);
+        if (source.CustomUserId != null) {
+            this.CustomUserId = new String(source.CustomUserId);
         }
         if (source.ClientIp != null) {
             this.ClientIp = new String(source.ClientIp);
@@ -167,9 +167,9 @@ public class UserInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
-        this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
         this.setParamSimple(map, prefix + "ClientIp", this.ClientIp);
         this.setParamSimple(map, prefix + "ProxyIp", this.ProxyIp);
 

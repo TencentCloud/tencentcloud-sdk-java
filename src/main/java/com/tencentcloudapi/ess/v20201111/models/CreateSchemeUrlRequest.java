@@ -30,46 +30,11 @@ public class CreateSchemeUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 调用方渠道信息，参考通用结构
+    * 应用相关信息
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
-
-    /**
-    * 姓名
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 手机号
-    */
-    @SerializedName("Mobile")
-    @Expose
-    private String Mobile;
-
-    /**
-    * 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
-    */
-    @SerializedName("PathType")
-    @Expose
-    private Long PathType;
-
-    /**
-    * 合同详情 id (PathType=1时必传)
-    */
-    @SerializedName("FlowId")
-    @Expose
-    private String FlowId;
-
-    /**
-    * 企业名称
-    */
-    @SerializedName("OrganizationName")
-    @Expose
-    private String OrganizationName;
 
     /**
     * 链接类型
@@ -80,6 +45,41 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     @SerializedName("EndPoint")
     @Expose
     private String EndPoint;
+
+    /**
+    * 姓名,最大长度50个字符
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 手机号，大陆手机号11位
+    */
+    @SerializedName("Mobile")
+    @Expose
+    private String Mobile;
+
+    /**
+    * 企业名称
+    */
+    @SerializedName("OrganizationName")
+    @Expose
+    private String OrganizationName;
+
+    /**
+    * 签署流程编号 (PathType=1时必传)
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
+    * 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
+    */
+    @SerializedName("PathType")
+    @Expose
+    private Long PathType;
 
     /**
     * 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
@@ -105,99 +105,19 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     }
 
     /**
-     * Get 调用方渠道信息，参考通用结构 
-     * @return Agent 调用方渠道信息，参考通用结构
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 调用方渠道信息，参考通用结构
-     * @param Agent 调用方渠道信息，参考通用结构
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
-    }
-
-    /**
-     * Get 姓名 
-     * @return Name 姓名
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 姓名
-     * @param Name 姓名
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 手机号 
-     * @return Mobile 手机号
-     */
-    public String getMobile() {
-        return this.Mobile;
-    }
-
-    /**
-     * Set 手机号
-     * @param Mobile 手机号
-     */
-    public void setMobile(String Mobile) {
-        this.Mobile = Mobile;
-    }
-
-    /**
-     * Get 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页 
-     * @return PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
-     */
-    public Long getPathType() {
-        return this.PathType;
-    }
-
-    /**
-     * Set 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
-     * @param PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
-     */
-    public void setPathType(Long PathType) {
-        this.PathType = PathType;
-    }
-
-    /**
-     * Get 合同详情 id (PathType=1时必传) 
-     * @return FlowId 合同详情 id (PathType=1时必传)
-     */
-    public String getFlowId() {
-        return this.FlowId;
-    }
-
-    /**
-     * Set 合同详情 id (PathType=1时必传)
-     * @param FlowId 合同详情 id (PathType=1时必传)
-     */
-    public void setFlowId(String FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 企业名称 
-     * @return OrganizationName 企业名称
-     */
-    public String getOrganizationName() {
-        return this.OrganizationName;
-    }
-
-    /**
-     * Set 企业名称
-     * @param OrganizationName 企业名称
-     */
-    public void setOrganizationName(String OrganizationName) {
-        this.OrganizationName = OrganizationName;
     }
 
     /**
@@ -226,6 +146,86 @@ APP：第三方APP或小程序跳转电子签小程序的path。
      */
     public void setEndPoint(String EndPoint) {
         this.EndPoint = EndPoint;
+    }
+
+    /**
+     * Get 姓名,最大长度50个字符 
+     * @return Name 姓名,最大长度50个字符
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 姓名,最大长度50个字符
+     * @param Name 姓名,最大长度50个字符
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 手机号，大陆手机号11位 
+     * @return Mobile 手机号，大陆手机号11位
+     */
+    public String getMobile() {
+        return this.Mobile;
+    }
+
+    /**
+     * Set 手机号，大陆手机号11位
+     * @param Mobile 手机号，大陆手机号11位
+     */
+    public void setMobile(String Mobile) {
+        this.Mobile = Mobile;
+    }
+
+    /**
+     * Get 企业名称 
+     * @return OrganizationName 企业名称
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set 企业名称
+     * @param OrganizationName 企业名称
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
+    }
+
+    /**
+     * Get 签署流程编号 (PathType=1时必传) 
+     * @return FlowId 签署流程编号 (PathType=1时必传)
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 签署流程编号 (PathType=1时必传)
+     * @param FlowId 签署流程编号 (PathType=1时必传)
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页 
+     * @return PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
+     */
+    public Long getPathType() {
+        return this.PathType;
+    }
+
+    /**
+     * Set 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
+     * @param PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
+     */
+    public void setPathType(Long PathType) {
+        this.PathType = PathType;
     }
 
     /**
@@ -258,23 +258,23 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.EndPoint != null) {
+            this.EndPoint = new String(source.EndPoint);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
-        if (source.PathType != null) {
-            this.PathType = new Long(source.PathType);
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
         }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
-        if (source.OrganizationName != null) {
-            this.OrganizationName = new String(source.OrganizationName);
-        }
-        if (source.EndPoint != null) {
-            this.EndPoint = new String(source.EndPoint);
+        if (source.PathType != null) {
+            this.PathType = new Long(source.PathType);
         }
         if (source.AutoJumpBack != null) {
             this.AutoJumpBack = new Boolean(source.AutoJumpBack);
@@ -288,12 +288,12 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "EndPoint", this.EndPoint);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
-        this.setParamSimple(map, prefix + "PathType", this.PathType);
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
-        this.setParamSimple(map, prefix + "EndPoint", this.EndPoint);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "PathType", this.PathType);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
 
     }

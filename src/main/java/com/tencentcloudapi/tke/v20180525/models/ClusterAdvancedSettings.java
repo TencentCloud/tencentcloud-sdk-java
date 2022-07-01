@@ -148,6 +148,13 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private String CiliumMode;
 
     /**
+    * 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+    */
+    @SerializedName("IsDualStack")
+    @Expose
+    private Boolean IsDualStack;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -443,6 +450,22 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.CiliumMode = CiliumMode;
     }
 
+    /**
+     * Get 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。 
+     * @return IsDualStack 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     */
+    public Boolean getIsDualStack() {
+        return this.IsDualStack;
+    }
+
+    /**
+     * Set 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     * @param IsDualStack 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     */
+    public void setIsDualStack(Boolean IsDualStack) {
+        this.IsDualStack = IsDualStack;
+    }
+
     public ClusterAdvancedSettings() {
     }
 
@@ -502,6 +525,9 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         if (source.CiliumMode != null) {
             this.CiliumMode = new String(source.CiliumMode);
         }
+        if (source.IsDualStack != null) {
+            this.IsDualStack = new Boolean(source.IsDualStack);
+        }
     }
 
 
@@ -526,6 +552,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
         this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
         this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
+        this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
 
     }
 }
