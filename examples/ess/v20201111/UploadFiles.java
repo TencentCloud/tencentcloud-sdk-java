@@ -31,7 +31,6 @@ public class UploadFiles {
             UploadFilesRequest request = new UploadFilesRequest();
 
             Caller caller = new Caller();
-            caller.setApplicationId(Appid);
             caller.setOperatorId(OperatorId);
             request.setCaller(caller);
             request.setBusinessType("FLOW");
