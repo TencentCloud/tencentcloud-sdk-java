@@ -322,6 +322,26 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *移动安全-网址检测服务
+     * @param req DescribeUrlDetectionResultRequest
+     * @return DescribeUrlDetectionResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUrlDetectionResultResponse DescribeUrlDetectionResult(DescribeUrlDetectionResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUrlDetectionResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUrlDetectionResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUrlDetectionResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户基础信息
      * @param req DescribeUserBaseInfoInstanceRequest
      * @return DescribeUserBaseInfoInstanceResponse

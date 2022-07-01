@@ -59,6 +59,26 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询主机列表
+     * @param req DescribeHostListRequest
+     * @return DescribeHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostListResponse DescribeHostList(DescribeHostListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于查询独享集群详情
      * @param req DescribeInstanceDetailRequest
      * @return DescribeInstanceDetailResponse

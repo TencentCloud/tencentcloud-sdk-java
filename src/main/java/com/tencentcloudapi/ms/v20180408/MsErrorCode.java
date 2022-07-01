@@ -1,19 +1,28 @@
 package com.tencentcloudapi.ms.v20180408;
 public enum MsErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
     // 服务端无法响应。
      INTERNALERROR_SERVERERROR("InternalError.ServerError"),
      
-    // 参数错误
+    // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
     // ServiceInfo结构体参数缺失。
      INVALIDPARAMETER_MISSINGSERVICEINFO("InvalidParameter.MissingServiceInfo"),
      
+    // 参数格式错误。
+     INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
+     
     // 不能找到指定的加固策略。
      INVALIDPARAMETER_PLANIDNOTFOUND("InvalidParameter.PlanIdNotFound"),
+     
+    // 参数取值错误。
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
     // 不能同时指定ItemIds和Filters。
      INVALIDPARAMETERVALUE_INVALIDCOEXISTITEMIDSFILTERS("InvalidParameterValue.InvalidCoexistItemIdsFilters"),
@@ -36,7 +45,7 @@ public enum MsErrorCode {
     // OrderField取值不合法。
      INVALIDPARAMETERVALUE_INVALIDORDERFIELD("InvalidParameterValue.InvalidOrderField"),
      
-    // 超过配额限制
+    // 超过配额限制。
      LIMITEXCEEDED("LimitExceeded"),
      
     // AppInfo结构体参数缺失。
@@ -63,11 +72,14 @@ public enum MsErrorCode {
     // 找不到该资源。
      RESOURCEUNAVAILABLE_NOTFOUND("ResourceUnavailable.NotFound"),
      
-    // 未授权操作
+    // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
     // 不是白名单用户。
-     UNAUTHORIZEDOPERATION_NOTWHITEUSER("UnauthorizedOperation.NotWhiteUser");
+     UNAUTHORIZEDOPERATION_NOTWHITEUSER("UnauthorizedOperation.NotWhiteUser"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private MsErrorCode (String value){

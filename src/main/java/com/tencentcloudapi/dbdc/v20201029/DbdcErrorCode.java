@@ -34,7 +34,10 @@ public enum DbdcErrorCode {
      RESOURCENOTFOUND_FETCHRESOURCEERROR("ResourceNotFound.FetchResourceError"),
      
     // 获取资源列表失败，ErrMsg：{{1}}。
-     RESOURCENOTFOUND_FETCHRESOURCELISTERROR("ResourceNotFound.FetchResourceListError");
+     RESOURCENOTFOUND_FETCHRESOURCELISTERROR("ResourceNotFound.FetchResourceListError"),
+     
+    // 资源状态异常。
+     RESOURCEUNAVAILABLE_RESOURCESTATUSABNORMALERROR("ResourceUnavailable.ResourceStatusAbnormalError");
      
     private String value;
     private DbdcErrorCode (String value){
