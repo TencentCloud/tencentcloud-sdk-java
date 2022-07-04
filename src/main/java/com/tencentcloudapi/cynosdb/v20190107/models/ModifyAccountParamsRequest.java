@@ -37,7 +37,7 @@ public class ModifyAccountParamsRequest extends AbstractModel{
     private InputAccount Account;
 
     /**
-    * 数据库表权限数组,当前仅支持参数：max_user_connections
+    * 数据库表权限数组,当前仅支持参数：max_user_connections，max_user_connections不能大于10240
     */
     @SerializedName("AccountParams")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyAccountParamsRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库表权限数组,当前仅支持参数：max_user_connections 
-     * @return AccountParams 数据库表权限数组,当前仅支持参数：max_user_connections
+     * Get 数据库表权限数组,当前仅支持参数：max_user_connections，max_user_connections不能大于10240 
+     * @return AccountParams 数据库表权限数组,当前仅支持参数：max_user_connections，max_user_connections不能大于10240
      */
     public AccountParam [] getAccountParams() {
         return this.AccountParams;
     }
 
     /**
-     * Set 数据库表权限数组,当前仅支持参数：max_user_connections
-     * @param AccountParams 数据库表权限数组,当前仅支持参数：max_user_connections
+     * Set 数据库表权限数组,当前仅支持参数：max_user_connections，max_user_connections不能大于10240
+     * @param AccountParams 数据库表权限数组,当前仅支持参数：max_user_connections，max_user_connections不能大于10240
      */
     public void setAccountParams(AccountParam [] AccountParams) {
         this.AccountParams = AccountParams;

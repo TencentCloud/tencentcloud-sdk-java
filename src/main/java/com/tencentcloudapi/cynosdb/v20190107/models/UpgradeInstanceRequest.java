@@ -51,7 +51,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String UpgradeType;
 
     /**
-    * 存储上限，为0表示使用标准配置
+    * 该参数已废弃
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -65,8 +65,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long AutoVoucher;
 
     /**
-    * 数据库类型，取值范围: 
-<li> MYSQL </li>
+    * 该参数已废弃
     */
     @SerializedName("DbType")
     @Expose
@@ -144,16 +143,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 存储上限，为0表示使用标准配置 
-     * @return StorageLimit 存储上限，为0表示使用标准配置
+     * Get 该参数已废弃 
+     * @return StorageLimit 该参数已废弃
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 存储上限，为0表示使用标准配置
-     * @param StorageLimit 存储上限，为0表示使用标准配置
+     * Set 该参数已废弃
+     * @param StorageLimit 该参数已废弃
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
@@ -176,20 +175,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库类型，取值范围: 
-<li> MYSQL </li> 
-     * @return DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Get 该参数已废弃 
+     * @return DbType 该参数已废弃
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Set 该参数已废弃
+     * @param DbType 该参数已废弃
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

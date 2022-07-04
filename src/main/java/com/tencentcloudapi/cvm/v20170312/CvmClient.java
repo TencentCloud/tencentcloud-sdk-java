@@ -342,6 +342,29 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
+
+* 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
+     * @param req DescribeChcHostsRequest
+     * @return DescribeChcHostsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChcHostsResponse DescribeChcHosts(DescribeChcHostsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChcHostsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChcHostsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChcHosts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
      * @param req DescribeDisasterRecoverGroupQuotaRequest
      * @return DescribeDisasterRecoverGroupQuotaResponse

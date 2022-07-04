@@ -37,8 +37,7 @@ public class IsolateInstanceRequest extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
-    * 数据库类型，取值范围: 
-<li> MYSQL </li>
+    * 该参数已废弃
     */
     @SerializedName("DbType")
     @Expose
@@ -77,20 +76,16 @@ public class IsolateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库类型，取值范围: 
-<li> MYSQL </li> 
-     * @return DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Get 该参数已废弃 
+     * @return DbType 该参数已废弃
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Set 该参数已废弃
+     * @param DbType 该参数已废弃
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

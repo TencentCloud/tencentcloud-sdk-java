@@ -81,6 +81,24 @@ public class CreateFlexPayeeRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 手机号码
+    */
+    @SerializedName("PhoneNo")
+    @Expose
+    private String PhoneNo;
+
+    /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 用户外部业务ID 
      * @return OutUserId 用户外部业务ID
      */
@@ -216,6 +234,54 @@ public class CreateFlexPayeeRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 手机号码 
+     * @return PhoneNo 手机号码
+     */
+    public String getPhoneNo() {
+        return this.PhoneNo;
+    }
+
+    /**
+     * Set 手机号码
+     * @param PhoneNo 手机号码
+     */
+    public void setPhoneNo(String PhoneNo) {
+        this.PhoneNo = PhoneNo;
+    }
+
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public CreateFlexPayeeRequest() {
     }
 
@@ -248,6 +314,12 @@ public class CreateFlexPayeeRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PhoneNo != null) {
+            this.PhoneNo = new String(source.PhoneNo);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -263,6 +335,8 @@ public class CreateFlexPayeeRequest extends AbstractModel{
         this.setParamObj(map, prefix + "TaxInfo.", this.TaxInfo);
         this.setParamSimple(map, prefix + "IdType", this.IdType);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PhoneNo", this.PhoneNo);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

@@ -65,7 +65,8 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     private Long Cooldown;
 
     /**
-    * 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+    * 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
     */
     @SerializedName("NotificationUserGroupIds")
     @Expose
@@ -168,16 +169,20 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。 
-     * @return NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * Get 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。 
+     * @return NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     public String [] getNotificationUserGroupIds() {
         return this.NotificationUserGroupIds;
     }
 
     /**
-     * Set 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-     * @param NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * Set 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
+     * @param NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
         this.NotificationUserGroupIds = NotificationUserGroupIds;

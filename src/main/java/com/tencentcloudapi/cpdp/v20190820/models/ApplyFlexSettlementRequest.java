@@ -60,6 +60,17 @@ OCCASION:偶然所得
     private String Remark;
 
     /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -147,6 +158,38 @@ OCCASION:偶然所得
         this.Remark = Remark;
     }
 
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public ApplyFlexSettlementRequest() {
     }
 
@@ -170,6 +213,9 @@ OCCASION:偶然所得
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -182,6 +228,7 @@ OCCASION:偶然所得
         this.setParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
         this.setParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

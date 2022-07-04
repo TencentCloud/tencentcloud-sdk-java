@@ -39,6 +39,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取项目信息
+     * @param req DescribeProjectRequest
+     * @return DescribeProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectResponse DescribeProject(DescribeProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询任务实例的关联实例列表
      * @param req DescribeRelatedInstancesRequest
      * @return DescribeRelatedInstancesResponse

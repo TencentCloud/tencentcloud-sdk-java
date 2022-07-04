@@ -31,6 +31,7 @@ public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
     * 订单ID。
+注意：参数TaskId和DealName必须传一个。
     */
     @SerializedName("DealName")
     @Expose
@@ -53,8 +54,10 @@ public class DescribeTaskStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 订单ID。 
+     * Get 订单ID。
+注意：参数TaskId和DealName必须传一个。 
      * @return DealName 订单ID。
+注意：参数TaskId和DealName必须传一个。
      */
     public String getDealName() {
         return this.DealName;
@@ -62,7 +65,9 @@ public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
      * Set 订单ID。
+注意：参数TaskId和DealName必须传一个。
      * @param DealName 订单ID。
+注意：参数TaskId和DealName必须传一个。
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

@@ -48,6 +48,17 @@ DISABLE:停用
     private String AccountRightStatus;
 
     /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -111,6 +122,38 @@ DISABLE:停用
         this.AccountRightStatus = AccountRightStatus;
     }
 
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public ModifyFlexPayeeAccountRightStatusRequest() {
     }
 
@@ -128,6 +171,9 @@ DISABLE:停用
         if (source.AccountRightStatus != null) {
             this.AccountRightStatus = new String(source.AccountRightStatus);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -138,6 +184,7 @@ DISABLE:停用
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "AccountRightType", this.AccountRightType);
         this.setParamSimple(map, prefix + "AccountRightStatus", this.AccountRightStatus);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

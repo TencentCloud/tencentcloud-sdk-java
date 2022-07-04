@@ -60,6 +60,17 @@ UNFREEZE:解冻
     private Paging PageNumber;
 
     /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -147,6 +158,38 @@ UNFREEZE:解冻
         this.PageNumber = PageNumber;
     }
 
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryFlexFreezeOrderListRequest() {
     }
 
@@ -170,6 +213,9 @@ UNFREEZE:解冻
         if (source.PageNumber != null) {
             this.PageNumber = new Paging(source.PageNumber);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -182,6 +228,7 @@ UNFREEZE:解冻
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "PageNumber.", this.PageNumber);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

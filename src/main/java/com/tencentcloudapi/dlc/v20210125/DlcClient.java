@@ -1179,6 +1179,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *上报元数据心跳
+     * @param req ReportHeartbeatMetaDataRequest
+     * @return ReportHeartbeatMetaDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(ReportHeartbeatMetaDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportHeartbeatMetaDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportHeartbeatMetaDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReportHeartbeatMetaData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解绑用户上的用户组
      * @param req UnbindWorkGroupsFromUserRequest
      * @return UnbindWorkGroupsFromUserResponse

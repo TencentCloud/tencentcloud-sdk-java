@@ -37,6 +37,17 @@ public class QueryFlexPaymentOrderStatusRequest extends AbstractModel{
     private String OrderId;
 
     /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 外部订单ID 
      * @return OutOrderId 外部订单ID
      */
@@ -68,6 +79,38 @@ public class QueryFlexPaymentOrderStatusRequest extends AbstractModel{
         this.OrderId = OrderId;
     }
 
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryFlexPaymentOrderStatusRequest() {
     }
 
@@ -82,6 +125,9 @@ public class QueryFlexPaymentOrderStatusRequest extends AbstractModel{
         if (source.OrderId != null) {
             this.OrderId = new String(source.OrderId);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -91,6 +137,7 @@ public class QueryFlexPaymentOrderStatusRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

@@ -51,6 +51,28 @@ public class QueryFlexSettlementOrderListRequest extends AbstractModel{
     private Paging PageNumber;
 
     /**
+    * 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private String OperationType;
+
+    /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -114,6 +136,70 @@ public class QueryFlexSettlementOrderListRequest extends AbstractModel{
         this.PageNumber = PageNumber;
     }
 
+    /**
+     * Get 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔 
+     * @return OperationType 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+     */
+    public String getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+     * @param OperationType 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+     */
+    public void setOperationType(String OperationType) {
+        this.OperationType = OperationType;
+    }
+
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryFlexSettlementOrderListRequest() {
     }
 
@@ -134,6 +220,12 @@ public class QueryFlexSettlementOrderListRequest extends AbstractModel{
         if (source.PageNumber != null) {
             this.PageNumber = new Paging(source.PageNumber);
         }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -145,6 +237,8 @@ public class QueryFlexSettlementOrderListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "PageNumber.", this.PageNumber);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class CreatePrometheusClusterAgentRequest extends AbstractModel{
 
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * agent列表
+    */
+    @SerializedName("Agents")
+    @Expose
+    private PrometheusClusterAgentBasic [] Agents;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get agent列表 
+     * @return Agents agent列表
+     */
+    public PrometheusClusterAgentBasic [] getAgents() {
+        return this.Agents;
+    }
+
+    /**
+     * Set agent列表
+     * @param Agents agent列表
+     */
+    public void setAgents(PrometheusClusterAgentBasic [] Agents) {
+        this.Agents = Agents;
+    }
+
     public CreatePrometheusClusterAgentRequest() {
     }
 
@@ -30,6 +76,15 @@ public class CreatePrometheusClusterAgentRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrometheusClusterAgentRequest(CreatePrometheusClusterAgentRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Agents != null) {
+            this.Agents = new PrometheusClusterAgentBasic[source.Agents.length];
+            for (int i = 0; i < source.Agents.length; i++) {
+                this.Agents[i] = new PrometheusClusterAgentBasic(source.Agents[i]);
+            }
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class CreatePrometheusClusterAgentRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
 
     }
 }

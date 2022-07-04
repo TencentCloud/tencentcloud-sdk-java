@@ -44,7 +44,7 @@ public class ModifyMaintainPeriodConfigRequest extends AbstractModel{
     private Long MaintainDuration;
 
     /**
-    * 每周维护日期
+    * 每周维护日期，日期取值范围[Mon, Tue, Wed, Thu, Fri, Sat, Sun]
     */
     @SerializedName("MaintainWeekDays")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyMaintainPeriodConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 每周维护日期 
-     * @return MaintainWeekDays 每周维护日期
+     * Get 每周维护日期，日期取值范围[Mon, Tue, Wed, Thu, Fri, Sat, Sun] 
+     * @return MaintainWeekDays 每周维护日期，日期取值范围[Mon, Tue, Wed, Thu, Fri, Sat, Sun]
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set 每周维护日期
-     * @param MaintainWeekDays 每周维护日期
+     * Set 每周维护日期，日期取值范围[Mon, Tue, Wed, Thu, Fri, Sat, Sun]
+     * @param MaintainWeekDays 每周维护日期，日期取值范围[Mon, Tue, Wed, Thu, Fri, Sat, Sun]
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

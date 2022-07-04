@@ -37,6 +37,17 @@ public class QueryFlexPayeeInfoRequest extends AbstractModel{
     private String OutUserId;
 
     /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -68,6 +79,38 @@ public class QueryFlexPayeeInfoRequest extends AbstractModel{
         this.OutUserId = OutUserId;
     }
 
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryFlexPayeeInfoRequest() {
     }
 
@@ -82,6 +125,9 @@ public class QueryFlexPayeeInfoRequest extends AbstractModel{
         if (source.OutUserId != null) {
             this.OutUserId = new String(source.OutUserId);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -91,6 +137,7 @@ public class QueryFlexPayeeInfoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "OutUserId", this.OutUserId);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

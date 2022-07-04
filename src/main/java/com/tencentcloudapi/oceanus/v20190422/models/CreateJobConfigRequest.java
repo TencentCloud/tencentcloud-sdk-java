@@ -142,6 +142,13 @@ public class CreateJobConfigRequest extends AbstractModel{
     private String WorkSpaceId;
 
     /**
+    * 日志级别
+    */
+    @SerializedName("LogLevel")
+    @Expose
+    private String LogLevel;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -413,6 +420,22 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get 日志级别 
+     * @return LogLevel 日志级别
+     */
+    public String getLogLevel() {
+        return this.LogLevel;
+    }
+
+    /**
+     * Set 日志级别
+     * @param LogLevel 日志级别
+     */
+    public void setLogLevel(String LogLevel) {
+        this.LogLevel = LogLevel;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -478,6 +501,9 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.LogLevel != null) {
+            this.LogLevel = new String(source.LogLevel);
+        }
     }
 
 
@@ -502,6 +528,7 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LogCollectType", this.LogCollectType);
         this.setParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
 
     }
 }

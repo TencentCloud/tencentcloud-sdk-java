@@ -44,21 +44,21 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private Long BackupTimeEnd;
 
     /**
-    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+    * 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
     */
     @SerializedName("BackupFreq")
     @Expose
     private String [] BackupFreq;
 
     /**
-    * 备份方式，logic-逻辑备份，snapshot-快照备份
+    * 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
     */
     @SerializedName("BackupType")
     @Expose
@@ -113,48 +113,48 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800 
-     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000 
+     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
-     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份 
-     * @return BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * Get 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份 
+     * @return BackupFreq 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
      */
     public String [] getBackupFreq() {
         return this.BackupFreq;
     }
 
     /**
-     * Set 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-     * @param BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * Set 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * @param BackupFreq 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
      */
     public void setBackupFreq(String [] BackupFreq) {
         this.BackupFreq = BackupFreq;
     }
 
     /**
-     * Get 备份方式，logic-逻辑备份，snapshot-快照备份 
-     * @return BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
+     * Get 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份 
+     * @return BackupType 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份方式，logic-逻辑备份，snapshot-快照备份
-     * @param BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
+     * Set 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
+     * @param BackupType 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

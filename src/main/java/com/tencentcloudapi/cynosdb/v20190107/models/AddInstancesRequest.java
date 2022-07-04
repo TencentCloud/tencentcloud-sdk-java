@@ -44,28 +44,28 @@ public class AddInstancesRequest extends AbstractModel{
     private Long Memory;
 
     /**
-    * 新增只读实例数，取值范围为(0,16]
+    * 新增只读实例数，取值范围为[0,4]
     */
     @SerializedName("ReadOnlyCount")
     @Expose
     private Long ReadOnlyCount;
 
     /**
-    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
+    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * 所属VPC网络ID
+    * 所属VPC网络ID，该参数已废弃
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 所属子网ID，如果设置了VpcId，则SubnetId必填
+    * 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -79,7 +79,7 @@ public class AddInstancesRequest extends AbstractModel{
     private Long Port;
 
     /**
-    * 实例名称，字符串长度范围为[0,64)
+    * 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
     */
     @SerializedName("InstanceName")
     @Expose
@@ -163,64 +163,64 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 新增只读实例数，取值范围为(0,16] 
-     * @return ReadOnlyCount 新增只读实例数，取值范围为(0,16]
+     * Get 新增只读实例数，取值范围为[0,4] 
+     * @return ReadOnlyCount 新增只读实例数，取值范围为[0,4]
      */
     public Long getReadOnlyCount() {
         return this.ReadOnlyCount;
     }
 
     /**
-     * Set 新增只读实例数，取值范围为(0,16]
-     * @param ReadOnlyCount 新增只读实例数，取值范围为(0,16]
+     * Set 新增只读实例数，取值范围为[0,4]
+     * @param ReadOnlyCount 新增只读实例数，取值范围为[0,4]
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;
     }
 
     /**
-     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组 
-     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
+     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。 
+     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
      */
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
 
     /**
-     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
-     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
+     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
      */
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
     }
 
     /**
-     * Get 所属VPC网络ID 
-     * @return VpcId 所属VPC网络ID
+     * Get 所属VPC网络ID，该参数已废弃 
+     * @return VpcId 所属VPC网络ID，该参数已废弃
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 所属VPC网络ID
-     * @param VpcId 所属VPC网络ID
+     * Set 所属VPC网络ID，该参数已废弃
+     * @param VpcId 所属VPC网络ID，该参数已废弃
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 所属子网ID，如果设置了VpcId，则SubnetId必填 
-     * @return SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填
+     * Get 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。 
+     * @return SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 所属子网ID，如果设置了VpcId，则SubnetId必填
-     * @param SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填
+     * Set 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+     * @param SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -243,16 +243,16 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名称，字符串长度范围为[0,64) 
-     * @return InstanceName 实例名称，字符串长度范围为[0,64)
+     * Get 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.' 
+     * @return InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，字符串长度范围为[0,64)
-     * @param InstanceName 实例名称，字符串长度范围为[0,64)
+     * Set 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+     * @param InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
