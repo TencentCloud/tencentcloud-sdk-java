@@ -23,24 +23,21 @@ import java.util.HashMap;
 public class UploadFilesRequest extends AbstractModel{
 
     /**
+    * 文件对应业务类型，用于区分文件存储路径：
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
+2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
     * 调用方信息
     */
     @SerializedName("Caller")
     @Expose
     private Caller Caller;
-
-    /**
-    * 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf/.html
-2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
-    */
-    @SerializedName("BusinessType")
-    @Expose
-    private String BusinessType;
 
     /**
     * 上传文件内容数组，最多支持20个文件
@@ -57,7 +54,7 @@ public class UploadFilesRequest extends AbstractModel{
     private String FileUrls;
 
     /**
-    * 是否将pdf灰色矩阵置白
+    * 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
     */
@@ -66,8 +63,8 @@ false--否，不处理
     private Boolean CoverRect;
 
     /**
-    * 特殊文件类型需要指定文件类型：
-HTML-- .html文件
+    * 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
     */
     @SerializedName("FileType")
     @Expose
@@ -79,6 +76,34 @@ HTML-- .html文件
     @SerializedName("CustomIds")
     @Expose
     private String [] CustomIds;
+
+    /**
+     * Get 文件对应业务类型，用于区分文件存储路径：
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
+2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png 
+     * @return BusinessType 文件对应业务类型，用于区分文件存储路径：
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
+2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set 文件对应业务类型，用于区分文件存储路径：
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
+2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+     * @param BusinessType 文件对应业务类型，用于区分文件存储路径：
+1. TEMPLATE - 模板； 文件类型：.pdf/.html
+2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
 
     /**
      * Get 调用方信息 
@@ -94,46 +119,6 @@ HTML-- .html文件
      */
     public void setCaller(Caller Caller) {
         this.Caller = Caller;
-    }
-
-    /**
-     * Get 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf/.html
-2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png 
-     * @return BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf/.html
-2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
-     */
-    public String getBusinessType() {
-        return this.BusinessType;
-    }
-
-    /**
-     * Set 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf/.html
-2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
-     * @param BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf/.html
-2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
-     */
-    public void setBusinessType(String BusinessType) {
-        this.BusinessType = BusinessType;
     }
 
     /**
@@ -169,10 +154,10 @@ HTML-- .html文件
     }
 
     /**
-     * Get 是否将pdf灰色矩阵置白
+     * Get 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理 
-     * @return CoverRect 是否将pdf灰色矩阵置白
+     * @return CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
      */
@@ -181,10 +166,10 @@ false--否，不处理
     }
 
     /**
-     * Set 是否将pdf灰色矩阵置白
+     * Set 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
-     * @param CoverRect 是否将pdf灰色矩阵置白
+     * @param CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
      */
@@ -193,20 +178,20 @@ false--否，不处理
     }
 
     /**
-     * Get 特殊文件类型需要指定文件类型：
-HTML-- .html文件 
-     * @return FileType 特殊文件类型需要指定文件类型：
-HTML-- .html文件
+     * Get 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF 
+     * @return FileType 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 特殊文件类型需要指定文件类型：
-HTML-- .html文件
-     * @param FileType 特殊文件类型需要指定文件类型：
-HTML-- .html文件
+     * Set 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
+     * @param FileType 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -236,11 +221,11 @@ HTML-- .html文件
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UploadFilesRequest(UploadFilesRequest source) {
-        if (source.Caller != null) {
-            this.Caller = new Caller(source.Caller);
-        }
         if (source.BusinessType != null) {
             this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.Caller != null) {
+            this.Caller = new Caller(source.Caller);
         }
         if (source.FileInfos != null) {
             this.FileInfos = new UploadFile[source.FileInfos.length];
@@ -270,8 +255,8 @@ HTML-- .html文件
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Caller.", this.Caller);
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamObj(map, prefix + "Caller.", this.Caller);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamSimple(map, prefix + "FileUrls", this.FileUrls);
         this.setParamSimple(map, prefix + "CoverRect", this.CoverRect);

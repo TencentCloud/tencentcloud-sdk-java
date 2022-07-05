@@ -84,6 +84,9 @@ public enum ImsErrorCode {
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+    // 未获取到接口授权。
+     UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized"),
+     
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),
      

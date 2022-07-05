@@ -106,6 +106,46 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *配置CHC物理服务器的带外和部署网络。传入带外网络和部署网络信息
+     * @param req ConfigureChcAssistVpcRequest
+     * @return ConfigureChcAssistVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(ConfigureChcAssistVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ConfigureChcAssistVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ConfigureChcAssistVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *配置CHC物理服务器部署网络
+     * @param req ConfigureChcDeployVpcRequest
+     * @return ConfigureChcDeployVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(ConfigureChcDeployVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ConfigureChcDeployVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ConfigureChcDeployVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
      * @param req CreateDisasterRecoverGroupRequest
      * @return CreateDisasterRecoverGroupResponse
@@ -1216,6 +1256,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *修改CHC物理服务器的属性
+     * @param req ModifyChcAttributeRequest
+     * @return ModifyChcAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyChcAttributeResponse ModifyChcAttribute(ModifyChcAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyChcAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyChcAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
      * @param req ModifyDisasterRecoverGroupAttributeRequest
      * @return ModifyDisasterRecoverGroupAttributeResponse
@@ -1556,6 +1616,46 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RebootInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *清理CHC物理服务器的带外网络和部署网络
+     * @param req RemoveChcAssistVpcRequest
+     * @return RemoveChcAssistVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveChcAssistVpcResponse RemoveChcAssistVpc(RemoveChcAssistVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveChcAssistVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveChcAssistVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *清理CHC物理服务器的部署网络
+     * @param req RemoveChcDeployVpcRequest
+     * @return RemoveChcDeployVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveChcDeployVpcResponse RemoveChcDeployVpc(RemoveChcDeployVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveChcDeployVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveChcDeployVpc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

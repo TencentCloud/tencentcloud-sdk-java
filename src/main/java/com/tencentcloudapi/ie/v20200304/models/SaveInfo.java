@@ -38,6 +38,14 @@ public class SaveInfo extends AbstractModel{
     private CosInfo CosInfo;
 
     /**
+    * 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get 存储类型，可选值： 
 1：CosInfo。 
      * @return Type 存储类型，可选值： 
@@ -73,6 +81,26 @@ public class SaveInfo extends AbstractModel{
         this.CosInfo = CosInfo;
     }
 
+    /**
+     * Get 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。 
+     * @return Id 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+     * @param Id 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public SaveInfo() {
     }
 
@@ -87,6 +115,9 @@ public class SaveInfo extends AbstractModel{
         if (source.CosInfo != null) {
             this.CosInfo = new CosInfo(source.CosInfo);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -96,6 +127,7 @@ public class SaveInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosInfo.", this.CosInfo);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

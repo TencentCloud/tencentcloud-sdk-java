@@ -52,6 +52,19 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
     private Boolean CloseAudit;
 
     /**
+    * 高频审计日志保存时长。支持值包括：
+7 - 一周
+30 - 一个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年；
+    */
+    @SerializedName("HighLogExpireDay")
+    @Expose
+    private Long HighLogExpireDay;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -131,6 +144,46 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
         this.CloseAudit = CloseAudit;
     }
 
+    /**
+     * Get 高频审计日志保存时长。支持值包括：
+7 - 一周
+30 - 一个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年； 
+     * @return HighLogExpireDay 高频审计日志保存时长。支持值包括：
+7 - 一周
+30 - 一个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年；
+     */
+    public Long getHighLogExpireDay() {
+        return this.HighLogExpireDay;
+    }
+
+    /**
+     * Set 高频审计日志保存时长。支持值包括：
+7 - 一周
+30 - 一个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年；
+     * @param HighLogExpireDay 高频审计日志保存时长。支持值包括：
+7 - 一周
+30 - 一个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年；
+     */
+    public void setHighLogExpireDay(Long HighLogExpireDay) {
+        this.HighLogExpireDay = HighLogExpireDay;
+    }
+
     public ModifyAuditConfigRequest() {
     }
 
@@ -148,6 +201,9 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
         if (source.CloseAudit != null) {
             this.CloseAudit = new Boolean(source.CloseAudit);
         }
+        if (source.HighLogExpireDay != null) {
+            this.HighLogExpireDay = new Long(source.HighLogExpireDay);
+        }
     }
 
 
@@ -158,6 +214,7 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
         this.setParamSimple(map, prefix + "CloseAudit", this.CloseAudit);
+        this.setParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
 
     }
 }

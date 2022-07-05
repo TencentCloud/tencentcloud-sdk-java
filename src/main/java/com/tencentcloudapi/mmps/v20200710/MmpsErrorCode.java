@@ -1,7 +1,10 @@
 package com.tencentcloudapi.mmps.v20200710;
 public enum MmpsErrorCode {
     // 操作失败。
-     FAILEDOPERATION("FailedOperation");
+     FAILEDOPERATION("FailedOperation"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private MmpsErrorCode (String value){

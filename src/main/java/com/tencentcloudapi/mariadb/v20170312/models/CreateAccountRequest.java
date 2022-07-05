@@ -72,6 +72,20 @@ public class CreateAccountRequest extends AbstractModel{
     private Long DelayThresh;
 
     /**
+    * 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+    */
+    @SerializedName("SlaveConst")
+    @Expose
+    private Long SlaveConst;
+
+    /**
+    * 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
      * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -183,6 +197,38 @@ public class CreateAccountRequest extends AbstractModel{
         this.DelayThresh = DelayThresh;
     }
 
+    /**
+     * Get 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。 
+     * @return SlaveConst 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+     */
+    public Long getSlaveConst() {
+        return this.SlaveConst;
+    }
+
+    /**
+     * Set 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+     * @param SlaveConst 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+     */
+    public void setSlaveConst(Long SlaveConst) {
+        this.SlaveConst = SlaveConst;
+    }
+
+    /**
+     * Get 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。 
+     * @return MaxUserConnections 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+     * @param MaxUserConnections 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -212,6 +258,12 @@ public class CreateAccountRequest extends AbstractModel{
         if (source.DelayThresh != null) {
             this.DelayThresh = new Long(source.DelayThresh);
         }
+        if (source.SlaveConst != null) {
+            this.SlaveConst = new Long(source.SlaveConst);
+        }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -226,6 +278,8 @@ public class CreateAccountRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+        this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }

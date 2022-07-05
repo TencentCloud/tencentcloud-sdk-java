@@ -83,6 +83,22 @@ public class NodeInfo extends AbstractModel{
     private Long DiskEncrypt;
 
     /**
+    * cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CpuNum")
+    @Expose
+    private Long CpuNum;
+
+    /**
+    * 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MemSize")
+    @Expose
+    private Long MemSize;
+
+    /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
@@ -226,6 +242,46 @@ public class NodeInfo extends AbstractModel{
         this.DiskEncrypt = DiskEncrypt;
     }
 
+    /**
+     * Get cpu数目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CpuNum cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCpuNum() {
+        return this.CpuNum;
+    }
+
+    /**
+     * Set cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CpuNum cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpuNum(Long CpuNum) {
+        this.CpuNum = CpuNum;
+    }
+
+    /**
+     * Get 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MemSize 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMemSize() {
+        return this.MemSize;
+    }
+
+    /**
+     * Set 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MemSize 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemSize(Long MemSize) {
+        this.MemSize = MemSize;
+    }
+
     public NodeInfo() {
     }
 
@@ -258,6 +314,12 @@ public class NodeInfo extends AbstractModel{
         if (source.DiskEncrypt != null) {
             this.DiskEncrypt = new Long(source.DiskEncrypt);
         }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
     }
 
 
@@ -273,6 +335,8 @@ public class NodeInfo extends AbstractModel{
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
         this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
+        this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
+        this.setParamSimple(map, prefix + "MemSize", this.MemSize);
 
     }
 }

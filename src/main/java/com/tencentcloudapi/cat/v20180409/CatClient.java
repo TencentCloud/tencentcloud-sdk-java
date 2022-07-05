@@ -99,7 +99,7 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *列出云拨测指标详细数据
+     *查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
      * @param req DescribeProbeMetricDataRequest
      * @return DescribeProbeMetricDataResponse
      * @throws TencentCloudSDKException

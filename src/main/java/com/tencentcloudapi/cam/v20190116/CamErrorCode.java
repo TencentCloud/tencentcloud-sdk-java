@@ -273,6 +273,9 @@ public enum CamErrorCode {
     // PolicyId指定的资源不存在。
      RESOURCENOTFOUND_POLICYIDNOTFOUND("ResourceNotFound.PolicyIdNotFound"),
      
+    // 密钥不存在。
+     RESOURCENOTFOUND_SECRETNOTEXIST("ResourceNotFound.SecretNotExist"),
+     
     // 用户不存在。
      RESOURCENOTFOUND_USERNOTEXIST("ResourceNotFound.UserNotExist"),
      

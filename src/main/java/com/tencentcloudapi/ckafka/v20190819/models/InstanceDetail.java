@@ -244,6 +244,14 @@ public class InstanceDetail extends AbstractModel{
     private Long PublicNetwork;
 
     /**
+    * 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -767,6 +775,26 @@ public class InstanceDetail extends AbstractModel{
         this.PublicNetwork = PublicNetwork;
     }
 
+    /**
+     * Get 实例类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public InstanceDetail() {
     }
 
@@ -874,6 +902,9 @@ public class InstanceDetail extends AbstractModel{
         if (source.PublicNetwork != null) {
             this.PublicNetwork = new Long(source.PublicNetwork);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -911,6 +942,7 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

@@ -79,6 +79,14 @@ public class DdosRule extends AbstractModel{
     private String Switch;
 
     /**
+    * UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UdpShardOpen")
+    @Expose
+    private String UdpShardOpen;
+
+    /**
      * Get DDoS防护等级
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DdosStatusInfo DDoS防护等级
@@ -218,6 +226,26 @@ public class DdosRule extends AbstractModel{
         this.Switch = Switch;
     }
 
+    /**
+     * Get UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UdpShardOpen UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUdpShardOpen() {
+        return this.UdpShardOpen;
+    }
+
+    /**
+     * Set UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UdpShardOpen UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUdpShardOpen(String UdpShardOpen) {
+        this.UdpShardOpen = UdpShardOpen;
+    }
+
     public DdosRule() {
     }
 
@@ -247,6 +275,9 @@ public class DdosRule extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.UdpShardOpen != null) {
+            this.UdpShardOpen = new String(source.UdpShardOpen);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class DdosRule extends AbstractModel{
         this.setParamObj(map, prefix + "DdosPacketFilter.", this.DdosPacketFilter);
         this.setParamObj(map, prefix + "DdosAcl.", this.DdosAcl);
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "UdpShardOpen", this.UdpShardOpen);
 
     }
 }

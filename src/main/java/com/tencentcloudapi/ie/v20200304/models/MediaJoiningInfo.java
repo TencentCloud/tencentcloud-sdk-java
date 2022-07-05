@@ -31,6 +31,15 @@ public class MediaJoiningInfo extends AbstractModel{
     private MediaTargetInfo TargetInfo;
 
     /**
+    * 拼接模式：
+Fast：快速；
+Normal：正常；
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
      * Get 输出目标信息，拼接只采用FileName和Format，用于指定目标文件名和格式。
 其中Format只支持mp4. 
      * @return TargetInfo 输出目标信息，拼接只采用FileName和Format，用于指定目标文件名和格式。
@@ -50,6 +59,30 @@ public class MediaJoiningInfo extends AbstractModel{
         this.TargetInfo = TargetInfo;
     }
 
+    /**
+     * Get 拼接模式：
+Fast：快速；
+Normal：正常； 
+     * @return Mode 拼接模式：
+Fast：快速；
+Normal：正常；
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 拼接模式：
+Fast：快速；
+Normal：正常；
+     * @param Mode 拼接模式：
+Fast：快速；
+Normal：正常；
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
     public MediaJoiningInfo() {
     }
 
@@ -61,6 +94,9 @@ public class MediaJoiningInfo extends AbstractModel{
         if (source.TargetInfo != null) {
             this.TargetInfo = new MediaTargetInfo(source.TargetInfo);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
     }
 
 
@@ -69,6 +105,7 @@ public class MediaJoiningInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TargetInfo.", this.TargetInfo);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
 
     }
 }

@@ -51,7 +51,7 @@ public class Cluster extends AbstractModel{
     private String Zone;
 
     /**
-    * 数据库版本
+    * TDSQL-C PostgreSQL 合入的社区版本号
     */
     @SerializedName("DBVersion")
     @Expose
@@ -153,6 +153,20 @@ public class Cluster extends AbstractModel{
     private Endpoint [] EndpointSet;
 
     /**
+    * TDSQL-C PostgreSQL 合入的社区主要版本号
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
+
+    /**
+    * TDSQL-C PostgreSQL 内核版本号
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get 集群ID，集群的唯一标识 
      * @return ClusterId 集群ID，集群的唯一标识
      */
@@ -217,16 +231,16 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get 数据库版本 
-     * @return DBVersion 数据库版本
+     * Get TDSQL-C PostgreSQL 合入的社区版本号 
+     * @return DBVersion TDSQL-C PostgreSQL 合入的社区版本号
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DBVersion 数据库版本
+     * Set TDSQL-C PostgreSQL 合入的社区版本号
+     * @param DBVersion TDSQL-C PostgreSQL 合入的社区版本号
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -468,6 +482,38 @@ public class Cluster extends AbstractModel{
         this.EndpointSet = EndpointSet;
     }
 
+    /**
+     * Get TDSQL-C PostgreSQL 合入的社区主要版本号 
+     * @return DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 合入的社区主要版本号
+     * @param DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get TDSQL-C PostgreSQL 内核版本号 
+     * @return DBKernelVersion TDSQL-C PostgreSQL 内核版本号
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 内核版本号
+     * @param DBKernelVersion TDSQL-C PostgreSQL 内核版本号
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public Cluster() {
     }
 
@@ -530,6 +576,12 @@ public class Cluster extends AbstractModel{
                 this.EndpointSet[i] = new Endpoint(source.EndpointSet[i]);
             }
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -554,6 +606,8 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "DBCharset", this.DBCharset);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamArrayObj(map, prefix + "EndpointSet.", this.EndpointSet);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

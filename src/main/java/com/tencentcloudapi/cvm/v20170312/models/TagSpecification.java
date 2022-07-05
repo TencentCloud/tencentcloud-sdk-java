@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel{
 
     /**
-    * 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”
+    * 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
     */
     @SerializedName("ResourceType")
     @Expose
@@ -37,16 +37,16 @@ public class TagSpecification extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image” 
-     * @return ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”
+     * Get 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair” 
+     * @return ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”
-     * @param ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”
+     * Set 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
+     * @param ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

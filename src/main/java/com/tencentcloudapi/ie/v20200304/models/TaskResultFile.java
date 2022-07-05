@@ -47,6 +47,14 @@ public class TaskResultFile extends AbstractModel{
     private MediaResultInfo MediaInfo;
 
     /**
+    * 文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get 文件链接。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 文件链接。
@@ -106,6 +114,26 @@ public class TaskResultFile extends AbstractModel{
         this.MediaInfo = MediaInfo;
     }
 
+    /**
+     * Get 文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Md5 文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set 文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Md5 文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public TaskResultFile() {
     }
 
@@ -123,6 +151,9 @@ public class TaskResultFile extends AbstractModel{
         if (source.MediaInfo != null) {
             this.MediaInfo = new MediaResultInfo(source.MediaInfo);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class TaskResultFile extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamObj(map, prefix + "MediaInfo.", this.MediaInfo);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

@@ -2293,6 +2293,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *CDB实例开通审计服务
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenAuditService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(OpenDBInstanceGTID)用于开启云数据库实例的 GTID，只支持版本为 5.6 以及以上的实例。
      * @param req OpenDBInstanceGTIDRequest
      * @return OpenDBInstanceGTIDResponse

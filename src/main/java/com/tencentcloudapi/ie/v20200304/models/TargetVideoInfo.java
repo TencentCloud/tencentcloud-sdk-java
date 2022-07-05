@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class TargetVideoInfo extends AbstractModel{
 
     /**
-    * 视频宽度，单位像素
+    * 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 视频高度，单位像素
+    * 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
     */
     @SerializedName("Height")
     @Expose
@@ -44,32 +44,32 @@ public class TargetVideoInfo extends AbstractModel{
     private Long FrameRate;
 
     /**
-     * Get 视频宽度，单位像素 
-     * @return Width 视频宽度，单位像素
+     * Get 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。 
+     * @return Width 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 视频宽度，单位像素
-     * @param Width 视频宽度，单位像素
+     * Set 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
+     * @param Width 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 视频高度，单位像素 
-     * @return Height 视频高度，单位像素
+     * Get 视频高度，单位像素，一般要求是偶数，否则会向下对齐。 
+     * @return Height 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 视频高度，单位像素
-     * @param Height 视频高度，单位像素
+     * Set 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
+     * @param Height 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

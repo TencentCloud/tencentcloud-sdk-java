@@ -114,6 +114,14 @@ public class DDoSAntiPly extends AbstractModel{
     private String EmptyConnectProtect;
 
     /**
+    * UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UdpShard")
+    @Expose
+    private String UdpShard;
+
+    /**
      * Get tcp协议封禁 on-开；off-关 
      * @return DropTcp tcp协议封禁 on-开；off-关
      */
@@ -321,6 +329,26 @@ public class DDoSAntiPly extends AbstractModel{
         this.EmptyConnectProtect = EmptyConnectProtect;
     }
 
+    /**
+     * Get UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UdpShard UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUdpShard() {
+        return this.UdpShard;
+    }
+
+    /**
+     * Set UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UdpShard UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUdpShard(String UdpShard) {
+        this.UdpShard = UdpShard;
+    }
+
     public DDoSAntiPly() {
     }
 
@@ -368,6 +396,9 @@ public class DDoSAntiPly extends AbstractModel{
         if (source.EmptyConnectProtect != null) {
             this.EmptyConnectProtect = new String(source.EmptyConnectProtect);
         }
+        if (source.UdpShard != null) {
+            this.UdpShard = new String(source.UdpShard);
+        }
     }
 
 
@@ -388,6 +419,7 @@ public class DDoSAntiPly extends AbstractModel{
         this.setParamSimple(map, prefix + "AbnormalSynNum", this.AbnormalSynNum);
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamSimple(map, prefix + "EmptyConnectProtect", this.EmptyConnectProtect);
+        this.setParamSimple(map, prefix + "UdpShard", this.UdpShard);
 
     }
 }

@@ -71,6 +71,14 @@ public class SecurityConfig extends AbstractModel{
     private SwitchConfig SwitchConfig;
 
     /**
+    * IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpTableConfig")
+    @Expose
+    private IpTableConfig IpTableConfig;
+
+    /**
      * Get 门神配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WafConfig 门神配置
@@ -190,6 +198,26 @@ public class SecurityConfig extends AbstractModel{
         this.SwitchConfig = SwitchConfig;
     }
 
+    /**
+     * Get IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpTableConfig IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IpTableConfig getIpTableConfig() {
+        return this.IpTableConfig;
+    }
+
+    /**
+     * Set IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpTableConfig IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpTableConfig(IpTableConfig IpTableConfig) {
+        this.IpTableConfig = IpTableConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -216,6 +244,9 @@ public class SecurityConfig extends AbstractModel{
         if (source.SwitchConfig != null) {
             this.SwitchConfig = new SwitchConfig(source.SwitchConfig);
         }
+        if (source.IpTableConfig != null) {
+            this.IpTableConfig = new IpTableConfig(source.IpTableConfig);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class SecurityConfig extends AbstractModel{
         this.setParamObj(map, prefix + "AclConfig.", this.AclConfig);
         this.setParamObj(map, prefix + "BotConfig.", this.BotConfig);
         this.setParamObj(map, prefix + "SwitchConfig.", this.SwitchConfig);
+        this.setParamObj(map, prefix + "IpTableConfig.", this.IpTableConfig);
 
     }
 }

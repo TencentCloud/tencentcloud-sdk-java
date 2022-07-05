@@ -142,6 +142,13 @@ public class AlterDMSTableRequest extends AbstractModel{
     private DMSPartition [] Partitions;
 
     /**
+    * 当前表名
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 当前名称 
      * @return CurrentName 当前名称
      */
@@ -413,6 +420,22 @@ public class AlterDMSTableRequest extends AbstractModel{
         this.Partitions = Partitions;
     }
 
+    /**
+     * Get 当前表名 
+     * @return Name 当前表名
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 当前表名
+     * @param Name 当前表名
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public AlterDMSTableRequest() {
     }
 
@@ -481,6 +504,9 @@ public class AlterDMSTableRequest extends AbstractModel{
                 this.Partitions[i] = new DMSPartition(source.Partitions[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -505,6 +531,7 @@ public class AlterDMSTableRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ViewOriginalText", this.ViewOriginalText);
         this.setParamSimple(map, prefix + "ViewExpandedText", this.ViewExpandedText);
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

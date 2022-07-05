@@ -44,6 +44,13 @@ public class DescribeRegionRequest extends AbstractModel{
     private String Business;
 
     /**
+    * cdc专有集群业务字段，可忽略
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -91,6 +98,22 @@ public class DescribeRegionRequest extends AbstractModel{
         this.Business = Business;
     }
 
+    /**
+     * Get cdc专有集群业务字段，可忽略 
+     * @return CdcId cdc专有集群业务字段，可忽略
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set cdc专有集群业务字段，可忽略
+     * @param CdcId cdc专有集群业务字段，可忽略
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public DescribeRegionRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeRegionRequest extends AbstractModel{
         if (source.Business != null) {
             this.Business = new String(source.Business);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeRegionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Business", this.Business);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

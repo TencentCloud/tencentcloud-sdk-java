@@ -12,6 +12,9 @@ public enum EisErrorCode {
     // 依赖服务错误。
      FAILEDOPERATION_METACOMPILERERROR("FailedOperation.MetaCompilerError"),
      
+    // 不支持的操作类型。
+     FAILEDOPERATION_UNSUPPORTEDOPERATIONTYPE("FailedOperation.UnSupportedOperationType"),
+     
     // 检查运行时失败。
      INTERNALERROR_CHECKRUNTIMEFAILED("InternalError.CheckRuntimeFailed"),
      

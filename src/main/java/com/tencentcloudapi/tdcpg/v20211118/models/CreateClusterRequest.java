@@ -30,13 +30,6 @@ public class CreateClusterRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 数据库版本，目前仅支持 10.17
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
     * 数据库用户密码，必须满足 8-64个字符，至少包含 大写字母、小写字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种
     */
     @SerializedName("MasterUserPassword")
@@ -88,6 +81,15 @@ public class CreateClusterRequest extends AbstractModel{
     private String ClusterName;
 
     /**
+    * TDSQL-C PostgreSQL 合入的社区版本号。
+支持入参值为：10.17。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数与DBMajorVersion、DBKernelVersion只能传递一个，且需要传递一个。
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
     * 项目Id，默认为0表示默认项目
     */
     @SerializedName("ProjectId")
@@ -124,6 +126,24 @@ public class CreateClusterRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * TDSQL-C PostgreSQL 合入的社区主要版本号。
+支持入参值为：10。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数和DBVersion、DBKernelVersion只能传递一个，且需要传递一个。
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
+
+    /**
+    * TDSQL-C PostgreSQL 内核版本号。
+支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
+注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -137,22 +157,6 @@ public class CreateClusterRequest extends AbstractModel{
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
-    }
-
-    /**
-     * Get 数据库版本，目前仅支持 10.17 
-     * @return DBVersion 数据库版本，目前仅支持 10.17
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set 数据库版本，目前仅支持 10.17
-     * @param DBVersion 数据库版本，目前仅支持 10.17
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
     }
 
     /**
@@ -276,6 +280,30 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get TDSQL-C PostgreSQL 合入的社区版本号。
+支持入参值为：10.17。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数与DBMajorVersion、DBKernelVersion只能传递一个，且需要传递一个。 
+     * @return DBVersion TDSQL-C PostgreSQL 合入的社区版本号。
+支持入参值为：10.17。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数与DBMajorVersion、DBKernelVersion只能传递一个，且需要传递一个。
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 合入的社区版本号。
+支持入参值为：10.17。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数与DBMajorVersion、DBKernelVersion只能传递一个，且需要传递一个。
+     * @param DBVersion TDSQL-C PostgreSQL 合入的社区版本号。
+支持入参值为：10.17。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数与DBMajorVersion、DBKernelVersion只能传递一个，且需要传递一个。
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+    }
+
+    /**
      * Get 项目Id，默认为0表示默认项目 
      * @return ProjectId 项目Id，默认为0表示默认项目
      */
@@ -359,6 +387,54 @@ public class CreateClusterRequest extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    /**
+     * Get TDSQL-C PostgreSQL 合入的社区主要版本号。
+支持入参值为：10。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数和DBVersion、DBKernelVersion只能传递一个，且需要传递一个。 
+     * @return DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号。
+支持入参值为：10。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数和DBVersion、DBKernelVersion只能传递一个，且需要传递一个。
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 合入的社区主要版本号。
+支持入参值为：10。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数和DBVersion、DBKernelVersion只能传递一个，且需要传递一个。
+     * @param DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号。
+支持入参值为：10。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+注：该参数和DBVersion、DBKernelVersion只能传递一个，且需要传递一个。
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get TDSQL-C PostgreSQL 内核版本号。
+支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
+注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。 
+     * @return DBKernelVersion TDSQL-C PostgreSQL 内核版本号。
+支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
+注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 内核版本号。
+支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
+注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+     * @param DBKernelVersion TDSQL-C PostgreSQL 内核版本号。
+支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
+注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -369,9 +445,6 @@ public class CreateClusterRequest extends AbstractModel{
     public CreateClusterRequest(CreateClusterRequest source) {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
-        }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
         }
         if (source.MasterUserPassword != null) {
             this.MasterUserPassword = new String(source.MasterUserPassword);
@@ -394,6 +467,9 @@ public class CreateClusterRequest extends AbstractModel{
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
+        }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
@@ -409,6 +485,12 @@ public class CreateClusterRequest extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -417,7 +499,6 @@ public class CreateClusterRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "MasterUserPassword", this.MasterUserPassword);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
@@ -425,11 +506,14 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

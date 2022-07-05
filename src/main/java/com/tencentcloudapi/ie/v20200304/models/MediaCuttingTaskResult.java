@@ -55,6 +55,17 @@ public class MediaCuttingTaskResult extends AbstractModel{
     private TaskResultFile LastFile;
 
     /**
+    * 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageCount")
+    @Expose
+    private Long ImageCount;
+
+    /**
      * Get 如果ResultListType不为NoListFile时，结果（TaskResultFile）列表文件的存储位置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListFile 如果ResultListType不为NoListFile时，结果（TaskResultFile）列表文件的存储位置。
@@ -134,6 +145,38 @@ public class MediaCuttingTaskResult extends AbstractModel{
         this.LastFile = LastFile;
     }
 
+    /**
+     * Get 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageCount 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getImageCount() {
+        return this.ImageCount;
+    }
+
+    /**
+     * Set 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageCount 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageCount(Long ImageCount) {
+        this.ImageCount = ImageCount;
+    }
+
     public MediaCuttingTaskResult() {
     }
 
@@ -154,6 +197,9 @@ public class MediaCuttingTaskResult extends AbstractModel{
         if (source.LastFile != null) {
             this.LastFile = new TaskResultFile(source.LastFile);
         }
+        if (source.ImageCount != null) {
+            this.ImageCount = new Long(source.ImageCount);
+        }
     }
 
 
@@ -165,6 +211,7 @@ public class MediaCuttingTaskResult extends AbstractModel{
         this.setParamSimple(map, prefix + "ResultCount", this.ResultCount);
         this.setParamObj(map, prefix + "FirstFile.", this.FirstFile);
         this.setParamObj(map, prefix + "LastFile.", this.LastFile);
+        this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
 
     }
 }

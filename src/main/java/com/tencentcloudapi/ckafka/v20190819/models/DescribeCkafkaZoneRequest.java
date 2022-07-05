@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeCkafkaZoneRequest extends AbstractModel{
 
+    /**
+    * cdc专业集群业务参数
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+     * Get cdc专业集群业务参数 
+     * @return CdcId cdc专业集群业务参数
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set cdc专业集群业务参数
+     * @param CdcId cdc专业集群业务参数
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public DescribeCkafkaZoneRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeCkafkaZoneRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCkafkaZoneRequest(DescribeCkafkaZoneRequest source) {
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeCkafkaZoneRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

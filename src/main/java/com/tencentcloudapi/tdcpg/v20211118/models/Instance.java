@@ -134,6 +134,20 @@ public class Instance extends AbstractModel{
     private String InstanceType;
 
     /**
+    * TDSQL-C PostgreSQL 合入的社区主要版本号
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
+
+    /**
+    * TDSQL-C PostgreSQL 内核版本号
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get 实例ID，集群下唯一 
      * @return InstanceId 实例ID，集群下唯一
      */
@@ -397,6 +411,38 @@ public class Instance extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get TDSQL-C PostgreSQL 合入的社区主要版本号 
+     * @return DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 合入的社区主要版本号
+     * @param DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get TDSQL-C PostgreSQL 内核版本号 
+     * @return DBKernelVersion TDSQL-C PostgreSQL 内核版本号
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set TDSQL-C PostgreSQL 内核版本号
+     * @param DBKernelVersion TDSQL-C PostgreSQL 内核版本号
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public Instance() {
     }
 
@@ -450,6 +496,12 @@ public class Instance extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -472,6 +524,8 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

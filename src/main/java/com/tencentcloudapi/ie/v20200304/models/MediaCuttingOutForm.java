@@ -54,18 +54,32 @@ Gaussian：高斯模糊；
     private String FillType;
 
     /**
-    * Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
+    * 【废弃】参考SpriteInfo
     */
     @SerializedName("SpriteRowCount")
     @Expose
     private Long SpriteRowCount;
 
     /**
-    * Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+    * 【废弃】参考SpriteInfo
     */
     @SerializedName("SpriteColumnCount")
     @Expose
     private Long SpriteColumnCount;
+
+    /**
+    * Type=Sprite时有效，表示雪碧图参数信息。
+    */
+    @SerializedName("SpriteInfo")
+    @Expose
+    private SpriteImageInfo SpriteInfo;
+
+    /**
+    * Type=Dynamic时有效，表示动图参数信息。
+    */
+    @SerializedName("DynamicInfo")
+    @Expose
+    private DynamicImageInfo DynamicInfo;
 
     /**
      * Get 输出类型，可选值：
@@ -168,35 +182,67 @@ Gaussian：高斯模糊；
     }
 
     /**
-     * Get Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。 
-     * @return SpriteRowCount Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
+     * Get 【废弃】参考SpriteInfo 
+     * @return SpriteRowCount 【废弃】参考SpriteInfo
      */
     public Long getSpriteRowCount() {
         return this.SpriteRowCount;
     }
 
     /**
-     * Set Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
-     * @param SpriteRowCount Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
+     * Set 【废弃】参考SpriteInfo
+     * @param SpriteRowCount 【废弃】参考SpriteInfo
      */
     public void setSpriteRowCount(Long SpriteRowCount) {
         this.SpriteRowCount = SpriteRowCount;
     }
 
     /**
-     * Get Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。 
-     * @return SpriteColumnCount Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+     * Get 【废弃】参考SpriteInfo 
+     * @return SpriteColumnCount 【废弃】参考SpriteInfo
      */
     public Long getSpriteColumnCount() {
         return this.SpriteColumnCount;
     }
 
     /**
-     * Set Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
-     * @param SpriteColumnCount Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+     * Set 【废弃】参考SpriteInfo
+     * @param SpriteColumnCount 【废弃】参考SpriteInfo
      */
     public void setSpriteColumnCount(Long SpriteColumnCount) {
         this.SpriteColumnCount = SpriteColumnCount;
+    }
+
+    /**
+     * Get Type=Sprite时有效，表示雪碧图参数信息。 
+     * @return SpriteInfo Type=Sprite时有效，表示雪碧图参数信息。
+     */
+    public SpriteImageInfo getSpriteInfo() {
+        return this.SpriteInfo;
+    }
+
+    /**
+     * Set Type=Sprite时有效，表示雪碧图参数信息。
+     * @param SpriteInfo Type=Sprite时有效，表示雪碧图参数信息。
+     */
+    public void setSpriteInfo(SpriteImageInfo SpriteInfo) {
+        this.SpriteInfo = SpriteInfo;
+    }
+
+    /**
+     * Get Type=Dynamic时有效，表示动图参数信息。 
+     * @return DynamicInfo Type=Dynamic时有效，表示动图参数信息。
+     */
+    public DynamicImageInfo getDynamicInfo() {
+        return this.DynamicInfo;
+    }
+
+    /**
+     * Set Type=Dynamic时有效，表示动图参数信息。
+     * @param DynamicInfo Type=Dynamic时有效，表示动图参数信息。
+     */
+    public void setDynamicInfo(DynamicImageInfo DynamicInfo) {
+        this.DynamicInfo = DynamicInfo;
     }
 
     public MediaCuttingOutForm() {
@@ -219,6 +265,12 @@ Gaussian：高斯模糊；
         if (source.SpriteColumnCount != null) {
             this.SpriteColumnCount = new Long(source.SpriteColumnCount);
         }
+        if (source.SpriteInfo != null) {
+            this.SpriteInfo = new SpriteImageInfo(source.SpriteInfo);
+        }
+        if (source.DynamicInfo != null) {
+            this.DynamicInfo = new DynamicImageInfo(source.DynamicInfo);
+        }
     }
 
 
@@ -230,6 +282,8 @@ Gaussian：高斯模糊；
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "SpriteRowCount", this.SpriteRowCount);
         this.setParamSimple(map, prefix + "SpriteColumnCount", this.SpriteColumnCount);
+        this.setParamObj(map, prefix + "SpriteInfo.", this.SpriteInfo);
+        this.setParamObj(map, prefix + "DynamicInfo.", this.DynamicInfo);
 
     }
 }

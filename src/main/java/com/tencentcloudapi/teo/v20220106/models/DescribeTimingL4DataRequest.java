@@ -44,21 +44,21 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     private String [] MetricNames;
 
     /**
-    * ZoneId列表，仅在zone/instance维度下查询时该参数有效
+    * 站点id列表
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * InstanceId列表，仅在Instance维度下查询时该参数有效
+    * 该字段已废弃，请使用ProxyIds字段
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 协议类型， 该字段当前无效
+    * 该字段当前无效
     */
     @SerializedName("Protocol")
     @Expose
@@ -72,11 +72,25 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     private String Interval;
 
     /**
-    * 规则ID，仅在instance维度有效
+    * 该字段当前无效，请使用Filter筛选
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
+
+    /**
+    * 支持的 Filter：proxyd,ruleId
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 四层实例列表
+    */
+    @SerializedName("ProxyIds")
+    @Expose
+    private String [] ProxyIds;
 
     /**
      * Get RFC3339格式，客户端时间 
@@ -127,48 +141,48 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     }
 
     /**
-     * Get ZoneId列表，仅在zone/instance维度下查询时该参数有效 
-     * @return ZoneIds ZoneId列表，仅在zone/instance维度下查询时该参数有效
+     * Get 站点id列表 
+     * @return ZoneIds 站点id列表
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set ZoneId列表，仅在zone/instance维度下查询时该参数有效
-     * @param ZoneIds ZoneId列表，仅在zone/instance维度下查询时该参数有效
+     * Set 站点id列表
+     * @param ZoneIds 站点id列表
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get InstanceId列表，仅在Instance维度下查询时该参数有效 
-     * @return InstanceIds InstanceId列表，仅在Instance维度下查询时该参数有效
+     * Get 该字段已废弃，请使用ProxyIds字段 
+     * @return InstanceIds 该字段已废弃，请使用ProxyIds字段
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set InstanceId列表，仅在Instance维度下查询时该参数有效
-     * @param InstanceIds InstanceId列表，仅在Instance维度下查询时该参数有效
+     * Set 该字段已废弃，请使用ProxyIds字段
+     * @param InstanceIds 该字段已废弃，请使用ProxyIds字段
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 协议类型， 该字段当前无效 
-     * @return Protocol 协议类型， 该字段当前无效
+     * Get 该字段当前无效 
+     * @return Protocol 该字段当前无效
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议类型， 该字段当前无效
-     * @param Protocol 协议类型， 该字段当前无效
+     * Set 该字段当前无效
+     * @param Protocol 该字段当前无效
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -191,19 +205,51 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     }
 
     /**
-     * Get 规则ID，仅在instance维度有效 
-     * @return RuleId 规则ID，仅在instance维度有效
+     * Get 该字段当前无效，请使用Filter筛选 
+     * @return RuleId 该字段当前无效，请使用Filter筛选
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID，仅在instance维度有效
-     * @param RuleId 规则ID，仅在instance维度有效
+     * Set 该字段当前无效，请使用Filter筛选
+     * @param RuleId 该字段当前无效，请使用Filter筛选
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
+    }
+
+    /**
+     * Get 支持的 Filter：proxyd,ruleId 
+     * @return Filters 支持的 Filter：proxyd,ruleId
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 支持的 Filter：proxyd,ruleId
+     * @param Filters 支持的 Filter：proxyd,ruleId
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 四层实例列表 
+     * @return ProxyIds 四层实例列表
+     */
+    public String [] getProxyIds() {
+        return this.ProxyIds;
+    }
+
+    /**
+     * Set 四层实例列表
+     * @param ProxyIds 四层实例列表
+     */
+    public void setProxyIds(String [] ProxyIds) {
+        this.ProxyIds = ProxyIds;
     }
 
     public DescribeTimingL4DataRequest() {
@@ -247,6 +293,18 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.ProxyIds != null) {
+            this.ProxyIds = new String[source.ProxyIds.length];
+            for (int i = 0; i < source.ProxyIds.length; i++) {
+                this.ProxyIds[i] = new String(source.ProxyIds[i]);
+            }
+        }
     }
 
 
@@ -262,6 +320,8 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
 
     }
 }

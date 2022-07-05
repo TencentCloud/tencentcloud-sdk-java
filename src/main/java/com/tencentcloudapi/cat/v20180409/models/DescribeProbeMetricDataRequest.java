@@ -23,138 +23,168 @@ import java.util.HashMap;
 public class DescribeProbeMetricDataRequest extends AbstractModel{
 
     /**
-    * 分析任务类型
+    * 分析任务类型，支持以下几种类型：
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_UploadDownload：文件传输
+AnalyzeTaskType_MediaStream：音视频体验
     */
     @SerializedName("AnalyzeTaskType")
     @Expose
     private String AnalyzeTaskType;
 
     /**
-    * 指标类型，counter 或者 gauge
+    * 指标类型，指标查询默认传gauge
     */
     @SerializedName("MetricType")
     @Expose
     private String MetricType;
 
     /**
-    * 指标详细字段
+    * 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 过滤条件
+    * 过滤条件可以传单个过滤条件也可以拼接多个参数
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 聚合时间, 1m、1d、100d 等等
+    * 聚合时间, 1m、1d、30d 等等
     */
     @SerializedName("GroupBy")
     @Expose
     private String GroupBy;
 
     /**
-    * 过滤条件数组
+    * 多条件过滤，支持多个过滤条件组合查询
+例如：[""host" = 'www.test.com'", "time >= now()-1h"]
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-     * Get 分析任务类型 
-     * @return AnalyzeTaskType 分析任务类型
+     * Get 分析任务类型，支持以下几种类型：
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_UploadDownload：文件传输
+AnalyzeTaskType_MediaStream：音视频体验 
+     * @return AnalyzeTaskType 分析任务类型，支持以下几种类型：
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_UploadDownload：文件传输
+AnalyzeTaskType_MediaStream：音视频体验
      */
     public String getAnalyzeTaskType() {
         return this.AnalyzeTaskType;
     }
 
     /**
-     * Set 分析任务类型
-     * @param AnalyzeTaskType 分析任务类型
+     * Set 分析任务类型，支持以下几种类型：
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_UploadDownload：文件传输
+AnalyzeTaskType_MediaStream：音视频体验
+     * @param AnalyzeTaskType 分析任务类型，支持以下几种类型：
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_UploadDownload：文件传输
+AnalyzeTaskType_MediaStream：音视频体验
      */
     public void setAnalyzeTaskType(String AnalyzeTaskType) {
         this.AnalyzeTaskType = AnalyzeTaskType;
     }
 
     /**
-     * Get 指标类型，counter 或者 gauge 
-     * @return MetricType 指标类型，counter 或者 gauge
+     * Get 指标类型，指标查询默认传gauge 
+     * @return MetricType 指标类型，指标查询默认传gauge
      */
     public String getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set 指标类型，counter 或者 gauge
-     * @param MetricType 指标类型，counter 或者 gauge
+     * Set 指标类型，指标查询默认传gauge
+     * @param MetricType 指标类型，指标查询默认传gauge
      */
     public void setMetricType(String MetricType) {
         this.MetricType = MetricType;
     }
 
     /**
-     * Get 指标详细字段 
-     * @return Field 指标详细字段
+     * Get 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms) 
+     * @return Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 指标详细字段
-     * @param Field 指标详细字段
+     * Set 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+     * @param Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filter 过滤条件
+     * Get 过滤条件可以传单个过滤条件也可以拼接多个参数 
+     * @return Filter 过滤条件可以传单个过滤条件也可以拼接多个参数
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filter 过滤条件
+     * Set 过滤条件可以传单个过滤条件也可以拼接多个参数
+     * @param Filter 过滤条件可以传单个过滤条件也可以拼接多个参数
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 聚合时间, 1m、1d、100d 等等 
-     * @return GroupBy 聚合时间, 1m、1d、100d 等等
+     * Get 聚合时间, 1m、1d、30d 等等 
+     * @return GroupBy 聚合时间, 1m、1d、30d 等等
      */
     public String getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合时间, 1m、1d、100d 等等
-     * @param GroupBy 聚合时间, 1m、1d、100d 等等
+     * Set 聚合时间, 1m、1d、30d 等等
+     * @param GroupBy 聚合时间, 1m、1d、30d 等等
      */
     public void setGroupBy(String GroupBy) {
         this.GroupBy = GroupBy;
     }
 
     /**
-     * Get 过滤条件数组 
-     * @return Filters 过滤条件数组
+     * Get 多条件过滤，支持多个过滤条件组合查询
+例如：[""host" = 'www.test.com'", "time >= now()-1h"] 
+     * @return Filters 多条件过滤，支持多个过滤条件组合查询
+例如：[""host" = 'www.test.com'", "time >= now()-1h"]
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件数组
-     * @param Filters 过滤条件数组
+     * Set 多条件过滤，支持多个过滤条件组合查询
+例如：[""host" = 'www.test.com'", "time >= now()-1h"]
+     * @param Filters 多条件过滤，支持多个过滤条件组合查询
+例如：[""host" = 'www.test.com'", "time >= now()-1h"]
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;

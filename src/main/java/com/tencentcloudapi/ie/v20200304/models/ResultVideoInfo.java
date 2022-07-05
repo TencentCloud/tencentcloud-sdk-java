@@ -55,7 +55,7 @@ public class ResultVideoInfo extends AbstractModel{
     private Long Height;
 
     /**
-    * 视频帧率
+    * 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fps")
@@ -143,9 +143,9 @@ public class ResultVideoInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频帧率
+     * Get 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fps 视频帧率
+     * @return Fps 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFps() {
@@ -153,9 +153,9 @@ public class ResultVideoInfo extends AbstractModel{
     }
 
     /**
-     * Set 视频帧率
+     * Set 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fps 视频帧率
+     * @param Fps 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFps(Long Fps) {

@@ -45,6 +45,14 @@ public class RateLimitConfig extends AbstractModel{
     private RateLimitTemplate Template;
 
     /**
+    * 智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Intelligence")
+    @Expose
+    private RateLimitIntelligence Intelligence;
+
+    /**
      * Get 开关 
      * @return Switch 开关
      */
@@ -96,6 +104,26 @@ public class RateLimitConfig extends AbstractModel{
         this.Template = Template;
     }
 
+    /**
+     * Get 智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Intelligence 智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RateLimitIntelligence getIntelligence() {
+        return this.Intelligence;
+    }
+
+    /**
+     * Set 智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Intelligence 智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntelligence(RateLimitIntelligence Intelligence) {
+        this.Intelligence = Intelligence;
+    }
+
     public RateLimitConfig() {
     }
 
@@ -116,6 +144,9 @@ public class RateLimitConfig extends AbstractModel{
         if (source.Template != null) {
             this.Template = new RateLimitTemplate(source.Template);
         }
+        if (source.Intelligence != null) {
+            this.Intelligence = new RateLimitIntelligence(source.Intelligence);
+        }
     }
 
 
@@ -126,6 +157,7 @@ public class RateLimitConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "UserRules.", this.UserRules);
         this.setParamObj(map, prefix + "Template.", this.Template);
+        this.setParamObj(map, prefix + "Intelligence.", this.Intelligence);
 
     }
 }

@@ -58,6 +58,14 @@ public class BotConfig extends AbstractModel{
     private BotPortraitRule PortraitRule;
 
     /**
+    * Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntelligenceRule")
+    @Expose
+    private IntelligenceRule IntelligenceRule;
+
+    /**
      * Get bot开关 
      * @return Switch bot开关
      */
@@ -137,6 +145,26 @@ public class BotConfig extends AbstractModel{
         this.PortraitRule = PortraitRule;
     }
 
+    /**
+     * Get Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntelligenceRule Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntelligenceRule getIntelligenceRule() {
+        return this.IntelligenceRule;
+    }
+
+    /**
+     * Set Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntelligenceRule Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntelligenceRule(IntelligenceRule IntelligenceRule) {
+        this.IntelligenceRule = IntelligenceRule;
+    }
+
     public BotConfig() {
     }
 
@@ -160,6 +188,9 @@ public class BotConfig extends AbstractModel{
         if (source.PortraitRule != null) {
             this.PortraitRule = new BotPortraitRule(source.PortraitRule);
         }
+        if (source.IntelligenceRule != null) {
+            this.IntelligenceRule = new IntelligenceRule(source.IntelligenceRule);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class BotConfig extends AbstractModel{
         this.setParamObj(map, prefix + "UaBotRule.", this.UaBotRule);
         this.setParamObj(map, prefix + "IspBotRule.", this.IspBotRule);
         this.setParamObj(map, prefix + "PortraitRule.", this.PortraitRule);
+        this.setParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
 
     }
 }

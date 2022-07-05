@@ -45,12 +45,27 @@ public class MediaCuttingInfo extends AbstractModel{
 
     /**
     * 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
     */
     @SerializedName("ResultListSaveType")
     @Expose
     private String ResultListSaveType;
+
+    /**
+    * 水印信息，最多支持 10 个水印。
+    */
+    @SerializedName("WatermarkInfoSet")
+    @Expose
+    private MediaCuttingWatermark [] WatermarkInfoSet;
+
+    /**
+    * 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+    */
+    @SerializedName("DropPureColor")
+    @Expose
+    private String DropPureColor;
 
     /**
      * Get 截取时间信息。 
@@ -102,11 +117,13 @@ NoListFile：不存储结果列表。
 
     /**
      * Get 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。 
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li> 
      * @return ResultListSaveType 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
      */
     public String getResultListSaveType() {
         return this.ResultListSaveType;
@@ -114,14 +131,48 @@ NoListFile：不存储结果列表。
 
     /**
      * Set 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
      * @param ResultListSaveType 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
      */
     public void setResultListSaveType(String ResultListSaveType) {
         this.ResultListSaveType = ResultListSaveType;
+    }
+
+    /**
+     * Get 水印信息，最多支持 10 个水印。 
+     * @return WatermarkInfoSet 水印信息，最多支持 10 个水印。
+     */
+    public MediaCuttingWatermark [] getWatermarkInfoSet() {
+        return this.WatermarkInfoSet;
+    }
+
+    /**
+     * Set 水印信息，最多支持 10 个水印。
+     * @param WatermarkInfoSet 水印信息，最多支持 10 个水印。
+     */
+    public void setWatermarkInfoSet(MediaCuttingWatermark [] WatermarkInfoSet) {
+        this.WatermarkInfoSet = WatermarkInfoSet;
+    }
+
+    /**
+     * Get 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。 
+     * @return DropPureColor 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+     */
+    public String getDropPureColor() {
+        return this.DropPureColor;
+    }
+
+    /**
+     * Set 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+     * @param DropPureColor 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+     */
+    public void setDropPureColor(String DropPureColor) {
+        this.DropPureColor = DropPureColor;
     }
 
     public MediaCuttingInfo() {
@@ -144,6 +195,15 @@ NoListFile：不存储结果列表。
         if (source.ResultListSaveType != null) {
             this.ResultListSaveType = new String(source.ResultListSaveType);
         }
+        if (source.WatermarkInfoSet != null) {
+            this.WatermarkInfoSet = new MediaCuttingWatermark[source.WatermarkInfoSet.length];
+            for (int i = 0; i < source.WatermarkInfoSet.length; i++) {
+                this.WatermarkInfoSet[i] = new MediaCuttingWatermark(source.WatermarkInfoSet[i]);
+            }
+        }
+        if (source.DropPureColor != null) {
+            this.DropPureColor = new String(source.DropPureColor);
+        }
     }
 
 
@@ -155,6 +215,8 @@ NoListFile：不存储结果列表。
         this.setParamObj(map, prefix + "TargetInfo.", this.TargetInfo);
         this.setParamObj(map, prefix + "OutForm.", this.OutForm);
         this.setParamSimple(map, prefix + "ResultListSaveType", this.ResultListSaveType);
+        this.setParamArrayObj(map, prefix + "WatermarkInfoSet.", this.WatermarkInfoSet);
+        this.setParamSimple(map, prefix + "DropPureColor", this.DropPureColor);
 
     }
 }
