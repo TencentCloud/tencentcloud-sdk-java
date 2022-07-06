@@ -30,7 +30,7 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * 未消费消息过期时间，单位：秒，范围60秒~1天。
+    * 未消费消息过期时间，单位：秒，范围60秒~15天。
     */
     @SerializedName("MsgTTL")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 未消费消息过期时间，单位：秒，范围60秒~1天。 
-     * @return MsgTTL 未消费消息过期时间，单位：秒，范围60秒~1天。
+     * Get 未消费消息过期时间，单位：秒，范围60秒~15天。 
+     * @return MsgTTL 未消费消息过期时间，单位：秒，范围60秒~15天。
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 未消费消息过期时间，单位：秒，范围60秒~1天。
-     * @param MsgTTL 未消费消息过期时间，单位：秒，范围60秒~1天。
+     * Set 未消费消息过期时间，单位：秒，范围60秒~15天。
+     * @param MsgTTL 未消费消息过期时间，单位：秒，范围60秒~15天。
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;

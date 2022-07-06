@@ -95,6 +95,14 @@ public class EffectiveMachineInfo extends AbstractModel{
     private LicenseOrder LicenseOrder;
 
     /**
+    * 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulNum")
+    @Expose
+    private Long VulNum;
+
+    /**
      * Get 机器名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MachineName 机器名称
@@ -274,6 +282,26 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.LicenseOrder = LicenseOrder;
     }
 
+    /**
+     * Get 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulNum 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVulNum() {
+        return this.VulNum;
+    }
+
+    /**
+     * Set 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulNum 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulNum(Long VulNum) {
+        this.VulNum = VulNum;
+    }
+
     public EffectiveMachineInfo() {
     }
 
@@ -312,6 +340,9 @@ public class EffectiveMachineInfo extends AbstractModel{
         if (source.LicenseOrder != null) {
             this.LicenseOrder = new LicenseOrder(source.LicenseOrder);
         }
+        if (source.VulNum != null) {
+            this.VulNum = new Long(source.VulNum);
+        }
     }
 
 
@@ -328,6 +359,7 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamObj(map, prefix + "LicenseOrder.", this.LicenseOrder);
+        this.setParamSimple(map, prefix + "VulNum", this.VulNum);
 
     }
 }

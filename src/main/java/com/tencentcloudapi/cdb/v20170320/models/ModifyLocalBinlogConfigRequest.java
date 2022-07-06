@@ -30,7 +30,7 @@ public class ModifyLocalBinlogConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 本地binlog保留时长，可取值范围：[72,168]。
+    * 本地binlog保留时长，可取值范围：[120,168]。
     */
     @SerializedName("SaveHours")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyLocalBinlogConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 本地binlog保留时长，可取值范围：[72,168]。 
-     * @return SaveHours 本地binlog保留时长，可取值范围：[72,168]。
+     * Get 本地binlog保留时长，可取值范围：[120,168]。 
+     * @return SaveHours 本地binlog保留时长，可取值范围：[120,168]。
      */
     public Long getSaveHours() {
         return this.SaveHours;
     }
 
     /**
-     * Set 本地binlog保留时长，可取值范围：[72,168]。
-     * @param SaveHours 本地binlog保留时长，可取值范围：[72,168]。
+     * Set 本地binlog保留时长，可取值范围：[120,168]。
+     * @param SaveHours 本地binlog保留时长，可取值范围：[120,168]。
      */
     public void setSaveHours(Long SaveHours) {
         this.SaveHours = SaveHours;

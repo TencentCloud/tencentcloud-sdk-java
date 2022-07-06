@@ -100,6 +100,13 @@ public class DescribeDMSPartitionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 表达式
+    */
+    @SerializedName("Expression")
+    @Expose
+    private String Expression;
+
+    /**
      * Get 数据库名 
      * @return DatabaseName 数据库名
      */
@@ -275,6 +282,22 @@ public class DescribeDMSPartitionsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 表达式 
+     * @return Expression 表达式
+     */
+    public String getExpression() {
+        return this.Expression;
+    }
+
+    /**
+     * Set 表达式
+     * @param Expression 表达式
+     */
+    public void setExpression(String Expression) {
+        this.Expression = Expression;
+    }
+
     public DescribeDMSPartitionsRequest() {
     }
 
@@ -325,6 +348,9 @@ public class DescribeDMSPartitionsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Expression != null) {
+            this.Expression = new String(source.Expression);
+        }
     }
 
 
@@ -343,6 +369,7 @@ public class DescribeDMSPartitionsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxParts", this.MaxParts);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Expression", this.Expression);
 
     }
 }

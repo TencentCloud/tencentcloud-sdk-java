@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class DestroyDBInstanceResponse extends AbstractModel{
 
     /**
-    * 下载链接
+    * 实例 ID，与入参InstanceId一致。
     */
-    @SerializedName("Link")
+    @SerializedName("InstanceId")
     @Expose
-    private String Link;
+    private String InstanceId;
 
     /**
-    * 下载需要的token
+    * 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
     */
-    @SerializedName("Token")
+    @SerializedName("FlowId")
     @Expose
-    private String Token;
-
-    /**
-    * 下载命令
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 下载链接 
-     * @return Link 下载链接
+     * Get 实例 ID，与入参InstanceId一致。 
+     * @return InstanceId 实例 ID，与入参InstanceId一致。
      */
-    public String getLink() {
-        return this.Link;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 下载链接
-     * @param Link 下载链接
+     * Set 实例 ID，与入参InstanceId一致。
+     * @param InstanceId 实例 ID，与入参InstanceId一致。
      */
-    public void setLink(String Link) {
-        this.Link = Link;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 下载需要的token 
-     * @return Token 下载需要的token
+     * Get 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。 
+     * @return FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
      */
-    public String getToken() {
-        return this.Token;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 下载需要的token
-     * @param Token 下载需要的token
+     * Set 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+     * @param FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
      */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get 下载命令 
-     * @return Command 下载命令
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set 下载命令
-     * @param Command 下载命令
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -114,22 +91,19 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public DestroyDBInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
+    public DestroyDBInstanceResponse(DestroyDBInstanceResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +115,8 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

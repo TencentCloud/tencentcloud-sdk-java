@@ -94,6 +94,23 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel{
     private Long GivenAuthorizedCnt;
 
     /**
+    * 起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * 子状态(具体意义依据State字段而定)
+State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubState")
+    @Expose
+    private String SubState;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -277,6 +294,50 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 起始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BeginTime 起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set 起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BeginTime 起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get 子状态(具体意义依据State字段而定)
+State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubState 子状态(具体意义依据State字段而定)
+State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubState() {
+        return this.SubState;
+    }
+
+    /**
+     * Set 子状态(具体意义依据State字段而定)
+State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubState 子状态(具体意义依据State字段而定)
+State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubState(String SubState) {
+        this.SubState = SubState;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -327,6 +388,12 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel{
         if (source.GivenAuthorizedCnt != null) {
             this.GivenAuthorizedCnt = new Long(source.GivenAuthorizedCnt);
         }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.SubState != null) {
+            this.SubState = new String(source.SubState);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -346,6 +413,8 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
         this.setParamSimple(map, prefix + "AutomaticRenewal", this.AutomaticRenewal);
         this.setParamSimple(map, prefix + "GivenAuthorizedCnt", this.GivenAuthorizedCnt);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "SubState", this.SubState);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

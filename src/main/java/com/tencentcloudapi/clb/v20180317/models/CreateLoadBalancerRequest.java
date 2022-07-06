@@ -110,7 +110,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VipIsp;
 
     /**
-    * 购买负载均衡的同时，给负载均衡打上标签。
+    * 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
     */
     @SerializedName("Tags")
     @Expose
@@ -404,16 +404,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 购买负载均衡的同时，给负载均衡打上标签。 
-     * @return Tags 购买负载均衡的同时，给负载均衡打上标签。
+     * Get 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。 
+     * @return Tags 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 购买负载均衡的同时，给负载均衡打上标签。
-     * @param Tags 购买负载均衡的同时，给负载均衡打上标签。
+     * Set 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
+     * @param Tags 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

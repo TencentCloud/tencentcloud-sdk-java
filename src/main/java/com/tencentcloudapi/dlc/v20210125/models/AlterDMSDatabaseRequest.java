@@ -22,6 +22,98 @@ import java.util.HashMap;
 
 public class AlterDMSDatabaseRequest extends AbstractModel{
 
+    /**
+    * 当前名称
+    */
+    @SerializedName("CurrentName")
+    @Expose
+    private String CurrentName;
+
+    /**
+    * schema名称
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 路径
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * 基础对象
+    */
+    @SerializedName("Asset")
+    @Expose
+    private Asset Asset;
+
+    /**
+     * Get 当前名称 
+     * @return CurrentName 当前名称
+     */
+    public String getCurrentName() {
+        return this.CurrentName;
+    }
+
+    /**
+     * Set 当前名称
+     * @param CurrentName 当前名称
+     */
+    public void setCurrentName(String CurrentName) {
+        this.CurrentName = CurrentName;
+    }
+
+    /**
+     * Get schema名称 
+     * @return SchemaName schema名称
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set schema名称
+     * @param SchemaName schema名称
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 路径 
+     * @return Location 路径
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 路径
+     * @param Location 路径
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get 基础对象 
+     * @return Asset 基础对象
+     */
+    public Asset getAsset() {
+        return this.Asset;
+    }
+
+    /**
+     * Set 基础对象
+     * @param Asset 基础对象
+     */
+    public void setAsset(Asset Asset) {
+        this.Asset = Asset;
+    }
+
     public AlterDMSDatabaseRequest() {
     }
 
@@ -30,6 +122,18 @@ public class AlterDMSDatabaseRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AlterDMSDatabaseRequest(AlterDMSDatabaseRequest source) {
+        if (source.CurrentName != null) {
+            this.CurrentName = new String(source.CurrentName);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Asset != null) {
+            this.Asset = new Asset(source.Asset);
+        }
     }
 
 
@@ -37,6 +141,10 @@ public class AlterDMSDatabaseRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CurrentName", this.CurrentName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamObj(map, prefix + "Asset.", this.Asset);
 
     }
 }

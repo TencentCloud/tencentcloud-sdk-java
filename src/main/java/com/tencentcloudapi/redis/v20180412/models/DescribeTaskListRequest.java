@@ -93,11 +93,18 @@ public class DescribeTaskListRequest extends AbstractModel{
     private Long [] Result;
 
     /**
-    * 操作者Uin
+    * 操作者Uin，该字段已废弃，使用OperateUin代替
     */
     @SerializedName("OperatorUin")
     @Expose
     private Long [] OperatorUin;
+
+    /**
+    * 操作者Uin
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String [] OperateUin;
 
     /**
      * Get 实例Id 
@@ -260,19 +267,35 @@ public class DescribeTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者Uin 
-     * @return OperatorUin 操作者Uin
+     * Get 操作者Uin，该字段已废弃，使用OperateUin代替 
+     * @return OperatorUin 操作者Uin，该字段已废弃，使用OperateUin代替
      */
     public Long [] getOperatorUin() {
         return this.OperatorUin;
     }
 
     /**
-     * Set 操作者Uin
-     * @param OperatorUin 操作者Uin
+     * Set 操作者Uin，该字段已废弃，使用OperateUin代替
+     * @param OperatorUin 操作者Uin，该字段已废弃，使用OperateUin代替
      */
     public void setOperatorUin(Long [] OperatorUin) {
         this.OperatorUin = OperatorUin;
+    }
+
+    /**
+     * Get 操作者Uin 
+     * @return OperateUin 操作者Uin
+     */
+    public String [] getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set 操作者Uin
+     * @param OperateUin 操作者Uin
+     */
+    public void setOperateUin(String [] OperateUin) {
+        this.OperateUin = OperateUin;
     }
 
     public DescribeTaskListRequest() {
@@ -331,6 +354,12 @@ public class DescribeTaskListRequest extends AbstractModel{
                 this.OperatorUin[i] = new Long(source.OperatorUin[i]);
             }
         }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String[source.OperateUin.length];
+            for (int i = 0; i < source.OperateUin.length; i++) {
+                this.OperateUin[i] = new String(source.OperateUin[i]);
+            }
+        }
     }
 
 
@@ -349,6 +378,7 @@ public class DescribeTaskListRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
         this.setParamArraySimple(map, prefix + "Result.", this.Result);
         this.setParamArraySimple(map, prefix + "OperatorUin.", this.OperatorUin);
+        this.setParamArraySimple(map, prefix + "OperateUin.", this.OperateUin);
 
     }
 }

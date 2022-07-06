@@ -30,11 +30,11 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private Policy [] Policy;
 
     /**
-    * 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+    * 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
     */
-    @SerializedName("AutoSnapshotPolicyName")
+    @SerializedName("DryRun")
     @Expose
-    private String AutoSnapshotPolicyName;
+    private Boolean DryRun;
 
     /**
     * 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
@@ -42,6 +42,13 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     @SerializedName("IsActivated")
     @Expose
     private Boolean IsActivated;
+
+    /**
+    * 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+    */
+    @SerializedName("AutoSnapshotPolicyName")
+    @Expose
+    private String AutoSnapshotPolicyName;
 
     /**
     * 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
@@ -56,13 +63,6 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     @SerializedName("RetentionDays")
     @Expose
     private Long RetentionDays;
-
-    /**
-    * 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
-    */
-    @SerializedName("DryRun")
-    @Expose
-    private Boolean DryRun;
 
     /**
      * Get 定期快照的执行策略。 
@@ -81,19 +81,19 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。 
-     * @return AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     * Get 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。 
+     * @return DryRun 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
      */
-    public String getAutoSnapshotPolicyName() {
-        return this.AutoSnapshotPolicyName;
+    public Boolean getDryRun() {
+        return this.DryRun;
     }
 
     /**
-     * Set 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
-     * @param AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     * Set 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
+     * @param DryRun 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
      */
-    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
-        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
     }
 
     /**
@@ -110,6 +110,22 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;
+    }
+
+    /**
+     * Get 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。 
+     * @return AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     */
+    public String getAutoSnapshotPolicyName() {
+        return this.AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Set 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     * @param AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     */
+    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
+        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
     }
 
     /**
@@ -144,22 +160,6 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
         this.RetentionDays = RetentionDays;
     }
 
-    /**
-     * Get 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。 
-     * @return DryRun 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
-     */
-    public Boolean getDryRun() {
-        return this.DryRun;
-    }
-
-    /**
-     * Set 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
-     * @param DryRun 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
-     */
-    public void setDryRun(Boolean DryRun) {
-        this.DryRun = DryRun;
-    }
-
     public CreateAutoSnapshotPolicyRequest() {
     }
 
@@ -174,20 +174,20 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
                 this.Policy[i] = new Policy(source.Policy[i]);
             }
         }
-        if (source.AutoSnapshotPolicyName != null) {
-            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
         }
         if (source.IsActivated != null) {
             this.IsActivated = new Boolean(source.IsActivated);
+        }
+        if (source.AutoSnapshotPolicyName != null) {
+            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
         }
         if (source.IsPermanent != null) {
             this.IsPermanent = new Boolean(source.IsPermanent);
         }
         if (source.RetentionDays != null) {
             this.RetentionDays = new Long(source.RetentionDays);
-        }
-        if (source.DryRun != null) {
-            this.DryRun = new Boolean(source.DryRun);
         }
     }
 
@@ -197,11 +197,11 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
-        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
-        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

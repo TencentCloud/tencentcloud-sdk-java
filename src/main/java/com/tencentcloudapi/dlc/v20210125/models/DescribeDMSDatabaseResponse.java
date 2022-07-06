@@ -23,11 +23,123 @@ import java.util.HashMap;
 public class DescribeDMSDatabaseResponse extends AbstractModel{
 
     /**
+    * 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 存储地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * 数据对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Asset")
+    @Expose
+    private Asset Asset;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get schema名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 存储地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Location 存储地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 存储地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Location 存储地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get 数据对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Asset 数据对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Asset getAsset() {
+        return this.Asset;
+    }
+
+    /**
+     * Set 数据对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Asset 数据对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsset(Asset Asset) {
+        this.Asset = Asset;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +165,18 @@ public class DescribeDMSDatabaseResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDMSDatabaseResponse(DescribeDMSDatabaseResponse source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Asset != null) {
+            this.Asset = new Asset(source.Asset);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +187,10 @@ public class DescribeDMSDatabaseResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamObj(map, prefix + "Asset.", this.Asset);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

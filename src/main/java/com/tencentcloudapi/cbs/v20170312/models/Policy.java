@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class Policy extends AbstractModel{
 
     /**
-    * 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
-    */
-    @SerializedName("DayOfWeek")
-    @Expose
-    private Long [] DayOfWeek;
-
-    /**
     * 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
     */
     @SerializedName("Hour")
@@ -37,20 +30,11 @@ public class Policy extends AbstractModel{
     private Long [] Hour;
 
     /**
-     * Get 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。 
-     * @return DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
-     */
-    public Long [] getDayOfWeek() {
-        return this.DayOfWeek;
-    }
-
-    /**
-     * Set 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
-     * @param DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
-     */
-    public void setDayOfWeek(Long [] DayOfWeek) {
-        this.DayOfWeek = DayOfWeek;
-    }
+    * 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+    */
+    @SerializedName("DayOfWeek")
+    @Expose
+    private Long [] DayOfWeek;
 
     /**
      * Get 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。 
@@ -68,6 +52,22 @@ public class Policy extends AbstractModel{
         this.Hour = Hour;
     }
 
+    /**
+     * Get 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。 
+     * @return DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     */
+    public Long [] getDayOfWeek() {
+        return this.DayOfWeek;
+    }
+
+    /**
+     * Set 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     * @param DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     */
+    public void setDayOfWeek(Long [] DayOfWeek) {
+        this.DayOfWeek = DayOfWeek;
+    }
+
     public Policy() {
     }
 
@@ -76,16 +76,16 @@ public class Policy extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Policy(Policy source) {
-        if (source.DayOfWeek != null) {
-            this.DayOfWeek = new Long[source.DayOfWeek.length];
-            for (int i = 0; i < source.DayOfWeek.length; i++) {
-                this.DayOfWeek[i] = new Long(source.DayOfWeek[i]);
-            }
-        }
         if (source.Hour != null) {
             this.Hour = new Long[source.Hour.length];
             for (int i = 0; i < source.Hour.length; i++) {
                 this.Hour[i] = new Long(source.Hour[i]);
+            }
+        }
+        if (source.DayOfWeek != null) {
+            this.DayOfWeek = new Long[source.DayOfWeek.length];
+            for (int i = 0; i < source.DayOfWeek.length; i++) {
+                this.DayOfWeek[i] = new Long(source.DayOfWeek[i]);
             }
         }
     }
@@ -95,8 +95,8 @@ public class Policy extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
         this.setParamArraySimple(map, prefix + "Hour.", this.Hour);
+        this.setParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
 
     }
 }

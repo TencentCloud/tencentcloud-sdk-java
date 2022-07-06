@@ -842,6 +842,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DestroyDBInstance)用于销毁已隔离的包年包月实例。
+     * @param req DestroyDBInstanceRequest
+     * @return DestroyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyDBInstanceResponse DestroyDBInstance(DestroyDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DestroyHourDBInstance）用于销毁按量计费实例。
      * @param req DestroyHourDBInstanceRequest
      * @return DestroyHourDBInstanceResponse

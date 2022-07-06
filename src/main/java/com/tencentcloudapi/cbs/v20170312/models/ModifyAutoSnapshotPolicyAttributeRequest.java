@@ -30,20 +30,6 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     private String AutoSnapshotPolicyId;
 
     /**
-    * 定期快照的执行策略。
-    */
-    @SerializedName("Policy")
-    @Expose
-    private Policy [] Policy;
-
-    /**
-    * 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
-    */
-    @SerializedName("AutoSnapshotPolicyName")
-    @Expose
-    private String AutoSnapshotPolicyName;
-
-    /**
     * 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
     */
     @SerializedName("IsActivated")
@@ -58,7 +44,21 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     private Boolean IsPermanent;
 
     /**
-    * 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
+    * 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+    */
+    @SerializedName("AutoSnapshotPolicyName")
+    @Expose
+    private String AutoSnapshotPolicyName;
+
+    /**
+    * 定期快照的执行策略。
+    */
+    @SerializedName("Policy")
+    @Expose
+    private Policy [] Policy;
+
+    /**
+    * 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
     */
     @SerializedName("RetentionDays")
     @Expose
@@ -78,38 +78,6 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
-    }
-
-    /**
-     * Get 定期快照的执行策略。 
-     * @return Policy 定期快照的执行策略。
-     */
-    public Policy [] getPolicy() {
-        return this.Policy;
-    }
-
-    /**
-     * Set 定期快照的执行策略。
-     * @param Policy 定期快照的执行策略。
-     */
-    public void setPolicy(Policy [] Policy) {
-        this.Policy = Policy;
-    }
-
-    /**
-     * Get 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。 
-     * @return AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
-     */
-    public String getAutoSnapshotPolicyName() {
-        return this.AutoSnapshotPolicyName;
-    }
-
-    /**
-     * Set 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
-     * @param AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
-     */
-    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
-        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
     }
 
     /**
@@ -145,16 +113,48 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。 
-     * @return RetentionDays 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
+     * Get 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。 
+     * @return AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     */
+    public String getAutoSnapshotPolicyName() {
+        return this.AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Set 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     * @param AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     */
+    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
+        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Get 定期快照的执行策略。 
+     * @return Policy 定期快照的执行策略。
+     */
+    public Policy [] getPolicy() {
+        return this.Policy;
+    }
+
+    /**
+     * Set 定期快照的执行策略。
+     * @param Policy 定期快照的执行策略。
+     */
+    public void setPolicy(Policy [] Policy) {
+        this.Policy = Policy;
+    }
+
+    /**
+     * Get 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。 
+     * @return RetentionDays 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
      */
     public Long getRetentionDays() {
         return this.RetentionDays;
     }
 
     /**
-     * Set 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
-     * @param RetentionDays 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
+     * Set 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
+     * @param RetentionDays 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
      */
     public void setRetentionDays(Long RetentionDays) {
         this.RetentionDays = RetentionDays;
@@ -171,20 +171,20 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
         if (source.AutoSnapshotPolicyId != null) {
             this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
         }
-        if (source.Policy != null) {
-            this.Policy = new Policy[source.Policy.length];
-            for (int i = 0; i < source.Policy.length; i++) {
-                this.Policy[i] = new Policy(source.Policy[i]);
-            }
-        }
-        if (source.AutoSnapshotPolicyName != null) {
-            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
-        }
         if (source.IsActivated != null) {
             this.IsActivated = new Boolean(source.IsActivated);
         }
         if (source.IsPermanent != null) {
             this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.AutoSnapshotPolicyName != null) {
+            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Policy[source.Policy.length];
+            for (int i = 0; i < source.Policy.length; i++) {
+                this.Policy[i] = new Policy(source.Policy[i]);
+            }
         }
         if (source.RetentionDays != null) {
             this.RetentionDays = new Long(source.RetentionDays);
@@ -197,10 +197,10 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
-        this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
-        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
         this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+        this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
 
     }

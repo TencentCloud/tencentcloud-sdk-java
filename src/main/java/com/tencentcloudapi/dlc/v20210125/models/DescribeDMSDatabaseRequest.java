@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class DescribeDMSDatabaseRequest extends AbstractModel{
 
+    /**
+    * 数据库名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * schema名称
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 匹配规则
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+     * Get 数据库名称 
+     * @return Name 数据库名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 数据库名称
+     * @param Name 数据库名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get schema名称 
+     * @return SchemaName schema名称
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set schema名称
+     * @param SchemaName schema名称
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 匹配规则 
+     * @return Pattern 匹配规则
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set 匹配规则
+     * @param Pattern 匹配规则
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
     public DescribeDMSDatabaseRequest() {
     }
 
@@ -30,6 +99,15 @@ public class DescribeDMSDatabaseRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDMSDatabaseRequest(DescribeDMSDatabaseRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class DescribeDMSDatabaseRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
 
     }
 }
