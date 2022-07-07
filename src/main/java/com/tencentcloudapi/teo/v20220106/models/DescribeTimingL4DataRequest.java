@@ -37,7 +37,11 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 指标列表
+    * 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
     */
     @SerializedName("MetricNames")
     @Expose
@@ -125,16 +129,32 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     }
 
     /**
-     * Get 指标列表 
-     * @return MetricNames 指标列表
+     * Get 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量 
+     * @return MetricNames 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 指标列表
-     * @param MetricNames 指标列表
+     * Set 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
+     * @param MetricNames 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

@@ -37,7 +37,10 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 时序类访问流量指标
+    * 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
     */
     @SerializedName("MetricNames")
     @Expose
@@ -97,16 +100,28 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 时序类访问流量指标 
-     * @return MetricNames 时序类访问流量指标
+     * Get 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽 
+     * @return MetricNames 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 时序类访问流量指标
-     * @param MetricNames 时序类访问流量指标
+     * Set 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
+     * @param MetricNames 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

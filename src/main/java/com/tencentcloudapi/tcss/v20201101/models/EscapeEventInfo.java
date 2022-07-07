@@ -193,6 +193,20 @@ MountNamespace逃逸、
     private String ContainerIsolateOperationSrc;
 
     /**
+    * 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
+
+    /**
      * Get 事件类型
    ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
@@ -632,6 +646,50 @@ MountNamespace逃逸、
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
+    /**
+     * Get 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING 
+     * @return ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     * @param ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
+    }
+
     public EscapeEventInfo() {
     }
 
@@ -700,6 +758,9 @@ MountNamespace逃逸、
         if (source.ContainerIsolateOperationSrc != null) {
             this.ContainerIsolateOperationSrc = new String(source.ContainerIsolateOperationSrc);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
     }
 
 
@@ -727,6 +788,7 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
 
     }
 }

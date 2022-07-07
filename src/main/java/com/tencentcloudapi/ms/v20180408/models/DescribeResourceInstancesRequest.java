@@ -23,14 +23,7 @@ import java.util.HashMap;
 public class DescribeResourceInstancesRequest extends AbstractModel{
 
     /**
-    * 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-    */
-    @SerializedName("Pids")
-    @Expose
-    private Long [] Pids;
-
-    /**
-    * 支持通过资源id，pid进行查询
+    * 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
     */
     @SerializedName("Filters")
     @Expose
@@ -51,6 +44,13 @@ public class DescribeResourceInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+    */
+    @SerializedName("Pids")
+    @Expose
+    private Long [] Pids;
+
+    /**
     * 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
     */
     @SerializedName("OrderField")
@@ -65,32 +65,16 @@ public class DescribeResourceInstancesRequest extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * Get 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。 
-     * @return Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-     */
-    public Long [] getPids() {
-        return this.Pids;
-    }
-
-    /**
-     * Set 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-     * @param Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-     */
-    public void setPids(Long [] Pids) {
-        this.Pids = Pids;
-    }
-
-    /**
-     * Get 支持通过资源id，pid进行查询 
-     * @return Filters 支持通过资源id，pid进行查询
+     * Get 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤 
+     * @return Filters 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 支持通过资源id，pid进行查询
-     * @param Filters 支持通过资源id，pid进行查询
+     * Set 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
+     * @param Filters 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -126,6 +110,22 @@ public class DescribeResourceInstancesRequest extends AbstractModel{
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。 
+     * @return Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     */
+    public Long [] getPids() {
+        return this.Pids;
+    }
+
+    /**
+     * Set 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     * @param Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     */
+    public void setPids(Long [] Pids) {
+        this.Pids = Pids;
     }
 
     /**
@@ -168,12 +168,6 @@ public class DescribeResourceInstancesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeResourceInstancesRequest(DescribeResourceInstancesRequest source) {
-        if (source.Pids != null) {
-            this.Pids = new Long[source.Pids.length];
-            for (int i = 0; i < source.Pids.length; i++) {
-                this.Pids[i] = new Long(source.Pids[i]);
-            }
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -185,6 +179,12 @@ public class DescribeResourceInstancesRequest extends AbstractModel{
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.Pids != null) {
+            this.Pids = new Long[source.Pids.length];
+            for (int i = 0; i < source.Pids.length; i++) {
+                this.Pids[i] = new Long(source.Pids[i]);
+            }
         }
         if (source.OrderField != null) {
             this.OrderField = new String(source.OrderField);
@@ -199,10 +199,10 @@ public class DescribeResourceInstancesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Pids.", this.Pids);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "Pids.", this.Pids);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 

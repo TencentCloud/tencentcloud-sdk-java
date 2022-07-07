@@ -51,6 +51,14 @@ public class ObjectInfo extends AbstractModel{
     private Attribute [] Attributes;
 
     /**
+    * 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllBox")
+    @Expose
+    private Box [] AllBox;
+
+    /**
      * Get 图像主体区域。 
      * @return Box 图像主体区域。
      */
@@ -114,6 +122,26 @@ public class ObjectInfo extends AbstractModel{
         this.Attributes = Attributes;
     }
 
+    /**
+     * Get 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllBox 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Box [] getAllBox() {
+        return this.AllBox;
+    }
+
+    /**
+     * Set 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllBox 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllBox(Box [] AllBox) {
+        this.AllBox = AllBox;
+    }
+
     public ObjectInfo() {
     }
 
@@ -140,6 +168,12 @@ public class ObjectInfo extends AbstractModel{
                 this.Attributes[i] = new Attribute(source.Attributes[i]);
             }
         }
+        if (source.AllBox != null) {
+            this.AllBox = new Box[source.AllBox.length];
+            for (int i = 0; i < source.AllBox.length; i++) {
+                this.AllBox[i] = new Box(source.AllBox[i]);
+            }
+        }
     }
 
 
@@ -151,6 +185,7 @@ public class ObjectInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
         this.setParamArrayObj(map, prefix + "Colors.", this.Colors);
         this.setParamArrayObj(map, prefix + "Attributes.", this.Attributes);
+        this.setParamArrayObj(map, prefix + "AllBox.", this.AllBox);
 
     }
 }

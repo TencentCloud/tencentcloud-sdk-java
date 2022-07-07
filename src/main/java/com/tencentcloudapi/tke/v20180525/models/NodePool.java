@@ -166,6 +166,14 @@ public class NodePool extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get NodePoolId 资源池id 
      * @return NodePoolId NodePoolId 资源池id
      */
@@ -509,6 +517,26 @@ public class NodePool extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeletionProtection 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeletionProtection 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public NodePool() {
     }
 
@@ -583,6 +611,9 @@ public class NodePool extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -609,6 +640,7 @@ public class NodePool extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

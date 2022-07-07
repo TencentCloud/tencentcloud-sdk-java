@@ -51,6 +51,14 @@ public class TcrNamespaceInfo extends AbstractModel{
     private Long NamespaceId;
 
     /**
+    * 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get 命名空间名称 
      * @return Name 命名空间名称
      */
@@ -114,6 +122,26 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.NamespaceId = NamespaceId;
     }
 
+    /**
+     * Get 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public TcrNamespaceInfo() {
     }
 
@@ -134,6 +162,9 @@ public class TcrNamespaceInfo extends AbstractModel{
         if (source.NamespaceId != null) {
             this.NamespaceId = new Long(source.NamespaceId);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
         this.setParamSimple(map, prefix + "Public", this.Public);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

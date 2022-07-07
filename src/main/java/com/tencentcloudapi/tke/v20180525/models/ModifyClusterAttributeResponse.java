@@ -63,6 +63,14 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
     private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
 
     /**
+    * 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QGPUShareEnable")
+    @Expose
+    private Boolean QGPUShareEnable;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -170,6 +178,26 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QGPUShareEnable 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getQGPUShareEnable() {
+        return this.QGPUShareEnable;
+    }
+
+    /**
+     * Set 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QGPUShareEnable 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQGPUShareEnable(Boolean QGPUShareEnable) {
+        this.QGPUShareEnable = QGPUShareEnable;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -208,6 +236,9 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         if (source.AutoUpgradeClusterLevel != null) {
             this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
         }
+        if (source.QGPUShareEnable != null) {
+            this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -223,6 +254,7 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

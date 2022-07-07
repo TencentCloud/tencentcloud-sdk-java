@@ -75,6 +75,13 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
     private Tag [] Tags;
 
     /**
+    * 调用者身份uin
+    */
+    @SerializedName("SourceIdentity")
+    @Expose
+    private String SourceIdentity;
+
+    /**
      * Get 角色的资源描述，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 普通角色：
 qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
@@ -210,6 +217,22 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.Tags = Tags;
     }
 
+    /**
+     * Get 调用者身份uin 
+     * @return SourceIdentity 调用者身份uin
+     */
+    public String getSourceIdentity() {
+        return this.SourceIdentity;
+    }
+
+    /**
+     * Set 调用者身份uin
+     * @param SourceIdentity 调用者身份uin
+     */
+    public void setSourceIdentity(String SourceIdentity) {
+        this.SourceIdentity = SourceIdentity;
+    }
+
     public AssumeRoleRequest() {
     }
 
@@ -239,6 +262,9 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.SourceIdentity != null) {
+            this.SourceIdentity = new String(source.SourceIdentity);
+        }
     }
 
 
@@ -252,6 +278,7 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SourceIdentity", this.SourceIdentity);
 
     }
 }

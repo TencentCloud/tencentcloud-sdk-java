@@ -44,6 +44,13 @@ public class CreateNamespaceRequest extends AbstractModel{
     private Boolean IsPublic;
 
     /**
+    * 云标签描述
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -91,6 +98,22 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.IsPublic = IsPublic;
     }
 
+    /**
+     * Get 云标签描述 
+     * @return TagSpecification 云标签描述
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 云标签描述
+     * @param TagSpecification 云标签描述
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateNamespaceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateNamespaceRequest extends AbstractModel{
         if (source.IsPublic != null) {
             this.IsPublic = new Boolean(source.IsPublic);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

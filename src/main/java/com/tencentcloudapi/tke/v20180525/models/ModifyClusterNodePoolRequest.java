@@ -114,6 +114,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private Long Unschedulable;
 
     /**
+    * 删除保护开关
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -321,6 +328,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.Unschedulable = Unschedulable;
     }
 
+    /**
+     * Get 删除保护开关 
+     * @return DeletionProtection 删除保护开关
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 删除保护开关
+     * @param DeletionProtection 删除保护开关
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -377,6 +400,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.Unschedulable != null) {
             this.Unschedulable = new Long(source.Unschedulable);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -397,6 +423,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

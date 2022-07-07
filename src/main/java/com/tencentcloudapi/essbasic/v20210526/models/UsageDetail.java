@@ -46,11 +46,19 @@ public class UsageDetail extends AbstractModel{
     private String Date;
 
     /**
-    * 消耗量
+    * 消耗数量
     */
     @SerializedName("Usage")
     @Expose
     private Long Usage;
+
+    /**
+    * 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cancel")
+    @Expose
+    private Long Cancel;
 
     /**
      * Get 渠道侧合作企业唯一标识 
@@ -109,19 +117,39 @@ public class UsageDetail extends AbstractModel{
     }
 
     /**
-     * Get 消耗量 
-     * @return Usage 消耗量
+     * Get 消耗数量 
+     * @return Usage 消耗数量
      */
     public Long getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 消耗量
-     * @param Usage 消耗量
+     * Set 消耗数量
+     * @param Usage 消耗数量
      */
     public void setUsage(Long Usage) {
         this.Usage = Usage;
+    }
+
+    /**
+     * Get 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cancel 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCancel() {
+        return this.Cancel;
+    }
+
+    /**
+     * Set 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cancel 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCancel(Long Cancel) {
+        this.Cancel = Cancel;
     }
 
     public UsageDetail() {
@@ -144,6 +172,9 @@ public class UsageDetail extends AbstractModel{
         if (source.Usage != null) {
             this.Usage = new Long(source.Usage);
         }
+        if (source.Cancel != null) {
+            this.Cancel = new Long(source.Cancel);
+        }
     }
 
 
@@ -155,6 +186,7 @@ public class UsageDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
         this.setParamSimple(map, prefix + "Date", this.Date);
         this.setParamSimple(map, prefix + "Usage", this.Usage);
+        this.setParamSimple(map, prefix + "Cancel", this.Cancel);
 
     }
 }

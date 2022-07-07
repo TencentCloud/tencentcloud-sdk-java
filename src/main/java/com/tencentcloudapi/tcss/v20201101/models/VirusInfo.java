@@ -72,8 +72,14 @@ public class VirusInfo extends AbstractModel{
     private String ContainerId;
 
     /**
-    * 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+    * 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
     */
     @SerializedName("ContainerStatus")
     @Expose
@@ -302,20 +308,44 @@ VALIDATION: 参数非法
     }
 
     /**
-     * Get 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁 
-     * @return ContainerStatus 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+     * Get 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING 
+     * @return ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
     }
 
     /**
-     * Set 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
-     * @param ContainerStatus 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+     * Set 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     * @param ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;

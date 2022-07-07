@@ -155,6 +155,13 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private Boolean IsDualStack;
 
     /**
+    * 是否开启QGPU共享
+    */
+    @SerializedName("QGPUShareEnable")
+    @Expose
+    private Boolean QGPUShareEnable;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -466,6 +473,22 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.IsDualStack = IsDualStack;
     }
 
+    /**
+     * Get 是否开启QGPU共享 
+     * @return QGPUShareEnable 是否开启QGPU共享
+     */
+    public Boolean getQGPUShareEnable() {
+        return this.QGPUShareEnable;
+    }
+
+    /**
+     * Set 是否开启QGPU共享
+     * @param QGPUShareEnable 是否开启QGPU共享
+     */
+    public void setQGPUShareEnable(Boolean QGPUShareEnable) {
+        this.QGPUShareEnable = QGPUShareEnable;
+    }
+
     public ClusterAdvancedSettings() {
     }
 
@@ -528,6 +551,9 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         if (source.IsDualStack != null) {
             this.IsDualStack = new Boolean(source.IsDualStack);
         }
+        if (source.QGPUShareEnable != null) {
+            this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
+        }
     }
 
 
@@ -553,6 +579,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
         this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
         this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+        this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
 
     }
 }

@@ -65,6 +65,13 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
     private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
 
     /**
+    * 是否开启QGPU共享
+    */
+    @SerializedName("QGPUShareEnable")
+    @Expose
+    private Boolean QGPUShareEnable;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -160,6 +167,22 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
+    /**
+     * Get 是否开启QGPU共享 
+     * @return QGPUShareEnable 是否开启QGPU共享
+     */
+    public Boolean getQGPUShareEnable() {
+        return this.QGPUShareEnable;
+    }
+
+    /**
+     * Set 是否开启QGPU共享
+     * @param QGPUShareEnable 是否开启QGPU共享
+     */
+    public void setQGPUShareEnable(Boolean QGPUShareEnable) {
+        this.QGPUShareEnable = QGPUShareEnable;
+    }
+
     public ModifyClusterAttributeRequest() {
     }
 
@@ -186,6 +209,9 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
         if (source.AutoUpgradeClusterLevel != null) {
             this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
         }
+        if (source.QGPUShareEnable != null) {
+            this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class ModifyClusterAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
 
     }
 }

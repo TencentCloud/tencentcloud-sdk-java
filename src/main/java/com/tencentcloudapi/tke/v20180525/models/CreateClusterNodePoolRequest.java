@@ -114,6 +114,13 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 删除保护开关
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get cluster id 
      * @return ClusterId cluster id
      */
@@ -321,6 +328,22 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 删除保护开关 
+     * @return DeletionProtection 删除保护开关
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 删除保护开关
+     * @param DeletionProtection 删除保护开关
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public CreateClusterNodePoolRequest() {
     }
 
@@ -377,6 +400,9 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -397,6 +423,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

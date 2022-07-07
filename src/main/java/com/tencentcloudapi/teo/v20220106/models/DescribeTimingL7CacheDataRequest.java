@@ -37,7 +37,9 @@ public class DescribeTimingL7CacheDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 时序类访问流量指标列表
+    * 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
     */
     @SerializedName("MetricNames")
     @Expose
@@ -99,16 +101,24 @@ EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
     }
 
     /**
-     * Get 时序类访问流量指标列表 
-     * @return MetricNames 时序类访问流量指标列表
+     * Get 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数 
+     * @return MetricNames 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 时序类访问流量指标列表
-     * @param MetricNames 时序类访问流量指标列表
+     * Set 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
+     * @param MetricNames 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

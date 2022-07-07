@@ -104,6 +104,22 @@ public class ClusterNetworkSettings extends AbstractModel{
     private Boolean IgnoreServiceCIDRConflict;
 
     /**
+    * 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDualStack")
+    @Expose
+    private Boolean IsDualStack;
+
+    /**
+    * 用于分配service的IP range，由系统自动分配
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6ServiceCIDR")
+    @Expose
+    private String Ipv6ServiceCIDR;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -295,6 +311,46 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
     }
 
+    /**
+     * Get 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDualStack 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDualStack() {
+        return this.IsDualStack;
+    }
+
+    /**
+     * Set 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDualStack 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDualStack(Boolean IsDualStack) {
+        this.IsDualStack = IsDualStack;
+    }
+
+    /**
+     * Get 用于分配service的IP range，由系统自动分配
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpv6ServiceCIDR() {
+        return this.Ipv6ServiceCIDR;
+    }
+
+    /**
+     * Set 用于分配service的IP range，由系统自动分配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6ServiceCIDR(String Ipv6ServiceCIDR) {
+        this.Ipv6ServiceCIDR = Ipv6ServiceCIDR;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -339,6 +395,12 @@ public class ClusterNetworkSettings extends AbstractModel{
         if (source.IgnoreServiceCIDRConflict != null) {
             this.IgnoreServiceCIDRConflict = new Boolean(source.IgnoreServiceCIDRConflict);
         }
+        if (source.IsDualStack != null) {
+            this.IsDualStack = new Boolean(source.IsDualStack);
+        }
+        if (source.Ipv6ServiceCIDR != null) {
+            this.Ipv6ServiceCIDR = new String(source.Ipv6ServiceCIDR);
+        }
     }
 
 
@@ -357,6 +419,8 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
         this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
+        this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+        this.setParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
 
     }
 }

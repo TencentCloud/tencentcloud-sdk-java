@@ -324,6 +324,9 @@ public enum EcmErrorCode {
     // 指定CIDR与同一个私有网络内的另一个子网发生冲突。
      INVALIDPARAMETERVALUE_SUBNETCONFLICT("InvalidParameterValue.SubnetConflict"),
      
+    // 子网不存在。
+     INVALIDPARAMETERVALUE_SUBNETNOTEXIST("InvalidParameterValue.SubnetNotExist"),
+     
     // 无效的子网网段。
      INVALIDPARAMETERVALUE_SUBNETRANGE("InvalidParameterValue.SubnetRange"),
      

@@ -21,6 +21,9 @@ public enum TatErrorCode {
     // 无效用户名。
      INVALIDPARAMETER_INVALIDUSERNAME("InvalidParameter.InvalidUsername"),
      
+    // 参数名称重复。
+     INVALIDPARAMETER_PARAMETERNAMEDUPLICATED("InvalidParameter.ParameterNameDuplicated"),
+     
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
