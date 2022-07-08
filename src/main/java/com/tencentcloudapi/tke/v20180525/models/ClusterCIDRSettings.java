@@ -37,7 +37,7 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Boolean IgnoreClusterCIDRConflict;
 
     /**
-    * 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+    * 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
     */
     @SerializedName("MaxNodePodNum")
     @Expose
@@ -111,16 +111,16 @@ public class ClusterCIDRSettings extends AbstractModel{
     }
 
     /**
-     * Get 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。 
-     * @return MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     * Get 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。 
+     * @return MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
      */
     public Long getMaxNodePodNum() {
         return this.MaxNodePodNum;
     }
 
     /**
-     * Set 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
-     * @param MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     * Set 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
+     * @param MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
      */
     public void setMaxNodePodNum(Long MaxNodePodNum) {
         this.MaxNodePodNum = MaxNodePodNum;

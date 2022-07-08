@@ -1,5 +1,8 @@
 package com.tencentcloudapi.gs.v20191118;
 public enum GsErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 锁定机器超时或未调用TrylockWorker。
      FAILEDOPERATION_LOCKTIMEOUT("FailedOperation.LockTimeout"),
      

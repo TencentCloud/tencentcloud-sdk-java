@@ -110,6 +110,27 @@ FAILED:已失败
     private String Remark;
 
     /**
+    * 收款用户ID
+    */
+    @SerializedName("PayeeId")
+    @Expose
+    private String PayeeId;
+
+    /**
+    * 外部用户ID
+    */
+    @SerializedName("OutUserId")
+    @Expose
+    private String OutUserId;
+
+    /**
+    * 操作类型
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private String OperationType;
+
+    /**
      * Get 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得 
@@ -325,6 +346,54 @@ FAILED:已失败
         this.Remark = Remark;
     }
 
+    /**
+     * Get 收款用户ID 
+     * @return PayeeId 收款用户ID
+     */
+    public String getPayeeId() {
+        return this.PayeeId;
+    }
+
+    /**
+     * Set 收款用户ID
+     * @param PayeeId 收款用户ID
+     */
+    public void setPayeeId(String PayeeId) {
+        this.PayeeId = PayeeId;
+    }
+
+    /**
+     * Get 外部用户ID 
+     * @return OutUserId 外部用户ID
+     */
+    public String getOutUserId() {
+        return this.OutUserId;
+    }
+
+    /**
+     * Set 外部用户ID
+     * @param OutUserId 外部用户ID
+     */
+    public void setOutUserId(String OutUserId) {
+        this.OutUserId = OutUserId;
+    }
+
+    /**
+     * Get 操作类型 
+     * @return OperationType 操作类型
+     */
+    public String getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 操作类型
+     * @param OperationType 操作类型
+     */
+    public void setOperationType(String OperationType) {
+        this.OperationType = OperationType;
+    }
+
     public SettlementOrderResult() {
     }
 
@@ -366,6 +435,15 @@ FAILED:已失败
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PayeeId != null) {
+            this.PayeeId = new String(source.PayeeId);
+        }
+        if (source.OutUserId != null) {
+            this.OutUserId = new String(source.OutUserId);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
     }
 
 
@@ -384,6 +462,9 @@ FAILED:已失败
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
+        this.setParamSimple(map, prefix + "OutUserId", this.OutUserId);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
 
     }
 }

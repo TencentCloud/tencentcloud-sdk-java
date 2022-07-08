@@ -72,6 +72,13 @@ public class OrderSummaryResult extends AbstractModel{
     private Long SummaryCount;
 
     /**
+    * 外部用户ID
+    */
+    @SerializedName("OutUserId")
+    @Expose
+    private String OutUserId;
+
+    /**
      * Get 汇总ID 
      * @return SummaryId 汇总ID
      */
@@ -183,6 +190,22 @@ public class OrderSummaryResult extends AbstractModel{
         this.SummaryCount = SummaryCount;
     }
 
+    /**
+     * Get 外部用户ID 
+     * @return OutUserId 外部用户ID
+     */
+    public String getOutUserId() {
+        return this.OutUserId;
+    }
+
+    /**
+     * Set 外部用户ID
+     * @param OutUserId 外部用户ID
+     */
+    public void setOutUserId(String OutUserId) {
+        this.OutUserId = OutUserId;
+    }
+
     public OrderSummaryResult() {
     }
 
@@ -212,6 +235,9 @@ public class OrderSummaryResult extends AbstractModel{
         if (source.SummaryCount != null) {
             this.SummaryCount = new Long(source.SummaryCount);
         }
+        if (source.OutUserId != null) {
+            this.OutUserId = new String(source.OutUserId);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class OrderSummaryResult extends AbstractModel{
         this.setParamSimple(map, prefix + "SummaryAmount", this.SummaryAmount);
         this.setParamSimple(map, prefix + "SummaryTime", this.SummaryTime);
         this.setParamSimple(map, prefix + "SummaryCount", this.SummaryCount);
+        this.setParamSimple(map, prefix + "OutUserId", this.OutUserId);
 
     }
 }

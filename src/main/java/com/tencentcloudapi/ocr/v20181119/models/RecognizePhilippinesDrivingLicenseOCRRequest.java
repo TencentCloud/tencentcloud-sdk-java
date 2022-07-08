@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class RecognizePhilippinesDrivingLicenseOCRRequest extends AbstractModel{
 
     /**
-    * 是否返回人像照片。
-    */
-    @SerializedName("ReturnHeadImage")
-    @Expose
-    private Boolean ReturnHeadImage;
-
-    /**
     * 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -51,20 +44,11 @@ public class RecognizePhilippinesDrivingLicenseOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-     * Get 是否返回人像照片。 
-     * @return ReturnHeadImage 是否返回人像照片。
-     */
-    public Boolean getReturnHeadImage() {
-        return this.ReturnHeadImage;
-    }
-
-    /**
-     * Set 是否返回人像照片。
-     * @param ReturnHeadImage 是否返回人像照片。
-     */
-    public void setReturnHeadImage(Boolean ReturnHeadImage) {
-        this.ReturnHeadImage = ReturnHeadImage;
-    }
+    * 是否返回人像照片。
+    */
+    @SerializedName("ReturnHeadImage")
+    @Expose
+    private Boolean ReturnHeadImage;
 
     /**
      * Get 图片的 Base64 值。
@@ -126,6 +110,22 @@ public class RecognizePhilippinesDrivingLicenseOCRRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 是否返回人像照片。 
+     * @return ReturnHeadImage 是否返回人像照片。
+     */
+    public Boolean getReturnHeadImage() {
+        return this.ReturnHeadImage;
+    }
+
+    /**
+     * Set 是否返回人像照片。
+     * @param ReturnHeadImage 是否返回人像照片。
+     */
+    public void setReturnHeadImage(Boolean ReturnHeadImage) {
+        this.ReturnHeadImage = ReturnHeadImage;
+    }
+
     public RecognizePhilippinesDrivingLicenseOCRRequest() {
     }
 
@@ -134,14 +134,14 @@ public class RecognizePhilippinesDrivingLicenseOCRRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RecognizePhilippinesDrivingLicenseOCRRequest(RecognizePhilippinesDrivingLicenseOCRRequest source) {
-        if (source.ReturnHeadImage != null) {
-            this.ReturnHeadImage = new Boolean(source.ReturnHeadImage);
-        }
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
         }
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.ReturnHeadImage != null) {
+            this.ReturnHeadImage = new Boolean(source.ReturnHeadImage);
         }
     }
 
@@ -150,9 +150,9 @@ public class RecognizePhilippinesDrivingLicenseOCRRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
 
     }
 }

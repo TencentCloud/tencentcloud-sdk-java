@@ -51,7 +51,10 @@ public class CreateFlowRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 发送类型(true为无序签,false为顺序签)
+    * 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
     */
     @SerializedName("Unordered")
     @Expose
@@ -179,16 +182,28 @@ public class CreateFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 发送类型(true为无序签,false为顺序签) 
-     * @return Unordered 发送类型(true为无序签,false为顺序签)
+     * Get 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致 
+     * @return Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      */
     public Boolean getUnordered() {
         return this.Unordered;
     }
 
     /**
-     * Set 发送类型(true为无序签,false为顺序签)
-     * @param Unordered 发送类型(true为无序签,false为顺序签)
+     * Set 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+     * @param Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;

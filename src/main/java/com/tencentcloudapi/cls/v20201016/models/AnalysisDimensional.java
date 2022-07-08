@@ -30,7 +30,7 @@ public class AnalysisDimensional extends AbstractModel{
     private String Name;
 
     /**
-    * 分析类型：query，field
+    * 分析类型：query，field ，original
     */
     @SerializedName("Type")
     @Expose
@@ -42,6 +42,13 @@ public class AnalysisDimensional extends AbstractModel{
     @SerializedName("Content")
     @Expose
     private String Content;
+
+    /**
+    * 配置
+    */
+    @SerializedName("ConfigInfo")
+    @Expose
+    private AlarmAnalysisConfig [] ConfigInfo;
 
     /**
      * Get 分析名称 
@@ -60,16 +67,16 @@ public class AnalysisDimensional extends AbstractModel{
     }
 
     /**
-     * Get 分析类型：query，field 
-     * @return Type 分析类型：query，field
+     * Get 分析类型：query，field ，original 
+     * @return Type 分析类型：query，field ，original
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 分析类型：query，field
-     * @param Type 分析类型：query，field
+     * Set 分析类型：query，field ，original
+     * @param Type 分析类型：query，field ，original
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -91,6 +98,22 @@ public class AnalysisDimensional extends AbstractModel{
         this.Content = Content;
     }
 
+    /**
+     * Get 配置 
+     * @return ConfigInfo 配置
+     */
+    public AlarmAnalysisConfig [] getConfigInfo() {
+        return this.ConfigInfo;
+    }
+
+    /**
+     * Set 配置
+     * @param ConfigInfo 配置
+     */
+    public void setConfigInfo(AlarmAnalysisConfig [] ConfigInfo) {
+        this.ConfigInfo = ConfigInfo;
+    }
+
     public AnalysisDimensional() {
     }
 
@@ -108,6 +131,12 @@ public class AnalysisDimensional extends AbstractModel{
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.ConfigInfo != null) {
+            this.ConfigInfo = new AlarmAnalysisConfig[source.ConfigInfo.length];
+            for (int i = 0; i < source.ConfigInfo.length; i++) {
+                this.ConfigInfo[i] = new AlarmAnalysisConfig(source.ConfigInfo[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class AnalysisDimensional extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "ConfigInfo.", this.ConfigInfo);
 
     }
 }

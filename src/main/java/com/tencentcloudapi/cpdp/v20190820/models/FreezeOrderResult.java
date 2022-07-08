@@ -103,6 +103,20 @@ FAILED:已失败
     private String Remark;
 
     /**
+    * 收款用户ID
+    */
+    @SerializedName("PayeeId")
+    @Expose
+    private String PayeeId;
+
+    /**
+    * 外部用户ID
+    */
+    @SerializedName("OutUserId")
+    @Expose
+    private String OutUserId;
+
+    /**
      * Get 税前金额 
      * @return AmountBeforeTax 税前金额
      */
@@ -302,6 +316,38 @@ FAILED:已失败
         this.Remark = Remark;
     }
 
+    /**
+     * Get 收款用户ID 
+     * @return PayeeId 收款用户ID
+     */
+    public String getPayeeId() {
+        return this.PayeeId;
+    }
+
+    /**
+     * Set 收款用户ID
+     * @param PayeeId 收款用户ID
+     */
+    public void setPayeeId(String PayeeId) {
+        this.PayeeId = PayeeId;
+    }
+
+    /**
+     * Get 外部用户ID 
+     * @return OutUserId 外部用户ID
+     */
+    public String getOutUserId() {
+        return this.OutUserId;
+    }
+
+    /**
+     * Set 外部用户ID
+     * @param OutUserId 外部用户ID
+     */
+    public void setOutUserId(String OutUserId) {
+        this.OutUserId = OutUserId;
+    }
+
     public FreezeOrderResult() {
     }
 
@@ -340,6 +386,12 @@ FAILED:已失败
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PayeeId != null) {
+            this.PayeeId = new String(source.PayeeId);
+        }
+        if (source.OutUserId != null) {
+            this.OutUserId = new String(source.OutUserId);
+        }
     }
 
 
@@ -357,6 +409,8 @@ FAILED:已失败
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
+        this.setParamSimple(map, prefix + "OutUserId", this.OutUserId);
 
     }
 }

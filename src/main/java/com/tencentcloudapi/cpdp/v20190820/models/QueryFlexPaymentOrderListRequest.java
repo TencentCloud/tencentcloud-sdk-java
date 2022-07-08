@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class QueryFlexPaymentOrderListRequest extends AbstractModel{
 
     /**
-    * 收款用户ID
-    */
-    @SerializedName("PayeeId")
-    @Expose
-    private String PayeeId;
-
-    /**
     * 开始时间，格式"yyyy-MM-dd hh:mm:ss"
     */
     @SerializedName("StartTime")
@@ -51,6 +44,13 @@ public class QueryFlexPaymentOrderListRequest extends AbstractModel{
     private Paging PageNumber;
 
     /**
+    * 收款用户ID
+    */
+    @SerializedName("PayeeId")
+    @Expose
+    private String PayeeId;
+
+    /**
     * 环境类型
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -60,22 +60,6 @@ __test__:测试环境
     @SerializedName("Environment")
     @Expose
     private String Environment;
-
-    /**
-     * Get 收款用户ID 
-     * @return PayeeId 收款用户ID
-     */
-    public String getPayeeId() {
-        return this.PayeeId;
-    }
-
-    /**
-     * Set 收款用户ID
-     * @param PayeeId 收款用户ID
-     */
-    public void setPayeeId(String PayeeId) {
-        this.PayeeId = PayeeId;
-    }
 
     /**
      * Get 开始时间，格式"yyyy-MM-dd hh:mm:ss" 
@@ -126,6 +110,22 @@ __test__:测试环境
     }
 
     /**
+     * Get 收款用户ID 
+     * @return PayeeId 收款用户ID
+     */
+    public String getPayeeId() {
+        return this.PayeeId;
+    }
+
+    /**
+     * Set 收款用户ID
+     * @param PayeeId 收款用户ID
+     */
+    public void setPayeeId(String PayeeId) {
+        this.PayeeId = PayeeId;
+    }
+
+    /**
      * Get 环境类型
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -165,9 +165,6 @@ __test__:测试环境
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QueryFlexPaymentOrderListRequest(QueryFlexPaymentOrderListRequest source) {
-        if (source.PayeeId != null) {
-            this.PayeeId = new String(source.PayeeId);
-        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -176,6 +173,9 @@ __test__:测试环境
         }
         if (source.PageNumber != null) {
             this.PageNumber = new Paging(source.PageNumber);
+        }
+        if (source.PayeeId != null) {
+            this.PayeeId = new String(source.PayeeId);
         }
         if (source.Environment != null) {
             this.Environment = new String(source.Environment);
@@ -187,10 +187,10 @@ __test__:测试环境
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "PageNumber.", this.PageNumber);
+        this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }

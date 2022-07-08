@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeEventsResponse extends AbstractModel{
 
     /**
-    * 日志集合是否结束
+    * 日志集合是否结束。true表示结束，无需进行翻页。
     */
     @SerializedName("ListOver")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeEventsResponse extends AbstractModel{
     private Event [] Events;
 
     /**
-    * 总数
+    * 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -60,16 +60,16 @@ public class DescribeEventsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 日志集合是否结束 
-     * @return ListOver 日志集合是否结束
+     * Get 日志集合是否结束。true表示结束，无需进行翻页。 
+     * @return ListOver 日志集合是否结束。true表示结束，无需进行翻页。
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 日志集合是否结束
-     * @param ListOver 日志集合是否结束
+     * Set 日志集合是否结束。true表示结束，无需进行翻页。
+     * @param ListOver 日志集合是否结束。true表示结束，无需进行翻页。
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
@@ -112,9 +112,9 @@ public class DescribeEventsResponse extends AbstractModel{
     }
 
     /**
-     * Get 总数
+     * Get 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 总数
+     * @return TotalCount 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -122,9 +122,9 @@ public class DescribeEventsResponse extends AbstractModel{
     }
 
     /**
-     * Set 总数
+     * Set 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 总数
+     * @param TotalCount 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

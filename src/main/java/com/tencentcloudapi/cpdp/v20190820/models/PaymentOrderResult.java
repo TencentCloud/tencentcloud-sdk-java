@@ -117,6 +117,13 @@ FAILED:已失败
     private String PayeeId;
 
     /**
+    * 外部用户ID
+    */
+    @SerializedName("OutUserId")
+    @Expose
+    private String OutUserId;
+
+    /**
      * Get 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得 
@@ -348,6 +355,22 @@ FAILED:已失败
         this.PayeeId = PayeeId;
     }
 
+    /**
+     * Get 外部用户ID 
+     * @return OutUserId 外部用户ID
+     */
+    public String getOutUserId() {
+        return this.OutUserId;
+    }
+
+    /**
+     * Set 外部用户ID
+     * @param OutUserId 外部用户ID
+     */
+    public void setOutUserId(String OutUserId) {
+        this.OutUserId = OutUserId;
+    }
+
     public PaymentOrderResult() {
     }
 
@@ -392,6 +415,9 @@ FAILED:已失败
         if (source.PayeeId != null) {
             this.PayeeId = new String(source.PayeeId);
         }
+        if (source.OutUserId != null) {
+            this.OutUserId = new String(source.OutUserId);
+        }
     }
 
 
@@ -411,6 +437,7 @@ FAILED:已失败
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
+        this.setParamSimple(map, prefix + "OutUserId", this.OutUserId);
 
     }
 }
