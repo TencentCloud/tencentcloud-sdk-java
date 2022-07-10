@@ -317,7 +317,8 @@ public class DeployApplicationRequest extends AbstractModel{
     private EnablePrometheusConf EnablePrometheusConf;
 
     /**
-    * 1：开始apm采集；0：关闭apm采集
+    * 1：开始apm采集（skywalking）；
+0：关闭apm采集；
     */
     @SerializedName("EnableTracing")
     @Expose
@@ -1020,16 +1021,20 @@ public class DeployApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 1：开始apm采集；0：关闭apm采集 
-     * @return EnableTracing 1：开始apm采集；0：关闭apm采集
+     * Get 1：开始apm采集（skywalking）；
+0：关闭apm采集； 
+     * @return EnableTracing 1：开始apm采集（skywalking）；
+0：关闭apm采集；
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
     }
 
     /**
-     * Set 1：开始apm采集；0：关闭apm采集
-     * @param EnableTracing 1：开始apm采集；0：关闭apm采集
+     * Set 1：开始apm采集（skywalking）；
+0：关闭apm采集；
+     * @param EnableTracing 1：开始apm采集（skywalking）；
+0：关闭apm采集；
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;

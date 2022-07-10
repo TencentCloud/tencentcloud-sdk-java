@@ -39,7 +39,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *取消匹配。
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+取消匹配。
      * @param req CancelMatchingRequest
      * @return CancelMatchingResponse
      * @throws TencentCloudSDKException
@@ -59,7 +61,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *创建匹配
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+创建匹配
      * @param req CreateMatchRequest
      * @return CreateMatchResponse
      * @throws TencentCloudSDKException
@@ -79,7 +83,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *创建规则
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+创建规则
      * @param req CreateRuleRequest
      * @return CreateRuleResponse
      * @throws TencentCloudSDKException
@@ -99,7 +105,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *删除匹配
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+删除匹配
      * @param req DeleteMatchRequest
      * @return DeleteMatchResponse
      * @throws TencentCloudSDKException
@@ -119,7 +127,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *删除规则
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+删除规则
      * @param req DeleteRuleRequest
      * @return DeleteRuleResponse
      * @throws TencentCloudSDKException
@@ -139,7 +149,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *统计数据
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+统计数据
      * @param req DescribeDataRequest
      * @return DescribeDataResponse
      * @throws TencentCloudSDKException
@@ -159,7 +171,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *查询匹配详情
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+查询匹配详情
      * @param req DescribeMatchRequest
      * @return DescribeMatchResponse
      * @throws TencentCloudSDKException
@@ -179,7 +193,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *分页查询匹配Code
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+分页查询匹配Code
      * @param req DescribeMatchCodesRequest
      * @return DescribeMatchCodesResponse
      * @throws TencentCloudSDKException
@@ -199,7 +215,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *分页查询匹配列表
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+分页查询匹配列表
      * @param req DescribeMatchesRequest
      * @return DescribeMatchesResponse
      * @throws TencentCloudSDKException
@@ -219,7 +237,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *查询匹配进度。
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+查询匹配进度。
      * @param req DescribeMatchingProgressRequest
      * @return DescribeMatchingProgressResponse
      * @throws TencentCloudSDKException
@@ -239,7 +259,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *查询规则详情
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+查询规则详情
      * @param req DescribeRuleRequest
      * @return DescribeRuleResponse
      * @throws TencentCloudSDKException
@@ -259,7 +281,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *分页查询规则集列表
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+分页查询规则集列表
      * @param req DescribeRulesRequest
      * @return DescribeRulesResponse
      * @throws TencentCloudSDKException
@@ -279,7 +303,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *查询匹配Token，Token用于push消息验证。
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+查询匹配Token，Token用于push消息验证。
      * @param req DescribeTokenRequest
      * @return DescribeTokenResponse
      * @throws TencentCloudSDKException
@@ -299,7 +325,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *修改匹配
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+修改匹配
      * @param req ModifyMatchRequest
      * @return ModifyMatchResponse
      * @throws TencentCloudSDKException
@@ -319,7 +347,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *修改规则（描述、标签）
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+修改规则（描述、标签）
      * @param req ModifyRuleRequest
      * @return ModifyRuleResponse
      * @throws TencentCloudSDKException
@@ -339,7 +369,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *修改匹配Token。
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+修改匹配Token。
      * @param req ModifyTokenRequest
      * @return ModifyTokenResponse
      * @throws TencentCloudSDKException
@@ -359,7 +391,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *支持传入一个玩家或多个玩家发起匹配，在同一个请求内的玩家将被分到同一个对局。
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+支持传入一个玩家或多个玩家发起匹配，在同一个请求内的玩家将被分到同一个对局。
      * @param req StartMatchingRequest
      * @return StartMatchingResponse
      * @throws TencentCloudSDKException
@@ -379,7 +413,9 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
-     *通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
+     *此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+
+通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
      * @param req StartMatchingBackfillRequest
      * @return StartMatchingBackfillResponse
      * @throws TencentCloudSDKException

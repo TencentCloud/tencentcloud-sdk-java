@@ -30,7 +30,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
     */
     @SerializedName("Filters")
     @Expose
@@ -40,7 +41,7 @@ sql_metric视图支持：service.name（服务名）维度进行过滤。
     * 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
     */
     @SerializedName("Metrics")
     @Expose
@@ -64,7 +65,8 @@ sql_metric视图支持：service_slow_sql_count（慢sql）。
     * 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
     */
     @SerializedName("GroupBy")
     @Expose
@@ -99,7 +101,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。 
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。 
      * @return Filters 要过滤的维度信息
 service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
@@ -107,7 +110,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
      */
     public GeneralFilter [] getFilters() {
         return this.Filters;
@@ -121,7 +125,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
      * @param Filters 要过滤的维度信息
 service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
@@ -129,7 +134,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
      */
     public void setFilters(GeneralFilter [] Filters) {
         this.Filters = Filters;
@@ -139,11 +145,11 @@ sql_metric视图支持：service.name（服务名）维度进行过滤。
      * Get 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。 
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。 
      * @return Metrics 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
      */
     public String [] getMetrics() {
         return this.Metrics;
@@ -153,11 +159,11 @@ sql_metric视图支持：service_slow_sql_count（慢sql）。
      * Set 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
      * @param Metrics 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
      */
     public void setMetrics(String [] Metrics) {
         this.Metrics = Metrics;
@@ -199,11 +205,13 @@ sql_metric视图支持：service_slow_sql_count（慢sql）。
      * Get 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。 
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。 
      * @return GroupBy 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
      */
     public String [] getGroupBy() {
         return this.GroupBy;
@@ -213,11 +221,13 @@ sql_metric视图支持：service.name（服务名）维度进行聚合。
      * Set 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
      * @param GroupBy 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;

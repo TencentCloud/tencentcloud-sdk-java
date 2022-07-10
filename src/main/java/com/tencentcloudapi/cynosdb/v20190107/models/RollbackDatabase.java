@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RollbackDatabase extends AbstractModel{
 
     /**
-    * 旧数据库
+    * 旧数据库名称
     */
     @SerializedName("OldDatabase")
     @Expose
     private String OldDatabase;
 
     /**
-    * 新数据库
+    * 新数据库名称
     */
     @SerializedName("NewDatabase")
     @Expose
     private String NewDatabase;
 
     /**
-     * Get 旧数据库 
-     * @return OldDatabase 旧数据库
+     * Get 旧数据库名称 
+     * @return OldDatabase 旧数据库名称
      */
     public String getOldDatabase() {
         return this.OldDatabase;
     }
 
     /**
-     * Set 旧数据库
-     * @param OldDatabase 旧数据库
+     * Set 旧数据库名称
+     * @param OldDatabase 旧数据库名称
      */
     public void setOldDatabase(String OldDatabase) {
         this.OldDatabase = OldDatabase;
     }
 
     /**
-     * Get 新数据库 
-     * @return NewDatabase 新数据库
+     * Get 新数据库名称 
+     * @return NewDatabase 新数据库名称
      */
     public String getNewDatabase() {
         return this.NewDatabase;
     }
 
     /**
-     * Set 新数据库
-     * @param NewDatabase 新数据库
+     * Set 新数据库名称
+     * @param NewDatabase 新数据库名称
      */
     public void setNewDatabase(String NewDatabase) {
         this.NewDatabase = NewDatabase;

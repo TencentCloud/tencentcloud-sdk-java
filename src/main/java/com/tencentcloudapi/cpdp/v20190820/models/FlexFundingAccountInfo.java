@@ -44,6 +44,13 @@ public class FlexFundingAccountInfo extends AbstractModel{
     private String FundingAccountBindSerialNo;
 
     /**
+    * 资金账户名称
+    */
+    @SerializedName("FundingAccountName")
+    @Expose
+    private String FundingAccountName;
+
+    /**
      * Get 资金账户号 
      * @return FundingAccountNo 资金账户号
      */
@@ -91,6 +98,22 @@ public class FlexFundingAccountInfo extends AbstractModel{
         this.FundingAccountBindSerialNo = FundingAccountBindSerialNo;
     }
 
+    /**
+     * Get 资金账户名称 
+     * @return FundingAccountName 资金账户名称
+     */
+    public String getFundingAccountName() {
+        return this.FundingAccountName;
+    }
+
+    /**
+     * Set 资金账户名称
+     * @param FundingAccountName 资金账户名称
+     */
+    public void setFundingAccountName(String FundingAccountName) {
+        this.FundingAccountName = FundingAccountName;
+    }
+
     public FlexFundingAccountInfo() {
     }
 
@@ -108,6 +131,9 @@ public class FlexFundingAccountInfo extends AbstractModel{
         if (source.FundingAccountBindSerialNo != null) {
             this.FundingAccountBindSerialNo = new String(source.FundingAccountBindSerialNo);
         }
+        if (source.FundingAccountName != null) {
+            this.FundingAccountName = new String(source.FundingAccountName);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class FlexFundingAccountInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FundingAccountNo", this.FundingAccountNo);
         this.setParamSimple(map, prefix + "FundingAccountType", this.FundingAccountType);
         this.setParamSimple(map, prefix + "FundingAccountBindSerialNo", this.FundingAccountBindSerialNo);
+        this.setParamSimple(map, prefix + "FundingAccountName", this.FundingAccountName);
 
     }
 }

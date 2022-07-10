@@ -79,7 +79,7 @@ public class FlowInfo extends AbstractModel{
     private String FlowDescription;
 
     /**
-    * 渠道的业务信息，最大长度1000个字符
+    * 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
     */
     @SerializedName("CustomerData")
     @Expose
@@ -228,16 +228,16 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 渠道的业务信息，最大长度1000个字符 
-     * @return CustomerData 渠道的业务信息，最大长度1000个字符
+     * Get 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
+     * @return CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     public String getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set 渠道的业务信息，最大长度1000个字符
-     * @param CustomerData 渠道的业务信息，最大长度1000个字符
+     * Set 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     public void setCustomerData(String CustomerData) {
         this.CustomerData = CustomerData;

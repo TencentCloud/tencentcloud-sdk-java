@@ -907,7 +907,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *云企付-创建支付订单
+     *云企付-创建支付订单。支持B2B网关支付，B2C转账下单。
      * @param req CreateOpenBankPaymentOrderRequest
      * @return CreateOpenBankPaymentOrderResponse
      * @throws TencentCloudSDKException
@@ -979,6 +979,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankUnifiedOrderResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateOpenBankUnifiedOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云企付-创建核销申请，适用于针对支付订单维度的确认收货，解冻等业务场景。目前支持的渠道有TENPAY下的EBANK_PAYMENT付款方式创建支付订单时，选择担保支付下单的订单进行解冻。
+     * @param req CreateOpenBankVerificationOrderRequest
+     * @return CreateOpenBankVerificationOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOpenBankVerificationOrderResponse CreateOpenBankVerificationOrder(CreateOpenBankVerificationOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOpenBankVerificationOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOpenBankVerificationOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOpenBankVerificationOrder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3130,6 +3150,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付-查询核销订单状态，客户可以使用该接口来查询核销申请的订单状态。目前仅支持TENPAY渠道EBANK_PAYMENT付款方式的担保支付订单查询。
+     * @param req QueryOpenBankVerificationOrderRequest
+     * @return QueryOpenBankVerificationOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankVerificationOrderResponse QueryOpenBankVerificationOrder(QueryOpenBankVerificationOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankVerificationOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankVerificationOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankVerificationOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据订单号，或者用户Id，查询支付订单状态 
      * @param req QueryOrderRequest
      * @return QueryOrderResponse
@@ -4042,6 +4082,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadTaxPaymentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UploadTaxPayment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云企付-子商户银行卡打款验证，在接入TENPAY渠道EBANK_PAYMENT付款时，若客户期望接入担保支付，需在接入前先完成，收款商户绑定的银行卡进行打款验证。验证成功后，才可以调用CreateOpenBankPaymentOrder接口进行担保支付下单。
+     * @param req VerifyOpenBankAccountRequest
+     * @return VerifyOpenBankAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyOpenBankAccountResponse VerifyOpenBankAccount(VerifyOpenBankAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyOpenBankAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyOpenBankAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyOpenBankAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

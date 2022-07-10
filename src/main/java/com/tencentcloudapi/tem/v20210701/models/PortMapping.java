@@ -44,6 +44,13 @@ public class PortMapping extends AbstractModel{
     private String Protocol;
 
     /**
+    * k8s service名称
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
      * Get 端口 
      * @return Port 端口
      */
@@ -91,6 +98,22 @@ public class PortMapping extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get k8s service名称 
+     * @return ServiceName k8s service名称
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set k8s service名称
+     * @param ServiceName k8s service名称
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
     public PortMapping() {
     }
 
@@ -108,6 +131,9 @@ public class PortMapping extends AbstractModel{
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class PortMapping extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "TargetPort", this.TargetPort);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
 
     }
 }

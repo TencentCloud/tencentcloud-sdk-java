@@ -37,14 +37,14 @@ public class RecognizeTravelCardOCRResponse extends AbstractModel{
     private String Color;
 
     /**
-    * 14天内到达或途经的城市
+    * 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
     */
     @SerializedName("ReachedCity")
     @Expose
     private String [] ReachedCity;
 
     /**
-    * 14天内到达或途径存在中高风险地区的城市
+    * 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
     */
     @SerializedName("RiskArea")
     @Expose
@@ -97,32 +97,32 @@ public class RecognizeTravelCardOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 14天内到达或途经的城市 
-     * @return ReachedCity 14天内到达或途经的城市
+     * Get 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”） 
+     * @return ReachedCity 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
      */
     public String [] getReachedCity() {
         return this.ReachedCity;
     }
 
     /**
-     * Set 14天内到达或途经的城市
-     * @param ReachedCity 14天内到达或途经的城市
+     * Set 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
+     * @param ReachedCity 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
      */
     public void setReachedCity(String [] ReachedCity) {
         this.ReachedCity = ReachedCity;
     }
 
     /**
-     * Get 14天内到达或途径存在中高风险地区的城市 
-     * @return RiskArea 14天内到达或途径存在中高风险地区的城市
+     * Get 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值） 
+     * @return RiskArea 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
      */
     public String [] getRiskArea() {
         return this.RiskArea;
     }
 
     /**
-     * Set 14天内到达或途径存在中高风险地区的城市
-     * @param RiskArea 14天内到达或途径存在中高风险地区的城市
+     * Set 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
+     * @param RiskArea 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
      */
     public void setRiskArea(String [] RiskArea) {
         this.RiskArea = RiskArea;

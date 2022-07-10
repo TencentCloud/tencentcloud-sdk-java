@@ -32,6 +32,14 @@ off：关闭
     private String Switch;
 
     /**
+    * 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RedirectConfig")
+    @Expose
+    private RedirectConfig RedirectConfig;
+
+    /**
      * Get 回源跟随开关
 on：开启
 off：关闭 
@@ -55,6 +63,26 @@ off：关闭
         this.Switch = Switch;
     }
 
+    /**
+     * Get 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RedirectConfig 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RedirectConfig getRedirectConfig() {
+        return this.RedirectConfig;
+    }
+
+    /**
+     * Set 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RedirectConfig 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRedirectConfig(RedirectConfig RedirectConfig) {
+        this.RedirectConfig = RedirectConfig;
+    }
+
     public FollowRedirect() {
     }
 
@@ -66,6 +94,9 @@ off：关闭
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.RedirectConfig != null) {
+            this.RedirectConfig = new RedirectConfig(source.RedirectConfig);
+        }
     }
 
 
@@ -74,6 +105,7 @@ off：关闭
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
 
     }
 }

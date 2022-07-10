@@ -24,7 +24,7 @@ public enum TmsErrorCode {
     // 请求的文本格式错误（需要base64编码格式的文本）。
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTTYPE("InvalidParameterValue.ErrTextContentType"),
      
-    // 未获取到接口授权。
+    // 未开通权限/无有效套餐包/账号已欠费。
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized");
      
     private String value;

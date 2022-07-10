@@ -37,6 +37,13 @@ public class BillingResourceInfo extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * 订单ID
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -68,6 +75,22 @@ public class BillingResourceInfo extends AbstractModel{
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get 订单ID 
+     * @return DealName 订单ID
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单ID
+     * @param DealName 订单ID
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
+    }
+
     public BillingResourceInfo() {
     }
 
@@ -85,6 +108,9 @@ public class BillingResourceInfo extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class BillingResourceInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
 
     }
 }

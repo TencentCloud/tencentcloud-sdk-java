@@ -37,21 +37,21 @@ public class RefundOpenBankOrderRequest extends AbstractModel{
     private Long RefundAmount;
 
     /**
-    * 渠道商户号。
+    * 渠道商户号。外部平台接入云企付平台下发。必填。
     */
     @SerializedName("ChannelMerchantId")
     @Expose
     private String ChannelMerchantId;
 
     /**
-    * 外部商户订单号，与云企付渠道订单号二者选填其一。
+    * 外部商户订单号，与云企付渠道订单号二者不能同时为空。
     */
     @SerializedName("OutOrderId")
     @Expose
     private String OutOrderId;
 
     /**
-    * 云企付渠道订单号，与外部订单号二者选填其一。
+    * 云企付渠道订单号，与外部订单号二者不能同时为空。
     */
     @SerializedName("ChannelOrderId")
     @Expose
@@ -66,6 +66,7 @@ public class RefundOpenBankOrderRequest extends AbstractModel{
 
     /**
     * 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
     */
     @SerializedName("RefundReason")
     @Expose
@@ -129,48 +130,48 @@ _不填默认为生产环境_
     }
 
     /**
-     * Get 渠道商户号。 
-     * @return ChannelMerchantId 渠道商户号。
+     * Get 渠道商户号。外部平台接入云企付平台下发。必填。 
+     * @return ChannelMerchantId 渠道商户号。外部平台接入云企付平台下发。必填。
      */
     public String getChannelMerchantId() {
         return this.ChannelMerchantId;
     }
 
     /**
-     * Set 渠道商户号。
-     * @param ChannelMerchantId 渠道商户号。
+     * Set 渠道商户号。外部平台接入云企付平台下发。必填。
+     * @param ChannelMerchantId 渠道商户号。外部平台接入云企付平台下发。必填。
      */
     public void setChannelMerchantId(String ChannelMerchantId) {
         this.ChannelMerchantId = ChannelMerchantId;
     }
 
     /**
-     * Get 外部商户订单号，与云企付渠道订单号二者选填其一。 
-     * @return OutOrderId 外部商户订单号，与云企付渠道订单号二者选填其一。
+     * Get 外部商户订单号，与云企付渠道订单号二者不能同时为空。 
+     * @return OutOrderId 外部商户订单号，与云企付渠道订单号二者不能同时为空。
      */
     public String getOutOrderId() {
         return this.OutOrderId;
     }
 
     /**
-     * Set 外部商户订单号，与云企付渠道订单号二者选填其一。
-     * @param OutOrderId 外部商户订单号，与云企付渠道订单号二者选填其一。
+     * Set 外部商户订单号，与云企付渠道订单号二者不能同时为空。
+     * @param OutOrderId 外部商户订单号，与云企付渠道订单号二者不能同时为空。
      */
     public void setOutOrderId(String OutOrderId) {
         this.OutOrderId = OutOrderId;
     }
 
     /**
-     * Get 云企付渠道订单号，与外部订单号二者选填其一。 
-     * @return ChannelOrderId 云企付渠道订单号，与外部订单号二者选填其一。
+     * Get 云企付渠道订单号，与外部订单号二者不能同时为空。 
+     * @return ChannelOrderId 云企付渠道订单号，与外部订单号二者不能同时为空。
      */
     public String getChannelOrderId() {
         return this.ChannelOrderId;
     }
 
     /**
-     * Set 云企付渠道订单号，与外部订单号二者选填其一。
-     * @param ChannelOrderId 云企付渠道订单号，与外部订单号二者选填其一。
+     * Set 云企付渠道订单号，与外部订单号二者不能同时为空。
+     * @param ChannelOrderId 云企付渠道订单号，与外部订单号二者不能同时为空。
      */
     public void setChannelOrderId(String ChannelOrderId) {
         this.ChannelOrderId = ChannelOrderId;
@@ -193,8 +194,10 @@ _不填默认为生产环境_
     }
 
     /**
-     * Get 退款原因。 
+     * Get 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。 
      * @return RefundReason 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
      */
     public String getRefundReason() {
         return this.RefundReason;
@@ -202,7 +205,9 @@ _不填默认为生产环境_
 
     /**
      * Set 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
      * @param RefundReason 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
      */
     public void setRefundReason(String RefundReason) {
         this.RefundReason = RefundReason;

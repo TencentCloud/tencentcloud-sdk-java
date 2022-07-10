@@ -102,27 +102,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *域名绑定证书。
-注意：需先调用添加证书接口进行证书添加。获取到证书Id后再调用该接口进行绑定。
-     * @param req BindLiveDomainCertRequest
-     * @return BindLiveDomainCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public BindLiveDomainCertResponse BindLiveDomainCert(BindLiveDomainCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindLiveDomainCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindLiveDomainCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
      * @param req CancelCommonMixStreamRequest
      * @return CancelCommonMixStreamResponse
@@ -200,26 +179,6 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *添加证书
-     * @param req CreateLiveCertRequest
-     * @return CreateLiveCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLiveCertResponse CreateLiveCert(CreateLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -548,26 +507,6 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *删除域名对应的证书
-     * @param req DeleteLiveCertRequest
-     * @return DeleteLiveCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLiveCertResponse DeleteLiveCert(DeleteLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2191,46 +2130,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *修改证书
-     * @param req ModifyLiveCertRequest
-     * @return ModifyLiveCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLiveCertResponse ModifyLiveCert(ModifyLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *修改域名和证书绑定信息
-     * @param req ModifyLiveDomainCertRequest
-     * @return ModifyLiveDomainCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLiveDomainCertResponse ModifyLiveDomainCert(ModifyLiveDomainCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveDomainCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

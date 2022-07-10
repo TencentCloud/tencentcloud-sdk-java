@@ -44,7 +44,7 @@ public class ModifyApplicationInfoRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
-    * 是否开启调用链, 0 为关闭，1位开启
+    * 是否开启调用链,（此参数已弃用）
     */
     @SerializedName("EnableTracing")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyApplicationInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启调用链, 0 为关闭，1位开启 
-     * @return EnableTracing 是否开启调用链, 0 为关闭，1位开启
+     * Get 是否开启调用链,（此参数已弃用） 
+     * @return EnableTracing 是否开启调用链,（此参数已弃用）
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
     }
 
     /**
-     * Set 是否开启调用链, 0 为关闭，1位开启
-     * @param EnableTracing 是否开启调用链, 0 为关闭，1位开启
+     * Set 是否开启调用链,（此参数已弃用）
+     * @param EnableTracing 是否开启调用链,（此参数已弃用）
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;
