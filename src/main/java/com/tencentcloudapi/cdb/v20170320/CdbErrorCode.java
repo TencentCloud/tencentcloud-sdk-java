@@ -159,6 +159,9 @@ public enum CdbErrorCode {
     // sql错误。
      INTERNALERROR_EXESQLERROR("InternalError.ExeSqlError"),
      
+    // sql执行失败。
+     INTERNALERROR_EXECUTESQLERROR("InternalError.ExecuteSQLError"),
+     
     // 文件传输异常。
      INTERNALERROR_FTPERROR("InternalError.FtpError"),
      

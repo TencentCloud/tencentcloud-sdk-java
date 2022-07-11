@@ -26,6 +26,8 @@ public class ZoneFilter extends AbstractModel{
     * 过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
     */
     @SerializedName("Name")
     @Expose
@@ -48,10 +50,14 @@ public class ZoneFilter extends AbstractModel{
     /**
      * Get 过滤字段名，支持的列表如下：
 - name: 站点名。
-- status: 站点状态 
+- status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值 
      * @return Name 过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
      */
     public String getName() {
         return this.Name;
@@ -61,9 +67,13 @@ public class ZoneFilter extends AbstractModel{
      * Set 过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
      * @param Name 过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
      */
     public void setName(String Name) {
         this.Name = Name;

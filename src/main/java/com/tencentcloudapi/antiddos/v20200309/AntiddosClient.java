@@ -359,6 +359,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *添加7层转发规则
+     * @param req CreateNewL7RulesRequest
+     * @return CreateNewL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNewL7RulesResponse CreateNewL7Rules(CreateNewL7RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNewL7Rules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加DDoS防护的特征过滤规则
      * @param req CreatePacketFilterConfigRequest
      * @return CreatePacketFilterConfigResponse

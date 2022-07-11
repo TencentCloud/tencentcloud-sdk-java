@@ -40,6 +40,13 @@ public class CreateKeyPairRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。 
      * @return KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
      */
@@ -83,6 +90,22 @@ public class CreateKeyPairRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateKeyPairRequest() {
     }
 
@@ -97,6 +120,12 @@ public class CreateKeyPairRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -106,6 +135,7 @@ public class CreateKeyPairRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyName", this.KeyName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

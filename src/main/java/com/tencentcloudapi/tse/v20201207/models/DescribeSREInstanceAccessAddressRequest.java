@@ -44,6 +44,13 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 引擎其他组件名称（pushgateway）
+    */
+    @SerializedName("Workload")
+    @Expose
+    private String Workload;
+
+    /**
      * Get 注册引擎实例Id 
      * @return InstanceId 注册引擎实例Id
      */
@@ -91,6 +98,22 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 引擎其他组件名称（pushgateway） 
+     * @return Workload 引擎其他组件名称（pushgateway）
+     */
+    public String getWorkload() {
+        return this.Workload;
+    }
+
+    /**
+     * Set 引擎其他组件名称（pushgateway）
+     * @param Workload 引擎其他组件名称（pushgateway）
+     */
+    public void setWorkload(String Workload) {
+        this.Workload = Workload;
+    }
+
     public DescribeSREInstanceAccessAddressRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Workload != null) {
+            this.Workload = new String(source.Workload);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Workload", this.Workload);
 
     }
 }

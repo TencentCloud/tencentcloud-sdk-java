@@ -60,6 +60,16 @@ public class ImageWatermarkInput extends AbstractModel{
     private String RepeatType;
 
     /**
+    * 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
+    */
+    @SerializedName("Transparency")
+    @Expose
+    private Long Transparency;
+
+    /**
      * Get 水印图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串。支持 jpeg、png、gif 图片格式。 
      * @return ImageContent 水印图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串。支持 jpeg、png、gif 图片格式。
      */
@@ -159,6 +169,34 @@ public class ImageWatermarkInput extends AbstractModel{
         this.RepeatType = RepeatType;
     }
 
+    /**
+     * Get 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。 
+     * @return Transparency 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
+     */
+    public Long getTransparency() {
+        return this.Transparency;
+    }
+
+    /**
+     * Set 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
+     * @param Transparency 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
+     */
+    public void setTransparency(Long Transparency) {
+        this.Transparency = Transparency;
+    }
+
     public ImageWatermarkInput() {
     }
 
@@ -179,6 +217,9 @@ public class ImageWatermarkInput extends AbstractModel{
         if (source.RepeatType != null) {
             this.RepeatType = new String(source.RepeatType);
         }
+        if (source.Transparency != null) {
+            this.Transparency = new Long(source.Transparency);
+        }
     }
 
 
@@ -190,6 +231,7 @@ public class ImageWatermarkInput extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "RepeatType", this.RepeatType);
+        this.setParamSimple(map, prefix + "Transparency", this.Transparency);
 
     }
 }

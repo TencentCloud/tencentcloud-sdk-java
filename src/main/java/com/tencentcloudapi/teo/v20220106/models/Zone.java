@@ -102,6 +102,14 @@ public class Zone extends AbstractModel{
     private String CnameStatus;
 
     /**
+    * 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 站点ID 
      * @return Id 站点ID
      */
@@ -297,6 +305,26 @@ public class Zone extends AbstractModel{
         this.CnameStatus = CnameStatus;
     }
 
+    /**
+     * Get 资源标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Zone() {
     }
 
@@ -341,6 +369,12 @@ public class Zone extends AbstractModel{
         if (source.CnameStatus != null) {
             this.CnameStatus = new String(source.CnameStatus);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -358,6 +392,7 @@ public class Zone extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

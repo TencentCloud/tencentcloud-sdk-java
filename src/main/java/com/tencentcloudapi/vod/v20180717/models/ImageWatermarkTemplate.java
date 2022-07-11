@@ -59,6 +59,15 @@ public class ImageWatermarkTemplate extends AbstractModel{
     private String RepeatType;
 
     /**
+    * 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
+    */
+    @SerializedName("Transparency")
+    @Expose
+    private Long Transparency;
+
+    /**
      * Get 水印图片地址。 
      * @return ImageUrl 水印图片地址。
      */
@@ -154,6 +163,30 @@ public class ImageWatermarkTemplate extends AbstractModel{
         this.RepeatType = RepeatType;
     }
 
+    /**
+     * Get 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li> 
+     * @return Transparency 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
+     */
+    public Long getTransparency() {
+        return this.Transparency;
+    }
+
+    /**
+     * Set 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
+     * @param Transparency 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
+     */
+    public void setTransparency(Long Transparency) {
+        this.Transparency = Transparency;
+    }
+
     public ImageWatermarkTemplate() {
     }
 
@@ -174,6 +207,9 @@ public class ImageWatermarkTemplate extends AbstractModel{
         if (source.RepeatType != null) {
             this.RepeatType = new String(source.RepeatType);
         }
+        if (source.Transparency != null) {
+            this.Transparency = new Long(source.Transparency);
+        }
     }
 
 
@@ -185,6 +221,7 @@ public class ImageWatermarkTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "RepeatType", this.RepeatType);
+        this.setParamSimple(map, prefix + "Transparency", this.Transparency);
 
     }
 }

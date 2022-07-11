@@ -105,7 +105,7 @@ public class CreateClustersRequest extends AbstractModel{
     private String AdminPassword;
 
     /**
-    * 端口，默认5432
+    * 端口，默认3306，取值范围[0, 65535)
     */
     @SerializedName("Port")
     @Expose
@@ -173,7 +173,7 @@ timeRollback，时间点回档
     private Long StorageLimit;
 
     /**
-    * 实例数量
+    * 实例数量，数量范围为(0,16]
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -194,7 +194,7 @@ timeRollback，时间点回档
     private String TimeUnit;
 
     /**
-    * 包年包月购买是否自动续费
+    * 包年包月购买是否自动续费，默认为0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -310,11 +310,18 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Long DealMode;
 
     /**
-    * 参数模版ID
+    * 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
+
+    /**
+    * 多可用区地址
+    */
+    @SerializedName("SlaveZone")
+    @Expose
+    private String SlaveZone;
 
     /**
      * Get 可用区 
@@ -513,16 +520,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 端口，默认5432 
-     * @return Port 端口，默认5432
+     * Get 端口，默认3306，取值范围[0, 65535) 
+     * @return Port 端口，默认3306，取值范围[0, 65535)
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口，默认5432
-     * @param Port 端口，默认5432
+     * Set 端口，默认3306，取值范围[0, 65535)
+     * @param Port 端口，默认3306，取值范围[0, 65535)
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -677,16 +684,16 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get 实例数量 
-     * @return InstanceCount 实例数量
+     * Get 实例数量，数量范围为(0,16] 
+     * @return InstanceCount 实例数量，数量范围为(0,16]
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 实例数量
-     * @param InstanceCount 实例数量
+     * Set 实例数量，数量范围为(0,16]
+     * @param InstanceCount 实例数量，数量范围为(0,16]
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -725,16 +732,16 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get 包年包月购买是否自动续费 
-     * @return AutoRenewFlag 包年包月购买是否自动续费
+     * Get 包年包月购买是否自动续费，默认为0 
+     * @return AutoRenewFlag 包年包月购买是否自动续费，默认为0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 包年包月购买是否自动续费
-     * @param AutoRenewFlag 包年包月购买是否自动续费
+     * Set 包年包月购买是否自动续费，默认为0
+     * @param AutoRenewFlag 包年包月购买是否自动续费，默认为0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -1009,19 +1016,35 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 参数模版ID 
-     * @return ParamTemplateId 参数模版ID
+     * Get 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID 
+     * @return ParamTemplateId 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模版ID
-     * @param ParamTemplateId 参数模版ID
+     * Set 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * @param ParamTemplateId 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get 多可用区地址 
+     * @return SlaveZone 多可用区地址
+     */
+    public String getSlaveZone() {
+        return this.SlaveZone;
+    }
+
+    /**
+     * Set 多可用区地址
+     * @param SlaveZone 多可用区地址
+     */
+    public void setSlaveZone(String SlaveZone) {
+        this.SlaveZone = SlaveZone;
     }
 
     public CreateClustersRequest() {
@@ -1161,6 +1184,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.ParamTemplateId != null) {
             this.ParamTemplateId = new Long(source.ParamTemplateId);
         }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String(source.SlaveZone);
+        }
     }
 
 
@@ -1207,6 +1233,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
 
     }
 }

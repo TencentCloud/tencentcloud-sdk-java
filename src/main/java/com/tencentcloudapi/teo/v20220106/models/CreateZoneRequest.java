@@ -46,6 +46,13 @@ public class CreateZoneRequest extends AbstractModel{
     private Boolean JumpStart;
 
     /**
+    * 资源标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 站点名字 
      * @return Name 站点名字
      */
@@ -101,6 +108,22 @@ public class CreateZoneRequest extends AbstractModel{
         this.JumpStart = JumpStart;
     }
 
+    /**
+     * Get 资源标签 
+     * @return Tags 资源标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资源标签
+     * @param Tags 资源标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateZoneRequest() {
     }
 
@@ -118,6 +141,12 @@ public class CreateZoneRequest extends AbstractModel{
         if (source.JumpStart != null) {
             this.JumpStart = new Boolean(source.JumpStart);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -128,6 +157,7 @@ public class CreateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "JumpStart", this.JumpStart);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

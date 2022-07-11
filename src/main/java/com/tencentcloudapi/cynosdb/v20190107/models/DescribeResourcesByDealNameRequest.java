@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class DescribeResourcesByDealNameRequest extends AbstractModel{
 
     /**
-    * 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+    * 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功） 
-     * @return DealName 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+    * 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+    */
+    @SerializedName("DealNames")
+    @Expose
+    private String [] DealNames;
+
+    /**
+     * Get 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功） 
+     * @return DealName 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
-     * @param DealName 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+     * Set 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+     * @param DealName 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
+    }
+
+    /**
+     * Get 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功） 
+     * @return DealNames 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+     */
+    public String [] getDealNames() {
+        return this.DealNames;
+    }
+
+    /**
+     * Set 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+     * @param DealNames 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+     */
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
     }
 
     public DescribeResourcesByDealNameRequest() {
@@ -56,6 +79,12 @@ public class DescribeResourcesByDealNameRequest extends AbstractModel{
         if (source.DealName != null) {
             this.DealName = new String(source.DealName);
         }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class DescribeResourcesByDealNameRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
 
     }
 }

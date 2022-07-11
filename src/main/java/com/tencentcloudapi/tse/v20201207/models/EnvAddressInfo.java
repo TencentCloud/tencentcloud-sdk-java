@@ -44,6 +44,14 @@ public class EnvAddressInfo extends AbstractModel{
     private String ConfigInternetServiceIp;
 
     /**
+    * config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigIntranetAddress")
+    @Expose
+    private String ConfigIntranetAddress;
+
+    /**
      * Get 环境名 
      * @return EnvName 环境名
      */
@@ -91,6 +99,26 @@ public class EnvAddressInfo extends AbstractModel{
         this.ConfigInternetServiceIp = ConfigInternetServiceIp;
     }
 
+    /**
+     * Get config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigIntranetAddress config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigIntranetAddress() {
+        return this.ConfigIntranetAddress;
+    }
+
+    /**
+     * Set config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigIntranetAddress config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigIntranetAddress(String ConfigIntranetAddress) {
+        this.ConfigIntranetAddress = ConfigIntranetAddress;
+    }
+
     public EnvAddressInfo() {
     }
 
@@ -108,6 +136,9 @@ public class EnvAddressInfo extends AbstractModel{
         if (source.ConfigInternetServiceIp != null) {
             this.ConfigInternetServiceIp = new String(source.ConfigInternetServiceIp);
         }
+        if (source.ConfigIntranetAddress != null) {
+            this.ConfigIntranetAddress = new String(source.ConfigIntranetAddress);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class EnvAddressInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvName", this.EnvName);
         this.setParamSimple(map, prefix + "EnableConfigInternet", this.EnableConfigInternet);
         this.setParamSimple(map, prefix + "ConfigInternetServiceIp", this.ConfigInternetServiceIp);
+        this.setParamSimple(map, prefix + "ConfigIntranetAddress", this.ConfigIntranetAddress);
 
     }
 }

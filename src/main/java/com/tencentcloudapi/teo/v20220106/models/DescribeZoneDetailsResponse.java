@@ -129,6 +129,14 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     private String CnameStatus;
 
     /**
+    * 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -404,6 +412,26 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     }
 
     /**
+     * Get 资源标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -475,6 +503,12 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
         if (source.CnameStatus != null) {
             this.CnameStatus = new String(source.CnameStatus);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -498,6 +532,7 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
         this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

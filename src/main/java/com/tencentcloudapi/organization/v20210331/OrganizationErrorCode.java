@@ -78,6 +78,9 @@ public enum OrganizationErrorCode {
     // 组织成员策略不存在。
      RESOURCENOTFOUND_MEMBERPOLICYNOTEXIST("ResourceNotFound.MemberPolicyNotExist"),
      
+    // 组织成员不存在。
+     RESOURCENOTFOUND_ORGANIZATIONMEMBERNOTEXIST("ResourceNotFound.OrganizationMemberNotExist"),
+     
     // 组织节点不在。
      RESOURCENOTFOUND_ORGANIZATIONNODENOTEXIST("ResourceNotFound.OrganizationNodeNotExist"),
      

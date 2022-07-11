@@ -81,6 +81,14 @@ Africa 非洲。
     private String [] RegionNames;
 
     /**
+    * 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
+    */
+    @SerializedName("CountryNames")
+    @Expose
+    private String [] CountryNames;
+
+    /**
      * Get 起始时间点，格式为 yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
      */
@@ -240,6 +248,26 @@ Africa 非洲。
         this.RegionNames = RegionNames;
     }
 
+    /**
+     * Get 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。 
+     * @return CountryNames 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
+     */
+    public String [] getCountryNames() {
+        return this.CountryNames;
+    }
+
+    /**
+     * Set 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
+     * @param CountryNames 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
+     */
+    public void setCountryNames(String [] CountryNames) {
+        this.CountryNames = CountryNames;
+    }
+
     public DescribePushBandwidthAndFluxListRequest() {
     }
 
@@ -272,6 +300,12 @@ Africa 非洲。
                 this.RegionNames[i] = new String(source.RegionNames[i]);
             }
         }
+        if (source.CountryNames != null) {
+            this.CountryNames = new String[source.CountryNames.length];
+            for (int i = 0; i < source.CountryNames.length; i++) {
+                this.CountryNames[i] = new String(source.CountryNames[i]);
+            }
+        }
     }
 
 
@@ -285,6 +319,7 @@ Africa 非洲。
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
         this.setParamArraySimple(map, prefix + "RegionNames.", this.RegionNames);
+        this.setParamArraySimple(map, prefix + "CountryNames.", this.CountryNames);
 
     }
 }

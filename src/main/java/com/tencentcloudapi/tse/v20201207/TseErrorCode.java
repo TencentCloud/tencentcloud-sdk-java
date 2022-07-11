@@ -3,6 +3,9 @@ public enum TseErrorCode {
     // 未授权操作错误。
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 创建内部错误。
      INTERNALERROR_CREATEERROR("InternalError.CreateError"),
      
