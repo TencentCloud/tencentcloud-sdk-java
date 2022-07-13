@@ -135,6 +135,15 @@ public class ExistedInstance extends AbstractModel{
     private String InstanceChargeType;
 
     /**
+    * 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6Addresses")
+    @Expose
+    private String [] IPv6Addresses;
+
+    /**
      * Get 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
@@ -414,6 +423,30 @@ public class ExistedInstance extends AbstractModel{
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    /**
+     * Get 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6Addresses 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIPv6Addresses() {
+        return this.IPv6Addresses;
+    }
+
+    /**
+     * Set 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6Addresses 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6Addresses(String [] IPv6Addresses) {
+        this.IPv6Addresses = IPv6Addresses;
+    }
+
     public ExistedInstance() {
     }
 
@@ -470,6 +503,12 @@ public class ExistedInstance extends AbstractModel{
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.IPv6Addresses != null) {
+            this.IPv6Addresses = new String[source.IPv6Addresses.length];
+            for (int i = 0; i < source.IPv6Addresses.length; i++) {
+                this.IPv6Addresses[i] = new String(source.IPv6Addresses[i]);
+            }
+        }
     }
 
 
@@ -491,6 +530,7 @@ public class ExistedInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
 
     }
 }

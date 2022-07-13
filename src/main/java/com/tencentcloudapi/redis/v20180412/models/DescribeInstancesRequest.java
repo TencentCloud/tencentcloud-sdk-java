@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+    * 返回数量，参数默认值20，最大值为1000
     */
     @SerializedName("Limit")
     @Expose
@@ -191,16 +191,23 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] TagKeys;
 
     /**
-     * Get 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准 
-     * @return Limit 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+    * 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+    */
+    @SerializedName("ProductVersions")
+    @Expose
+    private String [] ProductVersions;
+
+    /**
+     * Get 返回数量，参数默认值20，最大值为1000 
+     * @return Limit 返回数量，参数默认值20，最大值为1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
-     * @param Limit 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+     * Set 返回数量，参数默认值20，最大值为1000
+     * @param Limit 返回数量，参数默认值20，最大值为1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -574,6 +581,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.TagKeys = TagKeys;
     }
 
+    /**
+     * Get 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤 
+     * @return ProductVersions 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     */
+    public String [] getProductVersions() {
+        return this.ProductVersions;
+    }
+
+    /**
+     * Set 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     * @param ProductVersions 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     */
+    public void setProductVersions(String [] ProductVersions) {
+        this.ProductVersions = ProductVersions;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -690,6 +713,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.TagKeys[i] = new String(source.TagKeys[i]);
             }
         }
+        if (source.ProductVersions != null) {
+            this.ProductVersions = new String[source.ProductVersions.length];
+            for (int i = 0; i < source.ProductVersions.length; i++) {
+                this.ProductVersions[i] = new String(source.ProductVersions[i]);
+            }
+        }
     }
 
 
@@ -721,6 +750,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
 
     }
 }

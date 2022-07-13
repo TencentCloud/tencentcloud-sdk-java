@@ -177,6 +177,20 @@ public class ModifySparkAppRequest extends AbstractModel{
     private String DataSource;
 
     /**
+    * archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+    */
+    @SerializedName("IsLocalArchives")
+    @Expose
+    private String IsLocalArchives;
+
+    /**
+    * archives：依赖资源
+    */
+    @SerializedName("AppArchives")
+    @Expose
+    private String AppArchives;
+
+    /**
      * Get spark应用名 
      * @return AppName spark应用名
      */
@@ -528,6 +542,38 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.DataSource = DataSource;
     }
 
+    /**
+     * Get archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public String getIsLocalArchives() {
+        return this.IsLocalArchives;
+    }
+
+    /**
+     * Set archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public void setIsLocalArchives(String IsLocalArchives) {
+        this.IsLocalArchives = IsLocalArchives;
+    }
+
+    /**
+     * Get archives：依赖资源 
+     * @return AppArchives archives：依赖资源
+     */
+    public String getAppArchives() {
+        return this.AppArchives;
+    }
+
+    /**
+     * Set archives：依赖资源
+     * @param AppArchives archives：依赖资源
+     */
+    public void setAppArchives(String AppArchives) {
+        this.AppArchives = AppArchives;
+    }
+
     public ModifySparkAppRequest() {
     }
 
@@ -602,6 +648,12 @@ public class ModifySparkAppRequest extends AbstractModel{
         if (source.DataSource != null) {
             this.DataSource = new String(source.DataSource);
         }
+        if (source.IsLocalArchives != null) {
+            this.IsLocalArchives = new String(source.IsLocalArchives);
+        }
+        if (source.AppArchives != null) {
+            this.AppArchives = new String(source.AppArchives);
+        }
     }
 
 
@@ -631,6 +683,8 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
         this.setParamSimple(map, prefix + "MaxRetries", this.MaxRetries);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
+        this.setParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
+        this.setParamSimple(map, prefix + "AppArchives", this.AppArchives);
 
     }
 }

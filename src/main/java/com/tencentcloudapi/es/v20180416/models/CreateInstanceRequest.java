@@ -241,6 +241,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private String Protocol;
 
     /**
+    * 可维护时间段
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDuration OperationDuration;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -752,6 +759,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 可维护时间段 
+     * @return OperationDuration 可维护时间段
+     */
+    public OperationDuration getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set 可维护时间段
+     * @param OperationDuration 可维护时间段
+     */
+    public void setOperationDuration(OperationDuration OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -862,6 +885,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDuration(source.OperationDuration);
+        }
     }
 
 
@@ -899,6 +925,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

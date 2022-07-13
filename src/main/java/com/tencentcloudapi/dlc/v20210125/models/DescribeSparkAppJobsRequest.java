@@ -37,7 +37,7 @@ public class DescribeSparkAppJobsRequest extends AbstractModel{
     private String Sorting;
 
     /**
-    * 按照该参数过滤
+    * 按照该参数过滤,支持spark-job-name
     */
     @SerializedName("Filters")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeSparkAppJobsRequest extends AbstractModel{
     }
 
     /**
-     * Get 按照该参数过滤 
-     * @return Filters 按照该参数过滤
+     * Get 按照该参数过滤,支持spark-job-name 
+     * @return Filters 按照该参数过滤,支持spark-job-name
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 按照该参数过滤
-     * @param Filters 按照该参数过滤
+     * Set 按照该参数过滤,支持spark-job-name
+     * @param Filters 按照该参数过滤,支持spark-job-name
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

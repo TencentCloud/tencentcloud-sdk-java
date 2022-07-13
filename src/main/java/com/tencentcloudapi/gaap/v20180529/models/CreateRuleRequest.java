@@ -101,6 +101,13 @@ public class CreateRuleRequest extends AbstractModel{
     private String ServerNameIndication;
 
     /**
+    * HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+    */
+    @SerializedName("ForcedRedirect")
+    @Expose
+    private String ForcedRedirect;
+
+    /**
      * Get 7层监听器ID 
      * @return ListenerId 7层监听器ID
      */
@@ -280,6 +287,22 @@ public class CreateRuleRequest extends AbstractModel{
         this.ServerNameIndication = ServerNameIndication;
     }
 
+    /**
+     * Get HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。 
+     * @return ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public String getForcedRedirect() {
+        return this.ForcedRedirect;
+    }
+
+    /**
+     * Set HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     * @param ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public void setForcedRedirect(String ForcedRedirect) {
+        this.ForcedRedirect = ForcedRedirect;
+    }
+
     public CreateRuleRequest() {
     }
 
@@ -321,6 +344,9 @@ public class CreateRuleRequest extends AbstractModel{
         if (source.ServerNameIndication != null) {
             this.ServerNameIndication = new String(source.ServerNameIndication);
         }
+        if (source.ForcedRedirect != null) {
+            this.ForcedRedirect = new String(source.ForcedRedirect);
+        }
     }
 
 
@@ -339,6 +365,7 @@ public class CreateRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
         this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
         this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+        this.setParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
 
     }
 }

@@ -58,6 +58,20 @@ public class KTVMusicDetailInfo extends AbstractModel{
     private ChorusClip [] ChorusClipSet;
 
     /**
+    * 前奏间隔。
+    */
+    @SerializedName("PreludeInterval")
+    @Expose
+    private Long PreludeInterval;
+
+    /**
+    * 歌曲流派列表。
+    */
+    @SerializedName("GenreSet")
+    @Expose
+    private String [] GenreSet;
+
+    /**
      * Get 歌曲基础信息。 
      * @return KTVMusicBaseInfo 歌曲基础信息。
      */
@@ -137,6 +151,38 @@ public class KTVMusicDetailInfo extends AbstractModel{
         this.ChorusClipSet = ChorusClipSet;
     }
 
+    /**
+     * Get 前奏间隔。 
+     * @return PreludeInterval 前奏间隔。
+     */
+    public Long getPreludeInterval() {
+        return this.PreludeInterval;
+    }
+
+    /**
+     * Set 前奏间隔。
+     * @param PreludeInterval 前奏间隔。
+     */
+    public void setPreludeInterval(Long PreludeInterval) {
+        this.PreludeInterval = PreludeInterval;
+    }
+
+    /**
+     * Get 歌曲流派列表。 
+     * @return GenreSet 歌曲流派列表。
+     */
+    public String [] getGenreSet() {
+        return this.GenreSet;
+    }
+
+    /**
+     * Set 歌曲流派列表。
+     * @param GenreSet 歌曲流派列表。
+     */
+    public void setGenreSet(String [] GenreSet) {
+        this.GenreSet = GenreSet;
+    }
+
     public KTVMusicDetailInfo() {
     }
 
@@ -163,6 +209,15 @@ public class KTVMusicDetailInfo extends AbstractModel{
                 this.ChorusClipSet[i] = new ChorusClip(source.ChorusClipSet[i]);
             }
         }
+        if (source.PreludeInterval != null) {
+            this.PreludeInterval = new Long(source.PreludeInterval);
+        }
+        if (source.GenreSet != null) {
+            this.GenreSet = new String[source.GenreSet.length];
+            for (int i = 0; i < source.GenreSet.length; i++) {
+                this.GenreSet[i] = new String(source.GenreSet[i]);
+            }
+        }
     }
 
 
@@ -175,6 +230,8 @@ public class KTVMusicDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LyricsUrl", this.LyricsUrl);
         this.setParamSimple(map, prefix + "MidiUrl", this.MidiUrl);
         this.setParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
+        this.setParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
+        this.setParamArraySimple(map, prefix + "GenreSet.", this.GenreSet);
 
     }
 }

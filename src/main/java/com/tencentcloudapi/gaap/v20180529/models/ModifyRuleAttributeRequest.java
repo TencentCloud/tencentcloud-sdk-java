@@ -100,6 +100,13 @@ lc，最小连接数。
     private String ServerNameIndication;
 
     /**
+    * HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+    */
+    @SerializedName("ForcedRedirect")
+    @Expose
+    private String ForcedRedirect;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -287,6 +294,22 @@ lc，最小连接数。
         this.ServerNameIndication = ServerNameIndication;
     }
 
+    /**
+     * Get HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。 
+     * @return ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public String getForcedRedirect() {
+        return this.ForcedRedirect;
+    }
+
+    /**
+     * Set HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     * @param ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public void setForcedRedirect(String ForcedRedirect) {
+        this.ForcedRedirect = ForcedRedirect;
+    }
+
     public ModifyRuleAttributeRequest() {
     }
 
@@ -325,6 +348,9 @@ lc，最小连接数。
         if (source.ServerNameIndication != null) {
             this.ServerNameIndication = new String(source.ServerNameIndication);
         }
+        if (source.ForcedRedirect != null) {
+            this.ForcedRedirect = new String(source.ForcedRedirect);
+        }
     }
 
 
@@ -342,6 +368,7 @@ lc，最小连接数。
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
         this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
         this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+        this.setParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
 
     }
 }

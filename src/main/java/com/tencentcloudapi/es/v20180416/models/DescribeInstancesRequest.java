@@ -100,6 +100,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] HealthStatus;
 
     /**
+    * Vpc列表 筛选项
+    */
+    @SerializedName("VpcIds")
+    @Expose
+    private String [] VpcIds;
+
+    /**
      * Get 集群实例所属可用区，不传则默认所有可用区 
      * @return Zone 集群实例所属可用区，不传则默认所有可用区
      */
@@ -275,6 +282,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.HealthStatus = HealthStatus;
     }
 
+    /**
+     * Get Vpc列表 筛选项 
+     * @return VpcIds Vpc列表 筛选项
+     */
+    public String [] getVpcIds() {
+        return this.VpcIds;
+    }
+
+    /**
+     * Set Vpc列表 筛选项
+     * @param VpcIds Vpc列表 筛选项
+     */
+    public void setVpcIds(String [] VpcIds) {
+        this.VpcIds = VpcIds;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -334,6 +357,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.HealthStatus[i] = new Long(source.HealthStatus[i]);
             }
         }
+        if (source.VpcIds != null) {
+            this.VpcIds = new String[source.VpcIds.length];
+            for (int i = 0; i < source.VpcIds.length; i++) {
+                this.VpcIds[i] = new String(source.VpcIds[i]);
+            }
+        }
     }
 
 
@@ -352,6 +381,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
         this.setParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
+        this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
 
     }
 }

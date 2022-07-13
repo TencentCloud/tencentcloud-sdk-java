@@ -592,6 +592,14 @@ RENEW_FLAG_DEFAULT：不自动续费
     private EsConfigSetInfo [] EsConfigSets;
 
     /**
+    * 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDuration OperationDuration;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1967,6 +1975,26 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.EsConfigSets = EsConfigSets;
     }
 
+    /**
+     * Get 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationDuration 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OperationDuration getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationDuration 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationDuration(OperationDuration OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2215,6 +2243,9 @@ RENEW_FLAG_DEFAULT：不自动续费
                 this.EsConfigSets[i] = new EsConfigSetInfo(source.EsConfigSets[i]);
             }
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDuration(source.OperationDuration);
+        }
     }
 
 
@@ -2297,6 +2328,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
         this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
         this.setParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

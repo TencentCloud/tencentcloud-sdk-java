@@ -89,6 +89,14 @@ OCCASION:偶然所得
     private String InPayBalance;
 
     /**
+    * 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SumSettlementAmount")
+    @Expose
+    private String SumSettlementAmount;
+
+    /**
      * Get 账户ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccountId 账户ID
@@ -256,6 +264,26 @@ OCCASION:偶然所得
         this.InPayBalance = InPayBalance;
     }
 
+    /**
+     * Get 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SumSettlementAmount 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSumSettlementAmount() {
+        return this.SumSettlementAmount;
+    }
+
+    /**
+     * Set 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SumSettlementAmount 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSumSettlementAmount(String SumSettlementAmount) {
+        this.SumSettlementAmount = SumSettlementAmount;
+    }
+
     public PayeeAccountBalanceResult() {
     }
 
@@ -288,6 +316,9 @@ OCCASION:偶然所得
         if (source.InPayBalance != null) {
             this.InPayBalance = new String(source.InPayBalance);
         }
+        if (source.SumSettlementAmount != null) {
+            this.SumSettlementAmount = new String(source.SumSettlementAmount);
+        }
     }
 
 
@@ -303,6 +334,7 @@ OCCASION:偶然所得
         this.setParamSimple(map, prefix + "PayableBalance", this.PayableBalance);
         this.setParamSimple(map, prefix + "PaidBalance", this.PaidBalance);
         this.setParamSimple(map, prefix + "InPayBalance", this.InPayBalance);
+        this.setParamSimple(map, prefix + "SumSettlementAmount", this.SumSettlementAmount);
 
     }
 }

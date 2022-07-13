@@ -177,6 +177,13 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel{
     private String Env;
 
     /**
+    * 获取package
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -528,6 +535,22 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel{
         this.Env = Env;
     }
 
+    /**
+     * Get 获取package 
+     * @return PackageType 获取package
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 获取package
+     * @param PackageType 获取package
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public DescribeDataSetUrlStatisticsRequest() {
     }
 
@@ -602,6 +625,9 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel{
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -631,6 +657,7 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Browser", this.Browser);
         this.setParamSimple(map, prefix + "CostType", this.CostType);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

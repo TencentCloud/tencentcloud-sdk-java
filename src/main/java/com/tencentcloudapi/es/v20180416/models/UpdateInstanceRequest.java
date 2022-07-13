@@ -239,6 +239,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private EsConfigSetInfo EsConfigSet;
 
     /**
+    * 可维护时间段
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDurationUpdated OperationDuration;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -742,6 +749,22 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.EsConfigSet = EsConfigSet;
     }
 
+    /**
+     * Get 可维护时间段 
+     * @return OperationDuration 可维护时间段
+     */
+    public OperationDurationUpdated getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set 可维护时间段
+     * @param OperationDuration 可维护时间段
+     */
+    public void setOperationDuration(OperationDurationUpdated OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -846,6 +869,9 @@ public class UpdateInstanceRequest extends AbstractModel{
         if (source.EsConfigSet != null) {
             this.EsConfigSet = new EsConfigSetInfo(source.EsConfigSet);
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDurationUpdated(source.OperationDuration);
+        }
     }
 
 
@@ -883,6 +909,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
         this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
         this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

@@ -215,12 +215,44 @@ public class SparkJobInfo extends AbstractModel{
     private String IsLocalPythonFiles;
 
     /**
-    * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+    * 注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppPythonFiles")
     @Expose
     private String AppPythonFiles;
+
+    /**
+    * archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLocalArchives")
+    @Expose
+    private String IsLocalArchives;
+
+    /**
+    * archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobArchives")
+    @Expose
+    private String JobArchives;
+
+    /**
+    * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobPythonFiles")
+    @Expose
+    private String JobPythonFiles;
+
+    /**
+    * 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskNum")
+    @Expose
+    private Long TaskNum;
 
     /**
      * Get spark作业ID 
@@ -667,9 +699,9 @@ public class SparkJobInfo extends AbstractModel{
     }
 
     /**
-     * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * Get 注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @return AppPythonFiles 注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppPythonFiles() {
@@ -677,13 +709,93 @@ public class SparkJobInfo extends AbstractModel{
     }
 
     /**
-     * Set pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * Set 注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @param AppPythonFiles 注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppPythonFiles(String AppPythonFiles) {
         this.AppPythonFiles = AppPythonFiles;
+    }
+
+    /**
+     * Get archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsLocalArchives() {
+        return this.IsLocalArchives;
+    }
+
+    /**
+     * Set archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLocalArchives(String IsLocalArchives) {
+        this.IsLocalArchives = IsLocalArchives;
+    }
+
+    /**
+     * Get archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobArchives archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobArchives() {
+        return this.JobArchives;
+    }
+
+    /**
+     * Set archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobArchives archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobArchives(String JobArchives) {
+        this.JobArchives = JobArchives;
+    }
+
+    /**
+     * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobPythonFiles() {
+        return this.JobPythonFiles;
+    }
+
+    /**
+     * Set pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobPythonFiles(String JobPythonFiles) {
+        this.JobPythonFiles = JobPythonFiles;
+    }
+
+    /**
+     * Get 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskNum 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskNum() {
+        return this.TaskNum;
+    }
+
+    /**
+     * Set 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskNum 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskNum(Long TaskNum) {
+        this.TaskNum = TaskNum;
     }
 
     public SparkJobInfo() {
@@ -778,6 +890,18 @@ public class SparkJobInfo extends AbstractModel{
         if (source.AppPythonFiles != null) {
             this.AppPythonFiles = new String(source.AppPythonFiles);
         }
+        if (source.IsLocalArchives != null) {
+            this.IsLocalArchives = new String(source.IsLocalArchives);
+        }
+        if (source.JobArchives != null) {
+            this.JobArchives = new String(source.JobArchives);
+        }
+        if (source.JobPythonFiles != null) {
+            this.JobPythonFiles = new String(source.JobPythonFiles);
+        }
+        if (source.TaskNum != null) {
+            this.TaskNum = new Long(source.TaskNum);
+        }
     }
 
 
@@ -813,6 +937,10 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "IsLocalPythonFiles", this.IsLocalPythonFiles);
         this.setParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
+        this.setParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
+        this.setParamSimple(map, prefix + "JobArchives", this.JobArchives);
+        this.setParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
+        this.setParamSimple(map, prefix + "TaskNum", this.TaskNum);
 
     }
 }
