@@ -138,6 +138,9 @@ public enum GaapErrorCode {
     // 该资源不可访问。
      FAILEDOPERATION_RESOURCECANNOTACCESS("FailedOperation.ResourceCanNotAccess"),
      
+    // 资源已经被操作过。
+     FAILEDOPERATION_RESOURCEHADBEENDONE("FailedOperation.ResourceHadBeenDone"),
+     
     // 应用ID填写有误，请检查应用ID是否存在。
      FAILEDOPERATION_RESOURCENOTFOUND("FailedOperation.ResourceNotFound"),
      

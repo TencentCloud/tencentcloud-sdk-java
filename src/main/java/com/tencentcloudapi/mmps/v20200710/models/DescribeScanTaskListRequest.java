@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeScanTaskListRequest extends AbstractModel{
 
     /**
-    * 任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+    * 任务来源, -1:所有, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
     */
     @SerializedName("Source")
     @Expose
@@ -86,16 +86,16 @@ public class DescribeScanTaskListRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get 任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲; 
-     * @return Source 任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * Get 任务来源, -1:所有, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android); 
+     * @return Source 任务来源, -1:所有, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲;
-     * @param Source 任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * Set 任务来源, -1:所有, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * @param Source 任务来源, -1:所有, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public void setSource(Long Source) {
         this.Source = Source;

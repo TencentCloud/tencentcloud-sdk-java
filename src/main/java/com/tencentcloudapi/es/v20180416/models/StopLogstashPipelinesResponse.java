@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomRulesResponse extends AbstractModel{
-
-    /**
-    * 规则详情
-    */
-    @SerializedName("RuleList")
-    @Expose
-    private DescribeCustomRulesRspRuleListItem [] RuleList;
-
-    /**
-    * 规则条数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private String TotalCount;
+public class StopLogstashPipelinesResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeCustomRulesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 规则详情 
-     * @return RuleList 规则详情
-     */
-    public DescribeCustomRulesRspRuleListItem [] getRuleList() {
-        return this.RuleList;
-    }
-
-    /**
-     * Set 规则详情
-     * @param RuleList 规则详情
-     */
-    public void setRuleList(DescribeCustomRulesRspRuleListItem [] RuleList) {
-        this.RuleList = RuleList;
-    }
-
-    /**
-     * Get 规则条数 
-     * @return TotalCount 规则条数
-     */
-    public String getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 规则条数
-     * @param TotalCount 规则条数
-     */
-    public void setTotalCount(String TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeCustomRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeCustomRulesResponse() {
+    public StopLogstashPipelinesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCustomRulesResponse(DescribeCustomRulesResponse source) {
-        if (source.RuleList != null) {
-            this.RuleList = new DescribeCustomRulesRspRuleListItem[source.RuleList.length];
-            for (int i = 0; i < source.RuleList.length; i++) {
-                this.RuleList[i] = new DescribeCustomRulesRspRuleListItem(source.RuleList[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new String(source.TotalCount);
-        }
+    public StopLogstashPipelinesResponse(StopLogstashPipelinesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeCustomRulesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RuleList.", this.RuleList);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

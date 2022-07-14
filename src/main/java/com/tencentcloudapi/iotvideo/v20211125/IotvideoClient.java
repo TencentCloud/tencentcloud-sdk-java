@@ -79,6 +79,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *创建产品
+     * @param req CreateProductRequest
+     * @return CreateProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProductResponse CreateProduct(CreateProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProductResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProductResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询设备数据统计
      * @param req DescribeDeviceDataStatsRequest
      * @return DescribeDeviceDataStatsResponse
@@ -111,6 +131,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMessageDataStatsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeMessageDataStats");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备的绑定签名
+     * @param req GenSingleDeviceSignatureOfPublicRequest
+     * @return GenSingleDeviceSignatureOfPublicResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(GenSingleDeviceSignatureOfPublicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenSingleDeviceSignatureOfPublic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

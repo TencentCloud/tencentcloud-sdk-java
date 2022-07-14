@@ -79,6 +79,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *用于创建Logstash实例
+     * @param req CreateLogstashInstanceRequest
+     * @return CreateLogstashInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLogstashInstanceResponse CreateLogstashInstance(CreateLogstashInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLogstashInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLogstashInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLogstashInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除索引
      * @param req DeleteIndexRequest
      * @return DeleteIndexResponse
@@ -111,6 +131,46 @@ public class EsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于删除Logstash实例
+     * @param req DeleteLogstashInstanceRequest
+     * @return DeleteLogstashInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogstashInstanceResponse DeleteLogstashInstance(DeleteLogstashInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLogstashInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLogstashInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLogstashInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于批量删除Logstash管道
+     * @param req DeleteLogstashPipelinesRequest
+     * @return DeleteLogstashPipelinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogstashPipelinesResponse DeleteLogstashPipelines(DeleteLogstashPipelinesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLogstashPipelinesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLogstashPipelinesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLogstashPipelines");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -219,6 +279,86 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询用户该地域下符合条件的Logstash实例的日志
+     * @param req DescribeLogstashInstanceLogsRequest
+     * @return DescribeLogstashInstanceLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogstashInstanceLogsResponse DescribeLogstashInstanceLogs(DescribeLogstashInstanceLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogstashInstanceLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogstashInstanceLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogstashInstanceLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例指定条件下的操作记录
+     * @param req DescribeLogstashInstanceOperationsRequest
+     * @return DescribeLogstashInstanceOperationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogstashInstanceOperationsResponse DescribeLogstashInstanceOperations(DescribeLogstashInstanceOperationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogstashInstanceOperationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogstashInstanceOperationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogstashInstanceOperations");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户该地域下符合条件的所有Logstash实例
+     * @param req DescribeLogstashInstancesRequest
+     * @return DescribeLogstashInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogstashInstancesResponse DescribeLogstashInstances(DescribeLogstashInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogstashInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogstashInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogstashInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取Logstash实例管道列表
+     * @param req DescribeLogstashPipelinesRequest
+     * @return DescribeLogstashPipelinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogstashPipelinesResponse DescribeLogstashPipelines(DescribeLogstashPipelinesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogstashPipelinesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogstashPipelinesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogstashPipelines");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群各视图数据，包括集群维度、节点维度、Kibana维度
      * @param req DescribeViewsRequest
      * @return DescribeViewsResponse
@@ -319,6 +459,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *用于重启Logstash实例
+     * @param req RestartLogstashInstanceRequest
+     * @return RestartLogstashInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartLogstashInstanceResponse RestartLogstashInstance(RestartLogstashInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartLogstashInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartLogstashInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartLogstashInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于重启集群节点
      * @param req RestartNodesRequest
      * @return RestartNodesResponse
@@ -331,6 +491,66 @@ public class EsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RestartNodesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RestartNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于下发并且部署管道
+     * @param req SaveAndDeployLogstashPipelineRequest
+     * @return SaveAndDeployLogstashPipelineResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaveAndDeployLogstashPipelineResponse SaveAndDeployLogstashPipeline(SaveAndDeployLogstashPipelineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SaveAndDeployLogstashPipelineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SaveAndDeployLogstashPipelineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SaveAndDeployLogstashPipeline");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于启动Logstash管道
+     * @param req StartLogstashPipelinesRequest
+     * @return StartLogstashPipelinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLogstashPipelinesResponse StartLogstashPipelines(StartLogstashPipelinesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartLogstashPipelinesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartLogstashPipelinesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartLogstashPipelines");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于批量停止Logstash管道
+     * @param req StopLogstashPipelinesRequest
+     * @return StopLogstashPipelinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLogstashPipelinesResponse StopLogstashPipelines(StopLogstashPipelinesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopLogstashPipelinesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopLogstashPipelinesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopLogstashPipelines");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -438,6 +658,51 @@ public class EsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateJdkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateJdk");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对集群进行节点规格变更，修改实例名称，修改配置，等操作。参数中InstanceId为必传参数，参数传递组合及含义如下：
+- InstanceName：修改实例名称(仅用于标识实例)
+- NodeNum: 修改实例节点数量（节点横向扩缩容，纵向扩缩容等）
+- YMLConfig: 修改实例YML配置
+- BindedES：修改绑定的ES集群配置
+以上参数组合只能传递一种，多传或少传均会导致请求失败
+     * @param req UpdateLogstashInstanceRequest
+     * @return UpdateLogstashInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLogstashInstanceResponse UpdateLogstashInstance(UpdateLogstashInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateLogstashInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateLogstashInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateLogstashInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于更新管道描述信息
+     * @param req UpdateLogstashPipelineDescRequest
+     * @return UpdateLogstashPipelineDescResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLogstashPipelineDescResponse UpdateLogstashPipelineDesc(UpdateLogstashPipelineDescRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateLogstashPipelineDescResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateLogstashPipelineDescResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateLogstashPipelineDesc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

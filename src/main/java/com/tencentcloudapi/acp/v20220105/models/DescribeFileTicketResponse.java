@@ -30,14 +30,14 @@ public class DescribeFileTicketResponse extends AbstractModel{
     private Long Result;
 
     /**
-    * 上传url(灵鲲:Post方法（100:apk,101:txt）, 灵犀:put方法)
+    * 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
     */
     @SerializedName("UploadUrl")
     @Expose
     private String UploadUrl;
 
     /**
-    * 上传url鉴权信息(灵犀上传需要, Authorization参数值)
+    * 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadSign")
@@ -45,7 +45,7 @@ public class DescribeFileTicketResponse extends AbstractModel{
     private String UploadSign;
 
     /**
-    * 上传文件ID(灵犀提交诊断任务需要)
+    * 上传文件ID(任务来源为1时提交诊断任务需要)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FildID")
@@ -76,25 +76,25 @@ public class DescribeFileTicketResponse extends AbstractModel{
     }
 
     /**
-     * Get 上传url(灵鲲:Post方法（100:apk,101:txt）, 灵犀:put方法) 
-     * @return UploadUrl 上传url(灵鲲:Post方法（100:apk,101:txt）, 灵犀:put方法)
+     * Get 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法) 
+     * @return UploadUrl 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
      */
     public String getUploadUrl() {
         return this.UploadUrl;
     }
 
     /**
-     * Set 上传url(灵鲲:Post方法（100:apk,101:txt）, 灵犀:put方法)
-     * @param UploadUrl 上传url(灵鲲:Post方法（100:apk,101:txt）, 灵犀:put方法)
+     * Set 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
+     * @param UploadUrl 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
      */
     public void setUploadUrl(String UploadUrl) {
         this.UploadUrl = UploadUrl;
     }
 
     /**
-     * Get 上传url鉴权信息(灵犀上传需要, Authorization参数值)
+     * Get 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UploadSign 上传url鉴权信息(灵犀上传需要, Authorization参数值)
+     * @return UploadSign 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadSign() {
@@ -102,9 +102,9 @@ public class DescribeFileTicketResponse extends AbstractModel{
     }
 
     /**
-     * Set 上传url鉴权信息(灵犀上传需要, Authorization参数值)
+     * Set 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UploadSign 上传url鉴权信息(灵犀上传需要, Authorization参数值)
+     * @param UploadSign 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadSign(String UploadSign) {
@@ -112,9 +112,9 @@ public class DescribeFileTicketResponse extends AbstractModel{
     }
 
     /**
-     * Get 上传文件ID(灵犀提交诊断任务需要)
+     * Get 上传文件ID(任务来源为1时提交诊断任务需要)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FildID 上传文件ID(灵犀提交诊断任务需要)
+     * @return FildID 上传文件ID(任务来源为1时提交诊断任务需要)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFildID() {
@@ -122,9 +122,9 @@ public class DescribeFileTicketResponse extends AbstractModel{
     }
 
     /**
-     * Set 上传文件ID(灵犀提交诊断任务需要)
+     * Set 上传文件ID(任务来源为1时提交诊断任务需要)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FildID 上传文件ID(灵犀提交诊断任务需要)
+     * @param FildID 上传文件ID(任务来源为1时提交诊断任务需要)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFildID(String FildID) {

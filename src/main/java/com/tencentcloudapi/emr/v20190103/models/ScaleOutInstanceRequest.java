@@ -202,6 +202,13 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 预设配置组
+    */
+    @SerializedName("ScaleOutServiceConfAssign")
+    @Expose
+    private String ScaleOutServiceConfAssign;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -629,6 +636,22 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 预设配置组 
+     * @return ScaleOutServiceConfAssign 预设配置组
+     */
+    public String getScaleOutServiceConfAssign() {
+        return this.ScaleOutServiceConfAssign;
+    }
+
+    /**
+     * Set 预设配置组
+     * @param ScaleOutServiceConfAssign 预设配置组
+     */
+    public void setScaleOutServiceConfAssign(String ScaleOutServiceConfAssign) {
+        this.ScaleOutServiceConfAssign = ScaleOutServiceConfAssign;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -727,6 +750,9 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.ScaleOutServiceConfAssign != null) {
+            this.ScaleOutServiceConfAssign = new String(source.ScaleOutServiceConfAssign);
+        }
     }
 
 
@@ -758,6 +784,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
 
     }
 }

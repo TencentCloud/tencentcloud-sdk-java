@@ -30,7 +30,7 @@ public class CreateAppScanTaskRequest extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+    * 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
     */
     @SerializedName("Source")
     @Expose
@@ -65,21 +65,21 @@ public class CreateAppScanTaskRequest extends AbstractModel{
     private String AppVersion;
 
     /**
-    * 上传的软件文件ID(灵犀诊断必填)
+    * 上传的软件文件ID(任务来源为1时必填)
     */
     @SerializedName("FileID")
     @Expose
     private String FileID;
 
     /**
-    * 软件下载链接地址(灵鲲诊断必填)
+    * 软件下载链接地址(任务来源为2时必填)
     */
     @SerializedName("AppDownloadUrl")
     @Expose
     private String AppDownloadUrl;
 
     /**
-    * 隐私文本下载地址(灵鲲诊断必填)
+    * 隐私文本下载地址(任务来源为2时必填)
     */
     @SerializedName("PrivacyTextUrl")
     @Expose
@@ -158,16 +158,16 @@ public class CreateAppScanTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲; 
-     * @return Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * Get 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android); 
+     * @return Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
-     * @param Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * Set 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * @param Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public void setSource(Long Source) {
         this.Source = Source;
@@ -238,48 +238,48 @@ public class CreateAppScanTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 上传的软件文件ID(灵犀诊断必填) 
-     * @return FileID 上传的软件文件ID(灵犀诊断必填)
+     * Get 上传的软件文件ID(任务来源为1时必填) 
+     * @return FileID 上传的软件文件ID(任务来源为1时必填)
      */
     public String getFileID() {
         return this.FileID;
     }
 
     /**
-     * Set 上传的软件文件ID(灵犀诊断必填)
-     * @param FileID 上传的软件文件ID(灵犀诊断必填)
+     * Set 上传的软件文件ID(任务来源为1时必填)
+     * @param FileID 上传的软件文件ID(任务来源为1时必填)
      */
     public void setFileID(String FileID) {
         this.FileID = FileID;
     }
 
     /**
-     * Get 软件下载链接地址(灵鲲诊断必填) 
-     * @return AppDownloadUrl 软件下载链接地址(灵鲲诊断必填)
+     * Get 软件下载链接地址(任务来源为2时必填) 
+     * @return AppDownloadUrl 软件下载链接地址(任务来源为2时必填)
      */
     public String getAppDownloadUrl() {
         return this.AppDownloadUrl;
     }
 
     /**
-     * Set 软件下载链接地址(灵鲲诊断必填)
-     * @param AppDownloadUrl 软件下载链接地址(灵鲲诊断必填)
+     * Set 软件下载链接地址(任务来源为2时必填)
+     * @param AppDownloadUrl 软件下载链接地址(任务来源为2时必填)
      */
     public void setAppDownloadUrl(String AppDownloadUrl) {
         this.AppDownloadUrl = AppDownloadUrl;
     }
 
     /**
-     * Get 隐私文本下载地址(灵鲲诊断必填) 
-     * @return PrivacyTextUrl 隐私文本下载地址(灵鲲诊断必填)
+     * Get 隐私文本下载地址(任务来源为2时必填) 
+     * @return PrivacyTextUrl 隐私文本下载地址(任务来源为2时必填)
      */
     public String getPrivacyTextUrl() {
         return this.PrivacyTextUrl;
     }
 
     /**
-     * Set 隐私文本下载地址(灵鲲诊断必填)
-     * @param PrivacyTextUrl 隐私文本下载地址(灵鲲诊断必填)
+     * Set 隐私文本下载地址(任务来源为2时必填)
+     * @param PrivacyTextUrl 隐私文本下载地址(任务来源为2时必填)
      */
     public void setPrivacyTextUrl(String PrivacyTextUrl) {
         this.PrivacyTextUrl = PrivacyTextUrl;

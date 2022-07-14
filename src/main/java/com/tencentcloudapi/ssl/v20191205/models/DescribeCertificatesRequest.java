@@ -65,7 +65,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private String ExpirationSort;
 
     /**
-    * 证书状态。
+    * 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
     */
     @SerializedName("CertificateStatus")
     @Expose
@@ -98,6 +98,13 @@ public class DescribeCertificatesRequest extends AbstractModel{
     @SerializedName("FilterSource")
     @Expose
     private String FilterSource;
+
+    /**
+    * 是否筛选国密证书。1:筛选  0:不筛选
+    */
+    @SerializedName("IsSM")
+    @Expose
+    private Long IsSM;
 
     /**
      * Get 分页偏移量，从0开始。 
@@ -196,16 +203,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书状态。 
-     * @return CertificateStatus 证书状态。
+     * Get 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。 
+     * @return CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
      */
     public Long [] getCertificateStatus() {
         return this.CertificateStatus;
     }
 
     /**
-     * Set 证书状态。
-     * @param CertificateStatus 证书状态。
+     * Set 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+     * @param CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
      */
     public void setCertificateStatus(Long [] CertificateStatus) {
         this.CertificateStatus = CertificateStatus;
@@ -275,6 +282,22 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.FilterSource = FilterSource;
     }
 
+    /**
+     * Get 是否筛选国密证书。1:筛选  0:不筛选 
+     * @return IsSM 是否筛选国密证书。1:筛选  0:不筛选
+     */
+    public Long getIsSM() {
+        return this.IsSM;
+    }
+
+    /**
+     * Set 是否筛选国密证书。1:筛选  0:不筛选
+     * @param IsSM 是否筛选国密证书。1:筛选  0:不筛选
+     */
+    public void setIsSM(Long IsSM) {
+        this.IsSM = IsSM;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -319,6 +342,9 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.FilterSource != null) {
             this.FilterSource = new String(source.FilterSource);
         }
+        if (source.IsSM != null) {
+            this.IsSM = new Long(source.IsSM);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Upload", this.Upload);
         this.setParamSimple(map, prefix + "Renew", this.Renew);
         this.setParamSimple(map, prefix + "FilterSource", this.FilterSource);
+        this.setParamSimple(map, prefix + "IsSM", this.IsSM);
 
     }
 }

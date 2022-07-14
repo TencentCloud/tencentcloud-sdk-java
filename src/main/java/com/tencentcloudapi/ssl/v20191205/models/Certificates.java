@@ -271,6 +271,14 @@ public class Certificates extends AbstractModel{
     private Boolean IsIgnore;
 
     /**
+    * 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSM")
+    @Expose
+    private Boolean IsSM;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -890,6 +898,26 @@ public class Certificates extends AbstractModel{
         this.IsIgnore = IsIgnore;
     }
 
+    /**
+     * Get 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSM 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSM() {
+        return this.IsSM;
+    }
+
+    /**
+     * Set 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSM 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSM(Boolean IsSM) {
+        this.IsSM = IsSM;
+    }
+
     public Certificates() {
     }
 
@@ -1000,6 +1028,9 @@ public class Certificates extends AbstractModel{
         if (source.IsIgnore != null) {
             this.IsIgnore = new Boolean(source.IsIgnore);
         }
+        if (source.IsSM != null) {
+            this.IsSM = new Boolean(source.IsSM);
+        }
     }
 
 
@@ -1038,6 +1069,7 @@ public class Certificates extends AbstractModel{
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
+        this.setParamSimple(map, prefix + "IsSM", this.IsSM);
 
     }
 }

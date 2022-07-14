@@ -30,7 +30,7 @@ public class CreateAppScanTaskRepeatRequest extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+    * 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
     */
     @SerializedName("Source")
     @Expose
@@ -74,16 +74,16 @@ public class CreateAppScanTaskRepeatRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲; 
-     * @return Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * Get 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android); 
+     * @return Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
-     * @param Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * Set 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * @param Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public void setSource(Long Source) {
         this.Source = Source;

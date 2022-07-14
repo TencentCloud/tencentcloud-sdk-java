@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomRulesPagingInfo extends AbstractModel{
+public class LogstashExtendedFile extends AbstractModel{
 
     /**
-    * 当前页码
+    * 扩展文件名称
     */
-    @SerializedName("Offset")
+    @SerializedName("Name")
     @Expose
-    private Long Offset;
+    private String Name;
 
     /**
-    * 当前页的最大数据条数
+    * 扩展文件大小，单位B
     */
-    @SerializedName("Limit")
+    @SerializedName("Size")
     @Expose
-    private Long Limit;
+    private Long Size;
 
     /**
-     * Get 当前页码 
-     * @return Offset 当前页码
+     * Get 扩展文件名称 
+     * @return Name 扩展文件名称
      */
-    public Long getOffset() {
-        return this.Offset;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 当前页码
-     * @param Offset 当前页码
+     * Set 扩展文件名称
+     * @param Name 扩展文件名称
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 当前页的最大数据条数 
-     * @return Limit 当前页的最大数据条数
+     * Get 扩展文件大小，单位B 
+     * @return Size 扩展文件大小，单位B
      */
-    public Long getLimit() {
-        return this.Limit;
+    public Long getSize() {
+        return this.Size;
     }
 
     /**
-     * Set 当前页的最大数据条数
-     * @param Limit 当前页的最大数据条数
+     * Set 扩展文件大小，单位B
+     * @param Size 扩展文件大小，单位B
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
+    public void setSize(Long Size) {
+        this.Size = Size;
     }
 
-    public DescribeCustomRulesPagingInfo() {
+    public LogstashExtendedFile() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCustomRulesPagingInfo(DescribeCustomRulesPagingInfo source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+    public LogstashExtendedFile(LogstashExtendedFile source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeCustomRulesPagingInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

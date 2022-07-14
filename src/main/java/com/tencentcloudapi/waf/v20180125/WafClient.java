@@ -341,26 +341,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *获取防护配置中的自定义策略列表
-     * @param req DescribeCustomRulesRequest
-     * @return DescribeCustomRulesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCustomRulesResponse DescribeCustomRules(DescribeCustomRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCustomRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCustomRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取域名的规则白名单
 
 
