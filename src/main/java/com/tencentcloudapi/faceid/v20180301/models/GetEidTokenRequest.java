@@ -52,7 +52,7 @@ public class GetEidTokenRequest extends AbstractModel{
     private String Extra;
 
     /**
-    * 小程序模式配置，包括如何传入姓名身份证的配置。
+    * 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
     */
     @SerializedName("Config")
     @Expose
@@ -141,16 +141,16 @@ public class GetEidTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 小程序模式配置，包括如何传入姓名身份证的配置。 
-     * @return Config 小程序模式配置，包括如何传入姓名身份证的配置。
+     * Get 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。 
+     * @return Config 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
      */
     public GetEidTokenConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 小程序模式配置，包括如何传入姓名身份证的配置。
-     * @param Config 小程序模式配置，包括如何传入姓名身份证的配置。
+     * Set 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
+     * @param Config 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
      */
     public void setConfig(GetEidTokenConfig Config) {
         this.Config = Config;

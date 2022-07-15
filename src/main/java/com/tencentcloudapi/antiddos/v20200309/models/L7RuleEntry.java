@@ -172,6 +172,13 @@ public class L7RuleEntry extends AbstractModel{
     private String Id;
 
     /**
+    * 智能cc开关，取值[0(关闭), 1(开启)]
+    */
+    @SerializedName("CCAIEnable")
+    @Expose
+    private Long CCAIEnable;
+
+    /**
      * Get 会话保持时间，单位秒 
      * @return KeepTime 会话保持时间，单位秒
      */
@@ -515,6 +522,22 @@ public class L7RuleEntry extends AbstractModel{
         this.Id = Id;
     }
 
+    /**
+     * Get 智能cc开关，取值[0(关闭), 1(开启)] 
+     * @return CCAIEnable 智能cc开关，取值[0(关闭), 1(开启)]
+     */
+    public Long getCCAIEnable() {
+        return this.CCAIEnable;
+    }
+
+    /**
+     * Set 智能cc开关，取值[0(关闭), 1(开启)]
+     * @param CCAIEnable 智能cc开关，取值[0(关闭), 1(开启)]
+     */
+    public void setCCAIEnable(Long CCAIEnable) {
+        this.CCAIEnable = CCAIEnable;
+    }
+
     public L7RuleEntry() {
     }
 
@@ -589,6 +612,9 @@ public class L7RuleEntry extends AbstractModel{
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.CCAIEnable != null) {
+            this.CCAIEnable = new Long(source.CCAIEnable);
+        }
     }
 
 
@@ -617,6 +643,7 @@ public class L7RuleEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
         this.setParamSimple(map, prefix + "SSLId", this.SSLId);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "CCAIEnable", this.CCAIEnable);
 
     }
 }

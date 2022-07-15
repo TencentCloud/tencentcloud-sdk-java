@@ -187,6 +187,20 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Boolean DryRun;
 
     /**
+    * "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+    */
+    @SerializedName("ProductVersion")
+    @Expose
+    private String ProductVersion;
+
+    /**
+    * 独享集群id，ProductVersion="cdc"时必传
+    */
+    @SerializedName("RedisClusterId")
+    @Expose
+    private String RedisClusterId;
+
+    /**
      * Get 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。 
      * @return TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      */
@@ -566,6 +580,38 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本 
+     * @return ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+     */
+    public String getProductVersion() {
+        return this.ProductVersion;
+    }
+
+    /**
+     * Set "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+     * @param ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+     */
+    public void setProductVersion(String ProductVersion) {
+        this.ProductVersion = ProductVersion;
+    }
+
+    /**
+     * Get 独享集群id，ProductVersion="cdc"时必传 
+     * @return RedisClusterId 独享集群id，ProductVersion="cdc"时必传
+     */
+    public String getRedisClusterId() {
+        return this.RedisClusterId;
+    }
+
+    /**
+     * Set 独享集群id，ProductVersion="cdc"时必传
+     * @param RedisClusterId 独享集群id，ProductVersion="cdc"时必传
+     */
+    public void setRedisClusterId(String RedisClusterId) {
+        this.RedisClusterId = RedisClusterId;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -652,6 +698,12 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.ProductVersion != null) {
+            this.ProductVersion = new String(source.ProductVersion);
+        }
+        if (source.RedisClusterId != null) {
+            this.RedisClusterId = new String(source.RedisClusterId);
+        }
     }
 
 
@@ -682,6 +734,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+        this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
 
     }
 }

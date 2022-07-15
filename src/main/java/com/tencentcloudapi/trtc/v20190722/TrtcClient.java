@@ -59,26 +59,6 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *创建异常信息
-     * @param req CreateTroubleInfoRequest
-     * @return CreateTroubleInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTroubleInfoResponse CreateTroubleInfo(CreateTroubleInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTroubleInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTroubleInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
      * @param req DeletePictureRequest
      * @return DeletePictureResponse

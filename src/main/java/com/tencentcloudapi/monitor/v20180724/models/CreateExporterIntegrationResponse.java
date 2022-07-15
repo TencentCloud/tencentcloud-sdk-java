@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateExporterIntegrationResponse extends AbstractModel{
 
     /**
+    * 返回创建成功的集成名称列表
+    */
+    @SerializedName("Names")
+    @Expose
+    private String [] Names;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 返回创建成功的集成名称列表 
+     * @return Names 返回创建成功的集成名称列表
+     */
+    public String [] getNames() {
+        return this.Names;
+    }
+
+    /**
+     * Set 返回创建成功的集成名称列表
+     * @param Names 返回创建成功的集成名称列表
+     */
+    public void setNames(String [] Names) {
+        this.Names = Names;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,12 @@ public class CreateExporterIntegrationResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateExporterIntegrationResponse(CreateExporterIntegrationResponse source) {
+        if (source.Names != null) {
+            this.Names = new String[source.Names.length];
+            for (int i = 0; i < source.Names.length; i++) {
+                this.Names[i] = new String(source.Names[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class CreateExporterIntegrationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

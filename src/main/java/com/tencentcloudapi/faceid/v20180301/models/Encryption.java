@@ -37,7 +37,7 @@ public class Encryption extends AbstractModel{
     private String [] EncryptList;
 
     /**
-    * 有加密需求的用户，传入CBC加密的初始向量
+    * 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
     */
     @SerializedName("Iv")
     @Expose
@@ -76,16 +76,16 @@ public class Encryption extends AbstractModel{
     }
 
     /**
-     * Get 有加密需求的用户，传入CBC加密的初始向量 
-     * @return Iv 有加密需求的用户，传入CBC加密的初始向量
+     * Get 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。 
+     * @return Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
      */
     public String getIv() {
         return this.Iv;
     }
 
     /**
-     * Set 有加密需求的用户，传入CBC加密的初始向量
-     * @param Iv 有加密需求的用户，传入CBC加密的初始向量
+     * Set 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+     * @param Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
      */
     public void setIv(String Iv) {
         this.Iv = Iv;

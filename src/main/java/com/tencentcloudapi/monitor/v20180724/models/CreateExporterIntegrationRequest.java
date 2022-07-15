@@ -30,6 +30,20 @@ public class CreateExporterIntegrationRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 类型
+    */
+    @SerializedName("Kind")
+    @Expose
+    private String Kind;
+
+    /**
+    * 集成配置
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
     * Kubernetes 集群类型，取值如下：
 <li> 1= 容器集群(TKE) </li>
 <li> 2=弹性集群<EKS> </li>
@@ -47,20 +61,6 @@ public class CreateExporterIntegrationRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 类型
-    */
-    @SerializedName("Kind")
-    @Expose
-    private String Kind;
-
-    /**
-    * 集成配置
-    */
-    @SerializedName("Content")
-    @Expose
-    private String Content;
-
-    /**
      * Get 实例 ID 
      * @return InstanceId 实例 ID
      */
@@ -74,6 +74,38 @@ public class CreateExporterIntegrationRequest extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 类型 
+     * @return Kind 类型
+     */
+    public String getKind() {
+        return this.Kind;
+    }
+
+    /**
+     * Set 类型
+     * @param Kind 类型
+     */
+    public void setKind(String Kind) {
+        this.Kind = Kind;
+    }
+
+    /**
+     * Get 集成配置 
+     * @return Content 集成配置
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set 集成配置
+     * @param Content 集成配置
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
     }
 
     /**
@@ -120,38 +152,6 @@ public class CreateExporterIntegrationRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
-    /**
-     * Get 类型 
-     * @return Kind 类型
-     */
-    public String getKind() {
-        return this.Kind;
-    }
-
-    /**
-     * Set 类型
-     * @param Kind 类型
-     */
-    public void setKind(String Kind) {
-        this.Kind = Kind;
-    }
-
-    /**
-     * Get 集成配置 
-     * @return Content 集成配置
-     */
-    public String getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set 集成配置
-     * @param Content 集成配置
-     */
-    public void setContent(String Content) {
-        this.Content = Content;
-    }
-
     public CreateExporterIntegrationRequest() {
     }
 
@@ -163,17 +163,17 @@ public class CreateExporterIntegrationRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.KubeType != null) {
-            this.KubeType = new Long(source.KubeType);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
-        }
         if (source.Kind != null) {
             this.Kind = new String(source.Kind);
         }
         if (source.Content != null) {
             this.Content = new String(source.Content);
+        }
+        if (source.KubeType != null) {
+            this.KubeType = new Long(source.KubeType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -183,10 +183,10 @@ public class CreateExporterIntegrationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "KubeType", this.KubeType);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "KubeType", this.KubeType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

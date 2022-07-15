@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreatePrometheusScrapeJobResponse extends AbstractModel{
 
     /**
+    * 成功创建抓取任务 Id
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 成功创建抓取任务 Id 
+     * @return JobId 成功创建抓取任务 Id
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set 成功创建抓取任务 Id
+     * @param JobId 成功创建抓取任务 Id
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreatePrometheusScrapeJobResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrometheusScrapeJobResponse(CreatePrometheusScrapeJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreatePrometheusScrapeJobResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

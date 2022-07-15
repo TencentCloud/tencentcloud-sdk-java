@@ -36,6 +36,20 @@ public class GetEidTokenConfig extends AbstractModel{
     private String InputType;
 
     /**
+    * 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+    */
+    @SerializedName("UseIntentionVerify")
+    @Expose
+    private Boolean UseIntentionVerify;
+
+    /**
+    * 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+    */
+    @SerializedName("IntentionVerifyText")
+    @Expose
+    private String IntentionVerifyText;
+
+    /**
      * Get 姓名身份证输入方式。
 1：传身份证正反面OCR   
 2：传身份证正面OCR  
@@ -75,6 +89,38 @@ public class GetEidTokenConfig extends AbstractModel{
         this.InputType = InputType;
     }
 
+    /**
+     * Get 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。 
+     * @return UseIntentionVerify 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     */
+    public Boolean getUseIntentionVerify() {
+        return this.UseIntentionVerify;
+    }
+
+    /**
+     * Set 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     * @param UseIntentionVerify 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     */
+    public void setUseIntentionVerify(Boolean UseIntentionVerify) {
+        this.UseIntentionVerify = UseIntentionVerify;
+    }
+
+    /**
+     * Get 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。 
+     * @return IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     */
+    public String getIntentionVerifyText() {
+        return this.IntentionVerifyText;
+    }
+
+    /**
+     * Set 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @param IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     */
+    public void setIntentionVerifyText(String IntentionVerifyText) {
+        this.IntentionVerifyText = IntentionVerifyText;
+    }
+
     public GetEidTokenConfig() {
     }
 
@@ -86,6 +132,12 @@ public class GetEidTokenConfig extends AbstractModel{
         if (source.InputType != null) {
             this.InputType = new String(source.InputType);
         }
+        if (source.UseIntentionVerify != null) {
+            this.UseIntentionVerify = new Boolean(source.UseIntentionVerify);
+        }
+        if (source.IntentionVerifyText != null) {
+            this.IntentionVerifyText = new String(source.IntentionVerifyText);
+        }
     }
 
 
@@ -94,6 +146,8 @@ public class GetEidTokenConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputType", this.InputType);
+        this.setParamSimple(map, prefix + "UseIntentionVerify", this.UseIntentionVerify);
+        this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
 
     }
 }

@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreatePrometheusAgentResponse extends AbstractModel{
 
     /**
+    * 创建成功的 Agent Id
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 创建成功的 Agent Id 
+     * @return AgentId 创建成功的 Agent Id
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set 创建成功的 Agent Id
+     * @param AgentId 创建成功的 Agent Id
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreatePrometheusAgentResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrometheusAgentResponse(CreatePrometheusAgentResponse source) {
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreatePrometheusAgentResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
