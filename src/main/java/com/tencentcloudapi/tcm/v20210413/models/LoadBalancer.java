@@ -46,11 +46,59 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String InternetChargeType;
 
     /**
-    * 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
+    * 最大出带宽，单位Mbps，仅对公网属性的LB生效，默认值 10
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
+
+    /**
+    * 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneID")
+    @Expose
+    private String ZoneID;
+
+    /**
+    * 运营商类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipIsp")
+    @Expose
+    private String VipIsp;
+
+    /**
+    * TGW Group 名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TgwGroupName")
+    @Expose
+    private String TgwGroupName;
+
+    /**
+    * IP 类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddressIPVersion")
+    @Expose
+    private String AddressIPVersion;
+
+    /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 内网独占集群配置列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtensiveClusters")
+    @Expose
+    private ExtensiveClusters ExtensiveClusters;
 
     /**
      * Get 负载均衡实例的网络类型：
@@ -109,19 +157,139 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10 
-     * @return InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
+     * Get 最大出带宽，单位Mbps，仅对公网属性的LB生效，默认值 10 
+     * @return InternetMaxBandwidthOut 最大出带宽，单位Mbps，仅对公网属性的LB生效，默认值 10
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
-     * @param InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
+     * Set 最大出带宽，单位Mbps，仅对公网属性的LB生效，默认值 10
+     * @param InternetMaxBandwidthOut 最大出带宽，单位Mbps，仅对公网属性的LB生效，默认值 10
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    }
+
+    /**
+     * Get 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneID 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneID() {
+        return this.ZoneID;
+    }
+
+    /**
+     * Set 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneID 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneID(String ZoneID) {
+        this.ZoneID = ZoneID;
+    }
+
+    /**
+     * Get 运营商类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VipIsp 运营商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipIsp() {
+        return this.VipIsp;
+    }
+
+    /**
+     * Set 运营商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipIsp 运营商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipIsp(String VipIsp) {
+        this.VipIsp = VipIsp;
+    }
+
+    /**
+     * Get TGW Group 名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TgwGroupName TGW Group 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTgwGroupName() {
+        return this.TgwGroupName;
+    }
+
+    /**
+     * Set TGW Group 名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TgwGroupName TGW Group 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTgwGroupName(String TgwGroupName) {
+        this.TgwGroupName = TgwGroupName;
+    }
+
+    /**
+     * Get IP 类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddressIPVersion IP 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddressIPVersion() {
+        return this.AddressIPVersion;
+    }
+
+    /**
+     * Set IP 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddressIPVersion IP 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddressIPVersion(String AddressIPVersion) {
+        this.AddressIPVersion = AddressIPVersion;
+    }
+
+    /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 内网独占集群配置列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtensiveClusters 内网独占集群配置列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtensiveClusters getExtensiveClusters() {
+        return this.ExtensiveClusters;
+    }
+
+    /**
+     * Set 内网独占集群配置列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtensiveClusters 内网独占集群配置列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtensiveClusters(ExtensiveClusters ExtensiveClusters) {
+        this.ExtensiveClusters = ExtensiveClusters;
     }
 
     public LoadBalancer() {
@@ -144,6 +312,27 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.InternetMaxBandwidthOut != null) {
             this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
         }
+        if (source.ZoneID != null) {
+            this.ZoneID = new String(source.ZoneID);
+        }
+        if (source.VipIsp != null) {
+            this.VipIsp = new String(source.VipIsp);
+        }
+        if (source.TgwGroupName != null) {
+            this.TgwGroupName = new String(source.TgwGroupName);
+        }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.ExtensiveClusters != null) {
+            this.ExtensiveClusters = new ExtensiveClusters(source.ExtensiveClusters);
+        }
     }
 
 
@@ -155,6 +344,12 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+        this.setParamSimple(map, prefix + "ZoneID", this.ZoneID);
+        this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
+        this.setParamSimple(map, prefix + "TgwGroupName", this.TgwGroupName);
+        this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "ExtensiveClusters.", this.ExtensiveClusters);
 
     }
 }

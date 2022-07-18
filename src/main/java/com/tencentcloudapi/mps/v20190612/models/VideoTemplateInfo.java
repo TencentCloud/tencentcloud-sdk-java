@@ -27,6 +27,8 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
     */
     @SerializedName("Codec")
     @Expose
@@ -35,13 +37,14 @@ public class VideoTemplateInfo extends AbstractModel{
     /**
     * 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60]
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+    * 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
     */
     @SerializedName("Bitrate")
@@ -53,6 +56,7 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
@@ -97,6 +101,7 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
     */
     @SerializedName("FillType")
     @Expose
@@ -115,11 +120,15 @@ public class VideoTemplateInfo extends AbstractModel{
      * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li> 
+<li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。 
      * @return Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      */
     public String getCodec() {
         return this.Codec;
@@ -130,10 +139,14 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      * @param Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -141,9 +154,11 @@ public class VideoTemplateInfo extends AbstractModel{
 
     /**
      * Get 视频帧率，取值范围：[0, 100]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。 
+当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60] 
      * @return Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60]
      */
     public Long getFps() {
         return this.Fps;
@@ -152,17 +167,19 @@ public class VideoTemplateInfo extends AbstractModel{
     /**
      * Set 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60]
      * @param Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60]
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+     * Get 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。 
-     * @return Bitrate 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public Long getBitrate() {
@@ -170,9 +187,9 @@ public class VideoTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+     * Set 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
-     * @param Bitrate 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public void setBitrate(Long Bitrate) {
@@ -183,11 +200,13 @@ public class VideoTemplateInfo extends AbstractModel{
      * Get 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
-默认值：open。 
+默认值：open。
+注意：自适应模式时，Width不能小于Height。 
      * @return ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
@@ -198,10 +217,12 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
      * @param ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
@@ -305,13 +326,15 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
-默认值：black 。 
+默认值：black 。
+注意：自适应码流只支持 stretch、black。 
      * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
      */
     public String getFillType() {
         return this.FillType;
@@ -324,12 +347,14 @@ public class VideoTemplateInfo extends AbstractModel{
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
      * @param FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;

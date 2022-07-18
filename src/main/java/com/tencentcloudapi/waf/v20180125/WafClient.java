@@ -543,6 +543,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询下载攻击日志任务记录列表
+     * @param req GetAttackDownloadRecordsRequest
+     * @return GetAttackDownloadRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAttackDownloadRecordsResponse GetAttackDownloadRecords(GetAttackDownloadRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAttackDownloadRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAttackDownloadRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAttackDownloadRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于修改访问日志保存期限
      * @param req ModifyAccessPeriodRequest
      * @return ModifyAccessPeriodResponse

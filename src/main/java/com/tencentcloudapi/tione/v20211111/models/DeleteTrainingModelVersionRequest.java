@@ -30,6 +30,13 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel{
     private String TrainingModelVersionId;
 
     /**
+    * 是否同步清理cos
+    */
+    @SerializedName("EnableDeleteCos")
+    @Expose
+    private Boolean EnableDeleteCos;
+
+    /**
      * Get 模型版本ID 
      * @return TrainingModelVersionId 模型版本ID
      */
@@ -45,6 +52,22 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel{
         this.TrainingModelVersionId = TrainingModelVersionId;
     }
 
+    /**
+     * Get 是否同步清理cos 
+     * @return EnableDeleteCos 是否同步清理cos
+     */
+    public Boolean getEnableDeleteCos() {
+        return this.EnableDeleteCos;
+    }
+
+    /**
+     * Set 是否同步清理cos
+     * @param EnableDeleteCos 是否同步清理cos
+     */
+    public void setEnableDeleteCos(Boolean EnableDeleteCos) {
+        this.EnableDeleteCos = EnableDeleteCos;
+    }
+
     public DeleteTrainingModelVersionRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel{
         if (source.TrainingModelVersionId != null) {
             this.TrainingModelVersionId = new String(source.TrainingModelVersionId);
         }
+        if (source.EnableDeleteCos != null) {
+            this.EnableDeleteCos = new Boolean(source.EnableDeleteCos);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrainingModelVersionId", this.TrainingModelVersionId);
+        this.setParamSimple(map, prefix + "EnableDeleteCos", this.EnableDeleteCos);
 
     }
 }

@@ -123,6 +123,14 @@ public class TranscodeTemplate extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get 转码模板唯一标识。 
      * @return Definition 转码模板唯一标识。
      */
@@ -366,6 +374,26 @@ public class TranscodeTemplate extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public TranscodeTemplate() {
     }
 
@@ -413,6 +441,9 @@ public class TranscodeTemplate extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -433,6 +464,7 @@ public class TranscodeTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

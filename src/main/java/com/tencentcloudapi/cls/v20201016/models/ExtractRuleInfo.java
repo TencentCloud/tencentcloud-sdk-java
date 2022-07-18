@@ -103,6 +103,22 @@ public class ExtractRuleInfo extends AbstractModel{
     private Long Backtracking;
 
     /**
+    * 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsGBK")
+    @Expose
+    private Long IsGBK;
+
+    /**
+    * 是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JsonStandard")
+    @Expose
+    private Long JsonStandard;
+
+    /**
      * Get 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeKey 时间字段的key名字，time_key和time_format必须成对出现
@@ -302,6 +318,46 @@ public class ExtractRuleInfo extends AbstractModel{
         this.Backtracking = Backtracking;
     }
 
+    /**
+     * Get 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsGBK 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsGBK() {
+        return this.IsGBK;
+    }
+
+    /**
+     * Set 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsGBK 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsGBK(Long IsGBK) {
+        this.IsGBK = IsGBK;
+    }
+
+    /**
+     * Get 是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JsonStandard 是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getJsonStandard() {
+        return this.JsonStandard;
+    }
+
+    /**
+     * Set 是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JsonStandard 是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJsonStandard(Long JsonStandard) {
+        this.JsonStandard = JsonStandard;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -346,6 +402,12 @@ public class ExtractRuleInfo extends AbstractModel{
         if (source.Backtracking != null) {
             this.Backtracking = new Long(source.Backtracking);
         }
+        if (source.IsGBK != null) {
+            this.IsGBK = new Long(source.IsGBK);
+        }
+        if (source.JsonStandard != null) {
+            this.JsonStandard = new Long(source.JsonStandard);
+        }
     }
 
 
@@ -363,6 +425,8 @@ public class ExtractRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UnMatchUpLoadSwitch", this.UnMatchUpLoadSwitch);
         this.setParamSimple(map, prefix + "UnMatchLogKey", this.UnMatchLogKey);
         this.setParamSimple(map, prefix + "Backtracking", this.Backtracking);
+        this.setParamSimple(map, prefix + "IsGBK", this.IsGBK);
+        this.setParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
 
     }
 }

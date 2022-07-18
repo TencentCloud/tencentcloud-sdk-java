@@ -26,6 +26,7 @@ public class ParseNotificationResponse extends AbstractModel{
     * 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
     */
     @SerializedName("EventType")
     @Expose
@@ -62,6 +63,14 @@ public class ParseNotificationResponse extends AbstractModel{
     private String SessionContext;
 
     /**
+    * 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTaskEvent")
+    @Expose
+    private ScheduleTask ScheduleTaskEvent;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -71,10 +80,12 @@ public class ParseNotificationResponse extends AbstractModel{
     /**
      * Get 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
-<li>EditMediaTask：视频编辑任务。</li> 
+<li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li> 
      * @return EventType 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
      */
     public String getEventType() {
         return this.EventType;
@@ -84,9 +95,11 @@ public class ParseNotificationResponse extends AbstractModel{
      * Set 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
      * @param EventType 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -165,6 +178,26 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
+     * Get 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTaskEvent 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleTask getScheduleTaskEvent() {
+        return this.ScheduleTaskEvent;
+    }
+
+    /**
+     * Set 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTaskEvent 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTaskEvent(ScheduleTask ScheduleTaskEvent) {
+        this.ScheduleTaskEvent = ScheduleTaskEvent;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -203,6 +236,9 @@ public class ParseNotificationResponse extends AbstractModel{
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ScheduleTaskEvent != null) {
+            this.ScheduleTaskEvent = new ScheduleTask(source.ScheduleTaskEvent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -218,6 +254,7 @@ public class ParseNotificationResponse extends AbstractModel{
         this.setParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

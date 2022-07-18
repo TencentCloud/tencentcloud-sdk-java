@@ -100,6 +100,16 @@ public class ProcessMediaRequest extends AbstractModel{
     private String SessionContext;
 
     /**
+    * 编排ID。
+注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
+注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
+
+    /**
      * Get 媒体处理的文件输入信息。 
      * @return InputInfo 媒体处理的文件输入信息。
      */
@@ -275,6 +285,34 @@ public class ProcessMediaRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    /**
+     * Get 编排ID。
+注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
+注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。 
+     * @return ScheduleId 编排ID。
+注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
+注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set 编排ID。
+注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
+注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+     * @param ScheduleId 编排ID。
+注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
+注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -316,6 +354,9 @@ public class ProcessMediaRequest extends AbstractModel{
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
     }
 
 
@@ -334,6 +375,7 @@ public class ProcessMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
 
     }
 }

@@ -90,6 +90,13 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
+    * 音视频增强参数。
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get 转码模板唯一标识。 
      * @return Definition 转码模板唯一标识。
      */
@@ -249,6 +256,22 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get 音视频增强参数。 
+     * @return EnhanceConfig 音视频增强参数。
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set 音视频增强参数。
+     * @param EnhanceConfig 音视频增强参数。
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public ModifyTranscodeTemplateRequest() {
     }
 
@@ -284,6 +307,9 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -300,6 +326,7 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

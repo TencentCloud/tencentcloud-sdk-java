@@ -58,6 +58,20 @@ public class BackupFile extends AbstractModel{
     private String DownloadLink;
 
     /**
+    * 当前实例地域码
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 备份的跨地域region和所对应的下载地址
+    */
+    @SerializedName("CrossBackupAddr")
+    @Expose
+    private CrossBackupAddr [] CrossBackupAddr;
+
+    /**
      * Get 备份文件唯一标识 
      * @return Id 备份文件唯一标识
      */
@@ -137,6 +151,38 @@ public class BackupFile extends AbstractModel{
         this.DownloadLink = DownloadLink;
     }
 
+    /**
+     * Get 当前实例地域码 
+     * @return Region 当前实例地域码
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 当前实例地域码
+     * @param Region 当前实例地域码
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 备份的跨地域region和所对应的下载地址 
+     * @return CrossBackupAddr 备份的跨地域region和所对应的下载地址
+     */
+    public CrossBackupAddr [] getCrossBackupAddr() {
+        return this.CrossBackupAddr;
+    }
+
+    /**
+     * Set 备份的跨地域region和所对应的下载地址
+     * @param CrossBackupAddr 备份的跨地域region和所对应的下载地址
+     */
+    public void setCrossBackupAddr(CrossBackupAddr [] CrossBackupAddr) {
+        this.CrossBackupAddr = CrossBackupAddr;
+    }
+
     public BackupFile() {
     }
 
@@ -163,6 +209,15 @@ public class BackupFile extends AbstractModel{
         if (source.DownloadLink != null) {
             this.DownloadLink = new String(source.DownloadLink);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.CrossBackupAddr != null) {
+            this.CrossBackupAddr = new CrossBackupAddr[source.CrossBackupAddr.length];
+            for (int i = 0; i < source.CrossBackupAddr.length; i++) {
+                this.CrossBackupAddr[i] = new CrossBackupAddr(source.CrossBackupAddr[i]);
+            }
+        }
     }
 
 
@@ -175,6 +230,8 @@ public class BackupFile extends AbstractModel{
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "DownloadLink", this.DownloadLink);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "CrossBackupAddr.", this.CrossBackupAddr);
 
     }
 }

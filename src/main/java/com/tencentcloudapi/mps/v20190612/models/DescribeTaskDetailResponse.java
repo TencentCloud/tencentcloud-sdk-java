@@ -27,6 +27,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -64,20 +65,20 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String FinishTime;
 
     /**
-    * 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("WorkflowTask")
-    @Expose
-    private WorkflowTask WorkflowTask;
-
-    /**
     * 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EditMediaTask")
     @Expose
     private EditMediaTask EditMediaTask;
+
+    /**
+    * 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowTask")
+    @Expose
+    private WorkflowTask WorkflowTask;
 
     /**
     * 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
@@ -124,6 +125,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String ExtInfo;
 
     /**
+    * 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTask")
+    @Expose
+    private ScheduleTask ScheduleTask;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -134,11 +143,13 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      * Get 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li> 
+<li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li> 
      * @return TaskType 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -149,10 +160,12 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
      * @param TaskType 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -235,26 +248,6 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public WorkflowTask getWorkflowTask() {
-        return this.WorkflowTask;
-    }
-
-    /**
-     * Set 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setWorkflowTask(WorkflowTask WorkflowTask) {
-        this.WorkflowTask = WorkflowTask;
-    }
-
-    /**
      * Get 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
@@ -272,6 +265,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
         this.EditMediaTask = EditMediaTask;
+    }
+
+    /**
+     * Get 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkflowTask getWorkflowTask() {
+        return this.WorkflowTask;
+    }
+
+    /**
+     * Set 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowTask(WorkflowTask WorkflowTask) {
+        this.WorkflowTask = WorkflowTask;
     }
 
     /**
@@ -379,6 +392,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTask 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleTask getScheduleTask() {
+        return this.ScheduleTask;
+    }
+
+    /**
+     * Set 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTask 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTask(ScheduleTask ScheduleTask) {
+        this.ScheduleTask = ScheduleTask;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -417,11 +450,11 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
-        if (source.WorkflowTask != null) {
-            this.WorkflowTask = new WorkflowTask(source.WorkflowTask);
-        }
         if (source.EditMediaTask != null) {
             this.EditMediaTask = new EditMediaTask(source.EditMediaTask);
+        }
+        if (source.WorkflowTask != null) {
+            this.WorkflowTask = new WorkflowTask(source.WorkflowTask);
         }
         if (source.LiveStreamProcessTask != null) {
             this.LiveStreamProcessTask = new LiveStreamProcessTask(source.LiveStreamProcessTask);
@@ -441,6 +474,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.ScheduleTask != null) {
+            this.ScheduleTask = new ScheduleTask(source.ScheduleTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -456,14 +492,15 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
-        this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
         this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
+        this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
         this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

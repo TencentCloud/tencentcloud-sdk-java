@@ -85,6 +85,13 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
     private TEHDConfig TEHDConfig;
 
     /**
+    * 音视频增强配置。
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -236,6 +243,22 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get 音视频增强配置。 
+     * @return EnhanceConfig 音视频增强配置。
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set 音视频增强配置。
+     * @param EnhanceConfig 音视频增强配置。
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public CreateTranscodeTemplateRequest() {
     }
 
@@ -268,6 +291,9 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

@@ -27,7 +27,8 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
     */
     @SerializedName("Codec")
     @Expose
@@ -53,6 +54,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     * 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
@@ -117,12 +119,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。 
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。 
      * @return Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      */
     public String getCodec() {
         return this.Codec;
@@ -133,12 +137,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      * @param Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -187,10 +193,12 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     /**
      * Get 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
-<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li> 
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。 
      * @return ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
@@ -200,9 +208,11 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
      * Set 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
      * @param ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;

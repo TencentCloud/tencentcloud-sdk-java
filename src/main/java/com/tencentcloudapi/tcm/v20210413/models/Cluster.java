@@ -104,6 +104,13 @@ public class Cluster extends AbstractModel{
     private String Type;
 
     /**
+    * 集群关联的 Namespace 列表
+    */
+    @SerializedName("HostedNamespaces")
+    @Expose
+    private String [] HostedNamespaces;
+
+    /**
      * Get 集群Id 
      * @return ClusterId 集群Id
      */
@@ -295,6 +302,22 @@ public class Cluster extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get 集群关联的 Namespace 列表 
+     * @return HostedNamespaces 集群关联的 Namespace 列表
+     */
+    public String [] getHostedNamespaces() {
+        return this.HostedNamespaces;
+    }
+
+    /**
+     * Set 集群关联的 Namespace 列表
+     * @param HostedNamespaces 集群关联的 Namespace 列表
+     */
+    public void setHostedNamespaces(String [] HostedNamespaces) {
+        this.HostedNamespaces = HostedNamespaces;
+    }
+
     public Cluster() {
     }
 
@@ -336,6 +359,12 @@ public class Cluster extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.HostedNamespaces != null) {
+            this.HostedNamespaces = new String[source.HostedNamespaces.length];
+            for (int i = 0; i < source.HostedNamespaces.length; i++) {
+                this.HostedNamespaces[i] = new String(source.HostedNamespaces[i]);
+            }
+        }
     }
 
 
@@ -354,6 +383,7 @@ public class Cluster extends AbstractModel{
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "HostedNamespaces.", this.HostedNamespaces);
 
     }
 }

@@ -881,6 +881,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。
+
+默认接口请求频率限制：10次/秒。
      * @param req LicensePlateOCRRequest
      * @return LicensePlateOCRResponse
      * @throws TencentCloudSDKException
@@ -1788,6 +1790,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持市面上主流版式电子运单的识别，包括收件人和寄件人的姓名、电话、地址以及运单号等字段，精度均处于业界领先水平，识别准确率达到99%以上。
+
+默认接口请求频率限制：10次/秒。
      * @param req WaybillOCRRequest
      * @return WaybillOCRResponse
      * @throws TencentCloudSDKException

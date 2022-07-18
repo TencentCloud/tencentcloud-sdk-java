@@ -51,6 +51,17 @@ public class WorkloadConfig extends AbstractModel{
     private String [] SelectedNodeList;
 
     /**
+    * 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private String DeployMode;
+
+    /**
      * Get 工作副本数 
      * @return Replicas 工作副本数
      */
@@ -114,6 +125,38 @@ public class WorkloadConfig extends AbstractModel{
         this.SelectedNodeList = SelectedNodeList;
     }
 
+    /**
+     * Get 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池 
+     * @return DeployMode 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
+     */
+    public String getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
+     * @param DeployMode 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
+     */
+    public void setDeployMode(String DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
     public WorkloadConfig() {
     }
 
@@ -137,6 +180,9 @@ public class WorkloadConfig extends AbstractModel{
                 this.SelectedNodeList[i] = new String(source.SelectedNodeList[i]);
             }
         }
+        if (source.DeployMode != null) {
+            this.DeployMode = new String(source.DeployMode);
+        }
     }
 
 
@@ -148,6 +194,7 @@ public class WorkloadConfig extends AbstractModel{
         this.setParamObj(map, prefix + "Resources.", this.Resources);
         this.setParamObj(map, prefix + "HorizontalPodAutoscaler.", this.HorizontalPodAutoscaler);
         this.setParamArraySimple(map, prefix + "SelectedNodeList.", this.SelectedNodeList);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
 
     }
 }

@@ -62,6 +62,7 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 目前 默认CMQ。
     */
     @SerializedName("NotifyType")
@@ -160,11 +161,13 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 目前 默认CMQ。 
      * @return NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 目前 默认CMQ。
      */
     public String getNotifyType() {
@@ -176,11 +179,13 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 目前 默认CMQ。
      * @param NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
+<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 目前 默认CMQ。
      */
     public void setNotifyType(String NotifyType) {

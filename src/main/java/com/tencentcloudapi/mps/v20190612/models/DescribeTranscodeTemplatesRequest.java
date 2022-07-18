@@ -71,6 +71,17 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+    */
+    @SerializedName("TranscodeType")
+    @Expose
+    private String TranscodeType;
+
+    /**
      * Get 转码模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      */
@@ -190,6 +201,38 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。 
+     * @return TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+     */
+    public String getTranscodeType() {
+        return this.TranscodeType;
+    }
+
+    /**
+     * Set 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+     * @param TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+     */
+    public void setTranscodeType(String TranscodeType) {
+        this.TranscodeType = TranscodeType;
+    }
+
     public DescribeTranscodeTemplatesRequest() {
     }
 
@@ -219,6 +262,9 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TranscodeType != null) {
+            this.TranscodeType = new String(source.TranscodeType);
+        }
     }
 
 
@@ -232,6 +278,7 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TEHDType", this.TEHDType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
 
     }
 }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LicensePlateOCRResponse extends AbstractModel{
+public class LicensePlateInfo extends AbstractModel{
 
     /**
     * 识别出的车牌号码。
@@ -49,20 +49,6 @@ public class LicensePlateOCRResponse extends AbstractModel{
     @SerializedName("Color")
     @Expose
     private String Color;
-
-    /**
-    * 全部车牌信息。
-    */
-    @SerializedName("LicensePlateInfos")
-    @Expose
-    private LicensePlateInfo [] LicensePlateInfos;
-
-    /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
 
     /**
      * Get 识别出的车牌号码。 
@@ -128,46 +114,14 @@ public class LicensePlateOCRResponse extends AbstractModel{
         this.Color = Color;
     }
 
-    /**
-     * Get 全部车牌信息。 
-     * @return LicensePlateInfos 全部车牌信息。
-     */
-    public LicensePlateInfo [] getLicensePlateInfos() {
-        return this.LicensePlateInfos;
-    }
-
-    /**
-     * Set 全部车牌信息。
-     * @param LicensePlateInfos 全部车牌信息。
-     */
-    public void setLicensePlateInfos(LicensePlateInfo [] LicensePlateInfos) {
-        this.LicensePlateInfos = LicensePlateInfos;
-    }
-
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public LicensePlateOCRResponse() {
+    public LicensePlateInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LicensePlateOCRResponse(LicensePlateOCRResponse source) {
+    public LicensePlateInfo(LicensePlateInfo source) {
         if (source.Number != null) {
             this.Number = new String(source.Number);
         }
@@ -180,15 +134,6 @@ public class LicensePlateOCRResponse extends AbstractModel{
         if (source.Color != null) {
             this.Color = new String(source.Color);
         }
-        if (source.LicensePlateInfos != null) {
-            this.LicensePlateInfos = new LicensePlateInfo[source.LicensePlateInfos.length];
-            for (int i = 0; i < source.LicensePlateInfos.length; i++) {
-                this.LicensePlateInfos[i] = new LicensePlateInfo(source.LicensePlateInfos[i]);
-            }
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
-        }
     }
 
 
@@ -200,8 +145,6 @@ public class LicensePlateOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamObj(map, prefix + "Rect.", this.Rect);
         this.setParamSimple(map, prefix + "Color", this.Color);
-        this.setParamArrayObj(map, prefix + "LicensePlateInfos.", this.LicensePlateInfos);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

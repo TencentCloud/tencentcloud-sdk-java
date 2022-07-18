@@ -37,6 +37,13 @@ public class DescribeTasksResponse extends AbstractModel{
     private String ScrollToken;
 
     /**
+    * 符合过滤条件的记录总数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
+     * Get 符合过滤条件的记录总数。 
+     * @return TotalCount 符合过滤条件的记录总数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合过滤条件的记录总数。
+     * @param TotalCount 符合过滤条件的记录总数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +131,9 @@ public class DescribeTasksResponse extends AbstractModel{
         if (source.ScrollToken != null) {
             this.ScrollToken = new String(source.ScrollToken);
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribeTasksResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

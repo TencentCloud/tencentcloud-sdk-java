@@ -60,6 +60,13 @@ public class CreateSSHKeyPairSecretRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+    */
+    @SerializedName("SSHKeyName")
+    @Expose
+    private String SSHKeyName;
+
+    /**
      * Get 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。 
      * @return SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
      */
@@ -147,6 +154,22 @@ public class CreateSSHKeyPairSecretRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。 
+     * @return SSHKeyName 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+     */
+    public String getSSHKeyName() {
+        return this.SSHKeyName;
+    }
+
+    /**
+     * Set 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+     * @param SSHKeyName 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+     */
+    public void setSSHKeyName(String SSHKeyName) {
+        this.SSHKeyName = SSHKeyName;
+    }
+
     public CreateSSHKeyPairSecretRequest() {
     }
 
@@ -173,6 +196,9 @@ public class CreateSSHKeyPairSecretRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.SSHKeyName != null) {
+            this.SSHKeyName = new String(source.SSHKeyName);
+        }
     }
 
 
@@ -185,6 +211,7 @@ public class CreateSSHKeyPairSecretRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
 
     }
 }

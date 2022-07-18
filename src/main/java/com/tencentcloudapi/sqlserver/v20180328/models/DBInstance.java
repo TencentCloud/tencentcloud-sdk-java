@@ -331,6 +331,27 @@ public class DBInstance extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+    */
+    @SerializedName("CrossRegions")
+    @Expose
+    private String [] CrossRegions;
+
+    /**
+    * 跨地域备份状态 enable-开启，disable-关闭
+    */
+    @SerializedName("CrossBackupEnabled")
+    @Expose
+    private String CrossBackupEnabled;
+
+    /**
+    * 跨地域备份保留天数，则默认7天
+    */
+    @SerializedName("CrossBackupSaveDays")
+    @Expose
+    private Long CrossBackupSaveDays;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1046,6 +1067,54 @@ public class DBInstance extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 跨地域备份目的地域，如果为空，则表示未开启跨地域备份 
+     * @return CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     */
+    public String [] getCrossRegions() {
+        return this.CrossRegions;
+    }
+
+    /**
+     * Set 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     * @param CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     */
+    public void setCrossRegions(String [] CrossRegions) {
+        this.CrossRegions = CrossRegions;
+    }
+
+    /**
+     * Get 跨地域备份状态 enable-开启，disable-关闭 
+     * @return CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
+     */
+    public String getCrossBackupEnabled() {
+        return this.CrossBackupEnabled;
+    }
+
+    /**
+     * Set 跨地域备份状态 enable-开启，disable-关闭
+     * @param CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
+     */
+    public void setCrossBackupEnabled(String CrossBackupEnabled) {
+        this.CrossBackupEnabled = CrossBackupEnabled;
+    }
+
+    /**
+     * Get 跨地域备份保留天数，则默认7天 
+     * @return CrossBackupSaveDays 跨地域备份保留天数，则默认7天
+     */
+    public Long getCrossBackupSaveDays() {
+        return this.CrossBackupSaveDays;
+    }
+
+    /**
+     * Set 跨地域备份保留天数，则默认7天
+     * @param CrossBackupSaveDays 跨地域备份保留天数，则默认7天
+     */
+    public void setCrossBackupSaveDays(Long CrossBackupSaveDays) {
+        this.CrossBackupSaveDays = CrossBackupSaveDays;
+    }
+
     public DBInstance() {
     }
 
@@ -1189,6 +1258,18 @@ public class DBInstance extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.CrossRegions != null) {
+            this.CrossRegions = new String[source.CrossRegions.length];
+            for (int i = 0; i < source.CrossRegions.length; i++) {
+                this.CrossRegions[i] = new String(source.CrossRegions[i]);
+            }
+        }
+        if (source.CrossBackupEnabled != null) {
+            this.CrossBackupEnabled = new String(source.CrossBackupEnabled);
+        }
+        if (source.CrossBackupSaveDays != null) {
+            this.CrossBackupSaveDays = new Long(source.CrossBackupSaveDays);
+        }
     }
 
 
@@ -1239,6 +1320,9 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
         this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CrossBackupEnabled", this.CrossBackupEnabled);
+        this.setParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
 
     }
 }
