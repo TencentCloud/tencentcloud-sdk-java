@@ -80,6 +80,13 @@ public class ModifyListenerRequest extends AbstractModel{
     private Long SniSwitch;
 
     /**
+    * 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
     * 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
     */
     @SerializedName("KeepaliveEnable")
@@ -233,6 +240,22 @@ public class ModifyListenerRequest extends AbstractModel{
     }
 
     /**
+     * Get 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。 
+     * @return TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     * @param TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
      * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。 
      * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
      */
@@ -312,6 +335,9 @@ public class ModifyListenerRequest extends AbstractModel{
         if (source.SniSwitch != null) {
             this.SniSwitch = new Long(source.SniSwitch);
         }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
         if (source.KeepaliveEnable != null) {
             this.KeepaliveEnable = new Long(source.KeepaliveEnable);
         }
@@ -336,6 +362,7 @@ public class ModifyListenerRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);

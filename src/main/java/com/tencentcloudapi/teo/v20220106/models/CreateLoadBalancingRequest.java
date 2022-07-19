@@ -30,7 +30,7 @@ public class CreateLoadBalancingRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 子域名，填写@表示根域
+    * 子域名
     */
     @SerializedName("Host")
     @Expose
@@ -76,16 +76,16 @@ proxied: 开启代理
     }
 
     /**
-     * Get 子域名，填写@表示根域 
-     * @return Host 子域名，填写@表示根域
+     * Get 子域名 
+     * @return Host 子域名
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 子域名，填写@表示根域
-     * @param Host 子域名，填写@表示根域
+     * Set 子域名
+     * @param Host 子域名
      */
     public void setHost(String Host) {
         this.Host = Host;

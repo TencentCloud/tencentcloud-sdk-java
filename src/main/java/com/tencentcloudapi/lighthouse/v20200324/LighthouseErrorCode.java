@@ -135,6 +135,9 @@ public enum LighthouseErrorCode {
     // 参数值非法，镜像 ID 格式非法。
      INVALIDPARAMETERVALUE_BLUEPRINTIDMALFORMED("InvalidParameterValue.BlueprintIdMalformed"),
      
+    // 套餐和镜像不匹配。
+     INVALIDPARAMETERVALUE_BUNDLEANDBLUEPRINTNOTMATCH("InvalidParameterValue.BundleAndBlueprintNotMatch"),
+     
     // 云联网实例ID格式非法。
      INVALIDPARAMETERVALUE_CCNIDMALFORMED("InvalidParameterValue.CcnIdMalformed"),
      
@@ -439,7 +442,10 @@ public enum LighthouseErrorCode {
      UNSUPPORTEDOPERATION_SYSTEMBUSY("UnsupportedOperation.SystemBusy"),
      
     // Windows实例不支持绑定密钥对。
-     UNSUPPORTEDOPERATION_WINDOWSNOTALLOWTOASSOCIATEKEYPAIR("UnsupportedOperation.WindowsNotAllowToAssociateKeyPair");
+     UNSUPPORTEDOPERATION_WINDOWSNOTALLOWTOASSOCIATEKEYPAIR("UnsupportedOperation.WindowsNotAllowToAssociateKeyPair"),
+     
+    // windows类型实例不支持密钥对功能。
+     UNSUPPORTEDOPERATION_WINDOWSNOTSUPPORTKEYPAIR("UnsupportedOperation.WindowsNotSupportKeyPair");
      
     private String value;
     private LighthouseErrorCode (String value){

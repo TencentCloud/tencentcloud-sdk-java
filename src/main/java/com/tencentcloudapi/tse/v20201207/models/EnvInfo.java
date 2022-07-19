@@ -107,6 +107,20 @@ public class EnvInfo extends AbstractModel{
     private String AliasEnvName;
 
     /**
+    * 环境描述
+    */
+    @SerializedName("EnvDesc")
+    @Expose
+    private String EnvDesc;
+
+    /**
+    * 客户端带宽
+    */
+    @SerializedName("ClientBandWidth")
+    @Expose
+    private Long ClientBandWidth;
+
+    /**
      * Get 环境名称 
      * @return EnvName 环境名称
      */
@@ -298,6 +312,38 @@ public class EnvInfo extends AbstractModel{
         this.AliasEnvName = AliasEnvName;
     }
 
+    /**
+     * Get 环境描述 
+     * @return EnvDesc 环境描述
+     */
+    public String getEnvDesc() {
+        return this.EnvDesc;
+    }
+
+    /**
+     * Set 环境描述
+     * @param EnvDesc 环境描述
+     */
+    public void setEnvDesc(String EnvDesc) {
+        this.EnvDesc = EnvDesc;
+    }
+
+    /**
+     * Get 客户端带宽 
+     * @return ClientBandWidth 客户端带宽
+     */
+    public Long getClientBandWidth() {
+        return this.ClientBandWidth;
+    }
+
+    /**
+     * Set 客户端带宽
+     * @param ClientBandWidth 客户端带宽
+     */
+    public void setClientBandWidth(Long ClientBandWidth) {
+        this.ClientBandWidth = ClientBandWidth;
+    }
+
     public EnvInfo() {
     }
 
@@ -345,6 +391,12 @@ public class EnvInfo extends AbstractModel{
         if (source.AliasEnvName != null) {
             this.AliasEnvName = new String(source.AliasEnvName);
         }
+        if (source.EnvDesc != null) {
+            this.EnvDesc = new String(source.EnvDesc);
+        }
+        if (source.ClientBandWidth != null) {
+            this.ClientBandWidth = new Long(source.ClientBandWidth);
+        }
     }
 
 
@@ -364,6 +416,8 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvReplica", this.EnvReplica);
         this.setParamSimple(map, prefix + "RunningCount", this.RunningCount);
         this.setParamSimple(map, prefix + "AliasEnvName", this.AliasEnvName);
+        this.setParamSimple(map, prefix + "EnvDesc", this.EnvDesc);
+        this.setParamSimple(map, prefix + "ClientBandWidth", this.ClientBandWidth);
 
     }
 }

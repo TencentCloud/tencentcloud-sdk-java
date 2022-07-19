@@ -39,7 +39,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *创建任务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+创建任务
      * @param req CreateJobRequest
      * @return CreateJobResponse
      * @throws TencentCloudSDKException
@@ -59,7 +61,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *创建资源组的伸缩组。当前一个资源组仅允许创建一个伸缩组。
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+创建资源组的伸缩组。当前一个资源组仅允许创建一个伸缩组。
      * @param req CreateRsgAsGroupRequest
      * @return CreateRsgAsGroupResponse
      * @throws TencentCloudSDKException
@@ -79,7 +83,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *创建运行环境
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+创建运行环境
      * @param req CreateRuntimeRequest
      * @return CreateRuntimeResponse
      * @throws TencentCloudSDKException
@@ -99,7 +105,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *创建服务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+创建服务
      * @param req CreateServiceRequest
      * @return CreateServiceResponse
      * @throws TencentCloudSDKException
@@ -119,7 +127,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *创建服务配置
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+创建服务配置
      * @param req CreateServiceConfigRequest
      * @return CreateServiceConfigResponse
      * @throws TencentCloudSDKException
@@ -139,7 +149,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *删除资源组中的节点。目前仅支持删除已经到期的预付费节点，和按量付费节点。
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+删除资源组中的节点。目前仅支持删除已经到期的预付费节点，和按量付费节点。
      * @param req DeleteInstanceRequest
      * @return DeleteInstanceResponse
      * @throws TencentCloudSDKException
@@ -159,7 +171,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *删除任务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+删除任务
      * @param req DeleteJobRequest
      * @return DeleteJobResponse
      * @throws TencentCloudSDKException
@@ -179,7 +193,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *删除资源组
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+删除资源组
      * @param req DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
      * @throws TencentCloudSDKException
@@ -199,7 +215,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *伸缩
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+伸缩
      * @param req DeleteRsgAsGroupRequest
      * @return DeleteRsgAsGroupResponse
      * @throws TencentCloudSDKException
@@ -219,7 +237,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *删除运行环境
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+删除运行环境
      * @param req DeleteRuntimeRequest
      * @return DeleteRuntimeResponse
      * @throws TencentCloudSDKException
@@ -239,7 +259,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *删除服务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+删除服务
      * @param req DeleteServiceRequest
      * @return DeleteServiceResponse
      * @throws TencentCloudSDKException
@@ -259,7 +281,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *删除服务配置
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+删除服务配置
      * @param req DeleteServiceConfigRequest
      * @return DeleteServiceConfigResponse
      * @throws TencentCloudSDKException
@@ -279,7 +303,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *获取节点列表
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+获取节点列表
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -299,7 +325,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *获取资源组列表
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+获取资源组列表
      * @param req DescribeResourceGroupsRequest
      * @return DescribeResourceGroupsResponse
      * @throws TencentCloudSDKException
@@ -319,7 +347,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *查询伸缩组活动
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+查询伸缩组活动
      * @param req DescribeRsgAsGroupActivitiesRequest
      * @return DescribeRsgAsGroupActivitiesResponse
      * @throws TencentCloudSDKException
@@ -339,7 +369,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *查询资源组的伸缩组信息
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+查询资源组的伸缩组信息
      * @param req DescribeRsgAsGroupsRequest
      * @return DescribeRsgAsGroupsResponse
      * @throws TencentCloudSDKException
@@ -359,7 +391,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *描述服务运行环境
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+描述服务运行环境
      * @param req DescribeRuntimesRequest
      * @return DescribeRuntimesResponse
      * @throws TencentCloudSDKException
@@ -379,7 +413,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *描述服务配置
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+描述服务配置
      * @param req DescribeServiceConfigsRequest
      * @return DescribeServiceConfigsResponse
      * @throws TencentCloudSDKException
@@ -399,7 +435,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *描述服务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+描述服务
      * @param req DescribeServicesRequest
      * @return DescribeServicesResponse
      * @throws TencentCloudSDKException
@@ -419,7 +457,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *停用资源组的伸缩组
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+停用资源组的伸缩组
      * @param req DisableRsgAsGroupRequest
      * @return DisableRsgAsGroupResponse
      * @throws TencentCloudSDKException
@@ -439,7 +479,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *启用资源组的伸缩组
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+启用资源组的伸缩组
      * @param req EnableRsgAsGroupRequest
      * @return EnableRsgAsGroupResponse
      * @throws TencentCloudSDKException
@@ -459,7 +501,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *暴露服务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+暴露服务
      * @param req ExposeServiceRequest
      * @return ExposeServiceResponse
      * @throws TencentCloudSDKException
@@ -479,7 +523,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *更新任务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+更新任务
      * @param req UpdateJobRequest
      * @return UpdateJobResponse
      * @throws TencentCloudSDKException
@@ -499,7 +545,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *更新资源组的伸缩组
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+更新资源组的伸缩组
      * @param req UpdateRsgAsGroupRequest
      * @return UpdateRsgAsGroupResponse
      * @throws TencentCloudSDKException
@@ -519,7 +567,9 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
-     *更新服务
+     *因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+
+更新服务
      * @param req UpdateServiceRequest
      * @return UpdateServiceResponse
      * @throws TencentCloudSDKException

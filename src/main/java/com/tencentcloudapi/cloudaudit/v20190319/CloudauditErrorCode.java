@@ -130,7 +130,10 @@ public enum CloudauditErrorCode {
      RESOURCEINUSE_COSBUCKETEXISTS("ResourceInUse.CosBucketExists"),
      
     // 跟踪集不存在
-     RESOURCENOTFOUND_AUDITNOTEXIST("ResourceNotFound.AuditNotExist");
+     RESOURCENOTFOUND_AUDITNOTEXIST("ResourceNotFound.AuditNotExist"),
+     
+    // 角色不存在。
+     RESOURCENOTFOUND_ROLENOTEXIST("ResourceNotFound.RoleNotExist");
      
     private String value;
     private CloudauditErrorCode (String value){

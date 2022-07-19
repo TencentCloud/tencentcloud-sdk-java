@@ -42,6 +42,9 @@ public enum TeoErrorCode {
     // 域名不存在或不属于该账号。
      INVALIDPARAMETER_DOMAINNOTFOUND("InvalidParameter.DomainNotFound"),
      
+    // 无效的节点缓存。
+     INVALIDPARAMETER_INVALIDCACHEONLYONSWITCH("InvalidParameter.InvalidCacheOnlyOnSwitch"),
+     
     // 证书信息错误。
      INVALIDPARAMETER_INVALIDCERTINFO("InvalidParameter.InvalidCertInfo"),
      
@@ -86,6 +89,9 @@ public enum TeoErrorCode {
      
     // DNS 记录名称错误。
      INVALIDPARAMETERVALUE_INVALIDDNSNAME("InvalidParameterValue.InvalidDNSName"),
+     
+    // DNS 代理域名错误。
+     INVALIDPARAMETERVALUE_INVALIDPROXYNAME("InvalidParameterValue.InvalidProxyName"),
      
     // DNS 代理域名源站错误。
      INVALIDPARAMETERVALUE_INVALIDPROXYORIGIN("InvalidParameterValue.InvalidProxyOrigin"),

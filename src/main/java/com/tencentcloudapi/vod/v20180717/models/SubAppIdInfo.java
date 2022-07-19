@@ -32,9 +32,9 @@ public class SubAppIdInfo extends AbstractModel{
     /**
     * 子应用名称。
     */
-    @SerializedName("Name")
+    @SerializedName("SubAppIdName")
     @Expose
-    private String Name;
+    private String SubAppIdName;
 
     /**
     * 子应用简介。
@@ -62,6 +62,13 @@ public class SubAppIdInfo extends AbstractModel{
     private String Status;
 
     /**
+    * 子应用名称（该字段已不推荐使用，建议使用新的子应用名称字段 SubAppIdName）。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 子应用 ID。 
      * @return SubAppId 子应用 ID。
      */
@@ -79,18 +86,18 @@ public class SubAppIdInfo extends AbstractModel{
 
     /**
      * Get 子应用名称。 
-     * @return Name 子应用名称。
+     * @return SubAppIdName 子应用名称。
      */
-    public String getName() {
-        return this.Name;
+    public String getSubAppIdName() {
+        return this.SubAppIdName;
     }
 
     /**
      * Set 子应用名称。
-     * @param Name 子应用名称。
+     * @param SubAppIdName 子应用名称。
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setSubAppIdName(String SubAppIdName) {
+        this.SubAppIdName = SubAppIdName;
     }
 
     /**
@@ -157,6 +164,22 @@ public class SubAppIdInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 子应用名称（该字段已不推荐使用，建议使用新的子应用名称字段 SubAppIdName）。 
+     * @return Name 子应用名称（该字段已不推荐使用，建议使用新的子应用名称字段 SubAppIdName）。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 子应用名称（该字段已不推荐使用，建议使用新的子应用名称字段 SubAppIdName）。
+     * @param Name 子应用名称（该字段已不推荐使用，建议使用新的子应用名称字段 SubAppIdName）。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public SubAppIdInfo() {
     }
 
@@ -168,8 +191,8 @@ public class SubAppIdInfo extends AbstractModel{
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.SubAppIdName != null) {
+            this.SubAppIdName = new String(source.SubAppIdName);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -180,6 +203,9 @@ public class SubAppIdInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -188,10 +214,11 @@ public class SubAppIdInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubAppIdName", this.SubAppIdName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

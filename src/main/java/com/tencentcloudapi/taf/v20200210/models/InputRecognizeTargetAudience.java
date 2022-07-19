@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class InputRecognizeTargetAudience extends AbstractModel{
 
     /**
+    * 模型ID列表
+    */
+    @SerializedName("ModelIdList")
+    @Expose
+    private Long [] ModelIdList;
+
+    /**
     * 设备ID，AccountType指定的类型
     */
     @SerializedName("Uid")
@@ -35,13 +42,6 @@ public class InputRecognizeTargetAudience extends AbstractModel{
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
-
-    /**
-    * 模型ID列表
-    */
-    @SerializedName("ModelIdList")
-    @Expose
-    private Long [] ModelIdList;
 
     /**
     * 用户IP
@@ -303,6 +303,22 @@ public class InputRecognizeTargetAudience extends AbstractModel{
     private Device [] DeviceList;
 
     /**
+     * Get 模型ID列表 
+     * @return ModelIdList 模型ID列表
+     */
+    public Long [] getModelIdList() {
+        return this.ModelIdList;
+    }
+
+    /**
+     * Set 模型ID列表
+     * @param ModelIdList 模型ID列表
+     */
+    public void setModelIdList(Long [] ModelIdList) {
+        this.ModelIdList = ModelIdList;
+    }
+
+    /**
      * Get 设备ID，AccountType指定的类型 
      * @return Uid 设备ID，AccountType指定的类型
      */
@@ -332,22 +348,6 @@ public class InputRecognizeTargetAudience extends AbstractModel{
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
-    }
-
-    /**
-     * Get 模型ID列表 
-     * @return ModelIdList 模型ID列表
-     */
-    public Long [] getModelIdList() {
-        return this.ModelIdList;
-    }
-
-    /**
-     * Set 模型ID列表
-     * @param ModelIdList 模型ID列表
-     */
-    public void setModelIdList(Long [] ModelIdList) {
-        this.ModelIdList = ModelIdList;
     }
 
     /**
@@ -950,17 +950,17 @@ public class InputRecognizeTargetAudience extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InputRecognizeTargetAudience(InputRecognizeTargetAudience source) {
-        if (source.Uid != null) {
-            this.Uid = new String(source.Uid);
-        }
-        if (source.AccountType != null) {
-            this.AccountType = new Long(source.AccountType);
-        }
         if (source.ModelIdList != null) {
             this.ModelIdList = new Long[source.ModelIdList.length];
             for (int i = 0; i < source.ModelIdList.length; i++) {
                 this.ModelIdList[i] = new Long(source.ModelIdList[i]);
             }
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
         }
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
@@ -1083,9 +1083,9 @@ public class InputRecognizeTargetAudience extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "ModelIdList.", this.ModelIdList);
         this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
-        this.setParamArraySimple(map, prefix + "ModelIdList.", this.ModelIdList);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "Osv", this.Osv);

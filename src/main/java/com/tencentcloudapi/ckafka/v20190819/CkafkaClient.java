@@ -139,6 +139,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *用于查询cdc-ckafka任务状态
+     * @param req CheckCdcClusterRequest
+     * @return CheckCdcClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCdcClusterResponse CheckCdcCluster(CheckCdcClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckCdcClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckCdcClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckCdcCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加 ACL 策略
      * @param req CreateAclRequest
      * @return CreateAclResponse
@@ -151,6 +171,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateAclResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于cdc的专用ckafka集群
+     * @param req CreateCdcClusterRequest
+     * @return CreateCdcClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCdcClusterResponse CreateCdcCluster(CreateCdcClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCdcClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCdcClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCdcCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

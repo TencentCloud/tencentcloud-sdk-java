@@ -135,6 +135,20 @@ public class VehicleInvoiceInfo extends AbstractModel{
     private String MotorBankAccount;
 
     /**
+    * 销售地址
+    */
+    @SerializedName("SellerAddress")
+    @Expose
+    private String SellerAddress;
+
+    /**
+    * 销售电话
+    */
+    @SerializedName("SellerTel")
+    @Expose
+    private String SellerTel;
+
+    /**
      * Get 车辆类型 
      * @return CarType 车辆类型
      */
@@ -390,6 +404,38 @@ public class VehicleInvoiceInfo extends AbstractModel{
         this.MotorBankAccount = MotorBankAccount;
     }
 
+    /**
+     * Get 销售地址 
+     * @return SellerAddress 销售地址
+     */
+    public String getSellerAddress() {
+        return this.SellerAddress;
+    }
+
+    /**
+     * Set 销售地址
+     * @param SellerAddress 销售地址
+     */
+    public void setSellerAddress(String SellerAddress) {
+        this.SellerAddress = SellerAddress;
+    }
+
+    /**
+     * Get 销售电话 
+     * @return SellerTel 销售电话
+     */
+    public String getSellerTel() {
+        return this.SellerTel;
+    }
+
+    /**
+     * Set 销售电话
+     * @param SellerTel 销售电话
+     */
+    public void setSellerTel(String SellerTel) {
+        this.SellerTel = SellerTel;
+    }
+
     public VehicleInvoiceInfo() {
     }
 
@@ -446,6 +492,12 @@ public class VehicleInvoiceInfo extends AbstractModel{
         if (source.MotorBankAccount != null) {
             this.MotorBankAccount = new String(source.MotorBankAccount);
         }
+        if (source.SellerAddress != null) {
+            this.SellerAddress = new String(source.SellerAddress);
+        }
+        if (source.SellerTel != null) {
+            this.SellerTel = new String(source.SellerTel);
+        }
     }
 
 
@@ -469,6 +521,8 @@ public class VehicleInvoiceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MotorTaxRate", this.MotorTaxRate);
         this.setParamSimple(map, prefix + "MotorBankName", this.MotorBankName);
         this.setParamSimple(map, prefix + "MotorBankAccount", this.MotorBankAccount);
+        this.setParamSimple(map, prefix + "SellerAddress", this.SellerAddress);
+        this.setParamSimple(map, prefix + "SellerTel", this.SellerTel);
 
     }
 }

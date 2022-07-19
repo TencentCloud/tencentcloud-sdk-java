@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateBlockNodeRecordsRequest extends AbstractModel{
 
     /**
-    * 盘查实例id
+    * 盘查组id，可在“盘查组概览”功能中获取。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 节点id
+    * 节点id，可在“数据接入管理”中获取。
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 节点记录-json
+    * 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
     */
     @SerializedName("Records")
     @Expose
     private String Records;
 
     /**
-     * Get 盘查实例id 
-     * @return GroupId 盘查实例id
+     * Get 盘查组id，可在“盘查组概览”功能中获取。 
+     * @return GroupId 盘查组id，可在“盘查组概览”功能中获取。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 盘查实例id
-     * @param GroupId 盘查实例id
+     * Set 盘查组id，可在“盘查组概览”功能中获取。
+     * @param GroupId 盘查组id，可在“盘查组概览”功能中获取。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 节点id 
-     * @return NodeId 节点id
+     * Get 节点id，可在“数据接入管理”中获取。 
+     * @return NodeId 节点id，可在“数据接入管理”中获取。
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点id
-     * @param NodeId 节点id
+     * Set 节点id，可在“数据接入管理”中获取。
+     * @param NodeId 节点id，可在“数据接入管理”中获取。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 节点记录-json 
-     * @return Records 节点记录-json
+     * Get 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。 
+     * @return Records 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
      */
     public String getRecords() {
         return this.Records;
     }
 
     /**
-     * Set 节点记录-json
-     * @param Records 节点记录-json
+     * Set 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
+     * @param Records 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
      */
     public void setRecords(String Records) {
         this.Records = Records;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaClassInfo extends AbstractModel{
 
     /**
-    * 分类 ID
+    * 分类 ID。
     */
     @SerializedName("ClassId")
     @Expose
@@ -37,11 +37,11 @@ public class MediaClassInfo extends AbstractModel{
     private Long ParentId;
 
     /**
-    * 分类名称
+    * 分类名称。
     */
-    @SerializedName("ClassName")
+    @SerializedName("Name")
     @Expose
-    private String ClassName;
+    private String Name;
 
     /**
     * 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
@@ -51,23 +51,30 @@ public class MediaClassInfo extends AbstractModel{
     private Long Level;
 
     /**
-    * 当前分类的第一级子类 ID 集合
+    * 当前分类的第一级子类 ID 集合。
     */
     @SerializedName("SubClassIdSet")
     @Expose
     private Long [] SubClassIdSet;
 
     /**
-     * Get 分类 ID 
-     * @return ClassId 分类 ID
+    * 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+    */
+    @SerializedName("ClassName")
+    @Expose
+    private String ClassName;
+
+    /**
+     * Get 分类 ID。 
+     * @return ClassId 分类 ID。
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 分类 ID
-     * @param ClassId 分类 ID
+     * Set 分类 ID。
+     * @param ClassId 分类 ID。
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
@@ -90,19 +97,19 @@ public class MediaClassInfo extends AbstractModel{
     }
 
     /**
-     * Get 分类名称 
-     * @return ClassName 分类名称
+     * Get 分类名称。 
+     * @return Name 分类名称。
      */
-    public String getClassName() {
-        return this.ClassName;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 分类名称
-     * @param ClassName 分类名称
+     * Set 分类名称。
+     * @param Name 分类名称。
      */
-    public void setClassName(String ClassName) {
-        this.ClassName = ClassName;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -122,19 +129,35 @@ public class MediaClassInfo extends AbstractModel{
     }
 
     /**
-     * Get 当前分类的第一级子类 ID 集合 
-     * @return SubClassIdSet 当前分类的第一级子类 ID 集合
+     * Get 当前分类的第一级子类 ID 集合。 
+     * @return SubClassIdSet 当前分类的第一级子类 ID 集合。
      */
     public Long [] getSubClassIdSet() {
         return this.SubClassIdSet;
     }
 
     /**
-     * Set 当前分类的第一级子类 ID 集合
-     * @param SubClassIdSet 当前分类的第一级子类 ID 集合
+     * Set 当前分类的第一级子类 ID 集合。
+     * @param SubClassIdSet 当前分类的第一级子类 ID 集合。
      */
     public void setSubClassIdSet(Long [] SubClassIdSet) {
         this.SubClassIdSet = SubClassIdSet;
+    }
+
+    /**
+     * Get 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。 
+     * @return ClassName 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+     */
+    public String getClassName() {
+        return this.ClassName;
+    }
+
+    /**
+     * Set 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+     * @param ClassName 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+     */
+    public void setClassName(String ClassName) {
+        this.ClassName = ClassName;
     }
 
     public MediaClassInfo() {
@@ -151,8 +174,8 @@ public class MediaClassInfo extends AbstractModel{
         if (source.ParentId != null) {
             this.ParentId = new Long(source.ParentId);
         }
-        if (source.ClassName != null) {
-            this.ClassName = new String(source.ClassName);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.Level != null) {
             this.Level = new Long(source.Level);
@@ -163,6 +186,9 @@ public class MediaClassInfo extends AbstractModel{
                 this.SubClassIdSet[i] = new Long(source.SubClassIdSet[i]);
             }
         }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
     }
 
 
@@ -172,9 +198,10 @@ public class MediaClassInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "ParentId", this.ParentId);
-        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamArraySimple(map, prefix + "SubClassIdSet.", this.SubClassIdSet);
+        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
 
     }
 }
