@@ -75,6 +75,15 @@ public class KTVMusicBaseInfo extends AbstractModel{
     private String [] RightSet;
 
     /**
+    * 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
+    */
+    @SerializedName("RecommendType")
+    @Expose
+    private String RecommendType;
+
+    /**
      * Get 歌曲Id。 
      * @return MusicId 歌曲Id。
      */
@@ -198,6 +207,30 @@ public class KTVMusicBaseInfo extends AbstractModel{
         this.RightSet = RightSet;
     }
 
+    /**
+     * Get 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li> 
+     * @return RecommendType 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
+     */
+    public String getRecommendType() {
+        return this.RecommendType;
+    }
+
+    /**
+     * Set 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
+     * @param RecommendType 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
+     */
+    public void setRecommendType(String RecommendType) {
+        this.RecommendType = RecommendType;
+    }
+
     public KTVMusicBaseInfo() {
     }
 
@@ -233,6 +266,9 @@ public class KTVMusicBaseInfo extends AbstractModel{
                 this.RightSet[i] = new String(source.RightSet[i]);
             }
         }
+        if (source.RecommendType != null) {
+            this.RecommendType = new String(source.RecommendType);
+        }
     }
 
 
@@ -247,6 +283,7 @@ public class KTVMusicBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SingerImageUrl", this.SingerImageUrl);
         this.setParamObj(map, prefix + "AlbumInfo.", this.AlbumInfo);
         this.setParamArraySimple(map, prefix + "RightSet.", this.RightSet);
+        this.setParamSimple(map, prefix + "RecommendType", this.RecommendType);
 
     }
 }

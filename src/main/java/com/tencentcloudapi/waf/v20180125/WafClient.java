@@ -683,6 +683,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *创建搜索下载攻击日志任务，使用CLS新版本的搜索下载getlog接口
+     * @param req PostAttackDownloadTaskRequest
+     * @return PostAttackDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public PostAttackDownloadTaskResponse PostAttackDownloadTask(PostAttackDownloadTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PostAttackDownloadTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PostAttackDownloadTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PostAttackDownloadTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于搜索WAF访问日志
      * @param req SearchAccessLogRequest
      * @return SearchAccessLogResponse

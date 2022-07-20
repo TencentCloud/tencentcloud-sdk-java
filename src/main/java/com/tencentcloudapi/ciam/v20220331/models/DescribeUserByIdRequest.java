@@ -37,6 +37,16 @@ public class DescribeUserByIdRequest extends AbstractModel{
     private String UserId;
 
     /**
+    * 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
+    */
+    @SerializedName("Original")
+    @Expose
+    private Boolean Original;
+
+    /**
      * Get 用户目录ID 
      * @return UserStoreId 用户目录ID
      */
@@ -68,6 +78,34 @@ public class DescribeUserByIdRequest extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文 
+     * @return Original 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
+     */
+    public Boolean getOriginal() {
+        return this.Original;
+    }
+
+    /**
+     * Set 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
+     * @param Original 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
+     */
+    public void setOriginal(Boolean Original) {
+        this.Original = Original;
+    }
+
     public DescribeUserByIdRequest() {
     }
 
@@ -82,6 +120,9 @@ public class DescribeUserByIdRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.Original != null) {
+            this.Original = new Boolean(source.Original);
+        }
     }
 
 
@@ -91,6 +132,7 @@ public class DescribeUserByIdRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "Original", this.Original);
 
     }
 }

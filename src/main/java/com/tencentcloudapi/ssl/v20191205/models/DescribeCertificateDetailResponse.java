@@ -319,6 +319,22 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private String EncryptPrivateKey;
 
     /**
+    * 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertFingerprint")
+    @Expose
+    private String CertFingerprint;
+
+    /**
+    * 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptCertFingerprint")
+    @Expose
+    private String EncryptCertFingerprint;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1066,6 +1082,46 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertFingerprint 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCertFingerprint() {
+        return this.CertFingerprint;
+    }
+
+    /**
+     * Set 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertFingerprint 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertFingerprint(String CertFingerprint) {
+        this.CertFingerprint = CertFingerprint;
+    }
+
+    /**
+     * Get 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptCertFingerprint 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptCertFingerprint() {
+        return this.EncryptCertFingerprint;
+    }
+
+    /**
+     * Set 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptCertFingerprint 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptCertFingerprint(String EncryptCertFingerprint) {
+        this.EncryptCertFingerprint = EncryptCertFingerprint;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1206,6 +1262,12 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
         if (source.EncryptPrivateKey != null) {
             this.EncryptPrivateKey = new String(source.EncryptPrivateKey);
         }
+        if (source.CertFingerprint != null) {
+            this.CertFingerprint = new String(source.CertFingerprint);
+        }
+        if (source.EncryptCertFingerprint != null) {
+            this.EncryptCertFingerprint = new String(source.EncryptCertFingerprint);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1253,6 +1315,8 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "RootCert.", this.RootCert);
         this.setParamSimple(map, prefix + "EncryptCert", this.EncryptCert);
         this.setParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
+        this.setParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
+        this.setParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

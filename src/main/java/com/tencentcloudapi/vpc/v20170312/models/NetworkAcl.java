@@ -72,6 +72,20 @@ public class NetworkAcl extends AbstractModel{
     private NetworkAclEntry [] EgressEntries;
 
     /**
+    * 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+    */
+    @SerializedName("NetworkAclType")
+    @Expose
+    private String NetworkAclType;
+
+    /**
+    * 标签键值对
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `VPC`实例`ID`。 
      * @return VpcId `VPC`实例`ID`。
      */
@@ -183,6 +197,38 @@ public class NetworkAcl extends AbstractModel{
         this.EgressEntries = EgressEntries;
     }
 
+    /**
+     * Get 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE' 
+     * @return NetworkAclType 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     */
+    public String getNetworkAclType() {
+        return this.NetworkAclType;
+    }
+
+    /**
+     * Set 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     * @param NetworkAclType 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     */
+    public void setNetworkAclType(String NetworkAclType) {
+        this.NetworkAclType = NetworkAclType;
+    }
+
+    /**
+     * Get 标签键值对 
+     * @return TagSet 标签键值对
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对
+     * @param TagSet 标签键值对
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public NetworkAcl() {
     }
 
@@ -221,6 +267,15 @@ public class NetworkAcl extends AbstractModel{
                 this.EgressEntries[i] = new NetworkAclEntry(source.EgressEntries[i]);
             }
         }
+        if (source.NetworkAclType != null) {
+            this.NetworkAclType = new String(source.NetworkAclType);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -235,6 +290,8 @@ public class NetworkAcl extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);
         this.setParamArrayObj(map, prefix + "IngressEntries.", this.IngressEntries);
         this.setParamArrayObj(map, prefix + "EgressEntries.", this.EgressEntries);
+        this.setParamSimple(map, prefix + "NetworkAclType", this.NetworkAclType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

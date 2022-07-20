@@ -142,6 +142,13 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private Long QuotaConsumerByteRate;
 
     /**
+    * 调整topic副本数
+    */
+    @SerializedName("ReplicaNum")
+    @Expose
+    private Long ReplicaNum;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -413,6 +420,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.QuotaConsumerByteRate = QuotaConsumerByteRate;
     }
 
+    /**
+     * Get 调整topic副本数 
+     * @return ReplicaNum 调整topic副本数
+     */
+    public Long getReplicaNum() {
+        return this.ReplicaNum;
+    }
+
+    /**
+     * Set 调整topic副本数
+     * @param ReplicaNum 调整topic副本数
+     */
+    public void setReplicaNum(Long ReplicaNum) {
+        this.ReplicaNum = ReplicaNum;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -478,6 +501,9 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         if (source.QuotaConsumerByteRate != null) {
             this.QuotaConsumerByteRate = new Long(source.QuotaConsumerByteRate);
         }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new Long(source.ReplicaNum);
+        }
     }
 
 
@@ -502,6 +528,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
         this.setParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
+        this.setParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
 
     }
 }

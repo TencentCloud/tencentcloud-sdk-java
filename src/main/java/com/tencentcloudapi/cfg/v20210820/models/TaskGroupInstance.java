@@ -90,6 +90,14 @@ public class TaskGroupInstance extends AbstractModel{
     private String TaskGroupInstanceEndTime;
 
     /**
+    * 实例是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskGroupInstanceIsRedo")
+    @Expose
+    private Boolean TaskGroupInstanceIsRedo;
+
+    /**
      * Get 实例ID 
      * @return TaskGroupInstanceId 实例ID
      */
@@ -249,6 +257,26 @@ public class TaskGroupInstance extends AbstractModel{
         this.TaskGroupInstanceEndTime = TaskGroupInstanceEndTime;
     }
 
+    /**
+     * Get 实例是否可重试
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskGroupInstanceIsRedo 实例是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTaskGroupInstanceIsRedo() {
+        return this.TaskGroupInstanceIsRedo;
+    }
+
+    /**
+     * Set 实例是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskGroupInstanceIsRedo 实例是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskGroupInstanceIsRedo(Boolean TaskGroupInstanceIsRedo) {
+        this.TaskGroupInstanceIsRedo = TaskGroupInstanceIsRedo;
+    }
+
     public TaskGroupInstance() {
     }
 
@@ -284,6 +312,9 @@ public class TaskGroupInstance extends AbstractModel{
         if (source.TaskGroupInstanceEndTime != null) {
             this.TaskGroupInstanceEndTime = new String(source.TaskGroupInstanceEndTime);
         }
+        if (source.TaskGroupInstanceIsRedo != null) {
+            this.TaskGroupInstanceIsRedo = new Boolean(source.TaskGroupInstanceIsRedo);
+        }
     }
 
 
@@ -300,6 +331,7 @@ public class TaskGroupInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskGroupInstanceStatusType", this.TaskGroupInstanceStatusType);
         this.setParamSimple(map, prefix + "TaskGroupInstanceStartTime", this.TaskGroupInstanceStartTime);
         this.setParamSimple(map, prefix + "TaskGroupInstanceEndTime", this.TaskGroupInstanceEndTime);
+        this.setParamSimple(map, prefix + "TaskGroupInstanceIsRedo", this.TaskGroupInstanceIsRedo);
 
     }
 }

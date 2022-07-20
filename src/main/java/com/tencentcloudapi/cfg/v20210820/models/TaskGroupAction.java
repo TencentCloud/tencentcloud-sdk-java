@@ -150,6 +150,22 @@ public class TaskGroupAction extends AbstractModel{
     private String ActionType;
 
     /**
+    * 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsExecuteRedo")
+    @Expose
+    private Boolean IsExecuteRedo;
+
+    /**
+    * 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActionRisk")
+    @Expose
+    private String ActionRisk;
+
+    /**
      * Get 任务分组动作ID 
      * @return TaskGroupActionId 任务分组动作ID
      */
@@ -453,6 +469,46 @@ public class TaskGroupAction extends AbstractModel{
         this.ActionType = ActionType;
     }
 
+    /**
+     * Get 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsExecuteRedo 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsExecuteRedo() {
+        return this.IsExecuteRedo;
+    }
+
+    /**
+     * Set 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsExecuteRedo 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsExecuteRedo(Boolean IsExecuteRedo) {
+        this.IsExecuteRedo = IsExecuteRedo;
+    }
+
+    /**
+     * Get 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ActionRisk 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getActionRisk() {
+        return this.ActionRisk;
+    }
+
+    /**
+     * Set 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActionRisk 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActionRisk(String ActionRisk) {
+        this.ActionRisk = ActionRisk;
+    }
+
     public TaskGroupAction() {
     }
 
@@ -515,6 +571,12 @@ public class TaskGroupAction extends AbstractModel{
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
+        if (source.IsExecuteRedo != null) {
+            this.IsExecuteRedo = new Boolean(source.IsExecuteRedo);
+        }
+        if (source.ActionRisk != null) {
+            this.ActionRisk = new String(source.ActionRisk);
+        }
     }
 
 
@@ -539,6 +601,8 @@ public class TaskGroupAction extends AbstractModel{
         this.setParamSimple(map, prefix + "ActionApiType", this.ActionApiType);
         this.setParamSimple(map, prefix + "ActionAttribute", this.ActionAttribute);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "IsExecuteRedo", this.IsExecuteRedo);
+        this.setParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
 
     }
 }

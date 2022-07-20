@@ -34,7 +34,7 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
     private String EngineType;
 
     /**
-    * 语音流地址，支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+    * 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
     */
     @SerializedName("Url")
     @Expose
@@ -136,16 +136,16 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 语音流地址，支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流 
-     * @return Url 语音流地址，支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+     * Get 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls) 
+     * @return Url 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 语音流地址，支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
-     * @param Url 语音流地址，支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+     * Set 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
+     * @param Url 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
      */
     public void setUrl(String Url) {
         this.Url = Url;

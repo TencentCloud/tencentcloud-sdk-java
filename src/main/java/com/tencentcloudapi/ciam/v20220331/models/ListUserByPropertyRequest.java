@@ -47,6 +47,13 @@ public class ListUserByPropertyRequest extends AbstractModel{
     private String PropertyValue;
 
     /**
+    * 返回信息是否为原文
+    */
+    @SerializedName("Original")
+    @Expose
+    private Boolean Original;
+
+    /**
      * Get 用户目录ID 
      * @return UserStoreId 用户目录ID
      */
@@ -106,6 +113,22 @@ public class ListUserByPropertyRequest extends AbstractModel{
         this.PropertyValue = PropertyValue;
     }
 
+    /**
+     * Get 返回信息是否为原文 
+     * @return Original 返回信息是否为原文
+     */
+    public Boolean getOriginal() {
+        return this.Original;
+    }
+
+    /**
+     * Set 返回信息是否为原文
+     * @param Original 返回信息是否为原文
+     */
+    public void setOriginal(Boolean Original) {
+        this.Original = Original;
+    }
+
     public ListUserByPropertyRequest() {
     }
 
@@ -123,6 +146,9 @@ public class ListUserByPropertyRequest extends AbstractModel{
         if (source.PropertyValue != null) {
             this.PropertyValue = new String(source.PropertyValue);
         }
+        if (source.Original != null) {
+            this.Original = new Boolean(source.Original);
+        }
     }
 
 
@@ -133,6 +159,7 @@ public class ListUserByPropertyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
         this.setParamSimple(map, prefix + "PropertyCode", this.PropertyCode);
         this.setParamSimple(map, prefix + "PropertyValue", this.PropertyValue);
+        this.setParamSimple(map, prefix + "Original", this.Original);
 
     }
 }

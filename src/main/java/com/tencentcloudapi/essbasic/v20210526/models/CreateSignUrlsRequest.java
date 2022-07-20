@@ -49,6 +49,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
+"FOLLOWER"：关注方，目前是合同抄送方；
     */
     @SerializedName("GenerateType")
     @Expose
@@ -69,7 +70,8 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 参与人手机号，GenerateType为"PERSON"时必填
+    * 参与人手机号；
+GenerateType为"PERSON"或"FOLLOWER"时必填
     */
     @SerializedName("Mobile")
     @Expose
@@ -163,12 +165,14 @@ public class CreateSignUrlsRequest extends AbstractModel{
 "ALL"：全部签署方签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
-"PERSON"：个人； 
+"PERSON"：个人；
+"FOLLOWER"：关注方，目前是合同抄送方； 
      * @return GenerateType 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
+"FOLLOWER"：关注方，目前是合同抄送方；
      */
     public String getGenerateType() {
         return this.GenerateType;
@@ -180,11 +184,13 @@ public class CreateSignUrlsRequest extends AbstractModel{
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
+"FOLLOWER"：关注方，目前是合同抄送方；
      * @param GenerateType 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
+"FOLLOWER"：关注方，目前是合同抄送方；
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
@@ -223,16 +229,20 @@ public class CreateSignUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 参与人手机号，GenerateType为"PERSON"时必填 
-     * @return Mobile 参与人手机号，GenerateType为"PERSON"时必填
+     * Get 参与人手机号；
+GenerateType为"PERSON"或"FOLLOWER"时必填 
+     * @return Mobile 参与人手机号；
+GenerateType为"PERSON"或"FOLLOWER"时必填
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 参与人手机号，GenerateType为"PERSON"时必填
-     * @param Mobile 参与人手机号，GenerateType为"PERSON"时必填
+     * Set 参与人手机号；
+GenerateType为"PERSON"或"FOLLOWER"时必填
+     * @param Mobile 参与人手机号；
+GenerateType为"PERSON"或"FOLLOWER"时必填
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

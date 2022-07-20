@@ -47,6 +47,13 @@ public class ListUserRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 返回信息是否为原文
+    */
+    @SerializedName("Original")
+    @Expose
+    private Boolean Original;
+
+    /**
      * Get 用户目录ID 
      * @return UserStoreId 用户目录ID
      */
@@ -106,6 +113,22 @@ public class ListUserRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 返回信息是否为原文 
+     * @return Original 返回信息是否为原文
+     */
+    public Boolean getOriginal() {
+        return this.Original;
+    }
+
+    /**
+     * Set 返回信息是否为原文
+     * @param Original 返回信息是否为原文
+     */
+    public void setOriginal(Boolean Original) {
+        this.Original = Original;
+    }
+
     public ListUserRequest() {
     }
 
@@ -126,6 +149,9 @@ public class ListUserRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Original != null) {
+            this.Original = new Boolean(source.Original);
+        }
     }
 
 
@@ -136,6 +162,7 @@ public class ListUserRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
         this.setParamObj(map, prefix + "Pageable.", this.Pageable);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Original", this.Original);
 
     }
 }
