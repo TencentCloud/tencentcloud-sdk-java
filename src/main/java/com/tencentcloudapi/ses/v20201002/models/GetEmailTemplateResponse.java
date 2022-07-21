@@ -30,6 +30,13 @@ public class GetEmailTemplateResponse extends AbstractModel{
     private TemplateContent TemplateContent;
 
     /**
+    * 模板状态 0-审核通过 1-待审核 2-审核拒绝
+    */
+    @SerializedName("TemplateStatus")
+    @Expose
+    private Long TemplateStatus;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class GetEmailTemplateResponse extends AbstractModel{
      */
     public void setTemplateContent(TemplateContent TemplateContent) {
         this.TemplateContent = TemplateContent;
+    }
+
+    /**
+     * Get 模板状态 0-审核通过 1-待审核 2-审核拒绝 
+     * @return TemplateStatus 模板状态 0-审核通过 1-待审核 2-审核拒绝
+     */
+    public Long getTemplateStatus() {
+        return this.TemplateStatus;
+    }
+
+    /**
+     * Set 模板状态 0-审核通过 1-待审核 2-审核拒绝
+     * @param TemplateStatus 模板状态 0-审核通过 1-待审核 2-审核拒绝
+     */
+    public void setTemplateStatus(Long TemplateStatus) {
+        this.TemplateStatus = TemplateStatus;
     }
 
     /**
@@ -79,6 +102,9 @@ public class GetEmailTemplateResponse extends AbstractModel{
         if (source.TemplateContent != null) {
             this.TemplateContent = new TemplateContent(source.TemplateContent);
         }
+        if (source.TemplateStatus != null) {
+            this.TemplateStatus = new Long(source.TemplateStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class GetEmailTemplateResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
+        this.setParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

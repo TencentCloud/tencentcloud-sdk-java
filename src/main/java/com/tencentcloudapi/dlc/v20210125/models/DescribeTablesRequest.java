@@ -74,7 +74,7 @@ table-id - String - （过滤条件）table id形如：12342。
     private String EndTime;
 
     /**
-    * 排序字段，支持：ModifiedTime（默认）；CreateTime
+    * 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
     */
     @SerializedName("Sort")
     @Expose
@@ -222,16 +222,16 @@ table-id - String - （过滤条件）table id形如：12342。
     }
 
     /**
-     * Get 排序字段，支持：ModifiedTime（默认）；CreateTime 
-     * @return Sort 排序字段，支持：ModifiedTime（默认）；CreateTime
+     * Get 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序） 
+     * @return Sort 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序字段，支持：ModifiedTime（默认）；CreateTime
-     * @param Sort 排序字段，支持：ModifiedTime（默认）；CreateTime
+     * Set 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+     * @param Sort 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
      */
     public void setSort(String Sort) {
         this.Sort = Sort;

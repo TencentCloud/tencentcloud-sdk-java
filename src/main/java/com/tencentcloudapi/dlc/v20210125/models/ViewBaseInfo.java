@@ -37,6 +37,20 @@ public class ViewBaseInfo extends AbstractModel{
     private String ViewName;
 
     /**
+    * 视图创建人昵称
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
+    * 视图创建人ID
+    */
+    @SerializedName("UserSubUin")
+    @Expose
+    private String UserSubUin;
+
+    /**
      * Get 该视图所属数据库名字 
      * @return DatabaseName 该视图所属数据库名字
      */
@@ -68,6 +82,38 @@ public class ViewBaseInfo extends AbstractModel{
         this.ViewName = ViewName;
     }
 
+    /**
+     * Get 视图创建人昵称 
+     * @return UserAlias 视图创建人昵称
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 视图创建人昵称
+     * @param UserAlias 视图创建人昵称
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
+    /**
+     * Get 视图创建人ID 
+     * @return UserSubUin 视图创建人ID
+     */
+    public String getUserSubUin() {
+        return this.UserSubUin;
+    }
+
+    /**
+     * Set 视图创建人ID
+     * @param UserSubUin 视图创建人ID
+     */
+    public void setUserSubUin(String UserSubUin) {
+        this.UserSubUin = UserSubUin;
+    }
+
     public ViewBaseInfo() {
     }
 
@@ -82,6 +128,12 @@ public class ViewBaseInfo extends AbstractModel{
         if (source.ViewName != null) {
             this.ViewName = new String(source.ViewName);
         }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
+        if (source.UserSubUin != null) {
+            this.UserSubUin = new String(source.UserSubUin);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class ViewBaseInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "ViewName", this.ViewName);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
 
     }
 }

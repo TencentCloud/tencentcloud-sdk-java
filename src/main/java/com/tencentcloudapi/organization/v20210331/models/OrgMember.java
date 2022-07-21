@@ -151,6 +151,14 @@ public class OrgMember extends AbstractModel{
     private String BindStatus;
 
     /**
+    * 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PermissionStatus")
+    @Expose
+    private String PermissionStatus;
+
+    /**
      * Get 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemberUin 成员Uin
@@ -470,6 +478,26 @@ public class OrgMember extends AbstractModel{
         this.BindStatus = BindStatus;
     }
 
+    /**
+     * Get 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PermissionStatus 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPermissionStatus() {
+        return this.PermissionStatus;
+    }
+
+    /**
+     * Set 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PermissionStatus 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPermissionStatus(String PermissionStatus) {
+        this.PermissionStatus = PermissionStatus;
+    }
+
     public OrgMember() {
     }
 
@@ -532,6 +560,9 @@ public class OrgMember extends AbstractModel{
         if (source.BindStatus != null) {
             this.BindStatus = new String(source.BindStatus);
         }
+        if (source.PermissionStatus != null) {
+            this.PermissionStatus = new String(source.PermissionStatus);
+        }
     }
 
 
@@ -555,6 +586,7 @@ public class OrgMember extends AbstractModel{
         this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
+        this.setParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
 
     }
 }

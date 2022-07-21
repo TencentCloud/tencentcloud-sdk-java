@@ -37,6 +37,13 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     private NetworkAclEntrySet NetworkAclEntrySet;
 
     /**
+    * 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+    */
+    @SerializedName("NetworkAclQuintupleSet")
+    @Expose
+    private NetworkAclQuintupleEntries NetworkAclQuintupleSet;
+
+    /**
      * Get 网络ACL实例ID。例如：acl-12345678。 
      * @return NetworkAclId 网络ACL实例ID。例如：acl-12345678。
      */
@@ -68,6 +75,22 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
         this.NetworkAclEntrySet = NetworkAclEntrySet;
     }
 
+    /**
+     * Get 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。 
+     * @return NetworkAclQuintupleSet 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+     */
+    public NetworkAclQuintupleEntries getNetworkAclQuintupleSet() {
+        return this.NetworkAclQuintupleSet;
+    }
+
+    /**
+     * Set 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+     * @param NetworkAclQuintupleSet 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+     */
+    public void setNetworkAclQuintupleSet(NetworkAclQuintupleEntries NetworkAclQuintupleSet) {
+        this.NetworkAclQuintupleSet = NetworkAclQuintupleSet;
+    }
+
     public ModifyNetworkAclEntriesRequest() {
     }
 
@@ -82,6 +105,9 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
         if (source.NetworkAclEntrySet != null) {
             this.NetworkAclEntrySet = new NetworkAclEntrySet(source.NetworkAclEntrySet);
         }
+        if (source.NetworkAclQuintupleSet != null) {
+            this.NetworkAclQuintupleSet = new NetworkAclQuintupleEntries(source.NetworkAclQuintupleSet);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
         this.setParamObj(map, prefix + "NetworkAclEntrySet.", this.NetworkAclEntrySet);
+        this.setParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
 
     }
 }

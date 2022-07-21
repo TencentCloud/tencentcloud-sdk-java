@@ -120,6 +120,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *（通过走emrcc接入到cam） yarn applciation 统计接口
+     * @param req DescribeEmrApplicationStaticsRequest
+     * @return DescribeEmrApplicationStaticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEmrApplicationStatics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *预付费集群隔离后续费资源查询
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse

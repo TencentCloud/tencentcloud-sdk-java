@@ -66,6 +66,13 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private String UniformSocialCreditCode;
 
     /**
+    * 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+    */
+    @SerializedName("MenuStatus")
+    @Expose
+    private String MenuStatus;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
@@ -173,6 +180,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE 
+     * @return MenuStatus 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+     */
+    public String getMenuStatus() {
+        return this.MenuStatus;
+    }
+
+    /**
+     * Set 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+     * @param MenuStatus 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+     */
+    public void setMenuStatus(String MenuStatus) {
+        this.MenuStatus = MenuStatus;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -214,6 +237,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         if (source.UniformSocialCreditCode != null) {
             this.UniformSocialCreditCode = new String(source.UniformSocialCreditCode);
         }
+        if (source.MenuStatus != null) {
+            this.MenuStatus = new String(source.MenuStatus);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -230,6 +256,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
+        this.setParamSimple(map, prefix + "MenuStatus", this.MenuStatus);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

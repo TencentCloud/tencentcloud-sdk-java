@@ -62,6 +62,30 @@ public class DatabaseResponseInfo extends AbstractModel{
     private String ModifiedTime;
 
     /**
+    * cos存储路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * 建库用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
+    * 建库用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserSubUin")
+    @Expose
+    private String UserSubUin;
+
+    /**
      * Get 数据库名称。 
      * @return DatabaseName 数据库名称。
      */
@@ -157,6 +181,66 @@ public class DatabaseResponseInfo extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get cos存储路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Location cos存储路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set cos存储路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Location cos存储路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get 建库用户昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserAlias 建库用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 建库用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserAlias 建库用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
+    /**
+     * Get 建库用户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserSubUin 建库用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserSubUin() {
+        return this.UserSubUin;
+    }
+
+    /**
+     * Set 建库用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserSubUin 建库用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserSubUin(String UserSubUin) {
+        this.UserSubUin = UserSubUin;
+    }
+
     public DatabaseResponseInfo() {
     }
 
@@ -183,6 +267,15 @@ public class DatabaseResponseInfo extends AbstractModel{
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
+        if (source.UserSubUin != null) {
+            this.UserSubUin = new String(source.UserSubUin);
+        }
     }
 
 
@@ -195,6 +288,9 @@ public class DatabaseResponseInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
 
     }
 }

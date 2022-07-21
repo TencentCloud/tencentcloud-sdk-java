@@ -69,6 +69,22 @@ public class TableBaseInfo extends AbstractModel{
     private String TableFormat;
 
     /**
+    * 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserAlias")
+    @Expose
+    private String UserAlias;
+
+    /**
+    * 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserSubUin")
+    @Expose
+    private String UserSubUin;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -180,6 +196,46 @@ public class TableBaseInfo extends AbstractModel{
         this.TableFormat = TableFormat;
     }
 
+    /**
+     * Get 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserAlias 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserAlias() {
+        return this.UserAlias;
+    }
+
+    /**
+     * Set 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserAlias 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserAlias(String UserAlias) {
+        this.UserAlias = UserAlias;
+    }
+
+    /**
+     * Get 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserSubUin 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserSubUin() {
+        return this.UserSubUin;
+    }
+
+    /**
+     * Set 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserSubUin 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserSubUin(String UserSubUin) {
+        this.UserSubUin = UserSubUin;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -206,6 +262,12 @@ public class TableBaseInfo extends AbstractModel{
         if (source.TableFormat != null) {
             this.TableFormat = new String(source.TableFormat);
         }
+        if (source.UserAlias != null) {
+            this.UserAlias = new String(source.UserAlias);
+        }
+        if (source.UserSubUin != null) {
+            this.UserSubUin = new String(source.UserSubUin);
+        }
     }
 
 
@@ -219,6 +281,8 @@ public class TableBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TableComment", this.TableComment);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "TableFormat", this.TableFormat);
+        this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
 
     }
 }

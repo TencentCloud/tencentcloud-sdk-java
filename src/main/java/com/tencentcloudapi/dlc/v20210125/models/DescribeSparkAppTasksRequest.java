@@ -51,6 +51,27 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
     private String TaskId;
 
     /**
+    * 更新时间起始点
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 更新时间截止点
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 按照该参数过滤,支持task-state
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get spark作业Id 
      * @return JobId spark作业Id
      */
@@ -114,6 +135,54 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 更新时间起始点 
+     * @return StartTime 更新时间起始点
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 更新时间起始点
+     * @param StartTime 更新时间起始点
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 更新时间截止点 
+     * @return EndTime 更新时间截止点
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 更新时间截止点
+     * @param EndTime 更新时间截止点
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 按照该参数过滤,支持task-state 
+     * @return Filters 按照该参数过滤,支持task-state
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 按照该参数过滤,支持task-state
+     * @param Filters 按照该参数过滤,支持task-state
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeSparkAppTasksRequest() {
     }
 
@@ -134,6 +203,18 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -145,6 +226,9 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }
