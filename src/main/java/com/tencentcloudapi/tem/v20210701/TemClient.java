@@ -322,6 +322,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *销毁命名空间
+     * @param req DestroyEnvironmentRequest
+     * @return DestroyEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyEnvironmentResponse DestroyEnvironment(DestroyEnvironmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyEnvironmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyEnvironment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *生成应用程序包预签名下载链接
      * @param req GenerateApplicationPackageDownloadUrlRequest
      * @return GenerateApplicationPackageDownloadUrlResponse

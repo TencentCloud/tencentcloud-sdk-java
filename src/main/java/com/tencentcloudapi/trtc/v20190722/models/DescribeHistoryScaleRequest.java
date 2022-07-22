@@ -23,69 +23,79 @@ import java.util.HashMap;
 public class DescribeHistoryScaleRequest extends AbstractModel{
 
     /**
-    * 用户sdkappid(1400188366)
+    * 用户SdkAppId（如：1400xxxxxx）
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * 查询开始时间，5天内。本地unix时间戳（1587571000s）
+    * 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间，本地unix时间戳（1588034999s）
+    * 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 用户sdkappid(1400188366) 
-     * @return SdkAppId 用户sdkappid(1400188366)
+     * Get 用户SdkAppId（如：1400xxxxxx） 
+     * @return SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户sdkappid(1400188366)
-     * @param SdkAppId 用户sdkappid(1400188366)
+     * Set 用户SdkAppId（如：1400xxxxxx）
+     * @param SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 查询开始时间，5天内。本地unix时间戳（1587571000s） 
-     * @return StartTime 查询开始时间，5天内。本地unix时间戳（1587571000s）
+     * Get 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。 
+     * @return StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，5天内。本地unix时间戳（1587571000s）
-     * @param StartTime 查询开始时间，5天内。本地unix时间戳（1587571000s）
+     * Set 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
+     * @param StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，本地unix时间戳（1588034999s） 
-     * @return EndTime 查询结束时间，本地unix时间戳（1588034999s）
+     * Get 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。 
+     * @return EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，本地unix时间戳（1588034999s）
-     * @param EndTime 查询结束时间，本地unix时间戳（1588034999s）
+     * Set 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
+     * @param EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

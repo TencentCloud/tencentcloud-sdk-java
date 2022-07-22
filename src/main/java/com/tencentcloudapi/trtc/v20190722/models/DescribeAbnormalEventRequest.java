@@ -23,21 +23,22 @@ import java.util.HashMap;
 public class DescribeAbnormalEventRequest extends AbstractModel{
 
     /**
-    * 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
+    * 用户SdkAppId（如：1400xxxxxx）
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * 查询开始时间,本地unix时间戳（1592448600s）
+    * 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间,本地unix时间戳（1592449080s）
+    * 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
     */
     @SerializedName("EndTime")
     @Expose
@@ -51,48 +52,52 @@ public class DescribeAbnormalEventRequest extends AbstractModel{
     private String RoomId;
 
     /**
-     * Get 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间） 
-     * @return SdkAppId 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
+     * Get 用户SdkAppId（如：1400xxxxxx） 
+     * @return SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
-     * @param SdkAppId 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
+     * Set 用户SdkAppId（如：1400xxxxxx）
+     * @param SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 查询开始时间,本地unix时间戳（1592448600s） 
-     * @return StartTime 查询开始时间,本地unix时间戳（1592448600s）
+     * Get 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据 
+     * @return StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间,本地unix时间戳（1592448600s）
-     * @param StartTime 查询开始时间,本地unix时间戳（1592448600s）
+     * Set 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+     * @param StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间,本地unix时间戳（1592449080s） 
-     * @return EndTime 查询结束时间,本地unix时间戳（1592449080s）
+     * Get 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。 
+     * @return EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间,本地unix时间戳（1592449080s）
-     * @param EndTime 查询结束时间,本地unix时间戳（1592449080s）
+     * Set 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
+     * @param EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

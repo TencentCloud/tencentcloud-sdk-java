@@ -44,6 +44,20 @@ public class EmailIdentity extends AbstractModel{
     private Boolean SendingEnabled;
 
     /**
+    * 当前信誉等级
+    */
+    @SerializedName("CurrentReputationLevel")
+    @Expose
+    private Long CurrentReputationLevel;
+
+    /**
+    * 当日最高发信量
+    */
+    @SerializedName("DailyQuota")
+    @Expose
+    private Long DailyQuota;
+
+    /**
      * Get 发信域名 
      * @return IdentityName 发信域名
      */
@@ -91,6 +105,38 @@ public class EmailIdentity extends AbstractModel{
         this.SendingEnabled = SendingEnabled;
     }
 
+    /**
+     * Get 当前信誉等级 
+     * @return CurrentReputationLevel 当前信誉等级
+     */
+    public Long getCurrentReputationLevel() {
+        return this.CurrentReputationLevel;
+    }
+
+    /**
+     * Set 当前信誉等级
+     * @param CurrentReputationLevel 当前信誉等级
+     */
+    public void setCurrentReputationLevel(Long CurrentReputationLevel) {
+        this.CurrentReputationLevel = CurrentReputationLevel;
+    }
+
+    /**
+     * Get 当日最高发信量 
+     * @return DailyQuota 当日最高发信量
+     */
+    public Long getDailyQuota() {
+        return this.DailyQuota;
+    }
+
+    /**
+     * Set 当日最高发信量
+     * @param DailyQuota 当日最高发信量
+     */
+    public void setDailyQuota(Long DailyQuota) {
+        this.DailyQuota = DailyQuota;
+    }
+
     public EmailIdentity() {
     }
 
@@ -108,6 +154,12 @@ public class EmailIdentity extends AbstractModel{
         if (source.SendingEnabled != null) {
             this.SendingEnabled = new Boolean(source.SendingEnabled);
         }
+        if (source.CurrentReputationLevel != null) {
+            this.CurrentReputationLevel = new Long(source.CurrentReputationLevel);
+        }
+        if (source.DailyQuota != null) {
+            this.DailyQuota = new Long(source.DailyQuota);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class EmailIdentity extends AbstractModel{
         this.setParamSimple(map, prefix + "IdentityName", this.IdentityName);
         this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
         this.setParamSimple(map, prefix + "SendingEnabled", this.SendingEnabled);
+        this.setParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
+        this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
 
     }
 }

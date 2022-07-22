@@ -86,6 +86,16 @@ public class ImportImageRequest extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
+    * 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
      * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
@@ -229,6 +239,34 @@ public class ImportImageRequest extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License） 
+     * @return LicenseType 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
+     * @param LicenseType 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -267,6 +305,9 @@ public class ImportImageRequest extends AbstractModel{
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -283,6 +324,7 @@ public class ImportImageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "Force", this.Force);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

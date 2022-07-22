@@ -30,14 +30,14 @@ public class DescribeEmrApplicationStaticsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 起始时间
+    * 起始时间，时间戳（秒）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，时间戳（秒）
     */
     @SerializedName("EndTime")
     @Expose
@@ -116,32 +116,32 @@ public class DescribeEmrApplicationStaticsRequest extends AbstractModel{
     }
 
     /**
-     * Get 起始时间 
-     * @return StartTime 起始时间
+     * Get 起始时间，时间戳（秒） 
+     * @return StartTime 起始时间，时间戳（秒）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间
-     * @param StartTime 起始时间
+     * Set 起始时间，时间戳（秒）
+     * @param StartTime 起始时间，时间戳（秒）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间，时间戳（秒） 
+     * @return EndTime 结束时间，时间戳（秒）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间，时间戳（秒）
+     * @param EndTime 结束时间，时间戳（秒）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

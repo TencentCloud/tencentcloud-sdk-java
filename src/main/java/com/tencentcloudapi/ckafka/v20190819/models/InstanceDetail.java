@@ -252,6 +252,14 @@ public class InstanceDetail extends AbstractModel{
     private String ClusterType;
 
     /**
+    * 实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Features")
+    @Expose
+    private String [] Features;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -795,6 +803,26 @@ public class InstanceDetail extends AbstractModel{
         this.ClusterType = ClusterType;
     }
 
+    /**
+     * Get 实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Features 实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set 实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Features 实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeatures(String [] Features) {
+        this.Features = Features;
+    }
+
     public InstanceDetail() {
     }
 
@@ -905,6 +933,12 @@ public class InstanceDetail extends AbstractModel{
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
+        if (source.Features != null) {
+            this.Features = new String[source.Features.length];
+            for (int i = 0; i < source.Features.length; i++) {
+                this.Features[i] = new String(source.Features[i]);
+            }
+        }
     }
 
 
@@ -943,6 +977,7 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamArraySimple(map, prefix + "Features.", this.Features);
 
     }
 }

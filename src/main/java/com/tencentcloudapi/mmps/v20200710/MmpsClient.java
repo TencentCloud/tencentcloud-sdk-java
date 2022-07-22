@@ -79,6 +79,26 @@ public class MmpsClient extends AbstractClient{
     }
 
     /**
+     *创建小程序安全深度诊断任务
+     * @param req CreateFlySecMiniAppProfessionalScanTaskRequest
+     * @return CreateFlySecMiniAppProfessionalScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlySecMiniAppProfessionalScanTaskResponse CreateFlySecMiniAppProfessionalScanTask(CreateFlySecMiniAppProfessionalScanTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFlySecMiniAppProfessionalScanTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建小程序翼扬安全的基础或深度诊断任务
      * @param req CreateFlySecMiniAppScanTaskRequest
      * @return CreateFlySecMiniAppScanTaskResponse

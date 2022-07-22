@@ -120,7 +120,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *（通过走emrcc接入到cam） yarn applciation 统计接口
+     * yarn applciation 统计接口查询
      * @param req DescribeEmrApplicationStaticsRequest
      * @return DescribeEmrApplicationStaticsResponse
      * @throws TencentCloudSDKException

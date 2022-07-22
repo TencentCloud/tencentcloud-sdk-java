@@ -377,6 +377,14 @@ public class DCDBInstanceInfo extends AbstractModel{
     private ResourceTag [] ResourceTags;
 
     /**
+    * 数据库引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbVersionId")
+    @Expose
+    private String DbVersionId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1204,6 +1212,26 @@ public class DCDBInstanceInfo extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 数据库引擎版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbVersionId 数据库引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbVersionId() {
+        return this.DbVersionId;
+    }
+
+    /**
+     * Set 数据库引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbVersionId 数据库引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbVersionId(String DbVersionId) {
+        this.DbVersionId = DbVersionId;
+    }
+
     public DCDBInstanceInfo() {
     }
 
@@ -1365,6 +1393,9 @@ public class DCDBInstanceInfo extends AbstractModel{
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.DbVersionId != null) {
+            this.DbVersionId = new String(source.DbVersionId);
+        }
     }
 
 
@@ -1421,6 +1452,7 @@ public class DCDBInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
 
     }
 }

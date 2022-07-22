@@ -30,6 +30,20 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
     private EmailIdentity [] EmailIdentities;
 
     /**
+    * 最大信誉等级
+    */
+    @SerializedName("MaxReputationLevel")
+    @Expose
+    private Long MaxReputationLevel;
+
+    /**
+    * 单域名最高日发送量
+    */
+    @SerializedName("MaxDailyQuota")
+    @Expose
+    private Long MaxDailyQuota;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +64,38 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
      */
     public void setEmailIdentities(EmailIdentity [] EmailIdentities) {
         this.EmailIdentities = EmailIdentities;
+    }
+
+    /**
+     * Get 最大信誉等级 
+     * @return MaxReputationLevel 最大信誉等级
+     */
+    public Long getMaxReputationLevel() {
+        return this.MaxReputationLevel;
+    }
+
+    /**
+     * Set 最大信誉等级
+     * @param MaxReputationLevel 最大信誉等级
+     */
+    public void setMaxReputationLevel(Long MaxReputationLevel) {
+        this.MaxReputationLevel = MaxReputationLevel;
+    }
+
+    /**
+     * Get 单域名最高日发送量 
+     * @return MaxDailyQuota 单域名最高日发送量
+     */
+    public Long getMaxDailyQuota() {
+        return this.MaxDailyQuota;
+    }
+
+    /**
+     * Set 单域名最高日发送量
+     * @param MaxDailyQuota 单域名最高日发送量
+     */
+    public void setMaxDailyQuota(Long MaxDailyQuota) {
+        this.MaxDailyQuota = MaxDailyQuota;
     }
 
     /**
@@ -82,6 +128,12 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
                 this.EmailIdentities[i] = new EmailIdentity(source.EmailIdentities[i]);
             }
         }
+        if (source.MaxReputationLevel != null) {
+            this.MaxReputationLevel = new Long(source.MaxReputationLevel);
+        }
+        if (source.MaxDailyQuota != null) {
+            this.MaxDailyQuota = new Long(source.MaxDailyQuota);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +145,8 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EmailIdentities.", this.EmailIdentities);
+        this.setParamSimple(map, prefix + "MaxReputationLevel", this.MaxReputationLevel);
+        this.setParamSimple(map, prefix + "MaxDailyQuota", this.MaxDailyQuota);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

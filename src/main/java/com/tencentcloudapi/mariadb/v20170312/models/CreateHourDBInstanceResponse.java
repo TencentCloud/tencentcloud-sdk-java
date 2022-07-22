@@ -39,6 +39,14 @@ public class CreateHourDBInstanceResponse extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class CreateHourDBInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -118,6 +146,9 @@ public class CreateHourDBInstanceResponse extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -130,6 +161,7 @@ public class CreateHourDBInstanceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

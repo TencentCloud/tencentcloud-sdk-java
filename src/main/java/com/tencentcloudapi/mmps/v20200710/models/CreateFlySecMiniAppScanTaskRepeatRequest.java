@@ -30,7 +30,7 @@ public class CreateFlySecMiniAppScanTaskRepeatRequest extends AbstractModel{
     private String MiniAppID;
 
     /**
-    * 诊断模式 1:基础诊断，2:深度诊断
+    * 诊断模式 1:基础诊断
     */
     @SerializedName("Mode")
     @Expose
@@ -81,16 +81,16 @@ public class CreateFlySecMiniAppScanTaskRepeatRequest extends AbstractModel{
     }
 
     /**
-     * Get 诊断模式 1:基础诊断，2:深度诊断 
-     * @return Mode 诊断模式 1:基础诊断，2:深度诊断
+     * Get 诊断模式 1:基础诊断 
+     * @return Mode 诊断模式 1:基础诊断
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 诊断模式 1:基础诊断，2:深度诊断
-     * @param Mode 诊断模式 1:基础诊断，2:深度诊断
+     * Set 诊断模式 1:基础诊断
+     * @param Mode 诊断模式 1:基础诊断
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;

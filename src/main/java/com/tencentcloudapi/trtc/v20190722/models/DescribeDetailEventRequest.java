@@ -23,115 +23,125 @@ import java.util.HashMap;
 public class DescribeDetailEventRequest extends AbstractModel{
 
     /**
-    * 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
+    * 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
     */
     @SerializedName("CommId")
     @Expose
     private String CommId;
 
     /**
-    * 查询开始时间，14天内。本地unix时间戳（1588055615s）
+    * 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间，本地unix时间戳（1588058615s）
+    * 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 用户id
+    * 用户UserId
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 房间号
+    * 房间号（如：223）
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-     * Get 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050） 
-     * @return CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
+     * Get 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。 
+     * @return CommId 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
      */
     public String getCommId() {
         return this.CommId;
     }
 
     /**
-     * Set 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
-     * @param CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
+     * Set 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
+     * @param CommId 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
      */
     public void setCommId(String CommId) {
         this.CommId = CommId;
     }
 
     /**
-     * Get 查询开始时间，14天内。本地unix时间戳（1588055615s） 
-     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588055615s）
+     * Get 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据 
+     * @return StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，14天内。本地unix时间戳（1588055615s）
-     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588055615s）
+     * Set 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+     * @param StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，本地unix时间戳（1588058615s） 
-     * @return EndTime 查询结束时间，本地unix时间戳（1588058615s）
+     * Get 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。 
+     * @return EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，本地unix时间戳（1588058615s）
-     * @param EndTime 查询结束时间，本地unix时间戳（1588058615s）
+     * Set 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
+     * @param EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 用户id 
-     * @return UserId 用户id
+     * Get 用户UserId 
+     * @return UserId 用户UserId
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户id
-     * @param UserId 用户id
+     * Set 用户UserId
+     * @param UserId 用户UserId
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 房间号 
-     * @return RoomId 房间号
+     * Get 房间号（如：223） 
+     * @return RoomId 房间号（如：223）
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间号
-     * @param RoomId 房间号
+     * Set 房间号（如：223）
+     * @param RoomId 房间号（如：223）
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;

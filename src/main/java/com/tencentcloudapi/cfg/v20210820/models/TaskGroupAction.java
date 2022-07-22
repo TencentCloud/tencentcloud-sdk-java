@@ -166,6 +166,14 @@ public class TaskGroupAction extends AbstractModel{
     private String ActionRisk;
 
     /**
+    * 动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskGroupActionExecuteTime")
+    @Expose
+    private Long TaskGroupActionExecuteTime;
+
+    /**
      * Get 任务分组动作ID 
      * @return TaskGroupActionId 任务分组动作ID
      */
@@ -509,6 +517,26 @@ public class TaskGroupAction extends AbstractModel{
         this.ActionRisk = ActionRisk;
     }
 
+    /**
+     * Get 动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskGroupActionExecuteTime 动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskGroupActionExecuteTime() {
+        return this.TaskGroupActionExecuteTime;
+    }
+
+    /**
+     * Set 动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskGroupActionExecuteTime 动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskGroupActionExecuteTime(Long TaskGroupActionExecuteTime) {
+        this.TaskGroupActionExecuteTime = TaskGroupActionExecuteTime;
+    }
+
     public TaskGroupAction() {
     }
 
@@ -577,6 +605,9 @@ public class TaskGroupAction extends AbstractModel{
         if (source.ActionRisk != null) {
             this.ActionRisk = new String(source.ActionRisk);
         }
+        if (source.TaskGroupActionExecuteTime != null) {
+            this.TaskGroupActionExecuteTime = new Long(source.TaskGroupActionExecuteTime);
+        }
     }
 
 
@@ -603,6 +634,7 @@ public class TaskGroupAction extends AbstractModel{
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "IsExecuteRedo", this.IsExecuteRedo);
         this.setParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
+        this.setParamSimple(map, prefix + "TaskGroupActionExecuteTime", this.TaskGroupActionExecuteTime);
 
     }
 }

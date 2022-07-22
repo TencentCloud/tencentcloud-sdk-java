@@ -98,6 +98,14 @@ public class TaskGroupInstance extends AbstractModel{
     private Boolean TaskGroupInstanceIsRedo;
 
     /**
+    * 动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskGroupInstanceExecuteTime")
+    @Expose
+    private Long TaskGroupInstanceExecuteTime;
+
+    /**
      * Get 实例ID 
      * @return TaskGroupInstanceId 实例ID
      */
@@ -277,6 +285,26 @@ public class TaskGroupInstance extends AbstractModel{
         this.TaskGroupInstanceIsRedo = TaskGroupInstanceIsRedo;
     }
 
+    /**
+     * Get 动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskGroupInstanceExecuteTime 动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskGroupInstanceExecuteTime() {
+        return this.TaskGroupInstanceExecuteTime;
+    }
+
+    /**
+     * Set 动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskGroupInstanceExecuteTime 动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskGroupInstanceExecuteTime(Long TaskGroupInstanceExecuteTime) {
+        this.TaskGroupInstanceExecuteTime = TaskGroupInstanceExecuteTime;
+    }
+
     public TaskGroupInstance() {
     }
 
@@ -315,6 +343,9 @@ public class TaskGroupInstance extends AbstractModel{
         if (source.TaskGroupInstanceIsRedo != null) {
             this.TaskGroupInstanceIsRedo = new Boolean(source.TaskGroupInstanceIsRedo);
         }
+        if (source.TaskGroupInstanceExecuteTime != null) {
+            this.TaskGroupInstanceExecuteTime = new Long(source.TaskGroupInstanceExecuteTime);
+        }
     }
 
 
@@ -332,6 +363,7 @@ public class TaskGroupInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskGroupInstanceStartTime", this.TaskGroupInstanceStartTime);
         this.setParamSimple(map, prefix + "TaskGroupInstanceEndTime", this.TaskGroupInstanceEndTime);
         this.setParamSimple(map, prefix + "TaskGroupInstanceIsRedo", this.TaskGroupInstanceIsRedo);
+        this.setParamSimple(map, prefix + "TaskGroupInstanceExecuteTime", this.TaskGroupInstanceExecuteTime);
 
     }
 }

@@ -1027,6 +1027,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
+     * @param req CreateNetworkAclQuintupleEntriesRequest
+     * @return CreateNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntries(CreateNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNetworkAclQuintupleEntries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
@@ -1827,6 +1847,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNetworkAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNetworkAclQuintupleEntries）用于删除网络ACL五元组指定的入站规则和出站规则（但不是全量删除该ACL下的所有条目）。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
+     * @param req DeleteNetworkAclQuintupleEntriesRequest
+     * @return DeleteNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntries(DeleteNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNetworkAclQuintupleEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2990,6 +3030,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNetDetectsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNetDetects");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNetworkAclQuintupleEntries）查询入方向或出方向网络ACL五元组条目列表。
+     * @param req DescribeNetworkAclQuintupleEntriesRequest
+     * @return DescribeNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkAclQuintupleEntriesResponse DescribeNetworkAclQuintupleEntries(DescribeNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNetworkAclQuintupleEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4935,6 +4995,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclEntriesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNetworkAclEntries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyNetworkAclQuintupleEntries）用于修改网络ACL五元组的入站规则和出站规则。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
+     * @param req ModifyNetworkAclQuintupleEntriesRequest
+     * @return ModifyNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAclQuintupleEntriesResponse ModifyNetworkAclQuintupleEntries(ModifyNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNetworkAclQuintupleEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

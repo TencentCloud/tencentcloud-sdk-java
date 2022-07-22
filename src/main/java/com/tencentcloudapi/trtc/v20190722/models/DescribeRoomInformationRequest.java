@@ -23,138 +23,158 @@ import java.util.HashMap;
 public class DescribeRoomInformationRequest extends AbstractModel{
 
     /**
-    * 用户sdkappid
+    * 用户SdkAppId（如：1400xxxxxx）
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * 查询开始时间，14天内。本地unix时间戳（1588031999）
+    * 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间，本地unix时间戳（1588034999）
+    * 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：与StartTime间隔时间不超过24小时。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 字符串房间号
+    * 房间号（如：223)
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+    * 当前页数，默认为0，
+注意：PageNumber和PageSize 其中一个不填均默认返回10条数据。
     */
     @SerializedName("PageNumber")
     @Expose
     private String PageNumber;
 
     /**
-    * 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
+    * 每页个数，默认为10，
+范围：[1，100]
     */
     @SerializedName("PageSize")
     @Expose
     private String PageSize;
 
     /**
-     * Get 用户sdkappid 
-     * @return SdkAppId 用户sdkappid
+     * Get 用户SdkAppId（如：1400xxxxxx） 
+     * @return SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户sdkappid
-     * @param SdkAppId 用户sdkappid
+     * Set 用户SdkAppId（如：1400xxxxxx）
+     * @param SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 查询开始时间，14天内。本地unix时间戳（1588031999） 
-     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999）
+     * Get 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据 
+     * @return StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，14天内。本地unix时间戳（1588031999）
-     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999）
+     * Set 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+     * @param StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，本地unix时间戳（1588034999） 
-     * @return EndTime 查询结束时间，本地unix时间戳（1588034999）
+     * Get 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：与StartTime间隔时间不超过24小时。 
+     * @return EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：与StartTime间隔时间不超过24小时。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，本地unix时间戳（1588034999）
-     * @param EndTime 查询结束时间，本地unix时间戳（1588034999）
+     * Set 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：与StartTime间隔时间不超过24小时。
+     * @param EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：与StartTime间隔时间不超过24小时。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 字符串房间号 
-     * @return RoomId 字符串房间号
+     * Get 房间号（如：223) 
+     * @return RoomId 房间号（如：223)
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 字符串房间号
-     * @param RoomId 字符串房间号
+     * Set 房间号（如：223)
+     * @param RoomId 房间号（如：223)
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据） 
-     * @return PageNumber 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+     * Get 当前页数，默认为0，
+注意：PageNumber和PageSize 其中一个不填均默认返回10条数据。 
+     * @return PageNumber 当前页数，默认为0，
+注意：PageNumber和PageSize 其中一个不填均默认返回10条数据。
      */
     public String getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
-     * @param PageNumber 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+     * Set 当前页数，默认为0，
+注意：PageNumber和PageSize 其中一个不填均默认返回10条数据。
+     * @param PageNumber 当前页数，默认为0，
+注意：PageNumber和PageSize 其中一个不填均默认返回10条数据。
      */
     public void setPageNumber(String PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100） 
-     * @return PageSize 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
+     * Get 每页个数，默认为10，
+范围：[1，100] 
+     * @return PageSize 每页个数，默认为10，
+范围：[1，100]
      */
     public String getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
-     * @param PageSize 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
+     * Set 每页个数，默认为10，
+范围：[1，100]
+     * @param PageSize 每页个数，默认为10，
+范围：[1，100]
      */
     public void setPageSize(String PageSize) {
         this.PageSize = PageSize;
