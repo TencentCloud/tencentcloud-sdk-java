@@ -60,6 +60,14 @@ offline：下线状态
     private String Status;
 
     /**
+    * 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6")
+    @Expose
+    private String Ipv6;
+
+    /**
      * Get 节点 IP 
      * @return Ip 节点 IP
      */
@@ -147,6 +155,26 @@ offline：下线状态
         this.Status = Status;
     }
 
+    /**
+     * Get 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpv6() {
+        return this.Ipv6;
+    }
+
+    /**
+     * Set 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6(String Ipv6) {
+        this.Ipv6 = Ipv6;
+    }
+
     public IpStatus() {
     }
 
@@ -170,6 +198,9 @@ offline：下线状态
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new String(source.Ipv6);
+        }
     }
 
 
@@ -182,6 +213,7 @@ offline：下线状态
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Ipv6", this.Ipv6);
 
     }
 }

@@ -119,26 +119,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *创建攻击日志下载任务
-     * @param req CreateAttackDownloadTaskRequest
-     * @return CreateAttackDownloadTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAttackDownloadTaskResponse CreateAttackDownloadTask(CreateAttackDownloadTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAttackDownloadTaskResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAttackDownloadTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAttackDownloadTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口用于删除访问日志导出
      * @param req DeleteAccessExportRequest
      * @return DeleteAccessExportResponse

@@ -198,6 +198,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] ProductVersions;
 
     /**
+    * 批量查询指定的实例
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
      * Get 返回数量，参数默认值20，最大值为1000 
      * @return Limit 返回数量，参数默认值20，最大值为1000
      */
@@ -597,6 +604,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.ProductVersions = ProductVersions;
     }
 
+    /**
+     * Get 批量查询指定的实例 
+     * @return InstanceIds 批量查询指定的实例
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 批量查询指定的实例
+     * @param InstanceIds 批量查询指定的实例
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -719,6 +742,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.ProductVersions[i] = new String(source.ProductVersions[i]);
             }
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -751,6 +780,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

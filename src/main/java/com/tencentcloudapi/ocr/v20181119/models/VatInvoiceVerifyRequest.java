@@ -30,14 +30,14 @@ public class VatInvoiceVerifyRequest extends AbstractModel{
     private String InvoiceCode;
 
     /**
-    * 发票号码（8位）。
+    * 发票号码（8位）
     */
     @SerializedName("InvoiceNo")
     @Expose
     private String InvoiceNo;
 
     /**
-    * 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
+    * 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
     */
     @SerializedName("InvoiceDate")
     @Expose
@@ -79,32 +79,32 @@ public class VatInvoiceVerifyRequest extends AbstractModel{
     }
 
     /**
-     * Get 发票号码（8位）。 
-     * @return InvoiceNo 发票号码（8位）。
+     * Get 发票号码（8位） 
+     * @return InvoiceNo 发票号码（8位）
      */
     public String getInvoiceNo() {
         return this.InvoiceNo;
     }
 
     /**
-     * Set 发票号码（8位）。
-     * @param InvoiceNo 发票号码（8位）。
+     * Set 发票号码（8位）
+     * @param InvoiceNo 发票号码（8位）
      */
     public void setInvoiceNo(String InvoiceNo) {
         this.InvoiceNo = InvoiceNo;
     }
 
     /**
-     * Get 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。 
-     * @return InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
+     * Get 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。 
+     * @return InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
      */
     public String getInvoiceDate() {
         return this.InvoiceDate;
     }
 
     /**
-     * Set 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
-     * @param InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
+     * Set 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
+     * @param InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
      */
     public void setInvoiceDate(String InvoiceDate) {
         this.InvoiceDate = InvoiceDate;

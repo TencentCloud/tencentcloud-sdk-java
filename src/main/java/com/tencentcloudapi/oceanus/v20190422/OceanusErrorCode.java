@@ -27,6 +27,9 @@ public enum OceanusErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // CLS接口错误。
+     INTERNALERROR_CLS("InternalError.CLS"),
+     
     // COS 服务访问错误。
      INTERNALERROR_COSCLIENT("InternalError.COSClient"),
      

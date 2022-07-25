@@ -199,6 +199,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *创建Datahub连接源
+     * @param req CreateConnectResourceRequest
+     * @return CreateConnectResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConnectResourceResponse CreateConnectResource(CreateConnectResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConnectResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConnectResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConnectResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建消费者组
      * @param req CreateConsumerRequest
      * @return CreateConsumerResponse
@@ -211,6 +231,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateConsumerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建Datahub转储任务
+     * @param req CreateDatahubTaskRequest
+     * @return CreateDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatahubTaskResponse CreateDatahubTask(CreateDatahubTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDatahubTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDatahubTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDatahubTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

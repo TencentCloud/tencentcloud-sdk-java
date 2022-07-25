@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAttackDownloadTaskResponse extends AbstractModel{
+public class DescribeUserEventResponse extends AbstractModel{
 
     /**
-    * 任务ID
+    * 返回的事件列表，若没有数据，会返回空数组。
     */
-    @SerializedName("Flow")
+    @SerializedName("Data")
     @Expose
-    private String Flow;
+    private EventList [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateAttackDownloadTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return Flow 任务ID
+     * Get 返回的事件列表，若没有数据，会返回空数组。 
+     * @return Data 返回的事件列表，若没有数据，会返回空数组。
      */
-    public String getFlow() {
-        return this.Flow;
+    public EventList [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 任务ID
-     * @param Flow 任务ID
+     * Set 返回的事件列表，若没有数据，会返回空数组。
+     * @param Data 返回的事件列表，若没有数据，会返回空数组。
      */
-    public void setFlow(String Flow) {
-        this.Flow = Flow;
+    public void setData(EventList [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -68,16 +68,19 @@ public class CreateAttackDownloadTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateAttackDownloadTaskResponse() {
+    public DescribeUserEventResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAttackDownloadTaskResponse(CreateAttackDownloadTaskResponse source) {
-        if (source.Flow != null) {
-            this.Flow = new String(source.Flow);
+    public DescribeUserEventResponse(DescribeUserEventResponse source) {
+        if (source.Data != null) {
+            this.Data = new EventList[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new EventList(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +92,7 @@ public class CreateAttackDownloadTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Flow", this.Flow);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

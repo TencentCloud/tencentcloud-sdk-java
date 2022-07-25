@@ -639,6 +639,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询新购集群价格
+     * @param req InquirePriceCreateRequest
+     * @return InquirePriceCreateResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateResponse InquirePriceCreate(InquirePriceCreateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceCreateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceCreateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceCreate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *隔离集群
      * @param req IsolateClusterRequest
      * @return IsolateClusterResponse

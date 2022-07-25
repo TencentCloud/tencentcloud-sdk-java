@@ -59,6 +59,47 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *单条和批量复制作业
+https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
+     * @param req CopyJobsRequest
+     * @return CopyJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyJobsResponse CopyJobs(CopyJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CopyJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CopyJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CopyJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *作业列表页面新建文件夹请求
+     * @param req CreateFolderRequest
+     * @return CreateFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFolderResponse CreateFolder(CreateFolderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFolderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFolderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFolder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新建作业接口，一个 AppId 最多允许创建1000个作业
      * @param req CreateJobRequest
      * @return CreateJobResponse

@@ -575,6 +575,8 @@ public class OcrClient extends AbstractClient{
         </tr>
       </tbody>
     </table>
+
+默认接口请求频率限制：20次/秒。
      * @param req GeneralBasicOCRRequest
      * @return GeneralBasicOCRResponse
      * @throws TencentCloudSDKException

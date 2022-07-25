@@ -23,72 +23,72 @@ import java.util.HashMap;
 public class QueryFilter extends AbstractModel{
 
     /**
-    * 查询的字段
+    * 过滤key
     */
     @SerializedName("FilterKey")
     @Expose
     private String FilterKey;
 
     /**
-    * 查询的值
-    */
-    @SerializedName("FilterValue")
-    @Expose
-    private String FilterValue;
-
-    /**
-    * 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+    * 操作符(只支持32位)
     */
     @SerializedName("FilterOperatorType")
     @Expose
     private Long FilterOperatorType;
 
     /**
-     * Get 查询的字段 
-     * @return FilterKey 查询的字段
+    * 过滤value
+    */
+    @SerializedName("FilterValue")
+    @Expose
+    private String FilterValue;
+
+    /**
+     * Get 过滤key 
+     * @return FilterKey 过滤key
      */
     public String getFilterKey() {
         return this.FilterKey;
     }
 
     /**
-     * Set 查询的字段
-     * @param FilterKey 查询的字段
+     * Set 过滤key
+     * @param FilterKey 过滤key
      */
     public void setFilterKey(String FilterKey) {
         this.FilterKey = FilterKey;
     }
 
     /**
-     * Get 查询的值 
-     * @return FilterValue 查询的值
-     */
-    public String getFilterValue() {
-        return this.FilterValue;
-    }
-
-    /**
-     * Set 查询的值
-     * @param FilterValue 查询的值
-     */
-    public void setFilterValue(String FilterValue) {
-        this.FilterValue = FilterValue;
-    }
-
-    /**
-     * Get 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配 
-     * @return FilterOperatorType 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+     * Get 操作符(只支持32位) 
+     * @return FilterOperatorType 操作符(只支持32位)
      */
     public Long getFilterOperatorType() {
         return this.FilterOperatorType;
     }
 
     /**
-     * Set 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
-     * @param FilterOperatorType 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+     * Set 操作符(只支持32位)
+     * @param FilterOperatorType 操作符(只支持32位)
      */
     public void setFilterOperatorType(Long FilterOperatorType) {
         this.FilterOperatorType = FilterOperatorType;
+    }
+
+    /**
+     * Get 过滤value 
+     * @return FilterValue 过滤value
+     */
+    public String getFilterValue() {
+        return this.FilterValue;
+    }
+
+    /**
+     * Set 过滤value
+     * @param FilterValue 过滤value
+     */
+    public void setFilterValue(String FilterValue) {
+        this.FilterValue = FilterValue;
     }
 
     public QueryFilter() {
@@ -102,11 +102,11 @@ public class QueryFilter extends AbstractModel{
         if (source.FilterKey != null) {
             this.FilterKey = new String(source.FilterKey);
         }
-        if (source.FilterValue != null) {
-            this.FilterValue = new String(source.FilterValue);
-        }
         if (source.FilterOperatorType != null) {
             this.FilterOperatorType = new Long(source.FilterOperatorType);
+        }
+        if (source.FilterValue != null) {
+            this.FilterValue = new String(source.FilterValue);
         }
     }
 
@@ -116,8 +116,8 @@ public class QueryFilter extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FilterKey", this.FilterKey);
-        this.setParamSimple(map, prefix + "FilterValue", this.FilterValue);
         this.setParamSimple(map, prefix + "FilterOperatorType", this.FilterOperatorType);
+        this.setParamSimple(map, prefix + "FilterValue", this.FilterValue);
 
     }
 }

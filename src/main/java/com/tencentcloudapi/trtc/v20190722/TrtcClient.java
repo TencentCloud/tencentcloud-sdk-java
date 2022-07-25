@@ -121,6 +121,27 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。（同老接口DescribeCallDetail）
+**注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+     * @param req DescribeCallDetailInfoRequest
+     * @return DescribeCallDetailInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallDetailInfoResponse DescribeCallDetailInfo(DescribeCallDetailInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCallDetailInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCallDetailInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCallDetailInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。
      * @param req DescribeDetailEventRequest
      * @return DescribeDetailEventResponse
@@ -226,6 +247,27 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询SdkAppId下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。（同老接口DescribeRoomInformation）
+**注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+     * @param req DescribeRoomInfoRequest
+     * @return DescribeRoomInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoomInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoomInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoomInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询SdkAppId下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
 **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
      * @param req DescribeRoomInformationRequest
@@ -239,6 +281,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomInformationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRoomInformation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale） 
+     * @param req DescribeScaleInfoRequest
+     * @return DescribeScaleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScaleInfoResponse DescribeScaleInfo(DescribeScaleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScaleInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScaleInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScaleInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -263,6 +325,68 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTrtcMcuTranscodeTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询SdkAppId下任意20条异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询14天内数据，查询起止时间不超过1个小时。支持跨天查询。（同老接口DescribeAbnormalEvent）
+异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
+     * @param req DescribeUnusualEventRequest
+     * @return DescribeUnusualEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnusualEventResponse DescribeUnusualEvent(DescribeUnusualEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnusualEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnusualEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnusualEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。（同接口DescribeDetailEvent）
+     * @param req DescribeUserEventRequest
+     * @return DescribeUserEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserEventResponse DescribeUserEvent(DescribeUserEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定时间内的用户列表，可查询14天内数据，查询起止时间不超过4小时。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。（同老接口DescribeUserInformation）
+**注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+     * @param req DescribeUserInfoRequest
+     * @return DescribeUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
