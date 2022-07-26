@@ -439,6 +439,66 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *删除Datahub连接源
+     * @param req DeleteConnectResourceRequest
+     * @return DeleteConnectResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConnectResourceResponse DeleteConnectResource(DeleteConnectResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteConnectResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteConnectResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteConnectResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除Datahub任务
+     * @param req DeleteDatahubTaskRequest
+     * @return DeleteDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDatahubTaskResponse DeleteDatahubTask(DeleteDatahubTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDatahubTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDatahubTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDatahubTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除Datahub主题
+     * @param req DeleteDatahubTopicRequest
+     * @return DeleteDatahubTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDatahubTopicResponse DeleteDatahubTopic(DeleteDatahubTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDatahubTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDatahubTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDatahubTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除消费组
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -639,6 +699,46 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *查询Datahub连接源
+     * @param req DescribeConnectResourceRequest
+     * @return DescribeConnectResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConnectResourceResponse DescribeConnectResource(DescribeConnectResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConnectResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConnectResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConnectResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Datahub连接源列表
+     * @param req DescribeConnectResourcesRequest
+     * @return DescribeConnectResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConnectResourcesResponse DescribeConnectResources(DescribeConnectResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConnectResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConnectResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConnectResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询消费分组信息
      * @param req DescribeConsumerGroupRequest
      * @return DescribeConsumerGroupResponse
@@ -651,6 +751,66 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeConsumerGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeConsumerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取Datahub消费分组offset
+     * @param req DescribeDatahubGroupOffsetsRequest
+     * @return DescribeDatahubGroupOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(DescribeDatahubGroupOffsetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubGroupOffsetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubGroupOffsetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubGroupOffsets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Datahub任务信息
+     * @param req DescribeDatahubTaskRequest
+     * @return DescribeDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubTaskResponse DescribeDatahubTask(DescribeDatahubTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Datahub任务列表 
+     * @param req DescribeDatahubTasksRequest
+     * @return DescribeDatahubTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubTasksResponse DescribeDatahubTasks(DescribeDatahubTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -942,6 +1102,46 @@ public class CkafkaClient extends AbstractClient{
 
     /**
      *根据指定offset位置的消息
+     * @param req FetchDatahubMessageByOffsetRequest
+     * @return FetchDatahubMessageByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchDatahubMessageByOffsetResponse FetchDatahubMessageByOffset(FetchDatahubMessageByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchDatahubMessageByOffsetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchDatahubMessageByOffsetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FetchDatahubMessageByOffset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询最新消息列表
+     * @param req FetchLatestDatahubMessageListRequest
+     * @return FetchLatestDatahubMessageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(FetchLatestDatahubMessageListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchLatestDatahubMessageListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchLatestDatahubMessageListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FetchLatestDatahubMessageList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据指定offset位置的消息
      * @param req FetchMessageByOffsetRequest
      * @return FetchMessageByOffsetResponse
      * @throws TencentCloudSDKException
@@ -953,6 +1153,46 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<FetchMessageByOffsetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "FetchMessageByOffset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑Datahub连接源
+     * @param req ModifyConnectResourceRequest
+     * @return ModifyConnectResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConnectResourceResponse ModifyConnectResource(ModifyConnectResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyConnectResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyConnectResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyConnectResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改Datahub任务
+     * @param req ModifyDatahubTaskRequest
+     * @return ModifyDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatahubTaskResponse ModifyDatahubTask(ModifyDatahubTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatahubTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatahubTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatahubTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

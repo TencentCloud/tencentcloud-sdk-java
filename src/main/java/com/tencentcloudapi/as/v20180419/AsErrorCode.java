@@ -57,6 +57,9 @@ public enum AsErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // 无效的Action请求。
+     INVALIDPARAMETER_ACTIONNOTFOUND("InvalidParameter.ActionNotFound"),
+     
     // 参数冲突，指定的多个参数冲突，不能同时存在。
      INVALIDPARAMETER_CONFLICT("InvalidParameter.Conflict"),
      

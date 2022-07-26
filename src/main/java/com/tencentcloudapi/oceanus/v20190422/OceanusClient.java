@@ -60,7 +60,6 @@ public class OceanusClient extends AbstractClient{
 
     /**
      *单条和批量复制作业
-https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
      * @param req CopyJobsRequest
      * @return CopyJobsResponse
      * @throws TencentCloudSDKException

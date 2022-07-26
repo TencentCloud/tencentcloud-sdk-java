@@ -41,6 +41,7 @@ public class Activity extends AbstractModel{
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
 <li>START_INSTANCES：开启实例
 <li>STOP_INSTANCES：关闭实例
+<li>INVOKE_COMMAND：执行命令
     */
     @SerializedName("ActivityType")
     @Expose
@@ -130,6 +131,13 @@ public class Activity extends AbstractModel{
     private DetailedStatusMessage [] DetailedStatusMessageSet;
 
     /**
+    * 执行命令结果。
+    */
+    @SerializedName("InvocationResultSet")
+    @Expose
+    private InvocationResult [] InvocationResultSet;
+
+    /**
      * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
@@ -165,11 +173,13 @@ public class Activity extends AbstractModel{
      * Get 伸缩活动类型。取值如下：<br>
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
 <li>START_INSTANCES：开启实例
-<li>STOP_INSTANCES：关闭实例 
+<li>STOP_INSTANCES：关闭实例
+<li>INVOKE_COMMAND：执行命令 
      * @return ActivityType 伸缩活动类型。取值如下：<br>
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
 <li>START_INSTANCES：开启实例
 <li>STOP_INSTANCES：关闭实例
+<li>INVOKE_COMMAND：执行命令
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -180,10 +190,12 @@ public class Activity extends AbstractModel{
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
 <li>START_INSTANCES：开启实例
 <li>STOP_INSTANCES：关闭实例
+<li>INVOKE_COMMAND：执行命令
      * @param ActivityType 伸缩活动类型。取值如下：<br>
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
 <li>START_INSTANCES：开启实例
 <li>STOP_INSTANCES：关闭实例
+<li>INVOKE_COMMAND：执行命令
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
@@ -389,6 +401,22 @@ public class Activity extends AbstractModel{
         this.DetailedStatusMessageSet = DetailedStatusMessageSet;
     }
 
+    /**
+     * Get 执行命令结果。 
+     * @return InvocationResultSet 执行命令结果。
+     */
+    public InvocationResult [] getInvocationResultSet() {
+        return this.InvocationResultSet;
+    }
+
+    /**
+     * Set 执行命令结果。
+     * @param InvocationResultSet 执行命令结果。
+     */
+    public void setInvocationResultSet(InvocationResult [] InvocationResultSet) {
+        this.InvocationResultSet = InvocationResultSet;
+    }
+
     public Activity() {
     }
 
@@ -448,6 +476,12 @@ public class Activity extends AbstractModel{
                 this.DetailedStatusMessageSet[i] = new DetailedStatusMessage(source.DetailedStatusMessageSet[i]);
             }
         }
+        if (source.InvocationResultSet != null) {
+            this.InvocationResultSet = new InvocationResult[source.InvocationResultSet.length];
+            for (int i = 0; i < source.InvocationResultSet.length; i++) {
+                this.InvocationResultSet[i] = new InvocationResult(source.InvocationResultSet[i]);
+            }
+        }
     }
 
 
@@ -469,6 +503,7 @@ public class Activity extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
         this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
         this.setParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
+        this.setParamArrayObj(map, prefix + "InvocationResultSet.", this.InvocationResultSet);
 
     }
 }

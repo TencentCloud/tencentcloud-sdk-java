@@ -153,11 +153,19 @@ public class LaunchConfiguration extends AbstractModel{
     private String [] InstanceTypes;
 
     /**
-    * 标签列表。
+    * 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTag [] InstanceTags;
+
+    /**
+    * 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
     * 版本号。
@@ -522,19 +530,39 @@ public class LaunchConfiguration extends AbstractModel{
     }
 
     /**
-     * Get 标签列表。 
-     * @return InstanceTags 标签列表。
+     * Get 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。 
+     * @return InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
      */
     public InstanceTag [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set 标签列表。
-     * @param InstanceTags 标签列表。
+     * Set 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+     * @param InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
      */
     public void setInstanceTags(InstanceTag [] InstanceTags) {
         this.InstanceTags = InstanceTags;
+    }
+
+    /**
+     * Get 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -753,6 +781,12 @@ public class LaunchConfiguration extends AbstractModel{
                 this.InstanceTags[i] = new InstanceTag(source.InstanceTags[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
         if (source.VersionNumber != null) {
             this.VersionNumber = new Long(source.VersionNumber);
         }
@@ -803,6 +837,7 @@ public class LaunchConfiguration extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);

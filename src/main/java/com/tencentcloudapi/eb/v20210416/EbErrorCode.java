@@ -159,6 +159,9 @@ public enum EbErrorCode {
     // RuleName取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_RULENAME("InvalidParameterValue.RuleName"),
      
+    // 标签参数错误。
+     INVALIDPARAMETERVALUE_TAGS("InvalidParameterValue.Tags"),
+     
     // TargetDescription取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_TARGETDESCRIPTION("InvalidParameterValue.TargetDescription"),
      

@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class CopyJobsRequest extends AbstractModel{
 
+    /**
+    * 复制明细列表
+    */
+    @SerializedName("JobItems")
+    @Expose
+    private CopyJobItem [] JobItems;
+
+    /**
+    * 工作空间 SerialId
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
+     * Get 复制明细列表 
+     * @return JobItems 复制明细列表
+     */
+    public CopyJobItem [] getJobItems() {
+        return this.JobItems;
+    }
+
+    /**
+     * Set 复制明细列表
+     * @param JobItems 复制明细列表
+     */
+    public void setJobItems(CopyJobItem [] JobItems) {
+        this.JobItems = JobItems;
+    }
+
+    /**
+     * Get 工作空间 SerialId 
+     * @return WorkSpaceId 工作空间 SerialId
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间 SerialId
+     * @param WorkSpaceId 工作空间 SerialId
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public CopyJobsRequest() {
     }
 
@@ -30,6 +76,15 @@ public class CopyJobsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CopyJobsRequest(CopyJobsRequest source) {
+        if (source.JobItems != null) {
+            this.JobItems = new CopyJobItem[source.JobItems.length];
+            for (int i = 0; i < source.JobItems.length; i++) {
+                this.JobItems[i] = new CopyJobItem(source.JobItems[i]);
+            }
+        }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class CopyJobsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "JobItems.", this.JobItems);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

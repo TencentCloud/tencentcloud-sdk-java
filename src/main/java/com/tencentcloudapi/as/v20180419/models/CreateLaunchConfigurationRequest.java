@@ -127,6 +127,13 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     private String [] InstanceTypes;
 
     /**
+    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
     * 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
@@ -146,11 +153,11 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     private InstanceTag [] InstanceTags;
 
     /**
-    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    * 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
     */
-    @SerializedName("CamRoleName")
+    @SerializedName("Tags")
     @Expose
-    private String CamRoleName;
+    private Tag [] Tags;
 
     /**
     * 云服务器主机名（HostName）的相关设置。
@@ -432,6 +439,22 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
+     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * Get 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
@@ -484,19 +507,19 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
-     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Get 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。 
+     * @return Tags 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
      */
-    public String getCamRoleName() {
-        return this.CamRoleName;
+    public Tag [] getTags() {
+        return this.Tags;
     }
 
     /**
-     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
-     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Set 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
+     * @param Tags 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
      */
-    public void setCamRoleName(String CamRoleName) {
-        this.CamRoleName = CamRoleName;
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -634,6 +657,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
                 this.InstanceTypes[i] = new String(source.InstanceTypes[i]);
             }
         }
+        if (source.CamRoleName != null) {
+            this.CamRoleName = new String(source.CamRoleName);
+        }
         if (source.InstanceTypesCheckPolicy != null) {
             this.InstanceTypesCheckPolicy = new String(source.InstanceTypesCheckPolicy);
         }
@@ -643,8 +669,11 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
                 this.InstanceTags[i] = new InstanceTag(source.InstanceTags[i]);
             }
         }
-        if (source.CamRoleName != null) {
-            this.CamRoleName = new String(source.CamRoleName);
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
         if (source.HostNameSettings != null) {
             this.HostNameSettings = new HostNameSettings(source.HostNameSettings);
@@ -679,9 +708,10 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
-        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);

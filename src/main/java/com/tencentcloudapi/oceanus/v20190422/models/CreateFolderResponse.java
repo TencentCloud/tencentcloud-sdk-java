@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateFolderResponse extends AbstractModel{
 
     /**
+    * 新建文件夹的唯一ID
+    */
+    @SerializedName("FolderId")
+    @Expose
+    private String FolderId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 新建文件夹的唯一ID 
+     * @return FolderId 新建文件夹的唯一ID
+     */
+    public String getFolderId() {
+        return this.FolderId;
+    }
+
+    /**
+     * Set 新建文件夹的唯一ID
+     * @param FolderId 新建文件夹的唯一ID
+     */
+    public void setFolderId(String FolderId) {
+        this.FolderId = FolderId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreateFolderResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFolderResponse(CreateFolderResponse source) {
+        if (source.FolderId != null) {
+            this.FolderId = new String(source.FolderId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateFolderResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FolderId", this.FolderId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,6 +23,20 @@ import java.util.HashMap;
 public class CreateFolderRequest extends AbstractModel{
 
     /**
+    * 新建文件夹名
+    */
+    @SerializedName("FolderName")
+    @Expose
+    private String FolderName;
+
+    /**
+    * 新建文件夹的父目录ID
+    */
+    @SerializedName("ParentId")
+    @Expose
+    private String ParentId;
+
+    /**
     * 文件夹类型，0是任务文件夹，1是依赖文件夹
     */
     @SerializedName("FolderType")
@@ -35,6 +49,38 @@ public class CreateFolderRequest extends AbstractModel{
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
+
+    /**
+     * Get 新建文件夹名 
+     * @return FolderName 新建文件夹名
+     */
+    public String getFolderName() {
+        return this.FolderName;
+    }
+
+    /**
+     * Set 新建文件夹名
+     * @param FolderName 新建文件夹名
+     */
+    public void setFolderName(String FolderName) {
+        this.FolderName = FolderName;
+    }
+
+    /**
+     * Get 新建文件夹的父目录ID 
+     * @return ParentId 新建文件夹的父目录ID
+     */
+    public String getParentId() {
+        return this.ParentId;
+    }
+
+    /**
+     * Set 新建文件夹的父目录ID
+     * @param ParentId 新建文件夹的父目录ID
+     */
+    public void setParentId(String ParentId) {
+        this.ParentId = ParentId;
+    }
 
     /**
      * Get 文件夹类型，0是任务文件夹，1是依赖文件夹 
@@ -76,6 +122,12 @@ public class CreateFolderRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFolderRequest(CreateFolderRequest source) {
+        if (source.FolderName != null) {
+            this.FolderName = new String(source.FolderName);
+        }
+        if (source.ParentId != null) {
+            this.ParentId = new String(source.ParentId);
+        }
         if (source.FolderType != null) {
             this.FolderType = new Long(source.FolderType);
         }
@@ -89,6 +141,8 @@ public class CreateFolderRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FolderName", this.FolderName);
+        this.setParamSimple(map, prefix + "ParentId", this.ParentId);
         this.setParamSimple(map, prefix + "FolderType", this.FolderType);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 

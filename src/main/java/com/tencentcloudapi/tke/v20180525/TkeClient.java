@@ -399,6 +399,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建边缘集群日志采集配置
+     * @param req CreateEdgeLogConfigRequest
+     * @return CreateEdgeLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgeLogConfigResponse CreateEdgeLogConfig(CreateEdgeLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEdgeLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEdgeLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEdgeLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
      * @param req CreateImageCacheRequest
      * @return CreateImageCacheResponse
@@ -1271,6 +1291,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointVipStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusterEndpointVipStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取集群的访问地址，包括内网地址，外网地址，外网域名，外网访问安全策略
+     * @param req DescribeClusterEndpointsRequest
+     * @return DescribeClusterEndpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterEndpointsResponse DescribeClusterEndpoints(DescribeClusterEndpointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterEndpointsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterEndpoints");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2679,6 +2719,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *在tke@edge集群的边缘节点上安装日志采集组件
+     * @param req InstallEdgeLogAgentRequest
+     * @return InstallEdgeLogAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallEdgeLogAgentResponse InstallEdgeLogAgent(InstallEdgeLogAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstallEdgeLogAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstallEdgeLogAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstallEdgeLogAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在TKE集群中安装CLS日志采集组件
      * @param req InstallLogAgentRequest
      * @return InstallLogAgentResponse
@@ -3171,6 +3231,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SyncPrometheusTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *从tke@edge集群边缘节点上卸载日志采集组件
+     * @param req UninstallEdgeLogAgentRequest
+     * @return UninstallEdgeLogAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(UninstallEdgeLogAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UninstallEdgeLogAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UninstallEdgeLogAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UninstallEdgeLogAgent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

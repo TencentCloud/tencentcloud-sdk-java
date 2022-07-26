@@ -37,6 +37,13 @@ public class TdwParam extends AbstractModel{
     private String Tid;
 
     /**
+    * 是否为国内站，默认true
+    */
+    @SerializedName("IsDomestic")
+    @Expose
+    private Boolean IsDomestic;
+
+    /**
      * Get Tdw的bid 
      * @return Bid Tdw的bid
      */
@@ -68,6 +75,22 @@ public class TdwParam extends AbstractModel{
         this.Tid = Tid;
     }
 
+    /**
+     * Get 是否为国内站，默认true 
+     * @return IsDomestic 是否为国内站，默认true
+     */
+    public Boolean getIsDomestic() {
+        return this.IsDomestic;
+    }
+
+    /**
+     * Set 是否为国内站，默认true
+     * @param IsDomestic 是否为国内站，默认true
+     */
+    public void setIsDomestic(Boolean IsDomestic) {
+        this.IsDomestic = IsDomestic;
+    }
+
     public TdwParam() {
     }
 
@@ -82,6 +105,9 @@ public class TdwParam extends AbstractModel{
         if (source.Tid != null) {
             this.Tid = new String(source.Tid);
         }
+        if (source.IsDomestic != null) {
+            this.IsDomestic = new Boolean(source.IsDomestic);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class TdwParam extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bid", this.Bid);
         this.setParamSimple(map, prefix + "Tid", this.Tid);
+        this.setParamSimple(map, prefix + "IsDomestic", this.IsDomestic);
 
     }
 }

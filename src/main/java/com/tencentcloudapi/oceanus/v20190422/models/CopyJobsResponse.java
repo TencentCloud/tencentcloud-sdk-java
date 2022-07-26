@@ -23,11 +23,95 @@ import java.util.HashMap;
 public class CopyJobsResponse extends AbstractModel{
 
     /**
+    * 成功条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuccessCount")
+    @Expose
+    private Long SuccessCount;
+
+    /**
+    * 失败条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailCount")
+    @Expose
+    private Long FailCount;
+
+    /**
+    * 结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CopyJobsResults")
+    @Expose
+    private CopyJobResult [] CopyJobsResults;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 成功条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuccessCount 成功条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSuccessCount() {
+        return this.SuccessCount;
+    }
+
+    /**
+     * Set 成功条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuccessCount 成功条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuccessCount(Long SuccessCount) {
+        this.SuccessCount = SuccessCount;
+    }
+
+    /**
+     * Get 失败条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailCount 失败条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFailCount() {
+        return this.FailCount;
+    }
+
+    /**
+     * Set 失败条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailCount 失败条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailCount(Long FailCount) {
+        this.FailCount = FailCount;
+    }
+
+    /**
+     * Get 结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CopyJobsResults 结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CopyJobResult [] getCopyJobsResults() {
+        return this.CopyJobsResults;
+    }
+
+    /**
+     * Set 结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CopyJobsResults 结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCopyJobsResults(CopyJobResult [] CopyJobsResults) {
+        this.CopyJobsResults = CopyJobsResults;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +137,18 @@ public class CopyJobsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CopyJobsResponse(CopyJobsResponse source) {
+        if (source.SuccessCount != null) {
+            this.SuccessCount = new Long(source.SuccessCount);
+        }
+        if (source.FailCount != null) {
+            this.FailCount = new Long(source.FailCount);
+        }
+        if (source.CopyJobsResults != null) {
+            this.CopyJobsResults = new CopyJobResult[source.CopyJobsResults.length];
+            for (int i = 0; i < source.CopyJobsResults.length; i++) {
+                this.CopyJobsResults[i] = new CopyJobResult(source.CopyJobsResults[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +159,9 @@ public class CopyJobsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+        this.setParamSimple(map, prefix + "FailCount", this.FailCount);
+        this.setParamArrayObj(map, prefix + "CopyJobsResults.", this.CopyJobsResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
