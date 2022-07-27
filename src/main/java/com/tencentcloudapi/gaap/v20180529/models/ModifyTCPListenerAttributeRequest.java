@@ -51,7 +51,7 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     private String ListenerName;
 
     /**
-    * 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -164,16 +164,16 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。 
-     * @return Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。 
+     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
-     * @param Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

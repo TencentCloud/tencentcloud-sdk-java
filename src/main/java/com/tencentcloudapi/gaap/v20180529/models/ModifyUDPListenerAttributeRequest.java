@@ -51,11 +51,88 @@ public class ModifyUDPListenerAttributeRequest extends AbstractModel{
     private String ListenerName;
 
     /**
-    * 监听器源站调度策略
+    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
+
+    /**
+    * 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+    */
+    @SerializedName("DelayLoop")
+    @Expose
+    private Long DelayLoop;
+
+    /**
+    * 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+    */
+    @SerializedName("ConnectTimeout")
+    @Expose
+    private Long ConnectTimeout;
+
+    /**
+    * 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
+    * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
+    * 源站是否开启健康检查：1开启，0关闭。
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private Long HealthCheck;
+
+    /**
+    * UDP源站健康类型。PORT表示检查端口，PING表示PING。
+    */
+    @SerializedName("CheckType")
+    @Expose
+    private String CheckType;
+
+    /**
+    * UDP源站健康检查探测端口。
+    */
+    @SerializedName("CheckPort")
+    @Expose
+    private Long CheckPort;
+
+    /**
+    * UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+    */
+    @SerializedName("ContextType")
+    @Expose
+    private String ContextType;
+
+    /**
+    * UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+    */
+    @SerializedName("SendContext")
+    @Expose
+    private String SendContext;
+
+    /**
+    * UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+    */
+    @SerializedName("RecvContext")
+    @Expose
+    private String RecvContext;
 
     /**
      * Get 监听器ID 
@@ -122,19 +199,195 @@ public class ModifyUDPListenerAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 监听器源站调度策略 
-     * @return Scheduler 监听器源站调度策略
+     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。 
+     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器源站调度策略
-     * @param Scheduler 监听器源站调度策略
+     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
+    }
+
+    /**
+     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。 
+     * @return DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     */
+    public Long getDelayLoop() {
+        return this.DelayLoop;
+    }
+
+    /**
+     * Set 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * @param DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     */
+    public void setDelayLoop(Long DelayLoop) {
+        this.DelayLoop = DelayLoop;
+    }
+
+    /**
+     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。 
+     * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     */
+    public Long getConnectTimeout() {
+        return this.ConnectTimeout;
+    }
+
+    /**
+     * Set 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     */
+    public void setConnectTimeout(Long ConnectTimeout) {
+        this.ConnectTimeout = ConnectTimeout;
+    }
+
+    /**
+     * Get 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10 
+     * @return HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+     * @param HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10 
+     * @return UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+     * @param UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
+    /**
+     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启 
+     * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
+     * Get 源站是否开启健康检查：1开启，0关闭。 
+     * @return HealthCheck 源站是否开启健康检查：1开启，0关闭。
+     */
+    public Long getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 源站是否开启健康检查：1开启，0关闭。
+     * @param HealthCheck 源站是否开启健康检查：1开启，0关闭。
+     */
+    public void setHealthCheck(Long HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get UDP源站健康类型。PORT表示检查端口，PING表示PING。 
+     * @return CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
+     */
+    public String getCheckType() {
+        return this.CheckType;
+    }
+
+    /**
+     * Set UDP源站健康类型。PORT表示检查端口，PING表示PING。
+     * @param CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
+     */
+    public void setCheckType(String CheckType) {
+        this.CheckType = CheckType;
+    }
+
+    /**
+     * Get UDP源站健康检查探测端口。 
+     * @return CheckPort UDP源站健康检查探测端口。
+     */
+    public Long getCheckPort() {
+        return this.CheckPort;
+    }
+
+    /**
+     * Set UDP源站健康检查探测端口。
+     * @param CheckPort UDP源站健康检查探测端口。
+     */
+    public void setCheckPort(Long CheckPort) {
+        this.CheckPort = CheckPort;
+    }
+
+    /**
+     * Get UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。 
+     * @return ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+     */
+    public String getContextType() {
+        return this.ContextType;
+    }
+
+    /**
+     * Set UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+     * @param ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+     */
+    public void setContextType(String ContextType) {
+        this.ContextType = ContextType;
+    }
+
+    /**
+     * Get UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。 
+     * @return SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+     */
+    public String getSendContext() {
+        return this.SendContext;
+    }
+
+    /**
+     * Set UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+     * @param SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+     */
+    public void setSendContext(String SendContext) {
+        this.SendContext = SendContext;
+    }
+
+    /**
+     * Get UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。 
+     * @return RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+     */
+    public String getRecvContext() {
+        return this.RecvContext;
+    }
+
+    /**
+     * Set UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+     * @param RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+     */
+    public void setRecvContext(String RecvContext) {
+        this.RecvContext = RecvContext;
     }
 
     public ModifyUDPListenerAttributeRequest() {
@@ -160,6 +413,39 @@ public class ModifyUDPListenerAttributeRequest extends AbstractModel{
         if (source.Scheduler != null) {
             this.Scheduler = new String(source.Scheduler);
         }
+        if (source.DelayLoop != null) {
+            this.DelayLoop = new Long(source.DelayLoop);
+        }
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new String(source.CheckType);
+        }
+        if (source.CheckPort != null) {
+            this.CheckPort = new Long(source.CheckPort);
+        }
+        if (source.ContextType != null) {
+            this.ContextType = new String(source.ContextType);
+        }
+        if (source.SendContext != null) {
+            this.SendContext = new String(source.SendContext);
+        }
+        if (source.RecvContext != null) {
+            this.RecvContext = new String(source.RecvContext);
+        }
     }
 
 
@@ -172,6 +458,17 @@ public class ModifyUDPListenerAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
+        this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
+        this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+        this.setParamSimple(map, prefix + "CheckType", this.CheckType);
+        this.setParamSimple(map, prefix + "CheckPort", this.CheckPort);
+        this.setParamSimple(map, prefix + "ContextType", this.ContextType);
+        this.setParamSimple(map, prefix + "SendContext", this.SendContext);
+        this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
 
     }
 }

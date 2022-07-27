@@ -51,6 +51,13 @@ public class DescribeMicroserviceRequest extends AbstractModel{
     private String [] GroupIds;
 
     /**
+    * 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 微服务ID 
      * @return MicroserviceId 微服务ID
      */
@@ -114,6 +121,22 @@ public class DescribeMicroserviceRequest extends AbstractModel{
         this.GroupIds = GroupIds;
     }
 
+    /**
+     * Get 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip） 
+     * @return Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+     * @param Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeMicroserviceRequest() {
     }
 
@@ -137,6 +160,12 @@ public class DescribeMicroserviceRequest extends AbstractModel{
                 this.GroupIds[i] = new String(source.GroupIds[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class DescribeMicroserviceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

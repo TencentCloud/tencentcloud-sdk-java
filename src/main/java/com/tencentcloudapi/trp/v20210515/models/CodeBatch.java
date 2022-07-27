@@ -135,7 +135,7 @@ public class CodeBatch extends AbstractModel{
     private String ProductName;
 
     /**
-    * 0
+    * 未使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ext")
@@ -431,9 +431,9 @@ public class CodeBatch extends AbstractModel{
     }
 
     /**
-     * Get 0
+     * Get 未使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ext 0
+     * @return Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ext getExt() {
@@ -441,9 +441,9 @@ public class CodeBatch extends AbstractModel{
     }
 
     /**
-     * Set 0
+     * Set 未使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ext 0
+     * @param Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExt(Ext Ext) {

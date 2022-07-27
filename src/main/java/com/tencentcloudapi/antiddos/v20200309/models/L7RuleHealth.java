@@ -86,6 +86,48 @@ public class L7RuleHealth extends AbstractModel{
     private Long StatusCode;
 
     /**
+    * 是否同时下发http和https规则健康检查配置
+    */
+    @SerializedName("ProtocolFlag")
+    @Expose
+    private Long ProtocolFlag;
+
+    /**
+    * 被动探测开关，=1表示开启；=0表示关闭
+    */
+    @SerializedName("PassiveEnable")
+    @Expose
+    private Long PassiveEnable;
+
+    /**
+    * 被动探测不健康屏蔽时间
+    */
+    @SerializedName("BlockInter")
+    @Expose
+    private Long BlockInter;
+
+    /**
+    * 被动探测不健康统计间隔
+    */
+    @SerializedName("FailedCountInter")
+    @Expose
+    private Long FailedCountInter;
+
+    /**
+    * 被动探测不健康阈值
+    */
+    @SerializedName("FailedThreshold")
+    @Expose
+    private Long FailedThreshold;
+
+    /**
+    * 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+    */
+    @SerializedName("PassiveStatusCode")
+    @Expose
+    private Long PassiveStatusCode;
+
+    /**
      * Get 配置状态，0： 正常，1：配置中，2：配置失败 
      * @return Status 配置状态，0： 正常，1：配置中，2：配置失败
      */
@@ -229,6 +271,102 @@ public class L7RuleHealth extends AbstractModel{
         this.StatusCode = StatusCode;
     }
 
+    /**
+     * Get 是否同时下发http和https规则健康检查配置 
+     * @return ProtocolFlag 是否同时下发http和https规则健康检查配置
+     */
+    public Long getProtocolFlag() {
+        return this.ProtocolFlag;
+    }
+
+    /**
+     * Set 是否同时下发http和https规则健康检查配置
+     * @param ProtocolFlag 是否同时下发http和https规则健康检查配置
+     */
+    public void setProtocolFlag(Long ProtocolFlag) {
+        this.ProtocolFlag = ProtocolFlag;
+    }
+
+    /**
+     * Get 被动探测开关，=1表示开启；=0表示关闭 
+     * @return PassiveEnable 被动探测开关，=1表示开启；=0表示关闭
+     */
+    public Long getPassiveEnable() {
+        return this.PassiveEnable;
+    }
+
+    /**
+     * Set 被动探测开关，=1表示开启；=0表示关闭
+     * @param PassiveEnable 被动探测开关，=1表示开启；=0表示关闭
+     */
+    public void setPassiveEnable(Long PassiveEnable) {
+        this.PassiveEnable = PassiveEnable;
+    }
+
+    /**
+     * Get 被动探测不健康屏蔽时间 
+     * @return BlockInter 被动探测不健康屏蔽时间
+     */
+    public Long getBlockInter() {
+        return this.BlockInter;
+    }
+
+    /**
+     * Set 被动探测不健康屏蔽时间
+     * @param BlockInter 被动探测不健康屏蔽时间
+     */
+    public void setBlockInter(Long BlockInter) {
+        this.BlockInter = BlockInter;
+    }
+
+    /**
+     * Get 被动探测不健康统计间隔 
+     * @return FailedCountInter 被动探测不健康统计间隔
+     */
+    public Long getFailedCountInter() {
+        return this.FailedCountInter;
+    }
+
+    /**
+     * Set 被动探测不健康统计间隔
+     * @param FailedCountInter 被动探测不健康统计间隔
+     */
+    public void setFailedCountInter(Long FailedCountInter) {
+        this.FailedCountInter = FailedCountInter;
+    }
+
+    /**
+     * Get 被动探测不健康阈值 
+     * @return FailedThreshold 被动探测不健康阈值
+     */
+    public Long getFailedThreshold() {
+        return this.FailedThreshold;
+    }
+
+    /**
+     * Set 被动探测不健康阈值
+     * @param FailedThreshold 被动探测不健康阈值
+     */
+    public void setFailedThreshold(Long FailedThreshold) {
+        this.FailedThreshold = FailedThreshold;
+    }
+
+    /**
+     * Get 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和 
+     * @return PassiveStatusCode 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     */
+    public Long getPassiveStatusCode() {
+        return this.PassiveStatusCode;
+    }
+
+    /**
+     * Set 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     * @param PassiveStatusCode 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     */
+    public void setPassiveStatusCode(Long PassiveStatusCode) {
+        this.PassiveStatusCode = PassiveStatusCode;
+    }
+
     public L7RuleHealth() {
     }
 
@@ -264,6 +402,24 @@ public class L7RuleHealth extends AbstractModel{
         if (source.StatusCode != null) {
             this.StatusCode = new Long(source.StatusCode);
         }
+        if (source.ProtocolFlag != null) {
+            this.ProtocolFlag = new Long(source.ProtocolFlag);
+        }
+        if (source.PassiveEnable != null) {
+            this.PassiveEnable = new Long(source.PassiveEnable);
+        }
+        if (source.BlockInter != null) {
+            this.BlockInter = new Long(source.BlockInter);
+        }
+        if (source.FailedCountInter != null) {
+            this.FailedCountInter = new Long(source.FailedCountInter);
+        }
+        if (source.FailedThreshold != null) {
+            this.FailedThreshold = new Long(source.FailedThreshold);
+        }
+        if (source.PassiveStatusCode != null) {
+            this.PassiveStatusCode = new Long(source.PassiveStatusCode);
+        }
     }
 
 
@@ -280,6 +436,12 @@ public class L7RuleHealth extends AbstractModel{
         this.setParamSimple(map, prefix + "KickNum", this.KickNum);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
+        this.setParamSimple(map, prefix + "ProtocolFlag", this.ProtocolFlag);
+        this.setParamSimple(map, prefix + "PassiveEnable", this.PassiveEnable);
+        this.setParamSimple(map, prefix + "BlockInter", this.BlockInter);
+        this.setParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
+        this.setParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
+        this.setParamSimple(map, prefix + "PassiveStatusCode", this.PassiveStatusCode);
 
     }
 }

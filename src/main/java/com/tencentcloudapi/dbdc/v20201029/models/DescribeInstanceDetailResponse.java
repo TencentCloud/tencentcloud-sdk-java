@@ -191,12 +191,20 @@ public class DescribeInstanceDetailResponse extends AbstractModel{
     private String Zone;
 
     /**
-    * 围笼ID
+    * 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FenceId")
     @Expose
     private String FenceId;
+
+    /**
+    * 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -590,9 +598,9 @@ public class DescribeInstanceDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 围笼ID
+     * Get 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FenceId 围笼ID
+     * @return FenceId 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFenceId() {
@@ -600,13 +608,33 @@ public class DescribeInstanceDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 围笼ID
+     * Set 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FenceId 围笼ID
+     * @param FenceId 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFenceId(String FenceId) {
         this.FenceId = FenceId;
+    }
+
+    /**
+     * Get 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -708,6 +736,9 @@ public class DescribeInstanceDetailResponse extends AbstractModel{
         if (source.FenceId != null) {
             this.FenceId = new String(source.FenceId);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -743,6 +774,7 @@ public class DescribeInstanceDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskAssignable", this.DiskAssignable);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "FenceId", this.FenceId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,7 +44,7 @@ public class ReceiveMessageRequest extends AbstractModel{
     private Long ReceiverQueueSize;
 
     /**
-    * 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+    * 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
     */
     @SerializedName("SubInitialPosition")
     @Expose
@@ -120,16 +120,16 @@ public class ReceiveMessageRequest extends AbstractModel{
     }
 
     /**
-     * Get 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest 
-     * @return SubInitialPosition 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+     * Get 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest 
+     * @return SubInitialPosition 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
      */
     public String getSubInitialPosition() {
         return this.SubInitialPosition;
     }
 
     /**
-     * Set 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
-     * @param SubInitialPosition 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+     * Set 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+     * @param SubInitialPosition 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
      */
     public void setSubInitialPosition(String SubInitialPosition) {
         this.SubInitialPosition = SubInitialPosition;

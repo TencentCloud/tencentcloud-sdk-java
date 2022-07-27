@@ -37,7 +37,7 @@ public class CreateTCPListenersRequest extends AbstractModel{
     private Long [] Ports;
 
     /**
-    * 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -51,7 +51,7 @@ public class CreateTCPListenersRequest extends AbstractModel{
     private Long HealthCheck;
 
     /**
-    * 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+    * 监听器绑定源站类型。IP表示IP地址，DOMAIN表示域名。
     */
     @SerializedName("RealServerType")
     @Expose
@@ -153,16 +153,16 @@ public class CreateTCPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。 
-     * @return Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。 
+     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
-     * @param Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -185,16 +185,16 @@ public class CreateTCPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。 
-     * @return RealServerType 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+     * Get 监听器绑定源站类型。IP表示IP地址，DOMAIN表示域名。 
+     * @return RealServerType 监听器绑定源站类型。IP表示IP地址，DOMAIN表示域名。
      */
     public String getRealServerType() {
         return this.RealServerType;
     }
 
     /**
-     * Set 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
-     * @param RealServerType 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+     * Set 监听器绑定源站类型。IP表示IP地址，DOMAIN表示域名。
+     * @param RealServerType 监听器绑定源站类型。IP表示IP地址，DOMAIN表示域名。
      */
     public void setRealServerType(String RealServerType) {
         this.RealServerType = RealServerType;

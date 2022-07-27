@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateFlowByFilesRequest extends AbstractModel{
 
     /**
+    * 调用方用户信息，userId 必填
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
     * 签署流程名称,最大长度200个字符
     */
     @SerializedName("FlowName")
@@ -44,18 +51,11 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private String [] FileIds;
 
     /**
-    * 调用方用户信息
+    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
     */
-    @SerializedName("Operator")
+    @SerializedName("FlowType")
     @Expose
-    private UserInfo Operator;
-
-    /**
-    * 应用号信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
+    private String FlowType;
 
     /**
     * 经办人内容控件配置。可选类型为：
@@ -68,6 +68,29 @@ ATTACHMENT - 附件
     @SerializedName("Components")
     @Expose
     private Component [] Components;
+
+    /**
+    * 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo [] CcInfos;
+
+    /**
+    * 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
+    */
+    @SerializedName("NeedPreview")
+    @Expose
+    private Boolean NeedPreview;
+
+    /**
+    * 签署流程描述,最大长度1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
 
     /**
     * 签署流程的签署截止时间。
@@ -88,41 +111,34 @@ false：有序签
     private Boolean Unordered;
 
     /**
-    * 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-    */
-    @SerializedName("NeedPreview")
-    @Expose
-    private Boolean NeedPreview;
-
-    /**
-    * 签署流程描述,最大长度1000个字符
-    */
-    @SerializedName("FlowDescription")
-    @Expose
-    private String FlowDescription;
-
-    /**
-    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
-    * 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-    */
-    @SerializedName("CcInfos")
-    @Expose
-    private CcInfo [] CcInfos;
-
-    /**
     * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
     */
     @SerializedName("CustomShowMap")
     @Expose
     private String CustomShowMap;
+
+    /**
+    * 应用号信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
 
     /**
      * Get 签署流程名称,最大长度200个字符 
@@ -173,35 +189,19 @@ false：有序签
     }
 
     /**
-     * Get 调用方用户信息 
-     * @return Operator 调用方用户信息
+     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
+     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public String getFlowType() {
+        return this.FlowType;
     }
 
     /**
-     * Set 调用方用户信息
-     * @param Operator 调用方用户信息
+     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
-     * Get 应用号信息 
-     * @return Agent 应用号信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用号信息
-     * @param Agent 应用号信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
     }
 
     /**
@@ -238,6 +238,62 @@ ATTACHMENT - 附件
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;
+    }
+
+    /**
+     * Get 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用 
+     * @return CcInfos 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+     */
+    public CcInfo [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+     * @param CcInfos 被抄送人的信息列表。
+注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+     */
+    public void setCcInfos(CcInfo [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
+    /**
+     * Get 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒； 
+     * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
+     */
+    public Boolean getNeedPreview() {
+        return this.NeedPreview;
+    }
+
+    /**
+     * Set 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
+     * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
+预览链接有效期300秒；
+     */
+    public void setNeedPreview(Boolean NeedPreview) {
+        this.NeedPreview = NeedPreview;
+    }
+
+    /**
+     * Get 签署流程描述,最大长度1000个字符 
+     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程描述,最大长度1000个字符
+     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
     }
 
     /**
@@ -289,78 +345,6 @@ false：有序签
     }
 
     /**
-     * Get 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒； 
-     * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-     */
-    public Boolean getNeedPreview() {
-        return this.NeedPreview;
-    }
-
-    /**
-     * Set 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-     * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-     */
-    public void setNeedPreview(Boolean NeedPreview) {
-        this.NeedPreview = NeedPreview;
-    }
-
-    /**
-     * Get 签署流程描述,最大长度1000个字符 
-     * @return FlowDescription 签署流程描述,最大长度1000个字符
-     */
-    public String getFlowDescription() {
-        return this.FlowDescription;
-    }
-
-    /**
-     * Set 签署流程描述,最大长度1000个字符
-     * @param FlowDescription 签署流程描述,最大长度1000个字符
-     */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
-    }
-
-    /**
-     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
-     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用 
-     * @return CcInfos 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-     */
-    public CcInfo [] getCcInfos() {
-        return this.CcInfos;
-    }
-
-    /**
-     * Set 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-     * @param CcInfos 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-     */
-    public void setCcInfos(CcInfo [] CcInfos) {
-        this.CcInfos = CcInfos;
-    }
-
-    /**
      * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
      * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      */
@@ -376,6 +360,22 @@ false：有序签
         this.CustomShowMap = CustomShowMap;
     }
 
+    /**
+     * Get 应用号信息 
+     * @return Agent 应用号信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用号信息
+     * @param Agent 应用号信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -384,6 +384,9 @@ false：有序签
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowByFilesRequest(CreateFlowByFilesRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
@@ -399,11 +402,8 @@ false：有序签
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
         }
         if (source.Components != null) {
             this.Components = new Component[source.Components.length];
@@ -411,11 +411,11 @@ false：有序签
                 this.Components[i] = new Component(source.Components[i]);
             }
         }
-        if (source.Deadline != null) {
-            this.Deadline = new Long(source.Deadline);
-        }
-        if (source.Unordered != null) {
-            this.Unordered = new Boolean(source.Unordered);
+        if (source.CcInfos != null) {
+            this.CcInfos = new CcInfo[source.CcInfos.length];
+            for (int i = 0; i < source.CcInfos.length; i++) {
+                this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
+            }
         }
         if (source.NeedPreview != null) {
             this.NeedPreview = new Boolean(source.NeedPreview);
@@ -423,17 +423,17 @@ false：有序签
         if (source.FlowDescription != null) {
             this.FlowDescription = new String(source.FlowDescription);
         }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
         }
-        if (source.CcInfos != null) {
-            this.CcInfos = new CcInfo[source.CcInfos.length];
-            for (int i = 0; i < source.CcInfos.length; i++) {
-                this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
-            }
+        if (source.Unordered != null) {
+            this.Unordered = new Boolean(source.Unordered);
         }
         if (source.CustomShowMap != null) {
             this.CustomShowMap = new String(source.CustomShowMap);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -442,19 +442,19 @@ false：有序签
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
-        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
-        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
-        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

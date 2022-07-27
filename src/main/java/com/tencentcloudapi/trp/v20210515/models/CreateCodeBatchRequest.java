@@ -65,6 +65,13 @@ public class CreateCodeBatchRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 活动ID
+    */
+    @SerializedName("MpTpl")
+    @Expose
+    private String MpTpl;
+
+    /**
      * Get 企业ID 
      * @return CorpId 企业ID
      */
@@ -160,6 +167,22 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 活动ID 
+     * @return MpTpl 活动ID
+     */
+    public String getMpTpl() {
+        return this.MpTpl;
+    }
+
+    /**
+     * Set 活动ID
+     * @param MpTpl 活动ID
+     */
+    public void setMpTpl(String MpTpl) {
+        this.MpTpl = MpTpl;
+    }
+
     public CreateCodeBatchRequest() {
     }
 
@@ -186,6 +209,9 @@ public class CreateCodeBatchRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.MpTpl != null) {
+            this.MpTpl = new String(source.MpTpl);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BatchType", this.BatchType);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MpTpl", this.MpTpl);
 
     }
 }

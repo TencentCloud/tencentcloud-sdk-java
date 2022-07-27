@@ -37,10 +37,7 @@ public class ModifyRuleAttributeRequest extends AbstractModel{
     private String RuleId;
 
     /**
-    * 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -139,28 +136,16 @@ lc，最小连接数。
     }
 
     /**
-     * Get 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。 
-     * @return Scheduler 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。 
+     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
-     * @param Scheduler 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

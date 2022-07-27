@@ -119,6 +119,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *复制组实例更换角色
+     * @param req ChangeInstanceRoleRequest
+     * @return ChangeInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeInstanceRoleResponse ChangeInstanceRole(ChangeInstanceRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeInstanceRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeInstanceRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *复制组实例切主
+     * @param req ChangeMasterInstanceRequest
+     * @return ChangeMasterInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeMasterInstanceResponse ChangeMasterInstance(ChangeMasterInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeMasterInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeMasterInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口仅支持多AZ实例副本组提主和单AZ副本提主
      * @param req ChangeReplicaToMasterRequest
      * @return ChangeReplicaToMasterResponse

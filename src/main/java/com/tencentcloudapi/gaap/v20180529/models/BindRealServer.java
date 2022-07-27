@@ -70,6 +70,13 @@ public class BindRealServer extends AbstractModel{
     private String [] DownIPList;
 
     /**
+    * 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
+    */
+    @SerializedName("RealServerFailoverRole")
+    @Expose
+    private String RealServerFailoverRole;
+
+    /**
      * Get 源站ID 
      * @return RealServerId 源站ID
      */
@@ -185,6 +192,22 @@ public class BindRealServer extends AbstractModel{
         this.DownIPList = DownIPList;
     }
 
+    /**
+     * Get 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。 
+     * @return RealServerFailoverRole 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
+     */
+    public String getRealServerFailoverRole() {
+        return this.RealServerFailoverRole;
+    }
+
+    /**
+     * Set 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
+     * @param RealServerFailoverRole 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
+     */
+    public void setRealServerFailoverRole(String RealServerFailoverRole) {
+        this.RealServerFailoverRole = RealServerFailoverRole;
+    }
+
     public BindRealServer() {
     }
 
@@ -214,6 +237,9 @@ public class BindRealServer extends AbstractModel{
                 this.DownIPList[i] = new String(source.DownIPList[i]);
             }
         }
+        if (source.RealServerFailoverRole != null) {
+            this.RealServerFailoverRole = new String(source.RealServerFailoverRole);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class BindRealServer extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerStatus", this.RealServerStatus);
         this.setParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
         this.setParamArraySimple(map, prefix + "DownIPList.", this.DownIPList);
+        this.setParamSimple(map, prefix + "RealServerFailoverRole", this.RealServerFailoverRole);
 
     }
 }

@@ -51,14 +51,14 @@ public class DescribeInstanceDetail extends AbstractModel{
     private Long ProductId;
 
     /**
-    * 集群类型, 0:公有云, 1:金融围笼
+    * 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+    * 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
     */
     @SerializedName("HostType")
     @Expose
@@ -191,12 +191,20 @@ public class DescribeInstanceDetail extends AbstractModel{
     private String Zone;
 
     /**
-    * 围笼ID
+    * 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FenceId")
     @Expose
     private String FenceId;
+
+    /**
+    * 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
 
     /**
      * Get 独享集群实例Id 
@@ -263,32 +271,32 @@ public class DescribeInstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 集群类型, 0:公有云, 1:金融围笼 
-     * @return Type 集群类型, 0:公有云, 1:金融围笼
+     * Get 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群 
+     * @return Type 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 集群类型, 0:公有云, 1:金融围笼
-     * @param Type 集群类型, 0:公有云, 1:金融围笼
+     * Set 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
+     * @param Type 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘 
-     * @return HostType 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+     * Get 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型 
+     * @return HostType 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
      */
     public Long getHostType() {
         return this.HostType;
     }
 
     /**
-     * Set 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
-     * @param HostType 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+     * Set 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
+     * @param HostType 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
      */
     public void setHostType(Long HostType) {
         this.HostType = HostType;
@@ -583,9 +591,9 @@ public class DescribeInstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 围笼ID
+     * Get 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FenceId 围笼ID
+     * @return FenceId 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFenceId() {
@@ -593,13 +601,33 @@ public class DescribeInstanceDetail extends AbstractModel{
     }
 
     /**
-     * Set 围笼ID
+     * Set 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FenceId 围笼ID
+     * @param FenceId 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFenceId(String FenceId) {
         this.FenceId = FenceId;
+    }
+
+    /**
+     * Get 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     public DescribeInstanceDetail() {
@@ -685,6 +713,9 @@ public class DescribeInstanceDetail extends AbstractModel{
         if (source.FenceId != null) {
             this.FenceId = new String(source.FenceId);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -717,6 +748,7 @@ public class DescribeInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskAssignable", this.DiskAssignable);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "FenceId", this.FenceId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

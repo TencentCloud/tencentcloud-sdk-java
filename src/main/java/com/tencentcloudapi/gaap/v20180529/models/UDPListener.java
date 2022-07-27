@@ -78,7 +78,7 @@ public class UDPListener extends AbstractModel{
     private Long ListenerStatus;
 
     /**
-    * 监听器源站访问策略
+    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -112,6 +112,94 @@ public class UDPListener extends AbstractModel{
     @SerializedName("SessionPersist")
     @Expose
     private Long SessionPersist;
+
+    /**
+    * 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DelayLoop")
+    @Expose
+    private Long DelayLoop;
+
+    /**
+    * 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectTimeout")
+    @Expose
+    private Long ConnectTimeout;
+
+    /**
+    * 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
+    * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
+    * 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private Long HealthCheck;
+
+    /**
+    * UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckType")
+    @Expose
+    private String CheckType;
+
+    /**
+    * UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckPort")
+    @Expose
+    private Long CheckPort;
+
+    /**
+    * UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContextType")
+    @Expose
+    private String ContextType;
+
+    /**
+    * UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SendContext")
+    @Expose
+    private String SendContext;
+
+    /**
+    * UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecvContext")
+    @Expose
+    private String RecvContext;
 
     /**
      * Get 监听器ID 
@@ -250,16 +338,16 @@ public class UDPListener extends AbstractModel{
     }
 
     /**
-     * Get 监听器源站访问策略 
-     * @return Scheduler 监听器源站访问策略
+     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。 
+     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器源站访问策略
-     * @param Scheduler 监听器源站访问策略
+     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -333,6 +421,226 @@ public class UDPListener extends AbstractModel{
         this.SessionPersist = SessionPersist;
     }
 
+    /**
+     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDelayLoop() {
+        return this.DelayLoop;
+    }
+
+    /**
+     * Set 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelayLoop(Long DelayLoop) {
+        this.DelayLoop = DelayLoop;
+    }
+
+    /**
+     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConnectTimeout() {
+        return this.ConnectTimeout;
+    }
+
+    /**
+     * Set 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectTimeout(Long ConnectTimeout) {
+        this.ConnectTimeout = ConnectTimeout;
+    }
+
+    /**
+     * Get 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
+    /**
+     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
+     * Get 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheck 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheck 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheck(Long HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckType() {
+        return this.CheckType;
+    }
+
+    /**
+     * Set UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckType(String CheckType) {
+        this.CheckType = CheckType;
+    }
+
+    /**
+     * Get UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckPort UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCheckPort() {
+        return this.CheckPort;
+    }
+
+    /**
+     * Set UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckPort UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckPort(Long CheckPort) {
+        this.CheckPort = CheckPort;
+    }
+
+    /**
+     * Get UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContextType() {
+        return this.ContextType;
+    }
+
+    /**
+     * Set UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContextType(String ContextType) {
+        this.ContextType = ContextType;
+    }
+
+    /**
+     * Get UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSendContext() {
+        return this.SendContext;
+    }
+
+    /**
+     * Set UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSendContext(String SendContext) {
+        this.SendContext = SendContext;
+    }
+
+    /**
+     * Get UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecvContext() {
+        return this.RecvContext;
+    }
+
+    /**
+     * Set UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecvContext(String RecvContext) {
+        this.RecvContext = RecvContext;
+    }
+
     public UDPListener() {
     }
 
@@ -380,6 +688,39 @@ public class UDPListener extends AbstractModel{
         if (source.SessionPersist != null) {
             this.SessionPersist = new Long(source.SessionPersist);
         }
+        if (source.DelayLoop != null) {
+            this.DelayLoop = new Long(source.DelayLoop);
+        }
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new String(source.CheckType);
+        }
+        if (source.CheckPort != null) {
+            this.CheckPort = new Long(source.CheckPort);
+        }
+        if (source.ContextType != null) {
+            this.ContextType = new String(source.ContextType);
+        }
+        if (source.SendContext != null) {
+            this.SendContext = new String(source.SendContext);
+        }
+        if (source.RecvContext != null) {
+            this.RecvContext = new String(source.RecvContext);
+        }
     }
 
 
@@ -399,6 +740,17 @@ public class UDPListener extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
+        this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+        this.setParamSimple(map, prefix + "CheckType", this.CheckType);
+        this.setParamSimple(map, prefix + "CheckPort", this.CheckPort);
+        this.setParamSimple(map, prefix + "ContextType", this.ContextType);
+        this.setParamSimple(map, prefix + "SendContext", this.SendContext);
+        this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
 
     }
 }

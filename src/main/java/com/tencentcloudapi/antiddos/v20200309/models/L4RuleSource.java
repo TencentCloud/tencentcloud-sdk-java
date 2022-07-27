@@ -45,6 +45,14 @@ public class L4RuleSource extends AbstractModel{
     private Long Port;
 
     /**
+    * 备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Backup")
+    @Expose
+    private Long Backup;
+
+    /**
      * Get 回源IP或域名 
      * @return Source 回源IP或域名
      */
@@ -96,6 +104,26 @@ public class L4RuleSource extends AbstractModel{
         this.Port = Port;
     }
 
+    /**
+     * Get 备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Backup 备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackup() {
+        return this.Backup;
+    }
+
+    /**
+     * Set 备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Backup 备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackup(Long Backup) {
+        this.Backup = Backup;
+    }
+
     public L4RuleSource() {
     }
 
@@ -113,6 +141,9 @@ public class L4RuleSource extends AbstractModel{
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.Backup != null) {
+            this.Backup = new Long(source.Backup);
+        }
     }
 
 
@@ -123,6 +154,7 @@ public class L4RuleSource extends AbstractModel{
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Backup", this.Backup);
 
     }
 }

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateDocumentRequest extends AbstractModel{
 
     /**
+    * 调用方用户信息，userId 必填
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
     * 签署流程编号,由CreateFlow接口返回
     */
     @SerializedName("FlowId")
@@ -42,20 +49,6 @@ public class CreateDocumentRequest extends AbstractModel{
     @SerializedName("FileNames")
     @Expose
     private String [] FileNames;
-
-    /**
-    * 无
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 应用相关信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
 
     /**
     * 内容控件信息数组
@@ -78,6 +71,29 @@ public class CreateDocumentRequest extends AbstractModel{
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * 应用相关信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
 
     /**
      * Get 签署流程编号,由CreateFlow接口返回 
@@ -125,38 +141,6 @@ public class CreateDocumentRequest extends AbstractModel{
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;
-    }
-
-    /**
-     * Get 无 
-     * @return Operator 无
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 无
-     * @param Operator 无
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
     }
 
     /**
@@ -211,6 +195,22 @@ public class CreateDocumentRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateDocumentRequest() {
     }
 
@@ -219,6 +219,9 @@ public class CreateDocumentRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateDocumentRequest(CreateDocumentRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
@@ -230,12 +233,6 @@ public class CreateDocumentRequest extends AbstractModel{
             for (int i = 0; i < source.FileNames.length; i++) {
                 this.FileNames[i] = new String(source.FileNames[i]);
             }
-        }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
         }
         if (source.FormFields != null) {
             this.FormFields = new FormField[source.FormFields.length];
@@ -249,6 +246,9 @@ public class CreateDocumentRequest extends AbstractModel{
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -256,14 +256,14 @@ public class CreateDocumentRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

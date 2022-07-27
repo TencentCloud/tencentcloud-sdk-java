@@ -86,6 +86,13 @@ public class DescribeInstanceListRequest extends AbstractModel{
     private Long [] Status;
 
     /**
+    * 按所属集群ID过滤
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String [] ClusterId;
+
+    /**
      * Get 分页返回数量 
      * @return Limit 分页返回数量
      */
@@ -229,6 +236,22 @@ public class DescribeInstanceListRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 按所属集群ID过滤 
+     * @return ClusterId 按所属集群ID过滤
+     */
+    public String [] getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 按所属集群ID过滤
+     * @param ClusterId 按所属集群ID过滤
+     */
+    public void setClusterId(String [] ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public DescribeInstanceListRequest() {
     }
 
@@ -279,6 +302,12 @@ public class DescribeInstanceListRequest extends AbstractModel{
                 this.Status[i] = new Long(source.Status[i]);
             }
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String[source.ClusterId.length];
+            for (int i = 0; i < source.ClusterId.length; i++) {
+                this.ClusterId[i] = new String(source.ClusterId[i]);
+            }
+        }
     }
 
 
@@ -295,6 +324,7 @@ public class DescribeInstanceListRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceName.", this.InstanceName);
         this.setParamArraySimple(map, prefix + "FenceId.", this.FenceId);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamArraySimple(map, prefix + "ClusterId.", this.ClusterId);
 
     }
 }

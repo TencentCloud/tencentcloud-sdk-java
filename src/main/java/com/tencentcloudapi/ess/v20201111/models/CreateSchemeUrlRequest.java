@@ -23,28 +23,18 @@ import java.util.HashMap;
 public class CreateSchemeUrlRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，参考通用结构
+    * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 应用相关信息
+    * 企业名称
     */
-    @SerializedName("Agent")
+    @SerializedName("OrganizationName")
     @Expose
-    private Agent Agent;
-
-    /**
-    * 链接类型
-HTTP：跳转电子签小程序的http_url，
-APP：第三方APP或小程序跳转电子签小程序的path。
-默认为HTTP类型
-    */
-    @SerializedName("EndPoint")
-    @Expose
-    private String EndPoint;
+    private String OrganizationName;
 
     /**
     * 姓名,最大长度50个字符
@@ -61,11 +51,14 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     private String Mobile;
 
     /**
-    * 企业名称
+    * 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
     */
-    @SerializedName("OrganizationName")
+    @SerializedName("EndPoint")
     @Expose
-    private String OrganizationName;
+    private String EndPoint;
 
     /**
     * 签署流程编号 (PathType=1时必传)
@@ -89,63 +82,42 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     private Boolean AutoJumpBack;
 
     /**
-     * Get 调用方用户信息，参考通用结构 
-     * @return Operator 调用方用户信息，参考通用结构
+    * 应用相关信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，参考通用结构
-     * @param Operator 调用方用户信息，参考通用结构
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 企业名称 
+     * @return OrganizationName 企业名称
      */
-    public Agent getAgent() {
-        return this.Agent;
+    public String getOrganizationName() {
+        return this.OrganizationName;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 企业名称
+     * @param OrganizationName 企业名称
      */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 链接类型
-HTTP：跳转电子签小程序的http_url，
-APP：第三方APP或小程序跳转电子签小程序的path。
-默认为HTTP类型 
-     * @return EndPoint 链接类型
-HTTP：跳转电子签小程序的http_url，
-APP：第三方APP或小程序跳转电子签小程序的path。
-默认为HTTP类型
-     */
-    public String getEndPoint() {
-        return this.EndPoint;
-    }
-
-    /**
-     * Set 链接类型
-HTTP：跳转电子签小程序的http_url，
-APP：第三方APP或小程序跳转电子签小程序的path。
-默认为HTTP类型
-     * @param EndPoint 链接类型
-HTTP：跳转电子签小程序的http_url，
-APP：第三方APP或小程序跳转电子签小程序的path。
-默认为HTTP类型
-     */
-    public void setEndPoint(String EndPoint) {
-        this.EndPoint = EndPoint;
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
     }
 
     /**
@@ -181,19 +153,31 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     }
 
     /**
-     * Get 企业名称 
-     * @return OrganizationName 企业名称
+     * Get 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型 
+     * @return EndPoint 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
      */
-    public String getOrganizationName() {
-        return this.OrganizationName;
+    public String getEndPoint() {
+        return this.EndPoint;
     }
 
     /**
-     * Set 企业名称
-     * @param OrganizationName 企业名称
+     * Set 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
+     * @param EndPoint 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
      */
-    public void setOrganizationName(String OrganizationName) {
-        this.OrganizationName = OrganizationName;
+    public void setEndPoint(String EndPoint) {
+        this.EndPoint = EndPoint;
     }
 
     /**
@@ -244,6 +228,22 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         this.AutoJumpBack = AutoJumpBack;
     }
 
+    /**
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -255,11 +255,8 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
-        if (source.EndPoint != null) {
-            this.EndPoint = new String(source.EndPoint);
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -267,8 +264,8 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
-        if (source.OrganizationName != null) {
-            this.OrganizationName = new String(source.OrganizationName);
+        if (source.EndPoint != null) {
+            this.EndPoint = new String(source.EndPoint);
         }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
@@ -279,6 +276,9 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (source.AutoJumpBack != null) {
             this.AutoJumpBack = new Boolean(source.AutoJumpBack);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -287,14 +287,14 @@ APP：第三方APP或小程序跳转电子签小程序的path。
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "EndPoint", this.EndPoint);
+        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
-        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamSimple(map, prefix + "EndPoint", this.EndPoint);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "PathType", this.PathType);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

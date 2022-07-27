@@ -201,6 +201,14 @@ public class BGPIPInstance extends AbstractModel{
     private AnycastOutPackRelation AnycastOutPackRelation;
 
     /**
+    * 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private Long InstanceVersion;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -648,6 +656,26 @@ public class BGPIPInstance extends AbstractModel{
         this.AnycastOutPackRelation = AnycastOutPackRelation;
     }
 
+    /**
+     * Get 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceVersion 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceVersion 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceVersion(Long InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -725,6 +753,9 @@ public class BGPIPInstance extends AbstractModel{
         if (source.AnycastOutPackRelation != null) {
             this.AnycastOutPackRelation = new AnycastOutPackRelation(source.AnycastOutPackRelation);
         }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new Long(source.InstanceVersion);
+        }
     }
 
 
@@ -754,6 +785,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
 
     }
 }

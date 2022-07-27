@@ -128,6 +128,13 @@ public class DBInstanceDetail extends AbstractModel{
     private Long ShardNum;
 
     /**
+    * 地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
     * 可用区
     */
     @SerializedName("Zone")
@@ -154,6 +161,13 @@ public class DBInstanceDetail extends AbstractModel{
     @SerializedName("DbEngine")
     @Expose
     private String DbEngine;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
      * Get DB实例Id 
@@ -396,6 +410,22 @@ public class DBInstanceDetail extends AbstractModel{
     }
 
     /**
+     * Get 地域 
+     * @return Region 地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+     * @param Region 地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -459,6 +489,22 @@ public class DBInstanceDetail extends AbstractModel{
         this.DbEngine = DbEngine;
     }
 
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public DBInstanceDetail() {
     }
 
@@ -512,6 +558,9 @@ public class DBInstanceDetail extends AbstractModel{
         if (source.ShardNum != null) {
             this.ShardNum = new Long(source.ShardNum);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
@@ -523,6 +572,9 @@ public class DBInstanceDetail extends AbstractModel{
         }
         if (source.DbEngine != null) {
             this.DbEngine = new String(source.DbEngine);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
         }
     }
 
@@ -546,10 +598,12 @@ public class DBInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Disk", this.Disk);
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DbHosts", this.DbHosts);
         this.setParamSimple(map, prefix + "HostRole", this.HostRole);
         this.setParamSimple(map, prefix + "DbEngine", this.DbEngine);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

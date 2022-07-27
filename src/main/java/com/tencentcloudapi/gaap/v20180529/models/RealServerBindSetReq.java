@@ -51,7 +51,7 @@ public class RealServerBindSetReq extends AbstractModel{
     private Long RealServerWeight;
 
     /**
-    * 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+    * 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
     */
     @SerializedName("RealServerFailoverRole")
     @Expose
@@ -122,16 +122,16 @@ public class RealServerBindSetReq extends AbstractModel{
     }
 
     /**
-     * Get 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器 
-     * @return RealServerFailoverRole 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+     * Get 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。 
+     * @return RealServerFailoverRole 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
      */
     public String getRealServerFailoverRole() {
         return this.RealServerFailoverRole;
     }
 
     /**
-     * Set 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
-     * @param RealServerFailoverRole 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+     * Set 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
+     * @param RealServerFailoverRole 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
      */
     public void setRealServerFailoverRole(String RealServerFailoverRole) {
         this.RealServerFailoverRole = RealServerFailoverRole;

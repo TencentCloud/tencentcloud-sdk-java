@@ -31,6 +31,14 @@ public class AmountBeforeTaxResult extends AbstractModel{
     private String AmountBeforeTax;
 
     /**
+    * 两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AmountBeforeTaxWithTwoDigitPrecision")
+    @Expose
+    private String AmountBeforeTaxWithTwoDigitPrecision;
+
+    /**
      * Get 税前金额
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountBeforeTax 税前金额
@@ -50,6 +58,26 @@ public class AmountBeforeTaxResult extends AbstractModel{
         this.AmountBeforeTax = AmountBeforeTax;
     }
 
+    /**
+     * Get 两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AmountBeforeTaxWithTwoDigitPrecision 两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAmountBeforeTaxWithTwoDigitPrecision() {
+        return this.AmountBeforeTaxWithTwoDigitPrecision;
+    }
+
+    /**
+     * Set 两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AmountBeforeTaxWithTwoDigitPrecision 两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAmountBeforeTaxWithTwoDigitPrecision(String AmountBeforeTaxWithTwoDigitPrecision) {
+        this.AmountBeforeTaxWithTwoDigitPrecision = AmountBeforeTaxWithTwoDigitPrecision;
+    }
+
     public AmountBeforeTaxResult() {
     }
 
@@ -61,6 +89,9 @@ public class AmountBeforeTaxResult extends AbstractModel{
         if (source.AmountBeforeTax != null) {
             this.AmountBeforeTax = new String(source.AmountBeforeTax);
         }
+        if (source.AmountBeforeTaxWithTwoDigitPrecision != null) {
+            this.AmountBeforeTaxWithTwoDigitPrecision = new String(source.AmountBeforeTaxWithTwoDigitPrecision);
+        }
     }
 
 
@@ -69,6 +100,7 @@ public class AmountBeforeTaxResult extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
+        this.setParamSimple(map, prefix + "AmountBeforeTaxWithTwoDigitPrecision", this.AmountBeforeTaxWithTwoDigitPrecision);
 
     }
 }

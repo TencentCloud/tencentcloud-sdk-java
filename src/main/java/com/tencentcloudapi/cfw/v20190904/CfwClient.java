@@ -139,7 +139,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *创建防火墙实例
+     *创建NAT防火墙实例（Region参数必填）
      * @param req CreateNatFwInstanceRequest
      * @return CreateNatFwInstanceResponse
      * @throws TencentCloudSDKException

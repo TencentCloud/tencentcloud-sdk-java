@@ -79,7 +79,7 @@ public class HealthCheck extends AbstractModel{
     private String HttpCheckPath;
 
     /**
-    * 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+    * 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckDomain")
@@ -299,9 +299,9 @@ public class HealthCheck extends AbstractModel{
     }
 
     /**
-     * Get 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+     * Get 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+     * @return HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckDomain() {
@@ -309,9 +309,9 @@ public class HealthCheck extends AbstractModel{
     }
 
     /**
-     * Set 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+     * Set 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+     * @param HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {

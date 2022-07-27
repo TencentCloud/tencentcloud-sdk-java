@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateFlowRequest extends AbstractModel{
 
     /**
+    * 调用方用户信息，userId 必填
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
     * 签署流程名称,最大长度200个字符
     */
     @SerializedName("FlowName")
@@ -37,28 +44,25 @@ public class CreateFlowRequest extends AbstractModel{
     private FlowCreateApprover [] Approvers;
 
     /**
-    * 操作人信息
+    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
     */
-    @SerializedName("Operator")
+    @SerializedName("FlowType")
     @Expose
-    private UserInfo Operator;
+    private String FlowType;
 
     /**
-    * 应用相关信息
+    * 客户端Token，保持接口幂等性,最大长度64个字符
     */
-    @SerializedName("Agent")
+    @SerializedName("ClientToken")
     @Expose
-    private Agent Agent;
+    private String ClientToken;
 
     /**
-    * 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签），请和模板中的配置保持一致
+    * 暂未开放
     */
-    @SerializedName("Unordered")
+    @SerializedName("CallbackUrl")
     @Expose
-    private Boolean Unordered;
+    private String CallbackUrl;
 
     /**
     * 签署流程的签署截止时间。
@@ -67,13 +71,6 @@ false：有序签
     @SerializedName("DeadLine")
     @Expose
     private Long DeadLine;
-
-    /**
-    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
 
     /**
     * 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
@@ -90,11 +87,14 @@ false：有序签
     private String FlowDescription;
 
     /**
-    * 客户端Token，保持接口幂等性,最大长度64个字符
+    * 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
     */
-    @SerializedName("ClientToken")
+    @SerializedName("Unordered")
     @Expose
-    private String ClientToken;
+    private Boolean Unordered;
 
     /**
     * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
@@ -111,11 +111,27 @@ false：有序签
     private String RelatedFlowId;
 
     /**
-    * 暂未开放
+    * 应用相关信息
     */
-    @SerializedName("CallbackUrl")
+    @SerializedName("Agent")
     @Expose
-    private String CallbackUrl;
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
 
     /**
      * Get 签署流程名称,最大长度200个字符 
@@ -150,63 +166,51 @@ false：有序签
     }
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
+     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public String getFlowType() {
+        return this.FlowType;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 客户端Token，保持接口幂等性,最大长度64个字符 
+     * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
-    public Agent getAgent() {
-        return this.Agent;
+    public String getClientToken() {
+        return this.ClientToken;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签），请和模板中的配置保持一致 
-     * @return Unordered 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签），请和模板中的配置保持一致
+     * Get 暂未开放 
+     * @return CallbackUrl 暂未开放
      */
-    public Boolean getUnordered() {
-        return this.Unordered;
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
     }
 
     /**
-     * Set 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签），请和模板中的配置保持一致
-     * @param Unordered 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签），请和模板中的配置保持一致
+     * Set 暂未开放
+     * @param CallbackUrl 暂未开放
      */
-    public void setUnordered(Boolean Unordered) {
-        this.Unordered = Unordered;
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
     }
 
     /**
@@ -227,22 +231,6 @@ false：有序签
      */
     public void setDeadLine(Long DeadLine) {
         this.DeadLine = DeadLine;
-    }
-
-    /**
-     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
-     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
     }
 
     /**
@@ -278,19 +266,31 @@ false：有序签
     }
 
     /**
-     * Get 客户端Token，保持接口幂等性,最大长度64个字符 
-     * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * Get 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致 
+     * @return Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      */
-    public String getClientToken() {
-        return this.ClientToken;
+    public Boolean getUnordered() {
+        return this.Unordered;
     }
 
     /**
-     * Set 客户端Token，保持接口幂等性,最大长度64个字符
-     * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * Set 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+     * @param Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
+    public void setUnordered(Boolean Unordered) {
+        this.Unordered = Unordered;
     }
 
     /**
@@ -326,19 +326,19 @@ false：有序签
     }
 
     /**
-     * Get 暂未开放 
-     * @return CallbackUrl 暂未开放
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
      */
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
+    public Agent getAgent() {
+        return this.Agent;
     }
 
     /**
-     * Set 暂未开放
-     * @param CallbackUrl 暂未开放
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
      */
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     public CreateFlowRequest() {
@@ -349,6 +349,9 @@ false：有序签
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowRequest(CreateFlowRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
@@ -358,20 +361,17 @@ false：有序签
                 this.Approvers[i] = new FlowCreateApprover(source.Approvers[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
         }
-        if (source.Unordered != null) {
-            this.Unordered = new Boolean(source.Unordered);
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
         }
         if (source.DeadLine != null) {
             this.DeadLine = new Long(source.DeadLine);
-        }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
         }
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
@@ -379,8 +379,8 @@ false：有序签
         if (source.FlowDescription != null) {
             this.FlowDescription = new String(source.FlowDescription);
         }
-        if (source.ClientToken != null) {
-            this.ClientToken = new String(source.ClientToken);
+        if (source.Unordered != null) {
+            this.Unordered = new Boolean(source.Unordered);
         }
         if (source.CustomShowMap != null) {
             this.CustomShowMap = new String(source.CustomShowMap);
@@ -388,8 +388,8 @@ false：有序签
         if (source.RelatedFlowId != null) {
             this.RelatedFlowId = new String(source.RelatedFlowId);
         }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -398,19 +398,19 @@ false：有序签
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
-        this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }
