@@ -37,11 +37,25 @@ public class TdwParam extends AbstractModel{
     private String Tid;
 
     /**
-    * 是否为国内站，默认true
+    * 默认true
     */
     @SerializedName("IsDomestic")
     @Expose
     private Boolean IsDomestic;
+
+    /**
+    * TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+    */
+    @SerializedName("TdwHost")
+    @Expose
+    private String TdwHost;
+
+    /**
+    * TDW端口，默认8099
+    */
+    @SerializedName("TdwPort")
+    @Expose
+    private Long TdwPort;
 
     /**
      * Get Tdw的bid 
@@ -76,19 +90,51 @@ public class TdwParam extends AbstractModel{
     }
 
     /**
-     * Get 是否为国内站，默认true 
-     * @return IsDomestic 是否为国内站，默认true
+     * Get 默认true 
+     * @return IsDomestic 默认true
      */
     public Boolean getIsDomestic() {
         return this.IsDomestic;
     }
 
     /**
-     * Set 是否为国内站，默认true
-     * @param IsDomestic 是否为国内站，默认true
+     * Set 默认true
+     * @param IsDomestic 默认true
      */
     public void setIsDomestic(Boolean IsDomestic) {
         this.IsDomestic = IsDomestic;
+    }
+
+    /**
+     * Get TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com 
+     * @return TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+     */
+    public String getTdwHost() {
+        return this.TdwHost;
+    }
+
+    /**
+     * Set TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+     * @param TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+     */
+    public void setTdwHost(String TdwHost) {
+        this.TdwHost = TdwHost;
+    }
+
+    /**
+     * Get TDW端口，默认8099 
+     * @return TdwPort TDW端口，默认8099
+     */
+    public Long getTdwPort() {
+        return this.TdwPort;
+    }
+
+    /**
+     * Set TDW端口，默认8099
+     * @param TdwPort TDW端口，默认8099
+     */
+    public void setTdwPort(Long TdwPort) {
+        this.TdwPort = TdwPort;
     }
 
     public TdwParam() {
@@ -108,6 +154,12 @@ public class TdwParam extends AbstractModel{
         if (source.IsDomestic != null) {
             this.IsDomestic = new Boolean(source.IsDomestic);
         }
+        if (source.TdwHost != null) {
+            this.TdwHost = new String(source.TdwHost);
+        }
+        if (source.TdwPort != null) {
+            this.TdwPort = new Long(source.TdwPort);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class TdwParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Bid", this.Bid);
         this.setParamSimple(map, prefix + "Tid", this.Tid);
         this.setParamSimple(map, prefix + "IsDomestic", this.IsDomestic);
+        this.setParamSimple(map, prefix + "TdwHost", this.TdwHost);
+        this.setParamSimple(map, prefix + "TdwPort", this.TdwPort);
 
     }
 }

@@ -117,6 +117,14 @@ public class ShipperInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilenameMode")
+    @Expose
+    private Long FilenameMode;
+
+    /**
      * Get 投递规则ID 
      * @return ShipperId 投递规则ID
      */
@@ -336,6 +344,26 @@ public class ShipperInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFilenameMode() {
+        return this.FilenameMode;
+    }
+
+    /**
+     * Set 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilenameMode(Long FilenameMode) {
+        this.FilenameMode = FilenameMode;
+    }
+
     public ShipperInfo() {
     }
 
@@ -386,6 +414,9 @@ public class ShipperInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.FilenameMode != null) {
+            this.FilenameMode = new Long(source.FilenameMode);
+        }
     }
 
 
@@ -406,6 +437,7 @@ public class ShipperInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
 
     }
 }

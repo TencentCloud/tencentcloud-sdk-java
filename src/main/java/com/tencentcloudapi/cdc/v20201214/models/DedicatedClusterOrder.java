@@ -140,6 +140,30 @@ public class DedicatedClusterOrder extends AbstractModel{
     private Long PayStatus;
 
     /**
+    * 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayType")
+    @Expose
+    private String PayType;
+
+    /**
+    * 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeUnit")
+    @Expose
+    private String TimeUnit;
+
+    /**
+    * 购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
      * Get 专用集群id 
      * @return DedicatedClusterId 专用集群id
      */
@@ -415,6 +439,66 @@ public class DedicatedClusterOrder extends AbstractModel{
         this.PayStatus = PayStatus;
     }
 
+    /**
+     * Get 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayType 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayType() {
+        return this.PayType;
+    }
+
+    /**
+     * Set 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayType 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayType(String PayType) {
+        this.PayType = PayType;
+    }
+
+    /**
+     * Get 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeUnit 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTimeUnit() {
+        return this.TimeUnit;
+    }
+
+    /**
+     * Set 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeUnit 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeUnit(String TimeUnit) {
+        this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * Get 购买时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeSpan 购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeSpan 购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
     public DedicatedClusterOrder() {
     }
 
@@ -483,6 +567,15 @@ public class DedicatedClusterOrder extends AbstractModel{
         if (source.PayStatus != null) {
             this.PayStatus = new Long(source.PayStatus);
         }
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
     }
 
 
@@ -506,6 +599,9 @@ public class DedicatedClusterOrder extends AbstractModel{
         this.setParamSimple(map, prefix + "Mem", this.Mem);
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "PayStatus", this.PayStatus);
+        this.setParamSimple(map, prefix + "PayType", this.PayType);
+        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
 
     }
 }

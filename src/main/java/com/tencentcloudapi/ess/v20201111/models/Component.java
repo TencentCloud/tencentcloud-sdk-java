@@ -24,13 +24,15 @@ public class Component extends AbstractModel{
 
     /**
     * 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
     */
     @SerializedName("ComponentType")
     @Expose
@@ -122,7 +124,12 @@ ESIGN -- 个人印章类型
     private String ComponentRecipientId;
 
     /**
-    * 控件所填写的内容
+    * 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
     */
     @SerializedName("ComponentValue")
     @Expose
@@ -167,21 +174,25 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
      * Get 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件 
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用 
      * @return ComponentType 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
      */
     public String getComponentType() {
         return this.ComponentType;
@@ -189,21 +200,25 @@ SIGN_SIGNATURE - 手写签名控件
 
     /**
      * Set 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
      * @param ComponentType 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
      */
     public void setComponentType(String ComponentType) {
         this.ComponentType = ComponentType;
@@ -418,16 +433,36 @@ ESIGN -- 个人印章类型
     }
 
     /**
-     * Get 控件所填写的内容 
-     * @return ComponentValue 控件所填写的内容
+     * Get 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值 
+     * @return ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
      */
     public String getComponentValue() {
         return this.ComponentValue;
     }
 
     /**
-     * Set 控件所填写的内容
-     * @param ComponentValue 控件所填写的内容
+     * Set 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+     * @param ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
      */
     public void setComponentValue(String ComponentValue) {
         this.ComponentValue = ComponentValue;

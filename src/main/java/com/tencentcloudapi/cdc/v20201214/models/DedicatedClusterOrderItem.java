@@ -143,6 +143,22 @@ public class DedicatedClusterOrderItem extends AbstractModel{
     private String ComputeFormat;
 
     /**
+    * 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TypeFamily")
+    @Expose
+    private String TypeFamily;
+
+    /**
+    * 0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubOrderPayStatus")
+    @Expose
+    private Long SubOrderPayStatus;
+
+    /**
      * Get 专用集群类型id 
      * @return DedicatedClusterTypeId 专用集群类型id
      */
@@ -418,6 +434,46 @@ public class DedicatedClusterOrderItem extends AbstractModel{
         this.ComputeFormat = ComputeFormat;
     }
 
+    /**
+     * Get 规格类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TypeFamily 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTypeFamily() {
+        return this.TypeFamily;
+    }
+
+    /**
+     * Set 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TypeFamily 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTypeFamily(String TypeFamily) {
+        this.TypeFamily = TypeFamily;
+    }
+
+    /**
+     * Get 0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubOrderPayStatus 0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubOrderPayStatus() {
+        return this.SubOrderPayStatus;
+    }
+
+    /**
+     * Set 0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubOrderPayStatus 0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubOrderPayStatus(Long SubOrderPayStatus) {
+        this.SubOrderPayStatus = SubOrderPayStatus;
+    }
+
     public DedicatedClusterOrderItem() {
     }
 
@@ -486,6 +542,12 @@ public class DedicatedClusterOrderItem extends AbstractModel{
         if (source.ComputeFormat != null) {
             this.ComputeFormat = new String(source.ComputeFormat);
         }
+        if (source.TypeFamily != null) {
+            this.TypeFamily = new String(source.TypeFamily);
+        }
+        if (source.SubOrderPayStatus != null) {
+            this.SubOrderPayStatus = new Long(source.SubOrderPayStatus);
+        }
     }
 
 
@@ -510,6 +572,8 @@ public class DedicatedClusterOrderItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalGpu", this.TotalGpu);
         this.setParamSimple(map, prefix + "TypeName", this.TypeName);
         this.setParamSimple(map, prefix + "ComputeFormat", this.ComputeFormat);
+        this.setParamSimple(map, prefix + "TypeFamily", this.TypeFamily);
+        this.setParamSimple(map, prefix + "SubOrderPayStatus", this.SubOrderPayStatus);
 
     }
 }

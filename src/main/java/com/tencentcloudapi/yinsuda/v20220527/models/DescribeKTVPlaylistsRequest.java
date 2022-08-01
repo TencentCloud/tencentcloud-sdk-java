@@ -37,6 +37,15 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
     private String UserId;
 
     /**
+    * 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
+    */
+    @SerializedName("Types")
+    @Expose
+    private String [] Types;
+
+    /**
      * Get 应用名称。 
      * @return AppName 应用名称。
      */
@@ -68,6 +77,30 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li> 
+     * @return Types 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
+     */
+    public String [] getTypes() {
+        return this.Types;
+    }
+
+    /**
+     * Set 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
+     * @param Types 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
+     */
+    public void setTypes(String [] Types) {
+        this.Types = Types;
+    }
+
     public DescribeKTVPlaylistsRequest() {
     }
 
@@ -82,6 +115,12 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.Types != null) {
+            this.Types = new String[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new String(source.Types[i]);
+            }
+        }
     }
 
 
@@ -91,6 +130,7 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
 
     }
 }

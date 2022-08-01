@@ -110,6 +110,24 @@ public class Zone extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Resources")
+    @Expose
+    private Resource [] Resources;
+
+    /**
+    * 是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CnameSpeedUp")
+    @Expose
+    private String CnameSpeedUp;
+
+    /**
      * Get 站点ID 
      * @return Id 站点ID
      */
@@ -325,6 +343,54 @@ public class Zone extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 计费资源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Resources 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Resource [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Resources 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResources(Resource [] Resources) {
+        this.Resources = Resources;
+    }
+
+    /**
+     * Get 是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CnameSpeedUp 是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCnameSpeedUp() {
+        return this.CnameSpeedUp;
+    }
+
+    /**
+     * Set 是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CnameSpeedUp 是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCnameSpeedUp(String CnameSpeedUp) {
+        this.CnameSpeedUp = CnameSpeedUp;
+    }
+
     public Zone() {
     }
 
@@ -375,6 +441,15 @@ public class Zone extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Resources != null) {
+            this.Resources = new Resource[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new Resource(source.Resources[i]);
+            }
+        }
+        if (source.CnameSpeedUp != null) {
+            this.CnameSpeedUp = new String(source.CnameSpeedUp);
+        }
     }
 
 
@@ -393,6 +468,8 @@ public class Zone extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
 
     }
 }

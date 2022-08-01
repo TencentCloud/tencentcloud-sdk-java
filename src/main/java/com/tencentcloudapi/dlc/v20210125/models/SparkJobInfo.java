@@ -255,6 +255,14 @@ public class SparkJobInfo extends AbstractModel{
     private Long TaskNum;
 
     /**
+    * 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataEngineStatus")
+    @Expose
+    private Long DataEngineStatus;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -798,6 +806,26 @@ public class SparkJobInfo extends AbstractModel{
         this.TaskNum = TaskNum;
     }
 
+    /**
+     * Get 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataEngineStatus 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDataEngineStatus() {
+        return this.DataEngineStatus;
+    }
+
+    /**
+     * Set 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataEngineStatus 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataEngineStatus(Long DataEngineStatus) {
+        this.DataEngineStatus = DataEngineStatus;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -902,6 +930,9 @@ public class SparkJobInfo extends AbstractModel{
         if (source.TaskNum != null) {
             this.TaskNum = new Long(source.TaskNum);
         }
+        if (source.DataEngineStatus != null) {
+            this.DataEngineStatus = new Long(source.DataEngineStatus);
+        }
     }
 
 
@@ -941,6 +972,7 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "JobArchives", this.JobArchives);
         this.setParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
         this.setParamSimple(map, prefix + "TaskNum", this.TaskNum);
+        this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
 
     }
 }

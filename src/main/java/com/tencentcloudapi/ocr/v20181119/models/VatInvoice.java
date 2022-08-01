@@ -139,7 +139,7 @@ public class VatInvoice extends AbstractModel{
 
     /**
     * 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
     */
     @SerializedName("IsAbandoned")
     @Expose
@@ -478,9 +478,9 @@ Y: 有清单 N：无清单
 
     /**
      * Get 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲 
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲 
      * @return IsAbandoned 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      */
     public String getIsAbandoned() {
         return this.IsAbandoned;
@@ -488,9 +488,9 @@ Y: 已作废 N：未作废 H：红冲
 
     /**
      * Set 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      * @param IsAbandoned 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      */
     public void setIsAbandoned(String IsAbandoned) {
         this.IsAbandoned = IsAbandoned;

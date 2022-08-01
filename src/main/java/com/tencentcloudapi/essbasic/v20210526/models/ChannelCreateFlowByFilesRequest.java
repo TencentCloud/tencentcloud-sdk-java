@@ -100,6 +100,13 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String CustomShowMap;
 
     /**
+    * 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    */
+    @SerializedName("CustomerData")
+    @Expose
+    private String CustomerData;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
@@ -283,6 +290,22 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     }
 
     /**
+     * Get 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
+     * @return CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public String getCustomerData() {
+        return this.CustomerData;
+    }
+
+    /**
+     * Set 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public void setCustomerData(String CustomerData) {
+        this.CustomerData = CustomerData;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -348,6 +371,9 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
         if (source.CustomShowMap != null) {
             this.CustomShowMap = new String(source.CustomShowMap);
         }
+        if (source.CustomerData != null) {
+            this.CustomerData = new String(source.CustomerData);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -369,6 +395,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+        this.setParamSimple(map, prefix + "CustomerData", this.CustomerData);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

@@ -44,6 +44,22 @@ public class ForbidStreamInfo extends AbstractModel{
     private String ExpireTime;
 
     /**
+    * 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
+    * 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
      * Get 流名称。 
      * @return StreamName 流名称。
      */
@@ -91,6 +107,46 @@ public class ForbidStreamInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppName 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * Set 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppName 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
+     * Get 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainName 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainName 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
     public ForbidStreamInfo() {
     }
 
@@ -108,6 +164,12 @@ public class ForbidStreamInfo extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
     }
 
 
@@ -118,6 +180,8 @@ public class ForbidStreamInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

@@ -202,6 +202,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *获取运行服务列表
+     * @param req DescribeApplicationsRequest
+     * @return DescribeApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplications");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *单环境下所有应用状态查看
      * @param req DescribeApplicationsStatusRequest
      * @return DescribeApplicationsStatusResponse
@@ -234,6 +254,26 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDeployApplicationDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDeployApplicationDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取环境状态
+     * @param req DescribeEnvironmentStatusRequest
+     * @return DescribeEnvironmentStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentStatusResponse DescribeEnvironmentStatus(DescribeEnvironmentStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvironmentStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvironmentStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

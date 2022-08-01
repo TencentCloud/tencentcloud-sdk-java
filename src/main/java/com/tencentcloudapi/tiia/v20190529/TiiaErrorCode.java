@@ -6,8 +6,8 @@ public enum TiiaErrorCode {
     // 余额不足，开通失败，请充值后再开通。
      FAILEDOPERATION_BALANCEINSUFFICIENT("FailedOperation.BalanceInsufficient"),
      
-    // 文件下载失败。
-     FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownLoadError"),
+    // 文件下载错误。
+     FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownloadError"),
      
     // 图片内容为空。
      FAILEDOPERATION_EMPTYIMAGEERROR("FailedOperation.EmptyImageError"),
@@ -128,9 +128,6 @@ public enum TiiaErrorCode {
      
     // 返回数量不在合法范围内。
      INVALIDPARAMETERVALUE_LIMITEXCEED("InvalidParameterValue.LimitExceed"),
-     
-    // 图片中未检测到人脸。
-     INVALIDPARAMETERVALUE_NOFACEINPHOTO("InvalidParameterValue.NoFaceInPhoto"),
      
     // 图片已经存在。
      INVALIDPARAMETERVALUE_PICNAMEALREADYEXIST("InvalidParameterValue.PicNameAlreadyExist"),

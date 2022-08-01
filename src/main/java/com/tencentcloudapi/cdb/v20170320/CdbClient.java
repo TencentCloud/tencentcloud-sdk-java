@@ -2149,6 +2149,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyInstancePasswordComplexity)用于修改云数据库实例的密码复杂度。
+     * @param req ModifyInstancePasswordComplexityRequest
+     * @return ModifyInstancePasswordComplexityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexity(ModifyInstancePasswordComplexityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstancePasswordComplexity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyInstanceTag)用于对实例标签进行添加、修改或者删除。
      * @param req ModifyInstanceTagRequest
      * @return ModifyInstanceTagResponse

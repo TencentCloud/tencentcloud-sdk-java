@@ -51,7 +51,7 @@ public class DescribeScanTaskReportUrlRequest extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 报告类型, 0:诊断报告, 1:堆栈报告
+    * 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
     */
     @SerializedName("ReportType")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeScanTaskReportUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 报告类型, 0:诊断报告, 1:堆栈报告 
-     * @return ReportType 报告类型, 0:诊断报告, 1:堆栈报告
+     * Get 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果 
+     * @return ReportType 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
      */
     public Long getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set 报告类型, 0:诊断报告, 1:堆栈报告
-     * @param ReportType 报告类型, 0:诊断报告, 1:堆栈报告
+     * Set 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
+     * @param ReportType 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;

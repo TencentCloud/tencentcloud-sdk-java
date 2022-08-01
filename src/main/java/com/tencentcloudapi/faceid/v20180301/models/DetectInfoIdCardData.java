@@ -63,15 +63,36 @@ public class DetectInfoIdCardData extends AbstractModel{
     private String Avatar;
 
     /**
-    * 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
--9102 身份证复印件告警。
--9103 身份证翻拍告警。
--9106 身份证 PS 告警。
+    * 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarnInfos")
     @Expose
     private Long [] WarnInfos;
+
+    /**
+    * 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackWarnInfos")
+    @Expose
+    private Long [] BackWarnInfos;
 
     /**
      * Get OCR正面照片的base64编码。
@@ -174,15 +195,25 @@ public class DetectInfoIdCardData extends AbstractModel{
     }
 
     /**
-     * Get 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
--9102 身份证复印件告警。
--9103 身份证翻拍告警。
--9106 身份证 PS 告警。
+     * Get 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarnInfos 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
--9102 身份证复印件告警。
--9103 身份证翻拍告警。
--9106 身份证 PS 告警。
+     * @return WarnInfos 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getWarnInfos() {
@@ -190,19 +221,81 @@ public class DetectInfoIdCardData extends AbstractModel{
     }
 
     /**
-     * Set 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
--9102 身份证复印件告警。
--9103 身份证翻拍告警。
--9106 身份证 PS 告警。
+     * Set 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarnInfos 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
--9102 身份证复印件告警。
--9103 身份证翻拍告警。
--9106 身份证 PS 告警。
+     * @param WarnInfos 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnInfos(Long [] WarnInfos) {
         this.WarnInfos = WarnInfos;
+    }
+
+    /**
+     * Get 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackWarnInfos 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getBackWarnInfos() {
+        return this.BackWarnInfos;
+    }
+
+    /**
+     * Set 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackWarnInfos 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+-9100 身份证有效日期不合法告警，
+-9101 身份证边框不完整告警，
+-9102 身份证复印件告警，
+-9103 身份证翻拍告警，
+-9105 身份证框内遮挡告警，
+-9104 临时身份证告警，
+-9106 身份证 PS 告警，
+-9107 身份证反光告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackWarnInfos(Long [] BackWarnInfos) {
+        this.BackWarnInfos = BackWarnInfos;
     }
 
     public DetectInfoIdCardData() {
@@ -234,6 +327,12 @@ public class DetectInfoIdCardData extends AbstractModel{
                 this.WarnInfos[i] = new Long(source.WarnInfos[i]);
             }
         }
+        if (source.BackWarnInfos != null) {
+            this.BackWarnInfos = new Long[source.BackWarnInfos.length];
+            for (int i = 0; i < source.BackWarnInfos.length; i++) {
+                this.BackWarnInfos[i] = new Long(source.BackWarnInfos[i]);
+            }
+        }
     }
 
 
@@ -247,6 +346,7 @@ public class DetectInfoIdCardData extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcessedBackImage", this.ProcessedBackImage);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
         this.setParamArraySimple(map, prefix + "WarnInfos.", this.WarnInfos);
+        this.setParamArraySimple(map, prefix + "BackWarnInfos.", this.BackWarnInfos);
 
     }
 }

@@ -114,6 +114,27 @@ public class MySQLParam extends AbstractModel{
     private RecordMapping [] DataTargetRecordMapping;
 
     /**
+    * 事件路由到特定主题的正则表达式，默认为(.*)
+    */
+    @SerializedName("TopicRegex")
+    @Expose
+    private String TopicRegex;
+
+    /**
+    * TopicRegex的引用组，指定$1、$2等
+    */
+    @SerializedName("TopicReplacement")
+    @Expose
+    private String TopicReplacement;
+
+    /**
+    * 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+    */
+    @SerializedName("KeyColumns")
+    @Expose
+    private String KeyColumns;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -321,6 +342,54 @@ public class MySQLParam extends AbstractModel{
         this.DataTargetRecordMapping = DataTargetRecordMapping;
     }
 
+    /**
+     * Get 事件路由到特定主题的正则表达式，默认为(.*) 
+     * @return TopicRegex 事件路由到特定主题的正则表达式，默认为(.*)
+     */
+    public String getTopicRegex() {
+        return this.TopicRegex;
+    }
+
+    /**
+     * Set 事件路由到特定主题的正则表达式，默认为(.*)
+     * @param TopicRegex 事件路由到特定主题的正则表达式，默认为(.*)
+     */
+    public void setTopicRegex(String TopicRegex) {
+        this.TopicRegex = TopicRegex;
+    }
+
+    /**
+     * Get TopicRegex的引用组，指定$1、$2等 
+     * @return TopicReplacement TopicRegex的引用组，指定$1、$2等
+     */
+    public String getTopicReplacement() {
+        return this.TopicReplacement;
+    }
+
+    /**
+     * Set TopicRegex的引用组，指定$1、$2等
+     * @param TopicReplacement TopicRegex的引用组，指定$1、$2等
+     */
+    public void setTopicReplacement(String TopicReplacement) {
+        this.TopicReplacement = TopicReplacement;
+    }
+
+    /**
+     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键 
+     * @return KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public String getKeyColumns() {
+        return this.KeyColumns;
+    }
+
+    /**
+     * Set 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     * @param KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public void setKeyColumns(String KeyColumns) {
+        this.KeyColumns = KeyColumns;
+    }
+
     public MySQLParam() {
     }
 
@@ -371,6 +440,15 @@ public class MySQLParam extends AbstractModel{
                 this.DataTargetRecordMapping[i] = new RecordMapping(source.DataTargetRecordMapping[i]);
             }
         }
+        if (source.TopicRegex != null) {
+            this.TopicRegex = new String(source.TopicRegex);
+        }
+        if (source.TopicReplacement != null) {
+            this.TopicReplacement = new String(source.TopicReplacement);
+        }
+        if (source.KeyColumns != null) {
+            this.KeyColumns = new String(source.KeyColumns);
+        }
     }
 
 
@@ -391,6 +469,9 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "DataTargetInsertMode", this.DataTargetInsertMode);
         this.setParamSimple(map, prefix + "DataTargetPrimaryKeyField", this.DataTargetPrimaryKeyField);
         this.setParamArrayObj(map, prefix + "DataTargetRecordMapping.", this.DataTargetRecordMapping);
+        this.setParamSimple(map, prefix + "TopicRegex", this.TopicRegex);
+        this.setParamSimple(map, prefix + "TopicReplacement", this.TopicReplacement);
+        this.setParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
 
     }
 }

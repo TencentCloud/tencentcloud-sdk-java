@@ -39,14 +39,14 @@ public class WorkflowTask extends AbstractModel{
     private String Status;
 
     /**
-    * 已弃用，请使用各个具体任务的 ErrCode。
+    * 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 已弃用，请使用各个具体任务的 Message。
+    * 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
     */
     @SerializedName("Message")
     @Expose
@@ -137,32 +137,32 @@ public class WorkflowTask extends AbstractModel{
     }
 
     /**
-     * Get 已弃用，请使用各个具体任务的 ErrCode。 
-     * @return ErrCode 已弃用，请使用各个具体任务的 ErrCode。
+     * Get 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。 
+     * @return ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 已弃用，请使用各个具体任务的 ErrCode。
-     * @param ErrCode 已弃用，请使用各个具体任务的 ErrCode。
+     * Set 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     * @param ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 已弃用，请使用各个具体任务的 Message。 
-     * @return Message 已弃用，请使用各个具体任务的 Message。
+     * Get 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。 
+     * @return Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 已弃用，请使用各个具体任务的 Message。
-     * @param Message 已弃用，请使用各个具体任务的 Message。
+     * Set 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     * @param Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
      */
     public void setMessage(String Message) {
         this.Message = Message;

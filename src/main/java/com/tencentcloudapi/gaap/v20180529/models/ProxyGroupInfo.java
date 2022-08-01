@@ -114,6 +114,25 @@ CHANGING表示部分部署中。
     private Long Http3Supported;
 
     /**
+    * 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FeatureBitmap")
+    @Expose
+    private Long FeatureBitmap;
+
+    /**
      * Get 通道组id 
      * @return GroupId 通道组id
      */
@@ -345,6 +364,70 @@ CHANGING表示部分部署中。
         this.Http3Supported = Http3Supported;
     }
 
+    /**
+     * Get 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFeatureBitmap() {
+        return this.FeatureBitmap;
+    }
+
+    /**
+     * Set 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeatureBitmap(Long FeatureBitmap) {
+        this.FeatureBitmap = FeatureBitmap;
+    }
+
     public ProxyGroupInfo() {
     }
 
@@ -389,6 +472,9 @@ CHANGING表示部分部署中。
         if (source.Http3Supported != null) {
             this.Http3Supported = new Long(source.Http3Supported);
         }
+        if (source.FeatureBitmap != null) {
+            this.FeatureBitmap = new Long(source.FeatureBitmap);
+        }
     }
 
 
@@ -407,6 +493,7 @@ CHANGING表示部分部署中。
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+        this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
 
     }
 }

@@ -58,6 +58,14 @@ public class LogServiceInfo extends AbstractModel{
     private String Region;
 
     /**
+    * topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get log名 
      * @return LogsetName log名
      */
@@ -137,6 +145,26 @@ public class LogServiceInfo extends AbstractModel{
         this.Region = Region;
     }
 
+    /**
+     * Get topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Period topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Period topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public LogServiceInfo() {
     }
 
@@ -160,6 +188,9 @@ public class LogServiceInfo extends AbstractModel{
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class LogServiceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

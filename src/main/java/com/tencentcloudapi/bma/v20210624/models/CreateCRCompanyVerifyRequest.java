@@ -30,6 +30,13 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
     private String CompanyName;
 
     /**
+    * 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+    */
+    @SerializedName("CompanyIDType")
+    @Expose
+    private String CompanyIDType;
+
+    /**
     * 企业证件号码
     */
     @SerializedName("CompanyID")
@@ -65,13 +72,6 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
     private String VerificationCode;
 
     /**
-    * 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-    */
-    @SerializedName("CompanyIDType")
-    @Expose
-    private String CompanyIDType;
-
-    /**
     * xxx
     */
     @SerializedName("Type")
@@ -92,6 +92,22 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
+    }
+
+    /**
+     * Get 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1 
+     * @return CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     */
+    public String getCompanyIDType() {
+        return this.CompanyIDType;
+    }
+
+    /**
+     * Set 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     * @param CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     */
+    public void setCompanyIDType(String CompanyIDType) {
+        this.CompanyIDType = CompanyIDType;
     }
 
     /**
@@ -175,22 +191,6 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
     }
 
     /**
-     * Get 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1 
-     * @return CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     */
-    public String getCompanyIDType() {
-        return this.CompanyIDType;
-    }
-
-    /**
-     * Set 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     * @param CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     */
-    public void setCompanyIDType(String CompanyIDType) {
-        this.CompanyIDType = CompanyIDType;
-    }
-
-    /**
      * Get xxx 
      * @return Type xxx
      */
@@ -217,6 +217,9 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
         if (source.CompanyName != null) {
             this.CompanyName = new String(source.CompanyName);
         }
+        if (source.CompanyIDType != null) {
+            this.CompanyIDType = new String(source.CompanyIDType);
+        }
         if (source.CompanyID != null) {
             this.CompanyID = new String(source.CompanyID);
         }
@@ -232,9 +235,6 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
         if (source.VerificationCode != null) {
             this.VerificationCode = new String(source.VerificationCode);
         }
-        if (source.CompanyIDType != null) {
-            this.CompanyIDType = new String(source.CompanyIDType);
-        }
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
@@ -246,12 +246,12 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyName", this.CompanyName);
+        this.setParamSimple(map, prefix + "CompanyIDType", this.CompanyIDType);
         this.setParamSimple(map, prefix + "CompanyID", this.CompanyID);
         this.setParamSimple(map, prefix + "CompanyLegalName", this.CompanyLegalName);
         this.setParamSimple(map, prefix + "ManagerName", this.ManagerName);
         this.setParamSimple(map, prefix + "ManagerPhone", this.ManagerPhone);
         this.setParamSimple(map, prefix + "VerificationCode", this.VerificationCode);
-        this.setParamSimple(map, prefix + "CompanyIDType", this.CompanyIDType);
         this.setParamSimple(map, prefix + "Type", this.Type);
 
     }

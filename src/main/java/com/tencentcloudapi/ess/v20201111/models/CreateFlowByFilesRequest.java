@@ -58,12 +58,7 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private String FlowType;
 
     /**
-    * 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
+    * 经办人内容控件配置
     */
     @SerializedName("Components")
     @Expose
@@ -205,36 +200,16 @@ false：有序签
     }
 
     /**
-     * Get 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12 
-     * @return Components 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
+     * Get 经办人内容控件配置 
+     * @return Components 经办人内容控件配置
      */
     public Component [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
-     * @param Components 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
+     * Set 经办人内容控件配置
+     * @param Components 经办人内容控件配置
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

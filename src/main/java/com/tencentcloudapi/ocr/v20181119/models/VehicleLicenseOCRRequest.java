@@ -40,7 +40,8 @@ public class VehicleLicenseOCRRequest extends AbstractModel{
 
     /**
     * FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
     */
     @SerializedName("CardSide")
@@ -89,10 +90,12 @@ BACK 为行驶证副页正面（有号码号牌的一面）。
 
     /**
      * Get FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。 
      * @return CardSide FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
      */
     public String getCardSide() {
@@ -101,10 +104,12 @@ BACK 为行驶证副页正面（有号码号牌的一面）。
 
     /**
      * Set FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
      * @param CardSide FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
      */
     public void setCardSide(String CardSide) {

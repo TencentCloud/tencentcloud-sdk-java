@@ -44,7 +44,7 @@ public class DescribeFlySecMiniAppReportUrlRequest extends AbstractModel{
     private Long Mode;
 
     /**
-    * 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
+    * 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
     */
     @SerializedName("ReportType")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeFlySecMiniAppReportUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告 
-     * @return ReportType 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
+     * Get 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果 
+     * @return ReportType 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
      */
     public Long getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
-     * @param ReportType 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
+     * Set 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
+     * @param ReportType 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;

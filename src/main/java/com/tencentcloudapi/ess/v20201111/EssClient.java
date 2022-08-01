@@ -81,6 +81,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *创建文件转换任务
+     * @param req CreateConvertTaskApiRequest
+     * @return CreateConvertTaskApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConvertTaskApiResponse CreateConvertTaskApi(CreateConvertTaskApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConvertTaskApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConvertTaskApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConvertTaskApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建签署流程电子文档
 适用场景：见创建签署流程接口。
 注：该接口需要给对应的流程指定一个模板id，并且填充该模板中需要补充的信息。是“发起流程”接口的前置接口。
@@ -275,6 +295,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeThirdPartyAuthCodeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeThirdPartyAuthCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询转换任务状态
+     * @param req GetTaskResultApiRequest
+     * @return GetTaskResultApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskResultApiResponse GetTaskResultApi(GetTaskResultApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTaskResultApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTaskResultApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTaskResultApi");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

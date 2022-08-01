@@ -443,6 +443,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
+     * @param req DescribeUserCdcClbWafRegionsRequest
+     * @return DescribeUserCdcClbWafRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegions(DescribeUserCdcClbWafRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserCdcClbWafRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserCdcClbWafRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserCdcClbWafRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
      * @param req DescribeUserClbWafRegionsRequest
      * @return DescribeUserClbWafRegionsResponse

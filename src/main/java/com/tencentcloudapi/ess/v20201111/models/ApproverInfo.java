@@ -48,7 +48,7 @@ public class ApproverInfo extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+    * 本环节操作人签署控件配置
     */
     @SerializedName("SignComponents")
     @Expose
@@ -171,16 +171,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。 
-     * @return SignComponents 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+     * Get 本环节操作人签署控件配置 
+     * @return SignComponents 本环节操作人签署控件配置
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
     }
 
     /**
-     * Set 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
-     * @param SignComponents 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+     * Set 本环节操作人签署控件配置
+     * @param SignComponents 本环节操作人签署控件配置
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;

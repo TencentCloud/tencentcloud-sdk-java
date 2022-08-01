@@ -352,6 +352,20 @@ public class DBInstance extends AbstractModel{
     private Long CrossBackupSaveDays;
 
     /**
+    * 外网地址域名
+    */
+    @SerializedName("DnsPodDomain")
+    @Expose
+    private String DnsPodDomain;
+
+    /**
+    * 外网端口号
+    */
+    @SerializedName("TgwWanVPort")
+    @Expose
+    private Long TgwWanVPort;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1115,6 +1129,38 @@ public class DBInstance extends AbstractModel{
         this.CrossBackupSaveDays = CrossBackupSaveDays;
     }
 
+    /**
+     * Get 外网地址域名 
+     * @return DnsPodDomain 外网地址域名
+     */
+    public String getDnsPodDomain() {
+        return this.DnsPodDomain;
+    }
+
+    /**
+     * Set 外网地址域名
+     * @param DnsPodDomain 外网地址域名
+     */
+    public void setDnsPodDomain(String DnsPodDomain) {
+        this.DnsPodDomain = DnsPodDomain;
+    }
+
+    /**
+     * Get 外网端口号 
+     * @return TgwWanVPort 外网端口号
+     */
+    public Long getTgwWanVPort() {
+        return this.TgwWanVPort;
+    }
+
+    /**
+     * Set 外网端口号
+     * @param TgwWanVPort 外网端口号
+     */
+    public void setTgwWanVPort(Long TgwWanVPort) {
+        this.TgwWanVPort = TgwWanVPort;
+    }
+
     public DBInstance() {
     }
 
@@ -1270,6 +1316,12 @@ public class DBInstance extends AbstractModel{
         if (source.CrossBackupSaveDays != null) {
             this.CrossBackupSaveDays = new Long(source.CrossBackupSaveDays);
         }
+        if (source.DnsPodDomain != null) {
+            this.DnsPodDomain = new String(source.DnsPodDomain);
+        }
+        if (source.TgwWanVPort != null) {
+            this.TgwWanVPort = new Long(source.TgwWanVPort);
+        }
     }
 
 
@@ -1323,6 +1375,8 @@ public class DBInstance extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
         this.setParamSimple(map, prefix + "CrossBackupEnabled", this.CrossBackupEnabled);
         this.setParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
+        this.setParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
+        this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
 
     }
 }

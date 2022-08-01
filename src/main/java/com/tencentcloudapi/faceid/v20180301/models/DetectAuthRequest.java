@@ -88,6 +88,13 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     private String IntentionVerifyText;
 
     /**
+    * 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+    */
+    @SerializedName("IntentionQuestions")
+    @Expose
+    private IntentionQuestion [] IntentionQuestions;
+
+    /**
      * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。 
      * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      */
@@ -239,6 +246,22 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.IntentionVerifyText = IntentionVerifyText;
     }
 
+    /**
+     * Get 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。 
+     * @return IntentionQuestions 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+     */
+    public IntentionQuestion [] getIntentionQuestions() {
+        return this.IntentionQuestions;
+    }
+
+    /**
+     * Set 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+     * @param IntentionQuestions 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+     */
+    public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
+        this.IntentionQuestions = IntentionQuestions;
+    }
+
     public DetectAuthRequest() {
     }
 
@@ -274,6 +297,12 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         if (source.IntentionVerifyText != null) {
             this.IntentionVerifyText = new String(source.IntentionVerifyText);
         }
+        if (source.IntentionQuestions != null) {
+            this.IntentionQuestions = new IntentionQuestion[source.IntentionQuestions.length];
+            for (int i = 0; i < source.IntentionQuestions.length; i++) {
+                this.IntentionQuestions[i] = new IntentionQuestion(source.IntentionQuestions[i]);
+            }
+        }
     }
 
 
@@ -290,6 +319,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
+        this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
 
     }
 }

@@ -79,7 +79,7 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
-     *获取推荐歌单列表。
+     *获取歌单列表。
      * @param req DescribeKTVPlaylistsRequest
      * @return DescribeKTVPlaylistsResponse
      * @throws TencentCloudSDKException

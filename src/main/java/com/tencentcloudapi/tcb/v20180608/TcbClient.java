@@ -439,6 +439,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
+     * @param req DescribeBaasPackageListRequest
+     * @return DescribeBaasPackageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaasPackageListResponse DescribeBaasPackageList(DescribeBaasPackageListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaasPackageListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaasPackageListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaasPackageList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取云托管代码上传url
      * @param req DescribeCloudBaseBuildServiceRequest
      * @return DescribeCloudBaseBuildServiceResponse

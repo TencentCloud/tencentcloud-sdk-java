@@ -110,6 +110,14 @@ public class PrivateZoneRecord extends AbstractModel{
     private String Extra;
 
     /**
+    * 0暂停，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Long Enabled;
+
+    /**
      * Get 记录id 
      * @return RecordId 记录id
      */
@@ -313,6 +321,26 @@ public class PrivateZoneRecord extends AbstractModel{
         this.Extra = Extra;
     }
 
+    /**
+     * Get 0暂停，1启用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Enabled 0暂停，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set 0暂停，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Enabled 0暂停，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnabled(Long Enabled) {
+        this.Enabled = Enabled;
+    }
+
     public PrivateZoneRecord() {
     }
 
@@ -357,6 +385,9 @@ public class PrivateZoneRecord extends AbstractModel{
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.Enabled != null) {
+            this.Enabled = new Long(source.Enabled);
+        }
     }
 
 
@@ -376,6 +407,7 @@ public class PrivateZoneRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

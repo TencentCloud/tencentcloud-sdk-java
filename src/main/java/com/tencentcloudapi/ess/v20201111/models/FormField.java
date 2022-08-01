@@ -23,69 +23,94 @@ import java.util.HashMap;
 public class FormField extends AbstractModel{
 
     /**
-    * 控件填充value
+    * 控件填充value，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 模板中配置的选项值
     */
     @SerializedName("ComponentValue")
     @Expose
     private String ComponentValue;
 
     /**
-    * 控件id
+    * 控件id，和ComponentName选择一项传入即可
     */
     @SerializedName("ComponentId")
     @Expose
     private String ComponentId;
 
     /**
-    * 控件名字，最大长度不超过30字符
+    * 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-     * Get 控件填充value 
-     * @return ComponentValue 控件填充value
+     * Get 控件填充value，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 模板中配置的选项值 
+     * @return ComponentValue 控件填充value，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 模板中配置的选项值
      */
     public String getComponentValue() {
         return this.ComponentValue;
     }
 
     /**
-     * Set 控件填充value
-     * @param ComponentValue 控件填充value
+     * Set 控件填充value，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 模板中配置的选项值
+     * @param ComponentValue 控件填充value，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 模板中配置的选项值
      */
     public void setComponentValue(String ComponentValue) {
         this.ComponentValue = ComponentValue;
     }
 
     /**
-     * Get 控件id 
-     * @return ComponentId 控件id
+     * Get 控件id，和ComponentName选择一项传入即可 
+     * @return ComponentId 控件id，和ComponentName选择一项传入即可
      */
     public String getComponentId() {
         return this.ComponentId;
     }
 
     /**
-     * Set 控件id
-     * @param ComponentId 控件id
+     * Set 控件id，和ComponentName选择一项传入即可
+     * @param ComponentId 控件id，和ComponentName选择一项传入即可
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * Get 控件名字，最大长度不超过30字符 
-     * @return ComponentName 控件名字，最大长度不超过30字符
+     * Get 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可 
+     * @return ComponentName 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 控件名字，最大长度不超过30字符
-     * @param ComponentName 控件名字，最大长度不超过30字符
+     * Set 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
+     * @param ComponentName 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;

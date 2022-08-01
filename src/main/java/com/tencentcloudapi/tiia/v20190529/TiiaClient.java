@@ -192,30 +192,6 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
-     *传入一张图片，可以识别图片中包含的人物是否为公众人物，如果是，输出人物的姓名、基本信息、脸部坐标。
-
-支持识别一张图片中存在的多个人脸，针对每个人脸，会给出与之最相似的公众人物。
->     
-- 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-     * @param req DetectCelebrityRequest
-     * @return DetectCelebrityResponse
-     * @throws TencentCloudSDKException
-     */
-    public DetectCelebrityResponse DetectCelebrity(DetectCelebrityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectCelebrityResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DetectCelebrityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectCelebrity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *输入一张图片，返回AI针对一张图片是否是恶心的一系列判断值。
 
 通过恶心图片识别, 可以判断一张图片是否令人恶心, 同时给出它属于的潜在类别, 让您能够过滤掉使人不愉快的图片。

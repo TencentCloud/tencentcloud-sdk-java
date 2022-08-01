@@ -44,7 +44,8 @@ public class SendMessagesRequest extends AbstractModel{
     private String StringToken;
 
     /**
-    * 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
+    * 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
     */
     @SerializedName("ProducerName")
     @Expose
@@ -113,16 +114,20 @@ public class SendMessagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成 
-     * @return ProducerName 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
+     * Get 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。 
+     * @return ProducerName 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
      */
     public String getProducerName() {
         return this.ProducerName;
     }
 
     /**
-     * Set 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
-     * @param ProducerName 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
+     * Set 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
+     * @param ProducerName 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
      */
     public void setProducerName(String ProducerName) {
         this.ProducerName = ProducerName;

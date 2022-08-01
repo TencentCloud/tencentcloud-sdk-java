@@ -44,7 +44,7 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 分页大小，最大100，配合Context一起使用
+    * 分页大小，最大1000，配合Context一起使用
     */
     @SerializedName("Limit")
     @Expose
@@ -56,6 +56,20 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
     @SerializedName("Context")
     @Expose
     private String Context;
+
+    /**
+    * 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Boolean Asc;
+
+    /**
+    * 预览日志的通用过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
      * Get 列表返回的Id 
@@ -106,16 +120,16 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页大小，最大100，配合Context一起使用 
-     * @return Limit 分页大小，最大100，配合Context一起使用
+     * Get 分页大小，最大1000，配合Context一起使用 
+     * @return Limit 分页大小，最大1000，配合Context一起使用
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，最大100，配合Context一起使用
-     * @param Limit 分页大小，最大100，配合Context一起使用
+     * Set 分页大小，最大1000，配合Context一起使用
+     * @param Limit 分页大小，最大1000，配合Context一起使用
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -135,6 +149,38 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
      */
     public void setContext(String Context) {
         this.Context = Context;
+    }
+
+    /**
+     * Get 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列 
+     * @return Asc 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+     */
+    public Boolean getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+     * @param Asc 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+     */
+    public void setAsc(Boolean Asc) {
+        this.Asc = Asc;
+    }
+
+    /**
+     * Get 预览日志的通用过滤条件 
+     * @return Filters 预览日志的通用过滤条件
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 预览日志的通用过滤条件
+     * @param Filters 预览日志的通用过滤条件
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public ListTaskJobLogDetailRequest() {
@@ -160,6 +206,15 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
         if (source.Context != null) {
             this.Context = new String(source.Context);
         }
+        if (source.Asc != null) {
+            this.Asc = new Boolean(source.Asc);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -172,6 +227,8 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

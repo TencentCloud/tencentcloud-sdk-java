@@ -1739,6 +1739,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取事件、审计和日志的状态接口
+     * @param req DescribeEdgeLogSwitchesRequest
+     * @return DescribeEdgeLogSwitchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitches(DescribeEdgeLogSwitchesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeLogSwitches");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询容器实例中容器日志
      * @param req DescribeEksContainerInstanceLogRequest
      * @return DescribeEksContainerInstanceLogResponse

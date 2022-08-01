@@ -77,6 +77,13 @@ global：预热全球节点
     private Boolean DisableRange;
 
     /**
+    * 是否对URL进行编码
+    */
+    @SerializedName("UrlEncode")
+    @Expose
+    private Boolean UrlEncode;
+
+    /**
      * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
@@ -220,6 +227,22 @@ global：预热全球节点
         this.DisableRange = DisableRange;
     }
 
+    /**
+     * Get 是否对URL进行编码 
+     * @return UrlEncode 是否对URL进行编码
+     */
+    public Boolean getUrlEncode() {
+        return this.UrlEncode;
+    }
+
+    /**
+     * Set 是否对URL进行编码
+     * @param UrlEncode 是否对URL进行编码
+     */
+    public void setUrlEncode(Boolean UrlEncode) {
+        this.UrlEncode = UrlEncode;
+    }
+
     public PushUrlsCacheRequest() {
     }
 
@@ -249,6 +272,9 @@ global：预热全球节点
         if (source.DisableRange != null) {
             this.DisableRange = new Boolean(source.DisableRange);
         }
+        if (source.UrlEncode != null) {
+            this.UrlEncode = new Boolean(source.UrlEncode);
+        }
     }
 
 
@@ -262,6 +288,7 @@ global：预热全球节点
         this.setParamSimple(map, prefix + "Layer", this.Layer);
         this.setParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
         this.setParamSimple(map, prefix + "DisableRange", this.DisableRange);
+        this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
 
     }
 }

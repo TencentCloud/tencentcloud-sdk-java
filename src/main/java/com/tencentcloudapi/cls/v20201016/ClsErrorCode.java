@@ -141,6 +141,9 @@ public enum ClsErrorCode {
     // 分区超过限制。
      LIMITEXCEEDED_PARTITION("LimitExceeded.Partition"),
      
+    // 检索内存超限。
+     LIMITEXCEEDED_SEARCHRESOURCES("LimitExceeded.SearchResources"),
+     
     // 检索接口返回的日志量太大， 超过20MB限制。
      LIMITEXCEEDED_SEARCHRESULTTOOLARGE("LimitExceeded.SearchResultTooLarge"),
      
