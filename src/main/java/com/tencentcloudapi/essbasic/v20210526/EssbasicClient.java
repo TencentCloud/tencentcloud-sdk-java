@@ -59,6 +59,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *指定需要批量撤回的签署流程Id，获取批量撤销链接
+客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
+     * @param req ChannelCreateBatchCancelFlowUrlRequest
+     * @return ChannelCreateBatchCancelFlowUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrl(ChannelCreateBatchCancelFlowUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateBatchCancelFlowUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建签署流程。此接口不可直接使用，需要运营申请
      * @param req ChannelCreateFlowByFilesRequest
      * @return ChannelCreateFlowByFilesResponse

@@ -93,6 +93,20 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
     private String BusinessName;
 
     /**
+    * 页码
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
+
+    /**
+    * 页长
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
      * Get 过滤条件 
      * @return Filters 过滤条件
      */
@@ -252,6 +266,38 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         this.BusinessName = BusinessName;
     }
 
+    /**
+     * Get 页码 
+     * @return PageIndex 页码
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set 页码
+     * @param PageIndex 页码
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
+    }
+
+    /**
+     * Get 页长 
+     * @return PageSize 页长
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 页长
+     * @param PageSize 页长
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
     public DescribeMetricRecordsRequest() {
     }
 
@@ -299,6 +345,12 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         if (source.BusinessName != null) {
             this.BusinessName = new String(source.BusinessName);
         }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
     }
 
 
@@ -316,6 +368,8 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

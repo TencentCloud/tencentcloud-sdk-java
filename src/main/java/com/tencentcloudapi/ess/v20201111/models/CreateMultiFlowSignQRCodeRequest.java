@@ -82,6 +82,13 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private Long QrEffectiveDay;
 
     /**
+    * 限制二维码用户条件
+    */
+    @SerializedName("ApproverRestrictions")
+    @Expose
+    private ApproverRestriction ApproverRestrictions;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -221,6 +228,22 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.QrEffectiveDay = QrEffectiveDay;
     }
 
+    /**
+     * Get 限制二维码用户条件 
+     * @return ApproverRestrictions 限制二维码用户条件
+     */
+    public ApproverRestriction getApproverRestrictions() {
+        return this.ApproverRestrictions;
+    }
+
+    /**
+     * Set 限制二维码用户条件
+     * @param ApproverRestrictions 限制二维码用户条件
+     */
+    public void setApproverRestrictions(ApproverRestriction ApproverRestrictions) {
+        this.ApproverRestrictions = ApproverRestrictions;
+    }
+
     public CreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -253,6 +276,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.QrEffectiveDay != null) {
             this.QrEffectiveDay = new Long(source.QrEffectiveDay);
         }
+        if (source.ApproverRestrictions != null) {
+            this.ApproverRestrictions = new ApproverRestriction(source.ApproverRestrictions);
+        }
     }
 
 
@@ -268,6 +294,7 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
         this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+        this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
 
     }
 }

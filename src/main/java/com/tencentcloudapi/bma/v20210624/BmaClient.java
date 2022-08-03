@@ -39,6 +39,106 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *添加仿冒链接（举报）
+     * @param req CreateBPFakeURLRequest
+     * @return CreateBPFakeURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPFakeURLResponse CreateBPFakeURL(CreateBPFakeURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPFakeURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加误报工单
+     * @param req CreateBPFalseTicketRequest
+     * @return CreateBPFalseTicketResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPFalseTicketResponse CreateBPFalseTicket(CreateBPFalseTicketRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPFalseTicketResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPFalseTicketResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPFalseTicket");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加下线材料
+     * @param req CreateBPOfflineAttachmentRequest
+     * @return CreateBPOfflineAttachmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPOfflineAttachmentResponse CreateBPOfflineAttachment(CreateBPOfflineAttachmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPOfflineAttachmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPOfflineAttachmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPOfflineAttachment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加下线工单
+     * @param req CreateBPOfflineTicketRequest
+     * @return CreateBPOfflineTicketResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPOfflineTicketResponse CreateBPOfflineTicket(CreateBPOfflineTicketRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPOfflineTicketResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPOfflineTicketResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPOfflineTicket");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加保护网站
+     * @param req CreateBPProtectURLsRequest
+     * @return CreateBPProtectURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPProtectURLsResponse CreateBPProtectURLs(CreateBPProtectURLsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPProtectURLsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPProtectURLsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPProtectURLs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *版权保护-新建拦截接口
      * @param req CreateCRBlockRequest
      * @return CreateCRBlockResponse
@@ -119,6 +219,86 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *查询企业信息
+     * @param req DescribeBPCompanyInfoRequest
+     * @return DescribeBPCompanyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPCompanyInfoResponse DescribeBPCompanyInfo(DescribeBPCompanyInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPCompanyInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPCompanyInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPCompanyInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询仿冒链接
+     * @param req DescribeBPFakeURLsRequest
+     * @return DescribeBPFakeURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPFakeURLsResponse DescribeBPFakeURLs(DescribeBPFakeURLsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPFakeURLsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPFakeURLs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询保护网站
+     * @param req DescribeBPProtectURLsRequest
+     * @return DescribeBPProtectURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPProtectURLsResponse DescribeBPProtectURLs(DescribeBPProtectURLsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPProtectURLsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPProtectURLsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPProtectURLs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询举报列表
+     * @param req DescribeBPReportFakeURLsRequest
+     * @return DescribeBPReportFakeURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPReportFakeURLsResponse DescribeBPReportFakeURLs(DescribeBPReportFakeURLsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPReportFakeURLsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPReportFakeURLsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPReportFakeURLs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *版权保护-查询作品监测详情接口
      * @param req DescribeCRMonitorDetailRequest
      * @return DescribeCRMonitorDetailResponse
@@ -171,6 +351,26 @@ public class BmaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCRWorkInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCRWorkInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改下线材料
+     * @param req ModifyBPOfflineAttachmentRequest
+     * @return ModifyBPOfflineAttachmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBPOfflineAttachmentResponse ModifyBPOfflineAttachment(ModifyBPOfflineAttachmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBPOfflineAttachmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBPOfflineAttachmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBPOfflineAttachment");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

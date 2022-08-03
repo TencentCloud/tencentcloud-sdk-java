@@ -69,7 +69,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
     * 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
     */
     @SerializedName("MaxPersonNumPerGroup")
     @Expose
@@ -234,9 +234,9 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
      * Get 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。 
+例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。 
      * @return MaxPersonNumPerGroup 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
      */
     public Long getMaxPersonNumPerGroup() {
         return this.MaxPersonNumPerGroup;
@@ -244,9 +244,9 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
      * Set 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
      * @param MaxPersonNumPerGroup 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
      */
     public void setMaxPersonNumPerGroup(Long MaxPersonNumPerGroup) {
         this.MaxPersonNumPerGroup = MaxPersonNumPerGroup;

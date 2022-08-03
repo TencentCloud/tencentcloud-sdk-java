@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel{
 
     /**
-    * 用户在渠道的编号
+    * 用户在渠道的编号，最大64位字符串
     */
     @SerializedName("OpenId")
     @Expose
@@ -58,16 +58,16 @@ public class UserInfo extends AbstractModel{
     private String ProxyIp;
 
     /**
-     * Get 用户在渠道的编号 
-     * @return OpenId 用户在渠道的编号
+     * Get 用户在渠道的编号，最大64位字符串 
+     * @return OpenId 用户在渠道的编号，最大64位字符串
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 用户在渠道的编号
-     * @param OpenId 用户在渠道的编号
+     * Set 用户在渠道的编号，最大64位字符串
+     * @param OpenId 用户在渠道的编号，最大64位字符串
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

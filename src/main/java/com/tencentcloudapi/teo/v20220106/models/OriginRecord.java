@@ -40,7 +40,10 @@ public class OriginRecord extends AbstractModel{
     /**
     * 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
     */
     @SerializedName("Weight")
     @Expose
@@ -77,6 +80,14 @@ public class OriginRecord extends AbstractModel{
     @SerializedName("PrivateParameter")
     @Expose
     private OriginRecordPrivateParameter [] PrivateParameter;
+
+    /**
+    * 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Proto")
+    @Expose
+    private String Proto;
 
     /**
      * Get 记录值 
@@ -117,10 +128,16 @@ public class OriginRecord extends AbstractModel{
     /**
      * Get 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100 
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。 
      * @return Weight 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
      */
     public Long getWeight() {
         return this.Weight;
@@ -129,10 +146,16 @@ public class OriginRecord extends AbstractModel{
     /**
      * Set 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
      * @param Weight 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
@@ -218,6 +241,26 @@ public class OriginRecord extends AbstractModel{
         this.PrivateParameter = PrivateParameter;
     }
 
+    /**
+     * Get 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Proto 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProto() {
+        return this.Proto;
+    }
+
+    /**
+     * Set 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Proto 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProto(String Proto) {
+        this.Proto = Proto;
+    }
+
     public OriginRecord() {
     }
 
@@ -253,6 +296,9 @@ public class OriginRecord extends AbstractModel{
                 this.PrivateParameter[i] = new OriginRecordPrivateParameter(source.PrivateParameter[i]);
             }
         }
+        if (source.Proto != null) {
+            this.Proto = new String(source.Proto);
+        }
     }
 
 
@@ -267,6 +313,7 @@ public class OriginRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "Private", this.Private);
         this.setParamArrayObj(map, prefix + "PrivateParameter.", this.PrivateParameter);
+        this.setParamSimple(map, prefix + "Proto", this.Proto);
 
     }
 }

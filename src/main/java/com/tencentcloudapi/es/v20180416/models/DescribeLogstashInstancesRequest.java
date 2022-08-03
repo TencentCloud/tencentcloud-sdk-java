@@ -72,6 +72,13 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
     private Long OrderByType;
 
     /**
+    * VpcId 筛选项
+    */
+    @SerializedName("VpcIds")
+    @Expose
+    private String [] VpcIds;
+
+    /**
      * Get 实例所属可用区，不传则默认所有可用区 
      * @return Zone 实例所属可用区，不传则默认所有可用区
      */
@@ -183,6 +190,22 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
         this.OrderByType = OrderByType;
     }
 
+    /**
+     * Get VpcId 筛选项 
+     * @return VpcIds VpcId 筛选项
+     */
+    public String [] getVpcIds() {
+        return this.VpcIds;
+    }
+
+    /**
+     * Set VpcId 筛选项
+     * @param VpcIds VpcId 筛选项
+     */
+    public void setVpcIds(String [] VpcIds) {
+        this.VpcIds = VpcIds;
+    }
+
     public DescribeLogstashInstancesRequest() {
     }
 
@@ -218,6 +241,12 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
         if (source.OrderByType != null) {
             this.OrderByType = new Long(source.OrderByType);
         }
+        if (source.VpcIds != null) {
+            this.VpcIds = new String[source.VpcIds.length];
+            for (int i = 0; i < source.VpcIds.length; i++) {
+                this.VpcIds[i] = new String(source.VpcIds[i]);
+            }
+        }
     }
 
 
@@ -232,6 +261,7 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderByKey", this.OrderByKey);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
 
     }
 }

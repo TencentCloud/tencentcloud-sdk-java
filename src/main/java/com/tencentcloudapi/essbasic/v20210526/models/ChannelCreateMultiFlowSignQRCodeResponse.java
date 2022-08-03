@@ -30,6 +30,13 @@ public class ChannelCreateMultiFlowSignQRCodeResponse extends AbstractModel{
     private SignQrCode QrCode;
 
     /**
+    * 签署链接对象
+    */
+    @SerializedName("SignUrls")
+    @Expose
+    private SignUrl SignUrls;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class ChannelCreateMultiFlowSignQRCodeResponse extends AbstractModel{
      */
     public void setQrCode(SignQrCode QrCode) {
         this.QrCode = QrCode;
+    }
+
+    /**
+     * Get 签署链接对象 
+     * @return SignUrls 签署链接对象
+     */
+    public SignUrl getSignUrls() {
+        return this.SignUrls;
+    }
+
+    /**
+     * Set 签署链接对象
+     * @param SignUrls 签署链接对象
+     */
+    public void setSignUrls(SignUrl SignUrls) {
+        this.SignUrls = SignUrls;
     }
 
     /**
@@ -79,6 +102,9 @@ public class ChannelCreateMultiFlowSignQRCodeResponse extends AbstractModel{
         if (source.QrCode != null) {
             this.QrCode = new SignQrCode(source.QrCode);
         }
+        if (source.SignUrls != null) {
+            this.SignUrls = new SignUrl(source.SignUrls);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class ChannelCreateMultiFlowSignQRCodeResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "QrCode.", this.QrCode);
+        this.setParamObj(map, prefix + "SignUrls.", this.SignUrls);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

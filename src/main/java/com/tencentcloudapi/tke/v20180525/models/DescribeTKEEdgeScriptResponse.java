@@ -44,6 +44,14 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String Command;
 
     /**
+    * edgectl脚本版本，默认拉取最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScriptVersion")
+    @Expose
+    private String ScriptVersion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +107,26 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     }
 
     /**
+     * Get edgectl脚本版本，默认拉取最新版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScriptVersion edgectl脚本版本，默认拉取最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScriptVersion() {
+        return this.ScriptVersion;
+    }
+
+    /**
+     * Set edgectl脚本版本，默认拉取最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScriptVersion edgectl脚本版本，默认拉取最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScriptVersion(String ScriptVersion) {
+        this.ScriptVersion = ScriptVersion;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +159,9 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.ScriptVersion != null) {
+            this.ScriptVersion = new String(source.ScriptVersion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +175,7 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Link", this.Link);
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

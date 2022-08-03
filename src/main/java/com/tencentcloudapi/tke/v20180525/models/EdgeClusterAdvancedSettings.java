@@ -31,6 +31,22 @@ public class EdgeClusterAdvancedSettings extends AbstractModel{
     private EdgeClusterExtraArgs ExtraArgs;
 
     /**
+    * 运行时类型，支持"docker"和"containerd"，默认为docker
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Runtime")
+    @Expose
+    private String Runtime;
+
+    /**
+    * 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyMode")
+    @Expose
+    private String ProxyMode;
+
+    /**
      * Get 集群自定义参数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtraArgs 集群自定义参数
@@ -50,6 +66,46 @@ public class EdgeClusterAdvancedSettings extends AbstractModel{
         this.ExtraArgs = ExtraArgs;
     }
 
+    /**
+     * Get 运行时类型，支持"docker"和"containerd"，默认为docker
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Runtime 运行时类型，支持"docker"和"containerd"，默认为docker
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuntime() {
+        return this.Runtime;
+    }
+
+    /**
+     * Set 运行时类型，支持"docker"和"containerd"，默认为docker
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Runtime 运行时类型，支持"docker"和"containerd"，默认为docker
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuntime(String Runtime) {
+        this.Runtime = Runtime;
+    }
+
+    /**
+     * Get 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyMode 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProxyMode() {
+        return this.ProxyMode;
+    }
+
+    /**
+     * Set 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyMode 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyMode(String ProxyMode) {
+        this.ProxyMode = ProxyMode;
+    }
+
     public EdgeClusterAdvancedSettings() {
     }
 
@@ -61,6 +117,12 @@ public class EdgeClusterAdvancedSettings extends AbstractModel{
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new EdgeClusterExtraArgs(source.ExtraArgs);
         }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.ProxyMode != null) {
+            this.ProxyMode = new String(source.ProxyMode);
+        }
     }
 
 
@@ -69,6 +131,8 @@ public class EdgeClusterAdvancedSettings extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamSimple(map, prefix + "Runtime", this.Runtime);
+        this.setParamSimple(map, prefix + "ProxyMode", this.ProxyMode);
 
     }
 }

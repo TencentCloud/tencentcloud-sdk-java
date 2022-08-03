@@ -75,6 +75,13 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
+    * 限制二维码用户条件
+    */
+    @SerializedName("ApproverRestrictions")
+    @Expose
+    private ApproverRestriction ApproverRestrictions;
+
+    /**
     * 用户信息
     */
     @SerializedName("Operator")
@@ -206,6 +213,22 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
+     * Get 限制二维码用户条件 
+     * @return ApproverRestrictions 限制二维码用户条件
+     */
+    public ApproverRestriction getApproverRestrictions() {
+        return this.ApproverRestrictions;
+    }
+
+    /**
+     * Set 限制二维码用户条件
+     * @param ApproverRestrictions 限制二维码用户条件
+     */
+    public void setApproverRestrictions(ApproverRestriction ApproverRestrictions) {
+        this.ApproverRestrictions = ApproverRestrictions;
+    }
+
+    /**
      * Get 用户信息 
      * @return Operator 用户信息
      */
@@ -250,6 +273,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.ApproverRestrictions != null) {
+            this.ApproverRestrictions = new ApproverRestriction(source.ApproverRestrictions);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -267,6 +293,7 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

@@ -79,6 +79,13 @@ public class EnvBaseInfo extends AbstractModel{
     private String EnvType;
 
     /**
+    * 子网id
+    */
+    @SerializedName("SubnetIds")
+    @Expose
+    private String SubnetIds;
+
+    /**
      * Get 环境Id 
      * @return EnvId 环境Id
      */
@@ -206,6 +213,22 @@ public class EnvBaseInfo extends AbstractModel{
         this.EnvType = EnvType;
     }
 
+    /**
+     * Get 子网id 
+     * @return SubnetIds 子网id
+     */
+    public String getSubnetIds() {
+        return this.SubnetIds;
+    }
+
+    /**
+     * Set 子网id
+     * @param SubnetIds 子网id
+     */
+    public void setSubnetIds(String SubnetIds) {
+        this.SubnetIds = SubnetIds;
+    }
+
     public EnvBaseInfo() {
     }
 
@@ -238,6 +261,9 @@ public class EnvBaseInfo extends AbstractModel{
         if (source.EnvType != null) {
             this.EnvType = new String(source.EnvType);
         }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String(source.SubnetIds);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class EnvBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
 
     }
 }

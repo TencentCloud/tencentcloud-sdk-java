@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CompressInfo extends AbstractModel{
 
     /**
-    * 压缩格式，支持gzip、lzop和none不压缩
+    * 压缩格式，支持gzip、lzop、snappy和none不压缩
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-     * Get 压缩格式，支持gzip、lzop和none不压缩 
-     * @return Format 压缩格式，支持gzip、lzop和none不压缩
+     * Get 压缩格式，支持gzip、lzop、snappy和none不压缩 
+     * @return Format 压缩格式，支持gzip、lzop、snappy和none不压缩
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 压缩格式，支持gzip、lzop和none不压缩
-     * @param Format 压缩格式，支持gzip、lzop和none不压缩
+     * Set 压缩格式，支持gzip、lzop、snappy和none不压缩
+     * @param Format 压缩格式，支持gzip、lzop、snappy和none不压缩
      */
     public void setFormat(String Format) {
         this.Format = Format;

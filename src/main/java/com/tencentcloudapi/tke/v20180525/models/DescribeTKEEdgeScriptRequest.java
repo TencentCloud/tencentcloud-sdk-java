@@ -51,6 +51,13 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
     private String Config;
 
     /**
+    * 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+    */
+    @SerializedName("ScriptVersion")
+    @Expose
+    private String ScriptVersion;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -114,6 +121,22 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
         this.Config = Config;
     }
 
+    /**
+     * Get 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看 
+     * @return ScriptVersion 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+     */
+    public String getScriptVersion() {
+        return this.ScriptVersion;
+    }
+
+    /**
+     * Set 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+     * @param ScriptVersion 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+     */
+    public void setScriptVersion(String ScriptVersion) {
+        this.ScriptVersion = ScriptVersion;
+    }
+
     public DescribeTKEEdgeScriptRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.ScriptVersion != null) {
+            this.ScriptVersion = new String(source.ScriptVersion);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Interface", this.Interface);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
 
     }
 }

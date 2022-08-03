@@ -30,7 +30,7 @@ public class Agent extends AbstractModel{
     private String AppId;
 
     /**
-    * 渠道/平台合作企业的企业ID
+    * 渠道/平台合作企业的企业ID，最大64位字符串
     */
     @SerializedName("ProxyOrganizationOpenId")
     @Expose
@@ -51,7 +51,7 @@ public class Agent extends AbstractModel{
     private String ProxyAppId;
 
     /**
-    * 腾讯电子签颁发给渠道侧合作企业的企业ID
+    * 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
     */
     @SerializedName("ProxyOrganizationId")
     @Expose
@@ -74,16 +74,16 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 渠道/平台合作企业的企业ID 
-     * @return ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
+     * Get 渠道/平台合作企业的企业ID，最大64位字符串 
+     * @return ProxyOrganizationOpenId 渠道/平台合作企业的企业ID，最大64位字符串
      */
     public String getProxyOrganizationOpenId() {
         return this.ProxyOrganizationOpenId;
     }
 
     /**
-     * Set 渠道/平台合作企业的企业ID
-     * @param ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
+     * Set 渠道/平台合作企业的企业ID，最大64位字符串
+     * @param ProxyOrganizationOpenId 渠道/平台合作企业的企业ID，最大64位字符串
      */
     public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
         this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;
@@ -122,16 +122,16 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 腾讯电子签颁发给渠道侧合作企业的企业ID 
-     * @return ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
+     * Get 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传 
+     * @return ProxyOrganizationId 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
      */
     public String getProxyOrganizationId() {
         return this.ProxyOrganizationId;
     }
 
     /**
-     * Set 腾讯电子签颁发给渠道侧合作企业的企业ID
-     * @param ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
+     * Set 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
+     * @param ProxyOrganizationId 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
      */
     public void setProxyOrganizationId(String ProxyOrganizationId) {
         this.ProxyOrganizationId = ProxyOrganizationId;

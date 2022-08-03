@@ -44,6 +44,15 @@ public class CreateSessionRequest extends AbstractModel{
     private String ClientSession;
 
     /**
+    * 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+    */
+    @SerializedName("RunMode")
+    @Expose
+    private String RunMode;
+
+    /**
      * Get 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变） 
      * @return UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      */
@@ -91,6 +100,30 @@ public class CreateSessionRequest extends AbstractModel{
         this.ClientSession = ClientSession;
     }
 
+    /**
+     * Get 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。 
+     * @return RunMode 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     */
+    public String getRunMode() {
+        return this.RunMode;
+    }
+
+    /**
+     * Set 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     * @param RunMode 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     */
+    public void setRunMode(String RunMode) {
+        this.RunMode = RunMode;
+    }
+
     public CreateSessionRequest() {
     }
 
@@ -108,6 +141,9 @@ public class CreateSessionRequest extends AbstractModel{
         if (source.ClientSession != null) {
             this.ClientSession = new String(source.ClientSession);
         }
+        if (source.RunMode != null) {
+            this.RunMode = new String(source.RunMode);
+        }
     }
 
 
@@ -118,6 +154,7 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "ClientSession", this.ClientSession);
+        this.setParamSimple(map, prefix + "RunMode", this.RunMode);
 
     }
 }

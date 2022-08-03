@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class WafRule extends AbstractModel{
 
     /**
-    * 黑名单
+    * 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
     */
     @SerializedName("BlockRuleIDs")
     @Expose
     private Long [] BlockRuleIDs;
 
     /**
-    * id的开关
+    * 托管规则 开关
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 观察模式
+    * 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObserveRuleIDs")
@@ -45,41 +45,41 @@ public class WafRule extends AbstractModel{
     private Long [] ObserveRuleIDs;
 
     /**
-     * Get 黑名单 
-     * @return BlockRuleIDs 黑名单
+     * Get 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules 
+     * @return BlockRuleIDs 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
      */
     public Long [] getBlockRuleIDs() {
         return this.BlockRuleIDs;
     }
 
     /**
-     * Set 黑名单
-     * @param BlockRuleIDs 黑名单
+     * Set 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
+     * @param BlockRuleIDs 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
      */
     public void setBlockRuleIDs(Long [] BlockRuleIDs) {
         this.BlockRuleIDs = BlockRuleIDs;
     }
 
     /**
-     * Get id的开关 
-     * @return Switch id的开关
+     * Get 托管规则 开关 
+     * @return Switch 托管规则 开关
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set id的开关
-     * @param Switch id的开关
+     * Set 托管规则 开关
+     * @param Switch 托管规则 开关
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 观察模式
+     * Get 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObserveRuleIDs 观察模式
+     * @return ObserveRuleIDs 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getObserveRuleIDs() {
@@ -87,9 +87,9 @@ public class WafRule extends AbstractModel{
     }
 
     /**
-     * Set 观察模式
+     * Set 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObserveRuleIDs 观察模式
+     * @param ObserveRuleIDs 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObserveRuleIDs(Long [] ObserveRuleIDs) {
