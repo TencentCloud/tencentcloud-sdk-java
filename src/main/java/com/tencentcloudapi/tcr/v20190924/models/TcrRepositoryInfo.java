@@ -37,7 +37,7 @@ public class TcrRepositoryInfo extends AbstractModel{
     private String Namespace;
 
     /**
-    * 创建时间
+    * 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
     */
     @SerializedName("CreationTime")
     @Expose
@@ -67,7 +67,7 @@ public class TcrRepositoryInfo extends AbstractModel{
     private String BriefDescription;
 
     /**
-    * 更新时间
+    * 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -106,16 +106,16 @@ public class TcrRepositoryInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建时间 
-     * @return CreationTime 创建时间
+     * Get 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST" 
+     * @return CreationTime 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreationTime 创建时间
+     * Set 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
+     * @param CreationTime 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
@@ -178,16 +178,16 @@ public class TcrRepositoryInfo extends AbstractModel{
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST" 
+     * @return UpdateTime 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
+     * @param UpdateTime 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

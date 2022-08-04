@@ -100,6 +100,13 @@ public class UserInfo extends AbstractModel{
     private Long Uin;
 
     /**
+    * 所属 DNS 服务器
+    */
+    @SerializedName("FreeNs")
+    @Expose
+    private String [] FreeNs;
+
+    /**
      * Get 用户昵称 
      * @return Nick 用户昵称
      */
@@ -275,6 +282,22 @@ public class UserInfo extends AbstractModel{
         this.Uin = Uin;
     }
 
+    /**
+     * Get 所属 DNS 服务器 
+     * @return FreeNs 所属 DNS 服务器
+     */
+    public String [] getFreeNs() {
+        return this.FreeNs;
+    }
+
+    /**
+     * Set 所属 DNS 服务器
+     * @param FreeNs 所属 DNS 服务器
+     */
+    public void setFreeNs(String [] FreeNs) {
+        this.FreeNs = FreeNs;
+    }
+
     public UserInfo() {
     }
 
@@ -316,6 +339,12 @@ public class UserInfo extends AbstractModel{
         if (source.Uin != null) {
             this.Uin = new Long(source.Uin);
         }
+        if (source.FreeNs != null) {
+            this.FreeNs = new String[source.FreeNs.length];
+            for (int i = 0; i < source.FreeNs.length; i++) {
+                this.FreeNs[i] = new String(source.FreeNs[i]);
+            }
+        }
     }
 
 
@@ -334,6 +363,7 @@ public class UserInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RealName", this.RealName);
         this.setParamSimple(map, prefix + "WechatBinded", this.WechatBinded);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamArraySimple(map, prefix + "FreeNs.", this.FreeNs);
 
     }
 }

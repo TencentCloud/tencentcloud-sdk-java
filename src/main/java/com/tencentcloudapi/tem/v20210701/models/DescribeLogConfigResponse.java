@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cpdp.v20190820.models;
+package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuerySinglePayResponse extends AbstractModel{
+public class DescribeLogConfigResponse extends AbstractModel{
 
     /**
-    * 返回结果
+    * 配置
     */
     @SerializedName("Result")
     @Expose
-    private QuerySinglePayResult Result;
+    private LogConfig Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,18 +37,18 @@ public class QuerySinglePayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果 
-     * @return Result 返回结果
+     * Get 配置 
+     * @return Result 配置
      */
-    public QuerySinglePayResult getResult() {
+    public LogConfig getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回结果
-     * @param Result 返回结果
+     * Set 配置
+     * @param Result 配置
      */
-    public void setResult(QuerySinglePayResult Result) {
+    public void setResult(LogConfig Result) {
         this.Result = Result;
     }
 
@@ -68,16 +68,16 @@ public class QuerySinglePayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public QuerySinglePayResponse() {
+    public DescribeLogConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QuerySinglePayResponse(QuerySinglePayResponse source) {
+    public DescribeLogConfigResponse(DescribeLogConfigResponse source) {
         if (source.Result != null) {
-            this.Result = new QuerySinglePayResult(source.Result);
+            this.Result = new LogConfig(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

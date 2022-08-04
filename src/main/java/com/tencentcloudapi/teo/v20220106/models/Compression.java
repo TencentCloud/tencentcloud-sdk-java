@@ -32,6 +32,14 @@ off：关闭
     private String Switch;
 
     /**
+    * 支持的压缩算法列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Algorithms")
+    @Expose
+    private String [] Algorithms;
+
+    /**
      * Get 智能压缩配置开关
 on：开启
 off：关闭 
@@ -55,6 +63,26 @@ off：关闭
         this.Switch = Switch;
     }
 
+    /**
+     * Get 支持的压缩算法列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Algorithms 支持的压缩算法列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAlgorithms() {
+        return this.Algorithms;
+    }
+
+    /**
+     * Set 支持的压缩算法列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Algorithms 支持的压缩算法列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlgorithms(String [] Algorithms) {
+        this.Algorithms = Algorithms;
+    }
+
     public Compression() {
     }
 
@@ -66,6 +94,12 @@ off：关闭
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.Algorithms != null) {
+            this.Algorithms = new String[source.Algorithms.length];
+            for (int i = 0; i < source.Algorithms.length; i++) {
+                this.Algorithms[i] = new String(source.Algorithms[i]);
+            }
+        }
     }
 
 
@@ -74,6 +108,7 @@ off：关闭
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "Algorithms.", this.Algorithms);
 
     }
 }

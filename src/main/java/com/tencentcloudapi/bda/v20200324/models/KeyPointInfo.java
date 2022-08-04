@@ -44,6 +44,13 @@ public class KeyPointInfo extends AbstractModel{
     private Float Y;
 
     /**
+    * 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+    */
+    @SerializedName("BodyScore")
+    @Expose
+    private Float BodyScore;
+
+    /**
      * Get 代表不同位置的人体关键点信息，返回值为以下集合中的一个 [头部,颈部,右肩,右肘,右腕,左肩,左肘,左腕,右髋,右膝,右踝,左髋,左膝,左踝] 
      * @return KeyPointType 代表不同位置的人体关键点信息，返回值为以下集合中的一个 [头部,颈部,右肩,右肘,右腕,左肩,左肘,左腕,右髋,右膝,右踝,左髋,左膝,左踝]
      */
@@ -91,6 +98,22 @@ public class KeyPointInfo extends AbstractModel{
         this.Y = Y;
     }
 
+    /**
+     * Get 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。 
+     * @return BodyScore 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+     */
+    public Float getBodyScore() {
+        return this.BodyScore;
+    }
+
+    /**
+     * Set 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+     * @param BodyScore 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+     */
+    public void setBodyScore(Float BodyScore) {
+        this.BodyScore = BodyScore;
+    }
+
     public KeyPointInfo() {
     }
 
@@ -108,6 +131,9 @@ public class KeyPointInfo extends AbstractModel{
         if (source.Y != null) {
             this.Y = new Float(source.Y);
         }
+        if (source.BodyScore != null) {
+            this.BodyScore = new Float(source.BodyScore);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class KeyPointInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyPointType", this.KeyPointType);
         this.setParamSimple(map, prefix + "X", this.X);
         this.setParamSimple(map, prefix + "Y", this.Y);
+        this.setParamSimple(map, prefix + "BodyScore", this.BodyScore);
 
     }
 }

@@ -42,6 +42,15 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String Url;
 
     /**
+    * 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+    */
+    @SerializedName("LocalBodySwitch")
+    @Expose
+    private Boolean LocalBodySwitch;
+
+    /**
      * Get 图片 base64 数据，base64 编码后大小不可超过5M。  
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。  
@@ -93,6 +102,30 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.Url = Url;
     }
 
+    /**
+     * Get 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。 
+     * @return LocalBodySwitch 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+     */
+    public Boolean getLocalBodySwitch() {
+        return this.LocalBodySwitch;
+    }
+
+    /**
+     * Set 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+     * @param LocalBodySwitch 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+     */
+    public void setLocalBodySwitch(Boolean LocalBodySwitch) {
+        this.LocalBodySwitch = LocalBodySwitch;
+    }
+
     public DetectBodyJointsRequest() {
     }
 
@@ -107,6 +140,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.LocalBodySwitch != null) {
+            this.LocalBodySwitch = new Boolean(source.LocalBodySwitch);
+        }
     }
 
 
@@ -116,6 +152,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "LocalBodySwitch", this.LocalBodySwitch);
 
     }
 }

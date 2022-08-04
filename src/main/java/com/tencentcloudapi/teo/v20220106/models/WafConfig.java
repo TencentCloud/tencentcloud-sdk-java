@@ -44,7 +44,7 @@ public class WafConfig extends AbstractModel{
     private String Mode;
 
     /**
-    * 门神黑白名单
+    * 托管规则黑白名单
     */
     @SerializedName("WafRules")
     @Expose
@@ -107,16 +107,16 @@ public class WafConfig extends AbstractModel{
     }
 
     /**
-     * Get 门神黑白名单 
-     * @return WafRules 门神黑白名单
+     * Get 托管规则黑白名单 
+     * @return WafRules 托管规则黑白名单
      */
     public WafRule getWafRules() {
         return this.WafRules;
     }
 
     /**
-     * Set 门神黑白名单
-     * @param WafRules 门神黑白名单
+     * Set 托管规则黑白名单
+     * @param WafRules 托管规则黑白名单
      */
     public void setWafRules(WafRule WafRules) {
         this.WafRules = WafRules;

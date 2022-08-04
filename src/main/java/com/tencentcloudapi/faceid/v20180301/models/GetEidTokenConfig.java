@@ -43,11 +43,25 @@ public class GetEidTokenConfig extends AbstractModel{
     private Boolean UseIntentionVerify;
 
     /**
-    * 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+    * 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+    */
+    @SerializedName("IntentionMode")
+    @Expose
+    private String IntentionMode;
+
+    /**
+    * 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
     */
     @SerializedName("IntentionVerifyText")
     @Expose
     private String IntentionVerifyText;
+
+    /**
+    * 意愿核身问答模式的配置列表。当前仅支持一个问答。
+    */
+    @SerializedName("IntentionQuestions")
+    @Expose
+    private IntentionQuestion [] IntentionQuestions;
 
     /**
      * Get 姓名身份证输入方式。
@@ -106,19 +120,51 @@ public class GetEidTokenConfig extends AbstractModel{
     }
 
     /**
-     * Get 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。 
-     * @return IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * Get 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1 
+     * @return IntentionMode 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     */
+    public String getIntentionMode() {
+        return this.IntentionMode;
+    }
+
+    /**
+     * Set 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     * @param IntentionMode 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     */
+    public void setIntentionMode(String IntentionMode) {
+        this.IntentionMode = IntentionMode;
+    }
+
+    /**
+     * Get 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。 
+     * @return IntentionVerifyText 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     public String getIntentionVerifyText() {
         return this.IntentionVerifyText;
     }
 
     /**
-     * Set 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
-     * @param IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * Set 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @param IntentionVerifyText 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     public void setIntentionVerifyText(String IntentionVerifyText) {
         this.IntentionVerifyText = IntentionVerifyText;
+    }
+
+    /**
+     * Get 意愿核身问答模式的配置列表。当前仅支持一个问答。 
+     * @return IntentionQuestions 意愿核身问答模式的配置列表。当前仅支持一个问答。
+     */
+    public IntentionQuestion [] getIntentionQuestions() {
+        return this.IntentionQuestions;
+    }
+
+    /**
+     * Set 意愿核身问答模式的配置列表。当前仅支持一个问答。
+     * @param IntentionQuestions 意愿核身问答模式的配置列表。当前仅支持一个问答。
+     */
+    public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
+        this.IntentionQuestions = IntentionQuestions;
     }
 
     public GetEidTokenConfig() {
@@ -135,8 +181,17 @@ public class GetEidTokenConfig extends AbstractModel{
         if (source.UseIntentionVerify != null) {
             this.UseIntentionVerify = new Boolean(source.UseIntentionVerify);
         }
+        if (source.IntentionMode != null) {
+            this.IntentionMode = new String(source.IntentionMode);
+        }
         if (source.IntentionVerifyText != null) {
             this.IntentionVerifyText = new String(source.IntentionVerifyText);
+        }
+        if (source.IntentionQuestions != null) {
+            this.IntentionQuestions = new IntentionQuestion[source.IntentionQuestions.length];
+            for (int i = 0; i < source.IntentionQuestions.length; i++) {
+                this.IntentionQuestions[i] = new IntentionQuestion(source.IntentionQuestions[i]);
+            }
         }
     }
 
@@ -147,7 +202,9 @@ public class GetEidTokenConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputType", this.InputType);
         this.setParamSimple(map, prefix + "UseIntentionVerify", this.UseIntentionVerify);
+        this.setParamSimple(map, prefix + "IntentionMode", this.IntentionMode);
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
+        this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
 
     }
 }

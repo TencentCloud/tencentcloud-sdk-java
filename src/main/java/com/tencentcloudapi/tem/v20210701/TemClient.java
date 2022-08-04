@@ -139,6 +139,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *创建日志收集配置
+     * @param req CreateLogConfigRequest
+     * @return CreateLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLogConfigResponse CreateLogConfig(CreateLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *绑定云资源
      * @param req CreateResourceRequest
      * @return CreateResourceResponse
@@ -422,7 +442,7 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *获取租户环境列表
+     *获取环境列表
      * @param req DescribeEnvironmentsRequest
      * @return DescribeEnvironmentsResponse
      * @throws TencentCloudSDKException
@@ -482,6 +502,46 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *查询日志收集配置详情
+     * @param req DescribeLogConfigRequest
+     * @return DescribeLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogConfigResponse DescribeLogConfig(DescribeLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询分页的日志收集配置列表
+     * @param req DescribePagedLogConfigListRequest
+     * @return DescribePagedLogConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePagedLogConfigListResponse DescribePagedLogConfigList(DescribePagedLogConfigListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePagedLogConfigListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePagedLogConfigListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePagedLogConfigList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询应用关联的 Ingress 规则列表
      * @param req DescribeRelatedIngressesRequest
      * @return DescribeRelatedIngressesResponse
@@ -522,7 +582,7 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *销毁命名空间
+     *销毁环境
      * @param req DestroyEnvironmentRequest
      * @return DestroyEnvironmentResponse
      * @throws TencentCloudSDKException
@@ -534,6 +594,26 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroyEnvironmentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroyEnvironment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *销毁日志收集配置
+     * @param req DestroyLogConfigRequest
+     * @return DestroyLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyLogConfigResponse DestroyLogConfig(DestroyLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyLogConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -674,6 +754,26 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyIngressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIngress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑日志收集配置
+     * @param req ModifyLogConfigRequest
+     * @return ModifyLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogConfigResponse ModifyLogConfig(ModifyLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLogConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

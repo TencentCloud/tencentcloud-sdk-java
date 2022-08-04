@@ -65,7 +65,7 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private CommonTimeWindow BackupTimeWindow;
 
     /**
-    * 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+    * 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
     */
     @SerializedName("EnableBackupPeriodSave")
     @Expose
@@ -203,16 +203,16 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off 
-     * @return EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * Get 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效 
+     * @return EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
      */
     public String getEnableBackupPeriodSave() {
         return this.EnableBackupPeriodSave;
     }
 
     /**
-     * Set 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
-     * @param EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * Set 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
+     * @param EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
      */
     public void setEnableBackupPeriodSave(String EnableBackupPeriodSave) {
         this.EnableBackupPeriodSave = EnableBackupPeriodSave;

@@ -111,6 +111,46 @@ public class EksService extends AbstractModel{
     private PortMapping [] PortMappings;
 
     /**
+    * 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServicePortMappingList")
+    @Expose
+    private ServicePortMapping [] ServicePortMappingList;
+
+    /**
+    * 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlushAll")
+    @Expose
+    private Boolean FlushAll;
+
+    /**
+    * 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableRegistryNextDeploy")
+    @Expose
+    private Long EnableRegistryNextDeploy;
+
+    /**
+    * 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllIpDone")
+    @Expose
+    private Boolean AllIpDone;
+
+    /**
      * Get service name 
      * @return Name service name
      */
@@ -330,6 +370,106 @@ public class EksService extends AbstractModel{
         this.PortMappings = PortMappings;
     }
 
+    /**
+     * Get 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServicePortMappingList 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServicePortMapping [] getServicePortMappingList() {
+        return this.ServicePortMappingList;
+    }
+
+    /**
+     * Set 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServicePortMappingList 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServicePortMappingList(ServicePortMapping [] ServicePortMappingList) {
+        this.ServicePortMappingList = ServicePortMappingList;
+    }
+
+    /**
+     * Get 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlushAll 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFlushAll() {
+        return this.FlushAll;
+    }
+
+    /**
+     * Set 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlushAll 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlushAll(Boolean FlushAll) {
+        this.FlushAll = FlushAll;
+    }
+
+    /**
+     * Get 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableRegistryNextDeploy 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableRegistryNextDeploy() {
+        return this.EnableRegistryNextDeploy;
+    }
+
+    /**
+     * Set 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableRegistryNextDeploy 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableRegistryNextDeploy(Long EnableRegistryNextDeploy) {
+        this.EnableRegistryNextDeploy = EnableRegistryNextDeploy;
+    }
+
+    /**
+     * Get 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllIpDone 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllIpDone() {
+        return this.AllIpDone;
+    }
+
+    /**
+     * Set 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllIpDone 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllIpDone(Boolean AllIpDone) {
+        this.AllIpDone = AllIpDone;
+    }
+
     public EksService() {
     }
 
@@ -380,6 +520,24 @@ public class EksService extends AbstractModel{
                 this.PortMappings[i] = new PortMapping(source.PortMappings[i]);
             }
         }
+        if (source.ServicePortMappingList != null) {
+            this.ServicePortMappingList = new ServicePortMapping[source.ServicePortMappingList.length];
+            for (int i = 0; i < source.ServicePortMappingList.length; i++) {
+                this.ServicePortMappingList[i] = new ServicePortMapping(source.ServicePortMappingList[i]);
+            }
+        }
+        if (source.FlushAll != null) {
+            this.FlushAll = new Boolean(source.FlushAll);
+        }
+        if (source.EnableRegistryNextDeploy != null) {
+            this.EnableRegistryNextDeploy = new Long(source.EnableRegistryNextDeploy);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.AllIpDone != null) {
+            this.AllIpDone = new Boolean(source.AllIpDone);
+        }
     }
 
 
@@ -398,6 +556,11 @@ public class EksService extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "LoadBalanceId", this.LoadBalanceId);
         this.setParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+        this.setParamArrayObj(map, prefix + "ServicePortMappingList.", this.ServicePortMappingList);
+        this.setParamSimple(map, prefix + "FlushAll", this.FlushAll);
+        this.setParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
 
     }
 }

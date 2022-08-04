@@ -46,6 +46,14 @@ public class ScdnConfig extends AbstractModel{
     private AdvancedCCRules [] AdvancedRules;
 
     /**
+    * 增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GlobalAdvancedRules")
+    @Expose
+    private AdvancedCCRules [] GlobalAdvancedRules;
+
+    /**
      * Get on | off 
      * @return Switch on | off
      */
@@ -101,6 +109,26 @@ public class ScdnConfig extends AbstractModel{
         this.AdvancedRules = AdvancedRules;
     }
 
+    /**
+     * Get 增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GlobalAdvancedRules 增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedCCRules [] getGlobalAdvancedRules() {
+        return this.GlobalAdvancedRules;
+    }
+
+    /**
+     * Set 增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GlobalAdvancedRules 增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGlobalAdvancedRules(AdvancedCCRules [] GlobalAdvancedRules) {
+        this.GlobalAdvancedRules = GlobalAdvancedRules;
+    }
+
     public ScdnConfig() {
     }
 
@@ -124,6 +152,12 @@ public class ScdnConfig extends AbstractModel{
                 this.AdvancedRules[i] = new AdvancedCCRules(source.AdvancedRules[i]);
             }
         }
+        if (source.GlobalAdvancedRules != null) {
+            this.GlobalAdvancedRules = new AdvancedCCRules[source.GlobalAdvancedRules.length];
+            for (int i = 0; i < source.GlobalAdvancedRules.length; i++) {
+                this.GlobalAdvancedRules[i] = new AdvancedCCRules(source.GlobalAdvancedRules[i]);
+            }
+        }
     }
 
 
@@ -134,6 +168,7 @@ public class ScdnConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamArrayObj(map, prefix + "AdvancedRules.", this.AdvancedRules);
+        this.setParamArrayObj(map, prefix + "GlobalAdvancedRules.", this.GlobalAdvancedRules);
 
     }
 }

@@ -30,20 +30,6 @@ public class DiskConfig extends AbstractModel{
     private Boolean Available;
 
     /**
-    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-    */
-    @SerializedName("DiskType")
-    @Expose
-    private String DiskType;
-
-    /**
-    * 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-    */
-    @SerializedName("DiskUsage")
-    @Expose
-    private String DiskUsage;
-
-    /**
     * 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
     */
     @SerializedName("DiskChargeType")
@@ -51,25 +37,42 @@ public class DiskConfig extends AbstractModel{
     private String DiskChargeType;
 
     /**
-    * 最大可配置云盘大小，单位GB。
-    */
-    @SerializedName("MaxDiskSize")
-    @Expose
-    private Long MaxDiskSize;
-
-    /**
-    * 最小可配置云盘大小，单位GB。
-    */
-    @SerializedName("MinDiskSize")
-    @Expose
-    private Long MinDiskSize;
-
-    /**
     * 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
+
+    /**
+    * 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceFamily")
+    @Expose
+    private String InstanceFamily;
+
+    /**
+    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
+    * 云盘大小变化的最小步长，单位GB。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StepSize")
+    @Expose
+    private Long StepSize;
+
+    /**
+    * 额外的性能区间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraPerformanceRange")
+    @Expose
+    private Long [] ExtraPerformanceRange;
 
     /**
     * 实例机型。
@@ -80,12 +83,25 @@ public class DiskConfig extends AbstractModel{
     private String DeviceClass;
 
     /**
-    * 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
     */
-    @SerializedName("InstanceFamily")
+    @SerializedName("DiskUsage")
     @Expose
-    private String InstanceFamily;
+    private String DiskUsage;
+
+    /**
+    * 最小可配置云盘大小，单位GB。
+    */
+    @SerializedName("MinDiskSize")
+    @Expose
+    private Long MinDiskSize;
+
+    /**
+    * 最大可配置云盘大小，单位GB。
+    */
+    @SerializedName("MaxDiskSize")
+    @Expose
+    private Long MaxDiskSize;
 
     /**
      * Get 配置是否可用。 
@@ -101,38 +117,6 @@ public class DiskConfig extends AbstractModel{
      */
     public void setAvailable(Boolean Available) {
         this.Available = Available;
-    }
-
-    /**
-     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。 
-     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     */
-    public String getDiskType() {
-        return this.DiskType;
-    }
-
-    /**
-     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     */
-    public void setDiskType(String DiskType) {
-        this.DiskType = DiskType;
-    }
-
-    /**
-     * Get 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。 
-     * @return DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-     */
-    public String getDiskUsage() {
-        return this.DiskUsage;
-    }
-
-    /**
-     * Set 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-     * @param DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-     */
-    public void setDiskUsage(String DiskUsage) {
-        this.DiskUsage = DiskUsage;
     }
 
     /**
@@ -152,38 +136,6 @@ public class DiskConfig extends AbstractModel{
     }
 
     /**
-     * Get 最大可配置云盘大小，单位GB。 
-     * @return MaxDiskSize 最大可配置云盘大小，单位GB。
-     */
-    public Long getMaxDiskSize() {
-        return this.MaxDiskSize;
-    }
-
-    /**
-     * Set 最大可配置云盘大小，单位GB。
-     * @param MaxDiskSize 最大可配置云盘大小，单位GB。
-     */
-    public void setMaxDiskSize(Long MaxDiskSize) {
-        this.MaxDiskSize = MaxDiskSize;
-    }
-
-    /**
-     * Get 最小可配置云盘大小，单位GB。 
-     * @return MinDiskSize 最小可配置云盘大小，单位GB。
-     */
-    public Long getMinDiskSize() {
-        return this.MinDiskSize;
-    }
-
-    /**
-     * Set 最小可配置云盘大小，单位GB。
-     * @param MinDiskSize 最小可配置云盘大小，单位GB。
-     */
-    public void setMinDiskSize(Long MinDiskSize) {
-        this.MinDiskSize = MinDiskSize;
-    }
-
-    /**
      * Get 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。 
      * @return Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      */
@@ -197,6 +149,82 @@ public class DiskConfig extends AbstractModel{
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceFamily() {
+        return this.InstanceFamily;
+    }
+
+    /**
+     * Set 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceFamily(String InstanceFamily) {
+        this.InstanceFamily = InstanceFamily;
+    }
+
+    /**
+     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。 
+     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
+    /**
+     * Get 云盘大小变化的最小步长，单位GB。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StepSize 云盘大小变化的最小步长，单位GB。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStepSize() {
+        return this.StepSize;
+    }
+
+    /**
+     * Set 云盘大小变化的最小步长，单位GB。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StepSize 云盘大小变化的最小步长，单位GB。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStepSize(Long StepSize) {
+        this.StepSize = StepSize;
+    }
+
+    /**
+     * Get 额外的性能区间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraPerformanceRange 额外的性能区间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getExtraPerformanceRange() {
+        return this.ExtraPerformanceRange;
+    }
+
+    /**
+     * Set 额外的性能区间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraPerformanceRange 额外的性能区间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraPerformanceRange(Long [] ExtraPerformanceRange) {
+        this.ExtraPerformanceRange = ExtraPerformanceRange;
     }
 
     /**
@@ -220,23 +248,51 @@ public class DiskConfig extends AbstractModel{
     }
 
     /**
-     * Get 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。 
+     * @return DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      */
-    public String getInstanceFamily() {
-        return this.InstanceFamily;
+    public String getDiskUsage() {
+        return this.DiskUsage;
     }
 
     /**
-     * Set 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * @param DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      */
-    public void setInstanceFamily(String InstanceFamily) {
-        this.InstanceFamily = InstanceFamily;
+    public void setDiskUsage(String DiskUsage) {
+        this.DiskUsage = DiskUsage;
+    }
+
+    /**
+     * Get 最小可配置云盘大小，单位GB。 
+     * @return MinDiskSize 最小可配置云盘大小，单位GB。
+     */
+    public Long getMinDiskSize() {
+        return this.MinDiskSize;
+    }
+
+    /**
+     * Set 最小可配置云盘大小，单位GB。
+     * @param MinDiskSize 最小可配置云盘大小，单位GB。
+     */
+    public void setMinDiskSize(Long MinDiskSize) {
+        this.MinDiskSize = MinDiskSize;
+    }
+
+    /**
+     * Get 最大可配置云盘大小，单位GB。 
+     * @return MaxDiskSize 最大可配置云盘大小，单位GB。
+     */
+    public Long getMaxDiskSize() {
+        return this.MaxDiskSize;
+    }
+
+    /**
+     * Set 最大可配置云盘大小，单位GB。
+     * @param MaxDiskSize 最大可配置云盘大小，单位GB。
+     */
+    public void setMaxDiskSize(Long MaxDiskSize) {
+        this.MaxDiskSize = MaxDiskSize;
     }
 
     public DiskConfig() {
@@ -250,29 +306,38 @@ public class DiskConfig extends AbstractModel{
         if (source.Available != null) {
             this.Available = new Boolean(source.Available);
         }
-        if (source.DiskType != null) {
-            this.DiskType = new String(source.DiskType);
-        }
-        if (source.DiskUsage != null) {
-            this.DiskUsage = new String(source.DiskUsage);
-        }
         if (source.DiskChargeType != null) {
             this.DiskChargeType = new String(source.DiskChargeType);
-        }
-        if (source.MaxDiskSize != null) {
-            this.MaxDiskSize = new Long(source.MaxDiskSize);
-        }
-        if (source.MinDiskSize != null) {
-            this.MinDiskSize = new Long(source.MinDiskSize);
         }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.StepSize != null) {
+            this.StepSize = new Long(source.StepSize);
+        }
+        if (source.ExtraPerformanceRange != null) {
+            this.ExtraPerformanceRange = new Long[source.ExtraPerformanceRange.length];
+            for (int i = 0; i < source.ExtraPerformanceRange.length; i++) {
+                this.ExtraPerformanceRange[i] = new Long(source.ExtraPerformanceRange[i]);
+            }
+        }
         if (source.DeviceClass != null) {
             this.DeviceClass = new String(source.DeviceClass);
         }
-        if (source.InstanceFamily != null) {
-            this.InstanceFamily = new String(source.InstanceFamily);
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.MinDiskSize != null) {
+            this.MinDiskSize = new Long(source.MinDiskSize);
+        }
+        if (source.MaxDiskSize != null) {
+            this.MaxDiskSize = new Long(source.MaxDiskSize);
         }
     }
 
@@ -282,14 +347,16 @@ public class DiskConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Available", this.Available);
-        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
-        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-        this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
-        this.setParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
         this.setParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "StepSize", this.StepSize);
+        this.setParamArraySimple(map, prefix + "ExtraPerformanceRange.", this.ExtraPerformanceRange);
+        this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
+        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
+        this.setParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
+        this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
 
     }
 }

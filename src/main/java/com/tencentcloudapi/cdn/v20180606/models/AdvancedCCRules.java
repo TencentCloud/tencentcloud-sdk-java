@@ -86,6 +86,14 @@ public class AdvancedCCRules extends AbstractModel{
     private ScdnSevenLayerRules [] Configure;
 
     /**
+    * 是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
+
+    /**
      * Get 规则名称 
      * @return RuleName 规则名称
      */
@@ -241,6 +249,26 @@ public class AdvancedCCRules extends AbstractModel{
         this.Configure = Configure;
     }
 
+    /**
+     * Get 是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Switch 是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set 是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Switch 是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
     public AdvancedCCRules() {
     }
 
@@ -276,6 +304,9 @@ public class AdvancedCCRules extends AbstractModel{
                 this.Configure[i] = new ScdnSevenLayerRules(source.Configure[i]);
             }
         }
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
     }
 
 
@@ -291,6 +322,7 @@ public class AdvancedCCRules extends AbstractModel{
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamArrayObj(map, prefix + "Configure.", this.Configure);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

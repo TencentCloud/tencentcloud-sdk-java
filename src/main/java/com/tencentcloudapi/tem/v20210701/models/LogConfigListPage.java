@@ -13,87 +13,87 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220106.models;
+package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSGeoIp extends AbstractModel{
+public class LogConfigListPage extends AbstractModel{
 
     /**
-    * 地域信息，ID参考接口DescribeSecurityPolicyRegions
+    * 记录
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RegionId")
+    @SerializedName("Records")
     @Expose
-    private Long [] RegionId;
+    private LogConfig [] Records;
 
     /**
-    * 区域封禁清空标识
+    * 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Switch")
+    @SerializedName("ContinueToken")
     @Expose
-    private String Switch;
+    private String ContinueToken;
 
     /**
-     * Get 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * Get 记录
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * @return Records 记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getRegionId() {
-        return this.RegionId;
+    public LogConfig [] getRecords() {
+        return this.Records;
     }
 
     /**
-     * Set 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * Set 记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * @param Records 记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegionId(Long [] RegionId) {
-        this.RegionId = RegionId;
+    public void setRecords(LogConfig [] Records) {
+        this.Records = Records;
     }
 
     /**
-     * Get 区域封禁清空标识
+     * Get 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 区域封禁清空标识
+     * @return ContinueToken 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getContinueToken() {
+        return this.ContinueToken;
     }
 
     /**
-     * Set 区域封禁清空标识
+     * Set 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 区域封禁清空标识
+     * @param ContinueToken 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setContinueToken(String ContinueToken) {
+        this.ContinueToken = ContinueToken;
     }
 
-    public DDoSGeoIp() {
+    public LogConfigListPage() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DDoSGeoIp(DDoSGeoIp source) {
-        if (source.RegionId != null) {
-            this.RegionId = new Long[source.RegionId.length];
-            for (int i = 0; i < source.RegionId.length; i++) {
-                this.RegionId[i] = new Long(source.RegionId[i]);
+    public LogConfigListPage(LogConfigListPage source) {
+        if (source.Records != null) {
+            this.Records = new LogConfig[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new LogConfig(source.Records[i]);
             }
         }
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+        if (source.ContinueToken != null) {
+            this.ContinueToken = new String(source.ContinueToken);
         }
     }
 
@@ -102,8 +102,8 @@ public class DDoSGeoIp extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "RegionId.", this.RegionId);
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamSimple(map, prefix + "ContinueToken", this.ContinueToken);
 
     }
 }

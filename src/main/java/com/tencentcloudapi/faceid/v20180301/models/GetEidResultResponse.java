@@ -55,12 +55,20 @@ public class GetEidResultResponse extends AbstractModel{
     private EidInfo EidInfo;
 
     /**
-    * 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+    * 意愿核身朗读模式相关信息。若未使用意愿核身朗读功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionVerifyData")
     @Expose
     private IntentionVerifyData IntentionVerifyData;
+
+    /**
+    * 意愿核身问答模式相关信息。若未使用意愿核身问答模式功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntentionQuestionResult")
+    @Expose
+    private IntentionQuestionResult IntentionQuestionResult;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -150,9 +158,9 @@ public class GetEidResultResponse extends AbstractModel{
     }
 
     /**
-     * Get 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * Get 意愿核身朗读模式相关信息。若未使用意愿核身朗读功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @return IntentionVerifyData 意愿核身朗读模式相关信息。若未使用意愿核身朗读功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionVerifyData getIntentionVerifyData() {
@@ -160,13 +168,33 @@ public class GetEidResultResponse extends AbstractModel{
     }
 
     /**
-     * Set 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * Set 意愿核身朗读模式相关信息。若未使用意愿核身朗读功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionVerifyData 意愿核身朗读模式相关信息。若未使用意愿核身朗读功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionVerifyData(IntentionVerifyData IntentionVerifyData) {
         this.IntentionVerifyData = IntentionVerifyData;
+    }
+
+    /**
+     * Get 意愿核身问答模式相关信息。若未使用意愿核身问答模式功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntentionQuestionResult 意愿核身问答模式相关信息。若未使用意愿核身问答模式功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntentionQuestionResult getIntentionQuestionResult() {
+        return this.IntentionQuestionResult;
+    }
+
+    /**
+     * Set 意愿核身问答模式相关信息。若未使用意愿核身问答模式功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntentionQuestionResult 意愿核身问答模式相关信息。若未使用意愿核身问答模式功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntentionQuestionResult(IntentionQuestionResult IntentionQuestionResult) {
+        this.IntentionQuestionResult = IntentionQuestionResult;
     }
 
     /**
@@ -208,6 +236,9 @@ public class GetEidResultResponse extends AbstractModel{
         if (source.IntentionVerifyData != null) {
             this.IntentionVerifyData = new IntentionVerifyData(source.IntentionVerifyData);
         }
+        if (source.IntentionQuestionResult != null) {
+            this.IntentionQuestionResult = new IntentionQuestionResult(source.IntentionQuestionResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -223,6 +254,7 @@ public class GetEidResultResponse extends AbstractModel{
         this.setParamObj(map, prefix + "BestFrame.", this.BestFrame);
         this.setParamObj(map, prefix + "EidInfo.", this.EidInfo);
         this.setParamObj(map, prefix + "IntentionVerifyData.", this.IntentionVerifyData);
+        this.setParamObj(map, prefix + "IntentionQuestionResult.", this.IntentionQuestionResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
