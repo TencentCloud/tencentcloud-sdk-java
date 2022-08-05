@@ -42,6 +42,7 @@ public class Component extends AbstractModel{
     * 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -233,6 +234,7 @@ TEXT控件可以指定字体
      * Get 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -243,6 +245,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
      * @return ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -259,6 +262,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
      * Set 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -269,6 +273,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
      * @param ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；

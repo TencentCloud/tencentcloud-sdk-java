@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rce.v20201103.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskModelRequest extends AbstractModel{
+public class DescribeLiveDomainCertBindingsResponse extends AbstractModel{
 
     /**
-    * 业务入参
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("BusinessSecurityData")
+    @SerializedName("RequestId")
     @Expose
-    private InputDescribeRiskModelData BusinessSecurityData;
+    private String RequestId;
 
     /**
-     * Get 业务入参 
-     * @return BusinessSecurityData 业务入参
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public InputDescribeRiskModelData getBusinessSecurityData() {
-        return this.BusinessSecurityData;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 业务入参
-     * @param BusinessSecurityData 业务入参
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setBusinessSecurityData(InputDescribeRiskModelData BusinessSecurityData) {
-        this.BusinessSecurityData = BusinessSecurityData;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeRiskModelRequest() {
+    public DescribeLiveDomainCertBindingsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskModelRequest(DescribeRiskModelRequest source) {
-        if (source.BusinessSecurityData != null) {
-            this.BusinessSecurityData = new InputDescribeRiskModelData(source.BusinessSecurityData);
+    public DescribeLiveDomainCertBindingsResponse(DescribeLiveDomainCertBindingsResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeRiskModelRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

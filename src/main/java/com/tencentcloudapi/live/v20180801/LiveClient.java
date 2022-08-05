@@ -1120,6 +1120,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询绑定证书的域名列表。
+     * @param req DescribeLiveDomainCertBindingsRequest
+     * @return DescribeLiveDomainCertBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveDomainCertBindings");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实时的域名维度下行播放数据，由于数据处理有耗时，接口默认查询4分钟前的准实时数据。
      * @param req DescribeLiveDomainPlayInfoListRequest
      * @return DescribeLiveDomainPlayInfoListResponse
@@ -2130,6 +2150,27 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveCallbackTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量绑定证书对应的播放域名，并更新启用状态。
+新建自有证书将自动上传至腾讯云ssl。
+     * @param req ModifyLiveDomainCertBindingsRequest
+     * @return ModifyLiveDomainCertBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveDomainCertBindings");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

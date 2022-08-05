@@ -72,7 +72,7 @@ public class VulInfoList extends AbstractModel{
     private Long HostCount;
 
     /**
-    * 漏洞等级 1:低 2:中 3:高 4:提示
+    * 漏洞等级 1:低 2:中 3:高 4:严重
     */
     @SerializedName("Level")
     @Expose
@@ -311,16 +311,16 @@ public class VulInfoList extends AbstractModel{
     }
 
     /**
-     * Get 漏洞等级 1:低 2:中 3:高 4:提示 
-     * @return Level 漏洞等级 1:低 2:中 3:高 4:提示
+     * Get 漏洞等级 1:低 2:中 3:高 4:严重 
+     * @return Level 漏洞等级 1:低 2:中 3:高 4:严重
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 漏洞等级 1:低 2:中 3:高 4:提示
-     * @param Level 漏洞等级 1:低 2:中 3:高 4:提示
+     * Set 漏洞等级 1:低 2:中 3:高 4:严重
+     * @param Level 漏洞等级 1:低 2:中 3:高 4:严重
      */
     public void setLevel(Long Level) {
         this.Level = Level;

@@ -37,7 +37,7 @@ public class DescribeBlockStaticListRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 类型
+    * 列表类型，只能是下面三种之一：port、address、ip
     */
     @SerializedName("QueryType")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeBlockStaticListRequest extends AbstractModel{
     }
 
     /**
-     * Get 类型 
-     * @return QueryType 类型
+     * Get 列表类型，只能是下面三种之一：port、address、ip 
+     * @return QueryType 列表类型，只能是下面三种之一：port、address、ip
      */
     public String getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 类型
-     * @param QueryType 类型
+     * Set 列表类型，只能是下面三种之一：port、address、ip
+     * @param QueryType 列表类型，只能是下面三种之一：port、address、ip
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;

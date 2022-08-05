@@ -13,21 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rce.v20201103.models;
+package com.tencentcloudapi.ic.v20190307.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskModelResponse extends AbstractModel{
+public class DescribeSmsResponse extends AbstractModel{
 
     /**
-    * 业务出参
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("Total")
     @Expose
-    private OutputDescribeRiskModel Data;
+    private Long Total;
+
+    /**
+    * 短信列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("List")
+    @Expose
+    private ResSms [] List;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +46,43 @@ public class DescribeRiskModelResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 业务出参 
-     * @return Data 业务出参
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public OutputDescribeRiskModel getData() {
-        return this.Data;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 业务出参
-     * @param Data 业务出参
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(OutputDescribeRiskModel Data) {
-        this.Data = Data;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 短信列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return List 短信列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResSms [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set 短信列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param List 短信列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setList(ResSms [] List) {
+        this.List = List;
     }
 
     /**
@@ -68,16 +101,22 @@ public class DescribeRiskModelResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRiskModelResponse() {
+    public DescribeSmsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskModelResponse(DescribeRiskModelResponse source) {
-        if (source.Data != null) {
-            this.Data = new OutputDescribeRiskModel(source.Data);
+    public DescribeSmsResponse(DescribeSmsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.List != null) {
+            this.List = new ResSms[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new ResSms(source.List[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +128,8 @@ public class DescribeRiskModelResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,33 +23,37 @@ import java.util.HashMap;
 public class DetectLabelRequest extends AbstractModel{
 
     /**
-    * 图片URL地址。 
-图片限制： 
-• 图片格式：PNG、JPG、JPEG。 
-• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
-建议：
-• 图片像素：大于50*50像素，否则影响识别效果； 
-• 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
-    */
-    @SerializedName("ImageUrl")
-    @Expose
-    private String ImageUrl;
-
-    /**
-    * 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
-**注意：图片需要base64编码，并且要去掉编码头部。**
+    * 图片 Base64 编码数据。
+与ImageUrl同时存在时优先使用ImageUrl字段。
+图片限制：
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：经Base64编码后不超过4M。
+**<font color=#1E90FF>注意：图片需要Base64编码，并且要去掉编码头部。</font>**
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
+    * 图片 URL 地址。 
+图片限制： 
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+建议：
+• 图片像素：大于50*50像素，否则影响识别效果； 
+• 长宽比：长边:短边<5； 
+• 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+    */
+    @SerializedName("ImageUrl")
+    @Expose
+    private String ImageUrl;
+
+    /**
     * 本次调用支持的识别场景，可选值如下：
-WEB，针对网络图片优化;
-CAMERA，针对手机摄像头拍摄图片优化;
-ALBUM，针对手机相册、网盘产品优化;
-NEWS，针对新闻、资讯、广电等行业优化；
+• WEB，针对网络图片优化;
+• CAMERA，针对手机摄像头拍摄图片优化;
+• ALBUM，针对手机相册、网盘产品优化;
+• NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
@@ -59,83 +63,99 @@ NEWS，针对新闻、资讯、广电等行业优化；
     private String [] Scenes;
 
     /**
-     * Get 图片URL地址。 
-图片限制： 
-• 图片格式：PNG、JPG、JPEG。 
-• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
-建议：
-• 图片像素：大于50*50像素，否则影响识别效果； 
-• 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。 
-     * @return ImageUrl 图片URL地址。 
-图片限制： 
-• 图片格式：PNG、JPG、JPEG。 
-• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
-建议：
-• 图片像素：大于50*50像素，否则影响识别效果； 
-• 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
-     */
-    public String getImageUrl() {
-        return this.ImageUrl;
-    }
-
-    /**
-     * Set 图片URL地址。 
-图片限制： 
-• 图片格式：PNG、JPG、JPEG。 
-• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
-建议：
-• 图片像素：大于50*50像素，否则影响识别效果； 
-• 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
-     * @param ImageUrl 图片URL地址。 
-图片限制： 
-• 图片格式：PNG、JPG、JPEG。 
-• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
-建议：
-• 图片像素：大于50*50像素，否则影响识别效果； 
-• 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
-     */
-    public void setImageUrl(String ImageUrl) {
-        this.ImageUrl = ImageUrl;
-    }
-
-    /**
-     * Get 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
-**注意：图片需要base64编码，并且要去掉编码头部。** 
-     * @return ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
-**注意：图片需要base64编码，并且要去掉编码头部。**
+     * Get 图片 Base64 编码数据。
+与ImageUrl同时存在时优先使用ImageUrl字段。
+图片限制：
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：经Base64编码后不超过4M。
+**<font color=#1E90FF>注意：图片需要Base64编码，并且要去掉编码头部。</font>** 
+     * @return ImageBase64 图片 Base64 编码数据。
+与ImageUrl同时存在时优先使用ImageUrl字段。
+图片限制：
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：经Base64编码后不超过4M。
+**<font color=#1E90FF>注意：图片需要Base64编码，并且要去掉编码头部。</font>**
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
-**注意：图片需要base64编码，并且要去掉编码头部。**
-     * @param ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
-**注意：图片需要base64编码，并且要去掉编码头部。**
+     * Set 图片 Base64 编码数据。
+与ImageUrl同时存在时优先使用ImageUrl字段。
+图片限制：
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：经Base64编码后不超过4M。
+**<font color=#1E90FF>注意：图片需要Base64编码，并且要去掉编码头部。</font>**
+     * @param ImageBase64 图片 Base64 编码数据。
+与ImageUrl同时存在时优先使用ImageUrl字段。
+图片限制：
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：经Base64编码后不超过4M。
+**<font color=#1E90FF>注意：图片需要Base64编码，并且要去掉编码头部。</font>**
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
+     * Get 图片 URL 地址。 
+图片限制： 
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+建议：
+• 图片像素：大于50*50像素，否则影响识别效果； 
+• 长宽比：长边:短边<5； 
+• 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。 
+     * @return ImageUrl 图片 URL 地址。 
+图片限制： 
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+建议：
+• 图片像素：大于50*50像素，否则影响识别效果； 
+• 长宽比：长边:短边<5； 
+• 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+     */
+    public String getImageUrl() {
+        return this.ImageUrl;
+    }
+
+    /**
+     * Set 图片 URL 地址。 
+图片限制： 
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+建议：
+• 图片像素：大于50*50像素，否则影响识别效果； 
+• 长宽比：长边:短边<5； 
+• 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+     * @param ImageUrl 图片 URL 地址。 
+图片限制： 
+• 图片格式：PNG、JPG、JPEG、BMP。 
+• 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+建议：
+• 图片像素：大于50*50像素，否则影响识别效果； 
+• 长宽比：长边:短边<5； 
+• 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+     */
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
+    }
+
+    /**
      * Get 本次调用支持的识别场景，可选值如下：
-WEB，针对网络图片优化;
-CAMERA，针对手机摄像头拍摄图片优化;
-ALBUM，针对手机相册、网盘产品优化;
-NEWS，针对新闻、资讯、广电等行业优化；
+• WEB，针对网络图片优化;
+• CAMERA，针对手机摄像头拍摄图片优化;
+• ALBUM，针对手机相册、网盘产品优化;
+• NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。 
      * @return Scenes 本次调用支持的识别场景，可选值如下：
-WEB，针对网络图片优化;
-CAMERA，针对手机摄像头拍摄图片优化;
-ALBUM，针对手机相册、网盘产品优化;
-NEWS，针对新闻、资讯、广电等行业优化；
+• WEB，针对网络图片优化;
+• CAMERA，针对手机摄像头拍摄图片优化;
+• ALBUM，针对手机相册、网盘产品优化;
+• NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
@@ -146,18 +166,18 @@ NEWS，针对新闻、资讯、广电等行业优化；
 
     /**
      * Set 本次调用支持的识别场景，可选值如下：
-WEB，针对网络图片优化;
-CAMERA，针对手机摄像头拍摄图片优化;
-ALBUM，针对手机相册、网盘产品优化;
-NEWS，针对新闻、资讯、广电等行业优化；
+• WEB，针对网络图片优化;
+• CAMERA，针对手机摄像头拍摄图片优化;
+• ALBUM，针对手机相册、网盘产品优化;
+• NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
      * @param Scenes 本次调用支持的识别场景，可选值如下：
-WEB，针对网络图片优化;
-CAMERA，针对手机摄像头拍摄图片优化;
-ALBUM，针对手机相册、网盘产品优化;
-NEWS，针对新闻、资讯、广电等行业优化；
+• WEB，针对网络图片优化;
+• CAMERA，针对手机摄像头拍摄图片优化;
+• ALBUM，针对手机相册、网盘产品优化;
+• NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
@@ -174,11 +194,11 @@ NEWS，针对新闻、资讯、广电等行业优化；
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DetectLabelRequest(DetectLabelRequest source) {
-        if (source.ImageUrl != null) {
-            this.ImageUrl = new String(source.ImageUrl);
-        }
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
         }
         if (source.Scenes != null) {
             this.Scenes = new String[source.Scenes.length];
@@ -193,8 +213,8 @@ NEWS，针对新闻、资讯、广电等行业优化；
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
 
     }

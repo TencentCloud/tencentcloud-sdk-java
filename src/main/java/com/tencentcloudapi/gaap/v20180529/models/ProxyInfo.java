@@ -73,7 +73,7 @@ public class ProxyInfo extends AbstractModel{
     private Long Bandwidth;
 
     /**
-    * 并发，单位：个/秒。
+    * 并发，单位：万个/秒。
     */
     @SerializedName("Concurrent")
     @Expose
@@ -431,16 +431,16 @@ CrossBorder表示跨境通道。
     }
 
     /**
-     * Get 并发，单位：个/秒。 
-     * @return Concurrent 并发，单位：个/秒。
+     * Get 并发，单位：万个/秒。 
+     * @return Concurrent 并发，单位：万个/秒。
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set 并发，单位：个/秒。
-     * @param Concurrent 并发，单位：个/秒。
+     * Set 并发，单位：万个/秒。
+     * @param Concurrent 并发，单位：万个/秒。
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;
