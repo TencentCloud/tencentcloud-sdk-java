@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeLiveDomainCertBindingsResponse extends AbstractModel{
 
     /**
+    * 有绑定证书的域名信息数组。
+    */
+    @SerializedName("LiveDomainCertBindings")
+    @Expose
+    private LiveDomainCertBindings [] LiveDomainCertBindings;
+
+    /**
+    * 总的记录行数，便于分页。
+    */
+    @SerializedName("TotalNum")
+    @Expose
+    private Long TotalNum;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 有绑定证书的域名信息数组。 
+     * @return LiveDomainCertBindings 有绑定证书的域名信息数组。
+     */
+    public LiveDomainCertBindings [] getLiveDomainCertBindings() {
+        return this.LiveDomainCertBindings;
+    }
+
+    /**
+     * Set 有绑定证书的域名信息数组。
+     * @param LiveDomainCertBindings 有绑定证书的域名信息数组。
+     */
+    public void setLiveDomainCertBindings(LiveDomainCertBindings [] LiveDomainCertBindings) {
+        this.LiveDomainCertBindings = LiveDomainCertBindings;
+    }
+
+    /**
+     * Get 总的记录行数，便于分页。 
+     * @return TotalNum 总的记录行数，便于分页。
+     */
+    public Long getTotalNum() {
+        return this.TotalNum;
+    }
+
+    /**
+     * Set 总的记录行数，便于分页。
+     * @param TotalNum 总的记录行数，便于分页。
+     */
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribeLiveDomainCertBindingsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLiveDomainCertBindingsResponse(DescribeLiveDomainCertBindingsResponse source) {
+        if (source.LiveDomainCertBindings != null) {
+            this.LiveDomainCertBindings = new LiveDomainCertBindings[source.LiveDomainCertBindings.length];
+            for (int i = 0; i < source.LiveDomainCertBindings.length; i++) {
+                this.LiveDomainCertBindings[i] = new LiveDomainCertBindings(source.LiveDomainCertBindings[i]);
+            }
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribeLiveDomainCertBindingsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "LiveDomainCertBindings.", this.LiveDomainCertBindings);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

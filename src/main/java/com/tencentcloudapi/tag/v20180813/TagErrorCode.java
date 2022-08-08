@@ -1,5 +1,8 @@
 package com.tencentcloudapi.tag.v20180813;
 public enum TagErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
     // 未通过CAM鉴权。
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      

@@ -30,32 +30,11 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     private String InquiryType;
 
     /**
-    * 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
-    */
-    @SerializedName("Zones")
-    @Expose
-    private String [] Zones;
-
-    /**
     * 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
     */
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
-
-    /**
-    * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
-    */
-    @SerializedName("DiskTypes")
-    @Expose
-    private String [] DiskTypes;
-
-    /**
-    * 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-    */
-    @SerializedName("DiskUsage")
-    @Expose
-    private String DiskUsage;
 
     /**
     * 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
@@ -65,11 +44,18 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     private String [] InstanceFamilies;
 
     /**
-    * 实例CPU核数。
+    * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
     */
-    @SerializedName("CPU")
+    @SerializedName("DiskTypes")
     @Expose
-    private Long CPU;
+    private String [] DiskTypes;
+
+    /**
+    * 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
 
     /**
     * 实例内存大小。
@@ -77,6 +63,20 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Long Memory;
+
+    /**
+    * 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+    */
+    @SerializedName("DiskUsage")
+    @Expose
+    private String DiskUsage;
+
+    /**
+    * 实例CPU核数。
+    */
+    @SerializedName("CPU")
+    @Expose
+    private Long CPU;
 
     /**
      * Get 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。 
@@ -92,22 +92,6 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      */
     public void setInquiryType(String InquiryType) {
         this.InquiryType = InquiryType;
-    }
-
-    /**
-     * Get 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。 
-     * @return Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
-     */
-    public String [] getZones() {
-        return this.Zones;
-    }
-
-    /**
-     * Set 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
-     * @param Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
-     */
-    public void setZones(String [] Zones) {
-        this.Zones = Zones;
     }
 
     /**
@@ -127,6 +111,22 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     }
 
     /**
+     * Get 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518) 
+     * @return InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+     */
+    public String [] getInstanceFamilies() {
+        return this.InstanceFamilies;
+    }
+
+    /**
+     * Set 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+     * @param InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+     */
+    public void setInstanceFamilies(String [] InstanceFamilies) {
+        this.InstanceFamilies = InstanceFamilies;
+    }
+
+    /**
      * Get 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。 
      * @return DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
      */
@@ -140,6 +140,38 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      */
     public void setDiskTypes(String [] DiskTypes) {
         this.DiskTypes = DiskTypes;
+    }
+
+    /**
+     * Get 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。 
+     * @return Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     * @param Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get 实例内存大小。 
+     * @return Memory 实例内存大小。
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 实例内存大小。
+     * @param Memory 实例内存大小。
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
     }
 
     /**
@@ -159,22 +191,6 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     }
 
     /**
-     * Get 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518) 
-     * @return InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-     */
-    public String [] getInstanceFamilies() {
-        return this.InstanceFamilies;
-    }
-
-    /**
-     * Set 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-     * @param InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-     */
-    public void setInstanceFamilies(String [] InstanceFamilies) {
-        this.InstanceFamilies = InstanceFamilies;
-    }
-
-    /**
      * Get 实例CPU核数。 
      * @return CPU 实例CPU核数。
      */
@@ -190,22 +206,6 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
         this.CPU = CPU;
     }
 
-    /**
-     * Get 实例内存大小。 
-     * @return Memory 实例内存大小。
-     */
-    public Long getMemory() {
-        return this.Memory;
-    }
-
-    /**
-     * Set 实例内存大小。
-     * @param Memory 实例内存大小。
-     */
-    public void setMemory(Long Memory) {
-        this.Memory = Memory;
-    }
-
     public DescribeDiskConfigQuotaRequest() {
     }
 
@@ -217,23 +217,8 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
         if (source.InquiryType != null) {
             this.InquiryType = new String(source.InquiryType);
         }
-        if (source.Zones != null) {
-            this.Zones = new String[source.Zones.length];
-            for (int i = 0; i < source.Zones.length; i++) {
-                this.Zones[i] = new String(source.Zones[i]);
-            }
-        }
         if (source.DiskChargeType != null) {
             this.DiskChargeType = new String(source.DiskChargeType);
-        }
-        if (source.DiskTypes != null) {
-            this.DiskTypes = new String[source.DiskTypes.length];
-            for (int i = 0; i < source.DiskTypes.length; i++) {
-                this.DiskTypes[i] = new String(source.DiskTypes[i]);
-            }
-        }
-        if (source.DiskUsage != null) {
-            this.DiskUsage = new String(source.DiskUsage);
         }
         if (source.InstanceFamilies != null) {
             this.InstanceFamilies = new String[source.InstanceFamilies.length];
@@ -241,11 +226,26 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
                 this.InstanceFamilies[i] = new String(source.InstanceFamilies[i]);
             }
         }
-        if (source.CPU != null) {
-            this.CPU = new Long(source.CPU);
+        if (source.DiskTypes != null) {
+            this.DiskTypes = new String[source.DiskTypes.length];
+            for (int i = 0; i < source.DiskTypes.length; i++) {
+                this.DiskTypes[i] = new String(source.DiskTypes[i]);
+            }
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
         }
         if (source.Memory != null) {
             this.Memory = new Long(source.Memory);
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
         }
     }
 
@@ -255,13 +255,13 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InquiryType", this.InquiryType);
-        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-        this.setParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
-        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamArraySimple(map, prefix + "InstanceFamilies.", this.InstanceFamilies);
-        this.setParamSimple(map, prefix + "CPU", this.CPU);
+        this.setParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
+        this.setParamSimple(map, prefix + "CPU", this.CPU);
 
     }
 }

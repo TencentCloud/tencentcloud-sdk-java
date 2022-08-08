@@ -382,6 +382,26 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *查询CHC物理服务器禁止做的操作，返回给用户
+     * @param req DescribeChcDeniedActionsRequest
+     * @return DescribeChcDeniedActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChcDeniedActionsResponse DescribeChcDeniedActions(DescribeChcDeniedActionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChcDeniedActionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChcDeniedActions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
 
 * 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。

@@ -30,6 +30,14 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel{
     private String [] MismatchedDomainNames;
 
     /**
+    * 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Errors")
+    @Expose
+    private BatchDomainOperateErrors [] Errors;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel{
      */
     public void setMismatchedDomainNames(String [] MismatchedDomainNames) {
         this.MismatchedDomainNames = MismatchedDomainNames;
+    }
+
+    /**
+     * Get 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BatchDomainOperateErrors [] getErrors() {
+        return this.Errors;
+    }
+
+    /**
+     * Set 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrors(BatchDomainOperateErrors [] Errors) {
+        this.Errors = Errors;
     }
 
     /**
@@ -82,6 +110,12 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel{
                 this.MismatchedDomainNames[i] = new String(source.MismatchedDomainNames[i]);
             }
         }
+        if (source.Errors != null) {
+            this.Errors = new BatchDomainOperateErrors[source.Errors.length];
+            for (int i = 0; i < source.Errors.length; i++) {
+                this.Errors[i] = new BatchDomainOperateErrors(source.Errors[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +127,7 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MismatchedDomainNames.", this.MismatchedDomainNames);
+        this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

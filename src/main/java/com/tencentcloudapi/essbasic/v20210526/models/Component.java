@@ -41,13 +41,18 @@ public class Component extends AbstractModel{
     /**
     * 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
     */
@@ -134,8 +139,13 @@ TEXT控件可以指定字体
     private String ComponentExtra;
 
     /**
-    * 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
+    * 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
     */
     @SerializedName("ComponentValue")
     @Expose
@@ -233,24 +243,34 @@ TEXT控件可以指定字体
     /**
      * Get 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件 
      * @return ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
      */
@@ -261,24 +281,34 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     /**
      * Set 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
      * @param ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
      */
@@ -479,20 +509,40 @@ TEXT控件可以指定字体
     }
 
     /**
-     * Get 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码 
-     * @return ComponentValue 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
+     * Get 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo 
+     * @return ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      */
     public String getComponentValue() {
         return this.ComponentValue;
     }
 
     /**
-     * Set 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
-     * @param ComponentValue 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
+     * Set 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+     * @param ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      */
     public void setComponentValue(String ComponentValue) {
         this.ComponentValue = ComponentValue;

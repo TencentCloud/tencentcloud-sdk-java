@@ -39,26 +39,6 @@ public class AaClient extends AbstractClient{
     }
 
     /**
-     *活动防刷、注册保护、登录保护等营销产品的高级版本
-     * @param req ManageMarketingRiskRequest
-     * @return ManageMarketingRiskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ManageMarketingRiskResponse ManageMarketingRisk(ManageMarketingRiskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ManageMarketingRiskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManageMarketingRisk");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *腾讯云活动防刷（ActivityAntiRush，AA）是针对电商、O2O、P2P、游戏、支付等行业在促销活动中遇到“羊毛党”恶意刷取优惠福利的行为时，通过防刷引擎，精准识别出“薅羊毛”恶意行为的活动防刷服务，避免了企业被刷带来的巨大经济损失。
      * @param req QueryActivityAntiRushRequest
      * @return QueryActivityAntiRushResponse
@@ -71,26 +51,6 @@ public class AaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryActivityAntiRush");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *活动防刷高级版，支持对网赚众包、网赚防刷、引流反诈骗场景的检测识别
-     * @param req QueryActivityAntiRushAdvancedRequest
-     * @return QueryActivityAntiRushAdvancedResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryActivityAntiRushAdvancedResponse QueryActivityAntiRushAdvanced(QueryActivityAntiRushAdvancedRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryActivityAntiRushAdvancedResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushAdvancedResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryActivityAntiRushAdvanced");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

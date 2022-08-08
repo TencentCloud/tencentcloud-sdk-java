@@ -53,8 +53,8 @@ public class DescribeLiveDomainCertBindingsRequest extends AbstractModel{
 
     /**
     * 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -130,11 +130,11 @@ ExpireTimeDesc：证书过期时间升序。
 
     /**
      * Get 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。 
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。 
      * @return OrderBy 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
      */
     public String getOrderBy() {
         return this.OrderBy;
@@ -142,11 +142,11 @@ ExpireTimeDesc：证书过期时间升序。
 
     /**
      * Set 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
      * @param OrderBy 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

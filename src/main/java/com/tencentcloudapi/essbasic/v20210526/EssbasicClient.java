@@ -80,6 +80,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *渠道创建文件转换任务
+     * @param req ChannelCreateConvertTaskApiRequest
+     * @return ChannelCreateConvertTaskApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApi(ChannelCreateConvertTaskApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateConvertTaskApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateConvertTaskApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateConvertTaskApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建签署流程。此接口不可直接使用，需要运营申请
      * @param req ChannelCreateFlowByFilesRequest
      * @return ChannelCreateFlowByFilesResponse
@@ -113,6 +133,26 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ChannelCreateMultiFlowSignQRCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *渠道版查询转换任务状态
+     * @param req ChannelGetTaskResultApiRequest
+     * @return ChannelGetTaskResultApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelGetTaskResultApiResponse ChannelGetTaskResultApi(ChannelGetTaskResultApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelGetTaskResultApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelGetTaskResultApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelGetTaskResultApi");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -1161,6 +1161,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *根据位点查询消息列表
+     * @param req FetchMessageListByOffsetRequest
+     * @return FetchMessageListByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByOffsetResponse FetchMessageListByOffset(FetchMessageListByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FetchMessageListByOffset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *编辑Datahub连接源
      * @param req ModifyConnectResourceRequest
      * @return ModifyConnectResourceResponse
