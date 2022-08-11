@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SecEntryValue extends AbstractModel{
 
     /**
-    * 指标名称
+    * 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metric")
@@ -31,7 +31,7 @@ public class SecEntryValue extends AbstractModel{
     private String Metric;
 
     /**
-    * 指标数据明细
+    * 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
@@ -39,7 +39,7 @@ public class SecEntryValue extends AbstractModel{
     private TimingDataItem [] Detail;
 
     /**
-    * 最大值
+    * 最大值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
@@ -47,7 +47,7 @@ public class SecEntryValue extends AbstractModel{
     private Long Max;
 
     /**
-    * 平均值
+    * 平均值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Avg")
@@ -55,7 +55,7 @@ public class SecEntryValue extends AbstractModel{
     private Float Avg;
 
     /**
-    * 数据总和
+    * 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sum")
@@ -63,9 +63,9 @@ public class SecEntryValue extends AbstractModel{
     private Float Sum;
 
     /**
-     * Get 指标名称
+     * Get 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metric 指标名称
+     * @return Metric 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetric() {
@@ -73,9 +73,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Set 指标名称
+     * Set 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metric 指标名称
+     * @param Metric 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetric(String Metric) {
@@ -83,9 +83,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Get 指标数据明细
+     * Get 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Detail 指标数据明细
+     * @return Detail 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimingDataItem [] getDetail() {
@@ -93,9 +93,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Set 指标数据明细
+     * Set 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Detail 指标数据明细
+     * @param Detail 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(TimingDataItem [] Detail) {
@@ -103,9 +103,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Get 最大值
+     * Get 最大值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Max 最大值
+     * @return Max 最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMax() {
@@ -113,9 +113,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Set 最大值
+     * Set 最大值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Max 最大值
+     * @param Max 最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(Long Max) {
@@ -123,9 +123,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Get 平均值
+     * Get 平均值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Avg 平均值
+     * @return Avg 平均值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAvg() {
@@ -133,9 +133,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Set 平均值
+     * Set 平均值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Avg 平均值
+     * @param Avg 平均值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvg(Float Avg) {
@@ -143,9 +143,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Get 数据总和
+     * Get 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sum 数据总和
+     * @return Sum 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSum() {
@@ -153,9 +153,9 @@ public class SecEntryValue extends AbstractModel{
     }
 
     /**
-     * Set 数据总和
+     * Set 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sum 数据总和
+     * @param Sum 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSum(Float Sum) {

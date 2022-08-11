@@ -422,6 +422,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *获取环境基础信息
+     * @param req DescribeEnvironmentRequest
+     * @return DescribeEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentResponse DescribeEnvironment(DescribeEnvironmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvironmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvironment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取环境状态
      * @param req DescribeEnvironmentStatusRequest
      * @return DescribeEnvironmentStatusResponse

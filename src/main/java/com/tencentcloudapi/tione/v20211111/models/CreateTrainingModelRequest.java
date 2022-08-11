@@ -128,7 +128,7 @@ public class CreateTrainingModelRequest extends AbstractModel{
     private CosPathInfo ModelOutputPath;
 
     /**
-    * 模型来源 （JOB/COS/AUTO_ML）
+    * 模型来源 （JOB/COS）
     */
     @SerializedName("TrainingModelSource")
     @Expose
@@ -170,6 +170,13 @@ public class CreateTrainingModelRequest extends AbstractModel{
     @SerializedName("ModelFormat")
     @Expose
     private String ModelFormat;
+
+    /**
+    * 推理镜像ID
+    */
+    @SerializedName("ReasoningEnvironmentId")
+    @Expose
+    private String ReasoningEnvironmentId;
 
     /**
      * Get 导入方式（MODEL/VERSION） 
@@ -412,16 +419,16 @@ public class CreateTrainingModelRequest extends AbstractModel{
     }
 
     /**
-     * Get 模型来源 （JOB/COS/AUTO_ML） 
-     * @return TrainingModelSource 模型来源 （JOB/COS/AUTO_ML）
+     * Get 模型来源 （JOB/COS） 
+     * @return TrainingModelSource 模型来源 （JOB/COS）
      */
     public String getTrainingModelSource() {
         return this.TrainingModelSource;
     }
 
     /**
-     * Set 模型来源 （JOB/COS/AUTO_ML）
-     * @param TrainingModelSource 模型来源 （JOB/COS/AUTO_ML）
+     * Set 模型来源 （JOB/COS）
+     * @param TrainingModelSource 模型来源 （JOB/COS）
      */
     public void setTrainingModelSource(String TrainingModelSource) {
         this.TrainingModelSource = TrainingModelSource;
@@ -515,6 +522,22 @@ public class CreateTrainingModelRequest extends AbstractModel{
         this.ModelFormat = ModelFormat;
     }
 
+    /**
+     * Get 推理镜像ID 
+     * @return ReasoningEnvironmentId 推理镜像ID
+     */
+    public String getReasoningEnvironmentId() {
+        return this.ReasoningEnvironmentId;
+    }
+
+    /**
+     * Set 推理镜像ID
+     * @param ReasoningEnvironmentId 推理镜像ID
+     */
+    public void setReasoningEnvironmentId(String ReasoningEnvironmentId) {
+        this.ReasoningEnvironmentId = ReasoningEnvironmentId;
+    }
+
     public CreateTrainingModelRequest() {
     }
 
@@ -589,6 +612,9 @@ public class CreateTrainingModelRequest extends AbstractModel{
         if (source.ModelFormat != null) {
             this.ModelFormat = new String(source.ModelFormat);
         }
+        if (source.ReasoningEnvironmentId != null) {
+            this.ReasoningEnvironmentId = new String(source.ReasoningEnvironmentId);
+        }
     }
 
 
@@ -617,6 +643,7 @@ public class CreateTrainingModelRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TrainingJobVersion", this.TrainingJobVersion);
         this.setParamSimple(map, prefix + "ModelVersionType", this.ModelVersionType);
         this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
+        this.setParamSimple(map, prefix + "ReasoningEnvironmentId", this.ReasoningEnvironmentId);
 
     }
 }

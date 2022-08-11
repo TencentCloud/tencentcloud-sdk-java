@@ -86,7 +86,17 @@ public class Disk extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * 磁盘状态
+    * 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
     */
     @SerializedName("DiskState")
     @Expose
@@ -128,14 +138,16 @@ public class Disk extends AbstractModel{
     private String LatestOperationRequestId;
 
     /**
-    * 创建时间
+    * 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 到期时间
+    * 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredTime")
@@ -143,12 +155,27 @@ public class Disk extends AbstractModel{
     private String ExpiredTime;
 
     /**
-    * 隔离时间
+    * 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
+
+    /**
+    * 云硬盘的已有备份点数量。
+    */
+    @SerializedName("DiskBackupCount")
+    @Expose
+    private Long DiskBackupCount;
+
+    /**
+    * 云硬盘的备份点配额数量。
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
 
     /**
      * Get 磁盘ID 
@@ -295,16 +322,56 @@ public class Disk extends AbstractModel{
     }
 
     /**
-     * Get 磁盘状态 
-     * @return DiskState 磁盘状态
+     * Get 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li> 
+     * @return DiskState 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
      */
     public String getDiskState() {
         return this.DiskState;
     }
 
     /**
-     * Set 磁盘状态
-     * @param DiskState 磁盘状态
+     * Set 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
+     * @param DiskState 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
      */
     public void setDiskState(String DiskState) {
         this.DiskState = DiskState;
@@ -391,25 +458,31 @@ public class Disk extends AbstractModel{
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。 
+     * @return CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+     * @param CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 到期时间
+     * Get 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpiredTime 到期时间
+     * @return ExpiredTime 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredTime() {
@@ -417,9 +490,11 @@ public class Disk extends AbstractModel{
     }
 
     /**
-     * Set 到期时间
+     * Set 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpiredTime 到期时间
+     * @param ExpiredTime 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredTime(String ExpiredTime) {
@@ -427,9 +502,11 @@ public class Disk extends AbstractModel{
     }
 
     /**
-     * Get 隔离时间
+     * Get 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsolatedTime 隔离时间
+     * @return IsolatedTime 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedTime() {
@@ -437,13 +514,47 @@ public class Disk extends AbstractModel{
     }
 
     /**
-     * Set 隔离时间
+     * Set 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsolatedTime 隔离时间
+     * @param IsolatedTime 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get 云硬盘的已有备份点数量。 
+     * @return DiskBackupCount 云硬盘的已有备份点数量。
+     */
+    public Long getDiskBackupCount() {
+        return this.DiskBackupCount;
+    }
+
+    /**
+     * Set 云硬盘的已有备份点数量。
+     * @param DiskBackupCount 云硬盘的已有备份点数量。
+     */
+    public void setDiskBackupCount(Long DiskBackupCount) {
+        this.DiskBackupCount = DiskBackupCount;
+    }
+
+    /**
+     * Get 云硬盘的备份点配额数量。 
+     * @return DiskBackupQuota 云硬盘的备份点配额数量。
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set 云硬盘的备份点配额数量。
+     * @param DiskBackupQuota 云硬盘的备份点配额数量。
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
     }
 
     public Disk() {
@@ -508,6 +619,12 @@ public class Disk extends AbstractModel{
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new String(source.IsolatedTime);
         }
+        if (source.DiskBackupCount != null) {
+            this.DiskBackupCount = new Long(source.DiskBackupCount);
+        }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
     }
 
 
@@ -533,6 +650,8 @@ public class Disk extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
 
     }
 }

@@ -51,6 +51,13 @@ public class InquirePriceCreateDisksRequest extends AbstractModel{
     private Long DiskCount;
 
     /**
+    * 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
+
+    /**
      * Get 云硬盘大小, 单位: GB。 
      * @return DiskSize 云硬盘大小, 单位: GB。
      */
@@ -114,6 +121,22 @@ public class InquirePriceCreateDisksRequest extends AbstractModel{
         this.DiskCount = DiskCount;
     }
 
+    /**
+     * Get 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。 
+     * @return DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * @param DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
+    }
+
     public InquirePriceCreateDisksRequest() {
     }
 
@@ -134,6 +157,9 @@ public class InquirePriceCreateDisksRequest extends AbstractModel{
         if (source.DiskCount != null) {
             this.DiskCount = new Long(source.DiskCount);
         }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class InquirePriceCreateDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
 
     }
 }

@@ -1599,6 +1599,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *Proxy模拟故障接口
+     * @param req SwitchProxyRequest
+     * @return SwitchProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchProxyResponse SwitchProxy(SwitchProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *升级实例
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse

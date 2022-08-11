@@ -163,6 +163,20 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
     private ResourceTag [] ResourceTags;
 
     /**
+    * 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+    */
+    @SerializedName("Collation")
+    @Expose
+    private String Collation;
+
+    /**
+    * 系统时区，默认：China Standard Time
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get 主实例ID，格式如：mssql-3l3fgqn7 
      * @return InstanceId 主实例ID，格式如：mssql-3l3fgqn7
      */
@@ -482,6 +496,38 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 系统字符集排序规则，默认：Chinese_PRC_CI_AS 
+     * @return Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public String getCollation() {
+        return this.Collation;
+    }
+
+    /**
+     * Set 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public void setCollation(String Collation) {
+        this.Collation = Collation;
+    }
+
+    /**
+     * Get 系统时区，默认：China Standard Time 
+     * @return TimeZone 系统时区，默认：China Standard Time
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 系统时区，默认：China Standard Time
+     * @param TimeZone 系统时区，默认：China Standard Time
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public CreateReadOnlyDBInstancesRequest() {
     }
 
@@ -559,6 +605,12 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.Collation != null) {
+            this.Collation = new String(source.Collation);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -586,6 +638,8 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Collation", this.Collation);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

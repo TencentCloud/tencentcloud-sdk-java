@@ -51,11 +51,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
     */
     @SerializedName("Filters")
     @Expose
@@ -127,11 +129,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。 
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。 
      * @return Filters 过滤器列表。
 disk-id
 按照【云硬盘 ID】进行过滤。
@@ -153,11 +157,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -185,11 +191,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
      * @param Filters 过滤器列表。
 disk-id
 按照【云硬盘 ID】进行过滤。
@@ -211,11 +219,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -359,28 +359,6 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *废弃接口下架
-
-获取坐席用户列表（废弃）
-     * @param req DescribeSeatUserListRequest
-     * @return DescribeSeatUserListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSeatUserListResponse DescribeSeatUserList(DescribeSeatUserListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSeatUserListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSeatUserListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSeatUserList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取技能组信息列表
      * @param req DescribeSkillGroupInfoListRequest
      * @return DescribeSkillGroupInfoListResponse

@@ -366,6 +366,20 @@ public class DBInstance extends AbstractModel{
     private Long TgwWanVPort;
 
     /**
+    * 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+    */
+    @SerializedName("Collation")
+    @Expose
+    private String Collation;
+
+    /**
+    * 系统时区，默认：China Standard Time
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1161,6 +1175,38 @@ public class DBInstance extends AbstractModel{
         this.TgwWanVPort = TgwWanVPort;
     }
 
+    /**
+     * Get 系统字符集排序规则，默认：Chinese_PRC_CI_AS 
+     * @return Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public String getCollation() {
+        return this.Collation;
+    }
+
+    /**
+     * Set 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public void setCollation(String Collation) {
+        this.Collation = Collation;
+    }
+
+    /**
+     * Get 系统时区，默认：China Standard Time 
+     * @return TimeZone 系统时区，默认：China Standard Time
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 系统时区，默认：China Standard Time
+     * @param TimeZone 系统时区，默认：China Standard Time
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public DBInstance() {
     }
 
@@ -1322,6 +1368,12 @@ public class DBInstance extends AbstractModel{
         if (source.TgwWanVPort != null) {
             this.TgwWanVPort = new Long(source.TgwWanVPort);
         }
+        if (source.Collation != null) {
+            this.Collation = new String(source.Collation);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -1377,6 +1429,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
         this.setParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
         this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
+        this.setParamSimple(map, prefix + "Collation", this.Collation);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

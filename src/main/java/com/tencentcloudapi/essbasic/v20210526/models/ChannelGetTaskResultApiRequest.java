@@ -23,95 +23,95 @@ import java.util.HashMap;
 public class ChannelGetTaskResultApiRequest extends AbstractModel{
 
     /**
-    * 渠道信息
+    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 任务Id
+    * 任务Id，通过ChannelCreateConvertTaskApi接口获得
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 企业信息
-    */
-    @SerializedName("Organization")
-    @Expose
-    private OrganizationInfo Organization;
-
-    /**
-    * 操作人信息
+    * 操作者的信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-     * Get 渠道信息 
-     * @return Agent 渠道信息
+    * 暂未开放
+    */
+    @SerializedName("Organization")
+    @Expose
+    private OrganizationInfo Organization;
+
+    /**
+     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道信息
-     * @param Agent 渠道信息
+     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get 任务Id，通过ChannelCreateConvertTaskApi接口获得 
+     * @return TaskId 任务Id，通过ChannelCreateConvertTaskApi接口获得
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务Id，通过ChannelCreateConvertTaskApi接口获得
+     * @param TaskId 任务Id，通过ChannelCreateConvertTaskApi接口获得
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 企业信息 
-     * @return Organization 企业信息
-     */
-    public OrganizationInfo getOrganization() {
-        return this.Organization;
-    }
-
-    /**
-     * Set 企业信息
-     * @param Organization 企业信息
-     */
-    public void setOrganization(OrganizationInfo Organization) {
-        this.Organization = Organization;
-    }
-
-    /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return Organization 暂未开放
+     */
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Organization 暂未开放
+     */
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
     }
 
     public ChannelGetTaskResultApiRequest() {
@@ -128,11 +128,11 @@ public class ChannelGetTaskResultApiRequest extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
-        if (source.Organization != null) {
-            this.Organization = new OrganizationInfo(source.Organization);
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
         }
     }
 
@@ -143,8 +143,8 @@ public class ChannelGetTaskResultApiRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
 
     }
 }

@@ -31,7 +31,7 @@ public class UploadFilesRequest extends AbstractModel{
 
     /**
     * 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf
+1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
     */
     @SerializedName("BusinessType")
@@ -70,10 +70,10 @@ public class UploadFilesRequest extends AbstractModel{
 
     /**
      * Get 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf
+1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png 
      * @return BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf
+1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
      */
     public String getBusinessType() {
@@ -82,10 +82,10 @@ public class UploadFilesRequest extends AbstractModel{
 
     /**
      * Set 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf
+1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
      * @param BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf
+1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
      */
     public void setBusinessType(String BusinessType) {

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CCLogData extends AbstractModel{
 
     /**
-    * CC拦截日志数据集合
+    * CC拦截日志数据集合。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
@@ -31,41 +31,37 @@ public class CCLogData extends AbstractModel{
     private CCLog [] List;
 
     /**
-    * 当前页
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分页拉取的起始页号。最小值：1。
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分页拉取的最大返回结果数。最大值：1000。
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 总页数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总页数。
     */
     @SerializedName("Pages")
     @Expose
     private Long Pages;
 
     /**
-    * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总条数。
     */
     @SerializedName("TotalSize")
     @Expose
     private Long TotalSize;
 
     /**
-     * Get CC拦截日志数据集合
+     * Get CC拦截日志数据集合。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List CC拦截日志数据集合
+     * @return List CC拦截日志数据集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CCLog [] getList() {
@@ -73,9 +69,9 @@ public class CCLogData extends AbstractModel{
     }
 
     /**
-     * Set CC拦截日志数据集合
+     * Set CC拦截日志数据集合。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List CC拦截日志数据集合
+     * @param List CC拦截日志数据集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(CCLog [] List) {
@@ -83,80 +79,64 @@ public class CCLogData extends AbstractModel{
     }
 
     /**
-     * Get 当前页
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNo 当前页
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分页拉取的起始页号。最小值：1。 
+     * @return PageNo 分页拉取的起始页号。最小值：1。
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 当前页
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNo 当前页
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分页拉取的起始页号。最小值：1。
+     * @param PageNo 分页拉取的起始页号。最小值：1。
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分页拉取的最大返回结果数。最大值：1000。 
+     * @return PageSize 分页拉取的最大返回结果数。最大值：1000。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分页拉取的最大返回结果数。最大值：1000。
+     * @param PageSize 分页拉取的最大返回结果数。最大值：1000。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 总页数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Pages 总页数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总页数。 
+     * @return Pages 总页数。
      */
     public Long getPages() {
         return this.Pages;
     }
 
     /**
-     * Set 总页数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Pages 总页数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总页数。
+     * @param Pages 总页数。
      */
     public void setPages(Long Pages) {
         this.Pages = Pages;
     }
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalSize 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总条数。 
+     * @return TotalSize 总条数。
      */
     public Long getTotalSize() {
         return this.TotalSize;
     }
 
     /**
-     * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalSize 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总条数。
+     * @param TotalSize 总条数。
      */
     public void setTotalSize(Long TotalSize) {
         this.TotalSize = TotalSize;

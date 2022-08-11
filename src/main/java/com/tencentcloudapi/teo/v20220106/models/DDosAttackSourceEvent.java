@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DDosAttackSourceEvent extends AbstractModel{
 
     /**
-    * 攻击源ip
+    * 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackSourceIp")
@@ -31,7 +31,7 @@ public class DDosAttackSourceEvent extends AbstractModel{
     private String AttackSourceIp;
 
     /**
-    * 地区(国家)
+    * 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackRegion")
@@ -39,7 +39,7 @@ public class DDosAttackSourceEvent extends AbstractModel{
     private String AttackRegion;
 
     /**
-    * 累计攻击流量
+    * 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackFlow")
@@ -47,7 +47,7 @@ public class DDosAttackSourceEvent extends AbstractModel{
     private Long AttackFlow;
 
     /**
-    * 累计攻击包量
+    * 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackPacketNum")
@@ -55,9 +55,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     private Long AttackPacketNum;
 
     /**
-     * Get 攻击源ip
+     * Get 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackSourceIp 攻击源ip
+     * @return AttackSourceIp 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackSourceIp() {
@@ -65,9 +65,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Set 攻击源ip
+     * Set 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackSourceIp 攻击源ip
+     * @param AttackSourceIp 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackSourceIp(String AttackSourceIp) {
@@ -75,9 +75,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Get 地区(国家)
+     * Get 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackRegion 地区(国家)
+     * @return AttackRegion 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackRegion() {
@@ -85,9 +85,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Set 地区(国家)
+     * Set 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackRegion 地区(国家)
+     * @param AttackRegion 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackRegion(String AttackRegion) {
@@ -95,9 +95,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Get 累计攻击流量
+     * Get 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackFlow 累计攻击流量
+     * @return AttackFlow 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackFlow() {
@@ -105,9 +105,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Set 累计攻击流量
+     * Set 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackFlow 累计攻击流量
+     * @param AttackFlow 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackFlow(Long AttackFlow) {
@@ -115,9 +115,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Get 累计攻击包量
+     * Get 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackPacketNum 累计攻击包量
+     * @return AttackPacketNum 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackPacketNum() {
@@ -125,9 +125,9 @@ public class DDosAttackSourceEvent extends AbstractModel{
     }
 
     /**
-     * Set 累计攻击包量
+     * Set 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackPacketNum 累计攻击包量
+     * @param AttackPacketNum 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackPacketNum(Long AttackPacketNum) {

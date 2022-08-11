@@ -51,6 +51,13 @@ public class CreateConsumerRequest extends AbstractModel{
     private Ckafka Ckafka;
 
     /**
+    * 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+    */
+    @SerializedName("Compression")
+    @Expose
+    private Long Compression;
+
+    /**
      * Get 投递任务绑定的日志主题 ID 
      * @return TopicId 投递任务绑定的日志主题 ID
      */
@@ -114,6 +121,22 @@ public class CreateConsumerRequest extends AbstractModel{
         this.Ckafka = Ckafka;
     }
 
+    /**
+     * Get 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4] 
+     * @return Compression 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     */
+    public Long getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     * @param Compression 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     */
+    public void setCompression(Long Compression) {
+        this.Compression = Compression;
+    }
+
     public CreateConsumerRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateConsumerRequest extends AbstractModel{
         if (source.Ckafka != null) {
             this.Ckafka = new Ckafka(source.Ckafka);
         }
+        if (source.Compression != null) {
+            this.Compression = new Long(source.Compression);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateConsumerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedContent", this.NeedContent);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamObj(map, prefix + "Ckafka.", this.Ckafka);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
 
     }
 }

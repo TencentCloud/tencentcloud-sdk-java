@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class DescribeBotLogResponse extends AbstractModel{
 
     /**
-    * Bot攻击Data
+    * Bot攻击数据内容。
     */
     @SerializedName("Data")
     @Expose
     private BotLogData Data;
 
     /**
-    * 状态，1：失败，0:成功
+    * 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 返回信息
+    * 请求响应信息。
     */
     @SerializedName("Msg")
     @Expose
@@ -51,48 +53,56 @@ public class DescribeBotLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Bot攻击Data 
-     * @return Data Bot攻击Data
+     * Get Bot攻击数据内容。 
+     * @return Data Bot攻击数据内容。
      */
     public BotLogData getData() {
         return this.Data;
     }
 
     /**
-     * Set Bot攻击Data
-     * @param Data Bot攻击Data
+     * Set Bot攻击数据内容。
+     * @param Data Bot攻击数据内容。
      */
     public void setData(BotLogData Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 状态，1：失败，0:成功 
-     * @return Status 状态，1：失败，0:成功
+     * Get 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li> 
+     * @return Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1：失败，0:成功
-     * @param Status 状态，1：失败，0:成功
+     * Set 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 返回信息 
-     * @return Msg 返回信息
+     * Get 请求响应信息。 
+     * @return Msg 请求响应信息。
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回信息
-     * @param Msg 返回信息
+     * Set 请求响应信息。
+     * @param Msg 请求响应信息。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

@@ -196,6 +196,27 @@ VALIDATION: 参数非法
     private String MD5;
 
     /**
+    * 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private String RiskLevel;
+
+    /**
+    * 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckPlatform")
+    @Expose
+    private String [] CheckPlatform;
+
+    /**
      * Get 文件名称 
      * @return FileName 文件名称
      */
@@ -659,6 +680,66 @@ VALIDATION: 参数非法
         this.MD5 = MD5;
     }
 
+    /**
+     * Get 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskLevel(String RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
+    /**
+     * Get 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCheckPlatform() {
+        return this.CheckPlatform;
+    }
+
+    /**
+     * Set 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckPlatform(String [] CheckPlatform) {
+        this.CheckPlatform = CheckPlatform;
+    }
+
     public VirusInfo() {
     }
 
@@ -724,6 +805,15 @@ VALIDATION: 参数非法
         if (source.MD5 != null) {
             this.MD5 = new String(source.MD5);
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new String(source.RiskLevel);
+        }
+        if (source.CheckPlatform != null) {
+            this.CheckPlatform = new String[source.CheckPlatform.length];
+            for (int i = 0; i < source.CheckPlatform.length; i++) {
+                this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
+            }
+        }
     }
 
 
@@ -750,6 +840,8 @@ VALIDATION: 参数非法
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamSimple(map, prefix + "MD5", this.MD5);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+        this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
 
     }
 }

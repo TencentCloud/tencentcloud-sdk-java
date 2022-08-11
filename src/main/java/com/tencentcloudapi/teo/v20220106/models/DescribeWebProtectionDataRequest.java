@@ -23,257 +23,245 @@ import java.util.HashMap;
 public class DescribeWebProtectionDataRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间，RFC3339格式。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，RFC3339格式。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 统计指标列表
+    * 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 站点id列表
+    * 站点id列表，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 子域名列表
+    * 子域名列表，不填默认选择全部子域名。
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 协议类型
+    * 该字段已废弃，请勿传。
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-    * "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
+    * 该字段已废弃，请勿传。
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-    * 查询时间粒度，可选{min,5min,hour,day}
+    * 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+    * 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+    */
+    @SerializedName("QueryCondition")
+    @Expose
+    private QueryCondition [] QueryCondition;
+
+    /**
+     * Get 开始时间，RFC3339格式。 
+     * @return StartTime 开始时间，RFC3339格式。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间，RFC3339格式。
+     * @param StartTime 开始时间，RFC3339格式。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间，RFC3339格式。 
+     * @return EndTime 结束时间，RFC3339格式。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间，RFC3339格式。
+     * @param EndTime 结束时间，RFC3339格式。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 统计指标列表 
-     * @return MetricNames 统计指标列表
+     * Get 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li> 
+     * @return MetricNames 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 统计指标列表
-     * @param MetricNames 统计指标列表
+     * Set 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
+     * @param MetricNames 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 站点id列表 
-     * @return ZoneIds 站点id列表
+     * Get 站点id列表，不填默认选择全部站点。 
+     * @return ZoneIds 站点id列表，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点id列表
-     * @param ZoneIds 站点id列表
+     * Set 站点id列表，不填默认选择全部站点。
+     * @param ZoneIds 站点id列表，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 子域名列表 
-     * @return Domains 子域名列表
+     * Get 子域名列表，不填默认选择全部子域名。 
+     * @return Domains 子域名列表，不填默认选择全部子域名。
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 子域名列表
-     * @param Domains 子域名列表
+     * Set 子域名列表，不填默认选择全部子域名。
+     * @param Domains 子域名列表，不填默认选择全部子域名。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 协议类型 
-     * @return ProtocolType 协议类型
+     * Get 该字段已废弃，请勿传。 
+     * @return ProtocolType 该字段已废弃，请勿传。
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 协议类型
-     * @param ProtocolType 协议类型
+     * Set 该字段已废弃，请勿传。
+     * @param ProtocolType 该字段已废弃，请勿传。
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有" 
-     * @return AttackType "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
+     * Get 该字段已废弃，请勿传。 
+     * @return AttackType 该字段已废弃，请勿传。
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
-     * @param AttackType "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
+     * Set 该字段已废弃，请勿传。
+     * @param AttackType 该字段已废弃，请勿传。
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
     }
 
     /**
-     * Get 查询时间粒度，可选{min,5min,hour,day} 
-     * @return Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Get 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li> 
+     * @return Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间粒度，可选{min,5min,hour,day}
-     * @param Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Set 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
+    }
+
+    /**
+     * Get 筛选条件，取值有：
+<li>action ：执行动作 。</li> 
+     * @return QueryCondition 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     */
+    public QueryCondition [] getQueryCondition() {
+        return this.QueryCondition;
+    }
+
+    /**
+     * Set 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     * @param QueryCondition 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     */
+    public void setQueryCondition(QueryCondition [] QueryCondition) {
+        this.QueryCondition = QueryCondition;
     }
 
     public DescribeWebProtectionDataRequest() {
@@ -317,6 +305,12 @@ public class DescribeWebProtectionDataRequest extends AbstractModel{
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
+        if (source.QueryCondition != null) {
+            this.QueryCondition = new QueryCondition[source.QueryCondition.length];
+            for (int i = 0; i < source.QueryCondition.length; i++) {
+                this.QueryCondition[i] = new QueryCondition(source.QueryCondition[i]);
+            }
+        }
     }
 
 
@@ -332,6 +326,7 @@ public class DescribeWebProtectionDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
 
     }
 }

@@ -72,6 +72,9 @@ public enum TemErrorCode {
     // 定时弹性伸缩目标实例数不合法。
      INVALIDPARAMETERVALUE_CRONHPAREPLICASINVALID("InvalidParameterValue.CronHpaReplicasInvalid"),
      
+    // 弹性伸缩指标不合法。
+     INVALIDPARAMETERVALUE_HPAMETRICSINVALID("InvalidParameterValue.HpaMetricsInvalid"),
+     
     // 版本号格式非法。
      INVALIDPARAMETERVALUE_INVALIDDEPLOYVERSION("InvalidParameterValue.InvalidDeployVersion"),
      
@@ -83,6 +86,9 @@ public enum TemErrorCode {
      
     // 命名空间不属于用户。
      INVALIDPARAMETERVALUE_NAMESPACENOTBELONGTOAPPID("InvalidParameterValue.NamespaceNotBelongToAppid"),
+     
+    // 环境不存在。
+     INVALIDPARAMETERVALUE_NAMESPACENOTFOUND("InvalidParameterValue.NamespaceNotFound"),
      
     // 环境创建失败，达到上限。
      INVALIDPARAMETERVALUE_NAMESPACEREACHMAXIMUM("InvalidParameterValue.NamespaceReachMaximum"),

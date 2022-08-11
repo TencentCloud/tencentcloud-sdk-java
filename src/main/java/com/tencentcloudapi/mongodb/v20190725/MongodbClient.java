@@ -160,28 +160,6 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *备份下载功能已调整，此接口即将下线
-
-本接口（DescribeBackupAccess）用于获取备份文件的下载授权，具体的备份文件信息可通过查询实例备份列表（DescribeDBBackups）接口获取
-     * @param req DescribeBackupAccessRequest
-     * @return DescribeBackupAccessResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupAccessResponse DescribeBackupAccess(DescribeBackupAccessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupAccessResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupAccessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupAccess");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询备份下载任务信息
      * @param req DescribeBackupDownloadTaskRequest
      * @return DescribeBackupDownloadTaskResponse

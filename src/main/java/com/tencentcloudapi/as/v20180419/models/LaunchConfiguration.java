@@ -226,6 +226,14 @@ public class LaunchConfiguration extends AbstractModel{
     private String DiskTypePolicy;
 
     /**
+    * 高性能计算集群ID。<br>
+注意：此字段默认为空。
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
      * Get 实例所属项目ID。 
      * @return ProjectId 实例所属项目ID。
      */
@@ -701,6 +709,26 @@ public class LaunchConfiguration extends AbstractModel{
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
+    /**
+     * Get 高性能计算集群ID。<br>
+注意：此字段默认为空。 
+     * @return HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     * @param HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -811,6 +839,9 @@ public class LaunchConfiguration extends AbstractModel{
         if (source.DiskTypePolicy != null) {
             this.DiskTypePolicy = new String(source.DiskTypePolicy);
         }
+        if (source.HpcClusterId != null) {
+            this.HpcClusterId = new String(source.HpcClusterId);
+        }
     }
 
 
@@ -846,6 +877,7 @@ public class LaunchConfiguration extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
 
     }
 }

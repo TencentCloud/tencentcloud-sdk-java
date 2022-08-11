@@ -23,207 +23,267 @@ import java.util.HashMap;
 public class DescribeDDosAttackTopDataRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 过滤指标
+    * 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 查询前多少名,传值为0 全量
+    * 查询前多少个，传值为0返回全量。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 站点集合
+    * 站点id集合，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * ddos策略组id 集合
+    * ddos策略组id 集合，不填默认选择全部策略id。
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * 端口号
+    * 端口号。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 协议类型,tcp,udp,all
+    * 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-    * 攻击类型,flood,icmpFlood......,all
+    * 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 过滤指标 
-     * @return MetricName 过滤指标
+     * Get 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li> 
+     * @return MetricName 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 过滤指标
-     * @param MetricName 过滤指标
+     * Set 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
+     * @param MetricName 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 查询前多少名,传值为0 全量 
-     * @return Limit 查询前多少名,传值为0 全量
+     * Get 查询前多少个，传值为0返回全量。 
+     * @return Limit 查询前多少个，传值为0返回全量。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询前多少名,传值为0 全量
-     * @param Limit 查询前多少名,传值为0 全量
+     * Set 查询前多少个，传值为0返回全量。
+     * @param Limit 查询前多少个，传值为0返回全量。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 站点集合 
-     * @return ZoneIds 站点集合
+     * Get 站点id集合，不填默认选择全部站点。 
+     * @return ZoneIds 站点id集合，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合
-     * @param ZoneIds 站点集合
+     * Set 站点id集合，不填默认选择全部站点。
+     * @param ZoneIds 站点id集合，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ddos策略组id 集合 
-     * @return PolicyIds ddos策略组id 集合
+     * Get ddos策略组id 集合，不填默认选择全部策略id。 
+     * @return PolicyIds ddos策略组id 集合，不填默认选择全部策略id。
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set ddos策略组id 集合
-     * @param PolicyIds ddos策略组id 集合
+     * Set ddos策略组id 集合，不填默认选择全部策略id。
+     * @param PolicyIds ddos策略组id 集合，不填默认选择全部策略id。
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get 端口号 
-     * @return Port 端口号
+     * Get 端口号。 
+     * @return Port 端口号。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号
-     * @param Port 端口号
+     * Set 端口号。
+     * @param Port 端口号。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议类型,tcp,udp,all 
-     * @return ProtocolType 协议类型,tcp,udp,all
+     * Get 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li> 
+     * @return ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 协议类型,tcp,udp,all
-     * @param ProtocolType 协议类型,tcp,udp,all
+     * Set 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+     * @param ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 攻击类型,flood,icmpFlood......,all 
-     * @return AttackType 攻击类型,flood,icmpFlood......,all
+     * Get 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li> 
+     * @return AttackType 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set 攻击类型,flood,icmpFlood......,all
-     * @param AttackType 攻击类型,flood,icmpFlood......,all
+     * Set 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
+     * @param AttackType 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;

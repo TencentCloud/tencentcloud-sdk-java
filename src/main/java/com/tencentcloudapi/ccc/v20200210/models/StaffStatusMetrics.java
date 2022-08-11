@@ -107,6 +107,20 @@ public class StaffStatusMetrics extends AbstractModel{
     private Boolean ReserveNotReady;
 
     /**
+    * 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+    */
+    @SerializedName("UseMobileAccept")
+    @Expose
+    private Long UseMobileAccept;
+
+    /**
+    * 手机外呼开关
+    */
+    @SerializedName("UseMobileCallOut")
+    @Expose
+    private Boolean UseMobileCallOut;
+
+    /**
      * Get 坐席邮箱 
      * @return Email 坐席邮箱
      */
@@ -298,6 +312,38 @@ public class StaffStatusMetrics extends AbstractModel{
         this.ReserveNotReady = ReserveNotReady;
     }
 
+    /**
+     * Get 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终 
+     * @return UseMobileAccept 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+     */
+    public Long getUseMobileAccept() {
+        return this.UseMobileAccept;
+    }
+
+    /**
+     * Set 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+     * @param UseMobileAccept 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+     */
+    public void setUseMobileAccept(Long UseMobileAccept) {
+        this.UseMobileAccept = UseMobileAccept;
+    }
+
+    /**
+     * Get 手机外呼开关 
+     * @return UseMobileCallOut 手机外呼开关
+     */
+    public Boolean getUseMobileCallOut() {
+        return this.UseMobileCallOut;
+    }
+
+    /**
+     * Set 手机外呼开关
+     * @param UseMobileCallOut 手机外呼开关
+     */
+    public void setUseMobileCallOut(Boolean UseMobileCallOut) {
+        this.UseMobileCallOut = UseMobileCallOut;
+    }
+
     public StaffStatusMetrics() {
     }
 
@@ -342,6 +388,12 @@ public class StaffStatusMetrics extends AbstractModel{
         if (source.ReserveNotReady != null) {
             this.ReserveNotReady = new Boolean(source.ReserveNotReady);
         }
+        if (source.UseMobileAccept != null) {
+            this.UseMobileAccept = new Long(source.UseMobileAccept);
+        }
+        if (source.UseMobileCallOut != null) {
+            this.UseMobileCallOut = new Boolean(source.UseMobileCallOut);
+        }
     }
 
 
@@ -361,6 +413,8 @@ public class StaffStatusMetrics extends AbstractModel{
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "ReserveRest", this.ReserveRest);
         this.setParamSimple(map, prefix + "ReserveNotReady", this.ReserveNotReady);
+        this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
+        this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
 
     }
 }

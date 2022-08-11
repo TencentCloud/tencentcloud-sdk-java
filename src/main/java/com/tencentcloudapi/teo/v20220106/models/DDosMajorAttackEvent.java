@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DDosMajorAttackEvent extends AbstractModel{
 
     /**
-    * ddos 策略组id
+    * ddos 策略组id。
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 攻击最大带宽
+    * 攻击最大带宽。
     */
     @SerializedName("AttackMaxBandWidth")
     @Expose
     private Long AttackMaxBandWidth;
 
     /**
-    * 攻击时间 单位为s
+    * 攻击请求时间，采用unix秒级时间戳。
     */
     @SerializedName("AttackTime")
     @Expose
     private Long AttackTime;
 
     /**
-     * Get ddos 策略组id 
-     * @return PolicyId ddos 策略组id
+     * Get ddos 策略组id。 
+     * @return PolicyId ddos 策略组id。
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set ddos 策略组id
-     * @param PolicyId ddos 策略组id
+     * Set ddos 策略组id。
+     * @param PolicyId ddos 策略组id。
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 攻击最大带宽 
-     * @return AttackMaxBandWidth 攻击最大带宽
+     * Get 攻击最大带宽。 
+     * @return AttackMaxBandWidth 攻击最大带宽。
      */
     public Long getAttackMaxBandWidth() {
         return this.AttackMaxBandWidth;
     }
 
     /**
-     * Set 攻击最大带宽
-     * @param AttackMaxBandWidth 攻击最大带宽
+     * Set 攻击最大带宽。
+     * @param AttackMaxBandWidth 攻击最大带宽。
      */
     public void setAttackMaxBandWidth(Long AttackMaxBandWidth) {
         this.AttackMaxBandWidth = AttackMaxBandWidth;
     }
 
     /**
-     * Get 攻击时间 单位为s 
-     * @return AttackTime 攻击时间 单位为s
+     * Get 攻击请求时间，采用unix秒级时间戳。 
+     * @return AttackTime 攻击请求时间，采用unix秒级时间戳。
      */
     public Long getAttackTime() {
         return this.AttackTime;
     }
 
     /**
-     * Set 攻击时间 单位为s
-     * @param AttackTime 攻击时间 单位为s
+     * Set 攻击请求时间，采用unix秒级时间戳。
+     * @param AttackTime 攻击请求时间，采用unix秒级时间戳。
      */
     public void setAttackTime(Long AttackTime) {
         this.AttackTime = AttackTime;

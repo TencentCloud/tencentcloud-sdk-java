@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ChannelCreateBatchCancelFlowUrlResponse extends AbstractModel{
 
     /**
-    * 批量撤回url
+    * 批量撤销url
     */
     @SerializedName("BatchCancelFlowUrl")
     @Expose
     private String BatchCancelFlowUrl;
 
     /**
-    * 签署流程批量撤回失败原因
+    * 签署流程批量撤销失败原因
     */
     @SerializedName("FailMessages")
     @Expose
     private String [] FailMessages;
 
     /**
-    * 签署撤回url过期时间-年月日-时分秒
+    * 签署撤销url过期时间-年月日-时分秒
     */
     @SerializedName("UrlExpireOn")
     @Expose
@@ -51,48 +51,48 @@ public class ChannelCreateBatchCancelFlowUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量撤回url 
-     * @return BatchCancelFlowUrl 批量撤回url
+     * Get 批量撤销url 
+     * @return BatchCancelFlowUrl 批量撤销url
      */
     public String getBatchCancelFlowUrl() {
         return this.BatchCancelFlowUrl;
     }
 
     /**
-     * Set 批量撤回url
-     * @param BatchCancelFlowUrl 批量撤回url
+     * Set 批量撤销url
+     * @param BatchCancelFlowUrl 批量撤销url
      */
     public void setBatchCancelFlowUrl(String BatchCancelFlowUrl) {
         this.BatchCancelFlowUrl = BatchCancelFlowUrl;
     }
 
     /**
-     * Get 签署流程批量撤回失败原因 
-     * @return FailMessages 签署流程批量撤回失败原因
+     * Get 签署流程批量撤销失败原因 
+     * @return FailMessages 签署流程批量撤销失败原因
      */
     public String [] getFailMessages() {
         return this.FailMessages;
     }
 
     /**
-     * Set 签署流程批量撤回失败原因
-     * @param FailMessages 签署流程批量撤回失败原因
+     * Set 签署流程批量撤销失败原因
+     * @param FailMessages 签署流程批量撤销失败原因
      */
     public void setFailMessages(String [] FailMessages) {
         this.FailMessages = FailMessages;
     }
 
     /**
-     * Get 签署撤回url过期时间-年月日-时分秒 
-     * @return UrlExpireOn 签署撤回url过期时间-年月日-时分秒
+     * Get 签署撤销url过期时间-年月日-时分秒 
+     * @return UrlExpireOn 签署撤销url过期时间-年月日-时分秒
      */
     public String getUrlExpireOn() {
         return this.UrlExpireOn;
     }
 
     /**
-     * Set 签署撤回url过期时间-年月日-时分秒
-     * @param UrlExpireOn 签署撤回url过期时间-年月日-时分秒
+     * Set 签署撤销url过期时间-年月日-时分秒
+     * @param UrlExpireOn 签署撤销url过期时间-年月日-时分秒
      */
     public void setUrlExpireOn(String UrlExpireOn) {
         this.UrlExpireOn = UrlExpireOn;

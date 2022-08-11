@@ -44,14 +44,14 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     private String IocAction;
 
     /**
-    * 时间格式：yyyy-MM-dd HH:mm:ss
+    * 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 时间格式：yyyy-MM-dd HH:mm:ss
+    * 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
     */
     @SerializedName("EndTime")
     @Expose
@@ -106,32 +106,32 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get 时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return StartTime 时间格式：yyyy-MM-dd HH:mm:ss
+     * Get 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填 
+     * @return StartTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 时间格式：yyyy-MM-dd HH:mm:ss
-     * @param StartTime 时间格式：yyyy-MM-dd HH:mm:ss
+     * Set 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * @param StartTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return EndTime 时间格式：yyyy-MM-dd HH:mm:ss
+     * Get 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填 
+     * @return EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 时间格式：yyyy-MM-dd HH:mm:ss
-     * @param EndTime 时间格式：yyyy-MM-dd HH:mm:ss
+     * Set 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * @param EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

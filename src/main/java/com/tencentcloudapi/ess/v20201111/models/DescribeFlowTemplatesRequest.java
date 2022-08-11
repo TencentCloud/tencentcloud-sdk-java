@@ -37,7 +37,7 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 查询个数，默认20，最大100
+    * 查询个数，默认20，最大200
     */
     @SerializedName("Limit")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询个数，默认20，最大100 
-     * @return Limit 查询个数，默认20，最大100
+     * Get 查询个数，默认20，最大200 
+     * @return Limit 查询个数，默认20，最大200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询个数，默认20，最大100
-     * @param Limit 查询个数，默认20，最大100
+     * Set 查询个数，默认20，最大200
+     * @param Limit 查询个数，默认20，最大200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

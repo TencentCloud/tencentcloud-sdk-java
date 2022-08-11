@@ -30,7 +30,7 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 需要查询的流程ID列表
+    * 需要查询的流程ID列表，限制最大20个
     */
     @SerializedName("FlowIds")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要查询的流程ID列表 
-     * @return FlowIds 需要查询的流程ID列表
+     * Get 需要查询的流程ID列表，限制最大20个 
+     * @return FlowIds 需要查询的流程ID列表，限制最大20个
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 需要查询的流程ID列表
-     * @param FlowIds 需要查询的流程ID列表
+     * Set 需要查询的流程ID列表，限制最大20个
+     * @param FlowIds 需要查询的流程ID列表，限制最大20个
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

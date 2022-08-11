@@ -23,161 +23,176 @@ import java.util.HashMap;
 public class DescribeDDosAttackSourceEventRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 条数
+    * 分页拉取的最大返回结果数。最大值：1000。
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 当前页
+    * 分页拉取的起始页号。最小值：1。
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * ddos策略组id 集合
+    * ddos策略组id 集合，不填默认选择全部策略id。
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * 站点集合
+    * 站点集合，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 协议类型,{tcp,udp,all}
+    * 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 条数 
-     * @return PageSize 条数
+     * Get 分页拉取的最大返回结果数。最大值：1000。 
+     * @return PageSize 分页拉取的最大返回结果数。最大值：1000。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 条数
-     * @param PageSize 条数
+     * Set 分页拉取的最大返回结果数。最大值：1000。
+     * @param PageSize 分页拉取的最大返回结果数。最大值：1000。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 当前页 
-     * @return PageNo 当前页
+     * Get 分页拉取的起始页号。最小值：1。 
+     * @return PageNo 分页拉取的起始页号。最小值：1。
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 当前页
-     * @param PageNo 当前页
+     * Set 分页拉取的起始页号。最小值：1。
+     * @param PageNo 分页拉取的起始页号。最小值：1。
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get ddos策略组id 集合 
-     * @return PolicyIds ddos策略组id 集合
+     * Get ddos策略组id 集合，不填默认选择全部策略id。 
+     * @return PolicyIds ddos策略组id 集合，不填默认选择全部策略id。
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set ddos策略组id 集合
-     * @param PolicyIds ddos策略组id 集合
+     * Set ddos策略组id 集合，不填默认选择全部策略id。
+     * @param PolicyIds ddos策略组id 集合，不填默认选择全部策略id。
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get 站点集合 
-     * @return ZoneIds 站点集合
+     * Get 站点集合，不填默认选择全部站点。 
+     * @return ZoneIds 站点集合，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合
-     * @param ZoneIds 站点集合
+     * Set 站点集合，不填默认选择全部站点。
+     * @param ZoneIds 站点集合，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 协议类型,{tcp,udp,all} 
-     * @return ProtocolType 协议类型,{tcp,udp,all}
+     * Get 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li> 
+     * @return ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 协议类型,{tcp,udp,all}
-     * @param ProtocolType 协议类型,{tcp,udp,all}
+     * Set 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+     * @param ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;

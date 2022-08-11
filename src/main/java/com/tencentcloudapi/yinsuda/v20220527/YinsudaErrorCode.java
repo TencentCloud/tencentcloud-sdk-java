@@ -1,7 +1,10 @@
 package com.tencentcloudapi.yinsuda.v20220527;
 public enum YinsudaErrorCode {
     // 内部错误。
-     INTERNALERROR("InternalError");
+     INTERNALERROR("InternalError"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;
     private YinsudaErrorCode (String value){

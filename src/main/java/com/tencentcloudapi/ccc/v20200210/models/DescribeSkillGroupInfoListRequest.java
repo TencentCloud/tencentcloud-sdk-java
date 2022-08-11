@@ -58,6 +58,13 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel{
     private Long ModifiedTime;
 
     /**
+    * 技能组名称
+    */
+    @SerializedName("SkillGroupName")
+    @Expose
+    private String SkillGroupName;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -137,6 +144,22 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 技能组名称 
+     * @return SkillGroupName 技能组名称
+     */
+    public String getSkillGroupName() {
+        return this.SkillGroupName;
+    }
+
+    /**
+     * Set 技能组名称
+     * @param SkillGroupName 技能组名称
+     */
+    public void setSkillGroupName(String SkillGroupName) {
+        this.SkillGroupName = SkillGroupName;
+    }
+
     public DescribeSkillGroupInfoListRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel{
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new Long(source.ModifiedTime);
         }
+        if (source.SkillGroupName != null) {
+            this.SkillGroupName = new String(source.SkillGroupName);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
 
     }
 }

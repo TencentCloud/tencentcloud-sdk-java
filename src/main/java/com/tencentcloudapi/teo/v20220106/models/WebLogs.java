@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class WebLogs extends AbstractModel{
 
     /**
-    * 攻击内容
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackContent")
@@ -31,15 +31,14 @@ public class WebLogs extends AbstractModel{
     private String AttackContent;
 
     /**
-    * 攻击IP
-注意：此字段可能返回 null，表示取不到有效值。
+    * 攻击源（客户端）Ip。
     */
     @SerializedName("AttackIp")
     @Expose
     private String AttackIp;
 
     /**
-    * 攻击类型
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackType")
@@ -47,15 +46,14 @@ public class WebLogs extends AbstractModel{
     private String AttackType;
 
     /**
-    * 域名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 受攻击子域名。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * uuid
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msuuid")
@@ -63,7 +61,7 @@ public class WebLogs extends AbstractModel{
     private String Msuuid;
 
     /**
-    * 请求方法
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestMethod")
@@ -71,15 +69,14 @@ public class WebLogs extends AbstractModel{
     private String RequestMethod;
 
     /**
-    * 请求URI
-注意：此字段可能返回 null，表示取不到有效值。
+    * URI
     */
     @SerializedName("RequestUri")
     @Expose
     private String RequestUri;
 
     /**
-    * 风险等级
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
@@ -87,7 +84,7 @@ public class WebLogs extends AbstractModel{
     private String RiskLevel;
 
     /**
-    * 规则ID
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -95,23 +92,21 @@ public class WebLogs extends AbstractModel{
     private Long RuleId;
 
     /**
-    * IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+    * IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
     */
     @SerializedName("SipCountryCode")
     @Expose
     private String SipCountryCode;
 
     /**
-    * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 请求（事件）ID。
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 处置方式
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisposalMethod")
@@ -119,15 +114,14 @@ public class WebLogs extends AbstractModel{
     private String DisposalMethod;
 
     /**
-    * http_log
-注意：此字段可能返回 null，表示取不到有效值。
+    * http log。
     */
     @SerializedName("HttpLog")
     @Expose
     private String HttpLog;
 
     /**
-    * user agent
+    * 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ua")
@@ -135,17 +129,24 @@ public class WebLogs extends AbstractModel{
     private String Ua;
 
     /**
-    * 攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。
+    * 攻击时间，采用unix秒级时间戳。
     */
     @SerializedName("AttackTime")
     @Expose
     private Long AttackTime;
 
     /**
-     * Get 攻击内容
+    * 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleDetailList")
+    @Expose
+    private SecRuleRelatedInfo [] RuleDetailList;
+
+    /**
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackContent 攻击内容
+     * @return AttackContent 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackContent() {
@@ -153,9 +154,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set 攻击内容
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackContent 攻击内容
+     * @param AttackContent 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackContent(String AttackContent) {
@@ -163,29 +164,25 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 攻击IP
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackIp 攻击IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 攻击源（客户端）Ip。 
+     * @return AttackIp 攻击源（客户端）Ip。
      */
     public String getAttackIp() {
         return this.AttackIp;
     }
 
     /**
-     * Set 攻击IP
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackIp 攻击IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 攻击源（客户端）Ip。
+     * @param AttackIp 攻击源（客户端）Ip。
      */
     public void setAttackIp(String AttackIp) {
         this.AttackIp = AttackIp;
     }
 
     /**
-     * Get 攻击类型
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackType 攻击类型
+     * @return AttackType 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackType() {
@@ -193,9 +190,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set 攻击类型
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackType 攻击类型
+     * @param AttackType 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackType(String AttackType) {
@@ -203,29 +200,25 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 受攻击子域名。 
+     * @return Domain 受攻击子域名。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 受攻击子域名。
+     * @param Domain 受攻击子域名。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get uuid
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msuuid uuid
+     * @return Msuuid 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsuuid() {
@@ -233,9 +226,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set uuid
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msuuid uuid
+     * @param Msuuid 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsuuid(String Msuuid) {
@@ -243,9 +236,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 请求方法
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestMethod 请求方法
+     * @return RequestMethod 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestMethod() {
@@ -253,9 +246,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set 请求方法
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestMethod 请求方法
+     * @param RequestMethod 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestMethod(String RequestMethod) {
@@ -263,29 +256,25 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 请求URI
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestUri 请求URI
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get URI 
+     * @return RequestUri URI
      */
     public String getRequestUri() {
         return this.RequestUri;
     }
 
     /**
-     * Set 请求URI
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestUri 请求URI
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set URI
+     * @param RequestUri URI
      */
     public void setRequestUri(String RequestUri) {
         this.RequestUri = RequestUri;
     }
 
     /**
-     * Get 风险等级
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskLevel 风险等级
+     * @return RiskLevel 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
@@ -293,9 +282,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set 风险等级
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskLevel 风险等级
+     * @param RiskLevel 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
@@ -303,9 +292,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 规则ID
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则ID
+     * @return RuleId 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
@@ -313,9 +302,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set 规则ID
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则ID
+     * @param RuleId 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
@@ -323,49 +312,41 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SipCountryCode IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json) 
+     * @return SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
      */
     public String getSipCountryCode() {
         return this.SipCountryCode;
     }
 
     /**
-     * Set IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SipCountryCode IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
+     * @param SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
      */
     public void setSipCountryCode(String SipCountryCode) {
         this.SipCountryCode = SipCountryCode;
     }
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 请求（事件）ID。 
+     * @return EventId 请求（事件）ID。
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 请求（事件）ID。
+     * @param EventId 请求（事件）ID。
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 处置方式
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisposalMethod 处置方式
+     * @return DisposalMethod 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisposalMethod() {
@@ -373,9 +354,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set 处置方式
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisposalMethod 处置方式
+     * @param DisposalMethod 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisposalMethod(String DisposalMethod) {
@@ -383,29 +364,25 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get http_log
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpLog http_log
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get http log。 
+     * @return HttpLog http log。
      */
     public String getHttpLog() {
         return this.HttpLog;
     }
 
     /**
-     * Set http_log
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpLog http_log
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set http log。
+     * @param HttpLog http log。
      */
     public void setHttpLog(String HttpLog) {
         this.HttpLog = HttpLog;
     }
 
     /**
-     * Get user agent
+     * Get 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ua user agent
+     * @return Ua 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUa() {
@@ -413,9 +390,9 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Set user agent
+     * Set 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ua user agent
+     * @param Ua 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUa(String Ua) {
@@ -423,23 +400,39 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackTime 攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 攻击时间，采用unix秒级时间戳。 
+     * @return AttackTime 攻击时间，采用unix秒级时间戳。
      */
     public Long getAttackTime() {
         return this.AttackTime;
     }
 
     /**
-     * Set 攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackTime 攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 攻击时间，采用unix秒级时间戳。
+     * @param AttackTime 攻击时间，采用unix秒级时间戳。
      */
     public void setAttackTime(Long AttackTime) {
         this.AttackTime = AttackTime;
+    }
+
+    /**
+     * Get 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleDetailList 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecRuleRelatedInfo [] getRuleDetailList() {
+        return this.RuleDetailList;
+    }
+
+    /**
+     * Set 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleDetailList 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleDetailList(SecRuleRelatedInfo [] RuleDetailList) {
+        this.RuleDetailList = RuleDetailList;
     }
 
     public WebLogs() {
@@ -495,6 +488,12 @@ public class WebLogs extends AbstractModel{
         if (source.AttackTime != null) {
             this.AttackTime = new Long(source.AttackTime);
         }
+        if (source.RuleDetailList != null) {
+            this.RuleDetailList = new SecRuleRelatedInfo[source.RuleDetailList.length];
+            for (int i = 0; i < source.RuleDetailList.length; i++) {
+                this.RuleDetailList[i] = new SecRuleRelatedInfo(source.RuleDetailList[i]);
+            }
+        }
     }
 
 
@@ -517,6 +516,7 @@ public class WebLogs extends AbstractModel{
         this.setParamSimple(map, prefix + "HttpLog", this.HttpLog);
         this.setParamSimple(map, prefix + "Ua", this.Ua);
         this.setParamSimple(map, prefix + "AttackTime", this.AttackTime);
+        this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
 
     }
 }

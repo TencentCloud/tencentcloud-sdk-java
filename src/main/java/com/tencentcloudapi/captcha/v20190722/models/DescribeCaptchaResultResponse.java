@@ -61,7 +61,10 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
     private String CaptchaMsg;
 
     /**
-    * [0,100]，恶意等级
+    * 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvilLevel")
@@ -212,9 +215,15 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
     }
 
     /**
-     * Get [0,100]，恶意等级
+     * Get 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EvilLevel [0,100]，恶意等级
+     * @return EvilLevel 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEvilLevel() {
@@ -222,9 +231,15 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
     }
 
     /**
-     * Set [0,100]，恶意等级
+     * Set 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EvilLevel [0,100]，恶意等级
+     * @param EvilLevel 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvilLevel(Long EvilLevel) {

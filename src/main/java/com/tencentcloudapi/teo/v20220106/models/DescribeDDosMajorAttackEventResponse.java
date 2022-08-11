@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class DescribeDDosMajorAttackEventResponse extends AbstractModel{
 
     /**
-    * DDos查询主攻击事件
+    * DDos查询主攻击事件。
     */
     @SerializedName("Data")
     @Expose
     private DDosMajorAttackEventData Data;
 
     /**
-    * 状态，1:失败，0:成功
+    * 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 返回消息
+    * 请求响应消息。
     */
     @SerializedName("Msg")
     @Expose
@@ -51,48 +53,56 @@ public class DescribeDDosMajorAttackEventResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDos查询主攻击事件 
-     * @return Data DDos查询主攻击事件
+     * Get DDos查询主攻击事件。 
+     * @return Data DDos查询主攻击事件。
      */
     public DDosMajorAttackEventData getData() {
         return this.Data;
     }
 
     /**
-     * Set DDos查询主攻击事件
-     * @param Data DDos查询主攻击事件
+     * Set DDos查询主攻击事件。
+     * @param Data DDos查询主攻击事件。
      */
     public void setData(DDosMajorAttackEventData Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 状态，1:失败，0:成功 
-     * @return Status 状态，1:失败，0:成功
+     * Get 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li> 
+     * @return Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1:失败，0:成功
-     * @param Status 状态，1:失败，0:成功
+     * Set 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 返回消息 
-     * @return Msg 返回消息
+     * Get 请求响应消息。 
+     * @return Msg 请求响应消息。
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回消息
-     * @param Msg 返回消息
+     * Set 请求响应消息。
+     * @param Msg 请求响应消息。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

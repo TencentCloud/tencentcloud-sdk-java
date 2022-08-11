@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class DescribeWebManagedRulesLogResponse extends AbstractModel{
 
     /**
-    * web攻击日志data
+    * web攻击日志数据内容。
     */
     @SerializedName("Data")
     @Expose
     private WebLogData Data;
 
     /**
-    * 状态，1:失败，0:失败
+    * 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 返回信息
+    * 请求响应信息。
     */
     @SerializedName("Msg")
     @Expose
@@ -51,48 +53,56 @@ public class DescribeWebManagedRulesLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get web攻击日志data 
-     * @return Data web攻击日志data
+     * Get web攻击日志数据内容。 
+     * @return Data web攻击日志数据内容。
      */
     public WebLogData getData() {
         return this.Data;
     }
 
     /**
-     * Set web攻击日志data
-     * @param Data web攻击日志data
+     * Set web攻击日志数据内容。
+     * @param Data web攻击日志数据内容。
      */
     public void setData(WebLogData Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 状态，1:失败，0:失败 
-     * @return Status 状态，1:失败，0:失败
+     * Get 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li> 
+     * @return Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1:失败，0:失败
-     * @param Status 状态，1:失败，0:失败
+     * Set 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 返回信息 
-     * @return Msg 返回信息
+     * Get 请求响应信息。 
+     * @return Msg 请求响应信息。
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回信息
-     * @param Msg 返回信息
+     * Set 请求响应信息。
+     * @param Msg 请求响应信息。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

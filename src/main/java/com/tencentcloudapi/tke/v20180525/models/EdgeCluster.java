@@ -101,6 +101,14 @@ public class EdgeCluster extends AbstractModel{
     private Long MaxNodePodNum;
 
     /**
+    * 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterAdvancedSettings")
+    @Expose
+    private EdgeClusterAdvancedSettings ClusterAdvancedSettings;
+
+    /**
      * Get 集群Id 
      * @return ClusterId 集群Id
      */
@@ -280,6 +288,26 @@ public class EdgeCluster extends AbstractModel{
         this.MaxNodePodNum = MaxNodePodNum;
     }
 
+    /**
+     * Get 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterAdvancedSettings 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EdgeClusterAdvancedSettings getClusterAdvancedSettings() {
+        return this.ClusterAdvancedSettings;
+    }
+
+    /**
+     * Set 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterAdvancedSettings 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterAdvancedSettings(EdgeClusterAdvancedSettings ClusterAdvancedSettings) {
+        this.ClusterAdvancedSettings = ClusterAdvancedSettings;
+    }
+
     public EdgeCluster() {
     }
 
@@ -321,6 +349,9 @@ public class EdgeCluster extends AbstractModel{
         if (source.MaxNodePodNum != null) {
             this.MaxNodePodNum = new Long(source.MaxNodePodNum);
         }
+        if (source.ClusterAdvancedSettings != null) {
+            this.ClusterAdvancedSettings = new EdgeClusterAdvancedSettings(source.ClusterAdvancedSettings);
+        }
     }
 
 
@@ -339,6 +370,7 @@ public class EdgeCluster extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "EdgeClusterVersion", this.EdgeClusterVersion);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
+        this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
 
     }
 }

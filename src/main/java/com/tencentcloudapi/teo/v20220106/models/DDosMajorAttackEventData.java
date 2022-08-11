@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DDosMajorAttackEventData extends AbstractModel{
 
     /**
-    * DDosMajorAttackEvent ddos 攻击事件
+    * DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
@@ -31,7 +31,7 @@ public class DDosMajorAttackEventData extends AbstractModel{
     private DDosMajorAttackEvent [] List;
 
     /**
-    * 当前页
+    * 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNo")
@@ -39,7 +39,7 @@ public class DDosMajorAttackEventData extends AbstractModel{
     private Long PageNo;
 
     /**
-    * 每页展示条数
+    * 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
@@ -47,7 +47,7 @@ public class DDosMajorAttackEventData extends AbstractModel{
     private Long PageSize;
 
     /**
-    * 总页数
+    * 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pages")
@@ -55,7 +55,7 @@ public class DDosMajorAttackEventData extends AbstractModel{
     private Long Pages;
 
     /**
-    * 总条数
+    * 总条数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalSize")
@@ -63,9 +63,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     private Long TotalSize;
 
     /**
-     * Get DDosMajorAttackEvent ddos 攻击事件
+     * Get DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List DDosMajorAttackEvent ddos 攻击事件
+     * @return List DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DDosMajorAttackEvent [] getList() {
@@ -73,9 +73,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Set DDosMajorAttackEvent ddos 攻击事件
+     * Set DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List DDosMajorAttackEvent ddos 攻击事件
+     * @param List DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(DDosMajorAttackEvent [] List) {
@@ -83,9 +83,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Get 当前页
+     * Get 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNo 当前页
+     * @return PageNo 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNo() {
@@ -93,9 +93,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Set 当前页
+     * Set 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNo 当前页
+     * @param PageNo 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNo(Long PageNo) {
@@ -103,9 +103,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Get 每页展示条数
+     * Get 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 每页展示条数
+     * @return PageSize 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
@@ -113,9 +113,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Set 每页展示条数
+     * Set 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 每页展示条数
+     * @param PageSize 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
@@ -123,9 +123,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Get 总页数
+     * Get 总页数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Pages 总页数
+     * @return Pages 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPages() {
@@ -133,9 +133,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Set 总页数
+     * Set 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Pages 总页数
+     * @param Pages 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPages(Long Pages) {
@@ -143,9 +143,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Get 总条数
+     * Get 总条数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalSize 总条数
+     * @return TotalSize 总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalSize() {
@@ -153,9 +153,9 @@ public class DDosMajorAttackEventData extends AbstractModel{
     }
 
     /**
-     * Set 总条数
+     * Set 总条数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalSize 总条数
+     * @param TotalSize 总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalSize(Long TotalSize) {

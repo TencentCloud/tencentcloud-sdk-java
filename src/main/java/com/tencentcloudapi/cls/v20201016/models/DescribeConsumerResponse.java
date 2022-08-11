@@ -52,6 +52,14 @@ public class DescribeConsumerResponse extends AbstractModel{
     private Ckafka Ckafka;
 
     /**
+    * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Compression")
+    @Expose
+    private Long Compression;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -127,6 +135,26 @@ public class DescribeConsumerResponse extends AbstractModel{
     }
 
     /**
+     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompression(Long Compression) {
+        this.Compression = Compression;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -162,6 +190,9 @@ public class DescribeConsumerResponse extends AbstractModel{
         if (source.Ckafka != null) {
             this.Ckafka = new Ckafka(source.Ckafka);
         }
+        if (source.Compression != null) {
+            this.Compression = new Long(source.Compression);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -176,6 +207,7 @@ public class DescribeConsumerResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedContent", this.NeedContent);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamObj(map, prefix + "Ckafka.", this.Ckafka);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

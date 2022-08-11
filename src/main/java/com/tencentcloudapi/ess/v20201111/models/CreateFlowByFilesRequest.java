@@ -37,7 +37,7 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private String FlowName;
 
     /**
-    * 签署参与者信息
+    * 签署参与者信息，最大限制50方
     */
     @SerializedName("Approvers")
     @Expose
@@ -113,6 +113,16 @@ false：有序签
     private String CustomShowMap;
 
     /**
+    * 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+    */
+    @SerializedName("NeedSignReview")
+    @Expose
+    private Boolean NeedSignReview;
+
+    /**
     * 应用号信息
     */
     @SerializedName("Agent")
@@ -152,16 +162,16 @@ false：有序签
     }
 
     /**
-     * Get 签署参与者信息 
-     * @return Approvers 签署参与者信息
+     * Get 签署参与者信息，最大限制50方 
+     * @return Approvers 签署参与者信息，最大限制50方
      */
     public ApproverInfo [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 签署参与者信息
-     * @param Approvers 签署参与者信息
+     * Set 签署参与者信息，最大限制50方
+     * @param Approvers 签署参与者信息，最大限制50方
      */
     public void setApprovers(ApproverInfo [] Approvers) {
         this.Approvers = Approvers;
@@ -336,6 +346,34 @@ false：有序签
     }
 
     /**
+     * Get 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。 
+     * @return NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     */
+    public Boolean getNeedSignReview() {
+        return this.NeedSignReview;
+    }
+
+    /**
+     * Set 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     * @param NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     */
+    public void setNeedSignReview(Boolean NeedSignReview) {
+        this.NeedSignReview = NeedSignReview;
+    }
+
+    /**
      * Get 应用号信息 
      * @return Agent 应用号信息
      */
@@ -407,6 +445,9 @@ false：有序签
         if (source.CustomShowMap != null) {
             this.CustomShowMap = new String(source.CustomShowMap);
         }
+        if (source.NeedSignReview != null) {
+            this.NeedSignReview = new Boolean(source.NeedSignReview);
+        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -429,6 +470,7 @@ false：有序签
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+        this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TopNEntryValue extends AbstractModel{
 
     /**
-    * Entry的name
+    * 排序实体名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数量
+    * 排序实体数量。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get Entry的name 
-     * @return Name Entry的name
+     * Get 排序实体名。 
+     * @return Name 排序实体名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Entry的name
-     * @param Name Entry的name
+     * Set 排序实体名。
+     * @param Name 排序实体名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数量 
-     * @return Count 数量
+     * Get 排序实体数量。 
+     * @return Count 排序实体数量。
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 数量
-     * @param Count 数量
+     * Set 排序实体数量。
+     * @param Count 排序实体数量。
      */
     public void setCount(Long Count) {
         this.Count = Count;

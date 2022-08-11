@@ -89,6 +89,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *用户使用该接口可以创建语音消息转文本自学习模型，以供识别调用
+     * @param req CreateCustomizationRequest
+     * @return CreateCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomizationResponse CreateCustomization(CreateCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomization");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新增自定义送检用户
      * @param req CreateScanUserRequest
      * @return CreateScanUserResponse
@@ -101,6 +121,26 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateScanUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateScanUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过该接口可以删除语音消息转文本自学习模型
+     * @param req DeleteCustomizationRequest
+     * @return DeleteCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomizationResponse DeleteCustomization(DeleteCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCustomization");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -310,6 +350,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *查询语音消息转文本自学习模型列表
+     * @param req GetCustomizationListRequest
+     * @return GetCustomizationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCustomizationListResponse GetCustomizationList(GetCustomizationListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCustomizationListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCustomizationListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetCustomizationList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyAppStatus)用于修改应用总开关状态。
      * @param req ModifyAppStatusRequest
      * @return ModifyAppStatusResponse
@@ -330,6 +390,46 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *用户通过该接口可以更新语音消息转文本自学习模型。
+     * @param req ModifyCustomizationRequest
+     * @return ModifyCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomizationResponse ModifyCustomization(ModifyCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomization");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
+     * @param req ModifyCustomizationStateRequest
+     * @return ModifyCustomizationStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomizationStateResponse ModifyCustomizationState(ModifyCustomizationStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomizationStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomizationStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomizationState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改房间信息
      * @param req ModifyRoomInfoRequest
      * @return ModifyRoomInfoResponse
@@ -342,6 +442,26 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRoomInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRoomInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户麦克风状态。
+     * @param req ModifyUserMicStatusRequest
+     * @return ModifyUserMicStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserMicStatusResponse ModifyUserMicStatus(ModifyUserMicStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserMicStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserMicStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserMicStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

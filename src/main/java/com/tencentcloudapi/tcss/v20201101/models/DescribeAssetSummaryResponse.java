@@ -156,6 +156,13 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
     private Long ImageUnsafeCnt;
 
     /**
+    * 主机未安装agent数量
+    */
+    @SerializedName("HostUnInstallCnt")
+    @Expose
+    private Long HostUnInstallCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -467,6 +474,22 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 主机未安装agent数量 
+     * @return HostUnInstallCnt 主机未安装agent数量
+     */
+    public Long getHostUnInstallCnt() {
+        return this.HostUnInstallCnt;
+    }
+
+    /**
+     * Set 主机未安装agent数量
+     * @param HostUnInstallCnt 主机未安装agent数量
+     */
+    public void setHostUnInstallCnt(Long HostUnInstallCnt) {
+        this.HostUnInstallCnt = HostUnInstallCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -547,6 +570,9 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
         if (source.ImageUnsafeCnt != null) {
             this.ImageUnsafeCnt = new Long(source.ImageUnsafeCnt);
         }
+        if (source.HostUnInstallCnt != null) {
+            this.HostUnInstallCnt = new Long(source.HostUnInstallCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -576,6 +602,7 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "WebServiceCnt", this.WebServiceCnt);
         this.setParamSimple(map, prefix + "LatestImageScanTime", this.LatestImageScanTime);
         this.setParamSimple(map, prefix + "ImageUnsafeCnt", this.ImageUnsafeCnt);
+        this.setParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

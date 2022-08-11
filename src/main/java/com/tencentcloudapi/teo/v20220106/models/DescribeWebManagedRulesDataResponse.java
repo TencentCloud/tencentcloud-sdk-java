@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeWebManagedRulesDataResponse extends AbstractModel{
 
     /**
-    * Web攻击日志实体
+    * Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -31,21 +31,27 @@ public class DescribeWebManagedRulesDataResponse extends AbstractModel{
     private SecEntry [] Data;
 
     /**
-    * 状态，1:失败，0:成功
+    * 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 返回消息
+    * 请求响应消息。
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 查询时间粒度，可选{min,5min,hour,day}
+    * 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
     */
     @SerializedName("Interval")
     @Expose
@@ -59,9 +65,9 @@ public class DescribeWebManagedRulesDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Web攻击日志实体
+     * Get Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data Web攻击日志实体
+     * @return Data Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecEntry [] getData() {
@@ -69,9 +75,9 @@ public class DescribeWebManagedRulesDataResponse extends AbstractModel{
     }
 
     /**
-     * Set Web攻击日志实体
+     * Set Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data Web攻击日志实体
+     * @param Data Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(SecEntry [] Data) {
@@ -79,48 +85,72 @@ public class DescribeWebManagedRulesDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 状态，1:失败，0:成功 
-     * @return Status 状态，1:失败，0:成功
+     * Get 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li> 
+     * @return Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1:失败，0:成功
-     * @param Status 状态，1:失败，0:成功
+     * Set 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 返回消息 
-     * @return Msg 返回消息
+     * Get 请求响应消息。 
+     * @return Msg 请求响应消息。
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回消息
-     * @param Msg 返回消息
+     * Set 请求响应消息。
+     * @param Msg 请求响应消息。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get 查询时间粒度，可选{min,5min,hour,day} 
-     * @return Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Get 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li> 
+     * @return Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间粒度，可选{min,5min,hour,day}
-     * @param Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Set 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

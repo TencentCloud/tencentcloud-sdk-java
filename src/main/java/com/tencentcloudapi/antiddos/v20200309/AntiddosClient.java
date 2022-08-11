@@ -519,26 +519,6 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *删除DDoS防护的IP黑白名单
-     * @param req DeleteBlackWhiteIpListRequest
-     * @return DeleteBlackWhiteIpListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(DeleteBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteBlackWhiteIpListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteBlackWhiteIpList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *删除CC分级策略
      * @param req DeleteCCLevelPolicyRequest
      * @return DeleteCCLevelPolicyResponse
@@ -811,6 +791,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBasicDeviceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取高防包流量折线图
+     * @param req DescribeBgpBizTrendRequest
+     * @return DescribeBgpBizTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBgpBizTrendResponse DescribeBgpBizTrend(DescribeBgpBizTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBgpBizTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBgpBizTrend");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

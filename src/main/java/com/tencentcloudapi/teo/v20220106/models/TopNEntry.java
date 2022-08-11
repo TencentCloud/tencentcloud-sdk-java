@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TopNEntry extends AbstractModel{
 
     /**
-    * Entry key
+    * top查询维度值。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * TopN数据
+    * 查询具体数据。
     */
     @SerializedName("Value")
     @Expose
     private TopNEntryValue [] Value;
 
     /**
-     * Get Entry key 
-     * @return Key Entry key
+     * Get top查询维度值。 
+     * @return Key top查询维度值。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Entry key
-     * @param Key Entry key
+     * Set top查询维度值。
+     * @param Key top查询维度值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get TopN数据 
-     * @return Value TopN数据
+     * Get 查询具体数据。 
+     * @return Value 查询具体数据。
      */
     public TopNEntryValue [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set TopN数据
-     * @param Value TopN数据
+     * Set 查询具体数据。
+     * @param Value 查询具体数据。
      */
     public void setValue(TopNEntryValue [] Value) {
         this.Value = Value;

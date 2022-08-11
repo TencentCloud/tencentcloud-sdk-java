@@ -78,6 +78,13 @@ __test__:测试环境
     private String Environment;
 
     /**
+    * 支付结果通知回调地址
+    */
+    @SerializedName("NotifyUrl")
+    @Expose
+    private String NotifyUrl;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -213,6 +220,22 @@ __test__:测试环境
         this.Environment = Environment;
     }
 
+    /**
+     * Get 支付结果通知回调地址 
+     * @return NotifyUrl 支付结果通知回调地址
+     */
+    public String getNotifyUrl() {
+        return this.NotifyUrl;
+    }
+
+    /**
+     * Set 支付结果通知回调地址
+     * @param NotifyUrl 支付结果通知回调地址
+     */
+    public void setNotifyUrl(String NotifyUrl) {
+        this.NotifyUrl = NotifyUrl;
+    }
+
     public ApplyFlexPaymentRequest() {
     }
 
@@ -242,6 +265,9 @@ __test__:测试环境
         if (source.Environment != null) {
             this.Environment = new String(source.Environment);
         }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
     }
 
 
@@ -256,6 +282,7 @@ __test__:测试环境
         this.setParamObj(map, prefix + "FundingAccountInfo.", this.FundingAccountInfo);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
 
     }
 }

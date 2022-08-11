@@ -79,28 +79,6 @@ public class TafClient extends AbstractClient{
     }
 
     /**
-     *该服务已不再对外提供能力
-
-筛选敏感易骚扰人群
-     * @param req RecognizeEffectiveFlowRequest
-     * @return RecognizeEffectiveFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeEffectiveFlowResponse RecognizeEffectiveFlow(RecognizeEffectiveFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeEffectiveFlowResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeEffectiveFlowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeEffectiveFlow");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *流量反欺诈-流量验准高级版
      * @param req RecognizePreciseTargetAudienceRequest
      * @return RecognizePreciseTargetAudienceResponse

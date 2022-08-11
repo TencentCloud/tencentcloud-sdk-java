@@ -174,6 +174,14 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private String CamRoleName;
 
     /**
+    * 高性能计算集群ID。<br>
+注意：此字段默认为空。
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -561,6 +569,26 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.CamRoleName = CamRoleName;
     }
 
+    /**
+     * Get 高性能计算集群ID。<br>
+注意：此字段默认为空。 
+     * @return HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     * @param HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -632,6 +660,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.CamRoleName != null) {
             this.CamRoleName = new String(source.CamRoleName);
         }
+        if (source.HpcClusterId != null) {
+            this.HpcClusterId = new String(source.HpcClusterId);
+        }
     }
 
 
@@ -657,6 +688,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
 
     }
 }

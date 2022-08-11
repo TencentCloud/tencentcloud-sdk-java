@@ -51,6 +51,13 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
     private String Workload;
 
     /**
+    * 部署地域
+    */
+    @SerializedName("EngineRegion")
+    @Expose
+    private String EngineRegion;
+
+    /**
      * Get 注册引擎实例Id 
      * @return InstanceId 注册引擎实例Id
      */
@@ -114,6 +121,22 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         this.Workload = Workload;
     }
 
+    /**
+     * Get 部署地域 
+     * @return EngineRegion 部署地域
+     */
+    public String getEngineRegion() {
+        return this.EngineRegion;
+    }
+
+    /**
+     * Set 部署地域
+     * @param EngineRegion 部署地域
+     */
+    public void setEngineRegion(String EngineRegion) {
+        this.EngineRegion = EngineRegion;
+    }
+
     public DescribeSREInstanceAccessAddressRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         if (source.Workload != null) {
             this.Workload = new String(source.Workload);
         }
+        if (source.EngineRegion != null) {
+            this.EngineRegion = new String(source.EngineRegion);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Workload", this.Workload);
+        this.setParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
 
     }
 }

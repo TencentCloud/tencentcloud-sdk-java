@@ -23,233 +23,319 @@ import java.util.HashMap;
 public class DescribeWebManagedRulesTopDataRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 过滤指标
+    * 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 查询前多少名,传值为0 全量
+    * 查询前多少个，传值为0返回全量。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 站点集合
+    * 站点id列表，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * ddos策略组id 集合
+    * 该字段已废弃，请勿传。
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * 端口号
+    * 该字段已废弃，请勿传。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 协议类型,tcp,udp,all
+    * 该字段已废弃，请勿传。
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-    * 攻击类型,flood,icmpFlood......,all
+    * 该字段已废弃，请勿传。
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-    * 域名集合
+    * 域名列表，不填默认选择全部子域名。
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+    * 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+    */
+    @SerializedName("Interval")
+    @Expose
+    private String Interval;
+
+    /**
+    * 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+    */
+    @SerializedName("QueryCondition")
+    @Expose
+    private QueryCondition [] QueryCondition;
+
+    /**
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 过滤指标 
-     * @return MetricName 过滤指标
+     * Get 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li> 
+     * @return MetricName 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 过滤指标
-     * @param MetricName 过滤指标
+     * Set 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
+     * @param MetricName 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 查询前多少名,传值为0 全量 
-     * @return Limit 查询前多少名,传值为0 全量
+     * Get 查询前多少个，传值为0返回全量。 
+     * @return Limit 查询前多少个，传值为0返回全量。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询前多少名,传值为0 全量
-     * @param Limit 查询前多少名,传值为0 全量
+     * Set 查询前多少个，传值为0返回全量。
+     * @param Limit 查询前多少个，传值为0返回全量。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 站点集合 
-     * @return ZoneIds 站点集合
+     * Get 站点id列表，不填默认选择全部站点。 
+     * @return ZoneIds 站点id列表，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合
-     * @param ZoneIds 站点集合
+     * Set 站点id列表，不填默认选择全部站点。
+     * @param ZoneIds 站点id列表，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ddos策略组id 集合 
-     * @return PolicyIds ddos策略组id 集合
+     * Get 该字段已废弃，请勿传。 
+     * @return PolicyIds 该字段已废弃，请勿传。
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set ddos策略组id 集合
-     * @param PolicyIds ddos策略组id 集合
+     * Set 该字段已废弃，请勿传。
+     * @param PolicyIds 该字段已废弃，请勿传。
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get 端口号 
-     * @return Port 端口号
+     * Get 该字段已废弃，请勿传。 
+     * @return Port 该字段已废弃，请勿传。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号
-     * @param Port 端口号
+     * Set 该字段已废弃，请勿传。
+     * @param Port 该字段已废弃，请勿传。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议类型,tcp,udp,all 
-     * @return ProtocolType 协议类型,tcp,udp,all
+     * Get 该字段已废弃，请勿传。 
+     * @return ProtocolType 该字段已废弃，请勿传。
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 协议类型,tcp,udp,all
-     * @param ProtocolType 协议类型,tcp,udp,all
+     * Set 该字段已废弃，请勿传。
+     * @param ProtocolType 该字段已废弃，请勿传。
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 攻击类型,flood,icmpFlood......,all 
-     * @return AttackType 攻击类型,flood,icmpFlood......,all
+     * Get 该字段已废弃，请勿传。 
+     * @return AttackType 该字段已废弃，请勿传。
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set 攻击类型,flood,icmpFlood......,all
-     * @param AttackType 攻击类型,flood,icmpFlood......,all
+     * Set 该字段已废弃，请勿传。
+     * @param AttackType 该字段已废弃，请勿传。
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
     }
 
     /**
-     * Get 域名集合 
-     * @return Domains 域名集合
+     * Get 域名列表，不填默认选择全部子域名。 
+     * @return Domains 域名列表，不填默认选择全部子域名。
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 域名集合
-     * @param Domains 域名集合
+     * Set 域名列表，不填默认选择全部子域名。
+     * @param Domains 域名列表，不填默认选择全部子域名。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
+    }
+
+    /**
+     * Get 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li> 
+     * @return Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     */
+    public String getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     */
+    public void setInterval(String Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get 筛选条件，取值有：
+<li>action ：执行动作 。</li> 
+     * @return QueryCondition 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     */
+    public QueryCondition [] getQueryCondition() {
+        return this.QueryCondition;
+    }
+
+    /**
+     * Set 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     * @param QueryCondition 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     */
+    public void setQueryCondition(QueryCondition [] QueryCondition) {
+        this.QueryCondition = QueryCondition;
     }
 
     public DescribeWebManagedRulesTopDataRequest() {
@@ -299,6 +385,15 @@ public class DescribeWebManagedRulesTopDataRequest extends AbstractModel{
                 this.Domains[i] = new String(source.Domains[i]);
             }
         }
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+        if (source.QueryCondition != null) {
+            this.QueryCondition = new QueryCondition[source.QueryCondition.length];
+            for (int i = 0; i < source.QueryCondition.length; i++) {
+                this.QueryCondition[i] = new QueryCondition(source.QueryCondition[i]);
+            }
+        }
     }
 
 
@@ -316,6 +411,8 @@ public class DescribeWebManagedRulesTopDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
 
     }
 }

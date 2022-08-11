@@ -23,207 +23,277 @@ import java.util.HashMap;
 public class DescribeDDosAttackDataRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 统计指标列表
+    * 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 站点id列表
+    * 站点id列表，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * ddos策略组id列表
+    * ddos策略组id列表，不填默认选择全部策略id。
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * 端口号
+    * 端口号。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 协议类型,tcp,udp,all
+    * 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-    * 攻击类型,flood,icmpFlood......,all
+    * 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-    * 查询时间粒度，可选{min,5min,hour,day}
+    * 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 统计指标列表 
-     * @return MetricNames 统计指标列表
+     * Get 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li> 
+     * @return MetricNames 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 统计指标列表
-     * @param MetricNames 统计指标列表
+     * Set 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
+     * @param MetricNames 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 站点id列表 
-     * @return ZoneIds 站点id列表
+     * Get 站点id列表，不填默认选择全部站点。 
+     * @return ZoneIds 站点id列表，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点id列表
-     * @param ZoneIds 站点id列表
+     * Set 站点id列表，不填默认选择全部站点。
+     * @param ZoneIds 站点id列表，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ddos策略组id列表 
-     * @return PolicyIds ddos策略组id列表
+     * Get ddos策略组id列表，不填默认选择全部策略id。 
+     * @return PolicyIds ddos策略组id列表，不填默认选择全部策略id。
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set ddos策略组id列表
-     * @param PolicyIds ddos策略组id列表
+     * Set ddos策略组id列表，不填默认选择全部策略id。
+     * @param PolicyIds ddos策略组id列表，不填默认选择全部策略id。
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get 端口号 
-     * @return Port 端口号
+     * Get 端口号。 
+     * @return Port 端口号。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号
-     * @param Port 端口号
+     * Set 端口号。
+     * @param Port 端口号。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议类型,tcp,udp,all 
-     * @return ProtocolType 协议类型,tcp,udp,all
+     * Get 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li> 
+     * @return ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 协议类型,tcp,udp,all
-     * @param ProtocolType 协议类型,tcp,udp,all
+     * Set 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+     * @param ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 攻击类型,flood,icmpFlood......,all 
-     * @return AttackType 攻击类型,flood,icmpFlood......,all
+     * Get 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li> 
+     * @return AttackType 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set 攻击类型,flood,icmpFlood......,all
-     * @param AttackType 攻击类型,flood,icmpFlood......,all
+     * Set 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
+     * @param AttackType 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
     }
 
     /**
-     * Get 查询时间粒度，可选{min,5min,hour,day} 
-     * @return Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Get 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li> 
+     * @return Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间粒度，可选{min,5min,hour,day}
-     * @param Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Set 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

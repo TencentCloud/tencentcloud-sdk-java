@@ -59,28 +59,6 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *版本升级
-
-Bcos根据块高查询区块信息
-     * @param req BlockByNumberHandlerRequest
-     * @return BlockByNumberHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public BlockByNumberHandlerResponse BlockByNumberHandler(BlockByNumberHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BlockByNumberHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<BlockByNumberHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BlockByNumberHandler");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建并安装合约
      * @param req CreateChaincodeAndInstallForUserRequest
      * @return CreateChaincodeAndInstallForUserResponse
@@ -113,28 +91,6 @@ Bcos根据块高查询区块信息
                 Type type = new TypeToken<JsonResponseModel<DeployDynamicBcosContractResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeployDynamicBcosContract");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *版本升级
-
-动态部署合约
-     * @param req DeployDynamicContractHandlerRequest
-     * @return DeployDynamicContractHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeployDynamicContractHandlerResponse DeployDynamicContractHandler(DeployDynamicContractHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeployDynamicContractHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeployDynamicContractHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeployDynamicContractHandler");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -255,28 +211,6 @@ Bcos根据块高查询区块信息
                 Type type = new TypeToken<JsonResponseModel<GetBlockListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetBlockList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *版本升级
-
-Bcos分页查询当前群组下的区块列表
-     * @param req GetBlockListHandlerRequest
-     * @return GetBlockListHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetBlockListHandlerResponse GetBlockListHandler(GetBlockListHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetBlockListHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetBlockListHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetBlockListHandler");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -477,50 +411,6 @@ Bcos分页查询当前群组下的区块列表
                 Type type = new TypeToken<JsonResponseModel<GetPeerLogForUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetPeerLogForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *版本升级
-
-Bcos根据交易哈希查看交易详细信息
-     * @param req GetTransByHashHandlerRequest
-     * @return GetTransByHashHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetTransByHashHandlerResponse GetTransByHashHandler(GetTransByHashHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetTransByHashHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetTransByHashHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetTransByHashHandler");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *版本升级
-
-Bcos分页查询当前群组的交易信息列表
-     * @param req GetTransListHandlerRequest
-     * @return GetTransListHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetTransListHandlerResponse GetTransListHandler(GetTransListHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetTransListHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetTransListHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetTransListHandler");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -789,28 +679,6 @@ Bcos分页查询当前群组的交易信息列表
     }
 
     /**
-     *版本升级
-
-Bcos发送交易
-     * @param req SendTransactionHandlerRequest
-     * @return SendTransactionHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public SendTransactionHandlerResponse SendTransactionHandler(SendTransactionHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendTransactionHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<SendTransactionHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendTransactionHandler");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *trustsql服务统一接口
      * @param req SrvInvokeRequest
      * @return SrvInvokeResponse
@@ -823,28 +691,6 @@ Bcos发送交易
                 Type type = new TypeToken<JsonResponseModel<SrvInvokeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SrvInvoke");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *版本升级
-
-根据动态部署的合约发送交易
-     * @param req TransByDynamicContractHandlerRequest
-     * @return TransByDynamicContractHandlerResponse
-     * @throws TencentCloudSDKException
-     */
-    public TransByDynamicContractHandlerResponse TransByDynamicContractHandler(TransByDynamicContractHandlerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TransByDynamicContractHandlerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<TransByDynamicContractHandlerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TransByDynamicContractHandler");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,18 +23,11 @@ import java.util.HashMap;
 public class GetTaskResultApiRequest extends AbstractModel{
 
     /**
-    * 任务Id
+    * 任务Id，通过CreateConvertTaskApi得到
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
-
-    /**
-    * 企业信息
-    */
-    @SerializedName("Organization")
-    @Expose
-    private OrganizationInfo Organization;
 
     /**
     * 操作人信息
@@ -44,42 +37,33 @@ public class GetTaskResultApiRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 渠道信息
+    * 应用号信息
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+    * 暂未开放
+    */
+    @SerializedName("Organization")
+    @Expose
+    private OrganizationInfo Organization;
+
+    /**
+     * Get 任务Id，通过CreateConvertTaskApi得到 
+     * @return TaskId 任务Id，通过CreateConvertTaskApi得到
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务Id，通过CreateConvertTaskApi得到
+     * @param TaskId 任务Id，通过CreateConvertTaskApi得到
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
-    }
-
-    /**
-     * Get 企业信息 
-     * @return Organization 企业信息
-     */
-    public OrganizationInfo getOrganization() {
-        return this.Organization;
-    }
-
-    /**
-     * Set 企业信息
-     * @param Organization 企业信息
-     */
-    public void setOrganization(OrganizationInfo Organization) {
-        this.Organization = Organization;
     }
 
     /**
@@ -99,19 +83,35 @@ public class GetTaskResultApiRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道信息 
-     * @return Agent 渠道信息
+     * Get 应用号信息 
+     * @return Agent 应用号信息
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道信息
-     * @param Agent 渠道信息
+     * Set 应用号信息
+     * @param Agent 应用号信息
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return Organization 暂未开放
+     */
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Organization 暂未开放
+     */
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
     }
 
     public GetTaskResultApiRequest() {
@@ -125,14 +125,14 @@ public class GetTaskResultApiRequest extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
-        if (source.Organization != null) {
-            this.Organization = new OrganizationInfo(source.Organization);
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
         }
     }
 
@@ -142,9 +142,9 @@ public class GetTaskResultApiRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
 
     }
 }

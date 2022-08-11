@@ -45,6 +45,14 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
     private Long CreateLimitCount;
 
     /**
+    * 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlayTypeCount")
+    @Expose
+    private Long [] PlayTypeCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
     }
 
     /**
+     * Get 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlayTypeCount 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getPlayTypeCount() {
+        return this.PlayTypeCount;
+    }
+
+    /**
+     * Set 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlayTypeCount 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlayTypeCount(Long [] PlayTypeCount) {
+        this.PlayTypeCount = PlayTypeCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -139,6 +167,12 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
         if (source.CreateLimitCount != null) {
             this.CreateLimitCount = new Long(source.CreateLimitCount);
         }
+        if (source.PlayTypeCount != null) {
+            this.PlayTypeCount = new Long[source.PlayTypeCount.length];
+            for (int i = 0; i < source.PlayTypeCount.length; i++) {
+                this.PlayTypeCount[i] = new Long(source.PlayTypeCount[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -152,6 +186,7 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AllCount", this.AllCount);
         this.setParamArrayObj(map, prefix + "DomainList.", this.DomainList);
         this.setParamSimple(map, prefix + "CreateLimitCount", this.CreateLimitCount);
+        this.setParamArraySimple(map, prefix + "PlayTypeCount.", this.PlayTypeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

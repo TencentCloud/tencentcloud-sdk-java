@@ -405,6 +405,19 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String ContainerIsolateOperationSrc;
 
     /**
+    * 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckPlatform")
+    @Expose
+    private String [] CheckPlatform;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1388,6 +1401,46 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCheckPlatform() {
+        return this.CheckPlatform;
+    }
+
+    /**
+     * Set 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckPlatform(String [] CheckPlatform) {
+        this.CheckPlatform = CheckPlatform;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1552,6 +1605,12 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.ContainerIsolateOperationSrc != null) {
             this.ContainerIsolateOperationSrc = new String(source.ContainerIsolateOperationSrc);
         }
+        if (source.CheckPlatform != null) {
+            this.CheckPlatform = new String[source.CheckPlatform.length];
+            for (int i = 0; i < source.CheckPlatform.length; i++) {
+                this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1608,6 +1667,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+        this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

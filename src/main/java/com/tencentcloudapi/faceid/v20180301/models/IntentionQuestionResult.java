@@ -24,7 +24,7 @@ public class IntentionQuestionResult extends AbstractModel{
 
     /**
     * 意愿核身最终结果：
-0：通过，-1：未通过
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinalResultCode")
@@ -74,10 +74,10 @@ public class IntentionQuestionResult extends AbstractModel{
 
     /**
      * Get 意愿核身最终结果：
-0：通过，-1：未通过
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalResultCode 意愿核身最终结果：
-0：通过，-1：未通过
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinalResultCode() {
@@ -86,10 +86,10 @@ public class IntentionQuestionResult extends AbstractModel{
 
     /**
      * Set 意愿核身最终结果：
-0：通过，-1：未通过
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FinalResultCode 意愿核身最终结果：
-0：通过，-1：未通过
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinalResultCode(String FinalResultCode) {

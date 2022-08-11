@@ -30,7 +30,7 @@ public class Candidate extends AbstractModel{
     private String PersonId;
 
     /**
-    * 人脸ID
+    * 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
     */
     @SerializedName("FaceId")
     @Expose
@@ -90,16 +90,16 @@ public class Candidate extends AbstractModel{
     }
 
     /**
-     * Get 人脸ID 
-     * @return FaceId 人脸ID
+     * Get 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义 
+     * @return FaceId 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set 人脸ID
-     * @param FaceId 人脸ID
+     * Set 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
+     * @param FaceId 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;

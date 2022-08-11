@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDDosAttackDataResponse extends AbstractModel{
 
     /**
-    * DDos攻击数据
+    * DDos攻击数据内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -31,21 +31,27 @@ public class DescribeDDosAttackDataResponse extends AbstractModel{
     private SecEntry [] Data;
 
     /**
-    * 状态，1:失败，0:成功
+    * 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 返回数据
+    * 请求响应信息。
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 查询时间粒度，可选{min,5min,hour,day}
+    * 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
     */
     @SerializedName("Interval")
     @Expose
@@ -59,9 +65,9 @@ public class DescribeDDosAttackDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDos攻击数据
+     * Get DDos攻击数据内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data DDos攻击数据
+     * @return Data DDos攻击数据内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecEntry [] getData() {
@@ -69,9 +75,9 @@ public class DescribeDDosAttackDataResponse extends AbstractModel{
     }
 
     /**
-     * Set DDos攻击数据
+     * Set DDos攻击数据内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data DDos攻击数据
+     * @param Data DDos攻击数据内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(SecEntry [] Data) {
@@ -79,48 +85,72 @@ public class DescribeDDosAttackDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 状态，1:失败，0:成功 
-     * @return Status 状态，1:失败，0:成功
+     * Get 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li> 
+     * @return Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1:失败，0:成功
-     * @param Status 状态，1:失败，0:成功
+     * Set 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 返回数据 
-     * @return Msg 返回数据
+     * Get 请求响应信息。 
+     * @return Msg 请求响应信息。
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回数据
-     * @param Msg 返回数据
+     * Set 请求响应信息。
+     * @param Msg 请求响应信息。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get 查询时间粒度，可选{min,5min,hour,day} 
-     * @return Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Get 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li> 
+     * @return Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间粒度，可选{min,5min,hour,day}
-     * @param Interval 查询时间粒度，可选{min,5min,hour,day}
+     * Set 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

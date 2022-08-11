@@ -135,6 +135,20 @@ public class MySQLParam extends AbstractModel{
     private String KeyColumns;
 
     /**
+    * Mysql 是否抛弃解析失败的消息，默认为true
+    */
+    @SerializedName("DropInvalidMessage")
+    @Expose
+    private Boolean DropInvalidMessage;
+
+    /**
+    * 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+    */
+    @SerializedName("DropCls")
+    @Expose
+    private DropCls DropCls;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -390,6 +404,38 @@ public class MySQLParam extends AbstractModel{
         this.KeyColumns = KeyColumns;
     }
 
+    /**
+     * Get Mysql 是否抛弃解析失败的消息，默认为true 
+     * @return DropInvalidMessage Mysql 是否抛弃解析失败的消息，默认为true
+     */
+    public Boolean getDropInvalidMessage() {
+        return this.DropInvalidMessage;
+    }
+
+    /**
+     * Set Mysql 是否抛弃解析失败的消息，默认为true
+     * @param DropInvalidMessage Mysql 是否抛弃解析失败的消息，默认为true
+     */
+    public void setDropInvalidMessage(Boolean DropInvalidMessage) {
+        this.DropInvalidMessage = DropInvalidMessage;
+    }
+
+    /**
+     * Get 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效 
+     * @return DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     */
+    public DropCls getDropCls() {
+        return this.DropCls;
+    }
+
+    /**
+     * Set 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     * @param DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     */
+    public void setDropCls(DropCls DropCls) {
+        this.DropCls = DropCls;
+    }
+
     public MySQLParam() {
     }
 
@@ -449,6 +495,12 @@ public class MySQLParam extends AbstractModel{
         if (source.KeyColumns != null) {
             this.KeyColumns = new String(source.KeyColumns);
         }
+        if (source.DropInvalidMessage != null) {
+            this.DropInvalidMessage = new Boolean(source.DropInvalidMessage);
+        }
+        if (source.DropCls != null) {
+            this.DropCls = new DropCls(source.DropCls);
+        }
     }
 
 
@@ -472,6 +524,8 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicRegex", this.TopicRegex);
         this.setParamSimple(map, prefix + "TopicReplacement", this.TopicReplacement);
         this.setParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
+        this.setParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
+        this.setParamObj(map, prefix + "DropCls.", this.DropCls);
 
     }
 }

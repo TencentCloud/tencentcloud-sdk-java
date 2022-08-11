@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SecEntry extends AbstractModel{
 
     /**
-    * Entry的Key
+    * 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
@@ -31,7 +31,7 @@ public class SecEntry extends AbstractModel{
     private String Key;
 
     /**
-    * Entry的Value
+    * 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,9 +39,9 @@ public class SecEntry extends AbstractModel{
     private SecEntryValue [] Value;
 
     /**
-     * Get Entry的Key
+     * Get 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key Entry的Key
+     * @return Key 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
@@ -49,9 +49,9 @@ public class SecEntry extends AbstractModel{
     }
 
     /**
-     * Set Entry的Key
+     * Set 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key Entry的Key
+     * @param Key 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
@@ -59,9 +59,9 @@ public class SecEntry extends AbstractModel{
     }
 
     /**
-     * Get Entry的Value
+     * Get 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value Entry的Value
+     * @return Value 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecEntryValue [] getValue() {
@@ -69,9 +69,9 @@ public class SecEntry extends AbstractModel{
     }
 
     /**
-     * Set Entry的Value
+     * Set 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value Entry的Value
+     * @param Value 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(SecEntryValue [] Value) {

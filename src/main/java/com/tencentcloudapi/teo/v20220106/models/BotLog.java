@@ -23,39 +23,35 @@ import java.util.HashMap;
 public class BotLog extends AbstractModel{
 
     /**
-    * 攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
+    * 攻击时间，采用unix秒级时间戳。
     */
     @SerializedName("AttackTime")
     @Expose
     private Long AttackTime;
 
     /**
-    * 攻击ip
-注意：此字段可能返回 null，表示取不到有效值。
+    * 攻击源（客户端）ip。
     */
     @SerializedName("AttackIp")
     @Expose
     private String AttackIp;
 
     /**
-    * 域名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 受攻击域名。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 请求uri
-注意：此字段可能返回 null，表示取不到有效值。
+    * URI。
     */
     @SerializedName("RequestUri")
     @Expose
     private String RequestUri;
 
     /**
-    * 攻击类型
+    * 当前该字段无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackType")
@@ -63,23 +59,21 @@ public class BotLog extends AbstractModel{
     private String AttackType;
 
     /**
-    * 请求方法
-注意：此字段可能返回 null，表示取不到有效值。
+    * 请求方法。
     */
     @SerializedName("RequestMethod")
     @Expose
     private String RequestMethod;
 
     /**
-    * 攻击内容
-注意：此字段可能返回 null，表示取不到有效值。
+    * 攻击内容。
     */
     @SerializedName("AttackContent")
     @Expose
     private String AttackContent;
 
     /**
-    * 风险等级
+    * 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
@@ -87,7 +81,7 @@ public class BotLog extends AbstractModel{
     private String RiskLevel;
 
     /**
-    * 规则编号
+    * 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -95,23 +89,21 @@ public class BotLog extends AbstractModel{
     private Long RuleId;
 
     /**
-    * IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+    * IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
     */
     @SerializedName("SipCountryCode")
     @Expose
     private String SipCountryCode;
 
     /**
-    * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 请求（事件）ID。
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 处置方式
+    * 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisposalMethod")
@@ -119,7 +111,7 @@ public class BotLog extends AbstractModel{
     private String DisposalMethod;
 
     /**
-    * http_log
+    * 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpLog")
@@ -127,15 +119,14 @@ public class BotLog extends AbstractModel{
     private String HttpLog;
 
     /**
-    * user agent
-注意：此字段可能返回 null，表示取不到有效值。
+    * user agent。
     */
     @SerializedName("Ua")
     @Expose
     private String Ua;
 
     /**
-    * 检出方法
+    * 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectionMethod")
@@ -143,7 +134,7 @@ public class BotLog extends AbstractModel{
     private String DetectionMethod;
 
     /**
-    * 置信度
+    * 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
@@ -151,7 +142,7 @@ public class BotLog extends AbstractModel{
     private String Confidence;
 
     /**
-    * 恶意度
+    * 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Maliciousness")
@@ -159,89 +150,89 @@ public class BotLog extends AbstractModel{
     private String Maliciousness;
 
     /**
-     * Get 攻击时间
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackTime 攻击时间
+    * 规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleDetailList")
+    @Expose
+    private SecRuleRelatedInfo [] RuleDetailList;
+
+    /**
+    * Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+     * Get 攻击时间，采用unix秒级时间戳。 
+     * @return AttackTime 攻击时间，采用unix秒级时间戳。
      */
     public Long getAttackTime() {
         return this.AttackTime;
     }
 
     /**
-     * Set 攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackTime 攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 攻击时间，采用unix秒级时间戳。
+     * @param AttackTime 攻击时间，采用unix秒级时间戳。
      */
     public void setAttackTime(Long AttackTime) {
         this.AttackTime = AttackTime;
     }
 
     /**
-     * Get 攻击ip
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackIp 攻击ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 攻击源（客户端）ip。 
+     * @return AttackIp 攻击源（客户端）ip。
      */
     public String getAttackIp() {
         return this.AttackIp;
     }
 
     /**
-     * Set 攻击ip
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackIp 攻击ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 攻击源（客户端）ip。
+     * @param AttackIp 攻击源（客户端）ip。
      */
     public void setAttackIp(String AttackIp) {
         this.AttackIp = AttackIp;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 受攻击域名。 
+     * @return Domain 受攻击域名。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 受攻击域名。
+     * @param Domain 受攻击域名。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 请求uri
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestUri 请求uri
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get URI。 
+     * @return RequestUri URI。
      */
     public String getRequestUri() {
         return this.RequestUri;
     }
 
     /**
-     * Set 请求uri
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestUri 请求uri
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set URI。
+     * @param RequestUri URI。
      */
     public void setRequestUri(String RequestUri) {
         this.RequestUri = RequestUri;
     }
 
     /**
-     * Get 攻击类型
+     * Get 当前该字段无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackType 攻击类型
+     * @return AttackType 当前该字段无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackType() {
@@ -249,9 +240,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 攻击类型
+     * Set 当前该字段无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackType 攻击类型
+     * @param AttackType 当前该字段无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackType(String AttackType) {
@@ -259,49 +250,41 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get 请求方法
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestMethod 请求方法
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 请求方法。 
+     * @return RequestMethod 请求方法。
      */
     public String getRequestMethod() {
         return this.RequestMethod;
     }
 
     /**
-     * Set 请求方法
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestMethod 请求方法
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 请求方法。
+     * @param RequestMethod 请求方法。
      */
     public void setRequestMethod(String RequestMethod) {
         this.RequestMethod = RequestMethod;
     }
 
     /**
-     * Get 攻击内容
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackContent 攻击内容
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 攻击内容。 
+     * @return AttackContent 攻击内容。
      */
     public String getAttackContent() {
         return this.AttackContent;
     }
 
     /**
-     * Set 攻击内容
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackContent 攻击内容
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 攻击内容。
+     * @param AttackContent 攻击内容。
      */
     public void setAttackContent(String AttackContent) {
         this.AttackContent = AttackContent;
     }
 
     /**
-     * Get 风险等级
+     * Get 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskLevel 风险等级
+     * @return RiskLevel 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
@@ -309,9 +292,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 风险等级
+     * Set 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskLevel 风险等级
+     * @param RiskLevel 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
@@ -319,9 +302,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get 规则编号
+     * Get 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则编号
+     * @return RuleId 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
@@ -329,9 +312,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 规则编号
+     * Set 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则编号
+     * @param RuleId 当前该字段无效 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
@@ -339,49 +322,41 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SipCountryCode IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。 
+     * @return SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
      */
     public String getSipCountryCode() {
         return this.SipCountryCode;
     }
 
     /**
-     * Set IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SipCountryCode IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+     * @param SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
      */
     public void setSipCountryCode(String SipCountryCode) {
         this.SipCountryCode = SipCountryCode;
     }
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 请求（事件）ID。 
+     * @return EventId 请求（事件）ID。
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 请求（事件）ID。
+     * @param EventId 请求（事件）ID。
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 处置方式
+     * Get 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisposalMethod 处置方式
+     * @return DisposalMethod 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisposalMethod() {
@@ -389,9 +364,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 处置方式
+     * Set 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisposalMethod 处置方式
+     * @param DisposalMethod 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisposalMethod(String DisposalMethod) {
@@ -399,9 +374,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get http_log
+     * Get 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpLog http_log
+     * @return HttpLog 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpLog() {
@@ -409,9 +384,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set http_log
+     * Set 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpLog http_log
+     * @param HttpLog 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpLog(String HttpLog) {
@@ -419,29 +394,25 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get user agent
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ua user agent
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get user agent。 
+     * @return Ua user agent。
      */
     public String getUa() {
         return this.Ua;
     }
 
     /**
-     * Set user agent
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ua user agent
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set user agent。
+     * @param Ua user agent。
      */
     public void setUa(String Ua) {
         this.Ua = Ua;
     }
 
     /**
-     * Get 检出方法
+     * Get 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DetectionMethod 检出方法
+     * @return DetectionMethod 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectionMethod() {
@@ -449,9 +420,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 检出方法
+     * Set 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetectionMethod 检出方法
+     * @param DetectionMethod 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectionMethod(String DetectionMethod) {
@@ -459,9 +430,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get 置信度
+     * Get 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Confidence 置信度
+     * @return Confidence 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfidence() {
@@ -469,9 +440,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 置信度
+     * Set 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Confidence 置信度
+     * @param Confidence 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(String Confidence) {
@@ -479,9 +450,9 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get 恶意度
+     * Get 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Maliciousness 恶意度
+     * @return Maliciousness 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaliciousness() {
@@ -489,13 +460,53 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Set 恶意度
+     * Set 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Maliciousness 恶意度
+     * @param Maliciousness 该字段当前无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaliciousness(String Maliciousness) {
         this.Maliciousness = Maliciousness;
+    }
+
+    /**
+     * Get 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleDetailList 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecRuleRelatedInfo [] getRuleDetailList() {
+        return this.RuleDetailList;
+    }
+
+    /**
+     * Set 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleDetailList 规则相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleDetailList(SecRuleRelatedInfo [] RuleDetailList) {
+        this.RuleDetailList = RuleDetailList;
+    }
+
+    /**
+     * Get Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Label Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Label Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
     }
 
     public BotLog() {
@@ -557,6 +568,15 @@ public class BotLog extends AbstractModel{
         if (source.Maliciousness != null) {
             this.Maliciousness = new String(source.Maliciousness);
         }
+        if (source.RuleDetailList != null) {
+            this.RuleDetailList = new SecRuleRelatedInfo[source.RuleDetailList.length];
+            for (int i = 0; i < source.RuleDetailList.length; i++) {
+                this.RuleDetailList[i] = new SecRuleRelatedInfo(source.RuleDetailList[i]);
+            }
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
     }
 
 
@@ -581,6 +601,8 @@ public class BotLog extends AbstractModel{
         this.setParamSimple(map, prefix + "DetectionMethod", this.DetectionMethod);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Maliciousness", this.Maliciousness);
+        this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
+        this.setParamSimple(map, prefix + "Label", this.Label);
 
     }
 }

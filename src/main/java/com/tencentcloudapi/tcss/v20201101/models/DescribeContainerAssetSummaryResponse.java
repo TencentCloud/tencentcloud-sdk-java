@@ -93,6 +93,13 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel{
     private Long ImageTotalCnt;
 
     /**
+    * 主机未安装agent数量
+    */
+    @SerializedName("HostUnInstallCnt")
+    @Expose
+    private Long HostUnInstallCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +267,22 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 主机未安装agent数量 
+     * @return HostUnInstallCnt 主机未安装agent数量
+     */
+    public Long getHostUnInstallCnt() {
+        return this.HostUnInstallCnt;
+    }
+
+    /**
+     * Set 主机未安装agent数量
+     * @param HostUnInstallCnt 主机未安装agent数量
+     */
+    public void setHostUnInstallCnt(Long HostUnInstallCnt) {
+        this.HostUnInstallCnt = HostUnInstallCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -313,6 +336,9 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel{
         if (source.ImageTotalCnt != null) {
             this.ImageTotalCnt = new Long(source.ImageTotalCnt);
         }
+        if (source.HostUnInstallCnt != null) {
+            this.HostUnInstallCnt = new Long(source.HostUnInstallCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +359,7 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "HostOfflineCnt", this.HostOfflineCnt);
         this.setParamSimple(map, prefix + "ImageRegistryCnt", this.ImageRegistryCnt);
         this.setParamSimple(map, prefix + "ImageTotalCnt", this.ImageTotalCnt);
+        this.setParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

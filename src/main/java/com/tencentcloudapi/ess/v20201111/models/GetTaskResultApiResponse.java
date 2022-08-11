@@ -30,21 +30,33 @@ public class GetTaskResultApiResponse extends AbstractModel{
     private String TaskId;
 
     /**
-    * 任务状态
+    * 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * 状态描述
+    * 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
     */
     @SerializedName("TaskMessage")
     @Expose
     private String TaskMessage;
 
     /**
-    * 资源Id
+    * 资源Id，也是FileId，用于文件发起使用
     */
     @SerializedName("ResourceId")
     @Expose
@@ -74,48 +86,96 @@ public class GetTaskResultApiResponse extends AbstractModel{
     }
 
     /**
-     * Get 任务状态 
-     * @return TaskStatus 任务状态
+     * Get 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时 
+     * @return TaskStatus 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态
-     * @param TaskStatus 任务状态
+     * Set 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
+     * @param TaskStatus 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 状态描述 
-     * @return TaskMessage 状态描述
+     * Get 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时 
+     * @return TaskMessage 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
      */
     public String getTaskMessage() {
         return this.TaskMessage;
     }
 
     /**
-     * Set 状态描述
-     * @param TaskMessage 状态描述
+     * Set 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
+     * @param TaskMessage 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
      */
     public void setTaskMessage(String TaskMessage) {
         this.TaskMessage = TaskMessage;
     }
 
     /**
-     * Get 资源Id 
-     * @return ResourceId 资源Id
+     * Get 资源Id，也是FileId，用于文件发起使用 
+     * @return ResourceId 资源Id，也是FileId，用于文件发起使用
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id
-     * @param ResourceId 资源Id
+     * Set 资源Id，也是FileId，用于文件发起使用
+     * @param ResourceId 资源Id，也是FileId，用于文件发起使用
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

@@ -111,6 +111,19 @@ public class ImageVirusInfo extends AbstractModel{
     private String FileName;
 
     /**
+    * 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckPlatform")
+    @Expose
+    private String [] CheckPlatform;
+
+    /**
      * Get 路径
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 路径
@@ -330,6 +343,46 @@ public class ImageVirusInfo extends AbstractModel{
         this.FileName = FileName;
     }
 
+    /**
+     * Get 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCheckPlatform() {
+        return this.CheckPlatform;
+    }
+
+    /**
+     * Set 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckPlatform(String [] CheckPlatform) {
+        this.CheckPlatform = CheckPlatform;
+    }
+
     public ImageVirusInfo() {
     }
 
@@ -374,6 +427,12 @@ public class ImageVirusInfo extends AbstractModel{
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
+        if (source.CheckPlatform != null) {
+            this.CheckPlatform = new String[source.CheckPlatform.length];
+            for (int i = 0; i < source.CheckPlatform.length; i++) {
+                this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
+            }
+        }
     }
 
 
@@ -392,6 +451,7 @@ public class ImageVirusInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LatestScanTime", this.LatestScanTime);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
 
     }
 }

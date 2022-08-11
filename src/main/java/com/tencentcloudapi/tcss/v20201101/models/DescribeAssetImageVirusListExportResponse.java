@@ -30,6 +30,13 @@ public class DescribeAssetImageVirusListExportResponse extends AbstractModel{
     private String DownloadUrl;
 
     /**
+    * 任务ID
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeAssetImageVirusListExportResponse extends AbstractModel{
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * Get 任务ID 
+     * @return JobId 任务ID
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param JobId 任务ID
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -79,6 +102,9 @@ public class DescribeAssetImageVirusListExportResponse extends AbstractModel{
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class DescribeAssetImageVirusListExportResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

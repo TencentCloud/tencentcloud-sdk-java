@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TimingDataItem extends AbstractModel{
 
     /**
-    * 秒级时间戳
+    * 返回数据对应时间点，采用unix秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -31,7 +31,7 @@ public class TimingDataItem extends AbstractModel{
     private Long Timestamp;
 
     /**
-    * 数值
+    * 具体数值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,9 +39,9 @@ public class TimingDataItem extends AbstractModel{
     private Long Value;
 
     /**
-     * Get 秒级时间戳
+     * Get 返回数据对应时间点，采用unix秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp 秒级时间戳
+     * @return Timestamp 返回数据对应时间点，采用unix秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
@@ -49,9 +49,9 @@ public class TimingDataItem extends AbstractModel{
     }
 
     /**
-     * Set 秒级时间戳
+     * Set 返回数据对应时间点，采用unix秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp 秒级时间戳
+     * @param Timestamp 返回数据对应时间点，采用unix秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
@@ -59,9 +59,9 @@ public class TimingDataItem extends AbstractModel{
     }
 
     /**
-     * Get 数值
+     * Get 具体数值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 数值
+     * @return Value 具体数值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
@@ -69,9 +69,9 @@ public class TimingDataItem extends AbstractModel{
     }
 
     /**
-     * Set 数值
+     * Set 具体数值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 数值
+     * @param Value 具体数值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {

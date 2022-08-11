@@ -180,6 +180,14 @@ public class TrainingTaskSetItem extends AbstractModel{
     private ImageInfo ImageInfo;
 
     /**
+    * 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -555,6 +563,26 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.ImageInfo = ImageInfo;
     }
 
+    /**
+     * Get 任务信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
     public TrainingTaskSetItem() {
     }
 
@@ -632,6 +660,9 @@ public class TrainingTaskSetItem extends AbstractModel{
         if (source.ImageInfo != null) {
             this.ImageInfo = new ImageInfo(source.ImageInfo);
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -660,6 +691,7 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

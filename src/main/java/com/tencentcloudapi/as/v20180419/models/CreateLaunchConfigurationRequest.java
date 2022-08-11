@@ -191,6 +191,14 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     private String DiskTypePolicy;
 
     /**
+    * 高性能计算集群ID。<br>
+注意：此字段默认为空。
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
      * Get 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。 
      * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      */
@@ -598,6 +606,26 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
+    /**
+     * Get 高性能计算集群ID。<br>
+注意：此字段默认为空。 
+     * @return HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     * @param HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
     public CreateLaunchConfigurationRequest() {
     }
 
@@ -687,6 +715,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
         if (source.DiskTypePolicy != null) {
             this.DiskTypePolicy = new String(source.DiskTypePolicy);
         }
+        if (source.HpcClusterId != null) {
+            this.HpcClusterId = new String(source.HpcClusterId);
+        }
     }
 
 
@@ -716,6 +747,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
 
     }
 }

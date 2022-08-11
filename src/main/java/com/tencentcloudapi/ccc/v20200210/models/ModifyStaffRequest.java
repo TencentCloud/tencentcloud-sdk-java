@@ -65,6 +65,20 @@ public class ModifyStaffRequest extends AbstractModel{
     private Long [] SkillGroupIds;
 
     /**
+    * 是否开启手机外呼开关
+    */
+    @SerializedName("UseMobileCallOut")
+    @Expose
+    private Boolean UseMobileCallOut;
+
+    /**
+    * 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+    */
+    @SerializedName("UseMobileAccept")
+    @Expose
+    private Long UseMobileAccept;
+
+    /**
      * Get 应用ID 
      * @return SdkAppId 应用ID
      */
@@ -160,6 +174,38 @@ public class ModifyStaffRequest extends AbstractModel{
         this.SkillGroupIds = SkillGroupIds;
     }
 
+    /**
+     * Get 是否开启手机外呼开关 
+     * @return UseMobileCallOut 是否开启手机外呼开关
+     */
+    public Boolean getUseMobileCallOut() {
+        return this.UseMobileCallOut;
+    }
+
+    /**
+     * Set 是否开启手机外呼开关
+     * @param UseMobileCallOut 是否开启手机外呼开关
+     */
+    public void setUseMobileCallOut(Boolean UseMobileCallOut) {
+        this.UseMobileCallOut = UseMobileCallOut;
+    }
+
+    /**
+     * Get 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终 
+     * @return UseMobileAccept 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+     */
+    public Long getUseMobileAccept() {
+        return this.UseMobileAccept;
+    }
+
+    /**
+     * Set 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+     * @param UseMobileAccept 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+     */
+    public void setUseMobileAccept(Long UseMobileAccept) {
+        this.UseMobileAccept = UseMobileAccept;
+    }
+
     public ModifyStaffRequest() {
     }
 
@@ -189,6 +235,12 @@ public class ModifyStaffRequest extends AbstractModel{
                 this.SkillGroupIds[i] = new Long(source.SkillGroupIds[i]);
             }
         }
+        if (source.UseMobileCallOut != null) {
+            this.UseMobileCallOut = new Boolean(source.UseMobileCallOut);
+        }
+        if (source.UseMobileAccept != null) {
+            this.UseMobileAccept = new Long(source.UseMobileAccept);
+        }
     }
 
 
@@ -202,6 +254,8 @@ public class ModifyStaffRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
+        this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
+        this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
 
     }
 }

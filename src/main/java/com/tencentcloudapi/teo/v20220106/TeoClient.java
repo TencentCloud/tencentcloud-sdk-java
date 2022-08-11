@@ -499,7 +499,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询DDos攻击数据
+     *查询DDos攻击时序数据
      * @param req DescribeDDosAttackDataRequest
      * @return DescribeDDosAttackDataResponse
      * @throws TencentCloudSDKException
@@ -559,7 +559,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询DDos攻击源
+     *查询DDos攻击源信息
      * @param req DescribeDDosAttackSourceEventRequest
      * @return DescribeDDosAttackSourceEventResponse
      * @throws TencentCloudSDKException
@@ -1139,7 +1139,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询Web托管规则数据
+     *查询waf攻击时序数据
      * @param req DescribeWebManagedRulesDataRequest
      * @return DescribeWebManagedRulesDataResponse
      * @throws TencentCloudSDKException
@@ -1159,7 +1159,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询Web托管日志
+     *查询waf攻击日志
      * @param req DescribeWebManagedRulesLogRequest
      * @return DescribeWebManagedRulesLogResponse
      * @throws TencentCloudSDKException
@@ -1179,7 +1179,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询Web托管规则Top数据
+     *查询waf攻击top数据
      * @param req DescribeWebManagedRulesTopDataRequest
      * @return DescribeWebManagedRulesTopDataResponse
      * @throws TencentCloudSDKException
@@ -1219,7 +1219,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询web防护数据
+     *查询CC防护时序数据
      * @param req DescribeWebProtectionDataRequest
      * @return DescribeWebProtectionDataResponse
      * @throws TencentCloudSDKException
@@ -1239,7 +1239,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询web防护日志
+     *查询CC防护日志
      * @param req DescribeWebProtectionLogRequest
      * @return DescribeWebProtectionLogResponse
      * @throws TencentCloudSDKException

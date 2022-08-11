@@ -51,6 +51,13 @@ public class DiskPrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
+    * 计费项目明细列表。
+    */
+    @SerializedName("DetailPrices")
+    @Expose
+    private DetailPrice [] DetailPrices;
+
+    /**
      * Get 云硬盘单价。 
      * @return OriginalDiskPrice 云硬盘单价。
      */
@@ -114,6 +121,22 @@ public class DiskPrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    /**
+     * Get 计费项目明细列表。 
+     * @return DetailPrices 计费项目明细列表。
+     */
+    public DetailPrice [] getDetailPrices() {
+        return this.DetailPrices;
+    }
+
+    /**
+     * Set 计费项目明细列表。
+     * @param DetailPrices 计费项目明细列表。
+     */
+    public void setDetailPrices(DetailPrice [] DetailPrices) {
+        this.DetailPrices = DetailPrices;
+    }
+
     public DiskPrice() {
     }
 
@@ -134,6 +157,12 @@ public class DiskPrice extends AbstractModel{
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
+        if (source.DetailPrices != null) {
+            this.DetailPrices = new DetailPrice[source.DetailPrices.length];
+            for (int i = 0; i < source.DetailPrices.length; i++) {
+                this.DetailPrices[i] = new DetailPrice(source.DetailPrices[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class DiskPrice extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        this.setParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
 
     }
 }

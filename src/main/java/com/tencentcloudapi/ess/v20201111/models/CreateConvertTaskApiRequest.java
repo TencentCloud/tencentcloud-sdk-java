@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateConvertTaskApiRequest extends AbstractModel{
 
     /**
-    * 资源Id
-    */
-    @SerializedName("ResourceId")
-    @Expose
-    private String ResourceId;
-
-    /**
     * 资源类型 取值范围doc,docx,html之一
     */
     @SerializedName("ResourceType")
@@ -37,48 +30,39 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     private String ResourceType;
 
     /**
-    * 资源名称
+    * 资源名称，长度限制为256字符
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 无
+    * 资源Id，通过UploadFiles获取
     */
-    @SerializedName("Organization")
+    @SerializedName("ResourceId")
     @Expose
-    private OrganizationInfo Organization;
+    private String ResourceId;
 
     /**
-    * 无
+    * 操作者信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 无
+    * 应用号信息
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 资源Id 
-     * @return ResourceId 资源Id
-     */
-    public String getResourceId() {
-        return this.ResourceId;
-    }
-
-    /**
-     * Set 资源Id
-     * @param ResourceId 资源Id
-     */
-    public void setResourceId(String ResourceId) {
-        this.ResourceId = ResourceId;
-    }
+    * 暂未开放
+    */
+    @SerializedName("Organization")
+    @Expose
+    private OrganizationInfo Organization;
 
     /**
      * Get 资源类型 取值范围doc,docx,html之一 
@@ -97,67 +81,83 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源名称 
-     * @return ResourceName 资源名称
+     * Get 资源名称，长度限制为256字符 
+     * @return ResourceName 资源名称，长度限制为256字符
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称
-     * @param ResourceName 资源名称
+     * Set 资源名称，长度限制为256字符
+     * @param ResourceName 资源名称，长度限制为256字符
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 无 
-     * @return Organization 无
+     * Get 资源Id，通过UploadFiles获取 
+     * @return ResourceId 资源Id，通过UploadFiles获取
      */
-    public OrganizationInfo getOrganization() {
-        return this.Organization;
+    public String getResourceId() {
+        return this.ResourceId;
     }
 
     /**
-     * Set 无
-     * @param Organization 无
+     * Set 资源Id，通过UploadFiles获取
+     * @param ResourceId 资源Id，通过UploadFiles获取
      */
-    public void setOrganization(OrganizationInfo Organization) {
-        this.Organization = Organization;
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 无 
-     * @return Operator 无
+     * Get 操作者信息 
+     * @return Operator 操作者信息
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 无
-     * @param Operator 无
+     * Set 操作者信息
+     * @param Operator 操作者信息
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 无 
-     * @return Agent 无
+     * Get 应用号信息 
+     * @return Agent 应用号信息
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 无
-     * @param Agent 无
+     * Set 应用号信息
+     * @param Agent 应用号信息
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return Organization 暂未开放
+     */
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Organization 暂未开放
+     */
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
     }
 
     public CreateConvertTaskApiRequest() {
@@ -168,23 +168,23 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateConvertTaskApiRequest(CreateConvertTaskApiRequest source) {
-        if (source.ResourceId != null) {
-            this.ResourceId = new String(source.ResourceId);
-        }
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
         if (source.ResourceName != null) {
             this.ResourceName = new String(source.ResourceName);
         }
-        if (source.Organization != null) {
-            this.Organization = new OrganizationInfo(source.Organization);
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
         }
     }
 
@@ -193,12 +193,12 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
-        this.setParamObj(map, prefix + "Organization.", this.Organization);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
 
     }
 }

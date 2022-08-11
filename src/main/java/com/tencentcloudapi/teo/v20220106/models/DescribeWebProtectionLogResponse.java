@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class DescribeWebProtectionLogResponse extends AbstractModel{
 
     /**
-    * 限速拦截Data
+    * 限速拦截数据内容。
     */
     @SerializedName("Data")
     @Expose
     private CCLogData Data;
 
     /**
-    * 状态，1：失败，0:成功
+    * 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 返回信息
+    * 请求响应信息。
     */
     @SerializedName("Msg")
     @Expose
@@ -51,48 +53,56 @@ public class DescribeWebProtectionLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 限速拦截Data 
-     * @return Data 限速拦截Data
+     * Get 限速拦截数据内容。 
+     * @return Data 限速拦截数据内容。
      */
     public CCLogData getData() {
         return this.Data;
     }
 
     /**
-     * Set 限速拦截Data
-     * @param Data 限速拦截Data
+     * Set 限速拦截数据内容。
+     * @param Data 限速拦截数据内容。
      */
     public void setData(CCLogData Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 状态，1：失败，0:成功 
-     * @return Status 状态，1：失败，0:成功
+     * Get 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li> 
+     * @return Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1：失败，0:成功
-     * @param Status 状态，1：失败，0:成功
+     * Set 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 返回信息 
-     * @return Msg 返回信息
+     * Get 请求响应信息。 
+     * @return Msg 请求响应信息。
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回信息
-     * @param Msg 返回信息
+     * Set 请求响应信息。
+     * @param Msg 请求响应信息。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

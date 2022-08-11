@@ -156,6 +156,45 @@ public class VpnConnection extends AbstractModel{
     private String HealthCheckStatus;
 
     /**
+    * DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DpdEnable")
+    @Expose
+    private Long DpdEnable;
+
+    /**
+    * DPD超时时间。即探测确认对端不存在需要的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DpdTimeout")
+    @Expose
+    private String DpdTimeout;
+
+    /**
+    * DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DpdAction")
+    @Expose
+    private String DpdAction;
+
+    /**
+    * 标签键值对数组
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+    * 协商类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NegotiationType")
+    @Expose
+    private String NegotiationType;
+
+    /**
      * Get 通道实例ID。 
      * @return VpnConnectionId 通道实例ID。
      */
@@ -459,6 +498,102 @@ public class VpnConnection extends AbstractModel{
         this.HealthCheckStatus = HealthCheckStatus;
     }
 
+    /**
+     * Get DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDpdEnable() {
+        return this.DpdEnable;
+    }
+
+    /**
+     * Set DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDpdEnable(Long DpdEnable) {
+        this.DpdEnable = DpdEnable;
+    }
+
+    /**
+     * Get DPD超时时间。即探测确认对端不存在需要的时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDpdTimeout() {
+        return this.DpdTimeout;
+    }
+
+    /**
+     * Set DPD超时时间。即探测确认对端不存在需要的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDpdTimeout(String DpdTimeout) {
+        this.DpdTimeout = DpdTimeout;
+    }
+
+    /**
+     * Get DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDpdAction() {
+        return this.DpdAction;
+    }
+
+    /**
+     * Set DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDpdAction(String DpdAction) {
+        this.DpdAction = DpdAction;
+    }
+
+    /**
+     * Get 标签键值对数组 
+     * @return TagSet 标签键值对数组
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对数组
+     * @param TagSet 标签键值对数组
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
+     * Get 协商类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NegotiationType 协商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNegotiationType() {
+        return this.NegotiationType;
+    }
+
+    /**
+     * Set 协商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NegotiationType 协商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNegotiationType(String NegotiationType) {
+        this.NegotiationType = NegotiationType;
+    }
+
     public VpnConnection() {
     }
 
@@ -527,6 +662,24 @@ public class VpnConnection extends AbstractModel{
         if (source.HealthCheckStatus != null) {
             this.HealthCheckStatus = new String(source.HealthCheckStatus);
         }
+        if (source.DpdEnable != null) {
+            this.DpdEnable = new Long(source.DpdEnable);
+        }
+        if (source.DpdTimeout != null) {
+            this.DpdTimeout = new String(source.DpdTimeout);
+        }
+        if (source.DpdAction != null) {
+            this.DpdAction = new String(source.DpdAction);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.NegotiationType != null) {
+            this.NegotiationType = new String(source.NegotiationType);
+        }
     }
 
 
@@ -553,6 +706,11 @@ public class VpnConnection extends AbstractModel{
         this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
         this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
         this.setParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
+        this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+        this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+        this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
 
     }
 }

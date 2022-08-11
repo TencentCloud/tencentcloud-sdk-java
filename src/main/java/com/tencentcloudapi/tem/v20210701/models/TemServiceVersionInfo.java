@@ -34,7 +34,7 @@ public class TemServiceVersionInfo extends AbstractModel{
     */
     @SerializedName("ApplicationId")
     @Expose
-    private Boolean ApplicationId;
+    private String ApplicationId;
 
     /**
     * 部署方式
@@ -122,6 +122,7 @@ public class TemServiceVersionInfo extends AbstractModel{
 
     /**
     * 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsInfo")
     @Expose
@@ -318,7 +319,7 @@ public class TemServiceVersionInfo extends AbstractModel{
     */
     @SerializedName("MinAliveInstances")
     @Expose
-    private Long MinAliveInstances;
+    private String MinAliveInstances;
 
     /**
     * 安全组
@@ -473,7 +474,7 @@ public class TemServiceVersionInfo extends AbstractModel{
     private Long EnableTracing;
 
     /**
-    * 是否开启调用链上报，只有 EnableTracing=1 时生效
+    * 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTracingReport")
@@ -555,7 +556,7 @@ public class TemServiceVersionInfo extends AbstractModel{
     private Boolean UnderDeploying;
 
     /**
-    * 是否开启prometheus业务指标监控
+    * 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnablePrometheusConf")
@@ -579,6 +580,15 @@ public class TemServiceVersionInfo extends AbstractModel{
     private String TcrInstanceId;
 
     /**
+    * 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableMetrics")
+    @Expose
+    private Long EnableMetrics;
+
+    /**
      * Get 主键 
      * @return VersionId 主键
      */
@@ -598,7 +608,7 @@ public class TemServiceVersionInfo extends AbstractModel{
      * Get 服务id 
      * @return ApplicationId 服务id
      */
-    public Boolean getApplicationId() {
+    public String getApplicationId() {
         return this.ApplicationId;
     }
 
@@ -606,7 +616,7 @@ public class TemServiceVersionInfo extends AbstractModel{
      * Set 服务id
      * @param ApplicationId 服务id
      */
-    public void setApplicationId(Boolean ApplicationId) {
+    public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
@@ -803,8 +813,10 @@ public class TemServiceVersionInfo extends AbstractModel{
     }
 
     /**
-     * Get 弹性配置 
+     * Get 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EsInfo 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EsInfo getEsInfo() {
         return this.EsInfo;
@@ -812,7 +824,9 @@ public class TemServiceVersionInfo extends AbstractModel{
 
     /**
      * Set 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EsInfo 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsInfo(EsInfo EsInfo) {
         this.EsInfo = EsInfo;
@@ -1276,7 +1290,7 @@ public class TemServiceVersionInfo extends AbstractModel{
      * @return MinAliveInstances 最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMinAliveInstances() {
+    public String getMinAliveInstances() {
         return this.MinAliveInstances;
     }
 
@@ -1286,7 +1300,7 @@ public class TemServiceVersionInfo extends AbstractModel{
      * @param MinAliveInstances 最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMinAliveInstances(Long MinAliveInstances) {
+    public void setMinAliveInstances(String MinAliveInstances) {
         this.MinAliveInstances = MinAliveInstances;
     }
 
@@ -1671,9 +1685,9 @@ public class TemServiceVersionInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否开启调用链上报，只有 EnableTracing=1 时生效
+     * Get 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效
+     * @return EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableTracingReport() {
@@ -1681,9 +1695,9 @@ public class TemServiceVersionInfo extends AbstractModel{
     }
 
     /**
-     * Set 是否开启调用链上报，只有 EnableTracing=1 时生效
+     * Set 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效
+     * @param EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTracingReport(Long EnableTracingReport) {
@@ -1879,9 +1893,9 @@ public class TemServiceVersionInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否开启prometheus业务指标监控
+     * Get 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnablePrometheusConf 是否开启prometheus业务指标监控
+     * @return EnablePrometheusConf 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnablePrometheusConf getEnablePrometheusConf() {
@@ -1889,9 +1903,9 @@ public class TemServiceVersionInfo extends AbstractModel{
     }
 
     /**
-     * Set 是否开启prometheus业务指标监控
+     * Set 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnablePrometheusConf 是否开启prometheus业务指标监控
+     * @param EnablePrometheusConf 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
@@ -1938,6 +1952,30 @@ public class TemServiceVersionInfo extends AbstractModel{
         this.TcrInstanceId = TcrInstanceId;
     }
 
+    /**
+     * Get 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableMetrics() {
+        return this.EnableMetrics;
+    }
+
+    /**
+     * Set 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableMetrics(Long EnableMetrics) {
+        this.EnableMetrics = EnableMetrics;
+    }
+
     public TemServiceVersionInfo() {
     }
 
@@ -1950,7 +1988,7 @@ public class TemServiceVersionInfo extends AbstractModel{
             this.VersionId = new String(source.VersionId);
         }
         if (source.ApplicationId != null) {
-            this.ApplicationId = new Boolean(source.ApplicationId);
+            this.ApplicationId = new String(source.ApplicationId);
         }
         if (source.DeployMode != null) {
             this.DeployMode = new String(source.DeployMode);
@@ -2073,7 +2111,7 @@ public class TemServiceVersionInfo extends AbstractModel{
             this.LogEnable = new Long(source.LogEnable);
         }
         if (source.MinAliveInstances != null) {
-            this.MinAliveInstances = new Long(source.MinAliveInstances);
+            this.MinAliveInstances = new String(source.MinAliveInstances);
         }
         if (source.SecurityGroupIds != null) {
             this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
@@ -2195,6 +2233,9 @@ public class TemServiceVersionInfo extends AbstractModel{
         if (source.TcrInstanceId != null) {
             this.TcrInstanceId = new String(source.TcrInstanceId);
         }
+        if (source.EnableMetrics != null) {
+            this.EnableMetrics = new Long(source.EnableMetrics);
+        }
     }
 
 
@@ -2274,6 +2315,7 @@ public class TemServiceVersionInfo extends AbstractModel{
         this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
         this.setParamSimple(map, prefix + "StoppedManually", this.StoppedManually);
         this.setParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
+        this.setParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
 
     }
 }

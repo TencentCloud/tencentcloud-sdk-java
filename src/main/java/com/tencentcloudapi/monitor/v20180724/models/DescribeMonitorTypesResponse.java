@@ -30,6 +30,13 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
     private String [] MonitorTypes;
 
     /**
+    * 监控类型详情
+    */
+    @SerializedName("MonitorTypeInfos")
+    @Expose
+    private MonitorTypeInfo [] MonitorTypeInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;
+    }
+
+    /**
+     * Get 监控类型详情 
+     * @return MonitorTypeInfos 监控类型详情
+     */
+    public MonitorTypeInfo [] getMonitorTypeInfos() {
+        return this.MonitorTypeInfos;
+    }
+
+    /**
+     * Set 监控类型详情
+     * @param MonitorTypeInfos 监控类型详情
+     */
+    public void setMonitorTypeInfos(MonitorTypeInfo [] MonitorTypeInfos) {
+        this.MonitorTypeInfos = MonitorTypeInfos;
     }
 
     /**
@@ -82,6 +105,12 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
                 this.MonitorTypes[i] = new String(source.MonitorTypes[i]);
             }
         }
+        if (source.MonitorTypeInfos != null) {
+            this.MonitorTypeInfos = new MonitorTypeInfo[source.MonitorTypeInfos.length];
+            for (int i = 0; i < source.MonitorTypeInfos.length; i++) {
+                this.MonitorTypeInfos[i] = new MonitorTypeInfo(source.MonitorTypeInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +122,7 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MonitorTypes.", this.MonitorTypes);
+        this.setParamArrayObj(map, prefix + "MonitorTypeInfos.", this.MonitorTypeInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

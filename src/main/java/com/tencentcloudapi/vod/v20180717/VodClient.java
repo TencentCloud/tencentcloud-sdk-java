@@ -459,7 +459,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建超级播放器配置，数量上限：100。
+     *创建播放器配置，数量上限：100。
      * @param req CreateSuperPlayerConfigRequest
      * @return CreateSuperPlayerConfigResponse
      * @throws TencentCloudSDKException
@@ -845,7 +845,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除超级播放器配置。  
+     *删除播放器配置。  
 *注：系统预置播放器配置不允许删除。*
      * @param req DeleteSuperPlayerConfigRequest
      * @return DeleteSuperPlayerConfigResponse
@@ -1109,6 +1109,30 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCdnLogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCdnLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口返回查询时间范围内客户端上传加速统计信息。
+   1. 可以查询最近365天内的客户端上传加速统计数据。
+   2. 查询时间跨度不超过90天。
+   3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+
+     * @param req DescribeClientUploadAccelerationUsageDataRequest
+     * @return DescribeClientUploadAccelerationUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientUploadAccelerationUsageDataResponse DescribeClientUploadAccelerationUsageData(DescribeClientUploadAccelerationUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClientUploadAccelerationUsageData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1673,7 +1697,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *查询超级播放器配置，支持根据条件，分页查询。
+     *查询播放器配置，支持根据条件，分页查询。
      * @param req DescribeSuperPlayerConfigsRequest
      * @return DescribeSuperPlayerConfigsResponse
      * @throws TencentCloudSDKException
@@ -2313,7 +2337,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改超级播放器配置。
+     *修改播放器配置。
      * @param req ModifySuperPlayerConfigRequest
      * @return ModifySuperPlayerConfigResponse
      * @throws TencentCloudSDKException
