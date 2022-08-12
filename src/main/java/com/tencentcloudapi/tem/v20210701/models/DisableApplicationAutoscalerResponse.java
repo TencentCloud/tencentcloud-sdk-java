@@ -13,35 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupAccessResponse extends AbstractModel{
+public class DisableApplicationAutoscalerResponse extends AbstractModel{
 
     /**
-    * 实例所属地域
+    * 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Region")
+    @SerializedName("Result")
     @Expose
-    private String Region;
-
-    /**
-    * 备份文件所在存储桶
-    */
-    @SerializedName("Bucket")
-    @Expose
-    private String Bucket;
-
-    /**
-    * 备份文件的存储信息
-    */
-    @SerializedName("Files")
-    @Expose
-    private BackupFile [] Files;
+    private Boolean Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +38,23 @@ public class DescribeBackupAccessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例所属地域 
-     * @return Region 实例所属地域
+     * Get 是否成功
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRegion() {
-        return this.Region;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 实例所属地域
-     * @param Region 实例所属地域
+     * Set 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegion(String Region) {
-        this.Region = Region;
-    }
-
-    /**
-     * Get 备份文件所在存储桶 
-     * @return Bucket 备份文件所在存储桶
-     */
-    public String getBucket() {
-        return this.Bucket;
-    }
-
-    /**
-     * Set 备份文件所在存储桶
-     * @param Bucket 备份文件所在存储桶
-     */
-    public void setBucket(String Bucket) {
-        this.Bucket = Bucket;
-    }
-
-    /**
-     * Get 备份文件的存储信息 
-     * @return Files 备份文件的存储信息
-     */
-    public BackupFile [] getFiles() {
-        return this.Files;
-    }
-
-    /**
-     * Set 备份文件的存储信息
-     * @param Files 备份文件的存储信息
-     */
-    public void setFiles(BackupFile [] Files) {
-        this.Files = Files;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
     /**
@@ -114,25 +73,16 @@ public class DescribeBackupAccessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeBackupAccessResponse() {
+    public DisableApplicationAutoscalerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBackupAccessResponse(DescribeBackupAccessResponse source) {
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
-        }
-        if (source.Bucket != null) {
-            this.Bucket = new String(source.Bucket);
-        }
-        if (source.Files != null) {
-            this.Files = new BackupFile[source.Files.length];
-            for (int i = 0; i < source.Files.length; i++) {
-                this.Files[i] = new BackupFile(source.Files[i]);
-            }
+    public DisableApplicationAutoscalerResponse(DisableApplicationAutoscalerResponse source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -144,9 +94,7 @@ public class DescribeBackupAccessResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
-        this.setParamArrayObj(map, prefix + "Files.", this.Files);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

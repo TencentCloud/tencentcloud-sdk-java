@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeEffectiveFlowResponse extends AbstractModel{
+public class EnableApplicationAutoscalerResponse extends AbstractModel{
 
     /**
-    * 业务出参
+    * 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("Result")
     @Expose
-    private OutputRecognizeEffectiveFlow Data;
+    private Boolean Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class RecognizeEffectiveFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 业务出参 
-     * @return Data 业务出参
+     * Get 是否成功
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public OutputRecognizeEffectiveFlow getData() {
-        return this.Data;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 业务出参
-     * @param Data 业务出参
+     * Set 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(OutputRecognizeEffectiveFlow Data) {
-        this.Data = Data;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +73,16 @@ public class RecognizeEffectiveFlowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public RecognizeEffectiveFlowResponse() {
+    public EnableApplicationAutoscalerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RecognizeEffectiveFlowResponse(RecognizeEffectiveFlowResponse source) {
-        if (source.Data != null) {
-            this.Data = new OutputRecognizeEffectiveFlow(source.Data);
+    public EnableApplicationAutoscalerResponse(EnableApplicationAutoscalerResponse source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class RecognizeEffectiveFlowResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

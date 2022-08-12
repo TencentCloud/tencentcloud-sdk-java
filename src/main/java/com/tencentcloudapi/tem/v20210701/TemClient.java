@@ -642,6 +642,46 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *关闭应用弹性策略组合
+     * @param req DisableApplicationAutoscalerRequest
+     * @return DisableApplicationAutoscalerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableApplicationAutoscalerResponse DisableApplicationAutoscaler(DisableApplicationAutoscalerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableApplicationAutoscalerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableApplicationAutoscalerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableApplicationAutoscaler");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用应用弹性策略组合
+     * @param req EnableApplicationAutoscalerRequest
+     * @return EnableApplicationAutoscalerResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableApplicationAutoscalerResponse EnableApplicationAutoscaler(EnableApplicationAutoscalerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableApplicationAutoscalerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableApplicationAutoscalerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableApplicationAutoscaler");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *生成应用程序包预签名下载链接
      * @param req GenerateApplicationPackageDownloadUrlRequest
      * @return GenerateApplicationPackageDownloadUrlResponse

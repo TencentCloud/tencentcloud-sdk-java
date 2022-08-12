@@ -310,19 +310,27 @@ public class DeployApplicationRequest extends AbstractModel{
     private String OsFlavour;
 
     /**
-    * 是否开启prometheus 业务指标监控
+    * metrics业务指标监控配置
     */
     @SerializedName("EnablePrometheusConf")
     @Expose
     private EnablePrometheusConf EnablePrometheusConf;
 
     /**
-    * 1：开始apm采集（skywalking）；
+    * 1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
     */
     @SerializedName("EnableTracing")
     @Expose
     private Long EnableTracing;
+
+    /**
+    * 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+    */
+    @SerializedName("EnableMetrics")
+    @Expose
+    private Long EnableMetrics;
 
     /**
      * Get 应用ID 
@@ -1005,25 +1013,25 @@ public class DeployApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启prometheus 业务指标监控 
-     * @return EnablePrometheusConf 是否开启prometheus 业务指标监控
+     * Get metrics业务指标监控配置 
+     * @return EnablePrometheusConf metrics业务指标监控配置
      */
     public EnablePrometheusConf getEnablePrometheusConf() {
         return this.EnablePrometheusConf;
     }
 
     /**
-     * Set 是否开启prometheus 业务指标监控
-     * @param EnablePrometheusConf 是否开启prometheus 业务指标监控
+     * Set metrics业务指标监控配置
+     * @param EnablePrometheusConf metrics业务指标监控配置
      */
     public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
         this.EnablePrometheusConf = EnablePrometheusConf;
     }
 
     /**
-     * Get 1：开始apm采集（skywalking）；
+     * Get 1：开始自动apm采集（skywalking）；
 0：关闭apm采集； 
-     * @return EnableTracing 1：开始apm采集（skywalking）；
+     * @return EnableTracing 1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
      */
     public Long getEnableTracing() {
@@ -1031,13 +1039,33 @@ public class DeployApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Set 1：开始apm采集（skywalking）；
+     * Set 1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
-     * @param EnableTracing 1：开始apm采集（skywalking）；
+     * @param EnableTracing 1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;
+    }
+
+    /**
+     * Get 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集； 
+     * @return EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+     */
+    public Long getEnableMetrics() {
+        return this.EnableMetrics;
+    }
+
+    /**
+     * Set 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+     * @param EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+     */
+    public void setEnableMetrics(Long EnableMetrics) {
+        this.EnableMetrics = EnableMetrics;
     }
 
     public DeployApplicationRequest() {
@@ -1198,6 +1226,9 @@ public class DeployApplicationRequest extends AbstractModel{
         if (source.EnableTracing != null) {
             this.EnableTracing = new Long(source.EnableTracing);
         }
+        if (source.EnableMetrics != null) {
+            this.EnableMetrics = new Long(source.EnableMetrics);
+        }
     }
 
 
@@ -1246,6 +1277,7 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
         this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
         this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+        this.setParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
 
     }
 }

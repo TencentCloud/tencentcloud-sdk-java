@@ -37,6 +37,13 @@ public class SingleInvoiceInfo extends AbstractModel{
     private String Value;
 
     /**
+    * 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
+    */
+    @SerializedName("Row")
+    @Expose
+    private Long Row;
+
+    /**
      * Get 识别出的字段名称 
      * @return Name 识别出的字段名称
      */
@@ -68,6 +75,22 @@ public class SingleInvoiceInfo extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。 
+     * @return Row 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
+     */
+    public Long getRow() {
+        return this.Row;
+    }
+
+    /**
+     * Set 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
+     * @param Row 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
+     */
+    public void setRow(Long Row) {
+        this.Row = Row;
+    }
+
     public SingleInvoiceInfo() {
     }
 
@@ -82,6 +105,9 @@ public class SingleInvoiceInfo extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Row != null) {
+            this.Row = new Long(source.Row);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class SingleInvoiceInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Row", this.Row);
 
     }
 }
