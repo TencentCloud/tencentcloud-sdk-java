@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyApplicationProxyResponse extends AbstractModel{
 
     /**
-    * 代理ID
+    * 代理ID。
     */
     @SerializedName("ProxyId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyApplicationProxyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 代理ID 
-     * @return ProxyId 代理ID
+     * Get 代理ID。 
+     * @return ProxyId 代理ID。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 代理ID
-     * @param ProxyId 代理ID
+     * Set 代理ID。
+     * @param ProxyId 代理ID。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

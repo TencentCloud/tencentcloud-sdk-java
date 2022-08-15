@@ -30,13 +30,6 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
     private String [] DiskIds;
 
     /**
-    * 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
-
-    /**
     * 新的云硬盘名称。
     */
     @SerializedName("DiskName")
@@ -49,6 +42,13 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
     @SerializedName("Portable")
     @Expose
     private Boolean Portable;
+
+    /**
+    * 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
 
     /**
     * 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
@@ -81,22 +81,6 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。 
-     * @return ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
-     * @param ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
      * Get 新的云硬盘名称。 
      * @return DiskName 新的云硬盘名称。
      */
@@ -126,6 +110,22 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
      */
     public void setPortable(Boolean Portable) {
         this.Portable = Portable;
+    }
+
+    /**
+     * Get 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。 
+     * @return ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+     * @param ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -174,14 +174,14 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
                 this.DiskIds[i] = new String(source.DiskIds[i]);
             }
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
-        }
         if (source.DiskName != null) {
             this.DiskName = new String(source.DiskName);
         }
         if (source.Portable != null) {
             this.Portable = new Boolean(source.Portable);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
         }
         if (source.DeleteWithInstance != null) {
             this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
@@ -197,9 +197,9 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
         this.setParamSimple(map, prefix + "Portable", this.Portable);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 

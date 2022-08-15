@@ -87,6 +87,13 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     private String TotalCost;
 
     /**
+    * 分成金金额
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
      * Get 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BusinessCode 产品名称代码
@@ -234,6 +241,22 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
+    /**
+     * Get 分成金金额 
+     * @return TransferPayAmount 分成金金额
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金金额
+     * @param TransferPayAmount 分成金金额
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
     public BusinessSummaryOverviewItem() {
     }
 
@@ -269,6 +292,9 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
     }
 
 
@@ -285,6 +311,7 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

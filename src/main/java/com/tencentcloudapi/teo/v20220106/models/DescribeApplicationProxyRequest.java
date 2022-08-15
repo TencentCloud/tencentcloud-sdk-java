@@ -23,72 +23,100 @@ import java.util.HashMap;
 public class DescribeApplicationProxyRequest extends AbstractModel{
 
     /**
-    * 站点ID
+    * 站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 分页参数Offset
+    * 分页查询偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页参数Limit
+    * 分页查询限制数目，默认为10，最大可设置为1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 站点ID 
-     * @return ZoneId 站点ID
+    * 代理ID。
+当ProxyId为空时，表示查询站点下所有应用代理的列表。
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
+
+    /**
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID
-     * @param ZoneId 站点ID
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 分页参数Offset 
-     * @return Offset 分页参数Offset
+     * Get 分页查询偏移量，默认为0。 
+     * @return Offset 分页查询偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数Offset
-     * @param Offset 分页参数Offset
+     * Set 分页查询偏移量，默认为0。
+     * @param Offset 分页查询偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页参数Limit 
-     * @return Limit 分页参数Limit
+     * Get 分页查询限制数目，默认为10，最大可设置为1000。 
+     * @return Limit 分页查询限制数目，默认为10，最大可设置为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数Limit
-     * @param Limit 分页参数Limit
+     * Set 分页查询限制数目，默认为10，最大可设置为1000。
+     * @param Limit 分页查询限制数目，默认为10，最大可设置为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 代理ID。
+当ProxyId为空时，表示查询站点下所有应用代理的列表。 
+     * @return ProxyId 代理ID。
+当ProxyId为空时，表示查询站点下所有应用代理的列表。
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set 代理ID。
+当ProxyId为空时，表示查询站点下所有应用代理的列表。
+     * @param ProxyId 代理ID。
+当ProxyId为空时，表示查询站点下所有应用代理的列表。
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
     }
 
     public DescribeApplicationProxyRequest() {
@@ -108,6 +136,9 @@ public class DescribeApplicationProxyRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class DescribeApplicationProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
 
     }
 }

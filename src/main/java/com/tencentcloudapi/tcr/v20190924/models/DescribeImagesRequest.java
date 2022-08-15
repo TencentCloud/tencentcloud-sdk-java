@@ -65,6 +65,13 @@ public class DescribeImagesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 指定镜像 Digest 进行查找
+    */
+    @SerializedName("Digest")
+    @Expose
+    private String Digest;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -160,6 +167,22 @@ public class DescribeImagesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 指定镜像 Digest 进行查找 
+     * @return Digest 指定镜像 Digest 进行查找
+     */
+    public String getDigest() {
+        return this.Digest;
+    }
+
+    /**
+     * Set 指定镜像 Digest 进行查找
+     * @param Digest 指定镜像 Digest 进行查找
+     */
+    public void setDigest(String Digest) {
+        this.Digest = Digest;
+    }
+
     public DescribeImagesRequest() {
     }
 
@@ -186,6 +209,9 @@ public class DescribeImagesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Digest != null) {
+            this.Digest = new String(source.Digest);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class DescribeImagesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Digest", this.Digest);
 
     }
 }

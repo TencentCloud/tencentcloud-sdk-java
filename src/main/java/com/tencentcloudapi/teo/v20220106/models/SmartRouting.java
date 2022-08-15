@@ -23,33 +23,33 @@ import java.util.HashMap;
 public class SmartRouting extends AbstractModel{
 
     /**
-    * 智能加速配置开关
-on：开启
-off：关闭
+    * 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get 智能加速配置开关
-on：开启
-off：关闭 
-     * @return Switch 智能加速配置开关
-on：开启
-off：关闭
+     * Get 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 智能加速配置开关
-on：开启
-off：关闭
-     * @param Switch 智能加速配置开关
-on：开启
-off：关闭
+     * Set 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

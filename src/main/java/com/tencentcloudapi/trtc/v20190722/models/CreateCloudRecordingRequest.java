@@ -67,7 +67,7 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     /**
     * TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
     */
     @SerializedName("RoomIdType")
     @Expose
@@ -200,10 +200,10 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     /**
      * Get TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认） 
+1: 32位整型的RoomId 
      * @return RoomIdType TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
      */
     public Long getRoomIdType() {
         return this.RoomIdType;
@@ -212,10 +212,10 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     /**
      * Set TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
      * @param RoomIdType TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
      */
     public void setRoomIdType(Long RoomIdType) {
         this.RoomIdType = RoomIdType;

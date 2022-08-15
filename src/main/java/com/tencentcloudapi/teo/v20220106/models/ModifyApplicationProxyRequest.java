@@ -23,184 +23,202 @@ import java.util.HashMap;
 public class ModifyApplicationProxyRequest extends AbstractModel{
 
     /**
-    * 站点ID
+    * 站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 代理ID
+    * 代理ID。
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
+    * 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
     */
     @SerializedName("ProxyName")
     @Expose
     private String ProxyName;
 
     /**
-    * 参数已经废弃
+    * 参数已经废弃。
     */
     @SerializedName("ForwardClientIp")
     @Expose
     private String ForwardClientIp;
 
     /**
-    * 参数已经废弃
+    * 参数已经废弃。
     */
     @SerializedName("SessionPersist")
     @Expose
     private Boolean SessionPersist;
 
     /**
-    * 会话保持时间，取值范围：30-3600，单位：秒
+    * 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
     */
     @SerializedName("SessionPersistTime")
     @Expose
     private Long SessionPersistTime;
 
     /**
-    * 服务类型
-hostname：子域名模式
-instance：实例模式
+    * 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-     * Get 站点ID 
-     * @return ZoneId 站点ID
+    * Ipv6访问配置，不填写保持原有配置。
+    */
+    @SerializedName("Ipv6")
+    @Expose
+    private Ipv6Access Ipv6;
+
+    /**
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID
-     * @param ZoneId 站点ID
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 代理ID 
-     * @return ProxyId 代理ID
+     * Get 代理ID。 
+     * @return ProxyId 代理ID。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 代理ID
-     * @param ProxyId 代理ID
+     * Set 代理ID。
+     * @param ProxyId 代理ID。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称 
-     * @return ProxyName 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
+     * Get 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。 
+     * @return ProxyName 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
-     * @param ProxyName 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
+     * Set 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
+     * @param ProxyName 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
     }
 
     /**
-     * Get 参数已经废弃 
-     * @return ForwardClientIp 参数已经废弃
+     * Get 参数已经废弃。 
+     * @return ForwardClientIp 参数已经废弃。
      */
     public String getForwardClientIp() {
         return this.ForwardClientIp;
     }
 
     /**
-     * Set 参数已经废弃
-     * @param ForwardClientIp 参数已经废弃
+     * Set 参数已经废弃。
+     * @param ForwardClientIp 参数已经废弃。
      */
     public void setForwardClientIp(String ForwardClientIp) {
         this.ForwardClientIp = ForwardClientIp;
     }
 
     /**
-     * Get 参数已经废弃 
-     * @return SessionPersist 参数已经废弃
+     * Get 参数已经废弃。 
+     * @return SessionPersist 参数已经废弃。
      */
     public Boolean getSessionPersist() {
         return this.SessionPersist;
     }
 
     /**
-     * Set 参数已经废弃
-     * @param SessionPersist 参数已经废弃
+     * Set 参数已经废弃。
+     * @param SessionPersist 参数已经废弃。
      */
     public void setSessionPersist(Boolean SessionPersist) {
         this.SessionPersist = SessionPersist;
     }
 
     /**
-     * Get 会话保持时间，取值范围：30-3600，单位：秒 
-     * @return SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒
+     * Get 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。 
+     * @return SessionPersistTime 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set 会话保持时间，取值范围：30-3600，单位：秒
-     * @param SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒
+     * Set 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
+     * @param SessionPersistTime 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
     }
 
     /**
-     * Get 服务类型
-hostname：子域名模式
-instance：实例模式 
-     * @return ProxyType 服务类型
-hostname：子域名模式
-instance：实例模式
+     * Get 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。 
+     * @return ProxyType 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set 服务类型
-hostname：子域名模式
-instance：实例模式
-     * @param ProxyType 服务类型
-hostname：子域名模式
-instance：实例模式
+     * Set 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
+     * @param ProxyType 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
+    }
+
+    /**
+     * Get Ipv6访问配置，不填写保持原有配置。 
+     * @return Ipv6 Ipv6访问配置，不填写保持原有配置。
+     */
+    public Ipv6Access getIpv6() {
+        return this.Ipv6;
+    }
+
+    /**
+     * Set Ipv6访问配置，不填写保持原有配置。
+     * @param Ipv6 Ipv6访问配置，不填写保持原有配置。
+     */
+    public void setIpv6(Ipv6Access Ipv6) {
+        this.Ipv6 = Ipv6;
     }
 
     public ModifyApplicationProxyRequest() {
@@ -232,6 +250,9 @@ instance：实例模式
         if (source.ProxyType != null) {
             this.ProxyType = new String(source.ProxyType);
         }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new Ipv6Access(source.Ipv6);
+        }
     }
 
 
@@ -246,6 +267,7 @@ instance：实例模式
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
+        this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
 
     }
 }

@@ -44,6 +44,13 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
     private String DnsForwardStatus;
 
     /**
+    * 是否开启CNAME加速：ENABLED， DISABLED
+    */
+    @SerializedName("CnameSpeedupStatus")
+    @Expose
+    private String CnameSpeedupStatus;
+
+    /**
      * Get 私有域ID 
      * @return ZoneId 私有域ID
      */
@@ -91,6 +98,22 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
         this.DnsForwardStatus = DnsForwardStatus;
     }
 
+    /**
+     * Get 是否开启CNAME加速：ENABLED， DISABLED 
+     * @return CnameSpeedupStatus 是否开启CNAME加速：ENABLED， DISABLED
+     */
+    public String getCnameSpeedupStatus() {
+        return this.CnameSpeedupStatus;
+    }
+
+    /**
+     * Set 是否开启CNAME加速：ENABLED， DISABLED
+     * @param CnameSpeedupStatus 是否开启CNAME加速：ENABLED， DISABLED
+     */
+    public void setCnameSpeedupStatus(String CnameSpeedupStatus) {
+        this.CnameSpeedupStatus = CnameSpeedupStatus;
+    }
+
     public ModifyPrivateZoneRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
         if (source.DnsForwardStatus != null) {
             this.DnsForwardStatus = new String(source.DnsForwardStatus);
         }
+        if (source.CnameSpeedupStatus != null) {
+            this.CnameSpeedupStatus = new String(source.CnameSpeedupStatus);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
+        this.setParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
 
     }
 }

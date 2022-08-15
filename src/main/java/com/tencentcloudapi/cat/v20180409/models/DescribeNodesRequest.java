@@ -36,7 +36,7 @@ public class DescribeNodesRequest extends AbstractModel{
     * 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
     */
     @SerializedName("Location")
     @Expose
@@ -110,11 +110,11 @@ public class DescribeNodesRequest extends AbstractModel{
      * Get 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li> 
+<li> 3 = 境外</li> 
      * @return Location 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
      */
     public Long getLocation() {
         return this.Location;
@@ -124,11 +124,11 @@ public class DescribeNodesRequest extends AbstractModel{
      * Set 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
      * @param Location 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
      */
     public void setLocation(Long Location) {
         this.Location = Location;

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeZoneSettingRequest extends AbstractModel{
 
     /**
-    * 站点ID
+    * 站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-     * Get 站点ID 
-     * @return ZoneId 站点ID
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID
-     * @param ZoneId 站点ID
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

@@ -23,371 +23,474 @@ import java.util.HashMap;
 public class ModifyZoneSettingRequest extends AbstractModel{
 
     /**
-    * 待变更的站点ID
+    * 待变更的站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 缓存过期时间配置
+    * 缓存过期时间配置。
+不填写表示保持原有配置。
     */
     @SerializedName("Cache")
     @Expose
     private CacheConfig Cache;
 
     /**
-    * 节点缓存键配置
+    * 节点缓存键配置。
+不填写表示保持原有配置。
     */
     @SerializedName("CacheKey")
     @Expose
     private CacheKey CacheKey;
 
     /**
-    * 浏览器缓存配置
+    * 浏览器缓存配置。
+不填写表示保持原有配置。
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAge MaxAge;
 
     /**
-    * 离线缓存
+    * 离线缓存配置。
+不填写表示保持原有配置。
     */
     @SerializedName("OfflineCache")
     @Expose
     private OfflineCache OfflineCache;
 
     /**
-    * Quic访问
+    * Quic访问配置。
+不填写表示保持原有配置。
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
 
     /**
-    * POST请求传输配置
+    * Post请求传输配置。
+不填写表示保持原有配置。
     */
     @SerializedName("PostMaxSize")
     @Expose
     private PostMaxSize PostMaxSize;
 
     /**
-    * 智能压缩配置
+    * 智能压缩配置。
+不填写表示保持原有配置。
     */
     @SerializedName("Compression")
     @Expose
     private Compression Compression;
 
     /**
-    * http2回源配置
+    * Http2回源配置。
+不填写表示保持原有配置。
     */
     @SerializedName("UpstreamHttp2")
     @Expose
     private UpstreamHttp2 UpstreamHttp2;
 
     /**
-    * 访问协议强制https跳转配置
+    * 访问协议强制Https跳转配置。
+不填写表示保持原有配置。
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * Https 加速配置
+    * Https加速配置。
+不填写表示保持原有配置。
     */
     @SerializedName("Https")
     @Expose
     private Https Https;
 
     /**
-    * 源站配置
+    * 源站配置。
+不填写表示保持原有配置。
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * 智能加速配置
+    * 智能加速配置。
+不填写表示保持原有配置。
     */
     @SerializedName("SmartRouting")
     @Expose
     private SmartRouting SmartRouting;
 
     /**
-    * WebSocket配置
+    * WebSocket配置。
+不填写表示保持原有配置。
     */
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
 
     /**
-    * 客户端IP回源请求头配置
+    * 客户端IP回源请求头配置。
+不填写表示保持原有配置。
     */
     @SerializedName("ClientIpHeader")
     @Expose
     private ClientIp ClientIpHeader;
 
     /**
-    * 缓存预刷新配置
+    * 缓存预刷新配置。
+不填写表示保持原有配置。
     */
     @SerializedName("CachePrefresh")
     @Expose
     private CachePrefresh CachePrefresh;
 
     /**
-     * Get 待变更的站点ID 
-     * @return ZoneId 待变更的站点ID
+    * Ipv6访问配置。
+不填写表示保持原有配置。
+    */
+    @SerializedName("Ipv6")
+    @Expose
+    private Ipv6Access Ipv6;
+
+    /**
+     * Get 待变更的站点ID。 
+     * @return ZoneId 待变更的站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 待变更的站点ID
-     * @param ZoneId 待变更的站点ID
+     * Set 待变更的站点ID。
+     * @param ZoneId 待变更的站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 缓存过期时间配置 
-     * @return Cache 缓存过期时间配置
+     * Get 缓存过期时间配置。
+不填写表示保持原有配置。 
+     * @return Cache 缓存过期时间配置。
+不填写表示保持原有配置。
      */
     public CacheConfig getCache() {
         return this.Cache;
     }
 
     /**
-     * Set 缓存过期时间配置
-     * @param Cache 缓存过期时间配置
+     * Set 缓存过期时间配置。
+不填写表示保持原有配置。
+     * @param Cache 缓存过期时间配置。
+不填写表示保持原有配置。
      */
     public void setCache(CacheConfig Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get 节点缓存键配置 
-     * @return CacheKey 节点缓存键配置
+     * Get 节点缓存键配置。
+不填写表示保持原有配置。 
+     * @return CacheKey 节点缓存键配置。
+不填写表示保持原有配置。
      */
     public CacheKey getCacheKey() {
         return this.CacheKey;
     }
 
     /**
-     * Set 节点缓存键配置
-     * @param CacheKey 节点缓存键配置
+     * Set 节点缓存键配置。
+不填写表示保持原有配置。
+     * @param CacheKey 节点缓存键配置。
+不填写表示保持原有配置。
      */
     public void setCacheKey(CacheKey CacheKey) {
         this.CacheKey = CacheKey;
     }
 
     /**
-     * Get 浏览器缓存配置 
-     * @return MaxAge 浏览器缓存配置
+     * Get 浏览器缓存配置。
+不填写表示保持原有配置。 
+     * @return MaxAge 浏览器缓存配置。
+不填写表示保持原有配置。
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set 浏览器缓存配置
-     * @param MaxAge 浏览器缓存配置
+     * Set 浏览器缓存配置。
+不填写表示保持原有配置。
+     * @param MaxAge 浏览器缓存配置。
+不填写表示保持原有配置。
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get 离线缓存 
-     * @return OfflineCache 离线缓存
+     * Get 离线缓存配置。
+不填写表示保持原有配置。 
+     * @return OfflineCache 离线缓存配置。
+不填写表示保持原有配置。
      */
     public OfflineCache getOfflineCache() {
         return this.OfflineCache;
     }
 
     /**
-     * Set 离线缓存
-     * @param OfflineCache 离线缓存
+     * Set 离线缓存配置。
+不填写表示保持原有配置。
+     * @param OfflineCache 离线缓存配置。
+不填写表示保持原有配置。
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
         this.OfflineCache = OfflineCache;
     }
 
     /**
-     * Get Quic访问 
-     * @return Quic Quic访问
+     * Get Quic访问配置。
+不填写表示保持原有配置。 
+     * @return Quic Quic访问配置。
+不填写表示保持原有配置。
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set Quic访问
-     * @param Quic Quic访问
+     * Set Quic访问配置。
+不填写表示保持原有配置。
+     * @param Quic Quic访问配置。
+不填写表示保持原有配置。
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get POST请求传输配置 
-     * @return PostMaxSize POST请求传输配置
+     * Get Post请求传输配置。
+不填写表示保持原有配置。 
+     * @return PostMaxSize Post请求传输配置。
+不填写表示保持原有配置。
      */
     public PostMaxSize getPostMaxSize() {
         return this.PostMaxSize;
     }
 
     /**
-     * Set POST请求传输配置
-     * @param PostMaxSize POST请求传输配置
+     * Set Post请求传输配置。
+不填写表示保持原有配置。
+     * @param PostMaxSize Post请求传输配置。
+不填写表示保持原有配置。
      */
     public void setPostMaxSize(PostMaxSize PostMaxSize) {
         this.PostMaxSize = PostMaxSize;
     }
 
     /**
-     * Get 智能压缩配置 
-     * @return Compression 智能压缩配置
+     * Get 智能压缩配置。
+不填写表示保持原有配置。 
+     * @return Compression 智能压缩配置。
+不填写表示保持原有配置。
      */
     public Compression getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 智能压缩配置
-     * @param Compression 智能压缩配置
+     * Set 智能压缩配置。
+不填写表示保持原有配置。
+     * @param Compression 智能压缩配置。
+不填写表示保持原有配置。
      */
     public void setCompression(Compression Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get http2回源配置 
-     * @return UpstreamHttp2 http2回源配置
+     * Get Http2回源配置。
+不填写表示保持原有配置。 
+     * @return UpstreamHttp2 Http2回源配置。
+不填写表示保持原有配置。
      */
     public UpstreamHttp2 getUpstreamHttp2() {
         return this.UpstreamHttp2;
     }
 
     /**
-     * Set http2回源配置
-     * @param UpstreamHttp2 http2回源配置
+     * Set Http2回源配置。
+不填写表示保持原有配置。
+     * @param UpstreamHttp2 Http2回源配置。
+不填写表示保持原有配置。
      */
     public void setUpstreamHttp2(UpstreamHttp2 UpstreamHttp2) {
         this.UpstreamHttp2 = UpstreamHttp2;
     }
 
     /**
-     * Get 访问协议强制https跳转配置 
-     * @return ForceRedirect 访问协议强制https跳转配置
+     * Get 访问协议强制Https跳转配置。
+不填写表示保持原有配置。 
+     * @return ForceRedirect 访问协议强制Https跳转配置。
+不填写表示保持原有配置。
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set 访问协议强制https跳转配置
-     * @param ForceRedirect 访问协议强制https跳转配置
+     * Set 访问协议强制Https跳转配置。
+不填写表示保持原有配置。
+     * @param ForceRedirect 访问协议强制Https跳转配置。
+不填写表示保持原有配置。
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get Https 加速配置 
-     * @return Https Https 加速配置
+     * Get Https加速配置。
+不填写表示保持原有配置。 
+     * @return Https Https加速配置。
+不填写表示保持原有配置。
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set Https 加速配置
-     * @param Https Https 加速配置
+     * Set Https加速配置。
+不填写表示保持原有配置。
+     * @param Https Https加速配置。
+不填写表示保持原有配置。
      */
     public void setHttps(Https Https) {
         this.Https = Https;
     }
 
     /**
-     * Get 源站配置 
-     * @return Origin 源站配置
+     * Get 源站配置。
+不填写表示保持原有配置。 
+     * @return Origin 源站配置。
+不填写表示保持原有配置。
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set 源站配置
-     * @param Origin 源站配置
+     * Set 源站配置。
+不填写表示保持原有配置。
+     * @param Origin 源站配置。
+不填写表示保持原有配置。
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get 智能加速配置 
-     * @return SmartRouting 智能加速配置
+     * Get 智能加速配置。
+不填写表示保持原有配置。 
+     * @return SmartRouting 智能加速配置。
+不填写表示保持原有配置。
      */
     public SmartRouting getSmartRouting() {
         return this.SmartRouting;
     }
 
     /**
-     * Set 智能加速配置
-     * @param SmartRouting 智能加速配置
+     * Set 智能加速配置。
+不填写表示保持原有配置。
+     * @param SmartRouting 智能加速配置。
+不填写表示保持原有配置。
      */
     public void setSmartRouting(SmartRouting SmartRouting) {
         this.SmartRouting = SmartRouting;
     }
 
     /**
-     * Get WebSocket配置 
-     * @return WebSocket WebSocket配置
+     * Get WebSocket配置。
+不填写表示保持原有配置。 
+     * @return WebSocket WebSocket配置。
+不填写表示保持原有配置。
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
     }
 
     /**
-     * Set WebSocket配置
-     * @param WebSocket WebSocket配置
+     * Set WebSocket配置。
+不填写表示保持原有配置。
+     * @param WebSocket WebSocket配置。
+不填写表示保持原有配置。
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
     }
 
     /**
-     * Get 客户端IP回源请求头配置 
-     * @return ClientIpHeader 客户端IP回源请求头配置
+     * Get 客户端IP回源请求头配置。
+不填写表示保持原有配置。 
+     * @return ClientIpHeader 客户端IP回源请求头配置。
+不填写表示保持原有配置。
      */
     public ClientIp getClientIpHeader() {
         return this.ClientIpHeader;
     }
 
     /**
-     * Set 客户端IP回源请求头配置
-     * @param ClientIpHeader 客户端IP回源请求头配置
+     * Set 客户端IP回源请求头配置。
+不填写表示保持原有配置。
+     * @param ClientIpHeader 客户端IP回源请求头配置。
+不填写表示保持原有配置。
      */
     public void setClientIpHeader(ClientIp ClientIpHeader) {
         this.ClientIpHeader = ClientIpHeader;
     }
 
     /**
-     * Get 缓存预刷新配置 
-     * @return CachePrefresh 缓存预刷新配置
+     * Get 缓存预刷新配置。
+不填写表示保持原有配置。 
+     * @return CachePrefresh 缓存预刷新配置。
+不填写表示保持原有配置。
      */
     public CachePrefresh getCachePrefresh() {
         return this.CachePrefresh;
     }
 
     /**
-     * Set 缓存预刷新配置
-     * @param CachePrefresh 缓存预刷新配置
+     * Set 缓存预刷新配置。
+不填写表示保持原有配置。
+     * @param CachePrefresh 缓存预刷新配置。
+不填写表示保持原有配置。
      */
     public void setCachePrefresh(CachePrefresh CachePrefresh) {
         this.CachePrefresh = CachePrefresh;
+    }
+
+    /**
+     * Get Ipv6访问配置。
+不填写表示保持原有配置。 
+     * @return Ipv6 Ipv6访问配置。
+不填写表示保持原有配置。
+     */
+    public Ipv6Access getIpv6() {
+        return this.Ipv6;
+    }
+
+    /**
+     * Set Ipv6访问配置。
+不填写表示保持原有配置。
+     * @param Ipv6 Ipv6访问配置。
+不填写表示保持原有配置。
+     */
+    public void setIpv6(Ipv6Access Ipv6) {
+        this.Ipv6 = Ipv6;
     }
 
     public ModifyZoneSettingRequest() {
@@ -446,6 +549,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         if (source.CachePrefresh != null) {
             this.CachePrefresh = new CachePrefresh(source.CachePrefresh);
         }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new Ipv6Access(source.Ipv6);
+        }
     }
 
 
@@ -469,6 +575,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
+        this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
 
     }
 }

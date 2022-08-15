@@ -89,6 +89,39 @@ Block 建议屏蔽；
     private MoanResult [] MoanResults;
 
     /**
+    * 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
+    * 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LanguageResults")
+    @Expose
+    private AudioResultDetailLanguageResult [] LanguageResults;
+
+    /**
+    * 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpeakerResults")
+    @Expose
+    private AudioResultDetailSpeakerResult [] SpeakerResults;
+
+    /**
+    * 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecognitionResults")
+    @Expose
+    private RecognitionResult [] RecognitionResults;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -264,6 +297,90 @@ Block 建议屏蔽；
     }
 
     /**
+     * Get 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
+    /**
+     * Get 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioResultDetailLanguageResult [] getLanguageResults() {
+        return this.LanguageResults;
+    }
+
+    /**
+     * Set 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLanguageResults(AudioResultDetailLanguageResult [] LanguageResults) {
+        this.LanguageResults = LanguageResults;
+    }
+
+    /**
+     * Get 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpeakerResults 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioResultDetailSpeakerResult [] getSpeakerResults() {
+        return this.SpeakerResults;
+    }
+
+    /**
+     * Set 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpeakerResults 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpeakerResults(AudioResultDetailSpeakerResult [] SpeakerResults) {
+        this.SpeakerResults = SpeakerResults;
+    }
+
+    /**
+     * Get 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecognitionResults 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RecognitionResult [] getRecognitionResults() {
+        return this.RecognitionResults;
+    }
+
+    /**
+     * Set 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecognitionResults 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
+        this.RecognitionResults = RecognitionResults;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -317,6 +434,27 @@ Block 建议屏蔽；
                 this.MoanResults[i] = new MoanResult(source.MoanResults[i]);
             }
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
+        if (source.LanguageResults != null) {
+            this.LanguageResults = new AudioResultDetailLanguageResult[source.LanguageResults.length];
+            for (int i = 0; i < source.LanguageResults.length; i++) {
+                this.LanguageResults[i] = new AudioResultDetailLanguageResult(source.LanguageResults[i]);
+            }
+        }
+        if (source.SpeakerResults != null) {
+            this.SpeakerResults = new AudioResultDetailSpeakerResult[source.SpeakerResults.length];
+            for (int i = 0; i < source.SpeakerResults.length; i++) {
+                this.SpeakerResults[i] = new AudioResultDetailSpeakerResult(source.SpeakerResults[i]);
+            }
+        }
+        if (source.RecognitionResults != null) {
+            this.RecognitionResults = new RecognitionResult[source.RecognitionResults.length];
+            for (int i = 0; i < source.RecognitionResults.length; i++) {
+                this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -335,6 +473,10 @@ Block 建议屏蔽；
         this.setParamSimple(map, prefix + "AsrText", this.AsrText);
         this.setParamArrayObj(map, prefix + "TextResults.", this.TextResults);
         this.setParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
+        this.setParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
+        this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

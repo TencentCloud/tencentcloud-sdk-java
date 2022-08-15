@@ -94,6 +94,13 @@ public class TextToVoiceRequest extends AbstractModel{
     private String Codec;
 
     /**
+    * 是否开启时间戳功能，默认为false。
+    */
+    @SerializedName("EnableSubtitle")
+    @Expose
+    private Boolean EnableSubtitle;
+
+    /**
      * Get 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。 
      * @return Text 合成语音的源文本，按UTF-8编码统一计算。
@@ -257,6 +264,22 @@ public class TextToVoiceRequest extends AbstractModel{
         this.Codec = Codec;
     }
 
+    /**
+     * Get 是否开启时间戳功能，默认为false。 
+     * @return EnableSubtitle 是否开启时间戳功能，默认为false。
+     */
+    public Boolean getEnableSubtitle() {
+        return this.EnableSubtitle;
+    }
+
+    /**
+     * Set 是否开启时间戳功能，默认为false。
+     * @param EnableSubtitle 是否开启时间戳功能，默认为false。
+     */
+    public void setEnableSubtitle(Boolean EnableSubtitle) {
+        this.EnableSubtitle = EnableSubtitle;
+    }
+
     public TextToVoiceRequest() {
     }
 
@@ -295,6 +318,9 @@ public class TextToVoiceRequest extends AbstractModel{
         if (source.Codec != null) {
             this.Codec = new String(source.Codec);
         }
+        if (source.EnableSubtitle != null) {
+            this.EnableSubtitle = new Boolean(source.EnableSubtitle);
+        }
     }
 
 
@@ -312,6 +338,7 @@ public class TextToVoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
+        this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
 
     }
 }

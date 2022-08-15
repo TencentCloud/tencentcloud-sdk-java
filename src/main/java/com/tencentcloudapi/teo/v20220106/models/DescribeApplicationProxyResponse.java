@@ -23,40 +23,35 @@ import java.util.HashMap;
 public class DescribeApplicationProxyResponse extends AbstractModel{
 
     /**
-    * 数据列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 应用代理列表。
     */
     @SerializedName("Data")
     @Expose
     private ApplicationProxy [] Data;
 
     /**
-    * 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 记录总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
+    * 字段已废弃。
     */
     @SerializedName("Quota")
     @Expose
     private Long Quota;
 
     /**
-    * 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
     */
     @SerializedName("IpCount")
     @Expose
     private Long IpCount;
 
     /**
-    * 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
     */
     @SerializedName("DomainCount")
     @Expose
@@ -70,100 +65,80 @@ public class DescribeApplicationProxyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 数据列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 数据列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用代理列表。 
+     * @return Data 应用代理列表。
      */
     public ApplicationProxy [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 数据列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 数据列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 应用代理列表。
+     * @param Data 应用代理列表。
      */
     public void setData(ApplicationProxy [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 记录总数。 
+     * @return TotalCount 记录总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 记录总数。
+     * @param TotalCount 记录总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Quota 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 字段已废弃。 
+     * @return Quota 字段已废弃。
      */
     public Long getQuota() {
         return this.Quota;
     }
 
     /**
-     * Set 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Quota 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 字段已废弃。
+     * @param Quota 字段已废弃。
      */
     public void setQuota(Long Quota) {
         this.Quota = Quota;
     }
 
     /**
-     * Get 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpCount 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。 
+     * @return IpCount 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
      */
     public Long getIpCount() {
         return this.IpCount;
     }
 
     /**
-     * Set 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpCount 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
+     * @param IpCount 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
      */
     public void setIpCount(Long IpCount) {
         this.IpCount = IpCount;
     }
 
     /**
-     * Get 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomainCount 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。 
+     * @return DomainCount 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
      */
     public Long getDomainCount() {
         return this.DomainCount;
     }
 
     /**
-     * Set 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomainCount 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
+     * @param DomainCount 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;

@@ -37,7 +37,7 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
     private String DataId;
 
     /**
-    * 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+    * 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
     */
     @SerializedName("FileFormat")
     @Expose
@@ -52,8 +52,8 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
 
     /**
     * 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
     */
     @SerializedName("FileContent")
     @Expose
@@ -61,7 +61,7 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
 
     /**
     * 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
     */
     @SerializedName("FileUrl")
     @Expose
@@ -100,16 +100,16 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入 
-     * @return FileFormat 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+     * Get 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。 
+     * @return FileFormat 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
      */
     public String getFileFormat() {
         return this.FileFormat;
     }
 
     /**
-     * Set 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
-     * @param FileFormat 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+     * Set 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
+     * @param FileFormat 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
      */
     public void setFileFormat(String FileFormat) {
         this.FileFormat = FileFormat;
@@ -133,11 +133,11 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
 
     /**
      * Get 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3 
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。 
      * @return FileContent 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
      */
     public String getFileContent() {
         return this.FileContent;
@@ -145,11 +145,11 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
 
     /**
      * Set 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
      * @param FileContent 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
@@ -157,9 +157,9 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
 
     /**
      * Get 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent； 
+支持范围及格式：同FileContent； 
      * @return FileUrl 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -167,9 +167,9 @@ public class CreateAudioModerationSyncTaskRequest extends AbstractModel{
 
     /**
      * Set 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
      * @param FileUrl 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

@@ -93,6 +93,13 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
     private Boolean IgnoreScript;
 
     /**
+    * 是否需要返回测试数据文件信息
+    */
+    @SerializedName("IgnoreDataset")
+    @Expose
+    private Boolean IgnoreDataset;
+
+    /**
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
@@ -252,6 +259,22 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
         this.IgnoreScript = IgnoreScript;
     }
 
+    /**
+     * Get 是否需要返回测试数据文件信息 
+     * @return IgnoreDataset 是否需要返回测试数据文件信息
+     */
+    public Boolean getIgnoreDataset() {
+        return this.IgnoreDataset;
+    }
+
+    /**
+     * Set 是否需要返回测试数据文件信息
+     * @param IgnoreDataset 是否需要返回测试数据文件信息
+     */
+    public void setIgnoreDataset(Boolean IgnoreDataset) {
+        this.IgnoreDataset = IgnoreDataset;
+    }
+
     public DescribeScenarioWithJobsRequest() {
     }
 
@@ -296,6 +319,9 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
         if (source.IgnoreScript != null) {
             this.IgnoreScript = new Boolean(source.IgnoreScript);
         }
+        if (source.IgnoreDataset != null) {
+            this.IgnoreDataset = new Boolean(source.IgnoreDataset);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Ascend", this.Ascend);
         this.setParamObj(map, prefix + "ScenarioRelatedJobsParams.", this.ScenarioRelatedJobsParams);
         this.setParamSimple(map, prefix + "IgnoreScript", this.IgnoreScript);
+        this.setParamSimple(map, prefix + "IgnoreDataset", this.IgnoreDataset);
 
     }
 }

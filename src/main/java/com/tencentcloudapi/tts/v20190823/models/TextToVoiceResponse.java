@@ -37,6 +37,13 @@ public class TextToVoiceResponse extends AbstractModel{
     private String SessionId;
 
     /**
+    * 时间戳信息，若未开启时间戳，则返回空数组。
+    */
+    @SerializedName("Subtitles")
+    @Expose
+    private Subtitle [] Subtitles;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class TextToVoiceResponse extends AbstractModel{
     }
 
     /**
+     * Get 时间戳信息，若未开启时间戳，则返回空数组。 
+     * @return Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
+     */
+    public Subtitle [] getSubtitles() {
+        return this.Subtitles;
+    }
+
+    /**
+     * Set 时间戳信息，若未开启时间戳，则返回空数组。
+     * @param Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
+     */
+    public void setSubtitles(Subtitle [] Subtitles) {
+        this.Subtitles = Subtitles;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,12 @@ public class TextToVoiceResponse extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Subtitles != null) {
+            this.Subtitles = new Subtitle[source.Subtitles.length];
+            for (int i = 0; i < source.Subtitles.length; i++) {
+                this.Subtitles[i] = new Subtitle(source.Subtitles[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +146,7 @@ public class TextToVoiceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Audio", this.Audio);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

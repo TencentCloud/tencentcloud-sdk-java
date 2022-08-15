@@ -659,4 +659,24 @@ public class MongodbClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *包年包月实例隔离接口
+     * @param req TerminateDBInstancesRequest
+     * @return TerminateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDBInstancesResponse TerminateDBInstances(TerminateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

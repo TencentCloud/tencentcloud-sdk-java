@@ -65,6 +65,13 @@ public class DescribeNamespacesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 仅查询启用了 KMS 镜像签名的空间
+    */
+    @SerializedName("KmsSignPolicy")
+    @Expose
+    private Boolean KmsSignPolicy;
+
+    /**
      * Get 实例Id 
      * @return RegistryId 实例Id
      */
@@ -160,6 +167,22 @@ public class DescribeNamespacesRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 仅查询启用了 KMS 镜像签名的空间 
+     * @return KmsSignPolicy 仅查询启用了 KMS 镜像签名的空间
+     */
+    public Boolean getKmsSignPolicy() {
+        return this.KmsSignPolicy;
+    }
+
+    /**
+     * Set 仅查询启用了 KMS 镜像签名的空间
+     * @param KmsSignPolicy 仅查询启用了 KMS 镜像签名的空间
+     */
+    public void setKmsSignPolicy(Boolean KmsSignPolicy) {
+        this.KmsSignPolicy = KmsSignPolicy;
+    }
+
     public DescribeNamespacesRequest() {
     }
 
@@ -189,6 +212,9 @@ public class DescribeNamespacesRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.KmsSignPolicy != null) {
+            this.KmsSignPolicy = new Boolean(source.KmsSignPolicy);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class DescribeNamespacesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "KmsSignPolicy", this.KmsSignPolicy);
 
     }
 }

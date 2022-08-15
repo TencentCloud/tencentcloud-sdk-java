@@ -39,7 +39,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量删除任务，仅对任务状态为”已停止“有效；（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+批量删除任务，仅对任务状态为”已停止“有效；
 
      * @param req BatchDeleteTasksNewRequest
      * @return BatchDeleteTasksNewResponse
@@ -60,7 +61,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量修改任务责任人（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+批量修改任务责任人
      * @param req BatchModifyOwnersNewRequest
      * @return BatchModifyOwnersNewResponse
      * @throws TencentCloudSDKException
@@ -80,7 +82,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
      * @param req BatchStopTasksNewRequest
      * @return BatchStopTasksNewResponse
      * @throws TencentCloudSDKException
@@ -100,7 +103,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建文件夹（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+创建文件夹
      * @param req CreateFolderRequest
      * @return CreateFolderResponse
      * @throws TencentCloudSDKException
@@ -120,7 +124,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建任务（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+创建任务
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -140,7 +145,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建工作流（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+创建工作流
      * @param req CreateWorkflowRequest
      * @return CreateWorkflowResponse
      * @throws TencentCloudSDKException
@@ -160,7 +166,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *删除文件夹（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+删除文件夹
      * @param req DeleteFolderRequest
      * @return DeleteFolderResponse
      * @throws TencentCloudSDKException
@@ -180,7 +187,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *删除工作流（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+删除工作流
      * @param req DeleteWorkflowNewRequest
      * @return DeleteWorkflowNewResponse
      * @throws TencentCloudSDKException
@@ -200,7 +208,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *根据层级查找上/下游任务节点（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+根据层级查找上/下游任务节点
      * @param req DescribeDependTasksNewRequest
      * @return DescribeDependTasksNewResponse
      * @throws TencentCloudSDKException
@@ -220,7 +229,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *拉取文件夹目录（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+拉取文件夹目录
      * @param req DescribeFolderListRequest
      * @return DescribeFolderListResponse
      * @throws TencentCloudSDKException
@@ -240,7 +250,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *拉取文件夹下的工作流（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+拉取文件夹下的工作流
      * @param req DescribeFolderWorkflowListRequest
      * @return DescribeFolderWorkflowListResponse
      * @throws TencentCloudSDKException
@@ -260,7 +271,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取实例日志列表（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+获取实例日志列表
      * @param req DescribeInstanceLogsRequest
      * @return DescribeInstanceLogsResponse
      * @throws TencentCloudSDKException
@@ -320,7 +332,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询任务具体详情（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+查询任务具体详情
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
      * @throws TencentCloudSDKException
@@ -360,7 +373,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询任务脚本（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+查询任务脚本
      * @param req DescribeTaskScriptRequest
      * @return DescribeTaskScriptResponse
      * @throws TencentCloudSDKException
@@ -380,7 +394,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *根据工作流分页查询任务（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+根据工作流分页查询任务
      * @param req DescribeTasksByPageRequest
      * @return DescribeTasksByPageResponse
      * @throws TencentCloudSDKException
@@ -400,7 +415,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *实例批量置成功（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+实例批量置成功
      * @param req ForceSucInstancesRequest
      * @return ForceSucInstancesResponse
      * @throws TencentCloudSDKException
@@ -420,7 +436,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量冻结任务（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+批量冻结任务
      * @param req FreezeTasksRequest
      * @return FreezeTasksResponse
      * @throws TencentCloudSDKException
@@ -440,7 +457,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *基于多个工作流进行批量冻结任务操作（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+基于多个工作流进行批量冻结任务操作
      * @param req FreezeTasksByMultiWorkflowRequest
      * @return FreezeTasksByMultiWorkflowResponse
      * @throws TencentCloudSDKException
@@ -460,7 +478,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *实例批量终止操作（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+实例批量终止操作
      * @param req KillInstancesRequest
      * @return KillInstancesResponse
      * @throws TencentCloudSDKException
@@ -480,7 +499,10 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *任务批量补录，调度状态任务才可以补录；（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+任务批量补录，调度状态任务才可以补录；
+
+
 
      * @param req MakeUpTasksNewRequest
      * @return MakeUpTasksNewResponse
@@ -501,7 +523,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *工作流下所有任务的补录（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+工作流下所有任务的补录
      * @param req MakeUpWorkflowNewRequest
      * @return MakeUpWorkflowNewResponse
      * @throws TencentCloudSDKException
@@ -521,7 +544,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *文件夹更新（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+文件夹更新
      * @param req ModifyFolderRequest
      * @return ModifyFolderResponse
      * @throws TencentCloudSDKException
@@ -541,7 +565,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *更新任务（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+更新任务
      * @param req ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
      * @throws TencentCloudSDKException
@@ -561,7 +586,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *添加父任务依赖（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+添加父任务依赖
      * @param req ModifyTaskLinksRequest
      * @return ModifyTaskLinksResponse
      * @throws TencentCloudSDKException
@@ -581,7 +607,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *修改任务脚本（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+修改任务脚本
      * @param req ModifyTaskScriptRequest
      * @return ModifyTaskScriptResponse
      * @throws TencentCloudSDKException
@@ -601,7 +628,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *更新工作流（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+更新工作流
      * @param req ModifyWorkflowInfoRequest
      * @return ModifyWorkflowInfoResponse
      * @throws TencentCloudSDKException
@@ -621,7 +649,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *更新工作流调度（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+更新工作流调度
      * @param req ModifyWorkflowScheduleRequest
      * @return ModifyWorkflowScheduleResponse
      * @throws TencentCloudSDKException
@@ -641,7 +670,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *注册事件（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+注册事件
      * @param req RegisterEventRequest
      * @return RegisterEventResponse
      * @throws TencentCloudSDKException
@@ -661,7 +691,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *注册事件监听器（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+注册事件监听器
      * @param req RegisterEventListenerRequest
      * @return RegisterEventListenerResponse
      * @throws TencentCloudSDKException
@@ -681,7 +712,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *实例批量重跑（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+实例批量重跑
      * @param req RerunInstancesRequest
      * @return RerunInstancesResponse
      * @throws TencentCloudSDKException
@@ -701,7 +733,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *运行任务（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+运行任务
      * @param req RunTaskRequest
      * @return RunTaskResponse
      * @throws TencentCloudSDKException
@@ -721,7 +754,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *设置任务告警，新建/更新告警信息（最新）（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+设置任务告警，新建/更新告警信息（最新）
      * @param req SetTaskAlarmNewRequest
      * @return SetTaskAlarmNewResponse
      * @throws TencentCloudSDKException
@@ -741,7 +775,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *提交任务（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+提交任务
      * @param req SubmitTaskRequest
      * @return SubmitTaskResponse
      * @throws TencentCloudSDKException
@@ -761,7 +796,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *提交工作流（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+提交工作流
      * @param req SubmitWorkflowRequest
      * @return SubmitWorkflowResponse
      * @throws TencentCloudSDKException
@@ -781,7 +817,8 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *触发事件（Beta版本）
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+触发事件
      * @param req TriggerEventRequest
      * @return TriggerEventResponse
      * @throws TencentCloudSDKException

@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class Hsts extends AbstractModel{
 
     /**
-    * 是否开启，on或off。
+    * 是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * MaxAge数值。
+    * MaxAge数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxAge")
@@ -38,7 +40,9 @@ public class Hsts extends AbstractModel{
     private Long MaxAge;
 
     /**
-    * 是否包含子域名，on或off。
+    * 是否包含子域名，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeSubDomains")
@@ -46,7 +50,9 @@ public class Hsts extends AbstractModel{
     private String IncludeSubDomains;
 
     /**
-    * 是否预加载，on或off。
+    * 是否开启预加载，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Preload")
@@ -54,25 +60,33 @@ public class Hsts extends AbstractModel{
     private String Preload;
 
     /**
-     * Get 是否开启，on或off。 
-     * @return Switch 是否开启，on或off。
+     * Get 是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch 是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 是否开启，on或off。
-     * @param Switch 是否开启，on或off。
+     * Set 是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch 是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get MaxAge数值。
+     * Get MaxAge数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAge MaxAge数值。
+     * @return MaxAge MaxAge数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxAge() {
@@ -80,9 +94,9 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Set MaxAge数值。
+     * Set MaxAge数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge MaxAge数值。
+     * @param MaxAge MaxAge数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxAge(Long MaxAge) {
@@ -90,9 +104,13 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Get 是否包含子域名，on或off。
+     * Get 是否包含子域名，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncludeSubDomains 是否包含子域名，on或off。
+     * @return IncludeSubDomains 是否包含子域名，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeSubDomains() {
@@ -100,9 +118,13 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Set 是否包含子域名，on或off。
+     * Set 是否包含子域名，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncludeSubDomains 是否包含子域名，on或off。
+     * @param IncludeSubDomains 是否包含子域名，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
@@ -110,9 +132,13 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Get 是否预加载，on或off。
+     * Get 是否开启预加载，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Preload 是否预加载，on或off。
+     * @return Preload 是否开启预加载，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreload() {
@@ -120,9 +146,13 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Set 是否预加载，on或off。
+     * Set 是否开启预加载，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Preload 是否预加载，on或off。
+     * @param Preload 是否开启预加载，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreload(String Preload) {

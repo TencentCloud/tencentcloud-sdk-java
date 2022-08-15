@@ -23,64 +23,64 @@ import java.util.HashMap;
 public class MaxAge extends AbstractModel{
 
     /**
-    * MaxAge 时间设置，单位秒，最大365天
-注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaxAgeTime")
-    @Expose
-    private Long MaxAgeTime;
-
-    /**
-    * 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
     */
     @SerializedName("FollowOrigin")
     @Expose
     private String FollowOrigin;
 
     /**
-     * Get MaxAge 时间设置，单位秒，最大365天
+    * MaxAge 时间设置，单位秒，最大365天。
 注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAgeTime MaxAge 时间设置，单位秒，最大365天
-注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMaxAgeTime() {
-        return this.MaxAgeTime;
-    }
+    */
+    @SerializedName("MaxAgeTime")
+    @Expose
+    private Long MaxAgeTime;
 
     /**
-     * Set MaxAge 时间设置，单位秒，最大365天
-注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAgeTime MaxAge 时间设置，单位秒，最大365天
-注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaxAgeTime(Long MaxAgeTime) {
-        this.MaxAgeTime = MaxAgeTime;
-    }
-
-    /**
-     * Get 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FollowOrigin 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li> 
+     * @return FollowOrigin 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FollowOrigin 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
+     * @param FollowOrigin 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;
+    }
+
+    /**
+     * Get MaxAge 时间设置，单位秒，最大365天。
+注意：时间为0，即不缓存。 
+     * @return MaxAgeTime MaxAge 时间设置，单位秒，最大365天。
+注意：时间为0，即不缓存。
+     */
+    public Long getMaxAgeTime() {
+        return this.MaxAgeTime;
+    }
+
+    /**
+     * Set MaxAge 时间设置，单位秒，最大365天。
+注意：时间为0，即不缓存。
+     * @param MaxAgeTime MaxAge 时间设置，单位秒，最大365天。
+注意：时间为0，即不缓存。
+     */
+    public void setMaxAgeTime(Long MaxAgeTime) {
+        this.MaxAgeTime = MaxAgeTime;
     }
 
     public MaxAge() {
@@ -91,11 +91,11 @@ public class MaxAge extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public MaxAge(MaxAge source) {
-        if (source.MaxAgeTime != null) {
-            this.MaxAgeTime = new Long(source.MaxAgeTime);
-        }
         if (source.FollowOrigin != null) {
             this.FollowOrigin = new String(source.FollowOrigin);
+        }
+        if (source.MaxAgeTime != null) {
+            this.MaxAgeTime = new Long(source.MaxAgeTime);
         }
     }
 
@@ -104,8 +104,8 @@ public class MaxAge extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
         this.setParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);
+        this.setParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
 
     }
 }

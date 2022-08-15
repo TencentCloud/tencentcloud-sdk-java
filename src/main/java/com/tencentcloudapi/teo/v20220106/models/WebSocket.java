@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class WebSocket extends AbstractModel{
 
     /**
-    * WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+    * WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 设置超时时间，单位为秒，最大超时时间120秒。
+    * 超时时间，单位为秒，最大超时时间120秒。
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-     * Get WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on. 
-     * @return Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+     * Get WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li> 
+     * @return Switch WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
-     * @param Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+     * Set WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
+     * @param Switch WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 设置超时时间，单位为秒，最大超时时间120秒。 
-     * @return Timeout 设置超时时间，单位为秒，最大超时时间120秒。
+     * Get 超时时间，单位为秒，最大超时时间120秒。 
+     * @return Timeout 超时时间，单位为秒，最大超时时间120秒。
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 设置超时时间，单位为秒，最大超时时间120秒。
-     * @param Timeout 设置超时时间，单位为秒，最大超时时间120秒。
+     * Set 超时时间，单位为秒，最大超时时间120秒。
+     * @param Timeout 超时时间，单位为秒，最大超时时间120秒。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

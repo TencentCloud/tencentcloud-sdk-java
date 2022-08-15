@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class CachePrefresh extends AbstractModel{
 
     /**
-    * 缓存预刷新配置开关
+    * 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 缓存预刷新百分比：1-99
+    * 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
@@ -38,25 +40,33 @@ public class CachePrefresh extends AbstractModel{
     private Long Percent;
 
     /**
-     * Get 缓存预刷新配置开关 
-     * @return Switch 缓存预刷新配置开关
+     * Get 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 缓存预刷新配置开关
-     * @param Switch 缓存预刷新配置开关
+     * Set 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 缓存预刷新百分比：1-99
+     * Get 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Percent 缓存预刷新百分比：1-99
+     * @return Percent 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
@@ -64,9 +74,9 @@ public class CachePrefresh extends AbstractModel{
     }
 
     /**
-     * Set 缓存预刷新百分比：1-99
+     * Set 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Percent 缓存预刷新百分比：1-99
+     * @param Percent 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {

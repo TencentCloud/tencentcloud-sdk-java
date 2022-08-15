@@ -58,6 +58,13 @@ public class BusinessSummaryTotal extends AbstractModel{
     private String TotalCost;
 
     /**
+    * 分成金金额
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
      * Get 总花费 
      * @return RealTotalCost 总花费
      */
@@ -137,6 +144,22 @@ public class BusinessSummaryTotal extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
+    /**
+     * Get 分成金金额 
+     * @return TransferPayAmount 分成金金额
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金金额
+     * @param TransferPayAmount 分成金金额
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
     public BusinessSummaryTotal() {
     }
 
@@ -160,6 +183,9 @@ public class BusinessSummaryTotal extends AbstractModel{
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class BusinessSummaryTotal extends AbstractModel{
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

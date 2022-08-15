@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ApplicationProxyRule extends AbstractModel{
 
     /**
-    * 协议，取值为TCP或者UDP
+    * 协议，取值有：
+<li>TCP：TCP协议；</li>
+<li>UDP：UDP协议。</li>
     */
     @SerializedName("Proto")
     @Expose
@@ -31,17 +33,18 @@ public class ApplicationProxyRule extends AbstractModel{
 
     /**
     * 端口，支持格式：
-80：80端口
-81-90：81至90端口
+单个端口，如：80。
+端口段，如：81-82。表示81，82两个端口。
+注意：一条规则最多可填写20个端口。
     */
     @SerializedName("Port")
     @Expose
     private String [] Port;
 
     /**
-    * 源站类型，取值：
-custom：手动添加
-origins：源站组
+    * 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -51,17 +54,16 @@ origins：源站组
     * 源站信息：
 当OriginType=custom时，表示一个或多个源站，如：
 OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]
-
-当OriginType=origins时，包含一个元素，表示源站组ID，如：
-OriginValue=["origin-xxx"]
+OriginValue=["test.com:80"]；
+当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
+OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     */
     @SerializedName("OriginValue")
     @Expose
     private String [] OriginValue;
 
     /**
-    * 规则ID
+    * 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -69,49 +71,56 @@ OriginValue=["origin-xxx"]
     private String RuleId;
 
     /**
-    * 状态：
-online：启用
-offline：停用
-progress：部署中
-stopping：停用中
-fail：部署失败/停用失败
+    * 状态，取值有：
+<li>online：启用；</li>
+<li>offline：停用；</li>
+<li>progress：部署中；</li>
+<li>stopping：停用中；</li>
+<li>fail：部署失败/停用失败。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 传递客户端IP，当Proto=TCP时，取值：
-TOA：TOA
-PPV1: Proxy Protocol传递，协议版本V1
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
-当Proto=UDP时，取值：
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
+    * 传递客户端IP，取值有：
+<li>TOA：TOA（仅Proto=TCP时可选）；</li>
+<li>PPV1：Proxy Protocol传递，协议版本V1（仅Proto=TCP时可选）；</li>
+<li>PPV2：Proxy Protocol传递，协议版本V2；</li>
+<li>OFF：不传递。</li>
     */
     @SerializedName("ForwardClientIp")
     @Expose
     private String ForwardClientIp;
 
     /**
-    * 是否开启会话保持
+    * 是否开启会话保持，取值有：
+<li>true：开启；</li>
+<li>false：关闭。</li>
     */
     @SerializedName("SessionPersist")
     @Expose
     private Boolean SessionPersist;
 
     /**
-     * Get 协议，取值为TCP或者UDP 
-     * @return Proto 协议，取值为TCP或者UDP
+     * Get 协议，取值有：
+<li>TCP：TCP协议；</li>
+<li>UDP：UDP协议。</li> 
+     * @return Proto 协议，取值有：
+<li>TCP：TCP协议；</li>
+<li>UDP：UDP协议。</li>
      */
     public String getProto() {
         return this.Proto;
     }
 
     /**
-     * Set 协议，取值为TCP或者UDP
-     * @param Proto 协议，取值为TCP或者UDP
+     * Set 协议，取值有：
+<li>TCP：TCP协议；</li>
+<li>UDP：UDP协议。</li>
+     * @param Proto 协议，取值有：
+<li>TCP：TCP协议；</li>
+<li>UDP：UDP协议。</li>
      */
     public void setProto(String Proto) {
         this.Proto = Proto;
@@ -119,11 +128,13 @@ OFF：不传递
 
     /**
      * Get 端口，支持格式：
-80：80端口
-81-90：81至90端口 
+单个端口，如：80。
+端口段，如：81-82。表示81，82两个端口。
+注意：一条规则最多可填写20个端口。 
      * @return Port 端口，支持格式：
-80：80端口
-81-90：81至90端口
+单个端口，如：80。
+端口段，如：81-82。表示81，82两个端口。
+注意：一条规则最多可填写20个端口。
      */
     public String [] getPort() {
         return this.Port;
@@ -131,35 +142,37 @@ OFF：不传递
 
     /**
      * Set 端口，支持格式：
-80：80端口
-81-90：81至90端口
+单个端口，如：80。
+端口段，如：81-82。表示81，82两个端口。
+注意：一条规则最多可填写20个端口。
      * @param Port 端口，支持格式：
-80：80端口
-81-90：81至90端口
+单个端口，如：80。
+端口段，如：81-82。表示81，82两个端口。
+注意：一条规则最多可填写20个端口。
      */
     public void setPort(String [] Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 源站类型，取值：
-custom：手动添加
-origins：源站组 
-     * @return OriginType 源站类型，取值：
-custom：手动添加
-origins：源站组
+     * Get 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li> 
+     * @return OriginType 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set 源站类型，取值：
-custom：手动添加
-origins：源站组
-     * @param OriginType 源站类型，取值：
-custom：手动添加
-origins：源站组
+     * Set 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
+     * @param OriginType 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
@@ -169,17 +182,15 @@ origins：源站组
      * Get 源站信息：
 当OriginType=custom时，表示一个或多个源站，如：
 OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]
-
-当OriginType=origins时，包含一个元素，表示源站组ID，如：
-OriginValue=["origin-xxx"] 
+OriginValue=["test.com:80"]；
+当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
+OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。 
      * @return OriginValue 源站信息：
 当OriginType=custom时，表示一个或多个源站，如：
 OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]
-
-当OriginType=origins时，包含一个元素，表示源站组ID，如：
-OriginValue=["origin-xxx"]
+OriginValue=["test.com:80"]；
+当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
+OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
      */
     public String [] getOriginValue() {
         return this.OriginValue;
@@ -189,26 +200,24 @@ OriginValue=["origin-xxx"]
      * Set 源站信息：
 当OriginType=custom时，表示一个或多个源站，如：
 OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]
-
-当OriginType=origins时，包含一个元素，表示源站组ID，如：
-OriginValue=["origin-xxx"]
+OriginValue=["test.com:80"]；
+当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
+OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
      * @param OriginValue 源站信息：
 当OriginType=custom时，表示一个或多个源站，如：
 OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]
-
-当OriginType=origins时，包含一个元素，表示源站组ID，如：
-OriginValue=["origin-xxx"]
+OriginValue=["test.com:80"]；
+当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
+OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;
     }
 
     /**
-     * Get 规则ID
+     * Get 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则ID
+     * @return RuleId 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
@@ -216,9 +225,9 @@ OriginValue=["origin-xxx"]
     }
 
     /**
-     * Set 规则ID
+     * Set 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则ID
+     * @param RuleId 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
@@ -226,96 +235,92 @@ OriginValue=["origin-xxx"]
     }
 
     /**
-     * Get 状态：
-online：启用
-offline：停用
-progress：部署中
-stopping：停用中
-fail：部署失败/停用失败 
-     * @return Status 状态：
-online：启用
-offline：停用
-progress：部署中
-stopping：停用中
-fail：部署失败/停用失败
+     * Get 状态，取值有：
+<li>online：启用；</li>
+<li>offline：停用；</li>
+<li>progress：部署中；</li>
+<li>stopping：停用中；</li>
+<li>fail：部署失败/停用失败。</li> 
+     * @return Status 状态，取值有：
+<li>online：启用；</li>
+<li>offline：停用；</li>
+<li>progress：部署中；</li>
+<li>stopping：停用中；</li>
+<li>fail：部署失败/停用失败。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：
-online：启用
-offline：停用
-progress：部署中
-stopping：停用中
-fail：部署失败/停用失败
-     * @param Status 状态：
-online：启用
-offline：停用
-progress：部署中
-stopping：停用中
-fail：部署失败/停用失败
+     * Set 状态，取值有：
+<li>online：启用；</li>
+<li>offline：停用；</li>
+<li>progress：部署中；</li>
+<li>stopping：停用中；</li>
+<li>fail：部署失败/停用失败。</li>
+     * @param Status 状态，取值有：
+<li>online：启用；</li>
+<li>offline：停用；</li>
+<li>progress：部署中；</li>
+<li>stopping：停用中；</li>
+<li>fail：部署失败/停用失败。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 传递客户端IP，当Proto=TCP时，取值：
-TOA：TOA
-PPV1: Proxy Protocol传递，协议版本V1
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
-当Proto=UDP时，取值：
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递 
-     * @return ForwardClientIp 传递客户端IP，当Proto=TCP时，取值：
-TOA：TOA
-PPV1: Proxy Protocol传递，协议版本V1
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
-当Proto=UDP时，取值：
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
+     * Get 传递客户端IP，取值有：
+<li>TOA：TOA（仅Proto=TCP时可选）；</li>
+<li>PPV1：Proxy Protocol传递，协议版本V1（仅Proto=TCP时可选）；</li>
+<li>PPV2：Proxy Protocol传递，协议版本V2；</li>
+<li>OFF：不传递。</li> 
+     * @return ForwardClientIp 传递客户端IP，取值有：
+<li>TOA：TOA（仅Proto=TCP时可选）；</li>
+<li>PPV1：Proxy Protocol传递，协议版本V1（仅Proto=TCP时可选）；</li>
+<li>PPV2：Proxy Protocol传递，协议版本V2；</li>
+<li>OFF：不传递。</li>
      */
     public String getForwardClientIp() {
         return this.ForwardClientIp;
     }
 
     /**
-     * Set 传递客户端IP，当Proto=TCP时，取值：
-TOA：TOA
-PPV1: Proxy Protocol传递，协议版本V1
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
-当Proto=UDP时，取值：
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
-     * @param ForwardClientIp 传递客户端IP，当Proto=TCP时，取值：
-TOA：TOA
-PPV1: Proxy Protocol传递，协议版本V1
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
-当Proto=UDP时，取值：
-PPV2: Proxy Protocol传递，协议版本V2
-OFF：不传递
+     * Set 传递客户端IP，取值有：
+<li>TOA：TOA（仅Proto=TCP时可选）；</li>
+<li>PPV1：Proxy Protocol传递，协议版本V1（仅Proto=TCP时可选）；</li>
+<li>PPV2：Proxy Protocol传递，协议版本V2；</li>
+<li>OFF：不传递。</li>
+     * @param ForwardClientIp 传递客户端IP，取值有：
+<li>TOA：TOA（仅Proto=TCP时可选）；</li>
+<li>PPV1：Proxy Protocol传递，协议版本V1（仅Proto=TCP时可选）；</li>
+<li>PPV2：Proxy Protocol传递，协议版本V2；</li>
+<li>OFF：不传递。</li>
      */
     public void setForwardClientIp(String ForwardClientIp) {
         this.ForwardClientIp = ForwardClientIp;
     }
 
     /**
-     * Get 是否开启会话保持 
-     * @return SessionPersist 是否开启会话保持
+     * Get 是否开启会话保持，取值有：
+<li>true：开启；</li>
+<li>false：关闭。</li> 
+     * @return SessionPersist 是否开启会话保持，取值有：
+<li>true：开启；</li>
+<li>false：关闭。</li>
      */
     public Boolean getSessionPersist() {
         return this.SessionPersist;
     }
 
     /**
-     * Set 是否开启会话保持
-     * @param SessionPersist 是否开启会话保持
+     * Set 是否开启会话保持，取值有：
+<li>true：开启；</li>
+<li>false：关闭。</li>
+     * @param SessionPersist 是否开启会话保持，取值有：
+<li>true：开启；</li>
+<li>false：关闭。</li>
      */
     public void setSessionPersist(Boolean SessionPersist) {
         this.SessionPersist = SessionPersist;

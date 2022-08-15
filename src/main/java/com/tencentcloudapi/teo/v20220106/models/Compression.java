@@ -23,16 +23,18 @@ import java.util.HashMap;
 public class Compression extends AbstractModel{
 
     /**
-    * 智能压缩配置开关
-on：开启
-off：关闭
+    * 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 支持的压缩算法列表
+    * 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Algorithms")
@@ -40,33 +42,37 @@ off：关闭
     private String [] Algorithms;
 
     /**
-     * Get 智能压缩配置开关
-on：开启
-off：关闭 
-     * @return Switch 智能压缩配置开关
-on：开启
-off：关闭
+     * Get 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 智能压缩配置开关
-on：开启
-off：关闭
-     * @param Switch 智能压缩配置开关
-on：开启
-off：关闭
+     * Set 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 支持的压缩算法列表
+     * Get 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Algorithms 支持的压缩算法列表
+     * @return Algorithms 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlgorithms() {
@@ -74,9 +80,13 @@ off：关闭
     }
 
     /**
-     * Set 支持的压缩算法列表
+     * Set 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Algorithms 支持的压缩算法列表
+     * @param Algorithms 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgorithms(String [] Algorithms) {

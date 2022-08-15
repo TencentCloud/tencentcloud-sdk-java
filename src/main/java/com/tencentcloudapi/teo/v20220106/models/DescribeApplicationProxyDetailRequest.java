@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeApplicationProxyDetailRequest extends AbstractModel{
 
     /**
-    * 站点ID
+    * 站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-     * Get 站点ID 
-     * @return ZoneId 站点ID
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID
-     * @param ZoneId 站点ID
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例ID 
-     * @return ProxyId 实例ID
+     * Get 实例ID。 
+     * @return ProxyId 实例ID。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 实例ID
-     * @param ProxyId 实例ID
+     * Set 实例ID。
+     * @param ProxyId 实例ID。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

@@ -117,6 +117,13 @@ public class PrivateZone extends AbstractModel{
     private Boolean IsCustomTld;
 
     /**
+    * CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+    */
+    @SerializedName("CnameSpeedupStatus")
+    @Expose
+    private String CnameSpeedupStatus;
+
+    /**
      * Get 私有域id: zone-xxxxxxxx 
      * @return ZoneId 私有域id: zone-xxxxxxxx
      */
@@ -336,6 +343,22 @@ public class PrivateZone extends AbstractModel{
         this.IsCustomTld = IsCustomTld;
     }
 
+    /**
+     * Get CNAME加速状态：开通：ENABLED, 关闭，DISABLED 
+     * @return CnameSpeedupStatus CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+     */
+    public String getCnameSpeedupStatus() {
+        return this.CnameSpeedupStatus;
+    }
+
+    /**
+     * Set CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+     * @param CnameSpeedupStatus CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+     */
+    public void setCnameSpeedupStatus(String CnameSpeedupStatus) {
+        this.CnameSpeedupStatus = CnameSpeedupStatus;
+    }
+
     public PrivateZone() {
     }
 
@@ -392,6 +415,9 @@ public class PrivateZone extends AbstractModel{
         if (source.IsCustomTld != null) {
             this.IsCustomTld = new Boolean(source.IsCustomTld);
         }
+        if (source.CnameSpeedupStatus != null) {
+            this.CnameSpeedupStatus = new String(source.CnameSpeedupStatus);
+        }
     }
 
 
@@ -412,6 +438,7 @@ public class PrivateZone extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
         this.setParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
+        this.setParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
 
     }
 }

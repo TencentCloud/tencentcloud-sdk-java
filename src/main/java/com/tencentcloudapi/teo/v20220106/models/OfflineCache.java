@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class OfflineCache extends AbstractModel{
 
     /**
-    * on | off, 离线缓存是否开启
+    * 离线缓存是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -31,9 +33,13 @@ public class OfflineCache extends AbstractModel{
     private String Switch;
 
     /**
-     * Get on | off, 离线缓存是否开启
+     * Get 离线缓存是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch on | off, 离线缓存是否开启
+     * @return Switch 离线缓存是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -41,9 +47,13 @@ public class OfflineCache extends AbstractModel{
     }
 
     /**
-     * Set on | off, 离线缓存是否开启
+     * Set 离线缓存是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch on | off, 离线缓存是否开启
+     * @param Switch 离线缓存是否开启，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

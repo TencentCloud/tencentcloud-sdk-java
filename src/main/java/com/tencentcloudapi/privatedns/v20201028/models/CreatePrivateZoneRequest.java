@@ -51,7 +51,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
+    * 是否开启子域名递归, ENABLED， DISABLED。默认值为ENABLED
     */
     @SerializedName("DnsForwardStatus")
     @Expose
@@ -70,6 +70,13 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     @SerializedName("AccountVpcSet")
     @Expose
     private AccountVpcInfo [] AccountVpcSet;
+
+    /**
+    * 是否CNAME加速：ENABLED，DISABLED，默认值为ENABLED
+    */
+    @SerializedName("CnameSpeedupStatus")
+    @Expose
+    private String CnameSpeedupStatus;
 
     /**
      * Get 域名，格式必须是标准的TLD 
@@ -136,16 +143,16 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED 
-     * @return DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
+     * Get 是否开启子域名递归, ENABLED， DISABLED。默认值为ENABLED 
+     * @return DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为ENABLED
      */
     public String getDnsForwardStatus() {
         return this.DnsForwardStatus;
     }
 
     /**
-     * Set 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
-     * @param DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
+     * Set 是否开启子域名递归, ENABLED， DISABLED。默认值为ENABLED
+     * @param DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为ENABLED
      */
     public void setDnsForwardStatus(String DnsForwardStatus) {
         this.DnsForwardStatus = DnsForwardStatus;
@@ -181,6 +188,22 @@ public class CreatePrivateZoneRequest extends AbstractModel{
      */
     public void setAccountVpcSet(AccountVpcInfo [] AccountVpcSet) {
         this.AccountVpcSet = AccountVpcSet;
+    }
+
+    /**
+     * Get 是否CNAME加速：ENABLED，DISABLED，默认值为ENABLED 
+     * @return CnameSpeedupStatus 是否CNAME加速：ENABLED，DISABLED，默认值为ENABLED
+     */
+    public String getCnameSpeedupStatus() {
+        return this.CnameSpeedupStatus;
+    }
+
+    /**
+     * Set 是否CNAME加速：ENABLED，DISABLED，默认值为ENABLED
+     * @param CnameSpeedupStatus 是否CNAME加速：ENABLED，DISABLED，默认值为ENABLED
+     */
+    public void setCnameSpeedupStatus(String CnameSpeedupStatus) {
+        this.CnameSpeedupStatus = CnameSpeedupStatus;
     }
 
     public CreatePrivateZoneRequest() {
@@ -224,6 +247,9 @@ public class CreatePrivateZoneRequest extends AbstractModel{
                 this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
             }
         }
+        if (source.CnameSpeedupStatus != null) {
+            this.CnameSpeedupStatus = new String(source.CnameSpeedupStatus);
+        }
     }
 
 
@@ -238,6 +264,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+        this.setParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
 
     }
 }

@@ -65,6 +65,34 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     private Long NoRiskClusterCount;
 
     /**
+    * 已经检查集群数
+    */
+    @SerializedName("CheckedClusterCount")
+    @Expose
+    private Long CheckedClusterCount;
+
+    /**
+    * 自动检查集群数
+    */
+    @SerializedName("AutoCheckClusterCount")
+    @Expose
+    private Long AutoCheckClusterCount;
+
+    /**
+    * 手动检查集群数
+    */
+    @SerializedName("ManualCheckClusterCount")
+    @Expose
+    private Long ManualCheckClusterCount;
+
+    /**
+    * 检查失败集群数
+    */
+    @SerializedName("FailedClusterCount")
+    @Expose
+    private Long FailedClusterCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +196,70 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 已经检查集群数 
+     * @return CheckedClusterCount 已经检查集群数
+     */
+    public Long getCheckedClusterCount() {
+        return this.CheckedClusterCount;
+    }
+
+    /**
+     * Set 已经检查集群数
+     * @param CheckedClusterCount 已经检查集群数
+     */
+    public void setCheckedClusterCount(Long CheckedClusterCount) {
+        this.CheckedClusterCount = CheckedClusterCount;
+    }
+
+    /**
+     * Get 自动检查集群数 
+     * @return AutoCheckClusterCount 自动检查集群数
+     */
+    public Long getAutoCheckClusterCount() {
+        return this.AutoCheckClusterCount;
+    }
+
+    /**
+     * Set 自动检查集群数
+     * @param AutoCheckClusterCount 自动检查集群数
+     */
+    public void setAutoCheckClusterCount(Long AutoCheckClusterCount) {
+        this.AutoCheckClusterCount = AutoCheckClusterCount;
+    }
+
+    /**
+     * Get 手动检查集群数 
+     * @return ManualCheckClusterCount 手动检查集群数
+     */
+    public Long getManualCheckClusterCount() {
+        return this.ManualCheckClusterCount;
+    }
+
+    /**
+     * Set 手动检查集群数
+     * @param ManualCheckClusterCount 手动检查集群数
+     */
+    public void setManualCheckClusterCount(Long ManualCheckClusterCount) {
+        this.ManualCheckClusterCount = ManualCheckClusterCount;
+    }
+
+    /**
+     * Get 检查失败集群数 
+     * @return FailedClusterCount 检查失败集群数
+     */
+    public Long getFailedClusterCount() {
+        return this.FailedClusterCount;
+    }
+
+    /**
+     * Set 检查失败集群数
+     * @param FailedClusterCount 检查失败集群数
+     */
+    public void setFailedClusterCount(Long FailedClusterCount) {
+        this.FailedClusterCount = FailedClusterCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +301,18 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         if (source.NoRiskClusterCount != null) {
             this.NoRiskClusterCount = new Long(source.NoRiskClusterCount);
         }
+        if (source.CheckedClusterCount != null) {
+            this.CheckedClusterCount = new Long(source.CheckedClusterCount);
+        }
+        if (source.AutoCheckClusterCount != null) {
+            this.AutoCheckClusterCount = new Long(source.AutoCheckClusterCount);
+        }
+        if (source.ManualCheckClusterCount != null) {
+            this.ManualCheckClusterCount = new Long(source.ManualCheckClusterCount);
+        }
+        if (source.FailedClusterCount != null) {
+            this.FailedClusterCount = new Long(source.FailedClusterCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +329,10 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ManagedClusterCount", this.ManagedClusterCount);
         this.setParamSimple(map, prefix + "IndependentClusterCount", this.IndependentClusterCount);
         this.setParamSimple(map, prefix + "NoRiskClusterCount", this.NoRiskClusterCount);
+        this.setParamSimple(map, prefix + "CheckedClusterCount", this.CheckedClusterCount);
+        this.setParamSimple(map, prefix + "AutoCheckClusterCount", this.AutoCheckClusterCount);
+        this.setParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
+        this.setParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

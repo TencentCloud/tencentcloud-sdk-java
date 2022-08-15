@@ -23,16 +23,16 @@ import java.util.HashMap;
 public class PostMaxSize extends AbstractModel{
 
     /**
-    * 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+    * 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 最大限制，取值在1MB和500MB之间。单位字节
+    * 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSize")
@@ -40,33 +40,33 @@ public class PostMaxSize extends AbstractModel{
     private Long MaxSize;
 
     /**
-     * Get 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。 
-     * @return Switch 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+     * Get 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li> 
+     * @return Switch 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
-     * @param Switch 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+     * Set 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
+     * @param Switch 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 最大限制，取值在1MB和500MB之间。单位字节
+     * Get 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxSize 最大限制，取值在1MB和500MB之间。单位字节
+     * @return MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSize() {
@@ -74,9 +74,9 @@ public class PostMaxSize extends AbstractModel{
     }
 
     /**
-     * Set 最大限制，取值在1MB和500MB之间。单位字节
+     * Set 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxSize 最大限制，取值在1MB和500MB之间。单位字节
+     * @param MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSize(Long MaxSize) {

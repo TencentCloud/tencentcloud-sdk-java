@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CacheConfig extends AbstractModel{
 
     /**
-    * 缓存配置
+    * 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cache")
@@ -31,7 +31,7 @@ public class CacheConfig extends AbstractModel{
     private CacheConfigCache Cache;
 
     /**
-    * 不缓存配置
+    * 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoCache")
@@ -39,7 +39,7 @@ public class CacheConfig extends AbstractModel{
     private CacheConfigNoCache NoCache;
 
     /**
-    * 遵循源站配置
+    * 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowOrigin")
@@ -47,9 +47,9 @@ public class CacheConfig extends AbstractModel{
     private CacheConfigFollowOrigin FollowOrigin;
 
     /**
-     * Get 缓存配置
+     * Get 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cache 缓存配置
+     * @return Cache 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheConfigCache getCache() {
@@ -57,9 +57,9 @@ public class CacheConfig extends AbstractModel{
     }
 
     /**
-     * Set 缓存配置
+     * Set 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cache 缓存配置
+     * @param Cache 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCache(CacheConfigCache Cache) {
@@ -67,9 +67,9 @@ public class CacheConfig extends AbstractModel{
     }
 
     /**
-     * Get 不缓存配置
+     * Get 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoCache 不缓存配置
+     * @return NoCache 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheConfigNoCache getNoCache() {
@@ -77,9 +77,9 @@ public class CacheConfig extends AbstractModel{
     }
 
     /**
-     * Set 不缓存配置
+     * Set 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoCache 不缓存配置
+     * @param NoCache 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoCache(CacheConfigNoCache NoCache) {
@@ -87,9 +87,9 @@ public class CacheConfig extends AbstractModel{
     }
 
     /**
-     * Get 遵循源站配置
+     * Get 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FollowOrigin 遵循源站配置
+     * @return FollowOrigin 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheConfigFollowOrigin getFollowOrigin() {
@@ -97,9 +97,9 @@ public class CacheConfig extends AbstractModel{
     }
 
     /**
-     * Set 遵循源站配置
+     * Set 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FollowOrigin 遵循源站配置
+     * @param FollowOrigin 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowOrigin(CacheConfigFollowOrigin FollowOrigin) {

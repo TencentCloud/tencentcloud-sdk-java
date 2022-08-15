@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel{
 
     /**
-    * 访问强制跳转配置开关
-on：开启
-off：关闭
+    * 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 重定向状态码
-301
-302
+    * 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RedirectStatusCode")
@@ -42,37 +42,37 @@ off：关闭
     private Long RedirectStatusCode;
 
     /**
-     * Get 访问强制跳转配置开关
-on：开启
-off：关闭 
-     * @return Switch 访问强制跳转配置开关
-on：开启
-off：关闭
+     * Get 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 访问强制跳转配置开关
-on：开启
-off：关闭
-     * @param Switch 访问强制跳转配置开关
-on：开启
-off：关闭
+     * Set 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 重定向状态码
-301
-302
+     * Get 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RedirectStatusCode 重定向状态码
-301
-302
+     * @return RedirectStatusCode 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRedirectStatusCode() {
@@ -80,13 +80,13 @@ off：关闭
     }
 
     /**
-     * Set 重定向状态码
-301
-302
+     * Set 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RedirectStatusCode 重定向状态码
-301
-302
+     * @param RedirectStatusCode 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {

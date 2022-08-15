@@ -58,6 +58,13 @@ public class ServerBaseInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 公网访问类型
+    */
+    @SerializedName("AccessTypes")
+    @Expose
+    private String [] AccessTypes;
+
+    /**
      * Get 服务名 
      * @return ServerName 服务名
      */
@@ -137,6 +144,22 @@ public class ServerBaseInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 公网访问类型 
+     * @return AccessTypes 公网访问类型
+     */
+    public String [] getAccessTypes() {
+        return this.AccessTypes;
+    }
+
+    /**
+     * Set 公网访问类型
+     * @param AccessTypes 公网访问类型
+     */
+    public void setAccessTypes(String [] AccessTypes) {
+        this.AccessTypes = AccessTypes;
+    }
+
     public ServerBaseInfo() {
     }
 
@@ -160,6 +183,12 @@ public class ServerBaseInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.AccessTypes != null) {
+            this.AccessTypes = new String[source.AccessTypes.length];
+            for (int i = 0; i < source.AccessTypes.length; i++) {
+                this.AccessTypes[i] = new String(source.AccessTypes[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class ServerBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomDomainName", this.CustomDomainName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
 
     }
 }

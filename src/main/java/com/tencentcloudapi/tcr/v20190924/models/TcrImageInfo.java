@@ -30,7 +30,7 @@ public class TcrImageInfo extends AbstractModel{
     private String Digest;
 
     /**
-    * 镜像大小
+    * 镜像体积（单位：字节）
     */
     @SerializedName("Size")
     @Expose
@@ -51,6 +51,22 @@ public class TcrImageInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Kind")
+    @Expose
+    private String Kind;
+
+    /**
+    * KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KmsSignature")
+    @Expose
+    private String KmsSignature;
+
+    /**
      * Get 哈希值 
      * @return Digest 哈希值
      */
@@ -67,16 +83,16 @@ public class TcrImageInfo extends AbstractModel{
     }
 
     /**
-     * Get 镜像大小 
-     * @return Size 镜像大小
+     * Get 镜像体积（单位：字节） 
+     * @return Size 镜像体积（单位：字节）
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 镜像大小
-     * @param Size 镜像大小
+     * Set 镜像体积（单位：字节）
+     * @param Size 镜像体积（单位：字节）
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -114,6 +130,46 @@ public class TcrImageInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 制品类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Kind 制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKind() {
+        return this.Kind;
+    }
+
+    /**
+     * Set 制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Kind 制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKind(String Kind) {
+        this.Kind = Kind;
+    }
+
+    /**
+     * Get KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KmsSignature KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKmsSignature() {
+        return this.KmsSignature;
+    }
+
+    /**
+     * Set KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KmsSignature KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKmsSignature(String KmsSignature) {
+        this.KmsSignature = KmsSignature;
+    }
+
     public TcrImageInfo() {
     }
 
@@ -134,6 +190,12 @@ public class TcrImageInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Kind != null) {
+            this.Kind = new String(source.Kind);
+        }
+        if (source.KmsSignature != null) {
+            this.KmsSignature = new String(source.KmsSignature);
+        }
     }
 
 
@@ -145,6 +207,8 @@ public class TcrImageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Kind", this.Kind);
+        this.setParamSimple(map, prefix + "KmsSignature", this.KmsSignature);
 
     }
 }

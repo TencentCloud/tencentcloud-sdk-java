@@ -23,10 +23,26 @@ import java.util.HashMap;
 public class Origin extends AbstractModel{
 
     /**
-    * 回源协议配置
-http：强制 http 回源
-follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+    * 主源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Origins")
+    @Expose
+    private String [] Origins;
+
+    /**
+    * 备源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupOrigins")
+    @Expose
+    private String [] BackupOrigins;
+
+    /**
+    * 回源协议配置，取值有：
+<li>http：强制 http 回源；</li>
+<li>follow：协议跟随回源；</li>
+<li>https：强制 https 回源，https 回源时仅支持源站 443 端口。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginPullProtocol")
@@ -34,15 +50,63 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
     private String OriginPullProtocol;
 
     /**
-     * Get 回源协议配置
-http：强制 http 回源
-follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+    * OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosPrivateAccess")
+    @Expose
+    private String CosPrivateAccess;
+
+    /**
+     * Get 主源站列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginPullProtocol 回源协议配置
-http：强制 http 回源
-follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+     * @return Origins 主源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOrigins() {
+        return this.Origins;
+    }
+
+    /**
+     * Set 主源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Origins 主源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrigins(String [] Origins) {
+        this.Origins = Origins;
+    }
+
+    /**
+     * Get 备源站列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupOrigins 备源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBackupOrigins() {
+        return this.BackupOrigins;
+    }
+
+    /**
+     * Set 备源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupOrigins 备源站列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupOrigins(String [] BackupOrigins) {
+        this.BackupOrigins = BackupOrigins;
+    }
+
+    /**
+     * Get 回源协议配置，取值有：
+<li>http：强制 http 回源；</li>
+<li>follow：协议跟随回源；</li>
+<li>https：强制 https 回源，https 回源时仅支持源站 443 端口。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginPullProtocol 回源协议配置，取值有：
+<li>http：强制 http 回源；</li>
+<li>follow：协议跟随回源；</li>
+<li>https：强制 https 回源，https 回源时仅支持源站 443 端口。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginPullProtocol() {
@@ -50,19 +114,39 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
     }
 
     /**
-     * Set 回源协议配置
-http：强制 http 回源
-follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+     * Set 回源协议配置，取值有：
+<li>http：强制 http 回源；</li>
+<li>follow：协议跟随回源；</li>
+<li>https：强制 https 回源，https 回源时仅支持源站 443 端口。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullProtocol 回源协议配置
-http：强制 http 回源
-follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+     * @param OriginPullProtocol 回源协议配置，取值有：
+<li>http：强制 http 回源；</li>
+<li>follow：协议跟随回源；</li>
+<li>https：强制 https 回源，https 回源时仅支持源站 443 端口。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
+    }
+
+    /**
+     * Get OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosPrivateAccess OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosPrivateAccess() {
+        return this.CosPrivateAccess;
+    }
+
+    /**
+     * Set OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosPrivateAccess OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosPrivateAccess(String CosPrivateAccess) {
+        this.CosPrivateAccess = CosPrivateAccess;
     }
 
     public Origin() {
@@ -73,8 +157,23 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Origin(Origin source) {
+        if (source.Origins != null) {
+            this.Origins = new String[source.Origins.length];
+            for (int i = 0; i < source.Origins.length; i++) {
+                this.Origins[i] = new String(source.Origins[i]);
+            }
+        }
+        if (source.BackupOrigins != null) {
+            this.BackupOrigins = new String[source.BackupOrigins.length];
+            for (int i = 0; i < source.BackupOrigins.length; i++) {
+                this.BackupOrigins[i] = new String(source.BackupOrigins[i]);
+            }
+        }
         if (source.OriginPullProtocol != null) {
             this.OriginPullProtocol = new String(source.OriginPullProtocol);
+        }
+        if (source.CosPrivateAccess != null) {
+            this.CosPrivateAccess = new String(source.CosPrivateAccess);
         }
     }
 
@@ -83,7 +182,10 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "Origins.", this.Origins);
+        this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "OriginPullProtocol", this.OriginPullProtocol);
+        this.setParamSimple(map, prefix + "CosPrivateAccess", this.CosPrivateAccess);
 
     }
 }

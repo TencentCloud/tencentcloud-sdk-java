@@ -81,7 +81,7 @@ public class NodeDefineExt extends AbstractModel{
     * 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
@@ -244,12 +244,12 @@ public class NodeDefineExt extends AbstractModel{
      * Get 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Location 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLocation() {
@@ -260,12 +260,12 @@ public class NodeDefineExt extends AbstractModel{
      * Set 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(Long Location) {

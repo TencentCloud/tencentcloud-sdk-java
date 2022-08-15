@@ -23,33 +23,33 @@ import java.util.HashMap;
 public class UpstreamHttp2 extends AbstractModel{
 
     /**
-    * http2回源配置开关
-on：开启
-off：关闭
+    * http2回源配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get http2回源配置开关
-on：开启
-off：关闭 
-     * @return Switch http2回源配置开关
-on：开启
-off：关闭
+     * Get http2回源配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch http2回源配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set http2回源配置开关
-on：开启
-off：关闭
-     * @param Switch http2回源配置开关
-on：开启
-off：关闭
+     * Set http2回源配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch http2回源配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

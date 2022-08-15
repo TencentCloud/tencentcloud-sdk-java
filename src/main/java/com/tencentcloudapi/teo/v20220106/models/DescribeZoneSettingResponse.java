@@ -23,7 +23,21 @@ import java.util.HashMap;
 public class DescribeZoneSettingResponse extends AbstractModel{
 
     /**
-    * 缓存过期时间配置
+    * 站点ID。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * 站点名称。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cache")
@@ -31,7 +45,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private CacheConfig Cache;
 
     /**
-    * 节点缓存键配置
+    * 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheKey")
@@ -39,23 +53,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private CacheKey CacheKey;
 
     /**
-    * 浏览器缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaxAge")
-    @Expose
-    private MaxAge MaxAge;
-
-    /**
-    * 离线缓存
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("OfflineCache")
-    @Expose
-    private OfflineCache OfflineCache;
-
-    /**
-    * Quic访问
+    * Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quic")
@@ -63,7 +61,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private Quic Quic;
 
     /**
-    * POST请求传输配置
+    * POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostMaxSize")
@@ -71,7 +69,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private PostMaxSize PostMaxSize;
 
     /**
-    * 智能压缩配置
+    * 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compression")
@@ -79,7 +77,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private Compression Compression;
 
     /**
-    * http2回源配置
+    * Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamHttp2")
@@ -87,7 +85,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private UpstreamHttp2 UpstreamHttp2;
 
     /**
-    * 访问协议强制https跳转配置
+    * 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForceRedirect")
@@ -95,7 +93,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private ForceRedirect ForceRedirect;
 
     /**
-    * Https 加速配置
+    * Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Https")
@@ -103,7 +101,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private Https Https;
 
     /**
-    * 源站配置
+    * 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Origin")
@@ -111,7 +109,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private Origin Origin;
 
     /**
-    * 动态加速配置
+    * 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartRouting")
@@ -119,21 +117,23 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private SmartRouting SmartRouting;
 
     /**
-    * 站点ID
+    * 浏览器缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ZoneId")
+    @SerializedName("MaxAge")
     @Expose
-    private String ZoneId;
+    private MaxAge MaxAge;
 
     /**
-    * 站点域名
+    * 离线缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Zone")
+    @SerializedName("OfflineCache")
     @Expose
-    private String Zone;
+    private OfflineCache OfflineCache;
 
     /**
-    * WebSocket配置
+    * WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebSocket")
@@ -141,7 +141,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private WebSocket WebSocket;
 
     /**
-    * 客户端IP回源请求头配置
+    * 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIpHeader")
@@ -149,12 +149,20 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private ClientIp ClientIpHeader;
 
     /**
-    * 缓存预刷新配置
+    * 缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CachePrefresh")
     @Expose
     private CachePrefresh CachePrefresh;
+
+    /**
+    * Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6")
+    @Expose
+    private Ipv6Access Ipv6;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -164,9 +172,41 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 缓存过期时间配置
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 站点名称。 
+     * @return Zone 站点名称。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 站点名称。
+     * @param Zone 站点名称。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cache 缓存过期时间配置
+     * @return Cache 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheConfig getCache() {
@@ -174,9 +214,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 缓存过期时间配置
+     * Set 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cache 缓存过期时间配置
+     * @param Cache 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCache(CacheConfig Cache) {
@@ -184,9 +224,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 节点缓存键配置
+     * Get 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheKey 节点缓存键配置
+     * @return CacheKey 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheKey getCacheKey() {
@@ -194,9 +234,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 节点缓存键配置
+     * Set 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheKey 节点缓存键配置
+     * @param CacheKey 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheKey(CacheKey CacheKey) {
@@ -204,49 +244,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 浏览器缓存配置
+     * Get Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAge 浏览器缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public MaxAge getMaxAge() {
-        return this.MaxAge;
-    }
-
-    /**
-     * Set 浏览器缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge 浏览器缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaxAge(MaxAge MaxAge) {
-        this.MaxAge = MaxAge;
-    }
-
-    /**
-     * Get 离线缓存
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OfflineCache 离线缓存
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public OfflineCache getOfflineCache() {
-        return this.OfflineCache;
-    }
-
-    /**
-     * Set 离线缓存
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineCache 离线缓存
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOfflineCache(OfflineCache OfflineCache) {
-        this.OfflineCache = OfflineCache;
-    }
-
-    /**
-     * Get Quic访问
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Quic Quic访问
+     * @return Quic Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Quic getQuic() {
@@ -254,9 +254,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set Quic访问
+     * Set Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Quic Quic访问
+     * @param Quic Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuic(Quic Quic) {
@@ -264,9 +264,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get POST请求传输配置
+     * Get POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostMaxSize POST请求传输配置
+     * @return PostMaxSize POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostMaxSize getPostMaxSize() {
@@ -274,9 +274,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set POST请求传输配置
+     * Set POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostMaxSize POST请求传输配置
+     * @param PostMaxSize POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostMaxSize(PostMaxSize PostMaxSize) {
@@ -284,9 +284,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 智能压缩配置
+     * Get 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Compression 智能压缩配置
+     * @return Compression 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Compression getCompression() {
@@ -294,9 +294,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 智能压缩配置
+     * Set 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compression 智能压缩配置
+     * @param Compression 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompression(Compression Compression) {
@@ -304,9 +304,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get http2回源配置
+     * Get Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamHttp2 http2回源配置
+     * @return UpstreamHttp2 Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamHttp2 getUpstreamHttp2() {
@@ -314,9 +314,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set http2回源配置
+     * Set Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamHttp2 http2回源配置
+     * @param UpstreamHttp2 Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamHttp2(UpstreamHttp2 UpstreamHttp2) {
@@ -324,9 +324,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 访问协议强制https跳转配置
+     * Get 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForceRedirect 访问协议强制https跳转配置
+     * @return ForceRedirect 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ForceRedirect getForceRedirect() {
@@ -334,9 +334,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 访问协议强制https跳转配置
+     * Set 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceRedirect 访问协议强制https跳转配置
+     * @param ForceRedirect 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
@@ -344,9 +344,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get Https 加速配置
+     * Get Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Https Https 加速配置
+     * @return Https Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Https getHttps() {
@@ -354,9 +354,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set Https 加速配置
+     * Set Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Https Https 加速配置
+     * @param Https Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttps(Https Https) {
@@ -364,9 +364,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 源站配置
+     * Get 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Origin 源站配置
+     * @return Origin 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Origin getOrigin() {
@@ -374,9 +374,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 源站配置
+     * Set 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Origin 源站配置
+     * @param Origin 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrigin(Origin Origin) {
@@ -384,9 +384,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 动态加速配置
+     * Get 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmartRouting 动态加速配置
+     * @return SmartRouting 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartRouting getSmartRouting() {
@@ -394,9 +394,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 动态加速配置
+     * Set 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartRouting 动态加速配置
+     * @param SmartRouting 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartRouting(SmartRouting SmartRouting) {
@@ -404,41 +404,49 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 站点ID 
-     * @return ZoneId 站点ID
-     */
-    public String getZoneId() {
-        return this.ZoneId;
-    }
-
-    /**
-     * Set 站点ID
-     * @param ZoneId 站点ID
-     */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
-    }
-
-    /**
-     * Get 站点域名 
-     * @return Zone 站点域名
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * Set 站点域名
-     * @param Zone 站点域名
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
-     * Get WebSocket配置
+     * Get 浏览器缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebSocket WebSocket配置
+     * @return MaxAge 浏览器缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MaxAge getMaxAge() {
+        return this.MaxAge;
+    }
+
+    /**
+     * Set 浏览器缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxAge 浏览器缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxAge(MaxAge MaxAge) {
+        this.MaxAge = MaxAge;
+    }
+
+    /**
+     * Get 离线缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OfflineCache 离线缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 离线缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineCache 离线缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
+     * Get WebSocket配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebSocket WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebSocket getWebSocket() {
@@ -446,9 +454,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set WebSocket配置
+     * Set WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebSocket WebSocket配置
+     * @param WebSocket WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebSocket(WebSocket WebSocket) {
@@ -456,9 +464,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 客户端IP回源请求头配置
+     * Get 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientIpHeader 客户端IP回源请求头配置
+     * @return ClientIpHeader 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClientIp getClientIpHeader() {
@@ -466,9 +474,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 客户端IP回源请求头配置
+     * Set 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientIpHeader 客户端IP回源请求头配置
+     * @param ClientIpHeader 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIpHeader(ClientIp ClientIpHeader) {
@@ -476,9 +484,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 缓存预刷新配置
+     * Get 缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CachePrefresh 缓存预刷新配置
+     * @return CachePrefresh 缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CachePrefresh getCachePrefresh() {
@@ -486,13 +494,33 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
-     * Set 缓存预刷新配置
+     * Set 缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CachePrefresh 缓存预刷新配置
+     * @param CachePrefresh 缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCachePrefresh(CachePrefresh CachePrefresh) {
         this.CachePrefresh = CachePrefresh;
+    }
+
+    /**
+     * Get Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6 Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Ipv6Access getIpv6() {
+        return this.Ipv6;
+    }
+
+    /**
+     * Set Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6 Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6(Ipv6Access Ipv6) {
+        this.Ipv6 = Ipv6;
     }
 
     /**
@@ -519,17 +547,17 @@ public class DescribeZoneSettingResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeZoneSettingResponse(DescribeZoneSettingResponse source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
         if (source.Cache != null) {
             this.Cache = new CacheConfig(source.Cache);
         }
         if (source.CacheKey != null) {
             this.CacheKey = new CacheKey(source.CacheKey);
-        }
-        if (source.MaxAge != null) {
-            this.MaxAge = new MaxAge(source.MaxAge);
-        }
-        if (source.OfflineCache != null) {
-            this.OfflineCache = new OfflineCache(source.OfflineCache);
         }
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
@@ -555,11 +583,11 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         if (source.SmartRouting != null) {
             this.SmartRouting = new SmartRouting(source.SmartRouting);
         }
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
+        if (source.MaxAge != null) {
+            this.MaxAge = new MaxAge(source.MaxAge);
         }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
+        if (source.OfflineCache != null) {
+            this.OfflineCache = new OfflineCache(source.OfflineCache);
         }
         if (source.WebSocket != null) {
             this.WebSocket = new WebSocket(source.WebSocket);
@@ -569,6 +597,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         }
         if (source.CachePrefresh != null) {
             this.CachePrefresh = new CachePrefresh(source.CachePrefresh);
+        }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new Ipv6Access(source.Ipv6);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -580,10 +611,10 @@ public class DescribeZoneSettingResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamObj(map, prefix + "Cache.", this.Cache);
         this.setParamObj(map, prefix + "CacheKey.", this.CacheKey);
-        this.setParamObj(map, prefix + "MaxAge.", this.MaxAge);
-        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Compression.", this.Compression);
@@ -592,11 +623,12 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "Origin.", this.Origin);
         this.setParamObj(map, prefix + "SmartRouting.", this.SmartRouting);
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamObj(map, prefix + "MaxAge.", this.MaxAge);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
+        this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

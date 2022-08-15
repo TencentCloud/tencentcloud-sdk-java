@@ -59,6 +59,14 @@ public class TcrNamespaceInfo extends AbstractModel{
     private TagSpecification TagSpecification;
 
     /**
+    * 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private KeyValueString [] Metadata;
+
+    /**
      * Get 命名空间名称 
      * @return Name 命名空间名称
      */
@@ -142,6 +150,26 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadata 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KeyValueString [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadata 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadata(KeyValueString [] Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public TcrNamespaceInfo() {
     }
 
@@ -165,6 +193,12 @@ public class TcrNamespaceInfo extends AbstractModel{
         if (source.TagSpecification != null) {
             this.TagSpecification = new TagSpecification(source.TagSpecification);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new KeyValueString[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new KeyValueString(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -177,6 +211,7 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Public", this.Public);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }
