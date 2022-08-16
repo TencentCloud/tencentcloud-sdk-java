@@ -51,6 +51,13 @@ public class DescribeDeviceGroupsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 部门ID，用于过滤属于某个部门的资产组
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 资产组ID集合 
      * @return IdSet 资产组ID集合
      */
@@ -114,6 +121,22 @@ public class DescribeDeviceGroupsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 部门ID，用于过滤属于某个部门的资产组 
+     * @return DepartmentId 部门ID，用于过滤属于某个部门的资产组
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 部门ID，用于过滤属于某个部门的资产组
+     * @param DepartmentId 部门ID，用于过滤属于某个部门的资产组
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public DescribeDeviceGroupsRequest() {
     }
 
@@ -137,6 +160,9 @@ public class DescribeDeviceGroupsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class DescribeDeviceGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

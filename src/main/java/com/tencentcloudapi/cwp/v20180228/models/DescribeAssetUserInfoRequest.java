@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAssetUserInfoRequest extends AbstractModel{
 
     /**
-    * 服务器Quuid
+    * 云服务器UUID
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 服务器Uuid
+    * 主机安全UUID
     */
     @SerializedName("Uuid")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeAssetUserInfoRequest extends AbstractModel{
     private String Name;
 
     /**
-     * Get 服务器Quuid 
-     * @return Quuid 服务器Quuid
+     * Get 云服务器UUID 
+     * @return Quuid 云服务器UUID
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 服务器Quuid
-     * @param Quuid 服务器Quuid
+     * Set 云服务器UUID
+     * @param Quuid 云服务器UUID
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 服务器Uuid 
-     * @return Uuid 服务器Uuid
+     * Get 主机安全UUID 
+     * @return Uuid 主机安全UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 服务器Uuid
-     * @param Uuid 服务器Uuid
+     * Set 主机安全UUID
+     * @param Uuid 主机安全UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

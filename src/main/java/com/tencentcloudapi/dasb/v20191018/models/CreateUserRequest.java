@@ -88,6 +88,13 @@ public class CreateUserRequest extends AbstractModel{
     private String ValidateTime;
 
     /**
+    * 所属部门ID，如：“1.2.3”
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符 
      * @return UserName 用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      */
@@ -239,6 +246,22 @@ public class CreateUserRequest extends AbstractModel{
         this.ValidateTime = ValidateTime;
     }
 
+    /**
+     * Get 所属部门ID，如：“1.2.3” 
+     * @return DepartmentId 所属部门ID，如：“1.2.3”
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 所属部门ID，如：“1.2.3”
+     * @param DepartmentId 所属部门ID，如：“1.2.3”
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -277,6 +300,9 @@ public class CreateUserRequest extends AbstractModel{
         if (source.ValidateTime != null) {
             this.ValidateTime = new String(source.ValidateTime);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class CreateUserRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

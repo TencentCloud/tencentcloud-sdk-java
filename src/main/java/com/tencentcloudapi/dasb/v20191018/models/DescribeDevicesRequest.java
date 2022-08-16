@@ -93,6 +93,13 @@ public class DescribeDevicesRequest extends AbstractModel{
     private Long [] KindSet;
 
     /**
+    * 过滤条件，可按照部门ID进行过滤
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 资产ID集合 
      * @return IdSet 资产ID集合
      */
@@ -252,6 +259,22 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.KindSet = KindSet;
     }
 
+    /**
+     * Get 过滤条件，可按照部门ID进行过滤 
+     * @return DepartmentId 过滤条件，可按照部门ID进行过滤
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 过滤条件，可按照部门ID进行过滤
+     * @param DepartmentId 过滤条件，可按照部门ID进行过滤
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public DescribeDevicesRequest() {
     }
 
@@ -305,6 +328,9 @@ public class DescribeDevicesRequest extends AbstractModel{
                 this.KindSet[i] = new Long(source.KindSet[i]);
             }
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -322,6 +348,7 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
         this.setParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
         this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

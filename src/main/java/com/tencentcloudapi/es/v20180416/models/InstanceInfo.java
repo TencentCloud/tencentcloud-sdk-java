@@ -600,6 +600,22 @@ RENEW_FLAG_DEFAULT：不自动续费
     private OperationDuration OperationDuration;
 
     /**
+    * web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OptionalWebServiceInfos")
+    @Expose
+    private OptionalWebServiceInfo [] OptionalWebServiceInfos;
+
+    /**
+    * 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoIndexEnabled")
+    @Expose
+    private Boolean AutoIndexEnabled;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1995,6 +2011,46 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get web节点列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OptionalWebServiceInfos web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OptionalWebServiceInfo [] getOptionalWebServiceInfos() {
+        return this.OptionalWebServiceInfos;
+    }
+
+    /**
+     * Set web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OptionalWebServiceInfos web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOptionalWebServiceInfos(OptionalWebServiceInfo [] OptionalWebServiceInfos) {
+        this.OptionalWebServiceInfos = OptionalWebServiceInfos;
+    }
+
+    /**
+     * Get 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoIndexEnabled 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoIndexEnabled() {
+        return this.AutoIndexEnabled;
+    }
+
+    /**
+     * Set 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoIndexEnabled 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoIndexEnabled(Boolean AutoIndexEnabled) {
+        this.AutoIndexEnabled = AutoIndexEnabled;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2246,6 +2302,15 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDuration(source.OperationDuration);
         }
+        if (source.OptionalWebServiceInfos != null) {
+            this.OptionalWebServiceInfos = new OptionalWebServiceInfo[source.OptionalWebServiceInfos.length];
+            for (int i = 0; i < source.OptionalWebServiceInfos.length; i++) {
+                this.OptionalWebServiceInfos[i] = new OptionalWebServiceInfo(source.OptionalWebServiceInfos[i]);
+            }
+        }
+        if (source.AutoIndexEnabled != null) {
+            this.AutoIndexEnabled = new Boolean(source.AutoIndexEnabled);
+        }
     }
 
 
@@ -2329,6 +2394,8 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
         this.setParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
+        this.setParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
 
     }
 }

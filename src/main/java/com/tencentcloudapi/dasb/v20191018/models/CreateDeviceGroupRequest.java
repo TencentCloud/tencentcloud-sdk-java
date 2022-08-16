@@ -30,6 +30,13 @@ public class CreateDeviceGroupRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 资产组所属部门ID，如：1.2.3
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 资产组名，最大长度32字符 
      * @return Name 资产组名，最大长度32字符
      */
@@ -45,6 +52,22 @@ public class CreateDeviceGroupRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 资产组所属部门ID，如：1.2.3 
+     * @return DepartmentId 资产组所属部门ID，如：1.2.3
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 资产组所属部门ID，如：1.2.3
+     * @param DepartmentId 资产组所属部门ID，如：1.2.3
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public CreateDeviceGroupRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CreateDeviceGroupRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CreateDeviceGroupRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

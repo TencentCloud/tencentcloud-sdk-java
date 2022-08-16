@@ -80,6 +80,13 @@ public class DescribeUsersRequest extends AbstractModel{
     private Long [] AuthTypeSet;
 
     /**
+    * 部门ID，用于过滤属于某个部门的用户
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 如果IdSet不为空，则忽略其他参数 
      * @return IdSet 如果IdSet不为空，则忽略其他参数
      */
@@ -211,6 +218,22 @@ public class DescribeUsersRequest extends AbstractModel{
         this.AuthTypeSet = AuthTypeSet;
     }
 
+    /**
+     * Get 部门ID，用于过滤属于某个部门的用户 
+     * @return DepartmentId 部门ID，用于过滤属于某个部门的用户
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 部门ID，用于过滤属于某个部门的用户
+     * @param DepartmentId 部门ID，用于过滤属于某个部门的用户
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public DescribeUsersRequest() {
     }
 
@@ -252,6 +275,9 @@ public class DescribeUsersRequest extends AbstractModel{
                 this.AuthTypeSet[i] = new Long(source.AuthTypeSet[i]);
             }
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -267,6 +293,7 @@ public class DescribeUsersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

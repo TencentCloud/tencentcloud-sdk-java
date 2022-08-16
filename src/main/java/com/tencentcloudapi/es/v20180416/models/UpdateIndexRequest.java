@@ -65,6 +65,13 @@ public class UpdateIndexRequest extends AbstractModel{
     private String Password;
 
     /**
+    * 是否滚动后备索引
+    */
+    @SerializedName("RolloverBackingIndex")
+    @Expose
+    private Boolean RolloverBackingIndex;
+
+    /**
      * Get ES集群ID 
      * @return InstanceId ES集群ID
      */
@@ -160,6 +167,22 @@ public class UpdateIndexRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    /**
+     * Get 是否滚动后备索引 
+     * @return RolloverBackingIndex 是否滚动后备索引
+     */
+    public Boolean getRolloverBackingIndex() {
+        return this.RolloverBackingIndex;
+    }
+
+    /**
+     * Set 是否滚动后备索引
+     * @param RolloverBackingIndex 是否滚动后备索引
+     */
+    public void setRolloverBackingIndex(Boolean RolloverBackingIndex) {
+        this.RolloverBackingIndex = RolloverBackingIndex;
+    }
+
     public UpdateIndexRequest() {
     }
 
@@ -186,6 +209,9 @@ public class UpdateIndexRequest extends AbstractModel{
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.RolloverBackingIndex != null) {
+            this.RolloverBackingIndex = new Boolean(source.RolloverBackingIndex);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class UpdateIndexRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateMetaJson", this.UpdateMetaJson);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "RolloverBackingIndex", this.RolloverBackingIndex);
 
     }
 }

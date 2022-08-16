@@ -200,6 +200,13 @@ public class ModifyAclRequest extends AbstractModel{
     private String ValidateTo;
 
     /**
+    * 权限所属部门的ID，如：1.2.3
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 访问权限名称，最大32字符，不能包含空白字符 
      * @return Name 访问权限名称，最大32字符，不能包含空白字符
      */
@@ -607,6 +614,22 @@ public class ModifyAclRequest extends AbstractModel{
         this.ValidateTo = ValidateTo;
     }
 
+    /**
+     * Get 权限所属部门的ID，如：1.2.3 
+     * @return DepartmentId 权限所属部门的ID，如：1.2.3
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 权限所属部门的ID，如：1.2.3
+     * @param DepartmentId 权限所属部门的ID，如：1.2.3
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public ModifyAclRequest() {
     }
 
@@ -708,6 +731,9 @@ public class ModifyAclRequest extends AbstractModel{
         if (source.ValidateTo != null) {
             this.ValidateTo = new String(source.ValidateTo);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -740,6 +766,7 @@ public class ModifyAclRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AllowFileDel", this.AllowFileDel);
         this.setParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
         this.setParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

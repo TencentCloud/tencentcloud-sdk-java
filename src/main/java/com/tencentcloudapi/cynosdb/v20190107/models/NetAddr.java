@@ -63,6 +63,30 @@ public class NetAddr extends AbstractModel{
     private String NetType;
 
     /**
+    * 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 内网ip
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vip 内网ip
@@ -162,6 +186,66 @@ public class NetAddr extends AbstractModel{
         this.NetType = NetType;
     }
 
+    /**
+     * Get 子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UniqSubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UniqSubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UniqVpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UniqVpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public NetAddr() {
     }
 
@@ -185,6 +269,15 @@ public class NetAddr extends AbstractModel{
         if (source.NetType != null) {
             this.NetType = new String(source.NetType);
         }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -197,6 +290,9 @@ public class NetAddr extends AbstractModel{
         this.setParamSimple(map, prefix + "WanDomain", this.WanDomain);
         this.setParamSimple(map, prefix + "WanPort", this.WanPort);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

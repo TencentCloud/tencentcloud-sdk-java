@@ -95,6 +95,22 @@ public class User extends AbstractModel{
     private String ValidateTime;
 
     /**
+    * 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Department")
+    @Expose
+    private Department Department;
+
+    /**
+    * 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符 
      * @return UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      */
@@ -262,6 +278,46 @@ public class User extends AbstractModel{
         this.ValidateTime = ValidateTime;
     }
 
+    /**
+     * Get 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Department 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Department getDepartment() {
+        return this.Department;
+    }
+
+    /**
+     * Set 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Department 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDepartment(Department Department) {
+        this.Department = Department;
+    }
+
+    /**
+     * Get 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DepartmentId 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DepartmentId 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public User() {
     }
 
@@ -303,6 +359,12 @@ public class User extends AbstractModel{
         if (source.ValidateTime != null) {
             this.ValidateTime = new String(source.ValidateTime);
         }
+        if (source.Department != null) {
+            this.Department = new Department(source.Department);
+        }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -320,6 +382,8 @@ public class User extends AbstractModel{
         this.setParamArrayObj(map, prefix + "GroupSet.", this.GroupSet);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
+        this.setParamObj(map, prefix + "Department.", this.Department);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

@@ -65,6 +65,13 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel{
     private Long Kind;
 
     /**
+    * 所属部门ID
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 资产组ID 
      * @return Id 资产组ID
      */
@@ -160,6 +167,22 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel{
         this.Kind = Kind;
     }
 
+    /**
+     * Get 所属部门ID 
+     * @return DepartmentId 所属部门ID
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 所属部门ID
+     * @param DepartmentId 所属部门ID
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public DescribeDeviceGroupMembersRequest() {
     }
 
@@ -186,6 +209,9 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel{
         if (source.Kind != null) {
             this.Kind = new Long(source.Kind);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

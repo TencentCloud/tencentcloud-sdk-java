@@ -37,7 +37,7 @@ public class DescribeSocAlertListRequest extends AbstractModel{
     private Long PageIndex;
 
     /**
-    * 业务场景 参考ScenesType
+    * 1:急需关注 2.重保监控 3.全量告警
     */
     @SerializedName("Scenes")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeSocAlertListRequest extends AbstractModel{
     }
 
     /**
-     * Get 业务场景 参考ScenesType 
-     * @return Scenes 业务场景 参考ScenesType
+     * Get 1:急需关注 2.重保监控 3.全量告警 
+     * @return Scenes 1:急需关注 2.重保监控 3.全量告警
      */
     public Long getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set 业务场景 参考ScenesType
-     * @param Scenes 业务场景 参考ScenesType
+     * Set 1:急需关注 2.重保监控 3.全量告警
+     * @param Scenes 1:急需关注 2.重保监控 3.全量告警
      */
     public void setScenes(Long Scenes) {
         this.Scenes = Scenes;

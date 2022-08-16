@@ -88,6 +88,13 @@ public class ModifyUserRequest extends AbstractModel{
     private String ValidateTime;
 
     /**
+    * 用户所属部门的ID，如1.2.3
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 用户ID 
      * @return Id 用户ID
      */
@@ -239,6 +246,22 @@ public class ModifyUserRequest extends AbstractModel{
         this.ValidateTime = ValidateTime;
     }
 
+    /**
+     * Get 用户所属部门的ID，如1.2.3 
+     * @return DepartmentId 用户所属部门的ID，如1.2.3
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 用户所属部门的ID，如1.2.3
+     * @param DepartmentId 用户所属部门的ID，如1.2.3
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public ModifyUserRequest() {
     }
 
@@ -277,6 +300,9 @@ public class ModifyUserRequest extends AbstractModel{
         if (source.ValidateTime != null) {
             this.ValidateTime = new String(source.ValidateTime);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class ModifyUserRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

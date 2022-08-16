@@ -37,6 +37,13 @@ public class Box extends AbstractModel{
     private Float Score;
 
     /**
+    * 主体区域类目ID
+    */
+    @SerializedName("CategoryId")
+    @Expose
+    private Long CategoryId;
+
+    /**
      * Get 图像主体区域。 
      * @return Rect 图像主体区域。
      */
@@ -68,6 +75,22 @@ public class Box extends AbstractModel{
         this.Score = Score;
     }
 
+    /**
+     * Get 主体区域类目ID 
+     * @return CategoryId 主体区域类目ID
+     */
+    public Long getCategoryId() {
+        return this.CategoryId;
+    }
+
+    /**
+     * Set 主体区域类目ID
+     * @param CategoryId 主体区域类目ID
+     */
+    public void setCategoryId(Long CategoryId) {
+        this.CategoryId = CategoryId;
+    }
+
     public Box() {
     }
 
@@ -82,6 +105,9 @@ public class Box extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Float(source.Score);
         }
+        if (source.CategoryId != null) {
+            this.CategoryId = new Long(source.CategoryId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class Box extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Rect.", this.Rect);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
 
     }
 }

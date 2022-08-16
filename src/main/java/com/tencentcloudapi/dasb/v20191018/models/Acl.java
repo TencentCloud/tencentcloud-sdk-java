@@ -207,6 +207,14 @@ public class Acl extends AbstractModel{
     private Long Status;
 
     /**
+    * 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Department")
+    @Expose
+    private Department Department;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -630,6 +638,26 @@ public class Acl extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Department 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Department getDepartment() {
+        return this.Department;
+    }
+
+    /**
+     * Set 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Department 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDepartment(Department Department) {
+        this.Department = Department;
+    }
+
     public Acl() {
     }
 
@@ -734,6 +762,9 @@ public class Acl extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Department != null) {
+            this.Department = new Department(source.Department);
+        }
     }
 
 
@@ -767,6 +798,7 @@ public class Acl extends AbstractModel{
         this.setParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
         this.setParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "Department.", this.Department);
 
     }
 }

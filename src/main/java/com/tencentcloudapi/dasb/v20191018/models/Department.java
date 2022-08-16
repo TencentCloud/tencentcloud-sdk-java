@@ -20,98 +20,101 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Group extends AbstractModel{
+public class Department extends AbstractModel{
 
     /**
-    * 组ID
+    * 部门ID
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private String Id;
 
     /**
-    * 组名称
+    * 部门名称，1 - 256个字符
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 所属部门信息
+    * 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Department")
+    @SerializedName("Managers")
     @Expose
-    private Department Department;
+    private String [] Managers;
 
     /**
-     * Get 组ID 
-     * @return Id 组ID
+     * Get 部门ID 
+     * @return Id 部门ID
      */
-    public Long getId() {
+    public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 组ID
-     * @param Id 组ID
+     * Set 部门ID
+     * @param Id 部门ID
      */
-    public void setId(Long Id) {
+    public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 组名称 
-     * @return Name 组名称
+     * Get 部门名称，1 - 256个字符 
+     * @return Name 部门名称，1 - 256个字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 组名称
-     * @param Name 组名称
+     * Set 部门名称，1 - 256个字符
+     * @param Name 部门名称，1 - 256个字符
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 所属部门信息
+     * Get 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Department 所属部门信息
+     * @return Managers 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Department getDepartment() {
-        return this.Department;
+    public String [] getManagers() {
+        return this.Managers;
     }
 
     /**
-     * Set 所属部门信息
+     * Set 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Department 所属部门信息
+     * @param Managers 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDepartment(Department Department) {
-        this.Department = Department;
+    public void setManagers(String [] Managers) {
+        this.Managers = Managers;
     }
 
-    public Group() {
+    public Department() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Group(Group source) {
+    public Department(Department source) {
         if (source.Id != null) {
-            this.Id = new Long(source.Id);
+            this.Id = new String(source.Id);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Department != null) {
-            this.Department = new Department(source.Department);
+        if (source.Managers != null) {
+            this.Managers = new String[source.Managers.length];
+            for (int i = 0; i < source.Managers.length; i++) {
+                this.Managers[i] = new String(source.Managers[i]);
+            }
         }
     }
 
@@ -122,7 +125,7 @@ public class Group extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamObj(map, prefix + "Department.", this.Department);
+        this.setParamArraySimple(map, prefix + "Managers.", this.Managers);
 
     }
 }

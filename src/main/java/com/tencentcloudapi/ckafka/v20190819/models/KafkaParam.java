@@ -108,6 +108,22 @@ public class KafkaParam extends AbstractModel{
     private Long QpsLimit;
 
     /**
+    * Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableMappings")
+    @Expose
+    private TableMapping [] TableMappings;
+
+    /**
+    * 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseTableMapping")
+    @Expose
+    private Boolean UseTableMapping;
+
+    /**
      * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
      */
@@ -315,6 +331,46 @@ public class KafkaParam extends AbstractModel{
         this.QpsLimit = QpsLimit;
     }
 
+    /**
+     * Get Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TableMapping [] getTableMappings() {
+        return this.TableMappings;
+    }
+
+    /**
+     * Set Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableMappings(TableMapping [] TableMappings) {
+        this.TableMappings = TableMappings;
+    }
+
+    /**
+     * Get 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseTableMapping 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseTableMapping() {
+        return this.UseTableMapping;
+    }
+
+    /**
+     * Set 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseTableMapping 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseTableMapping(Boolean UseTableMapping) {
+        this.UseTableMapping = UseTableMapping;
+    }
+
     public KafkaParam() {
     }
 
@@ -356,6 +412,15 @@ public class KafkaParam extends AbstractModel{
         if (source.QpsLimit != null) {
             this.QpsLimit = new Long(source.QpsLimit);
         }
+        if (source.TableMappings != null) {
+            this.TableMappings = new TableMapping[source.TableMappings.length];
+            for (int i = 0; i < source.TableMappings.length; i++) {
+                this.TableMappings[i] = new TableMapping(source.TableMappings[i]);
+            }
+        }
+        if (source.UseTableMapping != null) {
+            this.UseTableMapping = new Boolean(source.UseTableMapping);
+        }
     }
 
 
@@ -374,6 +439,8 @@ public class KafkaParam extends AbstractModel{
         this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
         this.setParamSimple(map, prefix + "EnableToleration", this.EnableToleration);
         this.setParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
+        this.setParamArrayObj(map, prefix + "TableMappings.", this.TableMappings);
+        this.setParamSimple(map, prefix + "UseTableMapping", this.UseTableMapping);
 
     }
 }

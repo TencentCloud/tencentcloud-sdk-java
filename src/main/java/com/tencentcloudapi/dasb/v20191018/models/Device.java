@@ -122,6 +122,14 @@ public class Device extends AbstractModel{
     private Resource Resource;
 
     /**
+    * 资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Department")
+    @Expose
+    private Department Department;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -349,6 +357,26 @@ public class Device extends AbstractModel{
         this.Resource = Resource;
     }
 
+    /**
+     * Get 资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Department 资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Department getDepartment() {
+        return this.Department;
+    }
+
+    /**
+     * Set 资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Department 资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDepartment(Department Department) {
+        this.Department = Department;
+    }
+
     public Device() {
     }
 
@@ -402,6 +430,9 @@ public class Device extends AbstractModel{
         if (source.Resource != null) {
             this.Resource = new Resource(source.Resource);
         }
+        if (source.Department != null) {
+            this.Department = new Department(source.Department);
+        }
     }
 
 
@@ -423,6 +454,7 @@ public class Device extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamObj(map, prefix + "Resource.", this.Resource);
+        this.setParamObj(map, prefix + "Department.", this.Department);
 
     }
 }

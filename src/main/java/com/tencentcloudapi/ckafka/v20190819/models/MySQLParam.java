@@ -149,6 +149,34 @@ public class MySQLParam extends AbstractModel{
     private DropCls DropCls;
 
     /**
+    * 输出格式，DEFAULT、CANAL_1、CANAL_2
+    */
+    @SerializedName("OutputFormat")
+    @Expose
+    private String OutputFormat;
+
+    /**
+    * 当Table输入的是前缀时，该项值为true，否则为false
+    */
+    @SerializedName("IsTablePrefix")
+    @Expose
+    private Boolean IsTablePrefix;
+
+    /**
+    * 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+    */
+    @SerializedName("IncludeContentChanges")
+    @Expose
+    private String IncludeContentChanges;
+
+    /**
+    * 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+    */
+    @SerializedName("IncludeQuery")
+    @Expose
+    private Boolean IncludeQuery;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -436,6 +464,70 @@ public class MySQLParam extends AbstractModel{
         this.DropCls = DropCls;
     }
 
+    /**
+     * Get 输出格式，DEFAULT、CANAL_1、CANAL_2 
+     * @return OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+     */
+    public String getOutputFormat() {
+        return this.OutputFormat;
+    }
+
+    /**
+     * Set 输出格式，DEFAULT、CANAL_1、CANAL_2
+     * @param OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+     */
+    public void setOutputFormat(String OutputFormat) {
+        this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get 当Table输入的是前缀时，该项值为true，否则为false 
+     * @return IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+     */
+    public Boolean getIsTablePrefix() {
+        return this.IsTablePrefix;
+    }
+
+    /**
+     * Set 当Table输入的是前缀时，该项值为true，否则为false
+     * @param IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+     */
+    public void setIsTablePrefix(Boolean IsTablePrefix) {
+        this.IsTablePrefix = IsTablePrefix;
+    }
+
+    /**
+     * Get 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic 
+     * @return IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     */
+    public String getIncludeContentChanges() {
+        return this.IncludeContentChanges;
+    }
+
+    /**
+     * Set 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     * @param IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     */
+    public void setIncludeContentChanges(String IncludeContentChanges) {
+        this.IncludeContentChanges = IncludeContentChanges;
+    }
+
+    /**
+     * Get 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句 
+     * @return IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     */
+    public Boolean getIncludeQuery() {
+        return this.IncludeQuery;
+    }
+
+    /**
+     * Set 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     * @param IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     */
+    public void setIncludeQuery(Boolean IncludeQuery) {
+        this.IncludeQuery = IncludeQuery;
+    }
+
     public MySQLParam() {
     }
 
@@ -501,6 +593,18 @@ public class MySQLParam extends AbstractModel{
         if (source.DropCls != null) {
             this.DropCls = new DropCls(source.DropCls);
         }
+        if (source.OutputFormat != null) {
+            this.OutputFormat = new String(source.OutputFormat);
+        }
+        if (source.IsTablePrefix != null) {
+            this.IsTablePrefix = new Boolean(source.IsTablePrefix);
+        }
+        if (source.IncludeContentChanges != null) {
+            this.IncludeContentChanges = new String(source.IncludeContentChanges);
+        }
+        if (source.IncludeQuery != null) {
+            this.IncludeQuery = new Boolean(source.IncludeQuery);
+        }
     }
 
 
@@ -526,6 +630,10 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
         this.setParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
         this.setParamObj(map, prefix + "DropCls.", this.DropCls);
+        this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "IsTablePrefix", this.IsTablePrefix);
+        this.setParamSimple(map, prefix + "IncludeContentChanges", this.IncludeContentChanges);
+        this.setParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
 
     }
 }

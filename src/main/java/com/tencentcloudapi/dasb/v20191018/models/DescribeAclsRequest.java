@@ -79,6 +79,13 @@ public class DescribeAclsRequest extends AbstractModel{
     private Long Status;
 
     /**
+    * 部门ID，用于过滤属于某个部门的访问权限
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 访问权限ID集合 
      * @return IdSet 访问权限ID集合
      */
@@ -206,6 +213,22 @@ public class DescribeAclsRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 部门ID，用于过滤属于某个部门的访问权限 
+     * @return DepartmentId 部门ID，用于过滤属于某个部门的访问权限
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 部门ID，用于过滤属于某个部门的访问权限
+     * @param DepartmentId 部门ID，用于过滤属于某个部门的访问权限
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public DescribeAclsRequest() {
     }
 
@@ -247,6 +270,9 @@ public class DescribeAclsRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -262,6 +288,7 @@ public class DescribeAclsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

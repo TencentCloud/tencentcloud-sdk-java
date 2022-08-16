@@ -51,7 +51,7 @@ public class ObjectInfo extends AbstractModel{
     private Attribute [] Attributes;
 
     /**
-    * 图像的所有主体区域。
+    * 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllBox")
@@ -123,9 +123,9 @@ public class ObjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 图像的所有主体区域。
+     * Get 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllBox 图像的所有主体区域。
+     * @return AllBox 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Box [] getAllBox() {
@@ -133,9 +133,9 @@ public class ObjectInfo extends AbstractModel{
     }
 
     /**
-     * Set 图像的所有主体区域。
+     * Set 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllBox 图像的所有主体区域。
+     * @param AllBox 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllBox(Box [] AllBox) {

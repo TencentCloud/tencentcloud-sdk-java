@@ -72,6 +72,23 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
     private Long ApiVersion;
 
     /**
+    * -1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
+    * -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -183,6 +200,50 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         this.ApiVersion = ApiVersion;
     }
 
+    /**
+     * Get -1:不按项目筛选，获取所有
+>=0: 按项目id筛选 
+     * @return GroupId -1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set -1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+     * @param GroupId -1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止 
+     * @return Status -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
+     * @param Status -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public ListRuntimeDeployedInstancesMCRequest() {
     }
 
@@ -212,6 +273,12 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         if (source.ApiVersion != null) {
             this.ApiVersion = new Long(source.ApiVersion);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -226,6 +293,8 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

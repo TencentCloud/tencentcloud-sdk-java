@@ -58,6 +58,13 @@ public class DescribeUserGroupMembersRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 所属部门ID
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 用户组ID 
      * @return Id 用户组ID
      */
@@ -137,6 +144,22 @@ public class DescribeUserGroupMembersRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 所属部门ID 
+     * @return DepartmentId 所属部门ID
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 所属部门ID
+     * @param DepartmentId 所属部门ID
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public DescribeUserGroupMembersRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeUserGroupMembersRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeUserGroupMembersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }

@@ -30,6 +30,13 @@ public class CreateUserGroupRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 用户组所属部门的ID，如：1.2.3
+    */
+    @SerializedName("DepartmentId")
+    @Expose
+    private String DepartmentId;
+
+    /**
      * Get 用户组名，最大长度32字符 
      * @return Name 用户组名，最大长度32字符
      */
@@ -45,6 +52,22 @@ public class CreateUserGroupRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 用户组所属部门的ID，如：1.2.3 
+     * @return DepartmentId 用户组所属部门的ID，如：1.2.3
+     */
+    public String getDepartmentId() {
+        return this.DepartmentId;
+    }
+
+    /**
+     * Set 用户组所属部门的ID，如：1.2.3
+     * @param DepartmentId 用户组所属部门的ID，如：1.2.3
+     */
+    public void setDepartmentId(String DepartmentId) {
+        this.DepartmentId = DepartmentId;
+    }
+
     public CreateUserGroupRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CreateUserGroupRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.DepartmentId != null) {
+            this.DepartmentId = new String(source.DepartmentId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CreateUserGroupRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
 
     }
 }
