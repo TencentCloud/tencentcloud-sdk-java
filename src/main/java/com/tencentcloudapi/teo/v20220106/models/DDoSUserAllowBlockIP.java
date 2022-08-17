@@ -23,168 +23,148 @@ import java.util.HashMap;
 public class DDoSUserAllowBlockIP extends AbstractModel{
 
     /**
-    * 用户ip
-注意：此字段可能返回 null，表示取不到有效值。
+    * 客户端IP。
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 掩码
-注意：此字段可能返回 null，表示取不到有效值。
+    * 掩码。
     */
     @SerializedName("Mask")
     @Expose
     private Long Mask;
 
     /**
-    * 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
+    * 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+    * 10位时间戳，例如1199116800。
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
+    * 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
     */
     @SerializedName("Ip2")
     @Expose
     private String Ip2;
 
     /**
-    * 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
+    * 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
     */
     @SerializedName("Mask2")
     @Expose
     private Long Mask2;
 
     /**
-     * Get 用户ip
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ip 用户ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户端IP。 
+     * @return Ip 客户端IP。
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 用户ip
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ip 用户ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 客户端IP。
+     * @param Ip 客户端IP。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 掩码
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mask 掩码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 掩码。 
+     * @return Mask 掩码。
      */
     public Long getMask() {
         return this.Mask;
     }
 
     /**
-     * Set 掩码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mask 掩码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 掩码。
+     * @param Mask 掩码。
      */
     public void setMask(Long Mask) {
         this.Mask = Mask;
     }
 
     /**
-     * Get 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li> 
+     * @return Type 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
+     * @param Type 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 10位时间戳，例如1199116800。 
+     * @return UpdateTime 10位时间戳，例如1199116800。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 10位时间戳，例如1199116800。
+     * @param UpdateTime 10位时间戳，例如1199116800。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ip2 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。 
+     * @return Ip2 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
      */
     public String getIp2() {
         return this.Ip2;
     }
 
     /**
-     * Set 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ip2 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
+     * @param Ip2 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
      */
     public void setIp2(String Ip2) {
         this.Ip2 = Ip2;
     }
 
     /**
-     * Get 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mask2 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。 
+     * @return Mask2 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
      */
     public Long getMask2() {
         return this.Mask2;
     }
 
     /**
-     * Set 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mask2 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
+     * @param Mask2 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
      */
     public void setMask2(Long Mask2) {
         this.Mask2 = Mask2;

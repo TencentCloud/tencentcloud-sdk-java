@@ -23,49 +23,59 @@ import java.util.HashMap;
 public class DdosAcls extends AbstractModel{
 
     /**
-    * 开关 off清空规则标识
-    */
-    @SerializedName("Switch")
-    @Expose
-    private String Switch;
-
-    /**
-    * 端口过了详细参数
+    * 端口过滤规则数组。
     */
     @SerializedName("Acl")
     @Expose
     private DDoSAcl [] Acl;
 
     /**
-     * Get 开关 off清空规则标识 
-     * @return Switch 开关 off清空规则标识
-     */
-    public String getSwitch() {
-        return this.Switch;
-    }
+    * 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
 
     /**
-     * Set 开关 off清空规则标识
-     * @param Switch 开关 off清空规则标识
-     */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
-    }
-
-    /**
-     * Get 端口过了详细参数 
-     * @return Acl 端口过了详细参数
+     * Get 端口过滤规则数组。 
+     * @return Acl 端口过滤规则数组。
      */
     public DDoSAcl [] getAcl() {
         return this.Acl;
     }
 
     /**
-     * Set 端口过了详细参数
-     * @param Acl 端口过了详细参数
+     * Set 端口过滤规则数组。
+     * @param Acl 端口过滤规则数组。
      */
     public void setAcl(DDoSAcl [] Acl) {
         this.Acl = Acl;
+    }
+
+    /**
+     * Get 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。 
+     * @return Switch 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+     * @param Switch 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     public DdosAcls() {
@@ -76,14 +86,14 @@ public class DdosAcls extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DdosAcls(DdosAcls source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
-        }
         if (source.Acl != null) {
             this.Acl = new DDoSAcl[source.Acl.length];
             for (int i = 0; i < source.Acl.length; i++) {
                 this.Acl[i] = new DDoSAcl(source.Acl[i]);
             }
+        }
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -92,8 +102,8 @@ public class DdosAcls extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "Acl.", this.Acl);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

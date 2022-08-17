@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DdosRule extends AbstractModel{
 
     /**
-    * DDoS防护等级
+    * DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdosStatusInfo")
@@ -31,7 +31,7 @@ public class DdosRule extends AbstractModel{
     private DDoSStatusInfo DdosStatusInfo;
 
     /**
-    * DDoS地域封禁
+    * DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdosGeoIp")
@@ -39,7 +39,7 @@ public class DdosRule extends AbstractModel{
     private DDoSGeoIp DdosGeoIp;
 
     /**
-    * DDoS黑白名单
+    * DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdosAllowBlock")
@@ -47,7 +47,7 @@ public class DdosRule extends AbstractModel{
     private DdosAllowBlock DdosAllowBlock;
 
     /**
-    * DDoS 协议封禁+连接防护
+    * DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdosAntiPly")
@@ -55,7 +55,7 @@ public class DdosRule extends AbstractModel{
     private DDoSAntiPly DdosAntiPly;
 
     /**
-    * DDoS特征过滤
+    * DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdosPacketFilter")
@@ -63,7 +63,7 @@ public class DdosRule extends AbstractModel{
     private DdosPacketFilter DdosPacketFilter;
 
     /**
-    * DDoS端口过滤
+    * DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdosAcl")
@@ -71,25 +71,35 @@ public class DdosRule extends AbstractModel{
     private DdosAcls DdosAcl;
 
     /**
-    * DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。
+    * DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。
+    * UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
     */
     @SerializedName("UdpShardOpen")
     @Expose
     private String UdpShardOpen;
 
     /**
-     * Get DDoS防护等级
+    * DDoS源站访问速率限制。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DdosSpeedLimit")
+    @Expose
+    private DdosSpeedLimit DdosSpeedLimit;
+
+    /**
+     * Get DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdosStatusInfo DDoS防护等级
+     * @return DdosStatusInfo DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DDoSStatusInfo getDdosStatusInfo() {
@@ -97,9 +107,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Set DDoS防护等级
+     * Set DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosStatusInfo DDoS防护等级
+     * @param DdosStatusInfo DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdosStatusInfo(DDoSStatusInfo DdosStatusInfo) {
@@ -107,9 +117,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Get DDoS地域封禁
+     * Get DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdosGeoIp DDoS地域封禁
+     * @return DdosGeoIp DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DDoSGeoIp getDdosGeoIp() {
@@ -117,9 +127,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Set DDoS地域封禁
+     * Set DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosGeoIp DDoS地域封禁
+     * @param DdosGeoIp DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdosGeoIp(DDoSGeoIp DdosGeoIp) {
@@ -127,9 +137,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Get DDoS黑白名单
+     * Get DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdosAllowBlock DDoS黑白名单
+     * @return DdosAllowBlock DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosAllowBlock getDdosAllowBlock() {
@@ -137,9 +147,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Set DDoS黑白名单
+     * Set DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosAllowBlock DDoS黑白名单
+     * @param DdosAllowBlock DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdosAllowBlock(DdosAllowBlock DdosAllowBlock) {
@@ -147,9 +157,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Get DDoS 协议封禁+连接防护
+     * Get DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdosAntiPly DDoS 协议封禁+连接防护
+     * @return DdosAntiPly DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DDoSAntiPly getDdosAntiPly() {
@@ -157,9 +167,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Set DDoS 协议封禁+连接防护
+     * Set DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosAntiPly DDoS 协议封禁+连接防护
+     * @param DdosAntiPly DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdosAntiPly(DDoSAntiPly DdosAntiPly) {
@@ -167,9 +177,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Get DDoS特征过滤
+     * Get DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdosPacketFilter DDoS特征过滤
+     * @return DdosPacketFilter DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosPacketFilter getDdosPacketFilter() {
@@ -177,9 +187,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Set DDoS特征过滤
+     * Set DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosPacketFilter DDoS特征过滤
+     * @param DdosPacketFilter DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdosPacketFilter(DdosPacketFilter DdosPacketFilter) {
@@ -187,9 +197,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Get DDoS端口过滤
+     * Get DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdosAcl DDoS端口过滤
+     * @return DdosAcl DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosAcls getDdosAcl() {
@@ -197,9 +207,9 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Set DDoS端口过滤
+     * Set DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosAcl DDoS端口过滤
+     * @param DdosAcl DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdosAcl(DdosAcls DdosAcl) {
@@ -207,43 +217,71 @@ public class DdosRule extends AbstractModel{
     }
 
     /**
-     * Get DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li> 
+     * @return Switch DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
+     * @param Switch DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UdpShardOpen UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li> 
+     * @return UdpShardOpen UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
      */
     public String getUdpShardOpen() {
         return this.UdpShardOpen;
     }
 
     /**
-     * Set UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UdpShardOpen UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
+     * @param UdpShardOpen UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
      */
     public void setUdpShardOpen(String UdpShardOpen) {
         this.UdpShardOpen = UdpShardOpen;
+    }
+
+    /**
+     * Get DDoS源站访问速率限制。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DdosSpeedLimit DDoS源站访问速率限制。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DdosSpeedLimit getDdosSpeedLimit() {
+        return this.DdosSpeedLimit;
+    }
+
+    /**
+     * Set DDoS源站访问速率限制。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DdosSpeedLimit DDoS源站访问速率限制。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDdosSpeedLimit(DdosSpeedLimit DdosSpeedLimit) {
+        this.DdosSpeedLimit = DdosSpeedLimit;
     }
 
     public DdosRule() {
@@ -278,6 +316,9 @@ public class DdosRule extends AbstractModel{
         if (source.UdpShardOpen != null) {
             this.UdpShardOpen = new String(source.UdpShardOpen);
         }
+        if (source.DdosSpeedLimit != null) {
+            this.DdosSpeedLimit = new DdosSpeedLimit(source.DdosSpeedLimit);
+        }
     }
 
 
@@ -293,6 +334,7 @@ public class DdosRule extends AbstractModel{
         this.setParamObj(map, prefix + "DdosAcl.", this.DdosAcl);
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "UdpShardOpen", this.UdpShardOpen);
+        this.setParamObj(map, prefix + "DdosSpeedLimit.", this.DdosSpeedLimit);
 
     }
 }

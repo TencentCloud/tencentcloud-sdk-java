@@ -23,59 +23,59 @@ import java.util.HashMap;
 public class DDoSGeoIp extends AbstractModel{
 
     /**
-    * 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RegionId")
-    @Expose
-    private Long [] RegionId;
-
-    /**
-    * 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
+    * 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long [] getRegionId() {
-        return this.RegionId;
-    }
+    * 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long [] RegionId;
 
     /**
-     * Set 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRegionId(Long [] RegionId) {
-        this.RegionId = RegionId;
-    }
-
-    /**
-     * Get 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li> 
+     * @return Switch 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
+     * @param Switch 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
+    }
+
+    /**
+     * Get 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。 
+     * @return RegionId 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+     */
+    public Long [] getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+     * @param RegionId 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+     */
+    public void setRegionId(Long [] RegionId) {
+        this.RegionId = RegionId;
     }
 
     public DDoSGeoIp() {
@@ -86,14 +86,14 @@ public class DDoSGeoIp extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DDoSGeoIp(DDoSGeoIp source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
         if (source.RegionId != null) {
             this.RegionId = new Long[source.RegionId.length];
             for (int i = 0; i < source.RegionId.length; i++) {
                 this.RegionId[i] = new Long(source.RegionId[i]);
             }
-        }
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
         }
     }
 
@@ -102,8 +102,8 @@ public class DDoSGeoIp extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "RegionId.", this.RegionId);
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "RegionId.", this.RegionId);
 
     }
 }

@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.sms.v20210111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFilterResultResponse extends AbstractModel{
+public class ReportConversionResponse extends AbstractModel{
 
     /**
-    * 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+    * 转化率上报响应包体。
     */
-    @SerializedName("Data")
+    @SerializedName("ReportConversionStatus")
     @Expose
-    private VoiceFilterInfo Data;
+    private ReportConversionStatus ReportConversionStatus;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class DescribeFilterResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转化率上报响应包体。 
+     * @return ReportConversionStatus 转化率上报响应包体。
      */
-    public VoiceFilterInfo getData() {
-        return this.Data;
+    public ReportConversionStatus getReportConversionStatus() {
+        return this.ReportConversionStatus;
     }
 
     /**
-     * Set 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 转化率上报响应包体。
+     * @param ReportConversionStatus 转化率上报响应包体。
      */
-    public void setData(VoiceFilterInfo Data) {
-        this.Data = Data;
+    public void setReportConversionStatus(ReportConversionStatus ReportConversionStatus) {
+        this.ReportConversionStatus = ReportConversionStatus;
     }
 
     /**
@@ -73,16 +68,16 @@ public class DescribeFilterResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFilterResultResponse() {
+    public ReportConversionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFilterResultResponse(DescribeFilterResultResponse source) {
-        if (source.Data != null) {
-            this.Data = new VoiceFilterInfo(source.Data);
+    public ReportConversionResponse(ReportConversionResponse source) {
+        if (source.ReportConversionStatus != null) {
+            this.ReportConversionStatus = new ReportConversionStatus(source.ReportConversionStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ public class DescribeFilterResultResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "ReportConversionStatus.", this.ReportConversionStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

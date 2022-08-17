@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyDDoSPolicyRequest extends AbstractModel{
 
     /**
-    * 策略组ID
+    * 策略id。
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 一级域名
+    * 站点id。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * DDoS具体防护配置
+    * DDoS防护配置详情。
     */
     @SerializedName("DdosRule")
     @Expose
     private DdosRule DdosRule;
 
     /**
-     * Get 策略组ID 
-     * @return PolicyId 策略组ID
+     * Get 策略id。 
+     * @return PolicyId 策略id。
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略组ID
-     * @param PolicyId 策略组ID
+     * Set 策略id。
+     * @param PolicyId 策略id。
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 一级域名 
-     * @return ZoneId 一级域名
+     * Get 站点id。 
+     * @return ZoneId 站点id。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 一级域名
-     * @param ZoneId 一级域名
+     * Set 站点id。
+     * @param ZoneId 站点id。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get DDoS具体防护配置 
-     * @return DdosRule DDoS具体防护配置
+     * Get DDoS防护配置详情。 
+     * @return DdosRule DDoS防护配置详情。
      */
     public DdosRule getDdosRule() {
         return this.DdosRule;
     }
 
     /**
-     * Set DDoS具体防护配置
-     * @param DdosRule DDoS具体防护配置
+     * Set DDoS防护配置详情。
+     * @param DdosRule DDoS防护配置详情。
      */
     public void setDdosRule(DdosRule DdosRule) {
         this.DdosRule = DdosRule;

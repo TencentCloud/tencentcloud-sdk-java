@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class DDoSStatusInfo extends AbstractModel{
 
     /**
-    * 不支持，填off
+    * 暂不支持，默认值off。
     */
     @SerializedName("AiStatus")
     @Expose
     private String AiStatus;
 
     /**
-    * 用户appid
+    * 废弃字段。
     */
     @SerializedName("Appid")
     @Expose
     private String Appid;
 
     /**
-    * 策略等级 low, middle, high
+    * 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
     */
     @SerializedName("PlyLevel")
     @Expose
     private String PlyLevel;
 
     /**
-     * Get 不支持，填off 
-     * @return AiStatus 不支持，填off
+     * Get 暂不支持，默认值off。 
+     * @return AiStatus 暂不支持，默认值off。
      */
     public String getAiStatus() {
         return this.AiStatus;
     }
 
     /**
-     * Set 不支持，填off
-     * @param AiStatus 不支持，填off
+     * Set 暂不支持，默认值off。
+     * @param AiStatus 暂不支持，默认值off。
      */
     public void setAiStatus(String AiStatus) {
         this.AiStatus = AiStatus;
     }
 
     /**
-     * Get 用户appid 
-     * @return Appid 用户appid
+     * Get 废弃字段。 
+     * @return Appid 废弃字段。
      */
     public String getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set 用户appid
-     * @param Appid 用户appid
+     * Set 废弃字段。
+     * @param Appid 废弃字段。
      */
     public void setAppid(String Appid) {
         this.Appid = Appid;
     }
 
     /**
-     * Get 策略等级 low, middle, high 
-     * @return PlyLevel 策略等级 low, middle, high
+     * Get 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li> 
+     * @return PlyLevel 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
      */
     public String getPlyLevel() {
         return this.PlyLevel;
     }
 
     /**
-     * Set 策略等级 low, middle, high
-     * @param PlyLevel 策略等级 low, middle, high
+     * Set 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
+     * @param PlyLevel 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
      */
     public void setPlyLevel(String PlyLevel) {
         this.PlyLevel = PlyLevel;

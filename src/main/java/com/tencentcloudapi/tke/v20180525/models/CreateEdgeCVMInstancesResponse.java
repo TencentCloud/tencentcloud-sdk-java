@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilterResponse extends AbstractModel{
+public class CreateEdgeCVMInstancesResponse extends AbstractModel{
+
+    /**
+    * cvm id 列表
+    */
+    @SerializedName("CvmIdSet")
+    @Expose
+    private String [] CvmIdSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class VoiceFilterResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get cvm id 列表 
+     * @return CvmIdSet cvm id 列表
+     */
+    public String [] getCvmIdSet() {
+        return this.CvmIdSet;
+    }
+
+    /**
+     * Set cvm id 列表
+     * @param CvmIdSet cvm id 列表
+     */
+    public void setCvmIdSet(String [] CvmIdSet) {
+        this.CvmIdSet = CvmIdSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,20 @@ public class VoiceFilterResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public VoiceFilterResponse() {
+    public CreateEdgeCVMInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VoiceFilterResponse(VoiceFilterResponse source) {
+    public CreateEdgeCVMInstancesResponse(CreateEdgeCVMInstancesResponse source) {
+        if (source.CvmIdSet != null) {
+            this.CvmIdSet = new String[source.CvmIdSet.length];
+            for (int i = 0; i < source.CvmIdSet.length; i++) {
+                this.CvmIdSet[i] = new String(source.CvmIdSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class VoiceFilterResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CvmIdSet.", this.CvmIdSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

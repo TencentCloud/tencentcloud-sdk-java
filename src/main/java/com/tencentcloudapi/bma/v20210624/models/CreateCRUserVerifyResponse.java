@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.bma.v20210624.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFilterResultListResponse extends AbstractModel{
+public class CreateCRUserVerifyResponse extends AbstractModel{
 
     /**
-    * 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 认证状态 0-认证成功 1-认证失败
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Status")
     @Expose
-    private Long TotalCount;
+    private Long Status;
 
     /**
-    * 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 认证结果返回
     */
-    @SerializedName("Data")
+    @SerializedName("Note")
     @Expose
-    private VoiceFilterInfo [] Data;
+    private String Note;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +44,35 @@ public class DescribeFilterResultListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 认证状态 0-认证成功 1-认证失败 
+     * @return Status 认证状态 0-认证成功 1-认证失败
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 认证状态 0-认证成功 1-认证失败
+     * @param Status 认证状态 0-认证成功 1-认证失败
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 认证结果返回 
+     * @return Note 认证结果返回
      */
-    public VoiceFilterInfo [] getData() {
-        return this.Data;
+    public String getNote() {
+        return this.Note;
     }
 
     /**
-     * Set 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 认证结果返回
+     * @param Note 认证结果返回
      */
-    public void setData(VoiceFilterInfo [] Data) {
-        this.Data = Data;
+    public void setNote(String Note) {
+        this.Note = Note;
     }
 
     /**
@@ -101,22 +91,19 @@ public class DescribeFilterResultListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFilterResultListResponse() {
+    public CreateCRUserVerifyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFilterResultListResponse(DescribeFilterResultListResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public CreateCRUserVerifyResponse(CreateCRUserVerifyResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
-        if (source.Data != null) {
-            this.Data = new VoiceFilterInfo[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new VoiceFilterInfo(source.Data[i]);
-            }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +115,8 @@ public class DescribeFilterResultListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

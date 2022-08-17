@@ -230,6 +230,32 @@ pause：暂停中。
     private String Comment;
 
     /**
+    * 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupSourceType")
+    @Expose
+    private String BackupSourceType;
+
+    /**
+    * 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupSourceUrl")
+    @Expose
+    private String BackupSourceUrl;
+
+    /**
+    * 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WatermarkList")
+    @Expose
+    private PullPushWatermarkInfo [] WatermarkList;
+
+    /**
      * Get 拉流任务Id。 
      * @return TaskId 拉流任务Id。
      */
@@ -781,6 +807,74 @@ pause：暂停中。
         this.Comment = Comment;
     }
 
+    /**
+     * Get 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupSourceType 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupSourceType() {
+        return this.BackupSourceType;
+    }
+
+    /**
+     * Set 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupSourceType 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupSourceType(String BackupSourceType) {
+        this.BackupSourceType = BackupSourceType;
+    }
+
+    /**
+     * Get 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupSourceUrl 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupSourceUrl() {
+        return this.BackupSourceUrl;
+    }
+
+    /**
+     * Set 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupSourceUrl 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupSourceUrl(String BackupSourceUrl) {
+        this.BackupSourceUrl = BackupSourceUrl;
+    }
+
+    /**
+     * Get 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WatermarkList 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PullPushWatermarkInfo [] getWatermarkList() {
+        return this.WatermarkList;
+    }
+
+    /**
+     * Set 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WatermarkList 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWatermarkList(PullPushWatermarkInfo [] WatermarkList) {
+        this.WatermarkList = WatermarkList;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -864,6 +958,18 @@ pause：暂停中。
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.BackupSourceType != null) {
+            this.BackupSourceType = new String(source.BackupSourceType);
+        }
+        if (source.BackupSourceUrl != null) {
+            this.BackupSourceUrl = new String(source.BackupSourceUrl);
+        }
+        if (source.WatermarkList != null) {
+            this.WatermarkList = new PullPushWatermarkInfo[source.WatermarkList.length];
+            for (int i = 0; i < source.WatermarkList.length; i++) {
+                this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
+            }
+        }
     }
 
 
@@ -894,6 +1000,9 @@ pause：暂停中。
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "RecentPullInfo.", this.RecentPullInfo);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
+        this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+        this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
 
     }
 }

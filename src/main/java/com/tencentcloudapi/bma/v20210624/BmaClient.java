@@ -199,6 +199,26 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *品牌经营管家-版权保护个人认证接口
+     * @param req CreateCRUserVerifyRequest
+     * @return CreateCRUserVerifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCRUserVerifyResponse CreateCRUserVerify(CreateCRUserVerifyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCRUserVerifyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCRUserVerifyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCRUserVerify");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *版权保护-添加作品接口
      * @param req CreateCRWorkRequest
      * @return CreateCRWorkResponse

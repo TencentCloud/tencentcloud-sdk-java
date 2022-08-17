@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.sms.v20210111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFilterResultRequest extends AbstractModel{
+public class ReportConversionStatus extends AbstractModel{
 
     /**
-    * 应用ID
+    * 错误码。上报成功返回 ok。
     */
-    @SerializedName("BizId")
+    @SerializedName("Code")
     @Expose
-    private Long BizId;
+    private String Code;
 
     /**
-    * 文件ID
+    * 错误码描述。
     */
-    @SerializedName("FileId")
+    @SerializedName("Message")
     @Expose
-    private String FileId;
+    private String Message;
 
     /**
-     * Get 应用ID 
-     * @return BizId 应用ID
+     * Get 错误码。上报成功返回 ok。 
+     * @return Code 错误码。上报成功返回 ok。
      */
-    public Long getBizId() {
-        return this.BizId;
+    public String getCode() {
+        return this.Code;
     }
 
     /**
-     * Set 应用ID
-     * @param BizId 应用ID
+     * Set 错误码。上报成功返回 ok。
+     * @param Code 错误码。上报成功返回 ok。
      */
-    public void setBizId(Long BizId) {
-        this.BizId = BizId;
+    public void setCode(String Code) {
+        this.Code = Code;
     }
 
     /**
-     * Get 文件ID 
-     * @return FileId 文件ID
+     * Get 错误码描述。 
+     * @return Message 错误码描述。
      */
-    public String getFileId() {
-        return this.FileId;
+    public String getMessage() {
+        return this.Message;
     }
 
     /**
-     * Set 文件ID
-     * @param FileId 文件ID
+     * Set 错误码描述。
+     * @param Message 错误码描述。
      */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
-    public DescribeFilterResultRequest() {
+    public ReportConversionStatus() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFilterResultRequest(DescribeFilterResultRequest source) {
-        if (source.BizId != null) {
-            this.BizId = new Long(source.BizId);
+    public ReportConversionStatus(ReportConversionStatus source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
         }
-        if (source.FileId != null) {
-            this.FileId = new String(source.FileId);
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeFilterResultRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BizId", this.BizId);
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

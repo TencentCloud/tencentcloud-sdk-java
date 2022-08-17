@@ -23,161 +23,201 @@ import java.util.HashMap;
 public class DDoSAcl extends AbstractModel{
 
     /**
-    * 目的端口end
+    * 目的端口结束，取值范围0-65535。
     */
     @SerializedName("DportEnd")
     @Expose
     private Long DportEnd;
 
     /**
-    * 目的端口start
+    * 目的端口开始，取值范围0-65535。
     */
     @SerializedName("DportStart")
     @Expose
     private Long DportStart;
 
     /**
-    * 源端口end
+    * 源端口结束，取值范围0-65535。
     */
     @SerializedName("SportEnd")
     @Expose
     private Long SportEnd;
 
     /**
-    * 源端口start
+    * 源端口开始，取值范围0-65535。
     */
     @SerializedName("SportStart")
     @Expose
     private Long SportStart;
 
     /**
-    * 协议 'tcp', 'udp', 'all'
+    * 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 动作  drop-丢弃,；transmit-放行； forward-继续防护
+    * 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 是否为系统配置 0-人工配置；1-系统配置
+    * 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
     */
     @SerializedName("Default")
     @Expose
     private Long Default;
 
     /**
-     * Get 目的端口end 
-     * @return DportEnd 目的端口end
+     * Get 目的端口结束，取值范围0-65535。 
+     * @return DportEnd 目的端口结束，取值范围0-65535。
      */
     public Long getDportEnd() {
         return this.DportEnd;
     }
 
     /**
-     * Set 目的端口end
-     * @param DportEnd 目的端口end
+     * Set 目的端口结束，取值范围0-65535。
+     * @param DportEnd 目的端口结束，取值范围0-65535。
      */
     public void setDportEnd(Long DportEnd) {
         this.DportEnd = DportEnd;
     }
 
     /**
-     * Get 目的端口start 
-     * @return DportStart 目的端口start
+     * Get 目的端口开始，取值范围0-65535。 
+     * @return DportStart 目的端口开始，取值范围0-65535。
      */
     public Long getDportStart() {
         return this.DportStart;
     }
 
     /**
-     * Set 目的端口start
-     * @param DportStart 目的端口start
+     * Set 目的端口开始，取值范围0-65535。
+     * @param DportStart 目的端口开始，取值范围0-65535。
      */
     public void setDportStart(Long DportStart) {
         this.DportStart = DportStart;
     }
 
     /**
-     * Get 源端口end 
-     * @return SportEnd 源端口end
+     * Get 源端口结束，取值范围0-65535。 
+     * @return SportEnd 源端口结束，取值范围0-65535。
      */
     public Long getSportEnd() {
         return this.SportEnd;
     }
 
     /**
-     * Set 源端口end
-     * @param SportEnd 源端口end
+     * Set 源端口结束，取值范围0-65535。
+     * @param SportEnd 源端口结束，取值范围0-65535。
      */
     public void setSportEnd(Long SportEnd) {
         this.SportEnd = SportEnd;
     }
 
     /**
-     * Get 源端口start 
-     * @return SportStart 源端口start
+     * Get 源端口开始，取值范围0-65535。 
+     * @return SportStart 源端口开始，取值范围0-65535。
      */
     public Long getSportStart() {
         return this.SportStart;
     }
 
     /**
-     * Set 源端口start
-     * @param SportStart 源端口start
+     * Set 源端口开始，取值范围0-65535。
+     * @param SportStart 源端口开始，取值范围0-65535。
      */
     public void setSportStart(Long SportStart) {
         this.SportStart = SportStart;
     }
 
     /**
-     * Get 协议 'tcp', 'udp', 'all' 
-     * @return Protocol 协议 'tcp', 'udp', 'all'
+     * Get 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li> 
+     * @return Protocol 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议 'tcp', 'udp', 'all'
-     * @param Protocol 协议 'tcp', 'udp', 'all'
+     * Set 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
+     * @param Protocol 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 动作  drop-丢弃,；transmit-放行； forward-继续防护 
-     * @return Action 动作  drop-丢弃,；transmit-放行； forward-继续防护
+     * Get 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li> 
+     * @return Action 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 动作  drop-丢弃,；transmit-放行； forward-继续防护
-     * @param Action 动作  drop-丢弃,；transmit-放行； forward-继续防护
+     * Set 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
+     * @param Action 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 是否为系统配置 0-人工配置；1-系统配置 
-     * @return Default 是否为系统配置 0-人工配置；1-系统配置
+     * Get 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li> 
+     * @return Default 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
      */
     public Long getDefault() {
         return this.Default;
     }
 
     /**
-     * Set 是否为系统配置 0-人工配置；1-系统配置
-     * @param Default 是否为系统配置 0-人工配置；1-系统配置
+     * Set 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
+     * @param Default 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
      */
     public void setDefault(Long Default) {
         this.Default = Default;

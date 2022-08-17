@@ -399,6 +399,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建边缘容器CVM机器
+     * @param req CreateEdgeCVMInstancesRequest
+     * @return CreateEdgeCVMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgeCVMInstancesResponse CreateEdgeCVMInstances(CreateEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEdgeCVMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEdgeCVMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEdgeCVMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建边缘集群日志采集配置
      * @param req CreateEdgeLogConfigRequest
      * @return CreateEdgeLogConfigResponse

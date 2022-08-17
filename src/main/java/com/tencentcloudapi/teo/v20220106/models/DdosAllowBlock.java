@@ -23,49 +23,59 @@ import java.util.HashMap;
 public class DdosAllowBlock extends AbstractModel{
 
     /**
-    * 开关标识防护是否清空
-    */
-    @SerializedName("Switch")
-    @Expose
-    private String Switch;
-
-    /**
-    * 黑白名单数组
+    * 黑白名单数组。
     */
     @SerializedName("UserAllowBlockIp")
     @Expose
     private DDoSUserAllowBlockIP [] UserAllowBlockIp;
 
     /**
-     * Get 开关标识防护是否清空 
-     * @return Switch 开关标识防护是否清空
-     */
-    public String getSwitch() {
-        return this.Switch;
-    }
+    * 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
 
     /**
-     * Set 开关标识防护是否清空
-     * @param Switch 开关标识防护是否清空
-     */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
-    }
-
-    /**
-     * Get 黑白名单数组 
-     * @return UserAllowBlockIp 黑白名单数组
+     * Get 黑白名单数组。 
+     * @return UserAllowBlockIp 黑白名单数组。
      */
     public DDoSUserAllowBlockIP [] getUserAllowBlockIp() {
         return this.UserAllowBlockIp;
     }
 
     /**
-     * Set 黑白名单数组
-     * @param UserAllowBlockIp 黑白名单数组
+     * Set 黑白名单数组。
+     * @param UserAllowBlockIp 黑白名单数组。
      */
     public void setUserAllowBlockIp(DDoSUserAllowBlockIP [] UserAllowBlockIp) {
         this.UserAllowBlockIp = UserAllowBlockIp;
+    }
+
+    /**
+     * Get 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。 
+     * @return Switch 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+     * @param Switch 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     public DdosAllowBlock() {
@@ -76,14 +86,14 @@ public class DdosAllowBlock extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DdosAllowBlock(DdosAllowBlock source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
-        }
         if (source.UserAllowBlockIp != null) {
             this.UserAllowBlockIp = new DDoSUserAllowBlockIP[source.UserAllowBlockIp.length];
             for (int i = 0; i < source.UserAllowBlockIp.length; i++) {
                 this.UserAllowBlockIp[i] = new DDoSUserAllowBlockIP(source.UserAllowBlockIp[i]);
             }
+        }
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -92,8 +102,8 @@ public class DdosAllowBlock extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "UserAllowBlockIp.", this.UserAllowBlockIp);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

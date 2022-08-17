@@ -30,7 +30,7 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 分页尺寸，上限 100
+    * 分页尺寸，上限 9999
     */
     @SerializedName("PageSize")
     @Expose
@@ -58,6 +58,13 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
     private Long ModifiedTime;
 
     /**
+    * 技能组ID
+    */
+    @SerializedName("SkillGroupId")
+    @Expose
+    private Long SkillGroupId;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -74,16 +81,16 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页尺寸，上限 100 
-     * @return PageSize 分页尺寸，上限 100
+     * Get 分页尺寸，上限 9999 
+     * @return PageSize 分页尺寸，上限 9999
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页尺寸，上限 100
-     * @param PageSize 分页尺寸，上限 100
+     * Set 分页尺寸，上限 9999
+     * @param PageSize 分页尺寸，上限 9999
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -137,6 +144,22 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 技能组ID 
+     * @return SkillGroupId 技能组ID
+     */
+    public Long getSkillGroupId() {
+        return this.SkillGroupId;
+    }
+
+    /**
+     * Set 技能组ID
+     * @param SkillGroupId 技能组ID
+     */
+    public void setSkillGroupId(Long SkillGroupId) {
+        this.SkillGroupId = SkillGroupId;
+    }
+
     public DescribeStaffInfoListRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new Long(source.ModifiedTime);
         }
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new Long(source.SkillGroupId);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "StaffMail", this.StaffMail);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
 
     }
 }

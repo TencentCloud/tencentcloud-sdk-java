@@ -23,327 +23,382 @@ import java.util.HashMap;
 public class DDoSAntiPly extends AbstractModel{
 
     /**
-    * tcp协议封禁 on-开；off-关
+    * tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
     */
     @SerializedName("DropTcp")
     @Expose
     private String DropTcp;
 
     /**
-    * udp协议封禁 on-开；off-关
+    * udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
     */
     @SerializedName("DropUdp")
     @Expose
     private String DropUdp;
 
     /**
-    * icmp协议封禁 on-开；off-关
+    * icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
     */
     @SerializedName("DropIcmp")
     @Expose
     private String DropIcmp;
 
     /**
-    * 其他协议封禁 on-开；off-关
+    * 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
     */
     @SerializedName("DropOther")
     @Expose
     private String DropOther;
 
     /**
-    * 源每秒新建数限制  0-4294967295
+    * 源站每秒新连接限速，取值范围0-4294967295。
     */
     @SerializedName("SourceCreateLimit")
     @Expose
     private Long SourceCreateLimit;
 
     /**
-    * 源并发连接控制 0-4294967295
+    * 源站并发连接控制，取值范围0-4294967295。
     */
     @SerializedName("SourceConnectLimit")
     @Expose
     private Long SourceConnectLimit;
 
     /**
-    * 目的每秒新建数限制 0-4294967295
+    * 目的端口每秒新连接限速，取值范围0-4294967295。
     */
     @SerializedName("DestinationCreateLimit")
     @Expose
     private Long DestinationCreateLimit;
 
     /**
-    * 目的端口的并发连接控制 0-4294967295
+    * 目的端口并发连接控制，取值范围0-4294967295。
     */
     @SerializedName("DestinationConnectLimit")
     @Expose
     private Long DestinationConnectLimit;
 
     /**
-    * 异常连接数阈值  0-4294967295
+    * 每秒异常连接数阈值，取值范围0-4294967295。
     */
     @SerializedName("AbnormalConnectNum")
     @Expose
     private Long AbnormalConnectNum;
 
     /**
-    * syn占比异常阈值 0-100
+    * 异常syn报文百分比阈值，取值范围0-100。
     */
     @SerializedName("AbnormalSynRatio")
     @Expose
     private Long AbnormalSynRatio;
 
     /**
-    * syn个数异常阈值 0-65535
+    * 异常syn报文阈值，取值范围0-65535。
     */
     @SerializedName("AbnormalSynNum")
     @Expose
     private Long AbnormalSynNum;
 
     /**
-    * 连接超时检测 0-65535
+    * 每秒连接超时检测，取值范围0-65535。
     */
     @SerializedName("ConnectTimeout")
     @Expose
     private Long ConnectTimeout;
 
     /**
-    * 空连接防护开启 0-1
+    * 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
     */
     @SerializedName("EmptyConnectProtect")
     @Expose
     private String EmptyConnectProtect;
 
     /**
-    * UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
+    * UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
     */
     @SerializedName("UdpShard")
     @Expose
     private String UdpShard;
 
     /**
-     * Get tcp协议封禁 on-开；off-关 
-     * @return DropTcp tcp协议封禁 on-开；off-关
+     * Get tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li> 
+     * @return DropTcp tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public String getDropTcp() {
         return this.DropTcp;
     }
 
     /**
-     * Set tcp协议封禁 on-开；off-关
-     * @param DropTcp tcp协议封禁 on-开；off-关
+     * Set tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param DropTcp tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public void setDropTcp(String DropTcp) {
         this.DropTcp = DropTcp;
     }
 
     /**
-     * Get udp协议封禁 on-开；off-关 
-     * @return DropUdp udp协议封禁 on-开；off-关
+     * Get udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li> 
+     * @return DropUdp udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public String getDropUdp() {
         return this.DropUdp;
     }
 
     /**
-     * Set udp协议封禁 on-开；off-关
-     * @param DropUdp udp协议封禁 on-开；off-关
+     * Set udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param DropUdp udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public void setDropUdp(String DropUdp) {
         this.DropUdp = DropUdp;
     }
 
     /**
-     * Get icmp协议封禁 on-开；off-关 
-     * @return DropIcmp icmp协议封禁 on-开；off-关
+     * Get icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li> 
+     * @return DropIcmp icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public String getDropIcmp() {
         return this.DropIcmp;
     }
 
     /**
-     * Set icmp协议封禁 on-开；off-关
-     * @param DropIcmp icmp协议封禁 on-开；off-关
+     * Set icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param DropIcmp icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public void setDropIcmp(String DropIcmp) {
         this.DropIcmp = DropIcmp;
     }
 
     /**
-     * Get 其他协议封禁 on-开；off-关 
-     * @return DropOther 其他协议封禁 on-开；off-关
+     * Get 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li> 
+     * @return DropOther 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public String getDropOther() {
         return this.DropOther;
     }
 
     /**
-     * Set 其他协议封禁 on-开；off-关
-     * @param DropOther 其他协议封禁 on-开；off-关
+     * Set 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param DropOther 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public void setDropOther(String DropOther) {
         this.DropOther = DropOther;
     }
 
     /**
-     * Get 源每秒新建数限制  0-4294967295 
-     * @return SourceCreateLimit 源每秒新建数限制  0-4294967295
+     * Get 源站每秒新连接限速，取值范围0-4294967295。 
+     * @return SourceCreateLimit 源站每秒新连接限速，取值范围0-4294967295。
      */
     public Long getSourceCreateLimit() {
         return this.SourceCreateLimit;
     }
 
     /**
-     * Set 源每秒新建数限制  0-4294967295
-     * @param SourceCreateLimit 源每秒新建数限制  0-4294967295
+     * Set 源站每秒新连接限速，取值范围0-4294967295。
+     * @param SourceCreateLimit 源站每秒新连接限速，取值范围0-4294967295。
      */
     public void setSourceCreateLimit(Long SourceCreateLimit) {
         this.SourceCreateLimit = SourceCreateLimit;
     }
 
     /**
-     * Get 源并发连接控制 0-4294967295 
-     * @return SourceConnectLimit 源并发连接控制 0-4294967295
+     * Get 源站并发连接控制，取值范围0-4294967295。 
+     * @return SourceConnectLimit 源站并发连接控制，取值范围0-4294967295。
      */
     public Long getSourceConnectLimit() {
         return this.SourceConnectLimit;
     }
 
     /**
-     * Set 源并发连接控制 0-4294967295
-     * @param SourceConnectLimit 源并发连接控制 0-4294967295
+     * Set 源站并发连接控制，取值范围0-4294967295。
+     * @param SourceConnectLimit 源站并发连接控制，取值范围0-4294967295。
      */
     public void setSourceConnectLimit(Long SourceConnectLimit) {
         this.SourceConnectLimit = SourceConnectLimit;
     }
 
     /**
-     * Get 目的每秒新建数限制 0-4294967295 
-     * @return DestinationCreateLimit 目的每秒新建数限制 0-4294967295
+     * Get 目的端口每秒新连接限速，取值范围0-4294967295。 
+     * @return DestinationCreateLimit 目的端口每秒新连接限速，取值范围0-4294967295。
      */
     public Long getDestinationCreateLimit() {
         return this.DestinationCreateLimit;
     }
 
     /**
-     * Set 目的每秒新建数限制 0-4294967295
-     * @param DestinationCreateLimit 目的每秒新建数限制 0-4294967295
+     * Set 目的端口每秒新连接限速，取值范围0-4294967295。
+     * @param DestinationCreateLimit 目的端口每秒新连接限速，取值范围0-4294967295。
      */
     public void setDestinationCreateLimit(Long DestinationCreateLimit) {
         this.DestinationCreateLimit = DestinationCreateLimit;
     }
 
     /**
-     * Get 目的端口的并发连接控制 0-4294967295 
-     * @return DestinationConnectLimit 目的端口的并发连接控制 0-4294967295
+     * Get 目的端口并发连接控制，取值范围0-4294967295。 
+     * @return DestinationConnectLimit 目的端口并发连接控制，取值范围0-4294967295。
      */
     public Long getDestinationConnectLimit() {
         return this.DestinationConnectLimit;
     }
 
     /**
-     * Set 目的端口的并发连接控制 0-4294967295
-     * @param DestinationConnectLimit 目的端口的并发连接控制 0-4294967295
+     * Set 目的端口并发连接控制，取值范围0-4294967295。
+     * @param DestinationConnectLimit 目的端口并发连接控制，取值范围0-4294967295。
      */
     public void setDestinationConnectLimit(Long DestinationConnectLimit) {
         this.DestinationConnectLimit = DestinationConnectLimit;
     }
 
     /**
-     * Get 异常连接数阈值  0-4294967295 
-     * @return AbnormalConnectNum 异常连接数阈值  0-4294967295
+     * Get 每秒异常连接数阈值，取值范围0-4294967295。 
+     * @return AbnormalConnectNum 每秒异常连接数阈值，取值范围0-4294967295。
      */
     public Long getAbnormalConnectNum() {
         return this.AbnormalConnectNum;
     }
 
     /**
-     * Set 异常连接数阈值  0-4294967295
-     * @param AbnormalConnectNum 异常连接数阈值  0-4294967295
+     * Set 每秒异常连接数阈值，取值范围0-4294967295。
+     * @param AbnormalConnectNum 每秒异常连接数阈值，取值范围0-4294967295。
      */
     public void setAbnormalConnectNum(Long AbnormalConnectNum) {
         this.AbnormalConnectNum = AbnormalConnectNum;
     }
 
     /**
-     * Get syn占比异常阈值 0-100 
-     * @return AbnormalSynRatio syn占比异常阈值 0-100
+     * Get 异常syn报文百分比阈值，取值范围0-100。 
+     * @return AbnormalSynRatio 异常syn报文百分比阈值，取值范围0-100。
      */
     public Long getAbnormalSynRatio() {
         return this.AbnormalSynRatio;
     }
 
     /**
-     * Set syn占比异常阈值 0-100
-     * @param AbnormalSynRatio syn占比异常阈值 0-100
+     * Set 异常syn报文百分比阈值，取值范围0-100。
+     * @param AbnormalSynRatio 异常syn报文百分比阈值，取值范围0-100。
      */
     public void setAbnormalSynRatio(Long AbnormalSynRatio) {
         this.AbnormalSynRatio = AbnormalSynRatio;
     }
 
     /**
-     * Get syn个数异常阈值 0-65535 
-     * @return AbnormalSynNum syn个数异常阈值 0-65535
+     * Get 异常syn报文阈值，取值范围0-65535。 
+     * @return AbnormalSynNum 异常syn报文阈值，取值范围0-65535。
      */
     public Long getAbnormalSynNum() {
         return this.AbnormalSynNum;
     }
 
     /**
-     * Set syn个数异常阈值 0-65535
-     * @param AbnormalSynNum syn个数异常阈值 0-65535
+     * Set 异常syn报文阈值，取值范围0-65535。
+     * @param AbnormalSynNum 异常syn报文阈值，取值范围0-65535。
      */
     public void setAbnormalSynNum(Long AbnormalSynNum) {
         this.AbnormalSynNum = AbnormalSynNum;
     }
 
     /**
-     * Get 连接超时检测 0-65535 
-     * @return ConnectTimeout 连接超时检测 0-65535
+     * Get 每秒连接超时检测，取值范围0-65535。 
+     * @return ConnectTimeout 每秒连接超时检测，取值范围0-65535。
      */
     public Long getConnectTimeout() {
         return this.ConnectTimeout;
     }
 
     /**
-     * Set 连接超时检测 0-65535
-     * @param ConnectTimeout 连接超时检测 0-65535
+     * Set 每秒连接超时检测，取值范围0-65535。
+     * @param ConnectTimeout 每秒连接超时检测，取值范围0-65535。
      */
     public void setConnectTimeout(Long ConnectTimeout) {
         this.ConnectTimeout = ConnectTimeout;
     }
 
     /**
-     * Get 空连接防护开启 0-1 
-     * @return EmptyConnectProtect 空连接防护开启 0-1
+     * Get 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li> 
+     * @return EmptyConnectProtect 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public String getEmptyConnectProtect() {
         return this.EmptyConnectProtect;
     }
 
     /**
-     * Set 空连接防护开启 0-1
-     * @param EmptyConnectProtect 空连接防护开启 0-1
+     * Set 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param EmptyConnectProtect 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public void setEmptyConnectProtect(String EmptyConnectProtect) {
         this.EmptyConnectProtect = EmptyConnectProtect;
     }
 
     /**
-     * Get UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UdpShard UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li> 
+     * @return UdpShard UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public String getUdpShard() {
         return this.UdpShard;
     }
 
     /**
-     * Set UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UdpShard UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param UdpShard UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public void setUdpShard(String UdpShard) {
         this.UdpShard = UdpShard;

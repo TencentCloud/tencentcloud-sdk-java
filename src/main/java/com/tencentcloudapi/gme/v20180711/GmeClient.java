@@ -229,46 +229,6 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
-     *根据应用ID和文件ID查询识别结果
-     * @param req DescribeFilterResultRequest
-     * @return DescribeFilterResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFilterResultResponse DescribeFilterResult(DescribeFilterResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFilterResultResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFilterResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFilterResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *根据日期查询识别结果列表
-     * @param req DescribeFilterResultListRequest
-     * @return DescribeFilterResultListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFilterResultListResponse DescribeFilterResultList(DescribeFilterResultListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFilterResultListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFilterResultListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFilterResultList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取用户自定义送检信息
      * @param req DescribeRealtimeScanConfigRequest
      * @return DescribeRealtimeScanConfigResponse
@@ -656,28 +616,6 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateScanUsersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateScanUsers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口用于识别涉黄等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
-{"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
-Type表示过滤类型，1：色情，2：谩骂
-     * @param req VoiceFilterRequest
-     * @return VoiceFilterResponse
-     * @throws TencentCloudSDKException
-     */
-    public VoiceFilterResponse VoiceFilter(VoiceFilterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VoiceFilterResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<VoiceFilterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VoiceFilter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

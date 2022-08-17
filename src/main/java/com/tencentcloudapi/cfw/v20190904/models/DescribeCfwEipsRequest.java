@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCfwEipsRequest extends AbstractModel{
 
     /**
-    * 0：cfw新增模式，1：cfw接入模式
+    * 1：cfw接入模式，目前仅支持接入模式实例
     */
     @SerializedName("Mode")
     @Expose
@@ -37,23 +37,23 @@ public class DescribeCfwEipsRequest extends AbstractModel{
     private String NatGatewayId;
 
     /**
-    * 防火墙实例id
+    * 防火墙实例id，当前仅支持接入模式的实例
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-     * Get 0：cfw新增模式，1：cfw接入模式 
-     * @return Mode 0：cfw新增模式，1：cfw接入模式
+     * Get 1：cfw接入模式，目前仅支持接入模式实例 
+     * @return Mode 1：cfw接入模式，目前仅支持接入模式实例
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 0：cfw新增模式，1：cfw接入模式
-     * @param Mode 0：cfw新增模式，1：cfw接入模式
+     * Set 1：cfw接入模式，目前仅支持接入模式实例
+     * @param Mode 1：cfw接入模式，目前仅支持接入模式实例
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
@@ -76,16 +76,16 @@ public class DescribeCfwEipsRequest extends AbstractModel{
     }
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInstance 防火墙实例id
+     * Get 防火墙实例id，当前仅支持接入模式的实例 
+     * @return CfwInstance 防火墙实例id，当前仅支持接入模式的实例
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInstance 防火墙实例id
+     * Set 防火墙实例id，当前仅支持接入模式的实例
+     * @param CfwInstance 防火墙实例id，当前仅支持接入模式的实例
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;
