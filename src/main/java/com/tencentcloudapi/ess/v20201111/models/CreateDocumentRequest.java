@@ -44,7 +44,7 @@ public class CreateDocumentRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 文件名列表,单个文件名最大长度200个字符
+    * 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
     */
     @SerializedName("FileNames")
     @Expose
@@ -128,16 +128,16 @@ public class CreateDocumentRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件名列表,单个文件名最大长度200个字符 
-     * @return FileNames 文件名列表,单个文件名最大长度200个字符
+     * Get 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起 
+     * @return FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set 文件名列表,单个文件名最大长度200个字符
-     * @param FileNames 文件名列表,单个文件名最大长度200个字符
+     * Set 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
+     * @param FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;

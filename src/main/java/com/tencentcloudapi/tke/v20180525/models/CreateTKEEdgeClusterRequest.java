@@ -86,6 +86,27 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
     private EdgeClusterPublicLB PublicLB;
 
     /**
+    * 集群的级别
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * 集群是否支持自动升配
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private Boolean AutoUpgradeClusterLevel;
+
+    /**
+    * 集群计费方式
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
      * Get k8s版本号 
      * @return K8SVersion k8s版本号
      */
@@ -229,6 +250,54 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.PublicLB = PublicLB;
     }
 
+    /**
+     * Get 集群的级别 
+     * @return ClusterLevel 集群的级别
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 集群的级别
+     * @param ClusterLevel 集群的级别
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get 集群是否支持自动升配 
+     * @return AutoUpgradeClusterLevel 集群是否支持自动升配
+     */
+    public Boolean getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 集群是否支持自动升配
+     * @param AutoUpgradeClusterLevel 集群是否支持自动升配
+     */
+    public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Get 集群计费方式 
+     * @return ChargeType 集群计费方式
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 集群计费方式
+     * @param ChargeType 集群计费方式
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
     public CreateTKEEdgeClusterRequest() {
     }
 
@@ -264,6 +333,15 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         if (source.PublicLB != null) {
             this.PublicLB = new EdgeClusterPublicLB(source.PublicLB);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
     }
 
 
@@ -280,6 +358,9 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamObj(map, prefix + "PublicLB.", this.PublicLB);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }

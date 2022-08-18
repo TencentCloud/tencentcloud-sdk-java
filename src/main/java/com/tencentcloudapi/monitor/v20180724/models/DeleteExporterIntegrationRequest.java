@@ -30,6 +30,20 @@ public class DeleteExporterIntegrationRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 类型
+    */
+    @SerializedName("Kind")
+    @Expose
+    private String Kind;
+
+    /**
+    * 名字
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * Kubernetes 集群类型，取值如下：
 <li> 1= 容器集群(TKE) </li>
 <li> 2=弹性集群<EKS> </li>
@@ -47,20 +61,6 @@ public class DeleteExporterIntegrationRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 类型
-    */
-    @SerializedName("Kind")
-    @Expose
-    private String Kind;
-
-    /**
-    * 名字
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
      * Get 实例 ID 
      * @return InstanceId 实例 ID
      */
@@ -74,6 +74,38 @@ public class DeleteExporterIntegrationRequest extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 类型 
+     * @return Kind 类型
+     */
+    public String getKind() {
+        return this.Kind;
+    }
+
+    /**
+     * Set 类型
+     * @param Kind 类型
+     */
+    public void setKind(String Kind) {
+        this.Kind = Kind;
+    }
+
+    /**
+     * Get 名字 
+     * @return Name 名字
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 名字
+     * @param Name 名字
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -120,38 +152,6 @@ public class DeleteExporterIntegrationRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
-    /**
-     * Get 类型 
-     * @return Kind 类型
-     */
-    public String getKind() {
-        return this.Kind;
-    }
-
-    /**
-     * Set 类型
-     * @param Kind 类型
-     */
-    public void setKind(String Kind) {
-        this.Kind = Kind;
-    }
-
-    /**
-     * Get 名字 
-     * @return Name 名字
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 名字
-     * @param Name 名字
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
     public DeleteExporterIntegrationRequest() {
     }
 
@@ -163,17 +163,17 @@ public class DeleteExporterIntegrationRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.KubeType != null) {
-            this.KubeType = new Long(source.KubeType);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
-        }
         if (source.Kind != null) {
             this.Kind = new String(source.Kind);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.KubeType != null) {
+            this.KubeType = new Long(source.KubeType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -183,10 +183,10 @@ public class DeleteExporterIntegrationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "KubeType", this.KubeType);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "KubeType", this.KubeType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

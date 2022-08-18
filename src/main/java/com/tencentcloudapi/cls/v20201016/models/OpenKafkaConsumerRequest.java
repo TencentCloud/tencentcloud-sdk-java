@@ -30,6 +30,13 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
     private String FromTopicId;
 
     /**
+    * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+    */
+    @SerializedName("Compression")
+    @Expose
+    private Long Compression;
+
+    /**
      * Get CLS控制台创建的TopicId 
      * @return FromTopicId CLS控制台创建的TopicId
      */
@@ -45,6 +52,22 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
         this.FromTopicId = FromTopicId;
     }
 
+    /**
+     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4] 
+     * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     */
+    public Long getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     */
+    public void setCompression(Long Compression) {
+        this.Compression = Compression;
+    }
+
     public OpenKafkaConsumerRequest() {
     }
 
@@ -56,6 +79,9 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
         if (source.FromTopicId != null) {
             this.FromTopicId = new String(source.FromTopicId);
         }
+        if (source.Compression != null) {
+            this.Compression = new Long(source.Compression);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
 
     }
 }

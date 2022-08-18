@@ -44,7 +44,7 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private ApproverInfo [] Approvers;
 
     /**
-    * 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+    * 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
     */
     @SerializedName("FileIds")
     @Expose
@@ -178,16 +178,16 @@ false：有序签
     }
 
     /**
-     * Get 签署pdf文件的资源编号列表，通过UploadFiles接口获取 
-     * @return FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+     * Get 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起 
+     * @return FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 签署pdf文件的资源编号列表，通过UploadFiles接口获取
-     * @param FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+     * Set 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
+     * @param FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;

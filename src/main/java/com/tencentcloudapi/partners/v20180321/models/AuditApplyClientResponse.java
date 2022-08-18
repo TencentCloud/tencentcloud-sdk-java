@@ -45,6 +45,7 @@ public class AuditApplyClientResponse extends AbstractModel{
 
     /**
     * 关联时间对应的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentTime")
     @Expose
@@ -106,8 +107,10 @@ public class AuditApplyClientResponse extends AbstractModel{
     }
 
     /**
-     * Get 关联时间对应的时间戳 
+     * Get 关联时间对应的时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AgentTime 关联时间对应的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAgentTime() {
         return this.AgentTime;
@@ -115,7 +118,9 @@ public class AuditApplyClientResponse extends AbstractModel{
 
     /**
      * Set 关联时间对应的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentTime 关联时间对应的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentTime(Long AgentTime) {
         this.AgentTime = AgentTime;

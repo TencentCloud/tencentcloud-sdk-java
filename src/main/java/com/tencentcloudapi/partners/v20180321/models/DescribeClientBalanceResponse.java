@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeClientBalanceResponse extends AbstractModel{
 
     /**
-    * 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+    * 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
     */
     @SerializedName("Balance")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeClientBalanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额） 
-     * @return Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+     * Get 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】 
+     * @return Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
      */
     public Long getBalance() {
         return this.Balance;
     }
 
     /**
-     * Set 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
-     * @param Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+     * Set 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
+     * @param Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
      */
     public void setBalance(Long Balance) {
         this.Balance = Balance;

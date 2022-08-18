@@ -65,7 +65,7 @@ public class AgentAuditedClient extends AbstractModel{
     private String ClientName;
 
     /**
-    * 认证类型, 0：个人，1：企业；其他：未认证
+    * 认证类型, 0：个人，1：企业；其他：未认证或无效值
     */
     @SerializedName("AuthType")
     @Expose
@@ -234,16 +234,16 @@ public class AgentAuditedClient extends AbstractModel{
     }
 
     /**
-     * Get 认证类型, 0：个人，1：企业；其他：未认证 
-     * @return AuthType 认证类型, 0：个人，1：企业；其他：未认证
+     * Get 认证类型, 0：个人，1：企业；其他：未认证或无效值 
+     * @return AuthType 认证类型, 0：个人，1：企业；其他：未认证或无效值
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 认证类型, 0：个人，1：企业；其他：未认证
-     * @param AuthType 认证类型, 0：个人，1：企业；其他：未认证
+     * Set 认证类型, 0：个人，1：企业；其他：未认证或无效值
+     * @param AuthType 认证类型, 0：个人，1：企业；其他：未认证或无效值
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
