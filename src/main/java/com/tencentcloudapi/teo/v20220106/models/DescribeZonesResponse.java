@@ -23,15 +23,14 @@ import java.util.HashMap;
 public class DescribeZonesResponse extends AbstractModel{
 
     /**
-    * 符合条件的站点数
+    * 符合条件的站点个数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 站点详细信息列表。
     */
     @SerializedName("Zones")
     @Expose
@@ -45,36 +44,32 @@ public class DescribeZonesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的站点数 
-     * @return TotalCount 符合条件的站点数
+     * Get 符合条件的站点个数。 
+     * @return TotalCount 符合条件的站点个数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的站点数
-     * @param TotalCount 符合条件的站点数
+     * Set 符合条件的站点个数。
+     * @param TotalCount 符合条件的站点个数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Zones 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 站点详细信息列表。 
+     * @return Zones 站点详细信息列表。
      */
     public Zone [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Zones 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 站点详细信息列表。
+     * @param Zones 站点详细信息列表。
      */
     public void setZones(Zone [] Zones) {
         this.Zones = Zones;

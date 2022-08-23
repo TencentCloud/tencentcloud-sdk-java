@@ -157,6 +157,27 @@ public class ApplicationProxy extends AbstractModel{
     private Ipv6Access Ipv6;
 
     /**
+    * 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
+    */
+    @SerializedName("BanStatus")
+    @Expose
+    private String BanStatus;
+
+    /**
      * Get 代理ID。 
      * @return ProxyId 代理ID。
      */
@@ -488,6 +509,66 @@ public class ApplicationProxy extends AbstractModel{
         this.Ipv6 = Ipv6;
     }
 
+    /**
+     * Get 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas 
+     * @return Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+     * @param Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li> 
+     * @return BanStatus 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
+     */
+    public String getBanStatus() {
+        return this.BanStatus;
+    }
+
+    /**
+     * Set 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
+     * @param BanStatus 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
+     */
+    public void setBanStatus(String BanStatus) {
+        this.BanStatus = BanStatus;
+    }
+
     public ApplicationProxy() {
     }
 
@@ -553,6 +634,12 @@ public class ApplicationProxy extends AbstractModel{
         if (source.Ipv6 != null) {
             this.Ipv6 = new Ipv6Access(source.Ipv6);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.BanStatus != null) {
+            this.BanStatus = new String(source.BanStatus);
+        }
     }
 
 
@@ -577,6 +664,8 @@ public class ApplicationProxy extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamSimple(map, prefix + "HostId", this.HostId);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
 
     }
 }

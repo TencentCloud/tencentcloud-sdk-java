@@ -47,6 +47,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
 <li> ap-singapore-3 </li>
+<li>ap-singapore-4 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -57,6 +58,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
 <li> ap-shanghai-5 </li>
+<li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -76,7 +78,10 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> ap-nanjing-3 </li>
 <li> sa-saopaulo-1</li>
+<li> ap-jakarta-1 </li>
+<li> ap-jakarta-2 </li>
     */
     @SerializedName("Zone")
     @Expose
@@ -128,6 +133,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
 <li> ap-singapore-3 </li>
+<li>ap-singapore-4 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -138,6 +144,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
 <li> ap-shanghai-5 </li>
+<li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -157,7 +164,10 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-<li> sa-saopaulo-1</li> 
+<li> ap-nanjing-3 </li>
+<li> sa-saopaulo-1</li>
+<li> ap-jakarta-1 </li>
+<li> ap-jakarta-2 </li> 
      * @return Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -182,6 +192,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
 <li> ap-singapore-3 </li>
+<li>ap-singapore-4 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -192,6 +203,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
 <li> ap-shanghai-5 </li>
+<li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -211,7 +223,10 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> ap-nanjing-3 </li>
 <li> sa-saopaulo-1</li>
+<li> ap-jakarta-1 </li>
+<li> ap-jakarta-2 </li>
      */
     public String getZone() {
         return this.Zone;
@@ -242,6 +257,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
 <li> ap-singapore-3 </li>
+<li>ap-singapore-4 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -252,6 +268,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
 <li> ap-shanghai-5 </li>
+<li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -271,7 +288,10 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> ap-nanjing-3 </li>
 <li> sa-saopaulo-1</li>
+<li> ap-jakarta-1 </li>
+<li> ap-jakarta-2 </li>
      * @param Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -296,6 +316,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
 <li> ap-singapore-3 </li>
+<li>ap-singapore-4 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
@@ -306,6 +327,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
 <li> ap-shanghai-5 </li>
+<li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -325,7 +347,10 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> ap-nanjing-3 </li>
 <li> sa-saopaulo-1</li>
+<li> ap-jakarta-1 </li>
+<li> ap-jakarta-2 </li>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

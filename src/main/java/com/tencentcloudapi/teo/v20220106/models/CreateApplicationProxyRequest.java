@@ -37,13 +37,6 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     private String ZoneName;
 
     /**
-    * 规则详细信息。
-    */
-    @SerializedName("Rule")
-    @Expose
-    private ApplicationProxyRule [] Rule;
-
-    /**
     * 当ProxyType=hostname时，表示域名或子域名；
 当ProxyType=instance时，表示代理名称。
     */
@@ -91,6 +84,13 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     @SerializedName("ForwardClientIp")
     @Expose
     private String ForwardClientIp;
+
+    /**
+    * 规则详细信息。
+    */
+    @SerializedName("Rule")
+    @Expose
+    private ApplicationProxyRule [] Rule;
 
     /**
     * 四层代理模式，取值有：
@@ -147,22 +147,6 @@ public class CreateApplicationProxyRequest extends AbstractModel{
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
-    }
-
-    /**
-     * Get 规则详细信息。 
-     * @return Rule 规则详细信息。
-     */
-    public ApplicationProxyRule [] getRule() {
-        return this.Rule;
-    }
-
-    /**
-     * Set 规则详细信息。
-     * @param Rule 规则详细信息。
-     */
-    public void setRule(ApplicationProxyRule [] Rule) {
-        this.Rule = Rule;
     }
 
     /**
@@ -290,6 +274,22 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     }
 
     /**
+     * Get 规则详细信息。 
+     * @return Rule 规则详细信息。
+     */
+    public ApplicationProxyRule [] getRule() {
+        return this.Rule;
+    }
+
+    /**
+     * Set 规则详细信息。
+     * @param Rule 规则详细信息。
+     */
+    public void setRule(ApplicationProxyRule [] Rule) {
+        this.Rule = Rule;
+    }
+
+    /**
      * Get 四层代理模式，取值有：
 <li>hostname：表示子域名模式；</li>
 <li>instance：表示实例模式。</li>不填写使用默认值instance。 
@@ -367,12 +367,6 @@ public class CreateApplicationProxyRequest extends AbstractModel{
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
-        if (source.Rule != null) {
-            this.Rule = new ApplicationProxyRule[source.Rule.length];
-            for (int i = 0; i < source.Rule.length; i++) {
-                this.Rule[i] = new ApplicationProxyRule(source.Rule[i]);
-            }
-        }
         if (source.ProxyName != null) {
             this.ProxyName = new String(source.ProxyName);
         }
@@ -390,6 +384,12 @@ public class CreateApplicationProxyRequest extends AbstractModel{
         }
         if (source.ForwardClientIp != null) {
             this.ForwardClientIp = new String(source.ForwardClientIp);
+        }
+        if (source.Rule != null) {
+            this.Rule = new ApplicationProxyRule[source.Rule.length];
+            for (int i = 0; i < source.Rule.length; i++) {
+                this.Rule[i] = new ApplicationProxyRule(source.Rule[i]);
+            }
         }
         if (source.ProxyType != null) {
             this.ProxyType = new String(source.ProxyType);
@@ -409,13 +409,13 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
-        this.setParamArrayObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "ProxyName", this.ProxyName);
         this.setParamSimple(map, prefix + "PlatType", this.PlatType);
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamSimple(map, prefix + "AccelerateType", this.AccelerateType);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         this.setParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
+        this.setParamArrayObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);

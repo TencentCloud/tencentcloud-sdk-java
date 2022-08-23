@@ -63,6 +63,15 @@ public class L7OfflineLog extends AbstractModel{
     private String LogPacketName;
 
     /**
+    * 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 日志打包开始时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogTime 日志打包开始时间
@@ -162,6 +171,30 @@ public class L7OfflineLog extends AbstractModel{
         this.LogPacketName = LogPacketName;
     }
 
+    /**
+     * Get 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li> 
+     * @return Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     * @param Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public L7OfflineLog() {
     }
 
@@ -185,6 +218,9 @@ public class L7OfflineLog extends AbstractModel{
         if (source.LogPacketName != null) {
             this.LogPacketName = new String(source.LogPacketName);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -197,6 +233,7 @@ public class L7OfflineLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

@@ -44,6 +44,13 @@ public class SimpleHlsClipResponse extends AbstractModel{
     private String FileId;
 
     /**
+    * 剪辑固化后的视频任务流 ID。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class SimpleHlsClipResponse extends AbstractModel{
     }
 
     /**
+     * Get 剪辑固化后的视频任务流 ID。 
+     * @return TaskId 剪辑固化后的视频任务流 ID。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 剪辑固化后的视频任务流 ID。
+     * @param TaskId 剪辑固化后的视频任务流 ID。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +154,9 @@ public class SimpleHlsClipResponse extends AbstractModel{
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +170,7 @@ public class SimpleHlsClipResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

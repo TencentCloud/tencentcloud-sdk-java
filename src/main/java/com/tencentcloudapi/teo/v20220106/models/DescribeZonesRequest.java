@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeZonesRequest extends AbstractModel{
 
     /**
-    * 分页参数，页偏移
+    * 分页查询偏移量。默认值：0，最小值：0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页参数，每页返回的站点个数
+    * 分页查询限制数目。默认值：1000，最大值：1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询条件过滤器，复杂类型
+    * 查询条件过滤器，复杂类型。
     */
     @SerializedName("Filters")
     @Expose
     private ZoneFilter [] Filters;
 
     /**
-     * Get 分页参数，页偏移 
-     * @return Offset 分页参数，页偏移
+     * Get 分页查询偏移量。默认值：0，最小值：0。 
+     * @return Offset 分页查询偏移量。默认值：0，最小值：0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数，页偏移
-     * @param Offset 分页参数，页偏移
+     * Set 分页查询偏移量。默认值：0，最小值：0。
+     * @param Offset 分页查询偏移量。默认值：0，最小值：0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页参数，每页返回的站点个数 
-     * @return Limit 分页参数，每页返回的站点个数
+     * Get 分页查询限制数目。默认值：1000，最大值：1000。 
+     * @return Limit 分页查询限制数目。默认值：1000，最大值：1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，每页返回的站点个数
-     * @param Limit 分页参数，每页返回的站点个数
+     * Set 分页查询限制数目。默认值：1000，最大值：1000。
+     * @param Limit 分页查询限制数目。默认值：1000，最大值：1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询条件过滤器，复杂类型 
-     * @return Filters 查询条件过滤器，复杂类型
+     * Get 查询条件过滤器，复杂类型。 
+     * @return Filters 查询条件过滤器，复杂类型。
      */
     public ZoneFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件过滤器，复杂类型
-     * @param Filters 查询条件过滤器，复杂类型
+     * Set 查询条件过滤器，复杂类型。
+     * @param Filters 查询条件过滤器，复杂类型。
      */
     public void setFilters(ZoneFilter [] Filters) {
         this.Filters = Filters;

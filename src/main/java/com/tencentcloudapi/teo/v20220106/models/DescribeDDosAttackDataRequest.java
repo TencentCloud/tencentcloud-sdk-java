@@ -100,6 +100,15 @@ public class DescribeDDosAttackDataRequest extends AbstractModel{
     private String Interval;
 
     /**
+    * 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 开始时间。 
      * @return StartTime 开始时间。
      */
@@ -299,6 +308,30 @@ public class DescribeDDosAttackDataRequest extends AbstractModel{
         this.Interval = Interval;
     }
 
+    /**
+     * Get 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。 
+     * @return Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     * @param Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeDDosAttackDataRequest() {
     }
 
@@ -343,6 +376,9 @@ public class DescribeDDosAttackDataRequest extends AbstractModel{
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -359,6 +395,7 @@ public class DescribeDDosAttackDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

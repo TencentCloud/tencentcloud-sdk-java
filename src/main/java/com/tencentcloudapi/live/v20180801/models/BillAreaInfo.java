@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class BillAreaInfo extends AbstractModel{
 
     /**
-    * 大区名称
+    * 大区名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 国家明细数据
+    * 国家或地区明细数据。
     */
     @SerializedName("Countrys")
     @Expose
     private BillCountryInfo [] Countrys;
 
     /**
-     * Get 大区名称 
-     * @return Name 大区名称
+     * Get 大区名称。 
+     * @return Name 大区名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 大区名称
-     * @param Name 大区名称
+     * Set 大区名称。
+     * @param Name 大区名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 国家明细数据 
-     * @return Countrys 国家明细数据
+     * Get 国家或地区明细数据。 
+     * @return Countrys 国家或地区明细数据。
      */
     public BillCountryInfo [] getCountrys() {
         return this.Countrys;
     }
 
     /**
-     * Set 国家明细数据
-     * @param Countrys 国家明细数据
+     * Set 国家或地区明细数据。
+     * @param Countrys 国家或地区明细数据。
      */
     public void setCountrys(BillCountryInfo [] Countrys) {
         this.Countrys = Countrys;

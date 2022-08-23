@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Sv extends AbstractModel{
 
     /**
-    * 询价参数 key
+    * 询价参数键。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 询价参数 value
+    * 询价参数值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 询价参数 key 
-     * @return Key 询价参数 key
+     * Get 询价参数键。 
+     * @return Key 询价参数键。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 询价参数 key
-     * @param Key 询价参数 key
+     * Set 询价参数键。
+     * @param Key 询价参数键。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 询价参数 value 
-     * @return Value 询价参数 value
+     * Get 询价参数值。 
+     * @return Value 询价参数值。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 询价参数 value
-     * @param Value 询价参数 value
+     * Set 询价参数值。
+     * @param Value 询价参数值。
      */
     public void setValue(String Value) {
         this.Value = Value;

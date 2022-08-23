@@ -124,6 +124,22 @@ public class EnvBillingInfoItem extends AbstractModel{
     private String FreeQuota;
 
     /**
+    * 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableOverrun")
+    @Expose
+    private Boolean EnableOverrun;
+
+    /**
+    * 环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtPackageType")
+    @Expose
+    private String ExtPackageType;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -371,6 +387,46 @@ public class EnvBillingInfoItem extends AbstractModel{
         this.FreeQuota = FreeQuota;
     }
 
+    /**
+     * Get 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableOverrun() {
+        return this.EnableOverrun;
+    }
+
+    /**
+     * Set 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableOverrun(Boolean EnableOverrun) {
+        this.EnableOverrun = EnableOverrun;
+    }
+
+    /**
+     * Get 环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtPackageType 环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtPackageType() {
+        return this.ExtPackageType;
+    }
+
+    /**
+     * Set 环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtPackageType 环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtPackageType(String ExtPackageType) {
+        this.ExtPackageType = ExtPackageType;
+    }
+
     public EnvBillingInfoItem() {
     }
 
@@ -418,6 +474,12 @@ public class EnvBillingInfoItem extends AbstractModel{
         if (source.FreeQuota != null) {
             this.FreeQuota = new String(source.FreeQuota);
         }
+        if (source.EnableOverrun != null) {
+            this.EnableOverrun = new Boolean(source.EnableOverrun);
+        }
+        if (source.ExtPackageType != null) {
+            this.ExtPackageType = new String(source.ExtPackageType);
+        }
     }
 
 
@@ -438,6 +500,8 @@ public class EnvBillingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "PaymentChannel", this.PaymentChannel);
         this.setParamObj(map, prefix + "OrderInfo.", this.OrderInfo);
         this.setParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
+        this.setParamSimple(map, prefix + "EnableOverrun", this.EnableOverrun);
+        this.setParamSimple(map, prefix + "ExtPackageType", this.ExtPackageType);
 
     }
 }

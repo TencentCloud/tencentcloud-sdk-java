@@ -13,51 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InputKolBspData extends AbstractModel{
+public class Operator extends AbstractModel{
 
     /**
-    * BspData
+    * 运算符标识
     */
-    @SerializedName("DataList")
+    @SerializedName("Id")
     @Expose
-    private InputKolDataList [] DataList;
+    private String Id;
 
     /**
-     * Get BspData 
-     * @return DataList BspData
+    * 运算符展示名
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+     * Get 运算符标识 
+     * @return Id 运算符标识
      */
-    public InputKolDataList [] getDataList() {
-        return this.DataList;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set BspData
-     * @param DataList BspData
+     * Set 运算符标识
+     * @param Id 运算符标识
      */
-    public void setDataList(InputKolDataList [] DataList) {
-        this.DataList = DataList;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
-    public InputKolBspData() {
+    /**
+     * Get 运算符展示名 
+     * @return Name 运算符展示名
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 运算符展示名
+     * @param Name 运算符展示名
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public Operator() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InputKolBspData(InputKolBspData source) {
-        if (source.DataList != null) {
-            this.DataList = new InputKolDataList[source.DataList.length];
-            for (int i = 0; i < source.DataList.length; i++) {
-                this.DataList[i] = new InputKolDataList(source.DataList[i]);
-            }
+    public Operator(Operator source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
     }
 
@@ -66,7 +89,8 @@ public class InputKolBspData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DataList.", this.DataList);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

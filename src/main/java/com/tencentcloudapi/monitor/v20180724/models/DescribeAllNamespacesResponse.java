@@ -51,6 +51,14 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
     private CommonNamespace [] CustomNamespacesNew;
 
     /**
+    * 通用告警策略类型(包括：应用性能监控，前端性能监控，云拨测)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CommonNamespaces")
+    @Expose
+    private CommonNamespaceNew [] CommonNamespaces;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +130,26 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
     }
 
     /**
+     * Get 通用告警策略类型(包括：应用性能监控，前端性能监控，云拨测)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CommonNamespaces 通用告警策略类型(包括：应用性能监控，前端性能监控，云拨测)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CommonNamespaceNew [] getCommonNamespaces() {
+        return this.CommonNamespaces;
+    }
+
+    /**
+     * Set 通用告警策略类型(包括：应用性能监控，前端性能监控，云拨测)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommonNamespaces 通用告警策略类型(包括：应用性能监控，前端性能监控，云拨测)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommonNamespaces(CommonNamespaceNew [] CommonNamespaces) {
+        this.CommonNamespaces = CommonNamespaces;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -163,6 +191,12 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
                 this.CustomNamespacesNew[i] = new CommonNamespace(source.CustomNamespacesNew[i]);
             }
         }
+        if (source.CommonNamespaces != null) {
+            this.CommonNamespaces = new CommonNamespaceNew[source.CommonNamespaces.length];
+            for (int i = 0; i < source.CommonNamespaces.length; i++) {
+                this.CommonNamespaces[i] = new CommonNamespaceNew(source.CommonNamespaces[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -177,6 +211,7 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
         this.setParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
         this.setParamArrayObj(map, prefix + "QceNamespacesNew.", this.QceNamespacesNew);
         this.setParamArrayObj(map, prefix + "CustomNamespacesNew.", this.CustomNamespacesNew);
+        this.setParamArrayObj(map, prefix + "CommonNamespaces.", this.CommonNamespaces);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

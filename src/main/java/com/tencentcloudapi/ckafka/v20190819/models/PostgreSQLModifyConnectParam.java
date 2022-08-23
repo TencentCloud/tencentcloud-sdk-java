@@ -87,6 +87,14 @@ public class PostgreSQLModifyConnectParam extends AbstractModel{
     private Boolean IsUpdate;
 
     /**
+    * 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelfBuilt")
+    @Expose
+    private Boolean SelfBuilt;
+
+    /**
      * Get PostgreSQL连接源的实例资源【不支持修改】
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource PostgreSQL连接源的实例资源【不支持修改】
@@ -246,6 +254,26 @@ public class PostgreSQLModifyConnectParam extends AbstractModel{
         this.IsUpdate = IsUpdate;
     }
 
+    /**
+     * Get 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelfBuilt 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSelfBuilt() {
+        return this.SelfBuilt;
+    }
+
+    /**
+     * Set 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelfBuilt 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelfBuilt(Boolean SelfBuilt) {
+        this.SelfBuilt = SelfBuilt;
+    }
+
     public PostgreSQLModifyConnectParam() {
     }
 
@@ -278,6 +306,9 @@ public class PostgreSQLModifyConnectParam extends AbstractModel{
         if (source.IsUpdate != null) {
             this.IsUpdate = new Boolean(source.IsUpdate);
         }
+        if (source.SelfBuilt != null) {
+            this.SelfBuilt = new Boolean(source.SelfBuilt);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class PostgreSQLModifyConnectParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
+        this.setParamSimple(map, prefix + "SelfBuilt", this.SelfBuilt);
 
     }
 }

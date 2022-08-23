@@ -64,7 +64,6 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
     * 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -215,10 +214,8 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     }
 
     /**
-     * Get 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID。 
      * @return RuleId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -226,9 +223,7 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * Set 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

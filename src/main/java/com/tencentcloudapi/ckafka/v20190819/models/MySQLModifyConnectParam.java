@@ -87,6 +87,14 @@ public class MySQLModifyConnectParam extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelfBuilt")
+    @Expose
+    private Boolean SelfBuilt;
+
+    /**
      * Get MySQL连接源的实例资源【不支持修改】
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource MySQL连接源的实例资源【不支持修改】
@@ -246,6 +254,26 @@ public class MySQLModifyConnectParam extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelfBuilt 是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSelfBuilt() {
+        return this.SelfBuilt;
+    }
+
+    /**
+     * Set 是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelfBuilt 是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelfBuilt(Boolean SelfBuilt) {
+        this.SelfBuilt = SelfBuilt;
+    }
+
     public MySQLModifyConnectParam() {
     }
 
@@ -278,6 +306,9 @@ public class MySQLModifyConnectParam extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.SelfBuilt != null) {
+            this.SelfBuilt = new Boolean(source.SelfBuilt);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class MySQLModifyConnectParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "SelfBuilt", this.SelfBuilt);
 
     }
 }

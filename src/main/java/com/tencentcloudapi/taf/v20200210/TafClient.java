@@ -39,26 +39,6 @@ public class TafClient extends AbstractClient{
     }
 
     /**
-     *流量反欺诈-KOL欺诈识别
-     * @param req DetectFraudKOLRequest
-     * @return DetectFraudKOLResponse
-     * @throws TencentCloudSDKException
-     */
-    public DetectFraudKOLResponse DetectFraudKOL(DetectFraudKOLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectFraudKOLResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DetectFraudKOLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectFraudKOL");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *流量反欺诈-流量验准定制版
      * @param req RecognizeCustomizedAudienceRequest
      * @return RecognizeCustomizedAudienceResponse

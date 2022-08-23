@@ -65,7 +65,7 @@ public class CreateTrainingModelRequest extends AbstractModel{
     private String TrainingJobName;
 
     /**
-    * 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+    * 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
     */
     @SerializedName("AlgorithmFramework")
     @Expose
@@ -142,7 +142,7 @@ public class CreateTrainingModelRequest extends AbstractModel{
     private String TrainingPreference;
 
     /**
-    * 自动学习任务ID
+    * 自动学习任务ID（已废弃）
     */
     @SerializedName("AutoMLTaskId")
     @Expose
@@ -275,16 +275,16 @@ public class CreateTrainingModelRequest extends AbstractModel{
     }
 
     /**
-     * Get 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML) 
-     * @return AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+     * Get 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION) 
+     * @return AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
      */
     public String getAlgorithmFramework() {
         return this.AlgorithmFramework;
     }
 
     /**
-     * Set 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
-     * @param AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+     * Set 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
+     * @param AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
      */
     public void setAlgorithmFramework(String AlgorithmFramework) {
         this.AlgorithmFramework = AlgorithmFramework;
@@ -451,16 +451,16 @@ public class CreateTrainingModelRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动学习任务ID 
-     * @return AutoMLTaskId 自动学习任务ID
+     * Get 自动学习任务ID（已废弃） 
+     * @return AutoMLTaskId 自动学习任务ID（已废弃）
      */
     public String getAutoMLTaskId() {
         return this.AutoMLTaskId;
     }
 
     /**
-     * Set 自动学习任务ID
-     * @param AutoMLTaskId 自动学习任务ID
+     * Set 自动学习任务ID（已废弃）
+     * @param AutoMLTaskId 自动学习任务ID（已废弃）
      */
     public void setAutoMLTaskId(String AutoMLTaskId) {
         this.AutoMLTaskId = AutoMLTaskId;

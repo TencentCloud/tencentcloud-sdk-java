@@ -75,6 +75,15 @@ public class DescribeDDosMajorAttackEventRequest extends AbstractModel{
     private String [] ZoneIds;
 
     /**
+    * 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 开始时间。 
      * @return StartTime 开始时间。
      */
@@ -198,6 +207,30 @@ public class DescribeDDosMajorAttackEventRequest extends AbstractModel{
         this.ZoneIds = ZoneIds;
     }
 
+    /**
+     * Get 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。 
+     * @return Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     * @param Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeDDosMajorAttackEventRequest() {
     }
 
@@ -233,6 +266,9 @@ public class DescribeDDosMajorAttackEventRequest extends AbstractModel{
                 this.ZoneIds[i] = new String(source.ZoneIds[i]);
             }
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -247,6 +283,7 @@ public class DescribeDDosMajorAttackEventRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

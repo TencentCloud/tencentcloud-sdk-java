@@ -59,6 +59,26 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *根据输入的规则匹配曲库中的歌曲。
+     * @param req DescribeKTVMatchMusicsRequest
+     * @return DescribeKTVMatchMusicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVMatchMusicsResponse DescribeKTVMatchMusics(DescribeKTVMatchMusicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVMatchMusicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVMatchMusicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVMatchMusics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据歌单 Id 获取歌单详情。
      * @param req DescribeKTVPlaylistDetailRequest
      * @return DescribeKTVPlaylistDetailResponse

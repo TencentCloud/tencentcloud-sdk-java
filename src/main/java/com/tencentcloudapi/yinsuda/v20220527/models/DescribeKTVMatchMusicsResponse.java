@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.yinsuda.v20220527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectFraudKOLResponse extends AbstractModel{
+public class DescribeKTVMatchMusicsResponse extends AbstractModel{
 
     /**
-    * 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+    * 匹配到的歌曲列表。
     */
-    @SerializedName("Data")
+    @SerializedName("MatchMusicSet")
     @Expose
-    private OutputKolData Data;
+    private KTVMatchMusic [] MatchMusicSet;
+
+    /**
+    * 未匹配的规则列表。
+    */
+    @SerializedName("NotMatchRuleSet")
+    @Expose
+    private KTVMatchRule [] NotMatchRuleSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class DetectFraudKOLResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回包数据
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 匹配到的歌曲列表。 
+     * @return MatchMusicSet 匹配到的歌曲列表。
      */
-    public OutputKolData getData() {
-        return this.Data;
+    public KTVMatchMusic [] getMatchMusicSet() {
+        return this.MatchMusicSet;
     }
 
     /**
-     * Set 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 匹配到的歌曲列表。
+     * @param MatchMusicSet 匹配到的歌曲列表。
      */
-    public void setData(OutputKolData Data) {
-        this.Data = Data;
+    public void setMatchMusicSet(KTVMatchMusic [] MatchMusicSet) {
+        this.MatchMusicSet = MatchMusicSet;
+    }
+
+    /**
+     * Get 未匹配的规则列表。 
+     * @return NotMatchRuleSet 未匹配的规则列表。
+     */
+    public KTVMatchRule [] getNotMatchRuleSet() {
+        return this.NotMatchRuleSet;
+    }
+
+    /**
+     * Set 未匹配的规则列表。
+     * @param NotMatchRuleSet 未匹配的规则列表。
+     */
+    public void setNotMatchRuleSet(KTVMatchRule [] NotMatchRuleSet) {
+        this.NotMatchRuleSet = NotMatchRuleSet;
     }
 
     /**
@@ -73,16 +91,25 @@ public class DetectFraudKOLResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DetectFraudKOLResponse() {
+    public DescribeKTVMatchMusicsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DetectFraudKOLResponse(DetectFraudKOLResponse source) {
-        if (source.Data != null) {
-            this.Data = new OutputKolData(source.Data);
+    public DescribeKTVMatchMusicsResponse(DescribeKTVMatchMusicsResponse source) {
+        if (source.MatchMusicSet != null) {
+            this.MatchMusicSet = new KTVMatchMusic[source.MatchMusicSet.length];
+            for (int i = 0; i < source.MatchMusicSet.length; i++) {
+                this.MatchMusicSet[i] = new KTVMatchMusic(source.MatchMusicSet[i]);
+            }
+        }
+        if (source.NotMatchRuleSet != null) {
+            this.NotMatchRuleSet = new KTVMatchRule[source.NotMatchRuleSet.length];
+            for (int i = 0; i < source.NotMatchRuleSet.length; i++) {
+                this.NotMatchRuleSet[i] = new KTVMatchRule(source.NotMatchRuleSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +121,8 @@ public class DetectFraudKOLResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "MatchMusicSet.", this.MatchMusicSet);
+        this.setParamArrayObj(map, prefix + "NotMatchRuleSet.", this.NotMatchRuleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

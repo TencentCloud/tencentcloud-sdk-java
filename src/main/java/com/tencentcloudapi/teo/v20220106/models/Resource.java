@@ -23,235 +23,278 @@ import java.util.HashMap;
 public class Resource extends AbstractModel{
 
     /**
-    * 资源 ID
+    * 资源 ID。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 付费模式
-0 为后付费
-1 为预付费
+    * 付费模式，取值有：
+<li>0：后付费。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 创建时间
+    * 创建时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 生效时间
+    * 生效时间。
     */
     @SerializedName("EnableTime")
     @Expose
     private String EnableTime;
 
     /**
-    * 失效时间
+    * 失效时间。
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 套餐状态
+    * 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 询价参数
+    * 询价参数。
     */
     @SerializedName("Sv")
     @Expose
     private Sv [] Sv;
 
     /**
-    * 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
+    * 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 套餐关联资源ID
+    * 套餐关联资源 ID。
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-     * Get 资源 ID 
-     * @return Id 资源 ID
+    * 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+     * Get 资源 ID。 
+     * @return Id 资源 ID。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资源 ID
-     * @param Id 资源 ID
+     * Set 资源 ID。
+     * @param Id 资源 ID。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 付费模式
-0 为后付费
-1 为预付费 
-     * @return PayMode 付费模式
-0 为后付费
-1 为预付费
+     * Get 付费模式，取值有：
+<li>0：后付费。</li> 
+     * @return PayMode 付费模式，取值有：
+<li>0：后付费。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-0 为后付费
-1 为预付费
-     * @param PayMode 付费模式
-0 为后付费
-1 为预付费
+     * Set 付费模式，取值有：
+<li>0：后付费。</li>
+     * @param PayMode 付费模式，取值有：
+<li>0：后付费。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。 
+     * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。
+     * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 生效时间 
-     * @return EnableTime 生效时间
+     * Get 生效时间。 
+     * @return EnableTime 生效时间。
      */
     public String getEnableTime() {
         return this.EnableTime;
     }
 
     /**
-     * Set 生效时间
-     * @param EnableTime 生效时间
+     * Set 生效时间。
+     * @param EnableTime 生效时间。
      */
     public void setEnableTime(String EnableTime) {
         this.EnableTime = EnableTime;
     }
 
     /**
-     * Get 失效时间 
-     * @return ExpireTime 失效时间
+     * Get 失效时间。 
+     * @return ExpireTime 失效时间。
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 失效时间
-     * @param ExpireTime 失效时间
+     * Set 失效时间。
+     * @param ExpireTime 失效时间。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 套餐状态 
-     * @return Status 套餐状态
+     * Get 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li> 
+     * @return Status 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 套餐状态
-     * @param Status 套餐状态
+     * Set 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
+     * @param Status 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 询价参数 
-     * @return Sv 询价参数
+     * Get 询价参数。 
+     * @return Sv 询价参数。
      */
     public Sv [] getSv() {
         return this.Sv;
     }
 
     /**
-     * Set 询价参数
-     * @param Sv 询价参数
+     * Set 询价参数。
+     * @param Sv 询价参数。
      */
     public void setSv(Sv [] Sv) {
         this.Sv = Sv;
     }
 
     /**
-     * Get 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费 
-     * @return AutoRenewFlag 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
+     * Get 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li> 
+     * @return AutoRenewFlag 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
-     * @param AutoRenewFlag 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
+     * Set 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
+     * @param AutoRenewFlag 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 套餐关联资源ID 
-     * @return PlanId 套餐关联资源ID
+     * Get 套餐关联资源 ID。 
+     * @return PlanId 套餐关联资源 ID。
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 套餐关联资源ID
-     * @param PlanId 套餐关联资源ID
+     * Set 套餐关联资源 ID。
+     * @param PlanId 套餐关联资源 ID。
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
+    }
+
+    /**
+     * Get 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li> 
+     * @return Area 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
+     * @param Area 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     public Resource() {
@@ -292,6 +335,9 @@ public class Resource extends AbstractModel{
         if (source.PlanId != null) {
             this.PlanId = new String(source.PlanId);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -308,6 +354,7 @@ public class Resource extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Sv.", this.Sv);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

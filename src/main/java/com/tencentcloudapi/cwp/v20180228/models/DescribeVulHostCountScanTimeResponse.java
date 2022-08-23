@@ -58,6 +58,20 @@ public class DescribeVulHostCountScanTimeResponse extends AbstractModel{
     private Long TaskId;
 
     /**
+    * 最后一次修复漏洞的时间
+    */
+    @SerializedName("LastFixTime")
+    @Expose
+    private String LastFixTime;
+
+    /**
+    * 是否有支持自动修复的漏洞事件
+    */
+    @SerializedName("hadAutoFixVul")
+    @Expose
+    private Boolean hadAutoFixVul;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +159,38 @@ public class DescribeVulHostCountScanTimeResponse extends AbstractModel{
     }
 
     /**
+     * Get 最后一次修复漏洞的时间 
+     * @return LastFixTime 最后一次修复漏洞的时间
+     */
+    public String getLastFixTime() {
+        return this.LastFixTime;
+    }
+
+    /**
+     * Set 最后一次修复漏洞的时间
+     * @param LastFixTime 最后一次修复漏洞的时间
+     */
+    public void setLastFixTime(String LastFixTime) {
+        this.LastFixTime = LastFixTime;
+    }
+
+    /**
+     * Get 是否有支持自动修复的漏洞事件 
+     * @return hadAutoFixVul 是否有支持自动修复的漏洞事件
+     */
+    public Boolean gethadAutoFixVul() {
+        return this.hadAutoFixVul;
+    }
+
+    /**
+     * Set 是否有支持自动修复的漏洞事件
+     * @param hadAutoFixVul 是否有支持自动修复的漏洞事件
+     */
+    public void sethadAutoFixVul(Boolean hadAutoFixVul) {
+        this.hadAutoFixVul = hadAutoFixVul;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -183,6 +229,12 @@ public class DescribeVulHostCountScanTimeResponse extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.LastFixTime != null) {
+            this.LastFixTime = new String(source.LastFixTime);
+        }
+        if (source.hadAutoFixVul != null) {
+            this.hadAutoFixVul = new Boolean(source.hadAutoFixVul);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -198,6 +250,8 @@ public class DescribeVulHostCountScanTimeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "IfFirstScan", this.IfFirstScan);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "LastFixTime", this.LastFixTime);
+        this.setParamSimple(map, prefix + "hadAutoFixVul", this.hadAutoFixVul);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -37,6 +37,13 @@ public class DescribeInstancesCountRequest extends AbstractModel{
     private String GroupId;
 
     /**
+    * 游戏区域
+    */
+    @SerializedName("GameRegion")
+    @Expose
+    private String GameRegion;
+
+    /**
      * Get 游戏ID 
      * @return GameId 游戏ID
      */
@@ -68,6 +75,22 @@ public class DescribeInstancesCountRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 游戏区域 
+     * @return GameRegion 游戏区域
+     */
+    public String getGameRegion() {
+        return this.GameRegion;
+    }
+
+    /**
+     * Set 游戏区域
+     * @param GameRegion 游戏区域
+     */
+    public void setGameRegion(String GameRegion) {
+        this.GameRegion = GameRegion;
+    }
+
     public DescribeInstancesCountRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeInstancesCountRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.GameRegion != null) {
+            this.GameRegion = new String(source.GameRegion);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeInstancesCountRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GameId", this.GameId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GameRegion", this.GameRegion);
 
     }
 }

@@ -38,7 +38,6 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
 
     /**
     * 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalNameServers")
     @Expose
@@ -46,7 +45,6 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
 
     /**
     * 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameServers")
     @Expose
@@ -80,11 +78,48 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     private Boolean Paused;
 
     /**
-    * 站点创建时间
+    * 是否开启 CNAME 加速
+- enabled：开启
+- disabled：关闭
     */
-    @SerializedName("CreatedOn")
+    @SerializedName("CnameSpeedUp")
     @Expose
-    private String CreatedOn;
+    private String CnameSpeedUp;
+
+    /**
+    * cname切换验证状态
+- finished 切换完成
+- pending 切换验证中
+    */
+    @SerializedName("CnameStatus")
+    @Expose
+    private String CnameStatus;
+
+    /**
+    * 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Resources")
+    @Expose
+    private Resource [] Resources;
 
     /**
     * 站点修改时间
@@ -92,6 +127,13 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
+
+    /**
+    * 站点创建时间
+    */
+    @SerializedName("CreatedOn")
+    @Expose
+    private String CreatedOn;
 
     /**
     * 用户自定义 NS 信息
@@ -108,41 +150,6 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     @SerializedName("VanityNameServersIps")
     @Expose
     private VanityNameServersIps [] VanityNameServersIps;
-
-    /**
-    * 是否开启 CNAME 加速
-- enabled：开启
-- disabled：关闭
-    */
-    @SerializedName("CnameSpeedUp")
-    @Expose
-    private String CnameSpeedUp;
-
-    /**
-    * cname切换验证状态
-- finished 切换完成
-- pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CnameStatus")
-    @Expose
-    private String CnameStatus;
-
-    /**
-    * 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private Tag [] Tags;
-
-    /**
-    * 计费资源
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Resources")
-    @Expose
-    private Resource [] Resources;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -184,10 +191,8 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户当前使用的 NS 列表 
      * @return OriginalNameServers 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOriginalNameServers() {
         return this.OriginalNameServers;
@@ -195,19 +200,15 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
 
     /**
      * Set 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalNameServers 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalNameServers(String [] OriginalNameServers) {
         this.OriginalNameServers = OriginalNameServers;
     }
 
     /**
-     * Get 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腾讯云分配给用户的 NS 列表 
      * @return NameServers 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNameServers() {
         return this.NameServers;
@@ -215,9 +216,7 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
 
     /**
      * Set 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameServers 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameServers(String [] NameServers) {
         this.NameServers = NameServers;
@@ -296,19 +295,119 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
     }
 
     /**
-     * Get 站点创建时间 
-     * @return CreatedOn 站点创建时间
+     * Get 是否开启 CNAME 加速
+- enabled：开启
+- disabled：关闭 
+     * @return CnameSpeedUp 是否开启 CNAME 加速
+- enabled：开启
+- disabled：关闭
      */
-    public String getCreatedOn() {
-        return this.CreatedOn;
+    public String getCnameSpeedUp() {
+        return this.CnameSpeedUp;
     }
 
     /**
-     * Set 站点创建时间
-     * @param CreatedOn 站点创建时间
+     * Set 是否开启 CNAME 加速
+- enabled：开启
+- disabled：关闭
+     * @param CnameSpeedUp 是否开启 CNAME 加速
+- enabled：开启
+- disabled：关闭
      */
-    public void setCreatedOn(String CreatedOn) {
-        this.CreatedOn = CreatedOn;
+    public void setCnameSpeedUp(String CnameSpeedUp) {
+        this.CnameSpeedUp = CnameSpeedUp;
+    }
+
+    /**
+     * Get cname切换验证状态
+- finished 切换完成
+- pending 切换验证中 
+     * @return CnameStatus cname切换验证状态
+- finished 切换完成
+- pending 切换验证中
+     */
+    public String getCnameStatus() {
+        return this.CnameStatus;
+    }
+
+    /**
+     * Set cname切换验证状态
+- finished 切换完成
+- pending 切换验证中
+     * @param CnameStatus cname切换验证状态
+- finished 切换完成
+- pending 切换验证中
+     */
+    public void setCnameStatus(String CnameStatus) {
+        this.CnameStatus = CnameStatus;
+    }
+
+    /**
+     * Get 资源标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li> 
+     * @return Area 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
+     * @param Area 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get 计费资源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Resources 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Resource [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Resources 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResources(Resource [] Resources) {
+        this.Resources = Resources;
     }
 
     /**
@@ -325,6 +424,22 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;
+    }
+
+    /**
+     * Get 站点创建时间 
+     * @return CreatedOn 站点创建时间
+     */
+    public String getCreatedOn() {
+        return this.CreatedOn;
+    }
+
+    /**
+     * Set 站点创建时间
+     * @param CreatedOn 站点创建时间
+     */
+    public void setCreatedOn(String CreatedOn) {
+        this.CreatedOn = CreatedOn;
     }
 
     /**
@@ -365,98 +480,6 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
      */
     public void setVanityNameServersIps(VanityNameServersIps [] VanityNameServersIps) {
         this.VanityNameServersIps = VanityNameServersIps;
-    }
-
-    /**
-     * Get 是否开启 CNAME 加速
-- enabled：开启
-- disabled：关闭 
-     * @return CnameSpeedUp 是否开启 CNAME 加速
-- enabled：开启
-- disabled：关闭
-     */
-    public String getCnameSpeedUp() {
-        return this.CnameSpeedUp;
-    }
-
-    /**
-     * Set 是否开启 CNAME 加速
-- enabled：开启
-- disabled：关闭
-     * @param CnameSpeedUp 是否开启 CNAME 加速
-- enabled：开启
-- disabled：关闭
-     */
-    public void setCnameSpeedUp(String CnameSpeedUp) {
-        this.CnameSpeedUp = CnameSpeedUp;
-    }
-
-    /**
-     * Get cname切换验证状态
-- finished 切换完成
-- pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CnameStatus cname切换验证状态
-- finished 切换完成
-- pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCnameStatus() {
-        return this.CnameStatus;
-    }
-
-    /**
-     * Set cname切换验证状态
-- finished 切换完成
-- pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CnameStatus cname切换验证状态
-- finished 切换完成
-- pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCnameStatus(String CnameStatus) {
-        this.CnameStatus = CnameStatus;
-    }
-
-    /**
-     * Get 资源标签
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Tag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
-     * Get 计费资源
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resources 计费资源
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Resource [] getResources() {
-        return this.Resources;
-    }
-
-    /**
-     * Set 计费资源
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resources 计费资源
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResources(Resource [] Resources) {
-        this.Resources = Resources;
     }
 
     /**
@@ -510,21 +533,6 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
         if (source.Paused != null) {
             this.Paused = new Boolean(source.Paused);
         }
-        if (source.CreatedOn != null) {
-            this.CreatedOn = new String(source.CreatedOn);
-        }
-        if (source.ModifiedOn != null) {
-            this.ModifiedOn = new String(source.ModifiedOn);
-        }
-        if (source.VanityNameServers != null) {
-            this.VanityNameServers = new VanityNameServers(source.VanityNameServers);
-        }
-        if (source.VanityNameServersIps != null) {
-            this.VanityNameServersIps = new VanityNameServersIps[source.VanityNameServersIps.length];
-            for (int i = 0; i < source.VanityNameServersIps.length; i++) {
-                this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
-            }
-        }
         if (source.CnameSpeedUp != null) {
             this.CnameSpeedUp = new String(source.CnameSpeedUp);
         }
@@ -537,10 +545,28 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
         if (source.Resources != null) {
             this.Resources = new Resource[source.Resources.length];
             for (int i = 0; i < source.Resources.length; i++) {
                 this.Resources[i] = new Resource(source.Resources[i]);
+            }
+        }
+        if (source.ModifiedOn != null) {
+            this.ModifiedOn = new String(source.ModifiedOn);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+        if (source.VanityNameServers != null) {
+            this.VanityNameServers = new VanityNameServers(source.VanityNameServers);
+        }
+        if (source.VanityNameServersIps != null) {
+            this.VanityNameServersIps = new VanityNameServersIps[source.VanityNameServersIps.length];
+            for (int i = 0; i < source.VanityNameServersIps.length; i++) {
+                this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
             }
         }
         if (source.RequestId != null) {
@@ -560,14 +586,15 @@ public class DescribeZoneDetailsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Paused", this.Paused);
-        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-        this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
-        this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
         this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+        this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

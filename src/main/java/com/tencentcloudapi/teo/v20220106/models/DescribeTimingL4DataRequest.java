@@ -97,6 +97,15 @@ l4Flow_outFlux: 访问出流量
     private String [] ProxyIds;
 
     /**
+    * 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get RFC3339格式，客户端时间 
      * @return StartTime RFC3339格式，客户端时间
      */
@@ -272,6 +281,30 @@ l4Flow_outFlux: 访问出流量
         this.ProxyIds = ProxyIds;
     }
 
+    /**
+     * Get 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li> 
+     * @return Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     * @param Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeTimingL4DataRequest() {
     }
 
@@ -325,6 +358,9 @@ l4Flow_outFlux: 访问出流量
                 this.ProxyIds[i] = new String(source.ProxyIds[i]);
             }
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -342,6 +378,7 @@ l4Flow_outFlux: 访问出流量
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

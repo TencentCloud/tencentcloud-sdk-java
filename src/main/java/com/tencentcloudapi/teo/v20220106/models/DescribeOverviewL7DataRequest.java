@@ -41,6 +41,7 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
     */
     @SerializedName("MetricNames")
     @Expose
@@ -73,6 +74,15 @@ l7Flow_outBandwidth: 访问带宽
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
+
+    /**
+    * 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get RFC3339格式，客户端时间 
@@ -110,11 +120,13 @@ l7Flow_outBandwidth: 访问带宽
      * Get 指标列表，支持的指标
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽 
+l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量 
      * @return MetricNames 指标列表，支持的指标
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -125,10 +137,12 @@ l7Flow_outBandwidth: 访问带宽
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
      * @param MetricNames 指标列表，支持的指标
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
@@ -198,6 +212,30 @@ l7Flow_outBandwidth: 访问带宽
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li> 
+     * @return Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     * @param Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeOverviewL7DataRequest() {
     }
 
@@ -236,6 +274,9 @@ l7Flow_outBandwidth: 访问带宽
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -250,6 +291,7 @@ l7Flow_outBandwidth: 访问带宽
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

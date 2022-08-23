@@ -247,6 +247,14 @@ public class TableInfoNew extends AbstractModel{
     private Long TxhBackupExpireDay;
 
     /**
+    * 表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SyncTableInfo")
+    @Expose
+    private SyncTableInfo SyncTableInfo;
+
+    /**
      * Get 表格名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表格名称
@@ -806,6 +814,26 @@ public class TableInfoNew extends AbstractModel{
         this.TxhBackupExpireDay = TxhBackupExpireDay;
     }
 
+    /**
+     * Get 表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SyncTableInfo 表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SyncTableInfo getSyncTableInfo() {
+        return this.SyncTableInfo;
+    }
+
+    /**
+     * Set 表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncTableInfo 表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSyncTableInfo(SyncTableInfo SyncTableInfo) {
+        this.SyncTableInfo = SyncTableInfo;
+    }
+
     public TableInfoNew() {
     }
 
@@ -901,6 +929,9 @@ public class TableInfoNew extends AbstractModel{
         if (source.TxhBackupExpireDay != null) {
             this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
         }
+        if (source.SyncTableInfo != null) {
+            this.SyncTableInfo = new SyncTableInfo(source.SyncTableInfo);
+        }
     }
 
 
@@ -936,6 +967,7 @@ public class TableInfoNew extends AbstractModel{
         this.setParamSimple(map, prefix + "SortRule", this.SortRule);
         this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
         this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+        this.setParamObj(map, prefix + "SyncTableInfo.", this.SyncTableInfo);
 
     }
 }

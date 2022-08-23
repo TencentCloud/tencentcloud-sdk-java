@@ -93,6 +93,15 @@ public class DescribeWebProtectionDataRequest extends AbstractModel{
     private QueryCondition [] QueryCondition;
 
     /**
+    * 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 开始时间，RFC3339格式。 
      * @return StartTime 开始时间，RFC3339格式。
      */
@@ -264,6 +273,30 @@ public class DescribeWebProtectionDataRequest extends AbstractModel{
         this.QueryCondition = QueryCondition;
     }
 
+    /**
+     * Get 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。 
+     * @return Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     * @param Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeWebProtectionDataRequest() {
     }
 
@@ -311,6 +344,9 @@ public class DescribeWebProtectionDataRequest extends AbstractModel{
                 this.QueryCondition[i] = new QueryCondition(source.QueryCondition[i]);
             }
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -327,6 +363,7 @@ public class DescribeWebProtectionDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

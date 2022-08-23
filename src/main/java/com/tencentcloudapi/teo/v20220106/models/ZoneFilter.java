@@ -24,24 +24,24 @@ public class ZoneFilter extends AbstractModel{
 
     /**
     * 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 过滤字段值
+    * 过滤字段值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+    * 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
     */
     @SerializedName("Fuzzy")
     @Expose
@@ -49,15 +49,15 @@ public class ZoneFilter extends AbstractModel{
 
     /**
      * Get 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值 
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li> 
      * @return Name 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
      */
     public String getName() {
         return this.Name;
@@ -65,47 +65,47 @@ public class ZoneFilter extends AbstractModel{
 
     /**
      * Set 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
      * @param Name 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 过滤字段值 
-     * @return Values 过滤字段值
+     * Get 过滤字段值。 
+     * @return Values 过滤字段值。
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 过滤字段值
-     * @param Values 过滤字段值
+     * Set 过滤字段值。
+     * @param Values 过滤字段值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1 
-     * @return Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+     * Get 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。 
+     * @return Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
      */
     public Boolean getFuzzy() {
         return this.Fuzzy;
     }
 
     /**
-     * Set 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
-     * @param Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+     * Set 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
+     * @param Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
      */
     public void setFuzzy(Boolean Fuzzy) {
         this.Fuzzy = Fuzzy;

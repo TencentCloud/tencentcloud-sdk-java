@@ -80,6 +80,15 @@ public class DescribeBotLogRequest extends AbstractModel{
     private QueryCondition [] QueryCondition;
 
     /**
+    * 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 起始时间。 
      * @return StartTime 起始时间。
      */
@@ -223,6 +232,30 @@ public class DescribeBotLogRequest extends AbstractModel{
         this.QueryCondition = QueryCondition;
     }
 
+    /**
+     * Get 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。 
+     * @return Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     * @param Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeBotLogRequest() {
     }
 
@@ -261,6 +294,9 @@ public class DescribeBotLogRequest extends AbstractModel{
                 this.QueryCondition[i] = new QueryCondition(source.QueryCondition[i]);
             }
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -275,6 +311,7 @@ public class DescribeBotLogRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

@@ -156,6 +156,13 @@ public class UpdateScenarioRequest extends AbstractModel{
     private DomainNameConfig DomainNameConfig;
 
     /**
+    * WebHook请求配置
+    */
+    @SerializedName("NotificationHooks")
+    @Expose
+    private Notification [] NotificationHooks;
+
+    /**
      * Get 场景ID 
      * @return ScenarioId 场景ID
      */
@@ -459,6 +466,22 @@ public class UpdateScenarioRequest extends AbstractModel{
         this.DomainNameConfig = DomainNameConfig;
     }
 
+    /**
+     * Get WebHook请求配置 
+     * @return NotificationHooks WebHook请求配置
+     */
+    public Notification [] getNotificationHooks() {
+        return this.NotificationHooks;
+    }
+
+    /**
+     * Set WebHook请求配置
+     * @param NotificationHooks WebHook请求配置
+     */
+    public void setNotificationHooks(Notification [] NotificationHooks) {
+        this.NotificationHooks = NotificationHooks;
+    }
+
     public UpdateScenarioRequest() {
     }
 
@@ -545,6 +568,12 @@ public class UpdateScenarioRequest extends AbstractModel{
         if (source.DomainNameConfig != null) {
             this.DomainNameConfig = new DomainNameConfig(source.DomainNameConfig);
         }
+        if (source.NotificationHooks != null) {
+            this.NotificationHooks = new Notification[source.NotificationHooks.length];
+            for (int i = 0; i < source.NotificationHooks.length; i++) {
+                this.NotificationHooks[i] = new Notification(source.NotificationHooks[i]);
+            }
+        }
     }
 
 
@@ -571,6 +600,7 @@ public class UpdateScenarioRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SLAPolicy.", this.SLAPolicy);
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+        this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
 
     }
 }

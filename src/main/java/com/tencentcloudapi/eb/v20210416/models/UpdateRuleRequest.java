@@ -51,6 +51,13 @@ public class UpdateRuleRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+    */
+    @SerializedName("EventPattern")
+    @Expose
+    private String EventPattern;
+
+    /**
     * 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
     */
     @SerializedName("RuleName")
@@ -122,6 +129,22 @@ public class UpdateRuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084) 
+     * @return EventPattern 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+     */
+    public String getEventPattern() {
+        return this.EventPattern;
+    }
+
+    /**
+     * Set 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+     * @param EventPattern 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+     */
+    public void setEventPattern(String EventPattern) {
+        this.EventPattern = EventPattern;
+    }
+
+    /**
      * Get 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符 
      * @return RuleName 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      */
@@ -157,6 +180,9 @@ public class UpdateRuleRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.EventPattern != null) {
+            this.EventPattern = new String(source.EventPattern);
+        }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
@@ -171,6 +197,7 @@ public class UpdateRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "EventPattern", this.EventPattern);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }

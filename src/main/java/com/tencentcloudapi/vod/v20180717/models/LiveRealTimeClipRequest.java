@@ -72,6 +72,29 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     private String Procedure;
 
     /**
+    * 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+仅 IsPersistence 为 1 时有效。
+    */
+    @SerializedName("ClassId")
+    @Expose
+    private Long ClassId;
+
+    /**
+    * 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
+    */
+    @SerializedName("SourceContext")
+    @Expose
+    private String SourceContext;
+
+    /**
+    * 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
     * 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
     */
     @SerializedName("MetaDataRequired")
@@ -84,6 +107,15 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
+
+    /**
+    * 剪辑的直播流信息：
+<li>默认剪辑直播原始流。</li>
+<li>当StreamInfo中指定的Type为Transcoding，则剪辑TemplateId对应的直播转码流。</li>
+    */
+    @SerializedName("StreamInfo")
+    @Expose
+    private LiveRealTimeClipStreamInfo StreamInfo;
 
     /**
     * 系统保留字段，请勿填写。
@@ -205,6 +237,62 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     }
 
     /**
+     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+仅 IsPersistence 为 1 时有效。 
+     * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+仅 IsPersistence 为 1 时有效。
+     */
+    public Long getClassId() {
+        return this.ClassId;
+    }
+
+    /**
+     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+仅 IsPersistence 为 1 时有效。
+     * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li>
+仅 IsPersistence 为 1 时有效。
+     */
+    public void setClassId(Long ClassId) {
+        this.ClassId = ClassId;
+    }
+
+    /**
+     * Get 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。 
+     * @return SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
+     */
+    public String getSourceContext() {
+        return this.SourceContext;
+    }
+
+    /**
+     * Set 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
+     * @param SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
+     */
+    public void setSourceContext(String SourceContext) {
+        this.SourceContext = SourceContext;
+    }
+
+    /**
+     * Get 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。 
+     * @return SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+     * @param SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
+    /**
      * Get 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。 
      * @return MetaDataRequired 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
      */
@@ -234,6 +322,30 @@ public class LiveRealTimeClipRequest extends AbstractModel{
      */
     public void setHost(String Host) {
         this.Host = Host;
+    }
+
+    /**
+     * Get 剪辑的直播流信息：
+<li>默认剪辑直播原始流。</li>
+<li>当StreamInfo中指定的Type为Transcoding，则剪辑TemplateId对应的直播转码流。</li> 
+     * @return StreamInfo 剪辑的直播流信息：
+<li>默认剪辑直播原始流。</li>
+<li>当StreamInfo中指定的Type为Transcoding，则剪辑TemplateId对应的直播转码流。</li>
+     */
+    public LiveRealTimeClipStreamInfo getStreamInfo() {
+        return this.StreamInfo;
+    }
+
+    /**
+     * Set 剪辑的直播流信息：
+<li>默认剪辑直播原始流。</li>
+<li>当StreamInfo中指定的Type为Transcoding，则剪辑TemplateId对应的直播转码流。</li>
+     * @param StreamInfo 剪辑的直播流信息：
+<li>默认剪辑直播原始流。</li>
+<li>当StreamInfo中指定的Type为Transcoding，则剪辑TemplateId对应的直播转码流。</li>
+     */
+    public void setStreamInfo(LiveRealTimeClipStreamInfo StreamInfo) {
+        this.StreamInfo = StreamInfo;
     }
 
     /**
@@ -281,11 +393,23 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         if (source.Procedure != null) {
             this.Procedure = new String(source.Procedure);
         }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.SourceContext != null) {
+            this.SourceContext = new String(source.SourceContext);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
         if (source.MetaDataRequired != null) {
             this.MetaDataRequired = new Long(source.MetaDataRequired);
         }
         if (source.Host != null) {
             this.Host = new String(source.Host);
+        }
+        if (source.StreamInfo != null) {
+            this.StreamInfo = new LiveRealTimeClipStreamInfo(source.StreamInfo);
         }
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
@@ -304,8 +428,12 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Procedure", this.Procedure);
+        this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamObj(map, prefix + "StreamInfo.", this.StreamInfo);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }

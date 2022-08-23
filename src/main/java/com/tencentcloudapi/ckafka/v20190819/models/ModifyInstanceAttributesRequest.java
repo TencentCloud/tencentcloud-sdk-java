@@ -79,6 +79,13 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
+    * 实例级别单条消息大小（单位byte)
+    */
+    @SerializedName("MaxMessageByte")
+    @Expose
+    private Long MaxMessageByte;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -206,6 +213,22 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.DynamicDiskConfig = DynamicDiskConfig;
     }
 
+    /**
+     * Get 实例级别单条消息大小（单位byte) 
+     * @return MaxMessageByte 实例级别单条消息大小（单位byte)
+     */
+    public Long getMaxMessageByte() {
+        return this.MaxMessageByte;
+    }
+
+    /**
+     * Set 实例级别单条消息大小（单位byte)
+     * @param MaxMessageByte 实例级别单条消息大小（单位byte)
+     */
+    public void setMaxMessageByte(Long MaxMessageByte) {
+        this.MaxMessageByte = MaxMessageByte;
+    }
+
     public ModifyInstanceAttributesRequest() {
     }
 
@@ -238,6 +261,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         if (source.DynamicDiskConfig != null) {
             this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
         }
+        if (source.MaxMessageByte != null) {
+            this.MaxMessageByte = new Long(source.MaxMessageByte);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+        this.setParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
 
     }
 }

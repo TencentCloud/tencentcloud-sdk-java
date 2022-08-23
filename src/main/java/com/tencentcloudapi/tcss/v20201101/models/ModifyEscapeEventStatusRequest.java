@@ -30,7 +30,12 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
     private String [] EventIdSet;
 
     /**
-    * 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
+    * 标记事件的状态：
+EVENT_UNDEAL:未处理（取消忽略），
+EVENT_DEALED:已处理，
+EVENT_IGNORE:忽略，
+EVENT_DELETE：已删除
+EVENT_ADD_WHITE：加白
     */
     @SerializedName("Status")
     @Expose
@@ -42,6 +47,27 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * 加白镜像ID数组
+    */
+    @SerializedName("ImageIDs")
+    @Expose
+    private String [] ImageIDs;
+
+    /**
+    * 加白事件类型
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
+    */
+    @SerializedName("EventType")
+    @Expose
+    private String [] EventType;
 
     /**
      * Get 处理事件ids 
@@ -60,16 +86,36 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除 
-     * @return Status 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
+     * Get 标记事件的状态：
+EVENT_UNDEAL:未处理（取消忽略），
+EVENT_DEALED:已处理，
+EVENT_IGNORE:忽略，
+EVENT_DELETE：已删除
+EVENT_ADD_WHITE：加白 
+     * @return Status 标记事件的状态：
+EVENT_UNDEAL:未处理（取消忽略），
+EVENT_DEALED:已处理，
+EVENT_IGNORE:忽略，
+EVENT_DELETE：已删除
+EVENT_ADD_WHITE：加白
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
-     * @param Status 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
+     * Set 标记事件的状态：
+EVENT_UNDEAL:未处理（取消忽略），
+EVENT_DEALED:已处理，
+EVENT_IGNORE:忽略，
+EVENT_DELETE：已删除
+EVENT_ADD_WHITE：加白
+     * @param Status 标记事件的状态：
+EVENT_UNDEAL:未处理（取消忽略），
+EVENT_DEALED:已处理，
+EVENT_IGNORE:忽略，
+EVENT_DELETE：已删除
+EVENT_ADD_WHITE：加白
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -89,6 +135,66 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get 加白镜像ID数组 
+     * @return ImageIDs 加白镜像ID数组
+     */
+    public String [] getImageIDs() {
+        return this.ImageIDs;
+    }
+
+    /**
+     * Set 加白镜像ID数组
+     * @param ImageIDs 加白镜像ID数组
+     */
+    public void setImageIDs(String [] ImageIDs) {
+        this.ImageIDs = ImageIDs;
+    }
+
+    /**
+     * Get 加白事件类型
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸 
+     * @return EventType 加白事件类型
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
+     */
+    public String [] getEventType() {
+        return this.EventType;
+    }
+
+    /**
+     * Set 加白事件类型
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
+     * @param EventType 加白事件类型
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
+     */
+    public void setEventType(String [] EventType) {
+        this.EventType = EventType;
     }
 
     public ModifyEscapeEventStatusRequest() {
@@ -111,6 +217,18 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.ImageIDs != null) {
+            this.ImageIDs = new String[source.ImageIDs.length];
+            for (int i = 0; i < source.ImageIDs.length; i++) {
+                this.ImageIDs[i] = new String(source.ImageIDs[i]);
+            }
+        }
+        if (source.EventType != null) {
+            this.EventType = new String[source.EventType.length];
+            for (int i = 0; i < source.EventType.length; i++) {
+                this.EventType[i] = new String(source.EventType[i]);
+            }
+        }
     }
 
 
@@ -121,6 +239,8 @@ public class ModifyEscapeEventStatusRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "EventIdSet.", this.EventIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArraySimple(map, prefix + "ImageIDs.", this.ImageIDs);
+        this.setParamArraySimple(map, prefix + "EventType.", this.EventType);
 
     }
 }

@@ -41,7 +41,6 @@ off：关闭
 
     /**
     * 达到阈值后的操作
-RESOLVE_DNS_TO_ORIGIN：直接回源，仅自有源站域名支持
 RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -147,11 +146,9 @@ off：关闭
 
     /**
      * Get 达到阈值后的操作
-RESOLVE_DNS_TO_ORIGIN：直接回源，仅自有源站域名支持
 RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CounterMeasure 达到阈值后的操作
-RESOLVE_DNS_TO_ORIGIN：直接回源，仅自有源站域名支持
 RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,11 +158,9 @@ RETURN_404：全部请求返回 404
 
     /**
      * Set 达到阈值后的操作
-RESOLVE_DNS_TO_ORIGIN：直接回源，仅自有源站域名支持
 RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CounterMeasure 达到阈值后的操作
-RESOLVE_DNS_TO_ORIGIN：直接回源，仅自有源站域名支持
 RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
      */

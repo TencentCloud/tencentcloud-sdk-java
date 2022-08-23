@@ -165,6 +165,15 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     private Ipv6Access Ipv6;
 
     /**
+    * 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -524,6 +533,30 @@ public class DescribeZoneSettingResponse extends AbstractModel{
     }
 
     /**
+     * Get 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li> 
+     * @return Area 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
+     * @param Area 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -601,6 +634,9 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         if (source.Ipv6 != null) {
             this.Ipv6 = new Ipv6Access(source.Ipv6);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -629,6 +665,7 @@ public class DescribeZoneSettingResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
+        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

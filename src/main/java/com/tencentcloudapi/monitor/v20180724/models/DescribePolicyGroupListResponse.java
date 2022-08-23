@@ -38,6 +38,14 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
     private Long Total;
 
     /**
+    * 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Warning")
+    @Expose
+    private String Warning;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
     }
 
     /**
+     * Get 备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Warning 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWarning() {
+        return this.Warning;
+    }
+
+    /**
+     * Set 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Warning 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarning(String Warning) {
+        this.Warning = Warning;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +141,9 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.Warning != null) {
+            this.Warning = new String(source.Warning);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +156,7 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "Warning", this.Warning);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

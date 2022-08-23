@@ -26,7 +26,6 @@ public class CacheConfigCache extends AbstractModel{
     * 缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
     @Expose
@@ -54,12 +53,10 @@ public class CacheConfigCache extends AbstractModel{
     /**
      * Get 缓存配置开关，取值有：
 <li>on：开启；</li>
-<li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭。</li> 
      * @return Switch 缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
         return this.Switch;
@@ -69,11 +66,9 @@ public class CacheConfigCache extends AbstractModel{
      * Set 缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Switch 缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -69,12 +69,20 @@ public class TransformsParam extends AbstractModel{
     private String SourceType;
 
     /**
-    * 输出格式
+    * 输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputFormat")
     @Expose
     private String OutputFormat;
+
+    /**
+    * 输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RowParam")
+    @Expose
+    private RowParam RowParam;
 
     /**
      * Get 原始数据 
@@ -189,9 +197,9 @@ public class TransformsParam extends AbstractModel{
     }
 
     /**
-     * Get 输出格式
+     * Get 输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputFormat 输出格式
+     * @return OutputFormat 输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputFormat() {
@@ -199,13 +207,33 @@ public class TransformsParam extends AbstractModel{
     }
 
     /**
-     * Set 输出格式
+     * Set 输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputFormat 输出格式
+     * @param OutputFormat 输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputFormat(String OutputFormat) {
         this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get 输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RowParam 输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RowParam getRowParam() {
+        return this.RowParam;
+    }
+
+    /**
+     * Set 输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RowParam 输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRowParam(RowParam RowParam) {
+        this.RowParam = RowParam;
     }
 
     public TransformsParam() {
@@ -243,6 +271,9 @@ public class TransformsParam extends AbstractModel{
         if (source.OutputFormat != null) {
             this.OutputFormat = new String(source.OutputFormat);
         }
+        if (source.RowParam != null) {
+            this.RowParam = new RowParam(source.RowParam);
+        }
     }
 
 
@@ -257,6 +288,7 @@ public class TransformsParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamObj(map, prefix + "RowParam.", this.RowParam);
 
     }
 }

@@ -15,6 +15,9 @@ public enum TeoErrorCode {
     // 后台处理出错。
      INTERNALERROR_BACKENDERROR("InternalError.BackendError"),
      
+    // 数据库错误。
+     INTERNALERROR_DBERROR("InternalError.DBError"),
+     
     // 获取配置失败。
      INTERNALERROR_DOMAINCONFIG("InternalError.DomainConfig"),
      
@@ -128,6 +131,9 @@ public enum TeoErrorCode {
      
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
+     
+    // 域名尚未备案。
+     OPERATIONDENIED_DOMAINNOICP("OperationDenied.DomainNoICP"),
      
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),

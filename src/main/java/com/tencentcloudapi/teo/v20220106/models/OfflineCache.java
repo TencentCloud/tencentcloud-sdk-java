@@ -26,7 +26,6 @@ public class OfflineCache extends AbstractModel{
     * 离线缓存是否开启，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
     @Expose
@@ -35,12 +34,10 @@ public class OfflineCache extends AbstractModel{
     /**
      * Get 离线缓存是否开启，取值有：
 <li>on：开启；</li>
-<li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭。</li> 
      * @return Switch 离线缓存是否开启，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
         return this.Switch;
@@ -50,11 +47,9 @@ public class OfflineCache extends AbstractModel{
      * Set 离线缓存是否开启，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Switch 离线缓存是否开启，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

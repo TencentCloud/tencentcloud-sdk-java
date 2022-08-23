@@ -143,6 +143,22 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     private Long DefenseAttackCount;
 
     /**
+    * 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuccessFixCount")
+    @Expose
+    private Long SuccessFixCount;
+
+    /**
+    * 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FixSwitch")
+    @Expose
+    private Long FixSwitch;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -450,6 +466,46 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
     }
 
     /**
+     * Get 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuccessFixCount 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSuccessFixCount() {
+        return this.SuccessFixCount;
+    }
+
+    /**
+     * Set 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuccessFixCount 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuccessFixCount(Long SuccessFixCount) {
+        this.SuccessFixCount = SuccessFixCount;
+    }
+
+    /**
+     * Get 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FixSwitch 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFixSwitch() {
+        return this.FixSwitch;
+    }
+
+    /**
+     * Set 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FixSwitch 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFixSwitch(Long FixSwitch) {
+        this.FixSwitch = FixSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -518,6 +574,12 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
         if (source.DefenseAttackCount != null) {
             this.DefenseAttackCount = new Long(source.DefenseAttackCount);
         }
+        if (source.SuccessFixCount != null) {
+            this.SuccessFixCount = new Long(source.SuccessFixCount);
+        }
+        if (source.FixSwitch != null) {
+            this.FixSwitch = new Long(source.FixSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -543,6 +605,8 @@ public class DescribeVulInfoCvssResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CvssScoreFloat", this.CvssScoreFloat);
         this.setParamSimple(map, prefix + "Labels", this.Labels);
         this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
+        this.setParamSimple(map, prefix + "SuccessFixCount", this.SuccessFixCount);
+        this.setParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
