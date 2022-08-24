@@ -93,6 +93,13 @@ public class CreateShipperRequest extends AbstractModel{
     private ContentInfo Content;
 
     /**
+    * 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+    */
+    @SerializedName("FilenameMode")
+    @Expose
+    private Long FilenameMode;
+
+    /**
      * Get 创建的投递规则所属的日志主题ID 
      * @return TopicId 创建的投递规则所属的日志主题ID
      */
@@ -252,6 +259,22 @@ public class CreateShipperRequest extends AbstractModel{
         this.Content = Content;
     }
 
+    /**
+     * Get 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名） 
+     * @return FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     */
+    public Long getFilenameMode() {
+        return this.FilenameMode;
+    }
+
+    /**
+     * Set 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * @param FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     */
+    public void setFilenameMode(Long FilenameMode) {
+        this.FilenameMode = FilenameMode;
+    }
+
     public CreateShipperRequest() {
     }
 
@@ -293,6 +316,9 @@ public class CreateShipperRequest extends AbstractModel{
         if (source.Content != null) {
             this.Content = new ContentInfo(source.Content);
         }
+        if (source.FilenameMode != null) {
+            this.FilenameMode = new Long(source.FilenameMode);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateShipperRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Partition", this.Partition);
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
 
     }
 }

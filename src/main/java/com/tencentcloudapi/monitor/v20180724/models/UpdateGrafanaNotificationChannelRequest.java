@@ -30,7 +30,7 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String ChannelId;
 
     /**
-    * 实例名
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -74,16 +74,16 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceId 实例名
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceId 实例名
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

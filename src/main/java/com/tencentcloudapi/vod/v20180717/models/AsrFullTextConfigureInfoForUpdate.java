@@ -32,8 +32,17 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     private String Switch;
 
     /**
-    * 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+    * 字幕格式列表操作信息。
+    */
+    @SerializedName("SubtitleFormatsOperation")
+    @Expose
+    private SubtitleFormatsOperation SubtitleFormatsOperation;
+
+    /**
+    * 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
     */
     @SerializedName("SubtitleFormat")
     @Expose
@@ -64,20 +73,44 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Get 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li> 
-     * @return SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+     * Get 字幕格式列表操作信息。 
+     * @return SubtitleFormatsOperation 字幕格式列表操作信息。
+     */
+    public SubtitleFormatsOperation getSubtitleFormatsOperation() {
+        return this.SubtitleFormatsOperation;
+    }
+
+    /**
+     * Set 字幕格式列表操作信息。
+     * @param SubtitleFormatsOperation 字幕格式列表操作信息。
+     */
+    public void setSubtitleFormatsOperation(SubtitleFormatsOperation SubtitleFormatsOperation) {
+        this.SubtitleFormatsOperation = SubtitleFormatsOperation;
+    }
+
+    /**
+     * Get 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font> 
+     * @return SubtitleFormat 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
-     * @param SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+     * Set 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
+     * @param SubtitleFormat 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
@@ -94,6 +127,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.SubtitleFormatsOperation != null) {
+            this.SubtitleFormatsOperation = new SubtitleFormatsOperation(source.SubtitleFormatsOperation);
+        }
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
@@ -105,6 +141,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
 
     }

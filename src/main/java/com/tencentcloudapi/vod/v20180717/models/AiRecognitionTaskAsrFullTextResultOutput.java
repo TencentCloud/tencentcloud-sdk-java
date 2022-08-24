@@ -38,14 +38,21 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
     private String SegmentSetFileUrl;
 
     /**
-    * 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。。
+    * 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-    * 字幕文件 Url。
+    * 生成的字幕列表，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormats。
+    */
+    @SerializedName("SubtitleSet")
+    @Expose
+    private AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] SubtitleSet;
+
+    /**
+    * 生成的字幕文件 Url，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormat。
     */
     @SerializedName("SubtitleUrl")
     @Expose
@@ -88,32 +95,48 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
     }
 
     /**
-     * Get 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。。 
-     * @return SegmentSetFileUrlExpireTime 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。。
+     * Get 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return SegmentSetFileUrlExpireTime 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。。
-     * @param SegmentSetFileUrlExpireTime 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。。
+     * Set 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param SegmentSetFileUrlExpireTime 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Get 字幕文件 Url。 
-     * @return SubtitleUrl 字幕文件 Url。
+     * Get 生成的字幕列表，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormats。 
+     * @return SubtitleSet 生成的字幕列表，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormats。
+     */
+    public AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] getSubtitleSet() {
+        return this.SubtitleSet;
+    }
+
+    /**
+     * Set 生成的字幕列表，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormats。
+     * @param SubtitleSet 生成的字幕列表，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormats。
+     */
+    public void setSubtitleSet(AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] SubtitleSet) {
+        this.SubtitleSet = SubtitleSet;
+    }
+
+    /**
+     * Get 生成的字幕文件 Url，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormat。 
+     * @return SubtitleUrl 生成的字幕文件 Url，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormat。
      */
     public String getSubtitleUrl() {
         return this.SubtitleUrl;
     }
 
     /**
-     * Set 字幕文件 Url。
-     * @param SubtitleUrl 字幕文件 Url。
+     * Set 生成的字幕文件 Url，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormat。
+     * @param SubtitleUrl 生成的字幕文件 Url，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormat。
      */
     public void setSubtitleUrl(String SubtitleUrl) {
         this.SubtitleUrl = SubtitleUrl;
@@ -139,6 +162,12 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
         if (source.SegmentSetFileUrlExpireTime != null) {
             this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
         }
+        if (source.SubtitleSet != null) {
+            this.SubtitleSet = new AiRecognitionTaskAsrFullTextResultOutputSubtitleItem[source.SubtitleSet.length];
+            for (int i = 0; i < source.SubtitleSet.length; i++) {
+                this.SubtitleSet[i] = new AiRecognitionTaskAsrFullTextResultOutputSubtitleItem(source.SubtitleSet[i]);
+            }
+        }
         if (source.SubtitleUrl != null) {
             this.SubtitleUrl = new String(source.SubtitleUrl);
         }
@@ -152,6 +181,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
         this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
+        this.setParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
         this.setParamSimple(map, prefix + "SubtitleUrl", this.SubtitleUrl);
 
     }

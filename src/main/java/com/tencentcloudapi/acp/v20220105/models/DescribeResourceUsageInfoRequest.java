@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeResourceUsageInfoRequest extends AbstractModel{
 
     /**
-    * 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+    * 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
     */
     @SerializedName("PriceName")
     @Expose
@@ -44,16 +44,23 @@ public class DescribeResourceUsageInfoRequest extends AbstractModel{
     private Long Platform;
 
     /**
-     * Get 资源计费项名称(为空时，则根据TaskType和Platform进行查询) 
-     * @return PriceName 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+    * 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+    */
+    @SerializedName("Source")
+    @Expose
+    private Long Source;
+
+    /**
+     * Get 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询) 
+     * @return PriceName 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
      */
     public String getPriceName() {
         return this.PriceName;
     }
 
     /**
-     * Set 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
-     * @param PriceName 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+     * Set 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
+     * @param PriceName 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
      */
     public void setPriceName(String PriceName) {
         this.PriceName = PriceName;
@@ -91,6 +98,22 @@ public class DescribeResourceUsageInfoRequest extends AbstractModel{
         this.Platform = Platform;
     }
 
+    /**
+     * Get 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描; 
+     * @return Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+     */
+    public Long getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+     * @param Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+     */
+    public void setSource(Long Source) {
+        this.Source = Source;
+    }
+
     public DescribeResourceUsageInfoRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeResourceUsageInfoRequest extends AbstractModel{
         if (source.Platform != null) {
             this.Platform = new Long(source.Platform);
         }
+        if (source.Source != null) {
+            this.Source = new Long(source.Source);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeResourceUsageInfoRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PriceName", this.PriceName);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "Platform", this.Platform);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

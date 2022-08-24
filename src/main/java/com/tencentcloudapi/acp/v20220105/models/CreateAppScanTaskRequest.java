@@ -30,7 +30,7 @@ public class CreateAppScanTaskRequest extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+    * 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
     */
     @SerializedName("Source")
     @Expose
@@ -158,16 +158,16 @@ public class CreateAppScanTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android); 
-     * @return Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * Get 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描; 
+     * @return Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
-     * @param Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * Set 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+     * @param Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      */
     public void setSource(Long Source) {
         this.Source = Source;

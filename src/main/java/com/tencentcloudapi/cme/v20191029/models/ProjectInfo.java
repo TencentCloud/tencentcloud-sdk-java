@@ -78,11 +78,12 @@ public class ProjectInfo extends AbstractModel{
     private StreamConnectProjectInfo StreamConnectProjectInfo;
 
     /**
-    * 项目创建时间，格式按照 ISO 8601 标准表示。
+    * 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CreateTime")
+    @SerializedName("MediaCastProjectInfo")
     @Expose
-    private String CreateTime;
+    private MediaCastProjectInfo MediaCastProjectInfo;
 
     /**
     * 项目更新时间，格式按照 ISO 8601 标准表示。
@@ -90,6 +91,13 @@ public class ProjectInfo extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 项目创建时间，格式按照 ISO 8601 标准表示。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
      * Get 项目 Id。 
@@ -228,19 +236,23 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 项目创建时间，格式按照 ISO 8601 标准表示。 
-     * @return CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     * Get 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaCastProjectInfo 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getCreateTime() {
-        return this.CreateTime;
+    public MediaCastProjectInfo getMediaCastProjectInfo() {
+        return this.MediaCastProjectInfo;
     }
 
     /**
-     * Set 项目创建时间，格式按照 ISO 8601 标准表示。
-     * @param CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     * Set 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaCastProjectInfo 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
+    public void setMediaCastProjectInfo(MediaCastProjectInfo MediaCastProjectInfo) {
+        this.MediaCastProjectInfo = MediaCastProjectInfo;
     }
 
     /**
@@ -257,6 +269,22 @@ public class ProjectInfo extends AbstractModel{
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 项目创建时间，格式按照 ISO 8601 标准表示。 
+     * @return CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 项目创建时间，格式按照 ISO 8601 标准表示。
+     * @param CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     public ProjectInfo() {
@@ -288,11 +316,14 @@ public class ProjectInfo extends AbstractModel{
         if (source.StreamConnectProjectInfo != null) {
             this.StreamConnectProjectInfo = new StreamConnectProjectInfo(source.StreamConnectProjectInfo);
         }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
+        if (source.MediaCastProjectInfo != null) {
+            this.MediaCastProjectInfo = new MediaCastProjectInfo(source.MediaCastProjectInfo);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
         }
     }
 
@@ -308,8 +339,9 @@ public class ProjectInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
         this.setParamObj(map, prefix + "StreamConnectProjectInfo.", this.StreamConnectProjectInfo);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamObj(map, prefix + "MediaCastProjectInfo.", this.MediaCastProjectInfo);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
