@@ -165,6 +165,14 @@ public class EventContent extends AbstractModel{
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
+    * 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoveWatermarkCompleteEvent")
+    @Expose
+    private RemoveWatermarkTask RemoveWatermarkCompleteEvent;
+
+    /**
     * 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -549,6 +557,26 @@ public class EventContent extends AbstractModel{
     }
 
     /**
+     * Get 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoveWatermarkCompleteEvent 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RemoveWatermarkTask getRemoveWatermarkCompleteEvent() {
+        return this.RemoveWatermarkCompleteEvent;
+    }
+
+    /**
+     * Set 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoveWatermarkCompleteEvent 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask RemoveWatermarkCompleteEvent) {
+        this.RemoveWatermarkCompleteEvent = RemoveWatermarkCompleteEvent;
+    }
+
+    /**
      * Get 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
@@ -624,6 +652,9 @@ public class EventContent extends AbstractModel{
         if (source.WechatMiniProgramPublishCompleteEvent != null) {
             this.WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask(source.WechatMiniProgramPublishCompleteEvent);
         }
+        if (source.RemoveWatermarkCompleteEvent != null) {
+            this.RemoveWatermarkCompleteEvent = new RemoveWatermarkTask(source.RemoveWatermarkCompleteEvent);
+        }
         if (source.RestoreMediaCompleteEvent != null) {
             this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
         }
@@ -650,6 +681,7 @@ public class EventContent extends AbstractModel{
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
         this.setParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
+        this.setParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
 
     }

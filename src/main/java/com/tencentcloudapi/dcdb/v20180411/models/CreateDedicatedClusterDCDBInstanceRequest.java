@@ -205,6 +205,20 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
     private String [] SlaveHostIds;
 
     /**
+    * 需要回档的源实例ID
+    */
+    @SerializedName("RollbackInstanceId")
+    @Expose
+    private String RollbackInstanceId;
+
+    /**
+    * 回档时间
+    */
+    @SerializedName("RollbackTime")
+    @Expose
+    private String RollbackTime;
+
+    /**
      * Get 分配实例个数 
      * @return GoodsNum 分配实例个数
      */
@@ -620,6 +634,38 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
         this.SlaveHostIds = SlaveHostIds;
     }
 
+    /**
+     * Get 需要回档的源实例ID 
+     * @return RollbackInstanceId 需要回档的源实例ID
+     */
+    public String getRollbackInstanceId() {
+        return this.RollbackInstanceId;
+    }
+
+    /**
+     * Set 需要回档的源实例ID
+     * @param RollbackInstanceId 需要回档的源实例ID
+     */
+    public void setRollbackInstanceId(String RollbackInstanceId) {
+        this.RollbackInstanceId = RollbackInstanceId;
+    }
+
+    /**
+     * Get 回档时间 
+     * @return RollbackTime 回档时间
+     */
+    public String getRollbackTime() {
+        return this.RollbackTime;
+    }
+
+    /**
+     * Set 回档时间
+     * @param RollbackTime 回档时间
+     */
+    public void setRollbackTime(String RollbackTime) {
+        this.RollbackTime = RollbackTime;
+    }
+
     public CreateDedicatedClusterDCDBInstanceRequest() {
     }
 
@@ -712,6 +758,12 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
                 this.SlaveHostIds[i] = new String(source.SlaveHostIds[i]);
             }
         }
+        if (source.RollbackInstanceId != null) {
+            this.RollbackInstanceId = new String(source.RollbackInstanceId);
+        }
+        if (source.RollbackTime != null) {
+            this.RollbackTime = new String(source.RollbackTime);
+        }
     }
 
 
@@ -745,6 +797,8 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InitParams.", this.InitParams);
         this.setParamSimple(map, prefix + "MasterHostId", this.MasterHostId);
         this.setParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
+        this.setParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
+        this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
 
     }
 }

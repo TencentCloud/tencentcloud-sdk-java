@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeGrafanaConfigRequest extends AbstractModel{
 
     /**
-    * 无
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 无 
-     * @return InstanceId 无
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 无
-     * @param InstanceId 无
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

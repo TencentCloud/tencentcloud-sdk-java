@@ -439,6 +439,26 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *查询树状结构资源列表
+     * @param req DescribeTreeResourcesRequest
+     * @return DescribeTreeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTreeResourcesResponse DescribeTreeResources(DescribeTreeResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTreeResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTreeResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTreeResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
 (2)	更新作业备注 

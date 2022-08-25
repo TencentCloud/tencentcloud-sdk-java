@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class DescribeRollbackTimeRangeResponse extends AbstractModel{
 
     /**
-    * 有效回归时间范围开始时间点
+    * 有效回归时间范围开始时间点（已废弃）
     */
     @SerializedName("TimeRangeStart")
     @Expose
     private String TimeRangeStart;
 
     /**
-    * 有效回归时间范围结束时间点
+    * 有效回归时间范围结束时间点（已废弃）
     */
     @SerializedName("TimeRangeEnd")
     @Expose
     private String TimeRangeEnd;
+
+    /**
+    * 可回档时间范围
+    */
+    @SerializedName("RollbackTimeRanges")
+    @Expose
+    private RollbackTimeRange [] RollbackTimeRanges;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 有效回归时间范围开始时间点 
-     * @return TimeRangeStart 有效回归时间范围开始时间点
+     * Get 有效回归时间范围开始时间点（已废弃） 
+     * @return TimeRangeStart 有效回归时间范围开始时间点（已废弃）
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
     }
 
     /**
-     * Set 有效回归时间范围开始时间点
-     * @param TimeRangeStart 有效回归时间范围开始时间点
+     * Set 有效回归时间范围开始时间点（已废弃）
+     * @param TimeRangeStart 有效回归时间范围开始时间点（已废弃）
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get 有效回归时间范围结束时间点 
-     * @return TimeRangeEnd 有效回归时间范围结束时间点
+     * Get 有效回归时间范围结束时间点（已废弃） 
+     * @return TimeRangeEnd 有效回归时间范围结束时间点（已废弃）
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
     }
 
     /**
-     * Set 有效回归时间范围结束时间点
-     * @param TimeRangeEnd 有效回归时间范围结束时间点
+     * Set 有效回归时间范围结束时间点（已废弃）
+     * @param TimeRangeEnd 有效回归时间范围结束时间点（已废弃）
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;
+    }
+
+    /**
+     * Get 可回档时间范围 
+     * @return RollbackTimeRanges 可回档时间范围
+     */
+    public RollbackTimeRange [] getRollbackTimeRanges() {
+        return this.RollbackTimeRanges;
+    }
+
+    /**
+     * Set 可回档时间范围
+     * @param RollbackTimeRanges 可回档时间范围
+     */
+    public void setRollbackTimeRanges(RollbackTimeRange [] RollbackTimeRanges) {
+        this.RollbackTimeRanges = RollbackTimeRanges;
     }
 
     /**
@@ -105,6 +128,12 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
         if (source.TimeRangeEnd != null) {
             this.TimeRangeEnd = new String(source.TimeRangeEnd);
         }
+        if (source.RollbackTimeRanges != null) {
+            this.RollbackTimeRanges = new RollbackTimeRange[source.RollbackTimeRanges.length];
+            for (int i = 0; i < source.RollbackTimeRanges.length; i++) {
+                this.RollbackTimeRanges[i] = new RollbackTimeRange(source.RollbackTimeRanges[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +146,7 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeRangeStart", this.TimeRangeStart);
         this.setParamSimple(map, prefix + "TimeRangeEnd", this.TimeRangeEnd);
+        this.setParamArrayObj(map, prefix + "RollbackTimeRanges.", this.RollbackTimeRanges);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

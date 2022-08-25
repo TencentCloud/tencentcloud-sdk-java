@@ -35,7 +35,8 @@ public class EventContent extends AbstractModel{
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
     */
     @SerializedName("EventType")
     @Expose
@@ -143,6 +144,14 @@ public class EventContent extends AbstractModel{
     private VideoExportCompletedEvent VideoExportCompletedEvent;
 
     /**
+    * 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectMediaCastStatusChangedEvent")
+    @Expose
+    private ProjectMediaCastStatusChangedEvent ProjectMediaCastStatusChangedEvent;
+
+    /**
      * Get 事件类型，可取值有：
 <li>Storage.NewFileCreated：新文件产生事件；</li>
 <li>Project.StreamConnect.StatusChanged：云转推项目状态变更事件；</li>
@@ -155,7 +164,8 @@ public class EventContent extends AbstractModel{
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li> 
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li> 
      * @return EventType 事件类型，可取值有：
 <li>Storage.NewFileCreated：新文件产生事件；</li>
 <li>Project.StreamConnect.StatusChanged：云转推项目状态变更事件；</li>
@@ -168,7 +178,8 @@ public class EventContent extends AbstractModel{
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
      */
     public String getEventType() {
         return this.EventType;
@@ -187,7 +198,8 @@ public class EventContent extends AbstractModel{
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
      * @param EventType 事件类型，可取值有：
 <li>Storage.NewFileCreated：新文件产生事件；</li>
 <li>Project.StreamConnect.StatusChanged：云转推项目状态变更事件；</li>
@@ -200,7 +212,8 @@ public class EventContent extends AbstractModel{
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -454,6 +467,26 @@ public class EventContent extends AbstractModel{
         this.VideoExportCompletedEvent = VideoExportCompletedEvent;
     }
 
+    /**
+     * Get 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectMediaCastStatusChangedEvent 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProjectMediaCastStatusChangedEvent getProjectMediaCastStatusChangedEvent() {
+        return this.ProjectMediaCastStatusChangedEvent;
+    }
+
+    /**
+     * Set 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectMediaCastStatusChangedEvent 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectMediaCastStatusChangedEvent(ProjectMediaCastStatusChangedEvent ProjectMediaCastStatusChangedEvent) {
+        this.ProjectMediaCastStatusChangedEvent = ProjectMediaCastStatusChangedEvent;
+    }
+
     public EventContent() {
     }
 
@@ -504,6 +537,9 @@ public class EventContent extends AbstractModel{
         if (source.VideoExportCompletedEvent != null) {
             this.VideoExportCompletedEvent = new VideoExportCompletedEvent(source.VideoExportCompletedEvent);
         }
+        if (source.ProjectMediaCastStatusChangedEvent != null) {
+            this.ProjectMediaCastStatusChangedEvent = new ProjectMediaCastStatusChangedEvent(source.ProjectMediaCastStatusChangedEvent);
+        }
     }
 
 
@@ -525,6 +561,7 @@ public class EventContent extends AbstractModel{
         this.setParamObj(map, prefix + "ClassMovedEvent.", this.ClassMovedEvent);
         this.setParamObj(map, prefix + "ClassDeletedEvent.", this.ClassDeletedEvent);
         this.setParamObj(map, prefix + "VideoExportCompletedEvent.", this.VideoExportCompletedEvent);
+        this.setParamObj(map, prefix + "ProjectMediaCastStatusChangedEvent.", this.ProjectMediaCastStatusChangedEvent);
 
     }
 }

@@ -42,6 +42,14 @@ public class MediaSourceData extends AbstractModel{
     private String SourceContext;
 
     /**
+    * TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrtcRecordInfo")
+    @Expose
+    private TrtcRecordInfo TrtcRecordInfo;
+
+    /**
      * Get 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
@@ -93,6 +101,26 @@ public class MediaSourceData extends AbstractModel{
         this.SourceContext = SourceContext;
     }
 
+    /**
+     * Get TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrtcRecordInfo TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TrtcRecordInfo getTrtcRecordInfo() {
+        return this.TrtcRecordInfo;
+    }
+
+    /**
+     * Set TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrtcRecordInfo TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrtcRecordInfo(TrtcRecordInfo TrtcRecordInfo) {
+        this.TrtcRecordInfo = TrtcRecordInfo;
+    }
+
     public MediaSourceData() {
     }
 
@@ -107,6 +135,9 @@ public class MediaSourceData extends AbstractModel{
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.TrtcRecordInfo != null) {
+            this.TrtcRecordInfo = new TrtcRecordInfo(source.TrtcRecordInfo);
+        }
     }
 
 
@@ -116,6 +147,7 @@ public class MediaSourceData extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
 
     }
 }

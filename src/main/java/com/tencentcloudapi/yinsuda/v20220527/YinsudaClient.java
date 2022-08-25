@@ -59,6 +59,26 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *创建机器人，支持进入 RTC 房间，播放曲库歌曲。
+     * @param req CreateKTVRobotRequest
+     * @return CreateKTVRobotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKTVRobotResponse CreateKTVRobot(CreateKTVRobotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKTVRobotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateKTVRobotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateKTVRobot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据输入的规则匹配曲库中的歌曲。
      * @param req DescribeKTVMatchMusicsRequest
      * @return DescribeKTVMatchMusicsResponse
@@ -119,6 +139,26 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *获取机器人列表，支持 Id、状态等过滤条件。
+     * @param req DescribeKTVRobotsRequest
+     * @return DescribeKTVRobotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVRobotsResponse DescribeKTVRobots(DescribeKTVRobotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVRobotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVRobotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVRobots");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据关键词获取联想词列表。
      * @param req DescribeKTVSuggestionsRequest
      * @return DescribeKTVSuggestionsResponse
@@ -139,6 +179,26 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *销毁机器人，机器人退出 RTC 房间。
+     * @param req DestroyKTVRobotRequest
+     * @return DestroyKTVRobotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyKTVRobotResponse DestroyKTVRobot(DestroyKTVRobotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyKTVRobotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyKTVRobotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyKTVRobot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据关键词搜索歌曲，返回相关歌曲列表。
      * @param req SearchKTVMusicsRequest
      * @return SearchKTVMusicsResponse
@@ -151,6 +211,26 @@ public class YinsudaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchKTVMusicsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchKTVMusics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *下发操作机器人指令，支持播放、暂停、恢复、歌单设置等操作指令，实现对机器人行为的控制。
+     * @param req SyncKTVRobotCommandRequest
+     * @return SyncKTVRobotCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncKTVRobotCommandResponse SyncKTVRobotCommand(SyncKTVRobotCommandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncKTVRobotCommandResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncKTVRobotCommandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncKTVRobotCommand");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

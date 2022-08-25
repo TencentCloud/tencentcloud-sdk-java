@@ -139,6 +139,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建镜像加速服务
+     * @param req CreateImageAccelerationServiceRequest
+     * @return CreateImageAccelerationServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageAccelerationServiceResponse CreateImageAccelerationService(CreateImageAccelerationServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageAccelerationServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageAccelerationServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImageAccelerationService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在个人版中创建清理策略
      * @param req CreateImageLifecyclePersonalRequest
      * @return CreateImageLifecyclePersonalResponse
@@ -191,6 +211,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建自定义域名
+     * @param req CreateInstanceCustomizedDomainRequest
+     * @return CreateInstanceCustomizedDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceCustomizedDomainResponse CreateInstanceCustomizedDomain(CreateInstanceCustomizedDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceCustomizedDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceCustomizedDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstanceCustomizedDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -360,6 +400,26 @@ public class TcrClient extends AbstractClient{
 
     /**
      *创建实例公网访问白名单策略
+     * @param req CreateSecurityPoliciesRequest
+     * @return CreateSecurityPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityPoliciesResponse CreateSecurityPolicies(CreateSecurityPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSecurityPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSecurityPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSecurityPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建实例公网访问白名单策略
      * @param req CreateSecurityPolicyRequest
      * @return CreateSecurityPolicyResponse
      * @throws TencentCloudSDKException
@@ -371,6 +431,46 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为一个镜像版本创建签名
+     * @param req CreateSignatureRequest
+     * @return CreateSignatureResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSignatureResponse CreateSignature(CreateSignatureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSignatureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSignatureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSignature");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建镜像签名策略
+     * @param req CreateSignaturePolicyRequest
+     * @return CreateSignaturePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSignaturePolicyResponse CreateSignaturePolicy(CreateSignaturePolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSignaturePolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSignaturePolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSignaturePolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -499,6 +599,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除镜像加速服务
+     * @param req DeleteImageAccelerateServiceRequest
+     * @return DeleteImageAccelerateServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageAccelerateServiceResponse DeleteImageAccelerateService(DeleteImageAccelerateServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageAccelerateServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageAccelerateServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteImageAccelerateService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于删除个人版全局镜像版本自动清理策略
      * @param req DeleteImageLifecycleGlobalPersonalRequest
      * @return DeleteImageLifecycleGlobalPersonalResponse
@@ -591,6 +711,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除自定义域名
+     * @param req DeleteInstanceCustomizedDomainRequest
+     * @return DeleteInstanceCustomizedDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceCustomizedDomainResponse DeleteInstanceCustomizedDomain(DeleteInstanceCustomizedDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstanceCustomizedDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstanceCustomizedDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInstanceCustomizedDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -699,6 +839,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除从实例
+     * @param req DeleteReplicationInstanceRequest
+     * @return DeleteReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReplicationInstanceResponse DeleteReplicationInstance(DeleteReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReplicationInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除镜像仓库
      * @param req DeleteRepositoryRequest
      * @return DeleteRepositoryResponse
@@ -739,6 +899,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于企业版批量删除Repository Tag
+     * @param req DeleteRepositoryTagsRequest
+     * @return DeleteRepositoryTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRepositoryTagsResponse DeleteRepositoryTags(DeleteRepositoryTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRepositoryTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRepositoryTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRepositoryTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除实例公网访问白名单策略
      * @param req DeleteSecurityPolicyRequest
      * @return DeleteSecurityPolicyResponse
@@ -751,6 +931,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除命名空间加签策略
+     * @param req DeleteSignaturePolicyRequest
+     * @return DeleteSignaturePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSignaturePolicyResponse DeleteSignaturePolicy(DeleteSignaturePolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSignaturePolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSignaturePolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSignaturePolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -899,6 +1099,46 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *GC 最近10条历史
+     * @param req DescribeGCJobsRequest
+     * @return DescribeGCJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGCJobsResponse DescribeGCJobs(DescribeGCJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGCJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGCJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGCJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询镜像加速服务状态
+     * @param req DescribeImageAccelerateServiceRequest
+     * @return DescribeImageAccelerateServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageAccelerateServiceResponse DescribeImageAccelerateService(DescribeImageAccelerateServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageAccelerateServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageAccelerateServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageAccelerateService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在个人版中查询与指定tag镜像内容相同的tag列表
      * @param req DescribeImageFilterPersonalRequest
      * @return DescribeImageFilterPersonalResponse
@@ -1039,6 +1279,66 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询全部实例信息
+     * @param req DescribeInstanceAllRequest
+     * @return DescribeInstanceAllResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceAllResponse DescribeInstanceAll(DescribeInstanceAllRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAllResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceAll");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询所有有实例命名空间列表
+     * @param req DescribeInstanceAllNamespacesRequest
+     * @return DescribeInstanceAllNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(DescribeInstanceAllNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceAllNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAllNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceAllNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例自定义域名列表
+     * @param req DescribeInstanceCustomizedDomainRequest
+     * @return DescribeInstanceCustomizedDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceCustomizedDomainResponse DescribeInstanceCustomizedDomain(DescribeInstanceCustomizedDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceCustomizedDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceCustomizedDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceCustomizedDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实例当前状态以及过程信息
      * @param req DescribeInstanceStatusRequest
      * @return DescribeInstanceStatusResponse
@@ -1171,6 +1471,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNamespacesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在TCR中获取可用区域
+     * @param req DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRegions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

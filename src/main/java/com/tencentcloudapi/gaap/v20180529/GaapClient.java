@@ -301,6 +301,46 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *用来创建统一域名
+     * @param req CreateGlobalDomainRequest
+     * @return CreateGlobalDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalDomainResponse CreateGlobalDomain(CreateGlobalDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGlobalDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGlobalDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGlobalDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建域名解析记录
+     * @param req CreateGlobalDomainDnsRequest
+     * @return CreateGlobalDomainDnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalDomainDnsResponse CreateGlobalDomainDns(CreateGlobalDomainDnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGlobalDomainDnsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGlobalDomainDnsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGlobalDomainDns");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
      * @param req CreateHTTPListenerRequest
      * @return CreateHTTPListenerResponse
@@ -573,6 +613,46 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteFirstLinkSessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteFirstLinkSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除统一域名
+     * @param req DeleteGlobalDomainRequest
+     * @return DeleteGlobalDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalDomainResponse DeleteGlobalDomain(DeleteGlobalDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGlobalDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGlobalDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGlobalDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除域名的某条解析记录
+     * @param req DeleteGlobalDomainDnsRequest
+     * @return DeleteGlobalDomainDnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalDomainDnsResponse DeleteGlobalDomainDns(DeleteGlobalDomainDnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGlobalDomainDnsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGlobalDomainDnsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGlobalDomainDns");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -913,6 +993,46 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFirstLinkSessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFirstLinkSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询域名解析列表
+     * @param req DescribeGlobalDomainDnsRequest
+     * @return DescribeGlobalDomainDnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalDomainDnsResponse DescribeGlobalDomainDns(DescribeGlobalDomainDnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGlobalDomainDnsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGlobalDomainDnsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGlobalDomainDns");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询域名列表
+     * @param req DescribeGlobalDomainsRequest
+     * @return DescribeGlobalDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalDomainsResponse DescribeGlobalDomains(DescribeGlobalDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGlobalDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGlobalDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGlobalDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1461,6 +1581,46 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *暂停域名解析
+     * @param req DisableGlobalDomainRequest
+     * @return DisableGlobalDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableGlobalDomainResponse DisableGlobalDomain(DisableGlobalDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableGlobalDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableGlobalDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableGlobalDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开启域名解析
+     * @param req EnableGlobalDomainRequest
+     * @return EnableGlobalDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableGlobalDomainResponse EnableGlobalDomain(EnableGlobalDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableGlobalDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableGlobalDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableGlobalDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquiryPriceCreateProxy）用于创建加速通道询价。
      * @param req InquiryPriceCreateProxyRequest
      * @return InquiryPriceCreateProxyResponse
@@ -1533,6 +1693,46 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改域名属性
+     * @param req ModifyGlobalDomainAttributeRequest
+     * @return ModifyGlobalDomainAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalDomainAttributeResponse ModifyGlobalDomainAttribute(ModifyGlobalDomainAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGlobalDomainAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGlobalDomainAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGlobalDomainAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改域名解析记录
+     * @param req ModifyGlobalDomainDnsRequest
+     * @return ModifyGlobalDomainDnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalDomainDnsResponse ModifyGlobalDomainDns(ModifyGlobalDomainDnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGlobalDomainDnsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGlobalDomainDnsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGlobalDomainDns");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -72,6 +72,16 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     private String DrmType;
 
     /**
+    * DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
+    */
+    @SerializedName("DrmKeyProvider")
+    @Expose
+    private String DrmKeyProvider;
+
+    /**
     * 自适应转码输入流参数信息，最多输入10路流。
     */
     @SerializedName("StreamInfos")
@@ -235,6 +245,34 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     }
 
     /**
+     * Get DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。 
+     * @return DrmKeyProvider DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
+     */
+    public String getDrmKeyProvider() {
+        return this.DrmKeyProvider;
+    }
+
+    /**
+     * Set DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
+     * @param DrmKeyProvider DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
+     */
+    public void setDrmKeyProvider(String DrmKeyProvider) {
+        this.DrmKeyProvider = DrmKeyProvider;
+    }
+
+    /**
      * Get 自适应转码输入流参数信息，最多输入10路流。 
      * @return StreamInfos 自适应转码输入流参数信息，最多输入10路流。
      */
@@ -356,6 +394,9 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         if (source.DrmType != null) {
             this.DrmType = new String(source.DrmType);
         }
+        if (source.DrmKeyProvider != null) {
+            this.DrmKeyProvider = new String(source.DrmKeyProvider);
+        }
         if (source.StreamInfos != null) {
             this.StreamInfos = new AdaptiveStreamTemplate[source.StreamInfos.length];
             for (int i = 0; i < source.StreamInfos.length; i++) {
@@ -387,6 +428,7 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
+        this.setParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

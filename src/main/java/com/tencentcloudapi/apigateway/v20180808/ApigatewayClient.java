@@ -1478,6 +1478,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
+     *本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
+     * @param req ImportOpenApiRequest
+     * @return ImportOpenApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportOpenApiResponse ImportOpenApi(ImportOpenApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportOpenApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportOpenApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImportOpenApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改 API 文档
      * @param req ModifyAPIDocRequest
      * @return ModifyAPIDocResponse

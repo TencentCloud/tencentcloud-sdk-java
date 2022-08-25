@@ -195,6 +195,23 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] StorageClasses;
 
     /**
+    * TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("TrtcSdkAppIds")
+    @Expose
+    private Long [] TrtcSdkAppIds;
+
+    /**
+    * TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("TrtcRoomIds")
+    @Expose
+    private String [] TrtcRoomIds;
+
+    /**
     * （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
     */
@@ -709,6 +726,50 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li> 
+     * @return TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public Long [] getTrtcSdkAppIds() {
+        return this.TrtcSdkAppIds;
+    }
+
+    /**
+     * Set TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     * @param TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public void setTrtcSdkAppIds(Long [] TrtcSdkAppIds) {
+        this.TrtcSdkAppIds = TrtcSdkAppIds;
+    }
+
+    /**
+     * Get TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li> 
+     * @return TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+     */
+    public String [] getTrtcRoomIds() {
+        return this.TrtcRoomIds;
+    }
+
+    /**
+     * Set TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+     * @param TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+     */
+    public void setTrtcRoomIds(String [] TrtcRoomIds) {
+        this.TrtcRoomIds = TrtcRoomIds;
+    }
+
+    /**
      * Get （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。 
      * @return Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -956,6 +1017,18 @@ public class SearchMediaRequest extends AbstractModel{
                 this.StorageClasses[i] = new String(source.StorageClasses[i]);
             }
         }
+        if (source.TrtcSdkAppIds != null) {
+            this.TrtcSdkAppIds = new Long[source.TrtcSdkAppIds.length];
+            for (int i = 0; i < source.TrtcSdkAppIds.length; i++) {
+                this.TrtcSdkAppIds[i] = new Long(source.TrtcSdkAppIds[i]);
+            }
+        }
+        if (source.TrtcRoomIds != null) {
+            this.TrtcRoomIds = new String[source.TrtcRoomIds.length];
+            for (int i = 0; i < source.TrtcRoomIds.length; i++) {
+                this.TrtcRoomIds[i] = new String(source.TrtcRoomIds[i]);
+            }
+        }
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
@@ -1000,6 +1073,8 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+        this.setParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
+        this.setParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);

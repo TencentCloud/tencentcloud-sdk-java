@@ -156,7 +156,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 主实例地域信息，购买灾备实例时，该字段必填。
+    * 主实例地域信息，购买灾备、RO实例时，该字段必填。
     */
     @SerializedName("MasterRegion")
     @Expose
@@ -219,7 +219,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long ParamTemplateId;
 
     /**
-    * 告警策略id数组。
+    * 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
     */
     @SerializedName("AlarmPolicyList")
     @Expose
@@ -593,16 +593,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 主实例地域信息，购买灾备实例时，该字段必填。 
-     * @return MasterRegion 主实例地域信息，购买灾备实例时，该字段必填。
+     * Get 主实例地域信息，购买灾备、RO实例时，该字段必填。 
+     * @return MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * Set 主实例地域信息，购买灾备实例时，该字段必填。
-     * @param MasterRegion 主实例地域信息，购买灾备实例时，该字段必填。
+     * Set 主实例地域信息，购买灾备、RO实例时，该字段必填。
+     * @param MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;
@@ -737,16 +737,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 告警策略id数组。 
-     * @return AlarmPolicyList 告警策略id数组。
+     * Get 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。 
+     * @return AlarmPolicyList 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
      */
     public Long [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set 告警策略id数组。
-     * @param AlarmPolicyList 告警策略id数组。
+     * Set 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+     * @param AlarmPolicyList 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
      */
     public void setAlarmPolicyList(Long [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;

@@ -247,6 +247,14 @@ public class SREInstance extends AbstractModel{
     private String IsolateTime;
 
     /**
+    * 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionInfos")
+    @Expose
+    private DescribeInstanceRegionInfo [] RegionInfos;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -794,6 +802,26 @@ public class SREInstance extends AbstractModel{
         this.IsolateTime = IsolateTime;
     }
 
+    /**
+     * Get 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionInfos 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeInstanceRegionInfo [] getRegionInfos() {
+        return this.RegionInfos;
+    }
+
+    /**
+     * Set 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionInfos 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionInfos(DescribeInstanceRegionInfo [] RegionInfos) {
+        this.RegionInfos = RegionInfos;
+    }
+
     public SREInstance() {
     }
 
@@ -904,6 +932,12 @@ public class SREInstance extends AbstractModel{
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
+        if (source.RegionInfos != null) {
+            this.RegionInfos = new DescribeInstanceRegionInfo[source.RegionInfos.length];
+            for (int i = 0; i < source.RegionInfos.length; i++) {
+                this.RegionInfos[i] = new DescribeInstanceRegionInfo(source.RegionInfos[i]);
+            }
+        }
     }
 
 
@@ -940,6 +974,7 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamArrayObj(map, prefix + "RegionInfos.", this.RegionInfos);
 
     }
 }
