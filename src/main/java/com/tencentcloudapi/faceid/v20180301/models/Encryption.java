@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class Encryption extends AbstractModel{
 
     /**
-    * 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
-    */
-    @SerializedName("CiphertextBlob")
-    @Expose
-    private String CiphertextBlob;
-
-    /**
     * 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
     */
     @SerializedName("EncryptList")
     @Expose
     private String [] EncryptList;
+
+    /**
+    * 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+    */
+    @SerializedName("CiphertextBlob")
+    @Expose
+    private String CiphertextBlob;
 
     /**
     * 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
@@ -44,20 +44,18 @@ public class Encryption extends AbstractModel{
     private String Iv;
 
     /**
-     * Get 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。 
-     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
-     */
-    public String getCiphertextBlob() {
-        return this.CiphertextBlob;
-    }
+    * 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+    */
+    @SerializedName("Algorithm")
+    @Expose
+    private String Algorithm;
 
     /**
-     * Set 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
-     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
-     */
-    public void setCiphertextBlob(String CiphertextBlob) {
-        this.CiphertextBlob = CiphertextBlob;
-    }
+    * SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+    */
+    @SerializedName("TagList")
+    @Expose
+    private String [] TagList;
 
     /**
      * Get 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段 
@@ -76,6 +74,22 @@ public class Encryption extends AbstractModel{
     }
 
     /**
+     * Get 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。 
+     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     */
+    public String getCiphertextBlob() {
+        return this.CiphertextBlob;
+    }
+
+    /**
+     * Set 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     */
+    public void setCiphertextBlob(String CiphertextBlob) {
+        this.CiphertextBlob = CiphertextBlob;
+    }
+
+    /**
      * Get 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。 
      * @return Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
      */
@@ -91,6 +105,38 @@ public class Encryption extends AbstractModel{
         this.Iv = Iv;
     }
 
+    /**
+     * Get 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC' 
+     * @return Algorithm 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     */
+    public String getAlgorithm() {
+        return this.Algorithm;
+    }
+
+    /**
+     * Set 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     * @param Algorithm 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     */
+    public void setAlgorithm(String Algorithm) {
+        this.Algorithm = Algorithm;
+    }
+
+    /**
+     * Get SM4-GCM算法生成的消息摘要（校验消息完整性时使用） 
+     * @return TagList SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     */
+    public String [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     * @param TagList SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     */
+    public void setTagList(String [] TagList) {
+        this.TagList = TagList;
+    }
+
     public Encryption() {
     }
 
@@ -99,17 +145,26 @@ public class Encryption extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Encryption(Encryption source) {
-        if (source.CiphertextBlob != null) {
-            this.CiphertextBlob = new String(source.CiphertextBlob);
-        }
         if (source.EncryptList != null) {
             this.EncryptList = new String[source.EncryptList.length];
             for (int i = 0; i < source.EncryptList.length; i++) {
                 this.EncryptList[i] = new String(source.EncryptList[i]);
             }
         }
+        if (source.CiphertextBlob != null) {
+            this.CiphertextBlob = new String(source.CiphertextBlob);
+        }
         if (source.Iv != null) {
             this.Iv = new String(source.Iv);
+        }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+        if (source.TagList != null) {
+            this.TagList = new String[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new String(source.TagList[i]);
+            }
         }
     }
 
@@ -118,9 +173,11 @@ public class Encryption extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
         this.setParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
+        this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
         this.setParamSimple(map, prefix + "Iv", this.Iv);
+        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
+        this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReceiverInfo extends AbstractModel{
 
     /**
-    * 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+    * 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,7 +65,7 @@ public class ReceiverInfo extends AbstractModel{
     private String [] SendFor;
 
     /**
-    * 电话告警接收者uid
+    * 电话告警接收者 UID
     */
     @SerializedName("UidList")
     @Expose
@@ -107,14 +107,14 @@ public class ReceiverInfo extends AbstractModel{
     private Long NeedSendNotice;
 
     /**
-    * 接收组列表。通过平台接口查询到的接收组id列表
+    * 接收组列表。通过平台接口查询到的接收组 ID 列表
     */
     @SerializedName("ReceiverGroupList")
     @Expose
     private Long [] ReceiverGroupList;
 
     /**
-    * 接收人列表。通过平台接口查询到的接收人id列表
+    * 接收人列表。通过平台接口查询到的接收人 ID 列表
     */
     @SerializedName("ReceiverUserList")
     @Expose
@@ -128,16 +128,16 @@ public class ReceiverInfo extends AbstractModel{
     private String ReceiveLanguage;
 
     /**
-     * Get 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0" 
-     * @return StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * Get 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0" 
+     * @return StartTime 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
-     * @param StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * Set 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * @param StartTime 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -224,16 +224,16 @@ public class ReceiverInfo extends AbstractModel{
     }
 
     /**
-     * Get 电话告警接收者uid 
-     * @return UidList 电话告警接收者uid
+     * Get 电话告警接收者 UID 
+     * @return UidList 电话告警接收者 UID
      */
     public Long [] getUidList() {
         return this.UidList;
     }
 
     /**
-     * Set 电话告警接收者uid
-     * @param UidList 电话告警接收者uid
+     * Set 电话告警接收者 UID
+     * @param UidList 电话告警接收者 UID
      */
     public void setUidList(Long [] UidList) {
         this.UidList = UidList;
@@ -320,32 +320,32 @@ public class ReceiverInfo extends AbstractModel{
     }
 
     /**
-     * Get 接收组列表。通过平台接口查询到的接收组id列表 
-     * @return ReceiverGroupList 接收组列表。通过平台接口查询到的接收组id列表
+     * Get 接收组列表。通过平台接口查询到的接收组 ID 列表 
+     * @return ReceiverGroupList 接收组列表。通过平台接口查询到的接收组 ID 列表
      */
     public Long [] getReceiverGroupList() {
         return this.ReceiverGroupList;
     }
 
     /**
-     * Set 接收组列表。通过平台接口查询到的接收组id列表
-     * @param ReceiverGroupList 接收组列表。通过平台接口查询到的接收组id列表
+     * Set 接收组列表。通过平台接口查询到的接收组 ID 列表
+     * @param ReceiverGroupList 接收组列表。通过平台接口查询到的接收组 ID 列表
      */
     public void setReceiverGroupList(Long [] ReceiverGroupList) {
         this.ReceiverGroupList = ReceiverGroupList;
     }
 
     /**
-     * Get 接收人列表。通过平台接口查询到的接收人id列表 
-     * @return ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * Get 接收人列表。通过平台接口查询到的接收人 ID 列表 
+     * @return ReceiverUserList 接收人列表。通过平台接口查询到的接收人 ID 列表
      */
     public Long [] getReceiverUserList() {
         return this.ReceiverUserList;
     }
 
     /**
-     * Set 接收人列表。通过平台接口查询到的接收人id列表
-     * @param ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * Set 接收人列表。通过平台接口查询到的接收人 ID 列表
+     * @param ReceiverUserList 接收人列表。通过平台接口查询到的接收人 ID 列表
      */
     public void setReceiverUserList(Long [] ReceiverUserList) {
         this.ReceiverUserList = ReceiverUserList;

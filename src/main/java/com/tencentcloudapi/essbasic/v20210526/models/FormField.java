@@ -36,7 +36,8 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo�
     private String ComponentValue;
 
     /**
-    * 表单域或控件的ID，跟ComponentName二选一，不能全为空
+    * 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentId")
@@ -92,9 +93,11 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo�
     }
 
     /**
-     * Get 表单域或控件的ID，跟ComponentName二选一，不能全为空
+     * Get 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空
+     * @return ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentId() {
@@ -102,9 +105,11 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo�
     }
 
     /**
-     * Set 表单域或控件的ID，跟ComponentName二选一，不能全为空
+     * Set 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空
+     * @param ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentId(String ComponentId) {

@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunSyncAssetRequest extends AbstractModel{
+public class DescribeAvailablePlansRequest extends AbstractModel{
 
-    /**
-    * 0: 互联网防火墙开关，1：vpc 防火墙开关
-    */
-    @SerializedName("Type")
-    @Expose
-    private Long Type;
-
-    /**
-     * Get 0: 互联网防火墙开关，1：vpc 防火墙开关 
-     * @return Type 0: 互联网防火墙开关，1：vpc 防火墙开关
-     */
-    public Long getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 0: 互联网防火墙开关，1：vpc 防火墙开关
-     * @param Type 0: 互联网防火墙开关，1：vpc 防火墙开关
-     */
-    public void setType(Long Type) {
-        this.Type = Type;
-    }
-
-    public RunSyncAssetRequest() {
+    public DescribeAvailablePlansRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RunSyncAssetRequest(RunSyncAssetRequest source) {
-        if (source.Type != null) {
-            this.Type = new Long(source.Type);
-        }
+    public DescribeAvailablePlansRequest(DescribeAvailablePlansRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class RunSyncAssetRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -1410,26 +1410,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *同步资产-互联网&VPC
-     * @param req RunSyncAssetRequest
-     * @return RunSyncAssetResponse
-     * @throws TencentCloudSDKException
-     */
-    public RunSyncAssetResponse RunSyncAsset(RunSyncAssetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RunSyncAssetResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RunSyncAssetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RunSyncAsset");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *配置防火墙Dnat规则
      * @param req SetNatFwDnatRuleRequest
      * @return SetNatFwDnatRuleResponse

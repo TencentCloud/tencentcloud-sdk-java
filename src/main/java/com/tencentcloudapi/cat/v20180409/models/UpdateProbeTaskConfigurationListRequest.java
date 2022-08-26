@@ -58,6 +58,14 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel{
     private String Cron;
 
     /**
+    * 预付费套餐id
+需要与taskId对应
+    */
+    @SerializedName("ResourceIDs")
+    @Expose
+    private String [] ResourceIDs;
+
+    /**
      * Get 任务 ID 
      * @return TaskIds 任务 ID
      */
@@ -137,6 +145,26 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel{
         this.Cron = Cron;
     }
 
+    /**
+     * Get 预付费套餐id
+需要与taskId对应 
+     * @return ResourceIDs 预付费套餐id
+需要与taskId对应
+     */
+    public String [] getResourceIDs() {
+        return this.ResourceIDs;
+    }
+
+    /**
+     * Set 预付费套餐id
+需要与taskId对应
+     * @param ResourceIDs 预付费套餐id
+需要与taskId对应
+     */
+    public void setResourceIDs(String [] ResourceIDs) {
+        this.ResourceIDs = ResourceIDs;
+    }
+
     public UpdateProbeTaskConfigurationListRequest() {
     }
 
@@ -166,6 +194,12 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel{
         if (source.Cron != null) {
             this.Cron = new String(source.Cron);
         }
+        if (source.ResourceIDs != null) {
+            this.ResourceIDs = new String[source.ResourceIDs.length];
+            for (int i = 0; i < source.ResourceIDs.length; i++) {
+                this.ResourceIDs[i] = new String(source.ResourceIDs[i]);
+            }
+        }
     }
 
 
@@ -178,6 +212,7 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamSimple(map, prefix + "Cron", this.Cron);
+        this.setParamArraySimple(map, prefix + "ResourceIDs.", this.ResourceIDs);
 
     }
 }

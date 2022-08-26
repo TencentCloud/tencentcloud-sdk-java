@@ -67,11 +67,18 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     private Boolean IsNeedIdCardAvatar;
 
     /**
-    * 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+    * 已弃用。
     */
     @SerializedName("IsEncrypt")
     @Expose
     private Boolean IsEncrypt;
+
+    /**
+    * 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
 
     /**
      * Get 人脸核身流程的标识，调用DetectAuth接口时生成。 
@@ -178,19 +185,35 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName 
-     * @return IsEncrypt 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * Get 已弃用。 
+     * @return IsEncrypt 已弃用。
      */
     public Boolean getIsEncrypt() {
         return this.IsEncrypt;
     }
 
     /**
-     * Set 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
-     * @param IsEncrypt 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * Set 已弃用。
+     * @param IsEncrypt 已弃用。
      */
     public void setIsEncrypt(Boolean IsEncrypt) {
         this.IsEncrypt = IsEncrypt;
+    }
+
+    /**
+     * Get 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName 
+     * @return Encryption 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * @param Encryption 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
     }
 
     public GetDetectInfoEnhancedRequest() {
@@ -222,6 +245,9 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
         if (source.IsEncrypt != null) {
             this.IsEncrypt = new Boolean(source.IsEncrypt);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsCutIdCardImage", this.IsCutIdCardImage);
         this.setParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
         this.setParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
 
     }
 }

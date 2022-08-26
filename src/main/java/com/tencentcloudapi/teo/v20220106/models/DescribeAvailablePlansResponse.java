@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunSyncAssetResponse extends AbstractModel{
+public class DescribeAvailablePlansResponse extends AbstractModel{
 
     /**
-    * 0：同步成功，1：资产更新中，2：后台同步调用失败
+    * 当前账户可购买套餐类型及相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Status")
+    @SerializedName("PlanInfoList")
     @Expose
-    private Long Status;
+    private PlanInfo [] PlanInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class RunSyncAssetResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 0：同步成功，1：资产更新中，2：后台同步调用失败 
-     * @return Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * Get 当前账户可购买套餐类型及相关信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlanInfoList 当前账户可购买套餐类型及相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStatus() {
-        return this.Status;
+    public PlanInfo [] getPlanInfoList() {
+        return this.PlanInfoList;
     }
 
     /**
-     * Set 0：同步成功，1：资产更新中，2：后台同步调用失败
-     * @param Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * Set 当前账户可购买套餐类型及相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlanInfoList 当前账户可购买套餐类型及相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setPlanInfoList(PlanInfo [] PlanInfoList) {
+        this.PlanInfoList = PlanInfoList;
     }
 
     /**
@@ -68,16 +73,19 @@ public class RunSyncAssetResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public RunSyncAssetResponse() {
+    public DescribeAvailablePlansResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RunSyncAssetResponse(RunSyncAssetResponse source) {
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
+    public DescribeAvailablePlansResponse(DescribeAvailablePlansResponse source) {
+        if (source.PlanInfoList != null) {
+            this.PlanInfoList = new PlanInfo[source.PlanInfoList.length];
+            for (int i = 0; i < source.PlanInfoList.length; i++) {
+                this.PlanInfoList[i] = new PlanInfo(source.PlanInfoList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +97,7 @@ public class RunSyncAssetResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "PlanInfoList.", this.PlanInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
