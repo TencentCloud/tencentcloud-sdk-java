@@ -52,6 +52,13 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     private String [] PreviewUrls;
 
     /**
+    * 复杂文档合成任务的任务信息数组
+    */
+    @SerializedName("TaskInfos")
+    @Expose
+    private TaskInfo [] TaskInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -127,6 +134,22 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     }
 
     /**
+     * Get 复杂文档合成任务的任务信息数组 
+     * @return TaskInfos 复杂文档合成任务的任务信息数组
+     */
+    public TaskInfo [] getTaskInfos() {
+        return this.TaskInfos;
+    }
+
+    /**
+     * Set 复杂文档合成任务的任务信息数组
+     * @param TaskInfos 复杂文档合成任务的任务信息数组
+     */
+    public void setTaskInfos(TaskInfo [] TaskInfos) {
+        this.TaskInfos = TaskInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -174,6 +197,12 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
                 this.PreviewUrls[i] = new String(source.PreviewUrls[i]);
             }
         }
+        if (source.TaskInfos != null) {
+            this.TaskInfos = new TaskInfo[source.TaskInfos.length];
+            for (int i = 0; i < source.TaskInfos.length; i++) {
+                this.TaskInfos[i] = new TaskInfo(source.TaskInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -188,6 +217,7 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CustomerData.", this.CustomerData);
         this.setParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
         this.setParamArraySimple(map, prefix + "PreviewUrls.", this.PreviewUrls);
+        this.setParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -189,6 +189,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *创建出证报告，返回报告 URL
+     * @param req CreateFlowEvidenceReportRequest
+     * @return CreateFlowEvidenceReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowEvidenceReportResponse CreateFlowEvidenceReport(CreateFlowEvidenceReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlowEvidenceReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlowEvidenceReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFlowEvidenceReport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提交企业签署流程审批结果
 适用场景: 
 在通过接口(CreateFlow 或者CreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。

@@ -86,6 +86,13 @@ public class VatInvoiceItem extends AbstractModel{
     private String TaxAmount;
 
     /**
+    * 税收分类编码
+    */
+    @SerializedName("TaxClassifyCode")
+    @Expose
+    private String TaxClassifyCode;
+
+    /**
      * Get 行号 
      * @return LineNo 行号
      */
@@ -229,6 +236,22 @@ public class VatInvoiceItem extends AbstractModel{
         this.TaxAmount = TaxAmount;
     }
 
+    /**
+     * Get 税收分类编码 
+     * @return TaxClassifyCode 税收分类编码
+     */
+    public String getTaxClassifyCode() {
+        return this.TaxClassifyCode;
+    }
+
+    /**
+     * Set 税收分类编码
+     * @param TaxClassifyCode 税收分类编码
+     */
+    public void setTaxClassifyCode(String TaxClassifyCode) {
+        this.TaxClassifyCode = TaxClassifyCode;
+    }
+
     public VatInvoiceItem() {
     }
 
@@ -264,6 +287,9 @@ public class VatInvoiceItem extends AbstractModel{
         if (source.TaxAmount != null) {
             this.TaxAmount = new String(source.TaxAmount);
         }
+        if (source.TaxClassifyCode != null) {
+            this.TaxClassifyCode = new String(source.TaxClassifyCode);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class VatInvoiceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "AmountWithoutTax", this.AmountWithoutTax);
         this.setParamSimple(map, prefix + "TaxRate", this.TaxRate);
         this.setParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
+        this.setParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
 
     }
 }

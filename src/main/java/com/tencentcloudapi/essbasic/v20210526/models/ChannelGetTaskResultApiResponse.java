@@ -63,6 +63,14 @@ ProcessTimeout - 转换文件超时
     private String ResourceId;
 
     /**
+    * 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreviewUrl")
+    @Expose
+    private String PreviewUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -182,6 +190,26 @@ ProcessTimeout - 转换文件超时
     }
 
     /**
+     * Get 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreviewUrl 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreviewUrl() {
+        return this.PreviewUrl;
+    }
+
+    /**
+     * Set 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreviewUrl 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreviewUrl(String PreviewUrl) {
+        this.PreviewUrl = PreviewUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +245,9 @@ ProcessTimeout - 转换文件超时
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -231,6 +262,7 @@ ProcessTimeout - 转换文件超时
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "TaskMessage", this.TaskMessage);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

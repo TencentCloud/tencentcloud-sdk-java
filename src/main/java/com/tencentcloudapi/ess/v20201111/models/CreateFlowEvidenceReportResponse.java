@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignUpCfsServiceResponse extends AbstractModel{
+public class CreateFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+    * 出证报告 URL（有效期5分钟）
     */
-    @SerializedName("CfsServiceStatus")
+    @SerializedName("ReportUrl")
     @Expose
-    private String CfsServiceStatus;
+    private String ReportUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class SignUpCfsServiceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通 
-     * @return CfsServiceStatus 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+     * Get 出证报告 URL（有效期5分钟） 
+     * @return ReportUrl 出证报告 URL（有效期5分钟）
      */
-    public String getCfsServiceStatus() {
-        return this.CfsServiceStatus;
+    public String getReportUrl() {
+        return this.ReportUrl;
     }
 
     /**
-     * Set 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
-     * @param CfsServiceStatus 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+     * Set 出证报告 URL（有效期5分钟）
+     * @param ReportUrl 出证报告 URL（有效期5分钟）
      */
-    public void setCfsServiceStatus(String CfsServiceStatus) {
-        this.CfsServiceStatus = CfsServiceStatus;
+    public void setReportUrl(String ReportUrl) {
+        this.ReportUrl = ReportUrl;
     }
 
     /**
@@ -68,16 +68,16 @@ public class SignUpCfsServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public SignUpCfsServiceResponse() {
+    public CreateFlowEvidenceReportResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SignUpCfsServiceResponse(SignUpCfsServiceResponse source) {
-        if (source.CfsServiceStatus != null) {
-            this.CfsServiceStatus = new String(source.CfsServiceStatus);
+    public CreateFlowEvidenceReportResponse(CreateFlowEvidenceReportResponse source) {
+        if (source.ReportUrl != null) {
+            this.ReportUrl = new String(source.ReportUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class SignUpCfsServiceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CfsServiceStatus", this.CfsServiceStatus);
+        this.setParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

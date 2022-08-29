@@ -149,6 +149,13 @@ public class VehicleInvoiceInfo extends AbstractModel{
     private String SellerTel;
 
     /**
+    * 购方身份证
+    */
+    @SerializedName("BuyerNo")
+    @Expose
+    private String BuyerNo;
+
+    /**
      * Get 车辆类型 
      * @return CarType 车辆类型
      */
@@ -436,6 +443,22 @@ public class VehicleInvoiceInfo extends AbstractModel{
         this.SellerTel = SellerTel;
     }
 
+    /**
+     * Get 购方身份证 
+     * @return BuyerNo 购方身份证
+     */
+    public String getBuyerNo() {
+        return this.BuyerNo;
+    }
+
+    /**
+     * Set 购方身份证
+     * @param BuyerNo 购方身份证
+     */
+    public void setBuyerNo(String BuyerNo) {
+        this.BuyerNo = BuyerNo;
+    }
+
     public VehicleInvoiceInfo() {
     }
 
@@ -498,6 +521,9 @@ public class VehicleInvoiceInfo extends AbstractModel{
         if (source.SellerTel != null) {
             this.SellerTel = new String(source.SellerTel);
         }
+        if (source.BuyerNo != null) {
+            this.BuyerNo = new String(source.BuyerNo);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class VehicleInvoiceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MotorBankAccount", this.MotorBankAccount);
         this.setParamSimple(map, prefix + "SellerAddress", this.SellerAddress);
         this.setParamSimple(map, prefix + "SellerTel", this.SellerTel);
+        this.setParamSimple(map, prefix + "BuyerNo", this.BuyerNo);
 
     }
 }

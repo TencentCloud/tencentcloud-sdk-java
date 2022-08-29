@@ -197,6 +197,20 @@ Y: 有清单 N：无清单
     private VatInvoiceItem [] Items;
 
     /**
+    * 所属税局
+    */
+    @SerializedName("TaxBureau")
+    @Expose
+    private String TaxBureau;
+
+    /**
+    * 通行费标志:Y、是;N、否
+    */
+    @SerializedName("TrafficFreeFlag")
+    @Expose
+    private String TrafficFreeFlag;
+
+    /**
      * Get 发票代码 
      * @return Code 发票代码
      */
@@ -616,6 +630,38 @@ Y: 有清单 N：无清单
         this.Items = Items;
     }
 
+    /**
+     * Get 所属税局 
+     * @return TaxBureau 所属税局
+     */
+    public String getTaxBureau() {
+        return this.TaxBureau;
+    }
+
+    /**
+     * Set 所属税局
+     * @param TaxBureau 所属税局
+     */
+    public void setTaxBureau(String TaxBureau) {
+        this.TaxBureau = TaxBureau;
+    }
+
+    /**
+     * Get 通行费标志:Y、是;N、否 
+     * @return TrafficFreeFlag 通行费标志:Y、是;N、否
+     */
+    public String getTrafficFreeFlag() {
+        return this.TrafficFreeFlag;
+    }
+
+    /**
+     * Set 通行费标志:Y、是;N、否
+     * @param TrafficFreeFlag 通行费标志:Y、是;N、否
+     */
+    public void setTrafficFreeFlag(String TrafficFreeFlag) {
+        this.TrafficFreeFlag = TrafficFreeFlag;
+    }
+
     public VatInvoice() {
     }
 
@@ -696,6 +742,12 @@ Y: 有清单 N：无清单
                 this.Items[i] = new VatInvoiceItem(source.Items[i]);
             }
         }
+        if (source.TaxBureau != null) {
+            this.TaxBureau = new String(source.TaxBureau);
+        }
+        if (source.TrafficFreeFlag != null) {
+            this.TrafficFreeFlag = new String(source.TrafficFreeFlag);
+        }
     }
 
 
@@ -726,6 +778,8 @@ Y: 有清单 N：无清单
         this.setParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
         this.setParamSimple(map, prefix + "AmountWithTax", this.AmountWithTax);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "TaxBureau", this.TaxBureau);
+        this.setParamSimple(map, prefix + "TrafficFreeFlag", this.TrafficFreeFlag);
 
     }
 }

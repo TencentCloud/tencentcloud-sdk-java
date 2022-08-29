@@ -184,6 +184,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *创建出证报告，返回报告 URL
+     * @param req CreateChannelFlowEvidenceReportRequest
+     * @return CreateChannelFlowEvidenceReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReport(CreateChannelFlowEvidenceReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateChannelFlowEvidenceReport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（CreateConsoleLoginUrl）用于创建电子签控制台登录链接。若企业未激活，调用同步企业信息、同步经办人信息
 
      * @param req CreateConsoleLoginUrlRequest

@@ -299,26 +299,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *删除全部规则
-     * @param req DeleteSecurityGroupAllRuleRequest
-     * @return DeleteSecurityGroupAllRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteSecurityGroupAllRuleResponse DeleteSecurityGroupAllRule(DeleteSecurityGroupAllRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSecurityGroupAllRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSecurityGroupAllRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSecurityGroupAllRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *删除规则
      * @param req DeleteSecurityGroupRuleRequest
      * @return DeleteSecurityGroupRuleResponse
@@ -633,26 +613,6 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNatFwVpcDnsLstResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNatFwVpcDnsLst");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *nat规则列表概况
-     * @param req DescribeNatRuleOverviewRequest
-     * @return DescribeNatRuleOverviewResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNatRuleOverviewResponse DescribeNatRuleOverview(DescribeNatRuleOverviewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNatRuleOverviewResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNatRuleOverviewResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNatRuleOverview");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

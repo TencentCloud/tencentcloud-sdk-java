@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSecurityGroupAllRuleResponse extends AbstractModel{
+public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 0: 操作成功，非0：操作失败
+    * 出证报告 URL（有效五分钟）
     */
-    @SerializedName("Status")
+    @SerializedName("ReportUrl")
     @Expose
-    private Long Status;
-
-    /**
-    * 返回数据的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Info")
-    @Expose
-    private Long Info;
+    private String ReportUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DeleteSecurityGroupAllRuleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 0: 操作成功，非0：操作失败 
-     * @return Status 0: 操作成功，非0：操作失败
+     * Get 出证报告 URL（有效五分钟） 
+     * @return ReportUrl 出证报告 URL（有效五分钟）
      */
-    public Long getStatus() {
-        return this.Status;
+    public String getReportUrl() {
+        return this.ReportUrl;
     }
 
     /**
-     * Set 0: 操作成功，非0：操作失败
-     * @param Status 0: 操作成功，非0：操作失败
+     * Set 出证报告 URL（有效五分钟）
+     * @param ReportUrl 出证报告 URL（有效五分钟）
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 返回数据的json字符串
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Info 返回数据的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getInfo() {
-        return this.Info;
-    }
-
-    /**
-     * Set 返回数据的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Info 返回数据的json字符串
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setInfo(Long Info) {
-        this.Info = Info;
+    public void setReportUrl(String ReportUrl) {
+        this.ReportUrl = ReportUrl;
     }
 
     /**
@@ -96,19 +68,16 @@ public class DeleteSecurityGroupAllRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteSecurityGroupAllRuleResponse() {
+    public CreateChannelFlowEvidenceReportResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSecurityGroupAllRuleResponse(DeleteSecurityGroupAllRuleResponse source) {
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
-        if (source.Info != null) {
-            this.Info = new Long(source.Info);
+    public CreateChannelFlowEvidenceReportResponse(CreateChannelFlowEvidenceReportResponse source) {
+        if (source.ReportUrl != null) {
+            this.ReportUrl = new String(source.ReportUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +89,7 @@ public class DeleteSecurityGroupAllRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

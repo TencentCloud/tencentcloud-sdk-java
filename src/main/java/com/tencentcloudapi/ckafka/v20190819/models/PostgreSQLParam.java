@@ -58,6 +58,41 @@ public class PostgreSQLParam extends AbstractModel{
     private String SnapshotMode;
 
     /**
+    * 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+    */
+    @SerializedName("DataFormat")
+    @Expose
+    private String DataFormat;
+
+    /**
+    * "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+    */
+    @SerializedName("DataTargetInsertMode")
+    @Expose
+    private String DataTargetInsertMode;
+
+    /**
+    * 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+    */
+    @SerializedName("DataTargetPrimaryKeyField")
+    @Expose
+    private String DataTargetPrimaryKeyField;
+
+    /**
+    * 表与消息间的映射关系
+    */
+    @SerializedName("DataTargetRecordMapping")
+    @Expose
+    private RecordMapping [] DataTargetRecordMapping;
+
+    /**
+    * 是否抛弃解析失败的消息，默认为true
+    */
+    @SerializedName("DropInvalidMessage")
+    @Expose
+    private Boolean DropInvalidMessage;
+
+    /**
      * Get PostgreSQL的数据库名称 
      * @return Database PostgreSQL的数据库名称
      */
@@ -137,6 +172,86 @@ public class PostgreSQLParam extends AbstractModel{
         this.SnapshotMode = SnapshotMode;
     }
 
+    /**
+     * Get 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填 
+     * @return DataFormat 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+     */
+    public String getDataFormat() {
+        return this.DataFormat;
+    }
+
+    /**
+     * Set 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+     * @param DataFormat 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+     */
+    public void setDataFormat(String DataFormat) {
+        this.DataFormat = DataFormat;
+    }
+
+    /**
+     * Get "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入 
+     * @return DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+     */
+    public String getDataTargetInsertMode() {
+        return this.DataTargetInsertMode;
+    }
+
+    /**
+     * Set "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+     * @param DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+     */
+    public void setDataTargetInsertMode(String DataTargetInsertMode) {
+        this.DataTargetInsertMode = DataTargetInsertMode;
+    }
+
+    /**
+     * Get 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键 
+     * @return DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+     */
+    public String getDataTargetPrimaryKeyField() {
+        return this.DataTargetPrimaryKeyField;
+    }
+
+    /**
+     * Set 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+     * @param DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+     */
+    public void setDataTargetPrimaryKeyField(String DataTargetPrimaryKeyField) {
+        this.DataTargetPrimaryKeyField = DataTargetPrimaryKeyField;
+    }
+
+    /**
+     * Get 表与消息间的映射关系 
+     * @return DataTargetRecordMapping 表与消息间的映射关系
+     */
+    public RecordMapping [] getDataTargetRecordMapping() {
+        return this.DataTargetRecordMapping;
+    }
+
+    /**
+     * Set 表与消息间的映射关系
+     * @param DataTargetRecordMapping 表与消息间的映射关系
+     */
+    public void setDataTargetRecordMapping(RecordMapping [] DataTargetRecordMapping) {
+        this.DataTargetRecordMapping = DataTargetRecordMapping;
+    }
+
+    /**
+     * Get 是否抛弃解析失败的消息，默认为true 
+     * @return DropInvalidMessage 是否抛弃解析失败的消息，默认为true
+     */
+    public Boolean getDropInvalidMessage() {
+        return this.DropInvalidMessage;
+    }
+
+    /**
+     * Set 是否抛弃解析失败的消息，默认为true
+     * @param DropInvalidMessage 是否抛弃解析失败的消息，默认为true
+     */
+    public void setDropInvalidMessage(Boolean DropInvalidMessage) {
+        this.DropInvalidMessage = DropInvalidMessage;
+    }
+
     public PostgreSQLParam() {
     }
 
@@ -160,6 +275,24 @@ public class PostgreSQLParam extends AbstractModel{
         if (source.SnapshotMode != null) {
             this.SnapshotMode = new String(source.SnapshotMode);
         }
+        if (source.DataFormat != null) {
+            this.DataFormat = new String(source.DataFormat);
+        }
+        if (source.DataTargetInsertMode != null) {
+            this.DataTargetInsertMode = new String(source.DataTargetInsertMode);
+        }
+        if (source.DataTargetPrimaryKeyField != null) {
+            this.DataTargetPrimaryKeyField = new String(source.DataTargetPrimaryKeyField);
+        }
+        if (source.DataTargetRecordMapping != null) {
+            this.DataTargetRecordMapping = new RecordMapping[source.DataTargetRecordMapping.length];
+            for (int i = 0; i < source.DataTargetRecordMapping.length; i++) {
+                this.DataTargetRecordMapping[i] = new RecordMapping(source.DataTargetRecordMapping[i]);
+            }
+        }
+        if (source.DropInvalidMessage != null) {
+            this.DropInvalidMessage = new Boolean(source.DropInvalidMessage);
+        }
     }
 
 
@@ -172,6 +305,11 @@ public class PostgreSQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Resource", this.Resource);
         this.setParamSimple(map, prefix + "PluginName", this.PluginName);
         this.setParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
+        this.setParamSimple(map, prefix + "DataFormat", this.DataFormat);
+        this.setParamSimple(map, prefix + "DataTargetInsertMode", this.DataTargetInsertMode);
+        this.setParamSimple(map, prefix + "DataTargetPrimaryKeyField", this.DataTargetPrimaryKeyField);
+        this.setParamArrayObj(map, prefix + "DataTargetRecordMapping.", this.DataTargetRecordMapping);
+        this.setParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
 
     }
 }

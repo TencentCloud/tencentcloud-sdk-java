@@ -177,6 +177,13 @@ public class MySQLParam extends AbstractModel{
     private Boolean IncludeQuery;
 
     /**
+    * 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+    */
+    @SerializedName("RecordWithSchema")
+    @Expose
+    private Boolean RecordWithSchema;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -528,6 +535,22 @@ public class MySQLParam extends AbstractModel{
         this.IncludeQuery = IncludeQuery;
     }
 
+    /**
+     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带 
+     * @return RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public Boolean getRecordWithSchema() {
+        return this.RecordWithSchema;
+    }
+
+    /**
+     * Set 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     * @param RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public void setRecordWithSchema(Boolean RecordWithSchema) {
+        this.RecordWithSchema = RecordWithSchema;
+    }
+
     public MySQLParam() {
     }
 
@@ -605,6 +628,9 @@ public class MySQLParam extends AbstractModel{
         if (source.IncludeQuery != null) {
             this.IncludeQuery = new Boolean(source.IncludeQuery);
         }
+        if (source.RecordWithSchema != null) {
+            this.RecordWithSchema = new Boolean(source.RecordWithSchema);
+        }
     }
 
 
@@ -634,6 +660,7 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "IsTablePrefix", this.IsTablePrefix);
         this.setParamSimple(map, prefix + "IncludeContentChanges", this.IncludeContentChanges);
         this.setParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
+        this.setParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
 
     }
 }
