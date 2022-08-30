@@ -30,6 +30,9 @@ public enum AsErrorCode {
     // STS 接口调用失败。
      INTERNALERROR_CALLSTSERROR("InternalError.CallStsError"),
      
+    // TAT 接口调用失败。
+     INTERNALERROR_CALLTATERROR("InternalError.CallTATError"),
+     
     // Tag 接口调用失败。
      INTERNALERROR_CALLTAGERROR("InternalError.CallTagError"),
      
@@ -335,6 +338,9 @@ public enum AsErrorCode {
      
     // 指定的 CMQ queue 不存在。
      RESOURCENOTFOUND_CMQQUEUENOTFOUND("ResourceNotFound.CmqQueueNotFound"),
+     
+    // 命令不存在。
+     RESOURCENOTFOUND_COMMANDNOTFOUND("ResourceNotFound.CommandNotFound"),
      
     // 指定的实例不存在。
      RESOURCENOTFOUND_INSTANCESNOTFOUND("ResourceNotFound.InstancesNotFound"),

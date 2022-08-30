@@ -280,7 +280,10 @@ public enum TrtcErrorCode {
      UNAUTHORIZEDOPERATION_SDKAPPID("UnauthorizedOperation.SdkAppId"),
      
     // 未知参数错误。
-     UNKNOWNPARAMETER("UnknownParameter");
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TrtcErrorCode (String value){

@@ -31,6 +31,13 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
     private String DbType;
 
     /**
+    * 是否需要返回可用区信息
+    */
+    @SerializedName("IncludeZoneStocks")
+    @Expose
+    private Boolean IncludeZoneStocks;
+
+    /**
      * Get 数据库类型，取值范围: 
 <li> MYSQL </li> 
      * @return DbType 数据库类型，取值范围: 
@@ -50,6 +57,22 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get 是否需要返回可用区信息 
+     * @return IncludeZoneStocks 是否需要返回可用区信息
+     */
+    public Boolean getIncludeZoneStocks() {
+        return this.IncludeZoneStocks;
+    }
+
+    /**
+     * Set 是否需要返回可用区信息
+     * @param IncludeZoneStocks 是否需要返回可用区信息
+     */
+    public void setIncludeZoneStocks(Boolean IncludeZoneStocks) {
+        this.IncludeZoneStocks = IncludeZoneStocks;
+    }
+
     public DescribeInstanceSpecsRequest() {
     }
 
@@ -61,6 +84,9 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.IncludeZoneStocks != null) {
+            this.IncludeZoneStocks = new Boolean(source.IncludeZoneStocks);
+        }
     }
 
 
@@ -69,6 +95,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
 
     }
 }

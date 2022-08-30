@@ -74,7 +74,7 @@ public class TaskResultInfo extends AbstractModel{
     private Long DataAmount;
 
     /**
-    * 任务执行耗时，单位秒
+    * 计算耗时，单位： ms
     */
     @SerializedName("UsedTime")
     @Expose
@@ -151,6 +151,13 @@ public class TaskResultInfo extends AbstractModel{
     @SerializedName("DisplayFormat")
     @Expose
     private String DisplayFormat;
+
+    /**
+    * 任务耗时，单位： ms
+    */
+    @SerializedName("TotalTime")
+    @Expose
+    private Long TotalTime;
 
     /**
      * Get 任务唯一ID 
@@ -273,16 +280,16 @@ public class TaskResultInfo extends AbstractModel{
     }
 
     /**
-     * Get 任务执行耗时，单位秒 
-     * @return UsedTime 任务执行耗时，单位秒
+     * Get 计算耗时，单位： ms 
+     * @return UsedTime 计算耗时，单位： ms
      */
     public Long getUsedTime() {
         return this.UsedTime;
     }
 
     /**
-     * Set 任务执行耗时，单位秒
-     * @param UsedTime 任务执行耗时，单位秒
+     * Set 计算耗时，单位： ms
+     * @param UsedTime 计算耗时，单位： ms
      */
     public void setUsedTime(Long UsedTime) {
         this.UsedTime = UsedTime;
@@ -456,6 +463,22 @@ public class TaskResultInfo extends AbstractModel{
         this.DisplayFormat = DisplayFormat;
     }
 
+    /**
+     * Get 任务耗时，单位： ms 
+     * @return TotalTime 任务耗时，单位： ms
+     */
+    public Long getTotalTime() {
+        return this.TotalTime;
+    }
+
+    /**
+     * Set 任务耗时，单位： ms
+     * @param TotalTime 任务耗时，单位： ms
+     */
+    public void setTotalTime(Long TotalTime) {
+        this.TotalTime = TotalTime;
+    }
+
     public TaskResultInfo() {
     }
 
@@ -521,6 +544,9 @@ public class TaskResultInfo extends AbstractModel{
         if (source.DisplayFormat != null) {
             this.DisplayFormat = new String(source.DisplayFormat);
         }
+        if (source.TotalTime != null) {
+            this.TotalTime = new Long(source.TotalTime);
+        }
     }
 
 
@@ -546,6 +572,7 @@ public class TaskResultInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Percentage", this.Percentage);
         this.setParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
         this.setParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
+        this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
 
     }
 }

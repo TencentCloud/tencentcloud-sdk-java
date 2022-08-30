@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220106.models;
+package com.tencentcloudapi.ic.v20190307.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSPolicyResponse extends AbstractModel{
+public class PayForExtendDataResponse extends AbstractModel{
 
     /**
-    * DDoS防护配置
+    * 订单号
     */
-    @SerializedName("DdosRule")
+    @SerializedName("Data")
     @Expose
-    private DdosRule DdosRule;
+    private ResOrderIds Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDoS防护配置 
-     * @return DdosRule DDoS防护配置
+     * Get 订单号 
+     * @return Data 订单号
      */
-    public DdosRule getDdosRule() {
-        return this.DdosRule;
+    public ResOrderIds getData() {
+        return this.Data;
     }
 
     /**
-     * Set DDoS防护配置
-     * @param DdosRule DDoS防护配置
+     * Set 订单号
+     * @param Data 订单号
      */
-    public void setDdosRule(DdosRule DdosRule) {
-        this.DdosRule = DdosRule;
+    public void setData(ResOrderIds Data) {
+        this.Data = Data;
     }
 
     /**
@@ -68,16 +68,16 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDDoSPolicyResponse() {
+    public PayForExtendDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDDoSPolicyResponse(DescribeDDoSPolicyResponse source) {
-        if (source.DdosRule != null) {
-            this.DdosRule = new DdosRule(source.DdosRule);
+    public PayForExtendDataResponse(PayForExtendDataResponse source) {
+        if (source.Data != null) {
+            this.Data = new ResOrderIds(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DdosRule.", this.DdosRule);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

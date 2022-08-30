@@ -30,6 +30,27 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
     private String [] EngineVersions;
 
     /**
+    * 引擎类型，缺省则查询所有
+    */
+    @SerializedName("EngineTypes")
+    @Expose
+    private String [] EngineTypes;
+
+    /**
+    * 模板名称，缺省则查询所有
+    */
+    @SerializedName("TemplateNames")
+    @Expose
+    private String [] TemplateNames;
+
+    /**
+    * 模板id，缺省则查询所有
+    */
+    @SerializedName("TemplateIds")
+    @Expose
+    private Long [] TemplateIds;
+
+    /**
      * Get 引擎版本，缺省则查询所有 
      * @return EngineVersions 引擎版本，缺省则查询所有
      */
@@ -43,6 +64,54 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
+    }
+
+    /**
+     * Get 引擎类型，缺省则查询所有 
+     * @return EngineTypes 引擎类型，缺省则查询所有
+     */
+    public String [] getEngineTypes() {
+        return this.EngineTypes;
+    }
+
+    /**
+     * Set 引擎类型，缺省则查询所有
+     * @param EngineTypes 引擎类型，缺省则查询所有
+     */
+    public void setEngineTypes(String [] EngineTypes) {
+        this.EngineTypes = EngineTypes;
+    }
+
+    /**
+     * Get 模板名称，缺省则查询所有 
+     * @return TemplateNames 模板名称，缺省则查询所有
+     */
+    public String [] getTemplateNames() {
+        return this.TemplateNames;
+    }
+
+    /**
+     * Set 模板名称，缺省则查询所有
+     * @param TemplateNames 模板名称，缺省则查询所有
+     */
+    public void setTemplateNames(String [] TemplateNames) {
+        this.TemplateNames = TemplateNames;
+    }
+
+    /**
+     * Get 模板id，缺省则查询所有 
+     * @return TemplateIds 模板id，缺省则查询所有
+     */
+    public Long [] getTemplateIds() {
+        return this.TemplateIds;
+    }
+
+    /**
+     * Set 模板id，缺省则查询所有
+     * @param TemplateIds 模板id，缺省则查询所有
+     */
+    public void setTemplateIds(Long [] TemplateIds) {
+        this.TemplateIds = TemplateIds;
     }
 
     public DescribeParamTemplatesRequest() {
@@ -59,6 +128,24 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
                 this.EngineVersions[i] = new String(source.EngineVersions[i]);
             }
         }
+        if (source.EngineTypes != null) {
+            this.EngineTypes = new String[source.EngineTypes.length];
+            for (int i = 0; i < source.EngineTypes.length; i++) {
+                this.EngineTypes[i] = new String(source.EngineTypes[i]);
+            }
+        }
+        if (source.TemplateNames != null) {
+            this.TemplateNames = new String[source.TemplateNames.length];
+            for (int i = 0; i < source.TemplateNames.length; i++) {
+                this.TemplateNames[i] = new String(source.TemplateNames[i]);
+            }
+        }
+        if (source.TemplateIds != null) {
+            this.TemplateIds = new Long[source.TemplateIds.length];
+            for (int i = 0; i < source.TemplateIds.length; i++) {
+                this.TemplateIds[i] = new Long(source.TemplateIds[i]);
+            }
+        }
     }
 
 
@@ -67,6 +154,9 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+        this.setParamArraySimple(map, prefix + "TemplateNames.", this.TemplateNames);
+        this.setParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
 
     }
 }

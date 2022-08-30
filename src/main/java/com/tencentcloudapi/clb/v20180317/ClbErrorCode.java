@@ -21,6 +21,9 @@ public enum ClbErrorCode {
     // 参数格式错误。
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),
      
+    // 查询参数错误。
+     INVALIDPARAMETER_INVALIDFILTER("InvalidParameter.InvalidFilter"),
+     
     // 负载均衡实例ID错误。
      INVALIDPARAMETER_LBIDNOTFOUND("InvalidParameter.LBIdNotFound"),
      

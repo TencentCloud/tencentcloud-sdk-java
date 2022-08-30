@@ -51,6 +51,42 @@ public class InstanceSpec extends AbstractModel{
     private Long MinStorageSize;
 
     /**
+    * 是否有库存
+    */
+    @SerializedName("HasStock")
+    @Expose
+    private Boolean HasStock;
+
+    /**
+    * 机器类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * 最大IOPS
+    */
+    @SerializedName("MaxIops")
+    @Expose
+    private Long MaxIops;
+
+    /**
+    * 最大IO带宽
+    */
+    @SerializedName("MaxIoBandWidth")
+    @Expose
+    private Long MaxIoBandWidth;
+
+    /**
+    * 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneStockInfos")
+    @Expose
+    private ZoneStockInfo [] ZoneStockInfos;
+
+    /**
      * Get 实例CPU，单位：核 
      * @return Cpu 实例CPU，单位：核
      */
@@ -114,6 +150,90 @@ public class InstanceSpec extends AbstractModel{
         this.MinStorageSize = MinStorageSize;
     }
 
+    /**
+     * Get 是否有库存 
+     * @return HasStock 是否有库存
+     */
+    public Boolean getHasStock() {
+        return this.HasStock;
+    }
+
+    /**
+     * Set 是否有库存
+     * @param HasStock 是否有库存
+     */
+    public void setHasStock(Boolean HasStock) {
+        this.HasStock = HasStock;
+    }
+
+    /**
+     * Get 机器类型 
+     * @return MachineType 机器类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 机器类型
+     * @param MachineType 机器类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get 最大IOPS 
+     * @return MaxIops 最大IOPS
+     */
+    public Long getMaxIops() {
+        return this.MaxIops;
+    }
+
+    /**
+     * Set 最大IOPS
+     * @param MaxIops 最大IOPS
+     */
+    public void setMaxIops(Long MaxIops) {
+        this.MaxIops = MaxIops;
+    }
+
+    /**
+     * Get 最大IO带宽 
+     * @return MaxIoBandWidth 最大IO带宽
+     */
+    public Long getMaxIoBandWidth() {
+        return this.MaxIoBandWidth;
+    }
+
+    /**
+     * Set 最大IO带宽
+     * @param MaxIoBandWidth 最大IO带宽
+     */
+    public void setMaxIoBandWidth(Long MaxIoBandWidth) {
+        this.MaxIoBandWidth = MaxIoBandWidth;
+    }
+
+    /**
+     * Get 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneStockInfos 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZoneStockInfo [] getZoneStockInfos() {
+        return this.ZoneStockInfos;
+    }
+
+    /**
+     * Set 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneStockInfos 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneStockInfos(ZoneStockInfo [] ZoneStockInfos) {
+        this.ZoneStockInfos = ZoneStockInfos;
+    }
+
     public InstanceSpec() {
     }
 
@@ -134,6 +254,24 @@ public class InstanceSpec extends AbstractModel{
         if (source.MinStorageSize != null) {
             this.MinStorageSize = new Long(source.MinStorageSize);
         }
+        if (source.HasStock != null) {
+            this.HasStock = new Boolean(source.HasStock);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MaxIops != null) {
+            this.MaxIops = new Long(source.MaxIops);
+        }
+        if (source.MaxIoBandWidth != null) {
+            this.MaxIoBandWidth = new Long(source.MaxIoBandWidth);
+        }
+        if (source.ZoneStockInfos != null) {
+            this.ZoneStockInfos = new ZoneStockInfo[source.ZoneStockInfos.length];
+            for (int i = 0; i < source.ZoneStockInfos.length; i++) {
+                this.ZoneStockInfos[i] = new ZoneStockInfo(source.ZoneStockInfos[i]);
+            }
+        }
     }
 
 
@@ -145,6 +283,11 @@ public class InstanceSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
         this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "HasStock", this.HasStock);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "MaxIops", this.MaxIops);
+        this.setParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
+        this.setParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
 
     }
 }

@@ -87,6 +87,14 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private Long DesiredPodNumber;
 
     /**
+    * GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
     * base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -263,6 +271,26 @@ public class InstanceAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
      * Get base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
@@ -340,6 +368,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
         if (source.DesiredPodNumber != null) {
             this.DesiredPodNumber = new Long(source.DesiredPodNumber);
         }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
         if (source.PreStartUserScript != null) {
             this.PreStartUserScript = new String(source.PreStartUserScript);
         }
@@ -364,6 +395,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
 

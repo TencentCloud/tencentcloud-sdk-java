@@ -164,6 +164,20 @@ __SHARE_BY_API__：后续调用分润接口决定分润金额
     private OpenBankProfitShareInfo [] ProfitShareInfoList;
 
     /**
+    * 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+    */
+    @SerializedName("SettlementRulesInfo")
+    @Expose
+    private OpenBankSettlementRulesInfo SettlementRulesInfo;
+
+    /**
+    * 底层支付渠道特殊字段，若无特殊说明时，可以为空
+    */
+    @SerializedName("ExternalPaymentData")
+    @Expose
+    private String ExternalPaymentData;
+
+    /**
     * 备注信息。
     */
     @SerializedName("Remark")
@@ -529,6 +543,38 @@ __SHARE_BY_API__：后续调用分润接口决定分润金额
     }
 
     /**
+     * Get 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数 
+     * @return SettlementRulesInfo 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     */
+    public OpenBankSettlementRulesInfo getSettlementRulesInfo() {
+        return this.SettlementRulesInfo;
+    }
+
+    /**
+     * Set 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     * @param SettlementRulesInfo 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     */
+    public void setSettlementRulesInfo(OpenBankSettlementRulesInfo SettlementRulesInfo) {
+        this.SettlementRulesInfo = SettlementRulesInfo;
+    }
+
+    /**
+     * Get 底层支付渠道特殊字段，若无特殊说明时，可以为空 
+     * @return ExternalPaymentData 底层支付渠道特殊字段，若无特殊说明时，可以为空
+     */
+    public String getExternalPaymentData() {
+        return this.ExternalPaymentData;
+    }
+
+    /**
+     * Set 底层支付渠道特殊字段，若无特殊说明时，可以为空
+     * @param ExternalPaymentData 底层支付渠道特殊字段，若无特殊说明时，可以为空
+     */
+    public void setExternalPaymentData(String ExternalPaymentData) {
+        this.ExternalPaymentData = ExternalPaymentData;
+    }
+
+    /**
      * Get 备注信息。 
      * @return Remark 备注信息。
      */
@@ -637,6 +683,12 @@ __sandbox__:沙箱环境
                 this.ProfitShareInfoList[i] = new OpenBankProfitShareInfo(source.ProfitShareInfoList[i]);
             }
         }
+        if (source.SettlementRulesInfo != null) {
+            this.SettlementRulesInfo = new OpenBankSettlementRulesInfo(source.SettlementRulesInfo);
+        }
+        if (source.ExternalPaymentData != null) {
+            this.ExternalPaymentData = new String(source.ExternalPaymentData);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
@@ -668,6 +720,8 @@ __sandbox__:沙箱环境
         this.setParamSimple(map, prefix + "Attachment", this.Attachment);
         this.setParamSimple(map, prefix + "ProfitShareFlag", this.ProfitShareFlag);
         this.setParamArrayObj(map, prefix + "ProfitShareInfoList.", this.ProfitShareInfoList);
+        this.setParamObj(map, prefix + "SettlementRulesInfo.", this.SettlementRulesInfo);
+        this.setParamSimple(map, prefix + "ExternalPaymentData", this.ExternalPaymentData);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
 

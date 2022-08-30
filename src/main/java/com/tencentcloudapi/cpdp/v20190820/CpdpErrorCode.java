@@ -405,6 +405,9 @@ public enum CpdpErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // 传入参数有误，请检查传入参数是否正确。
+     INVALIDPARAMETER_BACKENDCGIERROR("InvalidParameter.BackendCgiError"),
+     
     // 缺少必填参数。
      INVALIDPARAMETER_LACKPARAMETER("InvalidParameter.LackParameter"),
      

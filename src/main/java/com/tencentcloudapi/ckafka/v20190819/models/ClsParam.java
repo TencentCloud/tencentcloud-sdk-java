@@ -54,6 +54,14 @@ public class ClsParam extends AbstractModel{
     private String ContentKey;
 
     /**
+    * 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
+    */
+    @SerializedName("TimeField")
+    @Expose
+    private String TimeField;
+
+    /**
      * Get 生产的信息是否为json格式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DecodeJson 生产的信息是否为json格式
@@ -129,6 +137,26 @@ public class ClsParam extends AbstractModel{
         this.ContentKey = ContentKey;
     }
 
+    /**
+     * Get 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳 
+     * @return TimeField 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
+     */
+    public String getTimeField() {
+        return this.TimeField;
+    }
+
+    /**
+     * Set 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
+     * @param TimeField 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
+     */
+    public void setTimeField(String TimeField) {
+        this.TimeField = TimeField;
+    }
+
     public ClsParam() {
     }
 
@@ -149,6 +177,9 @@ public class ClsParam extends AbstractModel{
         if (source.ContentKey != null) {
             this.ContentKey = new String(source.ContentKey);
         }
+        if (source.TimeField != null) {
+            this.TimeField = new String(source.TimeField);
+        }
     }
 
 
@@ -160,6 +191,7 @@ public class ClsParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Resource", this.Resource);
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "ContentKey", this.ContentKey);
+        this.setParamSimple(map, prefix + "TimeField", this.TimeField);
 
     }
 }

@@ -20,96 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubnetInfos extends AbstractModel{
+public class DriverVersion extends AbstractModel{
 
     /**
-    * 子网id
+    * GPU驱动或者CUDA的版本
     */
-    @SerializedName("SubnetId")
+    @SerializedName("Version")
     @Expose
-    private String SubnetId;
+    private String Version;
 
     /**
-    * 子网节点名称
+    * GPU驱动或者CUDA的名字
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 安全组id
-    */
-    @SerializedName("SecurityGroups")
-    @Expose
-    private String [] SecurityGroups;
-
-    /**
-     * Get 子网id 
-     * @return SubnetId 子网id
+     * Get GPU驱动或者CUDA的版本 
+     * @return Version GPU驱动或者CUDA的版本
      */
-    public String getSubnetId() {
-        return this.SubnetId;
+    public String getVersion() {
+        return this.Version;
     }
 
     /**
-     * Set 子网id
-     * @param SubnetId 子网id
+     * Set GPU驱动或者CUDA的版本
+     * @param Version GPU驱动或者CUDA的版本
      */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     /**
-     * Get 子网节点名称 
-     * @return Name 子网节点名称
+     * Get GPU驱动或者CUDA的名字 
+     * @return Name GPU驱动或者CUDA的名字
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 子网节点名称
-     * @param Name 子网节点名称
+     * Set GPU驱动或者CUDA的名字
+     * @param Name GPU驱动或者CUDA的名字
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
-    /**
-     * Get 安全组id 
-     * @return SecurityGroups 安全组id
-     */
-    public String [] getSecurityGroups() {
-        return this.SecurityGroups;
-    }
-
-    /**
-     * Set 安全组id
-     * @param SecurityGroups 安全组id
-     */
-    public void setSecurityGroups(String [] SecurityGroups) {
-        this.SecurityGroups = SecurityGroups;
-    }
-
-    public SubnetInfos() {
+    public DriverVersion() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SubnetInfos(SubnetInfos source) {
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
+    public DriverVersion(DriverVersion source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
-        }
-        if (source.SecurityGroups != null) {
-            this.SecurityGroups = new String[source.SecurityGroups.length];
-            for (int i = 0; i < source.SecurityGroups.length; i++) {
-                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
-            }
         }
     }
 
@@ -118,9 +89,8 @@ public class SubnetInfos extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }

@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220106.models;
+package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSPolicyResponse extends AbstractModel{
+public class DescribeCloudStorageStreamDataResponse extends AbstractModel{
 
     /**
-    * DDoS防护配置
+    * 图片流视频地址
     */
-    @SerializedName("DdosRule")
+    @SerializedName("VideoStream")
     @Expose
-    private DdosRule DdosRule;
+    private String VideoStream;
+
+    /**
+    * 图片流音频地址
+    */
+    @SerializedName("AudioStream")
+    @Expose
+    private String AudioStream;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDoS防护配置 
-     * @return DdosRule DDoS防护配置
+     * Get 图片流视频地址 
+     * @return VideoStream 图片流视频地址
      */
-    public DdosRule getDdosRule() {
-        return this.DdosRule;
+    public String getVideoStream() {
+        return this.VideoStream;
     }
 
     /**
-     * Set DDoS防护配置
-     * @param DdosRule DDoS防护配置
+     * Set 图片流视频地址
+     * @param VideoStream 图片流视频地址
      */
-    public void setDdosRule(DdosRule DdosRule) {
-        this.DdosRule = DdosRule;
+    public void setVideoStream(String VideoStream) {
+        this.VideoStream = VideoStream;
+    }
+
+    /**
+     * Get 图片流音频地址 
+     * @return AudioStream 图片流音频地址
+     */
+    public String getAudioStream() {
+        return this.AudioStream;
+    }
+
+    /**
+     * Set 图片流音频地址
+     * @param AudioStream 图片流音频地址
+     */
+    public void setAudioStream(String AudioStream) {
+        this.AudioStream = AudioStream;
     }
 
     /**
@@ -68,16 +91,19 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDDoSPolicyResponse() {
+    public DescribeCloudStorageStreamDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDDoSPolicyResponse(DescribeDDoSPolicyResponse source) {
-        if (source.DdosRule != null) {
-            this.DdosRule = new DdosRule(source.DdosRule);
+    public DescribeCloudStorageStreamDataResponse(DescribeCloudStorageStreamDataResponse source) {
+        if (source.VideoStream != null) {
+            this.VideoStream = new String(source.VideoStream);
+        }
+        if (source.AudioStream != null) {
+            this.AudioStream = new String(source.AudioStream);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +115,8 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DdosRule.", this.DdosRule);
+        this.setParamSimple(map, prefix + "VideoStream", this.VideoStream);
+        this.setParamSimple(map, prefix + "AudioStream", this.AudioStream);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

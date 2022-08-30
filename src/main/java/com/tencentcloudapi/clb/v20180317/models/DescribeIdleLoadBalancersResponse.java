@@ -13,36 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksResponse extends AbstractModel{
+public class DescribeIdleLoadBalancersResponse extends AbstractModel{
 
     /**
-    * 任务对象列表。
+    * 闲置实例列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TaskList")
+    @SerializedName("IdleLoadBalancers")
     @Expose
-    private TaskResponseInfo [] TaskList;
+    private IdleLoadBalancer [] IdleLoadBalancers;
 
     /**
-    * 实例总数。
+    * 所有闲置实例数目
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
-
-    /**
-    * 任务概览信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TasksOverview")
-    @Expose
-    private TasksOverview TasksOverview;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,55 +45,39 @@ public class DescribeTasksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务对象列表。 
-     * @return TaskList 任务对象列表。
+     * Get 闲置实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdleLoadBalancers 闲置实例列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TaskResponseInfo [] getTaskList() {
-        return this.TaskList;
+    public IdleLoadBalancer [] getIdleLoadBalancers() {
+        return this.IdleLoadBalancers;
     }
 
     /**
-     * Set 任务对象列表。
-     * @param TaskList 任务对象列表。
+     * Set 闲置实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdleLoadBalancers 闲置实例列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskList(TaskResponseInfo [] TaskList) {
-        this.TaskList = TaskList;
+    public void setIdleLoadBalancers(IdleLoadBalancer [] IdleLoadBalancers) {
+        this.IdleLoadBalancers = IdleLoadBalancers;
     }
 
     /**
-     * Get 实例总数。 
-     * @return TotalCount 实例总数。
+     * Get 所有闲置实例数目 
+     * @return TotalCount 所有闲置实例数目
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例总数。
-     * @param TotalCount 实例总数。
+     * Set 所有闲置实例数目
+     * @param TotalCount 所有闲置实例数目
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 任务概览信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TasksOverview 任务概览信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public TasksOverview getTasksOverview() {
-        return this.TasksOverview;
-    }
-
-    /**
-     * Set 任务概览信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TasksOverview 任务概览信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTasksOverview(TasksOverview TasksOverview) {
-        this.TasksOverview = TasksOverview;
     }
 
     /**
@@ -119,25 +96,22 @@ public class DescribeTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTasksResponse() {
+    public DescribeIdleLoadBalancersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTasksResponse(DescribeTasksResponse source) {
-        if (source.TaskList != null) {
-            this.TaskList = new TaskResponseInfo[source.TaskList.length];
-            for (int i = 0; i < source.TaskList.length; i++) {
-                this.TaskList[i] = new TaskResponseInfo(source.TaskList[i]);
+    public DescribeIdleLoadBalancersResponse(DescribeIdleLoadBalancersResponse source) {
+        if (source.IdleLoadBalancers != null) {
+            this.IdleLoadBalancers = new IdleLoadBalancer[source.IdleLoadBalancers.length];
+            for (int i = 0; i < source.IdleLoadBalancers.length; i++) {
+                this.IdleLoadBalancers[i] = new IdleLoadBalancer(source.IdleLoadBalancers[i]);
             }
         }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.TasksOverview != null) {
-            this.TasksOverview = new TasksOverview(source.TasksOverview);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -149,9 +123,8 @@ public class DescribeTasksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TaskList.", this.TaskList);
+        this.setParamArrayObj(map, prefix + "IdleLoadBalancers.", this.IdleLoadBalancers);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "TasksOverview.", this.TasksOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

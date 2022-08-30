@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220106.models;
+package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSPolicyResponse extends AbstractModel{
+public class DescribeNewL7RulesErrHealthResponse extends AbstractModel{
 
     /**
-    * DDoS防护配置
+    * 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
     */
-    @SerializedName("DdosRule")
+    @SerializedName("ErrHealths")
     @Expose
-    private DdosRule DdosRule;
+    private KeyValue [] ErrHealths;
+
+    /**
+    * 异常规则的总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDoS防护配置 
-     * @return DdosRule DDoS防护配置
+     * Get 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割 
+     * @return ErrHealths 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
      */
-    public DdosRule getDdosRule() {
-        return this.DdosRule;
+    public KeyValue [] getErrHealths() {
+        return this.ErrHealths;
     }
 
     /**
-     * Set DDoS防护配置
-     * @param DdosRule DDoS防护配置
+     * Set 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
+     * @param ErrHealths 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
      */
-    public void setDdosRule(DdosRule DdosRule) {
-        this.DdosRule = DdosRule;
+    public void setErrHealths(KeyValue [] ErrHealths) {
+        this.ErrHealths = ErrHealths;
+    }
+
+    /**
+     * Get 异常规则的总数 
+     * @return Total 异常规则的总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 异常规则的总数
+     * @param Total 异常规则的总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -68,16 +91,22 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDDoSPolicyResponse() {
+    public DescribeNewL7RulesErrHealthResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDDoSPolicyResponse(DescribeDDoSPolicyResponse source) {
-        if (source.DdosRule != null) {
-            this.DdosRule = new DdosRule(source.DdosRule);
+    public DescribeNewL7RulesErrHealthResponse(DescribeNewL7RulesErrHealthResponse source) {
+        if (source.ErrHealths != null) {
+            this.ErrHealths = new KeyValue[source.ErrHealths.length];
+            for (int i = 0; i < source.ErrHealths.length; i++) {
+                this.ErrHealths[i] = new KeyValue(source.ErrHealths[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class DescribeDDoSPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DdosRule.", this.DdosRule);
+        this.setParamArrayObj(map, prefix + "ErrHealths.", this.ErrHealths);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

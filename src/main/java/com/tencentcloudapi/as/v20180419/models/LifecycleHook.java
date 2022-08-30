@@ -93,6 +93,14 @@ public class LifecycleHook extends AbstractModel{
     private String LifecycleTransitionType;
 
     /**
+    * 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LifecycleCommand")
+    @Expose
+    private LifecycleCommand LifecycleCommand;
+
+    /**
      * Get 生命周期挂钩ID 
      * @return LifecycleHookId 生命周期挂钩ID
      */
@@ -252,6 +260,26 @@ public class LifecycleHook extends AbstractModel{
         this.LifecycleTransitionType = LifecycleTransitionType;
     }
 
+    /**
+     * Get 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LifecycleCommand 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LifecycleCommand getLifecycleCommand() {
+        return this.LifecycleCommand;
+    }
+
+    /**
+     * Set 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LifecycleCommand 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
+        this.LifecycleCommand = LifecycleCommand;
+    }
+
     public LifecycleHook() {
     }
 
@@ -290,6 +318,9 @@ public class LifecycleHook extends AbstractModel{
         if (source.LifecycleTransitionType != null) {
             this.LifecycleTransitionType = new String(source.LifecycleTransitionType);
         }
+        if (source.LifecycleCommand != null) {
+            this.LifecycleCommand = new LifecycleCommand(source.LifecycleCommand);
+        }
     }
 
 
@@ -307,6 +338,7 @@ public class LifecycleHook extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
         this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+        this.setParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
 
     }
 }

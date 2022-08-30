@@ -60,6 +60,30 @@ public class DescribeClusterEndpointsResponse extends AbstractModel{
     private String [] ClusterExternalACL;
 
     /**
+    * 外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterExternalDomain")
+    @Expose
+    private String ClusterExternalDomain;
+
+    /**
+    * 内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIntranetDomain")
+    @Expose
+    private String ClusterIntranetDomain;
+
+    /**
+    * 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,6 +179,66 @@ public class DescribeClusterEndpointsResponse extends AbstractModel{
     }
 
     /**
+     * Get 外网域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterExternalDomain 外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterExternalDomain() {
+        return this.ClusterExternalDomain;
+    }
+
+    /**
+     * Set 外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterExternalDomain 外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterExternalDomain(String ClusterExternalDomain) {
+        this.ClusterExternalDomain = ClusterExternalDomain;
+    }
+
+    /**
+     * Get 内网域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIntranetDomain 内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterIntranetDomain() {
+        return this.ClusterIntranetDomain;
+    }
+
+    /**
+     * Set 内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIntranetDomain 内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIntranetDomain(String ClusterIntranetDomain) {
+        this.ClusterIntranetDomain = ClusterIntranetDomain;
+    }
+
+    /**
+     * Get 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroup 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroup 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -196,6 +280,15 @@ public class DescribeClusterEndpointsResponse extends AbstractModel{
                 this.ClusterExternalACL[i] = new String(source.ClusterExternalACL[i]);
             }
         }
+        if (source.ClusterExternalDomain != null) {
+            this.ClusterExternalDomain = new String(source.ClusterExternalDomain);
+        }
+        if (source.ClusterIntranetDomain != null) {
+            this.ClusterIntranetDomain = new String(source.ClusterIntranetDomain);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -211,6 +304,9 @@ public class DescribeClusterEndpointsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterIntranetEndpoint", this.ClusterIntranetEndpoint);
         this.setParamSimple(map, prefix + "ClusterDomain", this.ClusterDomain);
         this.setParamArraySimple(map, prefix + "ClusterExternalACL.", this.ClusterExternalACL);
+        this.setParamSimple(map, prefix + "ClusterExternalDomain", this.ClusterExternalDomain);
+        this.setParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

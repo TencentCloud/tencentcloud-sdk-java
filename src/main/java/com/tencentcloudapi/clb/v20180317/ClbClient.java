@@ -767,6 +767,26 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *闲置实例是指创建超过7天后付费实例，且没有创建规则或创建规则没有绑定子机的负载均衡实例。
+     * @param req DescribeIdleLoadBalancersRequest
+     * @return DescribeIdleLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIdleLoadBalancersResponse DescribeIdleLoadBalancers(DescribeIdleLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIdleLoadBalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIdleLoadBalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIdleLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
      * @param req DescribeLBListenersRequest
      * @return DescribeLBListenersResponse

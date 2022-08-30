@@ -279,6 +279,9 @@ public enum CvmErrorCode {
     // 请确认指定的带宽包是否存在。
      INVALIDPARAMETERVALUE_BANDWIDTHPACKAGEIDNOTFOUND("InvalidParameterValue.BandwidthPackageIdNotFound"),
      
+    // 实例为基础网络实例，目标实例规格仅支持私有网络，不支持调整。
+     INVALIDPARAMETERVALUE_BASICNETWORKINSTANCEFAMILY("InvalidParameterValue.BasicNetworkInstanceFamily"),
+     
     // 请确认存储桶是否存在。
      INVALIDPARAMETERVALUE_BUCKETNOTFOUND("InvalidParameterValue.BucketNotFound"),
      
@@ -323,6 +326,9 @@ public enum CvmErrorCode {
      
     // 传参格式不对。
      INVALIDPARAMETERVALUE_INCORRECTFORMAT("InvalidParameterValue.IncorrectFormat"),
+     
+    // 实例ID不合要求，请提供规范的实例ID，类似ins-xxxxxxxx，字母x代表小写字符或数字。
+     INVALIDPARAMETERVALUE_INSTANCEIDMALFORMED("InvalidParameterValue.InstanceIdMalformed"),
      
     // 不支持操作不同计费方式的实例。
      INVALIDPARAMETERVALUE_INSTANCENOTSUPPORTEDMIXPRICINGMODEL("InvalidParameterValue.InstanceNotSupportedMixPricingModel"),

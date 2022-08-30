@@ -172,6 +172,22 @@ public class JobConfig extends AbstractModel{
     private String PythonVersion;
 
     /**
+    * Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRecover")
+    @Expose
+    private Long AutoRecover;
+
+    /**
+    * 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogLevel")
+    @Expose
+    private String LogLevel;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -539,6 +555,46 @@ public class JobConfig extends AbstractModel{
         this.PythonVersion = PythonVersion;
     }
 
+    /**
+     * Get Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRecover() {
+        return this.AutoRecover;
+    }
+
+    /**
+     * Set Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRecover(Long AutoRecover) {
+        this.AutoRecover = AutoRecover;
+    }
+
+    /**
+     * Get 日志级别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogLevel 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogLevel() {
+        return this.LogLevel;
+    }
+
+    /**
+     * Set 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogLevel 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogLevel(String LogLevel) {
+        this.LogLevel = LogLevel;
+    }
+
     public JobConfig() {
     }
 
@@ -610,6 +666,12 @@ public class JobConfig extends AbstractModel{
         if (source.PythonVersion != null) {
             this.PythonVersion = new String(source.PythonVersion);
         }
+        if (source.AutoRecover != null) {
+            this.AutoRecover = new Long(source.AutoRecover);
+        }
+        if (source.LogLevel != null) {
+            this.LogLevel = new String(source.LogLevel);
+        }
     }
 
 
@@ -636,6 +698,8 @@ public class JobConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
+        this.setParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
+        this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
 
     }
 }

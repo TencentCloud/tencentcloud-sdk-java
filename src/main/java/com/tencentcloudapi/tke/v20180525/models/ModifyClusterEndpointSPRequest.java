@@ -37,6 +37,13 @@ public class ModifyClusterEndpointSPRequest extends AbstractModel{
     private String [] SecurityPolicies;
 
     /**
+    * 修改外网访问安全组
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -68,6 +75,22 @@ public class ModifyClusterEndpointSPRequest extends AbstractModel{
         this.SecurityPolicies = SecurityPolicies;
     }
 
+    /**
+     * Get 修改外网访问安全组 
+     * @return SecurityGroup 修改外网访问安全组
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 修改外网访问安全组
+     * @param SecurityGroup 修改外网访问安全组
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
     public ModifyClusterEndpointSPRequest() {
     }
 
@@ -85,6 +108,9 @@ public class ModifyClusterEndpointSPRequest extends AbstractModel{
                 this.SecurityPolicies[i] = new String(source.SecurityPolicies[i]);
             }
         }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class ModifyClusterEndpointSPRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
 
     }
 }

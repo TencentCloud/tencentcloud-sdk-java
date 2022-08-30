@@ -1421,6 +1421,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *获取L7转发规则健康检查异常结果
+     * @param req DescribeNewL7RulesErrHealthRequest
+     * @return DescribeNewL7RulesErrHealthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNewL7RulesErrHealth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *拉取防护概览攻击趋势
      * @param req DescribeOverviewAttackTrendRequest
      * @return DescribeOverviewAttackTrendResponse

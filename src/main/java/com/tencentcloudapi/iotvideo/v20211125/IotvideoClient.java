@@ -779,6 +779,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *获取设备图片流数据
+     * @param req DescribeCloudStorageStreamDataRequest
+     * @return DescribeCloudStorageStreamDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageStreamDataResponse DescribeCloudStorageStreamData(DescribeCloudStorageStreamDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageStreamDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageStreamDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorageStreamData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *拉取云存事件缩略图
      * @param req DescribeCloudStorageThumbnailRequest
      * @return DescribeCloudStorageThumbnailResponse

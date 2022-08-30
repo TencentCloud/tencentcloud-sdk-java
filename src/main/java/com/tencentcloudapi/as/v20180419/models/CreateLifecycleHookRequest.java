@@ -79,6 +79,13 @@ public class CreateLifecycleHookRequest extends AbstractModel{
     private String LifecycleTransitionType;
 
     /**
+    * 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+    */
+    @SerializedName("LifecycleCommand")
+    @Expose
+    private LifecycleCommand LifecycleCommand;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -206,6 +213,22 @@ public class CreateLifecycleHookRequest extends AbstractModel{
         this.LifecycleTransitionType = LifecycleTransitionType;
     }
 
+    /**
+     * Get 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。 
+     * @return LifecycleCommand 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+     */
+    public LifecycleCommand getLifecycleCommand() {
+        return this.LifecycleCommand;
+    }
+
+    /**
+     * Set 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+     * @param LifecycleCommand 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+     */
+    public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
+        this.LifecycleCommand = LifecycleCommand;
+    }
+
     public CreateLifecycleHookRequest() {
     }
 
@@ -238,6 +261,9 @@ public class CreateLifecycleHookRequest extends AbstractModel{
         if (source.LifecycleTransitionType != null) {
             this.LifecycleTransitionType = new String(source.LifecycleTransitionType);
         }
+        if (source.LifecycleCommand != null) {
+            this.LifecycleCommand = new LifecycleCommand(source.LifecycleCommand);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class CreateLifecycleHookRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
         this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+        this.setParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
 
     }
 }

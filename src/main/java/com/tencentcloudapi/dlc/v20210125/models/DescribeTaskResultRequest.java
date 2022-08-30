@@ -30,7 +30,7 @@ public class DescribeTaskResultRequest extends AbstractModel{
     private String TaskId;
 
     /**
-    * 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+    * 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
     */
     @SerializedName("NextToken")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeTaskResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。 
-     * @return NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+     * Get 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。 
+     * @return NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
-     * @param NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+     * Set 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
+     * @param NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

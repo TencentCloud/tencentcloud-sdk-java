@@ -37,7 +37,27 @@ public class LifecycleActionResultInfo extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 通知的结果，表示通知CMQ是否成功。
+    * 执行活动ID。可通过TAT的[查询执行活动](https://cloud.tencent.com/document/api/1340/52679)API查询具体的执行结果。
+    */
+    @SerializedName("InvocationId")
+    @Expose
+    private String InvocationId;
+
+    /**
+    * 命令调用的结果，表示执行TAT命令是否成功。<br>
+<li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
+<li>FAILED 命令调用失败</li>
+<li>NONE</li>
+    */
+    @SerializedName("InvokeCommandResult")
+    @Expose
+    private String InvokeCommandResult;
+
+    /**
+    * 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+<li>SUCCESSFUL 通知成功</li>
+<li>FAILED 通知失败</li>
+<li>NONE</li>
     */
     @SerializedName("NotificationResult")
     @Expose
@@ -51,7 +71,15 @@ public class LifecycleActionResultInfo extends AbstractModel{
     private String LifecycleActionResult;
 
     /**
-    * 结果的原因。
+    * 结果的原因。<br>
+<li>HEARTBEAT_TIMEOUT 由于心跳超时，结果根据DefaultResult设置。</li>
+<li>NOTIFICATION_FAILURE 由于发送通知失败，结果根据DefaultResult设置。</li>
+<li>CALL_INTERFACE 调用了接口CompleteLifecycleAction设置结果。</li>
+<li>ANOTHER_ACTION_ABANDON 另一个生命周期操作的结果已设置为“ABANDON”。</li>
+<li>COMMAND_CALL_FAILURE  由于命令调用失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_FINISH  命令执行完成。</li>
+<li>COMMAND_EXEC_FAILURE 由于命令执行失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE 由于命令结果检查失败，结果根据DefaultResult设置。</li>
     */
     @SerializedName("ResultReason")
     @Expose
@@ -90,16 +118,72 @@ public class LifecycleActionResultInfo extends AbstractModel{
     }
 
     /**
-     * Get 通知的结果，表示通知CMQ是否成功。 
-     * @return NotificationResult 通知的结果，表示通知CMQ是否成功。
+     * Get 执行活动ID。可通过TAT的[查询执行活动](https://cloud.tencent.com/document/api/1340/52679)API查询具体的执行结果。 
+     * @return InvocationId 执行活动ID。可通过TAT的[查询执行活动](https://cloud.tencent.com/document/api/1340/52679)API查询具体的执行结果。
+     */
+    public String getInvocationId() {
+        return this.InvocationId;
+    }
+
+    /**
+     * Set 执行活动ID。可通过TAT的[查询执行活动](https://cloud.tencent.com/document/api/1340/52679)API查询具体的执行结果。
+     * @param InvocationId 执行活动ID。可通过TAT的[查询执行活动](https://cloud.tencent.com/document/api/1340/52679)API查询具体的执行结果。
+     */
+    public void setInvocationId(String InvocationId) {
+        this.InvocationId = InvocationId;
+    }
+
+    /**
+     * Get 命令调用的结果，表示执行TAT命令是否成功。<br>
+<li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
+<li>FAILED 命令调用失败</li>
+<li>NONE</li> 
+     * @return InvokeCommandResult 命令调用的结果，表示执行TAT命令是否成功。<br>
+<li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
+<li>FAILED 命令调用失败</li>
+<li>NONE</li>
+     */
+    public String getInvokeCommandResult() {
+        return this.InvokeCommandResult;
+    }
+
+    /**
+     * Set 命令调用的结果，表示执行TAT命令是否成功。<br>
+<li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
+<li>FAILED 命令调用失败</li>
+<li>NONE</li>
+     * @param InvokeCommandResult 命令调用的结果，表示执行TAT命令是否成功。<br>
+<li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
+<li>FAILED 命令调用失败</li>
+<li>NONE</li>
+     */
+    public void setInvokeCommandResult(String InvokeCommandResult) {
+        this.InvokeCommandResult = InvokeCommandResult;
+    }
+
+    /**
+     * Get 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+<li>SUCCESSFUL 通知成功</li>
+<li>FAILED 通知失败</li>
+<li>NONE</li> 
+     * @return NotificationResult 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+<li>SUCCESSFUL 通知成功</li>
+<li>FAILED 通知失败</li>
+<li>NONE</li>
      */
     public String getNotificationResult() {
         return this.NotificationResult;
     }
 
     /**
-     * Set 通知的结果，表示通知CMQ是否成功。
-     * @param NotificationResult 通知的结果，表示通知CMQ是否成功。
+     * Set 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+<li>SUCCESSFUL 通知成功</li>
+<li>FAILED 通知失败</li>
+<li>NONE</li>
+     * @param NotificationResult 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+<li>SUCCESSFUL 通知成功</li>
+<li>FAILED 通知失败</li>
+<li>NONE</li>
      */
     public void setNotificationResult(String NotificationResult) {
         this.NotificationResult = NotificationResult;
@@ -122,16 +206,48 @@ public class LifecycleActionResultInfo extends AbstractModel{
     }
 
     /**
-     * Get 结果的原因。 
-     * @return ResultReason 结果的原因。
+     * Get 结果的原因。<br>
+<li>HEARTBEAT_TIMEOUT 由于心跳超时，结果根据DefaultResult设置。</li>
+<li>NOTIFICATION_FAILURE 由于发送通知失败，结果根据DefaultResult设置。</li>
+<li>CALL_INTERFACE 调用了接口CompleteLifecycleAction设置结果。</li>
+<li>ANOTHER_ACTION_ABANDON 另一个生命周期操作的结果已设置为“ABANDON”。</li>
+<li>COMMAND_CALL_FAILURE  由于命令调用失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_FINISH  命令执行完成。</li>
+<li>COMMAND_EXEC_FAILURE 由于命令执行失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE 由于命令结果检查失败，结果根据DefaultResult设置。</li> 
+     * @return ResultReason 结果的原因。<br>
+<li>HEARTBEAT_TIMEOUT 由于心跳超时，结果根据DefaultResult设置。</li>
+<li>NOTIFICATION_FAILURE 由于发送通知失败，结果根据DefaultResult设置。</li>
+<li>CALL_INTERFACE 调用了接口CompleteLifecycleAction设置结果。</li>
+<li>ANOTHER_ACTION_ABANDON 另一个生命周期操作的结果已设置为“ABANDON”。</li>
+<li>COMMAND_CALL_FAILURE  由于命令调用失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_FINISH  命令执行完成。</li>
+<li>COMMAND_EXEC_FAILURE 由于命令执行失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE 由于命令结果检查失败，结果根据DefaultResult设置。</li>
      */
     public String getResultReason() {
         return this.ResultReason;
     }
 
     /**
-     * Set 结果的原因。
-     * @param ResultReason 结果的原因。
+     * Set 结果的原因。<br>
+<li>HEARTBEAT_TIMEOUT 由于心跳超时，结果根据DefaultResult设置。</li>
+<li>NOTIFICATION_FAILURE 由于发送通知失败，结果根据DefaultResult设置。</li>
+<li>CALL_INTERFACE 调用了接口CompleteLifecycleAction设置结果。</li>
+<li>ANOTHER_ACTION_ABANDON 另一个生命周期操作的结果已设置为“ABANDON”。</li>
+<li>COMMAND_CALL_FAILURE  由于命令调用失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_FINISH  命令执行完成。</li>
+<li>COMMAND_EXEC_FAILURE 由于命令执行失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE 由于命令结果检查失败，结果根据DefaultResult设置。</li>
+     * @param ResultReason 结果的原因。<br>
+<li>HEARTBEAT_TIMEOUT 由于心跳超时，结果根据DefaultResult设置。</li>
+<li>NOTIFICATION_FAILURE 由于发送通知失败，结果根据DefaultResult设置。</li>
+<li>CALL_INTERFACE 调用了接口CompleteLifecycleAction设置结果。</li>
+<li>ANOTHER_ACTION_ABANDON 另一个生命周期操作的结果已设置为“ABANDON”。</li>
+<li>COMMAND_CALL_FAILURE  由于命令调用失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_FINISH  命令执行完成。</li>
+<li>COMMAND_EXEC_FAILURE 由于命令执行失败，结果根据DefaultResult设置。</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE 由于命令结果检查失败，结果根据DefaultResult设置。</li>
      */
     public void setResultReason(String ResultReason) {
         this.ResultReason = ResultReason;
@@ -151,6 +267,12 @@ public class LifecycleActionResultInfo extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.InvocationId != null) {
+            this.InvocationId = new String(source.InvocationId);
+        }
+        if (source.InvokeCommandResult != null) {
+            this.InvokeCommandResult = new String(source.InvokeCommandResult);
+        }
         if (source.NotificationResult != null) {
             this.NotificationResult = new String(source.NotificationResult);
         }
@@ -169,6 +291,8 @@ public class LifecycleActionResultInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LifecycleHookId", this.LifecycleHookId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InvocationId", this.InvocationId);
+        this.setParamSimple(map, prefix + "InvokeCommandResult", this.InvokeCommandResult);
         this.setParamSimple(map, prefix + "NotificationResult", this.NotificationResult);
         this.setParamSimple(map, prefix + "LifecycleActionResult", this.LifecycleActionResult);
         this.setParamSimple(map, prefix + "ResultReason", this.ResultReason);

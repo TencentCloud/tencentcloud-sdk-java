@@ -149,6 +149,13 @@ public class CreateJobConfigRequest extends AbstractModel{
     private String LogLevel;
 
     /**
+    * Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+    */
+    @SerializedName("AutoRecover")
+    @Expose
+    private Long AutoRecover;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -436,6 +443,22 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.LogLevel = LogLevel;
     }
 
+    /**
+     * Get Oceanus 平台恢复作业开关 1:开启 -1: 关闭 
+     * @return AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     */
+    public Long getAutoRecover() {
+        return this.AutoRecover;
+    }
+
+    /**
+     * Set Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * @param AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     */
+    public void setAutoRecover(Long AutoRecover) {
+        this.AutoRecover = AutoRecover;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -504,6 +527,9 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.LogLevel != null) {
             this.LogLevel = new String(source.LogLevel);
         }
+        if (source.AutoRecover != null) {
+            this.AutoRecover = new Long(source.AutoRecover);
+        }
     }
 
 
@@ -529,6 +555,7 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
+        this.setParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
 
     }
 }
