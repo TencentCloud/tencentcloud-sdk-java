@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StorageParams extends AbstractModel{
 
     /**
-    * 第三方云存储的账号信息。
+    * 第三方云存储的账号信息（暂不支持）。
     */
     @SerializedName("CloudStorage")
     @Expose
@@ -37,16 +37,16 @@ public class StorageParams extends AbstractModel{
     private CloudVod CloudVod;
 
     /**
-     * Get 第三方云存储的账号信息。 
-     * @return CloudStorage 第三方云存储的账号信息。
+     * Get 第三方云存储的账号信息（暂不支持）。 
+     * @return CloudStorage 第三方云存储的账号信息（暂不支持）。
      */
     public CloudStorage getCloudStorage() {
         return this.CloudStorage;
     }
 
     /**
-     * Set 第三方云存储的账号信息。
-     * @param CloudStorage 第三方云存储的账号信息。
+     * Set 第三方云存储的账号信息（暂不支持）。
+     * @param CloudStorage 第三方云存储的账号信息（暂不支持）。
      */
     public void setCloudStorage(CloudStorage CloudStorage) {
         this.CloudStorage = CloudStorage;

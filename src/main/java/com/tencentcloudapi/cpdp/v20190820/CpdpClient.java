@@ -219,6 +219,46 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付结算申请接口
+     * @param req ApplyOpenBankSettleOrderRequest
+     * @return ApplyOpenBankSettleOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyOpenBankSettleOrderResponse ApplyOpenBankSettleOrder(ApplyOpenBankSettleOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyOpenBankSettleOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyOpenBankSettleOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyOpenBankSettleOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *子商户在线签约
+     * @param req ApplyOpenBankSubMerchantSignOnlineRequest
+     * @return ApplyOpenBankSubMerchantSignOnlineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyOpenBankSubMerchantSignOnlineResponse ApplyOpenBankSubMerchantSignOnline(ApplyOpenBankSubMerchantSignOnlineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyOpenBankSubMerchantSignOnlineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyOpenBankSubMerchantSignOnlineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyOpenBankSubMerchantSignOnline");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
      * @param req ApplyOutwardOrderRequest
      * @return ApplyOutwardOrderResponse
@@ -3050,6 +3090,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付结算单查询结果
+     * @param req QueryOpenBankSettleOrderRequest
+     * @return QueryOpenBankSettleOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankSettleOrderResponse QueryOpenBankSettleOrder(QueryOpenBankSettleOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankSettleOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankSettleOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankSettleOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *云企付-子商户资质文件查询
      * @param req QueryOpenBankSubMerchantCredentialRequest
      * @return QueryOpenBankSubMerchantCredentialResponse
@@ -3082,6 +3142,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryOpenBankSubMerchantRateConfigure");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *子商户在线签约查询
+     * @param req QueryOpenBankSubMerchantSignOnlineRequest
+     * @return QueryOpenBankSubMerchantSignOnlineResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankSubMerchantSignOnlineResponse QueryOpenBankSubMerchantSignOnline(QueryOpenBankSubMerchantSignOnlineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankSubMerchantSignOnlineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankSubMerchantSignOnlineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankSubMerchantSignOnline");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

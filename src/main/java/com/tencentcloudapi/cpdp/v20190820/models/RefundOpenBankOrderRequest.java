@@ -98,6 +98,13 @@ _不填默认为生产环境_
     private String Environment;
 
     /**
+    * 分账信息列表。
+    */
+    @SerializedName("ProfitShareInfoList")
+    @Expose
+    private OpenBankProfitShareInfo [] ProfitShareInfoList;
+
+    /**
      * Get 外部商户退款单号。 
      * @return OutRefundId 外部商户退款单号。
      */
@@ -277,6 +284,22 @@ _不填默认为生产环境_
         this.Environment = Environment;
     }
 
+    /**
+     * Get 分账信息列表。 
+     * @return ProfitShareInfoList 分账信息列表。
+     */
+    public OpenBankProfitShareInfo [] getProfitShareInfoList() {
+        return this.ProfitShareInfoList;
+    }
+
+    /**
+     * Set 分账信息列表。
+     * @param ProfitShareInfoList 分账信息列表。
+     */
+    public void setProfitShareInfoList(OpenBankProfitShareInfo [] ProfitShareInfoList) {
+        this.ProfitShareInfoList = ProfitShareInfoList;
+    }
+
     public RefundOpenBankOrderRequest() {
     }
 
@@ -315,6 +338,12 @@ _不填默认为生产环境_
         if (source.Environment != null) {
             this.Environment = new String(source.Environment);
         }
+        if (source.ProfitShareInfoList != null) {
+            this.ProfitShareInfoList = new OpenBankProfitShareInfo[source.ProfitShareInfoList.length];
+            for (int i = 0; i < source.ProfitShareInfoList.length; i++) {
+                this.ProfitShareInfoList[i] = new OpenBankProfitShareInfo(source.ProfitShareInfoList[i]);
+            }
+        }
     }
 
 
@@ -332,6 +361,7 @@ _不填默认为生产环境_
         this.setParamSimple(map, prefix + "ExternalRefundData", this.ExternalRefundData);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamArrayObj(map, prefix + "ProfitShareInfoList.", this.ProfitShareInfoList);
 
     }
 }

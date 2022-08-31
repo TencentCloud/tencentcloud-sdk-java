@@ -53,6 +53,14 @@ public class GetFileTranslateData extends AbstractModel{
     private String Message;
 
     /**
+    * 翻译进度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -124,6 +132,26 @@ public class GetFileTranslateData extends AbstractModel{
         this.Message = Message;
     }
 
+    /**
+     * Get 翻译进度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Progress 翻译进度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 翻译进度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Progress 翻译进度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public GetFileTranslateData() {
     }
 
@@ -144,6 +172,9 @@ public class GetFileTranslateData extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -155,6 +186,7 @@ public class GetFileTranslateData extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FileData", this.FileData);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

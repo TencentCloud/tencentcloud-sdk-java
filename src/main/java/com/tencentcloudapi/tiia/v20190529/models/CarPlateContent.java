@@ -55,6 +55,30 @@ public class CarPlateContent extends AbstractModel{
     private Coord [] PlateLocation;
 
     /**
+    * 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlateStatus")
+    @Expose
+    private String PlateStatus;
+
+    /**
+    * 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlateStatusConfidence")
+    @Expose
+    private Long PlateStatusConfidence;
+
+    /**
+    * 车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlateAngle")
+    @Expose
+    private Float PlateAngle;
+
+    /**
      * Get 车牌信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Plate 车牌信息。
@@ -134,6 +158,66 @@ public class CarPlateContent extends AbstractModel{
         this.PlateLocation = PlateLocation;
     }
 
+    /**
+     * Get 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlateStatus 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPlateStatus() {
+        return this.PlateStatus;
+    }
+
+    /**
+     * Set 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlateStatus 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlateStatus(String PlateStatus) {
+        this.PlateStatus = PlateStatus;
+    }
+
+    /**
+     * Get 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlateStatusConfidence 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPlateStatusConfidence() {
+        return this.PlateStatusConfidence;
+    }
+
+    /**
+     * Set 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlateStatusConfidence 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlateStatusConfidence(Long PlateStatusConfidence) {
+        this.PlateStatusConfidence = PlateStatusConfidence;
+    }
+
+    /**
+     * Get 车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlateAngle 车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getPlateAngle() {
+        return this.PlateAngle;
+    }
+
+    /**
+     * Set 车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlateAngle 车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlateAngle(Float PlateAngle) {
+        this.PlateAngle = PlateAngle;
+    }
+
     public CarPlateContent() {
     }
 
@@ -157,6 +241,15 @@ public class CarPlateContent extends AbstractModel{
                 this.PlateLocation[i] = new Coord(source.PlateLocation[i]);
             }
         }
+        if (source.PlateStatus != null) {
+            this.PlateStatus = new String(source.PlateStatus);
+        }
+        if (source.PlateStatusConfidence != null) {
+            this.PlateStatusConfidence = new Long(source.PlateStatusConfidence);
+        }
+        if (source.PlateAngle != null) {
+            this.PlateAngle = new Float(source.PlateAngle);
+        }
     }
 
 
@@ -168,6 +261,9 @@ public class CarPlateContent extends AbstractModel{
         this.setParamSimple(map, prefix + "Color", this.Color);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "PlateLocation.", this.PlateLocation);
+        this.setParamSimple(map, prefix + "PlateStatus", this.PlateStatus);
+        this.setParamSimple(map, prefix + "PlateStatusConfidence", this.PlateStatusConfidence);
+        this.setParamSimple(map, prefix + "PlateAngle", this.PlateAngle);
 
     }
 }

@@ -200,26 +200,6 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *创建独享集群DCDB实例
-     * @param req CreateDedicatedClusterDCDBInstanceRequest
-     * @return CreateDedicatedClusterDCDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDedicatedClusterDCDBInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建DCDB后付费实例
      * @param req CreateHourDCDBInstanceRequest
      * @return CreateHourDCDBInstanceResponse

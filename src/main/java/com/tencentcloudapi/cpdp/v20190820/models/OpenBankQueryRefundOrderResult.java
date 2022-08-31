@@ -111,6 +111,14 @@ public class OpenBankQueryRefundOrderResult extends AbstractModel{
     private String RefundMessage;
 
     /**
+    * 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProfitShareRespInfoList")
+    @Expose
+    private OpenBankProfitShareRespInfo [] ProfitShareRespInfoList;
+
+    /**
      * Get 外部商户退款单号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutRefundId 外部商户退款单号
@@ -330,6 +338,26 @@ public class OpenBankQueryRefundOrderResult extends AbstractModel{
         this.RefundMessage = RefundMessage;
     }
 
+    /**
+     * Get 分账信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProfitShareRespInfoList 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OpenBankProfitShareRespInfo [] getProfitShareRespInfoList() {
+        return this.ProfitShareRespInfoList;
+    }
+
+    /**
+     * Set 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProfitShareRespInfoList 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProfitShareRespInfoList(OpenBankProfitShareRespInfo [] ProfitShareRespInfoList) {
+        this.ProfitShareRespInfoList = ProfitShareRespInfoList;
+    }
+
     public OpenBankQueryRefundOrderResult() {
     }
 
@@ -371,6 +399,12 @@ public class OpenBankQueryRefundOrderResult extends AbstractModel{
         if (source.RefundMessage != null) {
             this.RefundMessage = new String(source.RefundMessage);
         }
+        if (source.ProfitShareRespInfoList != null) {
+            this.ProfitShareRespInfoList = new OpenBankProfitShareRespInfo[source.ProfitShareRespInfoList.length];
+            for (int i = 0; i < source.ProfitShareRespInfoList.length; i++) {
+                this.ProfitShareRespInfoList[i] = new OpenBankProfitShareRespInfo(source.ProfitShareRespInfoList[i]);
+            }
+        }
     }
 
 
@@ -389,6 +423,7 @@ public class OpenBankQueryRefundOrderResult extends AbstractModel{
         this.setParamSimple(map, prefix + "RefundInfo", this.RefundInfo);
         this.setParamSimple(map, prefix + "FeeAmount", this.FeeAmount);
         this.setParamSimple(map, prefix + "RefundMessage", this.RefundMessage);
+        this.setParamArrayObj(map, prefix + "ProfitShareRespInfoList.", this.ProfitShareRespInfoList);
 
     }
 }

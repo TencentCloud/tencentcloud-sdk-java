@@ -103,6 +103,14 @@ public class AlarmNotice extends AbstractModel{
     private String [] PolicyIds;
 
     /**
+    * 后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AMPConsumerId")
+    @Expose
+    private String AMPConsumerId;
+
+    /**
     * 推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -311,6 +319,26 @@ public class AlarmNotice extends AbstractModel{
     }
 
     /**
+     * Get 后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AMPConsumerId 后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAMPConsumerId() {
+        return this.AMPConsumerId;
+    }
+
+    /**
+     * Set 后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AMPConsumerId 后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAMPConsumerId(String AMPConsumerId) {
+        this.AMPConsumerId = AMPConsumerId;
+    }
+
+    /**
      * Get 推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CLSNotices 推送cls渠道
@@ -377,6 +405,9 @@ public class AlarmNotice extends AbstractModel{
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.AMPConsumerId != null) {
+            this.AMPConsumerId = new String(source.AMPConsumerId);
+        }
         if (source.CLSNotices != null) {
             this.CLSNotices = new CLSNotice[source.CLSNotices.length];
             for (int i = 0; i < source.CLSNotices.length; i++) {
@@ -400,6 +431,7 @@ public class AlarmNotice extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPreset", this.IsPreset);
         this.setParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamSimple(map, prefix + "AMPConsumerId", this.AMPConsumerId);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
 
     }

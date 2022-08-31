@@ -104,6 +104,22 @@ public class CarTagItem extends AbstractModel{
     private Long ColorConfidence;
 
     /**
+    * 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Orientation")
+    @Expose
+    private String Orientation;
+
+    /**
+    * 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrientationConfidence")
+    @Expose
+    private Long OrientationConfidence;
+
+    /**
      * Get 车系 
      * @return Serial 车系
      */
@@ -295,6 +311,46 @@ public class CarTagItem extends AbstractModel{
         this.ColorConfidence = ColorConfidence;
     }
 
+    /**
+     * Get 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Orientation 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrientation() {
+        return this.Orientation;
+    }
+
+    /**
+     * Set 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Orientation 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrientation(String Orientation) {
+        this.Orientation = Orientation;
+    }
+
+    /**
+     * Get 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrientationConfidence 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOrientationConfidence() {
+        return this.OrientationConfidence;
+    }
+
+    /**
+     * Set 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrientationConfidence 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrientationConfidence(Long OrientationConfidence) {
+        this.OrientationConfidence = OrientationConfidence;
+    }
+
     public CarTagItem() {
     }
 
@@ -339,6 +395,12 @@ public class CarTagItem extends AbstractModel{
         if (source.ColorConfidence != null) {
             this.ColorConfidence = new Long(source.ColorConfidence);
         }
+        if (source.Orientation != null) {
+            this.Orientation = new String(source.Orientation);
+        }
+        if (source.OrientationConfidence != null) {
+            this.OrientationConfidence = new Long(source.OrientationConfidence);
+        }
     }
 
 
@@ -357,6 +419,8 @@ public class CarTagItem extends AbstractModel{
         this.setParamSimple(map, prefix + "PlateConfidence", this.PlateConfidence);
         this.setParamSimple(map, prefix + "TypeConfidence", this.TypeConfidence);
         this.setParamSimple(map, prefix + "ColorConfidence", this.ColorConfidence);
+        this.setParamSimple(map, prefix + "Orientation", this.Orientation);
+        this.setParamSimple(map, prefix + "OrientationConfidence", this.OrientationConfidence);
 
     }
 }

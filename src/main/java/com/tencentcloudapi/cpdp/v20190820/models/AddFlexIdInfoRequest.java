@@ -57,6 +57,13 @@ __test__:测试环境
     private String Environment;
 
     /**
+    * 姓名
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 证件类型
 0:身份证
 1:社会信用代码 
@@ -144,6 +151,22 @@ __test__:测试环境
         this.Environment = Environment;
     }
 
+    /**
+     * Get 姓名 
+     * @return Name 姓名
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 姓名
+     * @param Name 姓名
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public AddFlexIdInfoRequest() {
     }
 
@@ -164,6 +187,9 @@ __test__:测试环境
         if (source.Environment != null) {
             this.Environment = new String(source.Environment);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -175,6 +201,7 @@ __test__:测试环境
         this.setParamSimple(map, prefix + "IdNo", this.IdNo);
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

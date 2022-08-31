@@ -151,6 +151,14 @@ OPENBANK_PAYMENT
     private Long FeeRate;
 
     /**
+    * 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProfitShareRespInfoList")
+    @Expose
+    private OpenBankProfitShareRespInfo [] ProfitShareRespInfoList;
+
+    /**
      * Get 渠道商户号。外部接入平台入驻云企付平台下发 
      * @return ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发
      */
@@ -470,6 +478,26 @@ OPENBANK_PAYMENT
         this.FeeRate = FeeRate;
     }
 
+    /**
+     * Get 分账信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProfitShareRespInfoList 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OpenBankProfitShareRespInfo [] getProfitShareRespInfoList() {
+        return this.ProfitShareRespInfoList;
+    }
+
+    /**
+     * Set 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProfitShareRespInfoList 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProfitShareRespInfoList(OpenBankProfitShareRespInfo [] ProfitShareRespInfoList) {
+        this.ProfitShareRespInfoList = ProfitShareRespInfoList;
+    }
+
     public QueryOpenBankPaymentOrderResult() {
     }
 
@@ -526,6 +554,12 @@ OPENBANK_PAYMENT
         if (source.FeeRate != null) {
             this.FeeRate = new Long(source.FeeRate);
         }
+        if (source.ProfitShareRespInfoList != null) {
+            this.ProfitShareRespInfoList = new OpenBankProfitShareRespInfo[source.ProfitShareRespInfoList.length];
+            for (int i = 0; i < source.ProfitShareRespInfoList.length; i++) {
+                this.ProfitShareRespInfoList[i] = new OpenBankProfitShareRespInfo(source.ProfitShareRespInfoList[i]);
+            }
+        }
     }
 
 
@@ -549,6 +583,7 @@ OPENBANK_PAYMENT
         this.setParamObj(map, prefix + "BankApprovalGuideInfo.", this.BankApprovalGuideInfo);
         this.setParamSimple(map, prefix + "FeeAmount", this.FeeAmount);
         this.setParamSimple(map, prefix + "FeeRate", this.FeeRate);
+        this.setParamArrayObj(map, prefix + "ProfitShareRespInfoList.", this.ProfitShareRespInfoList);
 
     }
 }

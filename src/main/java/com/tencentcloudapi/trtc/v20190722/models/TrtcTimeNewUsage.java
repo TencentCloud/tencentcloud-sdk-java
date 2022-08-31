@@ -37,35 +37,35 @@ public class TrtcTimeNewUsage extends AbstractModel{
     private Long VoiceUserNum;
 
     /**
-    * 音视频通话时长。单位：秒。
+    * 音视频通话收费时长。单位：秒。
     */
     @SerializedName("VideoTime")
     @Expose
     private Long VideoTime;
 
     /**
-    * 标清视频通话时长。单位：秒。
+    * 标清视频通话收费时长。单位：秒。
     */
     @SerializedName("Class1VideoTime")
     @Expose
     private Long Class1VideoTime;
 
     /**
-    * 高清视频通话时长。单位：秒。
+    * 高清视频通话收费时长。单位：秒。
     */
     @SerializedName("Class2VideoTime")
     @Expose
     private Long Class2VideoTime;
 
     /**
-    * 超高清视频通话时长。单位：秒。
+    * 超高清视频通话收费时长。单位：秒。
     */
     @SerializedName("Class3VideoTime")
     @Expose
     private Long Class3VideoTime;
 
     /**
-    * 音频通话时长。单位：秒。
+    * 音频通话收费时长。单位：秒。
     */
     @SerializedName("AudioTime")
     @Expose
@@ -79,14 +79,14 @@ public class TrtcTimeNewUsage extends AbstractModel{
     private Float Bandwidth;
 
     /**
-    * 2k视频通话时长。单位：秒。
+    * 2k视频通话收费时长。单位：秒。
     */
     @SerializedName("Video2KTime")
     @Expose
     private Long Video2KTime;
 
     /**
-    * 4k视频通话时长。单位：秒。
+    * 4k视频通话收费时长。单位：秒。
     */
     @SerializedName("Video4KTime")
     @Expose
@@ -125,80 +125,80 @@ public class TrtcTimeNewUsage extends AbstractModel{
     }
 
     /**
-     * Get 音视频通话时长。单位：秒。 
-     * @return VideoTime 音视频通话时长。单位：秒。
+     * Get 音视频通话收费时长。单位：秒。 
+     * @return VideoTime 音视频通话收费时长。单位：秒。
      */
     public Long getVideoTime() {
         return this.VideoTime;
     }
 
     /**
-     * Set 音视频通话时长。单位：秒。
-     * @param VideoTime 音视频通话时长。单位：秒。
+     * Set 音视频通话收费时长。单位：秒。
+     * @param VideoTime 音视频通话收费时长。单位：秒。
      */
     public void setVideoTime(Long VideoTime) {
         this.VideoTime = VideoTime;
     }
 
     /**
-     * Get 标清视频通话时长。单位：秒。 
-     * @return Class1VideoTime 标清视频通话时长。单位：秒。
+     * Get 标清视频通话收费时长。单位：秒。 
+     * @return Class1VideoTime 标清视频通话收费时长。单位：秒。
      */
     public Long getClass1VideoTime() {
         return this.Class1VideoTime;
     }
 
     /**
-     * Set 标清视频通话时长。单位：秒。
-     * @param Class1VideoTime 标清视频通话时长。单位：秒。
+     * Set 标清视频通话收费时长。单位：秒。
+     * @param Class1VideoTime 标清视频通话收费时长。单位：秒。
      */
     public void setClass1VideoTime(Long Class1VideoTime) {
         this.Class1VideoTime = Class1VideoTime;
     }
 
     /**
-     * Get 高清视频通话时长。单位：秒。 
-     * @return Class2VideoTime 高清视频通话时长。单位：秒。
+     * Get 高清视频通话收费时长。单位：秒。 
+     * @return Class2VideoTime 高清视频通话收费时长。单位：秒。
      */
     public Long getClass2VideoTime() {
         return this.Class2VideoTime;
     }
 
     /**
-     * Set 高清视频通话时长。单位：秒。
-     * @param Class2VideoTime 高清视频通话时长。单位：秒。
+     * Set 高清视频通话收费时长。单位：秒。
+     * @param Class2VideoTime 高清视频通话收费时长。单位：秒。
      */
     public void setClass2VideoTime(Long Class2VideoTime) {
         this.Class2VideoTime = Class2VideoTime;
     }
 
     /**
-     * Get 超高清视频通话时长。单位：秒。 
-     * @return Class3VideoTime 超高清视频通话时长。单位：秒。
+     * Get 超高清视频通话收费时长。单位：秒。 
+     * @return Class3VideoTime 超高清视频通话收费时长。单位：秒。
      */
     public Long getClass3VideoTime() {
         return this.Class3VideoTime;
     }
 
     /**
-     * Set 超高清视频通话时长。单位：秒。
-     * @param Class3VideoTime 超高清视频通话时长。单位：秒。
+     * Set 超高清视频通话收费时长。单位：秒。
+     * @param Class3VideoTime 超高清视频通话收费时长。单位：秒。
      */
     public void setClass3VideoTime(Long Class3VideoTime) {
         this.Class3VideoTime = Class3VideoTime;
     }
 
     /**
-     * Get 音频通话时长。单位：秒。 
-     * @return AudioTime 音频通话时长。单位：秒。
+     * Get 音频通话收费时长。单位：秒。 
+     * @return AudioTime 音频通话收费时长。单位：秒。
      */
     public Long getAudioTime() {
         return this.AudioTime;
     }
 
     /**
-     * Set 音频通话时长。单位：秒。
-     * @param AudioTime 音频通话时长。单位：秒。
+     * Set 音频通话收费时长。单位：秒。
+     * @param AudioTime 音频通话收费时长。单位：秒。
      */
     public void setAudioTime(Long AudioTime) {
         this.AudioTime = AudioTime;
@@ -221,32 +221,32 @@ public class TrtcTimeNewUsage extends AbstractModel{
     }
 
     /**
-     * Get 2k视频通话时长。单位：秒。 
-     * @return Video2KTime 2k视频通话时长。单位：秒。
+     * Get 2k视频通话收费时长。单位：秒。 
+     * @return Video2KTime 2k视频通话收费时长。单位：秒。
      */
     public Long getVideo2KTime() {
         return this.Video2KTime;
     }
 
     /**
-     * Set 2k视频通话时长。单位：秒。
-     * @param Video2KTime 2k视频通话时长。单位：秒。
+     * Set 2k视频通话收费时长。单位：秒。
+     * @param Video2KTime 2k视频通话收费时长。单位：秒。
      */
     public void setVideo2KTime(Long Video2KTime) {
         this.Video2KTime = Video2KTime;
     }
 
     /**
-     * Get 4k视频通话时长。单位：秒。 
-     * @return Video4KTime 4k视频通话时长。单位：秒。
+     * Get 4k视频通话收费时长。单位：秒。 
+     * @return Video4KTime 4k视频通话收费时长。单位：秒。
      */
     public Long getVideo4KTime() {
         return this.Video4KTime;
     }
 
     /**
-     * Set 4k视频通话时长。单位：秒。
-     * @param Video4KTime 4k视频通话时长。单位：秒。
+     * Set 4k视频通话收费时长。单位：秒。
+     * @param Video4KTime 4k视频通话收费时长。单位：秒。
      */
     public void setVideo4KTime(Long Video4KTime) {
         this.Video4KTime = Video4KTime;

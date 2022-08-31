@@ -1421,7 +1421,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *获取L7转发规则健康检查异常结果
+     *获取L7转发规则健康检查异常结果列表
      * @param req DescribeNewL7RulesErrHealthRequest
      * @return DescribeNewL7RulesErrHealthResponse
      * @throws TencentCloudSDKException
