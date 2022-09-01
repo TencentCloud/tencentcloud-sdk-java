@@ -86,6 +86,20 @@ public class CreateTraceDataRequest extends AbstractModel{
     private TraceItem [] TraceItems;
 
     /**
+    * 溯源状态 0: 无效, 1: 有效
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 环节数据
+    */
+    @SerializedName("PhaseData")
+    @Expose
+    private PhaseData PhaseData;
+
+    /**
      * Get 企业ID 
      * @return CorpId 企业ID
      */
@@ -229,6 +243,38 @@ public class CreateTraceDataRequest extends AbstractModel{
         this.TraceItems = TraceItems;
     }
 
+    /**
+     * Get 溯源状态 0: 无效, 1: 有效 
+     * @return Status 溯源状态 0: 无效, 1: 有效
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 溯源状态 0: 无效, 1: 有效
+     * @param Status 溯源状态 0: 无效, 1: 有效
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 环节数据 
+     * @return PhaseData 环节数据
+     */
+    public PhaseData getPhaseData() {
+        return this.PhaseData;
+    }
+
+    /**
+     * Set 环节数据
+     * @param PhaseData 环节数据
+     */
+    public void setPhaseData(PhaseData PhaseData) {
+        this.PhaseData = PhaseData;
+    }
+
     public CreateTraceDataRequest() {
     }
 
@@ -267,6 +313,12 @@ public class CreateTraceDataRequest extends AbstractModel{
                 this.TraceItems[i] = new TraceItem(source.TraceItems[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.PhaseData != null) {
+            this.PhaseData = new PhaseData(source.PhaseData);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class CreateTraceDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "TraceId", this.TraceId);
         this.setParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "PhaseData.", this.PhaseData);
 
     }
 }

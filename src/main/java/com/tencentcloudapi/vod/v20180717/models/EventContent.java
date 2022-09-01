@@ -40,7 +40,8 @@ public class EventContent extends AbstractModel{
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -181,6 +182,14 @@ public class EventContent extends AbstractModel{
     private RestoreMediaTask RestoreMediaCompleteEvent;
 
     /**
+    * 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReviewAudioVideoCompleteEvent")
+    @Expose
+    private ReviewAudioVideoTask ReviewAudioVideoCompleteEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -207,7 +216,8 @@ public class EventContent extends AbstractModel{
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -224,7 +234,8 @@ public class EventContent extends AbstractModel{
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -247,7 +258,8 @@ public class EventContent extends AbstractModel{
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -264,7 +276,8 @@ public class EventContent extends AbstractModel{
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -596,6 +609,26 @@ public class EventContent extends AbstractModel{
         this.RestoreMediaCompleteEvent = RestoreMediaCompleteEvent;
     }
 
+    /**
+     * Get 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() {
+        return this.ReviewAudioVideoCompleteEvent;
+    }
+
+    /**
+     * Set 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask ReviewAudioVideoCompleteEvent) {
+        this.ReviewAudioVideoCompleteEvent = ReviewAudioVideoCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -658,6 +691,9 @@ public class EventContent extends AbstractModel{
         if (source.RestoreMediaCompleteEvent != null) {
             this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
         }
+        if (source.ReviewAudioVideoCompleteEvent != null) {
+            this.ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask(source.ReviewAudioVideoCompleteEvent);
+        }
     }
 
 
@@ -683,6 +719,7 @@ public class EventContent extends AbstractModel{
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
         this.setParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+        this.setParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
 
     }
 }

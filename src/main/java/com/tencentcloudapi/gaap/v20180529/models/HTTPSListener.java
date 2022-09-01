@@ -126,6 +126,17 @@ public class HTTPSListener extends AbstractModel{
     private CertificateAliasInfo [] PolyClientCertificateAliasInfo;
 
     /**
+    * 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -381,6 +392,38 @@ public class HTTPSListener extends AbstractModel{
         this.PolyClientCertificateAliasInfo = PolyClientCertificateAliasInfo;
     }
 
+    /**
+     * Get 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Http3Supported 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Http3Supported 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public HTTPSListener() {
     }
 
@@ -431,6 +474,9 @@ public class HTTPSListener extends AbstractModel{
                 this.PolyClientCertificateAliasInfo[i] = new CertificateAliasInfo(source.PolyClientCertificateAliasInfo[i]);
             }
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -451,6 +497,7 @@ public class HTTPSListener extends AbstractModel{
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ClientCertificateAlias", this.ClientCertificateAlias);
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

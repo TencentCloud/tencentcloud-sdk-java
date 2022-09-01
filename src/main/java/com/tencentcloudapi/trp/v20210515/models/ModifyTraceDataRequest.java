@@ -128,11 +128,18 @@ public class ModifyTraceDataRequest extends AbstractModel{
     private Long CorpId;
 
     /**
-    * [无效] 溯源状态
+    * 溯源状态 0: 无效, 1: 有效
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * 环节数据
+    */
+    @SerializedName("PhaseData")
+    @Expose
+    private PhaseData PhaseData;
 
     /**
      * Get 溯源ID 
@@ -375,19 +382,35 @@ public class ModifyTraceDataRequest extends AbstractModel{
     }
 
     /**
-     * Get [无效] 溯源状态 
-     * @return Status [无效] 溯源状态
+     * Get 溯源状态 0: 无效, 1: 有效 
+     * @return Status 溯源状态 0: 无效, 1: 有效
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set [无效] 溯源状态
-     * @param Status [无效] 溯源状态
+     * Set 溯源状态 0: 无效, 1: 有效
+     * @param Status 溯源状态 0: 无效, 1: 有效
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 环节数据 
+     * @return PhaseData 环节数据
+     */
+    public PhaseData getPhaseData() {
+        return this.PhaseData;
+    }
+
+    /**
+     * Set 环节数据
+     * @param PhaseData 环节数据
+     */
+    public void setPhaseData(PhaseData PhaseData) {
+        this.PhaseData = PhaseData;
     }
 
     public ModifyTraceDataRequest() {
@@ -449,6 +472,9 @@ public class ModifyTraceDataRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.PhaseData != null) {
+            this.PhaseData = new PhaseData(source.PhaseData);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class ModifyTraceDataRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ChainData.", this.ChainData);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "PhaseData.", this.PhaseData);
 
     }
 }

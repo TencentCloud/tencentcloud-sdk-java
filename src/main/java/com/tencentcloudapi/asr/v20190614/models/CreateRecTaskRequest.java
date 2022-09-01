@@ -123,14 +123,14 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long FilterDirty;
 
     /**
-    * 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+    * 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
     */
     @SerializedName("HotwordId")
     @Expose
     private String HotwordId;
 
     /**
-    * 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+    * 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
     */
     @SerializedName("CustomizationId")
     @Expose
@@ -414,32 +414,32 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。 
-     * @return HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+     * Get 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。 
+     * @return HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
      */
     public String getHotwordId() {
         return this.HotwordId;
     }
 
     /**
-     * Set 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
-     * @param HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+     * Set 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+     * @param HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
      */
     public void setHotwordId(String HotwordId) {
         this.HotwordId = HotwordId;
     }
 
     /**
-     * Get 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。 
-     * @return CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * Get 自学习模型 id。如设置了该参数，将生效对应的自学习模型。 
+     * @return CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      */
     public String getCustomizationId() {
         return this.CustomizationId;
     }
 
     /**
-     * Set 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
-     * @param CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * Set 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+     * @param CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      */
     public void setCustomizationId(String CustomizationId) {
         this.CustomizationId = CustomizationId;

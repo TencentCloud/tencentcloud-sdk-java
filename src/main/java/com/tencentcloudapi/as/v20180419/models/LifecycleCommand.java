@@ -39,7 +39,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     */
     @SerializedName("Parameters")
     @Expose
-    private String [] Parameters;
+    private String Parameters;
 
     /**
      * Get 远程命令ID。若选择执行命令，则此项必填。
@@ -73,7 +73,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getParameters() {
+    public String getParameters() {
         return this.Parameters;
     }
 
@@ -89,7 +89,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setParameters(String [] Parameters) {
+    public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
@@ -105,10 +105,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
             this.CommandId = new String(source.CommandId);
         }
         if (source.Parameters != null) {
-            this.Parameters = new String[source.Parameters.length];
-            for (int i = 0; i < source.Parameters.length; i++) {
-                this.Parameters[i] = new String(source.Parameters[i]);
-            }
+            this.Parameters = new String(source.Parameters);
         }
     }
 
@@ -118,7 +115,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CommandId", this.CommandId);
-        this.setParamArraySimple(map, prefix + "Parameters.", this.Parameters);
+        this.setParamSimple(map, prefix + "Parameters", this.Parameters);
 
     }
 }

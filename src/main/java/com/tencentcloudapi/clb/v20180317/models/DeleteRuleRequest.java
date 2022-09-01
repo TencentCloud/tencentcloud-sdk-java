@@ -44,14 +44,14 @@ public class DeleteRuleRequest extends AbstractModel{
     private String [] LocationIds;
 
     /**
-    * 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
+    * 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
+    * 要删除的转发规则的转发路径。
     */
     @SerializedName("Url")
     @Expose
@@ -113,32 +113,32 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。 
-     * @return Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
+     * Get 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。 
+     * @return Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
-     * @param Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
+     * Set 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。
+     * @param Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。 
-     * @return Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
+     * Get 要删除的转发规则的转发路径。 
+     * @return Url 要删除的转发规则的转发路径。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
-     * @param Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
+     * Set 要删除的转发规则的转发路径。
+     * @param Url 要删除的转发规则的转发路径。
      */
     public void setUrl(String Url) {
         this.Url = Url;

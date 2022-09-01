@@ -71,6 +71,14 @@ public class TraceItem extends AbstractModel{
     private String [] Values;
 
     /**
+    * 类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Key")
+    @Expose
+    private String Key;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -190,6 +198,26 @@ public class TraceItem extends AbstractModel{
         this.Values = Values;
     }
 
+    /**
+     * Get 类型标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Key 类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKey() {
+        return this.Key;
+    }
+
+    /**
+     * Set 类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Key 类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKey(String Key) {
+        this.Key = Key;
+    }
+
     public TraceItem() {
     }
 
@@ -219,6 +247,9 @@ public class TraceItem extends AbstractModel{
                 this.Values[i] = new String(source.Values[i]);
             }
         }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
     }
 
 
@@ -232,6 +263,7 @@ public class TraceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "Key", this.Key);
 
     }
 }

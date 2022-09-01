@@ -51,7 +51,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String [] FileIds;
 
     /**
-    * 签署文件中的控件，如：填写控件等
+    * 签署文件中的发起方的填写控件，需要在发起的时候进行填充
     */
     @SerializedName("Components")
     @Expose
@@ -185,16 +185,16 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 签署文件中的控件，如：填写控件等 
-     * @return Components 签署文件中的控件，如：填写控件等
+     * Get 签署文件中的发起方的填写控件，需要在发起的时候进行填充 
+     * @return Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      */
     public Component [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 签署文件中的控件，如：填写控件等
-     * @param Components 签署文件中的控件，如：填写控件等
+     * Set 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+     * @param Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

@@ -32,7 +32,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>RemoveWatermarkTask：智能去除水印任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务；</li>
+<li> ReviewAudioVideo：音视频审核任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -174,6 +175,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
+    * 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReviewAudioVideoTask")
+    @Expose
+    private ReviewAudioVideoTask ReviewAudioVideoTask;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -190,7 +199,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>RemoveWatermarkTask：智能去除水印任务。</li> 
+<li>RemoveWatermarkTask：智能去除水印任务；</li>
+<li> ReviewAudioVideo：音视频审核任务。</li> 
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -200,7 +210,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>RemoveWatermarkTask：智能去除水印任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务；</li>
+<li> ReviewAudioVideo：音视频审核任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -216,7 +227,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>RemoveWatermarkTask：智能去除水印任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务；</li>
+<li> ReviewAudioVideo：音视频审核任务。</li>
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -226,7 +238,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>RemoveWatermarkTask：智能去除水印任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务；</li>
+<li> ReviewAudioVideo：音视频审核任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -569,6 +582,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReviewAudioVideoTask getReviewAudioVideoTask() {
+        return this.ReviewAudioVideoTask;
+    }
+
+    /**
+     * Set 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
+        this.ReviewAudioVideoTask = ReviewAudioVideoTask;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -646,6 +679,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.RemoveWatermarkTask != null) {
             this.RemoveWatermarkTask = new RemoveWatermarkTask(source.RemoveWatermarkTask);
         }
+        if (source.ReviewAudioVideoTask != null) {
+            this.ReviewAudioVideoTask = new ReviewAudioVideoTask(source.ReviewAudioVideoTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -674,6 +710,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+        this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
