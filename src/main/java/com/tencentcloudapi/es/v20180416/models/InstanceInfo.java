@@ -616,6 +616,14 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean AutoIndexEnabled;
 
     /**
+    * 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableHybridStorage")
+    @Expose
+    private Boolean EnableHybridStorage;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2051,6 +2059,26 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.AutoIndexEnabled = AutoIndexEnabled;
     }
 
+    /**
+     * Get 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableHybridStorage 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableHybridStorage() {
+        return this.EnableHybridStorage;
+    }
+
+    /**
+     * Set 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableHybridStorage 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableHybridStorage(Boolean EnableHybridStorage) {
+        this.EnableHybridStorage = EnableHybridStorage;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2311,6 +2339,9 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.AutoIndexEnabled != null) {
             this.AutoIndexEnabled = new Boolean(source.AutoIndexEnabled);
         }
+        if (source.EnableHybridStorage != null) {
+            this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
+        }
     }
 
 
@@ -2396,6 +2427,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         this.setParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
         this.setParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
+        this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
 
     }
 }

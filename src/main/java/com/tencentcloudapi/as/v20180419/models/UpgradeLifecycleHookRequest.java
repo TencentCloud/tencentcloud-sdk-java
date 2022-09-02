@@ -58,14 +58,14 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private Long HeartbeatTimeout;
 
     /**
-    * 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
+    * 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串""
     */
     @SerializedName("NotificationMetadata")
     @Expose
     private String NotificationMetadata;
 
     /**
-    * 通知目标
+    * 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
     */
     @SerializedName("NotificationTarget")
     @Expose
@@ -77,6 +77,13 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     @SerializedName("LifecycleTransitionType")
     @Expose
     private String LifecycleTransitionType;
+
+    /**
+    * 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+    */
+    @SerializedName("LifecycleCommand")
+    @Expose
+    private LifecycleCommand LifecycleCommand;
 
     /**
      * Get 生命周期挂钩ID 
@@ -159,32 +166,32 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
-     * Get 弹性伸缩向通知目标发送的附加信息，默认值为空字符串"" 
-     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
+     * Get 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串"" 
+     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串""
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
-     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
+     * Set 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串""
+     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串""
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;
     }
 
     /**
-     * Get 通知目标 
-     * @return NotificationTarget 通知目标
+     * Get 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。 
+     * @return NotificationTarget 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
      */
     public NotificationTarget getNotificationTarget() {
         return this.NotificationTarget;
     }
 
     /**
-     * Set 通知目标
-     * @param NotificationTarget 通知目标
+     * Set 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     * @param NotificationTarget 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
      */
     public void setNotificationTarget(NotificationTarget NotificationTarget) {
         this.NotificationTarget = NotificationTarget;
@@ -204,6 +211,22 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
      */
     public void setLifecycleTransitionType(String LifecycleTransitionType) {
         this.LifecycleTransitionType = LifecycleTransitionType;
+    }
+
+    /**
+     * Get 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。 
+     * @return LifecycleCommand 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     */
+    public LifecycleCommand getLifecycleCommand() {
+        return this.LifecycleCommand;
+    }
+
+    /**
+     * Set 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     * @param LifecycleCommand 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     */
+    public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
+        this.LifecycleCommand = LifecycleCommand;
     }
 
     public UpgradeLifecycleHookRequest() {
@@ -238,6 +261,9 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         if (source.LifecycleTransitionType != null) {
             this.LifecycleTransitionType = new String(source.LifecycleTransitionType);
         }
+        if (source.LifecycleCommand != null) {
+            this.LifecycleCommand = new LifecycleCommand(source.LifecycleCommand);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
         this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+        this.setParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
 
     }
 }

@@ -95,6 +95,17 @@ public class ProductInstance extends AbstractModel{
     private String RefundStatus;
 
     /**
+    * 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
+    */
+    @SerializedName("RenewStatus")
+    @Expose
+    private String RenewStatus;
+
+    /**
      * Get 预付费商品实例类型，取值有：
 <li>StarterPackage：点播新手包。</li>
 <li>MiniProgramPlugin：点播小程序插件。</li>
@@ -274,6 +285,38 @@ public class ProductInstance extends AbstractModel{
         this.RefundStatus = RefundStatus;
     }
 
+    /**
+     * Get 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li> 
+     * @return RenewStatus 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
+     */
+    public String getRenewStatus() {
+        return this.RenewStatus;
+    }
+
+    /**
+     * Set 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
+     * @param RenewStatus 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
+     */
+    public void setRenewStatus(String RenewStatus) {
+        this.RenewStatus = RenewStatus;
+    }
+
     public ProductInstance() {
     }
 
@@ -312,6 +355,9 @@ public class ProductInstance extends AbstractModel{
         if (source.RefundStatus != null) {
             this.RefundStatus = new String(source.RefundStatus);
         }
+        if (source.RenewStatus != null) {
+            this.RenewStatus = new String(source.RenewStatus);
+        }
     }
 
 
@@ -328,6 +374,7 @@ public class ProductInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ProductInstanceResourceSet.", this.ProductInstanceResourceSet);
         this.setParamSimple(map, prefix + "ProductInstanceStatus", this.ProductInstanceStatus);
         this.setParamSimple(map, prefix + "RefundStatus", this.RefundStatus);
+        this.setParamSimple(map, prefix + "RenewStatus", this.RenewStatus);
 
     }
 }

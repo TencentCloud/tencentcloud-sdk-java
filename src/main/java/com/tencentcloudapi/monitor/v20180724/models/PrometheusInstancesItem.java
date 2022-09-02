@@ -271,6 +271,22 @@ public class PrometheusInstancesItem extends AbstractModel{
     private String GrafanaInstanceId;
 
     /**
+    * 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlertRuleLimit")
+    @Expose
+    private Long AlertRuleLimit;
+
+    /**
+    * 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordingRuleLimit")
+    @Expose
+    private Long RecordingRuleLimit;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -938,6 +954,46 @@ public class PrometheusInstancesItem extends AbstractModel{
         this.GrafanaInstanceId = GrafanaInstanceId;
     }
 
+    /**
+     * Get 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlertRuleLimit 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlertRuleLimit() {
+        return this.AlertRuleLimit;
+    }
+
+    /**
+     * Set 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlertRuleLimit 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlertRuleLimit(Long AlertRuleLimit) {
+        this.AlertRuleLimit = AlertRuleLimit;
+    }
+
+    /**
+     * Get 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordingRuleLimit 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecordingRuleLimit() {
+        return this.RecordingRuleLimit;
+    }
+
+    /**
+     * Set 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordingRuleLimit 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordingRuleLimit(Long RecordingRuleLimit) {
+        this.RecordingRuleLimit = RecordingRuleLimit;
+    }
+
     public PrometheusInstancesItem() {
     }
 
@@ -1030,6 +1086,12 @@ public class PrometheusInstancesItem extends AbstractModel{
         if (source.GrafanaInstanceId != null) {
             this.GrafanaInstanceId = new String(source.GrafanaInstanceId);
         }
+        if (source.AlertRuleLimit != null) {
+            this.AlertRuleLimit = new Long(source.AlertRuleLimit);
+        }
+        if (source.RecordingRuleLimit != null) {
+            this.RecordingRuleLimit = new Long(source.RecordingRuleLimit);
+        }
     }
 
 
@@ -1064,6 +1126,8 @@ public class PrometheusInstancesItem extends AbstractModel{
         this.setParamSimple(map, prefix + "GrafanaIpWhiteList", this.GrafanaIpWhiteList);
         this.setParamObj(map, prefix + "Grant.", this.Grant);
         this.setParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
+        this.setParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
+        this.setParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
 
     }
 }

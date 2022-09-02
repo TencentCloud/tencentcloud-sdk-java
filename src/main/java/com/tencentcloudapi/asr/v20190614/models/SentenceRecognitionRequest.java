@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SentenceRecognitionRequest extends AbstractModel{
 
     /**
-    * 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+    * 腾讯云项目 ID，废弃参数，默认填写0即可。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -47,7 +47,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -68,7 +67,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private String VoiceFormat;
 
     /**
-    * 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+    * 用户端对此任务的唯一标识。废弃参数，忽略即可。
     */
     @SerializedName("UsrAudioKey")
     @Expose
@@ -96,11 +95,11 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long DataLen;
 
     /**
-    * 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+    * 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
     */
-    @SerializedName("HotwordId")
+    @SerializedName("WordInfo")
     @Expose
-    private String HotwordId;
+    private Long WordInfo;
 
     /**
     * 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -131,23 +130,30 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long ConvertNumMode;
 
     /**
-    * 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+    * 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
     */
-    @SerializedName("WordInfo")
+    @SerializedName("HotwordId")
     @Expose
-    private Long WordInfo;
+    private String HotwordId;
 
     /**
-     * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
-     * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+    * 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+    */
+    @SerializedName("CustomizationId")
+    @Expose
+    private String CustomizationId;
+
+    /**
+     * Get 腾讯云项目 ID，废弃参数，默认填写0即可。 
+     * @return ProjectId 腾讯云项目 ID，废弃参数，默认填写0即可。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
-     * @param ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * Set 腾讯云项目 ID，废弃参数，默认填写0即可。
+     * @param ProjectId 腾讯云项目 ID，废弃参数，默认填写0即可。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -179,8 +185,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
-• 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。 
+• 16k_zh_medical：16k 医疗； 
      * @return EngSerViceType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -191,7 +196,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
      */
     public String getEngSerViceType() {
         return this.EngSerViceType;
@@ -208,7 +212,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
      * @param EngSerViceType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -219,7 +222,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
      */
     public void setEngSerViceType(String EngSerViceType) {
         this.EngSerViceType = EngSerViceType;
@@ -258,16 +260,16 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。 
-     * @return UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+     * Get 用户端对此任务的唯一标识。废弃参数，忽略即可。 
+     * @return UsrAudioKey 用户端对此任务的唯一标识。废弃参数，忽略即可。
      */
     public String getUsrAudioKey() {
         return this.UsrAudioKey;
     }
 
     /**
-     * Set 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
-     * @param UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+     * Set 用户端对此任务的唯一标识。废弃参数，忽略即可。
+     * @param UsrAudioKey 用户端对此任务的唯一标识。废弃参数，忽略即可。
      */
     public void setUsrAudioKey(String UsrAudioKey) {
         this.UsrAudioKey = UsrAudioKey;
@@ -322,19 +324,19 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。 
-     * @return HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * Get 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。 
+     * @return WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
      */
-    public String getHotwordId() {
-        return this.HotwordId;
+    public Long getWordInfo() {
+        return this.WordInfo;
     }
 
     /**
-     * Set 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
-     * @param HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * Set 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+     * @param WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
      */
-    public void setHotwordId(String HotwordId) {
-        this.HotwordId = HotwordId;
+    public void setWordInfo(Long WordInfo) {
+        this.WordInfo = WordInfo;
     }
 
     /**
@@ -402,19 +404,35 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。 
-     * @return WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+     * Get 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。 
+     * @return HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      */
-    public Long getWordInfo() {
-        return this.WordInfo;
+    public String getHotwordId() {
+        return this.HotwordId;
     }
 
     /**
-     * Set 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
-     * @param WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+     * Set 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @param HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      */
-    public void setWordInfo(Long WordInfo) {
-        this.WordInfo = WordInfo;
+    public void setHotwordId(String HotwordId) {
+        this.HotwordId = HotwordId;
+    }
+
+    /**
+     * Get 自学习模型 id。如设置了该参数，将生效对应的自学习模型。 
+     * @return CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+     */
+    public String getCustomizationId() {
+        return this.CustomizationId;
+    }
+
+    /**
+     * Set 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+     * @param CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+     */
+    public void setCustomizationId(String CustomizationId) {
+        this.CustomizationId = CustomizationId;
     }
 
     public SentenceRecognitionRequest() {
@@ -452,8 +470,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
         if (source.DataLen != null) {
             this.DataLen = new Long(source.DataLen);
         }
-        if (source.HotwordId != null) {
-            this.HotwordId = new String(source.HotwordId);
+        if (source.WordInfo != null) {
+            this.WordInfo = new Long(source.WordInfo);
         }
         if (source.FilterDirty != null) {
             this.FilterDirty = new Long(source.FilterDirty);
@@ -467,8 +485,11 @@ public class SentenceRecognitionRequest extends AbstractModel{
         if (source.ConvertNumMode != null) {
             this.ConvertNumMode = new Long(source.ConvertNumMode);
         }
-        if (source.WordInfo != null) {
-            this.WordInfo = new Long(source.WordInfo);
+        if (source.HotwordId != null) {
+            this.HotwordId = new String(source.HotwordId);
+        }
+        if (source.CustomizationId != null) {
+            this.CustomizationId = new String(source.CustomizationId);
         }
     }
 
@@ -486,12 +507,13 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "DataLen", this.DataLen);
-        this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        this.setParamSimple(map, prefix + "WordInfo", this.WordInfo);
         this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
-        this.setParamSimple(map, prefix + "WordInfo", this.WordInfo);
+        this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        this.setParamSimple(map, prefix + "CustomizationId", this.CustomizationId);
 
     }
 }

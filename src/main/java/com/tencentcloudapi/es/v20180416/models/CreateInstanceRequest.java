@@ -248,6 +248,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private OperationDuration OperationDuration;
 
     /**
+    * 是否开启存算分离
+    */
+    @SerializedName("EnableHybridStorage")
+    @Expose
+    private Boolean EnableHybridStorage;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -775,6 +782,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get 是否开启存算分离 
+     * @return EnableHybridStorage 是否开启存算分离
+     */
+    public Boolean getEnableHybridStorage() {
+        return this.EnableHybridStorage;
+    }
+
+    /**
+     * Set 是否开启存算分离
+     * @param EnableHybridStorage 是否开启存算分离
+     */
+    public void setEnableHybridStorage(Boolean EnableHybridStorage) {
+        this.EnableHybridStorage = EnableHybridStorage;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -888,6 +911,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDuration(source.OperationDuration);
         }
+        if (source.EnableHybridStorage != null) {
+            this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
+        }
     }
 
 
@@ -926,6 +952,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
 
     }
 }

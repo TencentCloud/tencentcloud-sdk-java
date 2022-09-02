@@ -72,6 +72,13 @@ public class CreateCodeBatchRequest extends AbstractModel{
     private String MpTpl;
 
     /**
+    * 克隆批次ID
+    */
+    @SerializedName("CloneId")
+    @Expose
+    private String CloneId;
+
+    /**
      * Get 企业ID 
      * @return CorpId 企业ID
      */
@@ -183,6 +190,22 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.MpTpl = MpTpl;
     }
 
+    /**
+     * Get 克隆批次ID 
+     * @return CloneId 克隆批次ID
+     */
+    public String getCloneId() {
+        return this.CloneId;
+    }
+
+    /**
+     * Set 克隆批次ID
+     * @param CloneId 克隆批次ID
+     */
+    public void setCloneId(String CloneId) {
+        this.CloneId = CloneId;
+    }
+
     public CreateCodeBatchRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateCodeBatchRequest extends AbstractModel{
         if (source.MpTpl != null) {
             this.MpTpl = new String(source.MpTpl);
         }
+        if (source.CloneId != null) {
+            this.CloneId = new String(source.CloneId);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MpTpl", this.MpTpl);
+        this.setParamSimple(map, prefix + "CloneId", this.CloneId);
 
     }
 }

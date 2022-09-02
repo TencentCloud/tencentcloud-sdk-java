@@ -79,6 +79,14 @@ public class BotPkg extends AbstractModel{
     private Long UsedNum;
 
     /**
+    * 子产品code
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 资源id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceIds 资源id
@@ -218,6 +226,26 @@ public class BotPkg extends AbstractModel{
         this.UsedNum = UsedNum;
     }
 
+    /**
+     * Get 子产品code
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 子产品code
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 子产品code
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 子产品code
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public BotPkg() {
     }
 
@@ -247,6 +275,9 @@ public class BotPkg extends AbstractModel{
         if (source.UsedNum != null) {
             this.UsedNum = new Long(source.UsedNum);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class BotPkg extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "InquireNum", this.InquireNum);
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

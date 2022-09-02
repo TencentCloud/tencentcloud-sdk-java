@@ -64,6 +64,13 @@ public class GetEidTokenConfig extends AbstractModel{
     private IntentionQuestion [] IntentionQuestions;
 
     /**
+    * 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+    */
+    @SerializedName("IntentionRecognition")
+    @Expose
+    private Boolean IntentionRecognition;
+
+    /**
      * Get 姓名身份证输入方式。
 1：传身份证正反面OCR   
 2：传身份证正面OCR  
@@ -167,6 +174,22 @@ public class GetEidTokenConfig extends AbstractModel{
         this.IntentionQuestions = IntentionQuestions;
     }
 
+    /**
+     * Get 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。 
+     * @return IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+     */
+    public Boolean getIntentionRecognition() {
+        return this.IntentionRecognition;
+    }
+
+    /**
+     * Set 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+     * @param IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+     */
+    public void setIntentionRecognition(Boolean IntentionRecognition) {
+        this.IntentionRecognition = IntentionRecognition;
+    }
+
     public GetEidTokenConfig() {
     }
 
@@ -193,6 +216,9 @@ public class GetEidTokenConfig extends AbstractModel{
                 this.IntentionQuestions[i] = new IntentionQuestion(source.IntentionQuestions[i]);
             }
         }
+        if (source.IntentionRecognition != null) {
+            this.IntentionRecognition = new Boolean(source.IntentionRecognition);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class GetEidTokenConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "IntentionMode", this.IntentionMode);
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
+        this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
 
     }
 }

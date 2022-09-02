@@ -106,7 +106,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long PreReadTime;
 
     /**
-    * 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+    * 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
     */
     @SerializedName("UserId")
     @Expose
@@ -118,6 +118,20 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     @SerializedName("Required")
     @Expose
     private Boolean Required;
+
+    /**
+    * 签署人用户来源,企微侧用户请传入：WEWORKAPP
+    */
+    @SerializedName("ApproverSource")
+    @Expose
+    private String ApproverSource;
+
+    /**
+    * 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+    */
+    @SerializedName("CustomApproverTag")
+    @Expose
+    private String CustomApproverTag;
 
     /**
      * Get 参与者类型：
@@ -320,16 +334,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个 
-     * @return UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+     * Get 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段 
+     * @return UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
-     * @param UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+     * Set 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
+     * @param UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -349,6 +363,38 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
+    }
+
+    /**
+     * Get 签署人用户来源,企微侧用户请传入：WEWORKAPP 
+     * @return ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     */
+    public String getApproverSource() {
+        return this.ApproverSource;
+    }
+
+    /**
+     * Set 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * @param ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     */
+    public void setApproverSource(String ApproverSource) {
+        this.ApproverSource = ApproverSource;
+    }
+
+    /**
+     * Get 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段 
+     * @return CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     */
+    public String getCustomApproverTag() {
+        return this.CustomApproverTag;
+    }
+
+    /**
+     * Set 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     * @param CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     */
+    public void setCustomApproverTag(String CustomApproverTag) {
+        this.CustomApproverTag = CustomApproverTag;
     }
 
     public FlowCreateApprover() {
@@ -401,6 +447,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.Required != null) {
             this.Required = new Boolean(source.Required);
         }
+        if (source.ApproverSource != null) {
+            this.ApproverSource = new String(source.ApproverSource);
+        }
+        if (source.CustomApproverTag != null) {
+            this.CustomApproverTag = new String(source.CustomApproverTag);
+        }
     }
 
 
@@ -421,6 +473,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Required", this.Required);
+        this.setParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
+        this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
 
     }
 }

@@ -107,6 +107,27 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long PreReadTime;
 
     /**
+    * 签署人userId，非企微场景不使用此字段
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
+    * 签署人用户来源,企微侧用户请传入：WEWORKAPP
+    */
+    @SerializedName("ApproverSource")
+    @Expose
+    private String ApproverSource;
+
+    /**
+    * 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+    */
+    @SerializedName("CustomApproverTag")
+    @Expose
+    private String CustomApproverTag;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -310,6 +331,54 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.PreReadTime = PreReadTime;
     }
 
+    /**
+     * Get 签署人userId，非企微场景不使用此字段 
+     * @return UserId 签署人userId，非企微场景不使用此字段
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 签署人userId，非企微场景不使用此字段
+     * @param UserId 签署人userId，非企微场景不使用此字段
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
+     * Get 签署人用户来源,企微侧用户请传入：WEWORKAPP 
+     * @return ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     */
+    public String getApproverSource() {
+        return this.ApproverSource;
+    }
+
+    /**
+     * Set 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * @param ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     */
+    public void setApproverSource(String ApproverSource) {
+        this.ApproverSource = ApproverSource;
+    }
+
+    /**
+     * Get 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段 
+     * @return CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+     */
+    public String getCustomApproverTag() {
+        return this.CustomApproverTag;
+    }
+
+    /**
+     * Set 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+     * @param CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+     */
+    public void setCustomApproverTag(String CustomApproverTag) {
+        this.CustomApproverTag = CustomApproverTag;
+    }
+
     public ApproverInfo() {
     }
 
@@ -357,6 +426,15 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.PreReadTime != null) {
             this.PreReadTime = new Long(source.PreReadTime);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.ApproverSource != null) {
+            this.ApproverSource = new String(source.ApproverSource);
+        }
+        if (source.CustomApproverTag != null) {
+            this.CustomApproverTag = new String(source.CustomApproverTag);
+        }
     }
 
 
@@ -375,6 +453,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "ApproverRole", this.ApproverRole);
         this.setParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
+        this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
 
     }
 }

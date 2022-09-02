@@ -54,7 +54,7 @@ public class LifecycleActionResultInfo extends AbstractModel{
     private String InvokeCommandResult;
 
     /**
-    * 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+    * 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>
@@ -162,11 +162,11 @@ public class LifecycleActionResultInfo extends AbstractModel{
     }
 
     /**
-     * Get 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+     * Get 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li> 
-     * @return NotificationResult 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+     * @return NotificationResult 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>
@@ -176,11 +176,11 @@ public class LifecycleActionResultInfo extends AbstractModel{
     }
 
     /**
-     * Set 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+     * Set 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>
-     * @param NotificationResult 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+     * @param NotificationResult 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>

@@ -30,7 +30,7 @@ public class InquirePriceCreateRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 购买商品数量
+    * 购买计算节点个数
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -109,16 +109,16 @@ public class InquirePriceCreateRequest extends AbstractModel{
     }
 
     /**
-     * Get 购买商品数量 
-     * @return GoodsNum 购买商品数量
+     * Get 购买计算节点个数 
+     * @return GoodsNum 购买计算节点个数
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 购买商品数量
-     * @param GoodsNum 购买商品数量
+     * Set 购买计算节点个数
+     * @param GoodsNum 购买计算节点个数
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;

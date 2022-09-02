@@ -172,6 +172,14 @@ public class InstanceInfo extends AbstractModel{
     private BotPkg BotPkg;
 
     /**
+    * bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotQPS")
+    @Expose
+    private BotQPS BotQPS;
+
+    /**
      * Get id 
      * @return InstanceId id
      */
@@ -515,6 +523,26 @@ public class InstanceInfo extends AbstractModel{
         this.BotPkg = BotPkg;
     }
 
+    /**
+     * Get bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotQPS bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BotQPS getBotQPS() {
+        return this.BotQPS;
+    }
+
+    /**
+     * Set bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotQPS bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotQPS(BotQPS BotQPS) {
+        this.BotQPS = BotQPS;
+    }
+
     public InstanceInfo() {
     }
 
@@ -586,6 +614,9 @@ public class InstanceInfo extends AbstractModel{
         if (source.BotPkg != null) {
             this.BotPkg = new BotPkg(source.BotPkg);
         }
+        if (source.BotQPS != null) {
+            this.BotQPS = new BotQPS(source.BotQPS);
+        }
     }
 
 
@@ -614,6 +645,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamObj(map, prefix + "FraudPkg.", this.FraudPkg);
         this.setParamObj(map, prefix + "BotPkg.", this.BotPkg);
+        this.setParamObj(map, prefix + "BotQPS.", this.BotQPS);
 
     }
 }
