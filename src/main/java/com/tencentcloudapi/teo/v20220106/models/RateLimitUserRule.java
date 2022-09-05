@@ -23,70 +23,78 @@ import java.util.HashMap;
 public class RateLimitUserRule extends AbstractModel{
 
     /**
-    * RateLimit统计阈值
+    * RateLimit统计阈值，单位是次，取值范围0-4294967294。
     */
     @SerializedName("Threshold")
     @Expose
     private Long Threshold;
 
     /**
-    * RateLimit统计时间
+    * RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 规则名
+    * 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 动作：monitor(观察), drop(拦截)
+    * 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 惩罚时长
+    * 惩罚时长，0-100。
     */
     @SerializedName("PunishTime")
     @Expose
     private Long PunishTime;
 
     /**
-    * 处罚时长单位，second
+    * 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
     */
     @SerializedName("PunishTimeUnit")
     @Expose
     private String PunishTimeUnit;
 
     /**
-    * 规则状态
+    * 规则状态。
+1. on 生效
+2. off 不生效
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * 规则
+    * 规则。
     */
     @SerializedName("Conditions")
     @Expose
     private ACLCondition [] Conditions;
 
     /**
-    * 规则权重
+    * 规则权重，取值范围0-100。
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-    * 规则id
+    * 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleID")
@@ -94,7 +102,7 @@ public class RateLimitUserRule extends AbstractModel{
     private Long RuleID;
 
     /**
-    * 过滤词
+    * 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreqFields")
@@ -102,7 +110,7 @@ public class RateLimitUserRule extends AbstractModel{
     private String [] FreqFields;
 
     /**
-    * 更新时间
+    * 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -110,153 +118,185 @@ public class RateLimitUserRule extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get RateLimit统计阈值 
-     * @return Threshold RateLimit统计阈值
+     * Get RateLimit统计阈值，单位是次，取值范围0-4294967294。 
+     * @return Threshold RateLimit统计阈值，单位是次，取值范围0-4294967294。
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set RateLimit统计阈值
-     * @param Threshold RateLimit统计阈值
+     * Set RateLimit统计阈值，单位是次，取值范围0-4294967294。
+     * @param Threshold RateLimit统计阈值，单位是次，取值范围0-4294967294。
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;
     }
 
     /**
-     * Get RateLimit统计时间 
-     * @return Period RateLimit统计时间
+     * Get RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。 
+     * @return Period RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set RateLimit统计时间
-     * @param Period RateLimit统计时间
+     * Set RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
+     * @param Period RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 规则名 
-     * @return RuleName 规则名
+     * Get 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。 
+     * @return RuleName 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名
-     * @param RuleName 规则名
+     * Set 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
+     * @param RuleName 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 动作：monitor(观察), drop(拦截) 
-     * @return Action 动作：monitor(观察), drop(拦截)
+     * Get 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战) 
+     * @return Action 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 动作：monitor(观察), drop(拦截)
-     * @param Action 动作：monitor(观察), drop(拦截)
+     * Set 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
+     * @param Action 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 惩罚时长 
-     * @return PunishTime 惩罚时长
+     * Get 惩罚时长，0-100。 
+     * @return PunishTime 惩罚时长，0-100。
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set 惩罚时长
-     * @param PunishTime 惩罚时长
+     * Set 惩罚时长，0-100。
+     * @param PunishTime 惩罚时长，0-100。
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;
     }
 
     /**
-     * Get 处罚时长单位，second 
-     * @return PunishTimeUnit 处罚时长单位，second
+     * Get 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时 
+     * @return PunishTimeUnit 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
      */
     public String getPunishTimeUnit() {
         return this.PunishTimeUnit;
     }
 
     /**
-     * Set 处罚时长单位，second
-     * @param PunishTimeUnit 处罚时长单位，second
+     * Set 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
+     * @param PunishTimeUnit 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
      */
     public void setPunishTimeUnit(String PunishTimeUnit) {
         this.PunishTimeUnit = PunishTimeUnit;
     }
 
     /**
-     * Get 规则状态 
-     * @return RuleStatus 规则状态
+     * Get 规则状态。
+1. on 生效
+2. off 不生效 
+     * @return RuleStatus 规则状态。
+1. on 生效
+2. off 不生效
      */
     public String getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set 规则状态
-     * @param RuleStatus 规则状态
+     * Set 规则状态。
+1. on 生效
+2. off 不生效
+     * @param RuleStatus 规则状态。
+1. on 生效
+2. off 不生效
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get 规则 
-     * @return Conditions 规则
+     * Get 规则。 
+     * @return Conditions 规则。
      */
     public ACLCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 规则
-     * @param Conditions 规则
+     * Set 规则。
+     * @param Conditions 规则。
      */
     public void setConditions(ACLCondition [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get 规则权重 
-     * @return RulePriority 规则权重
+     * Get 规则权重，取值范围0-100。 
+     * @return RulePriority 规则权重，取值范围0-100。
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set 规则权重
-     * @param RulePriority 规则权重
+     * Set 规则权重，取值范围0-100。
+     * @param RulePriority 规则权重，取值范围0-100。
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
     }
 
     /**
-     * Get 规则id
+     * Get 规则id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则id
+     * @return RuleID 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleID() {
@@ -264,9 +304,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Set 规则id
+     * Set 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则id
+     * @param RuleID 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleID(Long RuleID) {
@@ -274,9 +314,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Get 过滤词
+     * Get 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FreqFields 过滤词
+     * @return FreqFields 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFreqFields() {
@@ -284,9 +324,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Set 过滤词
+     * Set 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FreqFields 过滤词
+     * @param FreqFields 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreqFields(String [] FreqFields) {
@@ -294,9 +334,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Get 更新时间
+     * Get 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -304,9 +344,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Set 更新时间
+     * Set 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {

@@ -20,93 +20,119 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCRMonitorRequest extends AbstractModel{
+public class CreateCRTortRequest extends AbstractModel{
 
     /**
-    * 作品ID
+    * xx
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * 监测状态 1-开启监测 2-关闭监测
+    * xx
     */
-    @SerializedName("MonitorStatus")
+    @SerializedName("TortURL")
     @Expose
-    private String MonitorStatus;
+    private String TortURL;
 
     /**
-    * 默认不停止，支持续期
+    * xx
     */
-    @SerializedName("MonitorEnd")
+    @SerializedName("TortPlat")
     @Expose
-    private String MonitorEnd;
+    private String TortPlat;
 
     /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+    * xx
+    */
+    @SerializedName("TortTitle")
+    @Expose
+    private String TortTitle;
+
+    /**
+     * Get xx 
+     * @return WorkId xx
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set xx
+     * @param WorkId xx
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get 监测状态 1-开启监测 2-关闭监测 
-     * @return MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * Get xx 
+     * @return TortURL xx
      */
-    public String getMonitorStatus() {
-        return this.MonitorStatus;
+    public String getTortURL() {
+        return this.TortURL;
     }
 
     /**
-     * Set 监测状态 1-开启监测 2-关闭监测
-     * @param MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * Set xx
+     * @param TortURL xx
      */
-    public void setMonitorStatus(String MonitorStatus) {
-        this.MonitorStatus = MonitorStatus;
+    public void setTortURL(String TortURL) {
+        this.TortURL = TortURL;
     }
 
     /**
-     * Get 默认不停止，支持续期 
-     * @return MonitorEnd 默认不停止，支持续期
+     * Get xx 
+     * @return TortPlat xx
      */
-    public String getMonitorEnd() {
-        return this.MonitorEnd;
+    public String getTortPlat() {
+        return this.TortPlat;
     }
 
     /**
-     * Set 默认不停止，支持续期
-     * @param MonitorEnd 默认不停止，支持续期
+     * Set xx
+     * @param TortPlat xx
      */
-    public void setMonitorEnd(String MonitorEnd) {
-        this.MonitorEnd = MonitorEnd;
+    public void setTortPlat(String TortPlat) {
+        this.TortPlat = TortPlat;
     }
 
-    public ModifyCRMonitorRequest() {
+    /**
+     * Get xx 
+     * @return TortTitle xx
+     */
+    public String getTortTitle() {
+        return this.TortTitle;
+    }
+
+    /**
+     * Set xx
+     * @param TortTitle xx
+     */
+    public void setTortTitle(String TortTitle) {
+        this.TortTitle = TortTitle;
+    }
+
+    public CreateCRTortRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyCRMonitorRequest(ModifyCRMonitorRequest source) {
+    public CreateCRTortRequest(CreateCRTortRequest source) {
         if (source.WorkId != null) {
             this.WorkId = new Long(source.WorkId);
         }
-        if (source.MonitorStatus != null) {
-            this.MonitorStatus = new String(source.MonitorStatus);
+        if (source.TortURL != null) {
+            this.TortURL = new String(source.TortURL);
         }
-        if (source.MonitorEnd != null) {
-            this.MonitorEnd = new String(source.MonitorEnd);
+        if (source.TortPlat != null) {
+            this.TortPlat = new String(source.TortPlat);
+        }
+        if (source.TortTitle != null) {
+            this.TortTitle = new String(source.TortTitle);
         }
     }
 
@@ -116,8 +142,9 @@ public class ModifyCRMonitorRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkId", this.WorkId);
-        this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
-        this.setParamSimple(map, prefix + "MonitorEnd", this.MonitorEnd);
+        this.setParamSimple(map, prefix + "TortURL", this.TortURL);
+        this.setParamSimple(map, prefix + "TortPlat", this.TortPlat);
+        this.setParamSimple(map, prefix + "TortTitle", this.TortTitle);
 
     }
 }

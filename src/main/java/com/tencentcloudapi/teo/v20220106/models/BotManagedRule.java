@@ -23,7 +23,14 @@ import java.util.HashMap;
 public class BotManagedRule extends AbstractModel{
 
     /**
-    * 想开启的规则id
+    * 本规则的ID。
+    */
+    @SerializedName("RuleID")
+    @Expose
+    private Long RuleID;
+
+    /**
+    * 老版本的通用规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManagedIds")
@@ -31,21 +38,18 @@ public class BotManagedRule extends AbstractModel{
     private Long [] ManagedIds;
 
     /**
-    * 本规则的id
-    */
-    @SerializedName("RuleID")
-    @Expose
-    private Long RuleID;
-
-    /**
-    * drop/trans/monitor/alg
+    * 触发规则后的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 观察
+4. alg Javascript挑战
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * ip封禁的惩罚时间
+    * 封禁的惩罚时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTime")
@@ -53,7 +57,7 @@ public class BotManagedRule extends AbstractModel{
     private Long PunishTime;
 
     /**
-    * 单位
+    * 封禁的惩罚时间单位。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTimeUnit")
@@ -61,39 +65,7 @@ public class BotManagedRule extends AbstractModel{
     private String PunishTimeUnit;
 
     /**
-    * 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 自定义返回页面的实例id
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PageId")
-    @Expose
-    private Long PageId;
-
-    /**
-    * 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RedirectUrl")
-    @Expose
-    private String RedirectUrl;
-
-    /**
-    * 重定向时候的返回码
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ResponseCode")
-    @Expose
-    private Long ResponseCode;
-
-    /**
-    * 放行的规则ID
+    * 放行的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransManagedIds")
@@ -101,7 +73,7 @@ public class BotManagedRule extends AbstractModel{
     private Long [] TransManagedIds;
 
     /**
-    * JS挑战的规则ID
+    * JS挑战的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlgManagedIds")
@@ -109,7 +81,7 @@ public class BotManagedRule extends AbstractModel{
     private Long [] AlgManagedIds;
 
     /**
-    * 数字验证码的规则ID
+    * 数字验证码的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CapManagedIds")
@@ -117,7 +89,7 @@ public class BotManagedRule extends AbstractModel{
     private Long [] CapManagedIds;
 
     /**
-    * 观察的规则ID
+    * 观察的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonManagedIds")
@@ -125,7 +97,7 @@ public class BotManagedRule extends AbstractModel{
     private Long [] MonManagedIds;
 
     /**
-    * 拦截的规则ID
+    * 拦截的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropManagedIds")
@@ -133,9 +105,57 @@ public class BotManagedRule extends AbstractModel{
     private Long [] DropManagedIds;
 
     /**
-     * Get 想开启的规则id
+    * 自定义返回页面的实例id。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PageId")
+    @Expose
+    private Long PageId;
+
+    /**
+    * 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RedirectUrl")
+    @Expose
+    private String RedirectUrl;
+
+    /**
+    * 重定向时候的返回码。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseCode")
+    @Expose
+    private Long ResponseCode;
+
+    /**
+     * Get 本规则的ID。 
+     * @return RuleID 本规则的ID。
+     */
+    public Long getRuleID() {
+        return this.RuleID;
+    }
+
+    /**
+     * Set 本规则的ID。
+     * @param RuleID 本规则的ID。
+     */
+    public void setRuleID(Long RuleID) {
+        this.RuleID = RuleID;
+    }
+
+    /**
+     * Get 老版本的通用规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ManagedIds 想开启的规则id
+     * @return ManagedIds 老版本的通用规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getManagedIds() {
@@ -143,9 +163,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set 想开启的规则id
+     * Set 老版本的通用规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManagedIds 想开启的规则id
+     * @param ManagedIds 老版本的通用规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagedIds(Long [] ManagedIds) {
@@ -153,41 +173,41 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get 本规则的id 
-     * @return RuleID 本规则的id
-     */
-    public Long getRuleID() {
-        return this.RuleID;
-    }
-
-    /**
-     * Set 本规则的id
-     * @param RuleID 本规则的id
-     */
-    public void setRuleID(Long RuleID) {
-        this.RuleID = RuleID;
-    }
-
-    /**
-     * Get drop/trans/monitor/alg 
-     * @return Action drop/trans/monitor/alg
+     * Get 触发规则后的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 观察
+4. alg Javascript挑战 
+     * @return Action 触发规则后的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 观察
+4. alg Javascript挑战
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set drop/trans/monitor/alg
-     * @param Action drop/trans/monitor/alg
+     * Set 触发规则后的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 观察
+4. alg Javascript挑战
+     * @param Action 触发规则后的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 观察
+4. alg Javascript挑战
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get ip封禁的惩罚时间
+     * Get 封禁的惩罚时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTime ip封禁的惩罚时间
+     * @return PunishTime 封禁的惩罚时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPunishTime() {
@@ -195,9 +215,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set ip封禁的惩罚时间
+     * Set 封禁的惩罚时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTime ip封禁的惩罚时间
+     * @param PunishTime 封禁的惩罚时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTime(Long PunishTime) {
@@ -205,9 +225,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get 单位
+     * Get 封禁的惩罚时间单位。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTimeUnit 单位
+     * @return PunishTimeUnit 封禁的惩罚时间单位。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPunishTimeUnit() {
@@ -215,9 +235,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set 单位
+     * Set 封禁的惩罚时间单位。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTimeUnit 单位
+     * @param PunishTimeUnit 封禁的惩罚时间单位。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTimeUnit(String PunishTimeUnit) {
@@ -225,89 +245,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get 自定义返回页面的名称
+     * Get 放行的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 自定义返回页面的实例id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageId 自定义返回页面的实例id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getPageId() {
-        return this.PageId;
-    }
-
-    /**
-     * Set 自定义返回页面的实例id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageId 自定义返回页面的实例id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPageId(Long PageId) {
-        this.PageId = PageId;
-    }
-
-    /**
-     * Get 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRedirectUrl() {
-        return this.RedirectUrl;
-    }
-
-    /**
-     * Set 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRedirectUrl(String RedirectUrl) {
-        this.RedirectUrl = RedirectUrl;
-    }
-
-    /**
-     * Get 重定向时候的返回码
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseCode 重定向时候的返回码
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getResponseCode() {
-        return this.ResponseCode;
-    }
-
-    /**
-     * Set 重定向时候的返回码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseCode 重定向时候的返回码
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResponseCode(Long ResponseCode) {
-        this.ResponseCode = ResponseCode;
-    }
-
-    /**
-     * Get 放行的规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransManagedIds 放行的规则ID
+     * @return TransManagedIds 放行的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getTransManagedIds() {
@@ -315,9 +255,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set 放行的规则ID
+     * Set 放行的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransManagedIds 放行的规则ID
+     * @param TransManagedIds 放行的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransManagedIds(Long [] TransManagedIds) {
@@ -325,9 +265,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get JS挑战的规则ID
+     * Get JS挑战的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlgManagedIds JS挑战的规则ID
+     * @return AlgManagedIds JS挑战的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getAlgManagedIds() {
@@ -335,9 +275,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set JS挑战的规则ID
+     * Set JS挑战的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlgManagedIds JS挑战的规则ID
+     * @param AlgManagedIds JS挑战的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgManagedIds(Long [] AlgManagedIds) {
@@ -345,9 +285,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get 数字验证码的规则ID
+     * Get 数字验证码的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CapManagedIds 数字验证码的规则ID
+     * @return CapManagedIds 数字验证码的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getCapManagedIds() {
@@ -355,9 +295,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set 数字验证码的规则ID
+     * Set 数字验证码的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CapManagedIds 数字验证码的规则ID
+     * @param CapManagedIds 数字验证码的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapManagedIds(Long [] CapManagedIds) {
@@ -365,9 +305,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get 观察的规则ID
+     * Get 观察的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonManagedIds 观察的规则ID
+     * @return MonManagedIds 观察的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getMonManagedIds() {
@@ -375,9 +315,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set 观察的规则ID
+     * Set 观察的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonManagedIds 观察的规则ID
+     * @param MonManagedIds 观察的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonManagedIds(Long [] MonManagedIds) {
@@ -385,9 +325,9 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Get 拦截的规则ID
+     * Get 拦截的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DropManagedIds 拦截的规则ID
+     * @return DropManagedIds 拦截的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDropManagedIds() {
@@ -395,13 +335,93 @@ public class BotManagedRule extends AbstractModel{
     }
 
     /**
-     * Set 拦截的规则ID
+     * Set 拦截的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DropManagedIds 拦截的规则ID
+     * @param DropManagedIds 拦截的规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropManagedIds(Long [] DropManagedIds) {
         this.DropManagedIds = DropManagedIds;
+    }
+
+    /**
+     * Get 自定义返回页面的实例id。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PageId 自定义返回页面的实例id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPageId() {
+        return this.PageId;
+    }
+
+    /**
+     * Set 自定义返回页面的实例id。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageId 自定义返回页面的实例id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPageId(Long PageId) {
+        this.PageId = PageId;
+    }
+
+    /**
+     * Get 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRedirectUrl() {
+        return this.RedirectUrl;
+    }
+
+    /**
+     * Set 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名，使用URLENCODE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRedirectUrl(String RedirectUrl) {
+        this.RedirectUrl = RedirectUrl;
+    }
+
+    /**
+     * Get 重定向时候的返回码。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResponseCode 重定向时候的返回码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResponseCode() {
+        return this.ResponseCode;
+    }
+
+    /**
+     * Set 重定向时候的返回码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseCode 重定向时候的返回码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseCode(Long ResponseCode) {
+        this.ResponseCode = ResponseCode;
     }
 
     public BotManagedRule() {
@@ -412,14 +432,14 @@ public class BotManagedRule extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BotManagedRule(BotManagedRule source) {
+        if (source.RuleID != null) {
+            this.RuleID = new Long(source.RuleID);
+        }
         if (source.ManagedIds != null) {
             this.ManagedIds = new Long[source.ManagedIds.length];
             for (int i = 0; i < source.ManagedIds.length; i++) {
                 this.ManagedIds[i] = new Long(source.ManagedIds[i]);
             }
-        }
-        if (source.RuleID != null) {
-            this.RuleID = new Long(source.RuleID);
         }
         if (source.Action != null) {
             this.Action = new String(source.Action);
@@ -429,18 +449,6 @@ public class BotManagedRule extends AbstractModel{
         }
         if (source.PunishTimeUnit != null) {
             this.PunishTimeUnit = new String(source.PunishTimeUnit);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.PageId != null) {
-            this.PageId = new Long(source.PageId);
-        }
-        if (source.RedirectUrl != null) {
-            this.RedirectUrl = new String(source.RedirectUrl);
-        }
-        if (source.ResponseCode != null) {
-            this.ResponseCode = new Long(source.ResponseCode);
         }
         if (source.TransManagedIds != null) {
             this.TransManagedIds = new Long[source.TransManagedIds.length];
@@ -472,6 +480,18 @@ public class BotManagedRule extends AbstractModel{
                 this.DropManagedIds[i] = new Long(source.DropManagedIds[i]);
             }
         }
+        if (source.PageId != null) {
+            this.PageId = new Long(source.PageId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
+        if (source.ResponseCode != null) {
+            this.ResponseCode = new Long(source.ResponseCode);
+        }
     }
 
 
@@ -479,20 +499,20 @@ public class BotManagedRule extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ManagedIds.", this.ManagedIds);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
+        this.setParamArraySimple(map, prefix + "ManagedIds.", this.ManagedIds);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "PunishTime", this.PunishTime);
         this.setParamSimple(map, prefix + "PunishTimeUnit", this.PunishTimeUnit);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "PageId", this.PageId);
-        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
-        this.setParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
         this.setParamArraySimple(map, prefix + "TransManagedIds.", this.TransManagedIds);
         this.setParamArraySimple(map, prefix + "AlgManagedIds.", this.AlgManagedIds);
         this.setParamArraySimple(map, prefix + "CapManagedIds.", this.CapManagedIds);
         this.setParamArraySimple(map, prefix + "MonManagedIds.", this.MonManagedIds);
         this.setParamArraySimple(map, prefix + "DropManagedIds.", this.DropManagedIds);
+        this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+        this.setParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
 
     }
 }

@@ -20,61 +20,64 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRule extends AbstractModel{
+public class ExceptUserRuleScope extends AbstractModel{
 
     /**
-    * AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+    * 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Mode")
+    @SerializedName("Modules")
     @Expose
-    private String Mode;
+    private String [] Modules;
 
     /**
-     * Get AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+     * Get 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+     * @return Modules 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMode() {
-        return this.Mode;
+    public String [] getModules() {
+        return this.Modules;
     }
 
     /**
-     * Set AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+     * Set 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+     * @param Modules 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMode(String Mode) {
-        this.Mode = Mode;
+    public void setModules(String [] Modules) {
+        this.Modules = Modules;
     }
 
-    public AiRule() {
+    public ExceptUserRuleScope() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AiRule(AiRule source) {
-        if (source.Mode != null) {
-            this.Mode = new String(source.Mode);
+    public ExceptUserRuleScope(ExceptUserRuleScope source) {
+        if (source.Modules != null) {
+            this.Modules = new String[source.Modules.length];
+            for (int i = 0; i < source.Modules.length; i++) {
+                this.Modules[i] = new String(source.Modules[i]);
+            }
         }
     }
 
@@ -83,7 +86,7 @@ public class AiRule extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamArraySimple(map, prefix + "Modules.", this.Modules);
 
     }
 }

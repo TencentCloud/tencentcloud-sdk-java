@@ -20,93 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCRMonitorRequest extends AbstractModel{
+public class CreateCRRightFileRequest extends AbstractModel{
 
     /**
-    * 作品ID
+    * xxx
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * 监测状态 1-开启监测 2-关闭监测
+    * xxx
     */
-    @SerializedName("MonitorStatus")
+    @SerializedName("FileList")
     @Expose
-    private String MonitorStatus;
+    private File [] FileList;
 
     /**
-    * 默认不停止，支持续期
-    */
-    @SerializedName("MonitorEnd")
-    @Expose
-    private String MonitorEnd;
-
-    /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+     * Get xxx 
+     * @return WorkId xxx
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set xxx
+     * @param WorkId xxx
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get 监测状态 1-开启监测 2-关闭监测 
-     * @return MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * Get xxx 
+     * @return FileList xxx
      */
-    public String getMonitorStatus() {
-        return this.MonitorStatus;
+    public File [] getFileList() {
+        return this.FileList;
     }
 
     /**
-     * Set 监测状态 1-开启监测 2-关闭监测
-     * @param MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * Set xxx
+     * @param FileList xxx
      */
-    public void setMonitorStatus(String MonitorStatus) {
-        this.MonitorStatus = MonitorStatus;
+    public void setFileList(File [] FileList) {
+        this.FileList = FileList;
     }
 
-    /**
-     * Get 默认不停止，支持续期 
-     * @return MonitorEnd 默认不停止，支持续期
-     */
-    public String getMonitorEnd() {
-        return this.MonitorEnd;
-    }
-
-    /**
-     * Set 默认不停止，支持续期
-     * @param MonitorEnd 默认不停止，支持续期
-     */
-    public void setMonitorEnd(String MonitorEnd) {
-        this.MonitorEnd = MonitorEnd;
-    }
-
-    public ModifyCRMonitorRequest() {
+    public CreateCRRightFileRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyCRMonitorRequest(ModifyCRMonitorRequest source) {
+    public CreateCRRightFileRequest(CreateCRRightFileRequest source) {
         if (source.WorkId != null) {
             this.WorkId = new Long(source.WorkId);
         }
-        if (source.MonitorStatus != null) {
-            this.MonitorStatus = new String(source.MonitorStatus);
-        }
-        if (source.MonitorEnd != null) {
-            this.MonitorEnd = new String(source.MonitorEnd);
+        if (source.FileList != null) {
+            this.FileList = new File[source.FileList.length];
+            for (int i = 0; i < source.FileList.length; i++) {
+                this.FileList[i] = new File(source.FileList[i]);
+            }
         }
     }
 
@@ -116,8 +93,7 @@ public class ModifyCRMonitorRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkId", this.WorkId);
-        this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
-        this.setParamSimple(map, prefix + "MonitorEnd", this.MonitorEnd);
+        this.setParamArrayObj(map, prefix + "FileList.", this.FileList);
 
     }
 }

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class WafRule extends AbstractModel{
 
     /**
-    * 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
-    */
-    @SerializedName("BlockRuleIDs")
-    @Expose
-    private Long [] BlockRuleIDs;
-
-    /**
-    * 托管规则 开关
+    * 托管规则开关。 on为开启
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+    * 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+    */
+    @SerializedName("BlockRuleIDs")
+    @Expose
+    private Long [] BlockRuleIDs;
+
+    /**
+    * 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObserveRuleIDs")
@@ -45,41 +45,41 @@ public class WafRule extends AbstractModel{
     private Long [] ObserveRuleIDs;
 
     /**
-     * Get 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules 
-     * @return BlockRuleIDs 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
-     */
-    public Long [] getBlockRuleIDs() {
-        return this.BlockRuleIDs;
-    }
-
-    /**
-     * Set 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
-     * @param BlockRuleIDs 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
-     */
-    public void setBlockRuleIDs(Long [] BlockRuleIDs) {
-        this.BlockRuleIDs = BlockRuleIDs;
-    }
-
-    /**
-     * Get 托管规则 开关 
-     * @return Switch 托管规则 开关
+     * Get 托管规则开关。 on为开启 
+     * @return Switch 托管规则开关。 on为开启
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 托管规则 开关
-     * @param Switch 托管规则 开关
+     * Set 托管规则开关。 on为开启
+     * @param Switch 托管规则开关。 on为开启
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+     * Get 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。 
+     * @return BlockRuleIDs 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+     */
+    public Long [] getBlockRuleIDs() {
+        return this.BlockRuleIDs;
+    }
+
+    /**
+     * Set 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+     * @param BlockRuleIDs 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+     */
+    public void setBlockRuleIDs(Long [] BlockRuleIDs) {
+        this.BlockRuleIDs = BlockRuleIDs;
+    }
+
+    /**
+     * Get 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObserveRuleIDs 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+     * @return ObserveRuleIDs 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getObserveRuleIDs() {
@@ -87,9 +87,9 @@ public class WafRule extends AbstractModel{
     }
 
     /**
-     * Set 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+     * Set 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObserveRuleIDs 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+     * @param ObserveRuleIDs 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObserveRuleIDs(Long [] ObserveRuleIDs) {
@@ -104,14 +104,14 @@ public class WafRule extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public WafRule(WafRule source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
         if (source.BlockRuleIDs != null) {
             this.BlockRuleIDs = new Long[source.BlockRuleIDs.length];
             for (int i = 0; i < source.BlockRuleIDs.length; i++) {
                 this.BlockRuleIDs[i] = new Long(source.BlockRuleIDs[i]);
             }
-        }
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
         }
         if (source.ObserveRuleIDs != null) {
             this.ObserveRuleIDs = new Long[source.ObserveRuleIDs.length];
@@ -126,8 +126,8 @@ public class WafRule extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "BlockRuleIDs.", this.BlockRuleIDs);
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "BlockRuleIDs.", this.BlockRuleIDs);
         this.setParamArraySimple(map, prefix + "ObserveRuleIDs.", this.ObserveRuleIDs);
 
     }

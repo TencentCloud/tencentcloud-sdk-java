@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class IpTableConfig extends AbstractModel{
 
     /**
-    * 开关
+    * 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -31,7 +33,7 @@ public class IpTableConfig extends AbstractModel{
     private String Switch;
 
     /**
-    * []
+    * 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
@@ -39,9 +41,13 @@ public class IpTableConfig extends AbstractModel{
     private IpTableRule [] Rules;
 
     /**
-     * Get 开关
+     * Get 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 开关
+     * @return Switch 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -49,9 +55,13 @@ public class IpTableConfig extends AbstractModel{
     }
 
     /**
-     * Set 开关
+     * Set 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 开关
+     * @param Switch 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
@@ -59,9 +69,9 @@ public class IpTableConfig extends AbstractModel{
     }
 
     /**
-     * Get []
+     * Get 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rules []
+     * @return Rules 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpTableRule [] getRules() {
@@ -69,9 +79,9 @@ public class IpTableConfig extends AbstractModel{
     }
 
     /**
-     * Set []
+     * Set 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rules []
+     * @param Rules 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(IpTableRule [] Rules) {

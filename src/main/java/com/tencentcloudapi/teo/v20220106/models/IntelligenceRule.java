@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class IntelligenceRule extends AbstractModel{
 
     /**
-    * 开关
+    * 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -31,7 +33,7 @@ public class IntelligenceRule extends AbstractModel{
     private String Switch;
 
     /**
-    * 规则详情
+    * 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -39,9 +41,13 @@ public class IntelligenceRule extends AbstractModel{
     private IntelligenceRuleItem [] Items;
 
     /**
-     * Get 开关
+     * Get 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 开关
+     * @return Switch 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -49,9 +55,13 @@ public class IntelligenceRule extends AbstractModel{
     }
 
     /**
-     * Set 开关
+     * Set 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 开关
+     * @param Switch 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
@@ -59,9 +69,9 @@ public class IntelligenceRule extends AbstractModel{
     }
 
     /**
-     * Get 规则详情
+     * Get 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 规则详情
+     * @return Items 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntelligenceRuleItem [] getItems() {
@@ -69,9 +79,9 @@ public class IntelligenceRule extends AbstractModel{
     }
 
     /**
-     * Set 规则详情
+     * Set 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 规则详情
+     * @param Items 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(IntelligenceRuleItem [] Items) {

@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class RateLimitConfig extends AbstractModel{
 
     /**
-    * 开关
+    * 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 用户规则
+    * 速率限制-用户规则列表。
     */
     @SerializedName("UserRules")
     @Expose
     private RateLimitUserRule [] UserRules;
 
     /**
-    * 默认模板
+    * 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Template")
@@ -45,7 +47,7 @@ public class RateLimitConfig extends AbstractModel{
     private RateLimitTemplate Template;
 
     /**
-    * 智能客户端过滤
+    * 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Intelligence")
@@ -53,41 +55,49 @@ public class RateLimitConfig extends AbstractModel{
     private RateLimitIntelligence Intelligence;
 
     /**
-     * Get 开关 
-     * @return Switch 开关
+     * Get 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit 
+     * @return Switch 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关
-     * @param Switch 开关
+     * Set 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
+     * @param Switch 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 用户规则 
-     * @return UserRules 用户规则
+     * Get 速率限制-用户规则列表。 
+     * @return UserRules 速率限制-用户规则列表。
      */
     public RateLimitUserRule [] getUserRules() {
         return this.UserRules;
     }
 
     /**
-     * Set 用户规则
-     * @param UserRules 用户规则
+     * Set 速率限制-用户规则列表。
+     * @param UserRules 速率限制-用户规则列表。
      */
     public void setUserRules(RateLimitUserRule [] UserRules) {
         this.UserRules = UserRules;
     }
 
     /**
-     * Get 默认模板
+     * Get 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Template 默认模板
+     * @return Template 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitTemplate getTemplate() {
@@ -95,9 +105,9 @@ public class RateLimitConfig extends AbstractModel{
     }
 
     /**
-     * Set 默认模板
+     * Set 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Template 默认模板
+     * @param Template 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplate(RateLimitTemplate Template) {
@@ -105,9 +115,9 @@ public class RateLimitConfig extends AbstractModel{
     }
 
     /**
-     * Get 智能客户端过滤
+     * Get 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Intelligence 智能客户端过滤
+     * @return Intelligence 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitIntelligence getIntelligence() {
@@ -115,9 +125,9 @@ public class RateLimitConfig extends AbstractModel{
     }
 
     /**
-     * Set 智能客户端过滤
+     * Set 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Intelligence 智能客户端过滤
+     * @param Intelligence 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntelligence(RateLimitIntelligence Intelligence) {

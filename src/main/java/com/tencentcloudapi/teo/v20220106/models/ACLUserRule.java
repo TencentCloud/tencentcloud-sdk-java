@@ -23,42 +23,51 @@ import java.util.HashMap;
 public class ACLUserRule extends AbstractModel{
 
     /**
-    * 规则名
+    * 规则名。
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 动作
+    * 处罚动作。
+1. trans 放行
+2. drop 拦截
+3. monitor 观察
+4. ban IP封禁
+5. redirect 重定向
+6. page 指定页面
+7. alg Javascript挑战
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 状态
+    * 规则状态。
+1. on 规则生效
+2. off 规则失效
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * ACL规则
+    * ACL规则。
     */
     @SerializedName("Conditions")
     @Expose
     private ACLCondition [] Conditions;
 
     /**
-    * 规则优先级
+    * 规则优先级，0-100。
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-    * 规则id
+    * 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleID")
@@ -66,7 +75,7 @@ public class ACLUserRule extends AbstractModel{
     private Long RuleID;
 
     /**
-    * 更新时间
+    * 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -74,7 +83,7 @@ public class ACLUserRule extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * ip封禁的惩罚时间
+    * ip封禁的惩罚时间，0-2天
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTime")
@@ -82,7 +91,10 @@ public class ACLUserRule extends AbstractModel{
     private Long PunishTime;
 
     /**
-    * ip封禁的惩罚时间单位
+    * ip封禁的惩罚时间单位。
+1. second 秒
+2. 分钟 minutes
+3. hour 小时
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTimeUnit")
@@ -90,15 +102,7 @@ public class ACLUserRule extends AbstractModel{
     private String PunishTimeUnit;
 
     /**
-    * 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 自定义返回页面的实例id
+    * 自定义返回页面的实例id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageId")
@@ -106,7 +110,15 @@ public class ACLUserRule extends AbstractModel{
     private Long PageId;
 
     /**
-    * 重定向时候的地址，必须为本用户接入的站点子域名
+    * 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 重定向时候的地址，必须为本用户接入的站点子域名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RedirectUrl")
@@ -114,7 +126,7 @@ public class ACLUserRule extends AbstractModel{
     private String RedirectUrl;
 
     /**
-    * 重定向时候的返回码
+    * 重定向时候的返回码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseCode")
@@ -122,89 +134,125 @@ public class ACLUserRule extends AbstractModel{
     private Long ResponseCode;
 
     /**
-     * Get 规则名 
-     * @return RuleName 规则名
+     * Get 规则名。 
+     * @return RuleName 规则名。
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名
-     * @param RuleName 规则名
+     * Set 规则名。
+     * @param RuleName 规则名。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 动作 
-     * @return Action 动作
+     * Get 处罚动作。
+1. trans 放行
+2. drop 拦截
+3. monitor 观察
+4. ban IP封禁
+5. redirect 重定向
+6. page 指定页面
+7. alg Javascript挑战 
+     * @return Action 处罚动作。
+1. trans 放行
+2. drop 拦截
+3. monitor 观察
+4. ban IP封禁
+5. redirect 重定向
+6. page 指定页面
+7. alg Javascript挑战
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 动作
-     * @param Action 动作
+     * Set 处罚动作。
+1. trans 放行
+2. drop 拦截
+3. monitor 观察
+4. ban IP封禁
+5. redirect 重定向
+6. page 指定页面
+7. alg Javascript挑战
+     * @param Action 处罚动作。
+1. trans 放行
+2. drop 拦截
+3. monitor 观察
+4. ban IP封禁
+5. redirect 重定向
+6. page 指定页面
+7. alg Javascript挑战
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 状态 
-     * @return RuleStatus 状态
+     * Get 规则状态。
+1. on 规则生效
+2. off 规则失效 
+     * @return RuleStatus 规则状态。
+1. on 规则生效
+2. off 规则失效
      */
     public String getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set 状态
-     * @param RuleStatus 状态
+     * Set 规则状态。
+1. on 规则生效
+2. off 规则失效
+     * @param RuleStatus 规则状态。
+1. on 规则生效
+2. off 规则失效
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get ACL规则 
-     * @return Conditions ACL规则
+     * Get ACL规则。 
+     * @return Conditions ACL规则。
      */
     public ACLCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set ACL规则
-     * @param Conditions ACL规则
+     * Set ACL规则。
+     * @param Conditions ACL规则。
      */
     public void setConditions(ACLCondition [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get 规则优先级 
-     * @return RulePriority 规则优先级
+     * Get 规则优先级，0-100。 
+     * @return RulePriority 规则优先级，0-100。
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set 规则优先级
-     * @param RulePriority 规则优先级
+     * Set 规则优先级，0-100。
+     * @param RulePriority 规则优先级，0-100。
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
     }
 
     /**
-     * Get 规则id
+     * Get 规则id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则id
+     * @return RuleID 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleID() {
@@ -212,9 +260,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set 规则id
+     * Set 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则id
+     * @param RuleID 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleID(Long RuleID) {
@@ -222,9 +270,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Get 更新时间
+     * Get 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -232,9 +280,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set 更新时间
+     * Set 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -242,9 +290,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Get ip封禁的惩罚时间
+     * Get ip封禁的惩罚时间，0-2天
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTime ip封禁的惩罚时间
+     * @return PunishTime ip封禁的惩罚时间，0-2天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPunishTime() {
@@ -252,9 +300,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set ip封禁的惩罚时间
+     * Set ip封禁的惩罚时间，0-2天
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTime ip封禁的惩罚时间
+     * @param PunishTime ip封禁的惩罚时间，0-2天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTime(Long PunishTime) {
@@ -262,9 +310,15 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Get ip封禁的惩罚时间单位
+     * Get ip封禁的惩罚时间单位。
+1. second 秒
+2. 分钟 minutes
+3. hour 小时
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTimeUnit ip封禁的惩罚时间单位
+     * @return PunishTimeUnit ip封禁的惩罚时间单位。
+1. second 秒
+2. 分钟 minutes
+3. hour 小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPunishTimeUnit() {
@@ -272,9 +326,15 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set ip封禁的惩罚时间单位
+     * Set ip封禁的惩罚时间单位。
+1. second 秒
+2. 分钟 minutes
+3. hour 小时
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTimeUnit ip封禁的惩罚时间单位
+     * @param PunishTimeUnit ip封禁的惩罚时间单位。
+1. second 秒
+2. 分钟 minutes
+3. hour 小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTimeUnit(String PunishTimeUnit) {
@@ -282,29 +342,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Get 自定义返回页面的名称
+     * Get 自定义返回页面的实例id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 自定义返回页面的名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 自定义返回页面的实例id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageId 自定义返回页面的实例id
+     * @return PageId 自定义返回页面的实例id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageId() {
@@ -312,9 +352,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set 自定义返回页面的实例id
+     * Set 自定义返回页面的实例id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageId 自定义返回页面的实例id
+     * @param PageId 自定义返回页面的实例id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageId(Long PageId) {
@@ -322,9 +362,29 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Get 重定向时候的地址，必须为本用户接入的站点子域名
+     * Get 自定义返回页面的名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名
+     * @return Name 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 自定义返回页面的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 重定向时候的地址，必须为本用户接入的站点子域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRedirectUrl() {
@@ -332,9 +392,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set 重定向时候的地址，必须为本用户接入的站点子域名
+     * Set 重定向时候的地址，必须为本用户接入的站点子域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名
+     * @param RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedirectUrl(String RedirectUrl) {
@@ -342,9 +402,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Get 重定向时候的返回码
+     * Get 重定向时候的返回码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseCode 重定向时候的返回码
+     * @return ResponseCode 重定向时候的返回码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResponseCode() {
@@ -352,9 +412,9 @@ public class ACLUserRule extends AbstractModel{
     }
 
     /**
-     * Set 重定向时候的返回码
+     * Set 重定向时候的返回码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseCode 重定向时候的返回码
+     * @param ResponseCode 重定向时候的返回码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseCode(Long ResponseCode) {
@@ -399,11 +459,11 @@ public class ACLUserRule extends AbstractModel{
         if (source.PunishTimeUnit != null) {
             this.PunishTimeUnit = new String(source.PunishTimeUnit);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
         if (source.PageId != null) {
             this.PageId = new Long(source.PageId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.RedirectUrl != null) {
             this.RedirectUrl = new String(source.RedirectUrl);
@@ -427,8 +487,8 @@ public class ACLUserRule extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "PunishTime", this.PunishTime);
         this.setParamSimple(map, prefix + "PunishTimeUnit", this.PunishTimeUnit);
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
 

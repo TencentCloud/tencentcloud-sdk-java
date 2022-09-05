@@ -23,31 +23,7 @@ import java.util.HashMap;
 public class IpTableRule extends AbstractModel{
 
     /**
-    * 动作: drop拦截，trans放行，monitor观察
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Action")
-    @Expose
-    private String Action;
-
-    /**
-    * 根据类型匹配：ip(根据ip), area(根据区域)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MatchFrom")
-    @Expose
-    private String MatchFrom;
-
-    /**
-    * 匹配内容
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MatchContent")
-    @Expose
-    private String MatchContent;
-
-    /**
-    * 规则id
+    * 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleID")
@@ -55,7 +31,38 @@ public class IpTableRule extends AbstractModel{
     private Long RuleID;
 
     /**
-    * 更新时间
+    * 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
+    * 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchFrom")
+    @Expose
+    private String MatchFrom;
+
+    /**
+    * 匹配内容。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchContent")
+    @Expose
+    private String MatchContent;
+
+    /**
+    * 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -63,69 +70,9 @@ public class IpTableRule extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get 动作: drop拦截，trans放行，monitor观察
+     * Get 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action 动作: drop拦截，trans放行，monitor观察
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getAction() {
-        return this.Action;
-    }
-
-    /**
-     * Set 动作: drop拦截，trans放行，monitor观察
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action 动作: drop拦截，trans放行，monitor观察
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAction(String Action) {
-        this.Action = Action;
-    }
-
-    /**
-     * Get 根据类型匹配：ip(根据ip), area(根据区域)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MatchFrom 根据类型匹配：ip(根据ip), area(根据区域)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getMatchFrom() {
-        return this.MatchFrom;
-    }
-
-    /**
-     * Set 根据类型匹配：ip(根据ip), area(根据区域)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MatchFrom 根据类型匹配：ip(根据ip), area(根据区域)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMatchFrom(String MatchFrom) {
-        this.MatchFrom = MatchFrom;
-    }
-
-    /**
-     * Get 匹配内容
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MatchContent 匹配内容
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getMatchContent() {
-        return this.MatchContent;
-    }
-
-    /**
-     * Set 匹配内容
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MatchContent 匹配内容
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMatchContent(String MatchContent) {
-        this.MatchContent = MatchContent;
-    }
-
-    /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则id
+     * @return RuleID 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleID() {
@@ -133,9 +80,9 @@ public class IpTableRule extends AbstractModel{
     }
 
     /**
-     * Set 规则id
+     * Set 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则id
+     * @param RuleID 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleID(Long RuleID) {
@@ -143,9 +90,97 @@ public class IpTableRule extends AbstractModel{
     }
 
     /**
-     * Get 更新时间
+     * Get 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return Action 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Action 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
+
+    /**
+     * Get 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchFrom 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchFrom() {
+        return this.MatchFrom;
+    }
+
+    /**
+     * Set 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchFrom 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchFrom(String MatchFrom) {
+        this.MatchFrom = MatchFrom;
+    }
+
+    /**
+     * Get 匹配内容。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchContent 匹配内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchContent() {
+        return this.MatchContent;
+    }
+
+    /**
+     * Set 匹配内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchContent 匹配内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchContent(String MatchContent) {
+        this.MatchContent = MatchContent;
+    }
+
+    /**
+     * Get 更新时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -153,9 +188,9 @@ public class IpTableRule extends AbstractModel{
     }
 
     /**
-     * Set 更新时间
+     * Set 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -170,6 +205,9 @@ public class IpTableRule extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public IpTableRule(IpTableRule source) {
+        if (source.RuleID != null) {
+            this.RuleID = new Long(source.RuleID);
+        }
         if (source.Action != null) {
             this.Action = new String(source.Action);
         }
@@ -178,9 +216,6 @@ public class IpTableRule extends AbstractModel{
         }
         if (source.MatchContent != null) {
             this.MatchContent = new String(source.MatchContent);
-        }
-        if (source.RuleID != null) {
-            this.RuleID = new Long(source.RuleID);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
@@ -192,10 +227,10 @@ public class IpTableRule extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "MatchFrom", this.MatchFrom);
         this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
-        this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }

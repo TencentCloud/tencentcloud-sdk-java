@@ -23,42 +23,44 @@ import java.util.HashMap;
 public class BotConfig extends AbstractModel{
 
     /**
-    * bot开关
+    * 开关。
+1. on 开启
+2. off 关闭
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 预置规则
+    * 通用详细基础规则。
     */
     @SerializedName("ManagedRule")
     @Expose
     private BotManagedRule ManagedRule;
 
     /**
-    * 保留
+    * ua基础规则。
     */
     @SerializedName("UaBotRule")
     @Expose
     private BotManagedRule UaBotRule;
 
     /**
-    * 保留
+    * isp基础规则。
     */
     @SerializedName("IspBotRule")
     @Expose
     private BotManagedRule IspBotRule;
 
     /**
-    * 用户画像规则
+    * 用户画像规则。
     */
     @SerializedName("PortraitRule")
     @Expose
     private BotPortraitRule PortraitRule;
 
     /**
-    * Bot智能分析
+    * Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntelligenceRule")
@@ -66,89 +68,97 @@ public class BotConfig extends AbstractModel{
     private IntelligenceRule IntelligenceRule;
 
     /**
-     * Get bot开关 
-     * @return Switch bot开关
+     * Get 开关。
+1. on 开启
+2. off 关闭 
+     * @return Switch 开关。
+1. on 开启
+2. off 关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set bot开关
-     * @param Switch bot开关
+     * Set 开关。
+1. on 开启
+2. off 关闭
+     * @param Switch 开关。
+1. on 开启
+2. off 关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 预置规则 
-     * @return ManagedRule 预置规则
+     * Get 通用详细基础规则。 
+     * @return ManagedRule 通用详细基础规则。
      */
     public BotManagedRule getManagedRule() {
         return this.ManagedRule;
     }
 
     /**
-     * Set 预置规则
-     * @param ManagedRule 预置规则
+     * Set 通用详细基础规则。
+     * @param ManagedRule 通用详细基础规则。
      */
     public void setManagedRule(BotManagedRule ManagedRule) {
         this.ManagedRule = ManagedRule;
     }
 
     /**
-     * Get 保留 
-     * @return UaBotRule 保留
+     * Get ua基础规则。 
+     * @return UaBotRule ua基础规则。
      */
     public BotManagedRule getUaBotRule() {
         return this.UaBotRule;
     }
 
     /**
-     * Set 保留
-     * @param UaBotRule 保留
+     * Set ua基础规则。
+     * @param UaBotRule ua基础规则。
      */
     public void setUaBotRule(BotManagedRule UaBotRule) {
         this.UaBotRule = UaBotRule;
     }
 
     /**
-     * Get 保留 
-     * @return IspBotRule 保留
+     * Get isp基础规则。 
+     * @return IspBotRule isp基础规则。
      */
     public BotManagedRule getIspBotRule() {
         return this.IspBotRule;
     }
 
     /**
-     * Set 保留
-     * @param IspBotRule 保留
+     * Set isp基础规则。
+     * @param IspBotRule isp基础规则。
      */
     public void setIspBotRule(BotManagedRule IspBotRule) {
         this.IspBotRule = IspBotRule;
     }
 
     /**
-     * Get 用户画像规则 
-     * @return PortraitRule 用户画像规则
+     * Get 用户画像规则。 
+     * @return PortraitRule 用户画像规则。
      */
     public BotPortraitRule getPortraitRule() {
         return this.PortraitRule;
     }
 
     /**
-     * Set 用户画像规则
-     * @param PortraitRule 用户画像规则
+     * Set 用户画像规则。
+     * @param PortraitRule 用户画像规则。
      */
     public void setPortraitRule(BotPortraitRule PortraitRule) {
         this.PortraitRule = PortraitRule;
     }
 
     /**
-     * Get Bot智能分析
+     * Get Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntelligenceRule Bot智能分析
+     * @return IntelligenceRule Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntelligenceRule getIntelligenceRule() {
@@ -156,9 +166,9 @@ public class BotConfig extends AbstractModel{
     }
 
     /**
-     * Set Bot智能分析
+     * Set Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntelligenceRule Bot智能分析
+     * @param IntelligenceRule Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntelligenceRule(IntelligenceRule IntelligenceRule) {

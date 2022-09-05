@@ -23,7 +23,13 @@ import java.util.HashMap;
 public class RateLimitTemplateDetail extends AbstractModel{
 
     /**
-    * 模板名称
+    * 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -31,7 +37,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private String Mode;
 
     /**
-    * 唯一id
+    * 唯一id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
@@ -39,7 +45,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private Long ID;
 
     /**
-    * 处置动作
+    * 处置动作。模板阀值触发后的处罚行为。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -47,7 +53,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private String Action;
 
     /**
-    * 惩罚时间，秒
+    * 惩罚时间，单位是秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTime")
@@ -55,7 +61,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private Long PunishTime;
 
     /**
-    * 阈值
+    * 阈值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Threshold")
@@ -63,7 +69,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private Long Threshold;
 
     /**
-    * 统计周期
+    * 统计周期。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
@@ -71,9 +77,21 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private Long Period;
 
     /**
-     * Get 模板名称
+     * Get 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 模板名称
+     * @return Mode 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -81,9 +99,21 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 模板名称
+     * Set 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 模板名称
+     * @param Mode 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -91,9 +121,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 唯一id
+     * Get 唯一id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ID 唯一id
+     * @return ID 唯一id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getID() {
@@ -101,9 +131,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 唯一id
+     * Set 唯一id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ID 唯一id
+     * @param ID 唯一id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(Long ID) {
@@ -111,9 +141,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 处置动作
+     * Get 处置动作。模板阀值触发后的处罚行为。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action 处置动作
+     * @return Action 处置动作。模板阀值触发后的处罚行为。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
@@ -121,9 +151,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 处置动作
+     * Set 处置动作。模板阀值触发后的处罚行为。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action 处置动作
+     * @param Action 处置动作。模板阀值触发后的处罚行为。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
@@ -131,9 +161,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 惩罚时间，秒
+     * Get 惩罚时间，单位是秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTime 惩罚时间，秒
+     * @return PunishTime 惩罚时间，单位是秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPunishTime() {
@@ -141,9 +171,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 惩罚时间，秒
+     * Set 惩罚时间，单位是秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTime 惩罚时间，秒
+     * @param PunishTime 惩罚时间，单位是秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTime(Long PunishTime) {
@@ -151,9 +181,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 阈值
+     * Get 阈值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Threshold 阈值
+     * @return Threshold 阈值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getThreshold() {
@@ -161,9 +191,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 阈值
+     * Set 阈值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Threshold 阈值
+     * @param Threshold 阈值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThreshold(Long Threshold) {
@@ -171,9 +201,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 统计周期
+     * Get 统计周期。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 统计周期
+     * @return Period 统计周期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
@@ -181,9 +211,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 统计周期
+     * Set 统计周期。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 统计周期
+     * @param Period 统计周期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {

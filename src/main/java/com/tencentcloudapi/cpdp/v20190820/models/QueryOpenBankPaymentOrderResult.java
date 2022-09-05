@@ -59,6 +59,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
     */
     @SerializedName("OrderStatus")
     @Expose
@@ -230,7 +232,9 @@ ACCEPTED：支付受理成功
 SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
-REVOKE：退票 
+REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款 
      * @return OrderStatus 订单状态。
 INIT：初始化
 PAYING：支付中
@@ -239,6 +243,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
      */
     public String getOrderStatus() {
         return this.OrderStatus;
@@ -253,6 +259,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
      * @param OrderStatus 订单状态。
 INIT：初始化
 PAYING：支付中
@@ -261,6 +269,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
      */
     public void setOrderStatus(String OrderStatus) {
         this.OrderStatus = OrderStatus;

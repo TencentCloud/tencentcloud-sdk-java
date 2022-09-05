@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class AclConfig extends AbstractModel{
 
     /**
-    * 开关
+    * 开关。
+1. on 开启
+2. off 关闭
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * ACL用户规则
+    * 自定义-用户规则。
     */
     @SerializedName("UserRules")
     @Expose
     private ACLUserRule [] UserRules;
 
     /**
-     * Get 开关 
-     * @return Switch 开关
+     * Get 开关。
+1. on 开启
+2. off 关闭 
+     * @return Switch 开关。
+1. on 开启
+2. off 关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关
-     * @param Switch 开关
+     * Set 开关。
+1. on 开启
+2. off 关闭
+     * @param Switch 开关。
+1. on 开启
+2. off 关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get ACL用户规则 
-     * @return UserRules ACL用户规则
+     * Get 自定义-用户规则。 
+     * @return UserRules 自定义-用户规则。
      */
     public ACLUserRule [] getUserRules() {
         return this.UserRules;
     }
 
     /**
-     * Set ACL用户规则
-     * @param UserRules ACL用户规则
+     * Set 自定义-用户规则。
+     * @param UserRules 自定义-用户规则。
      */
     public void setUserRules(ACLUserRule [] UserRules) {
         this.UserRules = UserRules;

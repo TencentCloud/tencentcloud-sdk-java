@@ -176,6 +176,29 @@ development: 开发环境
     private OrganizationInfo OrganizationInfo;
 
     /**
+    * 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+    */
+    @SerializedName("SubMerchantIdType")
+    @Expose
+    private String SubMerchantIdType;
+
+    /**
+    * 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+    */
+    @SerializedName("SubMerchantIdCode")
+    @Expose
+    private String SubMerchantIdCode;
+
+    /**
      * Get 聚鑫平台分配的支付MidasAppId 
      * @return MidasAppId 聚鑫平台分配的支付MidasAppId
      */
@@ -559,6 +582,74 @@ development: 开发环境
         this.OrganizationInfo = OrganizationInfo;
     }
 
+    /**
+     * Get 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码 
+     * @return SubMerchantIdType 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+     */
+    public String getSubMerchantIdType() {
+        return this.SubMerchantIdType;
+    }
+
+    /**
+     * Set 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+     * @param SubMerchantIdType 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+     */
+    public void setSubMerchantIdType(String SubMerchantIdType) {
+        this.SubMerchantIdType = SubMerchantIdType;
+    }
+
+    /**
+     * Get 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
+     * @return SubMerchantIdCode 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+     */
+    public String getSubMerchantIdCode() {
+        return this.SubMerchantIdCode;
+    }
+
+    /**
+     * Set 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+     * @param SubMerchantIdCode 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+     */
+    public void setSubMerchantIdCode(String SubMerchantIdCode) {
+        this.SubMerchantIdCode = SubMerchantIdCode;
+    }
+
     public CreateAcctRequest() {
     }
 
@@ -624,6 +715,12 @@ development: 开发环境
         if (source.OrganizationInfo != null) {
             this.OrganizationInfo = new OrganizationInfo(source.OrganizationInfo);
         }
+        if (source.SubMerchantIdType != null) {
+            this.SubMerchantIdType = new String(source.SubMerchantIdType);
+        }
+        if (source.SubMerchantIdCode != null) {
+            this.SubMerchantIdCode = new String(source.SubMerchantIdCode);
+        }
     }
 
 
@@ -650,6 +747,8 @@ development: 开发环境
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         this.setParamSimple(map, prefix + "SubMerchantStoreName", this.SubMerchantStoreName);
         this.setParamObj(map, prefix + "OrganizationInfo.", this.OrganizationInfo);
+        this.setParamSimple(map, prefix + "SubMerchantIdType", this.SubMerchantIdType);
+        this.setParamSimple(map, prefix + "SubMerchantIdCode", this.SubMerchantIdCode);
 
     }
 }

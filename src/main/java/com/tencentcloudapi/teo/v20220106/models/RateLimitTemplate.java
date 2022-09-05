@@ -23,7 +23,13 @@ import java.util.HashMap;
 public class RateLimitTemplate extends AbstractModel{
 
     /**
-    * 模板名称
+    * 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -31,7 +37,7 @@ public class RateLimitTemplate extends AbstractModel{
     private String Mode;
 
     /**
-    * 模板值详情
+    * 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
@@ -39,9 +45,21 @@ public class RateLimitTemplate extends AbstractModel{
     private RateLimitTemplateDetail Detail;
 
     /**
-     * Get 模板名称
+     * Get 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 模板名称
+     * @return Mode 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -49,9 +67,21 @@ public class RateLimitTemplate extends AbstractModel{
     }
 
     /**
-     * Set 模板名称
+     * Set 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 模板名称
+     * @param Mode 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -59,9 +89,9 @@ public class RateLimitTemplate extends AbstractModel{
     }
 
     /**
-     * Get 模板值详情
+     * Get 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Detail 模板值详情
+     * @return Detail 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitTemplateDetail getDetail() {
@@ -69,9 +99,9 @@ public class RateLimitTemplate extends AbstractModel{
     }
 
     /**
-     * Set 模板值详情
+     * Set 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Detail 模板值详情
+     * @param Detail 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(RateLimitTemplateDetail Detail) {

@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RateLimitIntelligence extends AbstractModel{
+public class ExceptConfig extends AbstractModel{
 
     /**
-    * 功能开关。
+    * 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -33,21 +33,19 @@ public class RateLimitIntelligence extends AbstractModel{
     private String Switch;
 
     /**
-    * 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+    * 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Action")
+    @SerializedName("UserRules")
     @Expose
-    private String Action;
+    private ExceptUserRule [] UserRules;
 
     /**
-     * Get 功能开关。
+     * Get 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 功能开关。
+     * @return Switch 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -57,11 +55,11 @@ public class RateLimitIntelligence extends AbstractModel{
     }
 
     /**
-     * Set 功能开关。
+     * Set 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 功能开关。
+     * @param Switch 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -71,46 +69,41 @@ public class RateLimitIntelligence extends AbstractModel{
     }
 
     /**
-     * Get 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * Get 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * @return UserRules 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getAction() {
-        return this.Action;
+    public ExceptUserRule [] getUserRules() {
+        return this.UserRules;
     }
 
     /**
-     * Set 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * Set 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * @param UserRules 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAction(String Action) {
-        this.Action = Action;
+    public void setUserRules(ExceptUserRule [] UserRules) {
+        this.UserRules = UserRules;
     }
 
-    public RateLimitIntelligence() {
+    public ExceptConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RateLimitIntelligence(RateLimitIntelligence source) {
+    public ExceptConfig(ExceptConfig source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.Action != null) {
-            this.Action = new String(source.Action);
+        if (source.UserRules != null) {
+            this.UserRules = new ExceptUserRule[source.UserRules.length];
+            for (int i = 0; i < source.UserRules.length; i++) {
+                this.UserRules[i] = new ExceptUserRule(source.UserRules[i]);
+            }
         }
     }
 
@@ -120,7 +113,7 @@ public class RateLimitIntelligence extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamArrayObj(map, prefix + "UserRules.", this.UserRules);
 
     }
 }

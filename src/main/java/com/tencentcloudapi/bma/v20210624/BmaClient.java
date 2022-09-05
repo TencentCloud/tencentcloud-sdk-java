@@ -199,6 +199,46 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *新增权属文件
+     * @param req CreateCRRightFileRequest
+     * @return CreateCRRightFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCRRightFileResponse CreateCRRightFile(CreateCRRightFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCRRightFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCRRightFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCRRightFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *举报侵权链接
+     * @param req CreateCRTortRequest
+     * @return CreateCRTortResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCRTortResponse CreateCRTort(CreateCRTortRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCRTortResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCRTortResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCRTort");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *品牌经营管家-版权保护个人认证接口
      * @param req CreateCRUserVerifyRequest
      * @return CreateCRUserVerifyResponse
@@ -471,6 +511,26 @@ public class BmaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCRRightStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCRRightStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *版权保护-白名单修改接口
+     * @param req ModifyCRWhiteListRequest
+     * @return ModifyCRWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCRWhiteListResponse ModifyCRWhiteList(ModifyCRWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCRWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCRWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCRWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

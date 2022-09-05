@@ -3400,6 +3400,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
+     * @param req DescribeTrafficPackagesRequest
+     * @return DescribeTrafficPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficPackagesResponse DescribeTrafficPackages(DescribeTrafficPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrafficPackagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrafficPackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询终端节点列表。
      * @param req DescribeVpcEndPointRequest
      * @return DescribeVpcEndPointResponse

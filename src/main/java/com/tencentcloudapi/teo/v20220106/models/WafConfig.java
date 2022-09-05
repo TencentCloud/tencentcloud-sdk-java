@@ -23,35 +23,44 @@ import java.util.HashMap;
 public class WafConfig extends AbstractModel{
 
     /**
-    * 开关
+    * WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 防护级别，loose/normal/strict/stricter/custom
+    * 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 模式 block-阻断；observe-观察模式；close-关闭
+    * 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 托管规则黑白名单
+    * 托管规则详细配置。
     */
     @SerializedName("WafRules")
     @Expose
     private WafRule WafRules;
 
     /**
-    * AI规则引擎防护
+    * AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiRule")
@@ -59,73 +68,109 @@ public class WafConfig extends AbstractModel{
     private AiRule AiRule;
 
     /**
-     * Get 开关 
-     * @return Switch 开关
+     * Get WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。 
+     * @return Switch WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关
-     * @param Switch 开关
+     * Set WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
+     * @param Switch WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 防护级别，loose/normal/strict/stricter/custom 
-     * @return Level 防护级别，loose/normal/strict/stricter/custom
+     * Get 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li> 
+     * @return Level 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 防护级别，loose/normal/strict/stricter/custom
-     * @param Level 防护级别，loose/normal/strict/stricter/custom
+     * Set 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
+     * @param Level 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 模式 block-阻断；observe-观察模式；close-关闭 
-     * @return Mode 模式 block-阻断；observe-观察模式；close-关闭
+     * Get 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li> 
+     * @return Mode 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 模式 block-阻断；observe-观察模式；close-关闭
-     * @param Mode 模式 block-阻断；observe-观察模式；close-关闭
+     * Set 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
+     * @param Mode 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 托管规则黑白名单 
-     * @return WafRules 托管规则黑白名单
+     * Get 托管规则详细配置。 
+     * @return WafRules 托管规则详细配置。
      */
     public WafRule getWafRules() {
         return this.WafRules;
     }
 
     /**
-     * Set 托管规则黑白名单
-     * @param WafRules 托管规则黑白名单
+     * Set 托管规则详细配置。
+     * @param WafRules 托管规则详细配置。
      */
     public void setWafRules(WafRule WafRules) {
         this.WafRules = WafRules;
     }
 
     /**
-     * Get AI规则引擎防护
+     * Get AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiRule AI规则引擎防护
+     * @return AiRule AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRule getAiRule() {
@@ -133,9 +178,9 @@ public class WafConfig extends AbstractModel{
     }
 
     /**
-     * Set AI规则引擎防护
+     * Set AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRule AI规则引擎防护
+     * @param AiRule AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiRule(AiRule AiRule) {
