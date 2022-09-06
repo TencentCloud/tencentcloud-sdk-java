@@ -1310,26 +1310,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *单个修改VPC火墙开关
-     * @param req ModifyVPCSwitchStatusRequest
-     * @return ModifyVPCSwitchStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyVPCSwitchStatusResponse ModifyVPCSwitchStatus(ModifyVPCSwitchStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVPCSwitchStatusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVPCSwitchStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVPCSwitchStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *删除互联网边界规则
      * @param req RemoveAcRuleRequest
      * @return RemoveAcRuleResponse

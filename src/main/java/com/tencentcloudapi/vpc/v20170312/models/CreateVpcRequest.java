@@ -30,7 +30,7 @@ public class CreateVpcRequest extends AbstractModel{
     private String VpcName;
 
     /**
-    * vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+    * vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -81,16 +81,16 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。 
-     * @return CidrBlock vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Get vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。 
+     * @return CidrBlock vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
-     * @param CidrBlock vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Set vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+     * @param CidrBlock vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

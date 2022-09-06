@@ -1781,26 +1781,6 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *修改边界防护L7转发规则
-     * @param req ModifyL7RulesEdgeRequest
-     * @return ModifyL7RulesEdgeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyL7RulesEdgeResponse ModifyL7RulesEdge(ModifyL7RulesEdgeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyL7RulesEdgeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyL7RulesEdgeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyL7RulesEdge");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改7层转发规则
      * @param req ModifyNewDomainRulesRequest
      * @return ModifyNewDomainRulesResponse

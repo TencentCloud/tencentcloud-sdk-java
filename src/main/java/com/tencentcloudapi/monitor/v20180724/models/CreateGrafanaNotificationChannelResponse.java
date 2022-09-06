@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
 
     /**
+    * 通道 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 通道 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelId 通道 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelId 通道 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateGrafanaNotificationChannelResponse(CreateGrafanaNotificationChannelResponse source) {
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

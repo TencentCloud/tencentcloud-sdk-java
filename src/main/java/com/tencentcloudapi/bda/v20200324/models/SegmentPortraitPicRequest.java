@@ -44,6 +44,13 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String Url;
 
     /**
+    * 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+    */
+    @SerializedName("RspImgType")
+    @Expose
+    private String RspImgType;
+
+    /**
      * Get 图片 base64 数据，base64 编码后大小不可超过5M。
 图片分辨率须小于2000*2000。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
@@ -103,6 +110,22 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.Url = Url;
     }
 
+    /**
+     * Get 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。 
+     * @return RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     */
+    public String getRspImgType() {
+        return this.RspImgType;
+    }
+
+    /**
+     * Set 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     * @param RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     */
+    public void setRspImgType(String RspImgType) {
+        this.RspImgType = RspImgType;
+    }
+
     public SegmentPortraitPicRequest() {
     }
 
@@ -117,6 +140,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
     }
 
 
@@ -126,6 +152,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
 
     }
 }

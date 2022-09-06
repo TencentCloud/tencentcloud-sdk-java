@@ -22,7 +22,10 @@ public enum TcbrErrorCode {
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
     // 资源不存在。
-     RESOURCENOTFOUND("ResourceNotFound");
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable");
      
     private String value;
     private TcbrErrorCode (String value){

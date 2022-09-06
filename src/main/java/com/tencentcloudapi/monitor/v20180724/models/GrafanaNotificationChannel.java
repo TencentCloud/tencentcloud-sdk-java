@@ -58,6 +58,29 @@ public class GrafanaNotificationChannel extends AbstractModel{
     private String UpdatedAt;
 
     /**
+    * 默认生效组织
+    */
+    @SerializedName("OrgId")
+    @Expose
+    private String OrgId;
+
+    /**
+    * 额外生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraOrgIds")
+    @Expose
+    private String [] ExtraOrgIds;
+
+    /**
+    * 生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrgIds")
+    @Expose
+    private String OrgIds;
+
+    /**
      * Get 渠道 ID 
      * @return ChannelId 渠道 ID
      */
@@ -137,6 +160,62 @@ public class GrafanaNotificationChannel extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get 默认生效组织 
+     * @return OrgId 默认生效组织
+     */
+    public String getOrgId() {
+        return this.OrgId;
+    }
+
+    /**
+     * Set 默认生效组织
+     * @param OrgId 默认生效组织
+     */
+    public void setOrgId(String OrgId) {
+        this.OrgId = OrgId;
+    }
+
+    /**
+     * Get 额外生效组织
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraOrgIds 额外生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getExtraOrgIds() {
+        return this.ExtraOrgIds;
+    }
+
+    /**
+     * Set 额外生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraOrgIds 额外生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraOrgIds(String [] ExtraOrgIds) {
+        this.ExtraOrgIds = ExtraOrgIds;
+    }
+
+    /**
+     * Get 生效组织
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrgIds 生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrgIds() {
+        return this.OrgIds;
+    }
+
+    /**
+     * Set 生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrgIds 生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrgIds(String OrgIds) {
+        this.OrgIds = OrgIds;
+    }
+
     public GrafanaNotificationChannel() {
     }
 
@@ -163,6 +242,18 @@ public class GrafanaNotificationChannel extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.OrgId != null) {
+            this.OrgId = new String(source.OrgId);
+        }
+        if (source.ExtraOrgIds != null) {
+            this.ExtraOrgIds = new String[source.ExtraOrgIds.length];
+            for (int i = 0; i < source.ExtraOrgIds.length; i++) {
+                this.ExtraOrgIds[i] = new String(source.ExtraOrgIds[i]);
+            }
+        }
+        if (source.OrgIds != null) {
+            this.OrgIds = new String(source.OrgIds);
+        }
     }
 
 
@@ -175,6 +266,9 @@ public class GrafanaNotificationChannel extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
+        this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+        this.setParamSimple(map, prefix + "OrgIds", this.OrgIds);
 
     }
 }

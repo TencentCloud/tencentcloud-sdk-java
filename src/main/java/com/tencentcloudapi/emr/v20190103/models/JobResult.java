@@ -54,6 +54,14 @@ public class JobResult extends AbstractModel{
     private String JobState;
 
     /**
+    * YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get 任务步骤名称。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 任务步骤名称。
@@ -141,6 +149,26 @@ public class JobResult extends AbstractModel{
         this.JobState = JobState;
     }
 
+    /**
+     * Get YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public JobResult() {
     }
 
@@ -158,6 +186,9 @@ public class JobResult extends AbstractModel{
         if (source.JobState != null) {
             this.JobState = new String(source.JobState);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -168,6 +199,7 @@ public class JobResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ActionOnFailure", this.ActionOnFailure);
         this.setParamSimple(map, prefix + "JobState", this.JobState);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

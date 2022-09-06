@@ -47,7 +47,7 @@ public class UploadFilesRequest extends AbstractModel{
     private UploadFile [] FileInfos;
 
     /**
-    * 上传文件链接数组，最多支持20个URL
+    * 不再使用，上传文件链接数组，最多支持20个URL
     */
     @SerializedName("FileUrls")
     @Expose
@@ -138,16 +138,16 @@ false--否，不处理
     }
 
     /**
-     * Get 上传文件链接数组，最多支持20个URL 
-     * @return FileUrls 上传文件链接数组，最多支持20个URL
+     * Get 不再使用，上传文件链接数组，最多支持20个URL 
+     * @return FileUrls 不再使用，上传文件链接数组，最多支持20个URL
      */
     public String getFileUrls() {
         return this.FileUrls;
     }
 
     /**
-     * Set 上传文件链接数组，最多支持20个URL
-     * @param FileUrls 上传文件链接数组，最多支持20个URL
+     * Set 不再使用，上传文件链接数组，最多支持20个URL
+     * @param FileUrls 不再使用，上传文件链接数组，最多支持20个URL
      */
     public void setFileUrls(String FileUrls) {
         this.FileUrls = FileUrls;

@@ -37,6 +37,13 @@ public class AutoCalloutTaskCalleeInfo extends AbstractModel{
     private Long State;
 
     /**
+    * 会话ID列表
+    */
+    @SerializedName("Sessions")
+    @Expose
+    private String [] Sessions;
+
+    /**
      * Get 被叫号码 
      * @return Callee 被叫号码
      */
@@ -68,6 +75,22 @@ public class AutoCalloutTaskCalleeInfo extends AbstractModel{
         this.State = State;
     }
 
+    /**
+     * Get 会话ID列表 
+     * @return Sessions 会话ID列表
+     */
+    public String [] getSessions() {
+        return this.Sessions;
+    }
+
+    /**
+     * Set 会话ID列表
+     * @param Sessions 会话ID列表
+     */
+    public void setSessions(String [] Sessions) {
+        this.Sessions = Sessions;
+    }
+
     public AutoCalloutTaskCalleeInfo() {
     }
 
@@ -82,6 +105,12 @@ public class AutoCalloutTaskCalleeInfo extends AbstractModel{
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.Sessions != null) {
+            this.Sessions = new String[source.Sessions.length];
+            for (int i = 0; i < source.Sessions.length; i++) {
+                this.Sessions[i] = new String(source.Sessions[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class AutoCalloutTaskCalleeInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Callee", this.Callee);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamArraySimple(map, prefix + "Sessions.", this.Sessions);
 
     }
 }

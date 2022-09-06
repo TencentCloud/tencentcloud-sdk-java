@@ -30,7 +30,7 @@ public class CreateReceiverDetailWithDataRequest extends AbstractModel{
     private Long ReceiverId;
 
     /**
-    * 收信人邮箱以及模板参数，数组形式
+    * 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
     */
     @SerializedName("Datas")
     @Expose
@@ -53,16 +53,16 @@ public class CreateReceiverDetailWithDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 收信人邮箱以及模板参数，数组形式 
-     * @return Datas 收信人邮箱以及模板参数，数组形式
+     * Get 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。 
+     * @return Datas 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
      */
     public ReceiverInputData [] getDatas() {
         return this.Datas;
     }
 
     /**
-     * Set 收信人邮箱以及模板参数，数组形式
-     * @param Datas 收信人邮箱以及模板参数，数组形式
+     * Set 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
+     * @param Datas 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
      */
     public void setDatas(ReceiverInputData [] Datas) {
         this.Datas = Datas;

@@ -30,6 +30,13 @@ public class DescribeSSOAccountRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 按账号 UIN 进行过滤
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -45,6 +52,22 @@ public class DescribeSSOAccountRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 按账号 UIN 进行过滤 
+     * @return UserId 按账号 UIN 进行过滤
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 按账号 UIN 进行过滤
+     * @param UserId 按账号 UIN 进行过滤
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public DescribeSSOAccountRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeSSOAccountRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeSSOAccountRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

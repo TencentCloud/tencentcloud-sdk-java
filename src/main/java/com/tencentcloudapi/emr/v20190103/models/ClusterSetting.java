@@ -67,7 +67,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     private LoginSettings LoginSettings;
 
     /**
-    * 实例标签。
+    * 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -227,16 +227,16 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     }
 
     /**
-     * Get 实例标签。 
-     * @return TagSpecification 实例标签。
+     * Get 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。 
+     * @return TagSpecification 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
      */
     public String [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 实例标签。
-     * @param TagSpecification 实例标签。
+     * Set 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
+     * @param TagSpecification 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
      */
     public void setTagSpecification(String [] TagSpecification) {
         this.TagSpecification = TagSpecification;

@@ -39,8 +39,7 @@ public class Step extends AbstractModel{
     /**
     * 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
     */
     @SerializedName("ActionOnFailure")
     @Expose
@@ -88,12 +87,10 @@ public class Step extends AbstractModel{
     /**
      * Get 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。 
+2. CONTINUE 执行失败时跳过并执行后续步骤。 
      * @return ActionOnFailure 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
      */
     public String getActionOnFailure() {
         return this.ActionOnFailure;
@@ -102,12 +99,10 @@ public class Step extends AbstractModel{
     /**
      * Set 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
      * @param ActionOnFailure 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
      */
     public void setActionOnFailure(String ActionOnFailure) {
         this.ActionOnFailure = ActionOnFailure;

@@ -24,6 +24,7 @@ public class SegmentPortraitPicResponse extends AbstractModel{
 
     /**
     * 处理后的图片 base64 数据，透明背景图
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultImage")
     @Expose
@@ -31,10 +32,35 @@ public class SegmentPortraitPicResponse extends AbstractModel{
 
     /**
     * 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultMask")
     @Expose
     private String ResultMask;
+
+    /**
+    * 图片是否存在前景。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasForeground")
+    @Expose
+    private Boolean HasForeground;
+
+    /**
+    * 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultImageUrl")
+    @Expose
+    private String ResultImageUrl;
+
+    /**
+    * 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultMaskUrl")
+    @Expose
+    private String ResultMaskUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,8 +70,10 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 处理后的图片 base64 数据，透明背景图 
+     * Get 处理后的图片 base64 数据，透明背景图
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultImage 处理后的图片 base64 数据，透明背景图
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultImage() {
         return this.ResultImage;
@@ -53,15 +81,19 @@ public class SegmentPortraitPicResponse extends AbstractModel{
 
     /**
      * Set 处理后的图片 base64 数据，透明背景图
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultImage 处理后的图片 base64 数据，透明背景图
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultImage(String ResultImage) {
         this.ResultImage = ResultImage;
     }
 
     /**
-     * Get 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255） 
+     * Get 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultMask 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultMask() {
         return this.ResultMask;
@@ -69,10 +101,72 @@ public class SegmentPortraitPicResponse extends AbstractModel{
 
     /**
      * Set 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultMask 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultMask(String ResultMask) {
         this.ResultMask = ResultMask;
+    }
+
+    /**
+     * Get 图片是否存在前景。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasForeground 图片是否存在前景。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasForeground() {
+        return this.HasForeground;
+    }
+
+    /**
+     * Set 图片是否存在前景。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasForeground 图片是否存在前景。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasForeground(Boolean HasForeground) {
+        this.HasForeground = HasForeground;
+    }
+
+    /**
+     * Get 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultImageUrl 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResultImageUrl() {
+        return this.ResultImageUrl;
+    }
+
+    /**
+     * Set 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultImageUrl 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultImageUrl(String ResultImageUrl) {
+        this.ResultImageUrl = ResultImageUrl;
+    }
+
+    /**
+     * Get 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultMaskUrl 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResultMaskUrl() {
+        return this.ResultMaskUrl;
+    }
+
+    /**
+     * Set 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultMaskUrl 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultMaskUrl(String ResultMaskUrl) {
+        this.ResultMaskUrl = ResultMaskUrl;
     }
 
     /**
@@ -105,6 +199,15 @@ public class SegmentPortraitPicResponse extends AbstractModel{
         if (source.ResultMask != null) {
             this.ResultMask = new String(source.ResultMask);
         }
+        if (source.HasForeground != null) {
+            this.HasForeground = new Boolean(source.HasForeground);
+        }
+        if (source.ResultImageUrl != null) {
+            this.ResultImageUrl = new String(source.ResultImageUrl);
+        }
+        if (source.ResultMaskUrl != null) {
+            this.ResultMaskUrl = new String(source.ResultMaskUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +220,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
         this.setParamSimple(map, prefix + "ResultMask", this.ResultMask);
+        this.setParamSimple(map, prefix + "HasForeground", this.HasForeground);
+        this.setParamSimple(map, prefix + "ResultImageUrl", this.ResultImageUrl);
+        this.setParamSimple(map, prefix + "ResultMaskUrl", this.ResultMaskUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

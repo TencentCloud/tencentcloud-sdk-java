@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class InstallPluginsResponse extends AbstractModel{
 
     /**
+    * 已安装插件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PluginIds")
+    @Expose
+    private String [] PluginIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 已安装插件 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PluginIds 已安装插件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getPluginIds() {
+        return this.PluginIds;
+    }
+
+    /**
+     * Set 已安装插件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PluginIds 已安装插件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPluginIds(String [] PluginIds) {
+        this.PluginIds = PluginIds;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,12 @@ public class InstallPluginsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InstallPluginsResponse(InstallPluginsResponse source) {
+        if (source.PluginIds != null) {
+            this.PluginIds = new String[source.PluginIds.length];
+            for (int i = 0; i < source.PluginIds.length; i++) {
+                this.PluginIds[i] = new String(source.PluginIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +97,7 @@ public class InstallPluginsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "PluginIds.", this.PluginIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

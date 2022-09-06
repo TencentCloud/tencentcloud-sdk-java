@@ -53,7 +53,7 @@ public class SendEmailRequest extends AbstractModel{
     private String ReplyToAddresses;
 
     /**
-    * 使用模板发送时，填写的模板相关参数
+    * 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
     */
     @SerializedName("Template")
     @Expose
@@ -67,7 +67,7 @@ public class SendEmailRequest extends AbstractModel{
     private Simple Simple;
 
     /**
-    * 需要发送附件时，填写附件相关参数。
+    * 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
     */
     @SerializedName("Attachments")
     @Expose
@@ -160,16 +160,16 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 使用模板发送时，填写的模板相关参数 
-     * @return Template 使用模板发送时，填写的模板相关参数
+     * Get 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项 
+     * @return Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set 使用模板发送时，填写的模板相关参数
-     * @param Template 使用模板发送时，填写的模板相关参数
+     * Set 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
+     * @param Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
@@ -192,16 +192,16 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要发送附件时，填写附件相关参数。 
-     * @return Attachments 需要发送附件时，填写附件相关参数。
+     * Get 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误 
+     * @return Attachments 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set 需要发送附件时，填写附件相关参数。
-     * @param Attachments 需要发送附件时，填写附件相关参数。
+     * Set 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
+     * @param Attachments 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;

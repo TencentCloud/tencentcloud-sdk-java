@@ -75,6 +75,20 @@ public class DescribeClusterNodesRequest extends AbstractModel{
     private SearchItem [] SearchFields;
 
     /**
+    * 无
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 无
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Long Asc;
+
+    /**
      * Get 集群实例ID,实例ID形如: emr-xxxxxxxx 
      * @return InstanceId 集群实例ID,实例ID形如: emr-xxxxxxxx
      */
@@ -210,6 +224,38 @@ public class DescribeClusterNodesRequest extends AbstractModel{
         this.SearchFields = SearchFields;
     }
 
+    /**
+     * Get 无 
+     * @return OrderField 无
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 无
+     * @param OrderField 无
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 无 
+     * @return Asc 无
+     */
+    public Long getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 无
+     * @param Asc 无
+     */
+    public void setAsc(Long Asc) {
+        this.Asc = Asc;
+    }
+
     public DescribeClusterNodesRequest() {
     }
 
@@ -239,6 +285,12 @@ public class DescribeClusterNodesRequest extends AbstractModel{
                 this.SearchFields[i] = new SearchItem(source.SearchFields[i]);
             }
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Long(source.Asc);
+        }
     }
 
 
@@ -252,6 +304,8 @@ public class DescribeClusterNodesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         this.setParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

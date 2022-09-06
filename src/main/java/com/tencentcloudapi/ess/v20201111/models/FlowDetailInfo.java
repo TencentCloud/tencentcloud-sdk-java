@@ -46,6 +46,12 @@ public class FlowDetailInfo extends AbstractModel{
 
     /**
     * 合同(流程)的状态
+1：未签署
+2：部分签署
+3：已退回
+4：完成签署
+5：已过期
+6：已取消
     */
     @SerializedName("FlowStatus")
     @Expose
@@ -134,8 +140,20 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)的状态 
+     * Get 合同(流程)的状态
+1：未签署
+2：部分签署
+3：已退回
+4：完成签署
+5：已过期
+6：已取消 
      * @return FlowStatus 合同(流程)的状态
+1：未签署
+2：部分签署
+3：已退回
+4：完成签署
+5：已过期
+6：已取消
      */
     public Long getFlowStatus() {
         return this.FlowStatus;
@@ -143,7 +161,19 @@ public class FlowDetailInfo extends AbstractModel{
 
     /**
      * Set 合同(流程)的状态
+1：未签署
+2：部分签署
+3：已退回
+4：完成签署
+5：已过期
+6：已取消
      * @param FlowStatus 合同(流程)的状态
+1：未签署
+2：部分签署
+3：已退回
+4：完成签署
+5：已过期
+6：已取消
      */
     public void setFlowStatus(Long FlowStatus) {
         this.FlowStatus = FlowStatus;

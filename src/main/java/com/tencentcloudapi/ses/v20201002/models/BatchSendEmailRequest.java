@@ -24,8 +24,8 @@ public class BatchSendEmailRequest extends AbstractModel{
 
     /**
     * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
     */
     @SerializedName("FromEmailAddress")
     @Expose
@@ -110,11 +110,11 @@ public class BatchSendEmailRequest extends AbstractModel{
 
     /**
      * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com> 
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt; 
      * @return FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
@@ -122,11 +122,11 @@ public class BatchSendEmailRequest extends AbstractModel{
 
     /**
      * Set 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
      * @param FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;

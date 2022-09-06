@@ -39,6 +39,16 @@ public class FlowApproverDetail extends AbstractModel{
 
     /**
     * 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
     */
     @SerializedName("ApproveStatus")
     @Expose
@@ -157,8 +167,28 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 签署人的状态 
+     * Get 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止 
      * @return ApproveStatus 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
      */
     public Long getApproveStatus() {
         return this.ApproveStatus;
@@ -166,7 +196,27 @@ public class FlowApproverDetail extends AbstractModel{
 
     /**
      * Set 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
      * @param ApproveStatus 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
      */
     public void setApproveStatus(Long ApproveStatus) {
         this.ApproveStatus = ApproveStatus;

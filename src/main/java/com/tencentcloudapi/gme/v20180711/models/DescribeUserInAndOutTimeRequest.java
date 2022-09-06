@@ -44,6 +44,20 @@ public class DescribeUserInAndOutTimeRequest extends AbstractModel{
     private Long UserId;
 
     /**
+    * 字符串类型用户ID
+    */
+    @SerializedName("UserIdStr")
+    @Expose
+    private String UserIdStr;
+
+    /**
+    * 字符串类型房间ID
+    */
+    @SerializedName("RoomIdStr")
+    @Expose
+    private String RoomIdStr;
+
+    /**
      * Get 应用ID 
      * @return BizId 应用ID
      */
@@ -91,6 +105,38 @@ public class DescribeUserInAndOutTimeRequest extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 字符串类型用户ID 
+     * @return UserIdStr 字符串类型用户ID
+     */
+    public String getUserIdStr() {
+        return this.UserIdStr;
+    }
+
+    /**
+     * Set 字符串类型用户ID
+     * @param UserIdStr 字符串类型用户ID
+     */
+    public void setUserIdStr(String UserIdStr) {
+        this.UserIdStr = UserIdStr;
+    }
+
+    /**
+     * Get 字符串类型房间ID 
+     * @return RoomIdStr 字符串类型房间ID
+     */
+    public String getRoomIdStr() {
+        return this.RoomIdStr;
+    }
+
+    /**
+     * Set 字符串类型房间ID
+     * @param RoomIdStr 字符串类型房间ID
+     */
+    public void setRoomIdStr(String RoomIdStr) {
+        this.RoomIdStr = RoomIdStr;
+    }
+
     public DescribeUserInAndOutTimeRequest() {
     }
 
@@ -108,6 +154,12 @@ public class DescribeUserInAndOutTimeRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new Long(source.UserId);
         }
+        if (source.UserIdStr != null) {
+            this.UserIdStr = new String(source.UserIdStr);
+        }
+        if (source.RoomIdStr != null) {
+            this.RoomIdStr = new String(source.RoomIdStr);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class DescribeUserInAndOutTimeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "UserIdStr", this.UserIdStr);
+        this.setParamSimple(map, prefix + "RoomIdStr", this.RoomIdStr);
 
     }
 }
