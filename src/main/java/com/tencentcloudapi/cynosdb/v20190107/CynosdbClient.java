@@ -139,6 +139,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *为集群创建手动备份
+     * @param req CreateBackupRequest
+     * @return CreateBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建集群
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
@@ -891,6 +911,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterSlaveZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyClusterSlaveZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *升级预付费存储
+     * @param req ModifyClusterStorageRequest
+     * @return ModifyClusterStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterStorageResponse ModifyClusterStorage(ModifyClusterStorageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterStorageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterStorageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterStorage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

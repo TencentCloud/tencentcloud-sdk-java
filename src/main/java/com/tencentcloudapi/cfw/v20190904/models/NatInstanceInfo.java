@@ -111,6 +111,30 @@ public class NatInstanceInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionDetail")
+    @Expose
+    private String RegionDetail;
+
+    /**
+    * 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneZh")
+    @Expose
+    private String ZoneZh;
+
+    /**
+    * 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneZhBak")
+    @Expose
+    private String ZoneZhBak;
+
+    /**
      * Get nat实例id 
      * @return NatinsId nat实例id
      */
@@ -318,6 +342,66 @@ public class NatInstanceInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionDetail 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionDetail() {
+        return this.RegionDetail;
+    }
+
+    /**
+     * Set 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionDetail 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionDetail(String RegionDetail) {
+        this.RegionDetail = RegionDetail;
+    }
+
+    /**
+     * Get 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneZh 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneZh() {
+        return this.ZoneZh;
+    }
+
+    /**
+     * Set 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneZh 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneZh(String ZoneZh) {
+        this.ZoneZh = ZoneZh;
+    }
+
+    /**
+     * Get 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneZhBak 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneZhBak() {
+        return this.ZoneZhBak;
+    }
+
+    /**
+     * Set 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneZhBak 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneZhBak(String ZoneZhBak) {
+        this.ZoneZhBak = ZoneZhBak;
+    }
+
     public NatInstanceInfo() {
     }
 
@@ -371,6 +455,15 @@ public class NatInstanceInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.RegionDetail != null) {
+            this.RegionDetail = new String(source.RegionDetail);
+        }
+        if (source.ZoneZh != null) {
+            this.ZoneZh = new String(source.ZoneZh);
+        }
+        if (source.ZoneZhBak != null) {
+            this.ZoneZhBak = new String(source.ZoneZhBak);
+        }
     }
 
 
@@ -390,6 +483,9 @@ public class NatInstanceInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "VpcIp.", this.VpcIp);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RegionDetail", this.RegionDetail);
+        this.setParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
+        this.setParamSimple(map, prefix + "ZoneZhBak", this.ZoneZhBak);
 
     }
 }

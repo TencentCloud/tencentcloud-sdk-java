@@ -102,6 +102,14 @@ RESULT_PASSED: 通过
     private String ImageTag;
 
     /**
+    * 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyInfo")
+    @Expose
+    private String VerifyInfo;
+
+    /**
      * Get 为客户分配的唯一的资产项的ID。 
      * @return CustomerAssetId 为客户分配的唯一的资产项的ID。
      */
@@ -309,6 +317,26 @@ RESULT_PASSED: 通过
         this.ImageTag = ImageTag;
     }
 
+    /**
+     * Get 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyInfo 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVerifyInfo() {
+        return this.VerifyInfo;
+    }
+
+    /**
+     * Set 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyInfo 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyInfo(String VerifyInfo) {
+        this.VerifyInfo = VerifyInfo;
+    }
+
     public ComplianceAffectedAsset() {
     }
 
@@ -344,6 +372,9 @@ RESULT_PASSED: 通过
         if (source.ImageTag != null) {
             this.ImageTag = new String(source.ImageTag);
         }
+        if (source.VerifyInfo != null) {
+            this.VerifyInfo = new String(source.VerifyInfo);
+        }
     }
 
 
@@ -360,6 +391,7 @@ RESULT_PASSED: 通过
         this.setParamSimple(map, prefix + "CheckResult", this.CheckResult);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "ImageTag", this.ImageTag);
+        this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
 
     }
 }

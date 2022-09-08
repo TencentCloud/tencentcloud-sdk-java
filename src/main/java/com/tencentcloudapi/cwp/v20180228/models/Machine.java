@@ -210,6 +210,14 @@ public class Machine extends AbstractModel{
     private Tags [] CloudTags;
 
     /**
+    * 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAddedOnTheFifteen")
+    @Expose
+    private Long IsAddedOnTheFifteen;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -657,6 +665,26 @@ public class Machine extends AbstractModel{
         this.CloudTags = CloudTags;
     }
 
+    /**
+     * Get 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAddedOnTheFifteen() {
+        return this.IsAddedOnTheFifteen;
+    }
+
+    /**
+     * Set 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAddedOnTheFifteen(Long IsAddedOnTheFifteen) {
+        this.IsAddedOnTheFifteen = IsAddedOnTheFifteen;
+    }
+
     public Machine() {
     }
 
@@ -746,6 +774,9 @@ public class Machine extends AbstractModel{
                 this.CloudTags[i] = new Tags(source.CloudTags[i]);
             }
         }
+        if (source.IsAddedOnTheFifteen != null) {
+            this.IsAddedOnTheFifteen = new Long(source.IsAddedOnTheFifteen);
+        }
     }
 
 
@@ -778,6 +809,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
         this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
+        this.setParamSimple(map, prefix + "IsAddedOnTheFifteen", this.IsAddedOnTheFifteen);
 
     }
 }

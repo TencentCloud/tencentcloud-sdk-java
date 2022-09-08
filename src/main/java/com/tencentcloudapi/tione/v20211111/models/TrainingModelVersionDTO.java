@@ -167,6 +167,54 @@ public class TrainingModelVersionDTO extends AbstractModel{
     private String TrainingModelFormat;
 
     /**
+    * 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionType")
+    @Expose
+    private String VersionType;
+
+    /**
+    * GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GPUType")
+    @Expose
+    private String GPUType;
+
+    /**
+    * 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoClean")
+    @Expose
+    private String AutoClean;
+
+    /**
+    * 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelCleanPeriod")
+    @Expose
+    private Long ModelCleanPeriod;
+
+    /**
+    * 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxReservedModels")
+    @Expose
+    private Long MaxReservedModels;
+
+    /**
+    * 模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelHotUpdatePath")
+    @Expose
+    private CosPathInfo ModelHotUpdatePath;
+
+    /**
      * Get 模型id 
      * @return TrainingModelId 模型id
      */
@@ -502,6 +550,126 @@ public class TrainingModelVersionDTO extends AbstractModel{
         this.TrainingModelFormat = TrainingModelFormat;
     }
 
+    /**
+     * Get 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionType 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersionType() {
+        return this.VersionType;
+    }
+
+    /**
+     * Set 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionType 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionType(String VersionType) {
+        this.VersionType = VersionType;
+    }
+
+    /**
+     * Get GPU类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GPUType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGPUType() {
+        return this.GPUType;
+    }
+
+    /**
+     * Set GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGPUType(String GPUType) {
+        this.GPUType = GPUType;
+    }
+
+    /**
+     * Get 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoClean 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAutoClean() {
+        return this.AutoClean;
+    }
+
+    /**
+     * Set 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoClean 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoClean(String AutoClean) {
+        this.AutoClean = AutoClean;
+    }
+
+    /**
+     * Get 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelCleanPeriod 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getModelCleanPeriod() {
+        return this.ModelCleanPeriod;
+    }
+
+    /**
+     * Set 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelCleanPeriod 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelCleanPeriod(Long ModelCleanPeriod) {
+        this.ModelCleanPeriod = ModelCleanPeriod;
+    }
+
+    /**
+     * Get 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxReservedModels 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxReservedModels() {
+        return this.MaxReservedModels;
+    }
+
+    /**
+     * Set 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxReservedModels 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxReservedModels(Long MaxReservedModels) {
+        this.MaxReservedModels = MaxReservedModels;
+    }
+
+    /**
+     * Get 模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelHotUpdatePath 模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CosPathInfo getModelHotUpdatePath() {
+        return this.ModelHotUpdatePath;
+    }
+
+    /**
+     * Set 模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelHotUpdatePath 模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelHotUpdatePath(CosPathInfo ModelHotUpdatePath) {
+        this.ModelHotUpdatePath = ModelHotUpdatePath;
+    }
+
     public TrainingModelVersionDTO() {
     }
 
@@ -570,6 +738,24 @@ public class TrainingModelVersionDTO extends AbstractModel{
         if (source.TrainingModelFormat != null) {
             this.TrainingModelFormat = new String(source.TrainingModelFormat);
         }
+        if (source.VersionType != null) {
+            this.VersionType = new String(source.VersionType);
+        }
+        if (source.GPUType != null) {
+            this.GPUType = new String(source.GPUType);
+        }
+        if (source.AutoClean != null) {
+            this.AutoClean = new String(source.AutoClean);
+        }
+        if (source.ModelCleanPeriod != null) {
+            this.ModelCleanPeriod = new Long(source.ModelCleanPeriod);
+        }
+        if (source.MaxReservedModels != null) {
+            this.MaxReservedModels = new Long(source.MaxReservedModels);
+        }
+        if (source.ModelHotUpdatePath != null) {
+            this.ModelHotUpdatePath = new CosPathInfo(source.ModelHotUpdatePath);
+        }
     }
 
 
@@ -597,6 +783,12 @@ public class TrainingModelVersionDTO extends AbstractModel{
         this.setParamSimple(map, prefix + "TrainingModelProgress", this.TrainingModelProgress);
         this.setParamSimple(map, prefix + "TrainingModelErrorMsg", this.TrainingModelErrorMsg);
         this.setParamSimple(map, prefix + "TrainingModelFormat", this.TrainingModelFormat);
+        this.setParamSimple(map, prefix + "VersionType", this.VersionType);
+        this.setParamSimple(map, prefix + "GPUType", this.GPUType);
+        this.setParamSimple(map, prefix + "AutoClean", this.AutoClean);
+        this.setParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
+        this.setParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
+        this.setParamObj(map, prefix + "ModelHotUpdatePath.", this.ModelHotUpdatePath);
 
     }
 }

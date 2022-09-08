@@ -116,6 +116,14 @@ RESULT_FAILED: 未通过
     private String LastCheckTime;
 
     /**
+    * 验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyInfo")
+    @Expose
+    private String VerifyInfo;
+
+    /**
      * Get 为客户分配的唯一的检测项的ID。 
      * @return CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      */
@@ -343,6 +351,26 @@ RESULT_FAILED: 未通过
         this.LastCheckTime = LastCheckTime;
     }
 
+    /**
+     * Get 验证信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyInfo 验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVerifyInfo() {
+        return this.VerifyInfo;
+    }
+
+    /**
+     * Set 验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyInfo 验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyInfo(String VerifyInfo) {
+        this.VerifyInfo = VerifyInfo;
+    }
+
     public ComplianceAssetPolicyItem() {
     }
 
@@ -387,6 +415,9 @@ RESULT_FAILED: 未通过
         if (source.LastCheckTime != null) {
             this.LastCheckTime = new String(source.LastCheckTime);
         }
+        if (source.VerifyInfo != null) {
+            this.VerifyInfo = new String(source.VerifyInfo);
+        }
     }
 
 
@@ -406,6 +437,7 @@ RESULT_FAILED: 未通过
         this.setParamSimple(map, prefix + "WhitelistId", this.WhitelistId);
         this.setParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
         this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
+        this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
 
     }
 }

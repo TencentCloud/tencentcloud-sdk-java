@@ -922,6 +922,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
+     * @param req DescribeCdbZoneConfigRequest
+     * @return DescribeCdbZoneConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(DescribeCdbZoneConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCdbZoneConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCdbZoneConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCdbZoneConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
      * @param req DescribeCloneListRequest
      * @return DescribeCloneListResponse

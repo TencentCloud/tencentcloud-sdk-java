@@ -279,6 +279,14 @@ public class Certificates extends AbstractModel{
     private Boolean IsSM;
 
     /**
+    * 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptAlgorithm")
+    @Expose
+    private String EncryptAlgorithm;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -918,6 +926,26 @@ public class Certificates extends AbstractModel{
         this.IsSM = IsSM;
     }
 
+    /**
+     * Get 证书算法
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptAlgorithm 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptAlgorithm() {
+        return this.EncryptAlgorithm;
+    }
+
+    /**
+     * Set 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptAlgorithm 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptAlgorithm(String EncryptAlgorithm) {
+        this.EncryptAlgorithm = EncryptAlgorithm;
+    }
+
     public Certificates() {
     }
 
@@ -1031,6 +1059,9 @@ public class Certificates extends AbstractModel{
         if (source.IsSM != null) {
             this.IsSM = new Boolean(source.IsSM);
         }
+        if (source.EncryptAlgorithm != null) {
+            this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
+        }
     }
 
 
@@ -1070,6 +1101,7 @@ public class Certificates extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
+        this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
 
     }
 }

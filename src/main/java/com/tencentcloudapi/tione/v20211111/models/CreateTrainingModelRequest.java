@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class CreateTrainingModelRequest extends AbstractModel{
 
     /**
-    * 导入方式（MODEL/VERSION）
+    * 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
     */
     @SerializedName("ImportMethod")
     @Expose
@@ -179,16 +182,49 @@ public class CreateTrainingModelRequest extends AbstractModel{
     private String ReasoningEnvironmentId;
 
     /**
-     * Get 导入方式（MODEL/VERSION） 
-     * @return ImportMethod 导入方式（MODEL/VERSION）
+    * 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+    */
+    @SerializedName("AutoClean")
+    @Expose
+    private String AutoClean;
+
+    /**
+    * 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+    */
+    @SerializedName("MaxReservedModels")
+    @Expose
+    private Long MaxReservedModels;
+
+    /**
+    * 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+    */
+    @SerializedName("ModelCleanPeriod")
+    @Expose
+    private Long ModelCleanPeriod;
+
+    /**
+     * Get 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本 
+     * @return ImportMethod 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
      */
     public String getImportMethod() {
         return this.ImportMethod;
     }
 
     /**
-     * Set 导入方式（MODEL/VERSION）
-     * @param ImportMethod 导入方式（MODEL/VERSION）
+     * Set 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
+     * @param ImportMethod 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
      */
     public void setImportMethod(String ImportMethod) {
         this.ImportMethod = ImportMethod;
@@ -538,6 +574,54 @@ public class CreateTrainingModelRequest extends AbstractModel{
         this.ReasoningEnvironmentId = ReasoningEnvironmentId;
     }
 
+    /**
+     * Get 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型 
+     * @return AutoClean 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+     */
+    public String getAutoClean() {
+        return this.AutoClean;
+    }
+
+    /**
+     * Set 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+     * @param AutoClean 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+     */
+    public void setAutoClean(String AutoClean) {
+        this.AutoClean = AutoClean;
+    }
+
+    /**
+     * Get 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1) 
+     * @return MaxReservedModels 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+     */
+    public Long getMaxReservedModels() {
+        return this.MaxReservedModels;
+    }
+
+    /**
+     * Set 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+     * @param MaxReservedModels 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+     */
+    public void setMaxReservedModels(Long MaxReservedModels) {
+        this.MaxReservedModels = MaxReservedModels;
+    }
+
+    /**
+     * Get 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1) 
+     * @return ModelCleanPeriod 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+     */
+    public Long getModelCleanPeriod() {
+        return this.ModelCleanPeriod;
+    }
+
+    /**
+     * Set 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+     * @param ModelCleanPeriod 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+     */
+    public void setModelCleanPeriod(Long ModelCleanPeriod) {
+        this.ModelCleanPeriod = ModelCleanPeriod;
+    }
+
     public CreateTrainingModelRequest() {
     }
 
@@ -615,6 +699,15 @@ public class CreateTrainingModelRequest extends AbstractModel{
         if (source.ReasoningEnvironmentId != null) {
             this.ReasoningEnvironmentId = new String(source.ReasoningEnvironmentId);
         }
+        if (source.AutoClean != null) {
+            this.AutoClean = new String(source.AutoClean);
+        }
+        if (source.MaxReservedModels != null) {
+            this.MaxReservedModels = new Long(source.MaxReservedModels);
+        }
+        if (source.ModelCleanPeriod != null) {
+            this.ModelCleanPeriod = new Long(source.ModelCleanPeriod);
+        }
     }
 
 
@@ -644,6 +737,9 @@ public class CreateTrainingModelRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ModelVersionType", this.ModelVersionType);
         this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
         this.setParamSimple(map, prefix + "ReasoningEnvironmentId", this.ReasoningEnvironmentId);
+        this.setParamSimple(map, prefix + "AutoClean", this.AutoClean);
+        this.setParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
+        this.setParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
 
     }
 }

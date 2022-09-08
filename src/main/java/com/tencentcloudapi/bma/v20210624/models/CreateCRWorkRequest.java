@@ -219,6 +219,13 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String Content;
 
     /**
+    * x
+    */
+    @SerializedName("MonitorEndTime")
+    @Expose
+    private String MonitorEndTime;
+
+    /**
      * Get 作品名称 
      * @return WorkName 作品名称
      */
@@ -666,6 +673,22 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.Content = Content;
     }
 
+    /**
+     * Get x 
+     * @return MonitorEndTime x
+     */
+    public String getMonitorEndTime() {
+        return this.MonitorEndTime;
+    }
+
+    /**
+     * Set x
+     * @param MonitorEndTime x
+     */
+    public void setMonitorEndTime(String MonitorEndTime) {
+        this.MonitorEndTime = MonitorEndTime;
+    }
+
     public CreateCRWorkRequest() {
     }
 
@@ -761,6 +784,9 @@ public class CreateCRWorkRequest extends AbstractModel{
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.MonitorEndTime != null) {
+            this.MonitorEndTime = new String(source.MonitorEndTime);
+        }
     }
 
 
@@ -796,6 +822,7 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AuthorizationEndTime", this.AuthorizationEndTime);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
 
     }
 }

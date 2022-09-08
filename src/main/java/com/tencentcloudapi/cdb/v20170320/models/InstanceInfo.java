@@ -333,6 +333,22 @@ public class InstanceInfo extends AbstractModel{
     private TagInfoItem [] TagList;
 
     /**
+    * 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
+    * 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1056,6 +1072,46 @@ public class InstanceInfo extends AbstractModel{
         this.TagList = TagList;
     }
 
+    /**
+     * Get 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
+     * Get 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxDelayTime 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxDelayTime 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1202,6 +1258,12 @@ public class InstanceInfo extends AbstractModel{
                 this.TagList[i] = new TagInfoItem(source.TagList[i]);
             }
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -1252,6 +1314,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

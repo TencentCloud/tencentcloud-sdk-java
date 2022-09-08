@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class DescribeDBPriceResponse extends AbstractModel{
 
     /**
-    * 实例价格，单位：分（人民币）。
+    * 实例价格，单位：分。
     */
     @SerializedName("Price")
     @Expose
     private Long Price;
 
     /**
-    * 实例原价，单位：分（人民币）。
+    * 实例原价，单位：分。
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
+
+    /**
+    * 货币单位。CNY-人民币，USD-美元。
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class DescribeDBPriceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例价格，单位：分（人民币）。 
-     * @return Price 实例价格，单位：分（人民币）。
+     * Get 实例价格，单位：分。 
+     * @return Price 实例价格，单位：分。
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实例价格，单位：分（人民币）。
-     * @param Price 实例价格，单位：分（人民币）。
+     * Set 实例价格，单位：分。
+     * @param Price 实例价格，单位：分。
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 实例原价，单位：分（人民币）。 
-     * @return OriginalPrice 实例原价，单位：分（人民币）。
+     * Get 实例原价，单位：分。 
+     * @return OriginalPrice 实例原价，单位：分。
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 实例原价，单位：分（人民币）。
-     * @param OriginalPrice 实例原价，单位：分（人民币）。
+     * Set 实例原价，单位：分。
+     * @param OriginalPrice 实例原价，单位：分。
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
+    }
+
+    /**
+     * Get 货币单位。CNY-人民币，USD-美元。 
+     * @return Currency 货币单位。CNY-人民币，USD-美元。
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set 货币单位。CNY-人民币，USD-美元。
+     * @param Currency 货币单位。CNY-人民币，USD-美元。
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
     }
 
     /**
@@ -105,6 +128,9 @@ public class DescribeDBPriceResponse extends AbstractModel{
         if (source.OriginalPrice != null) {
             this.OriginalPrice = new Long(source.OriginalPrice);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class DescribeDBPriceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

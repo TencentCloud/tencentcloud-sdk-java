@@ -333,6 +333,27 @@ public class DeployApplicationRequest extends AbstractModel{
     private Long EnableMetrics;
 
     /**
+    * 镜像部署时，选择的tcr实例id
+    */
+    @SerializedName("TcrInstanceId")
+    @Expose
+    private String TcrInstanceId;
+
+    /**
+    * 镜像部署时，选择的镜像服务器地址
+    */
+    @SerializedName("RepoServer")
+    @Expose
+    private String RepoServer;
+
+    /**
+    * 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private Long RepoType;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -1068,6 +1089,54 @@ public class DeployApplicationRequest extends AbstractModel{
         this.EnableMetrics = EnableMetrics;
     }
 
+    /**
+     * Get 镜像部署时，选择的tcr实例id 
+     * @return TcrInstanceId 镜像部署时，选择的tcr实例id
+     */
+    public String getTcrInstanceId() {
+        return this.TcrInstanceId;
+    }
+
+    /**
+     * Set 镜像部署时，选择的tcr实例id
+     * @param TcrInstanceId 镜像部署时，选择的tcr实例id
+     */
+    public void setTcrInstanceId(String TcrInstanceId) {
+        this.TcrInstanceId = TcrInstanceId;
+    }
+
+    /**
+     * Get 镜像部署时，选择的镜像服务器地址 
+     * @return RepoServer 镜像部署时，选择的镜像服务器地址
+     */
+    public String getRepoServer() {
+        return this.RepoServer;
+    }
+
+    /**
+     * Set 镜像部署时，选择的镜像服务器地址
+     * @param RepoServer 镜像部署时，选择的镜像服务器地址
+     */
+    public void setRepoServer(String RepoServer) {
+        this.RepoServer = RepoServer;
+    }
+
+    /**
+     * Get 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库 
+     * @return RepoType 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+     */
+    public Long getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+     * @param RepoType 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+     */
+    public void setRepoType(Long RepoType) {
+        this.RepoType = RepoType;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1229,6 +1298,15 @@ public class DeployApplicationRequest extends AbstractModel{
         if (source.EnableMetrics != null) {
             this.EnableMetrics = new Long(source.EnableMetrics);
         }
+        if (source.TcrInstanceId != null) {
+            this.TcrInstanceId = new String(source.TcrInstanceId);
+        }
+        if (source.RepoServer != null) {
+            this.RepoServer = new String(source.RepoServer);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new Long(source.RepoType);
+        }
     }
 
 
@@ -1278,6 +1356,9 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
         this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
         this.setParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
+        this.setParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
+        this.setParamSimple(map, prefix + "RepoServer", this.RepoServer);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
 
     }
 }

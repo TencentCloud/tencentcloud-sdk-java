@@ -53,6 +53,14 @@ public class ReviewAudioVideoTask extends AbstractModel{
     private String Message;
 
     /**
+    * 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Input")
+    @Expose
+    private ReviewAudioVideoTaskInput Input;
+
+    /**
     * 音视频审核任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -147,6 +155,26 @@ public class ReviewAudioVideoTask extends AbstractModel{
     }
 
     /**
+     * Get 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Input 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReviewAudioVideoTaskInput getInput() {
+        return this.Input;
+    }
+
+    /**
+     * Set 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Input 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInput(ReviewAudioVideoTaskInput Input) {
+        this.Input = Input;
+    }
+
+    /**
      * Get 音视频审核任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 音视频审核任务的输出。
@@ -218,6 +246,9 @@ public class ReviewAudioVideoTask extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Input != null) {
+            this.Input = new ReviewAudioVideoTaskInput(source.Input);
+        }
         if (source.Output != null) {
             this.Output = new ReviewAudioVideoTaskOutput(source.Output);
         }
@@ -238,6 +269,7 @@ public class ReviewAudioVideoTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

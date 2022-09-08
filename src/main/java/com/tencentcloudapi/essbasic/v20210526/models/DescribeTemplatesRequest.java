@@ -65,6 +65,20 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 是否返回所有组件信息
+    */
+    @SerializedName("QueryAllComponents")
+    @Expose
+    private Boolean QueryAllComponents;
+
+    /**
+    * 模糊搜索模版名称
+    */
+    @SerializedName("TemplateName")
+    @Expose
+    private String TemplateName;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -160,6 +174,38 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 是否返回所有组件信息 
+     * @return QueryAllComponents 是否返回所有组件信息
+     */
+    public Boolean getQueryAllComponents() {
+        return this.QueryAllComponents;
+    }
+
+    /**
+     * Set 是否返回所有组件信息
+     * @param QueryAllComponents 是否返回所有组件信息
+     */
+    public void setQueryAllComponents(Boolean QueryAllComponents) {
+        this.QueryAllComponents = QueryAllComponents;
+    }
+
+    /**
+     * Get 模糊搜索模版名称 
+     * @return TemplateName 模糊搜索模版名称
+     */
+    public String getTemplateName() {
+        return this.TemplateName;
+    }
+
+    /**
+     * Set 模糊搜索模版名称
+     * @param TemplateName 模糊搜索模版名称
+     */
+    public void setTemplateName(String TemplateName) {
+        this.TemplateName = TemplateName;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -186,6 +232,12 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.QueryAllComponents != null) {
+            this.QueryAllComponents = new Boolean(source.QueryAllComponents);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
+        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
 
     }
 }

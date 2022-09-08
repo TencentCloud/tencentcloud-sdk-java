@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioResultDetailMoanResult extends AbstractModel{
 
     /**
-    * 固定为Moan
+    * 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -31,37 +31,51 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     private String Label;
 
     /**
-    * 分数
+    * 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 开始时间
+    * 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * 结束时间
+    * 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
     */
     @SerializedName("EndTime")
     @Expose
     private Float EndTime;
 
     /**
-    * 子标签码
+    * *内测中，敬请期待*
     */
     @SerializedName("SubLabelCode")
     @Expose
     private String SubLabelCode;
 
     /**
-     * Get 固定为Moan
+    * 该字段用于返回当前标签（Lable）下的二级标签。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
+    * 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+    */
+    @SerializedName("Suggestion")
+    @Expose
+    private String Suggestion;
+
+    /**
+     * Get 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 固定为Moan
+     * @return Label 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -69,9 +83,9 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     }
 
     /**
-     * Set 固定为Moan
+     * Set 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 固定为Moan
+     * @param Label 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -79,67 +93,99 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     }
 
     /**
-     * Get 分数 
-     * @return Score 分数
+     * Get 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。 
+     * @return Score 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 分数
-     * @param Score 分数
+     * Set 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
+     * @param Score 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。 
+     * @return StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+     * @param StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。 
+     * @return EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
      */
     public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+     * @param EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 子标签码 
-     * @return SubLabelCode 子标签码
+     * Get *内测中，敬请期待* 
+     * @return SubLabelCode *内测中，敬请期待*
      */
     public String getSubLabelCode() {
         return this.SubLabelCode;
     }
 
     /**
-     * Set 子标签码
-     * @param SubLabelCode 子标签码
+     * Set *内测中，敬请期待*
+     * @param SubLabelCode *内测中，敬请期待*
      */
     public void setSubLabelCode(String SubLabelCode) {
         this.SubLabelCode = SubLabelCode;
+    }
+
+    /**
+     * Get 该字段用于返回当前标签（Lable）下的二级标签。 
+     * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该字段用于返回当前标签（Lable）下的二级标签。
+     * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
+    /**
+     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过 
+     * @return Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     */
+    public String getSuggestion() {
+        return this.Suggestion;
+    }
+
+    /**
+     * Set 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     * @param Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     */
+    public void setSuggestion(String Suggestion) {
+        this.Suggestion = Suggestion;
     }
 
     public AudioResultDetailMoanResult() {
@@ -165,6 +211,12 @@ public class AudioResultDetailMoanResult extends AbstractModel{
         if (source.SubLabelCode != null) {
             this.SubLabelCode = new String(source.SubLabelCode);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
     }
 
 
@@ -177,6 +229,8 @@ public class AudioResultDetailMoanResult extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
 
     }
 }

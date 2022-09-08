@@ -116,6 +116,14 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     private Long ProtectDays;
 
     /**
+    * 15天内新增的主机数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddedOnTheFifteen")
+    @Expose
+    private Long AddedOnTheFifteen;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -339,6 +347,26 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     }
 
     /**
+     * Get 15天内新增的主机数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddedOnTheFifteen 15天内新增的主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAddedOnTheFifteen() {
+        return this.AddedOnTheFifteen;
+    }
+
+    /**
+     * Set 15天内新增的主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddedOnTheFifteen 15天内新增的主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddedOnTheFifteen(Long AddedOnTheFifteen) {
+        this.AddedOnTheFifteen = AddedOnTheFifteen;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -401,6 +429,9 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         if (source.ProtectDays != null) {
             this.ProtectDays = new Long(source.ProtectDays);
         }
+        if (source.AddedOnTheFifteen != null) {
+            this.AddedOnTheFifteen = new Long(source.AddedOnTheFifteen);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -424,6 +455,7 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Offline", this.Offline);
         this.setParamSimple(map, prefix + "FlagshipMachineCnt", this.FlagshipMachineCnt);
         this.setParamSimple(map, prefix + "ProtectDays", this.ProtectDays);
+        this.setParamSimple(map, prefix + "AddedOnTheFifteen", this.AddedOnTheFifteen);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

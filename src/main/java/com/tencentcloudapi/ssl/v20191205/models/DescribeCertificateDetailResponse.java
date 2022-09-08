@@ -335,6 +335,14 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private String EncryptCertFingerprint;
 
     /**
+    * 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptAlgorithm")
+    @Expose
+    private String EncryptAlgorithm;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1122,6 +1130,26 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 证书算法
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptAlgorithm 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptAlgorithm() {
+        return this.EncryptAlgorithm;
+    }
+
+    /**
+     * Set 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptAlgorithm 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptAlgorithm(String EncryptAlgorithm) {
+        this.EncryptAlgorithm = EncryptAlgorithm;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1268,6 +1296,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
         if (source.EncryptCertFingerprint != null) {
             this.EncryptCertFingerprint = new String(source.EncryptCertFingerprint);
         }
+        if (source.EncryptAlgorithm != null) {
+            this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1317,6 +1348,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
         this.setParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
         this.setParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
+        this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

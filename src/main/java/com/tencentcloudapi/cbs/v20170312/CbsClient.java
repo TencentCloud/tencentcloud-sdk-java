@@ -39,6 +39,30 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（ApplyDiskBackup）用于回滚备份点到原云硬盘。
+
+* 仅支持回滚到原云硬盘上。对于数据盘备份点，如果您需要复制备份点数据到其它云硬盘上，请先使用 CreateSnapshot 将备份点转换为快照，然后使用 CreateDisks 接口创建新的弹性云硬盘，将快照数据复制到新购云硬盘上。
+* 用于回滚的备份点必须处于NORMAL状态。备份点状态可以通过DescribeDiskBackups接口查询，见输出参数中BackupState字段解释。
+* 如果是弹性云硬盘，则云硬盘必须处于未挂载状态，云硬盘挂载状态可以通过DescribeDisks接口查询，见Attached字段解释；如果是随实例一起购买的非弹性云硬盘，则实例必须处于关机状态，实例状态可以通过DescribeInstancesStatus接口查询。
+     * @param req ApplyDiskBackupRequest
+     * @return ApplyDiskBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyDiskBackupResponse ApplyDiskBackup(ApplyDiskBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyDiskBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyDiskBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ApplySnapshot）用于回滚快照到原云硬盘。
 
 * 仅支持回滚到原云硬盘上。对于数据盘快照，如果您需要复制快照数据到其它云硬盘上，请使用[CreateDisks](/document/product/362/16312)接口创建新的弹性云盘，将快照数据复制到新购云盘上。 
@@ -225,6 +249,26 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *批量删除指定的云硬盘备份点。
+     * @param req DeleteDiskBackupsRequest
+     * @return DeleteDiskBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDiskBackupsResponse DeleteDiskBackups(DeleteDiskBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDiskBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDiskBackups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteSnapshots）用于删除快照。
 
 * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -284,6 +328,29 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDiskAssociatedAutoSnapshotPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDiskBackups）用于查询备份点的详细信息。
+
+根据备份点ID、创建备份点的云硬盘ID、创建备份点的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器Filter。
+如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的备份点列表。
+     * @param req DescribeDiskBackupsRequest
+     * @return DescribeDiskBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskBackupsResponse DescribeDiskBackups(DescribeDiskBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiskBackups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -533,6 +600,26 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（InquirePricePriceModifyDiskBackupQuota）用于修改云硬盘备份点配额询价。
+     * @param req InquirePriceModifyDiskBackupQuotaRequest
+     * @return InquirePriceModifyDiskBackupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(InquirePriceModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceModifyDiskBackupQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquirePriceModifyDiskExtraPerformance）用于调整云硬盘额外性能询价。
      * @param req InquirePriceModifyDiskExtraPerformanceRequest
      * @return InquirePriceModifyDiskExtraPerformanceResponse
@@ -658,6 +745,26 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDiskAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口 (ModifyDiskBackupQuota) 用于修改云硬盘备份点配额。
+     * @param req ModifyDiskBackupQuotaRequest
+     * @return ModifyDiskBackupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(ModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDiskBackupQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDiskBackupQuota");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

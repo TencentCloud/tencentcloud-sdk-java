@@ -51,11 +51,18 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] Receivers;
 
     /**
-    * 额外组织 ID 数组
+    * 已废弃，请使用 OrganizationIds
     */
     @SerializedName("ExtraOrgIds")
     @Expose
     private String [] ExtraOrgIds;
+
+    /**
+    * 生效的组织 ID 数组
+    */
+    @SerializedName("OrganizationIds")
+    @Expose
+    private String [] OrganizationIds;
 
     /**
      * Get 通道 ID 
@@ -122,19 +129,35 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get 额外组织 ID 数组 
-     * @return ExtraOrgIds 额外组织 ID 数组
+     * Get 已废弃，请使用 OrganizationIds 
+     * @return ExtraOrgIds 已废弃，请使用 OrganizationIds
      */
     public String [] getExtraOrgIds() {
         return this.ExtraOrgIds;
     }
 
     /**
-     * Set 额外组织 ID 数组
-     * @param ExtraOrgIds 额外组织 ID 数组
+     * Set 已废弃，请使用 OrganizationIds
+     * @param ExtraOrgIds 已废弃，请使用 OrganizationIds
      */
     public void setExtraOrgIds(String [] ExtraOrgIds) {
         this.ExtraOrgIds = ExtraOrgIds;
+    }
+
+    /**
+     * Get 生效的组织 ID 数组 
+     * @return OrganizationIds 生效的组织 ID 数组
+     */
+    public String [] getOrganizationIds() {
+        return this.OrganizationIds;
+    }
+
+    /**
+     * Set 生效的组织 ID 数组
+     * @param OrganizationIds 生效的组织 ID 数组
+     */
+    public void setOrganizationIds(String [] OrganizationIds) {
+        this.OrganizationIds = OrganizationIds;
     }
 
     public UpdateGrafanaNotificationChannelRequest() {
@@ -166,6 +189,12 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
                 this.ExtraOrgIds[i] = new String(source.ExtraOrgIds[i]);
             }
         }
+        if (source.OrganizationIds != null) {
+            this.OrganizationIds = new String[source.OrganizationIds.length];
+            for (int i = 0; i < source.OrganizationIds.length; i++) {
+                this.OrganizationIds[i] = new String(source.OrganizationIds[i]);
+            }
+        }
     }
 
 
@@ -178,6 +207,7 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
         this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+        this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
 
     }
 }

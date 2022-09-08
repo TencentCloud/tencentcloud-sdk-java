@@ -37,7 +37,7 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String ChannelName;
 
     /**
-    * 组织 ID
+    * 默认为1，已废弃，请使用 OrganizationIds
     */
     @SerializedName("OrgId")
     @Expose
@@ -51,11 +51,18 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] Receivers;
 
     /**
-    * 额外组织 ID 数组
+    * 额外组织 ID 数组，已废弃，请使用 OrganizationIds
     */
     @SerializedName("ExtraOrgIds")
     @Expose
     private String [] ExtraOrgIds;
+
+    /**
+    * 生效的所有组织 ID 数组，默认为 ["1"]
+    */
+    @SerializedName("OrganizationIds")
+    @Expose
+    private String [] OrganizationIds;
 
     /**
      * Get 实例 ID 
@@ -90,16 +97,16 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get 组织 ID 
-     * @return OrgId 组织 ID
+     * Get 默认为1，已废弃，请使用 OrganizationIds 
+     * @return OrgId 默认为1，已废弃，请使用 OrganizationIds
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 组织 ID
-     * @param OrgId 组织 ID
+     * Set 默认为1，已废弃，请使用 OrganizationIds
+     * @param OrgId 默认为1，已废弃，请使用 OrganizationIds
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
@@ -122,19 +129,35 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get 额外组织 ID 数组 
-     * @return ExtraOrgIds 额外组织 ID 数组
+     * Get 额外组织 ID 数组，已废弃，请使用 OrganizationIds 
+     * @return ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
      */
     public String [] getExtraOrgIds() {
         return this.ExtraOrgIds;
     }
 
     /**
-     * Set 额外组织 ID 数组
-     * @param ExtraOrgIds 额外组织 ID 数组
+     * Set 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+     * @param ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
      */
     public void setExtraOrgIds(String [] ExtraOrgIds) {
         this.ExtraOrgIds = ExtraOrgIds;
+    }
+
+    /**
+     * Get 生效的所有组织 ID 数组，默认为 ["1"] 
+     * @return OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
+     */
+    public String [] getOrganizationIds() {
+        return this.OrganizationIds;
+    }
+
+    /**
+     * Set 生效的所有组织 ID 数组，默认为 ["1"]
+     * @param OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
+     */
+    public void setOrganizationIds(String [] OrganizationIds) {
+        this.OrganizationIds = OrganizationIds;
     }
 
     public CreateGrafanaNotificationChannelRequest() {
@@ -166,6 +189,12 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
                 this.ExtraOrgIds[i] = new String(source.ExtraOrgIds[i]);
             }
         }
+        if (source.OrganizationIds != null) {
+            this.OrganizationIds = new String[source.OrganizationIds.length];
+            for (int i = 0; i < source.OrganizationIds.length; i++) {
+                this.OrganizationIds[i] = new String(source.OrganizationIds[i]);
+            }
+        }
     }
 
 
@@ -178,6 +207,7 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrgId", this.OrgId);
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
         this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+        this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
 
     }
 }

@@ -58,14 +58,14 @@ public class GrafanaNotificationChannel extends AbstractModel{
     private String UpdatedAt;
 
     /**
-    * 默认生效组织
+    * 默认生效组织，已废弃，请使用 OrganizationIds
     */
     @SerializedName("OrgId")
     @Expose
     private String OrgId;
 
     /**
-    * 额外生效组织
+    * 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraOrgIds")
@@ -73,12 +73,20 @@ public class GrafanaNotificationChannel extends AbstractModel{
     private String [] ExtraOrgIds;
 
     /**
-    * 生效组织
+    * 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgIds")
     @Expose
     private String OrgIds;
+
+    /**
+    * 告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrganizationIds")
+    @Expose
+    private String OrganizationIds;
 
     /**
      * Get 渠道 ID 
@@ -161,25 +169,25 @@ public class GrafanaNotificationChannel extends AbstractModel{
     }
 
     /**
-     * Get 默认生效组织 
-     * @return OrgId 默认生效组织
+     * Get 默认生效组织，已废弃，请使用 OrganizationIds 
+     * @return OrgId 默认生效组织，已废弃，请使用 OrganizationIds
      */
     public String getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 默认生效组织
-     * @param OrgId 默认生效组织
+     * Set 默认生效组织，已废弃，请使用 OrganizationIds
+     * @param OrgId 默认生效组织，已废弃，请使用 OrganizationIds
      */
     public void setOrgId(String OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 额外生效组织
+     * Get 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraOrgIds 额外生效组织
+     * @return ExtraOrgIds 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExtraOrgIds() {
@@ -187,9 +195,9 @@ public class GrafanaNotificationChannel extends AbstractModel{
     }
 
     /**
-     * Set 额外生效组织
+     * Set 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraOrgIds 额外生效组织
+     * @param ExtraOrgIds 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraOrgIds(String [] ExtraOrgIds) {
@@ -197,9 +205,9 @@ public class GrafanaNotificationChannel extends AbstractModel{
     }
 
     /**
-     * Get 生效组织
+     * Get 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgIds 生效组织
+     * @return OrgIds 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgIds() {
@@ -207,13 +215,33 @@ public class GrafanaNotificationChannel extends AbstractModel{
     }
 
     /**
-     * Set 生效组织
+     * Set 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgIds 生效组织
+     * @param OrgIds 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgIds(String OrgIds) {
         this.OrgIds = OrgIds;
+    }
+
+    /**
+     * Get 告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrganizationIds 告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrganizationIds() {
+        return this.OrganizationIds;
+    }
+
+    /**
+     * Set 告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrganizationIds 告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrganizationIds(String OrganizationIds) {
+        this.OrganizationIds = OrganizationIds;
     }
 
     public GrafanaNotificationChannel() {
@@ -254,6 +282,9 @@ public class GrafanaNotificationChannel extends AbstractModel{
         if (source.OrgIds != null) {
             this.OrgIds = new String(source.OrgIds);
         }
+        if (source.OrganizationIds != null) {
+            this.OrganizationIds = new String(source.OrganizationIds);
+        }
     }
 
 
@@ -269,6 +300,7 @@ public class GrafanaNotificationChannel extends AbstractModel{
         this.setParamSimple(map, prefix + "OrgId", this.OrgId);
         this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
         this.setParamSimple(map, prefix + "OrgIds", this.OrgIds);
+        this.setParamSimple(map, prefix + "OrganizationIds", this.OrganizationIds);
 
     }
 }

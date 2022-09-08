@@ -559,6 +559,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询redis实例top key前缀列表。
+     * @param req DescribeRedisTopKeyPrefixListRequest
+     * @return DescribeRedisTopKeyPrefixListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixList(DescribeRedisTopKeyPrefixListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRedisTopKeyPrefixListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRedisTopKeyPrefixListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRedisTopKeyPrefixList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
      * @param req DescribeSecurityAuditLogDownloadUrlsRequest
      * @return DescribeSecurityAuditLogDownloadUrlsResponse
