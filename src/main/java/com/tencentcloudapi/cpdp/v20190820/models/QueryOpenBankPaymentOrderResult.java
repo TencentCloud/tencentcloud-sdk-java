@@ -161,6 +161,14 @@ OPENBANK_PAYMENT
     private OpenBankProfitShareRespInfo [] ProfitShareRespInfoList;
 
     /**
+    * 支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeFinish")
+    @Expose
+    private String TimeFinish;
+
+    /**
      * Get 渠道商户号。外部接入平台入驻云企付平台下发 
      * @return ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发
      */
@@ -508,6 +516,26 @@ OPENBANK_PAYMENT
         this.ProfitShareRespInfoList = ProfitShareRespInfoList;
     }
 
+    /**
+     * Get 支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeFinish 支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTimeFinish() {
+        return this.TimeFinish;
+    }
+
+    /**
+     * Set 支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeFinish 支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeFinish(String TimeFinish) {
+        this.TimeFinish = TimeFinish;
+    }
+
     public QueryOpenBankPaymentOrderResult() {
     }
 
@@ -570,6 +598,9 @@ OPENBANK_PAYMENT
                 this.ProfitShareRespInfoList[i] = new OpenBankProfitShareRespInfo(source.ProfitShareRespInfoList[i]);
             }
         }
+        if (source.TimeFinish != null) {
+            this.TimeFinish = new String(source.TimeFinish);
+        }
     }
 
 
@@ -594,6 +625,7 @@ OPENBANK_PAYMENT
         this.setParamSimple(map, prefix + "FeeAmount", this.FeeAmount);
         this.setParamSimple(map, prefix + "FeeRate", this.FeeRate);
         this.setParamArrayObj(map, prefix + "ProfitShareRespInfoList.", this.ProfitShareRespInfoList);
+        this.setParamSimple(map, prefix + "TimeFinish", this.TimeFinish);
 
     }
 }

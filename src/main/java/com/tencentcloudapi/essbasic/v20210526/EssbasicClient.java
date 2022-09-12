@@ -39,6 +39,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *指定需要批量撤销的签署流程Id，批量撤销合同
+客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+     * @param req ChannelBatchCancelFlowsRequest
+     * @return ChannelBatchCancelFlowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelBatchCancelFlowsResponse ChannelBatchCancelFlows(ChannelBatchCancelFlowsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelBatchCancelFlowsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelBatchCancelFlowsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelBatchCancelFlows");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
      * @param req ChannelCancelMultiFlowSignQRCodeRequest
      * @return ChannelCancelMultiFlowSignQRCodeResponse
@@ -120,6 +141,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *接口（ChannelCreateFlowGroupByFiles）用于通过多文件创建合同组签署流程。
+     * @param req ChannelCreateFlowGroupByFilesRequest
+     * @return ChannelCreateFlowGroupByFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateFlowGroupByFilesResponse ChannelCreateFlowGroupByFiles(ChannelCreateFlowGroupByFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateFlowGroupByFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowGroupByFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateFlowGroupByFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提交企业签署流程审批结果
 
 在通过接口(CreateFlowsByTemplates 或者ChannelCreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。
@@ -184,7 +225,8 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *创建出证报告，返回报告 URL
+     *【描述】：创建出证报告，返回报告 URL
+【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
      * @param req CreateChannelFlowEvidenceReportRequest
      * @return CreateChannelFlowEvidenceReportResponse
      * @throws TencentCloudSDKException

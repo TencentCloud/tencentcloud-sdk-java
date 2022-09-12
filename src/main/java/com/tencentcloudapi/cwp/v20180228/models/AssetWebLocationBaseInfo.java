@@ -157,6 +157,21 @@ public class AssetWebLocationBaseInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 首次采集时间
+    */
+    @SerializedName("FirstTime")
+    @Expose
+    private String FirstTime;
+
+    /**
+    * 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNew")
+    @Expose
+    private Long IsNew;
+
+    /**
      * Get 主机Uuid 
      * @return Uuid 主机Uuid
      */
@@ -464,6 +479,42 @@ public class AssetWebLocationBaseInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 首次采集时间 
+     * @return FirstTime 首次采集时间
+     */
+    public String getFirstTime() {
+        return this.FirstTime;
+    }
+
+    /**
+     * Set 首次采集时间
+     * @param FirstTime 首次采集时间
+     */
+    public void setFirstTime(String FirstTime) {
+        this.FirstTime = FirstTime;
+    }
+
+    /**
+     * Get 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNew 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNew() {
+        return this.IsNew;
+    }
+
+    /**
+     * Set 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNew 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNew(Long IsNew) {
+        this.IsNew = IsNew;
+    }
+
     public AssetWebLocationBaseInfo() {
     }
 
@@ -532,6 +583,12 @@ public class AssetWebLocationBaseInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.FirstTime != null) {
+            this.FirstTime = new String(source.FirstTime);
+        }
+        if (source.IsNew != null) {
+            this.IsNew = new Long(source.IsNew);
+        }
     }
 
 
@@ -558,6 +615,8 @@ public class AssetWebLocationBaseInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
+        this.setParamSimple(map, prefix + "IsNew", this.IsNew);
 
     }
 }

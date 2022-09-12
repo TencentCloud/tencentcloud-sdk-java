@@ -51,6 +51,27 @@ public class RumAreaInfo extends AbstractModel{
     private String AreaKey;
 
     /**
+    * 地域码表 id
+    */
+    @SerializedName("AreaRegionID")
+    @Expose
+    private String AreaRegionID;
+
+    /**
+    * 地域码表 code 如 ap-xxx（xxx 为地域词）
+    */
+    @SerializedName("AreaRegionCode")
+    @Expose
+    private String AreaRegionCode;
+
+    /**
+    * 地域缩写
+    */
+    @SerializedName("AreaAbbr")
+    @Expose
+    private String AreaAbbr;
+
+    /**
      * Get 片区Id 
      * @return AreaId 片区Id
      */
@@ -114,6 +135,54 @@ public class RumAreaInfo extends AbstractModel{
         this.AreaKey = AreaKey;
     }
 
+    /**
+     * Get 地域码表 id 
+     * @return AreaRegionID 地域码表 id
+     */
+    public String getAreaRegionID() {
+        return this.AreaRegionID;
+    }
+
+    /**
+     * Set 地域码表 id
+     * @param AreaRegionID 地域码表 id
+     */
+    public void setAreaRegionID(String AreaRegionID) {
+        this.AreaRegionID = AreaRegionID;
+    }
+
+    /**
+     * Get 地域码表 code 如 ap-xxx（xxx 为地域词） 
+     * @return AreaRegionCode 地域码表 code 如 ap-xxx（xxx 为地域词）
+     */
+    public String getAreaRegionCode() {
+        return this.AreaRegionCode;
+    }
+
+    /**
+     * Set 地域码表 code 如 ap-xxx（xxx 为地域词）
+     * @param AreaRegionCode 地域码表 code 如 ap-xxx（xxx 为地域词）
+     */
+    public void setAreaRegionCode(String AreaRegionCode) {
+        this.AreaRegionCode = AreaRegionCode;
+    }
+
+    /**
+     * Get 地域缩写 
+     * @return AreaAbbr 地域缩写
+     */
+    public String getAreaAbbr() {
+        return this.AreaAbbr;
+    }
+
+    /**
+     * Set 地域缩写
+     * @param AreaAbbr 地域缩写
+     */
+    public void setAreaAbbr(String AreaAbbr) {
+        this.AreaAbbr = AreaAbbr;
+    }
+
     public RumAreaInfo() {
     }
 
@@ -134,6 +203,15 @@ public class RumAreaInfo extends AbstractModel{
         if (source.AreaKey != null) {
             this.AreaKey = new String(source.AreaKey);
         }
+        if (source.AreaRegionID != null) {
+            this.AreaRegionID = new String(source.AreaRegionID);
+        }
+        if (source.AreaRegionCode != null) {
+            this.AreaRegionCode = new String(source.AreaRegionCode);
+        }
+        if (source.AreaAbbr != null) {
+            this.AreaAbbr = new String(source.AreaAbbr);
+        }
     }
 
 
@@ -145,6 +223,9 @@ public class RumAreaInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AreaStatus", this.AreaStatus);
         this.setParamSimple(map, prefix + "AreaName", this.AreaName);
         this.setParamSimple(map, prefix + "AreaKey", this.AreaKey);
+        this.setParamSimple(map, prefix + "AreaRegionID", this.AreaRegionID);
+        this.setParamSimple(map, prefix + "AreaRegionCode", this.AreaRegionCode);
+        this.setParamSimple(map, prefix + "AreaAbbr", this.AreaAbbr);
 
     }
 }

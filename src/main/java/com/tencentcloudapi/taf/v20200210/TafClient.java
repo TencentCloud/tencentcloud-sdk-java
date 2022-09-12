@@ -98,24 +98,4 @@ public class TafClient extends AbstractClient{
         return rsp.response;
     }
 
-    /**
-     *流量安选产品，短信发送接口
-     * @param req SendTrafficSecuritySmsMessageRequest
-     * @return SendTrafficSecuritySmsMessageResponse
-     * @throws TencentCloudSDKException
-     */
-    public SendTrafficSecuritySmsMessageResponse SendTrafficSecuritySmsMessage(SendTrafficSecuritySmsMessageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendTrafficSecuritySmsMessageResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<SendTrafficSecuritySmsMessageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendTrafficSecuritySmsMessage");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
 }

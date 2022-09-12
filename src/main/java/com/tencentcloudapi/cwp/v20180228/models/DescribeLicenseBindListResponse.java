@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendTrafficSecuritySmsMessageResponse extends AbstractModel{
+public class DescribeLicenseBindListResponse extends AbstractModel{
 
     /**
-    * 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总条数
     */
-    @SerializedName("Data")
+    @SerializedName("TotalCount")
     @Expose
-    private OutputSendTrafficSecuritySmsMsg Data;
+    private Long TotalCount;
+
+    /**
+    * 绑定机器列表信息
+    */
+    @SerializedName("List")
+    @Expose
+    private LicenseBindDetail [] List;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class SendTrafficSecuritySmsMessageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总条数 
+     * @return TotalCount 总条数
      */
-    public OutputSendTrafficSecuritySmsMsg getData() {
-        return this.Data;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总条数
+     * @param TotalCount 总条数
      */
-    public void setData(OutputSendTrafficSecuritySmsMsg Data) {
-        this.Data = Data;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 绑定机器列表信息 
+     * @return List 绑定机器列表信息
+     */
+    public LicenseBindDetail [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set 绑定机器列表信息
+     * @param List 绑定机器列表信息
+     */
+    public void setList(LicenseBindDetail [] List) {
+        this.List = List;
     }
 
     /**
@@ -73,16 +91,22 @@ public class SendTrafficSecuritySmsMessageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public SendTrafficSecuritySmsMessageResponse() {
+    public DescribeLicenseBindListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SendTrafficSecuritySmsMessageResponse(SendTrafficSecuritySmsMessageResponse source) {
-        if (source.Data != null) {
-            this.Data = new OutputSendTrafficSecuritySmsMsg(source.Data);
+    public DescribeLicenseBindListResponse(DescribeLicenseBindListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.List != null) {
+            this.List = new LicenseBindDetail[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new LicenseBindDetail(source.List[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +118,8 @@ public class SendTrafficSecuritySmsMessageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

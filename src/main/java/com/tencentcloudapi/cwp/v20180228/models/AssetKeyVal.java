@@ -45,6 +45,14 @@ public class AssetKeyVal extends AbstractModel{
     private String Desc;
 
     /**
+    * 今日新增数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewCount")
+    @Expose
+    private Long NewCount;
+
+    /**
      * Get 标签 
      * @return Key 标签
      */
@@ -96,6 +104,26 @@ public class AssetKeyVal extends AbstractModel{
         this.Desc = Desc;
     }
 
+    /**
+     * Get 今日新增数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewCount 今日新增数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNewCount() {
+        return this.NewCount;
+    }
+
+    /**
+     * Set 今日新增数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewCount 今日新增数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewCount(Long NewCount) {
+        this.NewCount = NewCount;
+    }
+
     public AssetKeyVal() {
     }
 
@@ -113,6 +141,9 @@ public class AssetKeyVal extends AbstractModel{
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.NewCount != null) {
+            this.NewCount = new Long(source.NewCount);
+        }
     }
 
 
@@ -123,6 +154,7 @@ public class AssetKeyVal extends AbstractModel{
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "NewCount", this.NewCount);
 
     }
 }

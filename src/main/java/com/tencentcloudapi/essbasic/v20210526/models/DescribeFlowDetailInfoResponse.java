@@ -45,6 +45,22 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
     private FlowDetailInfo [] FlowInfo;
 
     /**
+    * 合同组编号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
+    * 合同组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowGroupName")
+    @Expose
+    private String FlowGroupName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,6 +120,46 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 合同组编号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowGroupId 合同组编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowGroupId 合同组编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
+    /**
+     * Get 合同组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowGroupName 合同组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlowGroupName() {
+        return this.FlowGroupName;
+    }
+
+    /**
+     * Set 合同组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowGroupName 合同组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowGroupName(String FlowGroupName) {
+        this.FlowGroupName = FlowGroupName;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -139,6 +195,12 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
                 this.FlowInfo[i] = new FlowDetailInfo(source.FlowInfo[i]);
             }
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
+        if (source.FlowGroupName != null) {
+            this.FlowGroupName = new String(source.FlowGroupName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -152,6 +214,8 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
         this.setParamArrayObj(map, prefix + "FlowInfo.", this.FlowInfo);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+        this.setParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

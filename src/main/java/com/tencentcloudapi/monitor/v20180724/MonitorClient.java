@@ -987,6 +987,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *列出 Grafana 所有告警通道
+     * @param req DescribeGrafanaChannelsRequest
+     * @return DescribeGrafanaChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaChannelsResponse DescribeGrafanaChannels(DescribeGrafanaChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaChannelsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaChannelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaChannels");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列出 Grafana 的设置，即 grafana.ini 文件内容
      * @param req DescribeGrafanaConfigRequest
      * @return DescribeGrafanaConfigResponse

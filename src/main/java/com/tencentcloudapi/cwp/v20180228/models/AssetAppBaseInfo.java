@@ -30,18 +30,18 @@ public class AssetAppBaseInfo extends AbstractModel{
     private String MachineIp;
 
     /**
+    * 主机名称
+    */
+    @SerializedName("MachineName")
+    @Expose
+    private String MachineName;
+
+    /**
     * 主机外网IP
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
-
-    /**
-    * 主机Quuid
-    */
-    @SerializedName("Quuid")
-    @Expose
-    private String Quuid;
 
     /**
     * 主机Uuid
@@ -51,11 +51,11 @@ public class AssetAppBaseInfo extends AbstractModel{
     private String Uuid;
 
     /**
-    * 操作系统信息
+    * 主机Quuid
     */
-    @SerializedName("OsInfo")
+    @SerializedName("Quuid")
     @Expose
-    private String OsInfo;
+    private String Quuid;
 
     /**
     * 主机业务组ID
@@ -102,11 +102,11 @@ public class AssetAppBaseInfo extends AbstractModel{
     private String BinPath;
 
     /**
-    * 配置文件路径
+    * 操作系统信息
     */
-    @SerializedName("ConfigPath")
+    @SerializedName("OsInfo")
     @Expose
-    private String ConfigPath;
+    private String OsInfo;
 
     /**
     * 关联进程数
@@ -130,12 +130,34 @@ public class AssetAppBaseInfo extends AbstractModel{
     private String Version;
 
     /**
+    * 配置文件路径
+    */
+    @SerializedName("ConfigPath")
+    @Expose
+    private String ConfigPath;
+
+    /**
+    * 首次采集时间
+    */
+    @SerializedName("FirstTime")
+    @Expose
+    private String FirstTime;
+
+    /**
     * 数据更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNew")
+    @Expose
+    private Long IsNew;
 
     /**
      * Get 主机内网IP 
@@ -151,6 +173,22 @@ public class AssetAppBaseInfo extends AbstractModel{
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
+    }
+
+    /**
+     * Get 主机名称 
+     * @return MachineName 主机名称
+     */
+    public String getMachineName() {
+        return this.MachineName;
+    }
+
+    /**
+     * Set 主机名称
+     * @param MachineName 主机名称
+     */
+    public void setMachineName(String MachineName) {
+        this.MachineName = MachineName;
     }
 
     /**
@@ -170,22 +208,6 @@ public class AssetAppBaseInfo extends AbstractModel{
     }
 
     /**
-     * Get 主机Quuid 
-     * @return Quuid 主机Quuid
-     */
-    public String getQuuid() {
-        return this.Quuid;
-    }
-
-    /**
-     * Set 主机Quuid
-     * @param Quuid 主机Quuid
-     */
-    public void setQuuid(String Quuid) {
-        this.Quuid = Quuid;
-    }
-
-    /**
      * Get 主机Uuid 
      * @return Uuid 主机Uuid
      */
@@ -202,19 +224,19 @@ public class AssetAppBaseInfo extends AbstractModel{
     }
 
     /**
-     * Get 操作系统信息 
-     * @return OsInfo 操作系统信息
+     * Get 主机Quuid 
+     * @return Quuid 主机Quuid
      */
-    public String getOsInfo() {
-        return this.OsInfo;
+    public String getQuuid() {
+        return this.Quuid;
     }
 
     /**
-     * Set 操作系统信息
-     * @param OsInfo 操作系统信息
+     * Set 主机Quuid
+     * @param Quuid 主机Quuid
      */
-    public void setOsInfo(String OsInfo) {
-        this.OsInfo = OsInfo;
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
     }
 
     /**
@@ -334,19 +356,19 @@ public class AssetAppBaseInfo extends AbstractModel{
     }
 
     /**
-     * Get 配置文件路径 
-     * @return ConfigPath 配置文件路径
+     * Get 操作系统信息 
+     * @return OsInfo 操作系统信息
      */
-    public String getConfigPath() {
-        return this.ConfigPath;
+    public String getOsInfo() {
+        return this.OsInfo;
     }
 
     /**
-     * Set 配置文件路径
-     * @param ConfigPath 配置文件路径
+     * Set 操作系统信息
+     * @param OsInfo 操作系统信息
      */
-    public void setConfigPath(String ConfigPath) {
-        this.ConfigPath = ConfigPath;
+    public void setOsInfo(String OsInfo) {
+        this.OsInfo = OsInfo;
     }
 
     /**
@@ -398,6 +420,38 @@ public class AssetAppBaseInfo extends AbstractModel{
     }
 
     /**
+     * Get 配置文件路径 
+     * @return ConfigPath 配置文件路径
+     */
+    public String getConfigPath() {
+        return this.ConfigPath;
+    }
+
+    /**
+     * Set 配置文件路径
+     * @param ConfigPath 配置文件路径
+     */
+    public void setConfigPath(String ConfigPath) {
+        this.ConfigPath = ConfigPath;
+    }
+
+    /**
+     * Get 首次采集时间 
+     * @return FirstTime 首次采集时间
+     */
+    public String getFirstTime() {
+        return this.FirstTime;
+    }
+
+    /**
+     * Set 首次采集时间
+     * @param FirstTime 首次采集时间
+     */
+    public void setFirstTime(String FirstTime) {
+        this.FirstTime = FirstTime;
+    }
+
+    /**
      * Get 数据更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 数据更新时间
@@ -417,6 +471,26 @@ public class AssetAppBaseInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNew 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNew() {
+        return this.IsNew;
+    }
+
+    /**
+     * Set 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNew 是否新增[0:否|1:是]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNew(Long IsNew) {
+        this.IsNew = IsNew;
+    }
+
     public AssetAppBaseInfo() {
     }
 
@@ -428,17 +502,17 @@ public class AssetAppBaseInfo extends AbstractModel{
         if (source.MachineIp != null) {
             this.MachineIp = new String(source.MachineIp);
         }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
         if (source.MachineWanIp != null) {
             this.MachineWanIp = new String(source.MachineWanIp);
-        }
-        if (source.Quuid != null) {
-            this.Quuid = new String(source.Quuid);
         }
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
-        if (source.OsInfo != null) {
-            this.OsInfo = new String(source.OsInfo);
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
@@ -458,8 +532,8 @@ public class AssetAppBaseInfo extends AbstractModel{
         if (source.BinPath != null) {
             this.BinPath = new String(source.BinPath);
         }
-        if (source.ConfigPath != null) {
-            this.ConfigPath = new String(source.ConfigPath);
+        if (source.OsInfo != null) {
+            this.OsInfo = new String(source.OsInfo);
         }
         if (source.ProcessCount != null) {
             this.ProcessCount = new Long(source.ProcessCount);
@@ -470,8 +544,17 @@ public class AssetAppBaseInfo extends AbstractModel{
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.ConfigPath != null) {
+            this.ConfigPath = new String(source.ConfigPath);
+        }
+        if (source.FirstTime != null) {
+            this.FirstTime = new String(source.FirstTime);
+        }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.IsNew != null) {
+            this.IsNew = new Long(source.IsNew);
         }
     }
 
@@ -481,20 +564,23 @@ public class AssetAppBaseInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineIp", this.MachineIp);
+        this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
-        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
-        this.setParamSimple(map, prefix + "OsInfo", this.OsInfo);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "BinPath", this.BinPath);
-        this.setParamSimple(map, prefix + "ConfigPath", this.ConfigPath);
+        this.setParamSimple(map, prefix + "OsInfo", this.OsInfo);
         this.setParamSimple(map, prefix + "ProcessCount", this.ProcessCount);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "ConfigPath", this.ConfigPath);
+        this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "IsNew", this.IsNew);
 
     }
 }

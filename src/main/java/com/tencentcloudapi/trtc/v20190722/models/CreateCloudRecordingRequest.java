@@ -37,7 +37,7 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     private String RoomId;
 
     /**
-    * 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+    * 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC房间内的主播或者其他录制任务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分，即录制机器人进入房间的userid应保证独立且唯一。
     */
     @SerializedName("UserId")
     @Expose
@@ -67,7 +67,7 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     /**
     * TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId
+1: 32位整型的RoomId（默认）
     */
     @SerializedName("RoomIdType")
     @Expose
@@ -134,16 +134,16 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     }
 
     /**
-     * Get 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。 
-     * @return UserId 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+     * Get 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC房间内的主播或者其他录制任务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分，即录制机器人进入房间的userid应保证独立且唯一。 
+     * @return UserId 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC房间内的主播或者其他录制任务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分，即录制机器人进入房间的userid应保证独立且唯一。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
-     * @param UserId 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+     * Set 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC房间内的主播或者其他录制任务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分，即录制机器人进入房间的userid应保证独立且唯一。
+     * @param UserId 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC房间内的主播或者其他录制任务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分，即录制机器人进入房间的userid应保证独立且唯一。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -200,10 +200,10 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     /**
      * Get TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId 
+1: 32位整型的RoomId（默认） 
      * @return RoomIdType TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId
+1: 32位整型的RoomId（默认）
      */
     public Long getRoomIdType() {
         return this.RoomIdType;
@@ -212,10 +212,10 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     /**
      * Set TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId
+1: 32位整型的RoomId（默认）
      * @param RoomIdType TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId
+1: 32位整型的RoomId（默认）
      */
     public void setRoomIdType(Long RoomIdType) {
         this.RoomIdType = RoomIdType;

@@ -149,6 +149,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeleteRoomMember)用户删除房间或者剔除房间内用户
+     * @param req DeleteRoomMemberRequest
+     * @return DeleteRoomMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoomMemberResponse DeleteRoomMember(DeleteRoomMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRoomMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoomMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除自定义送检用户
      * @param req DeleteScanUserRequest
      * @return DeleteScanUserResponse

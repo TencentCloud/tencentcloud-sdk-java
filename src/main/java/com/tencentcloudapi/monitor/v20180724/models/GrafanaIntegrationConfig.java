@@ -51,6 +51,14 @@ public class GrafanaIntegrationConfig extends AbstractModel{
     private String Description;
 
     /**
+    * Grafana 跳转地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GrafanaURL")
+    @Expose
+    private String GrafanaURL;
+
+    /**
      * Get 集成 ID 
      * @return IntegrationId 集成 ID
      */
@@ -114,6 +122,26 @@ public class GrafanaIntegrationConfig extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get Grafana 跳转地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GrafanaURL Grafana 跳转地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGrafanaURL() {
+        return this.GrafanaURL;
+    }
+
+    /**
+     * Set Grafana 跳转地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GrafanaURL Grafana 跳转地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGrafanaURL(String GrafanaURL) {
+        this.GrafanaURL = GrafanaURL;
+    }
+
     public GrafanaIntegrationConfig() {
     }
 
@@ -134,6 +162,9 @@ public class GrafanaIntegrationConfig extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.GrafanaURL != null) {
+            this.GrafanaURL = new String(source.GrafanaURL);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class GrafanaIntegrationConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GrafanaURL", this.GrafanaURL);
 
     }
 }

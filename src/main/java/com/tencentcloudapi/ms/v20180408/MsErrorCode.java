@@ -6,6 +6,9 @@ public enum MsErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // Apk检测服务端无法响应。
+     INTERNALERROR_APKSERVERERROR("InternalError.ApkServerError"),
+     
     // 服务端无法响应。
      INTERNALERROR_SERVERERROR("InternalError.ServerError"),
      

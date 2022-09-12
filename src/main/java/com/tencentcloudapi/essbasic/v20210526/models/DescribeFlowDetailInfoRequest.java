@@ -31,6 +31,7 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
 
     /**
     * 合同(流程)编号数组，最多支持100个。
+（备注：该参数和合同组编号必须二选一）
     */
     @SerializedName("FlowIds")
     @Expose
@@ -42,6 +43,13 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 合同组编号（备注：该参数和合同(流程)编号数组必须二选一）
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -60,8 +68,10 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)编号数组，最多支持100个。 
+     * Get 合同(流程)编号数组，最多支持100个。
+（备注：该参数和合同组编号必须二选一） 
      * @return FlowIds 合同(流程)编号数组，最多支持100个。
+（备注：该参数和合同组编号必须二选一）
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -69,7 +79,9 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
 
     /**
      * Set 合同(流程)编号数组，最多支持100个。
+（备注：该参数和合同组编号必须二选一）
      * @param FlowIds 合同(流程)编号数组，最多支持100个。
+（备注：该参数和合同组编号必须二选一）
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -89,6 +101,22 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 合同组编号（备注：该参数和合同(流程)编号数组必须二选一） 
+     * @return FlowGroupId 合同组编号（备注：该参数和合同(流程)编号数组必须二选一）
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组编号（备注：该参数和合同(流程)编号数组必须二选一）
+     * @param FlowGroupId 合同组编号（备注：该参数和合同(流程)编号数组必须二选一）
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
     }
 
     public DescribeFlowDetailInfoRequest() {
@@ -111,6 +139,9 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
     }
 
 
@@ -121,6 +152,7 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

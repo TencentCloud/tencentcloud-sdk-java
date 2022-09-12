@@ -23,6 +23,20 @@ import java.util.HashMap;
 public class ExportAssetCoreModuleListRequest extends AbstractModel{
 
     /**
+    * 服务器Uuid
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
+    * 服务器Quuid
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
     * 过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
@@ -39,25 +53,43 @@ public class ExportAssetCoreModuleListRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 排序依据:Size,ProcessCount,ModuleCount
+    * 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 服务器Uuid
-    */
-    @SerializedName("Uuid")
-    @Expose
-    private String Uuid;
+     * Get 服务器Uuid 
+     * @return Uuid 服务器Uuid
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
 
     /**
-    * 服务器Quuid
-    */
-    @SerializedName("Quuid")
-    @Expose
-    private String Quuid;
+     * Set 服务器Uuid
+     * @param Uuid 服务器Uuid
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
+    /**
+     * Get 服务器Quuid 
+     * @return Quuid 服务器Quuid
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set 服务器Quuid
+     * @param Quuid 服务器Quuid
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
 
     /**
      * Get 过滤条件。
@@ -100,51 +132,19 @@ public class ExportAssetCoreModuleListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序依据:Size,ProcessCount,ModuleCount 
-     * @return By 排序依据:Size,ProcessCount,ModuleCount
+     * Get 排序依据[FirstTime|Size|ProcessCount|ModuleCount] 
+     * @return By 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序依据:Size,ProcessCount,ModuleCount
-     * @param By 排序依据:Size,ProcessCount,ModuleCount
+     * Set 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
+     * @param By 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
      */
     public void setBy(String By) {
         this.By = By;
-    }
-
-    /**
-     * Get 服务器Uuid 
-     * @return Uuid 服务器Uuid
-     */
-    public String getUuid() {
-        return this.Uuid;
-    }
-
-    /**
-     * Set 服务器Uuid
-     * @param Uuid 服务器Uuid
-     */
-    public void setUuid(String Uuid) {
-        this.Uuid = Uuid;
-    }
-
-    /**
-     * Get 服务器Quuid 
-     * @return Quuid 服务器Quuid
-     */
-    public String getQuuid() {
-        return this.Quuid;
-    }
-
-    /**
-     * Set 服务器Quuid
-     * @param Quuid 服务器Quuid
-     */
-    public void setQuuid(String Quuid) {
-        this.Quuid = Quuid;
     }
 
     public ExportAssetCoreModuleListRequest() {
@@ -155,6 +155,12 @@ public class ExportAssetCoreModuleListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ExportAssetCoreModuleListRequest(ExportAssetCoreModuleListRequest source) {
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
         if (source.Filters != null) {
             this.Filters = new AssetFilters[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -167,12 +173,6 @@ public class ExportAssetCoreModuleListRequest extends AbstractModel{
         if (source.By != null) {
             this.By = new String(source.By);
         }
-        if (source.Uuid != null) {
-            this.Uuid = new String(source.Uuid);
-        }
-        if (source.Quuid != null) {
-            this.Quuid = new String(source.Quuid);
-        }
     }
 
 
@@ -180,11 +180,11 @@ public class ExportAssetCoreModuleListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
-        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
-        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
 
     }
 }

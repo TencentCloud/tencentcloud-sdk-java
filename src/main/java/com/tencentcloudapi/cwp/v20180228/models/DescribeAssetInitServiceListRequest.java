@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DescribeAssetInitServiceListRequest extends AbstractModel{
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
+    * 服务器Uuid
     */
-    @SerializedName("Limit")
+    @SerializedName("Uuid")
     @Expose
-    private Long Limit;
+    private String Uuid;
 
     /**
-    * 偏移量，默认为0。
+    * 服务器Quuid
     */
-    @SerializedName("Offset")
+    @SerializedName("Quuid")
     @Expose
-    private Long Offset;
+    private String Quuid;
 
     /**
     * 过滤条件。
@@ -63,49 +63,63 @@ public class DescribeAssetInitServiceListRequest extends AbstractModel{
     private AssetFilters [] Filters;
 
     /**
-    * 服务器Uuid
+    * 偏移量，默认为0。
     */
-    @SerializedName("Uuid")
+    @SerializedName("Offset")
     @Expose
-    private String Uuid;
+    private Long Offset;
 
     /**
-    * 服务器Quuid
+    * 需要返回的数量，默认为10，最大值为100
     */
-    @SerializedName("Quuid")
+    @SerializedName("Limit")
     @Expose
-    private String Quuid;
+    private Long Limit;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
+    * 排序方式，asc升序 或 desc降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 排序方式：[FirstTime]
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+     * Get 服务器Uuid 
+     * @return Uuid 服务器Uuid
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getUuid() {
+        return this.Uuid;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
+     * Set 服务器Uuid
+     * @param Uuid 服务器Uuid
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get 服务器Quuid 
+     * @return Quuid 服务器Quuid
      */
-    public Long getOffset() {
-        return this.Offset;
+    public String getQuuid() {
+        return this.Quuid;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set 服务器Quuid
+     * @param Quuid 服务器Quuid
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
     }
 
     /**
@@ -201,35 +215,67 @@ public class DescribeAssetInitServiceListRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务器Uuid 
-     * @return Uuid 服务器Uuid
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
-    public String getUuid() {
-        return this.Uuid;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 服务器Uuid
-     * @param Uuid 服务器Uuid
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
-    public void setUuid(String Uuid) {
-        this.Uuid = Uuid;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
-     * Get 服务器Quuid 
-     * @return Quuid 服务器Quuid
+     * Get 需要返回的数量，默认为10，最大值为100 
+     * @return Limit 需要返回的数量，默认为10，最大值为100
      */
-    public String getQuuid() {
-        return this.Quuid;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 服务器Quuid
-     * @param Quuid 服务器Quuid
+     * Set 需要返回的数量，默认为10，最大值为100
+     * @param Limit 需要返回的数量，默认为10，最大值为100
      */
-    public void setQuuid(String Quuid) {
-        this.Quuid = Quuid;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 排序方式，asc升序 或 desc降序 
+     * @return Order 排序方式，asc升序 或 desc降序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式，asc升序 或 desc降序
+     * @param Order 排序方式，asc升序 或 desc降序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 排序方式：[FirstTime] 
+     * @return By 排序方式：[FirstTime]
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序方式：[FirstTime]
+     * @param By 排序方式：[FirstTime]
+     */
+    public void setBy(String By) {
+        this.By = By;
     }
 
     public DescribeAssetInitServiceListRequest() {
@@ -240,11 +286,11 @@ public class DescribeAssetInitServiceListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetInitServiceListRequest(DescribeAssetInitServiceListRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
         }
         if (source.Filters != null) {
             this.Filters = new AssetFilters[source.Filters.length];
@@ -252,11 +298,17 @@ public class DescribeAssetInitServiceListRequest extends AbstractModel{
                 this.Filters[i] = new AssetFilters(source.Filters[i]);
             }
         }
-        if (source.Uuid != null) {
-            this.Uuid = new String(source.Uuid);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
-        if (source.Quuid != null) {
-            this.Quuid = new String(source.Quuid);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
         }
     }
 
@@ -265,11 +317,13 @@ public class DescribeAssetInitServiceListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

@@ -30,7 +30,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 签署流程编号数组，最多支持100个。
+    * 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
     */
     @SerializedName("FlowIds")
     @Expose
@@ -113,6 +113,13 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     private UserInfo Operator;
 
     /**
+    * 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -129,16 +136,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 签署流程编号数组，最多支持100个。 
-     * @return FlowIds 签署流程编号数组，最多支持100个。
+     * Get 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一) 
+     * @return FlowIds 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 签署流程编号数组，最多支持100个。
-     * @param FlowIds 签署流程编号数组，最多支持100个。
+     * Set 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+     * @param FlowIds 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -328,6 +335,22 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.Operator = Operator;
     }
 
+    /**
+     * Get 合同组编号(备注：该参数和合同(流程)编号数组必须二选一) 
+     * @return FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+     * @param FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
     public CreateSignUrlsRequest() {
     }
 
@@ -375,6 +398,9 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
     }
 
 
@@ -394,6 +420,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

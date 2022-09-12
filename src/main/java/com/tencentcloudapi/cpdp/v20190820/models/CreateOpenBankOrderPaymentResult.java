@@ -53,6 +53,22 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
     private String OutOrderId;
 
     /**
+    * 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayInfo")
+    @Expose
+    private String PayInfo;
+
+    /**
+    * 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayInfoType")
+    @Expose
+    private String PayInfoType;
+
+    /**
      * Get 云企付平台订单号。 
      * @return ChannelOrderId 云企付平台订单号。
      */
@@ -124,6 +140,46 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
         this.OutOrderId = OutOrderId;
     }
 
+    /**
+     * Get 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayInfo 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayInfo() {
+        return this.PayInfo;
+    }
+
+    /**
+     * Set 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayInfo 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayInfo(String PayInfo) {
+        this.PayInfo = PayInfo;
+    }
+
+    /**
+     * Get 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayInfoType 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayInfoType() {
+        return this.PayInfoType;
+    }
+
+    /**
+     * Set 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayInfoType 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayInfoType(String PayInfoType) {
+        this.PayInfoType = PayInfoType;
+    }
+
     public CreateOpenBankOrderPaymentResult() {
     }
 
@@ -144,6 +200,12 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
         if (source.OutOrderId != null) {
             this.OutOrderId = new String(source.OutOrderId);
         }
+        if (source.PayInfo != null) {
+            this.PayInfo = new String(source.PayInfo);
+        }
+        if (source.PayInfoType != null) {
+            this.PayInfoType = new String(source.PayInfoType);
+        }
     }
 
 
@@ -155,6 +217,8 @@ public class CreateOpenBankOrderPaymentResult extends AbstractModel{
         this.setParamSimple(map, prefix + "ThirdPayOrderId", this.ThirdPayOrderId);
         this.setParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
         this.setParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
+        this.setParamSimple(map, prefix + "PayInfo", this.PayInfo);
+        this.setParamSimple(map, prefix + "PayInfoType", this.PayInfoType);
 
     }
 }

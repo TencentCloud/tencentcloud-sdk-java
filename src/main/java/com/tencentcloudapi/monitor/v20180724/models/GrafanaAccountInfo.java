@@ -51,6 +51,21 @@ public class GrafanaAccountInfo extends AbstractModel{
     private String CreateAt;
 
     /**
+    * 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 用户主账号 UIN
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
      * Get 用户账号ID 
      * @return UserId 用户账号ID
      */
@@ -114,6 +129,42 @@ public class GrafanaAccountInfo extends AbstractModel{
         this.CreateAt = CreateAt;
     }
 
+    /**
+     * Get 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 用户主账号 UIN 
+     * @return Uin 用户主账号 UIN
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 用户主账号 UIN
+     * @param Uin 用户主账号 UIN
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
     public GrafanaAccountInfo() {
     }
 
@@ -137,6 +188,12 @@ public class GrafanaAccountInfo extends AbstractModel{
         if (source.CreateAt != null) {
             this.CreateAt = new String(source.CreateAt);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
     }
 
 
@@ -148,6 +205,8 @@ public class GrafanaAccountInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Role.", this.Role);
         this.setParamSimple(map, prefix + "Notes", this.Notes);
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

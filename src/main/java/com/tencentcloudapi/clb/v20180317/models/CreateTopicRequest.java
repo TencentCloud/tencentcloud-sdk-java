@@ -51,6 +51,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long Period;
 
     /**
+    * 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get 日志主题的名称。 
      * @return TopicName 日志主题的名称。
      */
@@ -114,6 +121,22 @@ public class CreateTopicRequest extends AbstractModel{
         this.Period = Period;
     }
 
+    /**
+     * Get 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。 
+     * @return StorageType 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+     * @param StorageType 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

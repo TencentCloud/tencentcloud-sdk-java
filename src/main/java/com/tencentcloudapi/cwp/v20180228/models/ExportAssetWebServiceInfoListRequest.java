@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class ExportAssetWebServiceInfoListRequest extends AbstractModel{
 
     /**
+    * 查询指定Quuid主机的信息
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
     * 过滤条件。
 <li>User- string - 是否必填：否 - 运行用户</li>
 <li>Name- string - 是否必填：否 - Web服务名：
@@ -50,18 +57,27 @@ public class ExportAssetWebServiceInfoListRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 可选排序：ProcessCount
+    * 可选排序：[FirstTime|ProcessCount]
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 查询指定Quuid主机的信息
-    */
-    @SerializedName("Quuid")
-    @Expose
-    private String Quuid;
+     * Get 查询指定Quuid主机的信息 
+     * @return Quuid 查询指定Quuid主机的信息
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set 查询指定Quuid主机的信息
+     * @param Quuid 查询指定Quuid主机的信息
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
 
     /**
      * Get 过滤条件。
@@ -148,35 +164,19 @@ public class ExportAssetWebServiceInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 可选排序：ProcessCount 
-     * @return By 可选排序：ProcessCount
+     * Get 可选排序：[FirstTime|ProcessCount] 
+     * @return By 可选排序：[FirstTime|ProcessCount]
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 可选排序：ProcessCount
-     * @param By 可选排序：ProcessCount
+     * Set 可选排序：[FirstTime|ProcessCount]
+     * @param By 可选排序：[FirstTime|ProcessCount]
      */
     public void setBy(String By) {
         this.By = By;
-    }
-
-    /**
-     * Get 查询指定Quuid主机的信息 
-     * @return Quuid 查询指定Quuid主机的信息
-     */
-    public String getQuuid() {
-        return this.Quuid;
-    }
-
-    /**
-     * Set 查询指定Quuid主机的信息
-     * @param Quuid 查询指定Quuid主机的信息
-     */
-    public void setQuuid(String Quuid) {
-        this.Quuid = Quuid;
     }
 
     public ExportAssetWebServiceInfoListRequest() {
@@ -187,6 +187,9 @@ public class ExportAssetWebServiceInfoListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ExportAssetWebServiceInfoListRequest(ExportAssetWebServiceInfoListRequest source) {
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
         if (source.Filters != null) {
             this.Filters = new AssetFilters[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -199,9 +202,6 @@ public class ExportAssetWebServiceInfoListRequest extends AbstractModel{
         if (source.By != null) {
             this.By = new String(source.By);
         }
-        if (source.Quuid != null) {
-            this.Quuid = new String(source.Quuid);
-        }
     }
 
 
@@ -209,10 +209,10 @@ public class ExportAssetWebServiceInfoListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
-        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
 
     }
 }

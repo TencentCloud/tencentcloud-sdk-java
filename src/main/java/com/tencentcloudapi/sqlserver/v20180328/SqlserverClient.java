@@ -79,6 +79,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloseInterCommunication）用于关闭实例互通。
+     * @param req CloseInterCommunicationRequest
+     * @return CloseInterCommunicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseInterCommunicationResponse CloseInterCommunication(CloseInterCommunicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseInterCommunicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseInterCommunication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
      * @param req CompleteExpansionRequest
      * @return CompleteExpansionResponse
@@ -191,6 +211,46 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBasicDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBasicDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
+     * @param req CreateBusinessDBInstancesRequest
+     * @return CreateBusinessDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBusinessDBInstancesResponse CreateBusinessDBInstances(CreateBusinessDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBusinessDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBusinessDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateBusinessIntelligenceFile）用于添加商业智能服务文件。
+     * @param req CreateBusinessIntelligenceFileRequest
+     * @return CreateBusinessIntelligenceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFile(CreateBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBusinessIntelligenceFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -351,6 +411,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteBusinessIntelligenceFile）用于删除商业智能文件。
+     * @param req DeleteBusinessIntelligenceFileRequest
+     * @return DeleteBusinessIntelligenceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(DeleteBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBusinessIntelligenceFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -599,6 +679,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBusinessIntelligenceFile）用于查询商业智能服务需要的文件。
+     * @param req DescribeBusinessIntelligenceFileRequest
+     * @return DescribeBusinessIntelligenceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFile(DescribeBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBusinessIntelligenceFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeCrossRegionZone)根据主实例查询备机的容灾地域和可用区。
      * @param req DescribeCrossRegionZoneRequest
      * @return DescribeCrossRegionZoneResponse
@@ -631,6 +731,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBCharsetsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBCharsets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBInstanceInter）用于查询互通实例的信息。
+     * @param req DescribeDBInstanceInterRequest
+     * @return DescribeDBInstanceInterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceInterResponse DescribeDBInstanceInter(DescribeDBInstanceInterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceInterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceInter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1633,6 +1753,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyReadOnlyGroupDetailsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyReadOnlyGroupDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（OpenInterCommunication）用于打开实例的互通，实例互通可以实现商业智能服务相互联通。
+     * @param req OpenInterCommunicationRequest
+     * @return OpenInterCommunicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenInterCommunicationResponse OpenInterCommunication(OpenInterCommunicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenInterCommunicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenInterCommunication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -37,7 +37,7 @@ public class RecordingRuleSet extends AbstractModel{
     private Long RuleState;
 
     /**
-    * 规则名称
+    * 分组名称
     */
     @SerializedName("Name")
     @Expose
@@ -72,6 +72,14 @@ public class RecordingRuleSet extends AbstractModel{
     private String UpdatedAt;
 
     /**
+    * 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
      * Get 规则 ID 
      * @return RuleId 规则 ID
      */
@@ -104,16 +112,16 @@ public class RecordingRuleSet extends AbstractModel{
     }
 
     /**
-     * Get 规则名称 
-     * @return Name 规则名称
+     * Get 分组名称 
+     * @return Name 分组名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 规则名称
-     * @param Name 规则名称
+     * Set 分组名称
+     * @param Name 分组名称
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -183,6 +191,26 @@ public class RecordingRuleSet extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get 规则名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
     public RecordingRuleSet() {
     }
 
@@ -212,6 +240,9 @@ public class RecordingRuleSet extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class RecordingRuleSet extends AbstractModel{
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }
 }

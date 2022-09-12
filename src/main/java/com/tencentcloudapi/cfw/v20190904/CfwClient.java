@@ -461,6 +461,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *获取入侵防御按钮列表
+     * @param req DescribeDefenseSwitchRequest
+     * @return DescribeDefenseSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefenseSwitchResponse DescribeDefenseSwitch(DescribeDefenseSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDefenseSwitchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDefenseSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDefenseSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询新企业安全组规则
      * @param req DescribeEnterpriseSecurityGroupRuleRequest
      * @return DescribeEnterpriseSecurityGroupRuleResponse

@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class DescribeAssetMachineListRequest extends AbstractModel{
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * 偏移量，默认为0。
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
@@ -59,11 +45,18 @@ public class DescribeAssetMachineListRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 可选排序：PartitionCount
+    * 需要返回的数量，默认为10，最大值为100
     */
-    @SerializedName("By")
+    @SerializedName("Limit")
     @Expose
-    private String By;
+    private Long Limit;
+
+    /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 排序方式，asc升序 或 desc降序
@@ -73,36 +66,11 @@ public class DescribeAssetMachineListRequest extends AbstractModel{
     private String Order;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
+    * 可选排序[FirstTime|PartitionCount]
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
 
     /**
      * Get 过滤条件。
@@ -181,19 +149,35 @@ public class DescribeAssetMachineListRequest extends AbstractModel{
     }
 
     /**
-     * Get 可选排序：PartitionCount 
-     * @return By 可选排序：PartitionCount
+     * Get 需要返回的数量，默认为10，最大值为100 
+     * @return Limit 需要返回的数量，默认为10，最大值为100
      */
-    public String getBy() {
-        return this.By;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 可选排序：PartitionCount
-     * @param By 可选排序：PartitionCount
+     * Set 需要返回的数量，默认为10，最大值为100
+     * @param Limit 需要返回的数量，默认为10，最大值为100
      */
-    public void setBy(String By) {
-        this.By = By;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -212,6 +196,22 @@ public class DescribeAssetMachineListRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    /**
+     * Get 可选排序[FirstTime|PartitionCount] 
+     * @return By 可选排序[FirstTime|PartitionCount]
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 可选排序[FirstTime|PartitionCount]
+     * @param By 可选排序[FirstTime|PartitionCount]
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public DescribeAssetMachineListRequest() {
     }
 
@@ -220,23 +220,23 @@ public class DescribeAssetMachineListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetMachineListRequest(DescribeAssetMachineListRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
-        if (source.By != null) {
-            this.By = new String(source.By);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Order != null) {
             this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
         }
     }
 
@@ -245,11 +245,11 @@ public class DescribeAssetMachineListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

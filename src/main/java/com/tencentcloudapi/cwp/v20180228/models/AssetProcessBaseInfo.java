@@ -207,6 +207,20 @@ public class AssetProcessBaseInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 首次采集时间
+    */
+    @SerializedName("FirstTime")
+    @Expose
+    private String FirstTime;
+
+    /**
+    * 是否新增[0:否|1:是]
+    */
+    @SerializedName("IsNew")
+    @Expose
+    private Long IsNew;
+
+    /**
      * Get 主机内网IP 
      * @return MachineIp 主机内网IP
      */
@@ -630,6 +644,38 @@ public class AssetProcessBaseInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 首次采集时间 
+     * @return FirstTime 首次采集时间
+     */
+    public String getFirstTime() {
+        return this.FirstTime;
+    }
+
+    /**
+     * Set 首次采集时间
+     * @param FirstTime 首次采集时间
+     */
+    public void setFirstTime(String FirstTime) {
+        this.FirstTime = FirstTime;
+    }
+
+    /**
+     * Get 是否新增[0:否|1:是] 
+     * @return IsNew 是否新增[0:否|1:是]
+     */
+    public Long getIsNew() {
+        return this.IsNew;
+    }
+
+    /**
+     * Set 是否新增[0:否|1:是]
+     * @param IsNew 是否新增[0:否|1:是]
+     */
+    public void setIsNew(Long IsNew) {
+        this.IsNew = IsNew;
+    }
+
     public AssetProcessBaseInfo() {
     }
 
@@ -719,6 +765,12 @@ public class AssetProcessBaseInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.FirstTime != null) {
+            this.FirstTime = new String(source.FirstTime);
+        }
+        if (source.IsNew != null) {
+            this.IsNew = new Long(source.IsNew);
+        }
     }
 
 
@@ -752,6 +804,8 @@ public class AssetProcessBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
+        this.setParamSimple(map, prefix + "IsNew", this.IsNew);
 
     }
 }

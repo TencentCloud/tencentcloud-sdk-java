@@ -93,6 +93,76 @@ public class DescribeAssetInfoResponse extends AbstractModel{
     private Long WebLocationCount;
 
     /**
+    * 账号今日新增
+    */
+    @SerializedName("AccountNewCount")
+    @Expose
+    private Long AccountNewCount;
+
+    /**
+    * 端口今日新增
+    */
+    @SerializedName("PortNewCount")
+    @Expose
+    private Long PortNewCount;
+
+    /**
+    * 进程今日新增
+    */
+    @SerializedName("ProcessNewCount")
+    @Expose
+    private Long ProcessNewCount;
+
+    /**
+    * 软件今日新增
+    */
+    @SerializedName("SoftwareNewCount")
+    @Expose
+    private Long SoftwareNewCount;
+
+    /**
+    * 数据库今日新增
+    */
+    @SerializedName("DatabaseNewCount")
+    @Expose
+    private Long DatabaseNewCount;
+
+    /**
+    * Web应用今日新增
+    */
+    @SerializedName("WebAppNewCount")
+    @Expose
+    private Long WebAppNewCount;
+
+    /**
+    * Web框架今日新增
+    */
+    @SerializedName("WebFrameNewCount")
+    @Expose
+    private Long WebFrameNewCount;
+
+    /**
+    * Web服务今日新增
+    */
+    @SerializedName("WebServiceNewCount")
+    @Expose
+    private Long WebServiceNewCount;
+
+    /**
+    * Web站点今日新增
+    */
+    @SerializedName("WebLocationNewCount")
+    @Expose
+    private Long WebLocationNewCount;
+
+    /**
+    * 主机今日新增
+    */
+    @SerializedName("MachineNewCount")
+    @Expose
+    private Long MachineNewCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +330,166 @@ public class DescribeAssetInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 账号今日新增 
+     * @return AccountNewCount 账号今日新增
+     */
+    public Long getAccountNewCount() {
+        return this.AccountNewCount;
+    }
+
+    /**
+     * Set 账号今日新增
+     * @param AccountNewCount 账号今日新增
+     */
+    public void setAccountNewCount(Long AccountNewCount) {
+        this.AccountNewCount = AccountNewCount;
+    }
+
+    /**
+     * Get 端口今日新增 
+     * @return PortNewCount 端口今日新增
+     */
+    public Long getPortNewCount() {
+        return this.PortNewCount;
+    }
+
+    /**
+     * Set 端口今日新增
+     * @param PortNewCount 端口今日新增
+     */
+    public void setPortNewCount(Long PortNewCount) {
+        this.PortNewCount = PortNewCount;
+    }
+
+    /**
+     * Get 进程今日新增 
+     * @return ProcessNewCount 进程今日新增
+     */
+    public Long getProcessNewCount() {
+        return this.ProcessNewCount;
+    }
+
+    /**
+     * Set 进程今日新增
+     * @param ProcessNewCount 进程今日新增
+     */
+    public void setProcessNewCount(Long ProcessNewCount) {
+        this.ProcessNewCount = ProcessNewCount;
+    }
+
+    /**
+     * Get 软件今日新增 
+     * @return SoftwareNewCount 软件今日新增
+     */
+    public Long getSoftwareNewCount() {
+        return this.SoftwareNewCount;
+    }
+
+    /**
+     * Set 软件今日新增
+     * @param SoftwareNewCount 软件今日新增
+     */
+    public void setSoftwareNewCount(Long SoftwareNewCount) {
+        this.SoftwareNewCount = SoftwareNewCount;
+    }
+
+    /**
+     * Get 数据库今日新增 
+     * @return DatabaseNewCount 数据库今日新增
+     */
+    public Long getDatabaseNewCount() {
+        return this.DatabaseNewCount;
+    }
+
+    /**
+     * Set 数据库今日新增
+     * @param DatabaseNewCount 数据库今日新增
+     */
+    public void setDatabaseNewCount(Long DatabaseNewCount) {
+        this.DatabaseNewCount = DatabaseNewCount;
+    }
+
+    /**
+     * Get Web应用今日新增 
+     * @return WebAppNewCount Web应用今日新增
+     */
+    public Long getWebAppNewCount() {
+        return this.WebAppNewCount;
+    }
+
+    /**
+     * Set Web应用今日新增
+     * @param WebAppNewCount Web应用今日新增
+     */
+    public void setWebAppNewCount(Long WebAppNewCount) {
+        this.WebAppNewCount = WebAppNewCount;
+    }
+
+    /**
+     * Get Web框架今日新增 
+     * @return WebFrameNewCount Web框架今日新增
+     */
+    public Long getWebFrameNewCount() {
+        return this.WebFrameNewCount;
+    }
+
+    /**
+     * Set Web框架今日新增
+     * @param WebFrameNewCount Web框架今日新增
+     */
+    public void setWebFrameNewCount(Long WebFrameNewCount) {
+        this.WebFrameNewCount = WebFrameNewCount;
+    }
+
+    /**
+     * Get Web服务今日新增 
+     * @return WebServiceNewCount Web服务今日新增
+     */
+    public Long getWebServiceNewCount() {
+        return this.WebServiceNewCount;
+    }
+
+    /**
+     * Set Web服务今日新增
+     * @param WebServiceNewCount Web服务今日新增
+     */
+    public void setWebServiceNewCount(Long WebServiceNewCount) {
+        this.WebServiceNewCount = WebServiceNewCount;
+    }
+
+    /**
+     * Get Web站点今日新增 
+     * @return WebLocationNewCount Web站点今日新增
+     */
+    public Long getWebLocationNewCount() {
+        return this.WebLocationNewCount;
+    }
+
+    /**
+     * Set Web站点今日新增
+     * @param WebLocationNewCount Web站点今日新增
+     */
+    public void setWebLocationNewCount(Long WebLocationNewCount) {
+        this.WebLocationNewCount = WebLocationNewCount;
+    }
+
+    /**
+     * Get 主机今日新增 
+     * @return MachineNewCount 主机今日新增
+     */
+    public Long getMachineNewCount() {
+        return this.MachineNewCount;
+    }
+
+    /**
+     * Set 主机今日新增
+     * @param MachineNewCount 主机今日新增
+     */
+    public void setMachineNewCount(Long MachineNewCount) {
+        this.MachineNewCount = MachineNewCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -313,6 +543,36 @@ public class DescribeAssetInfoResponse extends AbstractModel{
         if (source.WebLocationCount != null) {
             this.WebLocationCount = new Long(source.WebLocationCount);
         }
+        if (source.AccountNewCount != null) {
+            this.AccountNewCount = new Long(source.AccountNewCount);
+        }
+        if (source.PortNewCount != null) {
+            this.PortNewCount = new Long(source.PortNewCount);
+        }
+        if (source.ProcessNewCount != null) {
+            this.ProcessNewCount = new Long(source.ProcessNewCount);
+        }
+        if (source.SoftwareNewCount != null) {
+            this.SoftwareNewCount = new Long(source.SoftwareNewCount);
+        }
+        if (source.DatabaseNewCount != null) {
+            this.DatabaseNewCount = new Long(source.DatabaseNewCount);
+        }
+        if (source.WebAppNewCount != null) {
+            this.WebAppNewCount = new Long(source.WebAppNewCount);
+        }
+        if (source.WebFrameNewCount != null) {
+            this.WebFrameNewCount = new Long(source.WebFrameNewCount);
+        }
+        if (source.WebServiceNewCount != null) {
+            this.WebServiceNewCount = new Long(source.WebServiceNewCount);
+        }
+        if (source.WebLocationNewCount != null) {
+            this.WebLocationNewCount = new Long(source.WebLocationNewCount);
+        }
+        if (source.MachineNewCount != null) {
+            this.MachineNewCount = new Long(source.MachineNewCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +593,16 @@ public class DescribeAssetInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "WebFrameCount", this.WebFrameCount);
         this.setParamSimple(map, prefix + "WebServiceCount", this.WebServiceCount);
         this.setParamSimple(map, prefix + "WebLocationCount", this.WebLocationCount);
+        this.setParamSimple(map, prefix + "AccountNewCount", this.AccountNewCount);
+        this.setParamSimple(map, prefix + "PortNewCount", this.PortNewCount);
+        this.setParamSimple(map, prefix + "ProcessNewCount", this.ProcessNewCount);
+        this.setParamSimple(map, prefix + "SoftwareNewCount", this.SoftwareNewCount);
+        this.setParamSimple(map, prefix + "DatabaseNewCount", this.DatabaseNewCount);
+        this.setParamSimple(map, prefix + "WebAppNewCount", this.WebAppNewCount);
+        this.setParamSimple(map, prefix + "WebFrameNewCount", this.WebFrameNewCount);
+        this.setParamSimple(map, prefix + "WebServiceNewCount", this.WebServiceNewCount);
+        this.setParamSimple(map, prefix + "WebLocationNewCount", this.WebLocationNewCount);
+        this.setParamSimple(map, prefix + "MachineNewCount", this.MachineNewCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

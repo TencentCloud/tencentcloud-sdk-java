@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServerCertInfo extends AbstractModel{
 
     /**
-    * 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+    * 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
@@ -31,7 +31,7 @@ public class ServerCertInfo extends AbstractModel{
     private String CertId;
 
     /**
-    * 证书备注名
+    * 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
@@ -39,10 +39,10 @@ public class ServerCertInfo extends AbstractModel{
     private String Alias;
 
     /**
-    * 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+    * 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -50,7 +50,7 @@ managed:腾讯云托管
     private String Type;
 
     /**
-    * 证书过期时间
+    * 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -58,7 +58,7 @@ managed:腾讯云托管
     private String ExpireTime;
 
     /**
-    * 证书部署时间
+    * 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployTime")
@@ -66,9 +66,9 @@ managed:腾讯云托管
     private String DeployTime;
 
     /**
-    * 部署状态:
-processing: 部署中
-deployed: 已部署
+    * 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -76,9 +76,17 @@ deployed: 已部署
     private String Status;
 
     /**
-     * Get 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+    * 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignAlgo")
+    @Expose
+    private String SignAlgo;
+
+    /**
+     * Get 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertId 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+     * @return CertId 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
@@ -86,9 +94,9 @@ deployed: 已部署
     }
 
     /**
-     * Set 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+     * Set 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertId 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+     * @param CertId 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
@@ -96,9 +104,9 @@ deployed: 已部署
     }
 
     /**
-     * Get 证书备注名
+     * Get 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alias 证书备注名
+     * @return Alias 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
@@ -106,9 +114,9 @@ deployed: 已部署
     }
 
     /**
-     * Set 证书备注名
+     * Set 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alias 证书备注名
+     * @param Alias 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
@@ -116,15 +124,15 @@ deployed: 已部署
     }
 
     /**
-     * Get 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+     * Get 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+     * @return Type 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -132,15 +140,15 @@ managed:腾讯云托管
     }
 
     /**
-     * Set 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+     * Set 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+     * @param Type 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -148,9 +156,9 @@ managed:腾讯云托管
     }
 
     /**
-     * Get 证书过期时间
+     * Get 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 证书过期时间
+     * @return ExpireTime 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -158,9 +166,9 @@ managed:腾讯云托管
     }
 
     /**
-     * Set 证书过期时间
+     * Set 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 证书过期时间
+     * @param ExpireTime 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -168,9 +176,9 @@ managed:腾讯云托管
     }
 
     /**
-     * Get 证书部署时间
+     * Get 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployTime 证书部署时间
+     * @return DeployTime 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployTime() {
@@ -178,9 +186,9 @@ managed:腾讯云托管
     }
 
     /**
-     * Set 证书部署时间
+     * Set 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployTime 证书部署时间
+     * @param DeployTime 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployTime(String DeployTime) {
@@ -188,13 +196,13 @@ managed:腾讯云托管
     }
 
     /**
-     * Get 部署状态:
-processing: 部署中
-deployed: 已部署
+     * Get 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 部署状态:
-processing: 部署中
-deployed: 已部署
+     * @return Status 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -202,17 +210,37 @@ deployed: 已部署
     }
 
     /**
-     * Set 部署状态:
-processing: 部署中
-deployed: 已部署
+     * Set 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 部署状态:
-processing: 部署中
-deployed: 已部署
+     * @param Status 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignAlgo 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSignAlgo() {
+        return this.SignAlgo;
+    }
+
+    /**
+     * Set 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignAlgo 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignAlgo(String SignAlgo) {
+        this.SignAlgo = SignAlgo;
     }
 
     public ServerCertInfo() {
@@ -241,6 +269,9 @@ deployed: 已部署
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SignAlgo != null) {
+            this.SignAlgo = new String(source.SignAlgo);
+        }
     }
 
 
@@ -254,6 +285,7 @@ deployed: 已部署
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "DeployTime", this.DeployTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
 
     }
 }

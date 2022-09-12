@@ -1235,6 +1235,27 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
+
+     * @param req RecognizeMedicalInvoiceOCRRequest
+     * @return RecognizeMedicalInvoiceOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(RecognizeMedicalInvoiceOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeMedicalInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeMedicalInvoiceOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeMedicalInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
      * @param req RecognizeOnlineTaxiItineraryOCRRequest
      * @return RecognizeOnlineTaxiItineraryOCRResponse

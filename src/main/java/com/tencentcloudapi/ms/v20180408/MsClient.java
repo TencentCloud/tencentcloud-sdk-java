@@ -199,6 +199,26 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *该接口采用同步模式请求腾讯APK云检测服务，即时返回检测数据，需要用户用轮询的方式调用本接口来进行样本送检并获取检测结果(每隔60s发送一次请求，传相同的参数，重试30次)，一般情况下0.5h内会出检测结果，最长时间是3h。当Result为ok并且ResultList数组非空有值时，代表检测完毕，若长时间获取不到检测结果，请联系客服。
+     * @param req DescribeApkDetectionResultRequest
+     * @return DescribeApkDetectionResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApkDetectionResultResponse DescribeApkDetectionResult(DescribeApkDetectionResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApkDetectionResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApkDetectionResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApkDetectionResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取某个用户的所有资源信息
      * @param req DescribeResourceInstancesRequest
      * @return DescribeResourceInstancesResponse

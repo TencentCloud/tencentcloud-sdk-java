@@ -51,6 +51,17 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
     private DataDisk [] DataDisk;
 
     /**
+    * 实例计费类型。其中：
+0，按资源维度后付费，计算当日用量峰值，例如CPU，内存，硬盘等，仅适用于非GNR系列机型；
+1，按小时后付费，单价：xx元/实例/小时，仅适用于GNR机型，如需开通该计费方式请提工单申请；
+2，按月后付费，单价：xx元/实例/月，仅适用于GNR机型；
+该字段不填时，非GNR机型会默认选择0；GNR机型默认选择2。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private Long InstanceChargeType;
+
+    /**
      * Get 实例的机型信息 
      * @return InstanceType 实例的机型信息
      */
@@ -114,6 +125,38 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
         this.DataDisk = DataDisk;
     }
 
+    /**
+     * Get 实例计费类型。其中：
+0，按资源维度后付费，计算当日用量峰值，例如CPU，内存，硬盘等，仅适用于非GNR系列机型；
+1，按小时后付费，单价：xx元/实例/小时，仅适用于GNR机型，如需开通该计费方式请提工单申请；
+2，按月后付费，单价：xx元/实例/月，仅适用于GNR机型；
+该字段不填时，非GNR机型会默认选择0；GNR机型默认选择2。 
+     * @return InstanceChargeType 实例计费类型。其中：
+0，按资源维度后付费，计算当日用量峰值，例如CPU，内存，硬盘等，仅适用于非GNR系列机型；
+1，按小时后付费，单价：xx元/实例/小时，仅适用于GNR机型，如需开通该计费方式请提工单申请；
+2，按月后付费，单价：xx元/实例/月，仅适用于GNR机型；
+该字段不填时，非GNR机型会默认选择0；GNR机型默认选择2。
+     */
+    public Long getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set 实例计费类型。其中：
+0，按资源维度后付费，计算当日用量峰值，例如CPU，内存，硬盘等，仅适用于非GNR系列机型；
+1，按小时后付费，单价：xx元/实例/小时，仅适用于GNR机型，如需开通该计费方式请提工单申请；
+2，按月后付费，单价：xx元/实例/月，仅适用于GNR机型；
+该字段不填时，非GNR机型会默认选择0；GNR机型默认选择2。
+     * @param InstanceChargeType 实例计费类型。其中：
+0，按资源维度后付费，计算当日用量峰值，例如CPU，内存，硬盘等，仅适用于非GNR系列机型；
+1，按小时后付费，单价：xx元/实例/小时，仅适用于GNR机型，如需开通该计费方式请提工单申请；
+2，按月后付费，单价：xx元/实例/月，仅适用于GNR机型；
+该字段不填时，非GNR机型会默认选择0；GNR机型默认选择2。
+     */
+    public void setInstanceChargeType(Long InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
     public DescribePriceRunInstanceRequest() {
     }
 
@@ -137,6 +180,9 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
                 this.DataDisk[i] = new DataDisk(source.DataDisk[i]);
             }
         }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new Long(source.InstanceChargeType);
+        }
     }
 
 
@@ -148,6 +194,7 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

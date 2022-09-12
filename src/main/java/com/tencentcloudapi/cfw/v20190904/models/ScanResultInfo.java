@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ScanResultInfo extends AbstractModel{
 
     /**
-    * 暴漏漏洞数量
+    * 暴露漏洞数量
     */
     @SerializedName("LeakNum")
     @Expose
@@ -37,7 +37,7 @@ public class ScanResultInfo extends AbstractModel{
     private Long IPNum;
 
     /**
-    * 暴漏端口数量
+    * 暴露端口数量
     */
     @SerializedName("PortNum")
     @Expose
@@ -65,16 +65,16 @@ public class ScanResultInfo extends AbstractModel{
     private Boolean BanStatus;
 
     /**
-     * Get 暴漏漏洞数量 
-     * @return LeakNum 暴漏漏洞数量
+     * Get 暴露漏洞数量 
+     * @return LeakNum 暴露漏洞数量
      */
     public Long getLeakNum() {
         return this.LeakNum;
     }
 
     /**
-     * Set 暴漏漏洞数量
-     * @param LeakNum 暴漏漏洞数量
+     * Set 暴露漏洞数量
+     * @param LeakNum 暴露漏洞数量
      */
     public void setLeakNum(Long LeakNum) {
         this.LeakNum = LeakNum;
@@ -97,16 +97,16 @@ public class ScanResultInfo extends AbstractModel{
     }
 
     /**
-     * Get 暴漏端口数量 
-     * @return PortNum 暴漏端口数量
+     * Get 暴露端口数量 
+     * @return PortNum 暴露端口数量
      */
     public Long getPortNum() {
         return this.PortNum;
     }
 
     /**
-     * Set 暴漏端口数量
-     * @param PortNum 暴漏端口数量
+     * Set 暴露端口数量
+     * @param PortNum 暴露端口数量
      */
     public void setPortNum(Long PortNum) {
         this.PortNum = PortNum;

@@ -122,6 +122,27 @@ public class AssetCoreModuleBaseInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 首次采集时间
+    */
+    @SerializedName("FirstTime")
+    @Expose
+    private String FirstTime;
+
+    /**
+    * 是否新增[0:否|1:是]
+    */
+    @SerializedName("IsNew")
+    @Expose
+    private Long IsNew;
+
+    /**
+    * 服务器外网IP
+    */
+    @SerializedName("MachineWanIp")
+    @Expose
+    private String MachineWanIp;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -349,6 +370,54 @@ public class AssetCoreModuleBaseInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 首次采集时间 
+     * @return FirstTime 首次采集时间
+     */
+    public String getFirstTime() {
+        return this.FirstTime;
+    }
+
+    /**
+     * Set 首次采集时间
+     * @param FirstTime 首次采集时间
+     */
+    public void setFirstTime(String FirstTime) {
+        this.FirstTime = FirstTime;
+    }
+
+    /**
+     * Get 是否新增[0:否|1:是] 
+     * @return IsNew 是否新增[0:否|1:是]
+     */
+    public Long getIsNew() {
+        return this.IsNew;
+    }
+
+    /**
+     * Set 是否新增[0:否|1:是]
+     * @param IsNew 是否新增[0:否|1:是]
+     */
+    public void setIsNew(Long IsNew) {
+        this.IsNew = IsNew;
+    }
+
+    /**
+     * Get 服务器外网IP 
+     * @return MachineWanIp 服务器外网IP
+     */
+    public String getMachineWanIp() {
+        return this.MachineWanIp;
+    }
+
+    /**
+     * Set 服务器外网IP
+     * @param MachineWanIp 服务器外网IP
+     */
+    public void setMachineWanIp(String MachineWanIp) {
+        this.MachineWanIp = MachineWanIp;
+    }
+
     public AssetCoreModuleBaseInfo() {
     }
 
@@ -399,6 +468,15 @@ public class AssetCoreModuleBaseInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.FirstTime != null) {
+            this.FirstTime = new String(source.FirstTime);
+        }
+        if (source.IsNew != null) {
+            this.IsNew = new Long(source.IsNew);
+        }
+        if (source.MachineWanIp != null) {
+            this.MachineWanIp = new String(source.MachineWanIp);
+        }
     }
 
 
@@ -420,6 +498,9 @@ public class AssetCoreModuleBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
+        this.setParamSimple(map, prefix + "IsNew", this.IsNew);
+        this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
 
     }
 }

@@ -23,18 +23,11 @@ import java.util.HashMap;
 public class DescribeAssetAppListRequest extends AbstractModel{
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
+    * 查询指定Quuid主机的信息
     */
-    @SerializedName("Limit")
+    @SerializedName("Quuid")
     @Expose
-    private Long Limit;
-
-    /**
-    * 偏移量，默认为0。
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
+    private String Quuid;
 
     /**
     * 过滤条件。
@@ -58,11 +51,18 @@ public class DescribeAssetAppListRequest extends AbstractModel{
     private AssetFilters [] Filters;
 
     /**
-    * 排序方式：ProcessCount
+    * 需要返回的数量，默认为10，最大值为100
     */
-    @SerializedName("By")
+    @SerializedName("Limit")
     @Expose
-    private String By;
+    private Long Limit;
+
+    /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 排序方式，asc升序 或 desc降序
@@ -72,42 +72,26 @@ public class DescribeAssetAppListRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 查询指定Quuid主机的信息
+    * 排序方式：[FirstTime|ProcessCount]
     */
-    @SerializedName("Quuid")
+    @SerializedName("By")
     @Expose
-    private String Quuid;
+    private String By;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
+     * Get 查询指定Quuid主机的信息 
+     * @return Quuid 查询指定Quuid主机的信息
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getQuuid() {
+        return this.Quuid;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
+     * Set 查询指定Quuid主机的信息
+     * @param Quuid 查询指定Quuid主机的信息
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
     }
 
     /**
@@ -183,19 +167,35 @@ public class DescribeAssetAppListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序方式：ProcessCount 
-     * @return By 排序方式：ProcessCount
+     * Get 需要返回的数量，默认为10，最大值为100 
+     * @return Limit 需要返回的数量，默认为10，最大值为100
      */
-    public String getBy() {
-        return this.By;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 排序方式：ProcessCount
-     * @param By 排序方式：ProcessCount
+     * Set 需要返回的数量，默认为10，最大值为100
+     * @param Limit 需要返回的数量，默认为10，最大值为100
      */
-    public void setBy(String By) {
-        this.By = By;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -215,19 +215,19 @@ public class DescribeAssetAppListRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询指定Quuid主机的信息 
-     * @return Quuid 查询指定Quuid主机的信息
+     * Get 排序方式：[FirstTime|ProcessCount] 
+     * @return By 排序方式：[FirstTime|ProcessCount]
      */
-    public String getQuuid() {
-        return this.Quuid;
+    public String getBy() {
+        return this.By;
     }
 
     /**
-     * Set 查询指定Quuid主机的信息
-     * @param Quuid 查询指定Quuid主机的信息
+     * Set 排序方式：[FirstTime|ProcessCount]
+     * @param By 排序方式：[FirstTime|ProcessCount]
      */
-    public void setQuuid(String Quuid) {
-        this.Quuid = Quuid;
+    public void setBy(String By) {
+        this.By = By;
     }
 
     public DescribeAssetAppListRequest() {
@@ -238,11 +238,8 @@ public class DescribeAssetAppListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetAppListRequest(DescribeAssetAppListRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
         }
         if (source.Filters != null) {
             this.Filters = new AssetFilters[source.Filters.length];
@@ -250,14 +247,17 @@ public class DescribeAssetAppListRequest extends AbstractModel{
                 this.Filters[i] = new AssetFilters(source.Filters[i]);
             }
         }
-        if (source.By != null) {
-            this.By = new String(source.By);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
-        if (source.Quuid != null) {
-            this.Quuid = new String(source.Quuid);
+        if (source.By != null) {
+            this.By = new String(source.By);
         }
     }
 
@@ -266,12 +266,12 @@ public class DescribeAssetAppListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
-        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

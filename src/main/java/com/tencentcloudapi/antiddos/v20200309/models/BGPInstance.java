@@ -140,6 +140,13 @@ public class BGPInstance extends AbstractModel{
     private Long IpCountNewFlag;
 
     /**
+    * 攻击封堵套餐标记
+    */
+    @SerializedName("VitalityVersion")
+    @Expose
+    private Long VitalityVersion;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -427,6 +434,22 @@ public class BGPInstance extends AbstractModel{
         this.IpCountNewFlag = IpCountNewFlag;
     }
 
+    /**
+     * Get 攻击封堵套餐标记 
+     * @return VitalityVersion 攻击封堵套餐标记
+     */
+    public Long getVitalityVersion() {
+        return this.VitalityVersion;
+    }
+
+    /**
+     * Set 攻击封堵套餐标记
+     * @param VitalityVersion 攻击封堵套餐标记
+     */
+    public void setVitalityVersion(Long VitalityVersion) {
+        this.VitalityVersion = VitalityVersion;
+    }
+
     public BGPInstance() {
     }
 
@@ -486,6 +509,9 @@ public class BGPInstance extends AbstractModel{
         if (source.IpCountNewFlag != null) {
             this.IpCountNewFlag = new Long(source.IpCountNewFlag);
         }
+        if (source.VitalityVersion != null) {
+            this.VitalityVersion = new Long(source.VitalityVersion);
+        }
     }
 
 
@@ -508,6 +534,7 @@ public class BGPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
+        this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
 
     }
 }

@@ -23,44 +23,6 @@ import java.util.HashMap;
 public class DescribeAssetCoreModuleListRequest extends AbstractModel{
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * 偏移量，默认为0。
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
-    */
-    @SerializedName("Filters")
-    @Expose
-    private AssetFilters [] Filters;
-
-    /**
-    * 排序方式，asc升序 或 desc降序
-    */
-    @SerializedName("Order")
-    @Expose
-    private String Order;
-
-    /**
-    * 排序依据:Size,ProcessCount,ModuleCount
-    */
-    @SerializedName("By")
-    @Expose
-    private String By;
-
-    /**
     * 服务器Uuid
     */
     @SerializedName("Uuid")
@@ -75,96 +37,42 @@ public class DescribeAssetCoreModuleListRequest extends AbstractModel{
     private String Quuid;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * Get 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li> 
-     * @return Filters 过滤条件。
+    * 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
-     */
-    public AssetFilters [] getFilters() {
-        return this.Filters;
-    }
+    */
+    @SerializedName("Filters")
+    @Expose
+    private AssetFilters [] Filters;
 
     /**
-     * Set 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
-     * @param Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
-     */
-    public void setFilters(AssetFilters [] Filters) {
-        this.Filters = Filters;
-    }
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
-     * Get 排序方式，asc升序 或 desc降序 
-     * @return Order 排序方式，asc升序 或 desc降序
-     */
-    public String getOrder() {
-        return this.Order;
-    }
+    * 需要返回的数量，默认为10，最大值为100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
-     * Set 排序方式，asc升序 或 desc降序
-     * @param Order 排序方式，asc升序 或 desc降序
-     */
-    public void setOrder(String Order) {
-        this.Order = Order;
-    }
+    * 排序方式，asc升序 或 desc降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
 
     /**
-     * Get 排序依据:Size,ProcessCount,ModuleCount 
-     * @return By 排序依据:Size,ProcessCount,ModuleCount
-     */
-    public String getBy() {
-        return this.By;
-    }
-
-    /**
-     * Set 排序依据:Size,ProcessCount,ModuleCount
-     * @param By 排序依据:Size,ProcessCount,ModuleCount
-     */
-    public void setBy(String By) {
-        this.By = By;
-    }
+    * 排序依据[Size|FirstTime|ProcessCount|ModuleCount]
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
 
     /**
      * Get 服务器Uuid 
@@ -198,6 +106,98 @@ public class DescribeAssetCoreModuleListRequest extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    /**
+     * Get 过滤条件。
+<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>Name- string - 是否必填：否 - 包名</li>
+<li>User- string - 是否必填：否 - 用户</li> 
+     * @return Filters 过滤条件。
+<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>Name- string - 是否必填：否 - 包名</li>
+<li>User- string - 是否必填：否 - 用户</li>
+     */
+    public AssetFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件。
+<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>Name- string - 是否必填：否 - 包名</li>
+<li>User- string - 是否必填：否 - 用户</li>
+     * @param Filters 过滤条件。
+<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>Name- string - 是否必填：否 - 包名</li>
+<li>User- string - 是否必填：否 - 用户</li>
+     */
+    public void setFilters(AssetFilters [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 需要返回的数量，默认为10，最大值为100 
+     * @return Limit 需要返回的数量，默认为10，最大值为100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 需要返回的数量，默认为10，最大值为100
+     * @param Limit 需要返回的数量，默认为10，最大值为100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 排序方式，asc升序 或 desc降序 
+     * @return Order 排序方式，asc升序 或 desc降序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式，asc升序 或 desc降序
+     * @param Order 排序方式，asc升序 或 desc降序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 排序依据[Size|FirstTime|ProcessCount|ModuleCount] 
+     * @return By 排序依据[Size|FirstTime|ProcessCount|ModuleCount]
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序依据[Size|FirstTime|ProcessCount|ModuleCount]
+     * @param By 排序依据[Size|FirstTime|ProcessCount|ModuleCount]
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public DescribeAssetCoreModuleListRequest() {
     }
 
@@ -206,11 +206,11 @@ public class DescribeAssetCoreModuleListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetCoreModuleListRequest(DescribeAssetCoreModuleListRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
         }
         if (source.Filters != null) {
             this.Filters = new AssetFilters[source.Filters.length];
@@ -218,17 +218,17 @@ public class DescribeAssetCoreModuleListRequest extends AbstractModel{
                 this.Filters[i] = new AssetFilters(source.Filters[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
         if (source.By != null) {
             this.By = new String(source.By);
-        }
-        if (source.Uuid != null) {
-            this.Uuid = new String(source.Uuid);
-        }
-        if (source.Quuid != null) {
-            this.Quuid = new String(source.Quuid);
         }
     }
 
@@ -237,13 +237,13 @@ public class DescribeAssetCoreModuleListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "Order", this.Order);
-        this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

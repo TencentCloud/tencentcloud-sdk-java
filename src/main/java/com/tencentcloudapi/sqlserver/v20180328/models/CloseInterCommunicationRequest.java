@@ -13,48 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendTrafficSecuritySmsMessageRequest extends AbstractModel{
+public class CloseInterCommunicationRequest extends AbstractModel{
 
     /**
-    * 业务入参
+    * 关闭互通的实例ID集合
     */
-    @SerializedName("BspData")
+    @SerializedName("InstanceIdSet")
     @Expose
-    private InputSendTrafficSecuritySmsMsg BspData;
+    private String [] InstanceIdSet;
 
     /**
-     * Get 业务入参 
-     * @return BspData 业务入参
+     * Get 关闭互通的实例ID集合 
+     * @return InstanceIdSet 关闭互通的实例ID集合
      */
-    public InputSendTrafficSecuritySmsMsg getBspData() {
-        return this.BspData;
+    public String [] getInstanceIdSet() {
+        return this.InstanceIdSet;
     }
 
     /**
-     * Set 业务入参
-     * @param BspData 业务入参
+     * Set 关闭互通的实例ID集合
+     * @param InstanceIdSet 关闭互通的实例ID集合
      */
-    public void setBspData(InputSendTrafficSecuritySmsMsg BspData) {
-        this.BspData = BspData;
+    public void setInstanceIdSet(String [] InstanceIdSet) {
+        this.InstanceIdSet = InstanceIdSet;
     }
 
-    public SendTrafficSecuritySmsMessageRequest() {
+    public CloseInterCommunicationRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SendTrafficSecuritySmsMessageRequest(SendTrafficSecuritySmsMessageRequest source) {
-        if (source.BspData != null) {
-            this.BspData = new InputSendTrafficSecuritySmsMsg(source.BspData);
+    public CloseInterCommunicationRequest(CloseInterCommunicationRequest source) {
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
         }
     }
 
@@ -63,7 +66,7 @@ public class SendTrafficSecuritySmsMessageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "BspData.", this.BspData);
+        this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
 
     }
 }
