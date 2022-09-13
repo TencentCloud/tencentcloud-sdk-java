@@ -15,6 +15,9 @@ public enum ThpcErrorCode {
     // 不支持该参数值。
      INVALIDPARAMETERVALUE_NOTSUPPORTED("InvalidParameterValue.NotSupported"),
      
+    // 字段不支持此值。
+     INVALIDPARAMETERVALUE_PARAMETERSNOTSUPPORTED("InvalidParameterValue.ParametersNotSupported"),
+     
     // 参数值过大。
      INVALIDPARAMETERVALUE_TOOLARGE("InvalidParameterValue.TooLarge"),
      
@@ -35,6 +38,9 @@ public enum ThpcErrorCode {
      
     // 集群不存在。
      RESOURCENOTFOUND_CLUSTERID("ResourceNotFound.ClusterId"),
+     
+    // 无法找到镜像ID。
+     RESOURCENOTFOUND_IMAGEID("ResourceNotFound.ImageId"),
      
     // 无法找到ID对应的弹性伸缩启动配置。
      RESOURCENOTFOUND_LAUNCHCONFIGURATIONID("ResourceNotFound.LaunchConfigurationId"),
