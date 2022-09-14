@@ -2017,6 +2017,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询转码任务数。
+     * @param req DescribeTranscodeTaskNumRequest
+     * @return DescribeTranscodeTaskNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTaskNumResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTranscodeTaskNum");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播上行路数查询
      * @param req DescribeUploadStreamNumsRequest
      * @return DescribeUploadStreamNumsResponse

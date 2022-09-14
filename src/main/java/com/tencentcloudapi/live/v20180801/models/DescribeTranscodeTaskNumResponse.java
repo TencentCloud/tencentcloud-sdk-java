@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220106.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOverviewL7DataResponse extends AbstractModel{
+public class DescribeTranscodeTaskNumResponse extends AbstractModel{
 
     /**
-    * 查询维度。
+    * 任务数列表。
     */
-    @SerializedName("Type")
+    @SerializedName("DataInfoList")
     @Expose
-    private String Type;
-
-    /**
-    * 查询时间间隔。
-    */
-    @SerializedName("Interval")
-    @Expose
-    private String Interval;
-
-    /**
-    * 七层监控类时序流量数据列表。
-    */
-    @SerializedName("Data")
-    @Expose
-    private TimingDataRecord [] Data;
+    private TranscodeTaskNum [] DataInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DescribeOverviewL7DataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询维度。 
-     * @return Type 查询维度。
+     * Get 任务数列表。 
+     * @return DataInfoList 任务数列表。
      */
-    public String getType() {
-        return this.Type;
+    public TranscodeTaskNum [] getDataInfoList() {
+        return this.DataInfoList;
     }
 
     /**
-     * Set 查询维度。
-     * @param Type 查询维度。
+     * Set 任务数列表。
+     * @param DataInfoList 任务数列表。
      */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
-
-    /**
-     * Get 查询时间间隔。 
-     * @return Interval 查询时间间隔。
-     */
-    public String getInterval() {
-        return this.Interval;
-    }
-
-    /**
-     * Set 查询时间间隔。
-     * @param Interval 查询时间间隔。
-     */
-    public void setInterval(String Interval) {
-        this.Interval = Interval;
-    }
-
-    /**
-     * Get 七层监控类时序流量数据列表。 
-     * @return Data 七层监控类时序流量数据列表。
-     */
-    public TimingDataRecord [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 七层监控类时序流量数据列表。
-     * @param Data 七层监控类时序流量数据列表。
-     */
-    public void setData(TimingDataRecord [] Data) {
-        this.Data = Data;
+    public void setDataInfoList(TranscodeTaskNum [] DataInfoList) {
+        this.DataInfoList = DataInfoList;
     }
 
     /**
@@ -114,24 +68,18 @@ public class DescribeOverviewL7DataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeOverviewL7DataResponse() {
+    public DescribeTranscodeTaskNumResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOverviewL7DataResponse(DescribeOverviewL7DataResponse source) {
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
-        if (source.Interval != null) {
-            this.Interval = new String(source.Interval);
-        }
-        if (source.Data != null) {
-            this.Data = new TimingDataRecord[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TimingDataRecord(source.Data[i]);
+    public DescribeTranscodeTaskNumResponse(DescribeTranscodeTaskNumResponse source) {
+        if (source.DataInfoList != null) {
+            this.DataInfoList = new TranscodeTaskNum[source.DataInfoList.length];
+            for (int i = 0; i < source.DataInfoList.length; i++) {
+                this.DataInfoList[i] = new TranscodeTaskNum(source.DataInfoList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -144,9 +92,7 @@ public class DescribeOverviewL7DataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

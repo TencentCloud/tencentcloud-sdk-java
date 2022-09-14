@@ -56,11 +56,18 @@ public class RecordParams extends AbstractModel{
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-    * 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
+    * 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
     */
     @SerializedName("OutputFormat")
     @Expose
     private Long OutputFormat;
+
+    /**
+    * 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+    */
+    @SerializedName("AvMerge")
+    @Expose
+    private Long AvMerge;
 
     /**
      * Get 录制模式：
@@ -147,19 +154,35 @@ public class RecordParams extends AbstractModel{
     }
 
     /**
-     * Get 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件） 
-     * @return OutputFormat 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
+     * Get 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。 
+     * @return OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
      */
     public Long getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
-     * @param OutputFormat 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
+     * Set 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+     * @param OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
      */
     public void setOutputFormat(Long OutputFormat) {
         this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。 
+     * @return AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     */
+    public Long getAvMerge() {
+        return this.AvMerge;
+    }
+
+    /**
+     * Set 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     * @param AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     */
+    public void setAvMerge(Long AvMerge) {
+        this.AvMerge = AvMerge;
     }
 
     public RecordParams() {
@@ -185,6 +208,9 @@ public class RecordParams extends AbstractModel{
         if (source.OutputFormat != null) {
             this.OutputFormat = new Long(source.OutputFormat);
         }
+        if (source.AvMerge != null) {
+            this.AvMerge = new Long(source.AvMerge);
+        }
     }
 
 
@@ -197,6 +223,7 @@ public class RecordParams extends AbstractModel{
         this.setParamSimple(map, prefix + "StreamType", this.StreamType);
         this.setParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
 
     }
 }

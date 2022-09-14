@@ -157,6 +157,14 @@ public class NatGateway extends AbstractModel{
     private Long ExclusiveGatewayBandwidth;
 
     /**
+    * NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RestrictState")
+    @Expose
+    private String RestrictState;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -476,6 +484,26 @@ public class NatGateway extends AbstractModel{
         this.ExclusiveGatewayBandwidth = ExclusiveGatewayBandwidth;
     }
 
+    /**
+     * Get NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRestrictState() {
+        return this.RestrictState;
+    }
+
+    /**
+     * Set NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRestrictState(String RestrictState) {
+        this.RestrictState = RestrictState;
+    }
+
     public NatGateway() {
     }
 
@@ -556,6 +584,9 @@ public class NatGateway extends AbstractModel{
         if (source.ExclusiveGatewayBandwidth != null) {
             this.ExclusiveGatewayBandwidth = new Long(source.ExclusiveGatewayBandwidth);
         }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class NatGateway extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
+        this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
 
     }
 }

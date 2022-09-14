@@ -47,7 +47,6 @@ LOCAL_GATEWAY：本地网关。
 
     /**
     * 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
     */
     @SerializedName("GatewayId")
     @Expose
@@ -191,10 +190,8 @@ LOCAL_GATEWAY：本地网关。
     }
 
     /**
-     * Get 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0' 
+     * Get 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。 
      * @return GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -202,9 +199,7 @@ LOCAL_GATEWAY：本地网关。
 
     /**
      * Set 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      * @param GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;

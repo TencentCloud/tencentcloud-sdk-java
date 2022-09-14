@@ -73,6 +73,13 @@ public class TencentVod extends AbstractModel{
     private String SourceContext;
 
     /**
+    * 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private Long MediaType;
+
+    /**
      * Get 媒体后续任务处理操作，即完成媒体上传后，可自动发起任务流操作。参数值为任务流模板名，云点播支持 创建任务流模板 并为模板命名。 
      * @return Procedure 媒体后续任务处理操作，即完成媒体上传后，可自动发起任务流操作。参数值为任务流模板名，云点播支持 创建任务流模板 并为模板命名。
      */
@@ -188,6 +195,22 @@ public class TencentVod extends AbstractModel{
         this.SourceContext = SourceContext;
     }
 
+    /**
+     * Get 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。 
+     * @return MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     */
+    public Long getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     * @param MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     */
+    public void setMediaType(Long MediaType) {
+        this.MediaType = MediaType;
+    }
+
     public TencentVod() {
     }
 
@@ -217,6 +240,9 @@ public class TencentVod extends AbstractModel{
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.MediaType != null) {
+            this.MediaType = new Long(source.MediaType);
+        }
     }
 
 
@@ -231,6 +257,7 @@ public class TencentVod extends AbstractModel{
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
 
     }
 }

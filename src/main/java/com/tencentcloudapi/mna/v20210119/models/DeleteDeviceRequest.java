@@ -13,23 +13,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBZoneConfigRequest extends AbstractModel{
+public class DeleteDeviceRequest extends AbstractModel{
 
-    public DescribeDBZoneConfigRequest() {
+    /**
+    * 删除设备的唯一ID
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
+     * Get 删除设备的唯一ID 
+     * @return DeviceId 删除设备的唯一ID
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 删除设备的唯一ID
+     * @param DeviceId 删除设备的唯一ID
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    public DeleteDeviceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBZoneConfigRequest(DescribeDBZoneConfigRequest source) {
+    public DeleteDeviceRequest(DeleteDeviceRequest source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeDBZoneConfigRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
 
     }
 }

@@ -138,6 +138,28 @@ public class Blueprint extends AbstractModel{
     private String ImageId;
 
     /**
+    * 官方网站Url。
+    */
+    @SerializedName("CommunityUrl")
+    @Expose
+    private String CommunityUrl;
+
+    /**
+    * 指导文章Url。
+    */
+    @SerializedName("GuideUrl")
+    @Expose
+    private String GuideUrl;
+
+    /**
+    * 镜像关联使用场景Id列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneIdSet")
+    @Expose
+    private String [] SceneIdSet;
+
+    /**
      * Get 镜像 ID  ，是 Blueprint 的唯一标识。 
      * @return BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
@@ -405,6 +427,58 @@ public class Blueprint extends AbstractModel{
         this.ImageId = ImageId;
     }
 
+    /**
+     * Get 官方网站Url。 
+     * @return CommunityUrl 官方网站Url。
+     */
+    public String getCommunityUrl() {
+        return this.CommunityUrl;
+    }
+
+    /**
+     * Set 官方网站Url。
+     * @param CommunityUrl 官方网站Url。
+     */
+    public void setCommunityUrl(String CommunityUrl) {
+        this.CommunityUrl = CommunityUrl;
+    }
+
+    /**
+     * Get 指导文章Url。 
+     * @return GuideUrl 指导文章Url。
+     */
+    public String getGuideUrl() {
+        return this.GuideUrl;
+    }
+
+    /**
+     * Set 指导文章Url。
+     * @param GuideUrl 指导文章Url。
+     */
+    public void setGuideUrl(String GuideUrl) {
+        this.GuideUrl = GuideUrl;
+    }
+
+    /**
+     * Get 镜像关联使用场景Id列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneIdSet 镜像关联使用场景Id列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSceneIdSet() {
+        return this.SceneIdSet;
+    }
+
+    /**
+     * Set 镜像关联使用场景Id列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneIdSet 镜像关联使用场景Id列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneIdSet(String [] SceneIdSet) {
+        this.SceneIdSet = SceneIdSet;
+    }
+
     public Blueprint() {
     }
 
@@ -461,6 +535,18 @@ public class Blueprint extends AbstractModel{
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
+        if (source.CommunityUrl != null) {
+            this.CommunityUrl = new String(source.CommunityUrl);
+        }
+        if (source.GuideUrl != null) {
+            this.GuideUrl = new String(source.GuideUrl);
+        }
+        if (source.SceneIdSet != null) {
+            this.SceneIdSet = new String[source.SceneIdSet.length];
+            for (int i = 0; i < source.SceneIdSet.length; i++) {
+                this.SceneIdSet[i] = new String(source.SceneIdSet[i]);
+            }
+        }
     }
 
 
@@ -484,6 +570,9 @@ public class Blueprint extends AbstractModel{
         this.setParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
         this.setParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "CommunityUrl", this.CommunityUrl);
+        this.setParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
+        this.setParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
 
     }
 }

@@ -30,14 +30,14 @@ public class DescribeBackupListRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 备份文件列表偏移
+    * 备份文件列表大小，取值范围(0,100]
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 备份文件列表起始
+    * 备份文件列表偏移，取值范围[0,INF)
     */
     @SerializedName("Offset")
     @Expose
@@ -50,6 +50,62 @@ public class DescribeBackupListRequest extends AbstractModel{
     @SerializedName("DbType")
     @Expose
     private String DbType;
+
+    /**
+    * 备份ID
+    */
+    @SerializedName("BackupIds")
+    @Expose
+    private Long [] BackupIds;
+
+    /**
+    * 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+    */
+    @SerializedName("BackupType")
+    @Expose
+    private String BackupType;
+
+    /**
+    * 备份方式，可选值：auto，自动备份；manual，手动备
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private String BackupMethod;
+
+    /**
+    * 快照类型，可选值：full，全量；increment，增量
+    */
+    @SerializedName("SnapShotType")
+    @Expose
+    private String SnapShotType;
+
+    /**
+    * 备份开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 备份结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 备份文件名，模糊查询
+    */
+    @SerializedName("FileNames")
+    @Expose
+    private String [] FileNames;
+
+    /**
+    * 备份备注名，模糊查询
+    */
+    @SerializedName("BackupNames")
+    @Expose
+    private String [] BackupNames;
 
     /**
      * Get 集群ID 
@@ -68,32 +124,32 @@ public class DescribeBackupListRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份文件列表偏移 
-     * @return Limit 备份文件列表偏移
+     * Get 备份文件列表大小，取值范围(0,100] 
+     * @return Limit 备份文件列表大小，取值范围(0,100]
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 备份文件列表偏移
-     * @param Limit 备份文件列表偏移
+     * Set 备份文件列表大小，取值范围(0,100]
+     * @param Limit 备份文件列表大小，取值范围(0,100]
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 备份文件列表起始 
-     * @return Offset 备份文件列表起始
+     * Get 备份文件列表偏移，取值范围[0,INF) 
+     * @return Offset 备份文件列表偏移，取值范围[0,INF)
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 备份文件列表起始
-     * @param Offset 备份文件列表起始
+     * Set 备份文件列表偏移，取值范围[0,INF)
+     * @param Offset 备份文件列表偏移，取值范围[0,INF)
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -119,6 +175,134 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get 备份ID 
+     * @return BackupIds 备份ID
+     */
+    public Long [] getBackupIds() {
+        return this.BackupIds;
+    }
+
+    /**
+     * Set 备份ID
+     * @param BackupIds 备份ID
+     */
+    public void setBackupIds(Long [] BackupIds) {
+        this.BackupIds = BackupIds;
+    }
+
+    /**
+     * Get 备份类型，可选值：snapshot，快照备份； logic，逻辑备份 
+     * @return BackupType 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+     */
+    public String getBackupType() {
+        return this.BackupType;
+    }
+
+    /**
+     * Set 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+     * @param BackupType 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+     */
+    public void setBackupType(String BackupType) {
+        this.BackupType = BackupType;
+    }
+
+    /**
+     * Get 备份方式，可选值：auto，自动备份；manual，手动备 
+     * @return BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备
+     */
+    public String getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set 备份方式，可选值：auto，自动备份；manual，手动备
+     * @param BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备
+     */
+    public void setBackupMethod(String BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * Get 快照类型，可选值：full，全量；increment，增量 
+     * @return SnapShotType 快照类型，可选值：full，全量；increment，增量
+     */
+    public String getSnapShotType() {
+        return this.SnapShotType;
+    }
+
+    /**
+     * Set 快照类型，可选值：full，全量；increment，增量
+     * @param SnapShotType 快照类型，可选值：full，全量；increment，增量
+     */
+    public void setSnapShotType(String SnapShotType) {
+        this.SnapShotType = SnapShotType;
+    }
+
+    /**
+     * Get 备份开始时间 
+     * @return StartTime 备份开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 备份开始时间
+     * @param StartTime 备份开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 备份结束时间 
+     * @return EndTime 备份结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 备份结束时间
+     * @param EndTime 备份结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 备份文件名，模糊查询 
+     * @return FileNames 备份文件名，模糊查询
+     */
+    public String [] getFileNames() {
+        return this.FileNames;
+    }
+
+    /**
+     * Set 备份文件名，模糊查询
+     * @param FileNames 备份文件名，模糊查询
+     */
+    public void setFileNames(String [] FileNames) {
+        this.FileNames = FileNames;
+    }
+
+    /**
+     * Get 备份备注名，模糊查询 
+     * @return BackupNames 备份备注名，模糊查询
+     */
+    public String [] getBackupNames() {
+        return this.BackupNames;
+    }
+
+    /**
+     * Set 备份备注名，模糊查询
+     * @param BackupNames 备份备注名，模糊查询
+     */
+    public void setBackupNames(String [] BackupNames) {
+        this.BackupNames = BackupNames;
+    }
+
     public DescribeBackupListRequest() {
     }
 
@@ -139,6 +323,39 @@ public class DescribeBackupListRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.BackupIds != null) {
+            this.BackupIds = new Long[source.BackupIds.length];
+            for (int i = 0; i < source.BackupIds.length; i++) {
+                this.BackupIds[i] = new Long(source.BackupIds[i]);
+            }
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new String(source.BackupMethod);
+        }
+        if (source.SnapShotType != null) {
+            this.SnapShotType = new String(source.SnapShotType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.FileNames != null) {
+            this.FileNames = new String[source.FileNames.length];
+            for (int i = 0; i < source.FileNames.length; i++) {
+                this.FileNames[i] = new String(source.FileNames[i]);
+            }
+        }
+        if (source.BackupNames != null) {
+            this.BackupNames = new String[source.BackupNames.length];
+            for (int i = 0; i < source.BackupNames.length; i++) {
+                this.BackupNames[i] = new String(source.BackupNames[i]);
+            }
+        }
     }
 
 
@@ -150,6 +367,14 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamArraySimple(map, prefix + "BackupIds.", this.BackupIds);
+        this.setParamSimple(map, prefix + "BackupType", this.BackupType);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
+        this.setParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
 
     }
 }

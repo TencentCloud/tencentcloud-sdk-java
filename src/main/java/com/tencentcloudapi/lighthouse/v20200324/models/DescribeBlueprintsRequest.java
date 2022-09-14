@@ -62,6 +62,9 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+<li>scene-id</li>按照【使用场景Id】进行过滤。
+类型：String
+必选：否
 
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BlueprintIds 和 Filters 。
     */
@@ -136,6 +139,9 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+<li>scene-id</li>按照【使用场景Id】进行过滤。
+类型：String
+必选：否
 
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BlueprintIds 和 Filters 。 
      * @return Filters 过滤器列表。
@@ -154,6 +160,9 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
+类型：String
+必选：否
+<li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
 
@@ -182,6 +191,9 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+<li>scene-id</li>按照【使用场景Id】进行过滤。
+类型：String
+必选：否
 
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BlueprintIds 和 Filters 。
      * @param Filters 过滤器列表。
@@ -200,6 +212,9 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
+类型：String
+必选：否
+<li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
 

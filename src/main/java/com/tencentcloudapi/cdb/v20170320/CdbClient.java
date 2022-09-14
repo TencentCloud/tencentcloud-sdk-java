@@ -1164,26 +1164,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBZoneConfig)用于查询可创建的云数据库各地域可售卖的规格配置。
-     * @param req DescribeDBZoneConfigRequest
-     * @return DescribeDBZoneConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBZoneConfigResponse DescribeDBZoneConfig(DescribeDBZoneConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBZoneConfigResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBZoneConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBZoneConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(DescribeDataBackupOverview)用于查询用户在当前地域总的数据备份概览。
      * @param req DescribeDataBackupOverviewRequest
      * @return DescribeDataBackupOverviewResponse

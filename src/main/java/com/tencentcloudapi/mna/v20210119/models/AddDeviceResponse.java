@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220106.models;
+package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOverviewL7DataResponse extends AbstractModel{
+public class AddDeviceResponse extends AbstractModel{
 
     /**
-    * 查询维度。
+    * 后台生成的base64字符串密钥
     */
-    @SerializedName("Type")
+    @SerializedName("DataKey")
     @Expose
-    private String Type;
+    private String DataKey;
 
     /**
-    * 查询时间间隔。
+    * 设备ID
     */
-    @SerializedName("Interval")
+    @SerializedName("DeviceId")
     @Expose
-    private String Interval;
-
-    /**
-    * 七层监控类时序流量数据列表。
-    */
-    @SerializedName("Data")
-    @Expose
-    private TimingDataRecord [] Data;
+    private String DeviceId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeOverviewL7DataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询维度。 
-     * @return Type 查询维度。
+     * Get 后台生成的base64字符串密钥 
+     * @return DataKey 后台生成的base64字符串密钥
      */
-    public String getType() {
-        return this.Type;
+    public String getDataKey() {
+        return this.DataKey;
     }
 
     /**
-     * Set 查询维度。
-     * @param Type 查询维度。
+     * Set 后台生成的base64字符串密钥
+     * @param DataKey 后台生成的base64字符串密钥
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setDataKey(String DataKey) {
+        this.DataKey = DataKey;
     }
 
     /**
-     * Get 查询时间间隔。 
-     * @return Interval 查询时间间隔。
+     * Get 设备ID 
+     * @return DeviceId 设备ID
      */
-    public String getInterval() {
-        return this.Interval;
+    public String getDeviceId() {
+        return this.DeviceId;
     }
 
     /**
-     * Set 查询时间间隔。
-     * @param Interval 查询时间间隔。
+     * Set 设备ID
+     * @param DeviceId 设备ID
      */
-    public void setInterval(String Interval) {
-        this.Interval = Interval;
-    }
-
-    /**
-     * Get 七层监控类时序流量数据列表。 
-     * @return Data 七层监控类时序流量数据列表。
-     */
-    public TimingDataRecord [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 七层监控类时序流量数据列表。
-     * @param Data 七层监控类时序流量数据列表。
-     */
-    public void setData(TimingDataRecord [] Data) {
-        this.Data = Data;
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
     }
 
     /**
@@ -114,25 +91,19 @@ public class DescribeOverviewL7DataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeOverviewL7DataResponse() {
+    public AddDeviceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOverviewL7DataResponse(DescribeOverviewL7DataResponse source) {
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+    public AddDeviceResponse(AddDeviceResponse source) {
+        if (source.DataKey != null) {
+            this.DataKey = new String(source.DataKey);
         }
-        if (source.Interval != null) {
-            this.Interval = new String(source.Interval);
-        }
-        if (source.Data != null) {
-            this.Data = new TimingDataRecord[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TimingDataRecord(source.Data[i]);
-            }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -144,9 +115,8 @@ public class DescribeOverviewL7DataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "DataKey", this.DataKey);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

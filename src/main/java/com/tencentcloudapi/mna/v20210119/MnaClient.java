@@ -39,6 +39,26 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *新建设备记录
+     * @param req AddDeviceRequest
+     * @return AddDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddDeviceResponse AddDevice(AddDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *移动网络发起Qos加速过程
      * @param req CreateQosRequest
      * @return CreateQosResponse
@@ -51,6 +71,26 @@ public class MnaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateQosResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateQos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除设备信息
+     * @param req DeleteDeviceRequest
+     * @return DeleteDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDevice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -91,6 +131,86 @@ public class MnaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeQosResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeQos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过指定设备的ID查找设备详细信息
+     * @param req GetDeviceRequest
+     * @return GetDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDeviceResponse GetDevice(GetDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备信息列表
+     * @param req GetDevicesRequest
+     * @return GetDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDevicesResponse GetDevices(GetDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在用量统计页面下载流量数据
+     * @param req GetStatisticDataRequest
+     * @return GetStatisticDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetStatisticDataResponse GetStatisticData(GetStatisticDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetStatisticDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetStatisticDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetStatisticData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新设备信息
+     * @param req UpdateDeviceRequest
+     * @return UpdateDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDeviceResponse UpdateDevice(UpdateDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDevice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

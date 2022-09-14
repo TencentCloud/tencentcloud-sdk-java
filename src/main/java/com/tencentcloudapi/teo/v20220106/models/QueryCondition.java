@@ -23,69 +23,109 @@ import java.util.HashMap;
 public class QueryCondition extends AbstractModel{
 
     /**
-    * 维度
+    * 筛选条件的key。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 操作符
+    * 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 维度值
+    * 筛选条件的值。
     */
     @SerializedName("Value")
     @Expose
     private String [] Value;
 
     /**
-     * Get 维度 
-     * @return Key 维度
+     * Get 筛选条件的key。 
+     * @return Key 筛选条件的key。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 维度
-     * @param Key 维度
+     * Set 筛选条件的key。
+     * @param Key 筛选条件的key。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 操作符 
-     * @return Operator 操作符
+     * Get 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li> 
+     * @return Operator 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作符
-     * @param Operator 操作符
+     * Set 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
+     * @param Operator 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 维度值 
-     * @return Value 维度值
+     * Get 筛选条件的值。 
+     * @return Value 筛选条件的值。
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set 维度值
-     * @param Value 维度值
+     * Set 筛选条件的值。
+     * @param Value 筛选条件的值。
      */
     public void setValue(String [] Value) {
         this.Value = Value;

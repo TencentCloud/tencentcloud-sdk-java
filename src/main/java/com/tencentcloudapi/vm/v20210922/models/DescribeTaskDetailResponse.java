@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel{
 
     /**
-    * 任务Id
+    * 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -31,7 +31,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String TaskId;
 
     /**
-    * 审核时传入的数据Id
+    * 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
@@ -39,7 +39,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String DataId;
 
     /**
-    * 业务类型
+    * 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
@@ -47,7 +47,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String BizType;
 
     /**
-    * 任务名称
+    * 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -55,12 +55,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String Name;
 
     /**
-    * 状态，可选值：
-FINISH 已完成
-PENDING 等待中
-RUNNING 进行中
-ERROR 出错
-CANCELLED 已取消
+    * 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -68,7 +64,7 @@ CANCELLED 已取消
     private String Status;
 
     /**
-    * 类型
+    * 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -76,11 +72,7 @@ CANCELLED 已取消
     private String Type;
 
     /**
-    * 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+    * 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -88,7 +80,7 @@ Block 确认违规
     private String Suggestion;
 
     /**
-    * 审核结果
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -96,7 +88,7 @@ Block 确认违规
     private TaskLabel [] Labels;
 
     /**
-    * 媒体解码信息
+    * 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfo")
@@ -104,7 +96,7 @@ Block 确认违规
     private MediaInfo MediaInfo;
 
     /**
-    * 任务信息
+    * 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
@@ -112,7 +104,7 @@ Block 确认违规
     private InputInfo InputInfo;
 
     /**
-    * 创建时间
+    * 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -120,7 +112,7 @@ Block 确认违规
     private String CreatedAt;
 
     /**
-    * 更新时间
+    * 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -136,7 +128,7 @@ Block 确认违规
     private Long TryInSeconds;
 
     /**
-    * 图片结果
+    * 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSegments")
@@ -144,7 +136,7 @@ Block 确认违规
     private ImageSegments [] ImageSegments;
 
     /**
-    * 音频结果
+    * 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioSegments")
@@ -152,11 +144,9 @@ Block 确认违规
     private AudioSegments [] AudioSegments;
 
     /**
-    * 如果返回的状态为ERROR，该字段会标记错误类型。
-可选值：：
-DECODE_ERROR: 解码失败。（输入资源中可能包含无法解码的视频）
-URL_ERROR：下载地址验证失败。
-TIMEOUT_ERROR：处理超时。
+    * 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+**URL_ERROR**：下载地址验证失败。
+**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorType")
@@ -164,12 +154,36 @@ TIMEOUT_ERROR：处理超时。
     private String ErrorType;
 
     /**
-    * 审核任务错误日志。当Error不为空时，会展示该字段
+    * 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorDescription")
     @Expose
     private String ErrorDescription;
+
+    /**
+    * 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+    * 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioText")
+    @Expose
+    private String AudioText;
+
+    /**
+    * 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Asrs")
+    @Expose
+    private RcbAsr [] Asrs;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -179,9 +193,9 @@ TIMEOUT_ERROR：处理超时。
     private String RequestId;
 
     /**
-     * Get 任务Id
+     * Get 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务Id
+     * @return TaskId 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -189,9 +203,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Set 任务Id
+     * Set 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务Id
+     * @param TaskId 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -199,9 +213,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Get 审核时传入的数据Id
+     * Get 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataId 审核时传入的数据Id
+     * @return DataId 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
@@ -209,9 +223,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Set 审核时传入的数据Id
+     * Set 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataId 审核时传入的数据Id
+     * @param DataId 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
@@ -219,9 +233,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Get 业务类型
+     * Get 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BizType 业务类型
+     * @return BizType 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
@@ -229,9 +243,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Set 业务类型
+     * Set 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizType 业务类型
+     * @param BizType 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
@@ -239,9 +253,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Get 任务名称
+     * Get 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 任务名称
+     * @return Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -249,9 +263,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Set 任务名称
+     * Set 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 任务名称
+     * @param Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -259,19 +273,11 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Get 状态，可选值：
-FINISH 已完成
-PENDING 等待中
-RUNNING 进行中
-ERROR 出错
-CANCELLED 已取消
+     * Get 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态，可选值：
-FINISH 已完成
-PENDING 等待中
-RUNNING 进行中
-ERROR 出错
-CANCELLED 已取消
+     * @return Status 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -279,19 +285,11 @@ CANCELLED 已取消
     }
 
     /**
-     * Set 状态，可选值：
-FINISH 已完成
-PENDING 等待中
-RUNNING 进行中
-ERROR 出错
-CANCELLED 已取消
+     * Set 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态，可选值：
-FINISH 已完成
-PENDING 等待中
-RUNNING 进行中
-ERROR 出错
-CANCELLED 已取消
+     * @param Status 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -299,9 +297,9 @@ CANCELLED 已取消
     }
 
     /**
-     * Get 类型
+     * Get 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型
+     * @return Type 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -309,9 +307,9 @@ CANCELLED 已取消
     }
 
     /**
-     * Set 类型
+     * Set 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型
+     * @param Type 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -319,17 +317,9 @@ CANCELLED 已取消
     }
 
     /**
-     * Get 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * @return Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -337,17 +327,9 @@ Block 确认违规
     }
 
     /**
-     * Set 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * Set 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * @param Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -355,9 +337,9 @@ Block 确认违规
     }
 
     /**
-     * Get 审核结果
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 审核结果
+     * @return Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLabel [] getLabels() {
@@ -365,9 +347,9 @@ Block 确认违规
     }
 
     /**
-     * Set 审核结果
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 审核结果
+     * @param Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TaskLabel [] Labels) {
@@ -375,9 +357,9 @@ Block 确认违规
     }
 
     /**
-     * Get 媒体解码信息
+     * Get 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaInfo 媒体解码信息
+     * @return MediaInfo 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo getMediaInfo() {
@@ -385,9 +367,9 @@ Block 确认违规
     }
 
     /**
-     * Set 媒体解码信息
+     * Set 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaInfo 媒体解码信息
+     * @param MediaInfo 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfo(MediaInfo MediaInfo) {
@@ -395,9 +377,9 @@ Block 确认违规
     }
 
     /**
-     * Get 任务信息
+     * Get 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputInfo 任务信息
+     * @return InputInfo 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputInfo getInputInfo() {
@@ -405,9 +387,9 @@ Block 确认违规
     }
 
     /**
-     * Set 任务信息
+     * Set 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputInfo 任务信息
+     * @param InputInfo 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(InputInfo InputInfo) {
@@ -415,9 +397,9 @@ Block 确认违规
     }
 
     /**
-     * Get 创建时间
+     * Get 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 创建时间
+     * @return CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -425,9 +407,9 @@ Block 确认违规
     }
 
     /**
-     * Set 创建时间
+     * Set 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 创建时间
+     * @param CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -435,9 +417,9 @@ Block 确认违规
     }
 
     /**
-     * Get 更新时间
+     * Get 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 更新时间
+     * @return UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -445,9 +427,9 @@ Block 确认违规
     }
 
     /**
-     * Set 更新时间
+     * Set 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 更新时间
+     * @param UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -475,9 +457,9 @@ Block 确认违规
     }
 
     /**
-     * Get 图片结果
+     * Get 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSegments 图片结果
+     * @return ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSegments [] getImageSegments() {
@@ -485,9 +467,9 @@ Block 确认违规
     }
 
     /**
-     * Set 图片结果
+     * Set 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSegments 图片结果
+     * @param ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSegments(ImageSegments [] ImageSegments) {
@@ -495,9 +477,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频结果
+     * Get 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioSegments 音频结果
+     * @return AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioSegments [] getAudioSegments() {
@@ -505,9 +487,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频结果
+     * Set 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioSegments 音频结果
+     * @param AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioSegments(AudioSegments [] AudioSegments) {
@@ -515,17 +497,13 @@ Block 确认违规
     }
 
     /**
-     * Get 如果返回的状态为ERROR，该字段会标记错误类型。
-可选值：：
-DECODE_ERROR: 解码失败。（输入资源中可能包含无法解码的视频）
-URL_ERROR：下载地址验证失败。
-TIMEOUT_ERROR：处理超时。
+     * Get 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+**URL_ERROR**：下载地址验证失败。
+**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorType 如果返回的状态为ERROR，该字段会标记错误类型。
-可选值：：
-DECODE_ERROR: 解码失败。（输入资源中可能包含无法解码的视频）
-URL_ERROR：下载地址验证失败。
-TIMEOUT_ERROR：处理超时。
+     * @return ErrorType 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+**URL_ERROR**：下载地址验证失败。
+**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorType() {
@@ -533,17 +511,13 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Set 如果返回的状态为ERROR，该字段会标记错误类型。
-可选值：：
-DECODE_ERROR: 解码失败。（输入资源中可能包含无法解码的视频）
-URL_ERROR：下载地址验证失败。
-TIMEOUT_ERROR：处理超时。
+     * Set 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+**URL_ERROR**：下载地址验证失败。
+**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorType 如果返回的状态为ERROR，该字段会标记错误类型。
-可选值：：
-DECODE_ERROR: 解码失败。（输入资源中可能包含无法解码的视频）
-URL_ERROR：下载地址验证失败。
-TIMEOUT_ERROR：处理超时。
+     * @param ErrorType 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+**URL_ERROR**：下载地址验证失败。
+**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorType(String ErrorType) {
@@ -551,9 +525,9 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Get 审核任务错误日志。当Error不为空时，会展示该字段
+     * Get 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorDescription 审核任务错误日志。当Error不为空时，会展示该字段
+     * @return ErrorDescription 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorDescription() {
@@ -561,13 +535,73 @@ TIMEOUT_ERROR：处理超时。
     }
 
     /**
-     * Set 审核任务错误日志。当Error不为空时，会展示该字段
+     * Set 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorDescription 审核任务错误日志。当Error不为空时，会展示该字段
+     * @param ErrorDescription 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorDescription(String ErrorDescription) {
         this.ErrorDescription = ErrorDescription;
+    }
+
+    /**
+     * Get 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Label 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Label 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
+    /**
+     * Get 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioText 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAudioText() {
+        return this.AudioText;
+    }
+
+    /**
+     * Set 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioText 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioText(String AudioText) {
+        this.AudioText = AudioText;
+    }
+
+    /**
+     * Get 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Asrs 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RcbAsr [] getAsrs() {
+        return this.Asrs;
+    }
+
+    /**
+     * Set 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Asrs 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsrs(RcbAsr [] Asrs) {
+        this.Asrs = Asrs;
     }
 
     /**
@@ -654,6 +688,18 @@ TIMEOUT_ERROR：处理超时。
         if (source.ErrorDescription != null) {
             this.ErrorDescription = new String(source.ErrorDescription);
         }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.AudioText != null) {
+            this.AudioText = new String(source.AudioText);
+        }
+        if (source.Asrs != null) {
+            this.Asrs = new RcbAsr[source.Asrs.length];
+            for (int i = 0; i < source.Asrs.length; i++) {
+                this.Asrs[i] = new RcbAsr(source.Asrs[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -681,6 +727,9 @@ TIMEOUT_ERROR：处理超时。
         this.setParamArrayObj(map, prefix + "AudioSegments.", this.AudioSegments);
         this.setParamSimple(map, prefix + "ErrorType", this.ErrorType);
         this.setParamSimple(map, prefix + "ErrorDescription", this.ErrorDescription);
+        this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "AudioText", this.AudioText);
+        this.setParamArrayObj(map, prefix + "Asrs.", this.Asrs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

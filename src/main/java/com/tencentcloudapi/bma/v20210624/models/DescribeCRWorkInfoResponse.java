@@ -58,6 +58,125 @@ public class DescribeCRWorkInfoResponse extends AbstractModel{
     private Long IsProducer;
 
     /**
+    * xxx
+    */
+    @SerializedName("EvidenceStatus")
+    @Expose
+    private Long EvidenceStatus;
+
+    /**
+    * xxx
+    */
+    @SerializedName("WorkCategory")
+    @Expose
+    private String WorkCategory;
+
+    /**
+    * xxx
+    */
+    @SerializedName("IsOriginal")
+    @Expose
+    private String IsOriginal;
+
+    /**
+    * xxx
+    */
+    @SerializedName("IsRelease")
+    @Expose
+    private String IsRelease;
+
+    /**
+    * xxx
+    */
+    @SerializedName("ProducerName")
+    @Expose
+    private String ProducerName;
+
+    /**
+    * xxx
+    */
+    @SerializedName("ProduceTime")
+    @Expose
+    private String ProduceTime;
+
+    /**
+    * xxx
+    */
+    @SerializedName("WhiteLists")
+    @Expose
+    private String [] WhiteLists;
+
+    /**
+    * xxx
+    */
+    @SerializedName("WorkDesc")
+    @Expose
+    private String WorkDesc;
+
+    /**
+    * xxx
+    */
+    @SerializedName("Authorization")
+    @Expose
+    private String Authorization;
+
+    /**
+    * xxx
+    */
+    @SerializedName("AuthorizationStartTime")
+    @Expose
+    private String AuthorizationStartTime;
+
+    /**
+    * xxx
+    */
+    @SerializedName("AuthorizationEndTime")
+    @Expose
+    private String AuthorizationEndTime;
+
+    /**
+    * xxx
+    */
+    @SerializedName("Commission")
+    @Expose
+    private String Commission;
+
+    /**
+    * xxx
+    */
+    @SerializedName("CommissionStartTime")
+    @Expose
+    private String CommissionStartTime;
+
+    /**
+    * xxx
+    */
+    @SerializedName("CommissionEndTime")
+    @Expose
+    private String CommissionEndTime;
+
+    /**
+    * xxx
+    */
+    @SerializedName("EvidenceUrl")
+    @Expose
+    private String EvidenceUrl;
+
+    /**
+    * xxx
+    */
+    @SerializedName("EvidenceStartTime")
+    @Expose
+    private String EvidenceStartTime;
+
+    /**
+    * xxx
+    */
+    @SerializedName("EvidenceEndTime")
+    @Expose
+    private String EvidenceEndTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +264,278 @@ public class DescribeCRWorkInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get xxx 
+     * @return EvidenceStatus xxx
+     */
+    public Long getEvidenceStatus() {
+        return this.EvidenceStatus;
+    }
+
+    /**
+     * Set xxx
+     * @param EvidenceStatus xxx
+     */
+    public void setEvidenceStatus(Long EvidenceStatus) {
+        this.EvidenceStatus = EvidenceStatus;
+    }
+
+    /**
+     * Get xxx 
+     * @return WorkCategory xxx
+     */
+    public String getWorkCategory() {
+        return this.WorkCategory;
+    }
+
+    /**
+     * Set xxx
+     * @param WorkCategory xxx
+     */
+    public void setWorkCategory(String WorkCategory) {
+        this.WorkCategory = WorkCategory;
+    }
+
+    /**
+     * Get xxx 
+     * @return IsOriginal xxx
+     */
+    public String getIsOriginal() {
+        return this.IsOriginal;
+    }
+
+    /**
+     * Set xxx
+     * @param IsOriginal xxx
+     */
+    public void setIsOriginal(String IsOriginal) {
+        this.IsOriginal = IsOriginal;
+    }
+
+    /**
+     * Get xxx 
+     * @return IsRelease xxx
+     */
+    public String getIsRelease() {
+        return this.IsRelease;
+    }
+
+    /**
+     * Set xxx
+     * @param IsRelease xxx
+     */
+    public void setIsRelease(String IsRelease) {
+        this.IsRelease = IsRelease;
+    }
+
+    /**
+     * Get xxx 
+     * @return ProducerName xxx
+     */
+    public String getProducerName() {
+        return this.ProducerName;
+    }
+
+    /**
+     * Set xxx
+     * @param ProducerName xxx
+     */
+    public void setProducerName(String ProducerName) {
+        this.ProducerName = ProducerName;
+    }
+
+    /**
+     * Get xxx 
+     * @return ProduceTime xxx
+     */
+    public String getProduceTime() {
+        return this.ProduceTime;
+    }
+
+    /**
+     * Set xxx
+     * @param ProduceTime xxx
+     */
+    public void setProduceTime(String ProduceTime) {
+        this.ProduceTime = ProduceTime;
+    }
+
+    /**
+     * Get xxx 
+     * @return WhiteLists xxx
+     */
+    public String [] getWhiteLists() {
+        return this.WhiteLists;
+    }
+
+    /**
+     * Set xxx
+     * @param WhiteLists xxx
+     */
+    public void setWhiteLists(String [] WhiteLists) {
+        this.WhiteLists = WhiteLists;
+    }
+
+    /**
+     * Get xxx 
+     * @return WorkDesc xxx
+     */
+    public String getWorkDesc() {
+        return this.WorkDesc;
+    }
+
+    /**
+     * Set xxx
+     * @param WorkDesc xxx
+     */
+    public void setWorkDesc(String WorkDesc) {
+        this.WorkDesc = WorkDesc;
+    }
+
+    /**
+     * Get xxx 
+     * @return Authorization xxx
+     */
+    public String getAuthorization() {
+        return this.Authorization;
+    }
+
+    /**
+     * Set xxx
+     * @param Authorization xxx
+     */
+    public void setAuthorization(String Authorization) {
+        this.Authorization = Authorization;
+    }
+
+    /**
+     * Get xxx 
+     * @return AuthorizationStartTime xxx
+     */
+    public String getAuthorizationStartTime() {
+        return this.AuthorizationStartTime;
+    }
+
+    /**
+     * Set xxx
+     * @param AuthorizationStartTime xxx
+     */
+    public void setAuthorizationStartTime(String AuthorizationStartTime) {
+        this.AuthorizationStartTime = AuthorizationStartTime;
+    }
+
+    /**
+     * Get xxx 
+     * @return AuthorizationEndTime xxx
+     */
+    public String getAuthorizationEndTime() {
+        return this.AuthorizationEndTime;
+    }
+
+    /**
+     * Set xxx
+     * @param AuthorizationEndTime xxx
+     */
+    public void setAuthorizationEndTime(String AuthorizationEndTime) {
+        this.AuthorizationEndTime = AuthorizationEndTime;
+    }
+
+    /**
+     * Get xxx 
+     * @return Commission xxx
+     */
+    public String getCommission() {
+        return this.Commission;
+    }
+
+    /**
+     * Set xxx
+     * @param Commission xxx
+     */
+    public void setCommission(String Commission) {
+        this.Commission = Commission;
+    }
+
+    /**
+     * Get xxx 
+     * @return CommissionStartTime xxx
+     */
+    public String getCommissionStartTime() {
+        return this.CommissionStartTime;
+    }
+
+    /**
+     * Set xxx
+     * @param CommissionStartTime xxx
+     */
+    public void setCommissionStartTime(String CommissionStartTime) {
+        this.CommissionStartTime = CommissionStartTime;
+    }
+
+    /**
+     * Get xxx 
+     * @return CommissionEndTime xxx
+     */
+    public String getCommissionEndTime() {
+        return this.CommissionEndTime;
+    }
+
+    /**
+     * Set xxx
+     * @param CommissionEndTime xxx
+     */
+    public void setCommissionEndTime(String CommissionEndTime) {
+        this.CommissionEndTime = CommissionEndTime;
+    }
+
+    /**
+     * Get xxx 
+     * @return EvidenceUrl xxx
+     */
+    public String getEvidenceUrl() {
+        return this.EvidenceUrl;
+    }
+
+    /**
+     * Set xxx
+     * @param EvidenceUrl xxx
+     */
+    public void setEvidenceUrl(String EvidenceUrl) {
+        this.EvidenceUrl = EvidenceUrl;
+    }
+
+    /**
+     * Get xxx 
+     * @return EvidenceStartTime xxx
+     */
+    public String getEvidenceStartTime() {
+        return this.EvidenceStartTime;
+    }
+
+    /**
+     * Set xxx
+     * @param EvidenceStartTime xxx
+     */
+    public void setEvidenceStartTime(String EvidenceStartTime) {
+        this.EvidenceStartTime = EvidenceStartTime;
+    }
+
+    /**
+     * Get xxx 
+     * @return EvidenceEndTime xxx
+     */
+    public String getEvidenceEndTime() {
+        return this.EvidenceEndTime;
+    }
+
+    /**
+     * Set xxx
+     * @param EvidenceEndTime xxx
+     */
+    public void setEvidenceEndTime(String EvidenceEndTime) {
+        this.EvidenceEndTime = EvidenceEndTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -183,6 +574,60 @@ public class DescribeCRWorkInfoResponse extends AbstractModel{
         if (source.IsProducer != null) {
             this.IsProducer = new Long(source.IsProducer);
         }
+        if (source.EvidenceStatus != null) {
+            this.EvidenceStatus = new Long(source.EvidenceStatus);
+        }
+        if (source.WorkCategory != null) {
+            this.WorkCategory = new String(source.WorkCategory);
+        }
+        if (source.IsOriginal != null) {
+            this.IsOriginal = new String(source.IsOriginal);
+        }
+        if (source.IsRelease != null) {
+            this.IsRelease = new String(source.IsRelease);
+        }
+        if (source.ProducerName != null) {
+            this.ProducerName = new String(source.ProducerName);
+        }
+        if (source.ProduceTime != null) {
+            this.ProduceTime = new String(source.ProduceTime);
+        }
+        if (source.WhiteLists != null) {
+            this.WhiteLists = new String[source.WhiteLists.length];
+            for (int i = 0; i < source.WhiteLists.length; i++) {
+                this.WhiteLists[i] = new String(source.WhiteLists[i]);
+            }
+        }
+        if (source.WorkDesc != null) {
+            this.WorkDesc = new String(source.WorkDesc);
+        }
+        if (source.Authorization != null) {
+            this.Authorization = new String(source.Authorization);
+        }
+        if (source.AuthorizationStartTime != null) {
+            this.AuthorizationStartTime = new String(source.AuthorizationStartTime);
+        }
+        if (source.AuthorizationEndTime != null) {
+            this.AuthorizationEndTime = new String(source.AuthorizationEndTime);
+        }
+        if (source.Commission != null) {
+            this.Commission = new String(source.Commission);
+        }
+        if (source.CommissionStartTime != null) {
+            this.CommissionStartTime = new String(source.CommissionStartTime);
+        }
+        if (source.CommissionEndTime != null) {
+            this.CommissionEndTime = new String(source.CommissionEndTime);
+        }
+        if (source.EvidenceUrl != null) {
+            this.EvidenceUrl = new String(source.EvidenceUrl);
+        }
+        if (source.EvidenceStartTime != null) {
+            this.EvidenceStartTime = new String(source.EvidenceStartTime);
+        }
+        if (source.EvidenceEndTime != null) {
+            this.EvidenceEndTime = new String(source.EvidenceEndTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -198,6 +643,23 @@ public class DescribeCRWorkInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
         this.setParamSimple(map, prefix + "CommStatus", this.CommStatus);
         this.setParamSimple(map, prefix + "IsProducer", this.IsProducer);
+        this.setParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
+        this.setParamSimple(map, prefix + "WorkCategory", this.WorkCategory);
+        this.setParamSimple(map, prefix + "IsOriginal", this.IsOriginal);
+        this.setParamSimple(map, prefix + "IsRelease", this.IsRelease);
+        this.setParamSimple(map, prefix + "ProducerName", this.ProducerName);
+        this.setParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
+        this.setParamArraySimple(map, prefix + "WhiteLists.", this.WhiteLists);
+        this.setParamSimple(map, prefix + "WorkDesc", this.WorkDesc);
+        this.setParamSimple(map, prefix + "Authorization", this.Authorization);
+        this.setParamSimple(map, prefix + "AuthorizationStartTime", this.AuthorizationStartTime);
+        this.setParamSimple(map, prefix + "AuthorizationEndTime", this.AuthorizationEndTime);
+        this.setParamSimple(map, prefix + "Commission", this.Commission);
+        this.setParamSimple(map, prefix + "CommissionStartTime", this.CommissionStartTime);
+        this.setParamSimple(map, prefix + "CommissionEndTime", this.CommissionEndTime);
+        this.setParamSimple(map, prefix + "EvidenceUrl", this.EvidenceUrl);
+        this.setParamSimple(map, prefix + "EvidenceStartTime", this.EvidenceStartTime);
+        this.setParamSimple(map, prefix + "EvidenceEndTime", this.EvidenceEndTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

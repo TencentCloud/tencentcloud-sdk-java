@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBZoneConfigResponse extends AbstractModel{
-
-    /**
-    * 可售卖地域配置数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 可售卖地域配置详情
-    */
-    @SerializedName("Items")
-    @Expose
-    private RegionSellConf [] Items;
+public class DeleteDeviceResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeDBZoneConfigResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 可售卖地域配置数量 
-     * @return TotalCount 可售卖地域配置数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 可售卖地域配置数量
-     * @param TotalCount 可售卖地域配置数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 可售卖地域配置详情 
-     * @return Items 可售卖地域配置详情
-     */
-    public RegionSellConf [] getItems() {
-        return this.Items;
-    }
-
-    /**
-     * Set 可售卖地域配置详情
-     * @param Items 可售卖地域配置详情
-     */
-    public void setItems(RegionSellConf [] Items) {
-        this.Items = Items;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeDBZoneConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBZoneConfigResponse() {
+    public DeleteDeviceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBZoneConfigResponse(DescribeDBZoneConfigResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Items != null) {
-            this.Items = new RegionSellConf[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new RegionSellConf(source.Items[i]);
-            }
-        }
+    public DeleteDeviceResponse(DeleteDeviceResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeDBZoneConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

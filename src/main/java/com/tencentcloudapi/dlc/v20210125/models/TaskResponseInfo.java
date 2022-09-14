@@ -256,6 +256,14 @@ public class TaskResponseInfo extends AbstractModel{
     private Long TotalTime;
 
     /**
+    * spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CmdArgs")
+    @Expose
+    private String CmdArgs;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -815,6 +823,26 @@ public class TaskResponseInfo extends AbstractModel{
         this.TotalTime = TotalTime;
     }
 
+    /**
+     * Get spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CmdArgs spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCmdArgs() {
+        return this.CmdArgs;
+    }
+
+    /**
+     * Set spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CmdArgs spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCmdArgs(String CmdArgs) {
+        this.CmdArgs = CmdArgs;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -916,6 +944,9 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.TotalTime != null) {
             this.TotalTime = new Long(source.TotalTime);
         }
+        if (source.CmdArgs != null) {
+            this.CmdArgs = new String(source.CmdArgs);
+        }
     }
 
 
@@ -954,6 +985,7 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SparkJobFile", this.SparkJobFile);
         this.setParamSimple(map, prefix + "UiUrl", this.UiUrl);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
+        this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
 
     }
 }

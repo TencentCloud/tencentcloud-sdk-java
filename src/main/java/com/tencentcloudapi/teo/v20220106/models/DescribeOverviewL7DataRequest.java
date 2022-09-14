@@ -23,53 +23,61 @@ import java.util.HashMap;
 public class DescribeOverviewL7DataRequest extends AbstractModel{
 
     /**
-    * RFC3339格式，客户端时间
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * RFC3339格式，客户端时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
+    * 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 时间间隔，选填{min, 5min, hour, day, week}
+    * 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * ZoneId列表，仅在zone/domain维度下查询时该参数有效
+    * 查询的站点集合，不填默认查询所有站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * Domain列表，仅在domain维度下查询时该参数有效
+    * 查询的域名集合，不填默认查询所有子域名。
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 协议类型， 选填{http,http2,https,all}
+    * 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
     */
     @SerializedName("Protocol")
     @Expose
@@ -85,128 +93,169 @@ l7Flow_outBandwidth: 访问带宽
     private String Area;
 
     /**
-     * Get RFC3339格式，客户端时间 
-     * @return StartTime RFC3339格式，客户端时间
+    * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+    */
+    @SerializedName("Filters")
+    @Expose
+    private QueryCondition [] Filters;
+
+    /**
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set RFC3339格式，客户端时间
-     * @param StartTime RFC3339格式，客户端时间
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get RFC3339格式，客户端时间 
-     * @return EndTime RFC3339格式，客户端时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set RFC3339格式，客户端时间
-     * @param EndTime RFC3339格式，客户端时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量 
-     * @return MetricNames 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
+     * Get 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li> 
+     * @return MetricNames 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
-     * @param MetricNames 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
+     * Set 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
+     * @param MetricNames 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 时间间隔，选填{min, 5min, hour, day, week} 
-     * @return Interval 时间间隔，选填{min, 5min, hour, day, week}
+     * Get 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li> 
+     * @return Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 时间间隔，选填{min, 5min, hour, day, week}
-     * @param Interval 时间间隔，选填{min, 5min, hour, day, week}
+     * Set 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get ZoneId列表，仅在zone/domain维度下查询时该参数有效 
-     * @return ZoneIds ZoneId列表，仅在zone/domain维度下查询时该参数有效
+     * Get 查询的站点集合，不填默认查询所有站点。 
+     * @return ZoneIds 查询的站点集合，不填默认查询所有站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set ZoneId列表，仅在zone/domain维度下查询时该参数有效
-     * @param ZoneIds ZoneId列表，仅在zone/domain维度下查询时该参数有效
+     * Set 查询的站点集合，不填默认查询所有站点。
+     * @param ZoneIds 查询的站点集合，不填默认查询所有站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Domain列表，仅在domain维度下查询时该参数有效 
-     * @return Domains Domain列表，仅在domain维度下查询时该参数有效
+     * Get 查询的域名集合，不填默认查询所有子域名。 
+     * @return Domains 查询的域名集合，不填默认查询所有子域名。
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Domain列表，仅在domain维度下查询时该参数有效
-     * @param Domains Domain列表，仅在domain维度下查询时该参数有效
+     * Set 查询的域名集合，不填默认查询所有子域名。
+     * @param Domains 查询的域名集合，不填默认查询所有子域名。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 协议类型， 选填{http,http2,https,all} 
-     * @return Protocol 协议类型， 选填{http,http2,https,all}
+     * Get 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。 
+     * @return Protocol 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议类型， 选填{http,http2,https,all}
-     * @param Protocol 协议类型， 选填{http,http2,https,all}
+     * Set 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
+     * @param Protocol 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -234,6 +283,30 @@ l7Flow_outBandwidth: 访问带宽
      */
     public void setArea(String Area) {
         this.Area = Area;
+    }
+
+    /**
+     * Get 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否 
+     * @return Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+     */
+    public QueryCondition [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+     * @param Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+     */
+    public void setFilters(QueryCondition [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeOverviewL7DataRequest() {
@@ -277,6 +350,12 @@ l7Flow_outBandwidth: 访问带宽
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Filters != null) {
+            this.Filters = new QueryCondition[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new QueryCondition(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -292,6 +371,7 @@ l7Flow_outBandwidth: 访问带宽
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

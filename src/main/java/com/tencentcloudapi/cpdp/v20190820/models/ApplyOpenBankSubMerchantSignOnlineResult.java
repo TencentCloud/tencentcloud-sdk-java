@@ -26,7 +26,7 @@ public class ApplyOpenBankSubMerchantSignOnlineResult extends AbstractModel{
     * 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
     */
     @SerializedName("SignStatus")
     @Expose
@@ -52,11 +52,11 @@ public class ApplyOpenBankSubMerchantSignOnlineResult extends AbstractModel{
      * Get 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中 
+  PROCESSING：签约中 
      * @return SignStatus 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
      */
     public String getSignStatus() {
         return this.SignStatus;
@@ -66,11 +66,11 @@ public class ApplyOpenBankSubMerchantSignOnlineResult extends AbstractModel{
      * Set 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
      * @param SignStatus 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
      */
     public void setSignStatus(String SignStatus) {
         this.SignStatus = SignStatus;

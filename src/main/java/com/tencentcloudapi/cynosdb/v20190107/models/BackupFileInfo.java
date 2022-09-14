@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class BackupFileInfo extends AbstractModel{
 
     /**
-    * 快照文件ID，用于回滚
+    * 快照文件ID，已废弃，请使用BackupId
     */
     @SerializedName("SnapshotId")
     @Expose
     private Long SnapshotId;
 
     /**
-    * 快照文件名
+    * 备份文件名
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 快照文件大小
+    * 备份文件大小
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 快照备份开始时间
+    * 备份开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 快照备份完成时间
+    * 备份完成时间
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 备份类型：snapshot，快照备份；timepoint，时间点备份
+    * 备份类型：snapshot，快照备份；logic，逻辑备份
     */
     @SerializedName("BackupType")
     @Expose
@@ -86,96 +86,120 @@ public class BackupFileInfo extends AbstractModel{
     private String SnapshotTime;
 
     /**
-     * Get 快照文件ID，用于回滚 
-     * @return SnapshotId 快照文件ID，用于回滚
+    * 备份ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupId")
+    @Expose
+    private Long BackupId;
+
+    /**
+    * 快照类型，可选值：full，全量；increment，增量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapShotType")
+    @Expose
+    private String SnapShotType;
+
+    /**
+    * 备份文件备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
+     * Get 快照文件ID，已废弃，请使用BackupId 
+     * @return SnapshotId 快照文件ID，已废弃，请使用BackupId
      */
     public Long getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照文件ID，用于回滚
-     * @param SnapshotId 快照文件ID，用于回滚
+     * Set 快照文件ID，已废弃，请使用BackupId
+     * @param SnapshotId 快照文件ID，已废弃，请使用BackupId
      */
     public void setSnapshotId(Long SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 快照文件名 
-     * @return FileName 快照文件名
+     * Get 备份文件名 
+     * @return FileName 备份文件名
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 快照文件名
-     * @param FileName 快照文件名
+     * Set 备份文件名
+     * @param FileName 备份文件名
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 快照文件大小 
-     * @return FileSize 快照文件大小
+     * Get 备份文件大小 
+     * @return FileSize 备份文件大小
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 快照文件大小
-     * @param FileSize 快照文件大小
+     * Set 备份文件大小
+     * @param FileSize 备份文件大小
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 快照备份开始时间 
-     * @return StartTime 快照备份开始时间
+     * Get 备份开始时间 
+     * @return StartTime 备份开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 快照备份开始时间
-     * @param StartTime 快照备份开始时间
+     * Set 备份开始时间
+     * @param StartTime 备份开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 快照备份完成时间 
-     * @return FinishTime 快照备份完成时间
+     * Get 备份完成时间 
+     * @return FinishTime 备份完成时间
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 快照备份完成时间
-     * @param FinishTime 快照备份完成时间
+     * Set 备份完成时间
+     * @param FinishTime 备份完成时间
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 备份类型：snapshot，快照备份；timepoint，时间点备份 
-     * @return BackupType 备份类型：snapshot，快照备份；timepoint，时间点备份
+     * Get 备份类型：snapshot，快照备份；logic，逻辑备份 
+     * @return BackupType 备份类型：snapshot，快照备份；logic，逻辑备份
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份类型：snapshot，快照备份；timepoint，时间点备份
-     * @param BackupType 备份类型：snapshot，快照备份；timepoint，时间点备份
+     * Set 备份类型：snapshot，快照备份；logic，逻辑备份
+     * @param BackupType 备份类型：snapshot，快照备份；logic，逻辑备份
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
@@ -229,6 +253,66 @@ public class BackupFileInfo extends AbstractModel{
         this.SnapshotTime = SnapshotTime;
     }
 
+    /**
+     * Get 备份ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupId 备份ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupId() {
+        return this.BackupId;
+    }
+
+    /**
+     * Set 备份ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupId 备份ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupId(Long BackupId) {
+        this.BackupId = BackupId;
+    }
+
+    /**
+     * Get 快照类型，可选值：full，全量；increment，增量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapShotType 快照类型，可选值：full，全量；increment，增量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSnapShotType() {
+        return this.SnapShotType;
+    }
+
+    /**
+     * Set 快照类型，可选值：full，全量；increment，增量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapShotType 快照类型，可选值：full，全量；increment，增量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapShotType(String SnapShotType) {
+        this.SnapShotType = SnapShotType;
+    }
+
+    /**
+     * Get 备份文件备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupName 备份文件备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set 备份文件备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupName 备份文件备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
     public BackupFileInfo() {
     }
 
@@ -264,6 +348,15 @@ public class BackupFileInfo extends AbstractModel{
         if (source.SnapshotTime != null) {
             this.SnapshotTime = new String(source.SnapshotTime);
         }
+        if (source.BackupId != null) {
+            this.BackupId = new Long(source.BackupId);
+        }
+        if (source.SnapShotType != null) {
+            this.SnapShotType = new String(source.SnapShotType);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
     }
 
 
@@ -280,6 +373,9 @@ public class BackupFileInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
         this.setParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+        this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
 
     }
 }

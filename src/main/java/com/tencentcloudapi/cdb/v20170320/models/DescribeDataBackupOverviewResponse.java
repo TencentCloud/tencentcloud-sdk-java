@@ -65,6 +65,20 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     private Long ManualBackupCount;
 
     /**
+    * 当前地域异地备份总容量。
+    */
+    @SerializedName("RemoteBackupVolume")
+    @Expose
+    private Long RemoteBackupVolume;
+
+    /**
+    * 当前地域异地备份总个数。
+    */
+    @SerializedName("RemoteBackupCount")
+    @Expose
+    private Long RemoteBackupCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +182,38 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前地域异地备份总容量。 
+     * @return RemoteBackupVolume 当前地域异地备份总容量。
+     */
+    public Long getRemoteBackupVolume() {
+        return this.RemoteBackupVolume;
+    }
+
+    /**
+     * Set 当前地域异地备份总容量。
+     * @param RemoteBackupVolume 当前地域异地备份总容量。
+     */
+    public void setRemoteBackupVolume(Long RemoteBackupVolume) {
+        this.RemoteBackupVolume = RemoteBackupVolume;
+    }
+
+    /**
+     * Get 当前地域异地备份总个数。 
+     * @return RemoteBackupCount 当前地域异地备份总个数。
+     */
+    public Long getRemoteBackupCount() {
+        return this.RemoteBackupCount;
+    }
+
+    /**
+     * Set 当前地域异地备份总个数。
+     * @param RemoteBackupCount 当前地域异地备份总个数。
+     */
+    public void setRemoteBackupCount(Long RemoteBackupCount) {
+        this.RemoteBackupCount = RemoteBackupCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +255,12 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         if (source.ManualBackupCount != null) {
             this.ManualBackupCount = new Long(source.ManualBackupCount);
         }
+        if (source.RemoteBackupVolume != null) {
+            this.RemoteBackupVolume = new Long(source.RemoteBackupVolume);
+        }
+        if (source.RemoteBackupCount != null) {
+            this.RemoteBackupCount = new Long(source.RemoteBackupCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +277,8 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoBackupCount", this.AutoBackupCount);
         this.setParamSimple(map, prefix + "ManualBackupVolume", this.ManualBackupVolume);
         this.setParamSimple(map, prefix + "ManualBackupCount", this.ManualBackupCount);
+        this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
+        this.setParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
