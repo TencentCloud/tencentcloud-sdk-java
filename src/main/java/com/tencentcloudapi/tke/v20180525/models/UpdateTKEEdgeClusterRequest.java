@@ -107,6 +107,13 @@ public class UpdateTKEEdgeClusterRequest extends AbstractModel{
     private Boolean AutoUpgradeClusterLevel;
 
     /**
+    * 边缘集群的集群规模
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
      * Get 边缘计算集群ID 
      * @return ClusterId 边缘计算集群ID
      */
@@ -298,6 +305,22 @@ public class UpdateTKEEdgeClusterRequest extends AbstractModel{
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
+    /**
+     * Get 边缘集群的集群规模 
+     * @return ClusterLevel 边缘集群的集群规模
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 边缘集群的集群规模
+     * @param ClusterLevel 边缘集群的集群规模
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
     public UpdateTKEEdgeClusterRequest() {
     }
 
@@ -342,6 +365,9 @@ public class UpdateTKEEdgeClusterRequest extends AbstractModel{
         if (source.AutoUpgradeClusterLevel != null) {
             this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class UpdateTKEEdgeClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Health", this.Health);
         this.setParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

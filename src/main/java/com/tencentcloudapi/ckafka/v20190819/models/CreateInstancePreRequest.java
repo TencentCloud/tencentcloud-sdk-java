@@ -30,7 +30,7 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 可用区
+    * 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
     */
     @SerializedName("ZoneId")
     @Expose
@@ -143,7 +143,7 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Boolean MultiZoneFlag;
 
     /**
-    * 可用区列表
+    * 可用区列表，购买多可用区实例时为必填项
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -166,16 +166,16 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 可用区 
-     * @return ZoneId 可用区
+     * Get 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值 
+     * @return ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区
-     * @param ZoneId 可用区
+     * Set 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+     * @param ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -426,16 +426,16 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 可用区列表 
-     * @return ZoneIds 可用区列表
+     * Get 可用区列表，购买多可用区实例时为必填项 
+     * @return ZoneIds 可用区列表，购买多可用区实例时为必填项
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区列表
-     * @param ZoneIds 可用区列表
+     * Set 可用区列表，购买多可用区实例时为必填项
+     * @param ZoneIds 可用区列表，购买多可用区实例时为必填项
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;

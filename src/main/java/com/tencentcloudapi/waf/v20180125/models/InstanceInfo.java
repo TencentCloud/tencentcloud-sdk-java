@@ -180,6 +180,14 @@ public class InstanceInfo extends AbstractModel{
     private BotQPS BotQPS;
 
     /**
+    * qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticBilling")
+    @Expose
+    private Long ElasticBilling;
+
+    /**
      * Get id 
      * @return InstanceId id
      */
@@ -543,6 +551,26 @@ public class InstanceInfo extends AbstractModel{
         this.BotQPS = BotQPS;
     }
 
+    /**
+     * Get qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticBilling qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElasticBilling() {
+        return this.ElasticBilling;
+    }
+
+    /**
+     * Set qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticBilling qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticBilling(Long ElasticBilling) {
+        this.ElasticBilling = ElasticBilling;
+    }
+
     public InstanceInfo() {
     }
 
@@ -617,6 +645,9 @@ public class InstanceInfo extends AbstractModel{
         if (source.BotQPS != null) {
             this.BotQPS = new BotQPS(source.BotQPS);
         }
+        if (source.ElasticBilling != null) {
+            this.ElasticBilling = new Long(source.ElasticBilling);
+        }
     }
 
 
@@ -646,6 +677,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamObj(map, prefix + "FraudPkg.", this.FraudPkg);
         this.setParamObj(map, prefix + "BotPkg.", this.BotPkg);
         this.setParamObj(map, prefix + "BotQPS.", this.BotQPS);
+        this.setParamSimple(map, prefix + "ElasticBilling", this.ElasticBilling);
 
     }
 }

@@ -191,6 +191,34 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private Long [] Weights;
 
     /**
+    * 是否开启主动健康检测，1表示开启，0表示不开启
+    */
+    @SerializedName("ActiveCheck")
+    @Expose
+    private Long ActiveCheck;
+
+    /**
+    * TLS版本信息
+    */
+    @SerializedName("TLSVersion")
+    @Expose
+    private Long TLSVersion;
+
+    /**
+    * 加密套件信息
+    */
+    @SerializedName("Ciphers")
+    @Expose
+    private Long [] Ciphers;
+
+    /**
+    * 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+    */
+    @SerializedName("CipherTemplate")
+    @Expose
+    private Long CipherTemplate;
+
+    /**
      * Get 需要防御的域名 
      * @return Domain 需要防御的域名
      */
@@ -574,6 +602,70 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.Weights = Weights;
     }
 
+    /**
+     * Get 是否开启主动健康检测，1表示开启，0表示不开启 
+     * @return ActiveCheck 是否开启主动健康检测，1表示开启，0表示不开启
+     */
+    public Long getActiveCheck() {
+        return this.ActiveCheck;
+    }
+
+    /**
+     * Set 是否开启主动健康检测，1表示开启，0表示不开启
+     * @param ActiveCheck 是否开启主动健康检测，1表示开启，0表示不开启
+     */
+    public void setActiveCheck(Long ActiveCheck) {
+        this.ActiveCheck = ActiveCheck;
+    }
+
+    /**
+     * Get TLS版本信息 
+     * @return TLSVersion TLS版本信息
+     */
+    public Long getTLSVersion() {
+        return this.TLSVersion;
+    }
+
+    /**
+     * Set TLS版本信息
+     * @param TLSVersion TLS版本信息
+     */
+    public void setTLSVersion(Long TLSVersion) {
+        this.TLSVersion = TLSVersion;
+    }
+
+    /**
+     * Get 加密套件信息 
+     * @return Ciphers 加密套件信息
+     */
+    public Long [] getCiphers() {
+        return this.Ciphers;
+    }
+
+    /**
+     * Set 加密套件信息
+     * @param Ciphers 加密套件信息
+     */
+    public void setCiphers(Long [] Ciphers) {
+        this.Ciphers = Ciphers;
+    }
+
+    /**
+     * Get 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版 
+     * @return CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     */
+    public Long getCipherTemplate() {
+        return this.CipherTemplate;
+    }
+
+    /**
+     * Set 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     * @param CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     */
+    public void setCipherTemplate(Long CipherTemplate) {
+        this.CipherTemplate = CipherTemplate;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -666,6 +758,21 @@ public class AddSpartaProtectionRequest extends AbstractModel{
                 this.Weights[i] = new Long(source.Weights[i]);
             }
         }
+        if (source.ActiveCheck != null) {
+            this.ActiveCheck = new Long(source.ActiveCheck);
+        }
+        if (source.TLSVersion != null) {
+            this.TLSVersion = new Long(source.TLSVersion);
+        }
+        if (source.Ciphers != null) {
+            this.Ciphers = new Long[source.Ciphers.length];
+            for (int i = 0; i < source.Ciphers.length; i++) {
+                this.Ciphers[i] = new Long(source.Ciphers[i]);
+            }
+        }
+        if (source.CipherTemplate != null) {
+            this.CipherTemplate = new Long(source.CipherTemplate);
+        }
     }
 
 
@@ -697,6 +804,10 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Anycast", this.Anycast);
         this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
+        this.setParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
+        this.setParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
+        this.setParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
+        this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
 
     }
 }

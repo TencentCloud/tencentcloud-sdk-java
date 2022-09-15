@@ -44,6 +44,13 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
     private Boolean DeleteAll;
 
     /**
+    * 是否为多域名黑白名单
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -91,6 +98,22 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
         this.DeleteAll = DeleteAll;
     }
 
+    /**
+     * Get 是否为多域名黑白名单 
+     * @return SourceType 是否为多域名黑白名单
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 是否为多域名黑白名单
+     * @param SourceType 是否为多域名黑白名单
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
     public DeleteIpAccessControlRequest() {
     }
 
@@ -111,6 +134,9 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
         if (source.DeleteAll != null) {
             this.DeleteAll = new Boolean(source.DeleteAll);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

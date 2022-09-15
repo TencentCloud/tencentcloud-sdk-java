@@ -45,6 +45,30 @@ public class IstioConfig extends AbstractModel{
     private Boolean DisablePolicyChecks;
 
     /**
+    * 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnablePilotHTTP")
+    @Expose
+    private Boolean EnablePilotHTTP;
+
+    /**
+    * 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableHTTPRetry")
+    @Expose
+    private Boolean DisableHTTPRetry;
+
+    /**
+    * SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartDNS")
+    @Expose
+    private SmartDNSConfig SmartDNS;
+
+    /**
      * Get 外部流量策略 
      * @return OutboundTrafficPolicy 外部流量策略
      */
@@ -96,6 +120,66 @@ public class IstioConfig extends AbstractModel{
         this.DisablePolicyChecks = DisablePolicyChecks;
     }
 
+    /**
+     * Get 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnablePilotHTTP 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnablePilotHTTP() {
+        return this.EnablePilotHTTP;
+    }
+
+    /**
+     * Set 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnablePilotHTTP 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnablePilotHTTP(Boolean EnablePilotHTTP) {
+        this.EnablePilotHTTP = EnablePilotHTTP;
+    }
+
+    /**
+     * Get 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableHTTPRetry 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDisableHTTPRetry() {
+        return this.DisableHTTPRetry;
+    }
+
+    /**
+     * Set 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableHTTPRetry 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableHTTPRetry(Boolean DisableHTTPRetry) {
+        this.DisableHTTPRetry = DisableHTTPRetry;
+    }
+
+    /**
+     * Get SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartDNS SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartDNSConfig getSmartDNS() {
+        return this.SmartDNS;
+    }
+
+    /**
+     * Set SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartDNS SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartDNS(SmartDNSConfig SmartDNS) {
+        this.SmartDNS = SmartDNS;
+    }
+
     public IstioConfig() {
     }
 
@@ -113,6 +197,15 @@ public class IstioConfig extends AbstractModel{
         if (source.DisablePolicyChecks != null) {
             this.DisablePolicyChecks = new Boolean(source.DisablePolicyChecks);
         }
+        if (source.EnablePilotHTTP != null) {
+            this.EnablePilotHTTP = new Boolean(source.EnablePilotHTTP);
+        }
+        if (source.DisableHTTPRetry != null) {
+            this.DisableHTTPRetry = new Boolean(source.DisableHTTPRetry);
+        }
+        if (source.SmartDNS != null) {
+            this.SmartDNS = new SmartDNSConfig(source.SmartDNS);
+        }
     }
 
 
@@ -123,6 +216,9 @@ public class IstioConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "OutboundTrafficPolicy", this.OutboundTrafficPolicy);
         this.setParamObj(map, prefix + "Tracing.", this.Tracing);
         this.setParamSimple(map, prefix + "DisablePolicyChecks", this.DisablePolicyChecks);
+        this.setParamSimple(map, prefix + "EnablePilotHTTP", this.EnablePilotHTTP);
+        this.setParamSimple(map, prefix + "DisableHTTPRetry", this.DisableHTTPRetry);
+        this.setParamObj(map, prefix + "SmartDNS.", this.SmartDNS);
 
     }
 }

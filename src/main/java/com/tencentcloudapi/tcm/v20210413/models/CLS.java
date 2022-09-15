@@ -44,6 +44,13 @@ public class CLS extends AbstractModel{
     private String Topic;
 
     /**
+    * 是否删除
+    */
+    @SerializedName("NeedDelete")
+    @Expose
+    private Boolean NeedDelete;
+
+    /**
      * Get 是否启用 
      * @return Enable 是否启用
      */
@@ -91,6 +98,22 @@ public class CLS extends AbstractModel{
         this.Topic = Topic;
     }
 
+    /**
+     * Get 是否删除 
+     * @return NeedDelete 是否删除
+     */
+    public Boolean getNeedDelete() {
+        return this.NeedDelete;
+    }
+
+    /**
+     * Set 是否删除
+     * @param NeedDelete 是否删除
+     */
+    public void setNeedDelete(Boolean NeedDelete) {
+        this.NeedDelete = NeedDelete;
+    }
+
     public CLS() {
     }
 
@@ -108,6 +131,9 @@ public class CLS extends AbstractModel{
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
+        if (source.NeedDelete != null) {
+            this.NeedDelete = new Boolean(source.NeedDelete);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CLS extends AbstractModel{
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "NeedDelete", this.NeedDelete);
 
     }
 }

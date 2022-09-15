@@ -30,6 +30,13 @@ public class EditMediaOutputConfig extends AbstractModel{
     private String Container;
 
     /**
+    * 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。 
      * @return Container 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
      */
@@ -45,6 +52,22 @@ public class EditMediaOutputConfig extends AbstractModel{
         this.Container = Container;
     }
 
+    /**
+     * Get 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal 
+     * @return Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * @param Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public EditMediaOutputConfig() {
     }
 
@@ -56,6 +79,9 @@ public class EditMediaOutputConfig extends AbstractModel{
         if (source.Container != null) {
             this.Container = new String(source.Container);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class EditMediaOutputConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Container", this.Container);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

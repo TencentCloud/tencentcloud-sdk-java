@@ -72,6 +72,13 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
     private String UpdateTimeOrder;
 
     /**
+    * 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+    */
+    @SerializedName("PolicyCountOrder")
+    @Expose
+    private String PolicyCountOrder;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -183,6 +190,22 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
         this.UpdateTimeOrder = UpdateTimeOrder;
     }
 
+    /**
+     * Get 指定按绑定策略数目的排序方式，asc=升序, desc=降序 
+     * @return PolicyCountOrder 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     */
+    public String getPolicyCountOrder() {
+        return this.PolicyCountOrder;
+    }
+
+    /**
+     * Set 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     * @param PolicyCountOrder 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     */
+    public void setPolicyCountOrder(String PolicyCountOrder) {
+        this.PolicyCountOrder = PolicyCountOrder;
+    }
+
     public DescribeConditionsTemplateListRequest() {
     }
 
@@ -212,6 +235,9 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
         if (source.UpdateTimeOrder != null) {
             this.UpdateTimeOrder = new String(source.UpdateTimeOrder);
         }
+        if (source.PolicyCountOrder != null) {
+            this.PolicyCountOrder = new String(source.PolicyCountOrder);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "UpdateTimeOrder", this.UpdateTimeOrder);
+        this.setParamSimple(map, prefix + "PolicyCountOrder", this.PolicyCountOrder);
 
     }
 }

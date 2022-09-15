@@ -53,7 +53,7 @@ public class Condition extends AbstractModel{
     private String CalcValue;
 
     /**
-    * 持续时间
+    * 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueTime")
@@ -94,6 +94,28 @@ public class Condition extends AbstractModel{
     @SerializedName("Unit")
     @Expose
     private String Unit;
+
+    /**
+    * 是否为高级指标，0：否；1：是
+    */
+    @SerializedName("IsAdvanced")
+    @Expose
+    private Long IsAdvanced;
+
+    /**
+    * 是否开通高级指标，0：否；1：是
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Long IsOpen;
+
+    /**
+    * 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
 
     /**
      * Get 告警通知频率 
@@ -168,9 +190,9 @@ public class Condition extends AbstractModel{
     }
 
     /**
-     * Get 持续时间
+     * Get 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContinueTime 持续时间
+     * @return ContinueTime 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContinueTime() {
@@ -178,9 +200,9 @@ public class Condition extends AbstractModel{
     }
 
     /**
-     * Set 持续时间
+     * Set 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContinueTime 持续时间
+     * @param ContinueTime 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueTime(String ContinueTime) {
@@ -267,6 +289,58 @@ public class Condition extends AbstractModel{
         this.Unit = Unit;
     }
 
+    /**
+     * Get 是否为高级指标，0：否；1：是 
+     * @return IsAdvanced 是否为高级指标，0：否；1：是
+     */
+    public Long getIsAdvanced() {
+        return this.IsAdvanced;
+    }
+
+    /**
+     * Set 是否为高级指标，0：否；1：是
+     * @param IsAdvanced 是否为高级指标，0：否；1：是
+     */
+    public void setIsAdvanced(Long IsAdvanced) {
+        this.IsAdvanced = IsAdvanced;
+    }
+
+    /**
+     * Get 是否开通高级指标，0：否；1：是 
+     * @return IsOpen 是否开通高级指标，0：否；1：是
+     */
+    public Long getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set 是否开通高级指标，0：否；1：是
+     * @param IsOpen 是否开通高级指标，0：否；1：是
+     */
+    public void setIsOpen(Long IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get 产品ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public Condition() {
     }
 
@@ -305,6 +379,15 @@ public class Condition extends AbstractModel{
         if (source.Unit != null) {
             this.Unit = new String(source.Unit);
         }
+        if (source.IsAdvanced != null) {
+            this.IsAdvanced = new Long(source.IsAdvanced);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Long(source.IsOpen);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -322,6 +405,9 @@ public class Condition extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
+        this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }
