@@ -23,23 +23,56 @@ import java.util.HashMap;
 public class TraceWatermarkInput extends AbstractModel{
 
     /**
-    * 水印模板 ID。
+    * 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
+
+    /**
+    * 该字段已废弃，请勿使用。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 水印模板 ID。 
-     * @return Definition 水印模板 ID。
+     * Get 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li> 
+     * @return Switch 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+     * @param Switch 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
+    /**
+     * Get 该字段已废弃，请勿使用。 
+     * @return Definition 该字段已废弃，请勿使用。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 水印模板 ID。
-     * @param Definition 水印模板 ID。
+     * Set 该字段已废弃，请勿使用。
+     * @param Definition 该字段已废弃，请勿使用。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -53,6 +86,9 @@ public class TraceWatermarkInput extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TraceWatermarkInput(TraceWatermarkInput source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
@@ -63,6 +99,7 @@ public class TraceWatermarkInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }

@@ -31,14 +31,14 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 渠道侧合作企业名称，最大长度64个字符
+    * 渠道子客企业名称，最大长度64个字符
     */
     @SerializedName("ProxyOrganizationName")
     @Expose
     private String ProxyOrganizationName;
 
     /**
-    * 渠道侧合作企业经办人的姓名，最大长度50个字符
+    * 渠道子客企业经办人的姓名，最大长度50个字符
     */
     @SerializedName("ProxyOperatorName")
     @Expose
@@ -59,7 +59,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private String ModuleId;
 
     /**
-    * 渠道侧合作企业统一社会信用代码，最大长度200个字符
+    * 渠道子客企业统一社会信用代码，最大长度200个字符
     */
     @SerializedName("UniformSocialCreditCode")
     @Expose
@@ -100,32 +100,32 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧合作企业名称，最大长度64个字符 
-     * @return ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
+     * Get 渠道子客企业名称，最大长度64个字符 
+     * @return ProxyOrganizationName 渠道子客企业名称，最大长度64个字符
      */
     public String getProxyOrganizationName() {
         return this.ProxyOrganizationName;
     }
 
     /**
-     * Set 渠道侧合作企业名称，最大长度64个字符
-     * @param ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
+     * Set 渠道子客企业名称，最大长度64个字符
+     * @param ProxyOrganizationName 渠道子客企业名称，最大长度64个字符
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {
         this.ProxyOrganizationName = ProxyOrganizationName;
     }
 
     /**
-     * Get 渠道侧合作企业经办人的姓名，最大长度50个字符 
-     * @return ProxyOperatorName 渠道侧合作企业经办人的姓名，最大长度50个字符
+     * Get 渠道子客企业经办人的姓名，最大长度50个字符 
+     * @return ProxyOperatorName 渠道子客企业经办人的姓名，最大长度50个字符
      */
     public String getProxyOperatorName() {
         return this.ProxyOperatorName;
     }
 
     /**
-     * Set 渠道侧合作企业经办人的姓名，最大长度50个字符
-     * @param ProxyOperatorName 渠道侧合作企业经办人的姓名，最大长度50个字符
+     * Set 渠道子客企业经办人的姓名，最大长度50个字符
+     * @param ProxyOperatorName 渠道子客企业经办人的姓名，最大长度50个字符
      */
     public void setProxyOperatorName(String ProxyOperatorName) {
         this.ProxyOperatorName = ProxyOperatorName;
@@ -164,16 +164,16 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧合作企业统一社会信用代码，最大长度200个字符 
-     * @return UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * Get 渠道子客企业统一社会信用代码，最大长度200个字符 
+     * @return UniformSocialCreditCode 渠道子客企业统一社会信用代码，最大长度200个字符
      */
     public String getUniformSocialCreditCode() {
         return this.UniformSocialCreditCode;
     }
 
     /**
-     * Set 渠道侧合作企业统一社会信用代码，最大长度200个字符
-     * @param UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * Set 渠道子客企业统一社会信用代码，最大长度200个字符
+     * @param UniformSocialCreditCode 渠道子客企业统一社会信用代码，最大长度200个字符
      */
     public void setUniformSocialCreditCode(String UniformSocialCreditCode) {
         this.UniformSocialCreditCode = UniformSocialCreditCode;

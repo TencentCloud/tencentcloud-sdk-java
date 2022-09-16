@@ -61,6 +61,15 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private Long Size;
 
     /**
+    * 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+    */
+    @SerializedName("DigitalWatermarkType")
+    @Expose
+    private String DigitalWatermarkType;
+
+    /**
      * Get 转自适应码流规格。 
      * @return Definition 转自适应码流规格。
      */
@@ -152,6 +161,30 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.Size = Size;
     }
 
+    /**
+     * Get 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li> 
+     * @return DigitalWatermarkType 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     */
+    public String getDigitalWatermarkType() {
+        return this.DigitalWatermarkType;
+    }
+
+    /**
+     * Set 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     * @param DigitalWatermarkType 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     */
+    public void setDigitalWatermarkType(String DigitalWatermarkType) {
+        this.DigitalWatermarkType = DigitalWatermarkType;
+    }
+
     public AdaptiveDynamicStreamingInfoItem() {
     }
 
@@ -175,6 +208,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         if (source.Size != null) {
             this.Size = new Long(source.Size);
         }
+        if (source.DigitalWatermarkType != null) {
+            this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
+        }
     }
 
 
@@ -187,6 +223,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
 
     }
 }

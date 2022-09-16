@@ -65,7 +65,7 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
     private Long ExpireLicenseCnt;
 
     /**
-    * 自动升级开关状态,默认 false,  ture 开启, false 关闭
+    * 自动升级开关状态,默认 false,  true 开启, false 关闭
     */
     @SerializedName("AutoOpenStatus")
     @Expose
@@ -231,16 +231,16 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
     }
 
     /**
-     * Get 自动升级开关状态,默认 false,  ture 开启, false 关闭 
-     * @return AutoOpenStatus 自动升级开关状态,默认 false,  ture 开启, false 关闭
+     * Get 自动升级开关状态,默认 false,  true 开启, false 关闭 
+     * @return AutoOpenStatus 自动升级开关状态,默认 false,  true 开启, false 关闭
      */
     public Boolean getAutoOpenStatus() {
         return this.AutoOpenStatus;
     }
 
     /**
-     * Set 自动升级开关状态,默认 false,  ture 开启, false 关闭
-     * @param AutoOpenStatus 自动升级开关状态,默认 false,  ture 开启, false 关闭
+     * Set 自动升级开关状态,默认 false,  true 开启, false 关闭
+     * @param AutoOpenStatus 自动升级开关状态,默认 false,  true 开启, false 关闭
      */
     public void setAutoOpenStatus(Boolean AutoOpenStatus) {
         this.AutoOpenStatus = AutoOpenStatus;

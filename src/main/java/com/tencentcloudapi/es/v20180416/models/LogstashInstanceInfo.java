@@ -200,6 +200,14 @@ public class LogstashInstanceInfo extends AbstractModel{
     private LogstashExtendedFile [] ExtendedFiles;
 
     /**
+    * 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDuration OperationDuration;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -607,6 +615,26 @@ public class LogstashInstanceInfo extends AbstractModel{
         this.ExtendedFiles = ExtendedFiles;
     }
 
+    /**
+     * Get 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationDuration 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OperationDuration getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationDuration 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationDuration(OperationDuration OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public LogstashInstanceInfo() {
     }
 
@@ -696,6 +724,9 @@ public class LogstashInstanceInfo extends AbstractModel{
                 this.ExtendedFiles[i] = new LogstashExtendedFile(source.ExtendedFiles[i]);
             }
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDuration(source.OperationDuration);
+        }
     }
 
 
@@ -728,6 +759,7 @@ public class LogstashInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BindedESInstanceId", this.BindedESInstanceId);
         this.setParamSimple(map, prefix + "YMLConfig", this.YMLConfig);
         this.setParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

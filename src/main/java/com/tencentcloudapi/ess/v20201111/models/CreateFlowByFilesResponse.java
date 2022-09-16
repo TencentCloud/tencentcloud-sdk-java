@@ -23,14 +23,18 @@ import java.util.HashMap;
 public class CreateFlowByFilesResponse extends AbstractModel{
 
     /**
-    * 签署流程编号
+    * 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 合同预览链接
+    * 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
@@ -45,25 +49,37 @@ public class CreateFlowByFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 签署流程编号 
-     * @return FlowId 签署流程编号
+     * Get 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。 
+     * @return FlowId 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 签署流程编号
-     * @param FlowId 签署流程编号
+     * Set 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
+     * @param FlowId 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 合同预览链接
+     * Get 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewUrl 合同预览链接
+     * @return PreviewUrl 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
@@ -71,9 +87,13 @@ public class CreateFlowByFilesResponse extends AbstractModel{
     }
 
     /**
-     * Set 合同预览链接
+     * Set 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewUrl 合同预览链接
+     * @param PreviewUrl 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {

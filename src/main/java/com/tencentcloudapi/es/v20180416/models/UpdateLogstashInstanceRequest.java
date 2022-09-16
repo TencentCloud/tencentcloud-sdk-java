@@ -79,6 +79,13 @@ public class UpdateLogstashInstanceRequest extends AbstractModel{
     private Long DiskSize;
 
     /**
+    * 可维护时间段
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDurationUpdated OperationDuration;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -206,6 +213,22 @@ public class UpdateLogstashInstanceRequest extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get 可维护时间段 
+     * @return OperationDuration 可维护时间段
+     */
+    public OperationDurationUpdated getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set 可维护时间段
+     * @param OperationDuration 可维护时间段
+     */
+    public void setOperationDuration(OperationDurationUpdated OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public UpdateLogstashInstanceRequest() {
     }
 
@@ -241,6 +264,9 @@ public class UpdateLogstashInstanceRequest extends AbstractModel{
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDurationUpdated(source.OperationDuration);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class UpdateLogstashInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

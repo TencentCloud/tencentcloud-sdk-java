@@ -23,15 +23,14 @@ import java.util.HashMap;
 public class CreateConsoleLoginUrlResponse extends AbstractModel{
 
     /**
-    * 控制台url，此链接5分钟内有效，且只能访问一次
+    * 子客Web控制台url，此链接5分钟内有效，且只能访问一次
     */
     @SerializedName("ConsoleUrl")
     @Expose
     private String ConsoleUrl;
 
     /**
-    * 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+    * 渠道子客企业是否已开通腾讯电子签。
     */
     @SerializedName("IsActivated")
     @Expose
@@ -45,36 +44,32 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 控制台url，此链接5分钟内有效，且只能访问一次 
-     * @return ConsoleUrl 控制台url，此链接5分钟内有效，且只能访问一次
+     * Get 子客Web控制台url，此链接5分钟内有效，且只能访问一次 
+     * @return ConsoleUrl 子客Web控制台url，此链接5分钟内有效，且只能访问一次
      */
     public String getConsoleUrl() {
         return this.ConsoleUrl;
     }
 
     /**
-     * Set 控制台url，此链接5分钟内有效，且只能访问一次
-     * @param ConsoleUrl 控制台url，此链接5分钟内有效，且只能访问一次
+     * Set 子客Web控制台url，此链接5分钟内有效，且只能访问一次
+     * @param ConsoleUrl 子客Web控制台url，此链接5分钟内有效，且只能访问一次
      */
     public void setConsoleUrl(String ConsoleUrl) {
         this.ConsoleUrl = ConsoleUrl;
     }
 
     /**
-     * Get 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。 
-     * @return IsActivated 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+     * Get 渠道子客企业是否已开通腾讯电子签。 
+     * @return IsActivated 渠道子客企业是否已开通腾讯电子签。
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
-     * @param IsActivated 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+     * Set 渠道子客企业是否已开通腾讯电子签。
+     * @param IsActivated 渠道子客企业是否已开通腾讯电子签。
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;

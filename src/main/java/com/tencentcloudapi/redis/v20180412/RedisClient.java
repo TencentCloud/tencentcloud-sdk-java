@@ -1379,7 +1379,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyInstanceParams)用于修改实例参数。
+     *本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse
      * @throws TencentCloudSDKException

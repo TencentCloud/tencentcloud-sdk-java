@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyInstanceParamsResponse extends AbstractModel{
 
     /**
-    * 修改是否成功。
+    * 修改是否成功。修改成功为true，失败为false。
     */
     @SerializedName("Changed")
     @Expose
     private Boolean Changed;
 
     /**
-    * 任务ID
+    * 任务ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -44,32 +44,32 @@ public class ModifyInstanceParamsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 修改是否成功。 
-     * @return Changed 修改是否成功。
+     * Get 修改是否成功。修改成功为true，失败为false。 
+     * @return Changed 修改是否成功。修改成功为true，失败为false。
      */
     public Boolean getChanged() {
         return this.Changed;
     }
 
     /**
-     * Set 修改是否成功。
-     * @param Changed 修改是否成功。
+     * Set 修改是否成功。修改成功为true，失败为false。
+     * @param Changed 修改是否成功。修改成功为true，失败为false。
      */
     public void setChanged(Boolean Changed) {
         this.Changed = Changed;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务ID。 
+     * @return TaskId 任务ID。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务ID。
+     * @param TaskId 任务ID。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -95,7 +95,7 @@ public class CreateProbeTasksRequest extends AbstractModel{
     private String PluginSource;
 
     /**
-    * 客户度ID
+    * 客户端ID
     */
     @SerializedName("ClientNum")
     @Expose
@@ -270,16 +270,16 @@ public class CreateProbeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户度ID 
-     * @return ClientNum 客户度ID
+     * Get 客户端ID 
+     * @return ClientNum 客户端ID
      */
     public String getClientNum() {
         return this.ClientNum;
     }
 
     /**
-     * Set 客户度ID
-     * @param ClientNum 客户度ID
+     * Set 客户端ID
+     * @param ClientNum 客户端ID
      */
     public void setClientNum(String ClientNum) {
         this.ClientNum = ClientNum;

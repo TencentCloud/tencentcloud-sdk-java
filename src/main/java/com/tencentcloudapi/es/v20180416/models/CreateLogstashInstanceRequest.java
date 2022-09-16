@@ -142,6 +142,13 @@ public class CreateLogstashInstanceRequest extends AbstractModel{
     private TagInfo [] TagList;
 
     /**
+    * 可维护时间段
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDuration OperationDuration;
+
+    /**
      * Get 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_） 
      * @return InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      */
@@ -413,6 +420,22 @@ public class CreateLogstashInstanceRequest extends AbstractModel{
         this.TagList = TagList;
     }
 
+    /**
+     * Get 可维护时间段 
+     * @return OperationDuration 可维护时间段
+     */
+    public OperationDuration getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set 可维护时间段
+     * @param OperationDuration 可维护时间段
+     */
+    public void setOperationDuration(OperationDuration OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public CreateLogstashInstanceRequest() {
     }
 
@@ -478,6 +501,9 @@ public class CreateLogstashInstanceRequest extends AbstractModel{
                 this.TagList[i] = new TagInfo(source.TagList[i]);
             }
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDuration(source.OperationDuration);
+        }
     }
 
 
@@ -502,6 +528,7 @@ public class CreateLogstashInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

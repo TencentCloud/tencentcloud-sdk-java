@@ -75,6 +75,8 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     /**
     * 是否需要预览，true：预览模式，false：非预览（默认）；
 预览链接有效期300秒；
+
+注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
     */
     @SerializedName("NeedPreview")
     @Expose
@@ -113,8 +115,8 @@ false：有序签
     private String CustomShowMap;
 
     /**
-    * 发起方企业的签署人进行签署操作是否需要企业内部审批。
-若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+    * 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
     */
@@ -247,9 +249,13 @@ false：有序签
 
     /**
      * Get 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒； 
+预览链接有效期300秒；
+
+注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。 
      * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
 预览链接有效期300秒；
+
+注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
      */
     public Boolean getNeedPreview() {
         return this.NeedPreview;
@@ -258,8 +264,12 @@ false：有序签
     /**
      * Set 是否需要预览，true：预览模式，false：非预览（默认）；
 预览链接有效期300秒；
+
+注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
      * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
 预览链接有效期300秒；
+
+注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
      */
     public void setNeedPreview(Boolean NeedPreview) {
         this.NeedPreview = NeedPreview;
@@ -346,12 +356,12 @@ false：有序签
     }
 
     /**
-     * Get 发起方企业的签署人进行签署操作是否需要企业内部审批。
-若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+     * Get 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。 
-     * @return NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
-若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+     * @return NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      */
@@ -360,12 +370,12 @@ false：有序签
     }
 
     /**
-     * Set 发起方企业的签署人进行签署操作是否需要企业内部审批。
-若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+     * Set 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-     * @param NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
-若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+     * @param NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      */

@@ -101,6 +101,15 @@ public class MediaTranscodeItem extends AbstractModel{
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
+    * 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+    */
+    @SerializedName("DigitalWatermarkType")
+    @Expose
+    private String DigitalWatermarkType;
+
+    /**
      * Get 转码后的视频文件地址。 
      * @return Url 转码后的视频文件地址。
      */
@@ -280,6 +289,30 @@ public class MediaTranscodeItem extends AbstractModel{
         this.AudioStreamSet = AudioStreamSet;
     }
 
+    /**
+     * Get 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li> 
+     * @return DigitalWatermarkType 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     */
+    public String getDigitalWatermarkType() {
+        return this.DigitalWatermarkType;
+    }
+
+    /**
+     * Set 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     * @param DigitalWatermarkType 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     */
+    public void setDigitalWatermarkType(String DigitalWatermarkType) {
+        this.DigitalWatermarkType = DigitalWatermarkType;
+    }
+
     public MediaTranscodeItem() {
     }
 
@@ -327,6 +360,9 @@ public class MediaTranscodeItem extends AbstractModel{
                 this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
             }
         }
+        if (source.DigitalWatermarkType != null) {
+            this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
+        }
     }
 
 
@@ -345,6 +381,7 @@ public class MediaTranscodeItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
+        this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
 
     }
 }

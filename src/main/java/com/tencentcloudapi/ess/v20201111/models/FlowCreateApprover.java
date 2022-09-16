@@ -27,7 +27,7 @@ public class FlowCreateApprover extends AbstractModel{
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -134,16 +134,23 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String CustomApproverTag;
 
     /**
+    * 快速注册相关信息，目前暂未开放！
+    */
+    @SerializedName("RegisterInfo")
+    @Expose
+    private RegisterInfo RegisterInfo;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。 
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。 
      * @return ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      */
     public Long getApproverType() {
         return this.ApproverType;
@@ -154,12 +161,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      * @param ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
@@ -397,6 +404,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.CustomApproverTag = CustomApproverTag;
     }
 
+    /**
+     * Get 快速注册相关信息，目前暂未开放！ 
+     * @return RegisterInfo 快速注册相关信息，目前暂未开放！
+     */
+    public RegisterInfo getRegisterInfo() {
+        return this.RegisterInfo;
+    }
+
+    /**
+     * Set 快速注册相关信息，目前暂未开放！
+     * @param RegisterInfo 快速注册相关信息，目前暂未开放！
+     */
+    public void setRegisterInfo(RegisterInfo RegisterInfo) {
+        this.RegisterInfo = RegisterInfo;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -453,6 +476,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.CustomApproverTag != null) {
             this.CustomApproverTag = new String(source.CustomApproverTag);
         }
+        if (source.RegisterInfo != null) {
+            this.RegisterInfo = new RegisterInfo(source.RegisterInfo);
+        }
     }
 
 
@@ -475,6 +501,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "Required", this.Required);
         this.setParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
         this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
+        this.setParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
 
     }
 }

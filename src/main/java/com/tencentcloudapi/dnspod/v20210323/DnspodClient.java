@@ -342,6 +342,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *获取域名分组列表
+     * @param req DescribeDomainGroupListRequest
+     * @return DescribeDomainGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainGroupListResponse DescribeDomainGroupList(DescribeDomainGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainGroupListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainGroupList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取域名列表
      * @param req DescribeDomainListRequest
      * @return DescribeDomainListResponse

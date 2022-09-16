@@ -1913,6 +1913,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *用于提取溯源水印。
+     * @param req ExtractTraceWatermarkRequest
+     * @return ExtractTraceWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractTraceWatermarkResponse ExtractTraceWatermark(ExtractTraceWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExtractTraceWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExtractTraceWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
   禁播/解禁操作全网生效时间约 5~10 分钟。
      * @param req ForbidMediaDistributionRequest

@@ -36,7 +36,6 @@ off：关闭
     * http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Http2")
@@ -152,12 +151,10 @@ off：关闭
      * Get http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Http2 http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttp2() {
@@ -168,12 +165,10 @@ off：关闭
      * Set http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Http2 http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttp2(String Http2) {

@@ -70,6 +70,18 @@ public class AddLiveDomainRequest extends AbstractModel{
     private Long IsMiniProgramLive;
 
     /**
+    * 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
+    */
+    @SerializedName("VerifyOwnerType")
+    @Expose
+    private String VerifyOwnerType;
+
+    /**
      * Get 域名名称。 
      * @return DomainName 域名名称。
      */
@@ -197,6 +209,42 @@ public class AddLiveDomainRequest extends AbstractModel{
         this.IsMiniProgramLive = IsMiniProgramLive;
     }
 
+    /**
+     * Get 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。 
+     * @return VerifyOwnerType 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
+     */
+    public String getVerifyOwnerType() {
+        return this.VerifyOwnerType;
+    }
+
+    /**
+     * Set 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
+     * @param VerifyOwnerType 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
+     */
+    public void setVerifyOwnerType(String VerifyOwnerType) {
+        this.VerifyOwnerType = VerifyOwnerType;
+    }
+
     public AddLiveDomainRequest() {
     }
 
@@ -220,6 +268,9 @@ public class AddLiveDomainRequest extends AbstractModel{
         if (source.IsMiniProgramLive != null) {
             this.IsMiniProgramLive = new Long(source.IsMiniProgramLive);
         }
+        if (source.VerifyOwnerType != null) {
+            this.VerifyOwnerType = new String(source.VerifyOwnerType);
+        }
     }
 
 
@@ -232,6 +283,7 @@ public class AddLiveDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
+        this.setParamSimple(map, prefix + "VerifyOwnerType", this.VerifyOwnerType);
 
     }
 }

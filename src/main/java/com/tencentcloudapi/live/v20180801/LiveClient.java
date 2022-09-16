@@ -102,6 +102,26 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *验证用户是否拥有特定直播域名。
+     * @param req AuthenticateDomainOwnerRequest
+     * @return AuthenticateDomainOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthenticateDomainOwnerResponse AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuthenticateDomainOwnerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AuthenticateDomainOwner");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
      * @param req CancelCommonMixStreamRequest
      * @return CancelCommonMixStreamResponse

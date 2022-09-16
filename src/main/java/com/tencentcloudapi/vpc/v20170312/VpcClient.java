@@ -2594,6 +2594,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *查询跨境带宽监控数据，该接口特提供给联通使用
+     * @param req DescribeCrossBorderFlowMonitorRequest
+     * @return DescribeCrossBorderFlowMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossBorderFlowMonitorResponse DescribeCrossBorderFlowMonitor(DescribeCrossBorderFlowMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCrossBorderFlowMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCrossBorderFlowMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCrossBorderFlowMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeCustomerGatewayVendors）用于查询可支持的对端网关厂商信息。
      * @param req DescribeCustomerGatewayVendorsRequest
      * @return DescribeCustomerGatewayVendorsResponse

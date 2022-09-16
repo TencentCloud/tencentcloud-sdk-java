@@ -72,6 +72,14 @@ public class KTVMusicDetailInfo extends AbstractModel{
     private String [] GenreSet;
 
     /**
+    * 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BPMInfo")
+    @Expose
+    private KTVBPMInfo BPMInfo;
+
+    /**
      * Get 歌曲基础信息。 
      * @return KTVMusicBaseInfo 歌曲基础信息。
      */
@@ -183,6 +191,26 @@ public class KTVMusicDetailInfo extends AbstractModel{
         this.GenreSet = GenreSet;
     }
 
+    /**
+     * Get 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BPMInfo 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KTVBPMInfo getBPMInfo() {
+        return this.BPMInfo;
+    }
+
+    /**
+     * Set 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BPMInfo 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBPMInfo(KTVBPMInfo BPMInfo) {
+        this.BPMInfo = BPMInfo;
+    }
+
     public KTVMusicDetailInfo() {
     }
 
@@ -218,6 +246,9 @@ public class KTVMusicDetailInfo extends AbstractModel{
                 this.GenreSet[i] = new String(source.GenreSet[i]);
             }
         }
+        if (source.BPMInfo != null) {
+            this.BPMInfo = new KTVBPMInfo(source.BPMInfo);
+        }
     }
 
 
@@ -232,6 +263,7 @@ public class KTVMusicDetailInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
         this.setParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
         this.setParamArraySimple(map, prefix + "GenreSet.", this.GenreSet);
+        this.setParamObj(map, prefix + "BPMInfo.", this.BPMInfo);
 
     }
 }

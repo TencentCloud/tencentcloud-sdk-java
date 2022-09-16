@@ -52,6 +52,13 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     private String CamRoleName;
 
     /**
+    * 实例的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
     * 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
     */
     @SerializedName("DisableApiTermination")
@@ -136,6 +143,22 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。 
+     * @return HostName 实例的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 实例的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+     * @param HostName 实例的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
      * Get 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。 
      * @return DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
      */
@@ -201,6 +224,9 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
         if (source.CamRoleName != null) {
             this.CamRoleName = new String(source.CamRoleName);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
@@ -218,6 +244,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
 

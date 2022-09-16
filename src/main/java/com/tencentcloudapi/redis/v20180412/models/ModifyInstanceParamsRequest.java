@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyInstanceParamsRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例修改的参数列表
+    * 实例修改的参数列表。
     */
     @SerializedName("InstanceParams")
     @Expose
     private InstanceParam [] InstanceParams;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例修改的参数列表 
-     * @return InstanceParams 实例修改的参数列表
+     * Get 实例修改的参数列表。 
+     * @return InstanceParams 实例修改的参数列表。
      */
     public InstanceParam [] getInstanceParams() {
         return this.InstanceParams;
     }
 
     /**
-     * Set 实例修改的参数列表
-     * @param InstanceParams 实例修改的参数列表
+     * Set 实例修改的参数列表。
+     * @param InstanceParams 实例修改的参数列表。
      */
     public void setInstanceParams(InstanceParam [] InstanceParams) {
         this.InstanceParams = InstanceParams;

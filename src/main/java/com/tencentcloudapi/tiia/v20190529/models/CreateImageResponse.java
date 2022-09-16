@@ -25,7 +25,7 @@ public class CreateImageResponse extends AbstractModel{
     /**
     * 输入图的主体信息。
 若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
-注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Object")
@@ -42,11 +42,11 @@ public class CreateImageResponse extends AbstractModel{
     /**
      * Get 输入图的主体信息。
 若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
-注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Object 输入图的主体信息。
 若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
-注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectInfo getObject() {
@@ -56,11 +56,11 @@ public class CreateImageResponse extends AbstractModel{
     /**
      * Set 输入图的主体信息。
 若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
-注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Object 输入图的主体信息。
 若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
-注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObject(ObjectInfo Object) {
