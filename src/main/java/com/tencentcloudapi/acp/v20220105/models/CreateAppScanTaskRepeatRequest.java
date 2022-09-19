@@ -93,6 +93,20 @@ public class CreateAppScanTaskRepeatRequest extends AbstractModel{
     private String PrivacyTextName;
 
     /**
+    * 软件Sha1值(PrivacyTextMD5不为空时必填)
+    */
+    @SerializedName("AppSha1")
+    @Expose
+    private String AppSha1;
+
+    /**
+    * 隐私申明文本md5(AppSha1不为空时必填)
+    */
+    @SerializedName("PrivacyTextMD5")
+    @Expose
+    private String PrivacyTextMD5;
+
+    /**
      * Get 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描; 
      * @return Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      */
@@ -252,6 +266,38 @@ public class CreateAppScanTaskRepeatRequest extends AbstractModel{
         this.PrivacyTextName = PrivacyTextName;
     }
 
+    /**
+     * Get 软件Sha1值(PrivacyTextMD5不为空时必填) 
+     * @return AppSha1 软件Sha1值(PrivacyTextMD5不为空时必填)
+     */
+    public String getAppSha1() {
+        return this.AppSha1;
+    }
+
+    /**
+     * Set 软件Sha1值(PrivacyTextMD5不为空时必填)
+     * @param AppSha1 软件Sha1值(PrivacyTextMD5不为空时必填)
+     */
+    public void setAppSha1(String AppSha1) {
+        this.AppSha1 = AppSha1;
+    }
+
+    /**
+     * Get 隐私申明文本md5(AppSha1不为空时必填) 
+     * @return PrivacyTextMD5 隐私申明文本md5(AppSha1不为空时必填)
+     */
+    public String getPrivacyTextMD5() {
+        return this.PrivacyTextMD5;
+    }
+
+    /**
+     * Set 隐私申明文本md5(AppSha1不为空时必填)
+     * @param PrivacyTextMD5 隐私申明文本md5(AppSha1不为空时必填)
+     */
+    public void setPrivacyTextMD5(String PrivacyTextMD5) {
+        this.PrivacyTextMD5 = PrivacyTextMD5;
+    }
+
     public CreateAppScanTaskRepeatRequest() {
     }
 
@@ -290,6 +336,12 @@ public class CreateAppScanTaskRepeatRequest extends AbstractModel{
         if (source.PrivacyTextName != null) {
             this.PrivacyTextName = new String(source.PrivacyTextName);
         }
+        if (source.AppSha1 != null) {
+            this.AppSha1 = new String(source.AppSha1);
+        }
+        if (source.PrivacyTextMD5 != null) {
+            this.PrivacyTextMD5 = new String(source.PrivacyTextMD5);
+        }
     }
 
 
@@ -307,6 +359,8 @@ public class CreateAppScanTaskRepeatRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PrivacyTextUrl", this.PrivacyTextUrl);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "PrivacyTextName", this.PrivacyTextName);
+        this.setParamSimple(map, prefix + "AppSha1", this.AppSha1);
+        this.setParamSimple(map, prefix + "PrivacyTextMD5", this.PrivacyTextMD5);
 
     }
 }
