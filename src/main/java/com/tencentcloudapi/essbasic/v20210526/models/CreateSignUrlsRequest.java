@@ -37,7 +37,14 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
-    * 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+    * 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
+    * 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
     */
     @SerializedName("Endpoint")
     @Expose
@@ -113,13 +120,6 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     private UserInfo Operator;
 
     /**
-    * 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
-    */
-    @SerializedName("FlowGroupId")
-    @Expose
-    private String FlowGroupId;
-
-    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -152,16 +152,32 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序； 
-     * @return Endpoint 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+     * Get 合同组编号(备注：该参数和合同(流程)编号数组必须二选一) 
+     * @return FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+     * @param FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
+    /**
+     * Get 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序； 
+     * @return Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序；
-     * @param Endpoint 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+     * Set 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+     * @param Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
@@ -335,22 +351,6 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.Operator = Operator;
     }
 
-    /**
-     * Get 合同组编号(备注：该参数和合同(流程)编号数组必须二选一) 
-     * @return FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
-     */
-    public String getFlowGroupId() {
-        return this.FlowGroupId;
-    }
-
-    /**
-     * Set 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
-     * @param FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
-     */
-    public void setFlowGroupId(String FlowGroupId) {
-        this.FlowGroupId = FlowGroupId;
-    }
-
     public CreateSignUrlsRequest() {
     }
 
@@ -367,6 +367,9 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
             for (int i = 0; i < source.FlowIds.length; i++) {
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
+        }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
         }
         if (source.Endpoint != null) {
             this.Endpoint = new String(source.Endpoint);
@@ -398,9 +401,6 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.FlowGroupId != null) {
-            this.FlowGroupId = new String(source.FlowGroupId);
-        }
     }
 
 
@@ -410,6 +410,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
@@ -420,7 +421,6 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

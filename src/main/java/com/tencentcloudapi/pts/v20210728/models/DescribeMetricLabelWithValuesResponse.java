@@ -24,6 +24,7 @@ public class DescribeMetricLabelWithValuesResponse extends AbstractModel{
 
     /**
     * 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricLabelWithValuesSet")
     @Expose
@@ -37,8 +38,10 @@ public class DescribeMetricLabelWithValuesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 指标所有的label和values数组 
+     * Get 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetricLabelWithValuesSet 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MetricLabelWithValues [] getMetricLabelWithValuesSet() {
         return this.MetricLabelWithValuesSet;
@@ -46,7 +49,9 @@ public class DescribeMetricLabelWithValuesResponse extends AbstractModel{
 
     /**
      * Set 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricLabelWithValuesSet 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricLabelWithValuesSet(MetricLabelWithValues [] MetricLabelWithValuesSet) {
         this.MetricLabelWithValuesSet = MetricLabelWithValuesSet;

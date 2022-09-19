@@ -85,6 +85,14 @@ public class TransformsParam extends AbstractModel{
     private RowParam RowParam;
 
     /**
+    * 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeepMetadata")
+    @Expose
+    private Boolean KeepMetadata;
+
+    /**
      * Get 原始数据 
      * @return Content 原始数据
      */
@@ -236,6 +244,26 @@ public class TransformsParam extends AbstractModel{
         this.RowParam = RowParam;
     }
 
+    /**
+     * Get 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeepMetadata 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getKeepMetadata() {
+        return this.KeepMetadata;
+    }
+
+    /**
+     * Set 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeepMetadata 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeepMetadata(Boolean KeepMetadata) {
+        this.KeepMetadata = KeepMetadata;
+    }
+
     public TransformsParam() {
     }
 
@@ -274,6 +302,9 @@ public class TransformsParam extends AbstractModel{
         if (source.RowParam != null) {
             this.RowParam = new RowParam(source.RowParam);
         }
+        if (source.KeepMetadata != null) {
+            this.KeepMetadata = new Boolean(source.KeepMetadata);
+        }
     }
 
 
@@ -289,6 +320,7 @@ public class TransformsParam extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamObj(map, prefix + "RowParam.", this.RowParam);
+        this.setParamSimple(map, prefix + "KeepMetadata", this.KeepMetadata);
 
     }
 }

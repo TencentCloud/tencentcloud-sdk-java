@@ -127,7 +127,7 @@ public class DescribeConnectResource extends AbstractModel{
     private ClickHouseConnectParam ClickHouseConnectParam;
 
     /**
-    * MySQL配置，Type为MYSQL时必填
+    * MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MySQLConnectParam")
@@ -135,12 +135,36 @@ public class DescribeConnectResource extends AbstractModel{
     private MySQLConnectParam MySQLConnectParam;
 
     /**
-    * PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+    * PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostgreSQLConnectParam")
     @Expose
     private PostgreSQLConnectParam PostgreSQLConnectParam;
+
+    /**
+    * MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MariaDBConnectParam")
+    @Expose
+    private MariaDBConnectParam MariaDBConnectParam;
+
+    /**
+    * SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SQLServerConnectParam")
+    @Expose
+    private SQLServerConnectParam SQLServerConnectParam;
+
+    /**
+    * Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CtsdbConnectParam")
+    @Expose
+    private CtsdbConnectParam CtsdbConnectParam;
 
     /**
      * Get 连接源的Id
@@ -403,9 +427,9 @@ public class DescribeConnectResource extends AbstractModel{
     }
 
     /**
-     * Get MySQL配置，Type为MYSQL时必填
+     * Get MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MySQLConnectParam MySQL配置，Type为MYSQL时必填
+     * @return MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MySQLConnectParam getMySQLConnectParam() {
@@ -413,9 +437,9 @@ public class DescribeConnectResource extends AbstractModel{
     }
 
     /**
-     * Set MySQL配置，Type为MYSQL时必填
+     * Set MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MySQLConnectParam MySQL配置，Type为MYSQL时必填
+     * @param MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMySQLConnectParam(MySQLConnectParam MySQLConnectParam) {
@@ -423,9 +447,9 @@ public class DescribeConnectResource extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * Get PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @return PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostgreSQLConnectParam getPostgreSQLConnectParam() {
@@ -433,13 +457,73 @@ public class DescribeConnectResource extends AbstractModel{
     }
 
     /**
-     * Set PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * Set PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @param PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostgreSQLConnectParam(PostgreSQLConnectParam PostgreSQLConnectParam) {
         this.PostgreSQLConnectParam = PostgreSQLConnectParam;
+    }
+
+    /**
+     * Get MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MariaDBConnectParam getMariaDBConnectParam() {
+        return this.MariaDBConnectParam;
+    }
+
+    /**
+     * Set MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMariaDBConnectParam(MariaDBConnectParam MariaDBConnectParam) {
+        this.MariaDBConnectParam = MariaDBConnectParam;
+    }
+
+    /**
+     * Get SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SQLServerConnectParam getSQLServerConnectParam() {
+        return this.SQLServerConnectParam;
+    }
+
+    /**
+     * Set SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSQLServerConnectParam(SQLServerConnectParam SQLServerConnectParam) {
+        this.SQLServerConnectParam = SQLServerConnectParam;
+    }
+
+    /**
+     * Get Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CtsdbConnectParam getCtsdbConnectParam() {
+        return this.CtsdbConnectParam;
+    }
+
+    /**
+     * Set Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCtsdbConnectParam(CtsdbConnectParam CtsdbConnectParam) {
+        this.CtsdbConnectParam = CtsdbConnectParam;
     }
 
     public DescribeConnectResource() {
@@ -495,6 +579,15 @@ public class DescribeConnectResource extends AbstractModel{
         if (source.PostgreSQLConnectParam != null) {
             this.PostgreSQLConnectParam = new PostgreSQLConnectParam(source.PostgreSQLConnectParam);
         }
+        if (source.MariaDBConnectParam != null) {
+            this.MariaDBConnectParam = new MariaDBConnectParam(source.MariaDBConnectParam);
+        }
+        if (source.SQLServerConnectParam != null) {
+            this.SQLServerConnectParam = new SQLServerConnectParam(source.SQLServerConnectParam);
+        }
+        if (source.CtsdbConnectParam != null) {
+            this.CtsdbConnectParam = new CtsdbConnectParam(source.CtsdbConnectParam);
+        }
     }
 
 
@@ -517,6 +610,9 @@ public class DescribeConnectResource extends AbstractModel{
         this.setParamObj(map, prefix + "ClickHouseConnectParam.", this.ClickHouseConnectParam);
         this.setParamObj(map, prefix + "MySQLConnectParam.", this.MySQLConnectParam);
         this.setParamObj(map, prefix + "PostgreSQLConnectParam.", this.PostgreSQLConnectParam);
+        this.setParamObj(map, prefix + "MariaDBConnectParam.", this.MariaDBConnectParam);
+        this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
+        this.setParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
 
     }
 }

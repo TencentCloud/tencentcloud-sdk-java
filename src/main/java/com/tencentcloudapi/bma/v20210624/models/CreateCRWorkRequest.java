@@ -128,7 +128,7 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String IsMonitor;
 
     /**
-    * 是否启用存证0：不启用 1：启用 默认为1
+    * 是否启用存证0：不存证  2：存证 默认为0
     */
     @SerializedName("IsCert")
     @Expose
@@ -156,70 +156,70 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String ProduceType;
 
     /**
-    * xxx
+    * 白名单
     */
     @SerializedName("WhiteLists")
     @Expose
     private String [] WhiteLists;
 
     /**
-    * x
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * xx
+    * 著作权人姓名
     */
     @SerializedName("ProducerName")
     @Expose
     private String ProducerName;
 
     /**
-    * xx
+    * 作者
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * x
+    * 授权书
     */
     @SerializedName("Authorization")
     @Expose
     private String Authorization;
 
     /**
-    * x
+    * 授权书开始时间
     */
     @SerializedName("AuthorizationStartTime")
     @Expose
     private String AuthorizationStartTime;
 
     /**
-    * x
+    * 授权书结束时间
     */
     @SerializedName("AuthorizationEndTime")
     @Expose
     private String AuthorizationEndTime;
 
     /**
-    * x
+    * 内容格式
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * x
+    * 文件内容
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * x
+    * 监测结束时间
     */
     @SerializedName("MonitorEndTime")
     @Expose
@@ -466,16 +466,16 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否启用存证0：不启用 1：启用 默认为1 
-     * @return IsCert 是否启用存证0：不启用 1：启用 默认为1
+     * Get 是否启用存证0：不存证  2：存证 默认为0 
+     * @return IsCert 是否启用存证0：不存证  2：存证 默认为0
      */
     public String getIsCert() {
         return this.IsCert;
     }
 
     /**
-     * Set 是否启用存证0：不启用 1：启用 默认为1
-     * @param IsCert 是否启用存证0：不启用 1：启用 默认为1
+     * Set 是否启用存证0：不存证  2：存证 默认为0
+     * @param IsCert 是否启用存证0：不存证  2：存证 默认为0
      */
     public void setIsCert(String IsCert) {
         this.IsCert = IsCert;
@@ -530,160 +530,160 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get xxx 
-     * @return WhiteLists xxx
+     * Get 白名单 
+     * @return WhiteLists 白名单
      */
     public String [] getWhiteLists() {
         return this.WhiteLists;
     }
 
     /**
-     * Set xxx
-     * @param WhiteLists xxx
+     * Set 白名单
+     * @param WhiteLists 白名单
      */
     public void setWhiteLists(String [] WhiteLists) {
         this.WhiteLists = WhiteLists;
     }
 
     /**
-     * Get x 
-     * @return WorkId x
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set x
-     * @param WorkId x
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get xx 
-     * @return ProducerName xx
+     * Get 著作权人姓名 
+     * @return ProducerName 著作权人姓名
      */
     public String getProducerName() {
         return this.ProducerName;
     }
 
     /**
-     * Set xx
-     * @param ProducerName xx
+     * Set 著作权人姓名
+     * @param ProducerName 著作权人姓名
      */
     public void setProducerName(String ProducerName) {
         this.ProducerName = ProducerName;
     }
 
     /**
-     * Get xx 
-     * @return Nickname xx
+     * Get 作者 
+     * @return Nickname 作者
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set xx
-     * @param Nickname xx
+     * Set 作者
+     * @param Nickname 作者
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get x 
-     * @return Authorization x
+     * Get 授权书 
+     * @return Authorization 授权书
      */
     public String getAuthorization() {
         return this.Authorization;
     }
 
     /**
-     * Set x
-     * @param Authorization x
+     * Set 授权书
+     * @param Authorization 授权书
      */
     public void setAuthorization(String Authorization) {
         this.Authorization = Authorization;
     }
 
     /**
-     * Get x 
-     * @return AuthorizationStartTime x
+     * Get 授权书开始时间 
+     * @return AuthorizationStartTime 授权书开始时间
      */
     public String getAuthorizationStartTime() {
         return this.AuthorizationStartTime;
     }
 
     /**
-     * Set x
-     * @param AuthorizationStartTime x
+     * Set 授权书开始时间
+     * @param AuthorizationStartTime 授权书开始时间
      */
     public void setAuthorizationStartTime(String AuthorizationStartTime) {
         this.AuthorizationStartTime = AuthorizationStartTime;
     }
 
     /**
-     * Get x 
-     * @return AuthorizationEndTime x
+     * Get 授权书结束时间 
+     * @return AuthorizationEndTime 授权书结束时间
      */
     public String getAuthorizationEndTime() {
         return this.AuthorizationEndTime;
     }
 
     /**
-     * Set x
-     * @param AuthorizationEndTime x
+     * Set 授权书结束时间
+     * @param AuthorizationEndTime 授权书结束时间
      */
     public void setAuthorizationEndTime(String AuthorizationEndTime) {
         this.AuthorizationEndTime = AuthorizationEndTime;
     }
 
     /**
-     * Get x 
-     * @return ContentType x
+     * Get 内容格式 
+     * @return ContentType 内容格式
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set x
-     * @param ContentType x
+     * Set 内容格式
+     * @param ContentType 内容格式
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get x 
-     * @return Content x
+     * Get 文件内容 
+     * @return Content 文件内容
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set x
-     * @param Content x
+     * Set 文件内容
+     * @param Content 文件内容
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get x 
-     * @return MonitorEndTime x
+     * Get 监测结束时间 
+     * @return MonitorEndTime 监测结束时间
      */
     public String getMonitorEndTime() {
         return this.MonitorEndTime;
     }
 
     /**
-     * Set x
-     * @param MonitorEndTime x
+     * Set 监测结束时间
+     * @param MonitorEndTime 监测结束时间
      */
     public void setMonitorEndTime(String MonitorEndTime) {
         this.MonitorEndTime = MonitorEndTime;

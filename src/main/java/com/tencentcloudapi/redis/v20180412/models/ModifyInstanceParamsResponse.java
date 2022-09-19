@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamsResponse extends AbstractModel{
 
     /**
-    * 修改是否成功。修改成功为true，失败为false。
+    * 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
     */
     @SerializedName("Changed")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyInstanceParamsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 修改是否成功。修改成功为true，失败为false。 
-     * @return Changed 修改是否成功。修改成功为true，失败为false。
+     * Get 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br> 
+     * @return Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
      */
     public Boolean getChanged() {
         return this.Changed;
     }
 
     /**
-     * Set 修改是否成功。修改成功为true，失败为false。
-     * @param Changed 修改是否成功。修改成功为true，失败为false。
+     * Set 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
+     * @param Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
      */
     public void setChanged(Boolean Changed) {
         this.Changed = Changed;

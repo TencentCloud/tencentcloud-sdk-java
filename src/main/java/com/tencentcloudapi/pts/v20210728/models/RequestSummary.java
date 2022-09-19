@@ -86,6 +86,27 @@ public class RequestSummary extends AbstractModel{
     private Float ErrorPercentage;
 
     /**
+    * 请求p99耗时，单位秒
+    */
+    @SerializedName("P99")
+    @Expose
+    private Float P99;
+
+    /**
+    * 响应状态码
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 响应详情
+    */
+    @SerializedName("Result")
+    @Expose
+    private String Result;
+
+    /**
      * Get 请求URL 
      * @return Service 请求URL
      */
@@ -229,6 +250,54 @@ public class RequestSummary extends AbstractModel{
         this.ErrorPercentage = ErrorPercentage;
     }
 
+    /**
+     * Get 请求p99耗时，单位秒 
+     * @return P99 请求p99耗时，单位秒
+     */
+    public Float getP99() {
+        return this.P99;
+    }
+
+    /**
+     * Set 请求p99耗时，单位秒
+     * @param P99 请求p99耗时，单位秒
+     */
+    public void setP99(Float P99) {
+        this.P99 = P99;
+    }
+
+    /**
+     * Get 响应状态码 
+     * @return Status 响应状态码
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 响应状态码
+     * @param Status 响应状态码
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 响应详情 
+     * @return Result 响应详情
+     */
+    public String getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 响应详情
+     * @param Result 响应详情
+     */
+    public void setResult(String Result) {
+        this.Result = Result;
+    }
+
     public RequestSummary() {
     }
 
@@ -264,6 +333,15 @@ public class RequestSummary extends AbstractModel{
         if (source.ErrorPercentage != null) {
             this.ErrorPercentage = new Float(source.ErrorPercentage);
         }
+        if (source.P99 != null) {
+            this.P99 = new Float(source.P99);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
     }
 
 
@@ -280,6 +358,9 @@ public class RequestSummary extends AbstractModel{
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "Max", this.Max);
         this.setParamSimple(map, prefix + "ErrorPercentage", this.ErrorPercentage);
+        this.setParamSimple(map, prefix + "P99", this.P99);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Result", this.Result);
 
     }
 }

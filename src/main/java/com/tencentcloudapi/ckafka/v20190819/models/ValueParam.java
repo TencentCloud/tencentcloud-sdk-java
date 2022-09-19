@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ValueParam extends AbstractModel{
 
     /**
-    * 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
+    * 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
     */
     @SerializedName("Type")
     @Expose
@@ -62,16 +62,40 @@ public class ValueParam extends AbstractModel{
     private RegexReplaceParam RegexReplace;
 
     /**
-     * Get 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换 
-     * @return Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
+    * 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Split")
+    @Expose
+    private SplitParam Split;
+
+    /**
+    * key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KV")
+    @Expose
+    private KVParam KV;
+
+    /**
+    * 处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Result")
+    @Expose
+    private String Result;
+
+    /**
+     * Get 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写 
+     * @return Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
-     * @param Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
+     * Set 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
+     * @param Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -157,6 +181,66 @@ public class ValueParam extends AbstractModel{
         this.RegexReplace = RegexReplace;
     }
 
+    /**
+     * Get 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Split 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SplitParam getSplit() {
+        return this.Split;
+    }
+
+    /**
+     * Set 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Split 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSplit(SplitParam Split) {
+        this.Split = Split;
+    }
+
+    /**
+     * Get key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KV key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KVParam getKV() {
+        return this.KV;
+    }
+
+    /**
+     * Set key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KV key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKV(KVParam KV) {
+        this.KV = KV;
+    }
+
+    /**
+     * Get 处理结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResult(String Result) {
+        this.Result = Result;
+    }
+
     public ValueParam() {
     }
 
@@ -180,6 +264,15 @@ public class ValueParam extends AbstractModel{
         if (source.RegexReplace != null) {
             this.RegexReplace = new RegexReplaceParam(source.RegexReplace);
         }
+        if (source.Split != null) {
+            this.Split = new SplitParam(source.Split);
+        }
+        if (source.KV != null) {
+            this.KV = new KVParam(source.KV);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
     }
 
 
@@ -192,6 +285,9 @@ public class ValueParam extends AbstractModel{
         this.setParamObj(map, prefix + "Substr.", this.Substr);
         this.setParamObj(map, prefix + "Date.", this.Date);
         this.setParamObj(map, prefix + "RegexReplace.", this.RegexReplace);
+        this.setParamObj(map, prefix + "Split.", this.Split);
+        this.setParamObj(map, prefix + "KV.", this.KV);
+        this.setParamSimple(map, prefix + "Result", this.Result);
 
     }
 }

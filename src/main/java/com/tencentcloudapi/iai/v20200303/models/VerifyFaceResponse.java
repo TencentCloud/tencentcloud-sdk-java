@@ -34,7 +34,7 @@ public class VerifyFaceResponse extends AbstractModel{
     private Float Score;
 
     /**
-    * 是否为同一人的判断。
+    * 是否为同一人判断，固定阈值分数为60分，若想更灵活地调整阈值可取Score参数返回进行判断
     */
     @SerializedName("IsMatch")
     @Expose
@@ -87,16 +87,16 @@ public class VerifyFaceResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否为同一人的判断。 
-     * @return IsMatch 是否为同一人的判断。
+     * Get 是否为同一人判断，固定阈值分数为60分，若想更灵活地调整阈值可取Score参数返回进行判断 
+     * @return IsMatch 是否为同一人判断，固定阈值分数为60分，若想更灵活地调整阈值可取Score参数返回进行判断
      */
     public Boolean getIsMatch() {
         return this.IsMatch;
     }
 
     /**
-     * Set 是否为同一人的判断。
-     * @param IsMatch 是否为同一人的判断。
+     * Set 是否为同一人判断，固定阈值分数为60分，若想更灵活地调整阈值可取Score参数返回进行判断
+     * @param IsMatch 是否为同一人判断，固定阈值分数为60分，若想更灵活地调整阈值可取Score参数返回进行判断
      */
     public void setIsMatch(Boolean IsMatch) {
         this.IsMatch = IsMatch;

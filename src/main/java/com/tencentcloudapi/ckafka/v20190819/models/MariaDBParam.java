@@ -51,6 +51,48 @@ public class MariaDBParam extends AbstractModel{
     private String SnapshotMode;
 
     /**
+    * 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+    */
+    @SerializedName("KeyColumns")
+    @Expose
+    private String KeyColumns;
+
+    /**
+    * 当Table输入的是前缀时，该项值为true，否则为false
+    */
+    @SerializedName("IsTablePrefix")
+    @Expose
+    private Boolean IsTablePrefix;
+
+    /**
+    * 输出格式，DEFAULT、CANAL_1、CANAL_2
+    */
+    @SerializedName("OutputFormat")
+    @Expose
+    private String OutputFormat;
+
+    /**
+    * 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+    */
+    @SerializedName("IncludeContentChanges")
+    @Expose
+    private String IncludeContentChanges;
+
+    /**
+    * 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+    */
+    @SerializedName("IncludeQuery")
+    @Expose
+    private Boolean IncludeQuery;
+
+    /**
+    * 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+    */
+    @SerializedName("RecordWithSchema")
+    @Expose
+    private Boolean RecordWithSchema;
+
+    /**
      * Get MariaDB的数据库名称，"*"为全数据库 
      * @return Database MariaDB的数据库名称，"*"为全数据库
      */
@@ -114,6 +156,102 @@ public class MariaDBParam extends AbstractModel{
         this.SnapshotMode = SnapshotMode;
     }
 
+    /**
+     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键 
+     * @return KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public String getKeyColumns() {
+        return this.KeyColumns;
+    }
+
+    /**
+     * Set 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     * @param KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public void setKeyColumns(String KeyColumns) {
+        this.KeyColumns = KeyColumns;
+    }
+
+    /**
+     * Get 当Table输入的是前缀时，该项值为true，否则为false 
+     * @return IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+     */
+    public Boolean getIsTablePrefix() {
+        return this.IsTablePrefix;
+    }
+
+    /**
+     * Set 当Table输入的是前缀时，该项值为true，否则为false
+     * @param IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+     */
+    public void setIsTablePrefix(Boolean IsTablePrefix) {
+        this.IsTablePrefix = IsTablePrefix;
+    }
+
+    /**
+     * Get 输出格式，DEFAULT、CANAL_1、CANAL_2 
+     * @return OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+     */
+    public String getOutputFormat() {
+        return this.OutputFormat;
+    }
+
+    /**
+     * Set 输出格式，DEFAULT、CANAL_1、CANAL_2
+     * @param OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+     */
+    public void setOutputFormat(String OutputFormat) {
+        this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic 
+     * @return IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     */
+    public String getIncludeContentChanges() {
+        return this.IncludeContentChanges;
+    }
+
+    /**
+     * Set 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     * @param IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     */
+    public void setIncludeContentChanges(String IncludeContentChanges) {
+        this.IncludeContentChanges = IncludeContentChanges;
+    }
+
+    /**
+     * Get 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句 
+     * @return IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     */
+    public Boolean getIncludeQuery() {
+        return this.IncludeQuery;
+    }
+
+    /**
+     * Set 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     * @param IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     */
+    public void setIncludeQuery(Boolean IncludeQuery) {
+        this.IncludeQuery = IncludeQuery;
+    }
+
+    /**
+     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带 
+     * @return RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public Boolean getRecordWithSchema() {
+        return this.RecordWithSchema;
+    }
+
+    /**
+     * Set 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     * @param RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public void setRecordWithSchema(Boolean RecordWithSchema) {
+        this.RecordWithSchema = RecordWithSchema;
+    }
+
     public MariaDBParam() {
     }
 
@@ -134,6 +272,24 @@ public class MariaDBParam extends AbstractModel{
         if (source.SnapshotMode != null) {
             this.SnapshotMode = new String(source.SnapshotMode);
         }
+        if (source.KeyColumns != null) {
+            this.KeyColumns = new String(source.KeyColumns);
+        }
+        if (source.IsTablePrefix != null) {
+            this.IsTablePrefix = new Boolean(source.IsTablePrefix);
+        }
+        if (source.OutputFormat != null) {
+            this.OutputFormat = new String(source.OutputFormat);
+        }
+        if (source.IncludeContentChanges != null) {
+            this.IncludeContentChanges = new String(source.IncludeContentChanges);
+        }
+        if (source.IncludeQuery != null) {
+            this.IncludeQuery = new Boolean(source.IncludeQuery);
+        }
+        if (source.RecordWithSchema != null) {
+            this.RecordWithSchema = new Boolean(source.RecordWithSchema);
+        }
     }
 
 
@@ -145,6 +301,12 @@ public class MariaDBParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Table", this.Table);
         this.setParamSimple(map, prefix + "Resource", this.Resource);
         this.setParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
+        this.setParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
+        this.setParamSimple(map, prefix + "IsTablePrefix", this.IsTablePrefix);
+        this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "IncludeContentChanges", this.IncludeContentChanges);
+        this.setParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
+        this.setParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
 
     }
 }

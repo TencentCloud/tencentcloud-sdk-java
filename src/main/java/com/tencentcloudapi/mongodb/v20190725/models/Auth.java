@@ -23,49 +23,54 @@ import java.util.HashMap;
 public class Auth extends AbstractModel{
 
     /**
-    * *表示所有数据库,db.name表示特定的name数据库。
-    */
-    @SerializedName("NameSpace")
-    @Expose
-    private String NameSpace;
-
-    /**
-    * 用于控制权限,0无权限，1只读，2只写，3读写。
+    * 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
     */
     @SerializedName("Mask")
     @Expose
     private Long Mask;
 
     /**
-     * Get *表示所有数据库,db.name表示特定的name数据库。 
-     * @return NameSpace *表示所有数据库,db.name表示特定的name数据库。
-     */
-    public String getNameSpace() {
-        return this.NameSpace;
-    }
+    * 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+    */
+    @SerializedName("NameSpace")
+    @Expose
+    private String NameSpace;
 
     /**
-     * Set *表示所有数据库,db.name表示特定的name数据库。
-     * @param NameSpace *表示所有数据库,db.name表示特定的name数据库。
-     */
-    public void setNameSpace(String NameSpace) {
-        this.NameSpace = NameSpace;
-    }
-
-    /**
-     * Get 用于控制权限,0无权限，1只读，2只写，3读写。 
-     * @return Mask 用于控制权限,0无权限，1只读，2只写，3读写。
+     * Get 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul> 
+     * @return Mask 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
      */
     public Long getMask() {
         return this.Mask;
     }
 
     /**
-     * Set 用于控制权限,0无权限，1只读，2只写，3读写。
-     * @param Mask 用于控制权限,0无权限，1只读，2只写，3读写。
+     * Set 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * @param Mask 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
      */
     public void setMask(Long Mask) {
         this.Mask = Mask;
+    }
+
+    /**
+     * Get 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul> 
+     * @return NameSpace 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+     */
+    public String getNameSpace() {
+        return this.NameSpace;
+    }
+
+    /**
+     * Set 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+     * @param NameSpace 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+     */
+    public void setNameSpace(String NameSpace) {
+        this.NameSpace = NameSpace;
     }
 
     public Auth() {
@@ -76,11 +81,11 @@ public class Auth extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Auth(Auth source) {
-        if (source.NameSpace != null) {
-            this.NameSpace = new String(source.NameSpace);
-        }
         if (source.Mask != null) {
             this.Mask = new Long(source.Mask);
+        }
+        if (source.NameSpace != null) {
+            this.NameSpace = new String(source.NameSpace);
         }
     }
 
@@ -89,8 +94,8 @@ public class Auth extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NameSpace", this.NameSpace);
         this.setParamSimple(map, prefix + "Mask", this.Mask);
+        this.setParamSimple(map, prefix + "NameSpace", this.NameSpace);
 
     }
 }

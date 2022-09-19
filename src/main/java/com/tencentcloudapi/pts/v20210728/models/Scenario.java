@@ -211,6 +211,14 @@ public class Scenario extends AbstractModel{
     private DomainNameConfig DomainNameConfig;
 
     /**
+    * 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NotificationHooks")
+    @Expose
+    private NotificationHook [] NotificationHooks;
+
+    /**
      * Get 场景ID 
      * @return ScenarioId 场景ID
      */
@@ -674,6 +682,26 @@ public class Scenario extends AbstractModel{
         this.DomainNameConfig = DomainNameConfig;
     }
 
+    /**
+     * Get 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NotificationHooks 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NotificationHook [] getNotificationHooks() {
+        return this.NotificationHooks;
+    }
+
+    /**
+     * Set 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NotificationHooks 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotificationHooks(NotificationHook [] NotificationHooks) {
+        this.NotificationHooks = NotificationHooks;
+    }
+
     public Scenario() {
     }
 
@@ -775,6 +803,12 @@ public class Scenario extends AbstractModel{
         if (source.DomainNameConfig != null) {
             this.DomainNameConfig = new DomainNameConfig(source.DomainNameConfig);
         }
+        if (source.NotificationHooks != null) {
+            this.NotificationHooks = new NotificationHook[source.NotificationHooks.length];
+            for (int i = 0; i < source.NotificationHooks.length; i++) {
+                this.NotificationHooks[i] = new NotificationHook(source.NotificationHooks[i]);
+            }
+        }
     }
 
 
@@ -806,6 +840,7 @@ public class Scenario extends AbstractModel{
         this.setParamObj(map, prefix + "SLAPolicy.", this.SLAPolicy);
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+        this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
 
     }
 }

@@ -44,6 +44,14 @@ public class MetricData extends AbstractModel{
     private DatePoint [] DataSet;
 
     /**
+    * 查询范围内的请求总量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricCount")
+    @Expose
+    private Long MetricCount;
+
+    /**
      * Get 资源描述 
      * @return Resource 资源描述
      */
@@ -91,6 +99,26 @@ public class MetricData extends AbstractModel{
         this.DataSet = DataSet;
     }
 
+    /**
+     * Get 查询范围内的请求总量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricCount 查询范围内的请求总量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMetricCount() {
+        return this.MetricCount;
+    }
+
+    /**
+     * Set 查询范围内的请求总量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricCount 查询范围内的请求总量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricCount(Long MetricCount) {
+        this.MetricCount = MetricCount;
+    }
+
     public MetricData() {
     }
 
@@ -111,6 +139,9 @@ public class MetricData extends AbstractModel{
                 this.DataSet[i] = new DatePoint(source.DataSet[i]);
             }
         }
+        if (source.MetricCount != null) {
+            this.MetricCount = new Long(source.MetricCount);
+        }
     }
 
 
@@ -121,6 +152,7 @@ public class MetricData extends AbstractModel{
         this.setParamSimple(map, prefix + "Resource", this.Resource);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamArrayObj(map, prefix + "DataSet.", this.DataSet);
+        this.setParamSimple(map, prefix + "MetricCount", this.MetricCount);
 
     }
 }

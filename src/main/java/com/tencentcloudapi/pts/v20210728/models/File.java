@@ -129,6 +129,22 @@ public class File extends AbstractModel{
     private Long Status;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+    * 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 文件 ID 
      * @return FileId 文件 ID
      */
@@ -384,6 +400,46 @@ public class File extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedAt 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedAt 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
+     * Get 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectId 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectId 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public File() {
     }
 
@@ -449,6 +505,12 @@ public class File extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -470,6 +532,8 @@ public class File extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArrayObj(map, prefix + "ScenarioSet.", this.ScenarioSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

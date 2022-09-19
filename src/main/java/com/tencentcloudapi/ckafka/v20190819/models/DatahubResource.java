@@ -142,6 +142,14 @@ public class DatahubResource extends AbstractModel{
     private SQLServerParam SQLServerParam;
 
     /**
+    * Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CtsdbParam")
+    @Expose
+    private CtsdbParam CtsdbParam;
+
+    /**
      * Get 资源类型 
      * @return Type 资源类型
      */
@@ -437,6 +445,26 @@ public class DatahubResource extends AbstractModel{
         this.SQLServerParam = SQLServerParam;
     }
 
+    /**
+     * Get Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CtsdbParam Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CtsdbParam getCtsdbParam() {
+        return this.CtsdbParam;
+    }
+
+    /**
+     * Set Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CtsdbParam Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCtsdbParam(CtsdbParam CtsdbParam) {
+        this.CtsdbParam = CtsdbParam;
+    }
+
     public DatahubResource() {
     }
 
@@ -490,6 +518,9 @@ public class DatahubResource extends AbstractModel{
         if (source.SQLServerParam != null) {
             this.SQLServerParam = new SQLServerParam(source.SQLServerParam);
         }
+        if (source.CtsdbParam != null) {
+            this.CtsdbParam = new CtsdbParam(source.CtsdbParam);
+        }
     }
 
 
@@ -512,6 +543,7 @@ public class DatahubResource extends AbstractModel{
         this.setParamObj(map, prefix + "TopicParam.", this.TopicParam);
         this.setParamObj(map, prefix + "MariaDBParam.", this.MariaDBParam);
         this.setParamObj(map, prefix + "SQLServerParam.", this.SQLServerParam);
+        this.setParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
 
     }
 }

@@ -107,6 +107,13 @@ public class ModifyConnectResourceRequest extends AbstractModel{
     private SQLServerModifyConnectParam SQLServerConnectParam;
 
     /**
+    * Ctsdb配置，Type为CTSDB
+    */
+    @SerializedName("CtsdbConnectParam")
+    @Expose
+    private CtsdbModifyConnectParam CtsdbConnectParam;
+
+    /**
      * Get 连接源的Id 
      * @return ResourceId 连接源的Id
      */
@@ -298,6 +305,22 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         this.SQLServerConnectParam = SQLServerConnectParam;
     }
 
+    /**
+     * Get Ctsdb配置，Type为CTSDB 
+     * @return CtsdbConnectParam Ctsdb配置，Type为CTSDB
+     */
+    public CtsdbModifyConnectParam getCtsdbConnectParam() {
+        return this.CtsdbConnectParam;
+    }
+
+    /**
+     * Set Ctsdb配置，Type为CTSDB
+     * @param CtsdbConnectParam Ctsdb配置，Type为CTSDB
+     */
+    public void setCtsdbConnectParam(CtsdbModifyConnectParam CtsdbConnectParam) {
+        this.CtsdbConnectParam = CtsdbConnectParam;
+    }
+
     public ModifyConnectResourceRequest() {
     }
 
@@ -342,6 +365,9 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         if (source.SQLServerConnectParam != null) {
             this.SQLServerConnectParam = new SQLServerModifyConnectParam(source.SQLServerConnectParam);
         }
+        if (source.CtsdbConnectParam != null) {
+            this.CtsdbConnectParam = new CtsdbModifyConnectParam(source.CtsdbConnectParam);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PostgreSQLConnectParam.", this.PostgreSQLConnectParam);
         this.setParamObj(map, prefix + "MariaDBConnectParam.", this.MariaDBConnectParam);
         this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
+        this.setParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
 
     }
 }

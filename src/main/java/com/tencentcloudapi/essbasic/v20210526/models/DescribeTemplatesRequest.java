@@ -44,14 +44,14 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Long ContentType;
 
     /**
-    * 查询个数，默认20，最大100
+    * 查询个数，默认20，最大100；在查询列表的时候有效
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询偏移位置，默认0
+    * 查询偏移位置，默认0；在查询列表的时候有效
     */
     @SerializedName("Offset")
     @Expose
@@ -72,7 +72,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Boolean QueryAllComponents;
 
     /**
-    * 模糊搜索模版名称
+    * 模糊搜索模板名称
     */
     @SerializedName("TemplateName")
     @Expose
@@ -127,32 +127,32 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询个数，默认20，最大100 
-     * @return Limit 查询个数，默认20，最大100
+     * Get 查询个数，默认20，最大100；在查询列表的时候有效 
+     * @return Limit 查询个数，默认20，最大100；在查询列表的时候有效
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询个数，默认20，最大100
-     * @param Limit 查询个数，默认20，最大100
+     * Set 查询个数，默认20，最大100；在查询列表的时候有效
+     * @param Limit 查询个数，默认20，最大100；在查询列表的时候有效
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询偏移位置，默认0 
-     * @return Offset 查询偏移位置，默认0
+     * Get 查询偏移位置，默认0；在查询列表的时候有效 
+     * @return Offset 查询偏移位置，默认0；在查询列表的时候有效
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询偏移位置，默认0
-     * @param Offset 查询偏移位置，默认0
+     * Set 查询偏移位置，默认0；在查询列表的时候有效
+     * @param Offset 查询偏移位置，默认0；在查询列表的时候有效
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -191,16 +191,16 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模糊搜索模版名称 
-     * @return TemplateName 模糊搜索模版名称
+     * Get 模糊搜索模板名称 
+     * @return TemplateName 模糊搜索模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模糊搜索模版名称
-     * @param TemplateName 模糊搜索模版名称
+     * Set 模糊搜索模板名称
+     * @param TemplateName 模糊搜索模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

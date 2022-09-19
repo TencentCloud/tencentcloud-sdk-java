@@ -93,6 +93,27 @@ public class PostgreSQLParam extends AbstractModel{
     private Boolean DropInvalidMessage;
 
     /**
+    * 输入的table是否为正则表达式
+    */
+    @SerializedName("IsTableRegular")
+    @Expose
+    private Boolean IsTableRegular;
+
+    /**
+    * 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+    */
+    @SerializedName("KeyColumns")
+    @Expose
+    private String KeyColumns;
+
+    /**
+    * 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+    */
+    @SerializedName("RecordWithSchema")
+    @Expose
+    private Boolean RecordWithSchema;
+
+    /**
      * Get PostgreSQL的数据库名称 
      * @return Database PostgreSQL的数据库名称
      */
@@ -252,6 +273,54 @@ public class PostgreSQLParam extends AbstractModel{
         this.DropInvalidMessage = DropInvalidMessage;
     }
 
+    /**
+     * Get 输入的table是否为正则表达式 
+     * @return IsTableRegular 输入的table是否为正则表达式
+     */
+    public Boolean getIsTableRegular() {
+        return this.IsTableRegular;
+    }
+
+    /**
+     * Set 输入的table是否为正则表达式
+     * @param IsTableRegular 输入的table是否为正则表达式
+     */
+    public void setIsTableRegular(Boolean IsTableRegular) {
+        this.IsTableRegular = IsTableRegular;
+    }
+
+    /**
+     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键 
+     * @return KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public String getKeyColumns() {
+        return this.KeyColumns;
+    }
+
+    /**
+     * Set 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     * @param KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public void setKeyColumns(String KeyColumns) {
+        this.KeyColumns = KeyColumns;
+    }
+
+    /**
+     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带 
+     * @return RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public Boolean getRecordWithSchema() {
+        return this.RecordWithSchema;
+    }
+
+    /**
+     * Set 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     * @param RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public void setRecordWithSchema(Boolean RecordWithSchema) {
+        this.RecordWithSchema = RecordWithSchema;
+    }
+
     public PostgreSQLParam() {
     }
 
@@ -293,6 +362,15 @@ public class PostgreSQLParam extends AbstractModel{
         if (source.DropInvalidMessage != null) {
             this.DropInvalidMessage = new Boolean(source.DropInvalidMessage);
         }
+        if (source.IsTableRegular != null) {
+            this.IsTableRegular = new Boolean(source.IsTableRegular);
+        }
+        if (source.KeyColumns != null) {
+            this.KeyColumns = new String(source.KeyColumns);
+        }
+        if (source.RecordWithSchema != null) {
+            this.RecordWithSchema = new Boolean(source.RecordWithSchema);
+        }
     }
 
 
@@ -310,6 +388,9 @@ public class PostgreSQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "DataTargetPrimaryKeyField", this.DataTargetPrimaryKeyField);
         this.setParamArrayObj(map, prefix + "DataTargetRecordMapping.", this.DataTargetRecordMapping);
         this.setParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
+        this.setParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
+        this.setParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
+        this.setParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
 
     }
 }

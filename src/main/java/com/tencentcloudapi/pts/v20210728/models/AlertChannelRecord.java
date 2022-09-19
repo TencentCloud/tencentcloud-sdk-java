@@ -71,6 +71,30 @@ public class AlertChannelRecord extends AbstractModel{
     private String UpdatedAt;
 
     /**
+    * App ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
      * Get Notice ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NoticeId Notice ID
@@ -190,6 +214,66 @@ public class AlertChannelRecord extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get App ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 主账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get 子账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAccountUin 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAccountUin 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
     public AlertChannelRecord() {
     }
 
@@ -216,6 +300,15 @@ public class AlertChannelRecord extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
     }
 
 
@@ -229,6 +322,9 @@ public class AlertChannelRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
 
     }
 }

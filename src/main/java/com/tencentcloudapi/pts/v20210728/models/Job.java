@@ -273,6 +273,62 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private String CronId;
 
     /**
+    * 场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainNameConfig")
+    @Expose
+    private DomainNameConfig DomainNameConfig;
+
+    /**
+    * false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Debug")
+    @Expose
+    private Boolean Debug;
+
+    /**
+    * 中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AbortReason")
+    @Expose
+    private Long AbortReason;
+
+    /**
+    * 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+    * 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NotificationHooks")
+    @Expose
+    private NotificationHook [] NotificationHooks;
+
+    /**
      * Get 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 任务的JobID
@@ -900,6 +956,146 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.CronId = CronId;
     }
 
+    /**
+     * Get 场景类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainNameConfig 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DomainNameConfig getDomainNameConfig() {
+        return this.DomainNameConfig;
+    }
+
+    /**
+     * Set 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainNameConfig 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainNameConfig(DomainNameConfig DomainNameConfig) {
+        this.DomainNameConfig = DomainNameConfig;
+    }
+
+    /**
+     * Get false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Debug false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDebug() {
+        return this.Debug;
+    }
+
+    /**
+     * Set false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Debug false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDebug(Boolean Debug) {
+        this.Debug = Debug;
+    }
+
+    /**
+     * Get 中断原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AbortReason 中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAbortReason() {
+        return this.AbortReason;
+    }
+
+    /**
+     * Set 中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AbortReason 中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbortReason(Long AbortReason) {
+        this.AbortReason = AbortReason;
+    }
+
+    /**
+     * Get 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedAt 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedAt 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
+     * Get 项目ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NotificationHooks 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NotificationHook [] getNotificationHooks() {
+        return this.NotificationHooks;
+    }
+
+    /**
+     * Set 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NotificationHooks 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotificationHooks(NotificationHook [] NotificationHooks) {
+        this.NotificationHooks = NotificationHooks;
+    }
+
     public Job() {
     }
 
@@ -1028,6 +1224,30 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         if (source.CronId != null) {
             this.CronId = new String(source.CronId);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.DomainNameConfig != null) {
+            this.DomainNameConfig = new DomainNameConfig(source.DomainNameConfig);
+        }
+        if (source.Debug != null) {
+            this.Debug = new Boolean(source.Debug);
+        }
+        if (source.AbortReason != null) {
+            this.AbortReason = new Long(source.AbortReason);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.NotificationHooks != null) {
+            this.NotificationHooks = new NotificationHook[source.NotificationHooks.length];
+            for (int i = 0; i < source.NotificationHooks.length; i++) {
+                this.NotificationHooks[i] = new NotificationHook(source.NotificationHooks[i]);
+            }
+        }
     }
 
 
@@ -1066,6 +1286,13 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.setParamArrayObj(map, prefix + "RequestFiles.", this.RequestFiles);
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamSimple(map, prefix + "CronId", this.CronId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+        this.setParamSimple(map, prefix + "Debug", this.Debug);
+        this.setParamSimple(map, prefix + "AbortReason", this.AbortReason);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
 
     }
 }

@@ -79,6 +79,62 @@ public class AlertRecord extends AbstractModel{
     private String JobId;
 
     /**
+    * App ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScenarioName")
+    @Expose
+    private String ScenarioName;
+
+    /**
+    * 告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Target")
+    @Expose
+    private String Target;
+
+    /**
+    * 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobSLAId")
+    @Expose
+    private String JobSLAId;
+
+    /**
+    * 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobSLADescription")
+    @Expose
+    private String JobSLADescription;
+
+    /**
      * Get 告警历史记录项 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlertRecordId 告警历史记录项 ID
@@ -218,6 +274,146 @@ public class AlertRecord extends AbstractModel{
         this.JobId = JobId;
     }
 
+    /**
+     * Get App ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 主账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get 子账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAccountUin 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAccountUin 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get 场景名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScenarioName 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScenarioName() {
+        return this.ScenarioName;
+    }
+
+    /**
+     * Set 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScenarioName 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScenarioName(String ScenarioName) {
+        this.ScenarioName = ScenarioName;
+    }
+
+    /**
+     * Get 告警对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Target 告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTarget() {
+        return this.Target;
+    }
+
+    /**
+     * Set 告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Target 告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTarget(String Target) {
+        this.Target = Target;
+    }
+
+    /**
+     * Get 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobSLAId 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobSLAId() {
+        return this.JobSLAId;
+    }
+
+    /**
+     * Set 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobSLAId 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobSLAId(String JobSLAId) {
+        this.JobSLAId = JobSLAId;
+    }
+
+    /**
+     * Get 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobSLADescription 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobSLADescription() {
+        return this.JobSLADescription;
+    }
+
+    /**
+     * Set 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobSLADescription 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobSLADescription(String JobSLADescription) {
+        this.JobSLADescription = JobSLADescription;
+    }
+
     public AlertRecord() {
     }
 
@@ -247,6 +443,27 @@ public class AlertRecord extends AbstractModel{
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.ScenarioName != null) {
+            this.ScenarioName = new String(source.ScenarioName);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.JobSLAId != null) {
+            this.JobSLAId = new String(source.JobSLAId);
+        }
+        if (source.JobSLADescription != null) {
+            this.JobSLADescription = new String(source.JobSLADescription);
+        }
     }
 
 
@@ -261,6 +478,13 @@ public class AlertRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "ScenarioName", this.ScenarioName);
+        this.setParamSimple(map, prefix + "Target", this.Target);
+        this.setParamSimple(map, prefix + "JobSLAId", this.JobSLAId);
+        this.setParamSimple(map, prefix + "JobSLADescription", this.JobSLADescription);
 
     }
 }
