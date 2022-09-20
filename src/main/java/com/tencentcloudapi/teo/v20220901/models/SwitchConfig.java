@@ -13,48 +13,58 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcRuleOverviewRequest extends AbstractModel{
+public class SwitchConfig extends AbstractModel{
 
     /**
-    * EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
+    * Web类型的安全总开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>不影响DDoS与Bot的开关。
     */
-    @SerializedName("EdgeId")
+    @SerializedName("WebSwitch")
     @Expose
-    private String EdgeId;
+    private String WebSwitch;
 
     /**
-     * Get EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则 
-     * @return EdgeId EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
+     * Get Web类型的安全总开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>不影响DDoS与Bot的开关。 
+     * @return WebSwitch Web类型的安全总开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>不影响DDoS与Bot的开关。
      */
-    public String getEdgeId() {
-        return this.EdgeId;
+    public String getWebSwitch() {
+        return this.WebSwitch;
     }
 
     /**
-     * Set EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
-     * @param EdgeId EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
+     * Set Web类型的安全总开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>不影响DDoS与Bot的开关。
+     * @param WebSwitch Web类型的安全总开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>不影响DDoS与Bot的开关。
      */
-    public void setEdgeId(String EdgeId) {
-        this.EdgeId = EdgeId;
+    public void setWebSwitch(String WebSwitch) {
+        this.WebSwitch = WebSwitch;
     }
 
-    public DescribeVpcRuleOverviewRequest() {
+    public SwitchConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVpcRuleOverviewRequest(DescribeVpcRuleOverviewRequest source) {
-        if (source.EdgeId != null) {
-            this.EdgeId = new String(source.EdgeId);
+    public SwitchConfig(SwitchConfig source) {
+        if (source.WebSwitch != null) {
+            this.WebSwitch = new String(source.WebSwitch);
         }
     }
 
@@ -63,7 +73,7 @@ public class DescribeVpcRuleOverviewRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EdgeId", this.EdgeId);
+        this.setParamSimple(map, prefix + "WebSwitch", this.WebSwitch);
 
     }
 }

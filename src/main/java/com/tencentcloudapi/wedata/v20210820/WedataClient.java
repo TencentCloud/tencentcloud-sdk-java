@@ -104,6 +104,27 @@ public class WedataClient extends AbstractClient{
 
     /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+创建数据源
+     * @param req CreateDataSourceRequest
+     * @return CreateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataSourceResponse CreateDataSource(CreateDataSourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDataSourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDataSourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDataSource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建文件夹
      * @param req CreateFolderRequest
      * @return CreateFolderResponse
@@ -167,6 +188,27 @@ public class WedataClient extends AbstractClient{
 
     /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+删除数据源
+     * @param req DeleteDataSourcesRequest
+     * @return DeleteDataSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataSourcesResponse DeleteDataSources(DeleteDataSourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDataSourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDataSourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDataSources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除文件夹
      * @param req DeleteFolderRequest
      * @return DeleteFolderResponse
@@ -200,6 +242,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteWorkflowNewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteWorkflowNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+数据源详情
+     * @param req DescribeDatasourceRequest
+     * @return DescribeDatasourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatasourceResponse DescribeDatasource(DescribeDatasourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatasourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatasourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatasource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -536,6 +599,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<MakeUpWorkflowNewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "MakeUpWorkflowNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+修改数据源
+     * @param req ModifyDataSourceRequest
+     * @return ModifyDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataSourceResponse ModifyDataSource(ModifyDataSourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataSourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataSourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataSource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

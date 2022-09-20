@@ -131,6 +131,19 @@ public class DetectDetail extends AbstractModel{
     private String CompareLibType;
 
     /**
+    * 枚举活体检测类型：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessMode")
+    @Expose
+    private Long LivenessMode;
+
+    /**
      * Get 请求时间戳。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReqTime 请求时间戳。
@@ -406,6 +419,46 @@ public class DetectDetail extends AbstractModel{
         this.CompareLibType = CompareLibType;
     }
 
+    /**
+     * Get 枚举活体检测类型：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessMode 枚举活体检测类型：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLivenessMode() {
+        return this.LivenessMode;
+    }
+
+    /**
+     * Set 枚举活体检测类型：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessMode 枚举活体检测类型：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessMode(Long LivenessMode) {
+        this.LivenessMode = LivenessMode;
+    }
+
     public DetectDetail() {
     }
 
@@ -453,6 +506,9 @@ public class DetectDetail extends AbstractModel{
         if (source.CompareLibType != null) {
             this.CompareLibType = new String(source.CompareLibType);
         }
+        if (source.LivenessMode != null) {
+            this.LivenessMode = new Long(source.LivenessMode);
+        }
     }
 
 
@@ -473,6 +529,7 @@ public class DetectDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Comparestatus", this.Comparestatus);
         this.setParamSimple(map, prefix + "Comparemsg", this.Comparemsg);
         this.setParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
+        this.setParamSimple(map, prefix + "LivenessMode", this.LivenessMode);
 
     }
 }

@@ -30,7 +30,7 @@ public class StorageParams extends AbstractModel{
     private CloudStorage CloudStorage;
 
     /**
-    * 第三方云点播的账号信息。
+    * 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
     */
     @SerializedName("CloudVod")
     @Expose
@@ -53,16 +53,16 @@ public class StorageParams extends AbstractModel{
     }
 
     /**
-     * Get 第三方云点播的账号信息。 
-     * @return CloudVod 第三方云点播的账号信息。
+     * Get 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。 
+     * @return CloudVod 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
      */
     public CloudVod getCloudVod() {
         return this.CloudVod;
     }
 
     /**
-     * Set 第三方云点播的账号信息。
-     * @param CloudVod 第三方云点播的账号信息。
+     * Set 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
+     * @param CloudVod 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
      */
     public void setCloudVod(CloudVod CloudVod) {
         this.CloudVod = CloudVod;

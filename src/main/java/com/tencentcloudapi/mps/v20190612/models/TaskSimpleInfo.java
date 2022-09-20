@@ -61,6 +61,13 @@ public class TaskSimpleInfo extends AbstractModel{
     private String FinishTime;
 
     /**
+    * 子任务类型。
+    */
+    @SerializedName("SubTaskTypes")
+    @Expose
+    private String [] SubTaskTypes;
+
+    /**
      * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
@@ -152,6 +159,22 @@ public class TaskSimpleInfo extends AbstractModel{
         this.FinishTime = FinishTime;
     }
 
+    /**
+     * Get 子任务类型。 
+     * @return SubTaskTypes 子任务类型。
+     */
+    public String [] getSubTaskTypes() {
+        return this.SubTaskTypes;
+    }
+
+    /**
+     * Set 子任务类型。
+     * @param SubTaskTypes 子任务类型。
+     */
+    public void setSubTaskTypes(String [] SubTaskTypes) {
+        this.SubTaskTypes = SubTaskTypes;
+    }
+
     public TaskSimpleInfo() {
     }
 
@@ -175,6 +198,12 @@ public class TaskSimpleInfo extends AbstractModel{
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.SubTaskTypes != null) {
+            this.SubTaskTypes = new String[source.SubTaskTypes.length];
+            for (int i = 0; i < source.SubTaskTypes.length; i++) {
+                this.SubTaskTypes[i] = new String(source.SubTaskTypes[i]);
+            }
+        }
     }
 
 
@@ -187,6 +216,7 @@ public class TaskSimpleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamArraySimple(map, prefix + "SubTaskTypes.", this.SubTaskTypes);
 
     }
 }

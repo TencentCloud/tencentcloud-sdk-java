@@ -198,6 +198,9 @@ public enum CpdpErrorCode {
     // 聚鑫内部系统错误。
      FAILEDOPERATION_MIDASINTERNALERROR("FailedOperation.MidasInternalError"),
      
+    // 聚鑫请求无效。
+     FAILEDOPERATION_MIDASINVALIDREQUEST("FailedOperation.MidasInvalidRequest"),
+     
     // 聚鑫需要重试。
      FAILEDOPERATION_MIDASNEEDRETRY("FailedOperation.MidasNeedRetry"),
      
@@ -209,6 +212,9 @@ public enum CpdpErrorCode {
      
     // 通用风控系统错误，被风控拦截。
      FAILEDOPERATION_MIDASRISK("FailedOperation.MidasRisk"),
+     
+    // 聚鑫支付状态不匹配。
+     FAILEDOPERATION_MIDASSTATUSNOTMATCH("FailedOperation.MidasStatusNotMatch"),
      
     // 聚鑫不支持该操作。
      FAILEDOPERATION_MIDASUNSUPPORTEDACTION("FailedOperation.MidasUnsupportedAction"),
@@ -518,6 +524,9 @@ public enum CpdpErrorCode {
      
     // 平台信息不存在。
      RESOURCENOTFOUND_PLATFORMINFONOTFOUND("ResourceNotFound.PlatformInfoNotFound"),
+     
+    // 聚鑫可用余额不足。
+     RESOURCEUNAVAILABLE_MIDASBALANCE("ResourceUnavailable.MidasBalance"),
      
     // 聚鑫单日限额。
      RESOURCEUNAVAILABLE_MIDASDAY("ResourceUnavailable.MidasDay"),

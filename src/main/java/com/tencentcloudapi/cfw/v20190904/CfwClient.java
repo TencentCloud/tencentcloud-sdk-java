@@ -805,26 +805,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *vpc规则列表概况
-     * @param req DescribeVpcRuleOverviewRequest
-     * @return DescribeVpcRuleOverviewResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVpcRuleOverviewResponse DescribeVpcRuleOverview(DescribeVpcRuleOverviewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcRuleOverviewResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcRuleOverviewResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcRuleOverview");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *防火墙垂直扩容
      * @param req ExpandCfwVerticalRequest
      * @return ExpandCfwVerticalResponse

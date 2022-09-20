@@ -13,38 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcRuleOverviewResponse extends AbstractModel{
+public class DescribeTimingL4DataResponse extends AbstractModel{
 
     /**
-    * 阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 查询结果的总条数。
     */
-    @SerializedName("StrategyNum")
+    @SerializedName("TotalCount")
     @Expose
-    private Long StrategyNum;
+    private Long TotalCount;
 
     /**
-    * 启用规则数量
+    * 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("StartRuleNum")
+    @SerializedName("Data")
     @Expose
-    private Long StartRuleNum;
-
-    /**
-    * 规则总量
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private TimingDataRecord [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,63 +45,39 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 阻断策略规则数量
+     * Get 查询结果的总条数。 
+     * @return TotalCount 查询结果的总条数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 查询结果的总条数。
+     * @param TotalCount 查询结果的总条数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StrategyNum 阻断策略规则数量
+     * @return Data 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStrategyNum() {
-        return this.StrategyNum;
+    public TimingDataRecord [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 阻断策略规则数量
+     * Set 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StrategyNum 阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStrategyNum(Long StrategyNum) {
-        this.StrategyNum = StrategyNum;
-    }
-
-    /**
-     * Get 启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartRuleNum 启用规则数量
+     * @param Data 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStartRuleNum() {
-        return this.StartRuleNum;
-    }
-
-    /**
-     * Set 启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartRuleNum 启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStartRuleNum(Long StartRuleNum) {
-        this.StartRuleNum = StartRuleNum;
-    }
-
-    /**
-     * Get 规则总量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 规则总量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set 规则总量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 规则总量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setData(TimingDataRecord [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -129,22 +96,22 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeVpcRuleOverviewResponse() {
+    public DescribeTimingL4DataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVpcRuleOverviewResponse(DescribeVpcRuleOverviewResponse source) {
-        if (source.StrategyNum != null) {
-            this.StrategyNum = new Long(source.StrategyNum);
+    public DescribeTimingL4DataResponse(DescribeTimingL4DataResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.StartRuleNum != null) {
-            this.StartRuleNum = new Long(source.StartRuleNum);
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+        if (source.Data != null) {
+            this.Data = new TimingDataRecord[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new TimingDataRecord(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -156,9 +123,8 @@ public class DescribeVpcRuleOverviewResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StrategyNum", this.StrategyNum);
-        this.setParamSimple(map, prefix + "StartRuleNum", this.StartRuleNum);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

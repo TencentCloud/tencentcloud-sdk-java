@@ -100,7 +100,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+    * 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -290,16 +290,16 @@ public class DescribeDBPriceRequest extends AbstractModel{
     }
 
     /**
-     * Get 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。 
-     * @return InstanceId 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+     * Get 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。 
+     * @return InstanceId 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
-     * @param InstanceId 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+     * Set 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+     * @param InstanceId 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
