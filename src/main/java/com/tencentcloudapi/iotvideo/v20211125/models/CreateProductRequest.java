@@ -45,17 +45,11 @@ public class CreateProductRequest extends AbstractModel{
 
     /**
     * 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
-
-    /**
-    * 设备操作系统，通用设备填default
-    */
-    @SerializedName("ChipOs")
-    @Expose
-    private String ChipOs;
 
     /**
     * 芯片厂商id，通用设备填default
@@ -79,11 +73,26 @@ public class CreateProductRequest extends AbstractModel{
     private String ProductDescription;
 
     /**
+    * 设备操作系统，通用设备填default
+    */
+    @SerializedName("ChipOs")
+    @Expose
+    private String ChipOs;
+
+    /**
     * 认证方式 只支持取值为2 psk认证
     */
     @SerializedName("EncryptionType")
     @Expose
     private Long EncryptionType;
+
+    /**
+    * 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
+    */
+    @SerializedName("CategoryId")
+    @Expose
+    private Long CategoryId;
 
     /**
     * 连接类型，wifi表示WIFI连接，cellular表示4G连接
@@ -141,8 +150,10 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频 
+     * Get 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组) 
      * @return Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
      */
     public String [] getFeatures() {
         return this.Features;
@@ -150,26 +161,12 @@ public class CreateProductRequest extends AbstractModel{
 
     /**
      * Set 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
      * @param Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
-    }
-
-    /**
-     * Get 设备操作系统，通用设备填default 
-     * @return ChipOs 设备操作系统，通用设备填default
-     */
-    public String getChipOs() {
-        return this.ChipOs;
-    }
-
-    /**
-     * Set 设备操作系统，通用设备填default
-     * @param ChipOs 设备操作系统，通用设备填default
-     */
-    public void setChipOs(String ChipOs) {
-        this.ChipOs = ChipOs;
     }
 
     /**
@@ -221,6 +218,22 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备操作系统，通用设备填default 
+     * @return ChipOs 设备操作系统，通用设备填default
+     */
+    public String getChipOs() {
+        return this.ChipOs;
+    }
+
+    /**
+     * Set 设备操作系统，通用设备填default
+     * @param ChipOs 设备操作系统，通用设备填default
+     */
+    public void setChipOs(String ChipOs) {
+        this.ChipOs = ChipOs;
+    }
+
+    /**
      * Get 认证方式 只支持取值为2 psk认证 
      * @return EncryptionType 认证方式 只支持取值为2 psk认证
      */
@@ -234,6 +247,26 @@ public class CreateProductRequest extends AbstractModel{
      */
     public void setEncryptionType(Long EncryptionType) {
         this.EncryptionType = EncryptionType;
+    }
+
+    /**
+     * Get 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组) 
+     * @return CategoryId 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
+     */
+    public Long getCategoryId() {
+        return this.CategoryId;
+    }
+
+    /**
+     * Set 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
+     * @param CategoryId 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
+     */
+    public void setCategoryId(Long CategoryId) {
+        this.CategoryId = CategoryId;
     }
 
     /**
@@ -275,9 +308,6 @@ public class CreateProductRequest extends AbstractModel{
                 this.Features[i] = new String(source.Features[i]);
             }
         }
-        if (source.ChipOs != null) {
-            this.ChipOs = new String(source.ChipOs);
-        }
         if (source.ChipManufactureId != null) {
             this.ChipManufactureId = new String(source.ChipManufactureId);
         }
@@ -287,8 +317,14 @@ public class CreateProductRequest extends AbstractModel{
         if (source.ProductDescription != null) {
             this.ProductDescription = new String(source.ProductDescription);
         }
+        if (source.ChipOs != null) {
+            this.ChipOs = new String(source.ChipOs);
+        }
         if (source.EncryptionType != null) {
             this.EncryptionType = new Long(source.EncryptionType);
+        }
+        if (source.CategoryId != null) {
+            this.CategoryId = new Long(source.CategoryId);
         }
         if (source.NetType != null) {
             this.NetType = new String(source.NetType);
@@ -304,11 +340,12 @@ public class CreateProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "ProductVaildYears", this.ProductVaildYears);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
-        this.setParamSimple(map, prefix + "ChipOs", this.ChipOs);
         this.setParamSimple(map, prefix + "ChipManufactureId", this.ChipManufactureId);
         this.setParamSimple(map, prefix + "ChipId", this.ChipId);
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+        this.setParamSimple(map, prefix + "ChipOs", this.ChipOs);
         this.setParamSimple(map, prefix + "EncryptionType", this.EncryptionType);
+        this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
 
     }

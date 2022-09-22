@@ -478,4 +478,24 @@ public class EssClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *验证合同文件
+     * @param req VerifyPdfRequest
+     * @return VerifyPdfResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyPdfResponse VerifyPdf(VerifyPdfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyPdfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyPdfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyPdf");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

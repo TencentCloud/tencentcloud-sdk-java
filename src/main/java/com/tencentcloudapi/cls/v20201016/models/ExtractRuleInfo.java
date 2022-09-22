@@ -119,6 +119,35 @@ public class ExtractRuleInfo extends AbstractModel{
     private Long JsonStandard;
 
     /**
+    * syslog传输协议，取值为tcp或者udp。
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
+
+    /**
+    * rfc3164：指定系统日志采集使用RFC3164协议解析日志。
+rfc5424：指定系统日志采集使用RFC5424协议解析日志。
+auto：自动匹配rfc3164或者rfc5424其中一种协议
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParseProtocol")
+    @Expose
+    private String ParseProtocol;
+
+    /**
      * Get 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeKey 时间字段的key名字，time_key和time_format必须成对出现
@@ -358,6 +387,86 @@ public class ExtractRuleInfo extends AbstractModel{
         this.JsonStandard = JsonStandard;
     }
 
+    /**
+     * Get syslog传输协议，取值为tcp或者udp。
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol syslog传输协议，取值为tcp或者udp。
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set syslog传输协议，取值为tcp或者udp。
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol syslog传输协议，取值为tcp或者udp。
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    /**
+     * Get rfc3164：指定系统日志采集使用RFC3164协议解析日志。
+rfc5424：指定系统日志采集使用RFC5424协议解析日志。
+auto：自动匹配rfc3164或者rfc5424其中一种协议
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
+rfc5424：指定系统日志采集使用RFC5424协议解析日志。
+auto：自动匹配rfc3164或者rfc5424其中一种协议
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParseProtocol() {
+        return this.ParseProtocol;
+    }
+
+    /**
+     * Set rfc3164：指定系统日志采集使用RFC3164协议解析日志。
+rfc5424：指定系统日志采集使用RFC5424协议解析日志。
+auto：自动匹配rfc3164或者rfc5424其中一种协议
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
+rfc5424：指定系统日志采集使用RFC5424协议解析日志。
+auto：自动匹配rfc3164或者rfc5424其中一种协议
+该接口适用于：创建采集规则配置、修改采集规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParseProtocol(String ParseProtocol) {
+        this.ParseProtocol = ParseProtocol;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -408,6 +517,15 @@ public class ExtractRuleInfo extends AbstractModel{
         if (source.JsonStandard != null) {
             this.JsonStandard = new Long(source.JsonStandard);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.ParseProtocol != null) {
+            this.ParseProtocol = new String(source.ParseProtocol);
+        }
     }
 
 
@@ -427,6 +545,9 @@ public class ExtractRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Backtracking", this.Backtracking);
         this.setParamSimple(map, prefix + "IsGBK", this.IsGBK);
         this.setParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
 
     }
 }

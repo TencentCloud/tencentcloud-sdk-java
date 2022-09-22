@@ -131,6 +131,14 @@ public class DescribeDatahubTaskRes extends AbstractModel{
     private String ErrorMessage;
 
     /**
+    * 任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -394,6 +402,26 @@ public class DescribeDatahubTaskRes extends AbstractModel{
         this.ErrorMessage = ErrorMessage;
     }
 
+    /**
+     * Get 任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeDatahubTaskRes() {
     }
 
@@ -447,6 +475,12 @@ public class DescribeDatahubTaskRes extends AbstractModel{
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -468,6 +502,7 @@ public class DescribeDatahubTaskRes extends AbstractModel{
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamObj(map, prefix + "TransformsParam.", this.TransformsParam);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

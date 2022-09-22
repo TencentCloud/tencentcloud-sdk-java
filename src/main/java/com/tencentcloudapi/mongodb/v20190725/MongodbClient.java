@@ -140,6 +140,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAccountUsers)用于获取当前实例的全部账号列表。
+     * @param req DescribeAccountUsersRequest
+     * @return DescribeAccountUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountUsersResponse DescribeAccountUsers(DescribeAccountUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccountUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询异步任务状态接口
      * @param req DescribeAsyncRequestInfoRequest
      * @return DescribeAsyncRequestInfoResponse
@@ -660,7 +680,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *包年包月实例隔离接口
+     *本接口（TerminateDBInstances）可将包年包月实例退还隔离。
      * @param req TerminateDBInstancesRequest
      * @return TerminateDBInstancesResponse
      * @throws TencentCloudSDKException

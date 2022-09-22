@@ -407,7 +407,7 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *获取DescribeDataFetchProject信息
+     *获取DescribeDataFetchProject信息。已下线，请使用DescribeDataFetchUrl
      * @param req DescribeDataFetchProjectRequest
      * @return DescribeDataFetchProjectResponse
      * @throws TencentCloudSDKException

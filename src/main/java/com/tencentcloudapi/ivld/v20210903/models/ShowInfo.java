@@ -143,6 +143,22 @@ public class ShowInfo extends AbstractModel{
     private String [] SummaryTagSet;
 
     /**
+    * 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnknownPersonSet")
+    @Expose
+    private UnknownPerson [] UnknownPersonSet;
+
+    /**
+    * 树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiLevelPersonInfoSet")
+    @Expose
+    private MultiLevelPersonInfo [] MultiLevelPersonInfoSet;
+
+    /**
      * Get 节目日期(只在新闻有效)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Date 节目日期(只在新闻有效)
@@ -442,6 +458,46 @@ public class ShowInfo extends AbstractModel{
         this.SummaryTagSet = SummaryTagSet;
     }
 
+    /**
+     * Get 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnknownPersonSet 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UnknownPerson [] getUnknownPersonSet() {
+        return this.UnknownPersonSet;
+    }
+
+    /**
+     * Set 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnknownPersonSet 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnknownPersonSet(UnknownPerson [] UnknownPersonSet) {
+        this.UnknownPersonSet = UnknownPersonSet;
+    }
+
+    /**
+     * Get 树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MultiLevelPersonInfoSet 树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MultiLevelPersonInfo [] getMultiLevelPersonInfoSet() {
+        return this.MultiLevelPersonInfoSet;
+    }
+
+    /**
+     * Set 树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiLevelPersonInfoSet 树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiLevelPersonInfoSet(MultiLevelPersonInfo [] MultiLevelPersonInfoSet) {
+        this.MultiLevelPersonInfoSet = MultiLevelPersonInfoSet;
+    }
+
     public ShowInfo() {
     }
 
@@ -516,6 +572,18 @@ public class ShowInfo extends AbstractModel{
                 this.SummaryTagSet[i] = new String(source.SummaryTagSet[i]);
             }
         }
+        if (source.UnknownPersonSet != null) {
+            this.UnknownPersonSet = new UnknownPerson[source.UnknownPersonSet.length];
+            for (int i = 0; i < source.UnknownPersonSet.length; i++) {
+                this.UnknownPersonSet[i] = new UnknownPerson(source.UnknownPersonSet[i]);
+            }
+        }
+        if (source.MultiLevelPersonInfoSet != null) {
+            this.MultiLevelPersonInfoSet = new MultiLevelPersonInfo[source.MultiLevelPersonInfoSet.length];
+            for (int i = 0; i < source.MultiLevelPersonInfoSet.length; i++) {
+                this.MultiLevelPersonInfoSet[i] = new MultiLevelPersonInfo(source.MultiLevelPersonInfoSet[i]);
+            }
+        }
     }
 
 
@@ -538,6 +606,8 @@ public class ShowInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);
         this.setParamArraySimple(map, prefix + "MediaClassifierSet.", this.MediaClassifierSet);
         this.setParamArraySimple(map, prefix + "SummaryTagSet.", this.SummaryTagSet);
+        this.setParamArrayObj(map, prefix + "UnknownPersonSet.", this.UnknownPersonSet);
+        this.setParamArrayObj(map, prefix + "MultiLevelPersonInfoSet.", this.MultiLevelPersonInfoSet);
 
     }
 }

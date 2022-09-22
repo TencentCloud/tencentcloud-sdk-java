@@ -840,6 +840,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *文本图像增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度。
+     * @param req ImageEnhancementRequest
+     * @return ImageEnhancementResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageEnhancementResponse ImageEnhancement(ImageEnhancementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImageEnhancementResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImageEnhancementResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImageEnhancement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
      * @param req InstitutionOCRRequest
      * @return InstitutionOCRResponse

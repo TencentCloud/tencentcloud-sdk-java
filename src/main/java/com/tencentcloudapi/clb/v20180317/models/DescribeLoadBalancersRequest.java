@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancersRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例ID。实例ID数量上限为20个。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -167,16 +167,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Filter [] Filters;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerIds 负载均衡实例ID。
+     * Get 负载均衡实例ID。实例ID数量上限为20个。 
+     * @return LoadBalancerIds 负载均衡实例ID。实例ID数量上限为20个。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerIds 负载均衡实例ID。
+     * Set 负载均衡实例ID。实例ID数量上限为20个。
+     * @param LoadBalancerIds 负载均衡实例ID。实例ID数量上限为20个。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

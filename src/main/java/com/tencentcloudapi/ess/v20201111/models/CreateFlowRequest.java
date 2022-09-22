@@ -60,9 +60,9 @@ public class CreateFlowRequest extends AbstractModel{
     /**
     * 暂未开放
     */
-    @SerializedName("CallbackUrl")
+    @SerializedName("RelatedFlowId")
     @Expose
-    private String CallbackUrl;
+    private String RelatedFlowId;
 
     /**
     * 签署流程的签署截止时间。
@@ -116,9 +116,9 @@ false：有序签
     /**
     * 暂未开放
     */
-    @SerializedName("RelatedFlowId")
+    @SerializedName("CallbackUrl")
     @Expose
-    private String RelatedFlowId;
+    private String CallbackUrl;
 
     /**
     * 应用相关信息
@@ -209,18 +209,18 @@ false：有序签
 
     /**
      * Get 暂未开放 
-     * @return CallbackUrl 暂未开放
+     * @return RelatedFlowId 暂未开放
      */
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
+    public String getRelatedFlowId() {
+        return this.RelatedFlowId;
     }
 
     /**
      * Set 暂未开放
-     * @param CallbackUrl 暂未开放
+     * @param RelatedFlowId 暂未开放
      */
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
+    public void setRelatedFlowId(String RelatedFlowId) {
+        this.RelatedFlowId = RelatedFlowId;
     }
 
     /**
@@ -349,18 +349,18 @@ false：有序签
 
     /**
      * Get 暂未开放 
-     * @return RelatedFlowId 暂未开放
+     * @return CallbackUrl 暂未开放
      */
-    public String getRelatedFlowId() {
-        return this.RelatedFlowId;
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
     }
 
     /**
      * Set 暂未开放
-     * @param RelatedFlowId 暂未开放
+     * @param CallbackUrl 暂未开放
      */
-    public void setRelatedFlowId(String RelatedFlowId) {
-        this.RelatedFlowId = RelatedFlowId;
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
     }
 
     /**
@@ -405,8 +405,8 @@ false：有序签
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
+        if (source.RelatedFlowId != null) {
+            this.RelatedFlowId = new String(source.RelatedFlowId);
         }
         if (source.DeadLine != null) {
             this.DeadLine = new Long(source.DeadLine);
@@ -426,8 +426,8 @@ false：有序签
         if (source.NeedSignReview != null) {
             this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
-        if (source.RelatedFlowId != null) {
-            this.RelatedFlowId = new String(source.RelatedFlowId);
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -444,14 +444,14 @@ false：有序签
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
         this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
-        this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

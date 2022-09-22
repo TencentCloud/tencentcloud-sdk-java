@@ -31,11 +31,36 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private TaskInfo TaskInfo;
 
     /**
-    * 任务结果数据，只在任务结束时返回
+    * 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskData")
     @Expose
     private Data TaskData;
+
+    /**
+    * 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageTaskData")
+    @Expose
+    private ImageData ImageTaskData;
+
+    /**
+    * 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioTaskData")
+    @Expose
+    private AudioData AudioTaskData;
+
+    /**
+    * 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextTaskData")
+    @Expose
+    private TextData TextTaskData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -65,19 +90,83 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 任务结果数据，只在任务结束时返回 
-     * @return TaskData 任务结果数据，只在任务结束时返回
+     * Get 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskData 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Data getTaskData() {
         return this.TaskData;
     }
 
     /**
-     * Set 任务结果数据，只在任务结束时返回
-     * @param TaskData 任务结果数据，只在任务结束时返回
+     * Set 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskData 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskData(Data TaskData) {
         this.TaskData = TaskData;
+    }
+
+    /**
+     * Get 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageTaskData 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageData getImageTaskData() {
+        return this.ImageTaskData;
+    }
+
+    /**
+     * Set 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageTaskData 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageTaskData(ImageData ImageTaskData) {
+        this.ImageTaskData = ImageTaskData;
+    }
+
+    /**
+     * Get 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioTaskData 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioData getAudioTaskData() {
+        return this.AudioTaskData;
+    }
+
+    /**
+     * Set 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioTaskData 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioTaskData(AudioData AudioTaskData) {
+        this.AudioTaskData = AudioTaskData;
+    }
+
+    /**
+     * Get 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TextTaskData 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextData getTextTaskData() {
+        return this.TextTaskData;
+    }
+
+    /**
+     * Set 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextTaskData 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextTaskData(TextData TextTaskData) {
+        this.TextTaskData = TextTaskData;
     }
 
     /**
@@ -110,6 +199,15 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.TaskData != null) {
             this.TaskData = new Data(source.TaskData);
         }
+        if (source.ImageTaskData != null) {
+            this.ImageTaskData = new ImageData(source.ImageTaskData);
+        }
+        if (source.AudioTaskData != null) {
+            this.AudioTaskData = new AudioData(source.AudioTaskData);
+        }
+        if (source.TextTaskData != null) {
+            this.TextTaskData = new TextData(source.TextTaskData);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,6 +220,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         this.setParamObj(map, prefix + "TaskData.", this.TaskData);
+        this.setParamObj(map, prefix + "ImageTaskData.", this.ImageTaskData);
+        this.setParamObj(map, prefix + "AudioTaskData.", this.AudioTaskData);
+        this.setParamObj(map, prefix + "TextTaskData.", this.TextTaskData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

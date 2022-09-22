@@ -30,7 +30,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 实例详细信息。
+    * 实例详细信息列表。
     */
     @SerializedName("Items")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Get 实例详细信息。 
-     * @return Items 实例详细信息。
+     * Get 实例详细信息列表。 
+     * @return Items 实例详细信息列表。
      */
     public InstanceInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 实例详细信息。
-     * @param Items 实例详细信息。
+     * Set 实例详细信息列表。
+     * @param Items 实例详细信息列表。
      */
     public void setItems(InstanceInfo [] Items) {
         this.Items = Items;

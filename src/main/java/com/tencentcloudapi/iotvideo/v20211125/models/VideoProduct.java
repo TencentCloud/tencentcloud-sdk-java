@@ -116,6 +116,14 @@ public class VideoProduct extends AbstractModel{
     private Long CategoryId;
 
     /**
+    * 产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductVaildYears")
+    @Expose
+    private Long ProductVaildYears;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -331,6 +339,26 @@ public class VideoProduct extends AbstractModel{
         this.CategoryId = CategoryId;
     }
 
+    /**
+     * Get 产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductVaildYears 产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductVaildYears() {
+        return this.ProductVaildYears;
+    }
+
+    /**
+     * Set 产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductVaildYears 产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductVaildYears(Long ProductVaildYears) {
+        this.ProductVaildYears = ProductVaildYears;
+    }
+
     public VideoProduct() {
     }
 
@@ -381,6 +409,9 @@ public class VideoProduct extends AbstractModel{
         if (source.CategoryId != null) {
             this.CategoryId = new Long(source.CategoryId);
         }
+        if (source.ProductVaildYears != null) {
+            this.ProductVaildYears = new Long(source.ProductVaildYears);
+        }
     }
 
 
@@ -401,6 +432,7 @@ public class VideoProduct extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
         this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
+        this.setParamSimple(map, prefix + "ProductVaildYears", this.ProductVaildYears);
 
     }
 }

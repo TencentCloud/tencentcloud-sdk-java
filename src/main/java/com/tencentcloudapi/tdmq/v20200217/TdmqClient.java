@@ -1419,6 +1419,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询用户已购的RocketMQ专享实例列表
+     * @param req DescribeRocketMQVipInstancesRequest
+     * @return DescribeRocketMQVipInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstances(DescribeRocketMQVipInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQVipInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取角色列表
      * @param req DescribeRolesRequest
      * @return DescribeRolesResponse

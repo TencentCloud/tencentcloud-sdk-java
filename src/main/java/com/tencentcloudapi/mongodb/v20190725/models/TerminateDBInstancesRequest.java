@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class TerminateDBInstancesRequest extends AbstractModel{
 
     /**
-    * 实例Id列表
+    * 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例Id列表 
-     * @return InstanceId 实例Id列表
+     * Get 指定预隔离实例ID。格式如：cmgo-p8vnipr5。 
+     * @return InstanceId 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id列表
-     * @param InstanceId 实例Id列表
+     * Set 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * @param InstanceId 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

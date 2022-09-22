@@ -479,6 +479,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *停用号码
+     * @param req DisableCCCPhoneNumberRequest
+     * @return DisableCCCPhoneNumberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableCCCPhoneNumberResponse DisableCCCPhoneNumber(DisableCCCPhoneNumberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableCCCPhoneNumberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableCCCPhoneNumberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableCCCPhoneNumber");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改客服账号
      * @param req ModifyStaffRequest
      * @return ModifyStaffResponse

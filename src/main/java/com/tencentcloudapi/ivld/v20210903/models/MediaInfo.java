@@ -62,7 +62,7 @@ public class MediaInfo extends AbstractModel{
     private String FailedReason;
 
     /**
-    * 媒资视频元信息
+    * 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
@@ -92,6 +92,38 @@ public class MediaInfo extends AbstractModel{
     @SerializedName("CallbackURL")
     @Expose
     private String CallbackURL;
+
+    /**
+    * 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private Long MediaType;
+
+    /**
+    * 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioMetadata")
+    @Expose
+    private AudioMetadata AudioMetadata;
+
+    /**
+    * 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageMetadata")
+    @Expose
+    private ImageMetadata ImageMetadata;
+
+    /**
+    * 媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextMetadata")
+    @Expose
+    private TextMetadata TextMetadata;
 
     /**
      * Get 媒资ID 
@@ -190,9 +222,9 @@ public class MediaInfo extends AbstractModel{
     }
 
     /**
-     * Get 媒资视频元信息
+     * Get 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metadata 媒资视频元信息
+     * @return Metadata 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetadata getMetadata() {
@@ -200,9 +232,9 @@ public class MediaInfo extends AbstractModel{
     }
 
     /**
-     * Set 媒资视频元信息
+     * Set 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metadata 媒资视频元信息
+     * @param Metadata 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(MediaMetadata Metadata) {
@@ -269,6 +301,86 @@ public class MediaInfo extends AbstractModel{
         this.CallbackURL = CallbackURL;
     }
 
+    /**
+     * Get 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaType 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaType 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMediaType(Long MediaType) {
+        this.MediaType = MediaType;
+    }
+
+    /**
+     * Get 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioMetadata 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioMetadata getAudioMetadata() {
+        return this.AudioMetadata;
+    }
+
+    /**
+     * Set 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioMetadata 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioMetadata(AudioMetadata AudioMetadata) {
+        this.AudioMetadata = AudioMetadata;
+    }
+
+    /**
+     * Get 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageMetadata 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageMetadata getImageMetadata() {
+        return this.ImageMetadata;
+    }
+
+    /**
+     * Set 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageMetadata 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageMetadata(ImageMetadata ImageMetadata) {
+        this.ImageMetadata = ImageMetadata;
+    }
+
+    /**
+     * Get 媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TextMetadata 媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextMetadata getTextMetadata() {
+        return this.TextMetadata;
+    }
+
+    /**
+     * Set 媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextMetadata 媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextMetadata(TextMetadata TextMetadata) {
+        this.TextMetadata = TextMetadata;
+    }
+
     public MediaInfo() {
     }
 
@@ -304,6 +416,18 @@ public class MediaInfo extends AbstractModel{
         if (source.CallbackURL != null) {
             this.CallbackURL = new String(source.CallbackURL);
         }
+        if (source.MediaType != null) {
+            this.MediaType = new Long(source.MediaType);
+        }
+        if (source.AudioMetadata != null) {
+            this.AudioMetadata = new AudioMetadata(source.AudioMetadata);
+        }
+        if (source.ImageMetadata != null) {
+            this.ImageMetadata = new ImageMetadata(source.ImageMetadata);
+        }
+        if (source.TextMetadata != null) {
+            this.TextMetadata = new TextMetadata(source.TextMetadata);
+        }
     }
 
 
@@ -320,6 +444,10 @@ public class MediaInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
+        this.setParamObj(map, prefix + "AudioMetadata.", this.AudioMetadata);
+        this.setParamObj(map, prefix + "ImageMetadata.", this.ImageMetadata);
+        this.setParamObj(map, prefix + "TextMetadata.", this.TextMetadata);
 
     }
 }

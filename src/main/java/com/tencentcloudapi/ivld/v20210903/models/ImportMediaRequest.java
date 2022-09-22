@@ -37,7 +37,7 @@ public class ImportMediaRequest extends AbstractModel{
     private String MD5;
 
     /**
-    * 待分析视频的名称，指定后可支持筛选，最多100个中文字符
+    * 待分析视频的名称，指定后可支持筛选，最多64B
     */
     @SerializedName("Name")
     @Expose
@@ -64,6 +64,14 @@ public class ImportMediaRequest extends AbstractModel{
     @SerializedName("CallbackURL")
     @Expose
     private String CallbackURL;
+
+    /**
+    * 媒资文件类型，详细定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+默认为2(视频)
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private Long MediaType;
 
     /**
      * Get 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB 
@@ -98,16 +106,16 @@ public class ImportMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 待分析视频的名称，指定后可支持筛选，最多100个中文字符 
-     * @return Name 待分析视频的名称，指定后可支持筛选，最多100个中文字符
+     * Get 待分析视频的名称，指定后可支持筛选，最多64B 
+     * @return Name 待分析视频的名称，指定后可支持筛选，最多64B
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 待分析视频的名称，指定后可支持筛选，最多100个中文字符
-     * @param Name 待分析视频的名称，指定后可支持筛选，最多100个中文字符
+     * Set 待分析视频的名称，指定后可支持筛选，最多64B
+     * @param Name 待分析视频的名称，指定后可支持筛选，最多64B
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -165,6 +173,26 @@ public class ImportMediaRequest extends AbstractModel{
         this.CallbackURL = CallbackURL;
     }
 
+    /**
+     * Get 媒资文件类型，详细定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+默认为2(视频) 
+     * @return MediaType 媒资文件类型，详细定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+默认为2(视频)
+     */
+    public Long getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set 媒资文件类型，详细定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+默认为2(视频)
+     * @param MediaType 媒资文件类型，详细定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+默认为2(视频)
+     */
+    public void setMediaType(Long MediaType) {
+        this.MediaType = MediaType;
+    }
+
     public ImportMediaRequest() {
     }
 
@@ -191,6 +219,9 @@ public class ImportMediaRequest extends AbstractModel{
         if (source.CallbackURL != null) {
             this.CallbackURL = new String(source.CallbackURL);
         }
+        if (source.MediaType != null) {
+            this.MediaType = new Long(source.MediaType);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class ImportMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WriteBackCosPath", this.WriteBackCosPath);
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
 
     }
 }

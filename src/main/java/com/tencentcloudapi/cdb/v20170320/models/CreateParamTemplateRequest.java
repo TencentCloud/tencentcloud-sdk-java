@@ -65,6 +65,13 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private String TemplateType;
 
     /**
+    * 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 参数模板名称。 
      * @return Name 参数模板名称。
      */
@@ -160,6 +167,22 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.TemplateType = TemplateType;
     }
 
+    /**
+     * Get 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。 
+     * @return EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     * @param EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public CreateParamTemplateRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateParamTemplateRequest extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

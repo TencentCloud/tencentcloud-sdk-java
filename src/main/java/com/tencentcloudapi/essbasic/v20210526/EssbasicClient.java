@@ -41,6 +41,8 @@ public class EssbasicClient extends AbstractClient{
     /**
      *指定需要批量撤销的签署流程Id，批量撤销合同
 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+注意:
+能撤回合同的只能是合同的发起人或者发起企业的超管、法人
      * @param req ChannelBatchCancelFlowsRequest
      * @return ChannelBatchCancelFlowsResponse
      * @throws TencentCloudSDKException
@@ -81,7 +83,10 @@ public class EssbasicClient extends AbstractClient{
 
     /**
      *指定需要批量撤销的签署流程Id，获取批量撤销链接
-客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销
+客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
+接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
+注意:
+能撤回合同的只能是合同的发起人或者发起企业的超管、法人
      * @param req ChannelCreateBatchCancelFlowUrlRequest
      * @return ChannelCreateBatchCancelFlowUrlResponse
      * @throws TencentCloudSDKException
@@ -217,6 +222,26 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ChannelGetTaskResultApiResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ChannelGetTaskResultApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *合同文件验签
+     * @param req ChannelVerifyPdfRequest
+     * @return ChannelVerifyPdfResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelVerifyPdfResponse ChannelVerifyPdf(ChannelVerifyPdfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelVerifyPdfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelVerifyPdfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelVerifyPdf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -55,6 +55,14 @@ public class MediaFilter extends AbstractModel{
     private String [] LabelSet;
 
     /**
+    * 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private Long MediaType;
+
+    /**
      * Get 媒资名称过滤条件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaNameSet 媒资名称过滤条件
@@ -134,6 +142,26 @@ public class MediaFilter extends AbstractModel{
         this.LabelSet = LabelSet;
     }
 
+    /**
+     * Get 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaType 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaType 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMediaType(Long MediaType) {
+        this.MediaType = MediaType;
+    }
+
     public MediaFilter() {
     }
 
@@ -166,6 +194,9 @@ public class MediaFilter extends AbstractModel{
                 this.LabelSet[i] = new String(source.LabelSet[i]);
             }
         }
+        if (source.MediaType != null) {
+            this.MediaType = new Long(source.MediaType);
+        }
     }
 
 
@@ -177,6 +208,7 @@ public class MediaFilter extends AbstractModel{
         this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
         this.setParamArraySimple(map, prefix + "MediaIdSet.", this.MediaIdSet);
         this.setParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaMetadata extends AbstractModel{
 
     /**
-    * 媒资视频文件大小
+    * 媒资视频文件大小，单位为字节
     */
     @SerializedName("FileSize")
     @Expose
@@ -85,16 +85,16 @@ public class MediaMetadata extends AbstractModel{
     private Long BitRate;
 
     /**
-     * Get 媒资视频文件大小 
-     * @return FileSize 媒资视频文件大小
+     * Get 媒资视频文件大小，单位为字节 
+     * @return FileSize 媒资视频文件大小，单位为字节
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 媒资视频文件大小
-     * @param FileSize 媒资视频文件大小
+     * Set 媒资视频文件大小，单位为字节
+     * @param FileSize 媒资视频文件大小，单位为字节
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;

@@ -122,6 +122,38 @@ public class TaskInfo extends AbstractModel{
     private String CallbackURL;
 
     /**
+    * 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioMetadata")
+    @Expose
+    private AudioMetadata AudioMetadata;
+
+    /**
+    * 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageMetadata")
+    @Expose
+    private ImageMetadata ImageMetadata;
+
+    /**
+    * 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextMetadata")
+    @Expose
+    private TextMetadata TextMetadata;
+
+    /**
+    * 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private MediaMetadata Metadata;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -361,6 +393,86 @@ public class TaskInfo extends AbstractModel{
         this.CallbackURL = CallbackURL;
     }
 
+    /**
+     * Get 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioMetadata getAudioMetadata() {
+        return this.AudioMetadata;
+    }
+
+    /**
+     * Set 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioMetadata(AudioMetadata AudioMetadata) {
+        this.AudioMetadata = AudioMetadata;
+    }
+
+    /**
+     * Get 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageMetadata getImageMetadata() {
+        return this.ImageMetadata;
+    }
+
+    /**
+     * Set 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageMetadata(ImageMetadata ImageMetadata) {
+        this.ImageMetadata = ImageMetadata;
+    }
+
+    /**
+     * Get 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextMetadata getTextMetadata() {
+        return this.TextMetadata;
+    }
+
+    /**
+     * Set 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextMetadata(TextMetadata TextMetadata) {
+        this.TextMetadata = TextMetadata;
+    }
+
+    /**
+     * Get 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaMetadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadata(MediaMetadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public TaskInfo() {
     }
 
@@ -408,6 +520,18 @@ public class TaskInfo extends AbstractModel{
         if (source.CallbackURL != null) {
             this.CallbackURL = new String(source.CallbackURL);
         }
+        if (source.AudioMetadata != null) {
+            this.AudioMetadata = new AudioMetadata(source.AudioMetadata);
+        }
+        if (source.ImageMetadata != null) {
+            this.ImageMetadata = new ImageMetadata(source.ImageMetadata);
+        }
+        if (source.TextMetadata != null) {
+            this.TextMetadata = new TextMetadata(source.TextMetadata);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new MediaMetadata(source.Metadata);
+        }
     }
 
 
@@ -428,6 +552,10 @@ public class TaskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MediaName", this.MediaName);
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+        this.setParamObj(map, prefix + "AudioMetadata.", this.AudioMetadata);
+        this.setParamObj(map, prefix + "ImageMetadata.", this.ImageMetadata);
+        this.setParamObj(map, prefix + "TextMetadata.", this.TextMetadata);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

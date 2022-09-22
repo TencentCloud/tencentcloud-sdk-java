@@ -239,7 +239,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *创建Datahub转储任务
+     *创建DIP转储任务
      * @param req CreateDatahubTaskRequest
      * @return CreateDatahubTaskResponse
      * @throws TencentCloudSDKException

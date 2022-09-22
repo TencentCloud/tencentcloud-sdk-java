@@ -86,6 +86,13 @@ public class CreateDatahubTaskRequest extends AbstractModel{
     private String TaskId;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -229,6 +236,22 @@ public class CreateDatahubTaskRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDatahubTaskRequest() {
     }
 
@@ -264,6 +287,12 @@ public class CreateDatahubTaskRequest extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -280,6 +309,7 @@ public class CreateDatahubTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SchemaId", this.SchemaId);
         this.setParamObj(map, prefix + "TransformsParam.", this.TransformsParam);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

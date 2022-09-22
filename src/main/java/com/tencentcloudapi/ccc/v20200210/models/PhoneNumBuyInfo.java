@@ -58,7 +58,7 @@ public class PhoneNumBuyInfo extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 号码状态，1正常|2停用
+    * 号码状态，1正常|2欠费停用|4管理员停用|5违规停用
     */
     @SerializedName("State")
     @Expose
@@ -145,16 +145,16 @@ public class PhoneNumBuyInfo extends AbstractModel{
     }
 
     /**
-     * Get 号码状态，1正常|2停用 
-     * @return State 号码状态，1正常|2停用
+     * Get 号码状态，1正常|2欠费停用|4管理员停用|5违规停用 
+     * @return State 号码状态，1正常|2欠费停用|4管理员停用|5违规停用
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 号码状态，1正常|2停用
-     * @param State 号码状态，1正常|2停用
+     * Set 号码状态，1正常|2欠费停用|4管理员停用|5违规停用
+     * @param State 号码状态，1正常|2欠费停用|4管理员停用|5违规停用
      */
     public void setState(Long State) {
         this.State = State;

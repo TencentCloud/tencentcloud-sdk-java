@@ -252,6 +252,48 @@ public class WedataClient extends AbstractClient{
     /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 数据源详情
+     * @param req DescribeDataSourceListRequest
+     * @return DescribeDataSourceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSourceListResponse DescribeDataSourceList(DescribeDataSourceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataSourceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataSourceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+数据源列表
+     * @param req DescribeDataSourceWithoutInfoRequest
+     * @return DescribeDataSourceWithoutInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSourceWithoutInfoResponse DescribeDataSourceWithoutInfo(DescribeDataSourceWithoutInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataSourceWithoutInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataSourceWithoutInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataSourceWithoutInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+数据源详情
      * @param req DescribeDatasourceRequest
      * @return DescribeDatasourceResponse
      * @throws TencentCloudSDKException
