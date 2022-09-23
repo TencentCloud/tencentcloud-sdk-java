@@ -30,6 +30,31 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
+    * Cos 应用 ID。
+**注：此参数现在须必选。**
+    */
+    @SerializedName("CosAppId")
+    @Expose
+    private Long CosAppId;
+
+    /**
+    * Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
+    * Cos 地域。
+**注：此参数现在须必选。**
+    */
+    @SerializedName("CosRegion")
+    @Expose
+    private String CosRegion;
+
+    /**
     * 模板名称。
 长度上限：255字节。
     */
@@ -77,28 +102,6 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     private Long PornFlag;
 
     /**
-    * Cos 应用 ID。
-    */
-    @SerializedName("CosAppId")
-    @Expose
-    private Long CosAppId;
-
-    /**
-    * Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-    */
-    @SerializedName("CosBucket")
-    @Expose
-    private String CosBucket;
-
-    /**
-    * Cos 地域。
-    */
-    @SerializedName("CosRegion")
-    @Expose
-    private String CosRegion;
-
-    /**
     * Cos Bucket文件夹前缀。
     */
     @SerializedName("CosPrefix")
@@ -126,6 +129,70 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get Cos 应用 ID。
+**注：此参数现在须必选。** 
+     * @return CosAppId Cos 应用 ID。
+**注：此参数现在须必选。**
+     */
+    public Long getCosAppId() {
+        return this.CosAppId;
+    }
+
+    /**
+     * Set Cos 应用 ID。
+**注：此参数现在须必选。**
+     * @param CosAppId Cos 应用 ID。
+**注：此参数现在须必选。**
+     */
+    public void setCosAppId(Long CosAppId) {
+        this.CosAppId = CosAppId;
+    }
+
+    /**
+     * Get Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。** 
+     * @return CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+     * @param CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
+    /**
+     * Get Cos 地域。
+**注：此参数现在须必选。** 
+     * @return CosRegion Cos 地域。
+**注：此参数现在须必选。**
+     */
+    public String getCosRegion() {
+        return this.CosRegion;
+    }
+
+    /**
+     * Set Cos 地域。
+**注：此参数现在须必选。**
+     * @param CosRegion Cos 地域。
+**注：此参数现在须必选。**
+     */
+    public void setCosRegion(String CosRegion) {
+        this.CosRegion = CosRegion;
     }
 
     /**
@@ -245,58 +312,6 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Cos 应用 ID。 
-     * @return CosAppId Cos 应用 ID。
-     */
-    public Long getCosAppId() {
-        return this.CosAppId;
-    }
-
-    /**
-     * Set Cos 应用 ID。
-     * @param CosAppId Cos 应用 ID。
-     */
-    public void setCosAppId(Long CosAppId) {
-        this.CosAppId = CosAppId;
-    }
-
-    /**
-     * Get Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。 
-     * @return CosBucket Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-     */
-    public String getCosBucket() {
-        return this.CosBucket;
-    }
-
-    /**
-     * Set Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-     * @param CosBucket Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-     */
-    public void setCosBucket(String CosBucket) {
-        this.CosBucket = CosBucket;
-    }
-
-    /**
-     * Get Cos 地域。 
-     * @return CosRegion Cos 地域。
-     */
-    public String getCosRegion() {
-        return this.CosRegion;
-    }
-
-    /**
-     * Set Cos 地域。
-     * @param CosRegion Cos 地域。
-     */
-    public void setCosRegion(String CosRegion) {
-        this.CosRegion = CosRegion;
-    }
-
-    /**
      * Get Cos Bucket文件夹前缀。 
      * @return CosPrefix Cos Bucket文件夹前缀。
      */
@@ -339,6 +354,15 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
         }
+        if (source.CosAppId != null) {
+            this.CosAppId = new Long(source.CosAppId);
+        }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.CosRegion != null) {
+            this.CosRegion = new String(source.CosRegion);
+        }
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
         }
@@ -357,15 +381,6 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
         if (source.PornFlag != null) {
             this.PornFlag = new Long(source.PornFlag);
         }
-        if (source.CosAppId != null) {
-            this.CosAppId = new Long(source.CosAppId);
-        }
-        if (source.CosBucket != null) {
-            this.CosBucket = new String(source.CosBucket);
-        }
-        if (source.CosRegion != null) {
-            this.CosRegion = new String(source.CosRegion);
-        }
         if (source.CosPrefix != null) {
             this.CosPrefix = new String(source.CosPrefix);
         }
@@ -380,15 +395,15 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "CosAppId", this.CosAppId);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "SnapshotInterval", this.SnapshotInterval);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "PornFlag", this.PornFlag);
-        this.setParamSimple(map, prefix + "CosAppId", this.CosAppId);
-        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
-        this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
         this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 

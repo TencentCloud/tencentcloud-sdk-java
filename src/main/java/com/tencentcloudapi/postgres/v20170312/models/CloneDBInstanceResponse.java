@@ -39,6 +39,14 @@ public class CloneDBInstanceResponse extends AbstractModel{
     private String BillId;
 
     /**
+    * 克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBInstanceId")
+    @Expose
+    private String DBInstanceId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class CloneDBInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get 克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
+     * Set 克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -115,6 +143,9 @@ public class CloneDBInstanceResponse extends AbstractModel{
         if (source.BillId != null) {
             this.BillId = new String(source.BillId);
         }
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +158,7 @@ public class CloneDBInstanceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "BillId", this.BillId);
+        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -143,6 +143,14 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Boolean IsAssignManager;
 
     /**
+    * 是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAuthManager")
+    @Expose
+    private Boolean IsAuthManager;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -450,6 +458,26 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAuthManager 是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsAuthManager() {
+        return this.IsAuthManager;
+    }
+
+    /**
+     * Set 是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAuthManager 是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAuthManager(Boolean IsAuthManager) {
+        this.IsAuthManager = IsAuthManager;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -521,6 +549,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
         if (source.IsAssignManager != null) {
             this.IsAssignManager = new Boolean(source.IsAssignManager);
         }
+        if (source.IsAuthManager != null) {
+            this.IsAuthManager = new Boolean(source.IsAuthManager);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -546,6 +577,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
         this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamSimple(map, prefix + "IsAssignManager", this.IsAssignManager);
+        this.setParamSimple(map, prefix + "IsAuthManager", this.IsAuthManager);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

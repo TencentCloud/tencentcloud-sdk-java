@@ -30,13 +30,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String SpecCode;
 
     /**
-    * PostgreSQL内核版本，目前强制和主实例保持一致
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
     * 实例容量大小，单位：GB。
     */
     @SerializedName("Storage")
@@ -79,7 +72,14 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+    * 【废弃】不再需要指定，内核版本号与主实例保持一致
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
+    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -179,22 +179,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL内核版本，目前强制和主实例保持一致 
-     * @return DBVersion PostgreSQL内核版本，目前强制和主实例保持一致
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set PostgreSQL内核版本，目前强制和主实例保持一致
-     * @param DBVersion PostgreSQL内核版本，目前强制和主实例保持一致
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-    }
-
-    /**
      * Get 实例容量大小，单位：GB。 
      * @return Storage 实例容量大小，单位：GB。
      */
@@ -291,16 +275,32 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。 
-     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * Get 【废弃】不再需要指定，内核版本号与主实例保持一致 
+     * @return DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * @param DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+    }
+
+    /**
+     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。 
+     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
-     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
+     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -493,9 +493,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
-        }
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
         }
@@ -513,6 +510,9 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
         }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
@@ -564,13 +564,13 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);

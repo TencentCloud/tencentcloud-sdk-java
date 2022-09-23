@@ -13,35 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
+public class DescribeUserResponse extends AbstractModel{
 
     /**
-    * 刊例价，单位：分
+    * 应用Id。
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("SdkAppId")
     @Expose
-    private Long OriginalPrice;
+    private Long SdkAppId;
 
     /**
-    * 折后实际付款金额，单位：分
+    * 用户Id。
     */
-    @SerializedName("Price")
+    @SerializedName("UserId")
     @Expose
-    private Long Price;
+    private String UserId;
 
     /**
-    * 币种。例如，CNY：人民币。
+    * 用户昵称。
     */
-    @SerializedName("Currency")
+    @SerializedName("Name")
     @Expose
-    private String Currency;
+    private String Name;
+
+    /**
+    * 用户头像Url。
+    */
+    @SerializedName("Avatar")
+    @Expose
+    private String Avatar;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +58,67 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 刊例价，单位：分 
-     * @return OriginalPrice 刊例价，单位：分
+     * Get 应用Id。 
+     * @return SdkAppId 应用Id。
      */
-    public Long getOriginalPrice() {
-        return this.OriginalPrice;
+    public Long getSdkAppId() {
+        return this.SdkAppId;
     }
 
     /**
-     * Set 刊例价，单位：分
-     * @param OriginalPrice 刊例价，单位：分
+     * Set 应用Id。
+     * @param SdkAppId 应用Id。
      */
-    public void setOriginalPrice(Long OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 折后实际付款金额，单位：分 
-     * @return Price 折后实际付款金额，单位：分
+     * Get 用户Id。 
+     * @return UserId 用户Id。
      */
-    public Long getPrice() {
-        return this.Price;
+    public String getUserId() {
+        return this.UserId;
     }
 
     /**
-     * Set 折后实际付款金额，单位：分
-     * @param Price 折后实际付款金额，单位：分
+     * Set 用户Id。
+     * @param UserId 用户Id。
      */
-    public void setPrice(Long Price) {
-        this.Price = Price;
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
     /**
-     * Get 币种。例如，CNY：人民币。 
-     * @return Currency 币种。例如，CNY：人民币。
+     * Get 用户昵称。 
+     * @return Name 用户昵称。
      */
-    public String getCurrency() {
-        return this.Currency;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 币种。例如，CNY：人民币。
-     * @param Currency 币种。例如，CNY：人民币。
+     * Set 用户昵称。
+     * @param Name 用户昵称。
      */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 用户头像Url。 
+     * @return Avatar 用户头像Url。
+     */
+    public String getAvatar() {
+        return this.Avatar;
+    }
+
+    /**
+     * Set 用户头像Url。
+     * @param Avatar 用户头像Url。
+     */
+    public void setAvatar(String Avatar) {
+        this.Avatar = Avatar;
     }
 
     /**
@@ -114,22 +137,25 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDBInstancesResponse() {
+    public DescribeUserResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDBInstancesResponse(InquiryPriceCreateDBInstancesResponse source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Long(source.OriginalPrice);
+    public DescribeUserResponse(DescribeUserResponse source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
         }
-        if (source.Price != null) {
-            this.Price = new Long(source.Price);
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
         }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Avatar != null) {
+            this.Avatar = new String(source.Avatar);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +167,10 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "Price", this.Price);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Avatar", this.Avatar);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

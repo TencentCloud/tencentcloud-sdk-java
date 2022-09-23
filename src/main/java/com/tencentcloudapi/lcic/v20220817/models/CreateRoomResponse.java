@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
+public class CreateRoomResponse extends AbstractModel{
 
     /**
-    * 刊例价，单位：分
+    * 房间ID。
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("RoomId")
     @Expose
-    private Long OriginalPrice;
-
-    /**
-    * 折后实际付款金额，单位：分
-    */
-    @SerializedName("Price")
-    @Expose
-    private Long Price;
-
-    /**
-    * 币种。例如，CNY：人民币。
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
+    private Long RoomId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 刊例价，单位：分 
-     * @return OriginalPrice 刊例价，单位：分
+     * Get 房间ID。 
+     * @return RoomId 房间ID。
      */
-    public Long getOriginalPrice() {
-        return this.OriginalPrice;
+    public Long getRoomId() {
+        return this.RoomId;
     }
 
     /**
-     * Set 刊例价，单位：分
-     * @param OriginalPrice 刊例价，单位：分
+     * Set 房间ID。
+     * @param RoomId 房间ID。
      */
-    public void setOriginalPrice(Long OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
-    }
-
-    /**
-     * Get 折后实际付款金额，单位：分 
-     * @return Price 折后实际付款金额，单位：分
-     */
-    public Long getPrice() {
-        return this.Price;
-    }
-
-    /**
-     * Set 折后实际付款金额，单位：分
-     * @param Price 折后实际付款金额，单位：分
-     */
-    public void setPrice(Long Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get 币种。例如，CNY：人民币。 
-     * @return Currency 币种。例如，CNY：人民币。
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set 币种。例如，CNY：人民币。
-     * @param Currency 币种。例如，CNY：人民币。
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setRoomId(Long RoomId) {
+        this.RoomId = RoomId;
     }
 
     /**
@@ -114,22 +68,16 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDBInstancesResponse() {
+    public CreateRoomResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDBInstancesResponse(InquiryPriceCreateDBInstancesResponse source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Long(source.OriginalPrice);
-        }
-        if (source.Price != null) {
-            this.Price = new Long(source.Price);
-        }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
+    public CreateRoomResponse(CreateRoomResponse source) {
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +89,7 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "Price", this.Price);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

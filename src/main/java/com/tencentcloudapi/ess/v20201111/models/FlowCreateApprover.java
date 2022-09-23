@@ -85,7 +85,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String [] VerifyChannel;
 
     /**
-    * 是否发送短信，sms--短信通知，none--不通知，默认为sms
+    * 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
     */
     @SerializedName("NotifyType")
     @Expose
@@ -293,16 +293,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 是否发送短信，sms--短信通知，none--不通知，默认为sms 
-     * @return NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     * Get 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信 
+     * @return NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 是否发送短信，sms--短信通知，none--不通知，默认为sms
-     * @param NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     * Set 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
+     * @param NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;

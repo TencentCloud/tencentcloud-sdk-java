@@ -58,7 +58,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+    * 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
     */
     @SerializedName("Pid")
     @Expose
@@ -70,6 +70,24 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
+
+    /**
+    * 实例类型，默认primary，支持如下：
+primary（双机高可用（一主一从））
+readonly（只读实例）
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * DB引擎，默认postgresql，支持如下：
+postgresql（云数据库PostgreSQL）
+mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+    */
+    @SerializedName("DBEngine")
+    @Expose
+    private String DBEngine;
 
     /**
      * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
@@ -152,16 +170,16 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。 
-     * @return Pid 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * Get 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。 
+     * @return Pid 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
-     * @param Pid 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * Set 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * @param Pid 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
@@ -181,6 +199,54 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get 实例类型，默认primary，支持如下：
+primary（双机高可用（一主一从））
+readonly（只读实例） 
+     * @return InstanceType 实例类型，默认primary，支持如下：
+primary（双机高可用（一主一从））
+readonly（只读实例）
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型，默认primary，支持如下：
+primary（双机高可用（一主一从））
+readonly（只读实例）
+     * @param InstanceType 实例类型，默认primary，支持如下：
+primary（双机高可用（一主一从））
+readonly（只读实例）
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get DB引擎，默认postgresql，支持如下：
+postgresql（云数据库PostgreSQL）
+mssql_compatible（MSSQL兼容-云数据库PostgreSQL） 
+     * @return DBEngine DB引擎，默认postgresql，支持如下：
+postgresql（云数据库PostgreSQL）
+mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+     */
+    public String getDBEngine() {
+        return this.DBEngine;
+    }
+
+    /**
+     * Set DB引擎，默认postgresql，支持如下：
+postgresql（云数据库PostgreSQL）
+mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+     * @param DBEngine DB引擎，默认postgresql，支持如下：
+postgresql（云数据库PostgreSQL）
+mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+     */
+    public void setDBEngine(String DBEngine) {
+        this.DBEngine = DBEngine;
     }
 
     public InquiryPriceCreateDBInstancesRequest() {
@@ -212,6 +278,12 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.DBEngine != null) {
+            this.DBEngine = new String(source.DBEngine);
+        }
     }
 
 
@@ -226,6 +298,8 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
 
     }
 }

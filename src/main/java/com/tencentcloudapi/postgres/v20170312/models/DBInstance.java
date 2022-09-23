@@ -292,6 +292,24 @@ public class DBInstance extends AbstractModel{
     private Long IsSupportTDE;
 
     /**
+    * 数据库引擎，支持：
+1、postgresql（云数据库PostgreSQL）；
+2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBEngine")
+    @Expose
+    private String DBEngine;
+
+    /**
+    * 数据库引擎的配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBEngineConfig")
+    @Expose
+    private String DBEngineConfig;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -923,6 +941,54 @@ public class DBInstance extends AbstractModel{
         this.IsSupportTDE = IsSupportTDE;
     }
 
+    /**
+     * Get 数据库引擎，支持：
+1、postgresql（云数据库PostgreSQL）；
+2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBEngine 数据库引擎，支持：
+1、postgresql（云数据库PostgreSQL）；
+2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDBEngine() {
+        return this.DBEngine;
+    }
+
+    /**
+     * Set 数据库引擎，支持：
+1、postgresql（云数据库PostgreSQL）；
+2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBEngine 数据库引擎，支持：
+1、postgresql（云数据库PostgreSQL）；
+2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBEngine(String DBEngine) {
+        this.DBEngine = DBEngine;
+    }
+
+    /**
+     * Get 数据库引擎的配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBEngineConfig 数据库引擎的配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDBEngineConfig() {
+        return this.DBEngineConfig;
+    }
+
+    /**
+     * Set 数据库引擎的配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBEngineConfig 数据库引擎的配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBEngineConfig(String DBEngineConfig) {
+        this.DBEngineConfig = DBEngineConfig;
+    }
+
     public DBInstance() {
     }
 
@@ -1054,6 +1120,12 @@ public class DBInstance extends AbstractModel{
         if (source.IsSupportTDE != null) {
             this.IsSupportTDE = new Long(source.IsSupportTDE);
         }
+        if (source.DBEngine != null) {
+            this.DBEngine = new String(source.DBEngine);
+        }
+        if (source.DBEngineConfig != null) {
+            this.DBEngineConfig = new String(source.DBEngineConfig);
+        }
     }
 
 
@@ -1098,6 +1170,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
         this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
+        this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
+        this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
 
     }
 }

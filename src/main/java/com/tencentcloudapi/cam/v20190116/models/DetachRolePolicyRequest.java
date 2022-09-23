@@ -30,14 +30,14 @@ public class DetachRolePolicyRequest extends AbstractModel{
     private Long PolicyId;
 
     /**
-    * 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+    * 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
     */
     @SerializedName("DetachRoleId")
     @Expose
     private String DetachRoleId;
 
     /**
-    * 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+    * 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
     */
     @SerializedName("DetachRoleName")
     @Expose
@@ -67,32 +67,32 @@ public class DetachRolePolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一 
-     * @return DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Get 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一 
+     * @return DetachRoleId 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      */
     public String getDetachRoleId() {
         return this.DetachRoleId;
     }
 
     /**
-     * Set 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
-     * @param DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Set 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
+     * @param DetachRoleId 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      */
     public void setDetachRoleId(String DetachRoleId) {
         this.DetachRoleId = DetachRoleId;
     }
 
     /**
-     * Get 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一 
-     * @return DetachRoleName 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Get 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一 
+     * @return DetachRoleName 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      */
     public String getDetachRoleName() {
         return this.DetachRoleName;
     }
 
     /**
-     * Set 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
-     * @param DetachRoleName 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Set 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
+     * @param DetachRoleName 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      */
     public void setDetachRoleName(String DetachRoleName) {
         this.DetachRoleName = DetachRoleName;

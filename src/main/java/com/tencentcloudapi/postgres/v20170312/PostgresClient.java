@@ -879,7 +879,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
+     *本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。只支持按量计费实例。
      * @param req InquiryPriceUpgradeDBInstanceRequest
      * @return InquiryPriceUpgradeDBInstanceResponse
      * @throws TencentCloudSDKException

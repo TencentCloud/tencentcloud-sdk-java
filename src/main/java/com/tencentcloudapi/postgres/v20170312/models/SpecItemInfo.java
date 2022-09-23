@@ -79,7 +79,7 @@ public class SpecItemInfo extends AbstractModel{
     private Long Qps;
 
     /**
-    * 该规格对应的计费ID
+    * 【该字段废弃】
     */
     @SerializedName("Pid")
     @Expose
@@ -245,16 +245,16 @@ public class SpecItemInfo extends AbstractModel{
     }
 
     /**
-     * Get 该规格对应的计费ID 
-     * @return Pid 该规格对应的计费ID
+     * Get 【该字段废弃】 
+     * @return Pid 【该字段废弃】
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 该规格对应的计费ID
-     * @param Pid 该规格对应的计费ID
+     * Set 【该字段废弃】
+     * @param Pid 【该字段废弃】
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;

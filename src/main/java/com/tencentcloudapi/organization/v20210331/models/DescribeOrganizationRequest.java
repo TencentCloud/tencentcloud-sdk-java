@@ -30,7 +30,7 @@ public class DescribeOrganizationRequest extends AbstractModel{
     private String Lang;
 
     /**
-    * 产品简称（查询是否集团服务委派管理员必须）
+    * 产品简称（查询是否集团服务委派管理员必填）
     */
     @SerializedName("Product")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeOrganizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 产品简称（查询是否集团服务委派管理员必须） 
-     * @return Product 产品简称（查询是否集团服务委派管理员必须）
+     * Get 产品简称（查询是否集团服务委派管理员必填） 
+     * @return Product 产品简称（查询是否集团服务委派管理员必填）
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品简称（查询是否集团服务委派管理员必须）
-     * @param Product 产品简称（查询是否集团服务委派管理员必须）
+     * Set 产品简称（查询是否集团服务委派管理员必填）
+     * @param Product 产品简称（查询是否集团服务委派管理员必填）
      */
     public void setProduct(String Product) {
         this.Product = Product;

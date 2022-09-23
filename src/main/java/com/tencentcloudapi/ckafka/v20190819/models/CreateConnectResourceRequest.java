@@ -100,6 +100,13 @@ public class CreateConnectResourceRequest extends AbstractModel{
     private SQLServerConnectParam SQLServerConnectParam;
 
     /**
+    * Doris 配置，Type为 DORIS 时必填
+    */
+    @SerializedName("DorisConnectParam")
+    @Expose
+    private DorisConnectParam DorisConnectParam;
+
+    /**
      * Get 连接源名称 
      * @return ResourceName 连接源名称
      */
@@ -275,6 +282,22 @@ public class CreateConnectResourceRequest extends AbstractModel{
         this.SQLServerConnectParam = SQLServerConnectParam;
     }
 
+    /**
+     * Get Doris 配置，Type为 DORIS 时必填 
+     * @return DorisConnectParam Doris 配置，Type为 DORIS 时必填
+     */
+    public DorisConnectParam getDorisConnectParam() {
+        return this.DorisConnectParam;
+    }
+
+    /**
+     * Set Doris 配置，Type为 DORIS 时必填
+     * @param DorisConnectParam Doris 配置，Type为 DORIS 时必填
+     */
+    public void setDorisConnectParam(DorisConnectParam DorisConnectParam) {
+        this.DorisConnectParam = DorisConnectParam;
+    }
+
     public CreateConnectResourceRequest() {
     }
 
@@ -316,6 +339,9 @@ public class CreateConnectResourceRequest extends AbstractModel{
         if (source.SQLServerConnectParam != null) {
             this.SQLServerConnectParam = new SQLServerConnectParam(source.SQLServerConnectParam);
         }
+        if (source.DorisConnectParam != null) {
+            this.DorisConnectParam = new DorisConnectParam(source.DorisConnectParam);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class CreateConnectResourceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PostgreSQLConnectParam.", this.PostgreSQLConnectParam);
         this.setParamObj(map, prefix + "MariaDBConnectParam.", this.MariaDBConnectParam);
         this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
+        this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
 
     }
 }
