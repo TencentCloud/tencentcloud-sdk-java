@@ -13,89 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Sort extends AbstractModel{
+public class Tag extends AbstractModel{
 
     /**
-    * 排序字段，当前支持：
-createTime，域名创建时间
-certExpireTime，证书过期时间
-certDeployTime,  证书部署时间
+    * 标签key
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * asc/desc，默认desc。
+    * 标签value
     */
-    @SerializedName("Sequence")
+    @SerializedName("Value")
     @Expose
-    private String Sequence;
+    private String Value;
 
     /**
-     * Get 排序字段，当前支持：
-createTime，域名创建时间
-certExpireTime，证书过期时间
-certDeployTime,  证书部署时间 
-     * @return Key 排序字段，当前支持：
-createTime，域名创建时间
-certExpireTime，证书过期时间
-certDeployTime,  证书部署时间
+     * Get 标签key 
+     * @return Key 标签key
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 排序字段，当前支持：
-createTime，域名创建时间
-certExpireTime，证书过期时间
-certDeployTime,  证书部署时间
-     * @param Key 排序字段，当前支持：
-createTime，域名创建时间
-certExpireTime，证书过期时间
-certDeployTime,  证书部署时间
+     * Set 标签key
+     * @param Key 标签key
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get asc/desc，默认desc。 
-     * @return Sequence asc/desc，默认desc。
+     * Get 标签value 
+     * @return Value 标签value
      */
-    public String getSequence() {
-        return this.Sequence;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set asc/desc，默认desc。
-     * @param Sequence asc/desc，默认desc。
+     * Set 标签value
+     * @param Value 标签value
      */
-    public void setSequence(String Sequence) {
-        this.Sequence = Sequence;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public Sort() {
+    public Tag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Sort(Sort source) {
+    public Tag(Tag source) {
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }
-        if (source.Sequence != null) {
-            this.Sequence = new String(source.Sequence);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -105,7 +90,7 @@ certDeployTime,  证书部署时间
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Sequence", this.Sequence);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

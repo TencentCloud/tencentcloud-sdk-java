@@ -55,6 +55,14 @@ public class DescribeDatasetDetailUnstructuredResponse extends AbstractModel{
     private FilterLabelInfo [] FilterLabelList;
 
     /**
+    * 数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RowTexts")
+    @Expose
+    private String [] RowTexts;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -142,6 +150,26 @@ public class DescribeDatasetDetailUnstructuredResponse extends AbstractModel{
     }
 
     /**
+     * Get 数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RowTexts 数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRowTexts() {
+        return this.RowTexts;
+    }
+
+    /**
+     * Set 数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RowTexts 数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRowTexts(String [] RowTexts) {
+        this.RowTexts = RowTexts;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -180,6 +208,12 @@ public class DescribeDatasetDetailUnstructuredResponse extends AbstractModel{
                 this.FilterLabelList[i] = new FilterLabelInfo(source.FilterLabelList[i]);
             }
         }
+        if (source.RowTexts != null) {
+            this.RowTexts = new String[source.RowTexts.length];
+            for (int i = 0; i < source.RowTexts.length; i++) {
+                this.RowTexts[i] = new String(source.RowTexts[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -194,6 +228,7 @@ public class DescribeDatasetDetailUnstructuredResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "NonAnnotatedTotalCount", this.NonAnnotatedTotalCount);
         this.setParamSimple(map, prefix + "FilterTotalCount", this.FilterTotalCount);
         this.setParamArrayObj(map, prefix + "FilterLabelList.", this.FilterLabelList);
+        this.setParamArraySimple(map, prefix + "RowTexts.", this.RowTexts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

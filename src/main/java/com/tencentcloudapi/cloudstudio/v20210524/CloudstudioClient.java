@@ -59,7 +59,7 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
-     *云主机方式创建工作空间
+     *云服务器方式创建工作空间
      * @param req CreateWorkspaceByAgentRequest
      * @return CreateWorkspaceByAgentResponse
      * @throws TencentCloudSDKException
@@ -79,7 +79,7 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
-     *快速开始, 基于模版创建工作空间
+     *快速开始, 基于模板创建工作空间
      * @param req CreateWorkspaceByTemplateRequest
      * @return CreateWorkspaceByTemplateResponse
      * @throws TencentCloudSDKException
@@ -139,7 +139,7 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
-     *获取所有模版列表
+     *获取所有模板列表
      * @param req DescribeCustomizeTemplatesRequest
      * @return DescribeCustomizeTemplatesResponse
      * @throws TencentCloudSDKException
@@ -279,7 +279,7 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
-     *修改模版默认代码仓库
+     *修改模板默认代码仓库
      * @param req ModifyCustomizeTemplateVersionControlRequest
      * @return ModifyCustomizeTemplateVersionControlResponse
      * @throws TencentCloudSDKException

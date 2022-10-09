@@ -73,6 +73,22 @@ public class TaskListItem extends AbstractModel{
     private String TaskUpdateTime;
 
     /**
+    * 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskPreCheckStatus")
+    @Expose
+    private Long TaskPreCheckStatus;
+
+    /**
+    * 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskPreCheckSuccess")
+    @Expose
+    private Boolean TaskPreCheckSuccess;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -188,6 +204,46 @@ public class TaskListItem extends AbstractModel{
         this.TaskUpdateTime = TaskUpdateTime;
     }
 
+    /**
+     * Get 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskPreCheckStatus() {
+        return this.TaskPreCheckStatus;
+    }
+
+    /**
+     * Set 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskPreCheckStatus(Long TaskPreCheckStatus) {
+        this.TaskPreCheckStatus = TaskPreCheckStatus;
+    }
+
+    /**
+     * Get 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskPreCheckSuccess 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTaskPreCheckSuccess() {
+        return this.TaskPreCheckSuccess;
+    }
+
+    /**
+     * Set 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskPreCheckSuccess 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskPreCheckSuccess(Boolean TaskPreCheckSuccess) {
+        this.TaskPreCheckSuccess = TaskPreCheckSuccess;
+    }
+
     public TaskListItem() {
     }
 
@@ -217,6 +273,12 @@ public class TaskListItem extends AbstractModel{
         if (source.TaskUpdateTime != null) {
             this.TaskUpdateTime = new String(source.TaskUpdateTime);
         }
+        if (source.TaskPreCheckStatus != null) {
+            this.TaskPreCheckStatus = new Long(source.TaskPreCheckStatus);
+        }
+        if (source.TaskPreCheckSuccess != null) {
+            this.TaskPreCheckSuccess = new Boolean(source.TaskPreCheckSuccess);
+        }
     }
 
 
@@ -231,6 +293,8 @@ public class TaskListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
         this.setParamSimple(map, prefix + "TaskUpdateTime", this.TaskUpdateTime);
+        this.setParamSimple(map, prefix + "TaskPreCheckStatus", this.TaskPreCheckStatus);
+        this.setParamSimple(map, prefix + "TaskPreCheckSuccess", this.TaskPreCheckSuccess);
 
     }
 }

@@ -246,6 +246,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private OperationDurationUpdated OperationDuration;
 
     /**
+    * 是否开启Altering 外网告警输出
+    */
+    @SerializedName("KibanaAlteringPublicAccess")
+    @Expose
+    private String KibanaAlteringPublicAccess;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -765,6 +772,22 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get 是否开启Altering 外网告警输出 
+     * @return KibanaAlteringPublicAccess 是否开启Altering 外网告警输出
+     */
+    public String getKibanaAlteringPublicAccess() {
+        return this.KibanaAlteringPublicAccess;
+    }
+
+    /**
+     * Set 是否开启Altering 外网告警输出
+     * @param KibanaAlteringPublicAccess 是否开启Altering 外网告警输出
+     */
+    public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
+        this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -872,6 +895,9 @@ public class UpdateInstanceRequest extends AbstractModel{
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDurationUpdated(source.OperationDuration);
         }
+        if (source.KibanaAlteringPublicAccess != null) {
+            this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
+        }
     }
 
 
@@ -910,6 +936,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
         this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
 
     }
 }

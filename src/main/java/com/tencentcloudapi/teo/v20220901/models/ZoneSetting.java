@@ -167,6 +167,14 @@ public class ZoneSetting extends AbstractModel{
     private Https Https;
 
     /**
+    * 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIpCountry")
+    @Expose
+    private ClientIpCountry ClientIpCountry;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -526,6 +534,26 @@ public class ZoneSetting extends AbstractModel{
         this.Https = Https;
     }
 
+    /**
+     * Get 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClientIpCountry getClientIpCountry() {
+        return this.ClientIpCountry;
+    }
+
+    /**
+     * Set 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
+        this.ClientIpCountry = ClientIpCountry;
+    }
+
     public ZoneSetting() {
     }
 
@@ -588,6 +616,9 @@ public class ZoneSetting extends AbstractModel{
         if (source.Https != null) {
             this.Https = new Https(source.Https);
         }
+        if (source.ClientIpCountry != null) {
+            this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
+        }
     }
 
 
@@ -613,6 +644,7 @@ public class ZoneSetting extends AbstractModel{
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "Https.", this.Https);
+        this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
 
     }
 }

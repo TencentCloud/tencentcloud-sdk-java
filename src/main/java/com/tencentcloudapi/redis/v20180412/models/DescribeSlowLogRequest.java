@@ -23,141 +23,164 @@ import java.util.HashMap;
 public class DescribeSlowLogRequest extends AbstractModel{
 
     /**
-    * 实例Id
+    * 实例Id。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间
+    * 开始时间。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 慢查询阈值（单位：微秒）
+    * 慢查询平均执行时间阈值（单位：微秒）。
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * 页面大小
+    * 每个页面展示的慢查询条数，默认值为20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * 慢查询条数的偏移量，取Limit整数倍。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+    * 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
+     * Get 实例Id。 
+     * @return InstanceId 实例Id。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例Id。
+     * @param InstanceId 实例Id。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间 
-     * @return BeginTime 开始时间
+     * Get 开始时间。 
+     * @return BeginTime 开始时间。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间
-     * @param BeginTime 开始时间
+     * Set 开始时间。
+     * @param BeginTime 开始时间。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 慢查询阈值（单位：微秒） 
-     * @return MinQueryTime 慢查询阈值（单位：微秒）
+     * Get 慢查询平均执行时间阈值（单位：微秒）。 
+     * @return MinQueryTime 慢查询平均执行时间阈值（单位：微秒）。
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set 慢查询阈值（单位：微秒）
-     * @param MinQueryTime 慢查询阈值（单位：微秒）
+     * Set 慢查询平均执行时间阈值（单位：微秒）。
+     * @param MinQueryTime 慢查询平均执行时间阈值（单位：微秒）。
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get 页面大小 
-     * @return Limit 页面大小
+     * Get 每个页面展示的慢查询条数，默认值为20。 
+     * @return Limit 每个页面展示的慢查询条数，默认值为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页面大小
-     * @param Limit 页面大小
+     * Set 每个页面展示的慢查询条数，默认值为20。
+     * @param Limit 每个页面展示的慢查询条数，默认值为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get 慢查询条数的偏移量，取Limit整数倍。 
+     * @return Offset 慢查询条数的偏移量，取Limit整数倍。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set 慢查询条数的偏移量，取Limit整数倍。
+     * @param Offset 慢查询条数的偏移量，取Limit整数倍。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul> 
+     * @return Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     * @param Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     public DescribeSlowLogRequest() {
@@ -186,6 +209,9 @@ public class DescribeSlowLogRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MinQueryTime", this.MinQueryTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

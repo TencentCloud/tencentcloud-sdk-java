@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateEKSClusterRequest extends AbstractModel{
 
     /**
-    * k8s版本号。可为1.14.4, 1.12.8。
+    * k8s版本号。可为1.18.4 1.20.6。
     */
     @SerializedName("K8SVersion")
     @Expose
@@ -58,7 +58,7 @@ public class CreateEKSClusterRequest extends AbstractModel{
     private String ClusterDesc;
 
     /**
-    * Serivce 所在子网Id
+    * Service CIDR 或 Serivce 所在子网Id
     */
     @SerializedName("ServiceSubnetId")
     @Expose
@@ -100,16 +100,16 @@ public class CreateEKSClusterRequest extends AbstractModel{
     private SubnetInfos [] SubnetInfos;
 
     /**
-     * Get k8s版本号。可为1.14.4, 1.12.8。 
-     * @return K8SVersion k8s版本号。可为1.14.4, 1.12.8。
+     * Get k8s版本号。可为1.18.4 1.20.6。 
+     * @return K8SVersion k8s版本号。可为1.18.4 1.20.6。
      */
     public String getK8SVersion() {
         return this.K8SVersion;
     }
 
     /**
-     * Set k8s版本号。可为1.14.4, 1.12.8。
-     * @param K8SVersion k8s版本号。可为1.14.4, 1.12.8。
+     * Set k8s版本号。可为1.18.4 1.20.6。
+     * @param K8SVersion k8s版本号。可为1.18.4 1.20.6。
      */
     public void setK8SVersion(String K8SVersion) {
         this.K8SVersion = K8SVersion;
@@ -180,16 +180,16 @@ public class CreateEKSClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get Serivce 所在子网Id 
-     * @return ServiceSubnetId Serivce 所在子网Id
+     * Get Service CIDR 或 Serivce 所在子网Id 
+     * @return ServiceSubnetId Service CIDR 或 Serivce 所在子网Id
      */
     public String getServiceSubnetId() {
         return this.ServiceSubnetId;
     }
 
     /**
-     * Set Serivce 所在子网Id
-     * @param ServiceSubnetId Serivce 所在子网Id
+     * Set Service CIDR 或 Serivce 所在子网Id
+     * @param ServiceSubnetId Service CIDR 或 Serivce 所在子网Id
      */
     public void setServiceSubnetId(String ServiceSubnetId) {
         this.ServiceSubnetId = ServiceSubnetId;

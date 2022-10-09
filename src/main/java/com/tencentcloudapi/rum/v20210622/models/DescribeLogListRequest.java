@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeLogListRequest extends AbstractModel{
 
     /**
-    * 排序方式  desc  asc
+    * 排序方式  desc  asc（必填）
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * searchlog  histogram
+    * searchlog  histogram（必填）
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 项目ID
+    * 项目ID（必填）
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 开始时间
+    * 开始时间（必填）
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 单次查询返回的原始日志条数，最大值为100
+    * 单次查询返回的原始日志条数，最大值为100（必填）
     */
     @SerializedName("Limit")
     @Expose
@@ -65,94 +65,94 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Context;
 
     /**
-    * 查询语句，参考控制台请求参数，语句长度最大为4096
+    * 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 结束时间
+    * 结束时间（必填）
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 排序方式  desc  asc 
-     * @return Sort 排序方式  desc  asc
+     * Get 排序方式  desc  asc（必填） 
+     * @return Sort 排序方式  desc  asc（必填）
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序方式  desc  asc
-     * @param Sort 排序方式  desc  asc
+     * Set 排序方式  desc  asc（必填）
+     * @param Sort 排序方式  desc  asc（必填）
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get searchlog  histogram 
-     * @return ActionType searchlog  histogram
+     * Get searchlog  histogram（必填） 
+     * @return ActionType searchlog  histogram（必填）
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set searchlog  histogram
-     * @param ActionType searchlog  histogram
+     * Set searchlog  histogram（必填）
+     * @param ActionType searchlog  histogram（必填）
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 项目ID 
-     * @return ID 项目ID
+     * Get 项目ID（必填） 
+     * @return ID 项目ID（必填）
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID
-     * @param ID 项目ID
+     * Set 项目ID（必填）
+     * @param ID 项目ID（必填）
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间（必填） 
+     * @return StartTime 开始时间（必填）
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间（必填）
+     * @param StartTime 开始时间（必填）
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 单次查询返回的原始日志条数，最大值为100 
-     * @return Limit 单次查询返回的原始日志条数，最大值为100
+     * Get 单次查询返回的原始日志条数，最大值为100（必填） 
+     * @return Limit 单次查询返回的原始日志条数，最大值为100（必填）
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的原始日志条数，最大值为100
-     * @param Limit 单次查询返回的原始日志条数，最大值为100
+     * Set 单次查询返回的原始日志条数，最大值为100（必填）
+     * @param Limit 单次查询返回的原始日志条数，最大值为100（必填）
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -175,32 +175,32 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询语句，参考控制台请求参数，语句长度最大为4096 
-     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096
+     * Get 查询语句，参考控制台请求参数，语句长度最大为4096（必填） 
+     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，参考控制台请求参数，语句长度最大为4096
-     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096
+     * Set 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间（必填） 
+     * @return EndTime 结束时间（必填）
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间（必填）
+     * @param EndTime 结束时间（必填）
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

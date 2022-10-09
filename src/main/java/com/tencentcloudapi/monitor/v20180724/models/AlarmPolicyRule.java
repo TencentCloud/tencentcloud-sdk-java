@@ -153,6 +153,22 @@ re=正则匹配
     private String ProductId;
 
     /**
+    * 最大值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValueMax")
+    @Expose
+    private Float ValueMax;
+
+    /**
+    * 最小值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValueMin")
+    @Expose
+    private Float ValueMin;
+
+    /**
      * Get 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
@@ -504,6 +520,46 @@ re=正则匹配
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get 最大值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValueMax 最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getValueMax() {
+        return this.ValueMax;
+    }
+
+    /**
+     * Set 最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValueMax 最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValueMax(Float ValueMax) {
+        this.ValueMax = ValueMax;
+    }
+
+    /**
+     * Get 最小值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValueMin 最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getValueMin() {
+        return this.ValueMin;
+    }
+
+    /**
+     * Set 最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValueMin 最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValueMin(Float ValueMin) {
+        this.ValueMin = ValueMin;
+    }
+
     public AlarmPolicyRule() {
     }
 
@@ -554,6 +610,12 @@ re=正则匹配
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
+        if (source.ValueMax != null) {
+            this.ValueMax = new Float(source.ValueMax);
+        }
+        if (source.ValueMin != null) {
+            this.ValueMin = new Float(source.ValueMin);
+        }
     }
 
 
@@ -575,6 +637,8 @@ re=正则匹配
         this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "ValueMax", this.ValueMax);
+        this.setParamSimple(map, prefix + "ValueMin", this.ValueMin);
 
     }
 }

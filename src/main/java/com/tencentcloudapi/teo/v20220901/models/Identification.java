@@ -39,7 +39,7 @@ public class Identification extends AbstractModel{
     private String Status;
 
     /**
-    * 站点归属信息。
+    * 站点归属权校验：Dns校验信息。
     */
     @SerializedName("Ascription")
     @Expose
@@ -52,6 +52,13 @@ public class Identification extends AbstractModel{
     @SerializedName("OriginalNameServers")
     @Expose
     private String [] OriginalNameServers;
+
+    /**
+    * 站点归属权校验：文件校验信息。
+    */
+    @SerializedName("FileAscription")
+    @Expose
+    private FileAscriptionInfo FileAscription;
 
     /**
      * Get 站点名称。 
@@ -94,16 +101,16 @@ public class Identification extends AbstractModel{
     }
 
     /**
-     * Get 站点归属信息。 
-     * @return Ascription 站点归属信息。
+     * Get 站点归属权校验：Dns校验信息。 
+     * @return Ascription 站点归属权校验：Dns校验信息。
      */
     public AscriptionInfo getAscription() {
         return this.Ascription;
     }
 
     /**
-     * Set 站点归属信息。
-     * @param Ascription 站点归属信息。
+     * Set 站点归属权校验：Dns校验信息。
+     * @param Ascription 站点归属权校验：Dns校验信息。
      */
     public void setAscription(AscriptionInfo Ascription) {
         this.Ascription = Ascription;
@@ -129,6 +136,22 @@ public class Identification extends AbstractModel{
         this.OriginalNameServers = OriginalNameServers;
     }
 
+    /**
+     * Get 站点归属权校验：文件校验信息。 
+     * @return FileAscription 站点归属权校验：文件校验信息。
+     */
+    public FileAscriptionInfo getFileAscription() {
+        return this.FileAscription;
+    }
+
+    /**
+     * Set 站点归属权校验：文件校验信息。
+     * @param FileAscription 站点归属权校验：文件校验信息。
+     */
+    public void setFileAscription(FileAscriptionInfo FileAscription) {
+        this.FileAscription = FileAscription;
+    }
+
     public Identification() {
     }
 
@@ -152,6 +175,9 @@ public class Identification extends AbstractModel{
                 this.OriginalNameServers[i] = new String(source.OriginalNameServers[i]);
             }
         }
+        if (source.FileAscription != null) {
+            this.FileAscription = new FileAscriptionInfo(source.FileAscription);
+        }
     }
 
 
@@ -163,6 +189,7 @@ public class Identification extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Ascription.", this.Ascription);
         this.setParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
+        this.setParamObj(map, prefix + "FileAscription.", this.FileAscription);
 
     }
 }

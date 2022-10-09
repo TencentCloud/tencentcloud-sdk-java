@@ -210,6 +210,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *查询企业员工
+     * @param req ChannelDescribeEmployeesRequest
+     * @return ChannelDescribeEmployeesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelDescribeEmployeesResponse ChannelDescribeEmployees(ChannelDescribeEmployeesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelDescribeEmployeesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelDescribeEmployeesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelDescribeEmployees");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *渠道版查询转换任务状态
      * @param req ChannelGetTaskResultApiRequest
      * @return ChannelGetTaskResultApiResponse
@@ -250,8 +270,8 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *【描述】：创建出证报告，返回报告 URL
-【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
+     *创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
+
      * @param req CreateChannelFlowEvidenceReportRequest
      * @return CreateChannelFlowEvidenceReportResponse
      * @throws TencentCloudSDKException

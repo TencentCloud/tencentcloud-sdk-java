@@ -23,7 +23,19 @@ import java.util.HashMap;
 public class ExceptUserRuleScope extends AbstractModel{
 
     /**
-    * 生效的模块。当前仅支持waf：托管规则。
+    * 例外规则类型。其中complete模式代表全量数据进行例外，partial模式代表可选择指定模块指定字段进行例外，该字段取值有：
+<li>complete：完全跳过模式；</li>
+<li>partial：部分跳过模式。</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 生效的模块，该字段取值有：
+<li>waf：托管规则；</li>
+<li>cc：速率限制规则；</li>
+<li>bot：Bot防护。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Modules")
@@ -31,9 +43,55 @@ public class ExceptUserRuleScope extends AbstractModel{
     private String [] Modules;
 
     /**
-     * Get 生效的模块。当前仅支持waf：托管规则。
+    * 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PartialModules")
+    @Expose
+    private PartialModule [] PartialModules;
+
+    /**
+    * 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SkipConditions")
+    @Expose
+    private SkipCondition [] SkipConditions;
+
+    /**
+     * Get 例外规则类型。其中complete模式代表全量数据进行例外，partial模式代表可选择指定模块指定字段进行例外，该字段取值有：
+<li>complete：完全跳过模式；</li>
+<li>partial：部分跳过模式。</li> 
+     * @return Type 例外规则类型。其中complete模式代表全量数据进行例外，partial模式代表可选择指定模块指定字段进行例外，该字段取值有：
+<li>complete：完全跳过模式；</li>
+<li>partial：部分跳过模式。</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 例外规则类型。其中complete模式代表全量数据进行例外，partial模式代表可选择指定模块指定字段进行例外，该字段取值有：
+<li>complete：完全跳过模式；</li>
+<li>partial：部分跳过模式。</li>
+     * @param Type 例外规则类型。其中complete模式代表全量数据进行例外，partial模式代表可选择指定模块指定字段进行例外，该字段取值有：
+<li>complete：完全跳过模式；</li>
+<li>partial：部分跳过模式。</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 生效的模块，该字段取值有：
+<li>waf：托管规则；</li>
+<li>cc：速率限制规则；</li>
+<li>bot：Bot防护。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Modules 生效的模块。当前仅支持waf：托管规则。
+     * @return Modules 生效的模块，该字段取值有：
+<li>waf：托管规则；</li>
+<li>cc：速率限制规则；</li>
+<li>bot：Bot防护。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getModules() {
@@ -41,13 +99,59 @@ public class ExceptUserRuleScope extends AbstractModel{
     }
 
     /**
-     * Set 生效的模块。当前仅支持waf：托管规则。
+     * Set 生效的模块，该字段取值有：
+<li>waf：托管规则；</li>
+<li>cc：速率限制规则；</li>
+<li>bot：Bot防护。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Modules 生效的模块。当前仅支持waf：托管规则。
+     * @param Modules 生效的模块，该字段取值有：
+<li>waf：托管规则；</li>
+<li>cc：速率限制规则；</li>
+<li>bot：Bot防护。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModules(String [] Modules) {
         this.Modules = Modules;
+    }
+
+    /**
+     * Get 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PartialModules 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PartialModule [] getPartialModules() {
+        return this.PartialModules;
+    }
+
+    /**
+     * Set 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartialModules 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartialModules(PartialModule [] PartialModules) {
+        this.PartialModules = PartialModules;
+    }
+
+    /**
+     * Get 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SkipConditions 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SkipCondition [] getSkipConditions() {
+        return this.SkipConditions;
+    }
+
+    /**
+     * Set 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SkipConditions 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSkipConditions(SkipCondition [] SkipConditions) {
+        this.SkipConditions = SkipConditions;
     }
 
     public ExceptUserRuleScope() {
@@ -58,10 +162,25 @@ public class ExceptUserRuleScope extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ExceptUserRuleScope(ExceptUserRuleScope source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Modules != null) {
             this.Modules = new String[source.Modules.length];
             for (int i = 0; i < source.Modules.length; i++) {
                 this.Modules[i] = new String(source.Modules[i]);
+            }
+        }
+        if (source.PartialModules != null) {
+            this.PartialModules = new PartialModule[source.PartialModules.length];
+            for (int i = 0; i < source.PartialModules.length; i++) {
+                this.PartialModules[i] = new PartialModule(source.PartialModules[i]);
+            }
+        }
+        if (source.SkipConditions != null) {
+            this.SkipConditions = new SkipCondition[source.SkipConditions.length];
+            for (int i = 0; i < source.SkipConditions.length; i++) {
+                this.SkipConditions[i] = new SkipCondition(source.SkipConditions[i]);
             }
         }
     }
@@ -71,7 +190,10 @@ public class ExceptUserRuleScope extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "Modules.", this.Modules);
+        this.setParamArrayObj(map, prefix + "PartialModules.", this.PartialModules);
+        this.setParamArrayObj(map, prefix + "SkipConditions.", this.SkipConditions);
 
     }
 }

@@ -66,11 +66,25 @@ public class DescribeCaptchaDataSumResponse extends AbstractModel{
     private Long CaptchaCode;
 
     /**
-    * 票据校验量
+    * 票据校验总量
     */
     @SerializedName("CheckTicketSum")
     @Expose
     private Long CheckTicketSum;
+
+    /**
+    * 票据验证通过量
+    */
+    @SerializedName("TicketThroughputSum")
+    @Expose
+    private Long TicketThroughputSum;
+
+    /**
+    * 票据验证拦截量
+    */
+    @SerializedName("TicketInterceptSum")
+    @Expose
+    private Long TicketInterceptSum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -180,19 +194,51 @@ public class DescribeCaptchaDataSumResponse extends AbstractModel{
     }
 
     /**
-     * Get 票据校验量 
-     * @return CheckTicketSum 票据校验量
+     * Get 票据校验总量 
+     * @return CheckTicketSum 票据校验总量
      */
     public Long getCheckTicketSum() {
         return this.CheckTicketSum;
     }
 
     /**
-     * Set 票据校验量
-     * @param CheckTicketSum 票据校验量
+     * Set 票据校验总量
+     * @param CheckTicketSum 票据校验总量
      */
     public void setCheckTicketSum(Long CheckTicketSum) {
         this.CheckTicketSum = CheckTicketSum;
+    }
+
+    /**
+     * Get 票据验证通过量 
+     * @return TicketThroughputSum 票据验证通过量
+     */
+    public Long getTicketThroughputSum() {
+        return this.TicketThroughputSum;
+    }
+
+    /**
+     * Set 票据验证通过量
+     * @param TicketThroughputSum 票据验证通过量
+     */
+    public void setTicketThroughputSum(Long TicketThroughputSum) {
+        this.TicketThroughputSum = TicketThroughputSum;
+    }
+
+    /**
+     * Get 票据验证拦截量 
+     * @return TicketInterceptSum 票据验证拦截量
+     */
+    public Long getTicketInterceptSum() {
+        return this.TicketInterceptSum;
+    }
+
+    /**
+     * Set 票据验证拦截量
+     * @param TicketInterceptSum 票据验证拦截量
+     */
+    public void setTicketInterceptSum(Long TicketInterceptSum) {
+        this.TicketInterceptSum = TicketInterceptSum;
     }
 
     /**
@@ -240,6 +286,12 @@ public class DescribeCaptchaDataSumResponse extends AbstractModel{
         if (source.CheckTicketSum != null) {
             this.CheckTicketSum = new Long(source.CheckTicketSum);
         }
+        if (source.TicketThroughputSum != null) {
+            this.TicketThroughputSum = new Long(source.TicketThroughputSum);
+        }
+        if (source.TicketInterceptSum != null) {
+            this.TicketInterceptSum = new Long(source.TicketInterceptSum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -257,6 +309,8 @@ public class DescribeCaptchaDataSumResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
         this.setParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
         this.setParamSimple(map, prefix + "CheckTicketSum", this.CheckTicketSum);
+        this.setParamSimple(map, prefix + "TicketThroughputSum", this.TicketThroughputSum);
+        this.setParamSimple(map, prefix + "TicketInterceptSum", this.TicketInterceptSum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -119,6 +119,14 @@ public class AlarmNotice extends AbstractModel{
     private CLSNotice [] CLSNotices;
 
     /**
+    * 通知模版绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 告警通知模板 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 告警通知模板 ID
@@ -358,6 +366,26 @@ public class AlarmNotice extends AbstractModel{
         this.CLSNotices = CLSNotices;
     }
 
+    /**
+     * Get 通知模版绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 通知模版绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 通知模版绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 通知模版绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AlarmNotice() {
     }
 
@@ -414,6 +442,12 @@ public class AlarmNotice extends AbstractModel{
                 this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -433,6 +467,7 @@ public class AlarmNotice extends AbstractModel{
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         this.setParamSimple(map, prefix + "AMPConsumerId", this.AMPConsumerId);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

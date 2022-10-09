@@ -126,6 +126,38 @@ STRUCTURE：智能结构化
     private OcrLabelInfo [] OcrLabels;
 
     /**
+    * OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrLabelInfo")
+    @Expose
+    private String OcrLabelInfo;
+
+    /**
+    * 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextClassificationLabelList")
+    @Expose
+    private String TextClassificationLabelList;
+
+    /**
+    * 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RowText")
+    @Expose
+    private String RowText;
+
+    /**
+    * 文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContentOmit")
+    @Expose
+    private Boolean ContentOmit;
+
+    /**
      * Get 数据集id 
      * @return DatasetId 数据集id
      */
@@ -381,6 +413,86 @@ STRUCTURE：智能结构化
         this.OcrLabels = OcrLabels;
     }
 
+    /**
+     * Get OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OcrLabelInfo OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOcrLabelInfo() {
+        return this.OcrLabelInfo;
+    }
+
+    /**
+     * Set OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrLabelInfo OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrLabelInfo(String OcrLabelInfo) {
+        this.OcrLabelInfo = OcrLabelInfo;
+    }
+
+    /**
+     * Get 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TextClassificationLabelList 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTextClassificationLabelList() {
+        return this.TextClassificationLabelList;
+    }
+
+    /**
+     * Set 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextClassificationLabelList 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextClassificationLabelList(String TextClassificationLabelList) {
+        this.TextClassificationLabelList = TextClassificationLabelList;
+    }
+
+    /**
+     * Get 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RowText 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRowText() {
+        return this.RowText;
+    }
+
+    /**
+     * Set 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RowText 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRowText(String RowText) {
+        this.RowText = RowText;
+    }
+
+    /**
+     * Get 文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContentOmit 文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getContentOmit() {
+        return this.ContentOmit;
+    }
+
+    /**
+     * Set 文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContentOmit 文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContentOmit(Boolean ContentOmit) {
+        this.ContentOmit = ContentOmit;
+    }
+
     public FilterLabelInfo() {
     }
 
@@ -440,6 +552,18 @@ STRUCTURE：智能结构化
                 this.OcrLabels[i] = new OcrLabelInfo(source.OcrLabels[i]);
             }
         }
+        if (source.OcrLabelInfo != null) {
+            this.OcrLabelInfo = new String(source.OcrLabelInfo);
+        }
+        if (source.TextClassificationLabelList != null) {
+            this.TextClassificationLabelList = new String(source.TextClassificationLabelList);
+        }
+        if (source.RowText != null) {
+            this.RowText = new String(source.RowText);
+        }
+        if (source.ContentOmit != null) {
+            this.ContentOmit = new Boolean(source.ContentOmit);
+        }
     }
 
 
@@ -460,6 +584,10 @@ STRUCTURE：智能结构化
         this.setParamSimple(map, prefix + "DownloadRGBUrl", this.DownloadRGBUrl);
         this.setParamSimple(map, prefix + "OcrScene", this.OcrScene);
         this.setParamArrayObj(map, prefix + "OcrLabels.", this.OcrLabels);
+        this.setParamSimple(map, prefix + "OcrLabelInfo", this.OcrLabelInfo);
+        this.setParamSimple(map, prefix + "TextClassificationLabelList", this.TextClassificationLabelList);
+        this.setParamSimple(map, prefix + "RowText", this.RowText);
+        this.setParamSimple(map, prefix + "ContentOmit", this.ContentOmit);
 
     }
 }

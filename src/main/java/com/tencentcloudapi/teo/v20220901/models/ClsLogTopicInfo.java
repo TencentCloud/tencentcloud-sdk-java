@@ -120,6 +120,15 @@ public class ClsLogTopicInfo extends AbstractModel{
     private String Area;
 
     /**
+    * 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
+    */
+    @SerializedName("LogSetType")
+    @Expose
+    private String LogSetType;
+
+    /**
      * Get 任务名。 
      * @return TaskName 任务名。
      */
@@ -351,6 +360,30 @@ public class ClsLogTopicInfo extends AbstractModel{
         this.Area = Area;
     }
 
+    /**
+     * Get 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li> 
+     * @return LogSetType 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
+     */
+    public String getLogSetType() {
+        return this.LogSetType;
+    }
+
+    /**
+     * Set 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
+     * @param LogSetType 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
+     */
+    public void setLogSetType(String LogSetType) {
+        this.LogSetType = LogSetType;
+    }
+
     public ClsLogTopicInfo() {
     }
 
@@ -398,6 +431,9 @@ public class ClsLogTopicInfo extends AbstractModel{
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.LogSetType != null) {
+            this.LogSetType = new String(source.LogSetType);
+        }
     }
 
 
@@ -418,6 +454,7 @@ public class ClsLogTopicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LogSetRegion", this.LogSetRegion);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogSetType", this.LogSetType);
 
     }
 }

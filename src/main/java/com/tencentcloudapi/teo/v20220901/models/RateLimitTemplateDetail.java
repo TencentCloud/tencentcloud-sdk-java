@@ -23,13 +23,13 @@ import java.util.HashMap;
 public class RateLimitTemplateDetail extends AbstractModel{
 
     /**
-    * 模板名称，取值有：
+    * 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -44,7 +44,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private Long ID;
 
     /**
-    * 处置动作。模板阀值触发后的处罚行为。
+    * 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -52,7 +54,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private String Action;
 
     /**
-    * 惩罚时间，0-2天，单位是秒。
+    * 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTime")
@@ -74,21 +76,21 @@ public class RateLimitTemplateDetail extends AbstractModel{
     private Long Period;
 
     /**
-     * Get 模板名称，取值有：
+     * Get 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 模板名称，取值有：
+     * @return Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -96,21 +98,21 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 模板名称，取值有：
+     * Set 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 模板名称，取值有：
+     * @param Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -134,9 +136,13 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 处置动作。模板阀值触发后的处罚行为。
+     * Get 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action 处置动作。模板阀值触发后的处罚行为。
+     * @return Action 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
@@ -144,9 +150,13 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 处置动作。模板阀值触发后的处罚行为。
+     * Set 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action 处置动作。模板阀值触发后的处罚行为。
+     * @param Action 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
@@ -154,9 +164,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Get 惩罚时间，0-2天，单位是秒。
+     * Get 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTime 惩罚时间，0-2天，单位是秒。
+     * @return PunishTime 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPunishTime() {
@@ -164,9 +174,9 @@ public class RateLimitTemplateDetail extends AbstractModel{
     }
 
     /**
-     * Set 惩罚时间，0-2天，单位是秒。
+     * Set 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTime 惩罚时间，0-2天，单位是秒。
+     * @param PunishTime 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTime(Long PunishTime) {

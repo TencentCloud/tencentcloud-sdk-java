@@ -290,6 +290,22 @@ public class AlarmPolicy extends AbstractModel{
     private Long AdvancedMetricNumber;
 
     /**
+    * 策略是否是全部对象策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsBindAll")
+    @Expose
+    private Long IsBindAll;
+
+    /**
+    * 策略标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -961,6 +977,46 @@ public class AlarmPolicy extends AbstractModel{
         this.AdvancedMetricNumber = AdvancedMetricNumber;
     }
 
+    /**
+     * Get 策略是否是全部对象策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsBindAll 策略是否是全部对象策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsBindAll() {
+        return this.IsBindAll;
+    }
+
+    /**
+     * Set 策略是否是全部对象策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsBindAll 策略是否是全部对象策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsBindAll(Long IsBindAll) {
+        this.IsBindAll = IsBindAll;
+    }
+
+    /**
+     * Get 策略标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 策略标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 策略标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 策略标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1083,6 +1139,15 @@ public class AlarmPolicy extends AbstractModel{
         if (source.AdvancedMetricNumber != null) {
             this.AdvancedMetricNumber = new Long(source.AdvancedMetricNumber);
         }
+        if (source.IsBindAll != null) {
+            this.IsBindAll = new Long(source.IsBindAll);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -1123,6 +1188,8 @@ public class AlarmPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
         this.setParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
+        this.setParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -114,6 +114,90 @@ public class MonitorTort extends AbstractModel{
     private String WorkTitle;
 
     /**
+    * 1
+    */
+    @SerializedName("TortSite")
+    @Expose
+    private String TortSite;
+
+    /**
+    * 1
+    */
+    @SerializedName("ICP")
+    @Expose
+    private String ICP;
+
+    /**
+    * 1
+    */
+    @SerializedName("RightNote")
+    @Expose
+    private String RightNote;
+
+    /**
+    * 1
+    */
+    @SerializedName("ObtainType")
+    @Expose
+    private Long ObtainType;
+
+    /**
+    * 1
+    */
+    @SerializedName("BlockNote")
+    @Expose
+    private String BlockNote;
+
+    /**
+    * 1
+    */
+    @SerializedName("WorkId")
+    @Expose
+    private Long WorkId;
+
+    /**
+    * 1
+    */
+    @SerializedName("WorkName")
+    @Expose
+    private String WorkName;
+
+    /**
+    * 1
+    */
+    @SerializedName("AuthStatus")
+    @Expose
+    private Long AuthStatus;
+
+    /**
+    * 1
+    */
+    @SerializedName("CommStatus")
+    @Expose
+    private Long CommStatus;
+
+    /**
+    * 1
+    */
+    @SerializedName("EvidenceStatus")
+    @Expose
+    private Long EvidenceStatus;
+
+    /**
+    * 1
+    */
+    @SerializedName("IsProducer")
+    @Expose
+    private Long IsProducer;
+
+    /**
+    * 1
+    */
+    @SerializedName("IsOverseas")
+    @Expose
+    private Long IsOverseas;
+
+    /**
      * Get 侵权信息ID 
      * @return TortId 侵权信息ID
      */
@@ -321,6 +405,198 @@ public class MonitorTort extends AbstractModel{
         this.WorkTitle = WorkTitle;
     }
 
+    /**
+     * Get 1 
+     * @return TortSite 1
+     */
+    public String getTortSite() {
+        return this.TortSite;
+    }
+
+    /**
+     * Set 1
+     * @param TortSite 1
+     */
+    public void setTortSite(String TortSite) {
+        this.TortSite = TortSite;
+    }
+
+    /**
+     * Get 1 
+     * @return ICP 1
+     */
+    public String getICP() {
+        return this.ICP;
+    }
+
+    /**
+     * Set 1
+     * @param ICP 1
+     */
+    public void setICP(String ICP) {
+        this.ICP = ICP;
+    }
+
+    /**
+     * Get 1 
+     * @return RightNote 1
+     */
+    public String getRightNote() {
+        return this.RightNote;
+    }
+
+    /**
+     * Set 1
+     * @param RightNote 1
+     */
+    public void setRightNote(String RightNote) {
+        this.RightNote = RightNote;
+    }
+
+    /**
+     * Get 1 
+     * @return ObtainType 1
+     */
+    public Long getObtainType() {
+        return this.ObtainType;
+    }
+
+    /**
+     * Set 1
+     * @param ObtainType 1
+     */
+    public void setObtainType(Long ObtainType) {
+        this.ObtainType = ObtainType;
+    }
+
+    /**
+     * Get 1 
+     * @return BlockNote 1
+     */
+    public String getBlockNote() {
+        return this.BlockNote;
+    }
+
+    /**
+     * Set 1
+     * @param BlockNote 1
+     */
+    public void setBlockNote(String BlockNote) {
+        this.BlockNote = BlockNote;
+    }
+
+    /**
+     * Get 1 
+     * @return WorkId 1
+     */
+    public Long getWorkId() {
+        return this.WorkId;
+    }
+
+    /**
+     * Set 1
+     * @param WorkId 1
+     */
+    public void setWorkId(Long WorkId) {
+        this.WorkId = WorkId;
+    }
+
+    /**
+     * Get 1 
+     * @return WorkName 1
+     */
+    public String getWorkName() {
+        return this.WorkName;
+    }
+
+    /**
+     * Set 1
+     * @param WorkName 1
+     */
+    public void setWorkName(String WorkName) {
+        this.WorkName = WorkName;
+    }
+
+    /**
+     * Get 1 
+     * @return AuthStatus 1
+     */
+    public Long getAuthStatus() {
+        return this.AuthStatus;
+    }
+
+    /**
+     * Set 1
+     * @param AuthStatus 1
+     */
+    public void setAuthStatus(Long AuthStatus) {
+        this.AuthStatus = AuthStatus;
+    }
+
+    /**
+     * Get 1 
+     * @return CommStatus 1
+     */
+    public Long getCommStatus() {
+        return this.CommStatus;
+    }
+
+    /**
+     * Set 1
+     * @param CommStatus 1
+     */
+    public void setCommStatus(Long CommStatus) {
+        this.CommStatus = CommStatus;
+    }
+
+    /**
+     * Get 1 
+     * @return EvidenceStatus 1
+     */
+    public Long getEvidenceStatus() {
+        return this.EvidenceStatus;
+    }
+
+    /**
+     * Set 1
+     * @param EvidenceStatus 1
+     */
+    public void setEvidenceStatus(Long EvidenceStatus) {
+        this.EvidenceStatus = EvidenceStatus;
+    }
+
+    /**
+     * Get 1 
+     * @return IsProducer 1
+     */
+    public Long getIsProducer() {
+        return this.IsProducer;
+    }
+
+    /**
+     * Set 1
+     * @param IsProducer 1
+     */
+    public void setIsProducer(Long IsProducer) {
+        this.IsProducer = IsProducer;
+    }
+
+    /**
+     * Get 1 
+     * @return IsOverseas 1
+     */
+    public Long getIsOverseas() {
+        return this.IsOverseas;
+    }
+
+    /**
+     * Set 1
+     * @param IsOverseas 1
+     */
+    public void setIsOverseas(Long IsOverseas) {
+        this.IsOverseas = IsOverseas;
+    }
+
     public MonitorTort() {
     }
 
@@ -368,6 +644,42 @@ public class MonitorTort extends AbstractModel{
         if (source.WorkTitle != null) {
             this.WorkTitle = new String(source.WorkTitle);
         }
+        if (source.TortSite != null) {
+            this.TortSite = new String(source.TortSite);
+        }
+        if (source.ICP != null) {
+            this.ICP = new String(source.ICP);
+        }
+        if (source.RightNote != null) {
+            this.RightNote = new String(source.RightNote);
+        }
+        if (source.ObtainType != null) {
+            this.ObtainType = new Long(source.ObtainType);
+        }
+        if (source.BlockNote != null) {
+            this.BlockNote = new String(source.BlockNote);
+        }
+        if (source.WorkId != null) {
+            this.WorkId = new Long(source.WorkId);
+        }
+        if (source.WorkName != null) {
+            this.WorkName = new String(source.WorkName);
+        }
+        if (source.AuthStatus != null) {
+            this.AuthStatus = new Long(source.AuthStatus);
+        }
+        if (source.CommStatus != null) {
+            this.CommStatus = new Long(source.CommStatus);
+        }
+        if (source.EvidenceStatus != null) {
+            this.EvidenceStatus = new Long(source.EvidenceStatus);
+        }
+        if (source.IsProducer != null) {
+            this.IsProducer = new Long(source.IsProducer);
+        }
+        if (source.IsOverseas != null) {
+            this.IsOverseas = new Long(source.IsOverseas);
+        }
     }
 
 
@@ -388,6 +700,18 @@ public class MonitorTort extends AbstractModel{
         this.setParamSimple(map, prefix + "TortNum", this.TortNum);
         this.setParamSimple(map, prefix + "ObtainNote", this.ObtainNote);
         this.setParamSimple(map, prefix + "WorkTitle", this.WorkTitle);
+        this.setParamSimple(map, prefix + "TortSite", this.TortSite);
+        this.setParamSimple(map, prefix + "ICP", this.ICP);
+        this.setParamSimple(map, prefix + "RightNote", this.RightNote);
+        this.setParamSimple(map, prefix + "ObtainType", this.ObtainType);
+        this.setParamSimple(map, prefix + "BlockNote", this.BlockNote);
+        this.setParamSimple(map, prefix + "WorkId", this.WorkId);
+        this.setParamSimple(map, prefix + "WorkName", this.WorkName);
+        this.setParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
+        this.setParamSimple(map, prefix + "CommStatus", this.CommStatus);
+        this.setParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
+        this.setParamSimple(map, prefix + "IsProducer", this.IsProducer);
+        this.setParamSimple(map, prefix + "IsOverseas", this.IsOverseas);
 
     }
 }

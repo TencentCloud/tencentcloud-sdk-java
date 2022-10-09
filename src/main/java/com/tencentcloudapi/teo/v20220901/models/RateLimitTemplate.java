@@ -29,11 +29,20 @@ public class RateLimitTemplate extends AbstractModel{
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
+
+    /**
+    * 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
 
     /**
     * 模板值详情。仅出参返回。
@@ -49,14 +58,14 @@ public class RateLimitTemplate extends AbstractModel{
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li> 
+<li>close：关闭，仅精准速率限制生效。</li> 
      * @return Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
      */
     public String getMode() {
         return this.Mode;
@@ -69,17 +78,41 @@ public class RateLimitTemplate extends AbstractModel{
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
      * @param Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
+    }
+
+    /**
+     * Get 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。 
+     * @return Action 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
+     * @param Action 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
     }
 
     /**
@@ -109,6 +142,9 @@ public class RateLimitTemplate extends AbstractModel{
         if (source.Mode != null) {
             this.Mode = new String(source.Mode);
         }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
         if (source.RateLimitTemplateDetail != null) {
             this.RateLimitTemplateDetail = new RateLimitTemplateDetail(source.RateLimitTemplateDetail);
         }
@@ -120,6 +156,7 @@ public class RateLimitTemplate extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamObj(map, prefix + "RateLimitTemplateDetail.", this.RateLimitTemplateDetail);
 
     }

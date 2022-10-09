@@ -45,7 +45,7 @@ public class DescribeHostsSettingRequest extends AbstractModel{
 
     /**
     * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -101,9 +101,9 @@ public class DescribeHostsSettingRequest extends AbstractModel{
 
     /**
      * Get 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否 
+<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li> 
      * @return Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -111,9 +111,9 @@ public class DescribeHostsSettingRequest extends AbstractModel{
 
     /**
      * Set 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
      * @param Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>host<br>   按照【<strong>域名</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

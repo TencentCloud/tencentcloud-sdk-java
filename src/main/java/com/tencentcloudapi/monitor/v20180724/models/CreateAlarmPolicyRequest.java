@@ -121,6 +121,20 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private String [] GroupBy;
 
     /**
+    * 模版绑定的标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 日志告警信息
+    */
+    @SerializedName("LogAlarmReqInfo")
+    @Expose
+    private LogAlarmReq LogAlarmReqInfo;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -344,6 +358,38 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.GroupBy = GroupBy;
     }
 
+    /**
+     * Get 模版绑定的标签 
+     * @return Tags 模版绑定的标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 模版绑定的标签
+     * @param Tags 模版绑定的标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 日志告警信息 
+     * @return LogAlarmReqInfo 日志告警信息
+     */
+    public LogAlarmReq getLogAlarmReqInfo() {
+        return this.LogAlarmReqInfo;
+    }
+
+    /**
+     * Set 日志告警信息
+     * @param LogAlarmReqInfo 日志告警信息
+     */
+    public void setLogAlarmReqInfo(LogAlarmReq LogAlarmReqInfo) {
+        this.LogAlarmReqInfo = LogAlarmReqInfo;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -403,6 +449,15 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.LogAlarmReqInfo != null) {
+            this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
+        }
     }
 
 
@@ -424,6 +479,8 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
 
     }
 }

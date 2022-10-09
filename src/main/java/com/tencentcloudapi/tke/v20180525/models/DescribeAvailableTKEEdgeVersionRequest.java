@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
 
+    /**
+    * 填写ClusterId获取当前集群各个组件版本和最新版本
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get 填写ClusterId获取当前集群各个组件版本和最新版本 
+     * @return ClusterId 填写ClusterId获取当前集群各个组件版本和最新版本
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 填写ClusterId获取当前集群各个组件版本和最新版本
+     * @param ClusterId 填写ClusterId获取当前集群各个组件版本和最新版本
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public DescribeAvailableTKEEdgeVersionRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAvailableTKEEdgeVersionRequest(DescribeAvailableTKEEdgeVersionRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

@@ -174,11 +174,17 @@ public enum EssErrorCode {
     // id类型参数不合法，请检查后重试。
      INVALIDPARAMETER_INVALIDID("InvalidParameter.InvalidId"),
      
+    // 参数Limit不正确。
+     INVALIDPARAMETER_INVALIDLIMIT("InvalidParameter.InvalidLimit"),
+     
     // 手机号码不正确。
      INVALIDPARAMETER_INVALIDMOBILE("InvalidParameter.InvalidMobile"),
      
     // 姓名不正确。
      INVALIDPARAMETER_INVALIDNAME("InvalidParameter.InvalidName"),
+     
+    // 参数Offset不正确。
+     INVALIDPARAMETER_INVALIDOFFSET("InvalidParameter.InvalidOffset"),
      
     // OpenId不正确。
      INVALIDPARAMETER_INVALIDOPENID("InvalidParameter.InvalidOpenId"),
@@ -344,6 +350,9 @@ public enum EssErrorCode {
      
     // 电子文档不可用，请稍后重试。
      OPERATIONDENIED_DOCUMENTNOAVAILABLE("OperationDenied.DocumentNoAvailable"),
+     
+    // 此企业无该资源使用权限。
+     OPERATIONDENIED_ERRNORESOURCEACCESS("OperationDenied.ErrNoResourceAccess"),
      
     // 个人签署方不支持设置企业名称，请确认签署人类型后重试。
      OPERATIONDENIED_ERRNOSUPPORTINDIVIDUALHASORGANIZATIONNAME("OperationDenied.ErrNoSupportIndividualHasOrganizationName"),

@@ -158,6 +158,14 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private Ipv6 Ipv6;
 
     /**
+    * 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+    */
+    @SerializedName("ClientIpCountry")
+    @Expose
+    private ClientIpCountry ClientIpCountry;
+
+    /**
      * Get 待变更的站点ID。 
      * @return ZoneId 待变更的站点ID。
      */
@@ -493,6 +501,26 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.Ipv6 = Ipv6;
     }
 
+    /**
+     * Get 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。 
+     * @return ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+     */
+    public ClientIpCountry getClientIpCountry() {
+        return this.ClientIpCountry;
+    }
+
+    /**
+     * Set 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+     * @param ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+     */
+    public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
+        this.ClientIpCountry = ClientIpCountry;
+    }
+
     public ModifyZoneSettingRequest() {
     }
 
@@ -552,6 +580,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         if (source.Ipv6 != null) {
             this.Ipv6 = new Ipv6(source.Ipv6);
         }
+        if (source.ClientIpCountry != null) {
+            this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
+        }
     }
 
 
@@ -576,6 +607,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
+        this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
 
     }
 }

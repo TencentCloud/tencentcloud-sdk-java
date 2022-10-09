@@ -119,7 +119,6 @@ public class HKIDCardOCRResponse extends AbstractModel{
 -9102：证照复印件告警
 -9103：证照翻拍告警
 -9104：证照PS告警
--9105：证照防伪告警
     */
     @SerializedName("WarningCode")
     @Expose
@@ -360,13 +359,11 @@ public class HKIDCardOCRResponse extends AbstractModel{
      * Get 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
--9105：证照防伪告警 
+-9104：证照PS告警 
      * @return WarningCode 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
 -9104：证照PS告警
--9105：证照防伪告警
      */
     public Long [] getWarningCode() {
         return this.WarningCode;
@@ -377,12 +374,10 @@ public class HKIDCardOCRResponse extends AbstractModel{
 -9102：证照复印件告警
 -9103：证照翻拍告警
 -9104：证照PS告警
--9105：证照防伪告警
      * @param WarningCode 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
 -9104：证照PS告警
--9105：证照防伪告警
      */
     public void setWarningCode(Long [] WarningCode) {
         this.WarningCode = WarningCode;

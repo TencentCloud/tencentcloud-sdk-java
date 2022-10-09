@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateReplicationGroupRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 指定复制组中的主实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 复制组名称
+    * 复制组名称。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 备注信息
+    * 备注信息。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 指定复制组中的主实例ID。 
+     * @return InstanceId 指定复制组中的主实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 指定复制组中的主实例ID。
+     * @param InstanceId 指定复制组中的主实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 复制组名称 
-     * @return GroupName 复制组名称
+     * Get 复制组名称。 
+     * @return GroupName 复制组名称。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 复制组名称
-     * @param GroupName 复制组名称
+     * Set 复制组名称。
+     * @param GroupName 复制组名称。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get 备注信息。 
+     * @return Remark 备注信息。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set 备注信息。
+     * @param Remark 备注信息。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

@@ -65,14 +65,14 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 是否返回所有组件信息
+    * 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
     */
     @SerializedName("QueryAllComponents")
     @Expose
     private Boolean QueryAllComponents;
 
     /**
-    * 模糊搜索模板名称
+    * 模糊搜索模板名称，最大长度200
     */
     @SerializedName("TemplateName")
     @Expose
@@ -175,32 +175,32 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否返回所有组件信息 
-     * @return QueryAllComponents 是否返回所有组件信息
+     * Get 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件 
+     * @return QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
      */
     public Boolean getQueryAllComponents() {
         return this.QueryAllComponents;
     }
 
     /**
-     * Set 是否返回所有组件信息
-     * @param QueryAllComponents 是否返回所有组件信息
+     * Set 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+     * @param QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
      */
     public void setQueryAllComponents(Boolean QueryAllComponents) {
         this.QueryAllComponents = QueryAllComponents;
     }
 
     /**
-     * Get 模糊搜索模板名称 
-     * @return TemplateName 模糊搜索模板名称
+     * Get 模糊搜索模板名称，最大长度200 
+     * @return TemplateName 模糊搜索模板名称，最大长度200
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模糊搜索模板名称
-     * @param TemplateName 模糊搜索模板名称
+     * Set 模糊搜索模板名称，最大长度200
+     * @param TemplateName 模糊搜索模板名称，最大长度200
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

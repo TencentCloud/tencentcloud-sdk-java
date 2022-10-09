@@ -177,6 +177,13 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
     private String Env;
 
     /**
+    * 网络状态
+    */
+    @SerializedName("NetStatus")
+    @Expose
+    private String NetStatus;
+
+    /**
      * Get 项目ID 
      * @return ID 项目ID
      */
@@ -528,6 +535,22 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
         this.Env = Env;
     }
 
+    /**
+     * Get 网络状态 
+     * @return NetStatus 网络状态
+     */
+    public String getNetStatus() {
+        return this.NetStatus;
+    }
+
+    /**
+     * Set 网络状态
+     * @param NetStatus 网络状态
+     */
+    public void setNetStatus(String NetStatus) {
+        this.NetStatus = NetStatus;
+    }
+
     public DescribeDataPerformancePageRequest() {
     }
 
@@ -602,6 +625,9 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.NetStatus != null) {
+            this.NetStatus = new String(source.NetStatus);
+        }
     }
 
 
@@ -631,6 +657,7 @@ public class DescribeDataPerformancePageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "CostType", this.CostType);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "NetStatus", this.NetStatus);
 
     }
 }

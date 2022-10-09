@@ -30,7 +30,7 @@ public class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-    * 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
+    * 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
     */
     @SerializedName("ForwardLoadBalancers")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50 
-     * @return ForwardLoadBalancers 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
+     * Get 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100 
+     * @return ForwardLoadBalancers 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
      */
     public ForwardLoadBalancer [] getForwardLoadBalancers() {
         return this.ForwardLoadBalancers;
     }
 
     /**
-     * Set 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
-     * @param ForwardLoadBalancers 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
+     * Set 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
+     * @param ForwardLoadBalancers 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
      */
     public void setForwardLoadBalancers(ForwardLoadBalancer [] ForwardLoadBalancers) {
         this.ForwardLoadBalancers = ForwardLoadBalancers;

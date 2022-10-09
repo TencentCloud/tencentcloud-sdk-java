@@ -30,6 +30,13 @@ public class MatchKBPURLListResponse extends AbstractModel{
     private PURL [] PURLList;
 
     /**
+    * 是否命中数据库。
+    */
+    @SerializedName("Hit")
+    @Expose
+    private Boolean Hit;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class MatchKBPURLListResponse extends AbstractModel{
      */
     public void setPURLList(PURL [] PURLList) {
         this.PURLList = PURLList;
+    }
+
+    /**
+     * Get 是否命中数据库。 
+     * @return Hit 是否命中数据库。
+     */
+    public Boolean getHit() {
+        return this.Hit;
+    }
+
+    /**
+     * Set 是否命中数据库。
+     * @param Hit 是否命中数据库。
+     */
+    public void setHit(Boolean Hit) {
+        this.Hit = Hit;
     }
 
     /**
@@ -82,6 +105,9 @@ public class MatchKBPURLListResponse extends AbstractModel{
                 this.PURLList[i] = new PURL(source.PURLList[i]);
             }
         }
+        if (source.Hit != null) {
+            this.Hit = new Boolean(source.Hit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +119,7 @@ public class MatchKBPURLListResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PURLList.", this.PURLList);
+        this.setParamSimple(map, prefix + "Hit", this.Hit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

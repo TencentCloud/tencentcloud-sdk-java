@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class AddReplicationInstanceRequest extends AbstractModel{
 
     /**
-    * 复制组ID
+    * 复制组ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例角色，rw可读写，r只读
+    * 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-     * Get 复制组ID 
-     * @return GroupId 复制组ID
+     * Get 复制组ID。 
+     * @return GroupId 复制组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组ID
-     * @param GroupId 复制组ID
+     * Set 复制组ID。
+     * @param GroupId 复制组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例角色，rw可读写，r只读 
-     * @return InstanceRole 实例角色，rw可读写，r只读
+     * Get 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul> 
+     * @return InstanceRole 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set 实例角色，rw可读写，r只读
-     * @param InstanceRole 实例角色，rw可读写，r只读
+     * Set 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
+     * @param InstanceRole 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;

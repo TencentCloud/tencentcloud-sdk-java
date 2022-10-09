@@ -69,6 +69,13 @@ STATUS_ALL，全部
     private String [] DatasetIds;
 
     /**
+    * 要筛选的文本分类场景标签信息
+    */
+    @SerializedName("TextClassificationLabels")
+    @Expose
+    private TextLabelDistributionInfo [] TextClassificationLabels;
+
+    /**
      * Get 数据集ID 
      * @return DatasetId 数据集ID
      */
@@ -180,6 +187,22 @@ STATUS_ALL，全部
         this.DatasetIds = DatasetIds;
     }
 
+    /**
+     * Get 要筛选的文本分类场景标签信息 
+     * @return TextClassificationLabels 要筛选的文本分类场景标签信息
+     */
+    public TextLabelDistributionInfo [] getTextClassificationLabels() {
+        return this.TextClassificationLabels;
+    }
+
+    /**
+     * Set 要筛选的文本分类场景标签信息
+     * @param TextClassificationLabels 要筛选的文本分类场景标签信息
+     */
+    public void setTextClassificationLabels(TextLabelDistributionInfo [] TextClassificationLabels) {
+        this.TextClassificationLabels = TextClassificationLabels;
+    }
+
     public DescribeDatasetDetailUnstructuredRequest() {
     }
 
@@ -212,6 +235,12 @@ STATUS_ALL，全部
                 this.DatasetIds[i] = new String(source.DatasetIds[i]);
             }
         }
+        if (source.TextClassificationLabels != null) {
+            this.TextClassificationLabels = new TextLabelDistributionInfo[source.TextClassificationLabels.length];
+            for (int i = 0; i < source.TextClassificationLabels.length; i++) {
+                this.TextClassificationLabels[i] = new TextLabelDistributionInfo(source.TextClassificationLabels[i]);
+            }
+        }
     }
 
 
@@ -225,6 +254,7 @@ STATUS_ALL，全部
         this.setParamArraySimple(map, prefix + "LabelList.", this.LabelList);
         this.setParamSimple(map, prefix + "AnnotationStatus", this.AnnotationStatus);
         this.setParamArraySimple(map, prefix + "DatasetIds.", this.DatasetIds);
+        this.setParamArrayObj(map, prefix + "TextClassificationLabels.", this.TextClassificationLabels);
 
     }
 }

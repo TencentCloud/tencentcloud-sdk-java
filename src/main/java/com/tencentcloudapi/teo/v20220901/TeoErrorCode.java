@@ -54,8 +54,20 @@ public enum TeoErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // 操作频繁，请稍后重试。
+     INVALIDPARAMETER_ACTIONINPROGRESS("InvalidParameter.ActionInProgress"),
+     
+    // HTTPS证书和域名不匹配。
+     INVALIDPARAMETER_CERTNOTMATCHDOMAIN("InvalidParameter.CertNotMatchDomain"),
+     
     // 域名不存在或不属于该账号。
      INVALIDPARAMETER_DOMAINNOTFOUND("InvalidParameter.DomainNotFound"),
+     
+    // 域名不存在。
+     INVALIDPARAMETER_HOSTNOTFOUND("InvalidParameter.HostNotFound"),
+     
+    // 无效的token鉴权参数。
+     INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESIGNPARAM("InvalidParameter.InvalidAuthenticationTypeSignParam"),
      
     // 无效的节点缓存。
      INVALIDPARAMETER_INVALIDCACHEONLYONSWITCH("InvalidParameter.InvalidCacheOnlyOnSwitch"),
@@ -66,11 +78,14 @@ public enum TeoErrorCode {
     // 无效的客户端IP请求头。
      INVALIDPARAMETER_INVALIDCLIENTIPHEADERNAME("InvalidParameter.InvalidClientIpHeaderName"),
      
-    // 不合法的过滤字段。
-     INVALIDPARAMETER_INVALIDFILTERNAME("InvalidParameter.InvalidFilterName"),
+    // 无效的自定义错误页面。
+     INVALIDPARAMETER_INVALIDERRORPAGEREDIRECTURL("InvalidParameter.InvalidErrorPageRedirectUrl"),
      
     // 无效的源站。
      INVALIDPARAMETER_INVALIDORIGIN("InvalidParameter.InvalidOrigin"),
+     
+    // 参数错误。
+     INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
     // 套餐包不支持最大上传大小。
      INVALIDPARAMETER_INVALIDPOSTMAXSIZEBILLING("InvalidParameter.InvalidPostMaxSizeBilling"),
@@ -80,6 +95,21 @@ public enum TeoErrorCode {
      
     // 无套餐包。
      INVALIDPARAMETER_INVALIDRESOURCEIDBILLING("InvalidParameter.InvalidResourceIdBilling"),
+     
+    // 无效的规则引擎操作。
+     INVALIDPARAMETER_INVALIDRULEENGINEACTION("InvalidParameter.InvalidRuleEngineAction"),
+     
+    // 规则不存在。
+     INVALIDPARAMETER_INVALIDRULEENGINENOTFOUND("InvalidParameter.InvalidRuleEngineNotFound"),
+     
+    // 无效的规则引擎条件。
+     INVALIDPARAMETER_INVALIDRULEENGINETARGET("InvalidParameter.InvalidRuleEngineTarget"),
+     
+    // 无效的规则引擎文件后缀条件。
+     INVALIDPARAMETER_INVALIDRULEENGINETARGETSEXTENSION("InvalidParameter.InvalidRuleEngineTargetsExtension"),
+     
+    // 无效的规则引擎URL条件。
+     INVALIDPARAMETER_INVALIDRULEENGINETARGETSURL("InvalidParameter.InvalidRuleEngineTargetsUrl"),
      
     // URL重写的目标URL无效。
      INVALIDPARAMETER_INVALIDURLREDIRECTURL("InvalidParameter.InvalidUrlRedirectUrl"),
@@ -107,6 +137,9 @@ public enum TeoErrorCode {
      
     // 站点不存在。
      INVALIDPARAMETER_ZONENOTFOUND("InvalidParameter.ZoneNotFound"),
+     
+    // 参数取值错误。
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
     // 与已经添加的记录冲突。
      INVALIDPARAMETERVALUE_CONFLICTRECORD("InvalidParameterValue.ConflictRecord"),
@@ -150,17 +183,53 @@ public enum TeoErrorCode {
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
      
+    // 域名被封禁，暂时无法操作。
+     OPERATIONDENIED_DOMAINISBLOCKED("OperationDenied.DomainIsBlocked"),
+     
     // 域名尚未备案。
      OPERATIONDENIED_DOMAINNOICP("OperationDenied.DomainNoICP"),
      
     // 4层代理资源处于封禁中，禁止操作。
      OPERATIONDENIED_L4PROXYINBANNEDSTATUS("OperationDenied.L4ProxyInBannedStatus"),
      
+    // 已存在多个Cname接入站点，不允许切换至NS。
+     OPERATIONDENIED_MULTIPLECNAMEZONE("OperationDenied.MultipleCnameZone"),
+     
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      
+    // 资源被本账号别称域名占用。
+     RESOURCEINUSE_ALIASDOMAIN("ResourceInUse.AliasDomain"),
+     
+    // 资源被本账号Cname接入占用。
+     RESOURCEINUSE_CNAME("ResourceInUse.Cname"),
+     
+    // Dns资源被占用。
+     RESOURCEINUSE_DNS("ResourceInUse.Dns"),
+     
+    // 资源被本账号的子域名占用。
+     RESOURCEINUSE_HOST("ResourceInUse.Host"),
+     
+    // 资源被本账号NS接入占用。
+     RESOURCEINUSE_NS("ResourceInUse.NS"),
+     
     // 资源被其他用户接入。
      RESOURCEINUSE_OTHERS("ResourceInUse.Others"),
+     
+    // 资源被其他账号别称域名占用。
+     RESOURCEINUSE_OTHERSALIASDOMAIN("ResourceInUse.OthersAliasDomain"),
+     
+    // 资源被其他账号Cname接入占用。
+     RESOURCEINUSE_OTHERSCNAME("ResourceInUse.OthersCname"),
+     
+    // 资源被其他账号的子域名占用。
+     RESOURCEINUSE_OTHERSHOST("ResourceInUse.OthersHost"),
+     
+    // 资源被其他账号NS接入占用。
+     RESOURCEINUSE_OTHERSNS("ResourceInUse.OthersNS"),
+     
+    // 资源被本账号和其他账号同时Cname接入占用。
+     RESOURCEINUSE_SELFANDOTHERSCNAME("ResourceInUse.SelfAndOthersCname"),
      
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),

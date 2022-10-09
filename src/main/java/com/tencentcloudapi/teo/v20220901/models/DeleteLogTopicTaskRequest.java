@@ -30,7 +30,7 @@ public class DeleteLogTopicTaskRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * 推送任务所属日志集地域。
+    * 推送任务所属日志集地域，此字段仅用于CLS推送任务。
     */
     @SerializedName("LogSetRegion")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteLogTopicTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 推送任务所属日志集地域。 
-     * @return LogSetRegion 推送任务所属日志集地域。
+     * Get 推送任务所属日志集地域，此字段仅用于CLS推送任务。 
+     * @return LogSetRegion 推送任务所属日志集地域，此字段仅用于CLS推送任务。
      */
     public String getLogSetRegion() {
         return this.LogSetRegion;
     }
 
     /**
-     * Set 推送任务所属日志集地域。
-     * @param LogSetRegion 推送任务所属日志集地域。
+     * Set 推送任务所属日志集地域，此字段仅用于CLS推送任务。
+     * @param LogSetRegion 推送任务所属日志集地域，此字段仅用于CLS推送任务。
      */
     public void setLogSetRegion(String LogSetRegion) {
         this.LogSetRegion = LogSetRegion;

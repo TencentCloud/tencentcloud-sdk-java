@@ -219,6 +219,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *关闭SSL
+     * @param req CloseSSLRequest
+     * @return CloseSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseSSLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseSSLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseSSL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建实例子账号
      * @param req CreateInstanceAccountRequest
      * @return CreateInstanceAccountResponse
@@ -979,7 +999,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例慢查询记录
+     *本接口（DescribeSlowLog）查询实例慢查询记录。
      * @param req DescribeSlowLogRequest
      * @return DescribeSlowLogResponse
      * @throws TencentCloudSDKException
@@ -1471,6 +1491,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开启SSL
+     * @param req OpenSSLRequest
+     * @return OpenSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenSSLResponse OpenSSL(OpenSSLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenSSLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenSSLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenSSL");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

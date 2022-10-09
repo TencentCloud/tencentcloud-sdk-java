@@ -101,6 +101,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private ExtensiveClusters ExtensiveClusters;
 
     /**
+    * 负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CrossRegionConfig")
+    @Expose
+    private CrossRegionConfig CrossRegionConfig;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
 只读。 
@@ -292,6 +300,26 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.ExtensiveClusters = ExtensiveClusters;
     }
 
+    /**
+     * Get 负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CrossRegionConfig 负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CrossRegionConfig getCrossRegionConfig() {
+        return this.CrossRegionConfig;
+    }
+
+    /**
+     * Set 负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossRegionConfig 负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCrossRegionConfig(CrossRegionConfig CrossRegionConfig) {
+        this.CrossRegionConfig = CrossRegionConfig;
+    }
+
     public LoadBalancer() {
     }
 
@@ -333,6 +361,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.ExtensiveClusters != null) {
             this.ExtensiveClusters = new ExtensiveClusters(source.ExtensiveClusters);
         }
+        if (source.CrossRegionConfig != null) {
+            this.CrossRegionConfig = new CrossRegionConfig(source.CrossRegionConfig);
+        }
     }
 
 
@@ -350,6 +381,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ExtensiveClusters.", this.ExtensiveClusters);
+        this.setParamObj(map, prefix + "CrossRegionConfig.", this.CrossRegionConfig);
 
     }
 }

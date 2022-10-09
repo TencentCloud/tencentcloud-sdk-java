@@ -30,6 +30,22 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
     private String [] Versions;
 
     /**
+    * 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EdgeVersionLatest")
+    @Expose
+    private String EdgeVersionLatest;
+
+    /**
+    * 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EdgeVersionCurrent")
+    @Expose
+    private String EdgeVersionCurrent;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +66,46 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
      */
     public void setVersions(String [] Versions) {
         this.Versions = Versions;
+    }
+
+    /**
+     * Get 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EdgeVersionLatest 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEdgeVersionLatest() {
+        return this.EdgeVersionLatest;
+    }
+
+    /**
+     * Set 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EdgeVersionLatest 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEdgeVersionLatest(String EdgeVersionLatest) {
+        this.EdgeVersionLatest = EdgeVersionLatest;
+    }
+
+    /**
+     * Get 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EdgeVersionCurrent 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEdgeVersionCurrent() {
+        return this.EdgeVersionCurrent;
+    }
+
+    /**
+     * Set 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EdgeVersionCurrent 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEdgeVersionCurrent(String EdgeVersionCurrent) {
+        this.EdgeVersionCurrent = EdgeVersionCurrent;
     }
 
     /**
@@ -82,6 +138,12 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
                 this.Versions[i] = new String(source.Versions[i]);
             }
         }
+        if (source.EdgeVersionLatest != null) {
+            this.EdgeVersionLatest = new String(source.EdgeVersionLatest);
+        }
+        if (source.EdgeVersionCurrent != null) {
+            this.EdgeVersionCurrent = new String(source.EdgeVersionCurrent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +155,8 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Versions.", this.Versions);
+        this.setParamSimple(map, prefix + "EdgeVersionLatest", this.EdgeVersionLatest);
+        this.setParamSimple(map, prefix + "EdgeVersionCurrent", this.EdgeVersionCurrent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

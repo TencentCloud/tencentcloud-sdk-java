@@ -53,6 +53,14 @@ public class ApproveUser extends AbstractModel{
     private String Nick;
 
     /**
+    * 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Scf")
+    @Expose
+    private Scf Scf;
+
+    /**
      * Get 用户uin 
      * @return Uin 用户uin
      */
@@ -124,6 +132,26 @@ public class ApproveUser extends AbstractModel{
         this.Nick = Nick;
     }
 
+    /**
+     * Get 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Scf 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Scf getScf() {
+        return this.Scf;
+    }
+
+    /**
+     * Set 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Scf 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScf(Scf Scf) {
+        this.Scf = Scf;
+    }
+
     public ApproveUser() {
     }
 
@@ -144,6 +172,9 @@ public class ApproveUser extends AbstractModel{
         if (source.Nick != null) {
             this.Nick = new String(source.Nick);
         }
+        if (source.Scf != null) {
+            this.Scf = new Scf(source.Scf);
+        }
     }
 
 
@@ -155,6 +186,7 @@ public class ApproveUser extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
+        this.setParamObj(map, prefix + "Scf.", this.Scf);
 
     }
 }

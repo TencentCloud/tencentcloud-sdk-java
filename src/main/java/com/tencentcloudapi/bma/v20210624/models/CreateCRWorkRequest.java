@@ -226,6 +226,20 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String MonitorEndTime;
 
     /**
+    * 申请人ID
+    */
+    @SerializedName("ApplierId")
+    @Expose
+    private String ApplierId;
+
+    /**
+    * 申请人姓名
+    */
+    @SerializedName("ApplierName")
+    @Expose
+    private String ApplierName;
+
+    /**
      * Get 作品名称 
      * @return WorkName 作品名称
      */
@@ -689,6 +703,38 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.MonitorEndTime = MonitorEndTime;
     }
 
+    /**
+     * Get 申请人ID 
+     * @return ApplierId 申请人ID
+     */
+    public String getApplierId() {
+        return this.ApplierId;
+    }
+
+    /**
+     * Set 申请人ID
+     * @param ApplierId 申请人ID
+     */
+    public void setApplierId(String ApplierId) {
+        this.ApplierId = ApplierId;
+    }
+
+    /**
+     * Get 申请人姓名 
+     * @return ApplierName 申请人姓名
+     */
+    public String getApplierName() {
+        return this.ApplierName;
+    }
+
+    /**
+     * Set 申请人姓名
+     * @param ApplierName 申请人姓名
+     */
+    public void setApplierName(String ApplierName) {
+        this.ApplierName = ApplierName;
+    }
+
     public CreateCRWorkRequest() {
     }
 
@@ -787,6 +833,12 @@ public class CreateCRWorkRequest extends AbstractModel{
         if (source.MonitorEndTime != null) {
             this.MonitorEndTime = new String(source.MonitorEndTime);
         }
+        if (source.ApplierId != null) {
+            this.ApplierId = new String(source.ApplierId);
+        }
+        if (source.ApplierName != null) {
+            this.ApplierName = new String(source.ApplierName);
+        }
     }
 
 
@@ -823,6 +875,8 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
+        this.setParamSimple(map, prefix + "ApplierId", this.ApplierId);
+        this.setParamSimple(map, prefix + "ApplierName", this.ApplierName);
 
     }
 }

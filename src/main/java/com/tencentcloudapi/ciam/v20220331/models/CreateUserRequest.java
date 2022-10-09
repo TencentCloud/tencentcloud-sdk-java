@@ -93,6 +93,41 @@ public class CreateUserRequest extends AbstractModel{
     private MemberMap [] CustomizationAttributes;
 
     /**
+    * 索引字段1
+    */
+    @SerializedName("IndexedAttribute1")
+    @Expose
+    private String IndexedAttribute1;
+
+    /**
+    * 索引字段2
+    */
+    @SerializedName("IndexedAttribute2")
+    @Expose
+    private String IndexedAttribute2;
+
+    /**
+    * 索引字段3
+    */
+    @SerializedName("IndexedAttribute3")
+    @Expose
+    private String IndexedAttribute3;
+
+    /**
+    * 索引字段4
+    */
+    @SerializedName("IndexedAttribute4")
+    @Expose
+    private String IndexedAttribute4;
+
+    /**
+    * 索引字段5
+    */
+    @SerializedName("IndexedAttribute5")
+    @Expose
+    private String IndexedAttribute5;
+
+    /**
      * Get 用户目录ID 
      * @return UserStoreId 用户目录ID
      */
@@ -252,6 +287,86 @@ public class CreateUserRequest extends AbstractModel{
         this.CustomizationAttributes = CustomizationAttributes;
     }
 
+    /**
+     * Get 索引字段1 
+     * @return IndexedAttribute1 索引字段1
+     */
+    public String getIndexedAttribute1() {
+        return this.IndexedAttribute1;
+    }
+
+    /**
+     * Set 索引字段1
+     * @param IndexedAttribute1 索引字段1
+     */
+    public void setIndexedAttribute1(String IndexedAttribute1) {
+        this.IndexedAttribute1 = IndexedAttribute1;
+    }
+
+    /**
+     * Get 索引字段2 
+     * @return IndexedAttribute2 索引字段2
+     */
+    public String getIndexedAttribute2() {
+        return this.IndexedAttribute2;
+    }
+
+    /**
+     * Set 索引字段2
+     * @param IndexedAttribute2 索引字段2
+     */
+    public void setIndexedAttribute2(String IndexedAttribute2) {
+        this.IndexedAttribute2 = IndexedAttribute2;
+    }
+
+    /**
+     * Get 索引字段3 
+     * @return IndexedAttribute3 索引字段3
+     */
+    public String getIndexedAttribute3() {
+        return this.IndexedAttribute3;
+    }
+
+    /**
+     * Set 索引字段3
+     * @param IndexedAttribute3 索引字段3
+     */
+    public void setIndexedAttribute3(String IndexedAttribute3) {
+        this.IndexedAttribute3 = IndexedAttribute3;
+    }
+
+    /**
+     * Get 索引字段4 
+     * @return IndexedAttribute4 索引字段4
+     */
+    public String getIndexedAttribute4() {
+        return this.IndexedAttribute4;
+    }
+
+    /**
+     * Set 索引字段4
+     * @param IndexedAttribute4 索引字段4
+     */
+    public void setIndexedAttribute4(String IndexedAttribute4) {
+        this.IndexedAttribute4 = IndexedAttribute4;
+    }
+
+    /**
+     * Get 索引字段5 
+     * @return IndexedAttribute5 索引字段5
+     */
+    public String getIndexedAttribute5() {
+        return this.IndexedAttribute5;
+    }
+
+    /**
+     * Set 索引字段5
+     * @param IndexedAttribute5 索引字段5
+     */
+    public void setIndexedAttribute5(String IndexedAttribute5) {
+        this.IndexedAttribute5 = IndexedAttribute5;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -296,6 +411,21 @@ public class CreateUserRequest extends AbstractModel{
                 this.CustomizationAttributes[i] = new MemberMap(source.CustomizationAttributes[i]);
             }
         }
+        if (source.IndexedAttribute1 != null) {
+            this.IndexedAttribute1 = new String(source.IndexedAttribute1);
+        }
+        if (source.IndexedAttribute2 != null) {
+            this.IndexedAttribute2 = new String(source.IndexedAttribute2);
+        }
+        if (source.IndexedAttribute3 != null) {
+            this.IndexedAttribute3 = new String(source.IndexedAttribute3);
+        }
+        if (source.IndexedAttribute4 != null) {
+            this.IndexedAttribute4 = new String(source.IndexedAttribute4);
+        }
+        if (source.IndexedAttribute5 != null) {
+            this.IndexedAttribute5 = new String(source.IndexedAttribute5);
+        }
     }
 
 
@@ -313,6 +443,11 @@ public class CreateUserRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UserGroup.", this.UserGroup);
         this.setParamSimple(map, prefix + "Birthdate", this.Birthdate);
         this.setParamArrayObj(map, prefix + "CustomizationAttributes.", this.CustomizationAttributes);
+        this.setParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+        this.setParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+        this.setParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+        this.setParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+        this.setParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
 
     }
 }

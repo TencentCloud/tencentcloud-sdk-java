@@ -143,6 +143,46 @@ public class TemNamespaceInfo extends AbstractModel{
     private Long Locked;
 
     /**
+    * 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
+    * 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 环境id 
      * @return EnvironmentId 环境id
      */
@@ -418,6 +458,106 @@ public class TemNamespaceInfo extends AbstractModel{
         this.Locked = Locked;
     }
 
+    /**
+     * Get 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAccountUin 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAccountUin 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public TemNamespaceInfo() {
     }
 
@@ -477,6 +617,24 @@ public class TemNamespaceInfo extends AbstractModel{
         if (source.Locked != null) {
             this.Locked = new Long(source.Locked);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -501,6 +659,11 @@ public class TemNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
         this.setParamSimple(map, prefix + "Locked", this.Locked);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

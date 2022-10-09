@@ -300,6 +300,9 @@ public enum RedisErrorCode {
     // 自动续费标识错误。
      UNSUPPORTEDOPERATION_ISAUTORENEWERROR("UnsupportedOperation.IsAutoRenewError"),
      
+    // 实例版本过低。
+     UNSUPPORTEDOPERATION_LIMITPROXYVERSION("UnsupportedOperation.LimitProxyVersion"),
+     
     // 只有集群版实例支持导出备份。
      UNSUPPORTEDOPERATION_ONLYCLUSTERINSTANCECANEXPORTBACKUP("UnsupportedOperation.OnlyClusterInstanceCanExportBackup");
      

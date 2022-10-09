@@ -107,6 +107,13 @@ ANNOTATION_FORMAT_FILE，文件目录结构
     private Boolean IsSchemaExisted;
 
     /**
+    * 导入文件粒度，按行或者按文件
+    */
+    @SerializedName("ContentType")
+    @Expose
+    private String ContentType;
+
+    /**
      * Get 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return DatasetName 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -322,6 +329,22 @@ ANNOTATION_FORMAT_FILE，文件目录结构
         this.IsSchemaExisted = IsSchemaExisted;
     }
 
+    /**
+     * Get 导入文件粒度，按行或者按文件 
+     * @return ContentType 导入文件粒度，按行或者按文件
+     */
+    public String getContentType() {
+        return this.ContentType;
+    }
+
+    /**
+     * Set 导入文件粒度，按行或者按文件
+     * @param ContentType 导入文件粒度，按行或者按文件
+     */
+    public void setContentType(String ContentType) {
+        this.ContentType = ContentType;
+    }
+
     public CreateDatasetRequest() {
     }
 
@@ -366,6 +389,9 @@ ANNOTATION_FORMAT_FILE，文件目录结构
         if (source.IsSchemaExisted != null) {
             this.IsSchemaExisted = new Boolean(source.IsSchemaExisted);
         }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
     }
 
 
@@ -383,6 +409,7 @@ ANNOTATION_FORMAT_FILE，文件目录结构
         this.setParamSimple(map, prefix + "AnnotationFormat", this.AnnotationFormat);
         this.setParamArrayObj(map, prefix + "SchemaInfos.", this.SchemaInfos);
         this.setParamSimple(map, prefix + "IsSchemaExisted", this.IsSchemaExisted);
+        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
 
     }
 }

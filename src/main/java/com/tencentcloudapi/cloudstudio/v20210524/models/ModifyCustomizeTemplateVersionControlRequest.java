@@ -30,7 +30,7 @@ public class ModifyCustomizeTemplateVersionControlRequest extends AbstractModel{
     private String CloudStudioSessionTeam;
 
     /**
-    * 模版ID
+    * 模板ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyCustomizeTemplateVersionControlRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版ID 
-     * @return TemplateId 模版ID
+     * Get 模板ID 
+     * @return TemplateId 模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版ID
-     * @param TemplateId 模版ID
+     * Set 模板ID
+     * @param TemplateId 模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

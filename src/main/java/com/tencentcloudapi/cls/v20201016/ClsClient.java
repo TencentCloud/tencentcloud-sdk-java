@@ -719,7 +719,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于构建直方图
+     *本接口用于构建日志数量直方图
      * @param req DescribeLogHistogramRequest
      * @return DescribeLogHistogramResponse
      * @throws TencentCloudSDKException

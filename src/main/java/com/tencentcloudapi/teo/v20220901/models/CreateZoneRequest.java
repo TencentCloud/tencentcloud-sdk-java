@@ -53,6 +53,15 @@ public class CreateZoneRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
+    */
+    @SerializedName("AllowDuplicates")
+    @Expose
+    private Boolean AllowDuplicates;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -124,6 +133,30 @@ public class CreateZoneRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。 
+     * @return AllowDuplicates 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
+     */
+    public Boolean getAllowDuplicates() {
+        return this.AllowDuplicates;
+    }
+
+    /**
+     * Set 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
+     * @param AllowDuplicates 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
+     */
+    public void setAllowDuplicates(Boolean AllowDuplicates) {
+        this.AllowDuplicates = AllowDuplicates;
+    }
+
     public CreateZoneRequest() {
     }
 
@@ -147,6 +180,9 @@ public class CreateZoneRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.AllowDuplicates != null) {
+            this.AllowDuplicates = new Boolean(source.AllowDuplicates);
+        }
     }
 
 
@@ -158,6 +194,7 @@ public class CreateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "JumpStart", this.JumpStart);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
 
     }
 }

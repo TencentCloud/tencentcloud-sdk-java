@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeESHitsResponse extends AbstractModel{
+public class DescribeAliasDomainsResponse extends AbstractModel{
 
     /**
-    * ES查询结果JSON
+    * 符合条件的别称域名个数。
     */
-    @SerializedName("Data")
+    @SerializedName("TotalCount")
     @Expose
-    private String Data;
+    private Long TotalCount;
+
+    /**
+    * 别称域名详细信息列表。
+    */
+    @SerializedName("AliasDomains")
+    @Expose
+    private AliasDomain [] AliasDomains;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeESHitsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ES查询结果JSON 
-     * @return Data ES查询结果JSON
+     * Get 符合条件的别称域名个数。 
+     * @return TotalCount 符合条件的别称域名个数。
      */
-    public String getData() {
-        return this.Data;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set ES查询结果JSON
-     * @param Data ES查询结果JSON
+     * Set 符合条件的别称域名个数。
+     * @param TotalCount 符合条件的别称域名个数。
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 别称域名详细信息列表。 
+     * @return AliasDomains 别称域名详细信息列表。
+     */
+    public AliasDomain [] getAliasDomains() {
+        return this.AliasDomains;
+    }
+
+    /**
+     * Set 别称域名详细信息列表。
+     * @param AliasDomains 别称域名详细信息列表。
+     */
+    public void setAliasDomains(AliasDomain [] AliasDomains) {
+        this.AliasDomains = AliasDomains;
     }
 
     /**
@@ -68,16 +91,22 @@ public class DescribeESHitsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeESHitsResponse() {
+    public DescribeAliasDomainsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeESHitsResponse(DescribeESHitsResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public DescribeAliasDomainsResponse(DescribeAliasDomainsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AliasDomains != null) {
+            this.AliasDomains = new AliasDomain[source.AliasDomains.length];
+            for (int i = 0; i < source.AliasDomains.length; i++) {
+                this.AliasDomains[i] = new AliasDomain(source.AliasDomains[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class DescribeESHitsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "AliasDomains.", this.AliasDomains);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

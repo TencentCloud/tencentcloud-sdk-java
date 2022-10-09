@@ -35,14 +35,13 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>sip_proto：网络层协议。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchFrom")
     @Expose
     private String MatchFrom;
 
     /**
-    * 匹配项的参数。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
+    * 匹配项的参数。仅当 MatchFrom 为 header 时，可以使用本参数，值可填入 header 的 key 作为参数。
     */
     @SerializedName("MatchParam")
     @Expose
@@ -66,7 +65,6 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>match_prefix：前缀匹配；</li>
 <li>match_suffix：后缀匹配；</li>
 <li>wildcard：通配符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -74,7 +72,6 @@ public class ExceptUserRuleCondition extends AbstractModel{
 
     /**
     * 匹配值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchContent")
     @Expose
@@ -92,8 +89,7 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>accept：请求内容类型；</li>
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
-<li>sip_proto：网络层协议。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>sip_proto：网络层协议。</li> 
      * @return MatchFrom 匹配项，取值有：
 <li>host：请求域名；</li>
 <li>sip：客户端IP；</li>
@@ -106,7 +102,6 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>sip_proto：网络层协议。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchFrom() {
         return this.MatchFrom;
@@ -125,7 +120,6 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>sip_proto：网络层协议。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchFrom 匹配项，取值有：
 <li>host：请求域名；</li>
 <li>sip：客户端IP；</li>
@@ -138,23 +132,22 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>sip_proto：网络层协议。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;
     }
 
     /**
-     * Get 匹配项的参数。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。 
-     * @return MatchParam 匹配项的参数。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
+     * Get 匹配项的参数。仅当 MatchFrom 为 header 时，可以使用本参数，值可填入 header 的 key 作为参数。 
+     * @return MatchParam 匹配项的参数。仅当 MatchFrom 为 header 时，可以使用本参数，值可填入 header 的 key 作为参数。
      */
     public String getMatchParam() {
         return this.MatchParam;
     }
 
     /**
-     * Set 匹配项的参数。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
-     * @param MatchParam 匹配项的参数。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
+     * Set 匹配项的参数。仅当 MatchFrom 为 header 时，可以使用本参数，值可填入 header 的 key 作为参数。
+     * @param MatchParam 匹配项的参数。仅当 MatchFrom 为 header 时，可以使用本参数，值可填入 header 的 key 作为参数。
      */
     public void setMatchParam(String MatchParam) {
         this.MatchParam = MatchParam;
@@ -177,8 +170,7 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>len_eq：数值等于；</li>
 <li>match_prefix：前缀匹配；</li>
 <li>match_suffix：后缀匹配；</li>
-<li>wildcard：通配符。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>wildcard：通配符。</li> 
      * @return Operator 匹配操作符，取值有：
 <li>equal：字符串等于；</li>
 <li>not_equal：数值不等于；</li>
@@ -196,7 +188,6 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>match_prefix：前缀匹配；</li>
 <li>match_suffix：后缀匹配；</li>
 <li>wildcard：通配符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -220,7 +211,6 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>match_prefix：前缀匹配；</li>
 <li>match_suffix：后缀匹配；</li>
 <li>wildcard：通配符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 匹配操作符，取值有：
 <li>equal：字符串等于；</li>
 <li>not_equal：数值不等于；</li>
@@ -238,17 +228,14 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>match_prefix：前缀匹配；</li>
 <li>match_suffix：后缀匹配；</li>
 <li>wildcard：通配符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 匹配值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配值。 
      * @return MatchContent 匹配值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchContent() {
         return this.MatchContent;
@@ -256,9 +243,7 @@ public class ExceptUserRuleCondition extends AbstractModel{
 
     /**
      * Set 匹配值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchContent 匹配值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchContent(String MatchContent) {
         this.MatchContent = MatchContent;

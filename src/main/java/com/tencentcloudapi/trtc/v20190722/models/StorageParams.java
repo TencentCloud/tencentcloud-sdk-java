@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class StorageParams extends AbstractModel{
 
     /**
-    * 第三方云存储的账号信息（暂不支持）。
+    * 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
     */
     @SerializedName("CloudStorage")
     @Expose
     private CloudStorage CloudStorage;
 
     /**
-    * 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
+    * 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
     */
     @SerializedName("CloudVod")
     @Expose
     private CloudVod CloudVod;
 
     /**
-     * Get 第三方云存储的账号信息（暂不支持）。 
-     * @return CloudStorage 第三方云存储的账号信息（暂不支持）。
+     * Get 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。 
+     * @return CloudStorage 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
      */
     public CloudStorage getCloudStorage() {
         return this.CloudStorage;
     }
 
     /**
-     * Set 第三方云存储的账号信息（暂不支持）。
-     * @param CloudStorage 第三方云存储的账号信息（暂不支持）。
+     * Set 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
+     * @param CloudStorage 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
      */
     public void setCloudStorage(CloudStorage CloudStorage) {
         this.CloudStorage = CloudStorage;
     }
 
     /**
-     * Get 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。 
-     * @return CloudVod 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
+     * Get 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。 
+     * @return CloudVod 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
      */
     public CloudVod getCloudVod() {
         return this.CloudVod;
     }
 
     /**
-     * Set 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
-     * @param CloudVod 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
+     * Set 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+     * @param CloudVod 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
      */
     public void setCloudVod(CloudVod CloudVod) {
         this.CloudVod = CloudVod;

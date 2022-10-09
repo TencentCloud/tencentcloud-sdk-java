@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class IdentifyZoneResponse extends AbstractModel{
 
     /**
-    * 站点归属信息。
+    * 站点归属校验：Dns校验信息。
     */
     @SerializedName("Ascription")
     @Expose
     private AscriptionInfo Ascription;
+
+    /**
+    * 站点归属权校验：文件校验信息。
+    */
+    @SerializedName("FileAscription")
+    @Expose
+    private FileAscriptionInfo FileAscription;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class IdentifyZoneResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 站点归属信息。 
-     * @return Ascription 站点归属信息。
+     * Get 站点归属校验：Dns校验信息。 
+     * @return Ascription 站点归属校验：Dns校验信息。
      */
     public AscriptionInfo getAscription() {
         return this.Ascription;
     }
 
     /**
-     * Set 站点归属信息。
-     * @param Ascription 站点归属信息。
+     * Set 站点归属校验：Dns校验信息。
+     * @param Ascription 站点归属校验：Dns校验信息。
      */
     public void setAscription(AscriptionInfo Ascription) {
         this.Ascription = Ascription;
+    }
+
+    /**
+     * Get 站点归属权校验：文件校验信息。 
+     * @return FileAscription 站点归属权校验：文件校验信息。
+     */
+    public FileAscriptionInfo getFileAscription() {
+        return this.FileAscription;
+    }
+
+    /**
+     * Set 站点归属权校验：文件校验信息。
+     * @param FileAscription 站点归属权校验：文件校验信息。
+     */
+    public void setFileAscription(FileAscriptionInfo FileAscription) {
+        this.FileAscription = FileAscription;
     }
 
     /**
@@ -79,6 +102,9 @@ public class IdentifyZoneResponse extends AbstractModel{
         if (source.Ascription != null) {
             this.Ascription = new AscriptionInfo(source.Ascription);
         }
+        if (source.FileAscription != null) {
+            this.FileAscription = new FileAscriptionInfo(source.FileAscription);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class IdentifyZoneResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Ascription.", this.Ascription);
+        this.setParamObj(map, prefix + "FileAscription.", this.FileAscription);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

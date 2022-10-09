@@ -51,6 +51,20 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private Long WaitSwitch;
 
     /**
+    * 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
+    */
+    @SerializedName("NotSyncRo")
+    @Expose
+    private Boolean NotSyncRo;
+
+    /**
+    * 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。
+    */
+    @SerializedName("NotSyncDr")
+    @Expose
+    private Boolean NotSyncDr;
+
+    /**
      * Get 实例短 ID 列表。 
      * @return InstanceIds 实例短 ID 列表。
      */
@@ -114,6 +128,38 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         this.WaitSwitch = WaitSwitch;
     }
 
+    /**
+     * Get 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。 
+     * @return NotSyncRo 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
+     */
+    public Boolean getNotSyncRo() {
+        return this.NotSyncRo;
+    }
+
+    /**
+     * Set 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
+     * @param NotSyncRo 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
+     */
+    public void setNotSyncRo(Boolean NotSyncRo) {
+        this.NotSyncRo = NotSyncRo;
+    }
+
+    /**
+     * Get 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。 
+     * @return NotSyncDr 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。
+     */
+    public Boolean getNotSyncDr() {
+        return this.NotSyncDr;
+    }
+
+    /**
+     * Set 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。
+     * @param NotSyncDr 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。
+     */
+    public void setNotSyncDr(Boolean NotSyncDr) {
+        this.NotSyncDr = NotSyncDr;
+    }
+
     public ModifyInstanceParamRequest() {
     }
 
@@ -140,6 +186,12 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         if (source.WaitSwitch != null) {
             this.WaitSwitch = new Long(source.WaitSwitch);
         }
+        if (source.NotSyncRo != null) {
+            this.NotSyncRo = new Boolean(source.NotSyncRo);
+        }
+        if (source.NotSyncDr != null) {
+            this.NotSyncDr = new Boolean(source.NotSyncDr);
+        }
     }
 
 
@@ -151,6 +203,8 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "NotSyncRo", this.NotSyncRo);
+        this.setParamSimple(map, prefix + "NotSyncDr", this.NotSyncDr);
 
     }
 }

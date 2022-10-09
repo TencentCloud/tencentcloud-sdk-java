@@ -23,8 +23,7 @@ import java.util.HashMap;
 public class ExceptUserRule extends AbstractModel{
 
     /**
-    * 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 规则名称，不可使用中文。
     */
     @SerializedName("RuleName")
     @Expose
@@ -32,7 +31,6 @@ public class ExceptUserRule extends AbstractModel{
 
     /**
     * 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -42,22 +40,20 @@ public class ExceptUserRule extends AbstractModel{
     * 规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 规则ID。仅出参使用。默认由底层生成。
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * 更新时间。仅出参使用
+    * 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -81,38 +77,31 @@ public class ExceptUserRule extends AbstractModel{
     private ExceptUserRuleScope ExceptUserRuleScope;
 
     /**
-    * 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 优先级，取值范围0-100。如果为null，默认由底层设置为0。
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-     * Get 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 规则名称，不可使用中文。 
+     * @return RuleName 规则名称，不可使用中文。
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 规则名称，不可使用中文。
+     * @param RuleName 规则名称，不可使用中文。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则的处置方式，当前仅支持skip：跳过全部托管规则。 
      * @return Action 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -120,9 +109,7 @@ public class ExceptUserRule extends AbstractModel{
 
     /**
      * Set 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -131,12 +118,10 @@ public class ExceptUserRule extends AbstractModel{
     /**
      * Get 规则生效状态，取值有：
 <li>on：生效；</li>
-<li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：失效。</li> 
      * @return RuleStatus 规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleStatus() {
         return this.RuleStatus;
@@ -146,40 +131,34 @@ public class ExceptUserRule extends AbstractModel{
      * Set 规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleStatus 规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 规则ID。仅出参使用。默认由底层生成。 
+     * @return RuleID 规则ID。仅出参使用。默认由底层生成。
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 规则ID。仅出参使用。默认由底层生成。
+     * @param RuleID 规则ID。仅出参使用。默认由底层生成。
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 更新时间。仅出参使用
+     * Get 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间。仅出参使用
+     * @return UpdateTime 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -187,9 +166,9 @@ public class ExceptUserRule extends AbstractModel{
     }
 
     /**
-     * Set 更新时间。仅出参使用
+     * Set 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间。仅出参使用
+     * @param UpdateTime 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -237,20 +216,16 @@ public class ExceptUserRule extends AbstractModel{
     }
 
     /**
-     * Get 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RulePriority 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 优先级，取值范围0-100。如果为null，默认由底层设置为0。 
+     * @return RulePriority 优先级，取值范围0-100。如果为null，默认由底层设置为0。
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RulePriority 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 优先级，取值范围0-100。如果为null，默认由底层设置为0。
+     * @param RulePriority 优先级，取值范围0-100。如果为null，默认由底层设置为0。
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;

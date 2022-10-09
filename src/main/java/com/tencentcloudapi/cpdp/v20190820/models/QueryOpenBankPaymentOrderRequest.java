@@ -30,14 +30,14 @@ public class QueryOpenBankPaymentOrderRequest extends AbstractModel{
     private String ChannelMerchantId;
 
     /**
-    * 外部商户订单号。与ChannelOrderId不能同时为空。
+    * 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
     */
     @SerializedName("OutOrderId")
     @Expose
     private String OutOrderId;
 
     /**
-    * 云平台订单号。与OutOrderId不能同时为空。
+    * 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
     */
     @SerializedName("ChannelOrderId")
     @Expose
@@ -67,32 +67,32 @@ public class QueryOpenBankPaymentOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 外部商户订单号。与ChannelOrderId不能同时为空。 
-     * @return OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。
+     * Get 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。 
+     * @return OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
      */
     public String getOutOrderId() {
         return this.OutOrderId;
     }
 
     /**
-     * Set 外部商户订单号。与ChannelOrderId不能同时为空。
-     * @param OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。
+     * Set 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
+     * @param OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
      */
     public void setOutOrderId(String OutOrderId) {
         this.OutOrderId = OutOrderId;
     }
 
     /**
-     * Get 云平台订单号。与OutOrderId不能同时为空。 
-     * @return ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。
+     * Get 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可 
+     * @return ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
      */
     public String getChannelOrderId() {
         return this.ChannelOrderId;
     }
 
     /**
-     * Set 云平台订单号。与OutOrderId不能同时为空。
-     * @param ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。
+     * Set 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
+     * @param ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
      */
     public void setChannelOrderId(String ChannelOrderId) {
         this.ChannelOrderId = ChannelOrderId;

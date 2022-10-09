@@ -30,11 +30,11 @@ public class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel{
     private String GatewayId;
 
     /**
-    * 翻页从第几个开始获取
+    * 实例分组id
     */
-    @SerializedName("Offset")
+    @SerializedName("GroupId")
     @Expose
-    private Long Offset;
+    private String GroupId;
 
     /**
     * 翻页获取多少个
@@ -42,6 +42,13 @@ public class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 翻页从第几个开始获取
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 云原生API网关实例ID。 
@@ -60,19 +67,19 @@ public class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel{
     }
 
     /**
-     * Get 翻页从第几个开始获取 
-     * @return Offset 翻页从第几个开始获取
+     * Get 实例分组id 
+     * @return GroupId 实例分组id
      */
-    public Long getOffset() {
-        return this.Offset;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set 翻页从第几个开始获取
-     * @param Offset 翻页从第几个开始获取
+     * Set 实例分组id
+     * @param GroupId 实例分组id
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -91,6 +98,22 @@ public class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 翻页从第几个开始获取 
+     * @return Offset 翻页从第几个开始获取
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 翻页从第几个开始获取
+     * @param Offset 翻页从第几个开始获取
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeCloudNativeAPIGatewayNodesRequest() {
     }
 
@@ -102,11 +125,14 @@ public class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel{
         if (source.GatewayId != null) {
             this.GatewayId = new String(source.GatewayId);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -116,8 +142,9 @@ public class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

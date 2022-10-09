@@ -72,6 +72,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Boolean CosBackup;
 
     /**
+    * 滚动模式时，是否跳过检查，进行强制重启。默认值为false
+    */
+    @SerializedName("SkipCheckForceRestart")
+    @Expose
+    private Boolean SkipCheckForceRestart;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -183,6 +190,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.CosBackup = CosBackup;
     }
 
+    /**
+     * Get 滚动模式时，是否跳过检查，进行强制重启。默认值为false 
+     * @return SkipCheckForceRestart 滚动模式时，是否跳过检查，进行强制重启。默认值为false
+     */
+    public Boolean getSkipCheckForceRestart() {
+        return this.SkipCheckForceRestart;
+    }
+
+    /**
+     * Set 滚动模式时，是否跳过检查，进行强制重启。默认值为false
+     * @param SkipCheckForceRestart 滚动模式时，是否跳过检查，进行强制重启。默认值为false
+     */
+    public void setSkipCheckForceRestart(Boolean SkipCheckForceRestart) {
+        this.SkipCheckForceRestart = SkipCheckForceRestart;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -212,6 +235,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.CosBackup != null) {
             this.CosBackup = new Boolean(source.CosBackup);
         }
+        if (source.SkipCheckForceRestart != null) {
+            this.SkipCheckForceRestart = new Boolean(source.SkipCheckForceRestart);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
         this.setParamSimple(map, prefix + "CosBackup", this.CosBackup);
+        this.setParamSimple(map, prefix + "SkipCheckForceRestart", this.SkipCheckForceRestart);
 
     }
 }

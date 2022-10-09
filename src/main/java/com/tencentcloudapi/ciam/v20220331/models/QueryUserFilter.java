@@ -44,6 +44,13 @@ public class QueryUserFilter extends AbstractModel{
     private Boolean Logic;
 
     /**
+    * 操作逻辑符（支持> < = >= <=  != between）
+    */
+    @SerializedName("OperateLogic")
+    @Expose
+    private String OperateLogic;
+
+    /**
      * Get 属性key 
      * @return PropertyKey 属性key
      */
@@ -91,6 +98,22 @@ public class QueryUserFilter extends AbstractModel{
         this.Logic = Logic;
     }
 
+    /**
+     * Get 操作逻辑符（支持> < = >= <=  != between） 
+     * @return OperateLogic 操作逻辑符（支持> < = >= <=  != between）
+     */
+    public String getOperateLogic() {
+        return this.OperateLogic;
+    }
+
+    /**
+     * Set 操作逻辑符（支持> < = >= <=  != between）
+     * @param OperateLogic 操作逻辑符（支持> < = >= <=  != between）
+     */
+    public void setOperateLogic(String OperateLogic) {
+        this.OperateLogic = OperateLogic;
+    }
+
     public QueryUserFilter() {
     }
 
@@ -108,6 +131,9 @@ public class QueryUserFilter extends AbstractModel{
         if (source.Logic != null) {
             this.Logic = new Boolean(source.Logic);
         }
+        if (source.OperateLogic != null) {
+            this.OperateLogic = new String(source.OperateLogic);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class QueryUserFilter extends AbstractModel{
         this.setParamSimple(map, prefix + "PropertyKey", this.PropertyKey);
         this.setParamSimple(map, prefix + "PropertyValue", this.PropertyValue);
         this.setParamSimple(map, prefix + "Logic", this.Logic);
+        this.setParamSimple(map, prefix + "OperateLogic", this.OperateLogic);
 
     }
 }

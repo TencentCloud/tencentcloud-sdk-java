@@ -68,6 +68,23 @@ public class ModifyLoadBalancingRequest extends AbstractModel{
     private Long TTL;
 
     /**
+    * 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+    */
+    @SerializedName("OriginType")
+    @Expose
+    private String OriginType;
+
+    /**
+    * 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
+    */
+    @SerializedName("AdvancedOriginGroups")
+    @Expose
+    private AdvancedOriginGroup [] AdvancedOriginGroups;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -175,6 +192,50 @@ public class ModifyLoadBalancingRequest extends AbstractModel{
         this.TTL = TTL;
     }
 
+    /**
+     * Get 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。 
+     * @return OriginType 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+     */
+    public String getOriginType() {
+        return this.OriginType;
+    }
+
+    /**
+     * Set 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+     * @param OriginType 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+     */
+    public void setOriginType(String OriginType) {
+        this.OriginType = OriginType;
+    }
+
+    /**
+     * Get 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。 
+     * @return AdvancedOriginGroups 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
+     */
+    public AdvancedOriginGroup [] getAdvancedOriginGroups() {
+        return this.AdvancedOriginGroups;
+    }
+
+    /**
+     * Set 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
+     * @param AdvancedOriginGroups 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
+     */
+    public void setAdvancedOriginGroups(AdvancedOriginGroup [] AdvancedOriginGroups) {
+        this.AdvancedOriginGroups = AdvancedOriginGroups;
+    }
+
     public ModifyLoadBalancingRequest() {
     }
 
@@ -201,6 +262,15 @@ public class ModifyLoadBalancingRequest extends AbstractModel{
         if (source.TTL != null) {
             this.TTL = new Long(source.TTL);
         }
+        if (source.OriginType != null) {
+            this.OriginType = new String(source.OriginType);
+        }
+        if (source.AdvancedOriginGroups != null) {
+            this.AdvancedOriginGroups = new AdvancedOriginGroup[source.AdvancedOriginGroups.length];
+            for (int i = 0; i < source.AdvancedOriginGroups.length; i++) {
+                this.AdvancedOriginGroups[i] = new AdvancedOriginGroup(source.AdvancedOriginGroups[i]);
+            }
+        }
     }
 
 
@@ -214,6 +284,8 @@ public class ModifyLoadBalancingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
         this.setParamSimple(map, prefix + "BackupOriginGroupId", this.BackupOriginGroupId);
         this.setParamSimple(map, prefix + "TTL", this.TTL);
+        this.setParamSimple(map, prefix + "OriginType", this.OriginType);
+        this.setParamArrayObj(map, prefix + "AdvancedOriginGroups.", this.AdvancedOriginGroups);
 
     }
 }

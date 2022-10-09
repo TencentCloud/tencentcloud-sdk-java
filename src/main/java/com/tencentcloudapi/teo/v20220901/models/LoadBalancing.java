@@ -97,6 +97,23 @@ public class LoadBalancing extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+    */
+    @SerializedName("OriginType")
+    @Expose
+    private String OriginType;
+
+    /**
+    * 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedOriginGroups")
+    @Expose
+    private AdvancedOriginGroup [] AdvancedOriginGroups;
+
+    /**
      * Get 负载均衡ID。 
      * @return LoadBalancingId 负载均衡ID。
      */
@@ -272,6 +289,50 @@ public class LoadBalancing extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li> 
+     * @return OriginType 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+     */
+    public String getOriginType() {
+        return this.OriginType;
+    }
+
+    /**
+     * Set 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+     * @param OriginType 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+     */
+    public void setOriginType(String OriginType) {
+        this.OriginType = OriginType;
+    }
+
+    /**
+     * Get 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedOriginGroups 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedOriginGroup [] getAdvancedOriginGroups() {
+        return this.AdvancedOriginGroups;
+    }
+
+    /**
+     * Set 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedOriginGroups 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedOriginGroups(AdvancedOriginGroup [] AdvancedOriginGroups) {
+        this.AdvancedOriginGroups = AdvancedOriginGroups;
+    }
+
     public LoadBalancing() {
     }
 
@@ -310,6 +371,15 @@ public class LoadBalancing extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.OriginType != null) {
+            this.OriginType = new String(source.OriginType);
+        }
+        if (source.AdvancedOriginGroups != null) {
+            this.AdvancedOriginGroups = new AdvancedOriginGroup[source.AdvancedOriginGroups.length];
+            for (int i = 0; i < source.AdvancedOriginGroups.length; i++) {
+                this.AdvancedOriginGroups[i] = new AdvancedOriginGroup(source.AdvancedOriginGroups[i]);
+            }
+        }
     }
 
 
@@ -327,6 +397,8 @@ public class LoadBalancing extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
         this.setParamSimple(map, prefix + "BackupOriginGroupId", this.BackupOriginGroupId);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "OriginType", this.OriginType);
+        this.setParamArrayObj(map, prefix + "AdvancedOriginGroups.", this.AdvancedOriginGroups);
 
     }
 }

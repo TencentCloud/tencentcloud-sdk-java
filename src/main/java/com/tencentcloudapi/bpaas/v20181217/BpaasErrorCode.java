@@ -1,5 +1,8 @@
 package com.tencentcloudapi.bpaas.v20181217;
 public enum BpaasErrorCode {
+    // 数据上报失败。
+     FAILEDOPERATION_SENDTOCKAFKA("FailedOperation.SendToCkafka"),
+     
     // 鉴权失败。
      INTERNALERROR_CAUTHERROR("InternalError.CauthError"),
      

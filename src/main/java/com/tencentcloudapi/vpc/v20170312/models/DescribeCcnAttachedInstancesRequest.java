@@ -62,7 +62,7 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
     private String OrderField;
 
     /**
-    * 排序方法。顺序：`ASC`，倒序：`DESC`。
+    * 排序方法。升序：`ASC`，倒序：`DESC`。
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -165,16 +165,16 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序方法。顺序：`ASC`，倒序：`DESC`。 
-     * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Get 排序方法。升序：`ASC`，倒序：`DESC`。 
+     * @return OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方法。顺序：`ASC`，倒序：`DESC`。
-     * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Set 排序方法。升序：`ASC`，倒序：`DESC`。
+     * @param OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

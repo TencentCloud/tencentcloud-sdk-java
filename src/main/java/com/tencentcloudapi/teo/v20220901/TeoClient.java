@@ -59,6 +59,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *创建别称域名。
+     * @param req CreateAliasDomainRequest
+     * @return CreateAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAliasDomainResponse CreateAliasDomain(CreateAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAliasDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建应用代理
      * @param req CreateApplicationProxyRequest
      * @return CreateApplicationProxyResponse
@@ -419,6 +439,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *删除别称域名。
+     * @param req DeleteAliasDomainRequest
+     * @return DeleteAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAliasDomainResponse DeleteAliasDomain(DeleteAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAliasDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除应用代理
      * @param req DeleteApplicationProxyRequest
      * @return DeleteApplicationProxyResponse
@@ -591,6 +631,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAddableEntityListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAddableEntityList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询别称域名信息列表。
+     * @param req DescribeAliasDomainsRequest
+     * @return DescribeAliasDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAliasDomainsResponse DescribeAliasDomains(DescribeAliasDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAliasDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAliasDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1051,26 +1111,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDnssecResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDnssec");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询域名证书列表，支持搜索、分页、排序、过滤。
-     * @param req DescribeHostCertificatesRequest
-     * @return DescribeHostCertificatesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeHostCertificatesResponse DescribeHostCertificates(DescribeHostCertificatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHostCertificatesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeHostCertificatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeHostCertificates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1959,6 +1999,46 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *修改别称域名。
+     * @param req ModifyAliasDomainRequest
+     * @return ModifyAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAliasDomainResponse ModifyAliasDomain(ModifyAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAliasDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改别称域名状态。
+     * @param req ModifyAliasDomainStatusRequest
+     * @return ModifyAliasDomainStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAliasDomainStatusResponse ModifyAliasDomainStatus(ModifyAliasDomainStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAliasDomainStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAliasDomainStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改应用代理
      * @param req ModifyApplicationProxyRequest
      * @return ModifyApplicationProxyResponse
@@ -2391,6 +2471,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyZoneStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyZoneStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *当客户取回站定的同时会取回此站点下关联的别称域名，此时入参为ZoneId；当客户接入站点发现已被别称域名接入时通过验证之后可取回域名，此时入参为ZoneName。
+     * @param req ReclaimAliasDomainRequest
+     * @return ReclaimAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReclaimAliasDomainResponse ReclaimAliasDomain(ReclaimAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReclaimAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReclaimAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReclaimAliasDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

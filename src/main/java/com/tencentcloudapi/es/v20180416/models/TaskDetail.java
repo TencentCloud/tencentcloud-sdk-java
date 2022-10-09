@@ -51,6 +51,14 @@ public class TaskDetail extends AbstractModel{
     private SubTaskDetail [] SubTasks;
 
     /**
+    * 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElapsedTime")
+    @Expose
+    private Long ElapsedTime;
+
+    /**
      * Get 任务名 
      * @return Name 任务名
      */
@@ -114,6 +122,26 @@ public class TaskDetail extends AbstractModel{
         this.SubTasks = SubTasks;
     }
 
+    /**
+     * Get 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElapsedTime 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElapsedTime() {
+        return this.ElapsedTime;
+    }
+
+    /**
+     * Set 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElapsedTime 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElapsedTime(Long ElapsedTime) {
+        this.ElapsedTime = ElapsedTime;
+    }
+
     public TaskDetail() {
     }
 
@@ -137,6 +165,9 @@ public class TaskDetail extends AbstractModel{
                 this.SubTasks[i] = new SubTaskDetail(source.SubTasks[i]);
             }
         }
+        if (source.ElapsedTime != null) {
+            this.ElapsedTime = new Long(source.ElapsedTime);
+        }
     }
 
 
@@ -148,6 +179,7 @@ public class TaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamArrayObj(map, prefix + "SubTasks.", this.SubTasks);
+        this.setParamSimple(map, prefix + "ElapsedTime", this.ElapsedTime);
 
     }
 }

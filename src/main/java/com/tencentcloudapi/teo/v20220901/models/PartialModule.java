@@ -20,77 +20,80 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HostsCertificate extends AbstractModel{
+public class PartialModule extends AbstractModel{
 
     /**
-    * 域名。
+    * 模块名称，取值为：
+<li>waf：托管规则。</li>
+    */
+    @SerializedName("Module")
+    @Expose
+    private String Module;
+
+    /**
+    * 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Host")
+    @SerializedName("Include")
     @Expose
-    private String Host;
+    private Long [] Include;
 
     /**
-    * 服务端证书配置。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HostCertInfo")
-    @Expose
-    private HostCertInfo HostCertInfo;
+     * Get 模块名称，取值为：
+<li>waf：托管规则。</li> 
+     * @return Module 模块名称，取值为：
+<li>waf：托管规则。</li>
+     */
+    public String getModule() {
+        return this.Module;
+    }
 
     /**
-     * Get 域名。
+     * Set 模块名称，取值为：
+<li>waf：托管规则。</li>
+     * @param Module 模块名称，取值为：
+<li>waf：托管规则。</li>
+     */
+    public void setModule(String Module) {
+        this.Module = Module;
+    }
+
+    /**
+     * Get 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Host 域名。
+     * @return Include 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getHost() {
-        return this.Host;
+    public Long [] getInclude() {
+        return this.Include;
     }
 
     /**
-     * Set 域名。
+     * Set 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Host 域名。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHost(String Host) {
-        this.Host = Host;
-    }
-
-    /**
-     * Get 服务端证书配置。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostCertInfo 服务端证书配置。
+     * @param Include 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public HostCertInfo getHostCertInfo() {
-        return this.HostCertInfo;
+    public void setInclude(Long [] Include) {
+        this.Include = Include;
     }
 
-    /**
-     * Set 服务端证书配置。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostCertInfo 服务端证书配置。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHostCertInfo(HostCertInfo HostCertInfo) {
-        this.HostCertInfo = HostCertInfo;
-    }
-
-    public HostsCertificate() {
+    public PartialModule() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HostsCertificate(HostsCertificate source) {
-        if (source.Host != null) {
-            this.Host = new String(source.Host);
+    public PartialModule(PartialModule source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
         }
-        if (source.HostCertInfo != null) {
-            this.HostCertInfo = new HostCertInfo(source.HostCertInfo);
+        if (source.Include != null) {
+            this.Include = new Long[source.Include.length];
+            for (int i = 0; i < source.Include.length; i++) {
+                this.Include[i] = new Long(source.Include[i]);
+            }
         }
     }
 
@@ -99,8 +102,8 @@ public class HostsCertificate extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Host", this.Host);
-        this.setParamObj(map, prefix + "HostCertInfo.", this.HostCertInfo);
+        this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamArraySimple(map, prefix + "Include.", this.Include);
 
     }
 }

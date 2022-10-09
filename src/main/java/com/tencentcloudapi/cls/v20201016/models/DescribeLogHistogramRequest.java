@@ -51,7 +51,7 @@ public class DescribeLogHistogramRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 时间间隔: 单位ms
+    * 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
     */
     @SerializedName("Interval")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeLogHistogramRequest extends AbstractModel{
     }
 
     /**
-     * Get 时间间隔: 单位ms 
-     * @return Interval 时间间隔: 单位ms
+     * Get 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200 
+     * @return Interval 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 时间间隔: 单位ms
-     * @param Interval 时间间隔: 单位ms
+     * Set 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
+     * @param Interval 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

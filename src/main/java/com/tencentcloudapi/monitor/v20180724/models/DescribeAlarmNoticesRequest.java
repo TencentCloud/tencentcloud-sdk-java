@@ -93,6 +93,13 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private String [] NoticeIds;
 
     /**
+    * 模版根据标签过滤
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -252,6 +259,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.NoticeIds = NoticeIds;
     }
 
+    /**
+     * Get 模版根据标签过滤 
+     * @return Tags 模版根据标签过滤
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 模版根据标签过滤
+     * @param Tags 模版根据标签过滤
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeAlarmNoticesRequest() {
     }
 
@@ -299,6 +322,12 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
                 this.NoticeIds[i] = new String(source.NoticeIds[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -316,6 +345,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

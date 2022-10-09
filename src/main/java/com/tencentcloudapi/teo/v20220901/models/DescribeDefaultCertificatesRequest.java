@@ -24,7 +24,7 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel{
 
     /**
     * 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
-<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是
+<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel{
 
     /**
      * Get 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
-<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 
+<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li> 
      * @return Filters 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
-<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是
+<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -56,9 +56,9 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel{
 
     /**
      * Set 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
-<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是
+<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
      * @param Filters 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
-<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是
+<li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

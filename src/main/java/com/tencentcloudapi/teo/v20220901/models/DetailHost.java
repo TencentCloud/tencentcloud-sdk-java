@@ -195,6 +195,14 @@ public class DetailHost extends AbstractModel{
     private Ipv6 Ipv6;
 
     /**
+    * 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIpCountry")
+    @Expose
+    private ClientIpCountry ClientIpCountry;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -618,6 +626,26 @@ public class DetailHost extends AbstractModel{
         this.Ipv6 = Ipv6;
     }
 
+    /**
+     * Get 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClientIpCountry getClientIpCountry() {
+        return this.ClientIpCountry;
+    }
+
+    /**
+     * Set 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
+        this.ClientIpCountry = ClientIpCountry;
+    }
+
     public DetailHost() {
     }
 
@@ -692,6 +720,9 @@ public class DetailHost extends AbstractModel{
         if (source.Ipv6 != null) {
             this.Ipv6 = new Ipv6(source.Ipv6);
         }
+        if (source.ClientIpCountry != null) {
+            this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
+        }
     }
 
 
@@ -721,6 +752,7 @@ public class DetailHost extends AbstractModel{
         this.setParamObj(map, prefix + "DDoS.", this.DDoS);
         this.setParamObj(map, prefix + "SmartRouting.", this.SmartRouting);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
+        this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
 
     }
 }

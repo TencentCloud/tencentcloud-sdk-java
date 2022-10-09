@@ -74,7 +74,7 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     /**
     * 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
     */
     @SerializedName("Warn")
@@ -239,11 +239,11 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     /**
      * Get 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警 
      * @return Warn 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
      */
     public Long [] getWarn() {
@@ -253,11 +253,11 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     /**
      * Set 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
      * @param Warn 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
      */
     public void setWarn(Long [] Warn) {

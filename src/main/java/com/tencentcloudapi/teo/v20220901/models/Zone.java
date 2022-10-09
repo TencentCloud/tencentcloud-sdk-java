@@ -78,7 +78,7 @@ public class Zone extends AbstractModel{
     private Boolean Paused;
 
     /**
-    * 是否开启cname加速，取值有：
+    * 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
     */
@@ -87,7 +87,7 @@ public class Zone extends AbstractModel{
     private String CnameSpeedUp;
 
     /**
-    * cname 接入状态，取值有：
+    * CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
     */
@@ -286,10 +286,10 @@ public class Zone extends AbstractModel{
     }
 
     /**
-     * Get 是否开启cname加速，取值有：
+     * Get 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li> 
-     * @return CnameSpeedUp 是否开启cname加速，取值有：
+     * @return CnameSpeedUp 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
      */
@@ -298,10 +298,10 @@ public class Zone extends AbstractModel{
     }
 
     /**
-     * Set 是否开启cname加速，取值有：
+     * Set 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
-     * @param CnameSpeedUp 是否开启cname加速，取值有：
+     * @param CnameSpeedUp 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
      */
@@ -310,10 +310,10 @@ public class Zone extends AbstractModel{
     }
 
     /**
-     * Get cname 接入状态，取值有：
+     * Get CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li> 
-     * @return CnameStatus cname 接入状态，取值有：
+     * @return CnameStatus CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
      */
@@ -322,10 +322,10 @@ public class Zone extends AbstractModel{
     }
 
     /**
-     * Set cname 接入状态，取值有：
+     * Set CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
-     * @param CnameStatus cname 接入状态，取值有：
+     * @param CnameStatus CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
      */

@@ -213,8 +213,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *【描述】：创建出证报告，返回报告 URL
-【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
+     *创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
      * @param req CreateFlowEvidenceReportRequest
      * @return CreateFlowEvidenceReportResponse
      * @throws TencentCloudSDKException
@@ -250,6 +249,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateFlowSignReviewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateFlowSignReview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建员工
+     * @param req CreateIntegrationEmployeesRequest
+     * @return CreateIntegrationEmployeesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntegrationEmployeesResponse CreateIntegrationEmployees(CreateIntegrationEmployeesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIntegrationEmployeesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIntegrationEmployeesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateIntegrationEmployees");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -302,6 +321,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSchemeUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateSchemeUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *移除员工
+     * @param req DeleteIntegrationEmployeesRequest
+     * @return DeleteIntegrationEmployeesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIntegrationEmployeesResponse DeleteIntegrationEmployees(DeleteIntegrationEmployeesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIntegrationEmployeesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIntegrationEmployeesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIntegrationEmployees");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -387,6 +426,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlowTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询员工信息，每次返回的数据量最大为20
+     * @param req DescribeIntegrationEmployeesRequest
+     * @return DescribeIntegrationEmployeesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(DescribeIntegrationEmployeesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIntegrationEmployeesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIntegrationEmployeesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIntegrationEmployees");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

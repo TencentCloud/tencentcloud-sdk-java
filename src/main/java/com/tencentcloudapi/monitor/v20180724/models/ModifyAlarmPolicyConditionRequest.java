@@ -72,6 +72,13 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private String [] GroupBy;
 
     /**
+    * 日志告警创建请求参数信息
+    */
+    @SerializedName("LogAlarmReqInfo")
+    @Expose
+    private LogAlarmReq LogAlarmReqInfo;
+
+    /**
      * Get 模块名，固定值 monitor 
      * @return Module 模块名，固定值 monitor
      */
@@ -183,6 +190,22 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.GroupBy = GroupBy;
     }
 
+    /**
+     * Get 日志告警创建请求参数信息 
+     * @return LogAlarmReqInfo 日志告警创建请求参数信息
+     */
+    public LogAlarmReq getLogAlarmReqInfo() {
+        return this.LogAlarmReqInfo;
+    }
+
+    /**
+     * Set 日志告警创建请求参数信息
+     * @param LogAlarmReqInfo 日志告警创建请求参数信息
+     */
+    public void setLogAlarmReqInfo(LogAlarmReq LogAlarmReqInfo) {
+        this.LogAlarmReqInfo = LogAlarmReqInfo;
+    }
+
     public ModifyAlarmPolicyConditionRequest() {
     }
 
@@ -215,6 +238,9 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.LogAlarmReqInfo != null) {
+            this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
 
     }
 }

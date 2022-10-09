@@ -51,7 +51,7 @@ public class CreateClusterEndpointRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 使用的安全组，只有外网访问需要传递
+    * 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -129,16 +129,16 @@ public class CreateClusterEndpointRequest extends AbstractModel{
     }
 
     /**
-     * Get 使用的安全组，只有外网访问需要传递 
-     * @return SecurityGroup 使用的安全组，只有外网访问需要传递
+     * Get 使用的安全组，只有外网访问需要传递（开启外网访问时必传） 
+     * @return SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 使用的安全组，只有外网访问需要传递
-     * @param SecurityGroup 使用的安全组，只有外网访问需要传递
+     * Set 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
+     * @param SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

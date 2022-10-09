@@ -128,6 +128,27 @@ public class CreateCRRightRequest extends AbstractModel{
     private String IsProducer;
 
     /**
+    * x
+    */
+    @SerializedName("EvidenceFileUrl")
+    @Expose
+    private String EvidenceFileUrl;
+
+    /**
+    * x
+    */
+    @SerializedName("EvidenceValidStartDate")
+    @Expose
+    private String EvidenceValidStartDate;
+
+    /**
+    * x
+    */
+    @SerializedName("EvidenceValidEndDate")
+    @Expose
+    private String EvidenceValidEndDate;
+
+    /**
      * Get 已存证的作品ID 
      * @return WorkId 已存证的作品ID
      */
@@ -367,6 +388,54 @@ public class CreateCRRightRequest extends AbstractModel{
         this.IsProducer = IsProducer;
     }
 
+    /**
+     * Get x 
+     * @return EvidenceFileUrl x
+     */
+    public String getEvidenceFileUrl() {
+        return this.EvidenceFileUrl;
+    }
+
+    /**
+     * Set x
+     * @param EvidenceFileUrl x
+     */
+    public void setEvidenceFileUrl(String EvidenceFileUrl) {
+        this.EvidenceFileUrl = EvidenceFileUrl;
+    }
+
+    /**
+     * Get x 
+     * @return EvidenceValidStartDate x
+     */
+    public String getEvidenceValidStartDate() {
+        return this.EvidenceValidStartDate;
+    }
+
+    /**
+     * Set x
+     * @param EvidenceValidStartDate x
+     */
+    public void setEvidenceValidStartDate(String EvidenceValidStartDate) {
+        this.EvidenceValidStartDate = EvidenceValidStartDate;
+    }
+
+    /**
+     * Get x 
+     * @return EvidenceValidEndDate x
+     */
+    public String getEvidenceValidEndDate() {
+        return this.EvidenceValidEndDate;
+    }
+
+    /**
+     * Set x
+     * @param EvidenceValidEndDate x
+     */
+    public void setEvidenceValidEndDate(String EvidenceValidEndDate) {
+        this.EvidenceValidEndDate = EvidenceValidEndDate;
+    }
+
     public CreateCRRightRequest() {
     }
 
@@ -420,6 +489,15 @@ public class CreateCRRightRequest extends AbstractModel{
         if (source.IsProducer != null) {
             this.IsProducer = new String(source.IsProducer);
         }
+        if (source.EvidenceFileUrl != null) {
+            this.EvidenceFileUrl = new String(source.EvidenceFileUrl);
+        }
+        if (source.EvidenceValidStartDate != null) {
+            this.EvidenceValidStartDate = new String(source.EvidenceValidStartDate);
+        }
+        if (source.EvidenceValidEndDate != null) {
+            this.EvidenceValidEndDate = new String(source.EvidenceValidEndDate);
+        }
     }
 
 
@@ -442,6 +520,9 @@ public class CreateCRRightRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HomeValidStartDate", this.HomeValidStartDate);
         this.setParamSimple(map, prefix + "HomeValidEndDate", this.HomeValidEndDate);
         this.setParamSimple(map, prefix + "IsProducer", this.IsProducer);
+        this.setParamSimple(map, prefix + "EvidenceFileUrl", this.EvidenceFileUrl);
+        this.setParamSimple(map, prefix + "EvidenceValidStartDate", this.EvidenceValidStartDate);
+        this.setParamSimple(map, prefix + "EvidenceValidEndDate", this.EvidenceValidEndDate);
 
     }
 }

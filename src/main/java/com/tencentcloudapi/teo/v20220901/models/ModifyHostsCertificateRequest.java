@@ -44,6 +44,15 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
     private ServerCertInfo [] ServerCertInfo;
 
     /**
+    * 托管类型，取值有：
+<li>apply：托管EO；</li>
+<li>none：不托管EO；</li>不填，默认取值为apply。
+    */
+    @SerializedName("ApplyType")
+    @Expose
+    private String ApplyType;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -91,6 +100,30 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
         this.ServerCertInfo = ServerCertInfo;
     }
 
+    /**
+     * Get 托管类型，取值有：
+<li>apply：托管EO；</li>
+<li>none：不托管EO；</li>不填，默认取值为apply。 
+     * @return ApplyType 托管类型，取值有：
+<li>apply：托管EO；</li>
+<li>none：不托管EO；</li>不填，默认取值为apply。
+     */
+    public String getApplyType() {
+        return this.ApplyType;
+    }
+
+    /**
+     * Set 托管类型，取值有：
+<li>apply：托管EO；</li>
+<li>none：不托管EO；</li>不填，默认取值为apply。
+     * @param ApplyType 托管类型，取值有：
+<li>apply：托管EO；</li>
+<li>none：不托管EO；</li>不填，默认取值为apply。
+     */
+    public void setApplyType(String ApplyType) {
+        this.ApplyType = ApplyType;
+    }
+
     public ModifyHostsCertificateRequest() {
     }
 
@@ -114,6 +147,9 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
                 this.ServerCertInfo[i] = new ServerCertInfo(source.ServerCertInfo[i]);
             }
         }
+        if (source.ApplyType != null) {
+            this.ApplyType = new String(source.ApplyType);
+        }
     }
 
 
@@ -124,6 +160,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
+        this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
 
     }
 }

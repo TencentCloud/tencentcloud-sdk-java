@@ -693,7 +693,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（CreateCcn）用于创建云联网（CCN）。<br />
 * 创建云联网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
-每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+* 每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
      * @param req CreateCcnRequest
      * @return CreateCcnResponse
      * @throws TencentCloudSDKException
@@ -5819,6 +5819,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<SetCcnRegionBandwidthLimitsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetCcnRegionBandwidthLimits");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置VPNGW续费标记
+     * @param req SetVpnGatewaysRenewFlagRequest
+     * @return SetVpnGatewaysRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(SetVpnGatewaysRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetVpnGatewaysRenewFlagResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetVpnGatewaysRenewFlagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetVpnGatewaysRenewFlag");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

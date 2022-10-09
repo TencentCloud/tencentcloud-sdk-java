@@ -287,6 +287,14 @@ public class PrometheusInstancesItem extends AbstractModel{
     private Long RecordingRuleLimit;
 
     /**
+    * 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MigrationType")
+    @Expose
+    private Long MigrationType;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -994,6 +1002,26 @@ public class PrometheusInstancesItem extends AbstractModel{
         this.RecordingRuleLimit = RecordingRuleLimit;
     }
 
+    /**
+     * Get 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MigrationType 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMigrationType() {
+        return this.MigrationType;
+    }
+
+    /**
+     * Set 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MigrationType 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMigrationType(Long MigrationType) {
+        this.MigrationType = MigrationType;
+    }
+
     public PrometheusInstancesItem() {
     }
 
@@ -1092,6 +1120,9 @@ public class PrometheusInstancesItem extends AbstractModel{
         if (source.RecordingRuleLimit != null) {
             this.RecordingRuleLimit = new Long(source.RecordingRuleLimit);
         }
+        if (source.MigrationType != null) {
+            this.MigrationType = new Long(source.MigrationType);
+        }
     }
 
 
@@ -1128,6 +1159,7 @@ public class PrometheusInstancesItem extends AbstractModel{
         this.setParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
         this.setParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
         this.setParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
+        this.setParamSimple(map, prefix + "MigrationType", this.MigrationType);
 
     }
 }

@@ -179,6 +179,27 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] OneClickPolicyType;
 
     /**
+    * 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+    */
+    @SerializedName("NotBindAll")
+    @Expose
+    private Long NotBindAll;
+
+    /**
+    * 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+    */
+    @SerializedName("NotInstanceGroup")
+    @Expose
+    private Long NotInstanceGroup;
+
+    /**
+    * 策略根据标签过滤
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -550,6 +571,54 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.OneClickPolicyType = OneClickPolicyType;
     }
 
+    /**
+     * Get 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤 
+     * @return NotBindAll 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     */
+    public Long getNotBindAll() {
+        return this.NotBindAll;
+    }
+
+    /**
+     * Set 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     * @param NotBindAll 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     */
+    public void setNotBindAll(Long NotBindAll) {
+        this.NotBindAll = NotBindAll;
+    }
+
+    /**
+     * Get 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤 
+     * @return NotInstanceGroup 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     */
+    public Long getNotInstanceGroup() {
+        return this.NotInstanceGroup;
+    }
+
+    /**
+     * Set 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     * @param NotInstanceGroup 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     */
+    public void setNotInstanceGroup(Long NotInstanceGroup) {
+        this.NotInstanceGroup = NotInstanceGroup;
+    }
+
+    /**
+     * Get 策略根据标签过滤 
+     * @return Tags 策略根据标签过滤
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 策略根据标签过滤
+     * @param Tags 策略根据标签过滤
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -654,6 +723,18 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
                 this.OneClickPolicyType[i] = new String(source.OneClickPolicyType[i]);
             }
         }
+        if (source.NotBindAll != null) {
+            this.NotBindAll = new Long(source.NotBindAll);
+        }
+        if (source.NotInstanceGroup != null) {
+            this.NotInstanceGroup = new Long(source.NotInstanceGroup);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -682,6 +763,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
         this.setParamArraySimple(map, prefix + "OneClickPolicyType.", this.OneClickPolicyType);
+        this.setParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
+        this.setParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

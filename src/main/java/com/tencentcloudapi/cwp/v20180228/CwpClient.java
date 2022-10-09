@@ -141,7 +141,7 @@ public class CwpClient extends AbstractClient{
     /**
      *CreateLicenseOrder 该接口可以创建专业版/旗舰版订单
 支持预付费后付费创建
-后付费订单直接闯将成功
+后付费订单直接创建成功
 预付费订单仅下单不支付,需要调用计费支付接口进行支付
      * @param req CreateLicenseOrderRequest
      * @return CreateLicenseOrderResponse
@@ -814,6 +814,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetEnvListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAssetEnvList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取主机所有资源数量
+     * @param req DescribeAssetHostTotalCountRequest
+     * @return DescribeAssetHostTotalCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetHostTotalCountResponse DescribeAssetHostTotalCount(DescribeAssetHostTotalCountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetHostTotalCountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetHostTotalCountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetHostTotalCount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1714,26 +1734,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeESAggregationsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeESAggregations");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *获取ES查询文档列表
-     * @param req DescribeESHitsRequest
-     * @return DescribeESHitsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeESHitsResponse DescribeESHits(DescribeESHitsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeESHitsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeESHitsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeESHits");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

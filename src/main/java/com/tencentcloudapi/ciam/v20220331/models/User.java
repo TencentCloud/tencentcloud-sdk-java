@@ -307,6 +307,46 @@ public class User extends AbstractModel{
     private Long LockTime;
 
     /**
+    * 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexedAttribute1")
+    @Expose
+    private String IndexedAttribute1;
+
+    /**
+    * 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexedAttribute2")
+    @Expose
+    private String IndexedAttribute2;
+
+    /**
+    * 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexedAttribute3")
+    @Expose
+    private String IndexedAttribute3;
+
+    /**
+    * 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexedAttribute4")
+    @Expose
+    private String IndexedAttribute4;
+
+    /**
+    * 索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexedAttribute5")
+    @Expose
+    private String IndexedAttribute5;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -1010,6 +1050,106 @@ public class User extends AbstractModel{
         this.LockTime = LockTime;
     }
 
+    /**
+     * Get 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexedAttribute1 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexedAttribute1() {
+        return this.IndexedAttribute1;
+    }
+
+    /**
+     * Set 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexedAttribute1 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexedAttribute1(String IndexedAttribute1) {
+        this.IndexedAttribute1 = IndexedAttribute1;
+    }
+
+    /**
+     * Get 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexedAttribute2 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexedAttribute2() {
+        return this.IndexedAttribute2;
+    }
+
+    /**
+     * Set 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexedAttribute2 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexedAttribute2(String IndexedAttribute2) {
+        this.IndexedAttribute2 = IndexedAttribute2;
+    }
+
+    /**
+     * Get 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexedAttribute3 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexedAttribute3() {
+        return this.IndexedAttribute3;
+    }
+
+    /**
+     * Set 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexedAttribute3 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexedAttribute3(String IndexedAttribute3) {
+        this.IndexedAttribute3 = IndexedAttribute3;
+    }
+
+    /**
+     * Get 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexedAttribute4 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexedAttribute4() {
+        return this.IndexedAttribute4;
+    }
+
+    /**
+     * Set 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexedAttribute4 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexedAttribute4(String IndexedAttribute4) {
+        this.IndexedAttribute4 = IndexedAttribute4;
+    }
+
+    /**
+     * Get 索引字段5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexedAttribute5 索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexedAttribute5() {
+        return this.IndexedAttribute5;
+    }
+
+    /**
+     * Set 索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexedAttribute5 索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexedAttribute5(String IndexedAttribute5) {
+        this.IndexedAttribute5 = IndexedAttribute5;
+    }
+
     public User() {
     }
 
@@ -1132,6 +1272,21 @@ public class User extends AbstractModel{
         if (source.LockTime != null) {
             this.LockTime = new Long(source.LockTime);
         }
+        if (source.IndexedAttribute1 != null) {
+            this.IndexedAttribute1 = new String(source.IndexedAttribute1);
+        }
+        if (source.IndexedAttribute2 != null) {
+            this.IndexedAttribute2 = new String(source.IndexedAttribute2);
+        }
+        if (source.IndexedAttribute3 != null) {
+            this.IndexedAttribute3 = new String(source.IndexedAttribute3);
+        }
+        if (source.IndexedAttribute4 != null) {
+            this.IndexedAttribute4 = new String(source.IndexedAttribute4);
+        }
+        if (source.IndexedAttribute5 != null) {
+            this.IndexedAttribute5 = new String(source.IndexedAttribute5);
+        }
     }
 
 
@@ -1175,6 +1330,11 @@ public class User extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "LockType", this.LockType);
         this.setParamSimple(map, prefix + "LockTime", this.LockTime);
+        this.setParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+        this.setParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+        this.setParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+        this.setParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+        this.setParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
 
     }
 }

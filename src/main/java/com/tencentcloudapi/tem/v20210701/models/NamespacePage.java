@@ -51,6 +51,14 @@ public class NamespacePage extends AbstractModel{
     private Long Pages;
 
     /**
+    * 当前条目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Current")
+    @Expose
+    private Long Current;
+
+    /**
      * Get 分页内容 
      * @return Records 分页内容
      */
@@ -114,6 +122,26 @@ public class NamespacePage extends AbstractModel{
         this.Pages = Pages;
     }
 
+    /**
+     * Get 当前条目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Current 当前条目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCurrent() {
+        return this.Current;
+    }
+
+    /**
+     * Set 当前条目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Current 当前条目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrent(Long Current) {
+        this.Current = Current;
+    }
+
     public NamespacePage() {
     }
 
@@ -137,6 +165,9 @@ public class NamespacePage extends AbstractModel{
         if (source.Pages != null) {
             this.Pages = new Long(source.Pages);
         }
+        if (source.Current != null) {
+            this.Current = new Long(source.Current);
+        }
     }
 
 
@@ -148,6 +179,7 @@ public class NamespacePage extends AbstractModel{
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Pages", this.Pages);
+        this.setParamSimple(map, prefix + "Current", this.Current);
 
     }
 }

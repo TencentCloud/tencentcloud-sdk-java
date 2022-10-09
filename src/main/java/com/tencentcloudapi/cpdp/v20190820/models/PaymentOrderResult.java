@@ -124,6 +124,14 @@ FAILED:已失败
     private String OutUserId;
 
     /**
+    * 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelOrderId")
+    @Expose
+    private String ChannelOrderId;
+
+    /**
      * Get 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得 
@@ -371,6 +379,26 @@ FAILED:已失败
         this.OutUserId = OutUserId;
     }
 
+    /**
+     * Get 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelOrderId 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelOrderId() {
+        return this.ChannelOrderId;
+    }
+
+    /**
+     * Set 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelOrderId 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelOrderId(String ChannelOrderId) {
+        this.ChannelOrderId = ChannelOrderId;
+    }
+
     public PaymentOrderResult() {
     }
 
@@ -418,6 +446,9 @@ FAILED:已失败
         if (source.OutUserId != null) {
             this.OutUserId = new String(source.OutUserId);
         }
+        if (source.ChannelOrderId != null) {
+            this.ChannelOrderId = new String(source.ChannelOrderId);
+        }
     }
 
 
@@ -438,6 +469,7 @@ FAILED:已失败
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "OutUserId", this.OutUserId);
+        this.setParamSimple(map, prefix + "ChannelOrderId", this.ChannelOrderId);
 
     }
 }

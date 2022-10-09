@@ -71,6 +71,14 @@ public class ModifyOriginGroupRequest extends AbstractModel{
     private OriginRecord [] OriginRecords;
 
     /**
+    * 回源Host，仅当OriginType=self时可以设置。
+不填写，表示使用已有配置。
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -190,6 +198,26 @@ public class ModifyOriginGroupRequest extends AbstractModel{
         this.OriginRecords = OriginRecords;
     }
 
+    /**
+     * Get 回源Host，仅当OriginType=self时可以设置。
+不填写，表示使用已有配置。 
+     * @return HostHeader 回源Host，仅当OriginType=self时可以设置。
+不填写，表示使用已有配置。
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set 回源Host，仅当OriginType=self时可以设置。
+不填写，表示使用已有配置。
+     * @param HostHeader 回源Host，仅当OriginType=self时可以设置。
+不填写，表示使用已有配置。
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
     public ModifyOriginGroupRequest() {
     }
 
@@ -219,6 +247,9 @@ public class ModifyOriginGroupRequest extends AbstractModel{
                 this.OriginRecords[i] = new OriginRecord(source.OriginRecords[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
     }
 
 
@@ -232,6 +263,7 @@ public class ModifyOriginGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
         this.setParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
         this.setParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }
 }

@@ -44,21 +44,21 @@ public class AgentSpaceDTO extends AbstractModel{
     private String ImageName;
 
     /**
-    * 云主机登录名称
+    * 云服务器登录名称
     */
     @SerializedName("RemoteUser")
     @Expose
     private String RemoteUser;
 
     /**
-    * 云主机登录地址
+    * 云服务器登录地址
     */
     @SerializedName("RemoteHost")
     @Expose
     private String RemoteHost;
 
     /**
-    * 云主机登录端口
+    * 云服务器登录端口
     */
     @SerializedName("RemotePort")
     @Expose
@@ -141,48 +141,48 @@ public class AgentSpaceDTO extends AbstractModel{
     }
 
     /**
-     * Get 云主机登录名称 
-     * @return RemoteUser 云主机登录名称
+     * Get 云服务器登录名称 
+     * @return RemoteUser 云服务器登录名称
      */
     public String getRemoteUser() {
         return this.RemoteUser;
     }
 
     /**
-     * Set 云主机登录名称
-     * @param RemoteUser 云主机登录名称
+     * Set 云服务器登录名称
+     * @param RemoteUser 云服务器登录名称
      */
     public void setRemoteUser(String RemoteUser) {
         this.RemoteUser = RemoteUser;
     }
 
     /**
-     * Get 云主机登录地址 
-     * @return RemoteHost 云主机登录地址
+     * Get 云服务器登录地址 
+     * @return RemoteHost 云服务器登录地址
      */
     public String getRemoteHost() {
         return this.RemoteHost;
     }
 
     /**
-     * Set 云主机登录地址
-     * @param RemoteHost 云主机登录地址
+     * Set 云服务器登录地址
+     * @param RemoteHost 云服务器登录地址
      */
     public void setRemoteHost(String RemoteHost) {
         this.RemoteHost = RemoteHost;
     }
 
     /**
-     * Get 云主机登录端口 
-     * @return RemotePort 云主机登录端口
+     * Get 云服务器登录端口 
+     * @return RemotePort 云服务器登录端口
      */
     public String getRemotePort() {
         return this.RemotePort;
     }
 
     /**
-     * Set 云主机登录端口
-     * @param RemotePort 云主机登录端口
+     * Set 云服务器登录端口
+     * @param RemotePort 云服务器登录端口
      */
     public void setRemotePort(String RemotePort) {
         this.RemotePort = RemotePort;

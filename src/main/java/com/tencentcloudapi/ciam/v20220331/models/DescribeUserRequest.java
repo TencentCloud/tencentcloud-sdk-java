@@ -51,6 +51,13 @@ public class DescribeUserRequest extends AbstractModel{
     private Boolean Original;
 
     /**
+    * 排序设置
+    */
+    @SerializedName("Sort")
+    @Expose
+    private Sort Sort;
+
+    /**
      * Get 用户目录ID 
      * @return UserStoreId 用户目录ID
      */
@@ -114,6 +121,22 @@ public class DescribeUserRequest extends AbstractModel{
         this.Original = Original;
     }
 
+    /**
+     * Get 排序设置 
+     * @return Sort 排序设置
+     */
+    public Sort getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序设置
+     * @param Sort 排序设置
+     */
+    public void setSort(Sort Sort) {
+        this.Sort = Sort;
+    }
+
     public DescribeUserRequest() {
     }
 
@@ -137,6 +160,9 @@ public class DescribeUserRequest extends AbstractModel{
         if (source.Original != null) {
             this.Original = new Boolean(source.Original);
         }
+        if (source.Sort != null) {
+            this.Sort = new Sort(source.Sort);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class DescribeUserRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Pageable.", this.Pageable);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Original", this.Original);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
 
     }
 }

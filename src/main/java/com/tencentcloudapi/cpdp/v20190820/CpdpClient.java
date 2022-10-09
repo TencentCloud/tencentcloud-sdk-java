@@ -219,7 +219,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *云企付结算申请接口
+     *云企付-结算申请接口
      * @param req ApplyOpenBankSettleOrderRequest
      * @return ApplyOpenBankSettleOrderResponse
      * @throws TencentCloudSDKException
@@ -2369,6 +2369,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *财税-查询金融数据文件下载链接
+     * @param req QueryFinancialDataUrlRequest
+     * @return QueryFinancialDataUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFinancialDataUrlResponse QueryFinancialDataUrl(QueryFinancialDataUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFinancialDataUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFinancialDataUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryFinancialDataUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *灵云V2-查询税前金额
      * @param req QueryFlexAmountBeforeTaxRequest
      * @return QueryFlexAmountBeforeTaxResponse
@@ -3090,7 +3110,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *云企付结算单查询结果
+     *云企付-结算单查询结果
      * @param req QueryOpenBankSettleOrderRequest
      * @return QueryOpenBankSettleOrderResponse
      * @throws TencentCloudSDKException

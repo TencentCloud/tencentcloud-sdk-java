@@ -278,6 +278,14 @@ public class Cluster extends AbstractModel{
     private Long PayMode;
 
     /**
+    * 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNeedManageNode")
+    @Expose
+    private Long IsNeedManageNode;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -889,6 +897,26 @@ public class Cluster extends AbstractModel{
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNeedManageNode() {
+        return this.IsNeedManageNode;
+    }
+
+    /**
+     * Set 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNeedManageNode(Long IsNeedManageNode) {
+        this.IsNeedManageNode = IsNeedManageNode;
+    }
+
     public Cluster() {
     }
 
@@ -1008,6 +1036,9 @@ public class Cluster extends AbstractModel{
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.IsNeedManageNode != null) {
+            this.IsNeedManageNode = new Long(source.IsNeedManageNode);
+        }
     }
 
 
@@ -1049,6 +1080,7 @@ public class Cluster extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Correlations.", this.Correlations);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "IsNeedManageNode", this.IsNeedManageNode);
 
     }
 }

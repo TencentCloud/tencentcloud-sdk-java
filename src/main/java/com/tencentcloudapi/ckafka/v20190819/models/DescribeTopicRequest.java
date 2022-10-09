@@ -44,7 +44,7 @@ public class DescribeTopicRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认为10，最大值为50
+    * 返回数量，不填则默认为20，最大值为50
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回数量，不填则默认为10，最大值为50 
-     * @return Limit 返回数量，不填则默认为10，最大值为50
+     * Get 返回数量，不填则默认为20，最大值为50 
+     * @return Limit 返回数量，不填则默认为20，最大值为50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认为10，最大值为50
-     * @param Limit 返回数量，不填则默认为10，最大值为50
+     * Set 返回数量，不填则默认为20，最大值为50
+     * @param Limit 返回数量，不填则默认为20，最大值为50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

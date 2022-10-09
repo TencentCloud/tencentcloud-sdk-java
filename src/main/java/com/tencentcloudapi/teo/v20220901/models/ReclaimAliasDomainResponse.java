@@ -20,22 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHostCertificatesResponse extends AbstractModel{
-
-    /**
-    * 总数，用于分页查询。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 域名证书配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HostCertificates")
-    @Expose
-    private HostsCertificate [] HostCertificates;
+public class ReclaimAliasDomainResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,42 +28,6 @@ public class DescribeHostCertificatesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 总数，用于分页查询。 
-     * @return TotalCount 总数，用于分页查询。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 总数，用于分页查询。
-     * @param TotalCount 总数，用于分页查询。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 域名证书配置列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostCertificates 域名证书配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public HostsCertificate [] getHostCertificates() {
-        return this.HostCertificates;
-    }
-
-    /**
-     * Set 域名证书配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostCertificates 域名证书配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHostCertificates(HostsCertificate [] HostCertificates) {
-        this.HostCertificates = HostCertificates;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -96,23 +45,14 @@ public class DescribeHostCertificatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeHostCertificatesResponse() {
+    public ReclaimAliasDomainResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeHostCertificatesResponse(DescribeHostCertificatesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.HostCertificates != null) {
-            this.HostCertificates = new HostsCertificate[source.HostCertificates.length];
-            for (int i = 0; i < source.HostCertificates.length; i++) {
-                this.HostCertificates[i] = new HostsCertificate(source.HostCertificates[i]);
-            }
-        }
+    public ReclaimAliasDomainResponse(ReclaimAliasDomainResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ public class DescribeHostCertificatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "HostCertificates.", this.HostCertificates);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -83,8 +83,9 @@ public class DefaultServerCertInfo extends AbstractModel{
 
     /**
     * 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -98,6 +99,14 @@ public class DefaultServerCertInfo extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
+
+    /**
+    * 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignAlgo")
+    @Expose
+    private String SignAlgo;
 
     /**
      * Get 服务器证书 ID。
@@ -253,12 +262,14 @@ public class DefaultServerCertInfo extends AbstractModel{
 
     /**
      * Get 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -267,12 +278,14 @@ public class DefaultServerCertInfo extends AbstractModel{
 
     /**
      * Set 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -297,6 +310,26 @@ public class DefaultServerCertInfo extends AbstractModel{
      */
     public void setMessage(String Message) {
         this.Message = Message;
+    }
+
+    /**
+     * Get 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignAlgo 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSignAlgo() {
+        return this.SignAlgo;
+    }
+
+    /**
+     * Set 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignAlgo 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignAlgo(String SignAlgo) {
+        this.SignAlgo = SignAlgo;
     }
 
     public DefaultServerCertInfo() {
@@ -337,6 +370,9 @@ public class DefaultServerCertInfo extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.SignAlgo != null) {
+            this.SignAlgo = new String(source.SignAlgo);
+        }
     }
 
 
@@ -353,6 +389,7 @@ public class DefaultServerCertInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SubjectAltName.", this.SubjectAltName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
 
     }
 }

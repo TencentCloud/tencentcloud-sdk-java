@@ -42,7 +42,7 @@ public class ServerCertInfo extends AbstractModel{
     * 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -117,12 +117,12 @@ public class ServerCertInfo extends AbstractModel{
      * Get 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -133,12 +133,12 @@ public class ServerCertInfo extends AbstractModel{
      * Set 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

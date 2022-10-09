@@ -37,7 +37,7 @@ public class DetachLoadBalancersRequest extends AbstractModel{
     private String [] LoadBalancerIds;
 
     /**
-    * 应用型负载均衡器标识信息列表，列表长度上限为50，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
+    * 应用型负载均衡器标识信息列表，列表长度上限为100，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
     */
     @SerializedName("ForwardLoadBalancerIdentifications")
     @Expose
@@ -76,16 +76,16 @@ public class DetachLoadBalancersRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用型负载均衡器标识信息列表，列表长度上限为50，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个 
-     * @return ForwardLoadBalancerIdentifications 应用型负载均衡器标识信息列表，列表长度上限为50，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
+     * Get 应用型负载均衡器标识信息列表，列表长度上限为100，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个 
+     * @return ForwardLoadBalancerIdentifications 应用型负载均衡器标识信息列表，列表长度上限为100，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
      */
     public ForwardLoadBalancerIdentification [] getForwardLoadBalancerIdentifications() {
         return this.ForwardLoadBalancerIdentifications;
     }
 
     /**
-     * Set 应用型负载均衡器标识信息列表，列表长度上限为50，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
-     * @param ForwardLoadBalancerIdentifications 应用型负载均衡器标识信息列表，列表长度上限为50，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
+     * Set 应用型负载均衡器标识信息列表，列表长度上限为100，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
+     * @param ForwardLoadBalancerIdentifications 应用型负载均衡器标识信息列表，列表长度上限为100，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
      */
     public void setForwardLoadBalancerIdentifications(ForwardLoadBalancerIdentification [] ForwardLoadBalancerIdentifications) {
         this.ForwardLoadBalancerIdentifications = ForwardLoadBalancerIdentifications;
