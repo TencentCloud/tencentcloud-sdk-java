@@ -275,6 +275,20 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private Boolean VolumeClean;
 
     /**
+    * javaagent信息: SERVICE_AGENT/OT_AGENT
+    */
+    @SerializedName("AgentProfileList")
+    @Expose
+    private AgentProfile [] AgentProfileList;
+
+    /**
+    * 预热配置信息
+    */
+    @SerializedName("WarmupSetting")
+    @Expose
+    private WarmupSetting WarmupSetting;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -850,6 +864,38 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.VolumeClean = VolumeClean;
     }
 
+    /**
+     * Get javaagent信息: SERVICE_AGENT/OT_AGENT 
+     * @return AgentProfileList javaagent信息: SERVICE_AGENT/OT_AGENT
+     */
+    public AgentProfile [] getAgentProfileList() {
+        return this.AgentProfileList;
+    }
+
+    /**
+     * Set javaagent信息: SERVICE_AGENT/OT_AGENT
+     * @param AgentProfileList javaagent信息: SERVICE_AGENT/OT_AGENT
+     */
+    public void setAgentProfileList(AgentProfile [] AgentProfileList) {
+        this.AgentProfileList = AgentProfileList;
+    }
+
+    /**
+     * Get 预热配置信息 
+     * @return WarmupSetting 预热配置信息
+     */
+    public WarmupSetting getWarmupSetting() {
+        return this.WarmupSetting;
+    }
+
+    /**
+     * Set 预热配置信息
+     * @param WarmupSetting 预热配置信息
+     */
+    public void setWarmupSetting(WarmupSetting WarmupSetting) {
+        this.WarmupSetting = WarmupSetting;
+    }
+
     public DeployContainerGroupRequest() {
     }
 
@@ -975,6 +1021,15 @@ public class DeployContainerGroupRequest extends AbstractModel{
         if (source.VolumeClean != null) {
             this.VolumeClean = new Boolean(source.VolumeClean);
         }
+        if (source.AgentProfileList != null) {
+            this.AgentProfileList = new AgentProfile[source.AgentProfileList.length];
+            for (int i = 0; i < source.AgentProfileList.length; i++) {
+                this.AgentProfileList[i] = new AgentProfile(source.AgentProfileList[i]);
+            }
+        }
+        if (source.WarmupSetting != null) {
+            this.WarmupSetting = new WarmupSetting(source.WarmupSetting);
+        }
     }
 
 
@@ -1018,6 +1073,8 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VolumeInfoList.", this.VolumeInfoList);
         this.setParamArrayObj(map, prefix + "VolumeMountInfoList.", this.VolumeMountInfoList);
         this.setParamSimple(map, prefix + "VolumeClean", this.VolumeClean);
+        this.setParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
+        this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
 
     }
 }

@@ -142,6 +142,20 @@ public class DeployGroupRequest extends AbstractModel{
     private String JdkVersion;
 
     /**
+    * 部署agent的类型、版本
+    */
+    @SerializedName("AgentProfileList")
+    @Expose
+    private AgentProfile [] AgentProfileList;
+
+    /**
+    * 预热参数配置
+    */
+    @SerializedName("WarmupSetting")
+    @Expose
+    private WarmupSetting WarmupSetting;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -413,6 +427,38 @@ public class DeployGroupRequest extends AbstractModel{
         this.JdkVersion = JdkVersion;
     }
 
+    /**
+     * Get 部署agent的类型、版本 
+     * @return AgentProfileList 部署agent的类型、版本
+     */
+    public AgentProfile [] getAgentProfileList() {
+        return this.AgentProfileList;
+    }
+
+    /**
+     * Set 部署agent的类型、版本
+     * @param AgentProfileList 部署agent的类型、版本
+     */
+    public void setAgentProfileList(AgentProfile [] AgentProfileList) {
+        this.AgentProfileList = AgentProfileList;
+    }
+
+    /**
+     * Get 预热参数配置 
+     * @return WarmupSetting 预热参数配置
+     */
+    public WarmupSetting getWarmupSetting() {
+        return this.WarmupSetting;
+    }
+
+    /**
+     * Set 预热参数配置
+     * @param WarmupSetting 预热参数配置
+     */
+    public void setWarmupSetting(WarmupSetting WarmupSetting) {
+        this.WarmupSetting = WarmupSetting;
+    }
+
     public DeployGroupRequest() {
     }
 
@@ -475,6 +521,15 @@ public class DeployGroupRequest extends AbstractModel{
         if (source.JdkVersion != null) {
             this.JdkVersion = new String(source.JdkVersion);
         }
+        if (source.AgentProfileList != null) {
+            this.AgentProfileList = new AgentProfile[source.AgentProfileList.length];
+            for (int i = 0; i < source.AgentProfileList.length; i++) {
+                this.AgentProfileList[i] = new AgentProfile(source.AgentProfileList[i]);
+            }
+        }
+        if (source.WarmupSetting != null) {
+            this.WarmupSetting = new WarmupSetting(source.WarmupSetting);
+        }
     }
 
 
@@ -499,6 +554,8 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
         this.setParamSimple(map, prefix + "JdkName", this.JdkName);
         this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
+        this.setParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
+        this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
 
     }
 }

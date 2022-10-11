@@ -51,6 +51,22 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     private Long FreeVolume;
 
     /**
+    * 用户在当前地域的异地备份总容量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoteBackupVolume")
+    @Expose
+    private Long RemoteBackupVolume;
+
+    /**
+    * 归档备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupArchiveVolume")
+    @Expose
+    private Long BackupArchiveVolume;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +138,46 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户在当前地域的异地备份总容量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoteBackupVolume 用户在当前地域的异地备份总容量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRemoteBackupVolume() {
+        return this.RemoteBackupVolume;
+    }
+
+    /**
+     * Set 用户在当前地域的异地备份总容量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteBackupVolume 用户在当前地域的异地备份总容量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoteBackupVolume(Long RemoteBackupVolume) {
+        this.RemoteBackupVolume = RemoteBackupVolume;
+    }
+
+    /**
+     * Get 归档备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupArchiveVolume 归档备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupArchiveVolume() {
+        return this.BackupArchiveVolume;
+    }
+
+    /**
+     * Set 归档备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupArchiveVolume 归档备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupArchiveVolume(Long BackupArchiveVolume) {
+        this.BackupArchiveVolume = BackupArchiveVolume;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +213,12 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
         if (source.FreeVolume != null) {
             this.FreeVolume = new Long(source.FreeVolume);
         }
+        if (source.RemoteBackupVolume != null) {
+            this.RemoteBackupVolume = new Long(source.RemoteBackupVolume);
+        }
+        if (source.BackupArchiveVolume != null) {
+            this.BackupArchiveVolume = new Long(source.BackupArchiveVolume);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +233,8 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupVolume", this.BackupVolume);
         this.setParamSimple(map, prefix + "BillingVolume", this.BillingVolume);
         this.setParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
+        this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
+        this.setParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

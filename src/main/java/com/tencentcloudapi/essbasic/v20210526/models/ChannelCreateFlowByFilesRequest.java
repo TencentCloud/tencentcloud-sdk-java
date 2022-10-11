@@ -72,7 +72,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+    * 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
     */
     @SerializedName("Unordered")
     @Expose
@@ -233,16 +233,16 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署 
-     * @return Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+     * Get 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序 
+     * @return Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
      */
     public Boolean getUnordered() {
         return this.Unordered;
     }
 
     /**
-     * Set 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
-     * @param Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+     * Set 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+     * @param Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;

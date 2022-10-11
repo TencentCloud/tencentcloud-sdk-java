@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+    * 数据库引擎名称，本接口取值：redis。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+    * 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+    * 实例 ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。 
-     * @return Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * Get 数据库引擎名称，本接口取值：redis。 
+     * @return Product 数据库引擎名称，本接口取值：redis。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
-     * @param Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * Set 数据库引擎名称，本接口取值：redis。
+     * @param Product 数据库引擎名称，本接口取值：redis。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。 
-     * @return SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+     * Get 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。 
+     * @return SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
-     * @param SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+     * Set 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * @param SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * Get 实例 ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * Set 实例 ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -58,6 +58,13 @@ public class GetMonitorDataResponse extends AbstractModel{
     private String EndTime;
 
     /**
+    * 返回信息
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class GetMonitorDataResponse extends AbstractModel{
     }
 
     /**
+     * Get 返回信息 
+     * @return Msg 返回信息
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set 返回信息
+     * @param Msg 返回信息
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -186,6 +209,9 @@ public class GetMonitorDataResponse extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -201,6 +227,7 @@ public class GetMonitorDataResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataPoints.", this.DataPoints);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

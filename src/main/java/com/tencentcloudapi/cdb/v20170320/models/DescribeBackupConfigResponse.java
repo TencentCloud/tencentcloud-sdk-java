@@ -100,6 +100,34 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     private String StartBackupPeriodSaveDate;
 
     /**
+    * 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+    */
+    @SerializedName("EnableBackupArchive")
+    @Expose
+    private String EnableBackupArchive;
+
+    /**
+    * 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+    */
+    @SerializedName("BackupArchiveDays")
+    @Expose
+    private Long BackupArchiveDays;
+
+    /**
+    * 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+    */
+    @SerializedName("EnableBinlogArchive")
+    @Expose
+    private String EnableBinlogArchive;
+
+    /**
+    * 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+    */
+    @SerializedName("BinlogArchiveDays")
+    @Expose
+    private Long BinlogArchiveDays;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -283,6 +311,70 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启数据备份归档策略，off-关闭，on-打开，默认为off 
+     * @return EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     */
+    public String getEnableBackupArchive() {
+        return this.EnableBackupArchive;
+    }
+
+    /**
+     * Set 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     * @param EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     */
+    public void setEnableBackupArchive(String EnableBackupArchive) {
+        this.EnableBackupArchive = EnableBackupArchive;
+    }
+
+    /**
+     * Get 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数 
+     * @return BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     */
+    public Long getBackupArchiveDays() {
+        return this.BackupArchiveDays;
+    }
+
+    /**
+     * Set 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     * @param BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     */
+    public void setBackupArchiveDays(Long BackupArchiveDays) {
+        this.BackupArchiveDays = BackupArchiveDays;
+    }
+
+    /**
+     * Get 是否开启日志备份归档策略，off-关闭，on-打开，默认为off 
+     * @return EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     */
+    public String getEnableBinlogArchive() {
+        return this.EnableBinlogArchive;
+    }
+
+    /**
+     * Set 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * @param EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     */
+    public void setEnableBinlogArchive(String EnableBinlogArchive) {
+        this.EnableBinlogArchive = EnableBinlogArchive;
+    }
+
+    /**
+     * Get 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数 
+     * @return BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     */
+    public Long getBinlogArchiveDays() {
+        return this.BinlogArchiveDays;
+    }
+
+    /**
+     * Set 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     * @param BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     */
+    public void setBinlogArchiveDays(Long BinlogArchiveDays) {
+        this.BinlogArchiveDays = BinlogArchiveDays;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -339,6 +431,18 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         if (source.StartBackupPeriodSaveDate != null) {
             this.StartBackupPeriodSaveDate = new String(source.StartBackupPeriodSaveDate);
         }
+        if (source.EnableBackupArchive != null) {
+            this.EnableBackupArchive = new String(source.EnableBackupArchive);
+        }
+        if (source.BackupArchiveDays != null) {
+            this.BackupArchiveDays = new Long(source.BackupArchiveDays);
+        }
+        if (source.EnableBinlogArchive != null) {
+            this.EnableBinlogArchive = new String(source.EnableBinlogArchive);
+        }
+        if (source.BinlogArchiveDays != null) {
+            this.BinlogArchiveDays = new Long(source.BinlogArchiveDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -360,6 +464,10 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
         this.setParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
         this.setParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
+        this.setParamSimple(map, prefix + "EnableBackupArchive", this.EnableBackupArchive);
+        this.setParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
+        this.setParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
+        this.setParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

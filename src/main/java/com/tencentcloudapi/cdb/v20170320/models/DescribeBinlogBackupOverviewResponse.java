@@ -51,6 +51,20 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     private Long RemoteBinlogCount;
 
     /**
+    * 归档日志备份容量（单位为字节）。
+    */
+    @SerializedName("BinlogArchiveVolume")
+    @Expose
+    private Long BinlogArchiveVolume;
+
+    /**
+    * 归档日志备份个数。
+    */
+    @SerializedName("BinlogArchiveCount")
+    @Expose
+    private Long BinlogArchiveCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +136,38 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 归档日志备份容量（单位为字节）。 
+     * @return BinlogArchiveVolume 归档日志备份容量（单位为字节）。
+     */
+    public Long getBinlogArchiveVolume() {
+        return this.BinlogArchiveVolume;
+    }
+
+    /**
+     * Set 归档日志备份容量（单位为字节）。
+     * @param BinlogArchiveVolume 归档日志备份容量（单位为字节）。
+     */
+    public void setBinlogArchiveVolume(Long BinlogArchiveVolume) {
+        this.BinlogArchiveVolume = BinlogArchiveVolume;
+    }
+
+    /**
+     * Get 归档日志备份个数。 
+     * @return BinlogArchiveCount 归档日志备份个数。
+     */
+    public Long getBinlogArchiveCount() {
+        return this.BinlogArchiveCount;
+    }
+
+    /**
+     * Set 归档日志备份个数。
+     * @param BinlogArchiveCount 归档日志备份个数。
+     */
+    public void setBinlogArchiveCount(Long BinlogArchiveCount) {
+        this.BinlogArchiveCount = BinlogArchiveCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +203,12 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
         if (source.RemoteBinlogCount != null) {
             this.RemoteBinlogCount = new Long(source.RemoteBinlogCount);
         }
+        if (source.BinlogArchiveVolume != null) {
+            this.BinlogArchiveVolume = new Long(source.BinlogArchiveVolume);
+        }
+        if (source.BinlogArchiveCount != null) {
+            this.BinlogArchiveCount = new Long(source.BinlogArchiveCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +223,8 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BinlogBackupCount", this.BinlogBackupCount);
         this.setParamSimple(map, prefix + "RemoteBinlogVolume", this.RemoteBinlogVolume);
         this.setParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
+        this.setParamSimple(map, prefix + "BinlogArchiveVolume", this.BinlogArchiveVolume);
+        this.setParamSimple(map, prefix + "BinlogArchiveCount", this.BinlogArchiveCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

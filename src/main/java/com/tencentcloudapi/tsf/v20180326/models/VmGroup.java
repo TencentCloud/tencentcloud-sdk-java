@@ -303,6 +303,22 @@ public class VmGroup extends AbstractModel{
     private String Alias;
 
     /**
+    * javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentProfileList")
+    @Expose
+    private AgentProfile [] AgentProfileList;
+
+    /**
+    * 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmupSetting")
+    @Expose
+    private WarmupSetting WarmupSetting;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -1002,6 +1018,46 @@ public class VmGroup extends AbstractModel{
         this.Alias = Alias;
     }
 
+    /**
+     * Get javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentProfileList javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AgentProfile [] getAgentProfileList() {
+        return this.AgentProfileList;
+    }
+
+    /**
+     * Set javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentProfileList javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentProfileList(AgentProfile [] AgentProfileList) {
+        this.AgentProfileList = AgentProfileList;
+    }
+
+    /**
+     * Get 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmupSetting 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WarmupSetting getWarmupSetting() {
+        return this.WarmupSetting;
+    }
+
+    /**
+     * Set 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmupSetting 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmupSetting(WarmupSetting WarmupSetting) {
+        this.WarmupSetting = WarmupSetting;
+    }
+
     public VmGroup() {
     }
 
@@ -1118,6 +1174,15 @@ public class VmGroup extends AbstractModel{
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.AgentProfileList != null) {
+            this.AgentProfileList = new AgentProfile[source.AgentProfileList.length];
+            for (int i = 0; i < source.AgentProfileList.length; i++) {
+                this.AgentProfileList[i] = new AgentProfile(source.AgentProfileList[i]);
+            }
+        }
+        if (source.WarmupSetting != null) {
+            this.WarmupSetting = new WarmupSetting(source.WarmupSetting);
+        }
     }
 
 
@@ -1160,6 +1225,8 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "StartScript", this.StartScript);
         this.setParamSimple(map, prefix + "StopScript", this.StopScript);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
+        this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
 
     }
 }

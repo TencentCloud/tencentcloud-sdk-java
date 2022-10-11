@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DisassociateSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+    * 数据库引擎名称，本接口取值：redis。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 安全组Id。
+    * 安全组 ID。
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 实例ID列表，一个或者多个实例Id组成的数组。
+    * 实例ID列表，一个或者多个实例 ID 组成的数组。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。 
-     * @return Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * Get 数据库引擎名称，本接口取值：redis。 
+     * @return Product 数据库引擎名称，本接口取值：redis。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
-     * @param Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * Set 数据库引擎名称，本接口取值：redis。
+     * @param Product 数据库引擎名称，本接口取值：redis。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 安全组Id。 
-     * @return SecurityGroupId 安全组Id。
+     * Get 安全组 ID。 
+     * @return SecurityGroupId 安全组 ID。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组Id。
-     * @param SecurityGroupId 安全组Id。
+     * Set 安全组 ID。
+     * @param SecurityGroupId 安全组 ID。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 实例ID列表，一个或者多个实例Id组成的数组。 
-     * @return InstanceIds 实例ID列表，一个或者多个实例Id组成的数组。
+     * Get 实例ID列表，一个或者多个实例 ID 组成的数组。 
+     * @return InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表，一个或者多个实例Id组成的数组。
-     * @param InstanceIds 实例ID列表，一个或者多个实例Id组成的数组。
+     * Set 实例ID列表，一个或者多个实例 ID 组成的数组。
+     * @param InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

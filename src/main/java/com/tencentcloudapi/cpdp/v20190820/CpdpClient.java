@@ -2209,6 +2209,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *智慧零售-查询公司抬头
+     * @param req QueryCompanyTitleRequest
+     * @return QueryCompanyTitleResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCompanyTitleResponse QueryCompanyTitle(QueryCompanyTitleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCompanyTitleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCompanyTitleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCompanyTitle");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过此接口查询签约数据
      * @param req QueryContractRequest
      * @return QueryContractResponse

@@ -79,6 +79,41 @@ public class BinlogInfo extends AbstractModel{
     private String BinlogFinishTime;
 
     /**
+    * 本地binlog文件所在地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * binlog异地备份详细信息
+    */
+    @SerializedName("RemoteInfo")
+    @Expose
+    private RemoteBackupInfo [] RemoteInfo;
+
+    /**
+    * 存储方式，0-常规存储，1-归档存储，默认为0
+    */
+    @SerializedName("CosStorageType")
+    @Expose
+    private Long CosStorageType;
+
+    /**
+    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get binlog 日志备份文件名 
      * @return Name binlog 日志备份文件名
      */
@@ -206,6 +241,86 @@ public class BinlogInfo extends AbstractModel{
         this.BinlogFinishTime = BinlogFinishTime;
     }
 
+    /**
+     * Get 本地binlog文件所在地域 
+     * @return Region 本地binlog文件所在地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 本地binlog文件所在地域
+     * @param Region 本地binlog文件所在地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。 
+     * @return Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     * @param Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get binlog异地备份详细信息 
+     * @return RemoteInfo binlog异地备份详细信息
+     */
+    public RemoteBackupInfo [] getRemoteInfo() {
+        return this.RemoteInfo;
+    }
+
+    /**
+     * Set binlog异地备份详细信息
+     * @param RemoteInfo binlog异地备份详细信息
+     */
+    public void setRemoteInfo(RemoteBackupInfo [] RemoteInfo) {
+        this.RemoteInfo = RemoteInfo;
+    }
+
+    /**
+     * Get 存储方式，0-常规存储，1-归档存储，默认为0 
+     * @return CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     */
+    public Long getCosStorageType() {
+        return this.CosStorageType;
+    }
+
+    /**
+     * Set 存储方式，0-常规存储，1-归档存储，默认为0
+     * @param CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     */
+    public void setCosStorageType(Long CosStorageType) {
+        this.CosStorageType = CosStorageType;
+    }
+
+    /**
+     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public BinlogInfo() {
     }
 
@@ -238,6 +353,24 @@ public class BinlogInfo extends AbstractModel{
         if (source.BinlogFinishTime != null) {
             this.BinlogFinishTime = new String(source.BinlogFinishTime);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RemoteInfo != null) {
+            this.RemoteInfo = new RemoteBackupInfo[source.RemoteInfo.length];
+            for (int i = 0; i < source.RemoteInfo.length; i++) {
+                this.RemoteInfo[i] = new RemoteBackupInfo(source.RemoteInfo[i]);
+            }
+        }
+        if (source.CosStorageType != null) {
+            this.CosStorageType = new Long(source.CosStorageType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -253,6 +386,11 @@ public class BinlogInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "BinlogStartTime", this.BinlogStartTime);
         this.setParamSimple(map, prefix + "BinlogFinishTime", this.BinlogFinishTime);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+        this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

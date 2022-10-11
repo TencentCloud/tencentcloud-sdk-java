@@ -13,35 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSecurityGroupsResponse extends AbstractModel{
+public class QueryCompanyTitleResponse extends AbstractModel{
 
     /**
-    * 安全组规则。
+    * 错误码
     */
-    @SerializedName("Groups")
+    @SerializedName("ErrCode")
     @Expose
-    private SecurityGroup [] Groups;
+    private String ErrCode;
 
     /**
-    * 安全组生效内网地址。
+    * 错误消息
     */
-    @SerializedName("VIP")
+    @SerializedName("ErrMessage")
     @Expose
-    private String VIP;
+    private String ErrMessage;
 
     /**
-    * 安全组生效内网端口。
+    * 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("VPort")
+    @SerializedName("Result")
     @Expose
-    private String VPort;
+    private CompanyTitleResult [] Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +52,55 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 安全组规则。 
-     * @return Groups 安全组规则。
+     * Get 错误码 
+     * @return ErrCode 错误码
      */
-    public SecurityGroup [] getGroups() {
-        return this.Groups;
+    public String getErrCode() {
+        return this.ErrCode;
     }
 
     /**
-     * Set 安全组规则。
-     * @param Groups 安全组规则。
+     * Set 错误码
+     * @param ErrCode 错误码
      */
-    public void setGroups(SecurityGroup [] Groups) {
-        this.Groups = Groups;
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 安全组生效内网地址。 
-     * @return VIP 安全组生效内网地址。
+     * Get 错误消息 
+     * @return ErrMessage 错误消息
      */
-    public String getVIP() {
-        return this.VIP;
+    public String getErrMessage() {
+        return this.ErrMessage;
     }
 
     /**
-     * Set 安全组生效内网地址。
-     * @param VIP 安全组生效内网地址。
+     * Set 错误消息
+     * @param ErrMessage 错误消息
      */
-    public void setVIP(String VIP) {
-        this.VIP = VIP;
+    public void setErrMessage(String ErrMessage) {
+        this.ErrMessage = ErrMessage;
     }
 
     /**
-     * Get 安全组生效内网端口。 
-     * @return VPort 安全组生效内网端口。
+     * Get 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getVPort() {
-        return this.VPort;
+    public CompanyTitleResult [] getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 安全组生效内网端口。
-     * @param VPort 安全组生效内网端口。
+     * Set 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setVPort(String VPort) {
-        this.VPort = VPort;
+    public void setResult(CompanyTitleResult [] Result) {
+        this.Result = Result;
     }
 
     /**
@@ -114,25 +119,25 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBSecurityGroupsResponse() {
+    public QueryCompanyTitleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBSecurityGroupsResponse(DescribeDBSecurityGroupsResponse source) {
-        if (source.Groups != null) {
-            this.Groups = new SecurityGroup[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new SecurityGroup(source.Groups[i]);
+    public QueryCompanyTitleResponse(QueryCompanyTitleResponse source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
+        }
+        if (source.ErrMessage != null) {
+            this.ErrMessage = new String(source.ErrMessage);
+        }
+        if (source.Result != null) {
+            this.Result = new CompanyTitleResult[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new CompanyTitleResult(source.Result[i]);
             }
-        }
-        if (source.VIP != null) {
-            this.VIP = new String(source.VIP);
-        }
-        if (source.VPort != null) {
-            this.VPort = new String(source.VPort);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -144,9 +149,9 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
-        this.setParamSimple(map, prefix + "VIP", this.VIP);
-        this.setParamSimple(map, prefix + "VPort", this.VPort);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
