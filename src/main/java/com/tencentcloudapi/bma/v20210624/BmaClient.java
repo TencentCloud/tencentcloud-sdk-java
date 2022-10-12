@@ -139,7 +139,8 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-新建拦截接口
+     *新建拦截
+
      * @param req CreateCRBlockRequest
      * @return CreateCRBlockResponse
      * @throws TencentCloudSDKException
@@ -159,7 +160,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *品牌经营管家-版权保护模块企业认证接口
+     *本接口用于企业认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
      * @param req CreateCRCompanyVerifyRequest
      * @return CreateCRCompanyVerifyResponse
      * @throws TencentCloudSDKException
@@ -199,7 +200,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *新增权属文件
+     *权属文件添加
      * @param req CreateCRRightFileRequest
      * @return CreateCRRightFileResponse
      * @throws TencentCloudSDKException
@@ -239,7 +240,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *品牌经营管家-版权保护个人认证接口
+     *本接口用于个人认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
      * @param req CreateCRUserVerifyRequest
      * @return CreateCRUserVerifyResponse
      * @throws TencentCloudSDKException
@@ -259,7 +260,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-添加作品接口
+     *新建作品
      * @param req CreateCRWorkRequest
      * @return CreateCRWorkResponse
      * @throws TencentCloudSDKException
@@ -439,7 +440,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-拦截申请接口
+     *拦截申请
      * @param req ModifyCRBlockStatusRequest
      * @return ModifyCRBlockStatusResponse
      * @throws TencentCloudSDKException
@@ -459,7 +460,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-修改监测状态接口
+     *开启/关闭监测
      * @param req ModifyCRMonitorRequest
      * @return ModifyCRMonitorResponse
      * @throws TencentCloudSDKException
@@ -479,7 +480,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *申请取证
+     *取证申请
      * @param req ModifyCRObtainStatusRequest
      * @return ModifyCRObtainStatusResponse
      * @throws TencentCloudSDKException
@@ -499,7 +500,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-维权申请接口
+     *发函申请
      * @param req ModifyCRRightStatusRequest
      * @return ModifyCRRightStatusResponse
      * @throws TencentCloudSDKException
@@ -519,7 +520,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-白名单修改接口
+     *修改白名单列表
      * @param req ModifyCRWhiteListRequest
      * @return ModifyCRWhiteListResponse
      * @throws TencentCloudSDKException

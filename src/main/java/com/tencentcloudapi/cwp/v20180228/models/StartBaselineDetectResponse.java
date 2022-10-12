@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bma.v20210624.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCRWorkResponse extends AbstractModel{
+public class StartBaselineDetectResponse extends AbstractModel{
 
     /**
-    * 作品ID
+    * 扫描任务ID
     */
-    @SerializedName("WorkId")
+    @SerializedName("TaskId")
     @Expose
-    private Long WorkId;
-
-    /**
-    * 存证ID
-    */
-    @SerializedName("EvidenceId")
-    @Expose
-    private Long EvidenceId;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class UpdateCRWorkResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+     * Get 扫描任务ID 
+     * @return TaskId 扫描任务ID
      */
-    public Long getWorkId() {
-        return this.WorkId;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set 扫描任务ID
+     * @param TaskId 扫描任务ID
      */
-    public void setWorkId(Long WorkId) {
-        this.WorkId = WorkId;
-    }
-
-    /**
-     * Get 存证ID 
-     * @return EvidenceId 存证ID
-     */
-    public Long getEvidenceId() {
-        return this.EvidenceId;
-    }
-
-    /**
-     * Set 存证ID
-     * @param EvidenceId 存证ID
-     */
-    public void setEvidenceId(Long EvidenceId) {
-        this.EvidenceId = EvidenceId;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -91,19 +68,16 @@ public class UpdateCRWorkResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateCRWorkResponse() {
+    public StartBaselineDetectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateCRWorkResponse(UpdateCRWorkResponse source) {
-        if (source.WorkId != null) {
-            this.WorkId = new Long(source.WorkId);
-        }
-        if (source.EvidenceId != null) {
-            this.EvidenceId = new Long(source.EvidenceId);
+    public StartBaselineDetectResponse(StartBaselineDetectResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +89,7 @@ public class UpdateCRWorkResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WorkId", this.WorkId);
-        this.setParamSimple(map, prefix + "EvidenceId", this.EvidenceId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

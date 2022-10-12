@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CreateCRTortRequest extends AbstractModel{
 
     /**
-    * xx
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * xx
+    * 侵权网址
     */
     @SerializedName("TortURL")
     @Expose
     private String TortURL;
 
     /**
-    * xx
+    * 侵权平台
     */
     @SerializedName("TortPlat")
     @Expose
     private String TortPlat;
 
     /**
-    * xx
+    * 侵权标题
     */
     @SerializedName("TortTitle")
     @Expose
     private String TortTitle;
 
     /**
-     * Get xx 
-     * @return WorkId xx
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set xx
-     * @param WorkId xx
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get xx 
-     * @return TortURL xx
+     * Get 侵权网址 
+     * @return TortURL 侵权网址
      */
     public String getTortURL() {
         return this.TortURL;
     }
 
     /**
-     * Set xx
-     * @param TortURL xx
+     * Set 侵权网址
+     * @param TortURL 侵权网址
      */
     public void setTortURL(String TortURL) {
         this.TortURL = TortURL;
     }
 
     /**
-     * Get xx 
-     * @return TortPlat xx
+     * Get 侵权平台 
+     * @return TortPlat 侵权平台
      */
     public String getTortPlat() {
         return this.TortPlat;
     }
 
     /**
-     * Set xx
-     * @param TortPlat xx
+     * Set 侵权平台
+     * @param TortPlat 侵权平台
      */
     public void setTortPlat(String TortPlat) {
         this.TortPlat = TortPlat;
     }
 
     /**
-     * Get xx 
-     * @return TortTitle xx
+     * Get 侵权标题 
+     * @return TortTitle 侵权标题
      */
     public String getTortTitle() {
         return this.TortTitle;
     }
 
     /**
-     * Set xx
-     * @param TortTitle xx
+     * Set 侵权标题
+     * @param TortTitle 侵权标题
      */
     public void setTortTitle(String TortTitle) {
         this.TortTitle = TortTitle;

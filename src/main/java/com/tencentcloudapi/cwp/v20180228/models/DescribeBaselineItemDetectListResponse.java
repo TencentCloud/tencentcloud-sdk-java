@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bma.v20210624.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCRWorkResponse extends AbstractModel{
+public class DescribeBaselineItemDetectListResponse extends AbstractModel{
 
     /**
-    * 作品ID
+    * 总数
     */
-    @SerializedName("WorkId")
+    @SerializedName("Total")
     @Expose
-    private Long WorkId;
+    private Long Total;
 
     /**
-    * 存证ID
+    * 无
     */
-    @SerializedName("EvidenceId")
+    @SerializedName("List")
     @Expose
-    private Long EvidenceId;
+    private BaselineItemDetect [] List;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class UpdateCRWorkResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+     * Get 总数 
+     * @return Total 总数
      */
-    public Long getWorkId() {
-        return this.WorkId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set 总数
+     * @param Total 总数
      */
-    public void setWorkId(Long WorkId) {
-        this.WorkId = WorkId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 存证ID 
-     * @return EvidenceId 存证ID
+     * Get 无 
+     * @return List 无
      */
-    public Long getEvidenceId() {
-        return this.EvidenceId;
+    public BaselineItemDetect [] getList() {
+        return this.List;
     }
 
     /**
-     * Set 存证ID
-     * @param EvidenceId 存证ID
+     * Set 无
+     * @param List 无
      */
-    public void setEvidenceId(Long EvidenceId) {
-        this.EvidenceId = EvidenceId;
+    public void setList(BaselineItemDetect [] List) {
+        this.List = List;
     }
 
     /**
@@ -91,19 +91,22 @@ public class UpdateCRWorkResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateCRWorkResponse() {
+    public DescribeBaselineItemDetectListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateCRWorkResponse(UpdateCRWorkResponse source) {
-        if (source.WorkId != null) {
-            this.WorkId = new Long(source.WorkId);
+    public DescribeBaselineItemDetectListResponse(DescribeBaselineItemDetectListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.EvidenceId != null) {
-            this.EvidenceId = new Long(source.EvidenceId);
+        if (source.List != null) {
+            this.List = new BaselineItemDetect[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new BaselineItemDetect(source.List[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +118,8 @@ public class UpdateCRWorkResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WorkId", this.WorkId);
-        this.setParamSimple(map, prefix + "EvidenceId", this.EvidenceId);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

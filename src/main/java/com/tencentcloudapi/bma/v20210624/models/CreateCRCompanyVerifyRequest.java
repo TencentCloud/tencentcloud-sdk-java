@@ -30,13 +30,6 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
     private String CompanyName;
 
     /**
-    * 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-    */
-    @SerializedName("CompanyIDType")
-    @Expose
-    private String CompanyIDType;
-
-    /**
     * 企业证件号码
     */
     @SerializedName("CompanyID")
@@ -51,28 +44,35 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
     private String CompanyLegalName;
 
     /**
-    * 管理员名称
+    * 联系人姓名
     */
     @SerializedName("ManagerName")
     @Expose
     private String ManagerName;
 
     /**
-    * 管理员手机号
+    * 联系人手机号
     */
     @SerializedName("ManagerPhone")
     @Expose
     private String ManagerPhone;
 
     /**
-    * 手机验证码
+    * 手机验证码，接口接入可以置空
     */
     @SerializedName("VerificationCode")
     @Expose
     private String VerificationCode;
 
     /**
-    * xxx
+    * 字段已废弃，企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+    */
+    @SerializedName("CompanyIDType")
+    @Expose
+    private String CompanyIDType;
+
+    /**
+    * 字段已废弃，认证类型
     */
     @SerializedName("Type")
     @Expose
@@ -92,22 +92,6 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
-    }
-
-    /**
-     * Get 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1 
-     * @return CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     */
-    public String getCompanyIDType() {
-        return this.CompanyIDType;
-    }
-
-    /**
-     * Set 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     * @param CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     */
-    public void setCompanyIDType(String CompanyIDType) {
-        this.CompanyIDType = CompanyIDType;
     }
 
     /**
@@ -143,64 +127,80 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
     }
 
     /**
-     * Get 管理员名称 
-     * @return ManagerName 管理员名称
+     * Get 联系人姓名 
+     * @return ManagerName 联系人姓名
      */
     public String getManagerName() {
         return this.ManagerName;
     }
 
     /**
-     * Set 管理员名称
-     * @param ManagerName 管理员名称
+     * Set 联系人姓名
+     * @param ManagerName 联系人姓名
      */
     public void setManagerName(String ManagerName) {
         this.ManagerName = ManagerName;
     }
 
     /**
-     * Get 管理员手机号 
-     * @return ManagerPhone 管理员手机号
+     * Get 联系人手机号 
+     * @return ManagerPhone 联系人手机号
      */
     public String getManagerPhone() {
         return this.ManagerPhone;
     }
 
     /**
-     * Set 管理员手机号
-     * @param ManagerPhone 管理员手机号
+     * Set 联系人手机号
+     * @param ManagerPhone 联系人手机号
      */
     public void setManagerPhone(String ManagerPhone) {
         this.ManagerPhone = ManagerPhone;
     }
 
     /**
-     * Get 手机验证码 
-     * @return VerificationCode 手机验证码
+     * Get 手机验证码，接口接入可以置空 
+     * @return VerificationCode 手机验证码，接口接入可以置空
      */
     public String getVerificationCode() {
         return this.VerificationCode;
     }
 
     /**
-     * Set 手机验证码
-     * @param VerificationCode 手机验证码
+     * Set 手机验证码，接口接入可以置空
+     * @param VerificationCode 手机验证码，接口接入可以置空
      */
     public void setVerificationCode(String VerificationCode) {
         this.VerificationCode = VerificationCode;
     }
 
     /**
-     * Get xxx 
-     * @return Type xxx
+     * Get 字段已废弃，企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1 
+     * @return CompanyIDType 字段已废弃，企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     */
+    public String getCompanyIDType() {
+        return this.CompanyIDType;
+    }
+
+    /**
+     * Set 字段已废弃，企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     * @param CompanyIDType 字段已废弃，企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     */
+    public void setCompanyIDType(String CompanyIDType) {
+        this.CompanyIDType = CompanyIDType;
+    }
+
+    /**
+     * Get 字段已废弃，认证类型 
+     * @return Type 字段已废弃，认证类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set xxx
-     * @param Type xxx
+     * Set 字段已废弃，认证类型
+     * @param Type 字段已废弃，认证类型
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -217,9 +217,6 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
         if (source.CompanyName != null) {
             this.CompanyName = new String(source.CompanyName);
         }
-        if (source.CompanyIDType != null) {
-            this.CompanyIDType = new String(source.CompanyIDType);
-        }
         if (source.CompanyID != null) {
             this.CompanyID = new String(source.CompanyID);
         }
@@ -235,6 +232,9 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
         if (source.VerificationCode != null) {
             this.VerificationCode = new String(source.VerificationCode);
         }
+        if (source.CompanyIDType != null) {
+            this.CompanyIDType = new String(source.CompanyIDType);
+        }
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
@@ -246,12 +246,12 @@ public class CreateCRCompanyVerifyRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyName", this.CompanyName);
-        this.setParamSimple(map, prefix + "CompanyIDType", this.CompanyIDType);
         this.setParamSimple(map, prefix + "CompanyID", this.CompanyID);
         this.setParamSimple(map, prefix + "CompanyLegalName", this.CompanyLegalName);
         this.setParamSimple(map, prefix + "ManagerName", this.ManagerName);
         this.setParamSimple(map, prefix + "ManagerPhone", this.ManagerPhone);
         this.setParamSimple(map, prefix + "VerificationCode", this.VerificationCode);
+        this.setParamSimple(map, prefix + "CompanyIDType", this.CompanyIDType);
         this.setParamSimple(map, prefix + "Type", this.Type);
 
     }

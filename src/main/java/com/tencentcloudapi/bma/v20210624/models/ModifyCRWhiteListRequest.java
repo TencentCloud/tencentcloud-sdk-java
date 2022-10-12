@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class ModifyCRWhiteListRequest extends AbstractModel{
 
     /**
-    * 白名单ID
+    * 该字段已废弃，白名单ID
     */
     @SerializedName("WhiteListId")
     @Expose
     private Long WhiteListId;
 
     /**
-    * 平台名称
+    * 该字段已废弃，平台名称
     */
     @SerializedName("PlatForm")
     @Expose
     private String PlatForm;
 
     /**
-    * 平台站点链接
+    * 该字段已废弃，平台站点链接
     */
     @SerializedName("PlatUrl")
     @Expose
     private String PlatUrl;
 
     /**
-    * 作者ID
+    * 该字段已废弃，作者ID
     */
     @SerializedName("AuthorId")
     @Expose
     private String AuthorId;
 
     /**
-    * 作品ID
+    * 该字段已废弃，作品ID
     */
     @SerializedName("WorksId")
     @Expose
     private Long WorksId;
 
     /**
-    * xxx
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * xxx
+    * 白名单列表，以\n分割
     */
     @SerializedName("WhiteSites")
     @Expose
     private String WhiteSites;
 
     /**
-     * Get 白名单ID 
-     * @return WhiteListId 白名单ID
+     * Get 该字段已废弃，白名单ID 
+     * @return WhiteListId 该字段已废弃，白名单ID
      */
     public Long getWhiteListId() {
         return this.WhiteListId;
     }
 
     /**
-     * Set 白名单ID
-     * @param WhiteListId 白名单ID
+     * Set 该字段已废弃，白名单ID
+     * @param WhiteListId 该字段已废弃，白名单ID
      */
     public void setWhiteListId(Long WhiteListId) {
         this.WhiteListId = WhiteListId;
     }
 
     /**
-     * Get 平台名称 
-     * @return PlatForm 平台名称
+     * Get 该字段已废弃，平台名称 
+     * @return PlatForm 该字段已废弃，平台名称
      */
     public String getPlatForm() {
         return this.PlatForm;
     }
 
     /**
-     * Set 平台名称
-     * @param PlatForm 平台名称
+     * Set 该字段已废弃，平台名称
+     * @param PlatForm 该字段已废弃，平台名称
      */
     public void setPlatForm(String PlatForm) {
         this.PlatForm = PlatForm;
     }
 
     /**
-     * Get 平台站点链接 
-     * @return PlatUrl 平台站点链接
+     * Get 该字段已废弃，平台站点链接 
+     * @return PlatUrl 该字段已废弃，平台站点链接
      */
     public String getPlatUrl() {
         return this.PlatUrl;
     }
 
     /**
-     * Set 平台站点链接
-     * @param PlatUrl 平台站点链接
+     * Set 该字段已废弃，平台站点链接
+     * @param PlatUrl 该字段已废弃，平台站点链接
      */
     public void setPlatUrl(String PlatUrl) {
         this.PlatUrl = PlatUrl;
     }
 
     /**
-     * Get 作者ID 
-     * @return AuthorId 作者ID
+     * Get 该字段已废弃，作者ID 
+     * @return AuthorId 该字段已废弃，作者ID
      */
     public String getAuthorId() {
         return this.AuthorId;
     }
 
     /**
-     * Set 作者ID
-     * @param AuthorId 作者ID
+     * Set 该字段已废弃，作者ID
+     * @param AuthorId 该字段已废弃，作者ID
      */
     public void setAuthorId(String AuthorId) {
         this.AuthorId = AuthorId;
     }
 
     /**
-     * Get 作品ID 
-     * @return WorksId 作品ID
+     * Get 该字段已废弃，作品ID 
+     * @return WorksId 该字段已废弃，作品ID
      */
     public Long getWorksId() {
         return this.WorksId;
     }
 
     /**
-     * Set 作品ID
-     * @param WorksId 作品ID
+     * Set 该字段已废弃，作品ID
+     * @param WorksId 该字段已废弃，作品ID
      */
     public void setWorksId(Long WorksId) {
         this.WorksId = WorksId;
     }
 
     /**
-     * Get xxx 
-     * @return WorkId xxx
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set xxx
-     * @param WorkId xxx
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get xxx 
-     * @return WhiteSites xxx
+     * Get 白名单列表，以\n分割 
+     * @return WhiteSites 白名单列表，以\n分割
      */
     public String getWhiteSites() {
         return this.WhiteSites;
     }
 
     /**
-     * Set xxx
-     * @param WhiteSites xxx
+     * Set 白名单列表，以\n分割
+     * @param WhiteSites 白名单列表，以\n分割
      */
     public void setWhiteSites(String WhiteSites) {
         this.WhiteSites = WhiteSites;

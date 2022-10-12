@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCRBlockRequest extends AbstractModel{
 
     /**
-    * 已存证的作品ID
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
@@ -58,93 +58,93 @@ public class CreateCRBlockRequest extends AbstractModel{
     private String BlockUrl;
 
     /**
-    * x
+    * 授权书下载地址
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * x
+    * 授权书生效日期
     */
     @SerializedName("ValidStartDate")
     @Expose
     private String ValidStartDate;
 
     /**
-    * x
+    * 授权书截止日期
     */
     @SerializedName("ValidEndDate")
     @Expose
     private String ValidEndDate;
 
     /**
-    * xx
+    * 侵权截图
     */
     @SerializedName("TortPic")
     @Expose
     private String TortPic;
 
     /**
-    * x
+    * 委托书下载地址
     */
     @SerializedName("CommFileUrl")
     @Expose
     private String CommFileUrl;
 
     /**
-    * x
+    * 委托书生效日期
     */
     @SerializedName("CommValidStartDate")
     @Expose
     private String CommValidStartDate;
 
     /**
-    * x
+    * 委托书截止日期
     */
     @SerializedName("CommValidEndDate")
     @Expose
     private String CommValidEndDate;
 
     /**
-    * x
+    * 是否著作权人：0-否 1-是
     */
     @SerializedName("IsProducer")
     @Expose
     private String IsProducer;
 
     /**
-    * x
+    * 存证证书下载地址
     */
     @SerializedName("EvidenceFileUrl")
     @Expose
     private String EvidenceFileUrl;
 
     /**
-    * x
+    * 存证证书生效日期
     */
     @SerializedName("EvidenceValidStartDate")
     @Expose
     private String EvidenceValidStartDate;
 
     /**
-    * x
+    * 存证证书截止日期
     */
     @SerializedName("EvidenceValidEndDate")
     @Expose
     private String EvidenceValidEndDate;
 
     /**
-     * Get 已存证的作品ID 
-     * @return WorkId 已存证的作品ID
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set 已存证的作品ID
-     * @param WorkId 已存证的作品ID
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
@@ -215,176 +215,176 @@ public class CreateCRBlockRequest extends AbstractModel{
     }
 
     /**
-     * Get x 
-     * @return FileUrl x
+     * Get 授权书下载地址 
+     * @return FileUrl 授权书下载地址
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set x
-     * @param FileUrl x
+     * Set 授权书下载地址
+     * @param FileUrl 授权书下载地址
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get x 
-     * @return ValidStartDate x
+     * Get 授权书生效日期 
+     * @return ValidStartDate 授权书生效日期
      */
     public String getValidStartDate() {
         return this.ValidStartDate;
     }
 
     /**
-     * Set x
-     * @param ValidStartDate x
+     * Set 授权书生效日期
+     * @param ValidStartDate 授权书生效日期
      */
     public void setValidStartDate(String ValidStartDate) {
         this.ValidStartDate = ValidStartDate;
     }
 
     /**
-     * Get x 
-     * @return ValidEndDate x
+     * Get 授权书截止日期 
+     * @return ValidEndDate 授权书截止日期
      */
     public String getValidEndDate() {
         return this.ValidEndDate;
     }
 
     /**
-     * Set x
-     * @param ValidEndDate x
+     * Set 授权书截止日期
+     * @param ValidEndDate 授权书截止日期
      */
     public void setValidEndDate(String ValidEndDate) {
         this.ValidEndDate = ValidEndDate;
     }
 
     /**
-     * Get xx 
-     * @return TortPic xx
+     * Get 侵权截图 
+     * @return TortPic 侵权截图
      */
     public String getTortPic() {
         return this.TortPic;
     }
 
     /**
-     * Set xx
-     * @param TortPic xx
+     * Set 侵权截图
+     * @param TortPic 侵权截图
      */
     public void setTortPic(String TortPic) {
         this.TortPic = TortPic;
     }
 
     /**
-     * Get x 
-     * @return CommFileUrl x
+     * Get 委托书下载地址 
+     * @return CommFileUrl 委托书下载地址
      */
     public String getCommFileUrl() {
         return this.CommFileUrl;
     }
 
     /**
-     * Set x
-     * @param CommFileUrl x
+     * Set 委托书下载地址
+     * @param CommFileUrl 委托书下载地址
      */
     public void setCommFileUrl(String CommFileUrl) {
         this.CommFileUrl = CommFileUrl;
     }
 
     /**
-     * Get x 
-     * @return CommValidStartDate x
+     * Get 委托书生效日期 
+     * @return CommValidStartDate 委托书生效日期
      */
     public String getCommValidStartDate() {
         return this.CommValidStartDate;
     }
 
     /**
-     * Set x
-     * @param CommValidStartDate x
+     * Set 委托书生效日期
+     * @param CommValidStartDate 委托书生效日期
      */
     public void setCommValidStartDate(String CommValidStartDate) {
         this.CommValidStartDate = CommValidStartDate;
     }
 
     /**
-     * Get x 
-     * @return CommValidEndDate x
+     * Get 委托书截止日期 
+     * @return CommValidEndDate 委托书截止日期
      */
     public String getCommValidEndDate() {
         return this.CommValidEndDate;
     }
 
     /**
-     * Set x
-     * @param CommValidEndDate x
+     * Set 委托书截止日期
+     * @param CommValidEndDate 委托书截止日期
      */
     public void setCommValidEndDate(String CommValidEndDate) {
         this.CommValidEndDate = CommValidEndDate;
     }
 
     /**
-     * Get x 
-     * @return IsProducer x
+     * Get 是否著作权人：0-否 1-是 
+     * @return IsProducer 是否著作权人：0-否 1-是
      */
     public String getIsProducer() {
         return this.IsProducer;
     }
 
     /**
-     * Set x
-     * @param IsProducer x
+     * Set 是否著作权人：0-否 1-是
+     * @param IsProducer 是否著作权人：0-否 1-是
      */
     public void setIsProducer(String IsProducer) {
         this.IsProducer = IsProducer;
     }
 
     /**
-     * Get x 
-     * @return EvidenceFileUrl x
+     * Get 存证证书下载地址 
+     * @return EvidenceFileUrl 存证证书下载地址
      */
     public String getEvidenceFileUrl() {
         return this.EvidenceFileUrl;
     }
 
     /**
-     * Set x
-     * @param EvidenceFileUrl x
+     * Set 存证证书下载地址
+     * @param EvidenceFileUrl 存证证书下载地址
      */
     public void setEvidenceFileUrl(String EvidenceFileUrl) {
         this.EvidenceFileUrl = EvidenceFileUrl;
     }
 
     /**
-     * Get x 
-     * @return EvidenceValidStartDate x
+     * Get 存证证书生效日期 
+     * @return EvidenceValidStartDate 存证证书生效日期
      */
     public String getEvidenceValidStartDate() {
         return this.EvidenceValidStartDate;
     }
 
     /**
-     * Set x
-     * @param EvidenceValidStartDate x
+     * Set 存证证书生效日期
+     * @param EvidenceValidStartDate 存证证书生效日期
      */
     public void setEvidenceValidStartDate(String EvidenceValidStartDate) {
         this.EvidenceValidStartDate = EvidenceValidStartDate;
     }
 
     /**
-     * Get x 
-     * @return EvidenceValidEndDate x
+     * Get 存证证书截止日期 
+     * @return EvidenceValidEndDate 存证证书截止日期
      */
     public String getEvidenceValidEndDate() {
         return this.EvidenceValidEndDate;
     }
 
     /**
-     * Set x
-     * @param EvidenceValidEndDate x
+     * Set 存证证书截止日期
+     * @param EvidenceValidEndDate 存证证书截止日期
      */
     public void setEvidenceValidEndDate(String EvidenceValidEndDate) {
         this.EvidenceValidEndDate = EvidenceValidEndDate;

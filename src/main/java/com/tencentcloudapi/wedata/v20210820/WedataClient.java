@@ -103,6 +103,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     * 创建用户自定义函数
+     * @param req CreateCustomFunctionRequest
+     * @return CreateCustomFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomFunctionResponse CreateCustomFunction(CreateCustomFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomFunction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建数据源
      * @param req CreateDataSourceRequest

@@ -30,7 +30,7 @@ public class CreateCRUserVerifyRequest extends AbstractModel{
     private String UserName;
 
     /**
-    * 用户身份证ID
+    * 用户身份证号
     */
     @SerializedName("UserID")
     @Expose
@@ -44,14 +44,14 @@ public class CreateCRUserVerifyRequest extends AbstractModel{
     private String UserPhone;
 
     /**
-    * 短信验证码
+    * 短信验证码，接口接入可以置空
     */
     @SerializedName("VerificationCode")
     @Expose
     private String VerificationCode;
 
     /**
-    * xxx
+    * 字段已废弃，认证类型
     */
     @SerializedName("Type")
     @Expose
@@ -74,16 +74,16 @@ public class CreateCRUserVerifyRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户身份证ID 
-     * @return UserID 用户身份证ID
+     * Get 用户身份证号 
+     * @return UserID 用户身份证号
      */
     public String getUserID() {
         return this.UserID;
     }
 
     /**
-     * Set 用户身份证ID
-     * @param UserID 用户身份证ID
+     * Set 用户身份证号
+     * @param UserID 用户身份证号
      */
     public void setUserID(String UserID) {
         this.UserID = UserID;
@@ -106,32 +106,32 @@ public class CreateCRUserVerifyRequest extends AbstractModel{
     }
 
     /**
-     * Get 短信验证码 
-     * @return VerificationCode 短信验证码
+     * Get 短信验证码，接口接入可以置空 
+     * @return VerificationCode 短信验证码，接口接入可以置空
      */
     public String getVerificationCode() {
         return this.VerificationCode;
     }
 
     /**
-     * Set 短信验证码
-     * @param VerificationCode 短信验证码
+     * Set 短信验证码，接口接入可以置空
+     * @param VerificationCode 短信验证码，接口接入可以置空
      */
     public void setVerificationCode(String VerificationCode) {
         this.VerificationCode = VerificationCode;
     }
 
     /**
-     * Get xxx 
-     * @return Type xxx
+     * Get 字段已废弃，认证类型 
+     * @return Type 字段已废弃，认证类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set xxx
-     * @param Type xxx
+     * Set 字段已废弃，认证类型
+     * @param Type 字段已废弃，认证类型
      */
     public void setType(String Type) {
         this.Type = Type;

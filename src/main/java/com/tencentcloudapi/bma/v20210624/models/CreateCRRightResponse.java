@@ -30,7 +30,7 @@ public class CreateCRRightResponse extends AbstractModel{
     private Long TortId;
 
     /**
-    * xxx
+    * 该字段已废弃
     */
     @SerializedName("TortNum")
     @Expose
@@ -60,16 +60,16 @@ public class CreateCRRightResponse extends AbstractModel{
     }
 
     /**
-     * Get xxx 
-     * @return TortNum xxx
+     * Get 该字段已废弃 
+     * @return TortNum 该字段已废弃
      */
     public String getTortNum() {
         return this.TortNum;
     }
 
     /**
-     * Set xxx
-     * @param TortNum xxx
+     * Set 该字段已废弃
+     * @param TortNum 该字段已废弃
      */
     public void setTortNum(String TortNum) {
         this.TortNum = TortNum;

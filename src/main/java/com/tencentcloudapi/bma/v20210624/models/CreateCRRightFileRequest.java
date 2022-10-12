@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateCRRightFileRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * xxx
+    * 权属文件列表
     */
     @SerializedName("FileList")
     @Expose
     private File [] FileList;
 
     /**
-     * Get xxx 
-     * @return WorkId xxx
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set xxx
-     * @param WorkId xxx
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get xxx 
-     * @return FileList xxx
+     * Get 权属文件列表 
+     * @return FileList 权属文件列表
      */
     public File [] getFileList() {
         return this.FileList;
     }
 
     /**
-     * Set xxx
-     * @param FileList xxx
+     * Set 权属文件列表
+     * @param FileList 权属文件列表
      */
     public void setFileList(File [] FileList) {
         this.FileList = FileList;

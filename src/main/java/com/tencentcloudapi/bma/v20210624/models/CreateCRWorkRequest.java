@@ -51,35 +51,35 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String WorkSign;
 
     /**
-    * 作品图片
+    * 字段已废弃，作品图片
     */
     @SerializedName("WorkPic")
     @Expose
     private String WorkPic;
 
     /**
-    * 创作描述
+    * 作品描述
     */
     @SerializedName("WorkDesc")
     @Expose
     private String WorkDesc;
 
     /**
-    * 是否原创 0:否 1:是
+    * 是否原创：0-否 1-是
     */
     @SerializedName("IsOriginal")
     @Expose
     private String IsOriginal;
 
     /**
-    * 是否发布 0：未发布 1：已发布
+    * 是否发布：0-未发布 1-已发布
     */
     @SerializedName("IsRelease")
     @Expose
     private String IsRelease;
 
     /**
-    * 著作权人ID
+    * 字段已废弃，著作权人ID
     */
     @SerializedName("ProducerID")
     @Expose
@@ -93,42 +93,42 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String ProduceTime;
 
     /**
-    * 样品文件路径
+    * 字段已废弃
     */
     @SerializedName("SampleContentURL")
     @Expose
     private String SampleContentURL;
 
     /**
-    * 样本下载Url
+    * 作品下载地址
     */
     @SerializedName("SampleDownloadURL")
     @Expose
     private String SampleDownloadURL;
 
     /**
-    * 授予类型
-    */
-    @SerializedName("GrantType")
-    @Expose
-    private String GrantType;
-
-    /**
-    * 作品发布Url
+    * 作品在线地址
     */
     @SerializedName("SamplePublicURL")
     @Expose
     private String SamplePublicURL;
 
     /**
-    * 是否启用监测 0：不启用 1：启用 默认为0
+    * 字段已废弃，授予类型
+    */
+    @SerializedName("GrantType")
+    @Expose
+    private String GrantType;
+
+    /**
+    * 是否监测：0-不监测 1-监测
     */
     @SerializedName("IsMonitor")
     @Expose
     private String IsMonitor;
 
     /**
-    * 是否启用存证0：不存证  2：存证 默认为0
+    * 是否存证：0-不存证  2-存证 注意是2
     */
     @SerializedName("IsCert")
     @Expose
@@ -149,21 +149,21 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String MonitorUrl;
 
     /**
-    * 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
+    * 字段已废弃，创作性质
     */
     @SerializedName("ProduceType")
     @Expose
     private String ProduceType;
 
     /**
-    * 白名单
+    * 白名单列表
     */
     @SerializedName("WhiteLists")
     @Expose
     private String [] WhiteLists;
 
     /**
-    * 作品ID
+    * 作品ID，忽略该字段
     */
     @SerializedName("WorkId")
     @Expose
@@ -177,14 +177,14 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String ProducerName;
 
     /**
-    * 作者
+    * 作者，小说类型必填
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * 授权书
+    * 授权书下载地址
     */
     @SerializedName("Authorization")
     @Expose
@@ -205,14 +205,14 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String AuthorizationEndTime;
 
     /**
-    * 内容格式
+    * 内容格式，支持txt、doc等，表示Content的具体格式
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * 文件内容
+    * 文件内容base64编码，该字段仅在无法提供下载链接时使用
     */
     @SerializedName("Content")
     @Expose
@@ -226,14 +226,14 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String MonitorEndTime;
 
     /**
-    * 申请人ID
+    * 申请人ID，用于存证和取证
     */
     @SerializedName("ApplierId")
     @Expose
     private String ApplierId;
 
     /**
-    * 申请人姓名
+    * 申请人姓名，用于存证和取证
     */
     @SerializedName("ApplierName")
     @Expose
@@ -304,80 +304,80 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 作品图片 
-     * @return WorkPic 作品图片
+     * Get 字段已废弃，作品图片 
+     * @return WorkPic 字段已废弃，作品图片
      */
     public String getWorkPic() {
         return this.WorkPic;
     }
 
     /**
-     * Set 作品图片
-     * @param WorkPic 作品图片
+     * Set 字段已废弃，作品图片
+     * @param WorkPic 字段已废弃，作品图片
      */
     public void setWorkPic(String WorkPic) {
         this.WorkPic = WorkPic;
     }
 
     /**
-     * Get 创作描述 
-     * @return WorkDesc 创作描述
+     * Get 作品描述 
+     * @return WorkDesc 作品描述
      */
     public String getWorkDesc() {
         return this.WorkDesc;
     }
 
     /**
-     * Set 创作描述
-     * @param WorkDesc 创作描述
+     * Set 作品描述
+     * @param WorkDesc 作品描述
      */
     public void setWorkDesc(String WorkDesc) {
         this.WorkDesc = WorkDesc;
     }
 
     /**
-     * Get 是否原创 0:否 1:是 
-     * @return IsOriginal 是否原创 0:否 1:是
+     * Get 是否原创：0-否 1-是 
+     * @return IsOriginal 是否原创：0-否 1-是
      */
     public String getIsOriginal() {
         return this.IsOriginal;
     }
 
     /**
-     * Set 是否原创 0:否 1:是
-     * @param IsOriginal 是否原创 0:否 1:是
+     * Set 是否原创：0-否 1-是
+     * @param IsOriginal 是否原创：0-否 1-是
      */
     public void setIsOriginal(String IsOriginal) {
         this.IsOriginal = IsOriginal;
     }
 
     /**
-     * Get 是否发布 0：未发布 1：已发布 
-     * @return IsRelease 是否发布 0：未发布 1：已发布
+     * Get 是否发布：0-未发布 1-已发布 
+     * @return IsRelease 是否发布：0-未发布 1-已发布
      */
     public String getIsRelease() {
         return this.IsRelease;
     }
 
     /**
-     * Set 是否发布 0：未发布 1：已发布
-     * @param IsRelease 是否发布 0：未发布 1：已发布
+     * Set 是否发布：0-未发布 1-已发布
+     * @param IsRelease 是否发布：0-未发布 1-已发布
      */
     public void setIsRelease(String IsRelease) {
         this.IsRelease = IsRelease;
     }
 
     /**
-     * Get 著作权人ID 
-     * @return ProducerID 著作权人ID
+     * Get 字段已废弃，著作权人ID 
+     * @return ProducerID 字段已废弃，著作权人ID
      */
     public Long getProducerID() {
         return this.ProducerID;
     }
 
     /**
-     * Set 著作权人ID
-     * @param ProducerID 著作权人ID
+     * Set 字段已废弃，著作权人ID
+     * @param ProducerID 字段已废弃，著作权人ID
      */
     public void setProducerID(Long ProducerID) {
         this.ProducerID = ProducerID;
@@ -400,96 +400,96 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 样品文件路径 
-     * @return SampleContentURL 样品文件路径
+     * Get 字段已废弃 
+     * @return SampleContentURL 字段已废弃
      */
     public String getSampleContentURL() {
         return this.SampleContentURL;
     }
 
     /**
-     * Set 样品文件路径
-     * @param SampleContentURL 样品文件路径
+     * Set 字段已废弃
+     * @param SampleContentURL 字段已废弃
      */
     public void setSampleContentURL(String SampleContentURL) {
         this.SampleContentURL = SampleContentURL;
     }
 
     /**
-     * Get 样本下载Url 
-     * @return SampleDownloadURL 样本下载Url
+     * Get 作品下载地址 
+     * @return SampleDownloadURL 作品下载地址
      */
     public String getSampleDownloadURL() {
         return this.SampleDownloadURL;
     }
 
     /**
-     * Set 样本下载Url
-     * @param SampleDownloadURL 样本下载Url
+     * Set 作品下载地址
+     * @param SampleDownloadURL 作品下载地址
      */
     public void setSampleDownloadURL(String SampleDownloadURL) {
         this.SampleDownloadURL = SampleDownloadURL;
     }
 
     /**
-     * Get 授予类型 
-     * @return GrantType 授予类型
-     */
-    public String getGrantType() {
-        return this.GrantType;
-    }
-
-    /**
-     * Set 授予类型
-     * @param GrantType 授予类型
-     */
-    public void setGrantType(String GrantType) {
-        this.GrantType = GrantType;
-    }
-
-    /**
-     * Get 作品发布Url 
-     * @return SamplePublicURL 作品发布Url
+     * Get 作品在线地址 
+     * @return SamplePublicURL 作品在线地址
      */
     public String getSamplePublicURL() {
         return this.SamplePublicURL;
     }
 
     /**
-     * Set 作品发布Url
-     * @param SamplePublicURL 作品发布Url
+     * Set 作品在线地址
+     * @param SamplePublicURL 作品在线地址
      */
     public void setSamplePublicURL(String SamplePublicURL) {
         this.SamplePublicURL = SamplePublicURL;
     }
 
     /**
-     * Get 是否启用监测 0：不启用 1：启用 默认为0 
-     * @return IsMonitor 是否启用监测 0：不启用 1：启用 默认为0
+     * Get 字段已废弃，授予类型 
+     * @return GrantType 字段已废弃，授予类型
+     */
+    public String getGrantType() {
+        return this.GrantType;
+    }
+
+    /**
+     * Set 字段已废弃，授予类型
+     * @param GrantType 字段已废弃，授予类型
+     */
+    public void setGrantType(String GrantType) {
+        this.GrantType = GrantType;
+    }
+
+    /**
+     * Get 是否监测：0-不监测 1-监测 
+     * @return IsMonitor 是否监测：0-不监测 1-监测
      */
     public String getIsMonitor() {
         return this.IsMonitor;
     }
 
     /**
-     * Set 是否启用监测 0：不启用 1：启用 默认为0
-     * @param IsMonitor 是否启用监测 0：不启用 1：启用 默认为0
+     * Set 是否监测：0-不监测 1-监测
+     * @param IsMonitor 是否监测：0-不监测 1-监测
      */
     public void setIsMonitor(String IsMonitor) {
         this.IsMonitor = IsMonitor;
     }
 
     /**
-     * Get 是否启用存证0：不存证  2：存证 默认为0 
-     * @return IsCert 是否启用存证0：不存证  2：存证 默认为0
+     * Get 是否存证：0-不存证  2-存证 注意是2 
+     * @return IsCert 是否存证：0-不存证  2-存证 注意是2
      */
     public String getIsCert() {
         return this.IsCert;
     }
 
     /**
-     * Set 是否启用存证0：不存证  2：存证 默认为0
-     * @param IsCert 是否启用存证0：不存证  2：存证 默认为0
+     * Set 是否存证：0-不存证  2-存证 注意是2
+     * @param IsCert 是否存证：0-不存证  2-存证 注意是2
      */
     public void setIsCert(String IsCert) {
         this.IsCert = IsCert;
@@ -528,48 +528,48 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 创作性质（原创,改编,翻译,汇编,注释,整理,其他) 
-     * @return ProduceType 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
+     * Get 字段已废弃，创作性质 
+     * @return ProduceType 字段已废弃，创作性质
      */
     public String getProduceType() {
         return this.ProduceType;
     }
 
     /**
-     * Set 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
-     * @param ProduceType 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
+     * Set 字段已废弃，创作性质
+     * @param ProduceType 字段已废弃，创作性质
      */
     public void setProduceType(String ProduceType) {
         this.ProduceType = ProduceType;
     }
 
     /**
-     * Get 白名单 
-     * @return WhiteLists 白名单
+     * Get 白名单列表 
+     * @return WhiteLists 白名单列表
      */
     public String [] getWhiteLists() {
         return this.WhiteLists;
     }
 
     /**
-     * Set 白名单
-     * @param WhiteLists 白名单
+     * Set 白名单列表
+     * @param WhiteLists 白名单列表
      */
     public void setWhiteLists(String [] WhiteLists) {
         this.WhiteLists = WhiteLists;
     }
 
     /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+     * Get 作品ID，忽略该字段 
+     * @return WorkId 作品ID，忽略该字段
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set 作品ID，忽略该字段
+     * @param WorkId 作品ID，忽略该字段
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
@@ -592,32 +592,32 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 作者 
-     * @return Nickname 作者
+     * Get 作者，小说类型必填 
+     * @return Nickname 作者，小说类型必填
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set 作者
-     * @param Nickname 作者
+     * Set 作者，小说类型必填
+     * @param Nickname 作者，小说类型必填
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 授权书 
-     * @return Authorization 授权书
+     * Get 授权书下载地址 
+     * @return Authorization 授权书下载地址
      */
     public String getAuthorization() {
         return this.Authorization;
     }
 
     /**
-     * Set 授权书
-     * @param Authorization 授权书
+     * Set 授权书下载地址
+     * @param Authorization 授权书下载地址
      */
     public void setAuthorization(String Authorization) {
         this.Authorization = Authorization;
@@ -656,32 +656,32 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 内容格式 
-     * @return ContentType 内容格式
+     * Get 内容格式，支持txt、doc等，表示Content的具体格式 
+     * @return ContentType 内容格式，支持txt、doc等，表示Content的具体格式
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 内容格式
-     * @param ContentType 内容格式
+     * Set 内容格式，支持txt、doc等，表示Content的具体格式
+     * @param ContentType 内容格式，支持txt、doc等，表示Content的具体格式
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 文件内容 
-     * @return Content 文件内容
+     * Get 文件内容base64编码，该字段仅在无法提供下载链接时使用 
+     * @return Content 文件内容base64编码，该字段仅在无法提供下载链接时使用
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 文件内容
-     * @param Content 文件内容
+     * Set 文件内容base64编码，该字段仅在无法提供下载链接时使用
+     * @param Content 文件内容base64编码，该字段仅在无法提供下载链接时使用
      */
     public void setContent(String Content) {
         this.Content = Content;
@@ -704,32 +704,32 @@ public class CreateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 申请人ID 
-     * @return ApplierId 申请人ID
+     * Get 申请人ID，用于存证和取证 
+     * @return ApplierId 申请人ID，用于存证和取证
      */
     public String getApplierId() {
         return this.ApplierId;
     }
 
     /**
-     * Set 申请人ID
-     * @param ApplierId 申请人ID
+     * Set 申请人ID，用于存证和取证
+     * @param ApplierId 申请人ID，用于存证和取证
      */
     public void setApplierId(String ApplierId) {
         this.ApplierId = ApplierId;
     }
 
     /**
-     * Get 申请人姓名 
-     * @return ApplierName 申请人姓名
+     * Get 申请人姓名，用于存证和取证 
+     * @return ApplierName 申请人姓名，用于存证和取证
      */
     public String getApplierName() {
         return this.ApplierName;
     }
 
     /**
-     * Set 申请人姓名
-     * @param ApplierName 申请人姓名
+     * Set 申请人姓名，用于存证和取证
+     * @param ApplierName 申请人姓名，用于存证和取证
      */
     public void setApplierName(String ApplierName) {
         this.ApplierName = ApplierName;
@@ -779,11 +779,11 @@ public class CreateCRWorkRequest extends AbstractModel{
         if (source.SampleDownloadURL != null) {
             this.SampleDownloadURL = new String(source.SampleDownloadURL);
         }
-        if (source.GrantType != null) {
-            this.GrantType = new String(source.GrantType);
-        }
         if (source.SamplePublicURL != null) {
             this.SamplePublicURL = new String(source.SamplePublicURL);
+        }
+        if (source.GrantType != null) {
+            this.GrantType = new String(source.GrantType);
         }
         if (source.IsMonitor != null) {
             this.IsMonitor = new String(source.IsMonitor);
@@ -858,8 +858,8 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
         this.setParamSimple(map, prefix + "SampleContentURL", this.SampleContentURL);
         this.setParamSimple(map, prefix + "SampleDownloadURL", this.SampleDownloadURL);
-        this.setParamSimple(map, prefix + "GrantType", this.GrantType);
         this.setParamSimple(map, prefix + "SamplePublicURL", this.SamplePublicURL);
+        this.setParamSimple(map, prefix + "GrantType", this.GrantType);
         this.setParamSimple(map, prefix + "IsMonitor", this.IsMonitor);
         this.setParamSimple(map, prefix + "IsCert", this.IsCert);
         this.setParamSimple(map, prefix + "CertUrl", this.CertUrl);

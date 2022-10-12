@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeRegionsResponse extends AbstractModel{
 
     /**
-    * 地域数量
+    * 地域数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 地域列表信息
+    * 地域列表信息。
     */
     @SerializedName("RegionSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeRegionsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 地域数量 
-     * @return TotalCount 地域数量
+     * Get 地域数量。 
+     * @return TotalCount 地域数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 地域数量
-     * @param TotalCount 地域数量
+     * Set 地域数量。
+     * @param TotalCount 地域数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 地域列表信息 
-     * @return RegionSet 地域列表信息
+     * Get 地域列表信息。 
+     * @return RegionSet 地域列表信息。
      */
     public RegionInfo [] getRegionSet() {
         return this.RegionSet;
     }
 
     /**
-     * Set 地域列表信息
-     * @param RegionSet 地域列表信息
+     * Set 地域列表信息。
+     * @param RegionSet 地域列表信息。
      */
     public void setRegionSet(RegionInfo [] RegionSet) {
         this.RegionSet = RegionSet;

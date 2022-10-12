@@ -44,7 +44,7 @@ public class DescribeCRMonitorDetailRequest extends AbstractModel{
     private Long PageNumber;
 
     /**
-    * x
+    * 过滤参数
     */
     @SerializedName("Filters")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeCRMonitorDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get x 
-     * @return Filters x
+     * Get 过滤参数 
+     * @return Filters 过滤参数
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set x
-     * @param Filters x
+     * Set 过滤参数
+     * @param Filters 过滤参数
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

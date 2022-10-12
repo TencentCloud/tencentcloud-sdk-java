@@ -1502,6 +1502,46 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取基线检测项的列表
+     * @param req DescribeBaselineItemDetectListRequest
+     * @return DescribeBaselineItemDetectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineItemDetectListResponse DescribeBaselineItemDetectList(DescribeBaselineItemDetectListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineItemDetectListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineItemDetectListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineItemDetectList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取基线项检测结果列表
+     * @param req DescribeBaselineItemListRequest
+     * @return DescribeBaselineItemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineItemListResponse DescribeBaselineItemList(DescribeBaselineItemListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineItemListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineItemListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineItemList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询基线列表信息
      * @param req DescribeBaselineListRequest
      * @return DescribeBaselineListResponse
@@ -4282,6 +4322,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *检测基线
+     * @param req StartBaselineDetectRequest
+     * @return StartBaselineDetectResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartBaselineDetectResponse StartBaselineDetect(StartBaselineDetectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartBaselineDetectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartBaselineDetectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartBaselineDetect");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *不再提醒爆破阻断提示弹窗
      * @param req StopNoticeBanTipsRequest
      * @return StopNoticeBanTipsResponse
@@ -4334,6 +4394,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SyncAssetScanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SyncAssetScan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *同步基线检测进度概要
+     * @param req SyncBaselineDetectSummaryRequest
+     * @return SyncBaselineDetectSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncBaselineDetectSummaryResponse SyncBaselineDetectSummary(SyncBaselineDetectSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncBaselineDetectSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncBaselineDetectSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncBaselineDetectSummary");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

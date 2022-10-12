@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class CreateCRTortResponse extends AbstractModel{
 
     /**
-    * xx
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * xx
+    * 侵权ID
     */
     @SerializedName("TortId")
     @Expose
     private Long TortId;
 
     /**
-    * xx
+    * 侵权标题
     */
     @SerializedName("TortTitle")
     @Expose
     private String TortTitle;
 
     /**
-    * xx
+    * 侵权平台
     */
     @SerializedName("TortPlat")
     @Expose
     private String TortPlat;
 
     /**
-    * xx
+    * 侵权网址
     */
     @SerializedName("TortURL")
     @Expose
     private String TortURL;
 
     /**
-    * xx
+    * 侵权域名
     */
     @SerializedName("TortDomain")
     @Expose
     private String TortDomain;
 
     /**
-    * xx
+    * 侵权主体
     */
     @SerializedName("TortBodyName")
     @Expose
@@ -79,112 +79,112 @@ public class CreateCRTortResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get xx 
-     * @return WorkId xx
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set xx
-     * @param WorkId xx
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get xx 
-     * @return TortId xx
+     * Get 侵权ID 
+     * @return TortId 侵权ID
      */
     public Long getTortId() {
         return this.TortId;
     }
 
     /**
-     * Set xx
-     * @param TortId xx
+     * Set 侵权ID
+     * @param TortId 侵权ID
      */
     public void setTortId(Long TortId) {
         this.TortId = TortId;
     }
 
     /**
-     * Get xx 
-     * @return TortTitle xx
+     * Get 侵权标题 
+     * @return TortTitle 侵权标题
      */
     public String getTortTitle() {
         return this.TortTitle;
     }
 
     /**
-     * Set xx
-     * @param TortTitle xx
+     * Set 侵权标题
+     * @param TortTitle 侵权标题
      */
     public void setTortTitle(String TortTitle) {
         this.TortTitle = TortTitle;
     }
 
     /**
-     * Get xx 
-     * @return TortPlat xx
+     * Get 侵权平台 
+     * @return TortPlat 侵权平台
      */
     public String getTortPlat() {
         return this.TortPlat;
     }
 
     /**
-     * Set xx
-     * @param TortPlat xx
+     * Set 侵权平台
+     * @param TortPlat 侵权平台
      */
     public void setTortPlat(String TortPlat) {
         this.TortPlat = TortPlat;
     }
 
     /**
-     * Get xx 
-     * @return TortURL xx
+     * Get 侵权网址 
+     * @return TortURL 侵权网址
      */
     public String getTortURL() {
         return this.TortURL;
     }
 
     /**
-     * Set xx
-     * @param TortURL xx
+     * Set 侵权网址
+     * @param TortURL 侵权网址
      */
     public void setTortURL(String TortURL) {
         this.TortURL = TortURL;
     }
 
     /**
-     * Get xx 
-     * @return TortDomain xx
+     * Get 侵权域名 
+     * @return TortDomain 侵权域名
      */
     public String getTortDomain() {
         return this.TortDomain;
     }
 
     /**
-     * Set xx
-     * @param TortDomain xx
+     * Set 侵权域名
+     * @param TortDomain 侵权域名
      */
     public void setTortDomain(String TortDomain) {
         this.TortDomain = TortDomain;
     }
 
     /**
-     * Get xx 
-     * @return TortBodyName xx
+     * Get 侵权主体 
+     * @return TortBodyName 侵权主体
      */
     public String getTortBodyName() {
         return this.TortBodyName;
     }
 
     /**
-     * Set xx
-     * @param TortBodyName xx
+     * Set 侵权主体
+     * @param TortBodyName 侵权主体
      */
     public void setTortBodyName(String TortBodyName) {
         this.TortBodyName = TortBodyName;

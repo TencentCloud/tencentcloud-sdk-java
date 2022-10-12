@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateCRUserVerifyResponse extends AbstractModel{
 
     /**
-    * 认证状态 0-认证成功 1-认证失败
+    * 认证状态：0-认证成功 1-认证失败
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 认证结果返回
+    * 认证状态说明，包括认证失败原因等
     */
     @SerializedName("Note")
     @Expose
@@ -44,32 +44,32 @@ public class CreateCRUserVerifyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 认证状态 0-认证成功 1-认证失败 
-     * @return Status 认证状态 0-认证成功 1-认证失败
+     * Get 认证状态：0-认证成功 1-认证失败 
+     * @return Status 认证状态：0-认证成功 1-认证失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 认证状态 0-认证成功 1-认证失败
-     * @param Status 认证状态 0-认证成功 1-认证失败
+     * Set 认证状态：0-认证成功 1-认证失败
+     * @param Status 认证状态：0-认证成功 1-认证失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 认证结果返回 
-     * @return Note 认证结果返回
+     * Get 认证状态说明，包括认证失败原因等 
+     * @return Note 认证状态说明，包括认证失败原因等
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 认证结果返回
-     * @param Note 认证结果返回
+     * Set 认证状态说明，包括认证失败原因等
+     * @param Note 认证状态说明，包括认证失败原因等
      */
     public void setNote(String Note) {
         this.Note = Note;

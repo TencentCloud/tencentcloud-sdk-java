@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateCRWorkResponse extends AbstractModel{
 
     /**
-    * 作品ID
+    * 作品ID，一个作品对应唯一的workid
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * x
+    * 存证ID，忽略该字段
     */
     @SerializedName("EvidenceId")
     @Expose
@@ -44,32 +44,32 @@ public class CreateCRWorkResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+     * Get 作品ID，一个作品对应唯一的workid 
+     * @return WorkId 作品ID，一个作品对应唯一的workid
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set 作品ID，一个作品对应唯一的workid
+     * @param WorkId 作品ID，一个作品对应唯一的workid
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get x 
-     * @return EvidenceId x
+     * Get 存证ID，忽略该字段 
+     * @return EvidenceId 存证ID，忽略该字段
      */
     public Long getEvidenceId() {
         return this.EvidenceId;
     }
 
     /**
-     * Set x
-     * @param EvidenceId x
+     * Set 存证ID，忽略该字段
+     * @param EvidenceId 存证ID，忽略该字段
      */
     public void setEvidenceId(Long EvidenceId) {
         this.EvidenceId = EvidenceId;

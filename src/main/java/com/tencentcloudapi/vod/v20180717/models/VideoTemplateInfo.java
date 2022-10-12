@@ -129,6 +129,16 @@ public class VideoTemplateInfo extends AbstractModel{
     private String PreserveHDRSwitch;
 
     /**
+    * 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
+    */
+    @SerializedName("CodecTag")
+    @Expose
+    private String CodecTag;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码；</li>
 <li>libx265：H.265 编码；</li>
@@ -432,6 +442,34 @@ public class VideoTemplateInfo extends AbstractModel{
         this.PreserveHDRSwitch = PreserveHDRSwitch;
     }
 
+    /**
+     * Get 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。 
+     * @return CodecTag 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
+     */
+    public String getCodecTag() {
+        return this.CodecTag;
+    }
+
+    /**
+     * Set 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
+     * @param CodecTag 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
+     */
+    public void setCodecTag(String CodecTag) {
+        this.CodecTag = CodecTag;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -470,6 +508,9 @@ public class VideoTemplateInfo extends AbstractModel{
         if (source.PreserveHDRSwitch != null) {
             this.PreserveHDRSwitch = new String(source.PreserveHDRSwitch);
         }
+        if (source.CodecTag != null) {
+            this.CodecTag = new String(source.CodecTag);
+        }
     }
 
 
@@ -487,6 +528,7 @@ public class VideoTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "Gop", this.Gop);
         this.setParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
+        this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
 
     }
 }

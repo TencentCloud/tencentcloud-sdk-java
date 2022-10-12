@@ -121,6 +121,14 @@ public class ClueInfoDetail extends AbstractModel{
     private String [] TagList;
 
     /**
+    * 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
      * Get 线索id，线索唯一识别编码 
      * @return ClueId 线索id，线索唯一识别编码
      */
@@ -344,6 +352,26 @@ public class ClueInfoDetail extends AbstractModel{
         this.TagList = TagList;
     }
 
+    /**
+     * Get 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserName 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserName 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
     public ClueInfoDetail() {
     }
 
@@ -397,6 +425,9 @@ public class ClueInfoDetail extends AbstractModel{
                 this.TagList[i] = new String(source.TagList[i]);
             }
         }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
     }
 
 
@@ -418,6 +449,7 @@ public class ClueInfoDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "SalesPhone", this.SalesPhone);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

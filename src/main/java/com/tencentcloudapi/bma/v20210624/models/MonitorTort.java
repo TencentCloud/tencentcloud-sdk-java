@@ -65,133 +65,133 @@ public class MonitorTort extends AbstractModel{
     private String Author;
 
     /**
-    * xxx
+    * 发现时间
     */
     @SerializedName("DetectTime")
     @Expose
     private String DetectTime;
 
     /**
-    * 1
+    * 取证状态
     */
     @SerializedName("ObtainStatus")
     @Expose
     private Long ObtainStatus;
 
     /**
-    * 1
+    * 维权状态
     */
     @SerializedName("RightStatus")
     @Expose
     private Long RightStatus;
 
     /**
-    * 1
+    * 拦截状态
     */
     @SerializedName("BlockStatus")
     @Expose
     private Long BlockStatus;
 
     /**
-    * 1
+    * 侵权编号
     */
     @SerializedName("TortNum")
     @Expose
     private String TortNum;
 
     /**
-    * 1
+    * 取证状态说明
     */
     @SerializedName("ObtainNote")
     @Expose
     private String ObtainNote;
 
     /**
-    * 1
+    * 作品标题
     */
     @SerializedName("WorkTitle")
     @Expose
     private String WorkTitle;
 
     /**
-    * 1
+    * 侵权站点
     */
     @SerializedName("TortSite")
     @Expose
     private String TortSite;
 
     /**
-    * 1
+    * ICP备案信息
     */
     @SerializedName("ICP")
     @Expose
     private String ICP;
 
     /**
-    * 1
+    * 维权状态说明
     */
     @SerializedName("RightNote")
     @Expose
     private String RightNote;
 
     /**
-    * 1
+    * 取证类型
     */
     @SerializedName("ObtainType")
     @Expose
     private Long ObtainType;
 
     /**
-    * 1
+    * 拦截状态说明
     */
     @SerializedName("BlockNote")
     @Expose
     private String BlockNote;
 
     /**
-    * 1
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * 1
+    * 作品名称
     */
     @SerializedName("WorkName")
     @Expose
     private String WorkName;
 
     /**
-    * 1
+    * 授权书状态
     */
     @SerializedName("AuthStatus")
     @Expose
     private Long AuthStatus;
 
     /**
-    * 1
+    * 委托书状态
     */
     @SerializedName("CommStatus")
     @Expose
     private Long CommStatus;
 
     /**
-    * 1
+    * 存证证书状态
     */
     @SerializedName("EvidenceStatus")
     @Expose
     private Long EvidenceStatus;
 
     /**
-    * 1
+    * 是否著作权人
     */
     @SerializedName("IsProducer")
     @Expose
     private Long IsProducer;
 
     /**
-    * 1
+    * 是否海外网址
     */
     @SerializedName("IsOverseas")
     @Expose
@@ -294,304 +294,304 @@ public class MonitorTort extends AbstractModel{
     }
 
     /**
-     * Get xxx 
-     * @return DetectTime xxx
+     * Get 发现时间 
+     * @return DetectTime 发现时间
      */
     public String getDetectTime() {
         return this.DetectTime;
     }
 
     /**
-     * Set xxx
-     * @param DetectTime xxx
+     * Set 发现时间
+     * @param DetectTime 发现时间
      */
     public void setDetectTime(String DetectTime) {
         this.DetectTime = DetectTime;
     }
 
     /**
-     * Get 1 
-     * @return ObtainStatus 1
+     * Get 取证状态 
+     * @return ObtainStatus 取证状态
      */
     public Long getObtainStatus() {
         return this.ObtainStatus;
     }
 
     /**
-     * Set 1
-     * @param ObtainStatus 1
+     * Set 取证状态
+     * @param ObtainStatus 取证状态
      */
     public void setObtainStatus(Long ObtainStatus) {
         this.ObtainStatus = ObtainStatus;
     }
 
     /**
-     * Get 1 
-     * @return RightStatus 1
+     * Get 维权状态 
+     * @return RightStatus 维权状态
      */
     public Long getRightStatus() {
         return this.RightStatus;
     }
 
     /**
-     * Set 1
-     * @param RightStatus 1
+     * Set 维权状态
+     * @param RightStatus 维权状态
      */
     public void setRightStatus(Long RightStatus) {
         this.RightStatus = RightStatus;
     }
 
     /**
-     * Get 1 
-     * @return BlockStatus 1
+     * Get 拦截状态 
+     * @return BlockStatus 拦截状态
      */
     public Long getBlockStatus() {
         return this.BlockStatus;
     }
 
     /**
-     * Set 1
-     * @param BlockStatus 1
+     * Set 拦截状态
+     * @param BlockStatus 拦截状态
      */
     public void setBlockStatus(Long BlockStatus) {
         this.BlockStatus = BlockStatus;
     }
 
     /**
-     * Get 1 
-     * @return TortNum 1
+     * Get 侵权编号 
+     * @return TortNum 侵权编号
      */
     public String getTortNum() {
         return this.TortNum;
     }
 
     /**
-     * Set 1
-     * @param TortNum 1
+     * Set 侵权编号
+     * @param TortNum 侵权编号
      */
     public void setTortNum(String TortNum) {
         this.TortNum = TortNum;
     }
 
     /**
-     * Get 1 
-     * @return ObtainNote 1
+     * Get 取证状态说明 
+     * @return ObtainNote 取证状态说明
      */
     public String getObtainNote() {
         return this.ObtainNote;
     }
 
     /**
-     * Set 1
-     * @param ObtainNote 1
+     * Set 取证状态说明
+     * @param ObtainNote 取证状态说明
      */
     public void setObtainNote(String ObtainNote) {
         this.ObtainNote = ObtainNote;
     }
 
     /**
-     * Get 1 
-     * @return WorkTitle 1
+     * Get 作品标题 
+     * @return WorkTitle 作品标题
      */
     public String getWorkTitle() {
         return this.WorkTitle;
     }
 
     /**
-     * Set 1
-     * @param WorkTitle 1
+     * Set 作品标题
+     * @param WorkTitle 作品标题
      */
     public void setWorkTitle(String WorkTitle) {
         this.WorkTitle = WorkTitle;
     }
 
     /**
-     * Get 1 
-     * @return TortSite 1
+     * Get 侵权站点 
+     * @return TortSite 侵权站点
      */
     public String getTortSite() {
         return this.TortSite;
     }
 
     /**
-     * Set 1
-     * @param TortSite 1
+     * Set 侵权站点
+     * @param TortSite 侵权站点
      */
     public void setTortSite(String TortSite) {
         this.TortSite = TortSite;
     }
 
     /**
-     * Get 1 
-     * @return ICP 1
+     * Get ICP备案信息 
+     * @return ICP ICP备案信息
      */
     public String getICP() {
         return this.ICP;
     }
 
     /**
-     * Set 1
-     * @param ICP 1
+     * Set ICP备案信息
+     * @param ICP ICP备案信息
      */
     public void setICP(String ICP) {
         this.ICP = ICP;
     }
 
     /**
-     * Get 1 
-     * @return RightNote 1
+     * Get 维权状态说明 
+     * @return RightNote 维权状态说明
      */
     public String getRightNote() {
         return this.RightNote;
     }
 
     /**
-     * Set 1
-     * @param RightNote 1
+     * Set 维权状态说明
+     * @param RightNote 维权状态说明
      */
     public void setRightNote(String RightNote) {
         this.RightNote = RightNote;
     }
 
     /**
-     * Get 1 
-     * @return ObtainType 1
+     * Get 取证类型 
+     * @return ObtainType 取证类型
      */
     public Long getObtainType() {
         return this.ObtainType;
     }
 
     /**
-     * Set 1
-     * @param ObtainType 1
+     * Set 取证类型
+     * @param ObtainType 取证类型
      */
     public void setObtainType(Long ObtainType) {
         this.ObtainType = ObtainType;
     }
 
     /**
-     * Get 1 
-     * @return BlockNote 1
+     * Get 拦截状态说明 
+     * @return BlockNote 拦截状态说明
      */
     public String getBlockNote() {
         return this.BlockNote;
     }
 
     /**
-     * Set 1
-     * @param BlockNote 1
+     * Set 拦截状态说明
+     * @param BlockNote 拦截状态说明
      */
     public void setBlockNote(String BlockNote) {
         this.BlockNote = BlockNote;
     }
 
     /**
-     * Get 1 
-     * @return WorkId 1
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set 1
-     * @param WorkId 1
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get 1 
-     * @return WorkName 1
+     * Get 作品名称 
+     * @return WorkName 作品名称
      */
     public String getWorkName() {
         return this.WorkName;
     }
 
     /**
-     * Set 1
-     * @param WorkName 1
+     * Set 作品名称
+     * @param WorkName 作品名称
      */
     public void setWorkName(String WorkName) {
         this.WorkName = WorkName;
     }
 
     /**
-     * Get 1 
-     * @return AuthStatus 1
+     * Get 授权书状态 
+     * @return AuthStatus 授权书状态
      */
     public Long getAuthStatus() {
         return this.AuthStatus;
     }
 
     /**
-     * Set 1
-     * @param AuthStatus 1
+     * Set 授权书状态
+     * @param AuthStatus 授权书状态
      */
     public void setAuthStatus(Long AuthStatus) {
         this.AuthStatus = AuthStatus;
     }
 
     /**
-     * Get 1 
-     * @return CommStatus 1
+     * Get 委托书状态 
+     * @return CommStatus 委托书状态
      */
     public Long getCommStatus() {
         return this.CommStatus;
     }
 
     /**
-     * Set 1
-     * @param CommStatus 1
+     * Set 委托书状态
+     * @param CommStatus 委托书状态
      */
     public void setCommStatus(Long CommStatus) {
         this.CommStatus = CommStatus;
     }
 
     /**
-     * Get 1 
-     * @return EvidenceStatus 1
+     * Get 存证证书状态 
+     * @return EvidenceStatus 存证证书状态
      */
     public Long getEvidenceStatus() {
         return this.EvidenceStatus;
     }
 
     /**
-     * Set 1
-     * @param EvidenceStatus 1
+     * Set 存证证书状态
+     * @param EvidenceStatus 存证证书状态
      */
     public void setEvidenceStatus(Long EvidenceStatus) {
         this.EvidenceStatus = EvidenceStatus;
     }
 
     /**
-     * Get 1 
-     * @return IsProducer 1
+     * Get 是否著作权人 
+     * @return IsProducer 是否著作权人
      */
     public Long getIsProducer() {
         return this.IsProducer;
     }
 
     /**
-     * Set 1
-     * @param IsProducer 1
+     * Set 是否著作权人
+     * @param IsProducer 是否著作权人
      */
     public void setIsProducer(Long IsProducer) {
         this.IsProducer = IsProducer;
     }
 
     /**
-     * Get 1 
-     * @return IsOverseas 1
+     * Get 是否海外网址 
+     * @return IsOverseas 是否海外网址
      */
     public Long getIsOverseas() {
         return this.IsOverseas;
     }
 
     /**
-     * Set 1
-     * @param IsOverseas 1
+     * Set 是否海外网址
+     * @param IsOverseas 是否海外网址
      */
     public void setIsOverseas(Long IsOverseas) {
         this.IsOverseas = IsOverseas;

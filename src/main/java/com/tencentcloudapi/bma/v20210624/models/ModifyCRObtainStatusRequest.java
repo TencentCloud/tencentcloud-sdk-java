@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ModifyCRObtainStatusRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 侵权ID
     */
     @SerializedName("TortId")
     @Expose
     private Long TortId;
 
     /**
-    * xxx
+    * 取证类型：1-网页取证 2-过程取证
     */
     @SerializedName("ObtainType")
     @Expose
     private Long ObtainType;
 
     /**
-    * xxx
+    * 过程取证的取证时长，单位分钟，范围0-120
     */
     @SerializedName("ObtainDuration")
     @Expose
     private Long ObtainDuration;
 
     /**
-    * xxx
+    * 结果回调地址
     */
     @SerializedName("ObtainUrl")
     @Expose
     private String ObtainUrl;
 
     /**
-     * Get xxx 
-     * @return TortId xxx
+     * Get 侵权ID 
+     * @return TortId 侵权ID
      */
     public Long getTortId() {
         return this.TortId;
     }
 
     /**
-     * Set xxx
-     * @param TortId xxx
+     * Set 侵权ID
+     * @param TortId 侵权ID
      */
     public void setTortId(Long TortId) {
         this.TortId = TortId;
     }
 
     /**
-     * Get xxx 
-     * @return ObtainType xxx
+     * Get 取证类型：1-网页取证 2-过程取证 
+     * @return ObtainType 取证类型：1-网页取证 2-过程取证
      */
     public Long getObtainType() {
         return this.ObtainType;
     }
 
     /**
-     * Set xxx
-     * @param ObtainType xxx
+     * Set 取证类型：1-网页取证 2-过程取证
+     * @param ObtainType 取证类型：1-网页取证 2-过程取证
      */
     public void setObtainType(Long ObtainType) {
         this.ObtainType = ObtainType;
     }
 
     /**
-     * Get xxx 
-     * @return ObtainDuration xxx
+     * Get 过程取证的取证时长，单位分钟，范围0-120 
+     * @return ObtainDuration 过程取证的取证时长，单位分钟，范围0-120
      */
     public Long getObtainDuration() {
         return this.ObtainDuration;
     }
 
     /**
-     * Set xxx
-     * @param ObtainDuration xxx
+     * Set 过程取证的取证时长，单位分钟，范围0-120
+     * @param ObtainDuration 过程取证的取证时长，单位分钟，范围0-120
      */
     public void setObtainDuration(Long ObtainDuration) {
         this.ObtainDuration = ObtainDuration;
     }
 
     /**
-     * Get xxx 
-     * @return ObtainUrl xxx
+     * Get 结果回调地址 
+     * @return ObtainUrl 结果回调地址
      */
     public String getObtainUrl() {
         return this.ObtainUrl;
     }
 
     /**
-     * Set xxx
-     * @param ObtainUrl xxx
+     * Set 结果回调地址
+     * @param ObtainUrl 结果回调地址
      */
     public void setObtainUrl(String ObtainUrl) {
         this.ObtainUrl = ObtainUrl;

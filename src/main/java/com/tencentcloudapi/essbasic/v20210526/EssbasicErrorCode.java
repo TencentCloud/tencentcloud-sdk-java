@@ -21,6 +21,9 @@ public enum EssbasicErrorCode {
     // 已授权。
      FAILEDOPERATION_HASAUTHORIZED("FailedOperation.HasAuthorized"),
      
+    // 当前合同状态无法进行签署审批。
+     FAILEDOPERATION_NOTAVAILABLESIGNREVIEW("FailedOperation.NotAvailableSignReview"),
+     
     // 发起签署存在填写控件。
      FAILEDOPERATION_QRCODECREATORSIGNCOMPONENTS("FailedOperation.QrCodeCreatorSignComponents"),
      
@@ -254,6 +257,9 @@ public enum EssbasicErrorCode {
      
     // ProxyOperatorOpenId不存在。
      MISSINGPARAMETER_PROXYOPERATOROPENID("MissingParameter.ProxyOperatorOpenId"),
+     
+    // 印章ID为空。
+     MISSINGPARAMETER_SEALID("MissingParameter.SealId"),
      
     // 印章图片为空。
      MISSINGPARAMETER_SEALIMAGE("MissingParameter.SealImage"),

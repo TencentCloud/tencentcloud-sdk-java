@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCRMonitorDetailResponse extends AbstractModel{
 
     /**
-    * MonitorTort数组
+    * 侵权数组
     */
     @SerializedName("Torts")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * x
+    * 监测状态
     */
     @SerializedName("MonitorStatus")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get MonitorTort数组 
-     * @return Torts MonitorTort数组
+     * Get 侵权数组 
+     * @return Torts 侵权数组
      */
     public MonitorTort [] getTorts() {
         return this.Torts;
     }
 
     /**
-     * Set MonitorTort数组
-     * @param Torts MonitorTort数组
+     * Set 侵权数组
+     * @param Torts 侵权数组
      */
     public void setTorts(MonitorTort [] Torts) {
         this.Torts = Torts;
@@ -83,16 +83,16 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get x 
-     * @return MonitorStatus x
+     * Get 监测状态 
+     * @return MonitorStatus 监测状态
      */
     public Long getMonitorStatus() {
         return this.MonitorStatus;
     }
 
     /**
-     * Set x
-     * @param MonitorStatus x
+     * Set 监测状态
+     * @param MonitorStatus 监测状态
      */
     public void setMonitorStatus(Long MonitorStatus) {
         this.MonitorStatus = MonitorStatus;

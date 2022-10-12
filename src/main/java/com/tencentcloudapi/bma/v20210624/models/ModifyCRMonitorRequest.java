@@ -30,14 +30,14 @@ public class ModifyCRMonitorRequest extends AbstractModel{
     private Long WorkId;
 
     /**
-    * 监测状态 1-开启监测 2-关闭监测
+    * 监测状态：1-开启监测 2-关闭监测
     */
     @SerializedName("MonitorStatus")
     @Expose
     private String MonitorStatus;
 
     /**
-    * 默认不停止，支持续期
+    * 监测截止时间
     */
     @SerializedName("MonitorEnd")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyCRMonitorRequest extends AbstractModel{
     }
 
     /**
-     * Get 监测状态 1-开启监测 2-关闭监测 
-     * @return MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * Get 监测状态：1-开启监测 2-关闭监测 
+     * @return MonitorStatus 监测状态：1-开启监测 2-关闭监测
      */
     public String getMonitorStatus() {
         return this.MonitorStatus;
     }
 
     /**
-     * Set 监测状态 1-开启监测 2-关闭监测
-     * @param MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * Set 监测状态：1-开启监测 2-关闭监测
+     * @param MonitorStatus 监测状态：1-开启监测 2-关闭监测
      */
     public void setMonitorStatus(String MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 
     /**
-     * Get 默认不停止，支持续期 
-     * @return MonitorEnd 默认不停止，支持续期
+     * Get 监测截止时间 
+     * @return MonitorEnd 监测截止时间
      */
     public String getMonitorEnd() {
         return this.MonitorEnd;
     }
 
     /**
-     * Set 默认不停止，支持续期
-     * @param MonitorEnd 默认不停止，支持续期
+     * Set 监测截止时间
+     * @param MonitorEnd 监测截止时间
      */
     public void setMonitorEnd(String MonitorEnd) {
         this.MonitorEnd = MonitorEnd;

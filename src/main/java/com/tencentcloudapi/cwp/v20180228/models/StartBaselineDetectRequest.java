@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bma.v20210624.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCRWorkInfoRequest extends AbstractModel{
+public class StartBaselineDetectRequest extends AbstractModel{
 
     /**
-    * 作品ID
+    * 基线检测参数
     */
-    @SerializedName("WorkId")
+    @SerializedName("Param")
     @Expose
-    private Long WorkId;
+    private BaselineDetectParam Param;
 
     /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
+     * Get 基线检测参数 
+     * @return Param 基线检测参数
      */
-    public Long getWorkId() {
-        return this.WorkId;
+    public BaselineDetectParam getParam() {
+        return this.Param;
     }
 
     /**
-     * Set 作品ID
-     * @param WorkId 作品ID
+     * Set 基线检测参数
+     * @param Param 基线检测参数
      */
-    public void setWorkId(Long WorkId) {
-        this.WorkId = WorkId;
+    public void setParam(BaselineDetectParam Param) {
+        this.Param = Param;
     }
 
-    public DescribeCRWorkInfoRequest() {
+    public StartBaselineDetectRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCRWorkInfoRequest(DescribeCRWorkInfoRequest source) {
-        if (source.WorkId != null) {
-            this.WorkId = new Long(source.WorkId);
+    public StartBaselineDetectRequest(StartBaselineDetectRequest source) {
+        if (source.Param != null) {
+            this.Param = new BaselineDetectParam(source.Param);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeCRWorkInfoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WorkId", this.WorkId);
+        this.setParamObj(map, prefix + "Param.", this.Param);
 
     }
 }

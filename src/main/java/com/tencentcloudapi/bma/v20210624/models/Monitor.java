@@ -79,14 +79,14 @@ public class Monitor extends AbstractModel{
     private String WorkCategory;
 
     /**
-    * xx
+    * 新增时间
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * xx
+    * 监测状态说明
     */
     @SerializedName("MonitorNote")
     @Expose
@@ -221,32 +221,32 @@ public class Monitor extends AbstractModel{
     }
 
     /**
-     * Get xx 
-     * @return InsertTime xx
+     * Get 新增时间 
+     * @return InsertTime 新增时间
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set xx
-     * @param InsertTime xx
+     * Set 新增时间
+     * @param InsertTime 新增时间
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get xx 
-     * @return MonitorNote xx
+     * Get 监测状态说明 
+     * @return MonitorNote 监测状态说明
      */
     public String getMonitorNote() {
         return this.MonitorNote;
     }
 
     /**
-     * Set xx
-     * @param MonitorNote xx
+     * Set 监测状态说明
+     * @param MonitorNote 监测状态说明
      */
     public void setMonitorNote(String MonitorNote) {
         this.MonitorNote = MonitorNote;

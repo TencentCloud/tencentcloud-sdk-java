@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCRRightFileResponse extends AbstractModel{
 
     /**
-    * xxx
+    * 权属文件Id，按提交顺序排序
     */
     @SerializedName("FileIds")
     @Expose
@@ -37,16 +37,16 @@ public class CreateCRRightFileResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get xxx 
-     * @return FileIds xxx
+     * Get 权属文件Id，按提交顺序排序 
+     * @return FileIds 权属文件Id，按提交顺序排序
      */
     public Long [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set xxx
-     * @param FileIds xxx
+     * Set 权属文件Id，按提交顺序排序
+     * @param FileIds 权属文件Id，按提交顺序排序
      */
     public void setFileIds(Long [] FileIds) {
         this.FileIds = FileIds;

@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bma.v20210624.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCRWorkInfoRequest extends AbstractModel{
+public class SyncBaselineDetectSummaryRequest extends AbstractModel{
 
-    /**
-    * 作品ID
-    */
-    @SerializedName("WorkId")
-    @Expose
-    private Long WorkId;
-
-    /**
-     * Get 作品ID 
-     * @return WorkId 作品ID
-     */
-    public Long getWorkId() {
-        return this.WorkId;
-    }
-
-    /**
-     * Set 作品ID
-     * @param WorkId 作品ID
-     */
-    public void setWorkId(Long WorkId) {
-        this.WorkId = WorkId;
-    }
-
-    public DescribeCRWorkInfoRequest() {
+    public SyncBaselineDetectSummaryRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCRWorkInfoRequest(DescribeCRWorkInfoRequest source) {
-        if (source.WorkId != null) {
-            this.WorkId = new Long(source.WorkId);
-        }
+    public SyncBaselineDetectSummaryRequest(SyncBaselineDetectSummaryRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class DescribeCRWorkInfoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WorkId", this.WorkId);
 
     }
 }

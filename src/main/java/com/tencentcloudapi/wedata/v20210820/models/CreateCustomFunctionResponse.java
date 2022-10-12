@@ -13,37 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBPerformanceDetailsResponse extends AbstractModel{
+public class CreateCustomFunctionResponse extends AbstractModel{
 
     /**
-    * 主节点性能监控数据
-    */
-    @SerializedName("Master")
-    @Expose
-    private PerformanceMonitorSet Master;
-
-    /**
-    * 备机1性能监控数据
+    * 函数唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Slave1")
+    @SerializedName("FunctionId")
     @Expose
-    private PerformanceMonitorSet Slave1;
+    private String FunctionId;
 
     /**
-    * 备机2性能监控数据，如果实例是一主一从，则没有该字段
+    * 无
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Slave2")
+    @SerializedName("ErrorMessage")
     @Expose
-    private PerformanceMonitorSet Slave2;
+    private String ErrorMessage;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,59 +46,43 @@ public class DescribeDBPerformanceDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 主节点性能监控数据 
-     * @return Master 主节点性能监控数据
-     */
-    public PerformanceMonitorSet getMaster() {
-        return this.Master;
-    }
-
-    /**
-     * Set 主节点性能监控数据
-     * @param Master 主节点性能监控数据
-     */
-    public void setMaster(PerformanceMonitorSet Master) {
-        this.Master = Master;
-    }
-
-    /**
-     * Get 备机1性能监控数据
+     * Get 函数唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Slave1 备机1性能监控数据
+     * @return FunctionId 函数唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public PerformanceMonitorSet getSlave1() {
-        return this.Slave1;
+    public String getFunctionId() {
+        return this.FunctionId;
     }
 
     /**
-     * Set 备机1性能监控数据
+     * Set 函数唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Slave1 备机1性能监控数据
+     * @param FunctionId 函数唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSlave1(PerformanceMonitorSet Slave1) {
-        this.Slave1 = Slave1;
+    public void setFunctionId(String FunctionId) {
+        this.FunctionId = FunctionId;
     }
 
     /**
-     * Get 备机2性能监控数据，如果实例是一主一从，则没有该字段
+     * Get 无
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Slave2 备机2性能监控数据，如果实例是一主一从，则没有该字段
+     * @return ErrorMessage 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public PerformanceMonitorSet getSlave2() {
-        return this.Slave2;
+    public String getErrorMessage() {
+        return this.ErrorMessage;
     }
 
     /**
-     * Set 备机2性能监控数据，如果实例是一主一从，则没有该字段
+     * Set 无
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Slave2 备机2性能监控数据，如果实例是一主一从，则没有该字段
+     * @param ErrorMessage 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSlave2(PerformanceMonitorSet Slave2) {
-        this.Slave2 = Slave2;
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
     }
 
     /**
@@ -124,22 +101,19 @@ public class DescribeDBPerformanceDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBPerformanceDetailsResponse() {
+    public CreateCustomFunctionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBPerformanceDetailsResponse(DescribeDBPerformanceDetailsResponse source) {
-        if (source.Master != null) {
-            this.Master = new PerformanceMonitorSet(source.Master);
+    public CreateCustomFunctionResponse(CreateCustomFunctionResponse source) {
+        if (source.FunctionId != null) {
+            this.FunctionId = new String(source.FunctionId);
         }
-        if (source.Slave1 != null) {
-            this.Slave1 = new PerformanceMonitorSet(source.Slave1);
-        }
-        if (source.Slave2 != null) {
-            this.Slave2 = new PerformanceMonitorSet(source.Slave2);
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -151,9 +125,8 @@ public class DescribeDBPerformanceDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Master.", this.Master);
-        this.setParamObj(map, prefix + "Slave1.", this.Slave1);
-        this.setParamObj(map, prefix + "Slave2.", this.Slave2);
+        this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

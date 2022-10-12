@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class UpdateCRWorkRequest extends AbstractModel{
 
     /**
-    * xx
+    * 作品ID
     */
     @SerializedName("WorkId")
     @Expose
     private Long WorkId;
 
     /**
-    * xx
+    * 文件的扩展名，比如txt，docx
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * xx
+    * 内容的base64编码
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * xx
+    * 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
     */
     @SerializedName("CertType")
     @Expose
     private String CertType;
 
     /**
-     * Get xx 
-     * @return WorkId xx
+     * Get 作品ID 
+     * @return WorkId 作品ID
      */
     public Long getWorkId() {
         return this.WorkId;
     }
 
     /**
-     * Set xx
-     * @param WorkId xx
+     * Set 作品ID
+     * @param WorkId 作品ID
      */
     public void setWorkId(Long WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get xx 
-     * @return ContentType xx
+     * Get 文件的扩展名，比如txt，docx 
+     * @return ContentType 文件的扩展名，比如txt，docx
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set xx
-     * @param ContentType xx
+     * Set 文件的扩展名，比如txt，docx
+     * @param ContentType 文件的扩展名，比如txt，docx
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get xx 
-     * @return Content xx
+     * Get 内容的base64编码 
+     * @return Content 内容的base64编码
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set xx
-     * @param Content xx
+     * Set 内容的base64编码
+     * @param Content 内容的base64编码
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get xx 
-     * @return CertType xx
+     * Get 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件 
+     * @return CertType 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
      */
     public String getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set xx
-     * @param CertType xx
+     * Set 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
+     * @param CertType 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
      */
     public void setCertType(String CertType) {
         this.CertType = CertType;

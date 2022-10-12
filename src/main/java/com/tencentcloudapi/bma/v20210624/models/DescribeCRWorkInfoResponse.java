@@ -23,154 +23,154 @@ import java.util.HashMap;
 public class DescribeCRWorkInfoResponse extends AbstractModel{
 
     /**
-    * x
+    * 作品名称
     */
     @SerializedName("WorkName")
     @Expose
     private String WorkName;
 
     /**
-    * x
+    * 监测状态
     */
     @SerializedName("MonitorStatus")
     @Expose
     private Long MonitorStatus;
 
     /**
-    * x
+    * 授权文件状态
     */
     @SerializedName("AuthStatus")
     @Expose
     private Long AuthStatus;
 
     /**
-    * x
+    * 委托书状态
     */
     @SerializedName("CommStatus")
     @Expose
     private Long CommStatus;
 
     /**
-    * x
+    * 是否著作权人
     */
     @SerializedName("IsProducer")
     @Expose
     private Long IsProducer;
 
     /**
-    * xxx
+    * 存证证书状态
     */
     @SerializedName("EvidenceStatus")
     @Expose
     private Long EvidenceStatus;
 
     /**
-    * xxx
+    * 作品类型
     */
     @SerializedName("WorkCategory")
     @Expose
     private String WorkCategory;
 
     /**
-    * xxx
+    * 是否原创
     */
     @SerializedName("IsOriginal")
     @Expose
     private String IsOriginal;
 
     /**
-    * xxx
+    * 是否已发表
     */
     @SerializedName("IsRelease")
     @Expose
     private String IsRelease;
 
     /**
-    * xxx
+    * 著作权人姓名
     */
     @SerializedName("ProducerName")
     @Expose
     private String ProducerName;
 
     /**
-    * xxx
+    * 发表时间
     */
     @SerializedName("ProduceTime")
     @Expose
     private String ProduceTime;
 
     /**
-    * xxx
+    * 白名单
     */
     @SerializedName("WhiteLists")
     @Expose
     private String [] WhiteLists;
 
     /**
-    * xxx
+    * 作品描述
     */
     @SerializedName("WorkDesc")
     @Expose
     private String WorkDesc;
 
     /**
-    * xxx
+    * 授权书
     */
     @SerializedName("Authorization")
     @Expose
     private String Authorization;
 
     /**
-    * xxx
+    * 授权书生效日期
     */
     @SerializedName("AuthorizationStartTime")
     @Expose
     private String AuthorizationStartTime;
 
     /**
-    * xxx
+    * 授权书截止日期
     */
     @SerializedName("AuthorizationEndTime")
     @Expose
     private String AuthorizationEndTime;
 
     /**
-    * xxx
+    * 委托书
     */
     @SerializedName("Commission")
     @Expose
     private String Commission;
 
     /**
-    * xxx
+    * 委托书生效日期
     */
     @SerializedName("CommissionStartTime")
     @Expose
     private String CommissionStartTime;
 
     /**
-    * xxx
+    * 委托书截止日期
     */
     @SerializedName("CommissionEndTime")
     @Expose
     private String CommissionEndTime;
 
     /**
-    * xxx
+    * 存证证书
     */
     @SerializedName("EvidenceUrl")
     @Expose
     private String EvidenceUrl;
 
     /**
-    * xxx
+    * 存证证书生效日期
     */
     @SerializedName("EvidenceStartTime")
     @Expose
     private String EvidenceStartTime;
 
     /**
-    * xxx
+    * 存证证书截止日期
     */
     @SerializedName("EvidenceEndTime")
     @Expose
@@ -184,352 +184,352 @@ public class DescribeCRWorkInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get x 
-     * @return WorkName x
+     * Get 作品名称 
+     * @return WorkName 作品名称
      */
     public String getWorkName() {
         return this.WorkName;
     }
 
     /**
-     * Set x
-     * @param WorkName x
+     * Set 作品名称
+     * @param WorkName 作品名称
      */
     public void setWorkName(String WorkName) {
         this.WorkName = WorkName;
     }
 
     /**
-     * Get x 
-     * @return MonitorStatus x
+     * Get 监测状态 
+     * @return MonitorStatus 监测状态
      */
     public Long getMonitorStatus() {
         return this.MonitorStatus;
     }
 
     /**
-     * Set x
-     * @param MonitorStatus x
+     * Set 监测状态
+     * @param MonitorStatus 监测状态
      */
     public void setMonitorStatus(Long MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 
     /**
-     * Get x 
-     * @return AuthStatus x
+     * Get 授权文件状态 
+     * @return AuthStatus 授权文件状态
      */
     public Long getAuthStatus() {
         return this.AuthStatus;
     }
 
     /**
-     * Set x
-     * @param AuthStatus x
+     * Set 授权文件状态
+     * @param AuthStatus 授权文件状态
      */
     public void setAuthStatus(Long AuthStatus) {
         this.AuthStatus = AuthStatus;
     }
 
     /**
-     * Get x 
-     * @return CommStatus x
+     * Get 委托书状态 
+     * @return CommStatus 委托书状态
      */
     public Long getCommStatus() {
         return this.CommStatus;
     }
 
     /**
-     * Set x
-     * @param CommStatus x
+     * Set 委托书状态
+     * @param CommStatus 委托书状态
      */
     public void setCommStatus(Long CommStatus) {
         this.CommStatus = CommStatus;
     }
 
     /**
-     * Get x 
-     * @return IsProducer x
+     * Get 是否著作权人 
+     * @return IsProducer 是否著作权人
      */
     public Long getIsProducer() {
         return this.IsProducer;
     }
 
     /**
-     * Set x
-     * @param IsProducer x
+     * Set 是否著作权人
+     * @param IsProducer 是否著作权人
      */
     public void setIsProducer(Long IsProducer) {
         this.IsProducer = IsProducer;
     }
 
     /**
-     * Get xxx 
-     * @return EvidenceStatus xxx
+     * Get 存证证书状态 
+     * @return EvidenceStatus 存证证书状态
      */
     public Long getEvidenceStatus() {
         return this.EvidenceStatus;
     }
 
     /**
-     * Set xxx
-     * @param EvidenceStatus xxx
+     * Set 存证证书状态
+     * @param EvidenceStatus 存证证书状态
      */
     public void setEvidenceStatus(Long EvidenceStatus) {
         this.EvidenceStatus = EvidenceStatus;
     }
 
     /**
-     * Get xxx 
-     * @return WorkCategory xxx
+     * Get 作品类型 
+     * @return WorkCategory 作品类型
      */
     public String getWorkCategory() {
         return this.WorkCategory;
     }
 
     /**
-     * Set xxx
-     * @param WorkCategory xxx
+     * Set 作品类型
+     * @param WorkCategory 作品类型
      */
     public void setWorkCategory(String WorkCategory) {
         this.WorkCategory = WorkCategory;
     }
 
     /**
-     * Get xxx 
-     * @return IsOriginal xxx
+     * Get 是否原创 
+     * @return IsOriginal 是否原创
      */
     public String getIsOriginal() {
         return this.IsOriginal;
     }
 
     /**
-     * Set xxx
-     * @param IsOriginal xxx
+     * Set 是否原创
+     * @param IsOriginal 是否原创
      */
     public void setIsOriginal(String IsOriginal) {
         this.IsOriginal = IsOriginal;
     }
 
     /**
-     * Get xxx 
-     * @return IsRelease xxx
+     * Get 是否已发表 
+     * @return IsRelease 是否已发表
      */
     public String getIsRelease() {
         return this.IsRelease;
     }
 
     /**
-     * Set xxx
-     * @param IsRelease xxx
+     * Set 是否已发表
+     * @param IsRelease 是否已发表
      */
     public void setIsRelease(String IsRelease) {
         this.IsRelease = IsRelease;
     }
 
     /**
-     * Get xxx 
-     * @return ProducerName xxx
+     * Get 著作权人姓名 
+     * @return ProducerName 著作权人姓名
      */
     public String getProducerName() {
         return this.ProducerName;
     }
 
     /**
-     * Set xxx
-     * @param ProducerName xxx
+     * Set 著作权人姓名
+     * @param ProducerName 著作权人姓名
      */
     public void setProducerName(String ProducerName) {
         this.ProducerName = ProducerName;
     }
 
     /**
-     * Get xxx 
-     * @return ProduceTime xxx
+     * Get 发表时间 
+     * @return ProduceTime 发表时间
      */
     public String getProduceTime() {
         return this.ProduceTime;
     }
 
     /**
-     * Set xxx
-     * @param ProduceTime xxx
+     * Set 发表时间
+     * @param ProduceTime 发表时间
      */
     public void setProduceTime(String ProduceTime) {
         this.ProduceTime = ProduceTime;
     }
 
     /**
-     * Get xxx 
-     * @return WhiteLists xxx
+     * Get 白名单 
+     * @return WhiteLists 白名单
      */
     public String [] getWhiteLists() {
         return this.WhiteLists;
     }
 
     /**
-     * Set xxx
-     * @param WhiteLists xxx
+     * Set 白名单
+     * @param WhiteLists 白名单
      */
     public void setWhiteLists(String [] WhiteLists) {
         this.WhiteLists = WhiteLists;
     }
 
     /**
-     * Get xxx 
-     * @return WorkDesc xxx
+     * Get 作品描述 
+     * @return WorkDesc 作品描述
      */
     public String getWorkDesc() {
         return this.WorkDesc;
     }
 
     /**
-     * Set xxx
-     * @param WorkDesc xxx
+     * Set 作品描述
+     * @param WorkDesc 作品描述
      */
     public void setWorkDesc(String WorkDesc) {
         this.WorkDesc = WorkDesc;
     }
 
     /**
-     * Get xxx 
-     * @return Authorization xxx
+     * Get 授权书 
+     * @return Authorization 授权书
      */
     public String getAuthorization() {
         return this.Authorization;
     }
 
     /**
-     * Set xxx
-     * @param Authorization xxx
+     * Set 授权书
+     * @param Authorization 授权书
      */
     public void setAuthorization(String Authorization) {
         this.Authorization = Authorization;
     }
 
     /**
-     * Get xxx 
-     * @return AuthorizationStartTime xxx
+     * Get 授权书生效日期 
+     * @return AuthorizationStartTime 授权书生效日期
      */
     public String getAuthorizationStartTime() {
         return this.AuthorizationStartTime;
     }
 
     /**
-     * Set xxx
-     * @param AuthorizationStartTime xxx
+     * Set 授权书生效日期
+     * @param AuthorizationStartTime 授权书生效日期
      */
     public void setAuthorizationStartTime(String AuthorizationStartTime) {
         this.AuthorizationStartTime = AuthorizationStartTime;
     }
 
     /**
-     * Get xxx 
-     * @return AuthorizationEndTime xxx
+     * Get 授权书截止日期 
+     * @return AuthorizationEndTime 授权书截止日期
      */
     public String getAuthorizationEndTime() {
         return this.AuthorizationEndTime;
     }
 
     /**
-     * Set xxx
-     * @param AuthorizationEndTime xxx
+     * Set 授权书截止日期
+     * @param AuthorizationEndTime 授权书截止日期
      */
     public void setAuthorizationEndTime(String AuthorizationEndTime) {
         this.AuthorizationEndTime = AuthorizationEndTime;
     }
 
     /**
-     * Get xxx 
-     * @return Commission xxx
+     * Get 委托书 
+     * @return Commission 委托书
      */
     public String getCommission() {
         return this.Commission;
     }
 
     /**
-     * Set xxx
-     * @param Commission xxx
+     * Set 委托书
+     * @param Commission 委托书
      */
     public void setCommission(String Commission) {
         this.Commission = Commission;
     }
 
     /**
-     * Get xxx 
-     * @return CommissionStartTime xxx
+     * Get 委托书生效日期 
+     * @return CommissionStartTime 委托书生效日期
      */
     public String getCommissionStartTime() {
         return this.CommissionStartTime;
     }
 
     /**
-     * Set xxx
-     * @param CommissionStartTime xxx
+     * Set 委托书生效日期
+     * @param CommissionStartTime 委托书生效日期
      */
     public void setCommissionStartTime(String CommissionStartTime) {
         this.CommissionStartTime = CommissionStartTime;
     }
 
     /**
-     * Get xxx 
-     * @return CommissionEndTime xxx
+     * Get 委托书截止日期 
+     * @return CommissionEndTime 委托书截止日期
      */
     public String getCommissionEndTime() {
         return this.CommissionEndTime;
     }
 
     /**
-     * Set xxx
-     * @param CommissionEndTime xxx
+     * Set 委托书截止日期
+     * @param CommissionEndTime 委托书截止日期
      */
     public void setCommissionEndTime(String CommissionEndTime) {
         this.CommissionEndTime = CommissionEndTime;
     }
 
     /**
-     * Get xxx 
-     * @return EvidenceUrl xxx
+     * Get 存证证书 
+     * @return EvidenceUrl 存证证书
      */
     public String getEvidenceUrl() {
         return this.EvidenceUrl;
     }
 
     /**
-     * Set xxx
-     * @param EvidenceUrl xxx
+     * Set 存证证书
+     * @param EvidenceUrl 存证证书
      */
     public void setEvidenceUrl(String EvidenceUrl) {
         this.EvidenceUrl = EvidenceUrl;
     }
 
     /**
-     * Get xxx 
-     * @return EvidenceStartTime xxx
+     * Get 存证证书生效日期 
+     * @return EvidenceStartTime 存证证书生效日期
      */
     public String getEvidenceStartTime() {
         return this.EvidenceStartTime;
     }
 
     /**
-     * Set xxx
-     * @param EvidenceStartTime xxx
+     * Set 存证证书生效日期
+     * @param EvidenceStartTime 存证证书生效日期
      */
     public void setEvidenceStartTime(String EvidenceStartTime) {
         this.EvidenceStartTime = EvidenceStartTime;
     }
 
     /**
-     * Get xxx 
-     * @return EvidenceEndTime xxx
+     * Get 存证证书截止日期 
+     * @return EvidenceEndTime 存证证书截止日期
      */
     public String getEvidenceEndTime() {
         return this.EvidenceEndTime;
     }
 
     /**
-     * Set xxx
-     * @param EvidenceEndTime xxx
+     * Set 存证证书截止日期
+     * @param EvidenceEndTime 存证证书截止日期
      */
     public void setEvidenceEndTime(String EvidenceEndTime) {
         this.EvidenceEndTime = EvidenceEndTime;
