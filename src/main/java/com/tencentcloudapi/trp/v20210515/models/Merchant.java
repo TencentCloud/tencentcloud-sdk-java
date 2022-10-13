@@ -73,6 +73,21 @@ public class Merchant extends AbstractModel{
     private String CodeRule;
 
     /**
+    * 码来源类型 0: 安心平台 1: 第三方码
+    */
+    @SerializedName("CodeType")
+    @Expose
+    private Long CodeType;
+
+    /**
+    * 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CodeUrl")
+    @Expose
+    private String CodeUrl;
+
+    /**
      * Get 商户标识码 
      * @return MerchantId 商户标识码
      */
@@ -188,6 +203,42 @@ public class Merchant extends AbstractModel{
         this.CodeRule = CodeRule;
     }
 
+    /**
+     * Get 码来源类型 0: 安心平台 1: 第三方码 
+     * @return CodeType 码来源类型 0: 安心平台 1: 第三方码
+     */
+    public Long getCodeType() {
+        return this.CodeType;
+    }
+
+    /**
+     * Set 码来源类型 0: 安心平台 1: 第三方码
+     * @param CodeType 码来源类型 0: 安心平台 1: 第三方码
+     */
+    public void setCodeType(Long CodeType) {
+        this.CodeType = CodeType;
+    }
+
+    /**
+     * Get 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodeUrl 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCodeUrl() {
+        return this.CodeUrl;
+    }
+
+    /**
+     * Set 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodeUrl 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodeUrl(String CodeUrl) {
+        this.CodeUrl = CodeUrl;
+    }
+
     public Merchant() {
     }
 
@@ -217,6 +268,12 @@ public class Merchant extends AbstractModel{
         if (source.CodeRule != null) {
             this.CodeRule = new String(source.CodeRule);
         }
+        if (source.CodeType != null) {
+            this.CodeType = new Long(source.CodeType);
+        }
+        if (source.CodeUrl != null) {
+            this.CodeUrl = new String(source.CodeUrl);
+        }
     }
 
 
@@ -231,6 +288,8 @@ public class Merchant extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CodeRule", this.CodeRule);
+        this.setParamSimple(map, prefix + "CodeType", this.CodeType);
+        this.setParamSimple(map, prefix + "CodeUrl", this.CodeUrl);
 
     }
 }

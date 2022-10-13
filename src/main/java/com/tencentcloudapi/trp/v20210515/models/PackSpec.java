@@ -44,6 +44,14 @@ public class PackSpec extends AbstractModel{
     private Long Amount;
 
     /**
+    * 码规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomId")
+    @Expose
+    private String CustomId;
+
+    /**
      * Get 层级 
      * @return Level 层级
      */
@@ -91,6 +99,26 @@ public class PackSpec extends AbstractModel{
         this.Amount = Amount;
     }
 
+    /**
+     * Get 码规则ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomId 码规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomId() {
+        return this.CustomId;
+    }
+
+    /**
+     * Set 码规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomId 码规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomId(String CustomId) {
+        this.CustomId = CustomId;
+    }
+
     public PackSpec() {
     }
 
@@ -108,6 +136,9 @@ public class PackSpec extends AbstractModel{
         if (source.Amount != null) {
             this.Amount = new Long(source.Amount);
         }
+        if (source.CustomId != null) {
+            this.CustomId = new String(source.CustomId);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class PackSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "Rate", this.Rate);
         this.setParamSimple(map, prefix + "Amount", this.Amount);
+        this.setParamSimple(map, prefix + "CustomId", this.CustomId);
 
     }
 }

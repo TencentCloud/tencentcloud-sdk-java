@@ -151,6 +151,14 @@ public class CodeBatch extends AbstractModel{
     private String TplName;
 
     /**
+    * 调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Job")
+    @Expose
+    private Job Job;
+
+    /**
      * Get 批次号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BatchId 批次号
@@ -470,6 +478,26 @@ public class CodeBatch extends AbstractModel{
         this.TplName = TplName;
     }
 
+    /**
+     * Get 调度任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Job 调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Job getJob() {
+        return this.Job;
+    }
+
+    /**
+     * Set 调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Job 调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJob(Job Job) {
+        this.Job = Job;
+    }
+
     public CodeBatch() {
     }
 
@@ -526,6 +554,9 @@ public class CodeBatch extends AbstractModel{
         if (source.TplName != null) {
             this.TplName = new String(source.TplName);
         }
+        if (source.Job != null) {
+            this.Job = new Job(source.Job);
+        }
     }
 
 
@@ -549,6 +580,7 @@ public class CodeBatch extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamObj(map, prefix + "Ext.", this.Ext);
         this.setParamSimple(map, prefix + "TplName", this.TplName);
+        this.setParamObj(map, prefix + "Job.", this.Job);
 
     }
 }

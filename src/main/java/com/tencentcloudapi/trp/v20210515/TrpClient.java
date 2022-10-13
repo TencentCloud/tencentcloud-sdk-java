@@ -59,7 +59,7 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
-     *生成码包
+     *生成普通码包
      * @param req CreateCodePackRequest
      * @return CreateCodePackResponse
      * @throws TencentCloudSDKException

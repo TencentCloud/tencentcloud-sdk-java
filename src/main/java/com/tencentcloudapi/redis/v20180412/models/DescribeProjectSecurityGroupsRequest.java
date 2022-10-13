@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
+    * 数据库引擎名称，本接口取值：redis。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 项目Id。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 偏移量。
+    * 偏移量，取值为Limit的整数倍。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 拉取数量限制，默认20
+    * 拉取数量限制，默认 20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索条件，支持安全组id或者安全组名称。
+    * 搜索条件，支持安全组 ID 或者安全组名称。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-     * Get 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 
-     * @return Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
+     * Get 数据库引擎名称，本接口取值：redis。 
+     * @return Product 数据库引擎名称，本接口取值：redis。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
-     * @param Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
+     * Set 数据库引擎名称，本接口取值：redis。
+     * @param Product 数据库引擎名称，本接口取值：redis。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 项目Id。 
-     * @return ProjectId 项目Id。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id。
-     * @param ProjectId 项目Id。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get 偏移量，取值为Limit的整数倍。 
+     * @return Offset 偏移量，取值为Limit的整数倍。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量，取值为Limit的整数倍。
+     * @param Offset 偏移量，取值为Limit的整数倍。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 拉取数量限制，默认20 
-     * @return Limit 拉取数量限制，默认20
+     * Get 拉取数量限制，默认 20。 
+     * @return Limit 拉取数量限制，默认 20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 拉取数量限制，默认20
-     * @param Limit 拉取数量限制，默认20
+     * Set 拉取数量限制，默认 20。
+     * @param Limit 拉取数量限制，默认 20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索条件，支持安全组id或者安全组名称。 
-     * @return SearchKey 搜索条件，支持安全组id或者安全组名称。
+     * Get 搜索条件，支持安全组 ID 或者安全组名称。 
+     * @return SearchKey 搜索条件，支持安全组 ID 或者安全组名称。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索条件，支持安全组id或者安全组名称。
-     * @param SearchKey 搜索条件，支持安全组id或者安全组名称。
+     * Set 搜索条件，支持安全组 ID 或者安全组名称。
+     * @param SearchKey 搜索条件，支持安全组 ID 或者安全组名称。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

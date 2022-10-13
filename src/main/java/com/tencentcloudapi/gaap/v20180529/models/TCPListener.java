@@ -172,6 +172,22 @@ public class TCPListener extends AbstractModel{
     private Long SessionPersist;
 
     /**
+    * 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
+
+    /**
+    * 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -539,6 +555,46 @@ public class TCPListener extends AbstractModel{
         this.SessionPersist = SessionPersist;
     }
 
+    /**
+     * Get 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public TCPListener() {
     }
 
@@ -607,6 +663,12 @@ public class TCPListener extends AbstractModel{
         if (source.SessionPersist != null) {
             this.SessionPersist = new Long(source.SessionPersist);
         }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -633,6 +695,8 @@ public class TCPListener extends AbstractModel{
         this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
         this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

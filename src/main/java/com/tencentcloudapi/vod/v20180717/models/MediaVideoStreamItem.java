@@ -58,6 +58,13 @@ public class MediaVideoStreamItem extends AbstractModel{
     private Long Fps;
 
     /**
+    * 编码标签，仅当 Codec 为 hevc 时有效。
+    */
+    @SerializedName("CodecTag")
+    @Expose
+    private String CodecTag;
+
+    /**
      * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
@@ -137,6 +144,22 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.Fps = Fps;
     }
 
+    /**
+     * Get 编码标签，仅当 Codec 为 hevc 时有效。 
+     * @return CodecTag 编码标签，仅当 Codec 为 hevc 时有效。
+     */
+    public String getCodecTag() {
+        return this.CodecTag;
+    }
+
+    /**
+     * Set 编码标签，仅当 Codec 为 hevc 时有效。
+     * @param CodecTag 编码标签，仅当 Codec 为 hevc 时有效。
+     */
+    public void setCodecTag(String CodecTag) {
+        this.CodecTag = CodecTag;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -160,6 +183,9 @@ public class MediaVideoStreamItem extends AbstractModel{
         if (source.Fps != null) {
             this.Fps = new Long(source.Fps);
         }
+        if (source.CodecTag != null) {
+            this.CodecTag = new String(source.CodecTag);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
 
     }
 }

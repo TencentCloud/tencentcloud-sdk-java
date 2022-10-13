@@ -422,46 +422,6 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBResourceUsage)用于查看数据库实例资源的使用情况。
-     * @param req DescribeDBResourceUsageRequest
-     * @return DescribeDBResourceUsageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBResourceUsageResponse DescribeDBResourceUsage(DescribeDBResourceUsageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBResourceUsageResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBResourceUsageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBResourceUsage");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口(DescribeDBResourceUsageDetails)用于查看数据库实例当前性能数据。
-     * @param req DescribeDBResourceUsageDetailsRequest
-     * @return DescribeDBResourceUsageDetailsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBResourceUsageDetailsResponse DescribeDBResourceUsageDetails(DescribeDBResourceUsageDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBResourceUsageDetailsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBResourceUsageDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBResourceUsageDetails");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse

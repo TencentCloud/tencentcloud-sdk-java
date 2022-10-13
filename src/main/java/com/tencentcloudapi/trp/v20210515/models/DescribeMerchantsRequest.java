@@ -51,6 +51,13 @@ public class DescribeMerchantsRequest extends AbstractModel{
     private Long CorpId;
 
     /**
+    * 码来源类型 0:自建, 1:第三方
+    */
+    @SerializedName("CodeType")
+    @Expose
+    private Long CodeType;
+
+    /**
      * Get 搜索商户名称 
      * @return Name 搜索商户名称
      */
@@ -114,6 +121,22 @@ public class DescribeMerchantsRequest extends AbstractModel{
         this.CorpId = CorpId;
     }
 
+    /**
+     * Get 码来源类型 0:自建, 1:第三方 
+     * @return CodeType 码来源类型 0:自建, 1:第三方
+     */
+    public Long getCodeType() {
+        return this.CodeType;
+    }
+
+    /**
+     * Set 码来源类型 0:自建, 1:第三方
+     * @param CodeType 码来源类型 0:自建, 1:第三方
+     */
+    public void setCodeType(Long CodeType) {
+        this.CodeType = CodeType;
+    }
+
     public DescribeMerchantsRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeMerchantsRequest extends AbstractModel{
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
+        if (source.CodeType != null) {
+            this.CodeType = new Long(source.CodeType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeMerchantsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
+        this.setParamSimple(map, prefix + "CodeType", this.CodeType);
 
     }
 }
