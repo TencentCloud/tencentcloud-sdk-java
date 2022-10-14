@@ -29,7 +29,7 @@ public class DescribeBaselineItemDetectListRequest extends AbstractModel{
 <li>ItemName - string - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
     */
     @SerializedName("Filters")
@@ -71,7 +71,7 @@ public class DescribeBaselineItemDetectListRequest extends AbstractModel{
 <li>ItemName - string - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li> 
      * @return Filters <li>HostId - string - 是否必填：否 - 主机Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
@@ -79,7 +79,7 @@ public class DescribeBaselineItemDetectListRequest extends AbstractModel{
 <li>ItemName - string - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
      */
     public Filter [] getFilters() {
@@ -93,7 +93,7 @@ public class DescribeBaselineItemDetectListRequest extends AbstractModel{
 <li>ItemName - string - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
      * @param Filters <li>HostId - string - 是否必填：否 - 主机Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
@@ -101,7 +101,7 @@ public class DescribeBaselineItemDetectListRequest extends AbstractModel{
 <li>ItemName - string - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
      */
     public void setFilters(Filter [] Filters) {

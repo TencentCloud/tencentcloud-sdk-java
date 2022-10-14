@@ -23,414 +23,414 @@ import java.util.HashMap;
 public class ReportFakeURLInfo extends AbstractModel{
 
     /**
-    * xxx
+    * 仿冒网址ID
     */
     @SerializedName("FakeURLId")
     @Expose
     private Long FakeURLId;
 
     /**
-    * xxx
+    * 检测时间
     */
     @SerializedName("DetectTime")
     @Expose
     private String DetectTime;
 
     /**
-    * xxx
+    * 保护网站
     */
     @SerializedName("ProtectURL")
     @Expose
     private String ProtectURL;
 
     /**
-    * xxx
+    * 保护网站名称
     */
     @SerializedName("ProtectWeb")
     @Expose
     private String ProtectWeb;
 
     /**
-    * xxx
+    * 仿冒网址
     */
     @SerializedName("FakeURL")
     @Expose
     private String FakeURL;
 
     /**
-    * xxx
+    * 截图
     */
     @SerializedName("Snapshot")
     @Expose
     private String Snapshot;
 
     /**
-    * xxx
+    * IP地址
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * xxx
+    * IP地理位置
     */
     @SerializedName("IPLoc")
     @Expose
     private String IPLoc;
 
     /**
-    * xxx
+    * 热度
     */
     @SerializedName("Heat")
     @Expose
     private Long Heat;
 
     /**
-    * xxx
+    * 网站状态
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * xxx
+    * 网站不处理原因
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * xxx
+    * 仿冒网站的企业名称
     */
     @SerializedName("FakeURLCompany")
     @Expose
     private String FakeURLCompany;
 
     /**
-    * xxx
+    * 仿冒网站的网站性质
     */
     @SerializedName("FakeURLAttr")
     @Expose
     private String FakeURLAttr;
 
     /**
-    * xxx
+    * 仿冒网站的网站名称
     */
     @SerializedName("FakeURLName")
     @Expose
     private String FakeURLName;
 
     /**
-    * xxx
+    * 仿冒网站的备案
     */
     @SerializedName("FakeURLICP")
     @Expose
     private String FakeURLICP;
 
     /**
-    * xxx
+    * 仿冒网站创建时间
     */
     @SerializedName("FakeURLCreateTime")
     @Expose
     private String FakeURLCreateTime;
 
     /**
-    * xxx
+    * 仿冒网站过期时间
     */
     @SerializedName("FakeURLExpireTime")
     @Expose
     private String FakeURLExpireTime;
 
     /**
-    * xxx
+    * 协查处置时间
     */
     @SerializedName("BlockTime")
     @Expose
     private String BlockTime;
 
     /**
-     * Get xxx 
-     * @return FakeURLId xxx
+     * Get 仿冒网址ID 
+     * @return FakeURLId 仿冒网址ID
      */
     public Long getFakeURLId() {
         return this.FakeURLId;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLId xxx
+     * Set 仿冒网址ID
+     * @param FakeURLId 仿冒网址ID
      */
     public void setFakeURLId(Long FakeURLId) {
         this.FakeURLId = FakeURLId;
     }
 
     /**
-     * Get xxx 
-     * @return DetectTime xxx
+     * Get 检测时间 
+     * @return DetectTime 检测时间
      */
     public String getDetectTime() {
         return this.DetectTime;
     }
 
     /**
-     * Set xxx
-     * @param DetectTime xxx
+     * Set 检测时间
+     * @param DetectTime 检测时间
      */
     public void setDetectTime(String DetectTime) {
         this.DetectTime = DetectTime;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectURL xxx
+     * Get 保护网站 
+     * @return ProtectURL 保护网站
      */
     public String getProtectURL() {
         return this.ProtectURL;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURL xxx
+     * Set 保护网站
+     * @param ProtectURL 保护网站
      */
     public void setProtectURL(String ProtectURL) {
         this.ProtectURL = ProtectURL;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectWeb xxx
+     * Get 保护网站名称 
+     * @return ProtectWeb 保护网站名称
      */
     public String getProtectWeb() {
         return this.ProtectWeb;
     }
 
     /**
-     * Set xxx
-     * @param ProtectWeb xxx
+     * Set 保护网站名称
+     * @param ProtectWeb 保护网站名称
      */
     public void setProtectWeb(String ProtectWeb) {
         this.ProtectWeb = ProtectWeb;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURL xxx
+     * Get 仿冒网址 
+     * @return FakeURL 仿冒网址
      */
     public String getFakeURL() {
         return this.FakeURL;
     }
 
     /**
-     * Set xxx
-     * @param FakeURL xxx
+     * Set 仿冒网址
+     * @param FakeURL 仿冒网址
      */
     public void setFakeURL(String FakeURL) {
         this.FakeURL = FakeURL;
     }
 
     /**
-     * Get xxx 
-     * @return Snapshot xxx
+     * Get 截图 
+     * @return Snapshot 截图
      */
     public String getSnapshot() {
         return this.Snapshot;
     }
 
     /**
-     * Set xxx
-     * @param Snapshot xxx
+     * Set 截图
+     * @param Snapshot 截图
      */
     public void setSnapshot(String Snapshot) {
         this.Snapshot = Snapshot;
     }
 
     /**
-     * Get xxx 
-     * @return IP xxx
+     * Get IP地址 
+     * @return IP IP地址
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set xxx
-     * @param IP xxx
+     * Set IP地址
+     * @param IP IP地址
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get xxx 
-     * @return IPLoc xxx
+     * Get IP地理位置 
+     * @return IPLoc IP地理位置
      */
     public String getIPLoc() {
         return this.IPLoc;
     }
 
     /**
-     * Set xxx
-     * @param IPLoc xxx
+     * Set IP地理位置
+     * @param IPLoc IP地理位置
      */
     public void setIPLoc(String IPLoc) {
         this.IPLoc = IPLoc;
     }
 
     /**
-     * Get xxx 
-     * @return Heat xxx
+     * Get 热度 
+     * @return Heat 热度
      */
     public Long getHeat() {
         return this.Heat;
     }
 
     /**
-     * Set xxx
-     * @param Heat xxx
+     * Set 热度
+     * @param Heat 热度
      */
     public void setHeat(Long Heat) {
         this.Heat = Heat;
     }
 
     /**
-     * Get xxx 
-     * @return Status xxx
+     * Get 网站状态 
+     * @return Status 网站状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set xxx
-     * @param Status xxx
+     * Set 网站状态
+     * @param Status 网站状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get xxx 
-     * @return Note xxx
+     * Get 网站不处理原因 
+     * @return Note 网站不处理原因
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set xxx
-     * @param Note xxx
+     * Set 网站不处理原因
+     * @param Note 网站不处理原因
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURLCompany xxx
+     * Get 仿冒网站的企业名称 
+     * @return FakeURLCompany 仿冒网站的企业名称
      */
     public String getFakeURLCompany() {
         return this.FakeURLCompany;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLCompany xxx
+     * Set 仿冒网站的企业名称
+     * @param FakeURLCompany 仿冒网站的企业名称
      */
     public void setFakeURLCompany(String FakeURLCompany) {
         this.FakeURLCompany = FakeURLCompany;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURLAttr xxx
+     * Get 仿冒网站的网站性质 
+     * @return FakeURLAttr 仿冒网站的网站性质
      */
     public String getFakeURLAttr() {
         return this.FakeURLAttr;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLAttr xxx
+     * Set 仿冒网站的网站性质
+     * @param FakeURLAttr 仿冒网站的网站性质
      */
     public void setFakeURLAttr(String FakeURLAttr) {
         this.FakeURLAttr = FakeURLAttr;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURLName xxx
+     * Get 仿冒网站的网站名称 
+     * @return FakeURLName 仿冒网站的网站名称
      */
     public String getFakeURLName() {
         return this.FakeURLName;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLName xxx
+     * Set 仿冒网站的网站名称
+     * @param FakeURLName 仿冒网站的网站名称
      */
     public void setFakeURLName(String FakeURLName) {
         this.FakeURLName = FakeURLName;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURLICP xxx
+     * Get 仿冒网站的备案 
+     * @return FakeURLICP 仿冒网站的备案
      */
     public String getFakeURLICP() {
         return this.FakeURLICP;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLICP xxx
+     * Set 仿冒网站的备案
+     * @param FakeURLICP 仿冒网站的备案
      */
     public void setFakeURLICP(String FakeURLICP) {
         this.FakeURLICP = FakeURLICP;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURLCreateTime xxx
+     * Get 仿冒网站创建时间 
+     * @return FakeURLCreateTime 仿冒网站创建时间
      */
     public String getFakeURLCreateTime() {
         return this.FakeURLCreateTime;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLCreateTime xxx
+     * Set 仿冒网站创建时间
+     * @param FakeURLCreateTime 仿冒网站创建时间
      */
     public void setFakeURLCreateTime(String FakeURLCreateTime) {
         this.FakeURLCreateTime = FakeURLCreateTime;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURLExpireTime xxx
+     * Get 仿冒网站过期时间 
+     * @return FakeURLExpireTime 仿冒网站过期时间
      */
     public String getFakeURLExpireTime() {
         return this.FakeURLExpireTime;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLExpireTime xxx
+     * Set 仿冒网站过期时间
+     * @param FakeURLExpireTime 仿冒网站过期时间
      */
     public void setFakeURLExpireTime(String FakeURLExpireTime) {
         this.FakeURLExpireTime = FakeURLExpireTime;
     }
 
     /**
-     * Get xxx 
-     * @return BlockTime xxx
+     * Get 协查处置时间 
+     * @return BlockTime 协查处置时间
      */
     public String getBlockTime() {
         return this.BlockTime;
     }
 
     /**
-     * Set xxx
-     * @param BlockTime xxx
+     * Set 协查处置时间
+     * @param BlockTime 协查处置时间
      */
     public void setBlockTime(String BlockTime) {
         this.BlockTime = BlockTime;

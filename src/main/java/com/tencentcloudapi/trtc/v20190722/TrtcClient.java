@@ -194,6 +194,31 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *获取TRTC混流转码的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
+     * @param req DescribeMixTranscodingUsageRequest
+     * @return DescribeMixTranscodingUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(DescribeMixTranscodingUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMixTranscodingUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMixTranscodingUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁查找自定义背景图或水印信息，可通过此接口查找已上传的图片信息。无需频繁查找图片信息的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中查看。
      * @param req DescribePictureRequest
      * @return DescribePictureResponse
@@ -231,6 +256,56 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordStatisticResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRecordStatistic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取TRTC录制的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
+     * @param req DescribeRecordingUsageRequest
+     * @return DescribeRecordingUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordingUsageResponse DescribeRecordingUsage(DescribeRecordingUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordingUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordingUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取TRTC旁路转推的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
+     * @param req DescribeRelayUsageRequest
+     * @return DescribeRelayUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelayUsageResponse DescribeRelayUsage(DescribeRelayUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRelayUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRelayUsage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -298,6 +373,31 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTrtcMcuTranscodeTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取TRTC音视频互动的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
+     * @param req DescribeTrtcUsageRequest
+     * @return DescribeTrtcUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcUsageResponse DescribeTrtcUsage(DescribeTrtcUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcUsage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

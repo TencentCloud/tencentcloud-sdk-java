@@ -65,7 +65,7 @@ public class CreateClusterRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 集群付费模式
+    * 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
     */
@@ -142,6 +142,23 @@ public class CreateClusterRequest extends AbstractModel{
     @SerializedName("DBKernelVersion")
     @Expose
     private String DBKernelVersion;
+
+    /**
+    * 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private String StoragePayMode;
+
+    /**
+    * 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
 
     /**
      * Get 可用区 
@@ -240,10 +257,10 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 集群付费模式
+     * Get 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费 
-     * @return PayMode 集群付费模式
+     * @return PayMode 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
      */
@@ -252,10 +269,10 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Set 集群付费模式
+     * Set 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
-     * @param PayMode 集群付费模式
+     * @param PayMode 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
      */
@@ -435,6 +452,50 @@ public class CreateClusterRequest extends AbstractModel{
         this.DBKernelVersion = DBKernelVersion;
     }
 
+    /**
+     * Get 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月 
+     * @return StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     */
+    public String getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     * @param StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     */
+    public void setStoragePayMode(String StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
+    /**
+     * Get 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置 
+     * @return Storage 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+     * @param Storage 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -491,6 +552,12 @@ public class CreateClusterRequest extends AbstractModel{
         if (source.DBKernelVersion != null) {
             this.DBKernelVersion = new String(source.DBKernelVersion);
         }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new String(source.StoragePayMode);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
     }
 
 
@@ -514,6 +581,8 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
 
     }
 }

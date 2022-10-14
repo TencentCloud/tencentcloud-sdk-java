@@ -58,6 +58,13 @@ public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel{
     private Long VideoTimeFhd;
 
     /**
+    * 带宽，单位：Mbps。
+    */
+    @SerializedName("Flux")
+    @Expose
+    private Float Flux;
+
+    /**
      * Get 本组数据对应的时间点，格式如：2020-09-07或2020-09-07 00:05:05。 
      * @return TimeKey 本组数据对应的时间点，格式如：2020-09-07或2020-09-07 00:05:05。
      */
@@ -137,6 +144,22 @@ public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel{
         this.VideoTimeFhd = VideoTimeFhd;
     }
 
+    /**
+     * Get 带宽，单位：Mbps。 
+     * @return Flux 带宽，单位：Mbps。
+     */
+    public Float getFlux() {
+        return this.Flux;
+    }
+
+    /**
+     * Set 带宽，单位：Mbps。
+     * @param Flux 带宽，单位：Mbps。
+     */
+    public void setFlux(Float Flux) {
+        this.Flux = Flux;
+    }
+
     public SdkAppIdTrtcMcuTranscodeTimeUsage() {
     }
 
@@ -160,6 +183,9 @@ public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel{
         if (source.VideoTimeFhd != null) {
             this.VideoTimeFhd = new Long(source.VideoTimeFhd);
         }
+        if (source.Flux != null) {
+            this.Flux = new Float(source.Flux);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoTimeSd", this.VideoTimeSd);
         this.setParamSimple(map, prefix + "VideoTimeHd", this.VideoTimeHd);
         this.setParamSimple(map, prefix + "VideoTimeFhd", this.VideoTimeFhd);
+        this.setParamSimple(map, prefix + "Flux", this.Flux);
 
     }
 }

@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class ModifyBPOfflineAttachmentRequest extends AbstractModel{
 
     /**
-    * xx
+    * 营业执照
     */
     @SerializedName("LicenseName")
     @Expose
     private String LicenseName;
 
     /**
-    * xx
+    * 授权书
     */
     @SerializedName("AuthorizationName")
     @Expose
     private String AuthorizationName;
 
     /**
-    * xx
+    * 商标名称
     */
     @SerializedName("BrandName")
     @Expose
     private String BrandName;
 
     /**
-    * xx
+    * 商标证明
     */
     @SerializedName("BrandCertificateName")
     @Expose
     private String BrandCertificateName;
 
     /**
-    * xx
+    * 商标转让证明
     */
     @SerializedName("TransferName")
     @Expose
     private String TransferName;
 
     /**
-     * Get xx 
-     * @return LicenseName xx
+     * Get 营业执照 
+     * @return LicenseName 营业执照
      */
     public String getLicenseName() {
         return this.LicenseName;
     }
 
     /**
-     * Set xx
-     * @param LicenseName xx
+     * Set 营业执照
+     * @param LicenseName 营业执照
      */
     public void setLicenseName(String LicenseName) {
         this.LicenseName = LicenseName;
     }
 
     /**
-     * Get xx 
-     * @return AuthorizationName xx
+     * Get 授权书 
+     * @return AuthorizationName 授权书
      */
     public String getAuthorizationName() {
         return this.AuthorizationName;
     }
 
     /**
-     * Set xx
-     * @param AuthorizationName xx
+     * Set 授权书
+     * @param AuthorizationName 授权书
      */
     public void setAuthorizationName(String AuthorizationName) {
         this.AuthorizationName = AuthorizationName;
     }
 
     /**
-     * Get xx 
-     * @return BrandName xx
+     * Get 商标名称 
+     * @return BrandName 商标名称
      */
     public String getBrandName() {
         return this.BrandName;
     }
 
     /**
-     * Set xx
-     * @param BrandName xx
+     * Set 商标名称
+     * @param BrandName 商标名称
      */
     public void setBrandName(String BrandName) {
         this.BrandName = BrandName;
     }
 
     /**
-     * Get xx 
-     * @return BrandCertificateName xx
+     * Get 商标证明 
+     * @return BrandCertificateName 商标证明
      */
     public String getBrandCertificateName() {
         return this.BrandCertificateName;
     }
 
     /**
-     * Set xx
-     * @param BrandCertificateName xx
+     * Set 商标证明
+     * @param BrandCertificateName 商标证明
      */
     public void setBrandCertificateName(String BrandCertificateName) {
         this.BrandCertificateName = BrandCertificateName;
     }
 
     /**
-     * Get xx 
-     * @return TransferName xx
+     * Get 商标转让证明 
+     * @return TransferName 商标转让证明
      */
     public String getTransferName() {
         return this.TransferName;
     }
 
     /**
-     * Set xx
-     * @param TransferName xx
+     * Set 商标转让证明
+     * @param TransferName 商标转让证明
      */
     public void setTransferName(String TransferName) {
         this.TransferName = TransferName;

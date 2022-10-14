@@ -167,6 +167,16 @@ public class Cluster extends AbstractModel{
     private String DBKernelVersion;
 
     /**
+    * 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private String StoragePayMode;
+
+    /**
      * Get 集群ID，集群的唯一标识 
      * @return ClusterId 集群ID，集群的唯一标识
      */
@@ -514,6 +524,34 @@ public class Cluster extends AbstractModel{
         this.DBKernelVersion = DBKernelVersion;
     }
 
+    /**
+     * Get 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStoragePayMode(String StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
     public Cluster() {
     }
 
@@ -582,6 +620,9 @@ public class Cluster extends AbstractModel{
         if (source.DBKernelVersion != null) {
             this.DBKernelVersion = new String(source.DBKernelVersion);
         }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new String(source.StoragePayMode);
+        }
     }
 
 
@@ -608,6 +649,7 @@ public class Cluster extends AbstractModel{
         this.setParamArrayObj(map, prefix + "EndpointSet.", this.EndpointSet);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
 
     }
 }

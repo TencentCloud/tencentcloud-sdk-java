@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class CreateBPProtectURLsRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 企业名称
     */
     @SerializedName("CompanyName")
     @Expose
     private String CompanyName;
 
     /**
-    * xxx
+    * 电话号码
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * xxx
+    * 营业执照
     */
     @SerializedName("LicenseName")
     @Expose
     private String LicenseName;
 
     /**
-    * xxx
+    * 保护网站
     */
     @SerializedName("ProtectURLs")
     @Expose
     private String [] ProtectURLs;
 
     /**
-    * xxx
+    * 网站名称
     */
     @SerializedName("ProtectWebs")
     @Expose
     private String [] ProtectWebs;
 
     /**
-     * Get xxx 
-     * @return CompanyName xxx
+     * Get 企业名称 
+     * @return CompanyName 企业名称
      */
     public String getCompanyName() {
         return this.CompanyName;
     }
 
     /**
-     * Set xxx
-     * @param CompanyName xxx
+     * Set 企业名称
+     * @param CompanyName 企业名称
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
     }
 
     /**
-     * Get xxx 
-     * @return Phone xxx
+     * Get 电话号码 
+     * @return Phone 电话号码
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set xxx
-     * @param Phone xxx
+     * Set 电话号码
+     * @param Phone 电话号码
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get xxx 
-     * @return LicenseName xxx
+     * Get 营业执照 
+     * @return LicenseName 营业执照
      */
     public String getLicenseName() {
         return this.LicenseName;
     }
 
     /**
-     * Set xxx
-     * @param LicenseName xxx
+     * Set 营业执照
+     * @param LicenseName 营业执照
      */
     public void setLicenseName(String LicenseName) {
         this.LicenseName = LicenseName;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectURLs xxx
+     * Get 保护网站 
+     * @return ProtectURLs 保护网站
      */
     public String [] getProtectURLs() {
         return this.ProtectURLs;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURLs xxx
+     * Set 保护网站
+     * @param ProtectURLs 保护网站
      */
     public void setProtectURLs(String [] ProtectURLs) {
         this.ProtectURLs = ProtectURLs;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectWebs xxx
+     * Get 网站名称 
+     * @return ProtectWebs 网站名称
      */
     public String [] getProtectWebs() {
         return this.ProtectWebs;
     }
 
     /**
-     * Set xxx
-     * @param ProtectWebs xxx
+     * Set 网站名称
+     * @param ProtectWebs 网站名称
      */
     public void setProtectWebs(String [] ProtectWebs) {
         this.ProtectWebs = ProtectWebs;

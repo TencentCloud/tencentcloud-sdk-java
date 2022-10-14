@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class BrandData extends AbstractModel{
 
     /**
-    * xxx
+    * 商标名称
     */
     @SerializedName("BrandName")
     @Expose
     private String BrandName;
 
     /**
-    * xxx
+    * 商标证明
     */
     @SerializedName("BrandCertificateName")
     @Expose
     private String BrandCertificateName;
 
     /**
-    * xxx
+    * 商标审核状态 1-审核中 2-审核未通过 3-审核通过
     */
     @SerializedName("BrandStatus")
     @Expose
     private Long BrandStatus;
 
     /**
-    * xxx
+    * 审核说明
     */
     @SerializedName("BrandNote")
     @Expose
     private String BrandNote;
 
     /**
-    * xxx
+    * 商标转让证明
     */
     @SerializedName("TransferName")
     @Expose
     private String TransferName;
 
     /**
-    * xxx
+    * 商标转让证明审核状态
     */
     @SerializedName("TransferStatus")
     @Expose
     private Long TransferStatus;
 
     /**
-    * xxx
+    * 审核说明 1-审核中 2-审核未通过 3-审核通过
     */
     @SerializedName("TransferNote")
     @Expose
     private String TransferNote;
 
     /**
-     * Get xxx 
-     * @return BrandName xxx
+     * Get 商标名称 
+     * @return BrandName 商标名称
      */
     public String getBrandName() {
         return this.BrandName;
     }
 
     /**
-     * Set xxx
-     * @param BrandName xxx
+     * Set 商标名称
+     * @param BrandName 商标名称
      */
     public void setBrandName(String BrandName) {
         this.BrandName = BrandName;
     }
 
     /**
-     * Get xxx 
-     * @return BrandCertificateName xxx
+     * Get 商标证明 
+     * @return BrandCertificateName 商标证明
      */
     public String getBrandCertificateName() {
         return this.BrandCertificateName;
     }
 
     /**
-     * Set xxx
-     * @param BrandCertificateName xxx
+     * Set 商标证明
+     * @param BrandCertificateName 商标证明
      */
     public void setBrandCertificateName(String BrandCertificateName) {
         this.BrandCertificateName = BrandCertificateName;
     }
 
     /**
-     * Get xxx 
-     * @return BrandStatus xxx
+     * Get 商标审核状态 1-审核中 2-审核未通过 3-审核通过 
+     * @return BrandStatus 商标审核状态 1-审核中 2-审核未通过 3-审核通过
      */
     public Long getBrandStatus() {
         return this.BrandStatus;
     }
 
     /**
-     * Set xxx
-     * @param BrandStatus xxx
+     * Set 商标审核状态 1-审核中 2-审核未通过 3-审核通过
+     * @param BrandStatus 商标审核状态 1-审核中 2-审核未通过 3-审核通过
      */
     public void setBrandStatus(Long BrandStatus) {
         this.BrandStatus = BrandStatus;
     }
 
     /**
-     * Get xxx 
-     * @return BrandNote xxx
+     * Get 审核说明 
+     * @return BrandNote 审核说明
      */
     public String getBrandNote() {
         return this.BrandNote;
     }
 
     /**
-     * Set xxx
-     * @param BrandNote xxx
+     * Set 审核说明
+     * @param BrandNote 审核说明
      */
     public void setBrandNote(String BrandNote) {
         this.BrandNote = BrandNote;
     }
 
     /**
-     * Get xxx 
-     * @return TransferName xxx
+     * Get 商标转让证明 
+     * @return TransferName 商标转让证明
      */
     public String getTransferName() {
         return this.TransferName;
     }
 
     /**
-     * Set xxx
-     * @param TransferName xxx
+     * Set 商标转让证明
+     * @param TransferName 商标转让证明
      */
     public void setTransferName(String TransferName) {
         this.TransferName = TransferName;
     }
 
     /**
-     * Get xxx 
-     * @return TransferStatus xxx
+     * Get 商标转让证明审核状态 
+     * @return TransferStatus 商标转让证明审核状态
      */
     public Long getTransferStatus() {
         return this.TransferStatus;
     }
 
     /**
-     * Set xxx
-     * @param TransferStatus xxx
+     * Set 商标转让证明审核状态
+     * @param TransferStatus 商标转让证明审核状态
      */
     public void setTransferStatus(Long TransferStatus) {
         this.TransferStatus = TransferStatus;
     }
 
     /**
-     * Get xxx 
-     * @return TransferNote xxx
+     * Get 审核说明 1-审核中 2-审核未通过 3-审核通过 
+     * @return TransferNote 审核说明 1-审核中 2-审核未通过 3-审核通过
      */
     public String getTransferNote() {
         return this.TransferNote;
     }
 
     /**
-     * Set xxx
-     * @param TransferNote xxx
+     * Set 审核说明 1-审核中 2-审核未通过 3-审核通过
+     * @param TransferNote 审核说明 1-审核中 2-审核未通过 3-审核通过
      */
     public void setTransferNote(String TransferNote) {
         this.TransferNote = TransferNote;

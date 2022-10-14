@@ -191,7 +191,7 @@ public class MonitorTort extends AbstractModel{
     private Long IsProducer;
 
     /**
-    * 是否海外网址
+    * 是否境外网址
     */
     @SerializedName("IsOverseas")
     @Expose
@@ -582,16 +582,16 @@ public class MonitorTort extends AbstractModel{
     }
 
     /**
-     * Get 是否海外网址 
-     * @return IsOverseas 是否海外网址
+     * Get 是否境外网址 
+     * @return IsOverseas 是否境外网址
      */
     public Long getIsOverseas() {
         return this.IsOverseas;
     }
 
     /**
-     * Set 是否海外网址
-     * @param IsOverseas 是否海外网址
+     * Set 是否境外网址
+     * @param IsOverseas 是否境外网址
      */
     public void setIsOverseas(Long IsOverseas) {
         this.IsOverseas = IsOverseas;

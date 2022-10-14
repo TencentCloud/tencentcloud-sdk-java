@@ -51,6 +51,13 @@ public class QueryFilter extends AbstractModel{
     private String Name;
 
     /**
+    * 操作符
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
      * Get 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip" 
      * @return Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
      */
@@ -114,6 +121,22 @@ public class QueryFilter extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 操作符 
+     * @return Operator 操作符
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作符
+     * @param Operator 操作符
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
     public QueryFilter() {
     }
 
@@ -140,6 +163,9 @@ public class QueryFilter extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class QueryFilter extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

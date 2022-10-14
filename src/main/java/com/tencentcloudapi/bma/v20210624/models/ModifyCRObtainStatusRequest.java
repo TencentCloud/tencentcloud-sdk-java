@@ -44,7 +44,7 @@ public class ModifyCRObtainStatusRequest extends AbstractModel{
     private Long ObtainDuration;
 
     /**
-    * 结果回调地址
+    * 取证结果回调地址
     */
     @SerializedName("ObtainUrl")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyCRObtainStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 结果回调地址 
-     * @return ObtainUrl 结果回调地址
+     * Get 取证结果回调地址 
+     * @return ObtainUrl 取证结果回调地址
      */
     public String getObtainUrl() {
         return this.ObtainUrl;
     }
 
     /**
-     * Set 结果回调地址
-     * @param ObtainUrl 结果回调地址
+     * Set 取证结果回调地址
+     * @param ObtainUrl 取证结果回调地址
      */
     public void setObtainUrl(String ObtainUrl) {
         this.ObtainUrl = ObtainUrl;

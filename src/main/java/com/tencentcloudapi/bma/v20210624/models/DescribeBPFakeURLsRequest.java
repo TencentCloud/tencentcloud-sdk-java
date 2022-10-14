@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeBPFakeURLsRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 过滤条件
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * xxx
+    * 页数
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * xxx
+    * 页码
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-     * Get xxx 
-     * @return Filters xxx
+     * Get 过滤条件 
+     * @return Filters 过滤条件
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set xxx
-     * @param Filters xxx
+     * Set 过滤条件
+     * @param Filters 过滤条件
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get xxx 
-     * @return PageSize xxx
+     * Get 页数 
+     * @return PageSize 页数
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set xxx
-     * @param PageSize xxx
+     * Set 页数
+     * @param PageSize 页数
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get xxx 
-     * @return PageNumber xxx
+     * Get 页码 
+     * @return PageNumber 页码
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set xxx
-     * @param PageNumber xxx
+     * Set 页码
+     * @param PageNumber 页码
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;

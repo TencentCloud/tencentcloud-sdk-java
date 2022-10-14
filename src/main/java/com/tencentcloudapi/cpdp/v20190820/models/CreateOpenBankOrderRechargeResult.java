@@ -53,6 +53,30 @@ public class CreateOpenBankOrderRechargeResult extends AbstractModel{
     private String OutOrderId;
 
     /**
+    * 充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealStatus")
+    @Expose
+    private String DealStatus;
+
+    /**
+    * 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealMessage")
+    @Expose
+    private String DealMessage;
+
+    /**
+    * PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PcWebUrl")
+    @Expose
+    private String PcWebUrl;
+
+    /**
      * Get 云企付平台订单号。 
      * @return ChannelOrderId 云企付平台订单号。
      */
@@ -124,6 +148,66 @@ public class CreateOpenBankOrderRechargeResult extends AbstractModel{
         this.OutOrderId = OutOrderId;
     }
 
+    /**
+     * Get 充值状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealStatus 充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDealStatus() {
+        return this.DealStatus;
+    }
+
+    /**
+     * Set 充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealStatus 充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealStatus(String DealStatus) {
+        this.DealStatus = DealStatus;
+    }
+
+    /**
+     * Get 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealMessage 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDealMessage() {
+        return this.DealMessage;
+    }
+
+    /**
+     * Set 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealMessage 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealMessage(String DealMessage) {
+        this.DealMessage = DealMessage;
+    }
+
+    /**
+     * Get PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PcWebUrl PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPcWebUrl() {
+        return this.PcWebUrl;
+    }
+
+    /**
+     * Set PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PcWebUrl PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPcWebUrl(String PcWebUrl) {
+        this.PcWebUrl = PcWebUrl;
+    }
+
     public CreateOpenBankOrderRechargeResult() {
     }
 
@@ -144,6 +228,15 @@ public class CreateOpenBankOrderRechargeResult extends AbstractModel{
         if (source.OutOrderId != null) {
             this.OutOrderId = new String(source.OutOrderId);
         }
+        if (source.DealStatus != null) {
+            this.DealStatus = new String(source.DealStatus);
+        }
+        if (source.DealMessage != null) {
+            this.DealMessage = new String(source.DealMessage);
+        }
+        if (source.PcWebUrl != null) {
+            this.PcWebUrl = new String(source.PcWebUrl);
+        }
     }
 
 
@@ -155,6 +248,9 @@ public class CreateOpenBankOrderRechargeResult extends AbstractModel{
         this.setParamSimple(map, prefix + "ThirdPayOrderId", this.ThirdPayOrderId);
         this.setParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
         this.setParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
+        this.setParamSimple(map, prefix + "DealStatus", this.DealStatus);
+        this.setParamSimple(map, prefix + "DealMessage", this.DealMessage);
+        this.setParamSimple(map, prefix + "PcWebUrl", this.PcWebUrl);
 
     }
 }

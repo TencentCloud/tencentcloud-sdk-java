@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CreateBPOfflineAttachmentRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 品牌名字
     */
     @SerializedName("BrandName")
     @Expose
     private String BrandName;
 
     /**
-    * xx
+    * 商标证明
     */
     @SerializedName("BrandCertificateName")
     @Expose
     private String BrandCertificateName;
 
     /**
-    * xx
+    * 商标转让证明
     */
     @SerializedName("TransferName")
     @Expose
     private String TransferName;
 
     /**
-    * xx
+    * 授权书
     */
     @SerializedName("AuthorizationName")
     @Expose
     private String AuthorizationName;
 
     /**
-     * Get xxx 
-     * @return BrandName xxx
+     * Get 品牌名字 
+     * @return BrandName 品牌名字
      */
     public String getBrandName() {
         return this.BrandName;
     }
 
     /**
-     * Set xxx
-     * @param BrandName xxx
+     * Set 品牌名字
+     * @param BrandName 品牌名字
      */
     public void setBrandName(String BrandName) {
         this.BrandName = BrandName;
     }
 
     /**
-     * Get xx 
-     * @return BrandCertificateName xx
+     * Get 商标证明 
+     * @return BrandCertificateName 商标证明
      */
     public String getBrandCertificateName() {
         return this.BrandCertificateName;
     }
 
     /**
-     * Set xx
-     * @param BrandCertificateName xx
+     * Set 商标证明
+     * @param BrandCertificateName 商标证明
      */
     public void setBrandCertificateName(String BrandCertificateName) {
         this.BrandCertificateName = BrandCertificateName;
     }
 
     /**
-     * Get xx 
-     * @return TransferName xx
+     * Get 商标转让证明 
+     * @return TransferName 商标转让证明
      */
     public String getTransferName() {
         return this.TransferName;
     }
 
     /**
-     * Set xx
-     * @param TransferName xx
+     * Set 商标转让证明
+     * @param TransferName 商标转让证明
      */
     public void setTransferName(String TransferName) {
         this.TransferName = TransferName;
     }
 
     /**
-     * Get xx 
-     * @return AuthorizationName xx
+     * Get 授权书 
+     * @return AuthorizationName 授权书
      */
     public String getAuthorizationName() {
         return this.AuthorizationName;
     }
 
     /**
-     * Set xx
-     * @param AuthorizationName xx
+     * Set 授权书
+     * @param AuthorizationName 授权书
      */
     public void setAuthorizationName(String AuthorizationName) {
         this.AuthorizationName = AuthorizationName;

@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class ProtectURLInfo extends AbstractModel{
 
     /**
-    * xxx
+    * 保护网站ID
     */
     @SerializedName("ProtectURLId")
     @Expose
     private Long ProtectURLId;
 
     /**
-    * xxx
+    * 保护网站
     */
     @SerializedName("ProtectURL")
     @Expose
     private String ProtectURL;
 
     /**
-    * xxx
+    * 保护网站名称
     */
     @SerializedName("ProtectWeb")
     @Expose
     private String ProtectWeb;
 
     /**
-    * xxx
+    * 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
     */
     @SerializedName("ProtectURLStatus")
     @Expose
     private Long ProtectURLStatus;
 
     /**
-    * xxx
+    * 网站审核不通过原因
     */
     @SerializedName("ProtectURLNote")
     @Expose
     private String ProtectURLNote;
 
     /**
-    * xxx
+    * 创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get xxx 
-     * @return ProtectURLId xxx
+     * Get 保护网站ID 
+     * @return ProtectURLId 保护网站ID
      */
     public Long getProtectURLId() {
         return this.ProtectURLId;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURLId xxx
+     * Set 保护网站ID
+     * @param ProtectURLId 保护网站ID
      */
     public void setProtectURLId(Long ProtectURLId) {
         this.ProtectURLId = ProtectURLId;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectURL xxx
+     * Get 保护网站 
+     * @return ProtectURL 保护网站
      */
     public String getProtectURL() {
         return this.ProtectURL;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURL xxx
+     * Set 保护网站
+     * @param ProtectURL 保护网站
      */
     public void setProtectURL(String ProtectURL) {
         this.ProtectURL = ProtectURL;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectWeb xxx
+     * Get 保护网站名称 
+     * @return ProtectWeb 保护网站名称
      */
     public String getProtectWeb() {
         return this.ProtectWeb;
     }
 
     /**
-     * Set xxx
-     * @param ProtectWeb xxx
+     * Set 保护网站名称
+     * @param ProtectWeb 保护网站名称
      */
     public void setProtectWeb(String ProtectWeb) {
         this.ProtectWeb = ProtectWeb;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectURLStatus xxx
+     * Get 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过 
+     * @return ProtectURLStatus 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
      */
     public Long getProtectURLStatus() {
         return this.ProtectURLStatus;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURLStatus xxx
+     * Set 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
+     * @param ProtectURLStatus 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
      */
     public void setProtectURLStatus(Long ProtectURLStatus) {
         this.ProtectURLStatus = ProtectURLStatus;
     }
 
     /**
-     * Get xxx 
-     * @return ProtectURLNote xxx
+     * Get 网站审核不通过原因 
+     * @return ProtectURLNote 网站审核不通过原因
      */
     public String getProtectURLNote() {
         return this.ProtectURLNote;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURLNote xxx
+     * Set 网站审核不通过原因
+     * @param ProtectURLNote 网站审核不通过原因
      */
     public void setProtectURLNote(String ProtectURLNote) {
         this.ProtectURLNote = ProtectURLNote;
     }
 
     /**
-     * Get xxx 
-     * @return CreateTime xxx
+     * Get 创建时间 
+     * @return CreateTime 创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set xxx
-     * @param CreateTime xxx
+     * Set 创建时间
+     * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

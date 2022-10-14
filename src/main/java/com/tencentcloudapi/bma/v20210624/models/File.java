@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class File extends AbstractModel{
 
     /**
-    * xxx
+    * 文件下载地址
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * xxx
+    * 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
     */
     @SerializedName("FileType")
     @Expose
     private Long FileType;
 
     /**
-    * xxx
+    * 文件有效开始日期
     */
     @SerializedName("ValidStartDate")
     @Expose
     private String ValidStartDate;
 
     /**
-    * xxx
+    * 文件有效截止日期
     */
     @SerializedName("ValidEndDate")
     @Expose
     private String ValidEndDate;
 
     /**
-     * Get xxx 
-     * @return FileUrl xxx
+     * Get 文件下载地址 
+     * @return FileUrl 文件下载地址
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set xxx
-     * @param FileUrl xxx
+     * Set 文件下载地址
+     * @param FileUrl 文件下载地址
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get xxx 
-     * @return FileType xxx
+     * Get 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照 
+     * @return FileType 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
      */
     public Long getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set xxx
-     * @param FileType xxx
+     * Set 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
+     * @param FileType 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
      */
     public void setFileType(Long FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get xxx 
-     * @return ValidStartDate xxx
+     * Get 文件有效开始日期 
+     * @return ValidStartDate 文件有效开始日期
      */
     public String getValidStartDate() {
         return this.ValidStartDate;
     }
 
     /**
-     * Set xxx
-     * @param ValidStartDate xxx
+     * Set 文件有效开始日期
+     * @param ValidStartDate 文件有效开始日期
      */
     public void setValidStartDate(String ValidStartDate) {
         this.ValidStartDate = ValidStartDate;
     }
 
     /**
-     * Get xxx 
-     * @return ValidEndDate xxx
+     * Get 文件有效截止日期 
+     * @return ValidEndDate 文件有效截止日期
      */
     public String getValidEndDate() {
         return this.ValidEndDate;
     }
 
     /**
-     * Set xxx
-     * @param ValidEndDate xxx
+     * Set 文件有效截止日期
+     * @param ValidEndDate 文件有效截止日期
      */
     public void setValidEndDate(String ValidEndDate) {
         this.ValidEndDate = ValidEndDate;

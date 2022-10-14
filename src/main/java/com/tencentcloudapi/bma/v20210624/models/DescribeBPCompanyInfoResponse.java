@@ -23,70 +23,70 @@ import java.util.HashMap;
 public class DescribeBPCompanyInfoResponse extends AbstractModel{
 
     /**
-    * xx
+    * 企业名称
     */
     @SerializedName("CompanyName")
     @Expose
     private String CompanyName;
 
     /**
-    * xx
+    * 电话号码
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * xx
+    * 营业执照
     */
     @SerializedName("LicenseName")
     @Expose
     private String LicenseName;
 
     /**
-    * xx
+    * 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
     */
     @SerializedName("LicenseStatus")
     @Expose
     private Long LicenseStatus;
 
     /**
-    * xx
+    * 营业执照备注
     */
     @SerializedName("LicenseNote")
     @Expose
     private String LicenseNote;
 
     /**
-    * xx
+    * 授权书
     */
     @SerializedName("AuthorizationName")
     @Expose
     private String AuthorizationName;
 
     /**
-    * xx
+    * 授权书审核状态
     */
     @SerializedName("AuthorizationStatus")
     @Expose
     private Long AuthorizationStatus;
 
     /**
-    * xx
+    * 授权书备注
     */
     @SerializedName("AuthorizationNote")
     @Expose
     private String AuthorizationNote;
 
     /**
-    * xx
+    * 品牌信息
     */
     @SerializedName("BrandDatas")
     @Expose
     private BrandData [] BrandDatas;
 
     /**
-    * xx
+    * 企业ID
     */
     @SerializedName("CompanyId")
     @Expose
@@ -100,160 +100,160 @@ public class DescribeBPCompanyInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get xx 
-     * @return CompanyName xx
+     * Get 企业名称 
+     * @return CompanyName 企业名称
      */
     public String getCompanyName() {
         return this.CompanyName;
     }
 
     /**
-     * Set xx
-     * @param CompanyName xx
+     * Set 企业名称
+     * @param CompanyName 企业名称
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
     }
 
     /**
-     * Get xx 
-     * @return Phone xx
+     * Get 电话号码 
+     * @return Phone 电话号码
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set xx
-     * @param Phone xx
+     * Set 电话号码
+     * @param Phone 电话号码
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get xx 
-     * @return LicenseName xx
+     * Get 营业执照 
+     * @return LicenseName 营业执照
      */
     public String getLicenseName() {
         return this.LicenseName;
     }
 
     /**
-     * Set xx
-     * @param LicenseName xx
+     * Set 营业执照
+     * @param LicenseName 营业执照
      */
     public void setLicenseName(String LicenseName) {
         this.LicenseName = LicenseName;
     }
 
     /**
-     * Get xx 
-     * @return LicenseStatus xx
+     * Get 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过 
+     * @return LicenseStatus 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
      */
     public Long getLicenseStatus() {
         return this.LicenseStatus;
     }
 
     /**
-     * Set xx
-     * @param LicenseStatus xx
+     * Set 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
+     * @param LicenseStatus 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
      */
     public void setLicenseStatus(Long LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
     }
 
     /**
-     * Get xx 
-     * @return LicenseNote xx
+     * Get 营业执照备注 
+     * @return LicenseNote 营业执照备注
      */
     public String getLicenseNote() {
         return this.LicenseNote;
     }
 
     /**
-     * Set xx
-     * @param LicenseNote xx
+     * Set 营业执照备注
+     * @param LicenseNote 营业执照备注
      */
     public void setLicenseNote(String LicenseNote) {
         this.LicenseNote = LicenseNote;
     }
 
     /**
-     * Get xx 
-     * @return AuthorizationName xx
+     * Get 授权书 
+     * @return AuthorizationName 授权书
      */
     public String getAuthorizationName() {
         return this.AuthorizationName;
     }
 
     /**
-     * Set xx
-     * @param AuthorizationName xx
+     * Set 授权书
+     * @param AuthorizationName 授权书
      */
     public void setAuthorizationName(String AuthorizationName) {
         this.AuthorizationName = AuthorizationName;
     }
 
     /**
-     * Get xx 
-     * @return AuthorizationStatus xx
+     * Get 授权书审核状态 
+     * @return AuthorizationStatus 授权书审核状态
      */
     public Long getAuthorizationStatus() {
         return this.AuthorizationStatus;
     }
 
     /**
-     * Set xx
-     * @param AuthorizationStatus xx
+     * Set 授权书审核状态
+     * @param AuthorizationStatus 授权书审核状态
      */
     public void setAuthorizationStatus(Long AuthorizationStatus) {
         this.AuthorizationStatus = AuthorizationStatus;
     }
 
     /**
-     * Get xx 
-     * @return AuthorizationNote xx
+     * Get 授权书备注 
+     * @return AuthorizationNote 授权书备注
      */
     public String getAuthorizationNote() {
         return this.AuthorizationNote;
     }
 
     /**
-     * Set xx
-     * @param AuthorizationNote xx
+     * Set 授权书备注
+     * @param AuthorizationNote 授权书备注
      */
     public void setAuthorizationNote(String AuthorizationNote) {
         this.AuthorizationNote = AuthorizationNote;
     }
 
     /**
-     * Get xx 
-     * @return BrandDatas xx
+     * Get 品牌信息 
+     * @return BrandDatas 品牌信息
      */
     public BrandData [] getBrandDatas() {
         return this.BrandDatas;
     }
 
     /**
-     * Set xx
-     * @param BrandDatas xx
+     * Set 品牌信息
+     * @param BrandDatas 品牌信息
      */
     public void setBrandDatas(BrandData [] BrandDatas) {
         this.BrandDatas = BrandDatas;
     }
 
     /**
-     * Get xx 
-     * @return CompanyId xx
+     * Get 企业ID 
+     * @return CompanyId 企业ID
      */
     public Long getCompanyId() {
         return this.CompanyId;
     }
 
     /**
-     * Set xx
-     * @param CompanyId xx
+     * Set 企业ID
+     * @param CompanyId 企业ID
      */
     public void setCompanyId(Long CompanyId) {
         this.CompanyId = CompanyId;

@@ -114,6 +114,13 @@ public class ModifyConnectResourceRequest extends AbstractModel{
     private CtsdbModifyConnectParam CtsdbConnectParam;
 
     /**
+    * Doris配置，Type为DORIS
+    */
+    @SerializedName("DorisConnectParam")
+    @Expose
+    private DorisModifyConnectParam DorisConnectParam;
+
+    /**
      * Get 连接源的Id 
      * @return ResourceId 连接源的Id
      */
@@ -321,6 +328,22 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         this.CtsdbConnectParam = CtsdbConnectParam;
     }
 
+    /**
+     * Get Doris配置，Type为DORIS 
+     * @return DorisConnectParam Doris配置，Type为DORIS
+     */
+    public DorisModifyConnectParam getDorisConnectParam() {
+        return this.DorisConnectParam;
+    }
+
+    /**
+     * Set Doris配置，Type为DORIS
+     * @param DorisConnectParam Doris配置，Type为DORIS
+     */
+    public void setDorisConnectParam(DorisModifyConnectParam DorisConnectParam) {
+        this.DorisConnectParam = DorisConnectParam;
+    }
+
     public ModifyConnectResourceRequest() {
     }
 
@@ -368,6 +391,9 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         if (source.CtsdbConnectParam != null) {
             this.CtsdbConnectParam = new CtsdbModifyConnectParam(source.CtsdbConnectParam);
         }
+        if (source.DorisConnectParam != null) {
+            this.DorisConnectParam = new DorisModifyConnectParam(source.DorisConnectParam);
+        }
     }
 
 
@@ -388,6 +414,7 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "MariaDBConnectParam.", this.MariaDBConnectParam);
         this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
         this.setParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
+        this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
 
     }
 }

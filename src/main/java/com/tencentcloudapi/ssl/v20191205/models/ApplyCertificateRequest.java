@@ -107,6 +107,13 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String OldCertificateId;
 
     /**
+    * 权益包ID，用于免费证书扩容包使用
+    */
+    @SerializedName("PackageId")
+    @Expose
+    private String PackageId;
+
+    /**
      * Get 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。 
      * @return DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
@@ -298,6 +305,22 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.OldCertificateId = OldCertificateId;
     }
 
+    /**
+     * Get 权益包ID，用于免费证书扩容包使用 
+     * @return PackageId 权益包ID，用于免费证书扩容包使用
+     */
+    public String getPackageId() {
+        return this.PackageId;
+    }
+
+    /**
+     * Set 权益包ID，用于免费证书扩容包使用
+     * @param PackageId 权益包ID，用于免费证书扩容包使用
+     */
+    public void setPackageId(String PackageId) {
+        this.PackageId = PackageId;
+    }
+
     public ApplyCertificateRequest() {
     }
 
@@ -342,6 +365,9 @@ public class ApplyCertificateRequest extends AbstractModel{
         if (source.OldCertificateId != null) {
             this.OldCertificateId = new String(source.OldCertificateId);
         }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CsrKeyPassword", this.CsrKeyPassword);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+        this.setParamSimple(map, prefix + "PackageId", this.PackageId);
 
     }
 }

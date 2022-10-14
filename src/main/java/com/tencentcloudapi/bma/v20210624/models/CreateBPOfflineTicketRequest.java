@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateBPOfflineTicketRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 仿冒网址ID
     */
     @SerializedName("FakeURLId")
     @Expose
     private Long FakeURLId;
 
     /**
-     * Get xxx 
-     * @return FakeURLId xxx
+     * Get 仿冒网址ID 
+     * @return FakeURLId 仿冒网址ID
      */
     public Long getFakeURLId() {
         return this.FakeURLId;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLId xxx
+     * Set 仿冒网址ID
+     * @param FakeURLId 仿冒网址ID
      */
     public void setFakeURLId(Long FakeURLId) {
         this.FakeURLId = FakeURLId;

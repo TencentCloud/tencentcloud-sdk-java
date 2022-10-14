@@ -30,6 +30,22 @@ public class CreateSinglePaymentData extends AbstractModel{
     private String TradeSerialNo;
 
     /**
+    * 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
+
+    /**
+    * 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentName")
+    @Expose
+    private String AgentName;
+
+    /**
      * Get 平台交易流水号，唯一 
      * @return TradeSerialNo 平台交易流水号，唯一
      */
@@ -45,6 +61,46 @@ public class CreateSinglePaymentData extends AbstractModel{
         this.TradeSerialNo = TradeSerialNo;
     }
 
+    /**
+     * Get 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentId 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentId 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
+    }
+
+    /**
+     * Get 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentName 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentName() {
+        return this.AgentName;
+    }
+
+    /**
+     * Set 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentName 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentName(String AgentName) {
+        this.AgentName = AgentName;
+    }
+
     public CreateSinglePaymentData() {
     }
 
@@ -56,6 +112,12 @@ public class CreateSinglePaymentData extends AbstractModel{
         if (source.TradeSerialNo != null) {
             this.TradeSerialNo = new String(source.TradeSerialNo);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
+        if (source.AgentName != null) {
+            this.AgentName = new String(source.AgentName);
+        }
     }
 
 
@@ -64,6 +126,8 @@ public class CreateSinglePaymentData extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TradeSerialNo", this.TradeSerialNo);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
+        this.setParamSimple(map, prefix + "AgentName", this.AgentName);
 
     }
 }

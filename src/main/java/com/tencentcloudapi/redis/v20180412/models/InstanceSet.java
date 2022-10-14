@@ -23,238 +23,238 @@ import java.util.HashMap;
 public class InstanceSet extends AbstractModel{
 
     /**
-    * 实例名称
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例Id
+    * 实例Id。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户的Appid
+    * 用户的Appid。
     */
     @SerializedName("Appid")
     @Expose
     private Long Appid;
 
     /**
-    * 项目Id
+    * 项目Id。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+    * 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域id
+    * 区域id。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * vpc网络id 如：75101
+    * vpc网络id，例如75101。
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * vpc网络下子网id 如：46315
+    * vpc网络下子网id 如：46315。
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+    * 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例vip
+    * 实例vip。
     */
     @SerializedName("WanIp")
     @Expose
     private String WanIp;
 
     /**
-    * 实例端口号
+    * 实例端口号。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 实例创建时间
+    * 实例创建时间。
     */
     @SerializedName("Createtime")
     @Expose
     private String Createtime;
 
     /**
-    * 实例容量大小，单位：MB
+    * 实例容量大小，单位：MB。
     */
     @SerializedName("Size")
     @Expose
     private Float Size;
 
     /**
-    * 该字段已废弃
+    * 该字段已废弃。
     */
     @SerializedName("SizeUsed")
     @Expose
     private Float SizeUsed;
 
     /**
-    * 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+    * 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+    * 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 实例到期时间
+    * 实例到期时间。
     */
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
 
     /**
-    * 引擎：社区版Redis、腾讯云CKV
+    * 引擎：社区版Redis、腾讯云CKV。
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * 产品类型：standalone – 标准版，cluster – 集群版
+    * 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-    * vpc网络id 如：vpc-fk33jsf43kgv
+    * vpc网络id，例如vpc-fk33jsf43kgv。
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * vpc网络下子网id 如：subnet-fd3j6l35mm0
+    * vpc网络下子网id，例如：subnet-fd3j6l35mm0。
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 计费模式：0-按量计费，1-包年包月
+    * 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
     */
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
 
     /**
-    * 实例运行状态描述：如”实例运行中“
+    * 实例运行状态描述：如”实例运行中“。
     */
     @SerializedName("InstanceTitle")
     @Expose
     private String InstanceTitle;
 
     /**
-    * 计划下线时间
+    * 计划下线时间。
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-    * 流程中的实例，返回子状态
+    * 流程中的实例，返回子状态。
     */
     @SerializedName("SubStatus")
     @Expose
     private Long SubStatus;
 
     /**
-    * 反亲和性标签
+    * 反亲和性标签。
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 实例节点信息
+    * 实例节点信息。
     */
     @SerializedName("InstanceNode")
     @Expose
     private InstanceNode [] InstanceNode;
 
     /**
-    * 分片大小
+    * 分片大小。
     */
     @SerializedName("RedisShardSize")
     @Expose
     private Long RedisShardSize;
 
     /**
-    * 分片数量
+    * 分片数量。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 副本数量
+    * 副本数量。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * 计费Id
+    * 计费Id。
     */
     @SerializedName("PriceId")
     @Expose
     private Long PriceId;
 
     /**
-    * 隔离时间
+    * 隔离时间。
     */
     @SerializedName("CloseTime")
     @Expose
     private String CloseTime;
 
     /**
-    * 从节点读取权重
+    * 从节点读取权重。
     */
     @SerializedName("SlaveReadWeight")
     @Expose
     private Long SlaveReadWeight;
 
     /**
-    * 实例关联的标签信息
+    * 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTags")
@@ -262,7 +262,7 @@ public class InstanceSet extends AbstractModel{
     private InstanceTagInfo [] InstanceTags;
 
     /**
-    * 项目名称
+    * 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -270,7 +270,7 @@ public class InstanceSet extends AbstractModel{
     private String ProjectName;
 
     /**
-    * 是否为免密实例，true-免密实例；false-非免密实例
+    * 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoAuth")
@@ -278,7 +278,7 @@ public class InstanceSet extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-    * 客户端连接数
+    * 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimit")
@@ -286,7 +286,7 @@ public class InstanceSet extends AbstractModel{
     private Long ClientLimit;
 
     /**
-    * DTS状态（内部参数，用户可忽略）
+    * DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DtsStatus")
@@ -294,7 +294,7 @@ public class InstanceSet extends AbstractModel{
     private Long DtsStatus;
 
     /**
-    * 分片带宽上限，单位MB
+    * 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetLimit")
@@ -302,7 +302,7 @@ public class InstanceSet extends AbstractModel{
     private Long NetLimit;
 
     /**
-    * 免密实例标识（内部参数，用户可忽略）
+    * 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PasswordFree")
@@ -310,15 +310,7 @@ public class InstanceSet extends AbstractModel{
     private Long PasswordFree;
 
     /**
-    * 实例只读标识（内部参数，用户可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ReadOnly")
-    @Expose
-    private Long ReadOnly;
-
-    /**
-    * 内部参数，用户可忽略
+    * 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
@@ -326,7 +318,15 @@ public class InstanceSet extends AbstractModel{
     private String Vip6;
 
     /**
-    * 内部参数，用户可忽略
+    * 实例只读标识（内部参数，用户可忽略）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadOnly")
+    @Expose
+    private Long ReadOnly;
+
+    /**
+    * 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainBandwidthDuration")
@@ -334,7 +334,7 @@ public class InstanceSet extends AbstractModel{
     private String RemainBandwidthDuration;
 
     /**
-    * Tendis实例的磁盘大小
+    * Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
@@ -342,7 +342,7 @@ public class InstanceSet extends AbstractModel{
     private Long DiskSize;
 
     /**
-    * 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+    * 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorVersion")
@@ -350,7 +350,7 @@ public class InstanceSet extends AbstractModel{
     private String MonitorVersion;
 
     /**
-    * 客户端最大连接数可设置的最小值
+    * 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimitMin")
@@ -358,7 +358,7 @@ public class InstanceSet extends AbstractModel{
     private Long ClientLimitMin;
 
     /**
-    * 客户端最大连接数可设置的最大值
+    * 客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientLimitMax")
@@ -366,7 +366,7 @@ public class InstanceSet extends AbstractModel{
     private Long ClientLimitMax;
 
     /**
-    * 实例的节点详细信息
+    * 实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeSet")
@@ -374,7 +374,7 @@ public class InstanceSet extends AbstractModel{
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * 实例所在的地域信息，比如ap-guangzhou
+    * 实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -382,537 +382,585 @@ public class InstanceSet extends AbstractModel{
     private String Region;
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+    * 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanAddress")
+    @Expose
+    private String WanAddress;
+
+    /**
+    * 北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolarisServer")
+    @Expose
+    private String PolarisServer;
+
+    /**
+    * 实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurrentProxyVersion")
+    @Expose
+    private String CurrentProxyVersion;
+
+    /**
+    * 实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurrentRedisVersion")
+    @Expose
+    private String CurrentRedisVersion;
+
+    /**
+    * 实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpgradeProxyVersion")
+    @Expose
+    private String UpgradeProxyVersion;
+
+    /**
+    * 实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpgradeRedisVersion")
+    @Expose
+    private String UpgradeRedisVersion;
+
+    /**
+     * Get 实例名称。 
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例Id。 
+     * @return InstanceId 实例Id。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例Id。
+     * @param InstanceId 实例Id。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户的Appid 
-     * @return Appid 用户的Appid
+     * Get 用户的Appid。 
+     * @return Appid 用户的Appid。
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set 用户的Appid
-     * @param Appid 用户的Appid
+     * Set 用户的Appid。
+     * @param Appid 用户的Appid。
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+     * Get 项目Id。 
+     * @return ProjectId 项目Id。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set 项目Id。
+     * @param ProjectId 项目Id。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本 
-     * @return RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Get 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本 
+     * @return RegionId 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-     * @param RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Set 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @param RegionId 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域id 
-     * @return ZoneId 区域id
+     * Get 区域id。 
+     * @return ZoneId 区域id。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域id
-     * @param ZoneId 区域id
+     * Set 区域id。
+     * @param ZoneId 区域id。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get vpc网络id 如：75101 
-     * @return VpcId vpc网络id 如：75101
+     * Get vpc网络id，例如75101。 
+     * @return VpcId vpc网络id，例如75101。
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc网络id 如：75101
-     * @param VpcId vpc网络id 如：75101
+     * Set vpc网络id，例如75101。
+     * @param VpcId vpc网络id，例如75101。
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc网络下子网id 如：46315 
-     * @return SubnetId vpc网络下子网id 如：46315
+     * Get vpc网络下子网id 如：46315。 
+     * @return SubnetId vpc网络下子网id 如：46315。
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set vpc网络下子网id 如：46315
-     * @param SubnetId vpc网络下子网id 如：46315
+     * Set vpc网络下子网id 如：46315。
+     * @param SubnetId vpc网络下子网id 如：46315。
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除 
-     * @return Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * Get 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul> 
+     * @return Status 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
-     * @param Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * Set 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+     * @param Status 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例vip 
-     * @return WanIp 实例vip
+     * Get 实例vip。 
+     * @return WanIp 实例vip。
      */
     public String getWanIp() {
         return this.WanIp;
     }
 
     /**
-     * Set 实例vip
-     * @param WanIp 实例vip
+     * Set 实例vip。
+     * @param WanIp 实例vip。
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get 实例端口号 
-     * @return Port 实例端口号
+     * Get 实例端口号。 
+     * @return Port 实例端口号。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 实例端口号
-     * @param Port 实例端口号
+     * Set 实例端口号。
+     * @param Port 实例端口号。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return Createtime 实例创建时间
+     * Get 实例创建时间。 
+     * @return Createtime 实例创建时间。
      */
     public String getCreatetime() {
         return this.Createtime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param Createtime 实例创建时间
+     * Set 实例创建时间。
+     * @param Createtime 实例创建时间。
      */
     public void setCreatetime(String Createtime) {
         this.Createtime = Createtime;
     }
 
     /**
-     * Get 实例容量大小，单位：MB 
-     * @return Size 实例容量大小，单位：MB
+     * Get 实例容量大小，单位：MB。 
+     * @return Size 实例容量大小，单位：MB。
      */
     public Float getSize() {
         return this.Size;
     }
 
     /**
-     * Set 实例容量大小，单位：MB
-     * @param Size 实例容量大小，单位：MB
+     * Set 实例容量大小，单位：MB。
+     * @param Size 实例容量大小，单位：MB。
      */
     public void setSize(Float Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 该字段已废弃 
-     * @return SizeUsed 该字段已废弃
+     * Get 该字段已废弃。 
+     * @return SizeUsed 该字段已废弃。
      */
     public Float getSizeUsed() {
         return this.SizeUsed;
     }
 
     /**
-     * Set 该字段已废弃
-     * @param SizeUsed 该字段已废弃
+     * Set 该字段已废弃。
+     * @param SizeUsed 该字段已废弃。
      */
     public void setSizeUsed(Float SizeUsed) {
         this.SizeUsed = SizeUsed;
     }
 
     /**
-     * Get 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构） 
-     * @return Type 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * Get 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul> 
+     * @return Type 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
-     * @param Type 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * Set 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
+     * @param Type 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费 
-     * @return AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+     * Get 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul> 
+     * @return AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
-     * @param AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+     * Set 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+     * @param AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 实例到期时间 
-     * @return DeadlineTime 实例到期时间
+     * Get 实例到期时间。 
+     * @return DeadlineTime 实例到期时间。
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set 实例到期时间
-     * @param DeadlineTime 实例到期时间
+     * Set 实例到期时间。
+     * @param DeadlineTime 实例到期时间。
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
     }
 
     /**
-     * Get 引擎：社区版Redis、腾讯云CKV 
-     * @return Engine 引擎：社区版Redis、腾讯云CKV
+     * Get 引擎：社区版Redis、腾讯云CKV。 
+     * @return Engine 引擎：社区版Redis、腾讯云CKV。
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 引擎：社区版Redis、腾讯云CKV
-     * @param Engine 引擎：社区版Redis、腾讯云CKV
+     * Set 引擎：社区版Redis、腾讯云CKV。
+     * @param Engine 引擎：社区版Redis、腾讯云CKV。
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get 产品类型：standalone – 标准版，cluster – 集群版 
-     * @return ProductType 产品类型：standalone – 标准版，cluster – 集群版
+     * Get 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul> 
+     * @return ProductType 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型：standalone – 标准版，cluster – 集群版
-     * @param ProductType 产品类型：standalone – 标准版，cluster – 集群版
+     * Set 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
+     * @param ProductType 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get vpc网络id 如：vpc-fk33jsf43kgv 
-     * @return UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
+     * Get vpc网络id，例如vpc-fk33jsf43kgv。 
+     * @return UniqVpcId vpc网络id，例如vpc-fk33jsf43kgv。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set vpc网络id 如：vpc-fk33jsf43kgv
-     * @param UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
+     * Set vpc网络id，例如vpc-fk33jsf43kgv。
+     * @param UniqVpcId vpc网络id，例如vpc-fk33jsf43kgv。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get vpc网络下子网id 如：subnet-fd3j6l35mm0 
-     * @return UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * Get vpc网络下子网id，例如：subnet-fd3j6l35mm0。 
+     * @return UniqSubnetId vpc网络下子网id，例如：subnet-fd3j6l35mm0。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set vpc网络下子网id 如：subnet-fd3j6l35mm0
-     * @param UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * Set vpc网络下子网id，例如：subnet-fd3j6l35mm0。
+     * @param UniqSubnetId vpc网络下子网id，例如：subnet-fd3j6l35mm0。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 计费模式：0-按量计费，1-包年包月 
-     * @return BillingMode 计费模式：0-按量计费，1-包年包月
+     * Get 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul> 
+     * @return BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 计费模式：0-按量计费，1-包年包月
-     * @param BillingMode 计费模式：0-按量计费，1-包年包月
+     * Set 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * @param BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get 实例运行状态描述：如”实例运行中“ 
-     * @return InstanceTitle 实例运行状态描述：如”实例运行中“
+     * Get 实例运行状态描述：如”实例运行中“。 
+     * @return InstanceTitle 实例运行状态描述：如”实例运行中“。
      */
     public String getInstanceTitle() {
         return this.InstanceTitle;
     }
 
     /**
-     * Set 实例运行状态描述：如”实例运行中“
-     * @param InstanceTitle 实例运行状态描述：如”实例运行中“
+     * Set 实例运行状态描述：如”实例运行中“。
+     * @param InstanceTitle 实例运行状态描述：如”实例运行中“。
      */
     public void setInstanceTitle(String InstanceTitle) {
         this.InstanceTitle = InstanceTitle;
     }
 
     /**
-     * Get 计划下线时间 
-     * @return OfflineTime 计划下线时间
+     * Get 计划下线时间。 
+     * @return OfflineTime 计划下线时间。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 计划下线时间
-     * @param OfflineTime 计划下线时间
+     * Set 计划下线时间。
+     * @param OfflineTime 计划下线时间。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 流程中的实例，返回子状态 
-     * @return SubStatus 流程中的实例，返回子状态
+     * Get 流程中的实例，返回子状态。 
+     * @return SubStatus 流程中的实例，返回子状态。
      */
     public Long getSubStatus() {
         return this.SubStatus;
     }
 
     /**
-     * Set 流程中的实例，返回子状态
-     * @param SubStatus 流程中的实例，返回子状态
+     * Set 流程中的实例，返回子状态。
+     * @param SubStatus 流程中的实例，返回子状态。
      */
     public void setSubStatus(Long SubStatus) {
         this.SubStatus = SubStatus;
     }
 
     /**
-     * Get 反亲和性标签 
-     * @return Tags 反亲和性标签
+     * Get 反亲和性标签。 
+     * @return Tags 反亲和性标签。
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 反亲和性标签
-     * @param Tags 反亲和性标签
+     * Set 反亲和性标签。
+     * @param Tags 反亲和性标签。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 实例节点信息 
-     * @return InstanceNode 实例节点信息
+     * Get 实例节点信息。 
+     * @return InstanceNode 实例节点信息。
      */
     public InstanceNode [] getInstanceNode() {
         return this.InstanceNode;
     }
 
     /**
-     * Set 实例节点信息
-     * @param InstanceNode 实例节点信息
+     * Set 实例节点信息。
+     * @param InstanceNode 实例节点信息。
      */
     public void setInstanceNode(InstanceNode [] InstanceNode) {
         this.InstanceNode = InstanceNode;
     }
 
     /**
-     * Get 分片大小 
-     * @return RedisShardSize 分片大小
+     * Get 分片大小。 
+     * @return RedisShardSize 分片大小。
      */
     public Long getRedisShardSize() {
         return this.RedisShardSize;
     }
 
     /**
-     * Set 分片大小
-     * @param RedisShardSize 分片大小
+     * Set 分片大小。
+     * @param RedisShardSize 分片大小。
      */
     public void setRedisShardSize(Long RedisShardSize) {
         this.RedisShardSize = RedisShardSize;
     }
 
     /**
-     * Get 分片数量 
-     * @return RedisShardNum 分片数量
+     * Get 分片数量。 
+     * @return RedisShardNum 分片数量。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 分片数量
-     * @param RedisShardNum 分片数量
+     * Set 分片数量。
+     * @param RedisShardNum 分片数量。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 副本数量 
-     * @return RedisReplicasNum 副本数量
+     * Get 副本数量。 
+     * @return RedisReplicasNum 副本数量。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 副本数量
-     * @param RedisReplicasNum 副本数量
+     * Set 副本数量。
+     * @param RedisReplicasNum 副本数量。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get 计费Id 
-     * @return PriceId 计费Id
+     * Get 计费Id。 
+     * @return PriceId 计费Id。
      */
     public Long getPriceId() {
         return this.PriceId;
     }
 
     /**
-     * Set 计费Id
-     * @param PriceId 计费Id
+     * Set 计费Id。
+     * @param PriceId 计费Id。
      */
     public void setPriceId(Long PriceId) {
         this.PriceId = PriceId;
     }
 
     /**
-     * Get 隔离时间 
-     * @return CloseTime 隔离时间
+     * Get 隔离时间。 
+     * @return CloseTime 隔离时间。
      */
     public String getCloseTime() {
         return this.CloseTime;
     }
 
     /**
-     * Set 隔离时间
-     * @param CloseTime 隔离时间
+     * Set 隔离时间。
+     * @param CloseTime 隔离时间。
      */
     public void setCloseTime(String CloseTime) {
         this.CloseTime = CloseTime;
     }
 
     /**
-     * Get 从节点读取权重 
-     * @return SlaveReadWeight 从节点读取权重
+     * Get 从节点读取权重。 
+     * @return SlaveReadWeight 从节点读取权重。
      */
     public Long getSlaveReadWeight() {
         return this.SlaveReadWeight;
     }
 
     /**
-     * Set 从节点读取权重
-     * @param SlaveReadWeight 从节点读取权重
+     * Set 从节点读取权重。
+     * @param SlaveReadWeight 从节点读取权重。
      */
     public void setSlaveReadWeight(Long SlaveReadWeight) {
         this.SlaveReadWeight = SlaveReadWeight;
     }
 
     /**
-     * Get 实例关联的标签信息
+     * Get 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceTags 实例关联的标签信息
+     * @return InstanceTags 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceTagInfo [] getInstanceTags() {
@@ -920,9 +968,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 实例关联的标签信息
+     * Set 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceTags 实例关联的标签信息
+     * @param InstanceTags 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
@@ -930,9 +978,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 项目名称
+     * Get 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -940,9 +988,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 项目名称
+     * Set 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -950,9 +998,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 是否为免密实例，true-免密实例；false-非免密实例
+     * Get 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoAuth 是否为免密实例，true-免密实例；false-非免密实例
+     * @return NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNoAuth() {
@@ -960,9 +1008,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 是否为免密实例，true-免密实例；false-非免密实例
+     * Set 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoAuth 是否为免密实例，true-免密实例；false-非免密实例
+     * @param NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoAuth(Boolean NoAuth) {
@@ -970,9 +1018,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 客户端连接数
+     * Get 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientLimit 客户端连接数
+     * @return ClientLimit 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimit() {
@@ -980,9 +1028,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 客户端连接数
+     * Set 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientLimit 客户端连接数
+     * @param ClientLimit 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimit(Long ClientLimit) {
@@ -990,9 +1038,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get DTS状态（内部参数，用户可忽略）
+     * Get DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DtsStatus DTS状态（内部参数，用户可忽略）
+     * @return DtsStatus DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDtsStatus() {
@@ -1000,9 +1048,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set DTS状态（内部参数，用户可忽略）
+     * Set DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DtsStatus DTS状态（内部参数，用户可忽略）
+     * @param DtsStatus DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDtsStatus(Long DtsStatus) {
@@ -1010,9 +1058,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 分片带宽上限，单位MB
+     * Get 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetLimit 分片带宽上限，单位MB
+     * @return NetLimit 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetLimit() {
@@ -1020,9 +1068,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 分片带宽上限，单位MB
+     * Set 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetLimit 分片带宽上限，单位MB
+     * @param NetLimit 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetLimit(Long NetLimit) {
@@ -1030,9 +1078,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 免密实例标识（内部参数，用户可忽略）
+     * Get 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PasswordFree 免密实例标识（内部参数，用户可忽略）
+     * @return PasswordFree 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPasswordFree() {
@@ -1040,9 +1088,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 免密实例标识（内部参数，用户可忽略）
+     * Set 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PasswordFree 免密实例标识（内部参数，用户可忽略）
+     * @param PasswordFree 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPasswordFree(Long PasswordFree) {
@@ -1050,29 +1098,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例只读标识（内部参数，用户可忽略）
+     * Get 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReadOnly 实例只读标识（内部参数，用户可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getReadOnly() {
-        return this.ReadOnly;
-    }
-
-    /**
-     * Set 实例只读标识（内部参数，用户可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReadOnly 实例只读标识（内部参数，用户可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setReadOnly(Long ReadOnly) {
-        this.ReadOnly = ReadOnly;
-    }
-
-    /**
-     * Get 内部参数，用户可忽略
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip6 内部参数，用户可忽略
+     * @return Vip6 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
@@ -1080,9 +1108,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 内部参数，用户可忽略
+     * Set 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip6 内部参数，用户可忽略
+     * @param Vip6 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
@@ -1090,9 +1118,29 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 内部参数，用户可忽略
+     * Get 实例只读标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemainBandwidthDuration 内部参数，用户可忽略
+     * @return ReadOnly 实例只读标识（内部参数，用户可忽略）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadOnly() {
+        return this.ReadOnly;
+    }
+
+    /**
+     * Set 实例只读标识（内部参数，用户可忽略）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadOnly 实例只读标识（内部参数，用户可忽略）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadOnly(Long ReadOnly) {
+        this.ReadOnly = ReadOnly;
+    }
+
+    /**
+     * Get 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemainBandwidthDuration 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemainBandwidthDuration() {
@@ -1100,9 +1148,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 内部参数，用户可忽略
+     * Set 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemainBandwidthDuration 内部参数，用户可忽略
+     * @param RemainBandwidthDuration 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
@@ -1110,9 +1158,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get Tendis实例的磁盘大小
+     * Get Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskSize Tendis实例的磁盘大小
+     * @return DiskSize Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
@@ -1120,9 +1168,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set Tendis实例的磁盘大小
+     * Set Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSize Tendis实例的磁盘大小
+     * @param DiskSize Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
@@ -1130,9 +1178,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+     * Get 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+     * @return MonitorVersion 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitorVersion() {
@@ -1140,9 +1188,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+     * Set 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+     * @param MonitorVersion 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorVersion(String MonitorVersion) {
@@ -1150,9 +1198,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 客户端最大连接数可设置的最小值
+     * Get 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientLimitMin 客户端最大连接数可设置的最小值
+     * @return ClientLimitMin 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimitMin() {
@@ -1160,9 +1208,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 客户端最大连接数可设置的最小值
+     * Set 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientLimitMin 客户端最大连接数可设置的最小值
+     * @param ClientLimitMin 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimitMin(Long ClientLimitMin) {
@@ -1170,9 +1218,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 客户端最大连接数可设置的最大值
+     * Get 客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientLimitMax 客户端最大连接数可设置的最大值
+     * @return ClientLimitMax 客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientLimitMax() {
@@ -1180,9 +1228,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 客户端最大连接数可设置的最大值
+     * Set 客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientLimitMax 客户端最大连接数可设置的最大值
+     * @param ClientLimitMax 客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientLimitMax(Long ClientLimitMax) {
@@ -1190,9 +1238,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例的节点详细信息
+     * Get 实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeSet 实例的节点详细信息
+     * @return NodeSet 实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RedisNodeInfo [] getNodeSet() {
@@ -1200,9 +1248,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 实例的节点详细信息
+     * Set 实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeSet 实例的节点详细信息
+     * @param NodeSet 实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
@@ -1210,9 +1258,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例所在的地域信息，比如ap-guangzhou
+     * Get 实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 实例所在的地域信息，比如ap-guangzhou
+     * @return Region 实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -1220,13 +1268,133 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 实例所在的地域信息，比如ap-guangzhou
+     * Set 实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 实例所在的地域信息，比如ap-guangzhou
+     * @param Region 实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
+    }
+
+    /**
+     * Get 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanAddress 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWanAddress() {
+        return this.WanAddress;
+    }
+
+    /**
+     * Set 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanAddress 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanAddress(String WanAddress) {
+        this.WanAddress = WanAddress;
+    }
+
+    /**
+     * Get 北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolarisServer 北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolarisServer() {
+        return this.PolarisServer;
+    }
+
+    /**
+     * Set 北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolarisServer 北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolarisServer(String PolarisServer) {
+        this.PolarisServer = PolarisServer;
+    }
+
+    /**
+     * Get 实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurrentProxyVersion 实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCurrentProxyVersion() {
+        return this.CurrentProxyVersion;
+    }
+
+    /**
+     * Set 实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurrentProxyVersion 实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrentProxyVersion(String CurrentProxyVersion) {
+        this.CurrentProxyVersion = CurrentProxyVersion;
+    }
+
+    /**
+     * Get 实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurrentRedisVersion 实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCurrentRedisVersion() {
+        return this.CurrentRedisVersion;
+    }
+
+    /**
+     * Set 实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurrentRedisVersion 实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrentRedisVersion(String CurrentRedisVersion) {
+        this.CurrentRedisVersion = CurrentRedisVersion;
+    }
+
+    /**
+     * Get 实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpgradeProxyVersion 实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpgradeProxyVersion() {
+        return this.UpgradeProxyVersion;
+    }
+
+    /**
+     * Set 实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpgradeProxyVersion 实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
+        this.UpgradeProxyVersion = UpgradeProxyVersion;
+    }
+
+    /**
+     * Get 实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpgradeRedisVersion 实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpgradeRedisVersion() {
+        return this.UpgradeRedisVersion;
+    }
+
+    /**
+     * Set 实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpgradeRedisVersion 实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
+        this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
     public InstanceSet() {
@@ -1366,11 +1534,11 @@ public class InstanceSet extends AbstractModel{
         if (source.PasswordFree != null) {
             this.PasswordFree = new Long(source.PasswordFree);
         }
-        if (source.ReadOnly != null) {
-            this.ReadOnly = new Long(source.ReadOnly);
-        }
         if (source.Vip6 != null) {
             this.Vip6 = new String(source.Vip6);
+        }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Long(source.ReadOnly);
         }
         if (source.RemainBandwidthDuration != null) {
             this.RemainBandwidthDuration = new String(source.RemainBandwidthDuration);
@@ -1395,6 +1563,24 @@ public class InstanceSet extends AbstractModel{
         }
         if (source.Region != null) {
             this.Region = new String(source.Region);
+        }
+        if (source.WanAddress != null) {
+            this.WanAddress = new String(source.WanAddress);
+        }
+        if (source.PolarisServer != null) {
+            this.PolarisServer = new String(source.PolarisServer);
+        }
+        if (source.CurrentProxyVersion != null) {
+            this.CurrentProxyVersion = new String(source.CurrentProxyVersion);
+        }
+        if (source.CurrentRedisVersion != null) {
+            this.CurrentRedisVersion = new String(source.CurrentRedisVersion);
+        }
+        if (source.UpgradeProxyVersion != null) {
+            this.UpgradeProxyVersion = new String(source.UpgradeProxyVersion);
+        }
+        if (source.UpgradeRedisVersion != null) {
+            this.UpgradeRedisVersion = new String(source.UpgradeRedisVersion);
         }
     }
 
@@ -1443,8 +1629,8 @@ public class InstanceSet extends AbstractModel{
         this.setParamSimple(map, prefix + "DtsStatus", this.DtsStatus);
         this.setParamSimple(map, prefix + "NetLimit", this.NetLimit);
         this.setParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
-        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
@@ -1452,6 +1638,12 @@ public class InstanceSet extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
         this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "WanAddress", this.WanAddress);
+        this.setParamSimple(map, prefix + "PolarisServer", this.PolarisServer);
+        this.setParamSimple(map, prefix + "CurrentProxyVersion", this.CurrentProxyVersion);
+        this.setParamSimple(map, prefix + "CurrentRedisVersion", this.CurrentRedisVersion);
+        this.setParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
+        this.setParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
 
     }
 }

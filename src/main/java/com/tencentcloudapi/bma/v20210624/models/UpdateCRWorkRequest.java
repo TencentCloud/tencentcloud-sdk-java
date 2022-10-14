@@ -30,7 +30,7 @@ public class UpdateCRWorkRequest extends AbstractModel{
     private Long WorkId;
 
     /**
-    * 文件的扩展名，比如txt，docx
+    * 文件的扩展名，例如txt，docx
     */
     @SerializedName("ContentType")
     @Expose
@@ -67,16 +67,16 @@ public class UpdateCRWorkRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件的扩展名，比如txt，docx 
-     * @return ContentType 文件的扩展名，比如txt，docx
+     * Get 文件的扩展名，例如txt，docx 
+     * @return ContentType 文件的扩展名，例如txt，docx
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 文件的扩展名，比如txt，docx
-     * @param ContentType 文件的扩展名，比如txt，docx
+     * Set 文件的扩展名，例如txt，docx
+     * @param ContentType 文件的扩展名，例如txt，docx
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;

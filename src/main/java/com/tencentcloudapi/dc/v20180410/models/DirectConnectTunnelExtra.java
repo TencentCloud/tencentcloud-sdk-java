@@ -312,6 +312,14 @@ REJECTED:拒绝
     private Long JumboEnable;
 
     /**
+    * 专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighPrecisionBFDEnable")
+    @Expose
+    private Long HighPrecisionBFDEnable;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -999,6 +1007,26 @@ REJECTED:拒绝
         this.JumboEnable = JumboEnable;
     }
 
+    /**
+     * Get 专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HighPrecisionBFDEnable 专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHighPrecisionBFDEnable() {
+        return this.HighPrecisionBFDEnable;
+    }
+
+    /**
+     * Set 专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighPrecisionBFDEnable 专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighPrecisionBFDEnable(Long HighPrecisionBFDEnable) {
+        this.HighPrecisionBFDEnable = HighPrecisionBFDEnable;
+    }
+
     public DirectConnectTunnelExtra() {
     }
 
@@ -1130,6 +1158,9 @@ REJECTED:拒绝
         if (source.JumboEnable != null) {
             this.JumboEnable = new Long(source.JumboEnable);
         }
+        if (source.HighPrecisionBFDEnable != null) {
+            this.HighPrecisionBFDEnable = new Long(source.HighPrecisionBFDEnable);
+        }
     }
 
 
@@ -1176,6 +1207,7 @@ REJECTED:拒绝
         this.setParamObj(map, prefix + "BgpIPv6Status.", this.BgpIPv6Status);
         this.setParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
         this.setParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
+        this.setParamSimple(map, prefix + "HighPrecisionBFDEnable", this.HighPrecisionBFDEnable);
 
     }
 }

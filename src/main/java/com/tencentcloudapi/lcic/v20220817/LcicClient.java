@@ -39,6 +39,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *创建房间内可以使用的文档。
+     * @param req CreateDocumentRequest
+     * @return CreateDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDocumentResponse CreateDocument(CreateDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建房间
      * @param req CreateRoomRequest
      * @return CreateRoomResponse
@@ -171,6 +191,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RegisterUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RegisterUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+     * @param req SetAppCustomContentRequest
+     * @return SetAppCustomContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAppCustomContentResponse SetAppCustomContent(SetAppCustomContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetAppCustomContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetAppCustomContent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

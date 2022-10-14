@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CreateBPFakeURLRequest extends AbstractModel{
 
     /**
-    * xxx
+    * 保护网址ID
     */
     @SerializedName("ProtectURLId")
     @Expose
     private Long ProtectURLId;
 
     /**
-    * xxx
+    * 仿冒网址
     */
     @SerializedName("FakeURL")
     @Expose
     private String FakeURL;
 
     /**
-    * xxx
+    * 截图
     */
     @SerializedName("SnapshotNames")
     @Expose
     private String [] SnapshotNames;
 
     /**
-    * xxx
+    * 举报说明
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-     * Get xxx 
-     * @return ProtectURLId xxx
+     * Get 保护网址ID 
+     * @return ProtectURLId 保护网址ID
      */
     public Long getProtectURLId() {
         return this.ProtectURLId;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURLId xxx
+     * Set 保护网址ID
+     * @param ProtectURLId 保护网址ID
      */
     public void setProtectURLId(Long ProtectURLId) {
         this.ProtectURLId = ProtectURLId;
     }
 
     /**
-     * Get xxx 
-     * @return FakeURL xxx
+     * Get 仿冒网址 
+     * @return FakeURL 仿冒网址
      */
     public String getFakeURL() {
         return this.FakeURL;
     }
 
     /**
-     * Set xxx
-     * @param FakeURL xxx
+     * Set 仿冒网址
+     * @param FakeURL 仿冒网址
      */
     public void setFakeURL(String FakeURL) {
         this.FakeURL = FakeURL;
     }
 
     /**
-     * Get xxx 
-     * @return SnapshotNames xxx
+     * Get 截图 
+     * @return SnapshotNames 截图
      */
     public String [] getSnapshotNames() {
         return this.SnapshotNames;
     }
 
     /**
-     * Set xxx
-     * @param SnapshotNames xxx
+     * Set 截图
+     * @param SnapshotNames 截图
      */
     public void setSnapshotNames(String [] SnapshotNames) {
         this.SnapshotNames = SnapshotNames;
     }
 
     /**
-     * Get xxx 
-     * @return Note xxx
+     * Get 举报说明 
+     * @return Note 举报说明
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set xxx
-     * @param Note xxx
+     * Set 举报说明
+     * @param Note 举报说明
      */
     public void setNote(String Note) {
         this.Note = Note;
