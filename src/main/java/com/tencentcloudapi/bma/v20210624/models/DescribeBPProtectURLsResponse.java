@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBPProtectURLsResponse extends AbstractModel{
 
     /**
-    * xxx
+    * 保护网址列表
     */
     @SerializedName("ProtectURLInfos")
     @Expose
     private ProtectURLInfo [] ProtectURLInfos;
 
     /**
-    * xxx
+    * 总量
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeBPProtectURLsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get xxx 
-     * @return ProtectURLInfos xxx
+     * Get 保护网址列表 
+     * @return ProtectURLInfos 保护网址列表
      */
     public ProtectURLInfo [] getProtectURLInfos() {
         return this.ProtectURLInfos;
     }
 
     /**
-     * Set xxx
-     * @param ProtectURLInfos xxx
+     * Set 保护网址列表
+     * @param ProtectURLInfos 保护网址列表
      */
     public void setProtectURLInfos(ProtectURLInfo [] ProtectURLInfos) {
         this.ProtectURLInfos = ProtectURLInfos;
     }
 
     /**
-     * Get xxx 
-     * @return TotalCount xxx
+     * Get 总量 
+     * @return TotalCount 总量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set xxx
-     * @param TotalCount xxx
+     * Set 总量
+     * @param TotalCount 总量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

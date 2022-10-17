@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBPReportFakeURLsResponse extends AbstractModel{
 
     /**
-    * xxx
+    * 举报网站列表
     */
     @SerializedName("ReportFakeURLInfos")
     @Expose
     private ReportFakeURLInfo [] ReportFakeURLInfos;
 
     /**
-    * xxx
+    * 总量
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeBPReportFakeURLsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get xxx 
-     * @return ReportFakeURLInfos xxx
+     * Get 举报网站列表 
+     * @return ReportFakeURLInfos 举报网站列表
      */
     public ReportFakeURLInfo [] getReportFakeURLInfos() {
         return this.ReportFakeURLInfos;
     }
 
     /**
-     * Set xxx
-     * @param ReportFakeURLInfos xxx
+     * Set 举报网站列表
+     * @param ReportFakeURLInfos 举报网站列表
      */
     public void setReportFakeURLInfos(ReportFakeURLInfo [] ReportFakeURLInfos) {
         this.ReportFakeURLInfos = ReportFakeURLInfos;
     }
 
     /**
-     * Get xxx 
-     * @return TotalCount xxx
+     * Get 总量 
+     * @return TotalCount 总量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set xxx
-     * @param TotalCount xxx
+     * Set 总量
+     * @param TotalCount 总量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

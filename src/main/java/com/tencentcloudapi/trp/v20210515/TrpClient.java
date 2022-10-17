@@ -79,6 +79,46 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *生成自定义码包
+     * @param req CreateCustomPackRequest
+     * @return CreateCustomPackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomPackResponse CreateCustomPack(CreateCustomPackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomPackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomPackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomPack");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新建自定义码规则
+     * @param req CreateCustomRuleRequest
+     * @return CreateCustomRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomRuleResponse CreateCustomRule(CreateCustomRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新建商户
      * @param req CreateMerchantRequest
      * @return CreateMerchantResponse
@@ -151,6 +191,26 @@ public class TrpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTraceCodesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTraceCodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *异步导入激活码包，如果是第三方码包，需要域名跟配置的匹配
+     * @param req CreateTraceCodesAsyncRequest
+     * @return CreateTraceCodesAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTraceCodesAsyncResponse CreateTraceCodesAsync(CreateTraceCodesAsyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTraceCodesAsyncResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTraceCodesAsyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTraceCodesAsync");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -299,6 +359,46 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询码包状态
+     * @param req DescribeCodePackStatusRequest
+     * @return DescribeCodePackStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCodePackStatusResponse DescribeCodePackStatus(DescribeCodePackStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCodePackStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCodePackStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCodePackStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询码包地址
+     * @param req DescribeCodePackUrlRequest
+     * @return DescribeCodePackUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCodePackUrlResponse DescribeCodePackUrl(DescribeCodePackUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCodePackUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCodePackUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCodePackUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询码包列表
      * @param req DescribeCodePacksRequest
      * @return DescribeCodePacksResponse
@@ -331,6 +431,66 @@ public class TrpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCodesByPackResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCodesByPack");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查自定义码规则
+     * @param req DescribeCustomRuleByIdRequest
+     * @return DescribeCustomRuleByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomRuleByIdResponse DescribeCustomRuleById(DescribeCustomRuleByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomRuleByIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomRuleByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomRuleById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查自定义码规则列表
+     * @param req DescribeCustomRulesRequest
+     * @return DescribeCustomRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomRulesResponse DescribeCustomRules(DescribeCustomRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取异步任务的输出地址
+     * @param req DescribeJobFileUrlRequest
+     * @return DescribeJobFileUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobFileUrlResponse DescribeJobFileUrl(DescribeJobFileUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobFileUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobFileUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJobFileUrl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -491,6 +651,46 @@ public class TrpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCodeBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCodeBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改自定义码规则
+     * @param req ModifyCustomRuleRequest
+     * @return ModifyCustomRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomRuleResponse ModifyCustomRule(ModifyCustomRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新自定义码规则状态
+     * @param req ModifyCustomRuleStatusRequest
+     * @return ModifyCustomRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(ModifyCustomRuleStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomRuleStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomRuleStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -13,21 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
+public class SubmitCustomFunctionResponse extends AbstractModel{
 
     /**
-    * 出证报告 URL（有效五分钟）
+    * 函数唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ReportUrl")
+    @SerializedName("FunctionId")
     @Expose
-    private String ReportUrl;
+    private String FunctionId;
+
+    /**
+    * 无
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +46,43 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 出证报告 URL（有效五分钟） 
-     * @return ReportUrl 出证报告 URL（有效五分钟）
+     * Get 函数唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FunctionId 函数唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getReportUrl() {
-        return this.ReportUrl;
+    public String getFunctionId() {
+        return this.FunctionId;
     }
 
     /**
-     * Set 出证报告 URL（有效五分钟）
-     * @param ReportUrl 出证报告 URL（有效五分钟）
+     * Set 函数唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FunctionId 函数唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReportUrl(String ReportUrl) {
-        this.ReportUrl = ReportUrl;
+    public void setFunctionId(String FunctionId) {
+        this.FunctionId = FunctionId;
+    }
+
+    /**
+     * Get 无
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMessage 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 无
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMessage 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
     }
 
     /**
@@ -68,16 +101,19 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateChannelFlowEvidenceReportResponse() {
+    public SubmitCustomFunctionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateChannelFlowEvidenceReportResponse(CreateChannelFlowEvidenceReportResponse source) {
-        if (source.ReportUrl != null) {
-            this.ReportUrl = new String(source.ReportUrl);
+    public SubmitCustomFunctionResponse(SubmitCustomFunctionResponse source) {
+        if (source.FunctionId != null) {
+            this.FunctionId = new String(source.FunctionId);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +125,8 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
+        this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

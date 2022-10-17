@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBPFakeURLsResponse extends AbstractModel{
 
     /**
-    * xxx
+    * 仿冒网址列表
     */
     @SerializedName("FakeURLInfos")
     @Expose
     private FakeURLInfo [] FakeURLInfos;
 
     /**
-    * xxx
+    * 总量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * xxx
+    * 导出量
     */
     @SerializedName("ExportURL")
     @Expose
@@ -51,48 +51,48 @@ public class DescribeBPFakeURLsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get xxx 
-     * @return FakeURLInfos xxx
+     * Get 仿冒网址列表 
+     * @return FakeURLInfos 仿冒网址列表
      */
     public FakeURLInfo [] getFakeURLInfos() {
         return this.FakeURLInfos;
     }
 
     /**
-     * Set xxx
-     * @param FakeURLInfos xxx
+     * Set 仿冒网址列表
+     * @param FakeURLInfos 仿冒网址列表
      */
     public void setFakeURLInfos(FakeURLInfo [] FakeURLInfos) {
         this.FakeURLInfos = FakeURLInfos;
     }
 
     /**
-     * Get xxx 
-     * @return TotalCount xxx
+     * Get 总量 
+     * @return TotalCount 总量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set xxx
-     * @param TotalCount xxx
+     * Set 总量
+     * @param TotalCount 总量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get xxx 
-     * @return ExportURL xxx
+     * Get 导出量 
+     * @return ExportURL 导出量
      */
     public String getExportURL() {
         return this.ExportURL;
     }
 
     /**
-     * Set xxx
-     * @param ExportURL xxx
+     * Set 导出量
+     * @param ExportURL 导出量
      */
     public void setExportURL(String ExportURL) {
         this.ExportURL = ExportURL;

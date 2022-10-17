@@ -37,7 +37,7 @@ public class CreateSubscriptionRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
+    * 订阅者名称，不超过128个字符。
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -111,16 +111,16 @@ public class CreateSubscriptionRequest extends AbstractModel{
     }
 
     /**
-     * Get 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。 
-     * @return SubscriptionName 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
+     * Get 订阅者名称，不超过128个字符。 
+     * @return SubscriptionName 订阅者名称，不超过128个字符。
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
     }
 
     /**
-     * Set 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
-     * @param SubscriptionName 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
+     * Set 订阅者名称，不超过128个字符。
+     * @param SubscriptionName 订阅者名称，不超过128个字符。
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;

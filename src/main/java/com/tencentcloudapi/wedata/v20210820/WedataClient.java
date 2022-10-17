@@ -207,6 +207,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *删除用户自定义函数
+     * @param req DeleteCustomFunctionRequest
+     * @return DeleteCustomFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomFunctionResponse DeleteCustomFunction(DeleteCustomFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCustomFunction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除数据源
      * @param req DeleteDataSourcesRequest
@@ -396,6 +416,46 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询函数分类
+     * @param req DescribeFunctionKindsRequest
+     * @return DescribeFunctionKindsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionKindsResponse DescribeFunctionKinds(DescribeFunctionKindsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFunctionKindsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFunctionKindsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFunctionKinds");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询函数类型
+     * @param req DescribeFunctionTypesRequest
+     * @return DescribeFunctionTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionTypesResponse DescribeFunctionTypes(DescribeFunctionTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFunctionTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFunctionTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFunctionTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 获取实例日志列表
      * @param req DescribeInstanceLogsRequest
@@ -409,6 +469,26 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询全量函数
+     * @param req DescribeOrganizationalFunctionsRequest
+     * @return DescribeOrganizationalFunctionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationalFunctionsResponse DescribeOrganizationalFunctions(DescribeOrganizationalFunctionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationalFunctionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationalFunctionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationalFunctions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -900,6 +980,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *保存用户自定义函数
+     * @param req SaveCustomFunctionRequest
+     * @return SaveCustomFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaveCustomFunctionResponse SaveCustomFunction(SaveCustomFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SaveCustomFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SaveCustomFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SaveCustomFunction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 设置任务告警，新建/更新告警信息（最新）
      * @param req SetTaskAlarmNewRequest
@@ -913,6 +1013,26 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetTaskAlarmNewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetTaskAlarmNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提交自定义函数
+     * @param req SubmitCustomFunctionRequest
+     * @return SubmitCustomFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitCustomFunctionResponse SubmitCustomFunction(SubmitCustomFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitCustomFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitCustomFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SubmitCustomFunction");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

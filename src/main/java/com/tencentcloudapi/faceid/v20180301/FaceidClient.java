@@ -39,6 +39,66 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *每次调用活体服务前，需要先调用本接口获取Token，需要保存此Token用来发起核验流程，并且在核验完成后获取结果信息。
+     * @param req ApplyLivenessTokenRequest
+     * @return ApplyLivenessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyLivenessTokenResponse ApplyLivenessToken(ApplyLivenessTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyLivenessTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyLivenessToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *每次调用Web核验服务前，需要先调用本接口获取Token，需要保存此Token用来发起核验流程，并且在核验完成后获取结果信息。
+     * @param req ApplySdkVerificationTokenRequest
+     * @return ApplySdkVerificationTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplySdkVerificationTokenResponse ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplySdkVerificationTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplySdkVerificationToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *每次调用Web核验服务前，需要先调用本接口获取BizToken，需要保存此BizToken用来发起核验流程，并且在核验完成后获取结果信息。
+     * @param req ApplyWebVerificationTokenRequest
+     * @return ApplyWebVerificationTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyWebVerificationTokenResponse ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyWebVerificationTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyWebVerificationToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于校验姓名和银行卡号的真实性和一致性。
      * @param req BankCard2EVerificationRequest
      * @return BankCard2EVerificationResponse
@@ -200,6 +260,27 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *生成一个临时的UploadUrl用于上传资源文件，客户需要使用HTTP PUT方法上传，上传完成后将ResourceUrl传给TargetAction对应接口完成资源传递（具体字段由使用场景确定）。
+数据存储于Region参数对应地域的腾讯云COS Bucket，存储有效期2小时。
+     * @param req CreateUploadUrlRequest
+     * @return CreateUploadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUploadUrlResponse CreateUploadUrl(CreateUploadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUploadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUploadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUploadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
      * @param req DetectAuthRequest
      * @return DetectAuthResponse
@@ -220,6 +301,27 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *使用活体比对（光线）SDK生成的数据包检测活体，并和传入的图片进行比对。
+图片和SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region需要和本接口请求的Region保持一致，推荐使用生成上传链接接口来完成资源传递。
+     * @param req DetectReflectLivenessAndCompareRequest
+     * @return DetectReflectLivenessAndCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetectReflectLivenessAndCompare");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
      * @param req EncryptedPhoneVerificationRequest
      * @return EncryptedPhoneVerificationResponse
@@ -232,6 +334,27 @@ public class FaceidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EncryptedPhoneVerificationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EncryptedPhoneVerification");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据活体比对（光线）SDK采集的机器信息生成适合的光线序列，将光线序列传入SDK后开启核身。
+SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region需要和本接口请求的Region保持一致，推荐使用生成上传链接接口来完成资源传递。
+     * @param req GenerateReflectSequenceRequest
+     * @return GenerateReflectSequenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateReflectSequenceResponse GenerateReflectSequence(GenerateReflectSequenceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateReflectSequenceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateReflectSequenceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateReflectSequence");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -400,6 +523,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *完成活体检测流程后，用核验令牌（SdkToken）调用本接口查询对应核验结果信息。Token申请后2小时内有效，可多次调用。
+     * @param req GetLivenessResultRequest
+     * @return GetLivenessResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLivenessResultResponse GetLivenessResult(GetLivenessResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLivenessResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLivenessResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetLivenessResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取微信实名认证结果
      * @param req GetRealNameAuthResultRequest
      * @return GetRealNameAuthResultResponse
@@ -441,6 +584,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *完成Sdk核验流程后，用核验令牌（Token）调用本接口查询对应核验结果信息。Token申请后三天内有效，可多次调用。
+     * @param req GetSdkVerificationResultRequest
+     * @return GetSdkVerificationResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSdkVerificationResultResponse GetSdkVerificationResult(GetSdkVerificationResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSdkVerificationResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSdkVerificationResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
      * @param req GetWeChatBillDetailsRequest
      * @return GetWeChatBillDetailsResponse
@@ -453,6 +616,26 @@ public class FaceidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetWeChatBillDetailsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetWeChatBillDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *完成Web核验流程后，用核验令牌（BizToken）调用本接口查询对应核验结果信息。BizToken申请后三天内（3\*24\*3,600秒）有效，可多次调用。
+     * @param req GetWebVerificationResultRequest
+     * @return GetWebVerificationResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWebVerificationResultResponse GetWebVerificationResult(GetWebVerificationResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetWebVerificationResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -733,6 +916,26 @@ public class FaceidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PhoneVerificationCUCCResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PhoneVerificationCUCC");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入视频和照片地址，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
+     * @param req VideoLivenessCompareRequest
+     * @return VideoLivenessCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public VideoLivenessCompareResponse VideoLivenessCompare(VideoLivenessCompareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VideoLivenessCompareResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VideoLivenessCompare");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
