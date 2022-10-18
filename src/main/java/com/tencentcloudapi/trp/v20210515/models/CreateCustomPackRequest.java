@@ -58,18 +58,25 @@ public class CreateCustomPackRequest extends AbstractModel{
     private Long PackLevel;
 
     /**
-    * 层级码包规则 [{ Level, Rate, Amount, CustomId }]
+    * 层级码包规则
     */
     @SerializedName("PackSpec")
     @Expose
     private PackSpec [] PackSpec;
 
     /**
-    * 码规则ID,  普通码包时必填
+    * 码规则ID,  和CodeParts二选一必填
     */
     @SerializedName("CustomId")
     @Expose
     private String CustomId;
+
+    /**
+    * 码段配置，和CustomId二选一必填
+    */
+    @SerializedName("CodeParts")
+    @Expose
+    private CodePart [] CodeParts;
 
     /**
      * Get 商户ID 
@@ -152,35 +159,51 @@ public class CreateCustomPackRequest extends AbstractModel{
     }
 
     /**
-     * Get 层级码包规则 [{ Level, Rate, Amount, CustomId }] 
-     * @return PackSpec 层级码包规则 [{ Level, Rate, Amount, CustomId }]
+     * Get 层级码包规则 
+     * @return PackSpec 层级码包规则
      */
     public PackSpec [] getPackSpec() {
         return this.PackSpec;
     }
 
     /**
-     * Set 层级码包规则 [{ Level, Rate, Amount, CustomId }]
-     * @param PackSpec 层级码包规则 [{ Level, Rate, Amount, CustomId }]
+     * Set 层级码包规则
+     * @param PackSpec 层级码包规则
      */
     public void setPackSpec(PackSpec [] PackSpec) {
         this.PackSpec = PackSpec;
     }
 
     /**
-     * Get 码规则ID,  普通码包时必填 
-     * @return CustomId 码规则ID,  普通码包时必填
+     * Get 码规则ID,  和CodeParts二选一必填 
+     * @return CustomId 码规则ID,  和CodeParts二选一必填
      */
     public String getCustomId() {
         return this.CustomId;
     }
 
     /**
-     * Set 码规则ID,  普通码包时必填
-     * @param CustomId 码规则ID,  普通码包时必填
+     * Set 码规则ID,  和CodeParts二选一必填
+     * @param CustomId 码规则ID,  和CodeParts二选一必填
      */
     public void setCustomId(String CustomId) {
         this.CustomId = CustomId;
+    }
+
+    /**
+     * Get 码段配置，和CustomId二选一必填 
+     * @return CodeParts 码段配置，和CustomId二选一必填
+     */
+    public CodePart [] getCodeParts() {
+        return this.CodeParts;
+    }
+
+    /**
+     * Set 码段配置，和CustomId二选一必填
+     * @param CodeParts 码段配置，和CustomId二选一必填
+     */
+    public void setCodeParts(CodePart [] CodeParts) {
+        this.CodeParts = CodeParts;
     }
 
     public CreateCustomPackRequest() {
@@ -215,6 +238,12 @@ public class CreateCustomPackRequest extends AbstractModel{
         if (source.CustomId != null) {
             this.CustomId = new String(source.CustomId);
         }
+        if (source.CodeParts != null) {
+            this.CodeParts = new CodePart[source.CodeParts.length];
+            for (int i = 0; i < source.CodeParts.length; i++) {
+                this.CodeParts[i] = new CodePart(source.CodeParts[i]);
+            }
+        }
     }
 
 
@@ -229,6 +258,7 @@ public class CreateCustomPackRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PackLevel", this.PackLevel);
         this.setParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
         this.setParamSimple(map, prefix + "CustomId", this.CustomId);
+        this.setParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
 
     }
 }

@@ -31,6 +31,22 @@ public class DescribeCodePackUrlResponse extends AbstractModel{
     private String Url;
 
     /**
+    * 图片码包地址，可能为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImgUrl")
+    @Expose
+    private String ImgUrl;
+
+    /**
+    * 文字码包Key，用于上传导入
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileKey")
+    @Expose
+    private String FileKey;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +71,46 @@ public class DescribeCodePackUrlResponse extends AbstractModel{
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get 图片码包地址，可能为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImgUrl 图片码包地址，可能为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImgUrl() {
+        return this.ImgUrl;
+    }
+
+    /**
+     * Set 图片码包地址，可能为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImgUrl 图片码包地址，可能为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImgUrl(String ImgUrl) {
+        this.ImgUrl = ImgUrl;
+    }
+
+    /**
+     * Get 文字码包Key，用于上传导入
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileKey 文字码包Key，用于上传导入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileKey() {
+        return this.FileKey;
+    }
+
+    /**
+     * Set 文字码包Key，用于上传导入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileKey 文字码包Key，用于上传导入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileKey(String FileKey) {
+        this.FileKey = FileKey;
     }
 
     /**
@@ -84,6 +140,12 @@ public class DescribeCodePackUrlResponse extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.ImgUrl != null) {
+            this.ImgUrl = new String(source.ImgUrl);
+        }
+        if (source.FileKey != null) {
+            this.FileKey = new String(source.FileKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +157,8 @@ public class DescribeCodePackUrlResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+        this.setParamSimple(map, prefix + "FileKey", this.FileKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

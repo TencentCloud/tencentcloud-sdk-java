@@ -39,6 +39,14 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel{
     private String LatestOperationState;
 
     /**
+    * OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OIDCConfig")
+    @Expose
+    private OIDCConfigAuthenticationOptions OIDCConfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel{
     }
 
     /**
+     * Get OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OIDCConfig OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OIDCConfigAuthenticationOptions getOIDCConfig() {
+        return this.OIDCConfig;
+    }
+
+    /**
+     * Set OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OIDCConfig OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOIDCConfig(OIDCConfigAuthenticationOptions OIDCConfig) {
+        this.OIDCConfig = OIDCConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -115,6 +143,9 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel{
         if (source.LatestOperationState != null) {
             this.LatestOperationState = new String(source.LatestOperationState);
         }
+        if (source.OIDCConfig != null) {
+            this.OIDCConfig = new OIDCConfigAuthenticationOptions(source.OIDCConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +158,7 @@ public class DescribeClusterAuthenticationOptionsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+        this.setParamObj(map, prefix + "OIDCConfig.", this.OIDCConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

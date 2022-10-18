@@ -339,6 +339,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *获得权益包列表
+     * @param req DescribePackagesRequest
+     * @return DescribePackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackagesResponse DescribePackages(DescribePackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePackagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePackagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DownloadCertificate）用于下载证书。
      * @param req DownloadCertificateRequest
      * @return DownloadCertificateResponse

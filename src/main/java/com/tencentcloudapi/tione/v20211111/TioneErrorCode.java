@@ -129,6 +129,9 @@ public enum TioneErrorCode {
     // 操作不允许。
      INTERNALERROR_NOTALLOW("InternalError.NotAllow"),
      
+    // 获取HDFS存储信息失败。
+     INTERNALERROR_QUERYHDFSINFOFAILED("InternalError.QueryHDFSInfoFailed"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      

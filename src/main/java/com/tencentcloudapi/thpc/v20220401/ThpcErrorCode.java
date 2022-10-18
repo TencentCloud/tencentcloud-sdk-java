@@ -55,7 +55,10 @@ public enum ThpcErrorCode {
      UNSUPPORTEDOPERATION_CLUSTERSTATUSNOTSUPPORT("UnsupportedOperation.ClusterStatusNotSupport"),
      
     // 类型节点不支持当前操作。
-     UNSUPPORTEDOPERATION_INVALIDNODEROLE("UnsupportedOperation.InvalidNodeRole");
+     UNSUPPORTEDOPERATION_INVALIDNODEROLE("UnsupportedOperation.InvalidNodeRole"),
+     
+    // 节点状态不支持此操作。
+     UNSUPPORTEDOPERATION_NODESTATUSNOTSUPPORT("UnsupportedOperation.NodeStatusNotSupport");
      
     private String value;
     private ThpcErrorCode (String value){

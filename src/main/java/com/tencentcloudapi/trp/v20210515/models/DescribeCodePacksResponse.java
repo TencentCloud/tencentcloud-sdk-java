@@ -23,11 +23,67 @@ import java.util.HashMap;
 public class DescribeCodePacksResponse extends AbstractModel{
 
     /**
+    * 码列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CodePacks")
+    @Expose
+    private CodePack [] CodePacks;
+
+    /**
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 码列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodePacks 码列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CodePack [] getCodePacks() {
+        return this.CodePacks;
+    }
+
+    /**
+     * Set 码列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodePacks 码列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodePacks(CodePack [] CodePacks) {
+        this.CodePacks = CodePacks;
+    }
+
+    /**
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +109,15 @@ public class DescribeCodePacksResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCodePacksResponse(DescribeCodePacksResponse source) {
+        if (source.CodePacks != null) {
+            this.CodePacks = new CodePack[source.CodePacks.length];
+            for (int i = 0; i < source.CodePacks.length; i++) {
+                this.CodePacks[i] = new CodePack(source.CodePacks[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +128,8 @@ public class DescribeCodePacksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "CodePacks.", this.CodePacks);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

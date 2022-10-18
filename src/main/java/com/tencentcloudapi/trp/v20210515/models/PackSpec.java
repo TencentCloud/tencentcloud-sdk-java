@@ -52,6 +52,14 @@ public class PackSpec extends AbstractModel{
     private String CustomId;
 
     /**
+    * 码段配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CodeParts")
+    @Expose
+    private CodePart [] CodeParts;
+
+    /**
      * Get 层级 
      * @return Level 层级
      */
@@ -119,6 +127,26 @@ public class PackSpec extends AbstractModel{
         this.CustomId = CustomId;
     }
 
+    /**
+     * Get 码段配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodeParts 码段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CodePart [] getCodeParts() {
+        return this.CodeParts;
+    }
+
+    /**
+     * Set 码段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodeParts 码段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodeParts(CodePart [] CodeParts) {
+        this.CodeParts = CodeParts;
+    }
+
     public PackSpec() {
     }
 
@@ -139,6 +167,12 @@ public class PackSpec extends AbstractModel{
         if (source.CustomId != null) {
             this.CustomId = new String(source.CustomId);
         }
+        if (source.CodeParts != null) {
+            this.CodeParts = new CodePart[source.CodeParts.length];
+            for (int i = 0; i < source.CodeParts.length; i++) {
+                this.CodeParts[i] = new CodePart(source.CodeParts[i]);
+            }
+        }
     }
 
 
@@ -150,6 +184,7 @@ public class PackSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Rate", this.Rate);
         this.setParamSimple(map, prefix + "Amount", this.Amount);
         this.setParamSimple(map, prefix + "CustomId", this.CustomId);
+        this.setParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
 
     }
 }

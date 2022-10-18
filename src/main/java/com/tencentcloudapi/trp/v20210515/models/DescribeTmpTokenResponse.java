@@ -20,15 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobFileUrlResponse extends AbstractModel{
+public class DescribeTmpTokenResponse extends AbstractModel{
 
     /**
-    * 码包地址
+    * 临时token
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Url")
+    @SerializedName("Token")
     @Expose
-    private String Url;
+    private String Token;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class DescribeJobFileUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 码包地址
+     * Get 临时token
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 码包地址
+     * @return Token 临时token
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUrl() {
-        return this.Url;
+    public String getToken() {
+        return this.Token;
     }
 
     /**
-     * Set 码包地址
+     * Set 临时token
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 码包地址
+     * @param Token 临时token
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setToken(String Token) {
+        this.Token = Token;
     }
 
     /**
@@ -73,16 +73,16 @@ public class DescribeJobFileUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeJobFileUrlResponse() {
+    public DescribeTmpTokenResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeJobFileUrlResponse(DescribeJobFileUrlResponse source) {
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+    public DescribeTmpTokenResponse(DescribeTmpTokenResponse source) {
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +94,7 @@ public class DescribeJobFileUrlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

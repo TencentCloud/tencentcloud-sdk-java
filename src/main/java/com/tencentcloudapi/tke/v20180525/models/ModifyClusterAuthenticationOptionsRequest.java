@@ -37,6 +37,13 @@ public class ModifyClusterAuthenticationOptionsRequest extends AbstractModel{
     private ServiceAccountAuthenticationOptions ServiceAccounts;
 
     /**
+    * OIDC认证配置
+    */
+    @SerializedName("OIDCConfig")
+    @Expose
+    private OIDCConfigAuthenticationOptions OIDCConfig;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -68,6 +75,22 @@ public class ModifyClusterAuthenticationOptionsRequest extends AbstractModel{
         this.ServiceAccounts = ServiceAccounts;
     }
 
+    /**
+     * Get OIDC认证配置 
+     * @return OIDCConfig OIDC认证配置
+     */
+    public OIDCConfigAuthenticationOptions getOIDCConfig() {
+        return this.OIDCConfig;
+    }
+
+    /**
+     * Set OIDC认证配置
+     * @param OIDCConfig OIDC认证配置
+     */
+    public void setOIDCConfig(OIDCConfigAuthenticationOptions OIDCConfig) {
+        this.OIDCConfig = OIDCConfig;
+    }
+
     public ModifyClusterAuthenticationOptionsRequest() {
     }
 
@@ -82,6 +105,9 @@ public class ModifyClusterAuthenticationOptionsRequest extends AbstractModel{
         if (source.ServiceAccounts != null) {
             this.ServiceAccounts = new ServiceAccountAuthenticationOptions(source.ServiceAccounts);
         }
+        if (source.OIDCConfig != null) {
+            this.OIDCConfig = new OIDCConfigAuthenticationOptions(source.OIDCConfig);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ModifyClusterAuthenticationOptionsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
+        this.setParamObj(map, prefix + "OIDCConfig.", this.OIDCConfig);
 
     }
 }

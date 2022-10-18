@@ -39,7 +39,7 @@ public class TraceData extends AbstractModel{
     private Long CorpId;
 
     /**
-    * 0
+    * 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -47,7 +47,7 @@ public class TraceData extends AbstractModel{
     private Long Type;
 
     /**
-    * 码
+    * 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -55,7 +55,7 @@ public class TraceData extends AbstractModel{
     private String Code;
 
     /**
-    * 排序
+    * 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rank")
@@ -119,12 +119,28 @@ public class TraceData extends AbstractModel{
     private String ChainTime;
 
     /**
-    * 无
+    * 上链数据
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChainData")
     @Expose
     private ChainData ChainData;
+
+    /**
+    * 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhaseData")
+    @Expose
+    private PhaseData PhaseData;
+
+    /**
+    * 溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
      * Get 溯源ID
@@ -167,9 +183,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 0
+     * Get 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 0
+     * @return Type 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -177,9 +193,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 0
+     * Set 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 0
+     * @param Type 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -187,9 +203,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 码
+     * Get 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 码
+     * @return Code 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
@@ -197,9 +213,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 码
+     * Set 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 码
+     * @param Code 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
@@ -207,9 +223,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 排序
+     * Get 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rank 排序
+     * @return Rank 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRank() {
@@ -217,9 +233,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 排序
+     * Set 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rank 排序
+     * @param Rank 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRank(Long Rank) {
@@ -367,9 +383,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 无
+     * Get 上链数据
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChainData 无
+     * @return ChainData 上链数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChainData getChainData() {
@@ -377,13 +393,53 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 无
+     * Set 上链数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChainData 无
+     * @param ChainData 上链数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChainData(ChainData ChainData) {
         this.ChainData = ChainData;
+    }
+
+    /**
+     * Get 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhaseData 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PhaseData getPhaseData() {
+        return this.PhaseData;
+    }
+
+    /**
+     * Set 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhaseData 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhaseData(PhaseData PhaseData) {
+        this.PhaseData = PhaseData;
+    }
+
+    /**
+     * Get 溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     public TraceData() {
@@ -436,6 +492,12 @@ public class TraceData extends AbstractModel{
         if (source.ChainData != null) {
             this.ChainData = new ChainData(source.ChainData);
         }
+        if (source.PhaseData != null) {
+            this.PhaseData = new PhaseData(source.PhaseData);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -456,6 +518,8 @@ public class TraceData extends AbstractModel{
         this.setParamSimple(map, prefix + "ChainStatus", this.ChainStatus);
         this.setParamSimple(map, prefix + "ChainTime", this.ChainTime);
         this.setParamObj(map, prefix + "ChainData.", this.ChainData);
+        this.setParamObj(map, prefix + "PhaseData.", this.PhaseData);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

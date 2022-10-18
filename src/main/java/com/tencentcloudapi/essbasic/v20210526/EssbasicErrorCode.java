@@ -171,6 +171,9 @@ public enum EssbasicErrorCode {
     // 缺少必填参数的值。
      INVALIDPARAMETER_MISSINGREQUIREDPARAMETERVALUE("InvalidParameter.MissingRequiredParameterValue"),
      
+    // 姓名不符合要求。
+     INVALIDPARAMETER_NAME("InvalidParameter.Name"),
+     
     // 不支持的手机号。
      INVALIDPARAMETER_NONSUPPORTMOBILE("InvalidParameter.NonsupportMobile"),
      

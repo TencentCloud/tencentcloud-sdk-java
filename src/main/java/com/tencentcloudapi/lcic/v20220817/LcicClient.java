@@ -99,6 +99,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *删除房间
+     * @param req DeleteRoomRequest
+     * @return DeleteRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoomResponse DeleteRoom(DeleteRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取房间信息
      * @param req DescribeRoomRequest
      * @return DescribeRoomResponse

@@ -39,7 +39,7 @@ public class CodeBatch extends AbstractModel{
     private Long CorpId;
 
     /**
-    * 码
+    * 批次编码(未使用)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchCode")
@@ -95,7 +95,7 @@ public class CodeBatch extends AbstractModel{
     private String MpTpl;
 
     /**
-    * 状态
+    * 批次状态 0: 未激活 1: 已激活 -1: 已冻结
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -199,9 +199,9 @@ public class CodeBatch extends AbstractModel{
     }
 
     /**
-     * Get 码
+     * Get 批次编码(未使用)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchCode 码
+     * @return BatchCode 批次编码(未使用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchCode() {
@@ -209,9 +209,9 @@ public class CodeBatch extends AbstractModel{
     }
 
     /**
-     * Set 码
+     * Set 批次编码(未使用)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchCode 码
+     * @param BatchCode 批次编码(未使用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchCode(String BatchCode) {
@@ -339,9 +339,9 @@ public class CodeBatch extends AbstractModel{
     }
 
     /**
-     * Get 状态
+     * Get 批次状态 0: 未激活 1: 已激活 -1: 已冻结
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 批次状态 0: 未激活 1: 已激活 -1: 已冻结
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -349,9 +349,9 @@ public class CodeBatch extends AbstractModel{
     }
 
     /**
-     * Set 状态
+     * Set 批次状态 0: 未激活 1: 已激活 -1: 已冻结
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 批次状态 0: 未激活 1: 已激活 -1: 已冻结
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

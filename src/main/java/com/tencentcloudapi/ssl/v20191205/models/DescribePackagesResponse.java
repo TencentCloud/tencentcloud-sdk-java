@@ -13,22 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trp.v20210515.models;
+package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobFileUrlResponse extends AbstractModel{
+public class DescribePackagesResponse extends AbstractModel{
 
     /**
-    * 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 权益包列表。
     */
-    @SerializedName("Url")
+    @SerializedName("Packages")
     @Expose
-    private String Url;
+    private PackageInfo [] Packages;
+
+    /**
+    * 总条数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 权益点总余额。
+    */
+    @SerializedName("TotalBalance")
+    @Expose
+    private Long TotalBalance;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +51,51 @@ public class DescribeJobFileUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 码包地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 权益包列表。 
+     * @return Packages 权益包列表。
      */
-    public String getUrl() {
-        return this.Url;
+    public PackageInfo [] getPackages() {
+        return this.Packages;
     }
 
     /**
-     * Set 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 码包地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 权益包列表。
+     * @param Packages 权益包列表。
      */
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setPackages(PackageInfo [] Packages) {
+        this.Packages = Packages;
+    }
+
+    /**
+     * Get 总条数。 
+     * @return TotalCount 总条数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总条数。
+     * @param TotalCount 总条数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 权益点总余额。 
+     * @return TotalBalance 权益点总余额。
+     */
+    public Long getTotalBalance() {
+        return this.TotalBalance;
+    }
+
+    /**
+     * Set 权益点总余额。
+     * @param TotalBalance 权益点总余额。
+     */
+    public void setTotalBalance(Long TotalBalance) {
+        this.TotalBalance = TotalBalance;
     }
 
     /**
@@ -73,16 +114,25 @@ public class DescribeJobFileUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeJobFileUrlResponse() {
+    public DescribePackagesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeJobFileUrlResponse(DescribeJobFileUrlResponse source) {
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+    public DescribePackagesResponse(DescribePackagesResponse source) {
+        if (source.Packages != null) {
+            this.Packages = new PackageInfo[source.Packages.length];
+            for (int i = 0; i < source.Packages.length; i++) {
+                this.Packages[i] = new PackageInfo(source.Packages[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TotalBalance != null) {
+            this.TotalBalance = new Long(source.TotalBalance);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +144,9 @@ public class DescribeJobFileUrlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamArrayObj(map, prefix + "Packages.", this.Packages);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "TotalBalance", this.TotalBalance);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

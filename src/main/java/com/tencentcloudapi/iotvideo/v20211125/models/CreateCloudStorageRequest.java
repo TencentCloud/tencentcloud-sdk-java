@@ -52,6 +52,12 @@ ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
 ye1w7d : 事件7天存储周套餐。
+lye1m3d：低功耗事件3天月套餐。
+lye1m7d：低功耗事件7天月套餐。
+lye1m30d：低功耗事件30天月套餐。
+lye1y3d：低功耗事件3天年套餐。
+lye1y7d：低功耗事件7天年套餐。
+lye1y30d：低功耗事件30天年套餐。
     */
     @SerializedName("PackageId")
     @Expose
@@ -111,7 +117,13 @@ ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
-ye1w7d : 事件7天存储周套餐。 
+ye1w7d : 事件7天存储周套餐。
+lye1m3d：低功耗事件3天月套餐。
+lye1m7d：低功耗事件7天月套餐。
+lye1m30d：低功耗事件30天月套餐。
+lye1y3d：低功耗事件3天年套餐。
+lye1y7d：低功耗事件7天年套餐。
+lye1y30d：低功耗事件30天年套餐。 
      * @return PackageId 云存套餐ID：
 yc1m3d ： 全时3天存储月套餐。
 yc1m7d ： 全时7天存储月套餐。
@@ -127,6 +139,12 @@ ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
 ye1w7d : 事件7天存储周套餐。
+lye1m3d：低功耗事件3天月套餐。
+lye1m7d：低功耗事件7天月套餐。
+lye1m30d：低功耗事件30天月套餐。
+lye1y3d：低功耗事件3天年套餐。
+lye1y7d：低功耗事件7天年套餐。
+lye1y30d：低功耗事件30天年套餐。
      */
     public String getPackageId() {
         return this.PackageId;
@@ -148,6 +166,12 @@ ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
 ye1w7d : 事件7天存储周套餐。
+lye1m3d：低功耗事件3天月套餐。
+lye1m7d：低功耗事件7天月套餐。
+lye1m30d：低功耗事件30天月套餐。
+lye1y3d：低功耗事件3天年套餐。
+lye1y7d：低功耗事件7天年套餐。
+lye1y30d：低功耗事件30天年套餐。
      * @param PackageId 云存套餐ID：
 yc1m3d ： 全时3天存储月套餐。
 yc1m7d ： 全时7天存储月套餐。
@@ -163,6 +187,12 @@ ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
 ye1w7d : 事件7天存储周套餐。
+lye1m3d：低功耗事件3天月套餐。
+lye1m7d：低功耗事件7天月套餐。
+lye1m30d：低功耗事件30天月套餐。
+lye1y3d：低功耗事件3天年套餐。
+lye1y7d：低功耗事件7天年套餐。
+lye1y30d：低功耗事件30天年套餐。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;

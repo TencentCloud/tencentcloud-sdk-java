@@ -579,6 +579,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询临时Token，主要用于上传接口
+     * @param req DescribeTmpTokenRequest
+     * @return DescribeTmpTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTmpTokenResponse DescribeTmpToken(DescribeTmpTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTmpTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTmpTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTmpToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询二维码信息
      * @param req DescribeTraceCodeByIdRequest
      * @return DescribeTraceCodeByIdResponse

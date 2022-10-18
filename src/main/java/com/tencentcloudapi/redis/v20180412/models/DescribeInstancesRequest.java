@@ -23,601 +23,624 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 返回数量，参数默认值20，最大值为1000
+    * 实例数量，参数默认值20，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * 偏移量，取Limit整数倍。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 实例Id，如：crs-6ubhgouj
+    * 实例 ID，如：crs-6ubhgouj。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 枚举范围： projectId,createtime,instancename,type,curDeadline
+    * 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 1倒序，0顺序，默认倒序
+    * 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+    * 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
     */
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
 
     /**
-    * 子网ID数组，数组下标从0开始，如：56854
+    * 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 项目ID 组成的数组，数组下标从0开始
-    */
-    @SerializedName("ProjectIds")
-    @Expose
-    private Long [] ProjectIds;
-
-    /**
-    * 查找实例的ID。
+    * 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 实例名称
+    * 项目 ID 组成的数组。
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private Long [] ProjectIds;
+
+    /**
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+    * 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
     */
     @SerializedName("UniqVpcIds")
     @Expose
     private String [] UniqVpcIds;
 
     /**
-    * 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+    * 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
     */
     @SerializedName("UniqSubnetIds")
     @Expose
     private String [] UniqSubnetIds;
 
     /**
-    * 地域ID，已经弃用，可通过公共参数Region查询对应地域
+    * 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
     */
     @SerializedName("RegionIds")
     @Expose
     private Long [] RegionIds;
 
     /**
-    * 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+    * 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 类型版本：1-单机版,2-主从版,3-集群版
+    * 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
     */
     @SerializedName("TypeVersion")
     @Expose
     private Long TypeVersion;
 
     /**
-    * 引擎信息：Redis-2.8，Redis-4.0，CKV
+    * 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
     */
     @SerializedName("EngineName")
     @Expose
     private String EngineName;
 
     /**
-    * 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    * 续费模式。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：明确不自动续费。</ul>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long [] AutoRenew;
 
     /**
-    * 计费模式：postpaid-按量计费；prepaid-包年包月
+    * 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
     */
     @SerializedName("BillingMode")
     @Expose
     private String BillingMode;
 
     /**
-    * 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
+    * 实例类型。<ul><li>1：Redis 老集群版。</li><li>2：Redis 2.8 主从版。</li><li>3：CKV 主从版。</li><li>4：CKV 集群版。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0主从版。</li><li>7：Redis 4.0 集群版。</li><li>8：Redis 5.0 主从版。</li><li>9：Redis 5.0 集群版。</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 搜索关键词：支持实例Id、实例名称、完整IP
+    * 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * 内部参数，用户可忽略
+    * 内部参数，用户可忽略。
     */
     @SerializedName("TypeList")
     @Expose
     private Long [] TypeList;
 
     /**
-    * 内部参数，用户可忽略
+    * 内部参数，用户可忽略。
     */
     @SerializedName("MonitorVersion")
     @Expose
     private String MonitorVersion;
 
     /**
-    * 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+    * 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTagInfo [] InstanceTags;
 
     /**
-    * 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+    * 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
     */
     @SerializedName("TagKeys")
     @Expose
     private String [] TagKeys;
 
     /**
-    * 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+    * 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cloud：云盘版。</li><li>cdc：独享集群版。</li></ul>
     */
     @SerializedName("ProductVersions")
     @Expose
     private String [] ProductVersions;
 
     /**
-    * 批量查询指定的实例
+    * 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 返回数量，参数默认值20，最大值为1000 
-     * @return Limit 返回数量，参数默认值20，最大值为1000
+    * 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+    */
+    @SerializedName("AzMode")
+    @Expose
+    private String AzMode;
+
+    /**
+     * Get 实例数量，参数默认值20，最大值为1000。 
+     * @return Limit 实例数量，参数默认值20，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，参数默认值20，最大值为1000
-     * @param Limit 返回数量，参数默认值20，最大值为1000
+     * Set 实例数量，参数默认值20，最大值为1000。
+     * @param Limit 实例数量，参数默认值20，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍。 
+     * @return Offset 偏移量，取Limit整数倍。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍。
+     * @param Offset 偏移量，取Limit整数倍。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 实例Id，如：crs-6ubhgouj 
-     * @return InstanceId 实例Id，如：crs-6ubhgouj
+     * Get 实例 ID，如：crs-6ubhgouj。 
+     * @return InstanceId 实例 ID，如：crs-6ubhgouj。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id，如：crs-6ubhgouj
-     * @param InstanceId 实例Id，如：crs-6ubhgouj
+     * Set 实例 ID，如：crs-6ubhgouj。
+     * @param InstanceId 实例 ID，如：crs-6ubhgouj。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 枚举范围： projectId,createtime,instancename,type,curDeadline 
-     * @return OrderBy 枚举范围： projectId,createtime,instancename,type,curDeadline
+     * Get 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul> 
+     * @return OrderBy 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 枚举范围： projectId,createtime,instancename,type,curDeadline
-     * @param OrderBy 枚举范围： projectId,createtime,instancename,type,curDeadline
+     * Set 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
+     * @param OrderBy 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 1倒序，0顺序，默认倒序 
-     * @return OrderType 1倒序，0顺序，默认倒序
+     * Get 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul> 
+     * @return OrderType 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 1倒序，0顺序，默认倒序
-     * @param OrderType 1倒序，0顺序，默认倒序
+     * Set 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+     * @param OrderType 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525 
-     * @return VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * Get 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。 
+     * @return VpcIds 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
      */
     public String [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
-     * @param VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * Set 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
+     * @param VpcIds 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
      */
     public void setVpcIds(String [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get 子网ID数组，数组下标从0开始，如：56854 
-     * @return SubnetIds 子网ID数组，数组下标从0开始，如：56854
+     * Get 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。 
+     * @return SubnetIds 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网ID数组，数组下标从0开始，如：56854
-     * @param SubnetIds 子网ID数组，数组下标从0开始，如：56854
+     * Set 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
+     * @param SubnetIds 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 项目ID 组成的数组，数组下标从0开始 
-     * @return ProjectIds 项目ID 组成的数组，数组下标从0开始
-     */
-    public Long [] getProjectIds() {
-        return this.ProjectIds;
-    }
-
-    /**
-     * Set 项目ID 组成的数组，数组下标从0开始
-     * @param ProjectIds 项目ID 组成的数组，数组下标从0开始
-     */
-    public void setProjectIds(Long [] ProjectIds) {
-        this.ProjectIds = ProjectIds;
-    }
-
-    /**
-     * Get 查找实例的ID。 
-     * @return SearchKey 查找实例的ID。
+     * Get 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。 
+     * @return SearchKey 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 查找实例的ID。
-     * @param SearchKey 查找实例的ID。
+     * Set 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
+     * @param SearchKey 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 项目 ID 组成的数组。 
+     * @return ProjectIds 项目 ID 组成的数组。
+     */
+    public Long [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目 ID 组成的数组。
+     * @param ProjectIds 项目 ID 组成的数组。
+     */
+    public void setProjectIds(Long [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
+    /**
+     * Get 实例名称。 
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk 
-     * @return UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Get 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。 
+     * @return UniqVpcIds 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
-     * @param UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Set 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
+     * @param UniqVpcIds 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;
     }
 
     /**
-     * Get 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2 
-     * @return UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * Get 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。 
+     * @return UniqSubnetIds 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-     * @param UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * Set 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
+     * @param UniqSubnetIds 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
     /**
-     * Get 地域ID，已经弃用，可通过公共参数Region查询对应地域 
-     * @return RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * Get 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。 
+     * @return RegionIds 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
      */
     public Long [] getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set 地域ID，已经弃用，可通过公共参数Region查询对应地域
-     * @param RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * Set 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
+     * @param RegionIds 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
      */
     public void setRegionIds(Long [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除 
-     * @return Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * Get 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul> 
+     * @return Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
-     * @param Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * Set 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * @param Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 类型版本：1-单机版,2-主从版,3-集群版 
-     * @return TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
+     * Get 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul> 
+     * @return TypeVersion 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
      */
     public Long getTypeVersion() {
         return this.TypeVersion;
     }
 
     /**
-     * Set 类型版本：1-单机版,2-主从版,3-集群版
-     * @param TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
+     * Set 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+     * @param TypeVersion 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
      */
     public void setTypeVersion(Long TypeVersion) {
         this.TypeVersion = TypeVersion;
     }
 
     /**
-     * Get 引擎信息：Redis-2.8，Redis-4.0，CKV 
-     * @return EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
+     * Get 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。 
+     * @return EngineName 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set 引擎信息：Redis-2.8，Redis-4.0，CKV
-     * @param EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
+     * Set 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
+     * @param EngineName 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
-     * @return AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 续费模式。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：明确不自动续费。</ul> 
+     * @return AutoRenew 续费模式。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：明确不自动续费。</ul>
      */
     public Long [] getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @param AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 续费模式。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：明确不自动续费。</ul>
+     * @param AutoRenew 续费模式。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：明确不自动续费。</ul>
      */
     public void setAutoRenew(Long [] AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 计费模式：postpaid-按量计费；prepaid-包年包月 
-     * @return BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
+     * Get 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul> 
+     * @return BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
      */
     public String getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 计费模式：postpaid-按量计费；prepaid-包年包月
-     * @param BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
+     * Set 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * @param BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
      */
     public void setBillingMode(String BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版， 
-     * @return Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
+     * Get 实例类型。<ul><li>1：Redis 老集群版。</li><li>2：Redis 2.8 主从版。</li><li>3：CKV 主从版。</li><li>4：CKV 集群版。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0主从版。</li><li>7：Redis 4.0 集群版。</li><li>8：Redis 5.0 主从版。</li><li>9：Redis 5.0 集群版。</li></ul> 
+     * @return Type 实例类型。<ul><li>1：Redis 老集群版。</li><li>2：Redis 2.8 主从版。</li><li>3：CKV 主从版。</li><li>4：CKV 集群版。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0主从版。</li><li>7：Redis 4.0 集群版。</li><li>8：Redis 5.0 主从版。</li><li>9：Redis 5.0 集群版。</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
-     * @param Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
+     * Set 实例类型。<ul><li>1：Redis 老集群版。</li><li>2：Redis 2.8 主从版。</li><li>3：CKV 主从版。</li><li>4：CKV 集群版。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0主从版。</li><li>7：Redis 4.0 集群版。</li><li>8：Redis 5.0 主从版。</li><li>9：Redis 5.0 集群版。</li></ul>
+     * @param Type 实例类型。<ul><li>1：Redis 老集群版。</li><li>2：Redis 2.8 主从版。</li><li>3：CKV 主从版。</li><li>4：CKV 集群版。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0主从版。</li><li>7：Redis 4.0 集群版。</li><li>8：Redis 5.0 主从版。</li><li>9：Redis 5.0 集群版。</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 搜索关键词：支持实例Id、实例名称、完整IP 
-     * @return SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
+     * Get 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。 
+     * @return SearchKeys 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set 搜索关键词：支持实例Id、实例名称、完整IP
-     * @param SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
+     * Set 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
+     * @param SearchKeys 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get 内部参数，用户可忽略 
-     * @return TypeList 内部参数，用户可忽略
+     * Get 内部参数，用户可忽略。 
+     * @return TypeList 内部参数，用户可忽略。
      */
     public Long [] getTypeList() {
         return this.TypeList;
     }
 
     /**
-     * Set 内部参数，用户可忽略
-     * @param TypeList 内部参数，用户可忽略
+     * Set 内部参数，用户可忽略。
+     * @param TypeList 内部参数，用户可忽略。
      */
     public void setTypeList(Long [] TypeList) {
         this.TypeList = TypeList;
     }
 
     /**
-     * Get 内部参数，用户可忽略 
-     * @return MonitorVersion 内部参数，用户可忽略
+     * Get 内部参数，用户可忽略。 
+     * @return MonitorVersion 内部参数，用户可忽略。
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set 内部参数，用户可忽略
-     * @param MonitorVersion 内部参数，用户可忽略
+     * Set 内部参数，用户可忽略。
+     * @param MonitorVersion 内部参数，用户可忽略。
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤 
-     * @return InstanceTags 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+     * Get 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。 
+     * @return InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
      */
     public InstanceTagInfo [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
-     * @param InstanceTags 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+     * Set 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @param InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get 根据标签的Key筛选资源，不传或者传空数组则不进行过滤 
-     * @return TagKeys 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+     * Get 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。 
+     * @return TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
-     * @param TagKeys 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+     * Set 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+     * @param TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;
     }
 
     /**
-     * Get 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤 
-     * @return ProductVersions 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     * Get 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cloud：云盘版。</li><li>cdc：独享集群版。</li></ul> 
+     * @return ProductVersions 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cloud：云盘版。</li><li>cdc：独享集群版。</li></ul>
      */
     public String [] getProductVersions() {
         return this.ProductVersions;
     }
 
     /**
-     * Set 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
-     * @param ProductVersions 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     * Set 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cloud：云盘版。</li><li>cdc：独享集群版。</li></ul>
+     * @param ProductVersions 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cloud：云盘版。</li><li>cdc：独享集群版。</li></ul>
      */
     public void setProductVersions(String [] ProductVersions) {
         this.ProductVersions = ProductVersions;
     }
 
     /**
-     * Get 批量查询指定的实例 
-     * @return InstanceIds 批量查询指定的实例
+     * Get 批量查询指定的实例 ID，返回结果已 Limit 限制为主。 
+     * @return InstanceIds 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 批量查询指定的实例
-     * @param InstanceIds 批量查询指定的实例
+     * Set 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
+     * @param InstanceIds 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul> 
+     * @return AzMode 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+     */
+    public String getAzMode() {
+        return this.AzMode;
+    }
+
+    /**
+     * Set 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+     * @param AzMode 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+     */
+    public void setAzMode(String AzMode) {
+        this.AzMode = AzMode;
     }
 
     public DescribeInstancesRequest() {
@@ -655,14 +678,14 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.SubnetIds[i] = new String(source.SubnetIds[i]);
             }
         }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
         if (source.ProjectIds != null) {
             this.ProjectIds = new Long[source.ProjectIds.length];
             for (int i = 0; i < source.ProjectIds.length; i++) {
                 this.ProjectIds[i] = new Long(source.ProjectIds[i]);
             }
-        }
-        if (source.SearchKey != null) {
-            this.SearchKey = new String(source.SearchKey);
         }
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
@@ -748,6 +771,9 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.AzMode != null) {
+            this.AzMode = new String(source.AzMode);
+        }
     }
 
 
@@ -762,8 +788,8 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
-        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
         this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
@@ -781,6 +807,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "AzMode", this.AzMode);
 
     }
 }

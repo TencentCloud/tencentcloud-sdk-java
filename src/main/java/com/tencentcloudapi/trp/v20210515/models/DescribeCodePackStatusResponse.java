@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class DescribeCodePackStatusResponse extends AbstractModel{
 
     /**
+    * 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class DescribeCodePackStatusResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCodePackStatusResponse(DescribeCodePackStatusResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class DescribeCodePackStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

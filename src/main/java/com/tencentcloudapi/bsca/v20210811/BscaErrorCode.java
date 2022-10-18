@@ -1,5 +1,8 @@
 package com.tencentcloudapi.bsca.v20210811;
 public enum BscaErrorCode {
+    // 账户流量余额不足。
+     FAILEDOPERATION_ACCOUNTNOTENOUGH("FailedOperation.AccountNotEnough"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
