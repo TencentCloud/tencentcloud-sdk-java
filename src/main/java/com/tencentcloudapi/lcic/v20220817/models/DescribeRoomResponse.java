@@ -120,6 +120,14 @@ coteaching 双师
     private String [] Assistants;
 
     /**
+    * 录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordUrl")
+    @Expose
+    private String RecordUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -371,6 +379,26 @@ coteaching 双师
     }
 
     /**
+     * Get 录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordUrl 录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordUrl() {
+        return this.RecordUrl;
+    }
+
+    /**
+     * Set 录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordUrl 录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordUrl(String RecordUrl) {
+        this.RecordUrl = RecordUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -433,6 +461,9 @@ coteaching 双师
                 this.Assistants[i] = new String(source.Assistants[i]);
             }
         }
+        if (source.RecordUrl != null) {
+            this.RecordUrl = new String(source.RecordUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -455,6 +486,7 @@ coteaching 双师
         this.setParamSimple(map, prefix + "SubType", this.SubType);
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+        this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

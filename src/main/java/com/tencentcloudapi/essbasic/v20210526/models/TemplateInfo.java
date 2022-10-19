@@ -72,7 +72,7 @@ public class TemplateInfo extends AbstractModel{
     private Long TemplateType;
 
     /**
-    * 是否是发起人
+    * 是否是发起人 ,已弃用
     */
     @SerializedName("IsPromoter")
     @Expose
@@ -205,16 +205,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否是发起人 
-     * @return IsPromoter 是否是发起人
+     * Get 是否是发起人 ,已弃用 
+     * @return IsPromoter 是否是发起人 ,已弃用
      */
     public Boolean getIsPromoter() {
         return this.IsPromoter;
     }
 
     /**
-     * Set 是否是发起人
-     * @param IsPromoter 是否是发起人
+     * Set 是否是发起人 ,已弃用
+     * @param IsPromoter 是否是发起人 ,已弃用
      */
     public void setIsPromoter(Boolean IsPromoter) {
         this.IsPromoter = IsPromoter;

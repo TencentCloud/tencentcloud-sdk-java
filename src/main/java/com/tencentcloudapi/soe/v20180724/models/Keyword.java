@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Keyword extends AbstractModel{
 
     /**
-    * 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+    * 被评估语音对应的文本，句子模式下不超过 20个单词或者中文文字，段落模式不超过 120个单词或者中文文字，中文文字需使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
     */
     @SerializedName("RefText")
     @Expose
@@ -45,7 +45,7 @@ public class Keyword extends AbstractModel{
 
     /**
     * 评估语言，0：英文，1：中文。
-ServerType不填默认传0
+ServerType不填默认为0
     */
     @SerializedName("ServerType")
     @Expose
@@ -59,16 +59,16 @@ ServerType不填默认传0
     private Long TextMode;
 
     /**
-     * Get 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。 
-     * @return RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * Get 被评估语音对应的文本，句子模式下不超过 20个单词或者中文文字，段落模式不超过 120个单词或者中文文字，中文文字需使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。 
+     * @return RefText 被评估语音对应的文本，句子模式下不超过 20个单词或者中文文字，段落模式不超过 120个单词或者中文文字，中文文字需使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public String getRefText() {
         return this.RefText;
     }
 
     /**
-     * Set 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
-     * @param RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * Set 被评估语音对应的文本，句子模式下不超过 20个单词或者中文文字，段落模式不超过 120个单词或者中文文字，中文文字需使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * @param RefText 被评估语音对应的文本，句子模式下不超过 20个单词或者中文文字，段落模式不超过 120个单词或者中文文字，中文文字需使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public void setRefText(String RefText) {
         this.RefText = RefText;
@@ -108,9 +108,9 @@ ServerType不填默认传0
 
     /**
      * Get 评估语言，0：英文，1：中文。
-ServerType不填默认传0 
+ServerType不填默认为0 
      * @return ServerType 评估语言，0：英文，1：中文。
-ServerType不填默认传0
+ServerType不填默认为0
      */
     public Long getServerType() {
         return this.ServerType;
@@ -118,9 +118,9 @@ ServerType不填默认传0
 
     /**
      * Set 评估语言，0：英文，1：中文。
-ServerType不填默认传0
+ServerType不填默认为0
      * @param ServerType 评估语言，0：英文，1：中文。
-ServerType不填默认传0
+ServerType不填默认为0
      */
     public void setServerType(Long ServerType) {
         this.ServerType = ServerType;

@@ -1422,6 +1422,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *修改日志主题
+     * @param req ModifyClsTopicRequest
+     * @return ModifyClsTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClsTopicResponse ModifyClsTopic(ModifyClsTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClsTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClsTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClsTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改数据库权限
      * @param req ModifyDatabaseACLRequest
      * @return ModifyDatabaseACLResponse

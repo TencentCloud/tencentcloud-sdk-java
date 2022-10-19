@@ -139,7 +139,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *新建拦截
+     *新建协查处置
 
      * @param req CreateCRBlockRequest
      * @return CreateCRBlockResponse
@@ -420,6 +420,26 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *查询取证详情
+     * @param req DescribeCRObtainDetailRequest
+     * @return DescribeCRObtainDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCRObtainDetailResponse DescribeCRObtainDetail(DescribeCRObtainDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCRObtainDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCRObtainDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCRObtainDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询作品基本信息
      * @param req DescribeCRWorkInfoRequest
      * @return DescribeCRWorkInfoResponse
@@ -460,7 +480,7 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *拦截申请
+     *协查处置申请
      * @param req ModifyCRBlockStatusRequest
      * @return ModifyCRBlockStatusResponse
      * @throws TencentCloudSDKException

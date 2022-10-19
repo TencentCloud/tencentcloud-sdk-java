@@ -37,13 +37,6 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 查询过滤实名用户，key为Status，Values为["IsVerified"]
     */
     @SerializedName("Filters")
@@ -56,6 +49,13 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 返回最大数量，最大为20 
@@ -90,22 +90,6 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 查询过滤实名用户，key为Status，Values为["IsVerified"] 
      * @return Filters 查询过滤实名用户，key为Status，Values为["IsVerified"]
      */
@@ -137,6 +121,22 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public ChannelDescribeEmployeesRequest() {
     }
 
@@ -151,9 +151,6 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -162,6 +159,9 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -172,9 +172,9 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

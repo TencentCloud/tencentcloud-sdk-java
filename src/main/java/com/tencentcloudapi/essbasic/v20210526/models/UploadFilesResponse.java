@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UploadFilesResponse extends AbstractModel{
 
     /**
-    * 文件id数组，有效期一个小时
+    * 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
     */
     @SerializedName("FileIds")
     @Expose
@@ -51,16 +51,16 @@ public class UploadFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件id数组，有效期一个小时 
-     * @return FileIds 文件id数组，有效期一个小时
+     * Get 文件id数组，有效期一个小时；有效期内此文件id可以反复使用 
+     * @return FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 文件id数组，有效期一个小时
-     * @param FileIds 文件id数组，有效期一个小时
+     * Set 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+     * @param FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;

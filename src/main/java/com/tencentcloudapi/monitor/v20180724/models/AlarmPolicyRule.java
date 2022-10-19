@@ -169,6 +169,14 @@ re=正则匹配
     private Float ValueMin;
 
     /**
+    * 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HierarchicalValue")
+    @Expose
+    private AlarmHierarchicalValue HierarchicalValue;
+
+    /**
      * Get 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
@@ -560,6 +568,26 @@ re=正则匹配
         this.ValueMin = ValueMin;
     }
 
+    /**
+     * Get 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmHierarchicalValue getHierarchicalValue() {
+        return this.HierarchicalValue;
+    }
+
+    /**
+     * Set 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHierarchicalValue(AlarmHierarchicalValue HierarchicalValue) {
+        this.HierarchicalValue = HierarchicalValue;
+    }
+
     public AlarmPolicyRule() {
     }
 
@@ -616,6 +644,9 @@ re=正则匹配
         if (source.ValueMin != null) {
             this.ValueMin = new Float(source.ValueMin);
         }
+        if (source.HierarchicalValue != null) {
+            this.HierarchicalValue = new AlarmHierarchicalValue(source.HierarchicalValue);
+        }
     }
 
 
@@ -639,6 +670,7 @@ re=正则匹配
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "ValueMax", this.ValueMax);
         this.setParamSimple(map, prefix + "ValueMin", this.ValueMin);
+        this.setParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
 
     }
 }

@@ -30,7 +30,7 @@ public class ModifyCRObtainStatusRequest extends AbstractModel{
     private Long TortId;
 
     /**
-    * 取证类型：1-网页取证 2-过程取证
+    * 取证类型：1-网页取证 2-过程取证(暂不提供)
     */
     @SerializedName("ObtainType")
     @Expose
@@ -67,16 +67,16 @@ public class ModifyCRObtainStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 取证类型：1-网页取证 2-过程取证 
-     * @return ObtainType 取证类型：1-网页取证 2-过程取证
+     * Get 取证类型：1-网页取证 2-过程取证(暂不提供) 
+     * @return ObtainType 取证类型：1-网页取证 2-过程取证(暂不提供)
      */
     public Long getObtainType() {
         return this.ObtainType;
     }
 
     /**
-     * Set 取证类型：1-网页取证 2-过程取证
-     * @param ObtainType 取证类型：1-网页取证 2-过程取证
+     * Set 取证类型：1-网页取证 2-过程取证(暂不提供)
+     * @param ObtainType 取证类型：1-网页取证 2-过程取证(暂不提供)
      */
     public void setObtainType(Long ObtainType) {
         this.ObtainType = ObtainType;

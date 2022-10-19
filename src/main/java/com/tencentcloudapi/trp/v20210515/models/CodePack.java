@@ -63,7 +63,7 @@ public class CodePack extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 状态
+    * 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -71,7 +71,7 @@ public class CodePack extends AbstractModel{
     private String Status;
 
     /**
-    * 记录
+    * 执行日志
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Log")
@@ -119,7 +119,7 @@ public class CodePack extends AbstractModel{
     private Long Cipher;
 
     /**
-    * 文字码地址
+    * [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextUrl")
@@ -127,7 +127,7 @@ public class CodePack extends AbstractModel{
     private String TextUrl;
 
     /**
-    * 二维码地址
+    * [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackUrl")
@@ -283,9 +283,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Get 状态
+     * Get 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -293,9 +293,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Set 状态
+     * Set 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -303,9 +303,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Get 记录
+     * Get 执行日志
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Log 记录
+     * @return Log 执行日志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLog() {
@@ -313,9 +313,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Set 记录
+     * Set 执行日志
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Log 记录
+     * @param Log 执行日志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLog(String Log) {
@@ -423,9 +423,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Get 文字码地址
+     * Get [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TextUrl 文字码地址
+     * @return TextUrl [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTextUrl() {
@@ -433,9 +433,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Set 文字码地址
+     * Set [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextUrl 文字码地址
+     * @param TextUrl [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextUrl(String TextUrl) {
@@ -443,9 +443,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Get 二维码地址
+     * Get [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackUrl 二维码地址
+     * @return PackUrl [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackUrl() {
@@ -453,9 +453,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Set 二维码地址
+     * Set [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackUrl 二维码地址
+     * @param PackUrl [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackUrl(String PackUrl) {

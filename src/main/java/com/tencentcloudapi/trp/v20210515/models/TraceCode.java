@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TraceCode extends AbstractModel{
 
     /**
-    * 码
+    * 二维码
     */
     @SerializedName("Code")
     @Expose
@@ -37,7 +37,7 @@ public class TraceCode extends AbstractModel{
     private Long CorpId;
 
     /**
-    * 包ID
+    * 码包ID
     */
     @SerializedName("PackId")
     @Expose
@@ -65,7 +65,7 @@ public class TraceCode extends AbstractModel{
     private String ProductId;
 
     /**
-    * 状态
+    * 码状态 0: 冻结 1: 激活
     */
     @SerializedName("Status")
     @Expose
@@ -100,16 +100,16 @@ public class TraceCode extends AbstractModel{
     private String ProductName;
 
     /**
-     * Get 码 
-     * @return Code 码
+     * Get 二维码 
+     * @return Code 二维码
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 码
-     * @param Code 码
+     * Set 二维码
+     * @param Code 二维码
      */
     public void setCode(String Code) {
         this.Code = Code;
@@ -132,16 +132,16 @@ public class TraceCode extends AbstractModel{
     }
 
     /**
-     * Get 包ID 
-     * @return PackId 包ID
+     * Get 码包ID 
+     * @return PackId 码包ID
      */
     public String getPackId() {
         return this.PackId;
     }
 
     /**
-     * Set 包ID
-     * @param PackId 包ID
+     * Set 码包ID
+     * @param PackId 码包ID
      */
     public void setPackId(String PackId) {
         this.PackId = PackId;
@@ -196,16 +196,16 @@ public class TraceCode extends AbstractModel{
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 码状态 0: 冻结 1: 激活 
+     * @return Status 码状态 0: 冻结 1: 激活
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 码状态 0: 冻结 1: 激活
+     * @param Status 码状态 0: 冻结 1: 激活
      */
     public void setStatus(Long Status) {
         this.Status = Status;

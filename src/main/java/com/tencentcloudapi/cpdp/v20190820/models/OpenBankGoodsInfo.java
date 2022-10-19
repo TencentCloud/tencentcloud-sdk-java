@@ -51,6 +51,41 @@ public class OpenBankGoodsInfo extends AbstractModel{
     private String GoodsBizType;
 
     /**
+    * 商品编号。
+    */
+    @SerializedName("Sku")
+    @Expose
+    private String Sku;
+
+    /**
+    * 商品单价。
+    */
+    @SerializedName("Price")
+    @Expose
+    private String Price;
+
+    /**
+    * 商品数量
+    */
+    @SerializedName("Quantity")
+    @Expose
+    private String Quantity;
+
+    /**
+    * 商品图片url
+    */
+    @SerializedName("ProductImage")
+    @Expose
+    private String ProductImage;
+
+    /**
+    * 商品链接url
+    */
+    @SerializedName("ProductUrl")
+    @Expose
+    private String ProductUrl;
+
+    /**
      * Get 商品标题。默认值“商品支付”。 
      * @return GoodsName 商品标题。默认值“商品支付”。
      */
@@ -114,6 +149,86 @@ public class OpenBankGoodsInfo extends AbstractModel{
         this.GoodsBizType = GoodsBizType;
     }
 
+    /**
+     * Get 商品编号。 
+     * @return Sku 商品编号。
+     */
+    public String getSku() {
+        return this.Sku;
+    }
+
+    /**
+     * Set 商品编号。
+     * @param Sku 商品编号。
+     */
+    public void setSku(String Sku) {
+        this.Sku = Sku;
+    }
+
+    /**
+     * Get 商品单价。 
+     * @return Price 商品单价。
+     */
+    public String getPrice() {
+        return this.Price;
+    }
+
+    /**
+     * Set 商品单价。
+     * @param Price 商品单价。
+     */
+    public void setPrice(String Price) {
+        this.Price = Price;
+    }
+
+    /**
+     * Get 商品数量 
+     * @return Quantity 商品数量
+     */
+    public String getQuantity() {
+        return this.Quantity;
+    }
+
+    /**
+     * Set 商品数量
+     * @param Quantity 商品数量
+     */
+    public void setQuantity(String Quantity) {
+        this.Quantity = Quantity;
+    }
+
+    /**
+     * Get 商品图片url 
+     * @return ProductImage 商品图片url
+     */
+    public String getProductImage() {
+        return this.ProductImage;
+    }
+
+    /**
+     * Set 商品图片url
+     * @param ProductImage 商品图片url
+     */
+    public void setProductImage(String ProductImage) {
+        this.ProductImage = ProductImage;
+    }
+
+    /**
+     * Get 商品链接url 
+     * @return ProductUrl 商品链接url
+     */
+    public String getProductUrl() {
+        return this.ProductUrl;
+    }
+
+    /**
+     * Set 商品链接url
+     * @param ProductUrl 商品链接url
+     */
+    public void setProductUrl(String ProductUrl) {
+        this.ProductUrl = ProductUrl;
+    }
+
     public OpenBankGoodsInfo() {
     }
 
@@ -134,6 +249,21 @@ public class OpenBankGoodsInfo extends AbstractModel{
         if (source.GoodsBizType != null) {
             this.GoodsBizType = new String(source.GoodsBizType);
         }
+        if (source.Sku != null) {
+            this.Sku = new String(source.Sku);
+        }
+        if (source.Price != null) {
+            this.Price = new String(source.Price);
+        }
+        if (source.Quantity != null) {
+            this.Quantity = new String(source.Quantity);
+        }
+        if (source.ProductImage != null) {
+            this.ProductImage = new String(source.ProductImage);
+        }
+        if (source.ProductUrl != null) {
+            this.ProductUrl = new String(source.ProductUrl);
+        }
     }
 
 
@@ -145,6 +275,11 @@ public class OpenBankGoodsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "GoodsDetail", this.GoodsDetail);
         this.setParamSimple(map, prefix + "GoodsDescription", this.GoodsDescription);
         this.setParamSimple(map, prefix + "GoodsBizType", this.GoodsBizType);
+        this.setParamSimple(map, prefix + "Sku", this.Sku);
+        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "Quantity", this.Quantity);
+        this.setParamSimple(map, prefix + "ProductImage", this.ProductImage);
+        this.setParamSimple(map, prefix + "ProductUrl", this.ProductUrl);
 
     }
 }

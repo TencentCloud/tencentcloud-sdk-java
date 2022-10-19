@@ -927,6 +927,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付-跨境支付下单
+     * @param req CreateOpenBankGlobalPaymentOrderRequest
+     * @return CreateOpenBankGlobalPaymentOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOpenBankGlobalPaymentOrderResponse CreateOpenBankGlobalPaymentOrder(CreateOpenBankGlobalPaymentOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOpenBankGlobalPaymentOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *云企付-创建商户
      * @param req CreateOpenBankMerchantRequest
      * @return CreateOpenBankMerchantResponse

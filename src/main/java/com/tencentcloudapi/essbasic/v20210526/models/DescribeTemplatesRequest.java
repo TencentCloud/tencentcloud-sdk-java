@@ -30,7 +30,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 模板唯一标识
+    * 模板唯一标识，查询单个模版时使用
     */
     @SerializedName("TemplateId")
     @Expose
@@ -58,13 +58,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
     */
     @SerializedName("QueryAllComponents")
@@ -77,6 +70,13 @@ public class DescribeTemplatesRequest extends AbstractModel{
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
+
+    /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -95,16 +95,16 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板唯一标识 
-     * @return TemplateId 模板唯一标识
+     * Get 模板唯一标识，查询单个模版时使用 
+     * @return TemplateId 模板唯一标识，查询单个模版时使用
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板唯一标识
-     * @param TemplateId 模板唯一标识
+     * Set 模板唯一标识，查询单个模版时使用
+     * @param TemplateId 模板唯一标识，查询单个模版时使用
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -159,22 +159,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件 
      * @return QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
      */
@@ -206,6 +190,22 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.TemplateName = TemplateName;
     }
 
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -229,14 +229,14 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.QueryAllComponents != null) {
             this.QueryAllComponents = new Boolean(source.QueryAllComponents);
         }
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -250,9 +250,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

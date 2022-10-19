@@ -39,6 +39,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *绑定文档到房间
+     * @param req BindDocumentToRoomRequest
+     * @return BindDocumentToRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindDocumentToRoomResponse BindDocumentToRoom(BindDocumentToRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindDocumentToRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindDocumentToRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindDocumentToRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建房间内可以使用的文档。
      * @param req CreateDocumentRequest
      * @return CreateDocumentResponse
@@ -139,6 +159,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取房间统计信息，仅可在房间结束后调用。
+     * @param req DescribeRoomStatisticsRequest
+     * @return DescribeRoomStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomStatisticsResponse DescribeRoomStatistics(DescribeRoomStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoomStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoomStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoomStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户信息
      * @param req DescribeUserRequest
      * @return DescribeUserResponse
@@ -199,6 +239,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *修改应用
+     * @param req ModifyAppRequest
+     * @return ModifyAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAppResponse ModifyApp(ModifyAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *注册用户
      * @param req RegisterUserRequest
      * @return RegisterUserResponse
@@ -231,6 +291,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetAppCustomContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *文档从房间解绑
+     * @param req UnbindDocumentFromRoomRequest
+     * @return UnbindDocumentFromRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(UnbindDocumentFromRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindDocumentFromRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindDocumentFromRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindDocumentFromRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -75,6 +75,13 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持�
     private Boolean ComponentRequired;
 
     /**
+    * 控件关联的签署方id
+    */
+    @SerializedName("ComponentRecipientId")
+    @Expose
+    private String ComponentRecipientId;
+
+    /**
     * 控件所属文件的序号 (文档中文件的排列序号，从0开始)
     */
     @SerializedName("FileIndex")
@@ -346,6 +353,22 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持�
      */
     public void setComponentRequired(Boolean ComponentRequired) {
         this.ComponentRequired = ComponentRequired;
+    }
+
+    /**
+     * Get 控件关联的签署方id 
+     * @return ComponentRecipientId 控件关联的签署方id
+     */
+    public String getComponentRecipientId() {
+        return this.ComponentRecipientId;
+    }
+
+    /**
+     * Set 控件关联的签署方id
+     * @param ComponentRecipientId 控件关联的签署方id
+     */
+    public void setComponentRecipientId(String ComponentRecipientId) {
+        this.ComponentRecipientId = ComponentRecipientId;
     }
 
     /**
@@ -656,6 +679,9 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo�
         if (source.ComponentRequired != null) {
             this.ComponentRequired = new Boolean(source.ComponentRequired);
         }
+        if (source.ComponentRecipientId != null) {
+            this.ComponentRecipientId = new String(source.ComponentRecipientId);
+        }
         if (source.FileIndex != null) {
             this.FileIndex = new Long(source.FileIndex);
         }
@@ -709,6 +735,7 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo�
         this.setParamSimple(map, prefix + "ComponentType", this.ComponentType);
         this.setParamSimple(map, prefix + "ComponentName", this.ComponentName);
         this.setParamSimple(map, prefix + "ComponentRequired", this.ComponentRequired);
+        this.setParamSimple(map, prefix + "ComponentRecipientId", this.ComponentRecipientId);
         this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
         this.setParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
