@@ -31,7 +31,7 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 查询资源所对应的签署流程Id，最多支持50个。
+    * 查询资源所对应的签署流程Id，最多支持50个
     */
     @SerializedName("FlowIds")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeResourceUrlsByFlowsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询资源所对应的签署流程Id，最多支持50个。 
-     * @return FlowIds 查询资源所对应的签署流程Id，最多支持50个。
+     * Get 查询资源所对应的签署流程Id，最多支持50个 
+     * @return FlowIds 查询资源所对应的签署流程Id，最多支持50个
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 查询资源所对应的签署流程Id，最多支持50个。
-     * @param FlowIds 查询资源所对应的签署流程Id，最多支持50个。
+     * Set 查询资源所对应的签署流程Id，最多支持50个
+     * @param FlowIds 查询资源所对应的签署流程Id，最多支持50个
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

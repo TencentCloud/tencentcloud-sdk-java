@@ -47,6 +47,14 @@ public class Concurrency extends AbstractModel{
     private Long MaxRequestsPerSecond;
 
     /**
+    * 优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GracefulStopSeconds")
+    @Expose
+    private Long GracefulStopSeconds;
+
+    /**
      * Get 多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Stages 多阶段配置数组
@@ -106,6 +114,26 @@ public class Concurrency extends AbstractModel{
         this.MaxRequestsPerSecond = MaxRequestsPerSecond;
     }
 
+    /**
+     * Get 优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GracefulStopSeconds 优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGracefulStopSeconds() {
+        return this.GracefulStopSeconds;
+    }
+
+    /**
+     * Set 优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GracefulStopSeconds 优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGracefulStopSeconds(Long GracefulStopSeconds) {
+        this.GracefulStopSeconds = GracefulStopSeconds;
+    }
+
     public Concurrency() {
     }
 
@@ -126,6 +154,9 @@ public class Concurrency extends AbstractModel{
         if (source.MaxRequestsPerSecond != null) {
             this.MaxRequestsPerSecond = new Long(source.MaxRequestsPerSecond);
         }
+        if (source.GracefulStopSeconds != null) {
+            this.GracefulStopSeconds = new Long(source.GracefulStopSeconds);
+        }
     }
 
 
@@ -136,6 +167,7 @@ public class Concurrency extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Stages.", this.Stages);
         this.setParamSimple(map, prefix + "IterationCount", this.IterationCount);
         this.setParamSimple(map, prefix + "MaxRequestsPerSecond", this.MaxRequestsPerSecond);
+        this.setParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
 
     }
 }

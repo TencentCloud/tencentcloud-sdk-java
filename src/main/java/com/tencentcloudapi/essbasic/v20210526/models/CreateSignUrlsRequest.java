@@ -52,7 +52,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
 
     /**
     * 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
@@ -185,13 +185,13 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 
     /**
      * Get 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方； 
      * @return GenerateType 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
@@ -203,13 +203,13 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 
     /**
      * Set 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方；
      * @param GenerateType 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；

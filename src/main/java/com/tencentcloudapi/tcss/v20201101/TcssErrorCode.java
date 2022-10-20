@@ -6,6 +6,9 @@ public enum TcssErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 客户端已离线。
+     FAILEDOPERATION_AGENTOFFLINE("FailedOperation.AgentOffline"),
+     
     // 授权数不足。
      FAILEDOPERATION_AUTHORIZEDNOTENOUGH("FailedOperation.AuthorizedNotEnough"),
      
@@ -14,6 +17,9 @@ public enum TcssErrorCode {
      
     // 在扫描中或无扫描权限建议授权后扫描。
      FAILEDOPERATION_ERRALREADYSCANNING("FailedOperation.ErrAlreadyScanning"),
+     
+    // 当前规则信息未找到。
+     FAILEDOPERATION_ERRRULENOTFIND("FailedOperation.ErrRuleNotFind"),
      
     // 通知策略变更失败。
      FAILEDOPERATION_NOTIFYPOLICYCHANGEFAILED("FailedOperation.NotifyPolicyChangeFailed"),
@@ -90,11 +96,23 @@ public enum TcssErrorCode {
     // 请求的次数超过了频率限制。
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
+    // 资源被占用。
+     RESOURCEINUSE("ResourceInUse"),
+     
+    // 资源不足。
+     RESOURCEINSUFFICIENT("ResourceInsufficient"),
+     
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
      
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
     // 未授权操作。
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private TcssErrorCode (String value){

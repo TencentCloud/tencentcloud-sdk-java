@@ -32,6 +32,22 @@ public class FollowOrigin extends AbstractModel{
     private String Switch;
 
     /**
+    * 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultCacheTime")
+    @Expose
+    private Long DefaultCacheTime;
+
+    /**
+    * 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultCache")
+    @Expose
+    private String DefaultCache;
+
+    /**
      * Get 遵循源站配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
@@ -55,6 +71,46 @@ public class FollowOrigin extends AbstractModel{
         this.Switch = Switch;
     }
 
+    /**
+     * Get 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultCacheTime 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefaultCacheTime() {
+        return this.DefaultCacheTime;
+    }
+
+    /**
+     * Set 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultCacheTime 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultCacheTime(Long DefaultCacheTime) {
+        this.DefaultCacheTime = DefaultCacheTime;
+    }
+
+    /**
+     * Get 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultCache 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultCache() {
+        return this.DefaultCache;
+    }
+
+    /**
+     * Set 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultCache 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultCache(String DefaultCache) {
+        this.DefaultCache = DefaultCache;
+    }
+
     public FollowOrigin() {
     }
 
@@ -66,6 +122,12 @@ public class FollowOrigin extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.DefaultCacheTime != null) {
+            this.DefaultCacheTime = new Long(source.DefaultCacheTime);
+        }
+        if (source.DefaultCache != null) {
+            this.DefaultCache = new String(source.DefaultCache);
+        }
     }
 
 
@@ -74,6 +136,8 @@ public class FollowOrigin extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
+        this.setParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
 
     }
 }

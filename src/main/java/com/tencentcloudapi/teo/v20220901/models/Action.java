@@ -45,8 +45,9 @@ public class Action extends AbstractModel{
 <li> Hsts；</li>
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
-<li> OcspStapling。</li>
-<li> HTTP/2 访问（Http2）。</li>
+<li> OcspStapling；</li>
+<li> HTTP/2 访问（Http2）；</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalAction")
@@ -96,8 +97,9 @@ public class Action extends AbstractModel{
 <li> Hsts；</li>
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
-<li> OcspStapling。</li>
-<li> HTTP/2 访问（Http2）。</li>
+<li> OcspStapling；</li>
+<li> HTTP/2 访问（Http2）；</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NormalAction 常规功能操作，选择该类型的功能项有：
 <li> 访问URL 重写（AccessUrlRedirect）；</li>
@@ -121,8 +123,9 @@ public class Action extends AbstractModel{
 <li> Hsts；</li>
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
-<li> OcspStapling。</li>
-<li> HTTP/2 访问（Http2）。</li>
+<li> OcspStapling；</li>
+<li> HTTP/2 访问（Http2）；</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NormalAction getNormalAction() {
@@ -152,8 +155,9 @@ public class Action extends AbstractModel{
 <li> Hsts；</li>
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
-<li> OcspStapling。</li>
-<li> HTTP/2 访问（Http2）。</li>
+<li> OcspStapling；</li>
+<li> HTTP/2 访问（Http2）；</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NormalAction 常规功能操作，选择该类型的功能项有：
 <li> 访问URL 重写（AccessUrlRedirect）；</li>
@@ -177,8 +181,9 @@ public class Action extends AbstractModel{
 <li> Hsts；</li>
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
-<li> OcspStapling。</li>
-<li> HTTP/2 访问（Http2）。</li>
+<li> OcspStapling；</li>
+<li> HTTP/2 访问（Http2）；</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalAction(NormalAction NormalAction) {

@@ -67,6 +67,14 @@ public class CustomSample extends AbstractModel{
     private String Unit;
 
     /**
+    * 指标序列名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 指标名 
      * @return Metric 指标名
      */
@@ -170,6 +178,26 @@ public class CustomSample extends AbstractModel{
         this.Unit = Unit;
     }
 
+    /**
+     * Get 指标序列名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 指标序列名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 指标序列名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 指标序列名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public CustomSample() {
     }
 
@@ -199,6 +227,9 @@ public class CustomSample extends AbstractModel{
         if (source.Unit != null) {
             this.Unit = new String(source.Unit);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -212,6 +243,7 @@ public class CustomSample extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

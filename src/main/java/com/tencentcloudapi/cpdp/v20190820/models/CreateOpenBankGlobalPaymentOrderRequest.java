@@ -128,6 +128,16 @@ public class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel{
     private OpenBankBillingInfo BillingInfo;
 
     /**
+    * 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 渠道商户号 
      * @return ChannelMerchantId 渠道商户号
      */
@@ -367,6 +377,34 @@ public class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel{
         this.BillingInfo = BillingInfo;
     }
 
+    /**
+     * Get 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境 
+     * @return Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
+     * @param Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public CreateOpenBankGlobalPaymentOrderRequest() {
     }
 
@@ -423,6 +461,9 @@ public class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel{
         if (source.BillingInfo != null) {
             this.BillingInfo = new OpenBankBillingInfo(source.BillingInfo);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -445,6 +486,7 @@ public class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "GoodsInfos.", this.GoodsInfos);
         this.setParamObj(map, prefix + "ShippingInfo.", this.ShippingInfo);
         this.setParamObj(map, prefix + "BillingInfo.", this.BillingInfo);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

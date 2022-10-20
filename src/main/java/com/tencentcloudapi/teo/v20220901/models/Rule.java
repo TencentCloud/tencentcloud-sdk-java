@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class Rule extends AbstractModel{
 
     /**
+    * 执行的功能。
+    */
+    @SerializedName("Actions")
+    @Expose
+    private Action [] Actions;
+
+    /**
     * 执行功能判断条件。
 注意：满足该数组内任意一项条件，功能即可执行。
     */
@@ -31,11 +38,27 @@ public class Rule extends AbstractModel{
     private RuleAndConditions [] Conditions;
 
     /**
-    * 执行的功能。
+    * 嵌套规则。
     */
-    @SerializedName("Actions")
+    @SerializedName("SubRules")
     @Expose
-    private Action [] Actions;
+    private SubRuleItem [] SubRules;
+
+    /**
+     * Get 执行的功能。 
+     * @return Actions 执行的功能。
+     */
+    public Action [] getActions() {
+        return this.Actions;
+    }
+
+    /**
+     * Set 执行的功能。
+     * @param Actions 执行的功能。
+     */
+    public void setActions(Action [] Actions) {
+        this.Actions = Actions;
+    }
 
     /**
      * Get 执行功能判断条件。
@@ -58,19 +81,19 @@ public class Rule extends AbstractModel{
     }
 
     /**
-     * Get 执行的功能。 
-     * @return Actions 执行的功能。
+     * Get 嵌套规则。 
+     * @return SubRules 嵌套规则。
      */
-    public Action [] getActions() {
-        return this.Actions;
+    public SubRuleItem [] getSubRules() {
+        return this.SubRules;
     }
 
     /**
-     * Set 执行的功能。
-     * @param Actions 执行的功能。
+     * Set 嵌套规则。
+     * @param SubRules 嵌套规则。
      */
-    public void setActions(Action [] Actions) {
-        this.Actions = Actions;
+    public void setSubRules(SubRuleItem [] SubRules) {
+        this.SubRules = SubRules;
     }
 
     public Rule() {
@@ -81,16 +104,22 @@ public class Rule extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Rule(Rule source) {
+        if (source.Actions != null) {
+            this.Actions = new Action[source.Actions.length];
+            for (int i = 0; i < source.Actions.length; i++) {
+                this.Actions[i] = new Action(source.Actions[i]);
+            }
+        }
         if (source.Conditions != null) {
             this.Conditions = new RuleAndConditions[source.Conditions.length];
             for (int i = 0; i < source.Conditions.length; i++) {
                 this.Conditions[i] = new RuleAndConditions(source.Conditions[i]);
             }
         }
-        if (source.Actions != null) {
-            this.Actions = new Action[source.Actions.length];
-            for (int i = 0; i < source.Actions.length; i++) {
-                this.Actions[i] = new Action(source.Actions[i]);
+        if (source.SubRules != null) {
+            this.SubRules = new SubRuleItem[source.SubRules.length];
+            for (int i = 0; i < source.SubRules.length; i++) {
+                this.SubRules[i] = new SubRuleItem(source.SubRules[i]);
             }
         }
     }
@@ -100,8 +129,9 @@ public class Rule extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         this.setParamArrayObj(map, prefix + "Actions.", this.Actions);
+        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+        this.setParamArrayObj(map, prefix + "SubRules.", this.SubRules);
 
     }
 }

@@ -145,6 +145,30 @@ public class File extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppID")
+    @Expose
+    private Long AppID;
+
+    /**
+    * 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
      * Get 文件 ID 
      * @return FileId 文件 ID
      */
@@ -440,6 +464,66 @@ public class File extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppID 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAppID() {
+        return this.AppID;
+    }
+
+    /**
+     * Set 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppID 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppID(Long AppID) {
+        this.AppID = AppID;
+    }
+
+    /**
+     * Get 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAccountUin 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAccountUin 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
     public File() {
     }
 
@@ -511,6 +595,15 @@ public class File extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.AppID != null) {
+            this.AppID = new Long(source.AppID);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
     }
 
 
@@ -534,6 +627,9 @@ public class File extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "AppID", this.AppID);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
 
     }
 }

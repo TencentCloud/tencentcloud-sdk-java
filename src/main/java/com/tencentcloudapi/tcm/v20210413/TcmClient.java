@@ -119,6 +119,26 @@ public class TcmClient extends AbstractClient{
     }
 
     /**
+     *关联集群
+     * @param req LinkClusterListRequest
+     * @return LinkClusterListResponse
+     * @throws TencentCloudSDKException
+     */
+    public LinkClusterListResponse LinkClusterList(LinkClusterListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<LinkClusterListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<LinkClusterListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "LinkClusterList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改网格
      * @param req ModifyMeshRequest
      * @return ModifyMeshResponse
@@ -131,6 +151,26 @@ public class TcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMeshResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMesh");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解关联集群
+     * @param req UnlinkClusterRequest
+     * @return UnlinkClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnlinkClusterResponse UnlinkCluster(UnlinkClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnlinkClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnlinkClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnlinkCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

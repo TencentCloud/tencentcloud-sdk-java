@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
+    * 用户信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
     * 模板ID
     */
     @SerializedName("TemplateId")
@@ -35,29 +42,6 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
-
-    /**
-    * 用户信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 应用信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
-    * 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
-    */
-    @SerializedName("CallbackUrl")
-    @Expose
-    private String CallbackUrl;
 
     /**
     * 最大可发起签署流程份数，默认5份 
@@ -84,9 +68,48 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
     * 限制二维码用户条件
     */
+    @SerializedName("Restrictions")
+    @Expose
+    private ApproverRestriction [] Restrictions;
+
+    /**
+    * 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
+    * 应用信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+    * 限制二维码用户条件（已弃用）
+    */
     @SerializedName("ApproverRestrictions")
     @Expose
     private ApproverRestriction ApproverRestrictions;
+
+    /**
+     * Get 用户信息 
+     * @return Operator 用户信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 用户信息
+     * @param Operator 用户信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
 
     /**
      * Get 模板ID 
@@ -118,62 +141,6 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
-    }
-
-    /**
-     * Get 用户信息 
-     * @return Operator 用户信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 用户信息
-     * @param Operator 用户信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
-     * Get 应用信息 
-     * @return Agent 应用信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用信息
-     * @param Agent 应用信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败 
-     * @return CallbackUrl 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
-     */
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
-    }
-
-    /**
-     * Set 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
-     * @param CallbackUrl 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
-     */
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
     }
 
     /**
@@ -230,15 +197,71 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
      * Get 限制二维码用户条件 
-     * @return ApproverRestrictions 限制二维码用户条件
+     * @return Restrictions 限制二维码用户条件
+     */
+    public ApproverRestriction [] getRestrictions() {
+        return this.Restrictions;
+    }
+
+    /**
+     * Set 限制二维码用户条件
+     * @param Restrictions 限制二维码用户条件
+     */
+    public void setRestrictions(ApproverRestriction [] Restrictions) {
+        this.Restrictions = Restrictions;
+    }
+
+    /**
+     * Get 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败 
+     * @return CallbackUrl 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     * @param CallbackUrl 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
+    /**
+     * Get 应用信息 
+     * @return Agent 应用信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用信息
+     * @param Agent 应用信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
+    /**
+     * Get 限制二维码用户条件（已弃用） 
+     * @return ApproverRestrictions 限制二维码用户条件（已弃用）
      */
     public ApproverRestriction getApproverRestrictions() {
         return this.ApproverRestrictions;
     }
 
     /**
-     * Set 限制二维码用户条件
-     * @param ApproverRestrictions 限制二维码用户条件
+     * Set 限制二维码用户条件（已弃用）
+     * @param ApproverRestrictions 限制二维码用户条件（已弃用）
      */
     public void setApproverRestrictions(ApproverRestriction ApproverRestrictions) {
         this.ApproverRestrictions = ApproverRestrictions;
@@ -252,20 +275,14 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateMultiFlowSignQRCodeRequest(CreateMultiFlowSignQRCodeRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
-        }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
         }
         if (source.MaxFlowNum != null) {
             this.MaxFlowNum = new Long(source.MaxFlowNum);
@@ -275,6 +292,18 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         }
         if (source.QrEffectiveDay != null) {
             this.QrEffectiveDay = new Long(source.QrEffectiveDay);
+        }
+        if (source.Restrictions != null) {
+            this.Restrictions = new ApproverRestriction[source.Restrictions.length];
+            for (int i = 0; i < source.Restrictions.length; i++) {
+                this.Restrictions[i] = new ApproverRestriction(source.Restrictions[i]);
+            }
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
         if (source.ApproverRestrictions != null) {
             this.ApproverRestrictions = new ApproverRestriction(source.ApproverRestrictions);
@@ -286,14 +315,15 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
         this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+        this.setParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
 
     }

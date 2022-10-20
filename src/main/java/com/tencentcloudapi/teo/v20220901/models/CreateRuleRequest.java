@@ -53,6 +53,13 @@ public class CreateRuleRequest extends AbstractModel{
     private Rule [] Rules;
 
     /**
+    * 规则标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -124,6 +131,22 @@ public class CreateRuleRequest extends AbstractModel{
         this.Rules = Rules;
     }
 
+    /**
+     * Get 规则标签。 
+     * @return Tags 规则标签。
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 规则标签。
+     * @param Tags 规则标签。
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateRuleRequest() {
     }
 
@@ -147,6 +170,12 @@ public class CreateRuleRequest extends AbstractModel{
                 this.Rules[i] = new Rule(source.Rules[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -158,6 +187,7 @@ public class CreateRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }
 }

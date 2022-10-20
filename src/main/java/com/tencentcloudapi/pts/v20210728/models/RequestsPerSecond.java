@@ -71,6 +71,14 @@ public class RequestsPerSecond extends AbstractModel{
     private Long TargetRequestsPerSecond;
 
     /**
+    * 优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GracefulStopSeconds")
+    @Expose
+    private Long GracefulStopSeconds;
+
+    /**
      * Get 最大RPS
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxRequestsPerSecond 最大RPS
@@ -190,6 +198,26 @@ public class RequestsPerSecond extends AbstractModel{
         this.TargetRequestsPerSecond = TargetRequestsPerSecond;
     }
 
+    /**
+     * Get 优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GracefulStopSeconds 优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGracefulStopSeconds() {
+        return this.GracefulStopSeconds;
+    }
+
+    /**
+     * Set 优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GracefulStopSeconds 优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGracefulStopSeconds(Long GracefulStopSeconds) {
+        this.GracefulStopSeconds = GracefulStopSeconds;
+    }
+
     public RequestsPerSecond() {
     }
 
@@ -216,6 +244,9 @@ public class RequestsPerSecond extends AbstractModel{
         if (source.TargetRequestsPerSecond != null) {
             this.TargetRequestsPerSecond = new Long(source.TargetRequestsPerSecond);
         }
+        if (source.GracefulStopSeconds != null) {
+            this.GracefulStopSeconds = new Long(source.GracefulStopSeconds);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class RequestsPerSecond extends AbstractModel{
         this.setParamSimple(map, prefix + "Resources", this.Resources);
         this.setParamSimple(map, prefix + "StartRequestsPerSecond", this.StartRequestsPerSecond);
         this.setParamSimple(map, prefix + "TargetRequestsPerSecond", this.TargetRequestsPerSecond);
+        this.setParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
 
     }
 }

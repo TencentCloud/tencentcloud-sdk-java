@@ -63,7 +63,7 @@ public class TraceData extends AbstractModel{
     private Long Rank;
 
     /**
-    * 溯源阶段 0:商品 1:通用 2:物流
+    * 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phase")
@@ -71,7 +71,7 @@ public class TraceData extends AbstractModel{
     private Long Phase;
 
     /**
-    * 环节名称
+    * 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhaseName")
@@ -79,7 +79,7 @@ public class TraceData extends AbstractModel{
     private String PhaseName;
 
     /**
-    * 时间
+    * 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceTime")
@@ -243,9 +243,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 溯源阶段 0:商品 1:通用 2:物流
+     * Get 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Phase 溯源阶段 0:商品 1:通用 2:物流
+     * @return Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhase() {
@@ -253,9 +253,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 溯源阶段 0:商品 1:通用 2:物流
+     * Set 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Phase 溯源阶段 0:商品 1:通用 2:物流
+     * @param Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhase(Long Phase) {
@@ -263,9 +263,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 环节名称
+     * Get 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhaseName 环节名称
+     * @return PhaseName 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhaseName() {
@@ -273,9 +273,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 环节名称
+     * Set 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhaseName 环节名称
+     * @param PhaseName 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhaseName(String PhaseName) {
@@ -283,9 +283,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 时间
+     * Get 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TraceTime 时间
+     * @return TraceTime 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTraceTime() {
@@ -293,9 +293,9 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Set 时间
+     * Set 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TraceTime 时间
+     * @param TraceTime 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceTime(String TraceTime) {

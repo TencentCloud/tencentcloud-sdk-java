@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class RunPrometheusInstanceRequest extends AbstractModel{
 
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化 
+     * @return SubnetId 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+     * @param SubnetId 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public RunPrometheusInstanceRequest() {
     }
 
@@ -30,6 +76,12 @@ public class RunPrometheusInstanceRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RunPrometheusInstanceRequest(RunPrometheusInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class RunPrometheusInstanceRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

@@ -37,7 +37,7 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
     private FlowInfo [] FlowInfos;
 
     /**
-    * 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+    * 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
     */
     @SerializedName("NeedPreview")
@@ -84,9 +84,9 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * Get 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒； 
-     * @return NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * @return NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
      */
     public Boolean getNeedPreview() {
@@ -94,9 +94,9 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Set 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * Set 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
-     * @param NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * @param NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
      */
     public void setNeedPreview(Boolean NeedPreview) {

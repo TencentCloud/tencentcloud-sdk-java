@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribePrometheusInstanceInitStatusRequest extends AbstractModel{
 
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DescribePrometheusInstanceInitStatusRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribePrometheusInstanceInitStatusRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusInstanceInitStatusRequest(DescribePrometheusInstanceInitStatusRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribePrometheusInstanceInitStatusRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

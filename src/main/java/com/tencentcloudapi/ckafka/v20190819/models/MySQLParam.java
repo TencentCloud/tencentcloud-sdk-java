@@ -184,6 +184,13 @@ public class MySQLParam extends AbstractModel{
     private Boolean RecordWithSchema;
 
     /**
+    * 存放信令表的数据库名称
+    */
+    @SerializedName("SignalDatabase")
+    @Expose
+    private String SignalDatabase;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -551,6 +558,22 @@ public class MySQLParam extends AbstractModel{
         this.RecordWithSchema = RecordWithSchema;
     }
 
+    /**
+     * Get 存放信令表的数据库名称 
+     * @return SignalDatabase 存放信令表的数据库名称
+     */
+    public String getSignalDatabase() {
+        return this.SignalDatabase;
+    }
+
+    /**
+     * Set 存放信令表的数据库名称
+     * @param SignalDatabase 存放信令表的数据库名称
+     */
+    public void setSignalDatabase(String SignalDatabase) {
+        this.SignalDatabase = SignalDatabase;
+    }
+
     public MySQLParam() {
     }
 
@@ -631,6 +654,9 @@ public class MySQLParam extends AbstractModel{
         if (source.RecordWithSchema != null) {
             this.RecordWithSchema = new Boolean(source.RecordWithSchema);
         }
+        if (source.SignalDatabase != null) {
+            this.SignalDatabase = new String(source.SignalDatabase);
+        }
     }
 
 
@@ -661,6 +687,7 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "IncludeContentChanges", this.IncludeContentChanges);
         this.setParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
         this.setParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
+        this.setParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
 
     }
 }

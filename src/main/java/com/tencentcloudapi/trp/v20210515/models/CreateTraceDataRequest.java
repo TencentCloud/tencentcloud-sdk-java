@@ -44,7 +44,7 @@ public class CreateTraceDataRequest extends AbstractModel{
     private String TaskId;
 
     /**
-    * 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+    * 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
     */
     @SerializedName("Phase")
     @Expose
@@ -148,16 +148,16 @@ public class CreateTraceDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源 
-     * @return Phase 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+     * Get 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源 
+     * @return Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      */
     public Long getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
-     * @param Phase 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+     * Set 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
+     * @param Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      */
     public void setPhase(Long Phase) {
         this.Phase = Phase;

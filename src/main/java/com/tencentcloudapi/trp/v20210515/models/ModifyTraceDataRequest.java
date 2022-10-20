@@ -79,7 +79,7 @@ public class ModifyTraceDataRequest extends AbstractModel{
     private Long Rank;
 
     /**
-    * [无效] 溯源阶段 0:商品 1:通用 2:物流
+    * [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
     */
     @SerializedName("Phase")
     @Expose
@@ -270,16 +270,16 @@ public class ModifyTraceDataRequest extends AbstractModel{
     }
 
     /**
-     * Get [无效] 溯源阶段 0:商品 1:通用 2:物流 
-     * @return Phase [无效] 溯源阶段 0:商品 1:通用 2:物流
+     * Get [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源 
+     * @return Phase [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      */
     public Long getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set [无效] 溯源阶段 0:商品 1:通用 2:物流
-     * @param Phase [无效] 溯源阶段 0:商品 1:通用 2:物流
+     * Set [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
+     * @param Phase [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      */
     public void setPhase(Long Phase) {
         this.Phase = Phase;

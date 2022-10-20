@@ -165,6 +165,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *资源管理需要先将资源上传到cos中，然后调用该接口，将cos资源绑定到wedata
+     * @param req CreateOrUpdateResourceRequest
+     * @return CreateOrUpdateResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrUpdateResourceResponse CreateOrUpdateResource(CreateOrUpdateResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrUpdateResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrUpdateResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrUpdateResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建任务
      * @param req CreateTaskRequest
@@ -261,6 +281,26 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteFolderResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteFolder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *资源管理删除资源
+     * @param req DeleteResourceRequest
+     * @return DeleteResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceResponse DeleteResource(DeleteResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteResource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -529,6 +569,26 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRelatedInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRelatedInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资源管理目录树
+     * @param req DescribeResourceManagePathTreesRequest
+     * @return DescribeResourceManagePathTreesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(DescribeResourceManagePathTreesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceManagePathTreesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceManagePathTreesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceManagePathTrees");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

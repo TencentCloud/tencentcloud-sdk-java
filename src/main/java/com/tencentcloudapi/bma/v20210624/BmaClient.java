@@ -180,6 +180,26 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *新建过程取证码
+     * @param req CreateCRDesktopCodeRequest
+     * @return CreateCRDesktopCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCRDesktopCodeResponse CreateCRDesktopCode(CreateCRDesktopCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCRDesktopCodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCRDesktopCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCRDesktopCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *版权保护-新建取证接口
      * @param req CreateCRObtainRequest
      * @return CreateCRObtainResponse
