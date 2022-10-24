@@ -135,6 +135,20 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
+    * 告警分级通知规则配置
+    */
+    @SerializedName("HierarchicalNotices")
+    @Expose
+    private AlarmHierarchicalNotice [] HierarchicalNotices;
+
+    /**
+    * 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+    */
+    @SerializedName("MigrateFlag")
+    @Expose
+    private Long MigrateFlag;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -390,6 +404,38 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.LogAlarmReqInfo = LogAlarmReqInfo;
     }
 
+    /**
+     * Get 告警分级通知规则配置 
+     * @return HierarchicalNotices 告警分级通知规则配置
+     */
+    public AlarmHierarchicalNotice [] getHierarchicalNotices() {
+        return this.HierarchicalNotices;
+    }
+
+    /**
+     * Set 告警分级通知规则配置
+     * @param HierarchicalNotices 告警分级通知规则配置
+     */
+    public void setHierarchicalNotices(AlarmHierarchicalNotice [] HierarchicalNotices) {
+        this.HierarchicalNotices = HierarchicalNotices;
+    }
+
+    /**
+     * Get 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑 
+     * @return MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+     */
+    public Long getMigrateFlag() {
+        return this.MigrateFlag;
+    }
+
+    /**
+     * Set 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+     * @param MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+     */
+    public void setMigrateFlag(Long MigrateFlag) {
+        this.MigrateFlag = MigrateFlag;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -458,6 +504,15 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         if (source.LogAlarmReqInfo != null) {
             this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
         }
+        if (source.HierarchicalNotices != null) {
+            this.HierarchicalNotices = new AlarmHierarchicalNotice[source.HierarchicalNotices.length];
+            for (int i = 0; i < source.HierarchicalNotices.length; i++) {
+                this.HierarchicalNotices[i] = new AlarmHierarchicalNotice(source.HierarchicalNotices[i]);
+            }
+        }
+        if (source.MigrateFlag != null) {
+            this.MigrateFlag = new Long(source.MigrateFlag);
+        }
     }
 
 
@@ -481,6 +536,8 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+        this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
+        this.setParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
 
     }
 }

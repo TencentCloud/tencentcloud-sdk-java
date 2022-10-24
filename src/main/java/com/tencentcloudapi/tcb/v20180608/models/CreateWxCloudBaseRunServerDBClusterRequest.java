@@ -51,6 +51,15 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
     private String DbVersion;
 
     /**
+    * 0: 非大小写敏感
+1: 大小写敏感
+默认 0
+    */
+    @SerializedName("LowerCaseTableName")
+    @Expose
+    private String LowerCaseTableName;
+
+    /**
      * Get 账户密码 
      * @return AccountPassword 账户密码
      */
@@ -114,6 +123,30 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         this.DbVersion = DbVersion;
     }
 
+    /**
+     * Get 0: 非大小写敏感
+1: 大小写敏感
+默认 0 
+     * @return LowerCaseTableName 0: 非大小写敏感
+1: 大小写敏感
+默认 0
+     */
+    public String getLowerCaseTableName() {
+        return this.LowerCaseTableName;
+    }
+
+    /**
+     * Set 0: 非大小写敏感
+1: 大小写敏感
+默认 0
+     * @param LowerCaseTableName 0: 非大小写敏感
+1: 大小写敏感
+默认 0
+     */
+    public void setLowerCaseTableName(String LowerCaseTableName) {
+        this.LowerCaseTableName = LowerCaseTableName;
+    }
+
     public CreateWxCloudBaseRunServerDBClusterRequest() {
     }
 
@@ -134,6 +167,9 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         if (source.DbVersion != null) {
             this.DbVersion = new String(source.DbVersion);
         }
+        if (source.LowerCaseTableName != null) {
+            this.LowerCaseTableName = new String(source.LowerCaseTableName);
+        }
     }
 
 
@@ -145,6 +181,7 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
+        this.setParamSimple(map, prefix + "LowerCaseTableName", this.LowerCaseTableName);
 
     }
 }

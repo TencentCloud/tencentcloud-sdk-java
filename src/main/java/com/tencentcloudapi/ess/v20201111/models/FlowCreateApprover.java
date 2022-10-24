@@ -99,7 +99,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Boolean IsFullText;
 
     /**
-    * 签署前置条件：阅读时长限制，默认为不需要
+    * 签署前置条件：阅读时长限制，单位秒，默认为不需要
     */
     @SerializedName("PreReadTime")
     @Expose
@@ -325,16 +325,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署前置条件：阅读时长限制，默认为不需要 
-     * @return PreReadTime 签署前置条件：阅读时长限制，默认为不需要
+     * Get 签署前置条件：阅读时长限制，单位秒，默认为不需要 
+     * @return PreReadTime 签署前置条件：阅读时长限制，单位秒，默认为不需要
      */
     public Long getPreReadTime() {
         return this.PreReadTime;
     }
 
     /**
-     * Set 签署前置条件：阅读时长限制，默认为不需要
-     * @param PreReadTime 签署前置条件：阅读时长限制，默认为不需要
+     * Set 签署前置条件：阅读时长限制，单位秒，默认为不需要
+     * @param PreReadTime 签署前置条件：阅读时长限制，单位秒，默认为不需要
      */
     public void setPreReadTime(Long PreReadTime) {
         this.PreReadTime = PreReadTime;

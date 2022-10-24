@@ -115,6 +115,13 @@ public class Mesh extends AbstractModel{
     private MeshStatus Status;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get Mesh实例Id 
      * @return MeshId Mesh实例Id
      */
@@ -350,6 +357,22 @@ public class Mesh extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 标签列表 
+     * @return TagList 标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+     * @param TagList 标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public Mesh() {
     }
 
@@ -394,6 +417,12 @@ public class Mesh extends AbstractModel{
         if (source.Status != null) {
             this.Status = new MeshStatus(source.Status);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -412,6 +441,7 @@ public class Mesh extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "Status.", this.Status);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

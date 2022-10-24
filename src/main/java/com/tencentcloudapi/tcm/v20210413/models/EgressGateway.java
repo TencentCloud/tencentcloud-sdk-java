@@ -44,6 +44,13 @@ public class EgressGateway extends AbstractModel{
     private WorkloadConfig Workload;
 
     /**
+    * 工作负载的状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private EgressGatewayStatus Status;
+
+    /**
      * Get Egress名称 
      * @return Name Egress名称
      */
@@ -91,6 +98,22 @@ public class EgressGateway extends AbstractModel{
         this.Workload = Workload;
     }
 
+    /**
+     * Get 工作负载的状态 
+     * @return Status 工作负载的状态
+     */
+    public EgressGatewayStatus getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 工作负载的状态
+     * @param Status 工作负载的状态
+     */
+    public void setStatus(EgressGatewayStatus Status) {
+        this.Status = Status;
+    }
+
     public EgressGateway() {
     }
 
@@ -108,6 +131,9 @@ public class EgressGateway extends AbstractModel{
         if (source.Workload != null) {
             this.Workload = new WorkloadConfig(source.Workload);
         }
+        if (source.Status != null) {
+            this.Status = new EgressGatewayStatus(source.Status);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class EgressGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamObj(map, prefix + "Workload.", this.Workload);
+        this.setParamObj(map, prefix + "Status.", this.Status);
 
     }
 }

@@ -99,6 +99,48 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *新增安全合规忽略(资产+检测项列表)列表，不显示指定的检查项包含的资产内容
+参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+     * @param req AddComplianceAssetPolicySetToWhitelistRequest
+     * @return AddComplianceAssetPolicySetToWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddComplianceAssetPolicySetToWhitelistResponse AddComplianceAssetPolicySetToWhitelist(AddComplianceAssetPolicySetToWhitelistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddComplianceAssetPolicySetToWhitelistResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddComplianceAssetPolicySetToWhitelistResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddComplianceAssetPolicySetToWhitelist");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+     * @param req AddCompliancePolicyAssetSetToWhitelistRequest
+     * @return AddCompliancePolicyAssetSetToWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCompliancePolicyAssetSetToWhitelistResponse AddCompliancePolicyAssetSetToWhitelist(AddCompliancePolicyAssetSetToWhitelistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCompliancePolicyAssetSetToWhitelistResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCompliancePolicyAssetSetToWhitelistResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddCompliancePolicyAssetSetToWhitelist");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将指定的检测项添加到白名单中，不显示未通过结果。
      * @param req AddCompliancePolicyItemToWhitelistRequest
      * @return AddCompliancePolicyItemToWhitelistResponse
@@ -1091,6 +1133,47 @@ public class TcssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAccessControlRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAccessControlRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *移除安全合规忽略(资产+检测项)列表，不显示指定的检查项包含的资产内容
+参考的AddCompliancePolicyAssetSetToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+     * @param req DeleteComplianceAssetPolicySetFromWhitelistRequest
+     * @return DeleteComplianceAssetPolicySetFromWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelist(DeleteComplianceAssetPolicySetFromWhitelistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteComplianceAssetPolicySetFromWhitelistResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteComplianceAssetPolicySetFromWhitelistResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteComplianceAssetPolicySetFromWhitelist");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+     * @param req DeleteCompliancePolicyAssetSetFromWhitelistRequest
+     * @return DeleteCompliancePolicyAssetSetFromWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelist(DeleteCompliancePolicyAssetSetFromWhitelistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCompliancePolicyAssetSetFromWhitelistResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCompliancePolicyAssetSetFromWhitelistResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCompliancePolicyAssetSetFromWhitelist");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3171,6 +3254,26 @@ public class TcssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeImageComponentListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeImageComponentList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户镜像仓库下的项目名称列表
+     * @param req DescribeImageRegistryNamespaceListRequest
+     * @return DescribeImageRegistryNamespaceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(DescribeImageRegistryNamespaceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageRegistryNamespaceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageRegistryNamespaceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageRegistryNamespaceList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -62,6 +62,30 @@ abnormal = 异常
     private Label [] ExternalLabels;
 
     /**
+    * 集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 集群所在VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 记录关联等操作的失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailedReason")
+    @Expose
+    private String FailedReason;
+
+    /**
      * Get 集群类型 
      * @return ClusterType 集群类型
      */
@@ -157,6 +181,66 @@ abnormal = 异常
         this.ExternalLabels = ExternalLabels;
     }
 
+    /**
+     * Get 集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 集群所在VPC ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 集群所在VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 集群所在VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 集群所在VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 记录关联等操作的失败信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailedReason 记录关联等操作的失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailedReason() {
+        return this.FailedReason;
+    }
+
+    /**
+     * Set 记录关联等操作的失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailedReason 记录关联等操作的失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailedReason(String FailedReason) {
+        this.FailedReason = FailedReason;
+    }
+
     public PrometheusAgentOverview() {
     }
 
@@ -183,6 +267,15 @@ abnormal = 异常
                 this.ExternalLabels[i] = new Label(source.ExternalLabels[i]);
             }
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.FailedReason != null) {
+            this.FailedReason = new String(source.FailedReason);
+        }
     }
 
 
@@ -195,6 +288,9 @@ abnormal = 异常
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
 
     }
 }

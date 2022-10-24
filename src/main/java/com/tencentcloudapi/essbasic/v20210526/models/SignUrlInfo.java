@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SignUrlInfo extends AbstractModel{
 
     /**
-    * 签署链接
+    * 签署链接，过期时间为30天
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignUrl")
@@ -31,7 +31,7 @@ public class SignUrlInfo extends AbstractModel{
     private String SignUrl;
 
     /**
-    * 链接失效时间,默认30分钟
+    * 合同过期时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deadline")
@@ -129,9 +129,9 @@ PERSON 自然人
     private String FlowGroupId;
 
     /**
-     * Get 签署链接
+     * Get 签署链接，过期时间为30天
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SignUrl 签署链接
+     * @return SignUrl 签署链接，过期时间为30天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignUrl() {
@@ -139,9 +139,9 @@ PERSON 自然人
     }
 
     /**
-     * Set 签署链接
+     * Set 签署链接，过期时间为30天
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SignUrl 签署链接
+     * @param SignUrl 签署链接，过期时间为30天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignUrl(String SignUrl) {
@@ -149,9 +149,9 @@ PERSON 自然人
     }
 
     /**
-     * Get 链接失效时间,默认30分钟
+     * Get 合同过期时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Deadline 链接失效时间,默认30分钟
+     * @return Deadline 合同过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadline() {
@@ -159,9 +159,9 @@ PERSON 自然人
     }
 
     /**
-     * Set 链接失效时间,默认30分钟
+     * Set 合同过期时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Deadline 链接失效时间,默认30分钟
+     * @param Deadline 合同过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadline(Long Deadline) {

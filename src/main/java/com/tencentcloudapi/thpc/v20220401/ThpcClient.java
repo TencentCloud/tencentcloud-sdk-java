@@ -158,4 +158,24 @@ public class ThpcClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
+     * @param req SetAutoScalingConfigurationRequest
+     * @return SetAutoScalingConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(SetAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetAutoScalingConfigurationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetAutoScalingConfigurationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetAutoScalingConfiguration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

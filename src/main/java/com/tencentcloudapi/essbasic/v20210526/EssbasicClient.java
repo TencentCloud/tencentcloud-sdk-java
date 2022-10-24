@@ -501,7 +501,7 @@ public class EssbasicClient extends AbstractClient{
     /**
      *该接口 (PrepareFlows) 用于创建待发起文件
 用户通过该接口进入签署流程发起的确认页面，进行发起信息二次确认， 如果确认则进行正常发起。
-目前该接口只支持B2C，不建议使用。
+目前该接口只支持B2C，不建议使用，将会废弃。
      * @param req PrepareFlowsRequest
      * @return PrepareFlowsResponse
      * @throws TencentCloudSDKException
