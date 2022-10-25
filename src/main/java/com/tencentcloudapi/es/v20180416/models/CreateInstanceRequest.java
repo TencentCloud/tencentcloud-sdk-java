@@ -255,6 +255,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Boolean EnableHybridStorage;
 
     /**
+    * 是否开启essd 增强型云盘
+    */
+    @SerializedName("DiskEnhance")
+    @Expose
+    private Long DiskEnhance;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -798,6 +805,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.EnableHybridStorage = EnableHybridStorage;
     }
 
+    /**
+     * Get 是否开启essd 增强型云盘 
+     * @return DiskEnhance 是否开启essd 增强型云盘
+     */
+    public Long getDiskEnhance() {
+        return this.DiskEnhance;
+    }
+
+    /**
+     * Set 是否开启essd 增强型云盘
+     * @param DiskEnhance 是否开启essd 增强型云盘
+     */
+    public void setDiskEnhance(Long DiskEnhance) {
+        this.DiskEnhance = DiskEnhance;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -914,6 +937,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.EnableHybridStorage != null) {
             this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
         }
+        if (source.DiskEnhance != null) {
+            this.DiskEnhance = new Long(source.DiskEnhance);
+        }
     }
 
 
@@ -953,6 +979,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+        this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
 
     }
 }

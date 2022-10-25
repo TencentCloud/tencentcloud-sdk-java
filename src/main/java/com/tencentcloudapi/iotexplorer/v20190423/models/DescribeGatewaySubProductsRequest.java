@@ -51,6 +51,13 @@ public class DescribeGatewaySubProductsRequest extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 是否跨账号产品
+    */
+    @SerializedName("ProductSource")
+    @Expose
+    private Long ProductSource;
+
+    /**
      * Get 网关产品ID 
      * @return GatewayProductId 网关产品ID
      */
@@ -114,6 +121,22 @@ public class DescribeGatewaySubProductsRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否跨账号产品 
+     * @return ProductSource 是否跨账号产品
+     */
+    public Long getProductSource() {
+        return this.ProductSource;
+    }
+
+    /**
+     * Set 是否跨账号产品
+     * @param ProductSource 是否跨账号产品
+     */
+    public void setProductSource(Long ProductSource) {
+        this.ProductSource = ProductSource;
+    }
+
     public DescribeGatewaySubProductsRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeGatewaySubProductsRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.ProductSource != null) {
+            this.ProductSource = new Long(source.ProductSource);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeGatewaySubProductsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProductSource", this.ProductSource);
 
     }
 }

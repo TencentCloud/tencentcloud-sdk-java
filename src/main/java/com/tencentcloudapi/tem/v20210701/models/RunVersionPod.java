@@ -98,6 +98,54 @@ public class RunVersionPod extends AbstractModel{
     private String ContainerState;
 
     /**
+    * 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeInfo")
+    @Expose
+    private NodeInfo NodeInfo;
+
+    /**
+    * 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Unhealthy")
+    @Expose
+    private Boolean Unhealthy;
+
+    /**
+    * 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnhealthyWarningMsg")
+    @Expose
+    private String UnhealthyWarningMsg;
+
+    /**
+    * 版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
+
+    /**
+    * 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
      * Get shell地址 
      * @return Webshell shell地址
      */
@@ -277,6 +325,126 @@ public class RunVersionPod extends AbstractModel{
         this.ContainerState = ContainerState;
     }
 
+    /**
+     * Get 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeInfo 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NodeInfo getNodeInfo() {
+        return this.NodeInfo;
+    }
+
+    /**
+     * Set 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeInfo 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeInfo(NodeInfo NodeInfo) {
+        this.NodeInfo = NodeInfo;
+    }
+
+    /**
+     * Get 启动时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 是否健康
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Unhealthy 是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUnhealthy() {
+        return this.Unhealthy;
+    }
+
+    /**
+     * Set 是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Unhealthy 是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnhealthy(Boolean Unhealthy) {
+        this.Unhealthy = Unhealthy;
+    }
+
+    /**
+     * Get 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnhealthyWarningMsg 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnhealthyWarningMsg() {
+        return this.UnhealthyWarningMsg;
+    }
+
+    /**
+     * Set 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnhealthyWarningMsg 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnhealthyWarningMsg(String UnhealthyWarningMsg) {
+        this.UnhealthyWarningMsg = UnhealthyWarningMsg;
+    }
+
+    /**
+     * Get 版本ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionId 版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set 版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionId 版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
+    }
+
+    /**
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
     public RunVersionPod() {
     }
 
@@ -315,6 +483,24 @@ public class RunVersionPod extends AbstractModel{
         if (source.ContainerState != null) {
             this.ContainerState = new String(source.ContainerState);
         }
+        if (source.NodeInfo != null) {
+            this.NodeInfo = new NodeInfo(source.NodeInfo);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Unhealthy != null) {
+            this.Unhealthy = new Boolean(source.Unhealthy);
+        }
+        if (source.UnhealthyWarningMsg != null) {
+            this.UnhealthyWarningMsg = new String(source.UnhealthyWarningMsg);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
     }
 
 
@@ -332,6 +518,12 @@ public class RunVersionPod extends AbstractModel{
         this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
         this.setParamSimple(map, prefix + "Ready", this.Ready);
         this.setParamSimple(map, prefix + "ContainerState", this.ContainerState);
+        this.setParamObj(map, prefix + "NodeInfo.", this.NodeInfo);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Unhealthy", this.Unhealthy);
+        this.setParamSimple(map, prefix + "UnhealthyWarningMsg", this.UnhealthyWarningMsg);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
 
     }
 }

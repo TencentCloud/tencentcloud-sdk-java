@@ -130,6 +130,54 @@ public class ServiceVersionBrief extends AbstractModel{
     private Boolean UnderDeploying;
 
     /**
+    * 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BatchDeployStatus")
+    @Expose
+    private String BatchDeployStatus;
+
+    /**
+    * 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeInfos")
+    @Expose
+    private NodeInfo [] NodeInfos;
+
+    /**
+    * 实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodList")
+    @Expose
+    private DescribeRunPodPage PodList;
+
+    /**
+    * 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkloadInfo")
+    @Expose
+    private WorkloadInfo WorkloadInfo;
+
+    /**
+    * 创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateDate")
+    @Expose
+    private String CreateDate;
+
+    /**
      * Get 版本名称 
      * @return VersionName 版本名称
      */
@@ -389,6 +437,126 @@ public class ServiceVersionBrief extends AbstractModel{
         this.UnderDeploying = UnderDeploying;
     }
 
+    /**
+     * Get 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BatchDeployStatus 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBatchDeployStatus() {
+        return this.BatchDeployStatus;
+    }
+
+    /**
+     * Set 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BatchDeployStatus 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBatchDeployStatus(String BatchDeployStatus) {
+        this.BatchDeployStatus = BatchDeployStatus;
+    }
+
+    /**
+     * Get 可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zones 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zones 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get 节点信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeInfos 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NodeInfo [] getNodeInfos() {
+        return this.NodeInfos;
+    }
+
+    /**
+     * Set 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeInfos 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeInfos(NodeInfo [] NodeInfos) {
+        this.NodeInfos = NodeInfos;
+    }
+
+    /**
+     * Get 实例信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodList 实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeRunPodPage getPodList() {
+        return this.PodList;
+    }
+
+    /**
+     * Set 实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodList 实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodList(DescribeRunPodPage PodList) {
+        this.PodList = PodList;
+    }
+
+    /**
+     * Get 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkloadInfo 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkloadInfo getWorkloadInfo() {
+        return this.WorkloadInfo;
+    }
+
+    /**
+     * Set 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkloadInfo 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkloadInfo(WorkloadInfo WorkloadInfo) {
+        this.WorkloadInfo = WorkloadInfo;
+    }
+
+    /**
+     * Get 创建日期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateDate 创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateDate() {
+        return this.CreateDate;
+    }
+
+    /**
+     * Set 创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateDate 创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateDate(String CreateDate) {
+        this.CreateDate = CreateDate;
+    }
+
     public ServiceVersionBrief() {
     }
 
@@ -439,6 +607,30 @@ public class ServiceVersionBrief extends AbstractModel{
         if (source.UnderDeploying != null) {
             this.UnderDeploying = new Boolean(source.UnderDeploying);
         }
+        if (source.BatchDeployStatus != null) {
+            this.BatchDeployStatus = new String(source.BatchDeployStatus);
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.NodeInfos != null) {
+            this.NodeInfos = new NodeInfo[source.NodeInfos.length];
+            for (int i = 0; i < source.NodeInfos.length; i++) {
+                this.NodeInfos[i] = new NodeInfo(source.NodeInfos[i]);
+            }
+        }
+        if (source.PodList != null) {
+            this.PodList = new DescribeRunPodPage(source.PodList);
+        }
+        if (source.WorkloadInfo != null) {
+            this.WorkloadInfo = new WorkloadInfo(source.WorkloadInfo);
+        }
+        if (source.CreateDate != null) {
+            this.CreateDate = new String(source.CreateDate);
+        }
     }
 
 
@@ -460,6 +652,12 @@ public class ServiceVersionBrief extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "UnderDeploying", this.UnderDeploying);
+        this.setParamSimple(map, prefix + "BatchDeployStatus", this.BatchDeployStatus);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamArrayObj(map, prefix + "NodeInfos.", this.NodeInfos);
+        this.setParamObj(map, prefix + "PodList.", this.PodList);
+        this.setParamObj(map, prefix + "WorkloadInfo.", this.WorkloadInfo);
+        this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);
 
     }
 }

@@ -72,6 +72,27 @@ public class ApplyOpenBankSettleOrderRequest extends AbstractModel{
     private String NotifyUrl;
 
     /**
+    * 附言
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 结算第三方渠道扩展信息。通联国际必选
+    */
+    @SerializedName("ExternalSettleData")
+    @Expose
+    private String ExternalSettleData;
+
+    /**
+    * 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 渠道商户号 
      * @return ChannelMerchantId 渠道商户号
      */
@@ -183,6 +204,54 @@ public class ApplyOpenBankSettleOrderRequest extends AbstractModel{
         this.NotifyUrl = NotifyUrl;
     }
 
+    /**
+     * Get 附言 
+     * @return Remark 附言
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 附言
+     * @param Remark 附言
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 结算第三方渠道扩展信息。通联国际必选 
+     * @return ExternalSettleData 结算第三方渠道扩展信息。通联国际必选
+     */
+    public String getExternalSettleData() {
+        return this.ExternalSettleData;
+    }
+
+    /**
+     * Set 结算第三方渠道扩展信息。通联国际必选
+     * @param ExternalSettleData 结算第三方渠道扩展信息。通联国际必选
+     */
+    public void setExternalSettleData(String ExternalSettleData) {
+        this.ExternalSettleData = ExternalSettleData;
+    }
+
+    /**
+     * Get 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境 
+     * @return Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     * @param Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public ApplyOpenBankSettleOrderRequest() {
     }
 
@@ -212,6 +281,15 @@ public class ApplyOpenBankSettleOrderRequest extends AbstractModel{
         if (source.NotifyUrl != null) {
             this.NotifyUrl = new String(source.NotifyUrl);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ExternalSettleData != null) {
+            this.ExternalSettleData = new String(source.ExternalSettleData);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -226,6 +304,9 @@ public class ApplyOpenBankSettleOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
         this.setParamSimple(map, prefix + "SettleDetail", this.SettleDetail);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "ExternalSettleData", this.ExternalSettleData);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

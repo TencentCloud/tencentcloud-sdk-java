@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeCdnDomainLogsResponse extends AbstractModel{
 
     /**
-    * 日志包下载链接
+    * 日志包下载链接。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
     */
     @SerializedName("DomainLogs")
     @Expose
@@ -44,16 +45,20 @@ public class DescribeCdnDomainLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 日志包下载链接 
-     * @return DomainLogs 日志包下载链接
+     * Get 日志包下载链接。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。 
+     * @return DomainLogs 日志包下载链接。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
      */
     public DomainLog [] getDomainLogs() {
         return this.DomainLogs;
     }
 
     /**
-     * Set 日志包下载链接
-     * @param DomainLogs 日志包下载链接
+     * Set 日志包下载链接。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
+     * @param DomainLogs 日志包下载链接。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
      */
     public void setDomainLogs(DomainLog [] DomainLogs) {
         this.DomainLogs = DomainLogs;

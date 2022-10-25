@@ -186,6 +186,30 @@ bank：网银
     private String ChannelExternalOrderId;
 
     /**
+    * 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SettleCheck")
+    @Expose
+    private Long SettleCheck;
+
+    /**
+    * 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelExternalUserInfoList")
+    @Expose
+    private OldChannelExternalUserInfo [] ChannelExternalUserInfoList;
+
+    /**
+    * 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachmentInfoList")
+    @Expose
+    private OldAttachmentInfo [] AttachmentInfoList;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -573,6 +597,66 @@ bank：网银
         this.ChannelExternalOrderId = ChannelExternalOrderId;
     }
 
+    /**
+     * Get 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SettleCheck 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSettleCheck() {
+        return this.SettleCheck;
+    }
+
+    /**
+     * Set 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SettleCheck 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSettleCheck(Long SettleCheck) {
+        this.SettleCheck = SettleCheck;
+    }
+
+    /**
+     * Get 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelExternalUserInfoList 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OldChannelExternalUserInfo [] getChannelExternalUserInfoList() {
+        return this.ChannelExternalUserInfoList;
+    }
+
+    /**
+     * Set 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelExternalUserInfoList 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelExternalUserInfoList(OldChannelExternalUserInfo [] ChannelExternalUserInfoList) {
+        this.ChannelExternalUserInfoList = ChannelExternalUserInfoList;
+    }
+
+    /**
+     * Get 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachmentInfoList 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OldAttachmentInfo [] getAttachmentInfoList() {
+        return this.AttachmentInfoList;
+    }
+
+    /**
+     * Set 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachmentInfoList 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachmentInfoList(OldAttachmentInfo [] AttachmentInfoList) {
+        this.AttachmentInfoList = AttachmentInfoList;
+    }
+
     public QueryOrderOutOrderList() {
     }
 
@@ -650,6 +734,21 @@ bank：网银
         if (source.ChannelExternalOrderId != null) {
             this.ChannelExternalOrderId = new String(source.ChannelExternalOrderId);
         }
+        if (source.SettleCheck != null) {
+            this.SettleCheck = new Long(source.SettleCheck);
+        }
+        if (source.ChannelExternalUserInfoList != null) {
+            this.ChannelExternalUserInfoList = new OldChannelExternalUserInfo[source.ChannelExternalUserInfoList.length];
+            for (int i = 0; i < source.ChannelExternalUserInfoList.length; i++) {
+                this.ChannelExternalUserInfoList[i] = new OldChannelExternalUserInfo(source.ChannelExternalUserInfoList[i]);
+            }
+        }
+        if (source.AttachmentInfoList != null) {
+            this.AttachmentInfoList = new OldAttachmentInfo[source.AttachmentInfoList.length];
+            for (int i = 0; i < source.AttachmentInfoList.length; i++) {
+                this.AttachmentInfoList[i] = new OldAttachmentInfo(source.AttachmentInfoList[i]);
+            }
+        }
     }
 
 
@@ -679,6 +778,9 @@ bank：网银
         this.setParamSimple(map, prefix + "ChannelOrderId", this.ChannelOrderId);
         this.setParamArrayObj(map, prefix + "SubOrderList.", this.SubOrderList);
         this.setParamSimple(map, prefix + "ChannelExternalOrderId", this.ChannelExternalOrderId);
+        this.setParamSimple(map, prefix + "SettleCheck", this.SettleCheck);
+        this.setParamArrayObj(map, prefix + "ChannelExternalUserInfoList.", this.ChannelExternalUserInfoList);
+        this.setParamArrayObj(map, prefix + "AttachmentInfoList.", this.AttachmentInfoList);
 
     }
 }

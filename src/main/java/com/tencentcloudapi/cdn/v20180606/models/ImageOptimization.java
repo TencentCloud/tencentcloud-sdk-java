@@ -47,6 +47,14 @@ public class ImageOptimization extends AbstractModel{
     private GuetzliAdapter GuetzliAdapter;
 
     /**
+    * AvifAdapter配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvifAdapter")
+    @Expose
+    private AvifAdapter AvifAdapter;
+
+    /**
      * Get WebpAdapter配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WebpAdapter WebpAdapter配置
@@ -106,6 +114,26 @@ public class ImageOptimization extends AbstractModel{
         this.GuetzliAdapter = GuetzliAdapter;
     }
 
+    /**
+     * Get AvifAdapter配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvifAdapter AvifAdapter配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AvifAdapter getAvifAdapter() {
+        return this.AvifAdapter;
+    }
+
+    /**
+     * Set AvifAdapter配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvifAdapter AvifAdapter配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvifAdapter(AvifAdapter AvifAdapter) {
+        this.AvifAdapter = AvifAdapter;
+    }
+
     public ImageOptimization() {
     }
 
@@ -123,6 +151,9 @@ public class ImageOptimization extends AbstractModel{
         if (source.GuetzliAdapter != null) {
             this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
         }
+        if (source.AvifAdapter != null) {
+            this.AvifAdapter = new AvifAdapter(source.AvifAdapter);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class ImageOptimization extends AbstractModel{
         this.setParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
         this.setParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
         this.setParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
+        this.setParamObj(map, prefix + "AvifAdapter.", this.AvifAdapter);
 
     }
 }

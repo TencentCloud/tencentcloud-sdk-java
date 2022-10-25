@@ -123,6 +123,22 @@ public class CloudSubOrderReturn extends AbstractModel{
     private String WxSubMchId;
 
     /**
+    * 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelSubPayOrderId")
+    @Expose
+    private String ChannelSubPayOrderId;
+
+    /**
+    * 物品ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
      * Get 子订单号 
      * @return SubOutTradeNo 子订单号
      */
@@ -354,6 +370,46 @@ public class CloudSubOrderReturn extends AbstractModel{
         this.WxSubMchId = WxSubMchId;
     }
 
+    /**
+     * Get 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelSubPayOrderId 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelSubPayOrderId() {
+        return this.ChannelSubPayOrderId;
+    }
+
+    /**
+     * Set 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelSubPayOrderId 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelSubPayOrderId(String ChannelSubPayOrderId) {
+        this.ChannelSubPayOrderId = ChannelSubPayOrderId;
+    }
+
+    /**
+     * Get 物品ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 物品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 物品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 物品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public CloudSubOrderReturn() {
     }
 
@@ -404,6 +460,12 @@ public class CloudSubOrderReturn extends AbstractModel{
         if (source.WxSubMchId != null) {
             this.WxSubMchId = new String(source.WxSubMchId);
         }
+        if (source.ChannelSubPayOrderId != null) {
+            this.ChannelSubPayOrderId = new String(source.ChannelSubPayOrderId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -425,6 +487,8 @@ public class CloudSubOrderReturn extends AbstractModel{
         this.setParamObj(map, prefix + "AttachmentInfoList.", this.AttachmentInfoList);
         this.setParamSimple(map, prefix + "ChannelExternalSubOrderId", this.ChannelExternalSubOrderId);
         this.setParamSimple(map, prefix + "WxSubMchId", this.WxSubMchId);
+        this.setParamSimple(map, prefix + "ChannelSubPayOrderId", this.ChannelSubPayOrderId);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

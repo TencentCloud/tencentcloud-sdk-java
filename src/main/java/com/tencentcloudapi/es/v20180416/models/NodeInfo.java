@@ -99,6 +99,14 @@ public class NodeInfo extends AbstractModel{
     private Long MemSize;
 
     /**
+    * /
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskEnhance")
+    @Expose
+    private Long DiskEnhance;
+
+    /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
@@ -282,6 +290,26 @@ public class NodeInfo extends AbstractModel{
         this.MemSize = MemSize;
     }
 
+    /**
+     * Get /
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskEnhance /
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskEnhance() {
+        return this.DiskEnhance;
+    }
+
+    /**
+     * Set /
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskEnhance /
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskEnhance(Long DiskEnhance) {
+        this.DiskEnhance = DiskEnhance;
+    }
+
     public NodeInfo() {
     }
 
@@ -320,6 +348,9 @@ public class NodeInfo extends AbstractModel{
         if (source.MemSize != null) {
             this.MemSize = new Long(source.MemSize);
         }
+        if (source.DiskEnhance != null) {
+            this.DiskEnhance = new Long(source.DiskEnhance);
+        }
     }
 
 
@@ -337,6 +368,7 @@ public class NodeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
+        this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
 
     }
 }

@@ -54,6 +54,22 @@ public class TopicParam extends AbstractModel{
     private String TopicId;
 
     /**
+    * 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompressionType")
+    @Expose
+    private String CompressionType;
+
+    /**
+    * 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseAutoCreateTopic")
+    @Expose
+    private Boolean UseAutoCreateTopic;
+
+    /**
      * Get 单独售卖Topic的Topic名称 
      * @return Resource 单独售卖Topic的Topic名称
      */
@@ -129,6 +145,46 @@ public class TopicParam extends AbstractModel{
         this.TopicId = TopicId;
     }
 
+    /**
+     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompressionType() {
+        return this.CompressionType;
+    }
+
+    /**
+     * Set 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompressionType(String CompressionType) {
+        this.CompressionType = CompressionType;
+    }
+
+    /**
+     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseAutoCreateTopic() {
+        return this.UseAutoCreateTopic;
+    }
+
+    /**
+     * Set 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseAutoCreateTopic(Boolean UseAutoCreateTopic) {
+        this.UseAutoCreateTopic = UseAutoCreateTopic;
+    }
+
     public TopicParam() {
     }
 
@@ -149,6 +205,12 @@ public class TopicParam extends AbstractModel{
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
+        if (source.CompressionType != null) {
+            this.CompressionType = new String(source.CompressionType);
+        }
+        if (source.UseAutoCreateTopic != null) {
+            this.UseAutoCreateTopic = new Boolean(source.UseAutoCreateTopic);
+        }
     }
 
 
@@ -160,6 +222,8 @@ public class TopicParam extends AbstractModel{
         this.setParamSimple(map, prefix + "OffsetType", this.OffsetType);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "CompressionType", this.CompressionType);
+        this.setParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
 
     }
 }

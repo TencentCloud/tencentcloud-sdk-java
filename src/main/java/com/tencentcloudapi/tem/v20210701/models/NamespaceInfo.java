@@ -96,6 +96,14 @@ public class NamespaceInfo extends AbstractModel{
     private Long Locked;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get ID 信息 
      * @return EnvironmentId ID 信息
      */
@@ -267,6 +275,26 @@ public class NamespaceInfo extends AbstractModel{
         this.Locked = Locked;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public NamespaceInfo() {
     }
 
@@ -308,6 +336,12 @@ public class NamespaceInfo extends AbstractModel{
         if (source.Locked != null) {
             this.Locked = new Long(source.Locked);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -325,6 +359,7 @@ public class NamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
         this.setParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
         this.setParamSimple(map, prefix + "Locked", this.Locked);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

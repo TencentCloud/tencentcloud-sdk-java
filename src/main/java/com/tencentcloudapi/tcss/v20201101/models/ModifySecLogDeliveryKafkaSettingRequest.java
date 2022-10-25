@@ -79,6 +79,13 @@ public class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel{
     private String KafkaVersion;
 
     /**
+    * 地域ID
+    */
+    @SerializedName("RegionID")
+    @Expose
+    private String RegionID;
+
+    /**
      * Get 实例ID 
      * @return InstanceID 实例ID
      */
@@ -206,6 +213,22 @@ public class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel{
         this.KafkaVersion = KafkaVersion;
     }
 
+    /**
+     * Get 地域ID 
+     * @return RegionID 地域ID
+     */
+    public String getRegionID() {
+        return this.RegionID;
+    }
+
+    /**
+     * Set 地域ID
+     * @param RegionID 地域ID
+     */
+    public void setRegionID(String RegionID) {
+        this.RegionID = RegionID;
+    }
+
     public ModifySecLogDeliveryKafkaSettingRequest() {
     }
 
@@ -241,6 +264,9 @@ public class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel{
         if (source.KafkaVersion != null) {
             this.KafkaVersion = new String(source.KafkaVersion);
         }
+        if (source.RegionID != null) {
+            this.RegionID = new String(source.RegionID);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "LogTypeList.", this.LogTypeList);
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
         this.setParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+        this.setParamSimple(map, prefix + "RegionID", this.RegionID);
 
     }
 }

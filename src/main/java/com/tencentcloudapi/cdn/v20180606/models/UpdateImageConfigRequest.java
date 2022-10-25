@@ -51,6 +51,13 @@ public class UpdateImageConfigRequest extends AbstractModel{
     private GuetzliAdapter GuetzliAdapter;
 
     /**
+    * AvifAdapter配置项
+    */
+    @SerializedName("AvifAdapter")
+    @Expose
+    private AvifAdapter AvifAdapter;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -114,6 +121,22 @@ public class UpdateImageConfigRequest extends AbstractModel{
         this.GuetzliAdapter = GuetzliAdapter;
     }
 
+    /**
+     * Get AvifAdapter配置项 
+     * @return AvifAdapter AvifAdapter配置项
+     */
+    public AvifAdapter getAvifAdapter() {
+        return this.AvifAdapter;
+    }
+
+    /**
+     * Set AvifAdapter配置项
+     * @param AvifAdapter AvifAdapter配置项
+     */
+    public void setAvifAdapter(AvifAdapter AvifAdapter) {
+        this.AvifAdapter = AvifAdapter;
+    }
+
     public UpdateImageConfigRequest() {
     }
 
@@ -134,6 +157,9 @@ public class UpdateImageConfigRequest extends AbstractModel{
         if (source.GuetzliAdapter != null) {
             this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
         }
+        if (source.AvifAdapter != null) {
+            this.AvifAdapter = new AvifAdapter(source.AvifAdapter);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class UpdateImageConfigRequest extends AbstractModel{
         this.setParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
         this.setParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
         this.setParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
+        this.setParamObj(map, prefix + "AvifAdapter.", this.AvifAdapter);
 
     }
 }

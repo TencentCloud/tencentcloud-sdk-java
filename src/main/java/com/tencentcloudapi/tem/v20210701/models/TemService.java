@@ -151,6 +151,14 @@ public class TemService extends AbstractModel{
     private Long EnableTracing;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 主键
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 主键
@@ -470,6 +478,26 @@ public class TemService extends AbstractModel{
         this.EnableTracing = EnableTracing;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public TemService() {
     }
 
@@ -529,6 +557,12 @@ public class TemService extends AbstractModel{
         if (source.EnableTracing != null) {
             this.EnableTracing = new Long(source.EnableTracing);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -552,6 +586,7 @@ public class TemService extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
         this.setParamArrayObj(map, prefix + "ActiveVersions.", this.ActiveVersions);
         this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

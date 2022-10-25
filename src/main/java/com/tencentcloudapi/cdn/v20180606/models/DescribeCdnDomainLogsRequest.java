@@ -69,8 +69,8 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     private String Area;
 
     /**
-    * 指定下载日志的类型。
-access：获取访问日志
+    * 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
     */
     @SerializedName("LogType")
     @Expose
@@ -189,20 +189,20 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * Get 指定下载日志的类型。
-access：获取访问日志 
-     * @return LogType 指定下载日志的类型。
-access：获取访问日志
+     * Get 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志 
+     * @return LogType 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 指定下载日志的类型。
-access：获取访问日志
-     * @param LogType 指定下载日志的类型。
-access：获取访问日志
+     * Set 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
+     * @param LogType 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

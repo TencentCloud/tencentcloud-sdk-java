@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class ModifyApplicationReplicasResponse extends AbstractModel{
 
     /**
+    * 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Result")
+    @Expose
+    private Boolean Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 是否成功
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResult(Boolean Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class ModifyApplicationReplicasResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyApplicationReplicasResponse(ModifyApplicationReplicasResponse source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class ModifyApplicationReplicasResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

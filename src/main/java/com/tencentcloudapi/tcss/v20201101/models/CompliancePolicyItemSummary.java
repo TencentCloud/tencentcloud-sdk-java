@@ -143,6 +143,14 @@ RESULT_FAILED: 未通过
     private Long BenchmarkStandardId;
 
     /**
+    * 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicableVersion")
+    @Expose
+    private String ApplicableVersion;
+
+    /**
      * Get 为客户分配的唯一的检测项的ID。 
      * @return CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      */
@@ -442,6 +450,26 @@ RESULT_FAILED: 未通过
         this.BenchmarkStandardId = BenchmarkStandardId;
     }
 
+    /**
+     * Get 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicableVersion 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicableVersion() {
+        return this.ApplicableVersion;
+    }
+
+    /**
+     * Set 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicableVersion 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicableVersion(String ApplicableVersion) {
+        this.ApplicableVersion = ApplicableVersion;
+    }
+
     public CompliancePolicyItemSummary() {
     }
 
@@ -495,6 +523,9 @@ RESULT_FAILED: 未通过
         if (source.BenchmarkStandardId != null) {
             this.BenchmarkStandardId = new Long(source.BenchmarkStandardId);
         }
+        if (source.ApplicableVersion != null) {
+            this.ApplicableVersion = new String(source.ApplicableVersion);
+        }
     }
 
 
@@ -517,6 +548,7 @@ RESULT_FAILED: 未通过
         this.setParamSimple(map, prefix + "WhitelistId", this.WhitelistId);
         this.setParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
         this.setParamSimple(map, prefix + "BenchmarkStandardId", this.BenchmarkStandardId);
+        this.setParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
 
     }
 }

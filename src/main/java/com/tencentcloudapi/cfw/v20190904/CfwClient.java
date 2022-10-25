@@ -79,7 +79,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *创建规则
+     *创建访问控制规则
      * @param req CreateAcRulesRequest
      * @return CreateAcRulesResponse
      * @throws TencentCloudSDKException

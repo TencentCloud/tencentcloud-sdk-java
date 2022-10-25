@@ -44,6 +44,16 @@ public class DownloadBillResponse extends AbstractModel{
     private String DownloadUrl;
 
     /**
+    * 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StateType")
+    @Expose
+    private String StateType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +109,34 @@ public class DownloadBillResponse extends AbstractModel{
     }
 
     /**
+     * Get 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StateType 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStateType() {
+        return this.StateType;
+    }
+
+    /**
+     * Set 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StateType 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStateType(String StateType) {
+        this.StateType = StateType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +169,9 @@ public class DownloadBillResponse extends AbstractModel{
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.StateType != null) {
+            this.StateType = new String(source.StateType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +185,7 @@ public class DownloadBillResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileMD5", this.FileMD5);
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "StateType", this.StateType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

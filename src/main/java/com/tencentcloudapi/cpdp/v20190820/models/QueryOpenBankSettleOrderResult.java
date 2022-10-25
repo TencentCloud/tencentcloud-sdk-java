@@ -98,6 +98,14 @@ _UNKNOWN：默认未知
     private String SettleFee;
 
     /**
+    * 账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
      * Get 外部结算流水号 
      * @return OutSettleId 外部结算流水号
      */
@@ -289,6 +297,26 @@ _UNKNOWN：默认未知
         this.SettleFee = SettleFee;
     }
 
+    /**
+     * Get 账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Currency 账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set 账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Currency 账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
     public QueryOpenBankSettleOrderResult() {
     }
 
@@ -324,6 +352,9 @@ _UNKNOWN：默认未知
         if (source.SettleFee != null) {
             this.SettleFee = new String(source.SettleFee);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
     }
 
 
@@ -340,6 +371,7 @@ _UNKNOWN：默认未知
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
         this.setParamSimple(map, prefix + "TimeFinish", this.TimeFinish);
         this.setParamSimple(map, prefix + "SettleFee", this.SettleFee);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
 
     }
 }

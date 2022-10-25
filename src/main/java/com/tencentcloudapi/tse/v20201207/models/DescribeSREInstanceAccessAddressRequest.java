@@ -44,7 +44,7 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 引擎其他组件名称（pushgateway）
+    * 引擎其他组件名称（pushgateway、polaris-limiter）
     */
     @SerializedName("Workload")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get 引擎其他组件名称（pushgateway） 
-     * @return Workload 引擎其他组件名称（pushgateway）
+     * Get 引擎其他组件名称（pushgateway、polaris-limiter） 
+     * @return Workload 引擎其他组件名称（pushgateway、polaris-limiter）
      */
     public String getWorkload() {
         return this.Workload;
     }
 
     /**
-     * Set 引擎其他组件名称（pushgateway）
-     * @param Workload 引擎其他组件名称（pushgateway）
+     * Set 引擎其他组件名称（pushgateway、polaris-limiter）
+     * @param Workload 引擎其他组件名称（pushgateway、polaris-limiter）
      */
     public void setWorkload(String Workload) {
         this.Workload = Workload;

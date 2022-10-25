@@ -71,6 +71,14 @@ public class DeployServicePodDetail extends AbstractModel{
     private String Webshell;
 
     /**
+    * 状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get pod Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodId pod Id
@@ -190,6 +198,26 @@ public class DeployServicePodDetail extends AbstractModel{
         this.Webshell = Webshell;
     }
 
+    /**
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public DeployServicePodDetail() {
     }
 
@@ -219,6 +247,9 @@ public class DeployServicePodDetail extends AbstractModel{
         if (source.Webshell != null) {
             this.Webshell = new String(source.Webshell);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -232,6 +263,7 @@ public class DeployServicePodDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Webshell", this.Webshell);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

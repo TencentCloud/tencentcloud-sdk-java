@@ -74,6 +74,14 @@ public class ServerCertInfo extends AbstractModel{
     private String SignAlgo;
 
     /**
+    * 证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CommonName")
+    @Expose
+    private String CommonName;
+
+    /**
      * Get 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertId 服务器证书 ID。
@@ -205,6 +213,26 @@ public class ServerCertInfo extends AbstractModel{
         this.SignAlgo = SignAlgo;
     }
 
+    /**
+     * Get 证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CommonName 证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCommonName() {
+        return this.CommonName;
+    }
+
+    /**
+     * Set 证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommonName 证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommonName(String CommonName) {
+        this.CommonName = CommonName;
+    }
+
     public ServerCertInfo() {
     }
 
@@ -231,6 +259,9 @@ public class ServerCertInfo extends AbstractModel{
         if (source.SignAlgo != null) {
             this.SignAlgo = new String(source.SignAlgo);
         }
+        if (source.CommonName != null) {
+            this.CommonName = new String(source.CommonName);
+        }
     }
 
 
@@ -244,6 +275,7 @@ public class ServerCertInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "DeployTime", this.DeployTime);
         this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
+        this.setParamSimple(map, prefix + "CommonName", this.CommonName);
 
     }
 }

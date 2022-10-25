@@ -51,6 +51,13 @@ public class QueryOpenBankSettleOrderRequest extends AbstractModel{
     private String ChannelSettleId;
 
     /**
+    * 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 渠道商户号 
      * @return ChannelMerchantId 渠道商户号
      */
@@ -114,6 +121,22 @@ public class QueryOpenBankSettleOrderRequest extends AbstractModel{
         this.ChannelSettleId = ChannelSettleId;
     }
 
+    /**
+     * Get 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境 
+     * @return Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     * @param Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public QueryOpenBankSettleOrderRequest() {
     }
 
@@ -134,6 +157,9 @@ public class QueryOpenBankSettleOrderRequest extends AbstractModel{
         if (source.ChannelSettleId != null) {
             this.ChannelSettleId = new String(source.ChannelSettleId);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class QueryOpenBankSettleOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
         this.setParamSimple(map, prefix + "OutSettleId", this.OutSettleId);
         this.setParamSimple(map, prefix + "ChannelSettleId", this.ChannelSettleId);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

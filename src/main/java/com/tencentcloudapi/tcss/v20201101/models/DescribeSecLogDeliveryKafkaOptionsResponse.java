@@ -30,6 +30,13 @@ public class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel{
     private CKafkaInstanceInfo [] InstanceList;
 
     /**
+    * 地域列表
+    */
+    @SerializedName("RegionList")
+    @Expose
+    private RegionInfo [] RegionList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel{
      */
     public void setInstanceList(CKafkaInstanceInfo [] InstanceList) {
         this.InstanceList = InstanceList;
+    }
+
+    /**
+     * Get 地域列表 
+     * @return RegionList 地域列表
+     */
+    public RegionInfo [] getRegionList() {
+        return this.RegionList;
+    }
+
+    /**
+     * Set 地域列表
+     * @param RegionList 地域列表
+     */
+    public void setRegionList(RegionInfo [] RegionList) {
+        this.RegionList = RegionList;
     }
 
     /**
@@ -82,6 +105,12 @@ public class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel{
                 this.InstanceList[i] = new CKafkaInstanceInfo(source.InstanceList[i]);
             }
         }
+        if (source.RegionList != null) {
+            this.RegionList = new RegionInfo[source.RegionList.length];
+            for (int i = 0; i < source.RegionList.length; i++) {
+                this.RegionList[i] = new RegionInfo(source.RegionList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +122,7 @@ public class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamArrayObj(map, prefix + "RegionList.", this.RegionList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -71,6 +71,16 @@ public class Https extends AbstractModel{
     private ServerCertInfo [] CertInfo;
 
     /**
+    * 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplyType")
+    @Expose
+    private String ApplyType;
+
+    /**
      * Get http2 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
@@ -202,6 +212,34 @@ public class Https extends AbstractModel{
         this.CertInfo = CertInfo;
     }
 
+    /**
+     * Get 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplyType 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplyType() {
+        return this.ApplyType;
+    }
+
+    /**
+     * Set 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplyType 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplyType(String ApplyType) {
+        this.ApplyType = ApplyType;
+    }
+
     public Https() {
     }
 
@@ -231,6 +269,9 @@ public class Https extends AbstractModel{
                 this.CertInfo[i] = new ServerCertInfo(source.CertInfo[i]);
             }
         }
+        if (source.ApplyType != null) {
+            this.ApplyType = new String(source.ApplyType);
+        }
     }
 
 
@@ -243,6 +284,7 @@ public class Https extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
         this.setParamObj(map, prefix + "Hsts.", this.Hsts);
         this.setParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
+        this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
 
     }
 }

@@ -65,6 +65,13 @@ public class DescribeApplicationsRequest extends AbstractModel{
     private String Keyword;
 
     /**
+    * 查询过滤器
+    */
+    @SerializedName("Filters")
+    @Expose
+    private QueryFilter [] Filters;
+
+    /**
      * Get 命名空间ID 
      * @return EnvironmentId 命名空间ID
      */
@@ -160,6 +167,22 @@ public class DescribeApplicationsRequest extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    /**
+     * Get 查询过滤器 
+     * @return Filters 查询过滤器
+     */
+    public QueryFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 查询过滤器
+     * @param Filters 查询过滤器
+     */
+    public void setFilters(QueryFilter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeApplicationsRequest() {
     }
 
@@ -186,6 +209,12 @@ public class DescribeApplicationsRequest extends AbstractModel{
         if (source.Keyword != null) {
             this.Keyword = new String(source.Keyword);
         }
+        if (source.Filters != null) {
+            this.Filters = new QueryFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new QueryFilter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -199,6 +228,7 @@ public class DescribeApplicationsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

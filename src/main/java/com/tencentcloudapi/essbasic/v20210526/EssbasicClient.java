@@ -62,6 +62,29 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *渠道版撤销签署流程接口
+注意:
+能撤回合同的只能是合同的发起人或者发起企业的超管、法人
+
+     * @param req ChannelCancelFlowRequest
+     * @return ChannelCancelFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCancelFlowResponse ChannelCancelFlow(ChannelCancelFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCancelFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCancelFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCancelFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
      * @param req ChannelCancelMultiFlowSignQRCodeRequest
      * @return ChannelCancelMultiFlowSignQRCodeResponse
@@ -412,7 +435,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *通过此接口（DescribeTemplates）查询该子客企业在电子签拥有的的有效模板，不包括渠道模版
+     *通过此接口（DescribeTemplates）查询该子客企业在电子签拥有的有效模板，不包括渠道模板
      * @param req DescribeTemplatesRequest
      * @return DescribeTemplatesResponse
      * @throws TencentCloudSDKException

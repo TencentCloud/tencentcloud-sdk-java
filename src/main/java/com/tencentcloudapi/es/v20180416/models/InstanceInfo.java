@@ -79,7 +79,7 @@ public class InstanceInfo extends AbstractModel{
     private String SubnetUid;
 
     /**
-    * 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+    * 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
     */
     @SerializedName("Status")
     @Expose
@@ -624,6 +624,22 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean EnableHybridStorage;
 
     /**
+    * 流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProcessPercent")
+    @Expose
+    private Float ProcessPercent;
+
+    /**
+    * Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaAlteringPublicAccess")
+    @Expose
+    private String KibanaAlteringPublicAccess;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -752,16 +768,16 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁 
-     * @return Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * Get 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中 
+     * @return Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
-     * @param Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * Set 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+     * @param Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -2079,6 +2095,46 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.EnableHybridStorage = EnableHybridStorage;
     }
 
+    /**
+     * Get 流程进度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProcessPercent 流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getProcessPercent() {
+        return this.ProcessPercent;
+    }
+
+    /**
+     * Set 流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessPercent 流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessPercent(Float ProcessPercent) {
+        this.ProcessPercent = ProcessPercent;
+    }
+
+    /**
+     * Get Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaAlteringPublicAccess() {
+        return this.KibanaAlteringPublicAccess;
+    }
+
+    /**
+     * Set Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
+        this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2342,6 +2398,12 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.EnableHybridStorage != null) {
             this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
         }
+        if (source.ProcessPercent != null) {
+            this.ProcessPercent = new Float(source.ProcessPercent);
+        }
+        if (source.KibanaAlteringPublicAccess != null) {
+            this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
+        }
     }
 
 
@@ -2428,6 +2490,8 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
         this.setParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+        this.setParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
+        this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
 
     }
 }

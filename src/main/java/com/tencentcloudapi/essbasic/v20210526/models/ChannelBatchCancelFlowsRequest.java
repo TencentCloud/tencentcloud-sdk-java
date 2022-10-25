@@ -37,6 +37,24 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
+    * 撤销理由
+    */
+    @SerializedName("CancelMessage")
+    @Expose
+    private String CancelMessage;
+
+    /**
+    * 撤销理由自定义格式；选项：
+0 默认格式
+1 只保留身份信息：展示为【发起方】
+2 保留身份信息+企业名称：展示为【发起方xxx公司】
+3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+    */
+    @SerializedName("CancelMessageFormat")
+    @Expose
+    private Long CancelMessageFormat;
+
+    /**
     * 操作人信息
     */
     @SerializedName("Operator")
@@ -76,6 +94,54 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
     }
 
     /**
+     * Get 撤销理由 
+     * @return CancelMessage 撤销理由
+     */
+    public String getCancelMessage() {
+        return this.CancelMessage;
+    }
+
+    /**
+     * Set 撤销理由
+     * @param CancelMessage 撤销理由
+     */
+    public void setCancelMessage(String CancelMessage) {
+        this.CancelMessage = CancelMessage;
+    }
+
+    /**
+     * Get 撤销理由自定义格式；选项：
+0 默认格式
+1 只保留身份信息：展示为【发起方】
+2 保留身份信息+企业名称：展示为【发起方xxx公司】
+3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】 
+     * @return CancelMessageFormat 撤销理由自定义格式；选项：
+0 默认格式
+1 只保留身份信息：展示为【发起方】
+2 保留身份信息+企业名称：展示为【发起方xxx公司】
+3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+     */
+    public Long getCancelMessageFormat() {
+        return this.CancelMessageFormat;
+    }
+
+    /**
+     * Set 撤销理由自定义格式；选项：
+0 默认格式
+1 只保留身份信息：展示为【发起方】
+2 保留身份信息+企业名称：展示为【发起方xxx公司】
+3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+     * @param CancelMessageFormat 撤销理由自定义格式；选项：
+0 默认格式
+1 只保留身份信息：展示为【发起方】
+2 保留身份信息+企业名称：展示为【发起方xxx公司】
+3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+     */
+    public void setCancelMessageFormat(Long CancelMessageFormat) {
+        this.CancelMessageFormat = CancelMessageFormat;
+    }
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -108,6 +174,12 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
         }
+        if (source.CancelMessage != null) {
+            this.CancelMessage = new String(source.CancelMessage);
+        }
+        if (source.CancelMessageFormat != null) {
+            this.CancelMessageFormat = new Long(source.CancelMessageFormat);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -120,6 +192,8 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
+        this.setParamSimple(map, prefix + "CancelMessageFormat", this.CancelMessageFormat);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

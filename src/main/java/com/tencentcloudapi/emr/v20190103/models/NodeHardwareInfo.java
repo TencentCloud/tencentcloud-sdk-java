@@ -384,7 +384,7 @@ public class NodeHardwareInfo extends AbstractModel{
     private String CurrentTime;
 
     /**
-    * 是否用于联邦
+    * 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFederation")
@@ -1312,9 +1312,9 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否用于联邦
+     * Get 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsFederation 是否用于联邦
+     * @return IsFederation 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsFederation() {
@@ -1322,9 +1322,9 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
-     * Set 是否用于联邦
+     * Set 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsFederation 是否用于联邦
+     * @param IsFederation 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFederation(Long IsFederation) {

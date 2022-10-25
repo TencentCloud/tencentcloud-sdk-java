@@ -44,6 +44,13 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * 查询过滤器
+    */
+    @SerializedName("Filters")
+    @Expose
+    private QueryFilter [] Filters;
+
+    /**
      * Get 分页limit 
      * @return Limit 分页limit
      */
@@ -91,6 +98,22 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get 查询过滤器 
+     * @return Filters 查询过滤器
+     */
+    public QueryFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 查询过滤器
+     * @param Filters 查询过滤器
+     */
+    public void setFilters(QueryFilter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeEnvironmentsRequest() {
     }
 
@@ -108,6 +131,12 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.Filters != null) {
+            this.Filters = new QueryFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new QueryFilter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

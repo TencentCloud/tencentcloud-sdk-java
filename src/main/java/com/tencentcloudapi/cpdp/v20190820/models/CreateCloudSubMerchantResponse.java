@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCloudSubMerchantResponse extends AbstractModel{
 
     /**
-    * 子应用Id。
+    * 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAppId")
@@ -31,7 +31,7 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     private String SubAppId;
 
     /**
-    * 渠道子商户Id。
+    * 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelSubMerchantId")
@@ -39,12 +39,20 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     private String ChannelSubMerchantId;
 
     /**
-    * 层级，从0开始。
+    * 层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
+
+    /**
+    * 渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelAppId")
+    @Expose
+    private String ChannelAppId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +62,9 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 子应用Id。
+     * Get 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubAppId 子应用Id。
+     * @return SubAppId 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAppId() {
@@ -64,9 +72,9 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     }
 
     /**
-     * Set 子应用Id。
+     * Set 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubAppId 子应用Id。
+     * @param SubAppId 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAppId(String SubAppId) {
@@ -74,9 +82,9 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     }
 
     /**
-     * Get 渠道子商户Id。
+     * Get 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelSubMerchantId 渠道子商户Id。
+     * @return ChannelSubMerchantId 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelSubMerchantId() {
@@ -84,9 +92,9 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     }
 
     /**
-     * Set 渠道子商户Id。
+     * Set 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelSubMerchantId 渠道子商户Id。
+     * @param ChannelSubMerchantId 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelSubMerchantId(String ChannelSubMerchantId) {
@@ -94,9 +102,9 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     }
 
     /**
-     * Get 层级，从0开始。
+     * Get 层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Level 层级，从0开始。
+     * @return Level 层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
@@ -104,13 +112,33 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
     }
 
     /**
-     * Set 层级，从0开始。
+     * Set 层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Level 层级，从0开始。
+     * @param Level 层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
+    }
+
+    /**
+     * Get 渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelAppId 渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelAppId() {
+        return this.ChannelAppId;
+    }
+
+    /**
+     * Set 渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelAppId 渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelAppId(String ChannelAppId) {
+        this.ChannelAppId = ChannelAppId;
     }
 
     /**
@@ -146,6 +174,9 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
         if (source.Level != null) {
             this.Level = new Long(source.Level);
         }
+        if (source.ChannelAppId != null) {
+            this.ChannelAppId = new String(source.ChannelAppId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -159,6 +190,7 @@ public class CreateCloudSubMerchantResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
         this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "ChannelAppId", this.ChannelAppId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

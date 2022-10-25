@@ -27,7 +27,8 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
     */
     @SerializedName("FromUrl")
     @Expose
@@ -92,12 +93,14 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。 
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。 
      * @return FromUrl 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
      */
     public String getFromUrl() {
         return this.FromUrl;
@@ -108,12 +111,14 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
      * @param FromUrl 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
      */
     public void setFromUrl(String FromUrl) {
         this.FromUrl = FromUrl;

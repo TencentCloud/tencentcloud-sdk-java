@@ -3142,6 +3142,46 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *查询导出任务下载URL
+     * @param req DescribeExportJobDownloadURLRequest
+     * @return DescribeExportJobDownloadURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURL(DescribeExportJobDownloadURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExportJobDownloadURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExportJobDownloadURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExportJobDownloadURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询导出任务管理列表
+     * @param req DescribeExportJobManageListRequest
+     * @return DescribeExportJobManageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportJobManageListResponse DescribeExportJobManageList(DescribeExportJobManageListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExportJobManageListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExportJobManageListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExportJobManageList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询导出任务的结果
      * @param req DescribeExportJobResultRequest
      * @return DescribeExportJobResultResponse

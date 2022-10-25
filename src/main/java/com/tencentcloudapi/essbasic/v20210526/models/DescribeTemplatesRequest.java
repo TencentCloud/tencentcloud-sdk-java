@@ -30,7 +30,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 模板唯一标识，查询单个模版时使用
+    * 模板唯一标识，查询单个模板时使用
     */
     @SerializedName("TemplateId")
     @Expose
@@ -95,16 +95,16 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板唯一标识，查询单个模版时使用 
-     * @return TemplateId 模板唯一标识，查询单个模版时使用
+     * Get 模板唯一标识，查询单个模板时使用 
+     * @return TemplateId 模板唯一标识，查询单个模板时使用
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板唯一标识，查询单个模版时使用
-     * @param TemplateId 模板唯一标识，查询单个模版时使用
+     * Set 模板唯一标识，查询单个模板时使用
+     * @param TemplateId 模板唯一标识，查询单个模板时使用
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

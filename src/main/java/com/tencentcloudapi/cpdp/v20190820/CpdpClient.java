@@ -439,6 +439,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云企付-绑定分账收款方
+     * @param req BindOpenBankProfitSharePayeeRequest
+     * @return BindOpenBankProfitSharePayeeResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindOpenBankProfitSharePayeeResponse BindOpenBankProfitSharePayee(BindOpenBankProfitSharePayeeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindOpenBankProfitSharePayeeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindOpenBankProfitSharePayeeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindOpenBankProfitSharePayee");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员绑定提现账户-回填银联鉴权短信码。用于会员填写动态验证码后，发往银行进行验证，验证成功则完成绑定。
      * @param req BindRelateAccReUnionPayRequest
      * @return BindRelateAccReUnionPayResponse
@@ -3122,6 +3142,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankPaymentOrderResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryOpenBankPaymentOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云企付-绑定分账收款方查询
+     * @param req QueryOpenBankProfitSharePayeeRequest
+     * @return QueryOpenBankProfitSharePayeeResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOpenBankProfitSharePayeeResponse QueryOpenBankProfitSharePayee(QueryOpenBankProfitSharePayeeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOpenBankProfitSharePayeeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOpenBankProfitSharePayeeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOpenBankProfitSharePayee");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

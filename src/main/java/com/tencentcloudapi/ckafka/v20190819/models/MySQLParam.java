@@ -30,7 +30,7 @@ public class MySQLParam extends AbstractModel{
     private String Database;
 
     /**
-    * MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+    * MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
     */
     @SerializedName("Table")
     @Expose
@@ -191,6 +191,13 @@ public class MySQLParam extends AbstractModel{
     private String SignalDatabase;
 
     /**
+    * 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+    */
+    @SerializedName("IsTableRegular")
+    @Expose
+    private Boolean IsTableRegular;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -207,16 +214,16 @@ public class MySQLParam extends AbstractModel{
     }
 
     /**
-     * Get MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写 
-     * @return Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+     * Get MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名" 
+     * @return Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
-     * @param Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+     * Set MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+     * @param Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
      */
     public void setTable(String Table) {
         this.Table = Table;
@@ -574,6 +581,22 @@ public class MySQLParam extends AbstractModel{
         this.SignalDatabase = SignalDatabase;
     }
 
+    /**
+     * Get 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix 
+     * @return IsTableRegular 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+     */
+    public Boolean getIsTableRegular() {
+        return this.IsTableRegular;
+    }
+
+    /**
+     * Set 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+     * @param IsTableRegular 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+     */
+    public void setIsTableRegular(Boolean IsTableRegular) {
+        this.IsTableRegular = IsTableRegular;
+    }
+
     public MySQLParam() {
     }
 
@@ -657,6 +680,9 @@ public class MySQLParam extends AbstractModel{
         if (source.SignalDatabase != null) {
             this.SignalDatabase = new String(source.SignalDatabase);
         }
+        if (source.IsTableRegular != null) {
+            this.IsTableRegular = new Boolean(source.IsTableRegular);
+        }
     }
 
 
@@ -688,6 +714,7 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
         this.setParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
         this.setParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
+        this.setParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
 
     }
 }

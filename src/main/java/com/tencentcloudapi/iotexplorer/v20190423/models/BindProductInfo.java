@@ -85,6 +85,14 @@ public class BindProductInfo extends AbstractModel{
     private String DevStatus;
 
     /**
+    * 产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductOwnerName")
+    @Expose
+    private String ProductOwnerName;
+
+    /**
      * Get 产品ID。 
      * @return ProductId 产品ID。
      */
@@ -236,6 +244,26 @@ public class BindProductInfo extends AbstractModel{
         this.DevStatus = DevStatus;
     }
 
+    /**
+     * Get 产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductOwnerName 产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductOwnerName() {
+        return this.ProductOwnerName;
+    }
+
+    /**
+     * Set 产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductOwnerName 产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductOwnerName(String ProductOwnerName) {
+        this.ProductOwnerName = ProductOwnerName;
+    }
+
     public BindProductInfo() {
     }
 
@@ -268,6 +296,9 @@ public class BindProductInfo extends AbstractModel{
         if (source.DevStatus != null) {
             this.DevStatus = new String(source.DevStatus);
         }
+        if (source.ProductOwnerName != null) {
+            this.ProductOwnerName = new String(source.ProductOwnerName);
+        }
     }
 
 
@@ -283,6 +314,7 @@ public class BindProductInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductType", this.ProductType);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
         this.setParamSimple(map, prefix + "DevStatus", this.DevStatus);
+        this.setParamSimple(map, prefix + "ProductOwnerName", this.ProductOwnerName);
 
     }
 }

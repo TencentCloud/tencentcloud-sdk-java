@@ -76,6 +76,14 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     private Long ConsoleInternetBandWidth;
 
     /**
+    * 北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LimiterAddressInfos")
+    @Expose
+    private PolarisLimiterAddress [] LimiterAddressInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -211,6 +219,26 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     }
 
     /**
+     * Get 北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LimiterAddressInfos 北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PolarisLimiterAddress [] getLimiterAddressInfos() {
+        return this.LimiterAddressInfos;
+    }
+
+    /**
+     * Set 北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LimiterAddressInfos 北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLimiterAddressInfos(PolarisLimiterAddress [] LimiterAddressInfos) {
+        this.LimiterAddressInfos = LimiterAddressInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -258,6 +286,12 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         if (source.ConsoleInternetBandWidth != null) {
             this.ConsoleInternetBandWidth = new Long(source.ConsoleInternetBandWidth);
         }
+        if (source.LimiterAddressInfos != null) {
+            this.LimiterAddressInfos = new PolarisLimiterAddress[source.LimiterAddressInfos.length];
+            for (int i = 0; i < source.LimiterAddressInfos.length; i++) {
+                this.LimiterAddressInfos[i] = new PolarisLimiterAddress(source.LimiterAddressInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -275,6 +309,7 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ConsoleIntranetAddress", this.ConsoleIntranetAddress);
         this.setParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
         this.setParamSimple(map, prefix + "ConsoleInternetBandWidth", this.ConsoleInternetBandWidth);
+        this.setParamArrayObj(map, prefix + "LimiterAddressInfos.", this.LimiterAddressInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

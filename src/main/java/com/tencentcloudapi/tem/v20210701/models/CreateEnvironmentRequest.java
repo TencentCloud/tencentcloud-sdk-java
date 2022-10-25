@@ -72,6 +72,13 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private Boolean EnableTswTraceService;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 环境名称 
      * @return EnvironmentName 环境名称
      */
@@ -183,6 +190,22 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.EnableTswTraceService = EnableTswTraceService;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -215,6 +238,12 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.EnableTswTraceService != null) {
             this.EnableTswTraceService = new Boolean(source.EnableTswTraceService);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -229,6 +258,7 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

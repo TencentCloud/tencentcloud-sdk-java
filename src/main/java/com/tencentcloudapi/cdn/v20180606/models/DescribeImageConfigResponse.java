@@ -47,6 +47,14 @@ public class DescribeImageConfigResponse extends AbstractModel{
     private GuetzliAdapter GuetzliAdapter;
 
     /**
+    * AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvifAdapter")
+    @Expose
+    private AvifAdapter AvifAdapter;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -114,6 +122,26 @@ public class DescribeImageConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvifAdapter AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AvifAdapter getAvifAdapter() {
+        return this.AvifAdapter;
+    }
+
+    /**
+     * Set AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvifAdapter AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvifAdapter(AvifAdapter AvifAdapter) {
+        this.AvifAdapter = AvifAdapter;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -146,6 +174,9 @@ public class DescribeImageConfigResponse extends AbstractModel{
         if (source.GuetzliAdapter != null) {
             this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
         }
+        if (source.AvifAdapter != null) {
+            this.AvifAdapter = new AvifAdapter(source.AvifAdapter);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -159,6 +190,7 @@ public class DescribeImageConfigResponse extends AbstractModel{
         this.setParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
         this.setParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
         this.setParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
+        this.setParamObj(map, prefix + "AvifAdapter.", this.AvifAdapter);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

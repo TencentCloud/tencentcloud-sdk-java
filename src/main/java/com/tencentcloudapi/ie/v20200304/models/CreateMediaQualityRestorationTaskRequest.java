@@ -51,6 +51,13 @@ public class CreateMediaQualityRestorationTaskRequest extends AbstractModel{
     private CallbackInfo CallbackInfo;
 
     /**
+    * 极速高清体验馆渠道标志。
+    */
+    @SerializedName("TopSpeedCodecChannel")
+    @Expose
+    private Long TopSpeedCodecChannel;
+
+    /**
      * Get 源文件地址。 
      * @return DownInfo 源文件地址。
      */
@@ -114,6 +121,22 @@ public class CreateMediaQualityRestorationTaskRequest extends AbstractModel{
         this.CallbackInfo = CallbackInfo;
     }
 
+    /**
+     * Get 极速高清体验馆渠道标志。 
+     * @return TopSpeedCodecChannel 极速高清体验馆渠道标志。
+     */
+    public Long getTopSpeedCodecChannel() {
+        return this.TopSpeedCodecChannel;
+    }
+
+    /**
+     * Set 极速高清体验馆渠道标志。
+     * @param TopSpeedCodecChannel 极速高清体验馆渠道标志。
+     */
+    public void setTopSpeedCodecChannel(Long TopSpeedCodecChannel) {
+        this.TopSpeedCodecChannel = TopSpeedCodecChannel;
+    }
+
     public CreateMediaQualityRestorationTaskRequest() {
     }
 
@@ -137,6 +160,9 @@ public class CreateMediaQualityRestorationTaskRequest extends AbstractModel{
         if (source.CallbackInfo != null) {
             this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
         }
+        if (source.TopSpeedCodecChannel != null) {
+            this.TopSpeedCodecChannel = new Long(source.TopSpeedCodecChannel);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class CreateMediaQualityRestorationTaskRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TransInfo.", this.TransInfo);
         this.setParamObj(map, prefix + "SaveInfo.", this.SaveInfo);
         this.setParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
+        this.setParamSimple(map, prefix + "TopSpeedCodecChannel", this.TopSpeedCodecChannel);
 
     }
 }

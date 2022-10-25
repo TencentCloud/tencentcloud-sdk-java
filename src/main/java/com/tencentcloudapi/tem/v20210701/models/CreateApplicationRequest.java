@@ -119,6 +119,13 @@ public class CreateApplicationRequest extends AbstractModel{
     private UseDefaultRepoParameters UseDefaultImageServiceParameters;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 应用名 
      * @return ApplicationName 应用名
      */
@@ -346,6 +353,22 @@ public class CreateApplicationRequest extends AbstractModel{
         this.UseDefaultImageServiceParameters = UseDefaultImageServiceParameters;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateApplicationRequest() {
     }
 
@@ -396,6 +419,12 @@ public class CreateApplicationRequest extends AbstractModel{
         if (source.UseDefaultImageServiceParameters != null) {
             this.UseDefaultImageServiceParameters = new UseDefaultRepoParameters(source.UseDefaultImageServiceParameters);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class CreateApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
         this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
         this.setParamObj(map, prefix + "UseDefaultImageServiceParameters.", this.UseDefaultImageServiceParameters);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

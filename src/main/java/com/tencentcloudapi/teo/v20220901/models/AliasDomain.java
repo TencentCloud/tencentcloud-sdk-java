@@ -53,8 +53,7 @@ public class AliasDomain extends AbstractModel{
     /**
     * 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
@@ -62,6 +61,23 @@ public class AliasDomain extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+    */
+    @SerializedName("ForbidMode")
+    @Expose
+    private Long ForbidMode;
+
+    /**
+    * 目标域名是否被封禁。
+    */
+    @SerializedName("TargetForbid")
+    @Expose
+    private Boolean TargetForbid;
 
     /**
     * 别称域名创建时间。
@@ -144,15 +160,13 @@ public class AliasDomain extends AbstractModel{
     /**
      * Get 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li> 
      * @return Status 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
@@ -164,21 +178,63 @@ public class AliasDomain extends AbstractModel{
     /**
      * Set 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
      * @param Status 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li> 
+     * @return ForbidMode 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+     */
+    public Long getForbidMode() {
+        return this.ForbidMode;
+    }
+
+    /**
+     * Set 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+     * @param ForbidMode 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+     */
+    public void setForbidMode(Long ForbidMode) {
+        this.ForbidMode = ForbidMode;
+    }
+
+    /**
+     * Get 目标域名是否被封禁。 
+     * @return TargetForbid 目标域名是否被封禁。
+     */
+    public Boolean getTargetForbid() {
+        return this.TargetForbid;
+    }
+
+    /**
+     * Set 目标域名是否被封禁。
+     * @param TargetForbid 目标域名是否被封禁。
+     */
+    public void setTargetForbid(Boolean TargetForbid) {
+        this.TargetForbid = TargetForbid;
     }
 
     /**
@@ -236,6 +292,12 @@ public class AliasDomain extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ForbidMode != null) {
+            this.ForbidMode = new Long(source.ForbidMode);
+        }
+        if (source.TargetForbid != null) {
+            this.TargetForbid = new Boolean(source.TargetForbid);
+        }
         if (source.CreatedOn != null) {
             this.CreatedOn = new String(source.CreatedOn);
         }
@@ -254,6 +316,8 @@ public class AliasDomain extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "TargetName", this.TargetName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ForbidMode", this.ForbidMode);
+        this.setParamSimple(map, prefix + "TargetForbid", this.TargetForbid);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
 

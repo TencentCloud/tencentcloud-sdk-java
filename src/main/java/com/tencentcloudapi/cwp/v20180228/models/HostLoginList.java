@@ -175,6 +175,16 @@ public class HostLoginList extends AbstractModel{
     private String Quuid;
 
     /**
+    * 高危信息说明：
+ABROAD - 海外IP；
+XTI - 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
      * Get 记录Id 
      * @return Id 记录Id
      */
@@ -554,6 +564,34 @@ public class HostLoginList extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    /**
+     * Get 高危信息说明：
+ABROAD - 海外IP；
+XTI - 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Desc 高危信息说明：
+ABROAD - 海外IP；
+XTI - 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 高危信息说明：
+ABROAD - 海外IP；
+XTI - 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Desc 高危信息说明：
+ABROAD - 海外IP；
+XTI - 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
     public HostLoginList() {
     }
 
@@ -619,6 +657,9 @@ public class HostLoginList extends AbstractModel{
         if (source.Quuid != null) {
             this.Quuid = new String(source.Quuid);
         }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
     }
 
 
@@ -645,6 +686,7 @@ public class HostLoginList extends AbstractModel{
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }
 }

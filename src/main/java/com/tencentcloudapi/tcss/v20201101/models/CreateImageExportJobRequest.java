@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateImageExportJobRequest extends AbstractModel{
 
     /**
-    * 导出字段
-    */
-    @SerializedName("ExportField")
-    @Expose
-    private String [] ExportField;
-
-    /**
     * 过滤条件。
 <li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
 <li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
@@ -69,20 +62,11 @@ public class CreateImageExportJobRequest extends AbstractModel{
     private String Order;
 
     /**
-     * Get 导出字段 
-     * @return ExportField 导出字段
-     */
-    public String [] getExportField() {
-        return this.ExportField;
-    }
-
-    /**
-     * Set 导出字段
-     * @param ExportField 导出字段
-     */
-    public void setExportField(String [] ExportField) {
-        this.ExportField = ExportField;
-    }
+    * 导出字段
+    */
+    @SerializedName("ExportField")
+    @Expose
+    private String [] ExportField;
 
     /**
      * Get 过滤条件。
@@ -180,6 +164,22 @@ public class CreateImageExportJobRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    /**
+     * Get 导出字段 
+     * @return ExportField 导出字段
+     */
+    public String [] getExportField() {
+        return this.ExportField;
+    }
+
+    /**
+     * Set 导出字段
+     * @param ExportField 导出字段
+     */
+    public void setExportField(String [] ExportField) {
+        this.ExportField = ExportField;
+    }
+
     public CreateImageExportJobRequest() {
     }
 
@@ -188,12 +188,6 @@ public class CreateImageExportJobRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateImageExportJobRequest(CreateImageExportJobRequest source) {
-        if (source.ExportField != null) {
-            this.ExportField = new String[source.ExportField.length];
-            for (int i = 0; i < source.ExportField.length; i++) {
-                this.ExportField[i] = new String(source.ExportField[i]);
-            }
-        }
         if (source.Filters != null) {
             this.Filters = new RunTimeFilters[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -212,6 +206,12 @@ public class CreateImageExportJobRequest extends AbstractModel{
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
+        if (source.ExportField != null) {
+            this.ExportField = new String[source.ExportField.length];
+            for (int i = 0; i < source.ExportField.length; i++) {
+                this.ExportField[i] = new String(source.ExportField[i]);
+            }
+        }
     }
 
 
@@ -219,12 +219,12 @@ public class CreateImageExportJobRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
 
     }
 }

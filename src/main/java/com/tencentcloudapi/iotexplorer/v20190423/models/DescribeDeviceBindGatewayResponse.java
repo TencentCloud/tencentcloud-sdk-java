@@ -47,6 +47,22 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
     private String GatewayName;
 
     /**
+    * 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayProductOwnerName")
+    @Expose
+    private String GatewayProductOwnerName;
+
+    /**
+    * 设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayProductOwnerUin")
+    @Expose
+    private String GatewayProductOwnerUin;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -114,6 +130,46 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
     }
 
     /**
+     * Get 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayProductOwnerName 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayProductOwnerName() {
+        return this.GatewayProductOwnerName;
+    }
+
+    /**
+     * Set 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayProductOwnerName 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayProductOwnerName(String GatewayProductOwnerName) {
+        this.GatewayProductOwnerName = GatewayProductOwnerName;
+    }
+
+    /**
+     * Get 设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayProductOwnerUin 设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayProductOwnerUin() {
+        return this.GatewayProductOwnerUin;
+    }
+
+    /**
+     * Set 设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayProductOwnerUin 设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayProductOwnerUin(String GatewayProductOwnerUin) {
+        this.GatewayProductOwnerUin = GatewayProductOwnerUin;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -146,6 +202,12 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
         if (source.GatewayName != null) {
             this.GatewayName = new String(source.GatewayName);
         }
+        if (source.GatewayProductOwnerName != null) {
+            this.GatewayProductOwnerName = new String(source.GatewayProductOwnerName);
+        }
+        if (source.GatewayProductOwnerUin != null) {
+            this.GatewayProductOwnerUin = new String(source.GatewayProductOwnerUin);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -159,6 +221,8 @@ public class DescribeDeviceBindGatewayResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayProductId", this.GatewayProductId);
         this.setParamSimple(map, prefix + "GatewayDeviceName", this.GatewayDeviceName);
         this.setParamSimple(map, prefix + "GatewayName", this.GatewayName);
+        this.setParamSimple(map, prefix + "GatewayProductOwnerName", this.GatewayProductOwnerName);
+        this.setParamSimple(map, prefix + "GatewayProductOwnerUin", this.GatewayProductOwnerUin);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

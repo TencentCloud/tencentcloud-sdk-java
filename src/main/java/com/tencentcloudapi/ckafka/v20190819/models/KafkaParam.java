@@ -124,6 +124,22 @@ public class KafkaParam extends AbstractModel{
     private Boolean UseTableMapping;
 
     /**
+    * 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseAutoCreateTopic")
+    @Expose
+    private Boolean UseAutoCreateTopic;
+
+    /**
+    * 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompressionType")
+    @Expose
+    private String CompressionType;
+
+    /**
      * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
      */
@@ -371,6 +387,46 @@ public class KafkaParam extends AbstractModel{
         this.UseTableMapping = UseTableMapping;
     }
 
+    /**
+     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseAutoCreateTopic() {
+        return this.UseAutoCreateTopic;
+    }
+
+    /**
+     * Set 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseAutoCreateTopic(Boolean UseAutoCreateTopic) {
+        this.UseAutoCreateTopic = UseAutoCreateTopic;
+    }
+
+    /**
+     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompressionType() {
+        return this.CompressionType;
+    }
+
+    /**
+     * Set 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompressionType(String CompressionType) {
+        this.CompressionType = CompressionType;
+    }
+
     public KafkaParam() {
     }
 
@@ -421,6 +477,12 @@ public class KafkaParam extends AbstractModel{
         if (source.UseTableMapping != null) {
             this.UseTableMapping = new Boolean(source.UseTableMapping);
         }
+        if (source.UseAutoCreateTopic != null) {
+            this.UseAutoCreateTopic = new Boolean(source.UseAutoCreateTopic);
+        }
+        if (source.CompressionType != null) {
+            this.CompressionType = new String(source.CompressionType);
+        }
     }
 
 
@@ -441,6 +503,8 @@ public class KafkaParam extends AbstractModel{
         this.setParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
         this.setParamArrayObj(map, prefix + "TableMappings.", this.TableMappings);
         this.setParamSimple(map, prefix + "UseTableMapping", this.UseTableMapping);
+        this.setParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
+        this.setParamSimple(map, prefix + "CompressionType", this.CompressionType);
 
     }
 }

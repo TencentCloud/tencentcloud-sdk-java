@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel{
 
+    /**
+    * 地域，若为空则返回所有可选地域
+    */
+    @SerializedName("RegionID")
+    @Expose
+    private String RegionID;
+
+    /**
+     * Get 地域，若为空则返回所有可选地域 
+     * @return RegionID 地域，若为空则返回所有可选地域
+     */
+    public String getRegionID() {
+        return this.RegionID;
+    }
+
+    /**
+     * Set 地域，若为空则返回所有可选地域
+     * @param RegionID 地域，若为空则返回所有可选地域
+     */
+    public void setRegionID(String RegionID) {
+        this.RegionID = RegionID;
+    }
+
     public DescribeSecLogDeliveryKafkaOptionsRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSecLogDeliveryKafkaOptionsRequest(DescribeSecLogDeliveryKafkaOptionsRequest source) {
+        if (source.RegionID != null) {
+            this.RegionID = new String(source.RegionID);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RegionID", this.RegionID);
 
     }
 }

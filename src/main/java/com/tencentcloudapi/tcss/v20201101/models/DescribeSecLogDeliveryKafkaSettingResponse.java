@@ -63,6 +63,14 @@ public class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel{
     private String User;
 
     /**
+    * 地域ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionID")
+    @Expose
+    private String RegionID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -170,6 +178,26 @@ public class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel{
     }
 
     /**
+     * Get 地域ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionID 地域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionID() {
+        return this.RegionID;
+    }
+
+    /**
+     * Set 地域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionID 地域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionID(String RegionID) {
+        this.RegionID = RegionID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -211,6 +239,9 @@ public class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel{
         if (source.User != null) {
             this.User = new String(source.User);
         }
+        if (source.RegionID != null) {
+            this.RegionID = new String(source.RegionID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +257,7 @@ public class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArrayObj(map, prefix + "LogTypeList.", this.LogTypeList);
         this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "RegionID", this.RegionID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

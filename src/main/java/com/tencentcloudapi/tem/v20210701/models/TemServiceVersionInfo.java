@@ -589,6 +589,110 @@ public class TemServiceVersionInfo extends AbstractModel{
     private Long EnableMetrics;
 
     /**
+    * 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
+    * 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableRegistry")
+    @Expose
+    private Long EnableRegistry;
+
+    /**
+    * 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoscalerList")
+    @Expose
+    private Autoscaler [] AutoscalerList;
+
+    /**
+    * 修改人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Modifier")
+    @Expose
+    private String Modifier;
+
+    /**
+    * 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+    * 部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployStrategyConf")
+    @Expose
+    private DeployStrategyConf DeployStrategyConf;
+
+    /**
+    * 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodList")
+    @Expose
+    private DescribeRunPodPage PodList;
+
+    /**
+    * 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfEdited")
+    @Expose
+    private Boolean ConfEdited;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 主键 
      * @return VersionId 主键
      */
@@ -1976,6 +2080,266 @@ public class TemServiceVersionInfo extends AbstractModel{
         this.EnableMetrics = EnableMetrics;
     }
 
+    /**
+     * Get 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAccountUin 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAccountUin 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableRegistry 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableRegistry() {
+        return this.EnableRegistry;
+    }
+
+    /**
+     * Set 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableRegistry 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableRegistry(Long EnableRegistry) {
+        this.EnableRegistry = EnableRegistry;
+    }
+
+    /**
+     * Get 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoscalerList 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Autoscaler [] getAutoscalerList() {
+        return this.AutoscalerList;
+    }
+
+    /**
+     * Set 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoscalerList 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoscalerList(Autoscaler [] AutoscalerList) {
+        this.AutoscalerList = AutoscalerList;
+    }
+
+    /**
+     * Get 修改人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Modifier 修改人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifier() {
+        return this.Modifier;
+    }
+
+    /**
+     * Set 修改人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Modifier 修改人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifier(String Modifier) {
+        this.Modifier = Modifier;
+    }
+
+    /**
+     * Get 创建人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
+    /**
+     * Get 部署策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployStrategyConf 部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeployStrategyConf getDeployStrategyConf() {
+        return this.DeployStrategyConf;
+    }
+
+    /**
+     * Set 部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployStrategyConf 部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployStrategyConf(DeployStrategyConf DeployStrategyConf) {
+        this.DeployStrategyConf = DeployStrategyConf;
+    }
+
+    /**
+     * Get 实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodList 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeRunPodPage getPodList() {
+        return this.PodList;
+    }
+
+    /**
+     * Set 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodList 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodList(DescribeRunPodPage PodList) {
+        this.PodList = PodList;
+    }
+
+    /**
+     * Get 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfEdited 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getConfEdited() {
+        return this.ConfEdited;
+    }
+
+    /**
+     * Set 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfEdited 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfEdited(Boolean ConfEdited) {
+        this.ConfEdited = ConfEdited;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public TemServiceVersionInfo() {
     }
 
@@ -2236,6 +2600,51 @@ public class TemServiceVersionInfo extends AbstractModel{
         if (source.EnableMetrics != null) {
             this.EnableMetrics = new Long(source.EnableMetrics);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.EnableRegistry != null) {
+            this.EnableRegistry = new Long(source.EnableRegistry);
+        }
+        if (source.AutoscalerList != null) {
+            this.AutoscalerList = new Autoscaler[source.AutoscalerList.length];
+            for (int i = 0; i < source.AutoscalerList.length; i++) {
+                this.AutoscalerList[i] = new Autoscaler(source.AutoscalerList[i]);
+            }
+        }
+        if (source.Modifier != null) {
+            this.Modifier = new String(source.Modifier);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.DeployStrategyConf != null) {
+            this.DeployStrategyConf = new DeployStrategyConf(source.DeployStrategyConf);
+        }
+        if (source.PodList != null) {
+            this.PodList = new DescribeRunPodPage(source.PodList);
+        }
+        if (source.ConfEdited != null) {
+            this.ConfEdited = new Boolean(source.ConfEdited);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -2316,6 +2725,19 @@ public class TemServiceVersionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StoppedManually", this.StoppedManually);
         this.setParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
         this.setParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableRegistry", this.EnableRegistry);
+        this.setParamArrayObj(map, prefix + "AutoscalerList.", this.AutoscalerList);
+        this.setParamSimple(map, prefix + "Modifier", this.Modifier);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
+        this.setParamObj(map, prefix + "PodList.", this.PodList);
+        this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -41,6 +41,14 @@ off：关闭
     private MaxAgeRule [] MaxAgeRules;
 
     /**
+    * MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxAgeCodeRule")
+    @Expose
+    private MaxAgeCodeRule MaxAgeCodeRule;
+
+    /**
      * Get 浏览器缓存配置开关
 on：开启
 off：关闭
@@ -88,6 +96,26 @@ off：关闭
         this.MaxAgeRules = MaxAgeRules;
     }
 
+    /**
+     * Get MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxAgeCodeRule MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MaxAgeCodeRule getMaxAgeCodeRule() {
+        return this.MaxAgeCodeRule;
+    }
+
+    /**
+     * Set MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxAgeCodeRule MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxAgeCodeRule(MaxAgeCodeRule MaxAgeCodeRule) {
+        this.MaxAgeCodeRule = MaxAgeCodeRule;
+    }
+
     public MaxAge() {
     }
 
@@ -105,6 +133,9 @@ off：关闭
                 this.MaxAgeRules[i] = new MaxAgeRule(source.MaxAgeRules[i]);
             }
         }
+        if (source.MaxAgeCodeRule != null) {
+            this.MaxAgeCodeRule = new MaxAgeCodeRule(source.MaxAgeCodeRule);
+        }
     }
 
 
@@ -114,6 +145,7 @@ off：关闭
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "MaxAgeRules.", this.MaxAgeRules);
+        this.setParamObj(map, prefix + "MaxAgeCodeRule.", this.MaxAgeCodeRule);
 
     }
 }

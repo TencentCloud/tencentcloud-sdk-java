@@ -65,6 +65,20 @@ public class FileAttributeInfo extends AbstractModel{
     private String LatestTamperedFileMTime;
 
     /**
+    * 新文件内容
+    */
+    @SerializedName("NewFile")
+    @Expose
+    private String NewFile;
+
+    /**
+    * 新旧文件的差异
+    */
+    @SerializedName("FileDiff")
+    @Expose
+    private String FileDiff;
+
+    /**
      * Get 文件名 
      * @return FileName 文件名
      */
@@ -160,6 +174,38 @@ public class FileAttributeInfo extends AbstractModel{
         this.LatestTamperedFileMTime = LatestTamperedFileMTime;
     }
 
+    /**
+     * Get 新文件内容 
+     * @return NewFile 新文件内容
+     */
+    public String getNewFile() {
+        return this.NewFile;
+    }
+
+    /**
+     * Set 新文件内容
+     * @param NewFile 新文件内容
+     */
+    public void setNewFile(String NewFile) {
+        this.NewFile = NewFile;
+    }
+
+    /**
+     * Get 新旧文件的差异 
+     * @return FileDiff 新旧文件的差异
+     */
+    public String getFileDiff() {
+        return this.FileDiff;
+    }
+
+    /**
+     * Set 新旧文件的差异
+     * @param FileDiff 新旧文件的差异
+     */
+    public void setFileDiff(String FileDiff) {
+        this.FileDiff = FileDiff;
+    }
+
     public FileAttributeInfo() {
     }
 
@@ -186,6 +232,12 @@ public class FileAttributeInfo extends AbstractModel{
         if (source.LatestTamperedFileMTime != null) {
             this.LatestTamperedFileMTime = new String(source.LatestTamperedFileMTime);
         }
+        if (source.NewFile != null) {
+            this.NewFile = new String(source.NewFile);
+        }
+        if (source.FileDiff != null) {
+            this.FileDiff = new String(source.FileDiff);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class FileAttributeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FilePath", this.FilePath);
         this.setParamSimple(map, prefix + "FileCreateTime", this.FileCreateTime);
         this.setParamSimple(map, prefix + "LatestTamperedFileMTime", this.LatestTamperedFileMTime);
+        this.setParamSimple(map, prefix + "NewFile", this.NewFile);
+        this.setParamSimple(map, prefix + "FileDiff", this.FileDiff);
 
     }
 }

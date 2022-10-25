@@ -72,6 +72,13 @@ public class ServiceGovernanceInfo extends AbstractModel{
     private VpcInfo [] PgwVpcInfos;
 
     /**
+    * 服务治理限流server引擎绑定的网络信息
+    */
+    @SerializedName("LimiterVpcInfos")
+    @Expose
+    private VpcInfo [] LimiterVpcInfos;
+
+    /**
      * Get 引擎所在的地域 
      * @return EngineRegion 引擎所在的地域
      */
@@ -183,6 +190,22 @@ public class ServiceGovernanceInfo extends AbstractModel{
         this.PgwVpcInfos = PgwVpcInfos;
     }
 
+    /**
+     * Get 服务治理限流server引擎绑定的网络信息 
+     * @return LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
+     */
+    public VpcInfo [] getLimiterVpcInfos() {
+        return this.LimiterVpcInfos;
+    }
+
+    /**
+     * Set 服务治理限流server引擎绑定的网络信息
+     * @param LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
+     */
+    public void setLimiterVpcInfos(VpcInfo [] LimiterVpcInfos) {
+        this.LimiterVpcInfos = LimiterVpcInfos;
+    }
+
     public ServiceGovernanceInfo() {
     }
 
@@ -224,6 +247,12 @@ public class ServiceGovernanceInfo extends AbstractModel{
                 this.PgwVpcInfos[i] = new VpcInfo(source.PgwVpcInfos[i]);
             }
         }
+        if (source.LimiterVpcInfos != null) {
+            this.LimiterVpcInfos = new VpcInfo[source.LimiterVpcInfos.length];
+            for (int i = 0; i < source.LimiterVpcInfos.length; i++) {
+                this.LimiterVpcInfos[i] = new VpcInfo(source.LimiterVpcInfos[i]);
+            }
+        }
     }
 
 
@@ -238,6 +267,7 @@ public class ServiceGovernanceInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
         this.setParamSimple(map, prefix + "MainPassword", this.MainPassword);
         this.setParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
+        this.setParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
 
     }
 }

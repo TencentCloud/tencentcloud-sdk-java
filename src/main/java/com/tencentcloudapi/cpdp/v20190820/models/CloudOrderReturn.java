@@ -212,6 +212,30 @@ wechat:微信支付
     private String SceneInfo;
 
     /**
+    * 子应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private String SubAppId;
+
+    /**
+    * 支付场景
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayScene")
+    @Expose
+    private String PayScene;
+
+    /**
+    * 支付方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PaymentMethod")
+    @Expose
+    private String PaymentMethod;
+
+    /**
      * Get 米大师分配的支付主MidasAppId 
      * @return AppId 米大师分配的支付主MidasAppId
      */
@@ -667,6 +691,66 @@ wechat:微信支付
         this.SceneInfo = SceneInfo;
     }
 
+    /**
+     * Get 子应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAppId 子应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set 子应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAppId 子应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAppId(String SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get 支付场景
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayScene 支付场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayScene() {
+        return this.PayScene;
+    }
+
+    /**
+     * Set 支付场景
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayScene 支付场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayScene(String PayScene) {
+        this.PayScene = PayScene;
+    }
+
+    /**
+     * Get 支付方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PaymentMethod 支付方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaymentMethod() {
+        return this.PaymentMethod;
+    }
+
+    /**
+     * Set 支付方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PaymentMethod 支付方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaymentMethod(String PaymentMethod) {
+        this.PaymentMethod = PaymentMethod;
+    }
+
     public CloudOrderReturn() {
     }
 
@@ -762,6 +846,15 @@ wechat:微信支付
         if (source.SceneInfo != null) {
             this.SceneInfo = new String(source.SceneInfo);
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.PayScene != null) {
+            this.PayScene = new String(source.PayScene);
+        }
+        if (source.PaymentMethod != null) {
+            this.PaymentMethod = new String(source.PaymentMethod);
+        }
     }
 
 
@@ -794,6 +887,9 @@ wechat:微信支付
         this.setParamArrayObj(map, prefix + "ChannelExternalUserInfoList.", this.ChannelExternalUserInfoList);
         this.setParamArrayObj(map, prefix + "ExternalReturnPromptGroupList.", this.ExternalReturnPromptGroupList);
         this.setParamSimple(map, prefix + "SceneInfo", this.SceneInfo);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "PayScene", this.PayScene);
+        this.setParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
 
     }
 }
