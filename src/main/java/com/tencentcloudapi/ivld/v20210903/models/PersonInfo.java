@@ -51,6 +51,14 @@ public class PersonInfo extends AbstractModel{
     private AppearInfo AppearInfo;
 
     /**
+    * 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppearRect")
+    @Expose
+    private Rectf AppearRect;
+
+    /**
      * Get 公众人物姓名 
      * @return Name 公众人物姓名
      */
@@ -114,6 +122,26 @@ public class PersonInfo extends AbstractModel{
         this.AppearInfo = AppearInfo;
     }
 
+    /**
+     * Get 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppearRect 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Rectf getAppearRect() {
+        return this.AppearRect;
+    }
+
+    /**
+     * Set 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppearRect 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppearRect(Rectf AppearRect) {
+        this.AppearRect = AppearRect;
+    }
+
     public PersonInfo() {
     }
 
@@ -134,6 +162,9 @@ public class PersonInfo extends AbstractModel{
         if (source.AppearInfo != null) {
             this.AppearInfo = new AppearInfo(source.AppearInfo);
         }
+        if (source.AppearRect != null) {
+            this.AppearRect = new Rectf(source.AppearRect);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class PersonInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Job", this.Job);
         this.setParamSimple(map, prefix + "FirstAppear", this.FirstAppear);
         this.setParamObj(map, prefix + "AppearInfo.", this.AppearInfo);
+        this.setParamObj(map, prefix + "AppearRect.", this.AppearRect);
 
     }
 }

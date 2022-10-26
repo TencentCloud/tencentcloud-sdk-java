@@ -44,7 +44,7 @@ public class ModifyCodeBatchRequest extends AbstractModel{
     private Long Status;
 
     /**
-    * 模板ID
+    * 模版ID，或者活动ID
     */
     @SerializedName("MpTpl")
     @Expose
@@ -120,16 +120,16 @@ public class ModifyCodeBatchRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板ID 
-     * @return MpTpl 模板ID
+     * Get 模版ID，或者活动ID 
+     * @return MpTpl 模版ID，或者活动ID
      */
     public String getMpTpl() {
         return this.MpTpl;
     }
 
     /**
-     * Set 模板ID
-     * @param MpTpl 模板ID
+     * Set 模版ID，或者活动ID
+     * @param MpTpl 模版ID，或者活动ID
      */
     public void setMpTpl(String MpTpl) {
         this.MpTpl = MpTpl;

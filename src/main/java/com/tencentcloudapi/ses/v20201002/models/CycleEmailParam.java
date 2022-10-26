@@ -37,6 +37,13 @@ public class CycleEmailParam extends AbstractModel{
     private Long IntervalTime;
 
     /**
+    * 是否终止周期，用于任务更新 0否1是
+    */
+    @SerializedName("TermCycle")
+    @Expose
+    private Long TermCycle;
+
+    /**
      * Get 任务开始时间 
      * @return BeginTime 任务开始时间
      */
@@ -68,6 +75,22 @@ public class CycleEmailParam extends AbstractModel{
         this.IntervalTime = IntervalTime;
     }
 
+    /**
+     * Get 是否终止周期，用于任务更新 0否1是 
+     * @return TermCycle 是否终止周期，用于任务更新 0否1是
+     */
+    public Long getTermCycle() {
+        return this.TermCycle;
+    }
+
+    /**
+     * Set 是否终止周期，用于任务更新 0否1是
+     * @param TermCycle 是否终止周期，用于任务更新 0否1是
+     */
+    public void setTermCycle(Long TermCycle) {
+        this.TermCycle = TermCycle;
+    }
+
     public CycleEmailParam() {
     }
 
@@ -82,6 +105,9 @@ public class CycleEmailParam extends AbstractModel{
         if (source.IntervalTime != null) {
             this.IntervalTime = new Long(source.IntervalTime);
         }
+        if (source.TermCycle != null) {
+            this.TermCycle = new Long(source.TermCycle);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CycleEmailParam extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "IntervalTime", this.IntervalTime);
+        this.setParamSimple(map, prefix + "TermCycle", this.TermCycle);
 
     }
 }

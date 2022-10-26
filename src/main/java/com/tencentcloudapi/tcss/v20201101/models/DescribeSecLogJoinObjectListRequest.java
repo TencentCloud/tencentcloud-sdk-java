@@ -48,10 +48,10 @@ bash: "container_bash",
 
     /**
     * 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -133,15 +133,15 @@ bash: "container_bash",
 
     /**
      * Get 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li> 
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li> 
      * @return Filters 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
@@ -149,15 +149,15 @@ bash: "container_bash",
 
     /**
      * Set 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
      * @param Filters 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

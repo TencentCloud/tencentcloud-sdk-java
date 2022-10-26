@@ -38,9 +38,9 @@ public class DescribeVirusAutoIsolateSampleListRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -94,13 +94,13 @@ public class DescribeVirusAutoIsolateSampleListRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li> 
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li> 
      * @return Filters 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
@@ -108,13 +108,13 @@ public class DescribeVirusAutoIsolateSampleListRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
      * @param Filters 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

@@ -92,6 +92,17 @@ public class SearchLogRequest extends AbstractModel{
     private Boolean UseNewAnalysis;
 
     /**
+    * 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
+    */
+    @SerializedName("SamplingRate")
+    @Expose
+    private Float SamplingRate;
+
+    /**
      * Get 要检索分析的日志主题ID 
      * @return TopicId 要检索分析的日志主题ID
      */
@@ -271,6 +282,38 @@ public class SearchLogRequest extends AbstractModel{
         this.UseNewAnalysis = UseNewAnalysis;
     }
 
+    /**
+     * Get 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1 
+     * @return SamplingRate 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
+     */
+    public Float getSamplingRate() {
+        return this.SamplingRate;
+    }
+
+    /**
+     * Set 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
+     * @param SamplingRate 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
+     */
+    public void setSamplingRate(Float SamplingRate) {
+        this.SamplingRate = SamplingRate;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -303,6 +346,9 @@ public class SearchLogRequest extends AbstractModel{
         if (source.UseNewAnalysis != null) {
             this.UseNewAnalysis = new Boolean(source.UseNewAnalysis);
         }
+        if (source.SamplingRate != null) {
+            this.SamplingRate = new Float(source.SamplingRate);
+        }
     }
 
 
@@ -318,6 +364,7 @@ public class SearchLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
+        this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
 
     }
 }

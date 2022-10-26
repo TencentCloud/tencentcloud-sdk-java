@@ -100,6 +100,20 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long FilterEnterpriseFlag;
 
     /**
+    * 轻量版搜索
+    */
+    @SerializedName("FilterLightFlag")
+    @Expose
+    private Long FilterLightFlag;
+
+    /**
+    * 定制版搜索
+    */
+    @SerializedName("FilterChannelFlag")
+    @Expose
+    private Long FilterChannelFlag;
+
+    /**
     * 标签搜索
     */
     @SerializedName("FilterTag")
@@ -283,6 +297,38 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 轻量版搜索 
+     * @return FilterLightFlag 轻量版搜索
+     */
+    public Long getFilterLightFlag() {
+        return this.FilterLightFlag;
+    }
+
+    /**
+     * Set 轻量版搜索
+     * @param FilterLightFlag 轻量版搜索
+     */
+    public void setFilterLightFlag(Long FilterLightFlag) {
+        this.FilterLightFlag = FilterLightFlag;
+    }
+
+    /**
+     * Get 定制版搜索 
+     * @return FilterChannelFlag 定制版搜索
+     */
+    public Long getFilterChannelFlag() {
+        return this.FilterChannelFlag;
+    }
+
+    /**
+     * Set 定制版搜索
+     * @param FilterChannelFlag 定制版搜索
+     */
+    public void setFilterChannelFlag(Long FilterChannelFlag) {
+        this.FilterChannelFlag = FilterChannelFlag;
+    }
+
+    /**
      * Get 标签搜索 
      * @return FilterTag 标签搜索
      */
@@ -342,6 +388,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterEnterpriseFlag != null) {
             this.FilterEnterpriseFlag = new Long(source.FilterEnterpriseFlag);
         }
+        if (source.FilterLightFlag != null) {
+            this.FilterLightFlag = new Long(source.FilterLightFlag);
+        }
+        if (source.FilterChannelFlag != null) {
+            this.FilterChannelFlag = new Long(source.FilterChannelFlag);
+        }
         if (source.FilterTag != null) {
             this.FilterTag = new TagFilter(source.FilterTag);
         }
@@ -363,6 +415,8 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
         this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         this.setParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
+        this.setParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
+        this.setParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
 
     }

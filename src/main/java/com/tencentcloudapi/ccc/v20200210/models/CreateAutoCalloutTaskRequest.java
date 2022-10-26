@@ -86,6 +86,13 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
     private Long Tries;
 
     /**
+    * 自定义变量（仅高级版支持）
+    */
+    @SerializedName("Variables")
+    @Expose
+    private Variable [] Variables;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -229,6 +236,22 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
         this.Tries = Tries;
     }
 
+    /**
+     * Get 自定义变量（仅高级版支持） 
+     * @return Variables 自定义变量（仅高级版支持）
+     */
+    public Variable [] getVariables() {
+        return this.Variables;
+    }
+
+    /**
+     * Set 自定义变量（仅高级版支持）
+     * @param Variables 自定义变量（仅高级版支持）
+     */
+    public void setVariables(Variable [] Variables) {
+        this.Variables = Variables;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -270,6 +293,12 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
         if (source.Tries != null) {
             this.Tries = new Long(source.Tries);
         }
+        if (source.Variables != null) {
+            this.Variables = new Variable[source.Variables.length];
+            for (int i = 0; i < source.Variables.length; i++) {
+                this.Variables[i] = new Variable(source.Variables[i]);
+            }
+        }
     }
 
 
@@ -286,6 +315,7 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "NotAfter", this.NotAfter);
         this.setParamSimple(map, prefix + "Tries", this.Tries);
+        this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
 
     }
 }

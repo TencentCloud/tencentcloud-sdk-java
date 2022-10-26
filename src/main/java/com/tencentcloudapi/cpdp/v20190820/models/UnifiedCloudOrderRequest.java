@@ -361,6 +361,13 @@ ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
     private CloudExternalUserInfo [] ExternalUserInfoList;
 
     /**
+    * 渠道透传数据列表
+    */
+    @SerializedName("ExternalAttachmentDataList")
+    @Expose
+    private CloudExternalAttachmentData [] ExternalAttachmentDataList;
+
+    /**
      * Get 米大师分配的支付主MidasAppId 
      * @return MidasAppId 米大师分配的支付主MidasAppId
      */
@@ -1244,6 +1251,22 @@ ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
         this.ExternalUserInfoList = ExternalUserInfoList;
     }
 
+    /**
+     * Get 渠道透传数据列表 
+     * @return ExternalAttachmentDataList 渠道透传数据列表
+     */
+    public CloudExternalAttachmentData [] getExternalAttachmentDataList() {
+        return this.ExternalAttachmentDataList;
+    }
+
+    /**
+     * Set 渠道透传数据列表
+     * @param ExternalAttachmentDataList 渠道透传数据列表
+     */
+    public void setExternalAttachmentDataList(CloudExternalAttachmentData [] ExternalAttachmentDataList) {
+        this.ExternalAttachmentDataList = ExternalAttachmentDataList;
+    }
+
     public UnifiedCloudOrderRequest() {
     }
 
@@ -1381,6 +1404,12 @@ ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
                 this.ExternalUserInfoList[i] = new CloudExternalUserInfo(source.ExternalUserInfoList[i]);
             }
         }
+        if (source.ExternalAttachmentDataList != null) {
+            this.ExternalAttachmentDataList = new CloudExternalAttachmentData[source.ExternalAttachmentDataList.length];
+            for (int i = 0; i < source.ExternalAttachmentDataList.length; i++) {
+                this.ExternalAttachmentDataList[i] = new CloudExternalAttachmentData(source.ExternalAttachmentDataList[i]);
+            }
+        }
     }
 
 
@@ -1427,6 +1456,7 @@ ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
         this.setParamArrayObj(map, prefix + "ExternalPromptGroupList.", this.ExternalPromptGroupList);
         this.setParamSimple(map, prefix + "OrderReceiveMode", this.OrderReceiveMode);
         this.setParamArrayObj(map, prefix + "ExternalUserInfoList.", this.ExternalUserInfoList);
+        this.setParamArrayObj(map, prefix + "ExternalAttachmentDataList.", this.ExternalAttachmentDataList);
 
     }
 }

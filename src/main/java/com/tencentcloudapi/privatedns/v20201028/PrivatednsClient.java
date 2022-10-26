@@ -419,6 +419,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *修改解析记录状态
+     * @param req ModifyRecordsStatusRequest
+     * @return ModifyRecordsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordsStatusResponse ModifyRecordsStatus(ModifyRecordsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *开通私有域解析
      * @param req SubscribePrivateZoneServiceRequest
      * @return SubscribePrivateZoneServiceResponse

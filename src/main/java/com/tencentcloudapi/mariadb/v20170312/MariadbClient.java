@@ -1069,6 +1069,66 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyInstanceNetwork）用于修改实例所属网络
+     * @param req ModifyInstanceNetworkRequest
+     * @return ModifyInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceNetworkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceNetwork");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyInstanceVip）用于修改实例VIP
+     * @param req ModifyInstanceVipRequest
+     * @return ModifyInstanceVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceVipResponse ModifyInstanceVip(ModifyInstanceVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceVip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyInstanceVport）用于修改实例VPORT
+     * @param req ModifyInstanceVportRequest
+     * @return ModifyInstanceVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceVportResponse ModifyInstanceVport(ModifyInstanceVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceVportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceVport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。
      * @param req ModifyLogFileRetentionPeriodRequest
      * @return ModifyLogFileRetentionPeriodResponse

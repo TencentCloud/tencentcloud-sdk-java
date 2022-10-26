@@ -760,7 +760,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *删除直播拉流配置。
+     *删除直播拉流配置。该接口已下线,请使用新接口 DeleteLivePullStreamTask。
      * @param req DeletePullStreamConfigRequest
      * @return DeletePullStreamConfigResponse
      * @throws TencentCloudSDKException
@@ -1849,7 +1849,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *查询直播拉流配置。
+     *查询直播拉流配置。该接口已下线,请使用新接口 DescribeLivePullStreamTasks。
      * @param req DescribePullStreamConfigsRequest
      * @return DescribePullStreamConfigsResponse
      * @throws TencentCloudSDKException
@@ -2383,7 +2383,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *更新拉流配置。
+     *更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
      * @param req ModifyPullStreamConfigRequest
      * @return ModifyPullStreamConfigResponse
      * @throws TencentCloudSDKException
@@ -2403,7 +2403,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *修改直播拉流配置的状态。
+     *修改直播拉流配置的状态。该接口已下线,请使用新接口 ModifyLivePullStreamTask。
      * @param req ModifyPullStreamStatusRequest
      * @return ModifyPullStreamStatusResponse
      * @throws TencentCloudSDKException

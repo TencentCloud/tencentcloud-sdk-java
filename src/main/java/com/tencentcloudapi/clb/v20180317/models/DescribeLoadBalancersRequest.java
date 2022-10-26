@@ -66,14 +66,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String [] LoadBalancerVips;
 
     /**
-    * 负载均衡绑定的后端服务的外网 IP。
+    * 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
     */
     @SerializedName("BackendPublicIps")
     @Expose
     private String [] BackendPublicIps;
 
     /**
-    * 负载均衡绑定的后端服务的内网 IP。
+    * 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
     */
     @SerializedName("BackendPrivateIps")
     @Expose
@@ -267,32 +267,32 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡绑定的后端服务的外网 IP。 
-     * @return BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
+     * Get 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。 
+     * @return BackendPublicIps 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
      */
     public String [] getBackendPublicIps() {
         return this.BackendPublicIps;
     }
 
     /**
-     * Set 负载均衡绑定的后端服务的外网 IP。
-     * @param BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
+     * Set 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
+     * @param BackendPublicIps 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
      */
     public void setBackendPublicIps(String [] BackendPublicIps) {
         this.BackendPublicIps = BackendPublicIps;
     }
 
     /**
-     * Get 负载均衡绑定的后端服务的内网 IP。 
-     * @return BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
+     * Get 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。 
+     * @return BackendPrivateIps 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
      */
     public String [] getBackendPrivateIps() {
         return this.BackendPrivateIps;
     }
 
     /**
-     * Set 负载均衡绑定的后端服务的内网 IP。
-     * @param BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
+     * Set 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
+     * @param BackendPrivateIps 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
      */
     public void setBackendPrivateIps(String [] BackendPrivateIps) {
         this.BackendPrivateIps = BackendPrivateIps;

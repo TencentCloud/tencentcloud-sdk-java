@@ -87,7 +87,7 @@ public class FlowApproverInfo extends AbstractModel{
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
     */
     @SerializedName("ApproverType")
     @Expose
@@ -141,6 +141,20 @@ ENTERPRISESERVER-企业静默签;
     @SerializedName("JumpUrl")
     @Expose
     private String JumpUrl;
+
+    /**
+    * 签署人个性化能力值
+    */
+    @SerializedName("ApproverOption")
+    @Expose
+    private ApproverOption ApproverOption;
+
+    /**
+    * 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+    */
+    @SerializedName("ApproverNeedSignReview")
+    @Expose
+    private Boolean ApproverNeedSignReview;
 
     /**
      * Get 签署人姓名，最大长度50个字符 
@@ -291,12 +305,12 @@ ENTERPRISESERVER-企业静默签;
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署； 
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口； 
      * @return ApproverType 签署人类型，PERSON-个人；
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
      */
     public String getApproverType() {
         return this.ApproverType;
@@ -307,12 +321,12 @@ ENTERPRISESERVER-企业静默签;
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
      * @param ApproverType 签署人类型，PERSON-个人；
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
@@ -430,6 +444,38 @@ ENTERPRISESERVER-企业静默签;
         this.JumpUrl = JumpUrl;
     }
 
+    /**
+     * Get 签署人个性化能力值 
+     * @return ApproverOption 签署人个性化能力值
+     */
+    public ApproverOption getApproverOption() {
+        return this.ApproverOption;
+    }
+
+    /**
+     * Set 签署人个性化能力值
+     * @param ApproverOption 签署人个性化能力值
+     */
+    public void setApproverOption(ApproverOption ApproverOption) {
+        this.ApproverOption = ApproverOption;
+    }
+
+    /**
+     * Get 当前签署方进行签署操作是否需要企业内部审批，true 则为需要 
+     * @return ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     */
+    public Boolean getApproverNeedSignReview() {
+        return this.ApproverNeedSignReview;
+    }
+
+    /**
+     * Set 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     * @param ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     */
+    public void setApproverNeedSignReview(Boolean ApproverNeedSignReview) {
+        this.ApproverNeedSignReview = ApproverNeedSignReview;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -492,6 +538,12 @@ ENTERPRISESERVER-企业静默签;
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
         }
+        if (source.ApproverOption != null) {
+            this.ApproverOption = new ApproverOption(source.ApproverOption);
+        }
+        if (source.ApproverNeedSignReview != null) {
+            this.ApproverNeedSignReview = new Boolean(source.ApproverNeedSignReview);
+        }
     }
 
 
@@ -515,6 +567,8 @@ ENTERPRISESERVER-企业静默签;
         this.setParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+        this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+        this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
 
     }
 }

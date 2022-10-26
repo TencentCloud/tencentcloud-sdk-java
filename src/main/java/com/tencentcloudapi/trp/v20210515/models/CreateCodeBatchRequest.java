@@ -65,14 +65,14 @@ public class CreateCodeBatchRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 活动ID
+    * 模版ID，或者活动ID
     */
     @SerializedName("MpTpl")
     @Expose
     private String MpTpl;
 
     /**
-    * 克隆批次ID
+    * 克隆批次ID，同时会复制溯源信息
     */
     @SerializedName("CloneId")
     @Expose
@@ -175,32 +175,32 @@ public class CreateCodeBatchRequest extends AbstractModel{
     }
 
     /**
-     * Get 活动ID 
-     * @return MpTpl 活动ID
+     * Get 模版ID，或者活动ID 
+     * @return MpTpl 模版ID，或者活动ID
      */
     public String getMpTpl() {
         return this.MpTpl;
     }
 
     /**
-     * Set 活动ID
-     * @param MpTpl 活动ID
+     * Set 模版ID，或者活动ID
+     * @param MpTpl 模版ID，或者活动ID
      */
     public void setMpTpl(String MpTpl) {
         this.MpTpl = MpTpl;
     }
 
     /**
-     * Get 克隆批次ID 
-     * @return CloneId 克隆批次ID
+     * Get 克隆批次ID，同时会复制溯源信息 
+     * @return CloneId 克隆批次ID，同时会复制溯源信息
      */
     public String getCloneId() {
         return this.CloneId;
     }
 
     /**
-     * Set 克隆批次ID
-     * @param CloneId 克隆批次ID
+     * Set 克隆批次ID，同时会复制溯源信息
+     * @param CloneId 克隆批次ID，同时会复制溯源信息
      */
     public void setCloneId(String CloneId) {
         this.CloneId = CloneId;

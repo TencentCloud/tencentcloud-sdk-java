@@ -119,6 +119,13 @@ public class CloudSubOrder extends AbstractModel{
     private CloudAttachmentInfo [] AttachmentInfoList;
 
     /**
+    * 渠道透传数据列表。
+    */
+    @SerializedName("ExternalAttachmentDataList")
+    @Expose
+    private CloudExternalAttachmentData [] ExternalAttachmentDataList;
+
+    /**
      * Get 子订单号。
 长度32个字符供参考，部分渠道存在长度更短的情况接入时请联系开发咨询。 
      * @return SubOutTradeNo 子订单号。
@@ -358,6 +365,22 @@ public class CloudSubOrder extends AbstractModel{
         this.AttachmentInfoList = AttachmentInfoList;
     }
 
+    /**
+     * Get 渠道透传数据列表。 
+     * @return ExternalAttachmentDataList 渠道透传数据列表。
+     */
+    public CloudExternalAttachmentData [] getExternalAttachmentDataList() {
+        return this.ExternalAttachmentDataList;
+    }
+
+    /**
+     * Set 渠道透传数据列表。
+     * @param ExternalAttachmentDataList 渠道透传数据列表。
+     */
+    public void setExternalAttachmentDataList(CloudExternalAttachmentData [] ExternalAttachmentDataList) {
+        this.ExternalAttachmentDataList = ExternalAttachmentDataList;
+    }
+
     public CloudSubOrder() {
     }
 
@@ -405,6 +428,12 @@ public class CloudSubOrder extends AbstractModel{
                 this.AttachmentInfoList[i] = new CloudAttachmentInfo(source.AttachmentInfoList[i]);
             }
         }
+        if (source.ExternalAttachmentDataList != null) {
+            this.ExternalAttachmentDataList = new CloudExternalAttachmentData[source.ExternalAttachmentDataList.length];
+            for (int i = 0; i < source.ExternalAttachmentDataList.length; i++) {
+                this.ExternalAttachmentDataList[i] = new CloudExternalAttachmentData(source.ExternalAttachmentDataList[i]);
+            }
+        }
     }
 
 
@@ -424,6 +453,7 @@ public class CloudSubOrder extends AbstractModel{
         this.setParamSimple(map, prefix + "WxSubMchId", this.WxSubMchId);
         this.setParamObj(map, prefix + "SettleInfo.", this.SettleInfo);
         this.setParamArrayObj(map, prefix + "AttachmentInfoList.", this.AttachmentInfoList);
+        this.setParamArrayObj(map, prefix + "ExternalAttachmentDataList.", this.ExternalAttachmentDataList);
 
     }
 }
