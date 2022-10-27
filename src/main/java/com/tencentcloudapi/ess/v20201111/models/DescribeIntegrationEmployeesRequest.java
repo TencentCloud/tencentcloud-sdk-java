@@ -37,7 +37,8 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 查询过滤实名用户，key为Status，Values为["IsVerified"]
+    * 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
     */
     @SerializedName("Filters")
     @Expose
@@ -83,16 +84,20 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询过滤实名用户，key为Status，Values为["IsVerified"] 
-     * @return Filters 查询过滤实名用户，key为Status，Values为["IsVerified"]
+     * Get 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...] 
+     * @return Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询过滤实名用户，key为Status，Values为["IsVerified"]
-     * @param Filters 查询过滤实名用户，key为Status，Values为["IsVerified"]
+     * Set 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+     * @param Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

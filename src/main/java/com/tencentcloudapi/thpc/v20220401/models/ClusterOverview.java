@@ -107,6 +107,13 @@ public class ClusterOverview extends AbstractModel{
     private Long LoginNodeCount;
 
     /**
+    * 集群所属私有网络ID。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get 集群ID。 
      * @return ClusterId 集群ID。
      */
@@ -298,6 +305,22 @@ public class ClusterOverview extends AbstractModel{
         this.LoginNodeCount = LoginNodeCount;
     }
 
+    /**
+     * Get 集群所属私有网络ID。 
+     * @return VpcId 集群所属私有网络ID。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 集群所属私有网络ID。
+     * @param VpcId 集群所属私有网络ID。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public ClusterOverview() {
     }
 
@@ -351,6 +374,9 @@ public class ClusterOverview extends AbstractModel{
         if (source.LoginNodeCount != null) {
             this.LoginNodeCount = new Long(source.LoginNodeCount);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
     }
 
 
@@ -370,6 +396,7 @@ public class ClusterOverview extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ManagerNodeSet.", this.ManagerNodeSet);
         this.setParamArrayObj(map, prefix + "LoginNodeSet.", this.LoginNodeSet);
         this.setParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel{
     private Long Offset;
 
     /**
-    * 限制数目
+    * 限制数目 最大100
     */
     @SerializedName("Limit")
     @Expose
@@ -102,16 +102,16 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel{
     }
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get 限制数目 最大100 
+     * @return Limit 限制数目 最大100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set 限制数目 最大100
+     * @param Limit 限制数目 最大100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

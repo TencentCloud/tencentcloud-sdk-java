@@ -30,21 +30,21 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 限制数目
+    * 限制数目 最大200
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 下单时间范围起始点
+    * 下单时间范围起始点【请保持时间范围最大90天】
     */
     @SerializedName("CreatTimeRangeStart")
     @Expose
     private String CreatTimeRangeStart;
 
     /**
-    * 下单时间范围终止点
+    * 下单时间范围终止点【请保持时间范围最大90天】
     */
     @SerializedName("CreatTimeRangeEnd")
     @Expose
@@ -102,48 +102,48 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get 限制数目 最大200 
+     * @return Limit 限制数目 最大200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set 限制数目 最大200
+     * @param Limit 限制数目 最大200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 下单时间范围起始点 
-     * @return CreatTimeRangeStart 下单时间范围起始点
+     * Get 下单时间范围起始点【请保持时间范围最大90天】 
+     * @return CreatTimeRangeStart 下单时间范围起始点【请保持时间范围最大90天】
      */
     public String getCreatTimeRangeStart() {
         return this.CreatTimeRangeStart;
     }
 
     /**
-     * Set 下单时间范围起始点
-     * @param CreatTimeRangeStart 下单时间范围起始点
+     * Set 下单时间范围起始点【请保持时间范围最大90天】
+     * @param CreatTimeRangeStart 下单时间范围起始点【请保持时间范围最大90天】
      */
     public void setCreatTimeRangeStart(String CreatTimeRangeStart) {
         this.CreatTimeRangeStart = CreatTimeRangeStart;
     }
 
     /**
-     * Get 下单时间范围终止点 
-     * @return CreatTimeRangeEnd 下单时间范围终止点
+     * Get 下单时间范围终止点【请保持时间范围最大90天】 
+     * @return CreatTimeRangeEnd 下单时间范围终止点【请保持时间范围最大90天】
      */
     public String getCreatTimeRangeEnd() {
         return this.CreatTimeRangeEnd;
     }
 
     /**
-     * Set 下单时间范围终止点
-     * @param CreatTimeRangeEnd 下单时间范围终止点
+     * Set 下单时间范围终止点【请保持时间范围最大90天】
+     * @param CreatTimeRangeEnd 下单时间范围终止点【请保持时间范围最大90天】
      */
     public void setCreatTimeRangeEnd(String CreatTimeRangeEnd) {
         this.CreatTimeRangeEnd = CreatTimeRangeEnd;

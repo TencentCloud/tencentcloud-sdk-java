@@ -165,6 +165,14 @@ public class NetworkInterface extends AbstractModel{
     private Long AttachType;
 
     /**
+    * 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -504,6 +512,26 @@ public class NetworkInterface extends AbstractModel{
         this.AttachType = AttachType;
     }
 
+    /**
+     * Get 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public NetworkInterface() {
     }
 
@@ -581,6 +609,9 @@ public class NetworkInterface extends AbstractModel{
         if (source.AttachType != null) {
             this.AttachType = new Long(source.AttachType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -607,6 +638,7 @@ public class NetworkInterface extends AbstractModel{
         this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "AttachType", this.AttachType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

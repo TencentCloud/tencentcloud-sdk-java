@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ResizeDiskRequest extends AbstractModel{
 
     /**
-    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-    */
-    @SerializedName("DiskId")
-    @Expose
-    private String DiskId;
-
-    /**
     * 云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
     */
     @SerializedName("DiskSize")
@@ -37,20 +30,11 @@ public class ResizeDiskRequest extends AbstractModel{
     private Long DiskSize;
 
     /**
-     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public String getDiskId() {
-        return this.DiskId;
-    }
-
-    /**
-     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public void setDiskId(String DiskId) {
-        this.DiskId = DiskId;
-    }
+    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
 
     /**
      * Get 云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
@@ -68,6 +52,22 @@ public class ResizeDiskRequest extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
+     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
     public ResizeDiskRequest() {
     }
 
@@ -76,11 +76,11 @@ public class ResizeDiskRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ResizeDiskRequest(ResizeDiskRequest source) {
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
     }
 
@@ -89,8 +89,8 @@ public class ResizeDiskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

@@ -65,6 +65,21 @@ public class WorkSpaceClusterItem extends AbstractModel{
     private Long Status;
 
     /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectIdStr")
+    @Expose
+    private String ProjectIdStr;
+
+    /**
      * Get 集群 ID 
      * @return ClusterGroupId 集群 ID
      */
@@ -160,6 +175,42 @@ public class WorkSpaceClusterItem extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectIdStr 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectIdStr() {
+        return this.ProjectIdStr;
+    }
+
+    /**
+     * Set 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectIdStr 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectIdStr(String ProjectIdStr) {
+        this.ProjectIdStr = ProjectIdStr;
+    }
+
     public WorkSpaceClusterItem() {
     }
 
@@ -186,6 +237,12 @@ public class WorkSpaceClusterItem extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectIdStr != null) {
+            this.ProjectIdStr = new String(source.ProjectIdStr);
+        }
     }
 
 
@@ -199,6 +256,8 @@ public class WorkSpaceClusterItem extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectIdStr", this.ProjectIdStr);
 
     }
 }

@@ -229,6 +229,14 @@ public class EmrListInstance extends AbstractModel{
     private Boolean IsMultiZoneCluster;
 
     /**
+    * 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsHandsCluster")
+    @Expose
+    private Boolean IsHandsCluster;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -728,6 +736,26 @@ public class EmrListInstance extends AbstractModel{
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
+    /**
+     * Get 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsHandsCluster 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsHandsCluster() {
+        return this.IsHandsCluster;
+    }
+
+    /**
+     * Set 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsHandsCluster 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsHandsCluster(Boolean IsHandsCluster) {
+        this.IsHandsCluster = IsHandsCluster;
+    }
+
     public EmrListInstance() {
     }
 
@@ -820,6 +848,9 @@ public class EmrListInstance extends AbstractModel{
         if (source.IsMultiZoneCluster != null) {
             this.IsMultiZoneCluster = new Boolean(source.IsMultiZoneCluster);
         }
+        if (source.IsHandsCluster != null) {
+            this.IsHandsCluster = new Boolean(source.IsHandsCluster);
+        }
     }
 
 
@@ -854,6 +885,7 @@ public class EmrListInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "ClusterClass", this.ClusterClass);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
+        this.setParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
 
     }
 }

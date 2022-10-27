@@ -107,7 +107,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long PreReadTime;
 
     /**
-    * 签署人userId，非企微场景不使用此字段
+    * 签署人userId，传此字段则不用传姓名、手机号
     */
     @SerializedName("UserId")
     @Expose
@@ -332,16 +332,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署人userId，非企微场景不使用此字段 
-     * @return UserId 签署人userId，非企微场景不使用此字段
+     * Get 签署人userId，传此字段则不用传姓名、手机号 
+     * @return UserId 签署人userId，传此字段则不用传姓名、手机号
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 签署人userId，非企微场景不使用此字段
-     * @param UserId 签署人userId，非企微场景不使用此字段
+     * Set 签署人userId，传此字段则不用传姓名、手机号
+     * @param UserId 签署人userId，传此字段则不用传姓名、手机号
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
