@@ -339,6 +339,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建查询结果下载任务
+     * @param req CreateResultDownloadRequest
+     * @return CreateResultDownloadResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResultDownloadResponse CreateResultDownload(CreateResultDownloadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateResultDownloadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateResultDownloadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateResultDownload");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateScript）用于创建sql脚本。
      * @param req CreateScriptRequest
      * @return CreateScriptResponse
@@ -731,6 +751,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDatabases");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询结果下载任务
+     * @param req DescribeResultDownloadRequest
+     * @return DescribeResultDownloadResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResultDownloadResponse DescribeResultDownload(DescribeResultDownloadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResultDownloadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResultDownload");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
