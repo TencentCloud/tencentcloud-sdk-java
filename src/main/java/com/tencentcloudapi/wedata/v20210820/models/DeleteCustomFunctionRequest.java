@@ -37,6 +37,13 @@ public class DeleteCustomFunctionRequest extends AbstractModel{
     private String FunctionId;
 
     /**
+    * 项目ID，必须填
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 集群实例 ID 
      * @return ClusterIdentifier 集群实例 ID
      */
@@ -68,6 +75,22 @@ public class DeleteCustomFunctionRequest extends AbstractModel{
         this.FunctionId = FunctionId;
     }
 
+    /**
+     * Get 项目ID，必须填 
+     * @return ProjectId 项目ID，必须填
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID，必须填
+     * @param ProjectId 项目ID，必须填
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public DeleteCustomFunctionRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DeleteCustomFunctionRequest extends AbstractModel{
         if (source.FunctionId != null) {
             this.FunctionId = new String(source.FunctionId);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DeleteCustomFunctionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterIdentifier", this.ClusterIdentifier);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

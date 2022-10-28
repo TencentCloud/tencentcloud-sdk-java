@@ -51,6 +51,20 @@ public class WaybillOCRRequest extends AbstractModel{
     private Boolean EnablePreDetect;
 
     /**
+    * 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+    */
+    @SerializedName("IsPdf")
+    @Expose
+    private Boolean IsPdf;
+
+    /**
+    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+    */
+    @SerializedName("PdfPageNumber")
+    @Expose
+    private Long PdfPageNumber;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -126,6 +140,38 @@ public class WaybillOCRRequest extends AbstractModel{
         this.EnablePreDetect = EnablePreDetect;
     }
 
+    /**
+     * Get 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。 
+     * @return IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public Boolean getIsPdf() {
+        return this.IsPdf;
+    }
+
+    /**
+     * Set 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     * @param IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public void setIsPdf(Boolean IsPdf) {
+        this.IsPdf = IsPdf;
+    }
+
+    /**
+     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。 
+     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public Long getPdfPageNumber() {
+        return this.PdfPageNumber;
+    }
+
+    /**
+     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public void setPdfPageNumber(Long PdfPageNumber) {
+        this.PdfPageNumber = PdfPageNumber;
+    }
+
     public WaybillOCRRequest() {
     }
 
@@ -143,6 +189,12 @@ public class WaybillOCRRequest extends AbstractModel{
         if (source.EnablePreDetect != null) {
             this.EnablePreDetect = new Boolean(source.EnablePreDetect);
         }
+        if (source.IsPdf != null) {
+            this.IsPdf = new Boolean(source.IsPdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
     }
 
 
@@ -153,6 +205,8 @@ public class WaybillOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "EnablePreDetect", this.EnablePreDetect);
+        this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
+        this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
 
     }
 }

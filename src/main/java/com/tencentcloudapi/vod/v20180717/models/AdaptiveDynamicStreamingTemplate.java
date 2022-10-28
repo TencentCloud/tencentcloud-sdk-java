@@ -121,6 +121,13 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 切片类型，仅当 Format 为 HLS 时有效。
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get 转自适应码流模板唯一标识。 
      * @return Definition 转自适应码流模板唯一标识。
      */
@@ -368,6 +375,22 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 切片类型，仅当 Format 为 HLS 时有效。 
+     * @return SegmentType 切片类型，仅当 Format 为 HLS 时有效。
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set 切片类型，仅当 Format 为 HLS 时有效。
+     * @param SegmentType 切片类型，仅当 Format 为 HLS 时有效。
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public AdaptiveDynamicStreamingTemplate() {
     }
 
@@ -415,6 +438,9 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -434,6 +460,7 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

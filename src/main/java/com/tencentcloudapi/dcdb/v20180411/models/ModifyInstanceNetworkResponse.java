@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yinsuda.v20220527.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKTVPlaylistsResponse extends AbstractModel{
+public class ModifyInstanceNetworkResponse extends AbstractModel{
 
     /**
-    * 歌单基础信息。
+    * 异步任务ID，根据此FlowId通过DescribeFlow接口查询任务进行状态
     */
-    @SerializedName("PlaylistBaseInfoSet")
+    @SerializedName("FlowId")
     @Expose
-    private KTVPlaylistBaseInfo [] PlaylistBaseInfoSet;
-
-    /**
-    * 歌单总数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeKTVPlaylistsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 歌单基础信息。 
-     * @return PlaylistBaseInfoSet 歌单基础信息。
+     * Get 异步任务ID，根据此FlowId通过DescribeFlow接口查询任务进行状态 
+     * @return FlowId 异步任务ID，根据此FlowId通过DescribeFlow接口查询任务进行状态
      */
-    public KTVPlaylistBaseInfo [] getPlaylistBaseInfoSet() {
-        return this.PlaylistBaseInfoSet;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 歌单基础信息。
-     * @param PlaylistBaseInfoSet 歌单基础信息。
+     * Set 异步任务ID，根据此FlowId通过DescribeFlow接口查询任务进行状态
+     * @param FlowId 异步任务ID，根据此FlowId通过DescribeFlow接口查询任务进行状态
      */
-    public void setPlaylistBaseInfoSet(KTVPlaylistBaseInfo [] PlaylistBaseInfoSet) {
-        this.PlaylistBaseInfoSet = PlaylistBaseInfoSet;
-    }
-
-    /**
-     * Get 歌单总数。 
-     * @return TotalCount 歌单总数。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 歌单总数。
-     * @param TotalCount 歌单总数。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeKTVPlaylistsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeKTVPlaylistsResponse() {
+    public ModifyInstanceNetworkResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeKTVPlaylistsResponse(DescribeKTVPlaylistsResponse source) {
-        if (source.PlaylistBaseInfoSet != null) {
-            this.PlaylistBaseInfoSet = new KTVPlaylistBaseInfo[source.PlaylistBaseInfoSet.length];
-            for (int i = 0; i < source.PlaylistBaseInfoSet.length; i++) {
-                this.PlaylistBaseInfoSet[i] = new KTVPlaylistBaseInfo(source.PlaylistBaseInfoSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public ModifyInstanceNetworkResponse(ModifyInstanceNetworkResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeKTVPlaylistsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PlaylistBaseInfoSet.", this.PlaylistBaseInfoSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

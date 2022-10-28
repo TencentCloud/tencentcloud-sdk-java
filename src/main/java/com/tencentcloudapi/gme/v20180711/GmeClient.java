@@ -209,7 +209,7 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
+     *本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近60天。
      * @param req DescribeAppStatisticsRequest
      * @return DescribeAppStatisticsResponse
      * @throws TencentCloudSDKException

@@ -58,6 +58,8 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 13：过路过桥费发票
 15：非税发票
 16：全电发票
+----------------------
+-1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
     */
     @SerializedName("Types")
     @Expose
@@ -71,6 +73,20 @@ No：不识别其他类型发票
     @SerializedName("ReturnOther")
     @Expose
     private String ReturnOther;
+
+    /**
+    * 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+    */
+    @SerializedName("IsPdf")
+    @Expose
+    private Boolean IsPdf;
+
+    /**
+    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+    */
+    @SerializedName("PdfPageNumber")
+    @Expose
+    private Long PdfPageNumber;
 
     /**
      * Get 图片的 Base64 值。
@@ -146,7 +162,9 @@ No：不识别其他类型发票
 12：购车发票
 13：过路过桥费发票
 15：非税发票
-16：全电发票 
+16：全电发票
+----------------------
+-1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回） 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -161,6 +179,8 @@ No：不识别其他类型发票
 13：过路过桥费发票
 15：非税发票
 16：全电发票
+----------------------
+-1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
      */
     public Long [] getTypes() {
         return this.Types;
@@ -181,6 +201,8 @@ No：不识别其他类型发票
 13：过路过桥费发票
 15：非税发票
 16：全电发票
+----------------------
+-1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
      * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -195,6 +217,8 @@ No：不识别其他类型发票
 13：过路过桥费发票
 15：非税发票
 16：全电发票
+----------------------
+-1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
      */
     public void setTypes(Long [] Types) {
         this.Types = Types;
@@ -224,6 +248,38 @@ No：不识别其他类型发票
         this.ReturnOther = ReturnOther;
     }
 
+    /**
+     * Get 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。 
+     * @return IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public Boolean getIsPdf() {
+        return this.IsPdf;
+    }
+
+    /**
+     * Set 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     * @param IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public void setIsPdf(Boolean IsPdf) {
+        this.IsPdf = IsPdf;
+    }
+
+    /**
+     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。 
+     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public Long getPdfPageNumber() {
+        return this.PdfPageNumber;
+    }
+
+    /**
+     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public void setPdfPageNumber(Long PdfPageNumber) {
+        this.PdfPageNumber = PdfPageNumber;
+    }
+
     public MixedInvoiceOCRRequest() {
     }
 
@@ -247,6 +303,12 @@ No：不识别其他类型发票
         if (source.ReturnOther != null) {
             this.ReturnOther = new String(source.ReturnOther);
         }
+        if (source.IsPdf != null) {
+            this.IsPdf = new Boolean(source.IsPdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
     }
 
 
@@ -258,6 +320,8 @@ No：不识别其他类型发票
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamArraySimple(map, prefix + "Types.", this.Types);
         this.setParamSimple(map, prefix + "ReturnOther", this.ReturnOther);
+        this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
+        this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
 
     }
 }

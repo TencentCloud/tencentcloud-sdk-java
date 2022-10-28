@@ -30,6 +30,14 @@ public class ConfigInfo extends AbstractModel{
     private String ConfigId;
 
     /**
+    * 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * 日志格式化方式
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -113,6 +121,26 @@ public class ConfigInfo extends AbstractModel{
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
+    }
+
+    /**
+     * Get 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -298,6 +326,9 @@ public class ConfigInfo extends AbstractModel{
         if (source.ConfigId != null) {
             this.ConfigId = new String(source.ConfigId);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
         if (source.LogFormat != null) {
             this.LogFormat = new String(source.LogFormat);
         }
@@ -336,6 +367,7 @@ public class ConfigInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "LogFormat", this.LogFormat);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "LogType", this.LogType);

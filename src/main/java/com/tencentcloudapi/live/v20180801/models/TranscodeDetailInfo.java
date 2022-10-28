@@ -71,7 +71,7 @@ topspeed_H265：极速高清-H265。
     private Long Bitrate;
 
     /**
-    * 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+    * 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
     */
     @SerializedName("Type")
     @Expose
@@ -90,6 +90,15 @@ topspeed_H265：极速高清-H265。
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
+
+    /**
+    * 地域：
+Mainland：国内。
+Overseas：海外。
+    */
+    @SerializedName("MainlandOrOversea")
+    @Expose
+    private String MainlandOrOversea;
 
     /**
      * Get 流名称。 
@@ -212,16 +221,16 @@ topspeed_H265：极速高清-H265。
     }
 
     /**
-     * Get 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。 
-     * @return Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+     * Get 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。 
+     * @return Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
-     * @param Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+     * Set 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
+     * @param Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -259,6 +268,30 @@ topspeed_H265：极速高清-H265。
         this.Resolution = Resolution;
     }
 
+    /**
+     * Get 地域：
+Mainland：国内。
+Overseas：海外。 
+     * @return MainlandOrOversea 地域：
+Mainland：国内。
+Overseas：海外。
+     */
+    public String getMainlandOrOversea() {
+        return this.MainlandOrOversea;
+    }
+
+    /**
+     * Set 地域：
+Mainland：国内。
+Overseas：海外。
+     * @param MainlandOrOversea 地域：
+Mainland：国内。
+Overseas：海外。
+     */
+    public void setMainlandOrOversea(String MainlandOrOversea) {
+        this.MainlandOrOversea = MainlandOrOversea;
+    }
+
     public TranscodeDetailInfo() {
     }
 
@@ -294,6 +327,9 @@ topspeed_H265：极速高清-H265。
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
     }
 
 
@@ -310,6 +346,7 @@ topspeed_H265：极速高清-H265。
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "PushDomain", this.PushDomain);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
 
     }
 }

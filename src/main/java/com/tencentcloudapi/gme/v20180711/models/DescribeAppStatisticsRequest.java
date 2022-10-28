@@ -44,7 +44,7 @@ public class DescribeAppStatisticsRequest extends AbstractModel{
     private String EndDate;
 
     /**
-    * 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+    * 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
     */
     @SerializedName("Services")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeAppStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter 
-     * @return Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+     * Get 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText 
+     * @return Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
      */
     public String [] getServices() {
         return this.Services;
     }
 
     /**
-     * Set 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
-     * @param Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+     * Set 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+     * @param Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
      */
     public void setServices(String [] Services) {
         this.Services = Services;

@@ -44,6 +44,13 @@ public class SubmitCustomFunctionRequest extends AbstractModel{
     private String Comment;
 
     /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 函数唯一标识 
      * @return FunctionId 函数唯一标识
      */
@@ -91,6 +98,22 @@ public class SubmitCustomFunctionRequest extends AbstractModel{
         this.Comment = Comment;
     }
 
+    /**
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public SubmitCustomFunctionRequest() {
     }
 
@@ -108,6 +131,9 @@ public class SubmitCustomFunctionRequest extends AbstractModel{
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class SubmitCustomFunctionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
         this.setParamSimple(map, prefix + "ClusterIdentifier", this.ClusterIdentifier);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

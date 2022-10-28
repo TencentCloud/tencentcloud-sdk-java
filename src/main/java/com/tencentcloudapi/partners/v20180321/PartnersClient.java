@@ -379,6 +379,26 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *代理商可查询自己名下全部返佣信息
+     * @param req DescribeRebateInfosNewRequest
+     * @return DescribeRebateInfosNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRebateInfosNewResponse DescribeRebateInfosNew(DescribeRebateInfosNewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRebateInfosNewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRebateInfosNewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRebateInfosNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *代理商查询名下业务员列表信息
      * @param req DescribeSalesmansRequest
      * @return DescribeSalesmansResponse

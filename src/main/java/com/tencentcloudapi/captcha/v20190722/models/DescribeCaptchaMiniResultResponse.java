@@ -32,6 +32,7 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel{
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
     */
     @SerializedName("CaptchaCode")
@@ -63,6 +64,7 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel{
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误 
      * @return CaptchaCode 1       ticket verification succeeded     票据验证成功
 7       CaptchaAppId does not match     票据与验证码应用APPID不匹配
@@ -73,6 +75,7 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel{
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
      */
     public Long getCaptchaCode() {
@@ -89,6 +92,7 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel{
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
      * @param CaptchaCode 1       ticket verification succeeded     票据验证成功
 7       CaptchaAppId does not match     票据与验证码应用APPID不匹配
@@ -99,6 +103,7 @@ public class DescribeCaptchaMiniResultResponse extends AbstractModel{
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
      */
     public void setCaptchaCode(Long CaptchaCode) {

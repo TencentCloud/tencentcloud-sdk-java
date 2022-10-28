@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProjectsRequest extends AbstractModel{
 
     /**
-    * 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
+    * 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
     */
     @SerializedName("AllList")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeProjectsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目 
-     * @return AllList 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
+     * Get 传1拉取所有项目（包括隐藏项目），传0拉取显示项目 
+     * @return AllList 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
      */
     public Long getAllList() {
         return this.AllList;
     }
 
     /**
-     * Set 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
-     * @param AllList 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
+     * Set 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
+     * @param AllList 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
      */
     public void setAllList(Long AllList) {
         this.AllList = AllList;

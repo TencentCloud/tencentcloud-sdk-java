@@ -13,48 +13,56 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilterStatisticsItem extends AbstractModel{
+public class ReplicateSetInfo extends AbstractModel{
 
     /**
-    * 语音过滤总时长，单位为min
+    * 节点属性
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Duration")
+    @SerializedName("Nodes")
     @Expose
-    private Long Duration;
+    private NodeProperty [] Nodes;
 
     /**
-     * Get 语音过滤总时长，单位为min 
-     * @return Duration 语音过滤总时长，单位为min
+     * Get 节点属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Nodes 节点属性
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDuration() {
-        return this.Duration;
+    public NodeProperty [] getNodes() {
+        return this.Nodes;
     }
 
     /**
-     * Set 语音过滤总时长，单位为min
-     * @param Duration 语音过滤总时长，单位为min
+     * Set 节点属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Nodes 节点属性
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDuration(Long Duration) {
-        this.Duration = Duration;
+    public void setNodes(NodeProperty [] Nodes) {
+        this.Nodes = Nodes;
     }
 
-    public VoiceFilterStatisticsItem() {
+    public ReplicateSetInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VoiceFilterStatisticsItem(VoiceFilterStatisticsItem source) {
-        if (source.Duration != null) {
-            this.Duration = new Long(source.Duration);
+    public ReplicateSetInfo(ReplicateSetInfo source) {
+        if (source.Nodes != null) {
+            this.Nodes = new NodeProperty[source.Nodes.length];
+            for (int i = 0; i < source.Nodes.length; i++) {
+                this.Nodes[i] = new NodeProperty(source.Nodes[i]);
+            }
         }
     }
 
@@ -63,7 +71,7 @@ public class VoiceFilterStatisticsItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamArrayObj(map, prefix + "Nodes.", this.Nodes);
 
     }
 }

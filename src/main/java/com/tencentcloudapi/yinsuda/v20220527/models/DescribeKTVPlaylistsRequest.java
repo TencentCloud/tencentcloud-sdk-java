@@ -40,10 +40,25 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
     * 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
     */
     @SerializedName("Types")
     @Expose
     private String [] Types;
+
+    /**
+    * 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页返回的记录条数，默认值：20，最大值：50。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
      * Get 应用名称。 
@@ -80,10 +95,12 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
     /**
      * Get 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
-<li>Customize：自定义。</li> 
+<li>Customize：自定义。</li>
+默认值为 OfficialRec。 
      * @return Types 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
      */
     public String [] getTypes() {
         return this.Types;
@@ -93,12 +110,46 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
      * Set 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
      * @param Types 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
      */
     public void setTypes(String [] Types) {
         this.Types = Types;
+    }
+
+    /**
+     * Get 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。 
+     * @return Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+     * @param Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页返回的记录条数，默认值：20，最大值：50。 
+     * @return Limit 分页返回的记录条数，默认值：20，最大值：50。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页返回的记录条数，默认值：20，最大值：50。
+     * @param Limit 分页返回的记录条数，默认值：20，最大值：50。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     public DescribeKTVPlaylistsRequest() {
@@ -121,6 +172,12 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
                 this.Types[i] = new String(source.Types[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -131,6 +188,8 @@ public class DescribeKTVPlaylistsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "Types.", this.Types);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

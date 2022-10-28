@@ -125,6 +125,13 @@ public class TranscodeTemplate extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 切片类型，仅当 Container 为 hls 时有效。
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get 转码模板唯一标识。 
      * @return Definition 转码模板唯一标识。
      */
@@ -376,6 +383,22 @@ public class TranscodeTemplate extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 切片类型，仅当 Container 为 hls 时有效。 
+     * @return SegmentType 切片类型，仅当 Container 为 hls 时有效。
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set 切片类型，仅当 Container 为 hls 时有效。
+     * @param SegmentType 切片类型，仅当 Container 为 hls 时有效。
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public TranscodeTemplate() {
     }
 
@@ -423,6 +446,9 @@ public class TranscodeTemplate extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class TranscodeTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

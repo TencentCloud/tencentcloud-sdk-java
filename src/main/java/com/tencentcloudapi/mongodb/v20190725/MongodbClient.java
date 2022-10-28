@@ -280,6 +280,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
+     * @param req DescribeDBInstanceNodePropertyRequest
+     * @return DescribeDBInstanceNodePropertyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(DescribeDBInstanceNodePropertyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceNodePropertyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceNodePropertyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceNodeProperty");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse

@@ -51,6 +51,20 @@ public class MixedInvoiceDetectRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+    */
+    @SerializedName("IsPdf")
+    @Expose
+    private Boolean IsPdf;
+
+    /**
+    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+    */
+    @SerializedName("PdfPageNumber")
+    @Expose
+    private Long PdfPageNumber;
+
+    /**
      * Get 是否需要返回裁剪后的图片。 
      * @return ReturnImage 是否需要返回裁剪后的图片。
      */
@@ -126,6 +140,38 @@ public class MixedInvoiceDetectRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。 
+     * @return IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public Boolean getIsPdf() {
+        return this.IsPdf;
+    }
+
+    /**
+     * Set 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     * @param IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public void setIsPdf(Boolean IsPdf) {
+        this.IsPdf = IsPdf;
+    }
+
+    /**
+     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。 
+     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public Long getPdfPageNumber() {
+        return this.PdfPageNumber;
+    }
+
+    /**
+     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public void setPdfPageNumber(Long PdfPageNumber) {
+        this.PdfPageNumber = PdfPageNumber;
+    }
+
     public MixedInvoiceDetectRequest() {
     }
 
@@ -143,6 +189,12 @@ public class MixedInvoiceDetectRequest extends AbstractModel{
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.IsPdf != null) {
+            this.IsPdf = new Boolean(source.IsPdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
     }
 
 
@@ -153,6 +205,8 @@ public class MixedInvoiceDetectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReturnImage", this.ReturnImage);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
+        this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
 
     }
 }

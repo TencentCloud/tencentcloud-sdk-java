@@ -54,6 +54,38 @@ public class AppStatisticsItem extends AbstractModel{
     private String Date;
 
     /**
+    * 录音转文本用量统计数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioTextStatisticsItem")
+    @Expose
+    private AudioTextStatisticsItem AudioTextStatisticsItem;
+
+    /**
+    * 流式转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StreamTextStatisticsItem")
+    @Expose
+    private StreamTextStatisticsItem StreamTextStatisticsItem;
+
+    /**
+    * 海外转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OverseaTextStatisticsItem")
+    @Expose
+    private OverseaTextStatisticsItem OverseaTextStatisticsItem;
+
+    /**
+    * 实时语音转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealtimeTextStatisticsItem")
+    @Expose
+    private RealtimeTextStatisticsItem RealtimeTextStatisticsItem;
+
+    /**
      * Get 实时语音统计数据
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealtimeSpeechStatisticsItem 实时语音统计数据
@@ -129,6 +161,86 @@ public class AppStatisticsItem extends AbstractModel{
         this.Date = Date;
     }
 
+    /**
+     * Get 录音转文本用量统计数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioTextStatisticsItem 录音转文本用量统计数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioTextStatisticsItem getAudioTextStatisticsItem() {
+        return this.AudioTextStatisticsItem;
+    }
+
+    /**
+     * Set 录音转文本用量统计数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioTextStatisticsItem 录音转文本用量统计数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioTextStatisticsItem(AudioTextStatisticsItem AudioTextStatisticsItem) {
+        this.AudioTextStatisticsItem = AudioTextStatisticsItem;
+    }
+
+    /**
+     * Get 流式转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StreamTextStatisticsItem 流式转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StreamTextStatisticsItem getStreamTextStatisticsItem() {
+        return this.StreamTextStatisticsItem;
+    }
+
+    /**
+     * Set 流式转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StreamTextStatisticsItem 流式转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStreamTextStatisticsItem(StreamTextStatisticsItem StreamTextStatisticsItem) {
+        this.StreamTextStatisticsItem = StreamTextStatisticsItem;
+    }
+
+    /**
+     * Get 海外转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OverseaTextStatisticsItem 海外转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OverseaTextStatisticsItem getOverseaTextStatisticsItem() {
+        return this.OverseaTextStatisticsItem;
+    }
+
+    /**
+     * Set 海外转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverseaTextStatisticsItem 海外转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOverseaTextStatisticsItem(OverseaTextStatisticsItem OverseaTextStatisticsItem) {
+        this.OverseaTextStatisticsItem = OverseaTextStatisticsItem;
+    }
+
+    /**
+     * Get 实时语音转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealtimeTextStatisticsItem 实时语音转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RealtimeTextStatisticsItem getRealtimeTextStatisticsItem() {
+        return this.RealtimeTextStatisticsItem;
+    }
+
+    /**
+     * Set 实时语音转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealtimeTextStatisticsItem 实时语音转文本用量数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealtimeTextStatisticsItem(RealtimeTextStatisticsItem RealtimeTextStatisticsItem) {
+        this.RealtimeTextStatisticsItem = RealtimeTextStatisticsItem;
+    }
+
     public AppStatisticsItem() {
     }
 
@@ -149,6 +261,18 @@ public class AppStatisticsItem extends AbstractModel{
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
+        if (source.AudioTextStatisticsItem != null) {
+            this.AudioTextStatisticsItem = new AudioTextStatisticsItem(source.AudioTextStatisticsItem);
+        }
+        if (source.StreamTextStatisticsItem != null) {
+            this.StreamTextStatisticsItem = new StreamTextStatisticsItem(source.StreamTextStatisticsItem);
+        }
+        if (source.OverseaTextStatisticsItem != null) {
+            this.OverseaTextStatisticsItem = new OverseaTextStatisticsItem(source.OverseaTextStatisticsItem);
+        }
+        if (source.RealtimeTextStatisticsItem != null) {
+            this.RealtimeTextStatisticsItem = new RealtimeTextStatisticsItem(source.RealtimeTextStatisticsItem);
+        }
     }
 
 
@@ -160,6 +284,10 @@ public class AppStatisticsItem extends AbstractModel{
         this.setParamObj(map, prefix + "VoiceMessageStatisticsItem.", this.VoiceMessageStatisticsItem);
         this.setParamObj(map, prefix + "VoiceFilterStatisticsItem.", this.VoiceFilterStatisticsItem);
         this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamObj(map, prefix + "AudioTextStatisticsItem.", this.AudioTextStatisticsItem);
+        this.setParamObj(map, prefix + "StreamTextStatisticsItem.", this.StreamTextStatisticsItem);
+        this.setParamObj(map, prefix + "OverseaTextStatisticsItem.", this.OverseaTextStatisticsItem);
+        this.setParamObj(map, prefix + "RealtimeTextStatisticsItem.", this.RealtimeTextStatisticsItem);
 
     }
 }

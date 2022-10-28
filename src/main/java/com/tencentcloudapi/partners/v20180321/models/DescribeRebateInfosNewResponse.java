@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yinsuda.v20220527.models;
+package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKTVPlaylistsResponse extends AbstractModel{
+public class DescribeRebateInfosNewResponse extends AbstractModel{
 
     /**
-    * 歌单基础信息。
+    * 返佣信息列表
     */
-    @SerializedName("PlaylistBaseInfoSet")
+    @SerializedName("RebateInfoSet")
     @Expose
-    private KTVPlaylistBaseInfo [] PlaylistBaseInfoSet;
+    private RebateInfoElemNew [] RebateInfoSet;
 
     /**
-    * 歌单总数。
+    * 符合查询条件返佣信息数目
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeKTVPlaylistsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 歌单基础信息。 
-     * @return PlaylistBaseInfoSet 歌单基础信息。
+     * Get 返佣信息列表 
+     * @return RebateInfoSet 返佣信息列表
      */
-    public KTVPlaylistBaseInfo [] getPlaylistBaseInfoSet() {
-        return this.PlaylistBaseInfoSet;
+    public RebateInfoElemNew [] getRebateInfoSet() {
+        return this.RebateInfoSet;
     }
 
     /**
-     * Set 歌单基础信息。
-     * @param PlaylistBaseInfoSet 歌单基础信息。
+     * Set 返佣信息列表
+     * @param RebateInfoSet 返佣信息列表
      */
-    public void setPlaylistBaseInfoSet(KTVPlaylistBaseInfo [] PlaylistBaseInfoSet) {
-        this.PlaylistBaseInfoSet = PlaylistBaseInfoSet;
+    public void setRebateInfoSet(RebateInfoElemNew [] RebateInfoSet) {
+        this.RebateInfoSet = RebateInfoSet;
     }
 
     /**
-     * Get 歌单总数。 
-     * @return TotalCount 歌单总数。
+     * Get 符合查询条件返佣信息数目 
+     * @return TotalCount 符合查询条件返佣信息数目
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 歌单总数。
-     * @param TotalCount 歌单总数。
+     * Set 符合查询条件返佣信息数目
+     * @param TotalCount 符合查询条件返佣信息数目
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -91,18 +91,18 @@ public class DescribeKTVPlaylistsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeKTVPlaylistsResponse() {
+    public DescribeRebateInfosNewResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeKTVPlaylistsResponse(DescribeKTVPlaylistsResponse source) {
-        if (source.PlaylistBaseInfoSet != null) {
-            this.PlaylistBaseInfoSet = new KTVPlaylistBaseInfo[source.PlaylistBaseInfoSet.length];
-            for (int i = 0; i < source.PlaylistBaseInfoSet.length; i++) {
-                this.PlaylistBaseInfoSet[i] = new KTVPlaylistBaseInfo(source.PlaylistBaseInfoSet[i]);
+    public DescribeRebateInfosNewResponse(DescribeRebateInfosNewResponse source) {
+        if (source.RebateInfoSet != null) {
+            this.RebateInfoSet = new RebateInfoElemNew[source.RebateInfoSet.length];
+            for (int i = 0; i < source.RebateInfoSet.length; i++) {
+                this.RebateInfoSet[i] = new RebateInfoElemNew(source.RebateInfoSet[i]);
             }
         }
         if (source.TotalCount != null) {
@@ -118,7 +118,7 @@ public class DescribeKTVPlaylistsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PlaylistBaseInfoSet.", this.PlaylistBaseInfoSet);
+        this.setParamArrayObj(map, prefix + "RebateInfoSet.", this.RebateInfoSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
