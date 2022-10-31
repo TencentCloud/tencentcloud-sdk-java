@@ -94,6 +94,14 @@ public class ValueParam extends AbstractModel{
     private JsonPathReplaceParam JsonPathReplace;
 
     /**
+    * Url解析
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UrlDecode")
+    @Expose
+    private UrlDecodeParam UrlDecode;
+
+    /**
      * Get 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写 
      * @return Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      */
@@ -269,6 +277,26 @@ public class ValueParam extends AbstractModel{
         this.JsonPathReplace = JsonPathReplace;
     }
 
+    /**
+     * Get Url解析
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UrlDecode Url解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UrlDecodeParam getUrlDecode() {
+        return this.UrlDecode;
+    }
+
+    /**
+     * Set Url解析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UrlDecode Url解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrlDecode(UrlDecodeParam UrlDecode) {
+        this.UrlDecode = UrlDecode;
+    }
+
     public ValueParam() {
     }
 
@@ -304,6 +332,9 @@ public class ValueParam extends AbstractModel{
         if (source.JsonPathReplace != null) {
             this.JsonPathReplace = new JsonPathReplaceParam(source.JsonPathReplace);
         }
+        if (source.UrlDecode != null) {
+            this.UrlDecode = new UrlDecodeParam(source.UrlDecode);
+        }
     }
 
 
@@ -320,6 +351,7 @@ public class ValueParam extends AbstractModel{
         this.setParamObj(map, prefix + "KV.", this.KV);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamObj(map, prefix + "JsonPathReplace.", this.JsonPathReplace);
+        this.setParamObj(map, prefix + "UrlDecode.", this.UrlDecode);
 
     }
 }

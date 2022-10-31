@@ -46,18 +46,18 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
     private String Proto;
 
     /**
-    * 源站类型，取值有：
-<li>custom：手动添加；</li>
-<li>origins：源站组。</li>
+    * 端口，支持格式：
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
     */
     @SerializedName("Port")
     @Expose
     private String [] Port;
 
     /**
-    * 源站类型，取值：
-custom：手动添加
-origins：源站组
+    * 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -65,11 +65,8 @@ origins：源站组
 
     /**
     * 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
     */
     @SerializedName("OriginValue")
     @Expose
@@ -94,6 +91,15 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     @SerializedName("SessionPersist")
     @Expose
     private Boolean SessionPersist;
+
+    /**
+    * 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
+    */
+    @SerializedName("OriginPort")
+    @Expose
+    private String OriginPort;
 
     /**
      * Get 站点ID。 
@@ -152,48 +158,48 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     }
 
     /**
-     * Get 源站类型，取值有：
-<li>custom：手动添加；</li>
-<li>origins：源站组。</li> 
-     * @return Port 源站类型，取值有：
-<li>custom：手动添加；</li>
-<li>origins：源站组。</li>
+     * Get 端口，支持格式：
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li> 
+     * @return Port 端口，支持格式：
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
      */
     public String [] getPort() {
         return this.Port;
     }
 
     /**
-     * Set 源站类型，取值有：
-<li>custom：手动添加；</li>
-<li>origins：源站组。</li>
-     * @param Port 源站类型，取值有：
-<li>custom：手动添加；</li>
-<li>origins：源站组。</li>
+     * Set 端口，支持格式：
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
+     * @param Port 端口，支持格式：
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
      */
     public void setPort(String [] Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 源站类型，取值：
-custom：手动添加
-origins：源站组 
-     * @return OriginType 源站类型，取值：
-custom：手动添加
-origins：源站组
+     * Get 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li> 
+     * @return OriginType 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set 源站类型，取值：
-custom：手动添加
-origins：源站组
-     * @param OriginType 源站类型，取值：
-custom：手动添加
-origins：源站组
+     * Set 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
+     * @param OriginType 源站类型，取值有：
+<li>custom：手动添加；</li>
+<li>origins：源站组。</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
@@ -201,17 +207,11 @@ origins：源站组
 
     /**
      * Get 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。 
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li> 
      * @return OriginValue 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      */
     public String [] getOriginValue() {
         return this.OriginValue;
@@ -219,17 +219,11 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * Set 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      * @param OriginValue 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;
@@ -291,6 +285,30 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
         this.SessionPersist = SessionPersist;
     }
 
+    /**
+     * Get 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li> 
+     * @return OriginPort 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
+     */
+    public String getOriginPort() {
+        return this.OriginPort;
+    }
+
+    /**
+     * Set 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
+     * @param OriginPort 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
+     */
+    public void setOriginPort(String OriginPort) {
+        this.OriginPort = OriginPort;
+    }
+
     public CreateApplicationProxyRuleRequest() {
     }
 
@@ -329,6 +347,9 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
         if (source.SessionPersist != null) {
             this.SessionPersist = new Boolean(source.SessionPersist);
         }
+        if (source.OriginPort != null) {
+            this.OriginPort = new String(source.OriginPort);
+        }
     }
 
 
@@ -344,6 +365,7 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
         this.setParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
         this.setParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
 
     }
 }

@@ -86,6 +86,30 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
     private Float SuggestedScore;
 
     /**
+    * 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefTextId")
+    @Expose
+    private Long RefTextId;
+
+    /**
+    * 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyWordHits")
+    @Expose
+    private Float [] KeyWordHits;
+
+    /**
+    * 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnKeyWordHits")
+    @Expose
+    private Float [] UnKeyWordHits;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -237,6 +261,66 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
     }
 
     /**
+     * Get 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefTextId 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRefTextId() {
+        return this.RefTextId;
+    }
+
+    /**
+     * Set 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefTextId 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefTextId(Long RefTextId) {
+        this.RefTextId = RefTextId;
+    }
+
+    /**
+     * Get 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyWordHits 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getKeyWordHits() {
+        return this.KeyWordHits;
+    }
+
+    /**
+     * Set 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyWordHits 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyWordHits(Float [] KeyWordHits) {
+        this.KeyWordHits = KeyWordHits;
+    }
+
+    /**
+     * Get 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnKeyWordHits 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getUnKeyWordHits() {
+        return this.UnKeyWordHits;
+    }
+
+    /**
+     * Set 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnKeyWordHits 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnKeyWordHits(Float [] UnKeyWordHits) {
+        this.UnKeyWordHits = UnKeyWordHits;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -293,6 +377,21 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
         if (source.SuggestedScore != null) {
             this.SuggestedScore = new Float(source.SuggestedScore);
         }
+        if (source.RefTextId != null) {
+            this.RefTextId = new Long(source.RefTextId);
+        }
+        if (source.KeyWordHits != null) {
+            this.KeyWordHits = new Float[source.KeyWordHits.length];
+            for (int i = 0; i < source.KeyWordHits.length; i++) {
+                this.KeyWordHits[i] = new Float(source.KeyWordHits[i]);
+            }
+        }
+        if (source.UnKeyWordHits != null) {
+            this.UnKeyWordHits = new Float[source.UnKeyWordHits.length];
+            for (int i = 0; i < source.UnKeyWordHits.length; i++) {
+                this.UnKeyWordHits[i] = new Float(source.UnKeyWordHits[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -312,6 +411,9 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SentenceInfoSet.", this.SentenceInfoSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SuggestedScore", this.SuggestedScore);
+        this.setParamSimple(map, prefix + "RefTextId", this.RefTextId);
+        this.setParamArraySimple(map, prefix + "KeyWordHits.", this.KeyWordHits);
+        this.setParamArraySimple(map, prefix + "UnKeyWordHits.", this.UnKeyWordHits);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

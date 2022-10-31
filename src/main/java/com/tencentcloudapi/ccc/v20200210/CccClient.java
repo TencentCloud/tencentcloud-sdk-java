@@ -119,6 +119,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建话机账号
+     * @param req CreateExtensionRequest
+     * @return CreateExtensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExtensionResponse CreateExtension(CreateExtensionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateExtensionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateExtensionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateExtension");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建 SDK 登录 Token。
      * @param req CreateSDKLoginTokenRequest
      * @return CreateSDKLoginTokenResponse
@@ -171,6 +191,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateUserSigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateUserSig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除话机账号
+     * @param req DeleteExtensionRequest
+     * @return DeleteExtensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExtensionResponse DeleteExtension(DeleteExtensionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteExtensionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteExtensionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteExtension");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -291,6 +331,46 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeChatMessagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeChatMessages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取话机信息
+     * @param req DescribeExtensionRequest
+     * @return DescribeExtensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtensionResponse DescribeExtension(DescribeExtensionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExtensionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExtensionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExtension");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询话机列表信息
+     * @param req DescribeExtensionsRequest
+     * @return DescribeExtensionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtensionsResponse DescribeExtensions(DescribeExtensionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExtensionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExtensionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExtensions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -499,6 +579,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *修改话机账号(绑定技能组、绑定坐席账号)
+     * @param req ModifyExtensionRequest
+     * @return ModifyExtensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyExtensionResponse ModifyExtension(ModifyExtensionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyExtensionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyExtensionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyExtension");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改客服账号
      * @param req ModifyStaffRequest
      * @return ModifyStaffResponse
@@ -511,6 +611,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyStaffResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyStaff");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重置话机注册密码
+     * @param req ResetExtensionPasswordRequest
+     * @return ResetExtensionPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetExtensionPasswordResponse ResetExtensionPassword(ResetExtensionPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetExtensionPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetExtensionPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetExtensionPassword");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

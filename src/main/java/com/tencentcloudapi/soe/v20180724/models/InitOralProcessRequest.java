@@ -138,6 +138,13 @@ ServerType不填默认为0
     private Long TextMode;
 
     /**
+    * 主题词和关键词
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。 
      * @return SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      */
@@ -453,6 +460,22 @@ ServerType不填默认为0
         this.TextMode = TextMode;
     }
 
+    /**
+     * Get 主题词和关键词 
+     * @return Keyword 主题词和关键词
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 主题词和关键词
+     * @param Keyword 主题词和关键词
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public InitOralProcessRequest() {
     }
 
@@ -497,6 +520,9 @@ ServerType不填默认为0
         if (source.TextMode != null) {
             this.TextMode = new Long(source.TextMode);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -516,6 +542,7 @@ ServerType不填默认为0
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
         this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
         this.setParamSimple(map, prefix + "TextMode", this.TextMode);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

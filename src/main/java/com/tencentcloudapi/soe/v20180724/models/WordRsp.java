@@ -79,6 +79,14 @@ public class WordRsp extends AbstractModel{
     private String ReferenceWord;
 
     /**
+    * 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeywordTag")
+    @Expose
+    private Long KeywordTag;
+
+    /**
      * Get 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。 
      * @return MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
@@ -206,6 +214,26 @@ public class WordRsp extends AbstractModel{
         this.ReferenceWord = ReferenceWord;
     }
 
+    /**
+     * Get 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeywordTag 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getKeywordTag() {
+        return this.KeywordTag;
+    }
+
+    /**
+     * Set 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeywordTag 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeywordTag(Long KeywordTag) {
+        this.KeywordTag = KeywordTag;
+    }
+
     public WordRsp() {
     }
 
@@ -241,6 +269,9 @@ public class WordRsp extends AbstractModel{
         if (source.ReferenceWord != null) {
             this.ReferenceWord = new String(source.ReferenceWord);
         }
+        if (source.KeywordTag != null) {
+            this.KeywordTag = new Long(source.KeywordTag);
+        }
     }
 
 
@@ -256,6 +287,7 @@ public class WordRsp extends AbstractModel{
         this.setParamSimple(map, prefix + "MatchTag", this.MatchTag);
         this.setParamArrayObj(map, prefix + "PhoneInfos.", this.PhoneInfos);
         this.setParamSimple(map, prefix + "ReferenceWord", this.ReferenceWord);
+        this.setParamSimple(map, prefix + "KeywordTag", this.KeywordTag);
 
     }
 }

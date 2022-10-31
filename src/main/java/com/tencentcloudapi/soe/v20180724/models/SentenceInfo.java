@@ -65,6 +65,30 @@ public class SentenceInfo extends AbstractModel{
     private Float SuggestedScore;
 
     /**
+    * 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefTextId")
+    @Expose
+    private Long RefTextId;
+
+    /**
+    * 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyWordHits")
+    @Expose
+    private Float [] KeyWordHits;
+
+    /**
+    * 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnKeyWordHits")
+    @Expose
+    private Float [] UnKeyWordHits;
+
+    /**
      * Get 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1. 
      * @return SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      */
@@ -160,6 +184,66 @@ public class SentenceInfo extends AbstractModel{
         this.SuggestedScore = SuggestedScore;
     }
 
+    /**
+     * Get 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefTextId 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRefTextId() {
+        return this.RefTextId;
+    }
+
+    /**
+     * Set 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefTextId 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefTextId(Long RefTextId) {
+        this.RefTextId = RefTextId;
+    }
+
+    /**
+     * Get 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyWordHits 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getKeyWordHits() {
+        return this.KeyWordHits;
+    }
+
+    /**
+     * Set 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyWordHits 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyWordHits(Float [] KeyWordHits) {
+        this.KeyWordHits = KeyWordHits;
+    }
+
+    /**
+     * Get 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnKeyWordHits 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getUnKeyWordHits() {
+        return this.UnKeyWordHits;
+    }
+
+    /**
+     * Set 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnKeyWordHits 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnKeyWordHits(Float [] UnKeyWordHits) {
+        this.UnKeyWordHits = UnKeyWordHits;
+    }
+
     public SentenceInfo() {
     }
 
@@ -189,6 +273,21 @@ public class SentenceInfo extends AbstractModel{
         if (source.SuggestedScore != null) {
             this.SuggestedScore = new Float(source.SuggestedScore);
         }
+        if (source.RefTextId != null) {
+            this.RefTextId = new Long(source.RefTextId);
+        }
+        if (source.KeyWordHits != null) {
+            this.KeyWordHits = new Float[source.KeyWordHits.length];
+            for (int i = 0; i < source.KeyWordHits.length; i++) {
+                this.KeyWordHits[i] = new Float(source.KeyWordHits[i]);
+            }
+        }
+        if (source.UnKeyWordHits != null) {
+            this.UnKeyWordHits = new Float[source.UnKeyWordHits.length];
+            for (int i = 0; i < source.UnKeyWordHits.length; i++) {
+                this.UnKeyWordHits[i] = new Float(source.UnKeyWordHits[i]);
+            }
+        }
     }
 
 
@@ -202,6 +301,9 @@ public class SentenceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PronFluency", this.PronFluency);
         this.setParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
         this.setParamSimple(map, prefix + "SuggestedScore", this.SuggestedScore);
+        this.setParamSimple(map, prefix + "RefTextId", this.RefTextId);
+        this.setParamArraySimple(map, prefix + "KeyWordHits.", this.KeyWordHits);
+        this.setParamArraySimple(map, prefix + "UnKeyWordHits.", this.UnKeyWordHits);
 
     }
 }

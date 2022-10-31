@@ -180,6 +180,13 @@ ServerType不填默认为0
     private Long TextMode;
 
     /**
+    * 主题词和关键词
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
 注意：序号上限为3000，不能超过上限。 
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
@@ -603,6 +610,22 @@ ServerType不填默认为0
         this.TextMode = TextMode;
     }
 
+    /**
+     * Get 主题词和关键词 
+     * @return Keyword 主题词和关键词
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 主题词和关键词
+     * @param Keyword 主题词和关键词
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public TransmitOralProcessWithInitRequest() {
     }
 
@@ -662,6 +685,9 @@ ServerType不填默认为0
         if (source.TextMode != null) {
             this.TextMode = new Long(source.TextMode);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -686,6 +712,7 @@ ServerType不填默认为0
         this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
         this.setParamSimple(map, prefix + "TextMode", this.TextMode);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }
