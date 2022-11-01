@@ -65,6 +65,21 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
     private Long UnhandledVirusEventCnt;
 
     /**
+    * 未处理恶意外连事件
+    */
+    @SerializedName("UnhandledMaliciousConnectionEventCnt")
+    @Expose
+    private Long UnhandledMaliciousConnectionEventCnt;
+
+    /**
+    * 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnhandledK8sApiEventCnt")
+    @Expose
+    private Long UnhandledK8sApiEventCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +183,42 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 未处理恶意外连事件 
+     * @return UnhandledMaliciousConnectionEventCnt 未处理恶意外连事件
+     */
+    public Long getUnhandledMaliciousConnectionEventCnt() {
+        return this.UnhandledMaliciousConnectionEventCnt;
+    }
+
+    /**
+     * Set 未处理恶意外连事件
+     * @param UnhandledMaliciousConnectionEventCnt 未处理恶意外连事件
+     */
+    public void setUnhandledMaliciousConnectionEventCnt(Long UnhandledMaliciousConnectionEventCnt) {
+        this.UnhandledMaliciousConnectionEventCnt = UnhandledMaliciousConnectionEventCnt;
+    }
+
+    /**
+     * Get 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnhandledK8sApiEventCnt 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUnhandledK8sApiEventCnt() {
+        return this.UnhandledK8sApiEventCnt;
+    }
+
+    /**
+     * Set 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnhandledK8sApiEventCnt 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnhandledK8sApiEventCnt(Long UnhandledK8sApiEventCnt) {
+        this.UnhandledK8sApiEventCnt = UnhandledK8sApiEventCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +260,12 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
         if (source.UnhandledVirusEventCnt != null) {
             this.UnhandledVirusEventCnt = new Long(source.UnhandledVirusEventCnt);
         }
+        if (source.UnhandledMaliciousConnectionEventCnt != null) {
+            this.UnhandledMaliciousConnectionEventCnt = new Long(source.UnhandledMaliciousConnectionEventCnt);
+        }
+        if (source.UnhandledK8sApiEventCnt != null) {
+            this.UnhandledK8sApiEventCnt = new Long(source.UnhandledK8sApiEventCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +282,8 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "UnhandledAbnormalProcessCnt", this.UnhandledAbnormalProcessCnt);
         this.setParamSimple(map, prefix + "UnhandledFileCnt", this.UnhandledFileCnt);
         this.setParamSimple(map, prefix + "UnhandledVirusEventCnt", this.UnhandledVirusEventCnt);
+        this.setParamSimple(map, prefix + "UnhandledMaliciousConnectionEventCnt", this.UnhandledMaliciousConnectionEventCnt);
+        this.setParamSimple(map, prefix + "UnhandledK8sApiEventCnt", this.UnhandledK8sApiEventCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

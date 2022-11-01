@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAliasDomainsResponse extends AbstractModel{
+public class DescribeRabbitMQNodeListResponse extends AbstractModel{
 
     /**
-    * 符合条件的别称域名个数。
+    * 集群列表数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 别称域名详细信息列表。
+    * 集群列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AliasDomains")
+    @SerializedName("NodeList")
     @Expose
-    private AliasDomain [] AliasDomains;
+    private RabbitMQPrivateNode [] NodeList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class DescribeAliasDomainsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的别称域名个数。 
-     * @return TotalCount 符合条件的别称域名个数。
+     * Get 集群列表数量 
+     * @return TotalCount 集群列表数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的别称域名个数。
-     * @param TotalCount 符合条件的别称域名个数。
+     * Set 集群列表数量
+     * @param TotalCount 集群列表数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 别称域名详细信息列表。 
-     * @return AliasDomains 别称域名详细信息列表。
+     * Get 集群列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeList 集群列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AliasDomain [] getAliasDomains() {
-        return this.AliasDomains;
+    public RabbitMQPrivateNode [] getNodeList() {
+        return this.NodeList;
     }
 
     /**
-     * Set 别称域名详细信息列表。
-     * @param AliasDomains 别称域名详细信息列表。
+     * Set 集群列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeList 集群列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAliasDomains(AliasDomain [] AliasDomains) {
-        this.AliasDomains = AliasDomains;
+    public void setNodeList(RabbitMQPrivateNode [] NodeList) {
+        this.NodeList = NodeList;
     }
 
     /**
@@ -91,21 +96,21 @@ public class DescribeAliasDomainsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAliasDomainsResponse() {
+    public DescribeRabbitMQNodeListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAliasDomainsResponse(DescribeAliasDomainsResponse source) {
+    public DescribeRabbitMQNodeListResponse(DescribeRabbitMQNodeListResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.AliasDomains != null) {
-            this.AliasDomains = new AliasDomain[source.AliasDomains.length];
-            for (int i = 0; i < source.AliasDomains.length; i++) {
-                this.AliasDomains[i] = new AliasDomain(source.AliasDomains[i]);
+        if (source.NodeList != null) {
+            this.NodeList = new RabbitMQPrivateNode[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new RabbitMQPrivateNode(source.NodeList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +124,7 @@ public class DescribeAliasDomainsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "AliasDomains.", this.AliasDomains);
+        this.setParamArrayObj(map, prefix + "NodeList.", this.NodeList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

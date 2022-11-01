@@ -205,7 +205,10 @@ public enum TcrErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+    // 修改vpc与私有域关联关系失败。
+     UNSUPPORTEDOPERATION_MODIFYPRIVATEZONEVPC("UnsupportedOperation.ModifyPrivateZoneVpc");
      
     private String value;
     private TcrErrorCode (String value){

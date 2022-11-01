@@ -45,7 +45,7 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long UserLevel;
 
     /**
-    * 旗舰版到期时间
+    * 旗舰版到期时间（Epoch Unix Timestamp）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProExpireTime")
@@ -144,9 +144,9 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get 旗舰版到期时间
+     * Get 旗舰版到期时间（Epoch Unix Timestamp）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProExpireTime 旗舰版到期时间
+     * @return ProExpireTime 旗舰版到期时间（Epoch Unix Timestamp）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProExpireTime() {
@@ -154,9 +154,9 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
-     * Set 旗舰版到期时间
+     * Set 旗舰版到期时间（Epoch Unix Timestamp）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProExpireTime 旗舰版到期时间
+     * @param ProExpireTime 旗舰版到期时间（Epoch Unix Timestamp）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProExpireTime(Long ProExpireTime) {

@@ -139,6 +139,26 @@ public class TcmClient extends AbstractClient{
     }
 
     /**
+     *关联Prometheus
+     * @param req LinkPrometheusRequest
+     * @return LinkPrometheusResponse
+     * @throws TencentCloudSDKException
+     */
+    public LinkPrometheusResponse LinkPrometheus(LinkPrometheusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<LinkPrometheusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<LinkPrometheusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "LinkPrometheus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改网格
      * @param req ModifyMeshRequest
      * @return ModifyMeshResponse
@@ -171,6 +191,26 @@ public class TcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UnlinkClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnlinkCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解除关联Prometheus
+     * @param req UnlinkPrometheusRequest
+     * @return UnlinkPrometheusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnlinkPrometheusResponse UnlinkPrometheus(UnlinkPrometheusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnlinkPrometheusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnlinkPrometheusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnlinkPrometheus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

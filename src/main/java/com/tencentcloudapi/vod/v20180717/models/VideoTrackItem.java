@@ -47,6 +47,15 @@ public class VideoTrackItem extends AbstractModel{
     private Float Duration;
 
     /**
+    * 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+    */
+    @SerializedName("TargetDuration")
+    @Expose
+    private Float TargetDuration;
+
+    /**
     * 视频原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值 ：Center。
@@ -100,18 +109,18 @@ public class VideoTrackItem extends AbstractModel{
     private String Height;
 
     /**
-    * 对图像进行的操作，如图像旋转等。
-    */
-    @SerializedName("ImageOperations")
-    @Expose
-    private ImageTransform [] ImageOperations;
-
-    /**
     * 对音频进行操作，如静音等。
     */
     @SerializedName("AudioOperations")
     @Expose
     private AudioTransform [] AudioOperations;
+
+    /**
+    * 对图像进行的操作，如图像旋转等。
+    */
+    @SerializedName("ImageOperations")
+    @Expose
+    private ImageTransform [] ImageOperations;
 
     /**
      * Get 视频片段的媒体素材来源，可以是：
@@ -171,6 +180,30 @@ public class VideoTrackItem extends AbstractModel{
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
+    }
+
+    /**
+     * Get 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li> 
+     * @return TargetDuration 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     */
+    public Float getTargetDuration() {
+        return this.TargetDuration;
+    }
+
+    /**
+     * Set 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     * @param TargetDuration 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     */
+    public void setTargetDuration(Float TargetDuration) {
+        this.TargetDuration = TargetDuration;
     }
 
     /**
@@ -326,22 +359,6 @@ public class VideoTrackItem extends AbstractModel{
     }
 
     /**
-     * Get 对图像进行的操作，如图像旋转等。 
-     * @return ImageOperations 对图像进行的操作，如图像旋转等。
-     */
-    public ImageTransform [] getImageOperations() {
-        return this.ImageOperations;
-    }
-
-    /**
-     * Set 对图像进行的操作，如图像旋转等。
-     * @param ImageOperations 对图像进行的操作，如图像旋转等。
-     */
-    public void setImageOperations(ImageTransform [] ImageOperations) {
-        this.ImageOperations = ImageOperations;
-    }
-
-    /**
      * Get 对音频进行操作，如静音等。 
      * @return AudioOperations 对音频进行操作，如静音等。
      */
@@ -355,6 +372,22 @@ public class VideoTrackItem extends AbstractModel{
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;
+    }
+
+    /**
+     * Get 对图像进行的操作，如图像旋转等。 
+     * @return ImageOperations 对图像进行的操作，如图像旋转等。
+     */
+    public ImageTransform [] getImageOperations() {
+        return this.ImageOperations;
+    }
+
+    /**
+     * Set 对图像进行的操作，如图像旋转等。
+     * @param ImageOperations 对图像进行的操作，如图像旋转等。
+     */
+    public void setImageOperations(ImageTransform [] ImageOperations) {
+        this.ImageOperations = ImageOperations;
     }
 
     public VideoTrackItem() {
@@ -374,6 +407,9 @@ public class VideoTrackItem extends AbstractModel{
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
+        if (source.TargetDuration != null) {
+            this.TargetDuration = new Float(source.TargetDuration);
+        }
         if (source.CoordinateOrigin != null) {
             this.CoordinateOrigin = new String(source.CoordinateOrigin);
         }
@@ -389,16 +425,16 @@ public class VideoTrackItem extends AbstractModel{
         if (source.Height != null) {
             this.Height = new String(source.Height);
         }
-        if (source.ImageOperations != null) {
-            this.ImageOperations = new ImageTransform[source.ImageOperations.length];
-            for (int i = 0; i < source.ImageOperations.length; i++) {
-                this.ImageOperations[i] = new ImageTransform(source.ImageOperations[i]);
-            }
-        }
         if (source.AudioOperations != null) {
             this.AudioOperations = new AudioTransform[source.AudioOperations.length];
             for (int i = 0; i < source.AudioOperations.length; i++) {
                 this.AudioOperations[i] = new AudioTransform(source.AudioOperations[i]);
+            }
+        }
+        if (source.ImageOperations != null) {
+            this.ImageOperations = new ImageTransform[source.ImageOperations.length];
+            for (int i = 0; i < source.ImageOperations.length; i++) {
+                this.ImageOperations[i] = new ImageTransform(source.ImageOperations[i]);
             }
         }
     }
@@ -411,13 +447,14 @@ public class VideoTrackItem extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
         this.setParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
         this.setParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
         this.setParamSimple(map, prefix + "XPos", this.XPos);
         this.setParamSimple(map, prefix + "YPos", this.YPos);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
-        this.setParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
         this.setParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
+        this.setParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
 
     }
 }

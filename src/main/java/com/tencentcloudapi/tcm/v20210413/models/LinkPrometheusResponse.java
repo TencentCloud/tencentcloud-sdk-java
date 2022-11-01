@@ -13,29 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.tcm.v20210413.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
-
-    /**
-    * 白盒密钥信息列表。
-    */
-    @SerializedName("KeyInfos")
-    @Expose
-    private WhiteboxKeyInfo [] KeyInfos;
-
-    /**
-    * 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class LinkPrometheusResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,42 +28,6 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 白盒密钥信息列表。 
-     * @return KeyInfos 白盒密钥信息列表。
-     */
-    public WhiteboxKeyInfo [] getKeyInfos() {
-        return this.KeyInfos;
-    }
-
-    /**
-     * Set 白盒密钥信息列表。
-     * @param KeyInfos 白盒密钥信息列表。
-     */
-    public void setKeyInfos(WhiteboxKeyInfo [] KeyInfos) {
-        this.KeyInfos = KeyInfos;
-    }
-
-    /**
-     * Get 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -96,23 +45,14 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeWhiteBoxKeyDetailsResponse() {
+    public LinkPrometheusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeWhiteBoxKeyDetailsResponse(DescribeWhiteBoxKeyDetailsResponse source) {
-        if (source.KeyInfos != null) {
-            this.KeyInfos = new WhiteboxKeyInfo[source.KeyInfos.length];
-            for (int i = 0; i < source.KeyInfos.length; i++) {
-                this.KeyInfos[i] = new WhiteboxKeyInfo(source.KeyInfos[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public LinkPrometheusResponse(LinkPrometheusResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "KeyInfos.", this.KeyInfos);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

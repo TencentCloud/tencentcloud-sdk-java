@@ -1541,6 +1541,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *查询账号维度待处理风险信息，包括是否为付费用户，查询攻击中、封堵中、过期资源数量等
+     * @param req DescribePendingRiskInfoRequest
+     * @return DescribePendingRiskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePendingRiskInfoResponse DescribePendingRiskInfo(DescribePendingRiskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePendingRiskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePendingRiskInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
      * @param req DisassociateDDoSEipAddressRequest
      * @return DisassociateDDoSEipAddressResponse

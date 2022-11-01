@@ -1,5 +1,8 @@
 package com.tencentcloudapi.bpaas.v20181217;
 public enum BpaasErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 数据上报失败。
      FAILEDOPERATION_SENDTOCKAFKA("FailedOperation.SendToCkafka"),
      
@@ -11,6 +14,9 @@ public enum BpaasErrorCode {
      
     // 已经审批。
      INVALIDPARAMETER_HASBEENAPPROVED("InvalidParameter.HasBeenApproved"),
+     
+    // id不存在。
+     INVALIDPARAMETER_IDNOTEXIST("InvalidParameter.IdNotExist"),
      
     // 非法流程节点。
      INVALIDPARAMETER_ILLEGALNODE("InvalidParameter.IllegalNode"),

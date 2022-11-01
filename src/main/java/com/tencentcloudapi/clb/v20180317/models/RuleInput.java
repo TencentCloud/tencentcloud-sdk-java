@@ -51,7 +51,7 @@ public class RuleInput extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * 证书信息
+    * 证书信息；此参数和MultiCertInfo不能同时传入。
     */
     @SerializedName("Certificate")
     @Expose
@@ -122,6 +122,13 @@ public class RuleInput extends AbstractModel{
     private String [] Domains;
 
     /**
+    * 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
+
+    /**
      * Get 转发规则的路径。长度限制为：1~200。 
      * @return Url 转发规则的路径。长度限制为：1~200。
      */
@@ -186,16 +193,16 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
-     * Get 证书信息 
-     * @return Certificate 证书信息
+     * Get 证书信息；此参数和MultiCertInfo不能同时传入。 
+     * @return Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书信息
-     * @param Certificate 证书信息
+     * Set 证书信息；此参数和MultiCertInfo不能同时传入。
+     * @param Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -349,6 +356,22 @@ public class RuleInput extends AbstractModel{
         this.Domains = Domains;
     }
 
+    /**
+     * Get 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。 
+     * @return MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     * @param MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
     public RuleInput() {
     }
 
@@ -402,6 +425,9 @@ public class RuleInput extends AbstractModel{
                 this.Domains[i] = new String(source.Domains[i]);
             }
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
     }
 
 
@@ -423,6 +449,7 @@ public class RuleInput extends AbstractModel{
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "Quic", this.Quic);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
 
     }
 }

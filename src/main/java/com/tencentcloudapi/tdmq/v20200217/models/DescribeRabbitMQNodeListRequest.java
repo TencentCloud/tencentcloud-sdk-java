@@ -13,100 +13,100 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudhsm.v20191112.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcRequest extends AbstractModel{
+public class DescribeRabbitMQNodeListRequest extends AbstractModel{
 
     /**
-    * 返回偏移量。Offset最小为0。
+    * 不适用，默认参数
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量。Limit需要在[1, 100]之间。
+    * 一页限制
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键字
-    */
-    @SerializedName("SearchWord")
-    @Expose
-    private String SearchWord;
+     * Get 不适用，默认参数 
+     * @return InstanceId 不适用，默认参数
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
 
     /**
-     * Get 返回偏移量。Offset最小为0。 
-     * @return Offset 返回偏移量。Offset最小为0。
+     * Set 不适用，默认参数
+     * @param InstanceId 不适用，默认参数
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 偏移量 
+     * @return Offset 偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回偏移量。Offset最小为0。
-     * @param Offset 返回偏移量。Offset最小为0。
+     * Set 偏移量
+     * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量。Limit需要在[1, 100]之间。 
-     * @return Limit 返回数量。Limit需要在[1, 100]之间。
+     * Get 一页限制 
+     * @return Limit 一页限制
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。Limit需要在[1, 100]之间。
-     * @param Limit 返回数量。Limit需要在[1, 100]之间。
+     * Set 一页限制
+     * @param Limit 一页限制
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
-    /**
-     * Get 搜索关键字 
-     * @return SearchWord 搜索关键字
-     */
-    public String getSearchWord() {
-        return this.SearchWord;
-    }
-
-    /**
-     * Set 搜索关键字
-     * @param SearchWord 搜索关键字
-     */
-    public void setSearchWord(String SearchWord) {
-        this.SearchWord = SearchWord;
-    }
-
-    public DescribeVpcRequest() {
+    public DescribeRabbitMQNodeListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVpcRequest(DescribeVpcRequest source) {
+    public DescribeRabbitMQNodeListRequest(DescribeRabbitMQNodeListRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.SearchWord != null) {
-            this.SearchWord = new String(source.SearchWord);
         }
     }
 
@@ -115,9 +115,9 @@ public class DescribeVpcRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
 
     }
 }

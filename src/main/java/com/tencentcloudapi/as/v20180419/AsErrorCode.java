@@ -186,6 +186,9 @@ public enum AsErrorCode {
     // 定时任务名称包含无效字符。
      INVALIDPARAMETERVALUE_INVALIDSCHEDULEDACTIONNAMEINCLUDEILLEGALCHAR("InvalidParameterValue.InvalidScheduledActionNameIncludeIllegalChar"),
      
+    // 安全组ID无效。
+     INVALIDPARAMETERVALUE_INVALIDSECURITYGROUPID("InvalidParameterValue.InvalidSecurityGroupId"),
+     
     // 快照ID无效。
      INVALIDPARAMETERVALUE_INVALIDSNAPSHOTID("InvalidParameterValue.InvalidSnapshotId"),
      

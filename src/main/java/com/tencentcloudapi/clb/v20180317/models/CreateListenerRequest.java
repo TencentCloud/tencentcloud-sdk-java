@@ -58,7 +58,7 @@ public class CreateListenerRequest extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+    * 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。
     */
     @SerializedName("Certificate")
     @Expose
@@ -120,6 +120,13 @@ public class CreateListenerRequest extends AbstractModel{
     @SerializedName("DeregisterTargetRst")
     @Expose
     private Boolean DeregisterTargetRst;
+
+    /**
+    * 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
 
     /**
      * Get 负载均衡实例 ID。 
@@ -202,16 +209,16 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。 
-     * @return Certificate 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+     * Get 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。 
+     * @return Certificate 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
-     * @param Certificate 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+     * Set 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。
+     * @param Certificate 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -349,6 +356,22 @@ public class CreateListenerRequest extends AbstractModel{
         this.DeregisterTargetRst = DeregisterTargetRst;
     }
 
+    /**
+     * Get 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。 
+     * @return MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+     * @param MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -405,6 +428,9 @@ public class CreateListenerRequest extends AbstractModel{
         if (source.DeregisterTargetRst != null) {
             this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
     }
 
 
@@ -426,6 +452,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "EndPort", this.EndPort);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
 
     }
 }

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.tcm.v20210413.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAliasDomainStatusResponse extends AbstractModel{
+public class UnlinkPrometheusRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 网格ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("MeshID")
     @Expose
-    private String RequestId;
+    private String MeshID;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 网格ID 
+     * @return MeshID 网格ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getMeshID() {
+        return this.MeshID;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 网格ID
+     * @param MeshID 网格ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setMeshID(String MeshID) {
+        this.MeshID = MeshID;
     }
 
-    public ModifyAliasDomainStatusResponse() {
+    public UnlinkPrometheusRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAliasDomainStatusResponse(ModifyAliasDomainStatusResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public UnlinkPrometheusRequest(UnlinkPrometheusRequest source) {
+        if (source.MeshID != null) {
+            this.MeshID = new String(source.MeshID);
         }
     }
 
@@ -63,7 +63,7 @@ public class ModifyAliasDomainStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "MeshID", this.MeshID);
 
     }
 }

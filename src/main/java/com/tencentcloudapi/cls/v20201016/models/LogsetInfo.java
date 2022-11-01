@@ -44,6 +44,14 @@ public class LogsetInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssumerName")
+    @Expose
+    private String AssumerName;
+
+    /**
     * 日志集绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -59,7 +67,7 @@ public class LogsetInfo extends AbstractModel{
     private Long TopicCount;
 
     /**
-    * 若AssumerUin非空，则表示创建该日志集的服务方角色
+    * 若AssumerName非空，则表示创建该日志集的服务方角色
     */
     @SerializedName("RoleName")
     @Expose
@@ -114,6 +122,26 @@ public class LogsetInfo extends AbstractModel{
     }
 
     /**
+     * Get 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssumerName 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssumerName() {
+        return this.AssumerName;
+    }
+
+    /**
+     * Set 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssumerName 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssumerName(String AssumerName) {
+        this.AssumerName = AssumerName;
+    }
+
+    /**
      * Get 日志集绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 日志集绑定的标签
@@ -150,16 +178,16 @@ public class LogsetInfo extends AbstractModel{
     }
 
     /**
-     * Get 若AssumerUin非空，则表示创建该日志集的服务方角色 
-     * @return RoleName 若AssumerUin非空，则表示创建该日志集的服务方角色
+     * Get 若AssumerName非空，则表示创建该日志集的服务方角色 
+     * @return RoleName 若AssumerName非空，则表示创建该日志集的服务方角色
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 若AssumerUin非空，则表示创建该日志集的服务方角色
-     * @param RoleName 若AssumerUin非空，则表示创建该日志集的服务方角色
+     * Set 若AssumerName非空，则表示创建该日志集的服务方角色
+     * @param RoleName 若AssumerName非空，则表示创建该日志集的服务方角色
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
@@ -181,6 +209,9 @@ public class LogsetInfo extends AbstractModel{
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.AssumerName != null) {
+            this.AssumerName = new String(source.AssumerName);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -204,6 +235,7 @@ public class LogsetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TopicCount", this.TopicCount);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);

@@ -58,7 +58,7 @@ public class ModifyListenerRequest extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
+    * 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
     */
     @SerializedName("Certificate")
     @Expose
@@ -106,6 +106,13 @@ public class ModifyListenerRequest extends AbstractModel{
     @SerializedName("SessionType")
     @Expose
     private String SessionType;
+
+    /**
+    * 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
 
     /**
      * Get 负载均衡实例ID。 
@@ -188,16 +195,16 @@ public class ModifyListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。 
-     * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
+     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。 
+     * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
-     * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
+     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+     * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -303,6 +310,22 @@ public class ModifyListenerRequest extends AbstractModel{
         this.SessionType = SessionType;
     }
 
+    /**
+     * Get 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。 
+     * @return MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+     * @param MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -347,6 +370,9 @@ public class ModifyListenerRequest extends AbstractModel{
         if (source.SessionType != null) {
             this.SessionType = new String(source.SessionType);
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
     }
 
 
@@ -366,6 +392,7 @@ public class ModifyListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
 
     }
 }

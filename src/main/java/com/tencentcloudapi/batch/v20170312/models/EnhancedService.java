@@ -37,7 +37,7 @@ public class EnhancedService extends AbstractModel{
     private RunMonitorServiceEnabled MonitorService;
 
     /**
-    * 开启云自动化助手服务。若不指定该参数，则默认不开启云自动化助手服务。
+    * 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，则公共镜像默认开启云自动化助手服务，其他镜像默认不开启云自动化助手服务。
     */
     @SerializedName("AutomationService")
     @Expose
@@ -76,16 +76,16 @@ public class EnhancedService extends AbstractModel{
     }
 
     /**
-     * Get 开启云自动化助手服务。若不指定该参数，则默认不开启云自动化助手服务。 
-     * @return AutomationService 开启云自动化助手服务。若不指定该参数，则默认不开启云自动化助手服务。
+     * Get 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，则公共镜像默认开启云自动化助手服务，其他镜像默认不开启云自动化助手服务。 
+     * @return AutomationService 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，则公共镜像默认开启云自动化助手服务，其他镜像默认不开启云自动化助手服务。
      */
     public RunAutomationServiceEnabled getAutomationService() {
         return this.AutomationService;
     }
 
     /**
-     * Set 开启云自动化助手服务。若不指定该参数，则默认不开启云自动化助手服务。
-     * @param AutomationService 开启云自动化助手服务。若不指定该参数，则默认不开启云自动化助手服务。
+     * Set 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，则公共镜像默认开启云自动化助手服务，其他镜像默认不开启云自动化助手服务。
+     * @param AutomationService 开启云自动化助手服务（TencentCloud Automation Tools，TAT）。若不指定该参数，则公共镜像默认开启云自动化助手服务，其他镜像默认不开启云自动化助手服务。
      */
     public void setAutomationService(RunAutomationServiceEnabled AutomationService) {
         this.AutomationService = AutomationService;

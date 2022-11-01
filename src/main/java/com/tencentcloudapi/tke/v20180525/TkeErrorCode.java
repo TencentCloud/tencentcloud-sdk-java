@@ -42,6 +42,9 @@ public enum TkeErrorCode {
     // 请求(http请求)其他云服务失败。
      FAILEDOPERATION_COMPONENTCLINETHTTP("FailedOperation.ComponentClinetHttp"),
      
+    // 创建CLS客户端失败。
+     FAILEDOPERATION_CREATECLSCLIENT("FailedOperation.CreateClsClient"),
+     
     // 创建CLS采集配置失败。
      FAILEDOPERATION_CREATECLSCONFIG("FailedOperation.CreateClsConfig"),
      
@@ -446,6 +449,9 @@ public enum TkeErrorCode {
      
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
+     
+    // CVM资源不足。
+     RESOURCEINSUFFICIENT_SPECIFIEDINSTANCETYPE("ResourceInsufficient.SpecifiedInstanceType"),
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),

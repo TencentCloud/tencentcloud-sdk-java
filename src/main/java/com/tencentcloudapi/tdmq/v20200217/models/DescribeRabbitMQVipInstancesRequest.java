@@ -13,100 +13,103 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudhsm.v20191112.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcRequest extends AbstractModel{
+public class DescribeRabbitMQVipInstancesRequest extends AbstractModel{
 
     /**
-    * 返回偏移量。Offset最小为0。
+    * 查询条件过滤器
     */
-    @SerializedName("Offset")
+    @SerializedName("Filters")
     @Expose
-    private Long Offset;
+    private Filter [] Filters;
 
     /**
-    * 返回数量。Limit需要在[1, 100]之间。
+    * 查询数目上限，默认20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键字
+    * 查询起始位置
     */
-    @SerializedName("SearchWord")
+    @SerializedName("Offset")
     @Expose
-    private String SearchWord;
+    private Long Offset;
 
     /**
-     * Get 返回偏移量。Offset最小为0。 
-     * @return Offset 返回偏移量。Offset最小为0。
+     * Get 查询条件过滤器 
+     * @return Filters 查询条件过滤器
      */
-    public Long getOffset() {
-        return this.Offset;
+    public Filter [] getFilters() {
+        return this.Filters;
     }
 
     /**
-     * Set 返回偏移量。Offset最小为0。
-     * @param Offset 返回偏移量。Offset最小为0。
+     * Set 查询条件过滤器
+     * @param Filters 查询条件过滤器
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
-     * Get 返回数量。Limit需要在[1, 100]之间。 
-     * @return Limit 返回数量。Limit需要在[1, 100]之间。
+     * Get 查询数目上限，默认20 
+     * @return Limit 查询数目上限，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。Limit需要在[1, 100]之间。
-     * @param Limit 返回数量。Limit需要在[1, 100]之间。
+     * Set 查询数目上限，默认20
+     * @param Limit 查询数目上限，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return SearchWord 搜索关键字
+     * Get 查询起始位置 
+     * @return Offset 查询起始位置
      */
-    public String getSearchWord() {
-        return this.SearchWord;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 搜索关键字
-     * @param SearchWord 搜索关键字
+     * Set 查询起始位置
+     * @param Offset 查询起始位置
      */
-    public void setSearchWord(String SearchWord) {
-        this.SearchWord = SearchWord;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
-    public DescribeVpcRequest() {
+    public DescribeRabbitMQVipInstancesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVpcRequest(DescribeVpcRequest source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+    public DescribeRabbitMQVipInstancesRequest(DescribeRabbitMQVipInstancesRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.SearchWord != null) {
-            this.SearchWord = new String(source.SearchWord);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -115,9 +118,9 @@ public class DescribeVpcRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -58,6 +58,14 @@ public class TopicInfo extends AbstractModel{
     private Boolean Index;
 
     /**
+    * 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssumerName")
+    @Expose
+    private String AssumerName;
+
+    /**
     * 创建时间
     */
     @SerializedName("CreateTime")
@@ -110,6 +118,22 @@ public class TopicInfo extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Long Period;
+
+    /**
+    * 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAssumerName")
+    @Expose
+    private String SubAssumerName;
+
+    /**
+    * 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Describes")
+    @Expose
+    private String Describes;
 
     /**
      * Get 日志集ID 
@@ -189,6 +213,26 @@ public class TopicInfo extends AbstractModel{
      */
     public void setIndex(Boolean Index) {
         this.Index = Index;
+    }
+
+    /**
+     * Get 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssumerName 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssumerName() {
+        return this.AssumerName;
+    }
+
+    /**
+     * Set 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssumerName 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssumerName(String AssumerName) {
+        this.AssumerName = AssumerName;
     }
 
     /**
@@ -323,6 +367,46 @@ public class TopicInfo extends AbstractModel{
         this.Period = Period;
     }
 
+    /**
+     * Get 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAssumerName() {
+        return this.SubAssumerName;
+    }
+
+    /**
+     * Set 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAssumerName(String SubAssumerName) {
+        this.SubAssumerName = SubAssumerName;
+    }
+
+    /**
+     * Get 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Describes 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescribes() {
+        return this.Describes;
+    }
+
+    /**
+     * Set 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Describes 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescribes(String Describes) {
+        this.Describes = Describes;
+    }
+
     public TopicInfo() {
     }
 
@@ -345,6 +429,9 @@ public class TopicInfo extends AbstractModel{
         }
         if (source.Index != null) {
             this.Index = new Boolean(source.Index);
+        }
+        if (source.AssumerName != null) {
+            this.AssumerName = new String(source.AssumerName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -370,6 +457,12 @@ public class TopicInfo extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.SubAssumerName != null) {
+            this.SubAssumerName = new String(source.SubAssumerName);
+        }
+        if (source.Describes != null) {
+            this.Describes = new String(source.Describes);
+        }
     }
 
 
@@ -382,6 +475,7 @@ public class TopicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
@@ -389,6 +483,8 @@ public class TopicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
+        this.setParamSimple(map, prefix + "Describes", this.Describes);
 
     }
 }

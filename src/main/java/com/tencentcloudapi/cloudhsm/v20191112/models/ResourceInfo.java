@@ -103,7 +103,7 @@ public class ResourceInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * 过期时间
+    * 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -399,9 +399,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 过期时间
+     * Get 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 过期时间
+     * @return ExpireTime 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
@@ -409,9 +409,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Set 过期时间
+     * Set 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 过期时间
+     * @param ExpireTime 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {

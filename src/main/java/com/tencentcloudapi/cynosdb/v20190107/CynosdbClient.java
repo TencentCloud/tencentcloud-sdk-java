@@ -219,6 +219,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *为集群删除手动备份，无法删除自动备份
+     * @param req DeleteBackupRequest
+     * @return DeleteBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *账号所有权限
      * @param req DescribeAccountAllGrantPrivilegesRequest
      * @return DescribeAccountAllGrantPrivilegesResponse

@@ -93,7 +93,7 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * 过期时间
+    * 资源过期时间，以时间戳形式展示。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -363,16 +363,16 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get 资源过期时间，以时间戳形式展示。 
+     * @return ExpireTime 资源过期时间，以时间戳形式展示。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set 资源过期时间，以时间戳形式展示。
+     * @param ExpireTime 资源过期时间，以时间戳形式展示。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

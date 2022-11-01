@@ -1319,6 +1319,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *RabbitMQ专享版查询节点列表
+     * @param req DescribeRabbitMQNodeListRequest
+     * @return DescribeRabbitMQNodeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(DescribeRabbitMQNodeListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQNodeListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQNodeListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQNodeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户已购的RabbitMQ专享实例列表
+     * @param req DescribeRabbitMQVipInstancesRequest
+     * @return DescribeRabbitMQVipInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(DescribeRabbitMQVipInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVipInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVipInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取单个RocketMQ集群信息
      * @param req DescribeRocketMQClusterRequest
      * @return DescribeRocketMQClusterResponse

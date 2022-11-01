@@ -135,6 +135,9 @@ public enum DcdbErrorCode {
     // 获取账号列表失败。
      INTERNALERROR_GETUSERLISTFAILED("InternalError.GetUserListFailed"),
      
+    // 获取用户安全组数量失败。
+     INTERNALERROR_GETUSERSGCOUNTFAILED("InternalError.GetUserSGCountFailed"),
+     
     // 获取用户安全组配额失败。
      INTERNALERROR_GETUSGQUOTAERROR("InternalError.GetUsgQuotaError"),
      

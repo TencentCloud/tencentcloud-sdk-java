@@ -47,6 +47,15 @@ public class AudioTrackItem extends AbstractModel{
     private Float Duration;
 
     /**
+    * 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+    */
+    @SerializedName("TargetDuration")
+    @Expose
+    private Float TargetDuration;
+
+    /**
     * 对音频片段进行的操作，如音量调节等。
     */
     @SerializedName("AudioOperations")
@@ -114,6 +123,30 @@ public class AudioTrackItem extends AbstractModel{
     }
 
     /**
+     * Get 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li> 
+     * @return TargetDuration 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     */
+    public Float getTargetDuration() {
+        return this.TargetDuration;
+    }
+
+    /**
+     * Set 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     * @param TargetDuration 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     */
+    public void setTargetDuration(Float TargetDuration) {
+        this.TargetDuration = TargetDuration;
+    }
+
+    /**
      * Get 对音频片段进行的操作，如音量调节等。 
      * @return AudioOperations 对音频片段进行的操作，如音量调节等。
      */
@@ -146,6 +179,9 @@ public class AudioTrackItem extends AbstractModel{
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
+        if (source.TargetDuration != null) {
+            this.TargetDuration = new Float(source.TargetDuration);
+        }
         if (source.AudioOperations != null) {
             this.AudioOperations = new AudioTransform[source.AudioOperations.length];
             for (int i = 0; i < source.AudioOperations.length; i++) {
@@ -162,6 +198,7 @@ public class AudioTrackItem extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
         this.setParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
         this.setParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
 
     }

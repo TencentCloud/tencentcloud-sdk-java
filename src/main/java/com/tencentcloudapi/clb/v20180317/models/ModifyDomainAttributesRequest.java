@@ -51,7 +51,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private String NewDomain;
 
     /**
-    * 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+    * 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
     */
     @SerializedName("Certificate")
     @Expose
@@ -84,6 +84,13 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     @SerializedName("NewDomains")
     @Expose
     private String [] NewDomains;
+
+    /**
+    * 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
 
     /**
      * Get 负载均衡实例ID。 
@@ -150,16 +157,16 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 域名相关的证书信息，注意，仅对启用SNI的监听器适用。 
-     * @return Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+     * Get 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。 
+     * @return Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
-     * @param Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+     * Set 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
+     * @param Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -229,6 +236,22 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.NewDomains = NewDomains;
     }
 
+    /**
+     * Get 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。 
+     * @return MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+     * @param MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
     public ModifyDomainAttributesRequest() {
     }
 
@@ -267,6 +290,9 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
                 this.NewDomains[i] = new String(source.NewDomains[i]);
             }
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         this.setParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
 
     }
 }

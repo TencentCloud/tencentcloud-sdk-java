@@ -294,6 +294,14 @@ public class VulDefenceEventDetail extends AbstractModel{
     private String JNDIUrl;
 
     /**
+    * rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RaspDetail")
+    @Expose
+    private RaspInfo [] RaspDetail;
+
+    /**
      * Get 漏洞CVEID 
      * @return CVEID 漏洞CVEID
      */
@@ -969,6 +977,26 @@ public class VulDefenceEventDetail extends AbstractModel{
         this.JNDIUrl = JNDIUrl;
     }
 
+    /**
+     * Get rasp detail
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RaspDetail rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RaspInfo [] getRaspDetail() {
+        return this.RaspDetail;
+    }
+
+    /**
+     * Set rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RaspDetail rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRaspDetail(RaspInfo [] RaspDetail) {
+        this.RaspDetail = RaspDetail;
+    }
+
     public VulDefenceEventDetail() {
     }
 
@@ -1082,6 +1110,12 @@ public class VulDefenceEventDetail extends AbstractModel{
         if (source.JNDIUrl != null) {
             this.JNDIUrl = new String(source.JNDIUrl);
         }
+        if (source.RaspDetail != null) {
+            this.RaspDetail = new RaspInfo[source.RaspDetail.length];
+            for (int i = 0; i < source.RaspDetail.length; i++) {
+                this.RaspDetail[i] = new RaspInfo(source.RaspDetail[i]);
+            }
+        }
     }
 
 
@@ -1123,6 +1157,7 @@ public class VulDefenceEventDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         this.setParamSimple(map, prefix + "JNDIUrl", this.JNDIUrl);
+        this.setParamArrayObj(map, prefix + "RaspDetail.", this.RaspDetail);
 
     }
 }

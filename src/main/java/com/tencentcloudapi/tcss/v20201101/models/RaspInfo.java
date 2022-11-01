@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAliasDomainResponse extends AbstractModel{
+public class RaspInfo extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * rasp名称
     */
-    @SerializedName("RequestId")
+    @SerializedName("Name")
     @Expose
-    private String RequestId;
+    private String Name;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * rasp  描述
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get rasp名称 
+     * @return Name rasp名称
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set rasp名称
+     * @param Name rasp名称
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public DeleteAliasDomainResponse() {
+    /**
+     * Get rasp  描述 
+     * @return Value rasp  描述
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set rasp  描述
+     * @param Value rasp  描述
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public RaspInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteAliasDomainResponse(DeleteAliasDomainResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public RaspInfo(RaspInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class DeleteAliasDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }
