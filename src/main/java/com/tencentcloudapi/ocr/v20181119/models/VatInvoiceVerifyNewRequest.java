@@ -66,6 +66,28 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel{
     private String Amount;
 
     /**
+    * 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+    */
+    @SerializedName("RegionCode")
+    @Expose
+    private String RegionCode;
+
+    /**
+    * 销方税号，通用机打电子发票必填
+    */
+    @SerializedName("SellerTaxCode")
+    @Expose
+    private String SellerTaxCode;
+
+    /**
+    * 是否开启通用机打电子发票，默认为关闭。
+    */
+    @SerializedName("EnableCommonElectronic")
+    @Expose
+    private Boolean EnableCommonElectronic;
+
+    /**
      * Get 发票号码，8位、20位（全电票） 
      * @return InvoiceNo 发票号码，8位、20位（全电票）
      */
@@ -165,6 +187,58 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel{
         this.Amount = Amount;
     }
 
+    /**
+     * Get 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300 
+     * @return RegionCode 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+     */
+    public String getRegionCode() {
+        return this.RegionCode;
+    }
+
+    /**
+     * Set 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+     * @param RegionCode 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+     */
+    public void setRegionCode(String RegionCode) {
+        this.RegionCode = RegionCode;
+    }
+
+    /**
+     * Get 销方税号，通用机打电子发票必填 
+     * @return SellerTaxCode 销方税号，通用机打电子发票必填
+     */
+    public String getSellerTaxCode() {
+        return this.SellerTaxCode;
+    }
+
+    /**
+     * Set 销方税号，通用机打电子发票必填
+     * @param SellerTaxCode 销方税号，通用机打电子发票必填
+     */
+    public void setSellerTaxCode(String SellerTaxCode) {
+        this.SellerTaxCode = SellerTaxCode;
+    }
+
+    /**
+     * Get 是否开启通用机打电子发票，默认为关闭。 
+     * @return EnableCommonElectronic 是否开启通用机打电子发票，默认为关闭。
+     */
+    public Boolean getEnableCommonElectronic() {
+        return this.EnableCommonElectronic;
+    }
+
+    /**
+     * Set 是否开启通用机打电子发票，默认为关闭。
+     * @param EnableCommonElectronic 是否开启通用机打电子发票，默认为关闭。
+     */
+    public void setEnableCommonElectronic(Boolean EnableCommonElectronic) {
+        this.EnableCommonElectronic = EnableCommonElectronic;
+    }
+
     public VatInvoiceVerifyNewRequest() {
     }
 
@@ -191,6 +265,15 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel{
         if (source.Amount != null) {
             this.Amount = new String(source.Amount);
         }
+        if (source.RegionCode != null) {
+            this.RegionCode = new String(source.RegionCode);
+        }
+        if (source.SellerTaxCode != null) {
+            this.SellerTaxCode = new String(source.SellerTaxCode);
+        }
+        if (source.EnableCommonElectronic != null) {
+            this.EnableCommonElectronic = new Boolean(source.EnableCommonElectronic);
+        }
     }
 
 
@@ -204,6 +287,9 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InvoiceKind", this.InvoiceKind);
         this.setParamSimple(map, prefix + "CheckCode", this.CheckCode);
         this.setParamSimple(map, prefix + "Amount", this.Amount);
+        this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
+        this.setParamSimple(map, prefix + "SellerTaxCode", this.SellerTaxCode);
+        this.setParamSimple(map, prefix + "EnableCommonElectronic", this.EnableCommonElectronic);
 
     }
 }

@@ -279,6 +279,26 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *查询单个验证的统计数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
+     * @param req GetTicketStatisticsRequest
+     * @return GetTicketStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTicketStatisticsResponse GetTicketStatistics(GetTicketStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTicketStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTicketStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTicketStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询所有验证的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
      * @param req GetTotalTicketStatisticsRequest
      * @return GetTotalTicketStatisticsResponse

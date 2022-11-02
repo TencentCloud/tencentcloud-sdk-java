@@ -86,6 +86,13 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
     private Long [] IdentityRoleID;
 
     /**
+    * 主体关系ID
+    */
+    @SerializedName("AuthRelationId")
+    @Expose
+    private Long AuthRelationId;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -229,6 +236,22 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
         this.IdentityRoleID = IdentityRoleID;
     }
 
+    /**
+     * Get 主体关系ID 
+     * @return AuthRelationId 主体关系ID
+     */
+    public Long getAuthRelationId() {
+        return this.AuthRelationId;
+    }
+
+    /**
+     * Set 主体关系ID
+     * @param AuthRelationId 主体关系ID
+     */
+    public void setAuthRelationId(Long AuthRelationId) {
+        this.AuthRelationId = AuthRelationId;
+    }
+
     public CreateOrganizationMemberRequest() {
     }
 
@@ -270,6 +293,9 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
                 this.IdentityRoleID[i] = new Long(source.IdentityRoleID[i]);
             }
         }
+        if (source.AuthRelationId != null) {
+            this.AuthRelationId = new Long(source.AuthRelationId);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
         this.setParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
+        this.setParamSimple(map, prefix + "AuthRelationId", this.AuthRelationId);
 
     }
 }

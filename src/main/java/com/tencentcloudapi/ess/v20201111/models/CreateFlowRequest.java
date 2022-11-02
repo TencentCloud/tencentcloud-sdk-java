@@ -73,7 +73,7 @@ public class CreateFlowRequest extends AbstractModel{
     private Long DeadLine;
 
     /**
-    * 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+    * 用户自定义字段，回调的时候会进行透传，长度需要小于20480
     */
     @SerializedName("UserData")
     @Expose
@@ -244,16 +244,16 @@ false：有序签
     }
 
     /**
-     * Get 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480 
-     * @return UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     * Get 用户自定义字段，回调的时候会进行透传，长度需要小于20480 
+     * @return UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
-     * @param UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     * Set 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     * @param UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;

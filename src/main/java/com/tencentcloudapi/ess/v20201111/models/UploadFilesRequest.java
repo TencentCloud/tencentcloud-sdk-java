@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class UploadFilesRequest extends AbstractModel{
 
     /**
-    * 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+    * 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
     */
     @SerializedName("BusinessType")
@@ -78,13 +78,13 @@ false--否，不处理
     private String [] CustomIds;
 
     /**
-     * Get 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+     * Get 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png 
-     * @return BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+     * @return BusinessType 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
      */
     public String getBusinessType() {
@@ -92,13 +92,13 @@ false--否，不处理
     }
 
     /**
-     * Set 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+     * Set 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-     * @param BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+     * @param BusinessType 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
      */
     public void setBusinessType(String BusinessType) {

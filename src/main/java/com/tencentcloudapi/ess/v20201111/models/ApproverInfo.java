@@ -128,6 +128,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String CustomApproverTag;
 
     /**
+    * 签署人个性化能力值
+    */
+    @SerializedName("ApproverOption")
+    @Expose
+    private ApproverOption ApproverOption;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -379,6 +386,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.CustomApproverTag = CustomApproverTag;
     }
 
+    /**
+     * Get 签署人个性化能力值 
+     * @return ApproverOption 签署人个性化能力值
+     */
+    public ApproverOption getApproverOption() {
+        return this.ApproverOption;
+    }
+
+    /**
+     * Set 签署人个性化能力值
+     * @param ApproverOption 签署人个性化能力值
+     */
+    public void setApproverOption(ApproverOption ApproverOption) {
+        this.ApproverOption = ApproverOption;
+    }
+
     public ApproverInfo() {
     }
 
@@ -435,6 +458,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.CustomApproverTag != null) {
             this.CustomApproverTag = new String(source.CustomApproverTag);
         }
+        if (source.ApproverOption != null) {
+            this.ApproverOption = new ApproverOption(source.ApproverOption);
+        }
     }
 
 
@@ -456,6 +482,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
         this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
+        this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
 
     }
 }

@@ -25,6 +25,8 @@ public class Component extends AbstractModel{
     /**
     * 控件编号
 
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
+
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
 例：
@@ -206,6 +208,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     /**
      * Get 控件编号
 
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
+
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
 例：
@@ -215,6 +219,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
 创建控件时，此值为空
 查询时返回完整结构 
      * @return ComponentId 控件编号
+
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
 
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
@@ -232,6 +238,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     /**
      * Set 控件编号
 
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
+
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
 例：
@@ -241,6 +249,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
 创建控件时，此值为空
 查询时返回完整结构
      * @param ComponentId 控件编号
+
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
 
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。

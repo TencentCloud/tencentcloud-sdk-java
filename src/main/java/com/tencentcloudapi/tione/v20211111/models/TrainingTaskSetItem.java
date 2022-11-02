@@ -53,12 +53,12 @@ public class TrainingTaskSetItem extends AbstractModel{
     private String FrameworkVersion;
 
     /**
-    * 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+    * 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TrainingMode")
+    @SerializedName("FrameworkEnvironment")
     @Expose
-    private String TrainingMode;
+    private String FrameworkEnvironment;
 
     /**
     * 计费模式
@@ -90,12 +90,12 @@ public class TrainingTaskSetItem extends AbstractModel{
     private ResourceConfigInfo [] ResourceConfigInfos;
 
     /**
-    * 标签配置
+    * 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Tags")
+    @SerializedName("TrainingMode")
     @Expose
-    private Tag [] Tags;
+    private String TrainingMode;
 
     /**
     * 任务状态
@@ -188,6 +188,14 @@ public class TrainingTaskSetItem extends AbstractModel{
     private String Message;
 
     /**
+    * 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -260,23 +268,23 @@ public class TrainingTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Get 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Get 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @return FrameworkEnvironment 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTrainingMode() {
-        return this.TrainingMode;
+    public String getFrameworkEnvironment() {
+        return this.FrameworkEnvironment;
     }
 
     /**
-     * Set 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Set 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param FrameworkEnvironment 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTrainingMode(String TrainingMode) {
-        this.TrainingMode = TrainingMode;
+    public void setFrameworkEnvironment(String FrameworkEnvironment) {
+        this.FrameworkEnvironment = FrameworkEnvironment;
     }
 
     /**
@@ -348,23 +356,23 @@ public class TrainingTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Get 标签配置
+     * Get 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签配置
+     * @return TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Tag [] getTags() {
-        return this.Tags;
+    public String getTrainingMode() {
+        return this.TrainingMode;
     }
 
     /**
-     * Set 标签配置
+     * Set 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签配置
+     * @param TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
+    public void setTrainingMode(String TrainingMode) {
+        this.TrainingMode = TrainingMode;
     }
 
     /**
@@ -583,6 +591,26 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.Message = Message;
     }
 
+    /**
+     * Get 标签配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public TrainingTaskSetItem() {
     }
 
@@ -603,8 +631,8 @@ public class TrainingTaskSetItem extends AbstractModel{
         if (source.FrameworkVersion != null) {
             this.FrameworkVersion = new String(source.FrameworkVersion);
         }
-        if (source.TrainingMode != null) {
-            this.TrainingMode = new String(source.TrainingMode);
+        if (source.FrameworkEnvironment != null) {
+            this.FrameworkEnvironment = new String(source.FrameworkEnvironment);
         }
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
@@ -621,11 +649,8 @@ public class TrainingTaskSetItem extends AbstractModel{
                 this.ResourceConfigInfos[i] = new ResourceConfigInfo(source.ResourceConfigInfos[i]);
             }
         }
-        if (source.Tags != null) {
-            this.Tags = new Tag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new Tag(source.Tags[i]);
-            }
+        if (source.TrainingMode != null) {
+            this.TrainingMode = new String(source.TrainingMode);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -663,6 +688,12 @@ public class TrainingTaskSetItem extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -674,12 +705,12 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
         this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
-        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
+        this.setParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ChargeStatus", this.ChargeStatus);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RuntimeInSeconds", this.RuntimeInSeconds);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
@@ -692,6 +723,7 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

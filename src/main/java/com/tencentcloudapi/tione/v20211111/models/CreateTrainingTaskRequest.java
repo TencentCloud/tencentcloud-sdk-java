@@ -30,13 +30,6 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-    */
-    @SerializedName("TrainingMode")
-    @Expose
-    private String TrainingMode;
-
-    /**
     * 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
     */
     @SerializedName("ChargeType")
@@ -56,6 +49,13 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     @SerializedName("CodePackagePath")
     @Expose
     private CosPathInfo CodePackagePath;
+
+    /**
+    * 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+    */
+    @SerializedName("TrainingMode")
+    @Expose
+    private String TrainingMode;
 
     /**
     * COS训练输出路径
@@ -79,11 +79,18 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     private String FrameworkName;
 
     /**
-    * 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+    * 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
     */
     @SerializedName("FrameworkVersion")
     @Expose
     private String FrameworkVersion;
+
+    /**
+    * 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+    */
+    @SerializedName("FrameworkEnvironment")
+    @Expose
+    private String FrameworkEnvironment;
 
     /**
     * 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
@@ -112,13 +119,6 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     @SerializedName("StartCmdInfo")
     @Expose
     private StartCmdInfo StartCmdInfo;
-
-    /**
-    * 数据来源，eg：DATASET、COS、CFS、HDFS
-    */
-    @SerializedName("DataSource")
-    @Expose
-    private String DataSource;
 
     /**
     * 数据配置
@@ -163,6 +163,13 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 数据来源，eg：DATASET、COS、CFS、HDFS
+    */
+    @SerializedName("DataSource")
+    @Expose
+    private String DataSource;
+
+    /**
      * Get 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -176,22 +183,6 @@ public class CreateTrainingTaskRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
-    }
-
-    /**
-     * Get 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD 
-     * @return TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     */
-    public String getTrainingMode() {
-        return this.TrainingMode;
-    }
-
-    /**
-     * Set 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     * @param TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     */
-    public void setTrainingMode(String TrainingMode) {
-        this.TrainingMode = TrainingMode;
     }
 
     /**
@@ -243,6 +234,22 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD 
+     * @return TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     */
+    public String getTrainingMode() {
+        return this.TrainingMode;
+    }
+
+    /**
+     * Set 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     */
+    public void setTrainingMode(String TrainingMode) {
+        this.TrainingMode = TrainingMode;
+    }
+
+    /**
      * Get COS训练输出路径 
      * @return Output COS训练输出路径
      */
@@ -291,19 +298,35 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu 
-     * @return FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     * Get 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9 
+     * @return FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
      */
     public String getFrameworkVersion() {
         return this.FrameworkVersion;
     }
 
     /**
-     * Set 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
-     * @param FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     * Set 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
+     * @param FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
      */
     public void setFrameworkVersion(String FrameworkVersion) {
         this.FrameworkVersion = FrameworkVersion;
+    }
+
+    /**
+     * Get 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu 
+     * @return FrameworkEnvironment 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     */
+    public String getFrameworkEnvironment() {
+        return this.FrameworkEnvironment;
+    }
+
+    /**
+     * Set 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     * @param FrameworkEnvironment 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     */
+    public void setFrameworkEnvironment(String FrameworkEnvironment) {
+        this.FrameworkEnvironment = FrameworkEnvironment;
     }
 
     /**
@@ -368,22 +391,6 @@ public class CreateTrainingTaskRequest extends AbstractModel{
      */
     public void setStartCmdInfo(StartCmdInfo StartCmdInfo) {
         this.StartCmdInfo = StartCmdInfo;
-    }
-
-    /**
-     * Get 数据来源，eg：DATASET、COS、CFS、HDFS 
-     * @return DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
-     */
-    public String getDataSource() {
-        return this.DataSource;
-    }
-
-    /**
-     * Set 数据来源，eg：DATASET、COS、CFS、HDFS
-     * @param DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
-     */
-    public void setDataSource(String DataSource) {
-        this.DataSource = DataSource;
     }
 
     /**
@@ -482,6 +489,22 @@ public class CreateTrainingTaskRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 数据来源，eg：DATASET、COS、CFS、HDFS 
+     * @return DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
+     */
+    public String getDataSource() {
+        return this.DataSource;
+    }
+
+    /**
+     * Set 数据来源，eg：DATASET、COS、CFS、HDFS
+     * @param DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
+     */
+    public void setDataSource(String DataSource) {
+        this.DataSource = DataSource;
+    }
+
     public CreateTrainingTaskRequest() {
     }
 
@@ -492,9 +515,6 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     public CreateTrainingTaskRequest(CreateTrainingTaskRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
-        }
-        if (source.TrainingMode != null) {
-            this.TrainingMode = new String(source.TrainingMode);
         }
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
@@ -508,6 +528,9 @@ public class CreateTrainingTaskRequest extends AbstractModel{
         if (source.CodePackagePath != null) {
             this.CodePackagePath = new CosPathInfo(source.CodePackagePath);
         }
+        if (source.TrainingMode != null) {
+            this.TrainingMode = new String(source.TrainingMode);
+        }
         if (source.Output != null) {
             this.Output = new CosPathInfo(source.Output);
         }
@@ -519,6 +542,9 @@ public class CreateTrainingTaskRequest extends AbstractModel{
         }
         if (source.FrameworkVersion != null) {
             this.FrameworkVersion = new String(source.FrameworkVersion);
+        }
+        if (source.FrameworkEnvironment != null) {
+            this.FrameworkEnvironment = new String(source.FrameworkEnvironment);
         }
         if (source.ResourceGroupId != null) {
             this.ResourceGroupId = new String(source.ResourceGroupId);
@@ -534,9 +560,6 @@ public class CreateTrainingTaskRequest extends AbstractModel{
         }
         if (source.StartCmdInfo != null) {
             this.StartCmdInfo = new StartCmdInfo(source.StartCmdInfo);
-        }
-        if (source.DataSource != null) {
-            this.DataSource = new String(source.DataSource);
         }
         if (source.DataConfigs != null) {
             this.DataConfigs = new DataConfig[source.DataConfigs.length];
@@ -559,6 +582,9 @@ public class CreateTrainingTaskRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.DataSource != null) {
+            this.DataSource = new String(source.DataSource);
+        }
     }
 
 
@@ -567,25 +593,26 @@ public class CreateTrainingTaskRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
         this.setParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
+        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
         this.setParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
         this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
+        this.setParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamObj(map, prefix + "StartCmdInfo.", this.StartCmdInfo);
-        this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamSimple(map, prefix + "TuningParameters", this.TuningParameters);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "DataSource", this.DataSource);
 
     }
 }

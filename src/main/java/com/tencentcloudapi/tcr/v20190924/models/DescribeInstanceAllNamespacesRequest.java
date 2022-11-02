@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class DescribeInstanceAllNamespacesRequest extends AbstractModel{
 
+    /**
+    * 每页个数
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 起始偏移位置
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get 每页个数 
+     * @return Limit 每页个数
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页个数
+     * @param Limit 每页个数
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 起始偏移位置 
+     * @return Offset 起始偏移位置
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 起始偏移位置
+     * @param Offset 起始偏移位置
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeInstanceAllNamespacesRequest() {
     }
 
@@ -30,6 +76,12 @@ public class DescribeInstanceAllNamespacesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceAllNamespacesRequest(DescribeInstanceAllNamespacesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class DescribeInstanceAllNamespacesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

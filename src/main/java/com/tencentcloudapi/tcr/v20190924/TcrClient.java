@@ -1299,7 +1299,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *查询所有有实例命名空间列表
+     *查询所有实例命名空间列表
      * @param req DescribeInstanceAllNamespacesRequest
      * @return DescribeInstanceAllNamespacesResponse
      * @throws TencentCloudSDKException

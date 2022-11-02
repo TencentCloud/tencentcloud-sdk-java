@@ -179,6 +179,26 @@ public class TcmClient extends AbstractClient{
     }
 
     /**
+     *修改 Tracing 配置
+     * @param req ModifyTracingConfigRequest
+     * @return ModifyTracingConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTracingConfigResponse ModifyTracingConfig(ModifyTracingConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTracingConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTracingConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTracingConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解关联集群
      * @param req UnlinkClusterRequest
      * @return UnlinkClusterResponse

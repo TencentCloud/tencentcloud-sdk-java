@@ -39,7 +39,7 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     private Long GoodsNum;
 
     /**
-    * 商品的时间大小
+    * 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
@@ -47,7 +47,7 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     private String TimeSpan;
 
     /**
-    * 商品的时间单位
+    * 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
@@ -110,9 +110,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Get 商品的时间大小
+     * Get 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeSpan 商品的时间大小
+     * @return TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeSpan() {
@@ -120,9 +120,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Set 商品的时间大小
+     * Set 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeSpan 商品的时间大小
+     * @param TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(String TimeSpan) {
@@ -130,9 +130,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Get 商品的时间单位
+     * Get 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeUnit 商品的时间单位
+     * @return TimeUnit 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
@@ -140,9 +140,9 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
     }
 
     /**
-     * Set 商品的时间单位
+     * Set 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeUnit 商品的时间单位
+     * @param TimeUnit 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {

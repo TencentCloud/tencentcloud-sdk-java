@@ -439,6 +439,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *修改忽略证书到期通知。打开或关闭证书到期通知。
+     * @param req ModifyCertificatesExpiringNotificationSwitchRequest
+     * @return ModifyCertificatesExpiringNotificationSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCertificatesExpiringNotificationSwitchResponse ModifyCertificatesExpiringNotificationSwitch(ModifyCertificatesExpiringNotificationSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCertificatesExpiringNotificationSwitchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCertificatesExpiringNotificationSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCertificatesExpiringNotificationSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ReplaceCertificate）用于重颁发证书。已申请的免费证书仅支持 RSA 算法、密钥对参数为2048的证书重颁发，并且目前仅支持1次重颁发。
      * @param req ReplaceCertificateRequest
      * @return ReplaceCertificateResponse

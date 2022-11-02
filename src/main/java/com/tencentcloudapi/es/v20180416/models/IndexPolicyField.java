@@ -71,6 +71,14 @@ public class IndexPolicyField extends AbstractModel{
     private String FrozenMinAge;
 
     /**
+    * /
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColdAction")
+    @Expose
+    private String ColdAction;
+
+    /**
      * Get 是否开启warm阶段
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WarmEnable 是否开启warm阶段
@@ -190,6 +198,26 @@ public class IndexPolicyField extends AbstractModel{
         this.FrozenMinAge = FrozenMinAge;
     }
 
+    /**
+     * Get /
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColdAction /
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColdAction() {
+        return this.ColdAction;
+    }
+
+    /**
+     * Set /
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColdAction /
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColdAction(String ColdAction) {
+        this.ColdAction = ColdAction;
+    }
+
     public IndexPolicyField() {
     }
 
@@ -216,6 +244,9 @@ public class IndexPolicyField extends AbstractModel{
         if (source.FrozenMinAge != null) {
             this.FrozenMinAge = new String(source.FrozenMinAge);
         }
+        if (source.ColdAction != null) {
+            this.ColdAction = new String(source.ColdAction);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class IndexPolicyField extends AbstractModel{
         this.setParamSimple(map, prefix + "ColdMinAge", this.ColdMinAge);
         this.setParamSimple(map, prefix + "FrozenEnable", this.FrozenEnable);
         this.setParamSimple(map, prefix + "FrozenMinAge", this.FrozenMinAge);
+        this.setParamSimple(map, prefix + "ColdAction", this.ColdAction);
 
     }
 }

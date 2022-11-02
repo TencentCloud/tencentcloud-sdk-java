@@ -40,6 +40,7 @@ public class ChannelCreateFlowSignReviewRequest extends AbstractModel{
     * 企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
     */
     @SerializedName("ReviewType")
     @Expose
@@ -88,10 +89,12 @@ REJECT: 拒绝
     /**
      * Get 企业内部审核结果
 PASS: 通过
-REJECT: 拒绝 
+REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束) 
      * @return ReviewType 企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
      */
     public String getReviewType() {
         return this.ReviewType;
@@ -101,9 +104,11 @@ REJECT: 拒绝
      * Set 企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
      * @param ReviewType 企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
      */
     public void setReviewType(String ReviewType) {
         this.ReviewType = ReviewType;

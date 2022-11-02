@@ -881,6 +881,26 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *创建恶意请求事件导出任务
+     * @param req CreateRiskDnsEventExportJobRequest
+     * @return CreateRiskDnsEventExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRiskDnsEventExportJobResponse CreateRiskDnsEventExportJob(CreateRiskDnsEventExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRiskDnsEventExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRiskDnsEventExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRiskDnsEventExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加检索模板
      * @param req CreateSearchTemplateRequest
      * @return CreateSearchTemplateResponse

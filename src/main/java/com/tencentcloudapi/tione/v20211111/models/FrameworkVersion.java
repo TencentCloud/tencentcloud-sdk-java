@@ -37,6 +37,13 @@ public class FrameworkVersion extends AbstractModel{
     private String [] TrainingModes;
 
     /**
+    * 框架运行环境
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
      * Get 框架版本 
      * @return Version 框架版本
      */
@@ -68,6 +75,22 @@ public class FrameworkVersion extends AbstractModel{
         this.TrainingModes = TrainingModes;
     }
 
+    /**
+     * Get 框架运行环境 
+     * @return Environment 框架运行环境
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 框架运行环境
+     * @param Environment 框架运行环境
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
     public FrameworkVersion() {
     }
 
@@ -85,6 +108,9 @@ public class FrameworkVersion extends AbstractModel{
                 this.TrainingModes[i] = new String(source.TrainingModes[i]);
             }
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class FrameworkVersion extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "TrainingModes.", this.TrainingModes);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
 
     }
 }

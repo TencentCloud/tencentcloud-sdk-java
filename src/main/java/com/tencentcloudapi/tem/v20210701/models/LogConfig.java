@@ -53,14 +53,14 @@ public class LogConfig extends AbstractModel{
     private String TopicId;
 
     /**
-    * 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+    * 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * 首行正则表达式，当LogType=multiline_log 时生效
+    * 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginningRegex")
@@ -114,6 +114,14 @@ public class LogConfig extends AbstractModel{
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
+
+    /**
+    * 导出规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtractRule")
+    @Expose
+    private LogConfigExtractRule ExtractRule;
 
     /**
      * Get 名称 
@@ -188,25 +196,25 @@ public class LogConfig extends AbstractModel{
     }
 
     /**
-     * Get 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文； 
-     * @return LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * Get 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json； 
+     * @return LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
-     * @param LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * Set 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
+     * @param LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 首行正则表达式，当LogType=multiline_log 时生效
+     * Get 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BeginningRegex 首行正则表达式，当LogType=multiline_log 时生效
+     * @return BeginningRegex 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginningRegex() {
@@ -214,9 +222,9 @@ public class LogConfig extends AbstractModel{
     }
 
     /**
-     * Set 首行正则表达式，当LogType=multiline_log 时生效
+     * Set 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BeginningRegex 首行正则表达式，当LogType=multiline_log 时生效
+     * @param BeginningRegex 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginningRegex(String BeginningRegex) {
@@ -343,6 +351,26 @@ public class LogConfig extends AbstractModel{
         this.ApplicationName = ApplicationName;
     }
 
+    /**
+     * Get 导出规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtractRule 导出规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LogConfigExtractRule getExtractRule() {
+        return this.ExtractRule;
+    }
+
+    /**
+     * Set 导出规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractRule 导出规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtractRule(LogConfigExtractRule ExtractRule) {
+        this.ExtractRule = ExtractRule;
+    }
+
     public LogConfig() {
     }
 
@@ -387,6 +415,9 @@ public class LogConfig extends AbstractModel{
         if (source.ApplicationName != null) {
             this.ApplicationName = new String(source.ApplicationName);
         }
+        if (source.ExtractRule != null) {
+            this.ExtractRule = new LogConfigExtractRule(source.ExtractRule);
+        }
     }
 
 
@@ -406,6 +437,7 @@ public class LogConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifyDate", this.ModifyDate);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+        this.setParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
 
     }
 }

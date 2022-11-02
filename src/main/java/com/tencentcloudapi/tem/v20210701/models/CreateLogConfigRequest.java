@@ -93,6 +93,13 @@ public class CreateLogConfigRequest extends AbstractModel{
     private String FilePattern;
 
     /**
+    * 导出规则
+    */
+    @SerializedName("ExtractRule")
+    @Expose
+    private LogConfigExtractRule ExtractRule;
+
+    /**
      * Get 环境 ID 
      * @return EnvironmentId 环境 ID
      */
@@ -252,6 +259,22 @@ public class CreateLogConfigRequest extends AbstractModel{
         this.FilePattern = FilePattern;
     }
 
+    /**
+     * Get 导出规则 
+     * @return ExtractRule 导出规则
+     */
+    public LogConfigExtractRule getExtractRule() {
+        return this.ExtractRule;
+    }
+
+    /**
+     * Set 导出规则
+     * @param ExtractRule 导出规则
+     */
+    public void setExtractRule(LogConfigExtractRule ExtractRule) {
+        this.ExtractRule = ExtractRule;
+    }
+
     public CreateLogConfigRequest() {
     }
 
@@ -290,6 +313,9 @@ public class CreateLogConfigRequest extends AbstractModel{
         if (source.FilePattern != null) {
             this.FilePattern = new String(source.FilePattern);
         }
+        if (source.ExtractRule != null) {
+            this.ExtractRule = new LogConfigExtractRule(source.ExtractRule);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class CreateLogConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginningRegex", this.BeginningRegex);
         this.setParamSimple(map, prefix + "LogPath", this.LogPath);
         this.setParamSimple(map, prefix + "FilePattern", this.FilePattern);
+        this.setParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
 
     }
 }

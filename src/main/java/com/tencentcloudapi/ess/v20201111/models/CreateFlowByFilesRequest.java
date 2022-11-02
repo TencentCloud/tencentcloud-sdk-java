@@ -125,6 +125,13 @@ false：有序签
     private Boolean NeedSignReview;
 
     /**
+    * 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
     * 应用号信息
     */
     @SerializedName("Agent")
@@ -384,6 +391,22 @@ false：有序签
     }
 
     /**
+     * Get 用户自定义字段，回调的时候会进行透传，长度需要小于20480 
+     * @return UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     * @param UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * Get 应用号信息 
      * @return Agent 应用号信息
      */
@@ -458,6 +481,9 @@ false：有序签
         if (source.NeedSignReview != null) {
             this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -481,6 +507,7 @@ false：有序签
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

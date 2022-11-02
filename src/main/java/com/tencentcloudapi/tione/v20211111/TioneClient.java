@@ -79,6 +79,26 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *用于创建、发布一个新的模型服务
+     * @param req CreateModelServiceRequest
+     * @return CreateModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelServiceResponse CreateModelService(CreateModelServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateModelServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateModelServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateModelService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *导入模型
      * @param req CreateTrainingModelRequest
      * @return CreateTrainingModelResponse
@@ -159,6 +179,46 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *根据服务id删除模型服务
+     * @param req DeleteModelServiceRequest
+     * @return DeleteModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelServiceResponse DeleteModelService(DeleteModelServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteModelServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteModelServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteModelService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据服务组id删除服务组下所有模型服务
+     * @param req DeleteModelServiceGroupRequest
+     * @return DeleteModelServiceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelServiceGroupResponse DeleteModelServiceGroup(DeleteModelServiceGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteModelServiceGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteModelServiceGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteModelServiceGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除模型
      * @param req DeleteTrainingModelRequest
      * @return DeleteTrainingModelResponse
@@ -211,6 +271,26 @@ public class TioneClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTrainingTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTrainingTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列举API
+     * @param req DescribeAPIConfigsRequest
+     * @return DescribeAPIConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPIConfigsResponse DescribeAPIConfigs(DescribeAPIConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAPIConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAPIConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAPIConfigs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -459,6 +539,146 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *查询单个服务
+     * @param req DescribeModelServiceRequest
+     * @return DescribeModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServiceResponse DescribeModelService(DescribeModelServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *展示服务的调用信息
+     * @param req DescribeModelServiceCallInfoRequest
+     * @return DescribeModelServiceCallInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServiceCallInfoResponse DescribeModelServiceCallInfo(DescribeModelServiceCallInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServiceCallInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServiceCallInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelServiceCallInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询单个服务组
+     * @param req DescribeModelServiceGroupRequest
+     * @return DescribeModelServiceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServiceGroupResponse DescribeModelServiceGroup(DescribeModelServiceGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServiceGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServiceGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelServiceGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列举在线推理服务组
+     * @param req DescribeModelServiceGroupsRequest
+     * @return DescribeModelServiceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServiceGroupsResponse DescribeModelServiceGroups(DescribeModelServiceGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServiceGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServiceGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelServiceGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *展示服务的历史版本
+     * @param req DescribeModelServiceHistoryRequest
+     * @return DescribeModelServiceHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServiceHistoryResponse DescribeModelServiceHistory(DescribeModelServiceHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServiceHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServiceHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelServiceHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询模型服务能否开启热更新
+     * @param req DescribeModelServiceHotUpdatedRequest
+     * @return DescribeModelServiceHotUpdatedResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(DescribeModelServiceHotUpdatedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServiceHotUpdatedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServiceHotUpdatedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelServiceHotUpdated");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询多个服务
+     * @param req DescribeModelServicesRequest
+     * @return DescribeModelServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelServicesResponse DescribeModelServices(DescribeModelServicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModelServicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModelServicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModelServices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *训练框架列表
      * @param req DescribeTrainingFrameworksRequest
      * @return DescribeTrainingFrameworksResponse
@@ -611,6 +831,26 @@ public class TioneClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTrainingTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新推理服务组流量分配
+     * @param req ModifyServiceGroupWeightsRequest
+     * @return ModifyServiceGroupWeightsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(ModifyServiceGroupWeightsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyServiceGroupWeightsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyServiceGroupWeightsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyServiceGroupWeights");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

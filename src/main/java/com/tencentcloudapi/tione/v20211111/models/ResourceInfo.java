@@ -50,7 +50,7 @@ Gpu=100表示使用了“一张”gpu卡, 但此处的“一张”卡有可能�
     private Long Gpu;
 
     /**
-    * Gpu卡型号 T4或者V100
+    * Gpu卡型号 T4或者V100。仅展示当前 GPU 卡型号，若存在多类型同时使用，则参考 RealGpuDetailSet 的值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuType")
@@ -66,6 +66,14 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
     @SerializedName("RealGpu")
     @Expose
     private Long RealGpu;
+
+    /**
+    * 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealGpuDetailSet")
+    @Expose
+    private GpuDetail [] RealGpuDetailSet;
 
     /**
      * Get 处理器资源, 单位为1/1000核
@@ -140,9 +148,9 @@ Gpu=100表示使用了“一张”gpu卡, 但此处的“一张”卡有可能�
     }
 
     /**
-     * Get Gpu卡型号 T4或者V100
+     * Get Gpu卡型号 T4或者V100。仅展示当前 GPU 卡型号，若存在多类型同时使用，则参考 RealGpuDetailSet 的值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GpuType Gpu卡型号 T4或者V100
+     * @return GpuType Gpu卡型号 T4或者V100。仅展示当前 GPU 卡型号，若存在多类型同时使用，则参考 RealGpuDetailSet 的值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpuType() {
@@ -150,9 +158,9 @@ Gpu=100表示使用了“一张”gpu卡, 但此处的“一张”卡有可能�
     }
 
     /**
-     * Set Gpu卡型号 T4或者V100
+     * Set Gpu卡型号 T4或者V100。仅展示当前 GPU 卡型号，若存在多类型同时使用，则参考 RealGpuDetailSet 的值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GpuType Gpu卡型号 T4或者V100
+     * @param GpuType Gpu卡型号 T4或者V100。仅展示当前 GPU 卡型号，若存在多类型同时使用，则参考 RealGpuDetailSet 的值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuType(String GpuType) {
@@ -187,6 +195,26 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         this.RealGpu = RealGpu;
     }
 
+    /**
+     * Get 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealGpuDetailSet 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GpuDetail [] getRealGpuDetailSet() {
+        return this.RealGpuDetailSet;
+    }
+
+    /**
+     * Set 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealGpuDetailSet 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealGpuDetailSet(GpuDetail [] RealGpuDetailSet) {
+        this.RealGpuDetailSet = RealGpuDetailSet;
+    }
+
     public ResourceInfo() {
     }
 
@@ -210,6 +238,12 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         if (source.RealGpu != null) {
             this.RealGpu = new Long(source.RealGpu);
         }
+        if (source.RealGpuDetailSet != null) {
+            this.RealGpuDetailSet = new GpuDetail[source.RealGpuDetailSet.length];
+            for (int i = 0; i < source.RealGpuDetailSet.length; i++) {
+                this.RealGpuDetailSet[i] = new GpuDetail(source.RealGpuDetailSet[i]);
+            }
+        }
     }
 
 
@@ -222,6 +256,7 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
         this.setParamSimple(map, prefix + "RealGpu", this.RealGpu);
+        this.setParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
 
     }
 }

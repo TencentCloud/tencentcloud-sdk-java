@@ -74,12 +74,12 @@ public class TrainingTaskDetail extends AbstractModel{
     private String FrameworkVersion;
 
     /**
-    * 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+    * 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TrainingMode")
+    @SerializedName("FrameworkEnvironment")
     @Expose
-    private String TrainingMode;
+    private String FrameworkEnvironment;
 
     /**
     * 计费模式
@@ -112,12 +112,12 @@ public class TrainingTaskDetail extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 自定义镜像信息
+    * 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ImageInfo")
+    @SerializedName("TrainingMode")
     @Expose
-    private ImageInfo ImageInfo;
+    private String TrainingMode;
 
     /**
     * 代码包
@@ -196,11 +196,12 @@ public class TrainingTaskDetail extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 任务状态
+    * 自定义镜像信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Status")
+    @SerializedName("ImageInfo")
     @Expose
-    private String Status;
+    private ImageInfo ImageInfo;
 
     /**
     * 运行时长
@@ -302,6 +303,13 @@ public class TrainingTaskDetail extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
+
+    /**
+    * 任务状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
      * Get 训练任务ID 
@@ -424,23 +432,23 @@ public class TrainingTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Get 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @return FrameworkEnvironment 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTrainingMode() {
-        return this.TrainingMode;
+    public String getFrameworkEnvironment() {
+        return this.FrameworkEnvironment;
     }
 
     /**
-     * Set 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Set 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param FrameworkEnvironment 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTrainingMode(String TrainingMode) {
-        this.TrainingMode = TrainingMode;
+    public void setFrameworkEnvironment(String FrameworkEnvironment) {
+        this.FrameworkEnvironment = FrameworkEnvironment;
     }
 
     /**
@@ -516,23 +524,23 @@ public class TrainingTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 自定义镜像信息
+     * Get 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageInfo 自定义镜像信息
+     * @return TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ImageInfo getImageInfo() {
-        return this.ImageInfo;
+    public String getTrainingMode() {
+        return this.TrainingMode;
     }
 
     /**
-     * Set 自定义镜像信息
+     * Set 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo 自定义镜像信息
+     * @param TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setImageInfo(ImageInfo ImageInfo) {
-        this.ImageInfo = ImageInfo;
+    public void setTrainingMode(String TrainingMode) {
+        this.TrainingMode = TrainingMode;
     }
 
     /**
@@ -720,19 +728,23 @@ public class TrainingTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get 自定义镜像信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageInfo 自定义镜像信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getStatus() {
-        return this.Status;
+    public ImageInfo getImageInfo() {
+        return this.ImageInfo;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set 自定义镜像信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageInfo 自定义镜像信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setImageInfo(ImageInfo ImageInfo) {
+        this.ImageInfo = ImageInfo;
     }
 
     /**
@@ -983,6 +995,22 @@ public class TrainingTaskDetail extends AbstractModel{
         this.Message = Message;
     }
 
+    /**
+     * Get 任务状态 
+     * @return Status 任务状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 任务状态
+     * @param Status 任务状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public TrainingTaskDetail() {
     }
 
@@ -1012,8 +1040,8 @@ public class TrainingTaskDetail extends AbstractModel{
         if (source.FrameworkVersion != null) {
             this.FrameworkVersion = new String(source.FrameworkVersion);
         }
-        if (source.TrainingMode != null) {
-            this.TrainingMode = new String(source.TrainingMode);
+        if (source.FrameworkEnvironment != null) {
+            this.FrameworkEnvironment = new String(source.FrameworkEnvironment);
         }
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
@@ -1033,8 +1061,8 @@ public class TrainingTaskDetail extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
-        if (source.ImageInfo != null) {
-            this.ImageInfo = new ImageInfo(source.ImageInfo);
+        if (source.TrainingMode != null) {
+            this.TrainingMode = new String(source.TrainingMode);
         }
         if (source.CodePackagePath != null) {
             this.CodePackagePath = new CosPathInfo(source.CodePackagePath);
@@ -1069,8 +1097,8 @@ public class TrainingTaskDetail extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.ImageInfo != null) {
+            this.ImageInfo = new ImageInfo(source.ImageInfo);
         }
         if (source.RuntimeInSeconds != null) {
             this.RuntimeInSeconds = new Long(source.RuntimeInSeconds);
@@ -1111,6 +1139,9 @@ public class TrainingTaskDetail extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -1125,12 +1156,12 @@ public class TrainingTaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
         this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
-        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
+        this.setParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
-        this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
         this.setParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
         this.setParamObj(map, prefix + "StartCmdInfo.", this.StartCmdInfo);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
@@ -1141,7 +1172,7 @@ public class TrainingTaskDetail extends AbstractModel{
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "RuntimeInSeconds", this.RuntimeInSeconds);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
@@ -1155,6 +1186,7 @@ public class TrainingTaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }
