@@ -71,6 +71,13 @@ lye1y30d：低功耗事件30天年套餐。
     private Long Override;
 
     /**
+    * 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+    */
+    @SerializedName("PackageQueue")
+    @Expose
+    private String PackageQueue;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -214,6 +221,22 @@ lye1y30d：低功耗事件30天年套餐。
         this.Override = Override;
     }
 
+    /**
+     * Get 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。 
+     * @return PackageQueue 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+     */
+    public String getPackageQueue() {
+        return this.PackageQueue;
+    }
+
+    /**
+     * Set 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+     * @param PackageQueue 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+     */
+    public void setPackageQueue(String PackageQueue) {
+        this.PackageQueue = PackageQueue;
+    }
+
     public CreateCloudStorageRequest() {
     }
 
@@ -234,6 +257,9 @@ lye1y30d：低功耗事件30天年套餐。
         if (source.Override != null) {
             this.Override = new Long(source.Override);
         }
+        if (source.PackageQueue != null) {
+            this.PackageQueue = new String(source.PackageQueue);
+        }
     }
 
 
@@ -245,6 +271,7 @@ lye1y30d：低功耗事件30天年套餐。
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "Override", this.Override);
+        this.setParamSimple(map, prefix + "PackageQueue", this.PackageQueue);
 
     }
 }

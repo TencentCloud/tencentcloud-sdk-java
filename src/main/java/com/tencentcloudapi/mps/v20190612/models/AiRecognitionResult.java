@@ -29,6 +29,7 @@ public class AiRecognitionResult extends AbstractModel{
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -80,18 +81,29 @@ public class AiRecognitionResult extends AbstractModel{
     private AiRecognitionTaskOcrFullTextResult OcrFullTextTask;
 
     /**
+    * 翻译结果，当 Type 为
+ TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransTextTask")
+    @Expose
+    private AiRecognitionTaskTransTextResult TransTextTask;
+
+    /**
      * Get 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别。</li> 
+<li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li> 
      * @return Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      */
     public String getType() {
         return this.Type;
@@ -104,12 +116,14 @@ public class AiRecognitionResult extends AbstractModel{
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      * @param Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -235,6 +249,30 @@ public class AiRecognitionResult extends AbstractModel{
         this.OcrFullTextTask = OcrFullTextTask;
     }
 
+    /**
+     * Get 翻译结果，当 Type 为
+ TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransTextTask 翻译结果，当 Type 为
+ TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionTaskTransTextResult getTransTextTask() {
+        return this.TransTextTask;
+    }
+
+    /**
+     * Set 翻译结果，当 Type 为
+ TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransTextTask 翻译结果，当 Type 为
+ TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransTextTask(AiRecognitionTaskTransTextResult TransTextTask) {
+        this.TransTextTask = TransTextTask;
+    }
+
     public AiRecognitionResult() {
     }
 
@@ -261,6 +299,9 @@ public class AiRecognitionResult extends AbstractModel{
         if (source.OcrFullTextTask != null) {
             this.OcrFullTextTask = new AiRecognitionTaskOcrFullTextResult(source.OcrFullTextTask);
         }
+        if (source.TransTextTask != null) {
+            this.TransTextTask = new AiRecognitionTaskTransTextResult(source.TransTextTask);
+        }
     }
 
 
@@ -274,6 +315,7 @@ public class AiRecognitionResult extends AbstractModel{
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
         this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
+        this.setParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
 
     }
 }

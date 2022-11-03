@@ -89,7 +89,7 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
     private Long SampleInterval;
 
     /**
-    * 图片格式，取值为 jpg 和 png。
+    * 图片格式，取值为 jpg、png、webp。
     */
     @SerializedName("Format")
     @Expose
@@ -295,16 +295,16 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片格式，取值为 jpg 和 png。 
-     * @return Format 图片格式，取值为 jpg 和 png。
+     * Get 图片格式，取值为 jpg、png、webp。 
+     * @return Format 图片格式，取值为 jpg、png、webp。
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 图片格式，取值为 jpg 和 png。
-     * @param Format 图片格式，取值为 jpg 和 png。
+     * Set 图片格式，取值为 jpg、png、webp。
+     * @param Format 图片格式，取值为 jpg、png、webp。
      */
     public void setFormat(String Format) {
         this.Format = Format;

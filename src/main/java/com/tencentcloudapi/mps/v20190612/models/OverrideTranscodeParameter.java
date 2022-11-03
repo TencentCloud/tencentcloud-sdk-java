@@ -69,6 +69,13 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
+    * 字幕流配置参数。
+    */
+    @SerializedName("SubtitleTemplate")
+    @Expose
+    private SubtitleTemplate SubtitleTemplate;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -180,6 +187,22 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get 字幕流配置参数。 
+     * @return SubtitleTemplate 字幕流配置参数。
+     */
+    public SubtitleTemplate getSubtitleTemplate() {
+        return this.SubtitleTemplate;
+    }
+
+    /**
+     * Set 字幕流配置参数。
+     * @param SubtitleTemplate 字幕流配置参数。
+     */
+    public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
+        this.SubtitleTemplate = SubtitleTemplate;
+    }
+
     public OverrideTranscodeParameter() {
     }
 
@@ -206,6 +229,9 @@ public class OverrideTranscodeParameter extends AbstractModel{
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
         }
+        if (source.SubtitleTemplate != null) {
+            this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
+        }
     }
 
 
@@ -219,6 +245,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
 
     }
 }

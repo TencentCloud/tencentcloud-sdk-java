@@ -52,7 +52,8 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     private String [] PreviewUrls;
 
     /**
-    * 复杂文档合成任务的任务信息数组
+    * 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
+如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
     */
     @SerializedName("TaskInfos")
     @Expose
@@ -134,16 +135,20 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 复杂文档合成任务的任务信息数组 
-     * @return TaskInfos 复杂文档合成任务的任务信息数组
+     * Get 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
+如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情； 
+     * @return TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
+如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
      */
     public TaskInfo [] getTaskInfos() {
         return this.TaskInfos;
     }
 
     /**
-     * Set 复杂文档合成任务的任务信息数组
-     * @param TaskInfos 复杂文档合成任务的任务信息数组
+     * Set 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
+如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * @param TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
+如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
      */
     public void setTaskInfos(TaskInfo [] TaskInfos) {
         this.TaskInfos = TaskInfos;

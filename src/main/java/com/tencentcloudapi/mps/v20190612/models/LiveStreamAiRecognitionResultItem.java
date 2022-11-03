@@ -29,6 +29,7 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel{
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -75,18 +76,27 @@ OcrFullTextRecognition 时有效。
     private LiveStreamOcrFullTextRecognitionResult [] OcrFullTextRecognitionResultSet;
 
     /**
+    * 翻译结果，当Type 为 TransTextRecognition 时有效。
+    */
+    @SerializedName("TransTextRecognitionResultSet")
+    @Expose
+    private LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet;
+
+    /**
      * Get 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别。</li> 
+<li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li> 
      * @return Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      */
     public String getType() {
         return this.Type;
@@ -99,12 +109,14 @@ OcrFullTextRecognition 时有效。
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      * @param Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -210,6 +222,22 @@ OcrFullTextRecognition 时有效。
         this.OcrFullTextRecognitionResultSet = OcrFullTextRecognitionResultSet;
     }
 
+    /**
+     * Get 翻译结果，当Type 为 TransTextRecognition 时有效。 
+     * @return TransTextRecognitionResultSet 翻译结果，当Type 为 TransTextRecognition 时有效。
+     */
+    public LiveStreamTransTextRecognitionResult [] getTransTextRecognitionResultSet() {
+        return this.TransTextRecognitionResultSet;
+    }
+
+    /**
+     * Set 翻译结果，当Type 为 TransTextRecognition 时有效。
+     * @param TransTextRecognitionResultSet 翻译结果，当Type 为 TransTextRecognition 时有效。
+     */
+    public void setTransTextRecognitionResultSet(LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet) {
+        this.TransTextRecognitionResultSet = TransTextRecognitionResultSet;
+    }
+
     public LiveStreamAiRecognitionResultItem() {
     }
 
@@ -251,6 +279,12 @@ OcrFullTextRecognition 时有效。
                 this.OcrFullTextRecognitionResultSet[i] = new LiveStreamOcrFullTextRecognitionResult(source.OcrFullTextRecognitionResultSet[i]);
             }
         }
+        if (source.TransTextRecognitionResultSet != null) {
+            this.TransTextRecognitionResultSet = new LiveStreamTransTextRecognitionResult[source.TransTextRecognitionResultSet.length];
+            for (int i = 0; i < source.TransTextRecognitionResultSet.length; i++) {
+                this.TransTextRecognitionResultSet[i] = new LiveStreamTransTextRecognitionResult(source.TransTextRecognitionResultSet[i]);
+            }
+        }
     }
 
 
@@ -264,6 +298,7 @@ OcrFullTextRecognition 时有效。
         this.setParamArrayObj(map, prefix + "OcrWordsRecognitionResultSet.", this.OcrWordsRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
+        this.setParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
 
     }
 }

@@ -82,7 +82,7 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
     private String ResolutionAdaptive;
 
     /**
-    * 图片格式，取值为 jpg 和 png。默认为 jpg。
+    * 图片格式，取值为 jpg、png、webp。默认为 jpg。
     */
     @SerializedName("Format")
     @Expose
@@ -272,16 +272,16 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片格式，取值为 jpg 和 png。默认为 jpg。 
-     * @return Format 图片格式，取值为 jpg 和 png。默认为 jpg。
+     * Get 图片格式，取值为 jpg、png、webp。默认为 jpg。 
+     * @return Format 图片格式，取值为 jpg、png、webp。默认为 jpg。
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 图片格式，取值为 jpg 和 png。默认为 jpg。
-     * @param Format 图片格式，取值为 jpg 和 png。默认为 jpg。
+     * Set 图片格式，取值为 jpg、png、webp。默认为 jpg。
+     * @param Format 图片格式，取值为 jpg、png、webp。默认为 jpg。
      */
     public void setFormat(String Format) {
         this.Format = Format;

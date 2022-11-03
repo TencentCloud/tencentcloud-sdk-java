@@ -79,6 +79,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *以订单方式新建企业信息/配额信息
+     * @param req CreateCorporationOrderRequest
+     * @return CreateCorporationOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCorporationOrderResponse CreateCorporationOrder(CreateCorporationOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCorporationOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCorporationOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCorporationOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *生成自定义码包
      * @param req CreateCustomPackRequest
      * @return CreateCustomPackResponse

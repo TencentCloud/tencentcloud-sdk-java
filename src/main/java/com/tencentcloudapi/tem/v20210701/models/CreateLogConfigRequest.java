@@ -65,7 +65,7 @@ public class CreateLogConfigRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+    * 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
     */
     @SerializedName("LogType")
     @Expose
@@ -196,16 +196,16 @@ public class CreateLogConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文； 
-     * @return LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * Get 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则 
+     * @return LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
-     * @param LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * Set 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
+     * @param LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

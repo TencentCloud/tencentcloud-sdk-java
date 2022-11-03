@@ -58,7 +58,7 @@ public class CreateClusterRequest extends AbstractModel{
     private Long ComputeNodeCount;
 
     /**
-    * 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+    * 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
     */
     @SerializedName("SchedulerType")
     @Expose
@@ -111,7 +111,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Boolean DryRun;
 
     /**
-    * 域名字服务类型。默认值：NIS
+    * 域名字服务类型。默认取值：NIS。
 <li>NIS：NIS域名字服务。
     */
     @SerializedName("AccountType")
@@ -234,16 +234,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。 
-     * @return SchedulerType 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+     * Get 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。 
+     * @return SchedulerType 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
      */
     public String getSchedulerType() {
         return this.SchedulerType;
     }
 
     /**
-     * Set 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
-     * @param SchedulerType 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+     * Set 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+     * @param SchedulerType 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
      */
     public void setSchedulerType(String SchedulerType) {
         this.SchedulerType = SchedulerType;
@@ -362,9 +362,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 域名字服务类型。默认值：NIS
+     * Get 域名字服务类型。默认取值：NIS。
 <li>NIS：NIS域名字服务。 
-     * @return AccountType 域名字服务类型。默认值：NIS
+     * @return AccountType 域名字服务类型。默认取值：NIS。
 <li>NIS：NIS域名字服务。
      */
     public String getAccountType() {
@@ -372,9 +372,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Set 域名字服务类型。默认值：NIS
+     * Set 域名字服务类型。默认取值：NIS。
 <li>NIS：NIS域名字服务。
-     * @param AccountType 域名字服务类型。默认值：NIS
+     * @param AccountType 域名字服务类型。默认取值：NIS。
 <li>NIS：NIS域名字服务。
      */
     public void setAccountType(String AccountType) {

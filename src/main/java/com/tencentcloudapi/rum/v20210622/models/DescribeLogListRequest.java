@@ -65,7 +65,7 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Context;
 
     /**
-    * 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+    * 查询语句，参考控制台请求参数，语句长度最大为4096（必填）例："id:120001 AND type:\"log\""
     */
     @SerializedName("Query")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询语句，参考控制台请求参数，语句长度最大为4096（必填） 
-     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Get 查询语句，参考控制台请求参数，语句长度最大为4096（必填）例："id:120001 AND type:\"log\"" 
+     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）例："id:120001 AND type:\"log\""
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Set 查询语句，参考控制台请求参数，语句长度最大为4096（必填）例："id:120001 AND type:\"log\""
+     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）例："id:120001 AND type:\"log\""
      */
     public void setQuery(String Query) {
         this.Query = Query;

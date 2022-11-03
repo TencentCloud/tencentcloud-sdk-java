@@ -13,30 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.trp.v20210515.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoomInfoResponse extends AbstractModel{
+public class CreateCorporationOrderResponse extends AbstractModel{
 
     /**
-    * 操作结果, 0成功, 非0失败
+    * 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("CorpId")
     @Expose
-    private Long Result;
-
-    /**
-    * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ErrMsg")
-    @Expose
-    private String ErrMsg;
+    private Long CorpId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +38,23 @@ public class ModifyRoomInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 操作结果, 0成功, 非0失败
+     * Get 企业ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 操作结果, 0成功, 非0失败
+     * @return CorpId 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getResult() {
-        return this.Result;
+    public Long getCorpId() {
+        return this.CorpId;
     }
 
     /**
-     * Set 操作结果, 0成功, 非0失败
+     * Set 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResult(Long Result) {
-        this.Result = Result;
-    }
-
-    /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrMsg 错误信息
+     * @param CorpId 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getErrMsg() {
-        return this.ErrMsg;
-    }
-
-    /**
-     * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setErrMsg(String ErrMsg) {
-        this.ErrMsg = ErrMsg;
+    public void setCorpId(Long CorpId) {
+        this.CorpId = CorpId;
     }
 
     /**
@@ -101,19 +73,16 @@ public class ModifyRoomInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyRoomInfoResponse() {
+    public CreateCorporationOrderResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyRoomInfoResponse(ModifyRoomInfoResponse source) {
-        if (source.Result != null) {
-            this.Result = new Long(source.Result);
-        }
-        if (source.ErrMsg != null) {
-            this.ErrMsg = new String(source.ErrMsg);
+    public CreateCorporationOrderResponse(CreateCorporationOrderResponse source) {
+        if (source.CorpId != null) {
+            this.CorpId = new Long(source.CorpId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +94,7 @@ public class ModifyRoomInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "CorpId", this.CorpId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

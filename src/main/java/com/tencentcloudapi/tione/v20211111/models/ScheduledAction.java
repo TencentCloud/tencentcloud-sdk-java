@@ -30,7 +30,7 @@ public class ScheduledAction extends AbstractModel{
     private Boolean ScheduleStop;
 
     /**
-    * 要执行定时停止的时间，格式：“2022-01-26 19:46:22”
+    * 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
     */
     @SerializedName("ScheduleStopTime")
     @Expose
@@ -53,16 +53,16 @@ public class ScheduledAction extends AbstractModel{
     }
 
     /**
-     * Get 要执行定时停止的时间，格式：“2022-01-26 19:46:22” 
-     * @return ScheduleStopTime 要执行定时停止的时间，格式：“2022-01-26 19:46:22”
+     * Get 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00” 
+     * @return ScheduleStopTime 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
      */
     public String getScheduleStopTime() {
         return this.ScheduleStopTime;
     }
 
     /**
-     * Set 要执行定时停止的时间，格式：“2022-01-26 19:46:22”
-     * @param ScheduleStopTime 要执行定时停止的时间，格式：“2022-01-26 19:46:22”
+     * Set 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
+     * @param ScheduleStopTime 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
      */
     public void setScheduleStopTime(String ScheduleStopTime) {
         this.ScheduleStopTime = ScheduleStopTime;
