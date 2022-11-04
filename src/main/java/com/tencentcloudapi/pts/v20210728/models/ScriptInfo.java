@@ -79,6 +79,14 @@ public class ScriptInfo extends AbstractModel{
     private Long LoadWeight;
 
     /**
+    * 文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 文件名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 文件名
@@ -218,6 +226,26 @@ public class ScriptInfo extends AbstractModel{
         this.LoadWeight = LoadWeight;
     }
 
+    /**
+     * Get 文件 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileId 文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileId 文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public ScriptInfo() {
     }
 
@@ -247,6 +275,9 @@ public class ScriptInfo extends AbstractModel{
         if (source.LoadWeight != null) {
             this.LoadWeight = new Long(source.LoadWeight);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class ScriptInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EncodedContent", this.EncodedContent);
         this.setParamSimple(map, prefix + "EncodedHttpArchive", this.EncodedHttpArchive);
         this.setParamSimple(map, prefix + "LoadWeight", this.LoadWeight);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

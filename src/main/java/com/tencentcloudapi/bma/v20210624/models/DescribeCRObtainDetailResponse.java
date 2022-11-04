@@ -128,6 +128,13 @@ public class DescribeCRObtainDetailResponse extends AbstractModel{
     private String ObtainName;
 
     /**
+    * 取证公证信息
+    */
+    @SerializedName("DepositPdfCert")
+    @Expose
+    private String DepositPdfCert;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -375,6 +382,22 @@ public class DescribeCRObtainDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 取证公证信息 
+     * @return DepositPdfCert 取证公证信息
+     */
+    public String getDepositPdfCert() {
+        return this.DepositPdfCert;
+    }
+
+    /**
+     * Set 取证公证信息
+     * @param DepositPdfCert 取证公证信息
+     */
+    public void setDepositPdfCert(String DepositPdfCert) {
+        this.DepositPdfCert = DepositPdfCert;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -443,6 +466,9 @@ public class DescribeCRObtainDetailResponse extends AbstractModel{
         if (source.ObtainName != null) {
             this.ObtainName = new String(source.ObtainName);
         }
+        if (source.DepositPdfCert != null) {
+            this.DepositPdfCert = new String(source.DepositPdfCert);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +494,7 @@ public class DescribeCRObtainDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ObtainNote", this.ObtainNote);
         this.setParamSimple(map, prefix + "ObtainDuration", this.ObtainDuration);
         this.setParamSimple(map, prefix + "ObtainName", this.ObtainName);
+        this.setParamSimple(map, prefix + "DepositPdfCert", this.DepositPdfCert);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

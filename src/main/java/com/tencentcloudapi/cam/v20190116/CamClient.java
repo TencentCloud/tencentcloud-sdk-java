@@ -159,6 +159,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *为CAM用户创建访问密钥
+     * @param req CreateAccessKeyRequest
+     * @return CreateAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessKeyResponse CreateAccessKey(CreateAccessKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccessKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccessKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccessKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户组
      * @param req CreateGroupRequest
      * @return CreateGroupResponse
@@ -331,6 +351,27 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateUserSAMLConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateUserSAMLConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为CAM用户删除访问密钥。
+此接口属于高风险操作，删除密钥后不可恢复，腾讯云将永久拒绝此密钥的所有请求，请谨慎使用。
+     * @param req DeleteAccessKeyRequest
+     * @return DeleteAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccessKeyResponse DeleteAccessKey(DeleteAccessKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccessKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccessKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAccessKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1491,6 +1532,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UntagRoleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UntagRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为CAM用户更新访问密钥
+     * @param req UpdateAccessKeyRequest
+     * @return UpdateAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccessKeyResponse UpdateAccessKey(UpdateAccessKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAccessKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAccessKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAccessKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

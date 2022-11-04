@@ -37,7 +37,7 @@ public class EnhancedService extends AbstractModel{
     private RunMonitorServiceEnabled MonitorService;
 
     /**
-    * 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+    * 该参数已废弃，查询时会返回空值，请勿使用。
     */
     @SerializedName("AutomationService")
     @Expose
@@ -76,16 +76,16 @@ public class EnhancedService extends AbstractModel{
     }
 
     /**
-     * Get 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutomationService 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该参数已废弃，查询时会返回空值，请勿使用。 
+     * @return AutomationService 该参数已废弃，查询时会返回空值，请勿使用。
      */
     public RunAutomationServiceEnabled [] getAutomationService() {
         return this.AutomationService;
     }
 
     /**
-     * Set 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutomationService 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     * Set 该参数已废弃，查询时会返回空值，请勿使用。
+     * @param AutomationService 该参数已废弃，查询时会返回空值，请勿使用。
      */
     public void setAutomationService(RunAutomationServiceEnabled [] AutomationService) {
         this.AutomationService = AutomationService;

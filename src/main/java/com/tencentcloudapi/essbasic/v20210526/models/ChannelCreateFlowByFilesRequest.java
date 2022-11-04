@@ -121,6 +121,16 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+    */
+    @SerializedName("ApproverVerifyType")
+    @Expose
+    private String ApproverVerifyType;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -344,6 +354,34 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。 
+     * @return ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+     */
+    public String getApproverVerifyType() {
+        return this.ApproverVerifyType;
+    }
+
+    /**
+     * Set 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+     * @param ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+     */
+    public void setApproverVerifyType(String ApproverVerifyType) {
+        this.ApproverVerifyType = ApproverVerifyType;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -403,6 +441,9 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.ApproverVerifyType != null) {
+            this.ApproverVerifyType = new String(source.ApproverVerifyType);
+        }
     }
 
 
@@ -424,6 +465,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomerData", this.CustomerData);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
 
     }
 }

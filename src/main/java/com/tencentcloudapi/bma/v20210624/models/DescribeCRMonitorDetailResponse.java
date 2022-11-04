@@ -44,6 +44,13 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
     private Long MonitorStatus;
 
     /**
+    * 导出地址
+    */
+    @SerializedName("ExportURL")
+    @Expose
+    private String ExportURL;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 导出地址 
+     * @return ExportURL 导出地址
+     */
+    public String getExportURL() {
+        return this.ExportURL;
+    }
+
+    /**
+     * Set 导出地址
+     * @param ExportURL 导出地址
+     */
+    public void setExportURL(String ExportURL) {
+        this.ExportURL = ExportURL;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -134,6 +157,9 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
         if (source.MonitorStatus != null) {
             this.MonitorStatus = new Long(source.MonitorStatus);
         }
+        if (source.ExportURL != null) {
+            this.ExportURL = new String(source.ExportURL);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -147,6 +173,7 @@ public class DescribeCRMonitorDetailResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Torts.", this.Torts);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
+        this.setParamSimple(map, prefix + "ExportURL", this.ExportURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

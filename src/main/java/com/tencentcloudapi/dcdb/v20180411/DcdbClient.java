@@ -883,6 +883,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
+     * @param req IsolateDedicatedDBInstanceRequest
+     * @return IsolateDedicatedDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateDedicatedDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *隔离DCDB后付费实例
      * @param req IsolateHourDCDBInstanceRequest
      * @return IsolateHourDCDBInstanceResponse

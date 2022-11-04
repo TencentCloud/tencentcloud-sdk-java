@@ -169,6 +169,14 @@ public class File extends AbstractModel{
     private String SubAccountUin;
 
     /**
+    * 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
      * Get 文件 ID 
      * @return FileId 文件 ID
      */
@@ -524,6 +532,26 @@ public class File extends AbstractModel{
         this.SubAccountUin = SubAccountUin;
     }
 
+    /**
+     * Get 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
     public File() {
     }
 
@@ -604,6 +632,9 @@ public class File extends AbstractModel{
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
     }
 
 
@@ -630,6 +661,7 @@ public class File extends AbstractModel{
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

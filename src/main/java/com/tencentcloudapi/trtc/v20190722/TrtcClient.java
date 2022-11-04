@@ -358,6 +358,111 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
+joinSuccessRate：加入频道成功率。
+joinSuccessIn5sRate：5s内加入频道成功率。
+audioFreezeRate：音频卡顿率。
+videoFreezeRate：视频卡顿率。
+networkDelay ：网络延迟率。
+注意：
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+     * @param req DescribeTRTCMarketQualityMetricDataRequest
+     * @return DescribeTRTCMarketQualityMetricDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCMarketQualityMetricDataResponse DescribeTRTCMarketQualityMetricData(DescribeTRTCMarketQualityMetricDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTRTCMarketQualityMetricDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTRTCMarketQualityMetricDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTRTCMarketQualityMetricData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
+userCount：通话人数，
+roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
+peakCurrentChannels：峰值同时在线频道数。
+peakCurrentUsers：峰值同时在线人数。
+注意：
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+     * @param req DescribeTRTCMarketScaleMetricDataRequest
+     * @return DescribeTRTCMarketScaleMetricDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCMarketScaleMetricDataResponse DescribeTRTCMarketScaleMetricData(DescribeTRTCMarketScaleMetricDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTRTCMarketScaleMetricDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTRTCMarketScaleMetricDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTRTCMarketScaleMetricData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
+-视频卡顿率
+-音频卡顿率
+注意：
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+     * @param req DescribeTRTCRealTimeQualityMetricDataRequest
+     * @return DescribeTRTCRealTimeQualityMetricDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCRealTimeQualityMetricDataResponse DescribeTRTCRealTimeQualityMetricData(DescribeTRTCRealTimeQualityMetricDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTRTCRealTimeQualityMetricDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTRTCRealTimeQualityMetricDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTRTCRealTimeQualityMetricData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
+-userCount（在线用户数）
+-roomCount（在线房间数）
+注意：
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+     * @param req DescribeTRTCRealTimeScaleMetricDataRequest
+     * @return DescribeTRTCRealTimeScaleMetricDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCRealTimeScaleMetricDataResponse DescribeTRTCRealTimeScaleMetricData(DescribeTRTCRealTimeScaleMetricDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTRTCRealTimeScaleMetricDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTRTCRealTimeScaleMetricDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTRTCRealTimeScaleMetricData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询旁路转码计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。

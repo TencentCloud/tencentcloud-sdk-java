@@ -198,6 +198,13 @@ public class MonitorTort extends AbstractModel{
     private Long IsOverseas;
 
     /**
+    * ip地理位置
+    */
+    @SerializedName("IPLoc")
+    @Expose
+    private String IPLoc;
+
+    /**
      * Get 侵权信息ID 
      * @return TortId 侵权信息ID
      */
@@ -597,6 +604,22 @@ public class MonitorTort extends AbstractModel{
         this.IsOverseas = IsOverseas;
     }
 
+    /**
+     * Get ip地理位置 
+     * @return IPLoc ip地理位置
+     */
+    public String getIPLoc() {
+        return this.IPLoc;
+    }
+
+    /**
+     * Set ip地理位置
+     * @param IPLoc ip地理位置
+     */
+    public void setIPLoc(String IPLoc) {
+        this.IPLoc = IPLoc;
+    }
+
     public MonitorTort() {
     }
 
@@ -680,6 +703,9 @@ public class MonitorTort extends AbstractModel{
         if (source.IsOverseas != null) {
             this.IsOverseas = new Long(source.IsOverseas);
         }
+        if (source.IPLoc != null) {
+            this.IPLoc = new String(source.IPLoc);
+        }
     }
 
 
@@ -712,6 +738,7 @@ public class MonitorTort extends AbstractModel{
         this.setParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
         this.setParamSimple(map, prefix + "IsProducer", this.IsProducer);
         this.setParamSimple(map, prefix + "IsOverseas", this.IsOverseas);
+        this.setParamSimple(map, prefix + "IPLoc", this.IPLoc);
 
     }
 }

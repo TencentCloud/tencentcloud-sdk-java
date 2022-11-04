@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class DescribeFileUrlsRequest extends AbstractModel{
 
     /**
+    * 调用方用户信息，UserId 必填
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
     * 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * 业务编号的数组，如模板编号、文档编号、印章编号
+    * 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
     */
     @SerializedName("BusinessIds")
@@ -42,21 +49,7 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     private String [] BusinessIds;
 
     /**
-    * 操作者信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 应用相关信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
-    * 下载后的文件命名，只有fileType为zip的时候生效
+    * 下载后的文件命名，只有FileType为zip的时候生效
     */
     @SerializedName("FileName")
     @Expose
@@ -93,28 +86,51 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
     * 暂不开放
     */
-    @SerializedName("Scene")
-    @Expose
-    private String Scene;
-
-    /**
-    * 暂不开放
-    */
     @SerializedName("CcToken")
     @Expose
     private String CcToken;
 
     /**
+    * 暂不开放
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
+
+    /**
+    * 应用相关信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，UserId 必填 
+     * @return Operator 调用方用户信息，UserId 必填
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 调用方用户信息，UserId 必填
+     * @param Operator 调用方用户信息，UserId 必填
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Get 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
-- 印章  “SEAL”
-- 流程 "FLOW" 
+- 印章  “SEAL” 
      * @return BusinessType 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
      */
     public String getBusinessType() {
         return this.BusinessType;
@@ -122,24 +138,24 @@ public class DescribeFileUrlsRequest extends AbstractModel{
 
     /**
      * Set 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
      * @param BusinessType 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 业务编号的数组，如模板编号、文档编号、印章编号
+     * Get 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源 
-     * @return BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+     * @return BusinessIds 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
      */
     public String [] getBusinessIds() {
@@ -147,9 +163,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Set 业务编号的数组，如模板编号、文档编号、印章编号
+     * Set 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
-     * @param BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+     * @param BusinessIds 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
      */
     public void setBusinessIds(String [] BusinessIds) {
@@ -157,48 +173,16 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者信息 
-     * @return Operator 操作者信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者信息
-     * @param Operator 操作者信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 下载后的文件命名，只有fileType为zip的时候生效 
-     * @return FileName 下载后的文件命名，只有fileType为zip的时候生效
+     * Get 下载后的文件命名，只有FileType为zip的时候生效 
+     * @return FileName 下载后的文件命名，只有FileType为zip的时候生效
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 下载后的文件命名，只有fileType为zip的时候生效
-     * @param FileName 下载后的文件命名，只有fileType为zip的时候生效
+     * Set 下载后的文件命名，只有FileType为zip的时候生效
+     * @param FileName 下载后的文件命名，只有FileType为zip的时候生效
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -270,6 +254,22 @@ public class DescribeFileUrlsRequest extends AbstractModel{
 
     /**
      * Get 暂不开放 
+     * @return CcToken 暂不开放
+     */
+    public String getCcToken() {
+        return this.CcToken;
+    }
+
+    /**
+     * Set 暂不开放
+     * @param CcToken 暂不开放
+     */
+    public void setCcToken(String CcToken) {
+        this.CcToken = CcToken;
+    }
+
+    /**
+     * Get 暂不开放 
      * @return Scene 暂不开放
      */
     public String getScene() {
@@ -285,19 +285,19 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 暂不开放 
-     * @return CcToken 暂不开放
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
      */
-    public String getCcToken() {
-        return this.CcToken;
+    public Agent getAgent() {
+        return this.Agent;
     }
 
     /**
-     * Set 暂不开放
-     * @param CcToken 暂不开放
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
      */
-    public void setCcToken(String CcToken) {
-        this.CcToken = CcToken;
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     public DescribeFileUrlsRequest() {
@@ -308,6 +308,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFileUrlsRequest(DescribeFileUrlsRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
         if (source.BusinessType != null) {
             this.BusinessType = new String(source.BusinessType);
         }
@@ -316,12 +319,6 @@ public class DescribeFileUrlsRequest extends AbstractModel{
             for (int i = 0; i < source.BusinessIds.length; i++) {
                 this.BusinessIds[i] = new String(source.BusinessIds[i]);
             }
-        }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
         }
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
@@ -338,11 +335,14 @@ public class DescribeFileUrlsRequest extends AbstractModel{
         if (source.UrlTtl != null) {
             this.UrlTtl = new Long(source.UrlTtl);
         }
+        if (source.CcToken != null) {
+            this.CcToken = new String(source.CcToken);
+        }
         if (source.Scene != null) {
             this.Scene = new String(source.Scene);
         }
-        if (source.CcToken != null) {
-            this.CcToken = new String(source.CcToken);
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -351,17 +351,17 @@ public class DescribeFileUrlsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
         this.setParamArraySimple(map, prefix + "BusinessIds.", this.BusinessIds);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "UrlTtl", this.UrlTtl);
-        this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "CcToken", this.CcToken);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

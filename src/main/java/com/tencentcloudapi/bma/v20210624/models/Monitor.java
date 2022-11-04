@@ -93,6 +93,34 @@ public class Monitor extends AbstractModel{
     private String MonitorNote;
 
     /**
+    * 作品类型全部展示
+    */
+    @SerializedName("WorkCategoryAll")
+    @Expose
+    private String WorkCategoryAll;
+
+    /**
+    * 存证状态
+    */
+    @SerializedName("EvidenceStatus")
+    @Expose
+    private Long EvidenceStatus;
+
+    /**
+    * 存证状态说明
+    */
+    @SerializedName("EvidenceNote")
+    @Expose
+    private String EvidenceNote;
+
+    /**
+    * 侵权站点数量
+    */
+    @SerializedName("TortSiteNum")
+    @Expose
+    private Long TortSiteNum;
+
+    /**
      * Get 作品ID 
      * @return WorkId 作品ID
      */
@@ -252,6 +280,70 @@ public class Monitor extends AbstractModel{
         this.MonitorNote = MonitorNote;
     }
 
+    /**
+     * Get 作品类型全部展示 
+     * @return WorkCategoryAll 作品类型全部展示
+     */
+    public String getWorkCategoryAll() {
+        return this.WorkCategoryAll;
+    }
+
+    /**
+     * Set 作品类型全部展示
+     * @param WorkCategoryAll 作品类型全部展示
+     */
+    public void setWorkCategoryAll(String WorkCategoryAll) {
+        this.WorkCategoryAll = WorkCategoryAll;
+    }
+
+    /**
+     * Get 存证状态 
+     * @return EvidenceStatus 存证状态
+     */
+    public Long getEvidenceStatus() {
+        return this.EvidenceStatus;
+    }
+
+    /**
+     * Set 存证状态
+     * @param EvidenceStatus 存证状态
+     */
+    public void setEvidenceStatus(Long EvidenceStatus) {
+        this.EvidenceStatus = EvidenceStatus;
+    }
+
+    /**
+     * Get 存证状态说明 
+     * @return EvidenceNote 存证状态说明
+     */
+    public String getEvidenceNote() {
+        return this.EvidenceNote;
+    }
+
+    /**
+     * Set 存证状态说明
+     * @param EvidenceNote 存证状态说明
+     */
+    public void setEvidenceNote(String EvidenceNote) {
+        this.EvidenceNote = EvidenceNote;
+    }
+
+    /**
+     * Get 侵权站点数量 
+     * @return TortSiteNum 侵权站点数量
+     */
+    public Long getTortSiteNum() {
+        return this.TortSiteNum;
+    }
+
+    /**
+     * Set 侵权站点数量
+     * @param TortSiteNum 侵权站点数量
+     */
+    public void setTortSiteNum(Long TortSiteNum) {
+        this.TortSiteNum = TortSiteNum;
+    }
+
     public Monitor() {
     }
 
@@ -290,6 +382,18 @@ public class Monitor extends AbstractModel{
         if (source.MonitorNote != null) {
             this.MonitorNote = new String(source.MonitorNote);
         }
+        if (source.WorkCategoryAll != null) {
+            this.WorkCategoryAll = new String(source.WorkCategoryAll);
+        }
+        if (source.EvidenceStatus != null) {
+            this.EvidenceStatus = new Long(source.EvidenceStatus);
+        }
+        if (source.EvidenceNote != null) {
+            this.EvidenceNote = new String(source.EvidenceNote);
+        }
+        if (source.TortSiteNum != null) {
+            this.TortSiteNum = new Long(source.TortSiteNum);
+        }
     }
 
 
@@ -307,6 +411,10 @@ public class Monitor extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkCategory", this.WorkCategory);
         this.setParamSimple(map, prefix + "InsertTime", this.InsertTime);
         this.setParamSimple(map, prefix + "MonitorNote", this.MonitorNote);
+        this.setParamSimple(map, prefix + "WorkCategoryAll", this.WorkCategoryAll);
+        this.setParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
+        this.setParamSimple(map, prefix + "EvidenceNote", this.EvidenceNote);
+        this.setParamSimple(map, prefix + "TortSiteNum", this.TortSiteNum);
 
     }
 }

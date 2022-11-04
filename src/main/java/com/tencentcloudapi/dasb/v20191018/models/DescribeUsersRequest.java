@@ -37,7 +37,7 @@ public class DescribeUsersRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 分页，偏移位置
+    * 分页偏移位置，默认值为0
     */
     @SerializedName("Offset")
     @Expose
@@ -119,16 +119,16 @@ public class DescribeUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页，偏移位置 
-     * @return Offset 分页，偏移位置
+     * Get 分页偏移位置，默认值为0 
+     * @return Offset 分页偏移位置，默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页，偏移位置
-     * @param Offset 分页，偏移位置
+     * Set 分页偏移位置，默认值为0
+     * @param Offset 分页偏移位置，默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

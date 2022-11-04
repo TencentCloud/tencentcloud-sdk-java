@@ -139,6 +139,16 @@ false：有序签
     private Agent Agent;
 
     /**
+    * 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+    */
+    @SerializedName("ApproverVerifyType")
+    @Expose
+    private String ApproverVerifyType;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -422,6 +432,34 @@ false：有序签
         this.Agent = Agent;
     }
 
+    /**
+     * Get 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。 
+     * @return ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+     */
+    public String getApproverVerifyType() {
+        return this.ApproverVerifyType;
+    }
+
+    /**
+     * Set 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+     * @param ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+     */
+    public void setApproverVerifyType(String ApproverVerifyType) {
+        this.ApproverVerifyType = ApproverVerifyType;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -487,6 +525,9 @@ false：有序签
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.ApproverVerifyType != null) {
+            this.ApproverVerifyType = new String(source.ApproverVerifyType);
+        }
     }
 
 
@@ -509,6 +550,7 @@ false：有序签
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
 
     }
 }

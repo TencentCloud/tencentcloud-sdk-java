@@ -44,6 +44,13 @@ public class ZonesInfo extends AbstractModel{
     private String ZoneName;
 
     /**
+    * 是否在售
+    */
+    @SerializedName("OnSale")
+    @Expose
+    private Boolean OnSale;
+
+    /**
      * Get 可用区英文ID 
      * @return Zone 可用区英文ID
      */
@@ -91,6 +98,22 @@ public class ZonesInfo extends AbstractModel{
         this.ZoneName = ZoneName;
     }
 
+    /**
+     * Get 是否在售 
+     * @return OnSale 是否在售
+     */
+    public Boolean getOnSale() {
+        return this.OnSale;
+    }
+
+    /**
+     * Set 是否在售
+     * @param OnSale 是否在售
+     */
+    public void setOnSale(Boolean OnSale) {
+        this.OnSale = OnSale;
+    }
+
     public ZonesInfo() {
     }
 
@@ -108,6 +131,9 @@ public class ZonesInfo extends AbstractModel{
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.OnSale != null) {
+            this.OnSale = new Boolean(source.OnSale);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ZonesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "OnSale", this.OnSale);
 
     }
 }

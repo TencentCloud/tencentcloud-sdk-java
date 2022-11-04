@@ -30,7 +30,9 @@ public class ModifyResourcePoolsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 标识是fair还是capacity
+    * 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
     */
     @SerializedName("Key")
     @Expose
@@ -53,16 +55,24 @@ public class ModifyResourcePoolsRequest extends AbstractModel{
     }
 
     /**
-     * Get 标识是fair还是capacity 
-     * @return Key 标识是fair还是capacity
+     * Get 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li> 
+     * @return Key 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 标识是fair还是capacity
-     * @param Key 标识是fair还是capacity
+     * Set 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
+     * @param Key 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
      */
     public void setKey(String Key) {
         this.Key = Key;
