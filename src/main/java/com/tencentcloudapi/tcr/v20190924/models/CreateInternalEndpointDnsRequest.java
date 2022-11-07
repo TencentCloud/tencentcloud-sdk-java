@@ -60,6 +60,13 @@ false: 使用vpc域名
     private String RegionName;
 
     /**
+    * 请求的地域ID，用于实例复制地域
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
      * Get tcr实例id 
      * @return InstanceId tcr实例id
      */
@@ -147,6 +154,22 @@ false: 使用vpc域名
         this.RegionName = RegionName;
     }
 
+    /**
+     * Get 请求的地域ID，用于实例复制地域 
+     * @return RegionId 请求的地域ID，用于实例复制地域
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 请求的地域ID，用于实例复制地域
+     * @param RegionId 请求的地域ID，用于实例复制地域
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public CreateInternalEndpointDnsRequest() {
     }
 
@@ -170,6 +193,9 @@ false: 使用vpc域名
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
     }
 
 
@@ -182,6 +208,7 @@ false: 使用vpc域名
         this.setParamSimple(map, prefix + "EniLBIp", this.EniLBIp);
         this.setParamSimple(map, prefix + "UsePublicDomain", this.UsePublicDomain);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

@@ -30,14 +30,14 @@ public class TransmitOralProcessResponse extends AbstractModel{
     private Float PronAccuracy;
 
     /**
-    * 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+    * 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
     */
     @SerializedName("PronFluency")
     @Expose
     private Float PronFluency;
 
     /**
-    * 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+    * 发音完整度，取值范围[0, 1]，当为词模式或自由说模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
     */
     @SerializedName("PronCompletion")
     @Expose
@@ -58,7 +58,7 @@ public class TransmitOralProcessResponse extends AbstractModel{
     private String SessionId;
 
     /**
-    * 保存语音音频文件下载地址
+    * 已废弃，不再保存语音音频文件下载地址
     */
     @SerializedName("AudioUrl")
     @Expose
@@ -133,32 +133,32 @@ public class TransmitOralProcessResponse extends AbstractModel{
     }
 
     /**
-     * Get 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义 
-     * @return PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Get 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1 
+     * @return PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
      */
     public Float getPronFluency() {
         return this.PronFluency;
     }
 
     /**
-     * Set 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
-     * @param PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Set 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
+     * @param PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
      */
     public void setPronFluency(Float PronFluency) {
         this.PronFluency = PronFluency;
     }
 
     /**
-     * Get 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义 
-     * @return PronCompletion 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Get 发音完整度，取值范围[0, 1]，当为词模式或自由说模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1 
+     * @return PronCompletion 发音完整度，取值范围[0, 1]，当为词模式或自由说模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
      */
     public Float getPronCompletion() {
         return this.PronCompletion;
     }
 
     /**
-     * Set 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
-     * @param PronCompletion 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Set 发音完整度，取值范围[0, 1]，当为词模式或自由说模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
+     * @param PronCompletion 发音完整度，取值范围[0, 1]，当为词模式或自由说模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
      */
     public void setPronCompletion(Float PronCompletion) {
         this.PronCompletion = PronCompletion;
@@ -197,16 +197,16 @@ public class TransmitOralProcessResponse extends AbstractModel{
     }
 
     /**
-     * Get 保存语音音频文件下载地址 
-     * @return AudioUrl 保存语音音频文件下载地址
+     * Get 已废弃，不再保存语音音频文件下载地址 
+     * @return AudioUrl 已废弃，不再保存语音音频文件下载地址
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 保存语音音频文件下载地址
-     * @param AudioUrl 保存语音音频文件下载地址
+     * Set 已废弃，不再保存语音音频文件下载地址
+     * @param AudioUrl 已废弃，不再保存语音音频文件下载地址
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;

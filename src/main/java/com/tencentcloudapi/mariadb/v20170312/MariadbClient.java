@@ -863,6 +863,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(IsolateDBInstance)用于隔离云数据库实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
+     * @param req IsolateDBInstanceRequest
+     * @return IsolateDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDBInstanceResponse IsolateDBInstance(IsolateDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
      * @param req IsolateDedicatedDBInstanceRequest
      * @return IsolateDedicatedDBInstanceResponse

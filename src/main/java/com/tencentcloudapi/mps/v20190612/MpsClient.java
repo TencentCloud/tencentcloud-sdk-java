@@ -219,6 +219,46 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建媒体传输的传输流配置。
+     * @param req CreateStreamLinkFlowRequest
+     * @return CreateStreamLinkFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkFlowResponse CreateStreamLinkFlow(CreateStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLinkFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLinkFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStreamLinkFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建媒体传输流的输出信息。
+     * @param req CreateStreamLinkOutputInfoRequest
+     * @return CreateStreamLinkOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(CreateStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLinkOutputInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLinkOutputInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStreamLinkOutputInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义转码模板，数量上限：1000。
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
@@ -484,6 +524,46 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除媒体传输的传输流配置。
+     * @param req DeleteStreamLinkFlowRequest
+     * @return DeleteStreamLinkFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(DeleteStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLinkFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLinkFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteStreamLinkFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除媒体传输流的输出配置。
+     * @param req DeleteStreamLinkOutputRequest
+     * @return DeleteStreamLinkOutputResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(DeleteStreamLinkOutputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLinkOutputResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLinkOutputResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteStreamLinkOutput");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -764,6 +844,188 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体传输开通状态。
+     * @param req DescribeStreamLinkActivateStateRequest
+     * @return DescribeStreamLinkActivateStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkActivateStateResponse DescribeStreamLinkActivateState(DescribeStreamLinkActivateStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkActivateStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkActivateStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkActivateState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体输入流的配置信息。
+     * @param req DescribeStreamLinkFlowRequest
+     * @return DescribeStreamLinkFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(DescribeStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体传输流的日志信息。
+     * @param req DescribeStreamLinkFlowLogsRequest
+     * @return DescribeStreamLinkFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(DescribeStreamLinkFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体传输流的媒体质量数据。
+
+     * @param req DescribeStreamLinkFlowMediaStatisticsRequest
+     * @return DescribeStreamLinkFlowMediaStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(DescribeStreamLinkFlowMediaStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowMediaStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实时查询流的当前状态
+     * @param req DescribeStreamLinkFlowRealtimeStatusRequest
+     * @return DescribeStreamLinkFlowRealtimeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatus(DescribeStreamLinkFlowRealtimeStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowRealtimeStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体传输流的SRT质量数据。
+     * @param req DescribeStreamLinkFlowSRTStatisticsRequest
+     * @return DescribeStreamLinkFlowSRTStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatistics(DescribeStreamLinkFlowSRTStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowSRTStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体传输流的媒体质量数据。
+
+     * @param req DescribeStreamLinkFlowStatisticsRequest
+     * @return DescribeStreamLinkFlowStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatistics(DescribeStreamLinkFlowStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量查询媒体输入流的配置信息。
+     * @param req DescribeStreamLinkFlowsRequest
+     * @return DescribeStreamLinkFlowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(DescribeStreamLinkFlowsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlows");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询媒体传输所有地区。
+     * @param req DescribeStreamLinkRegionsRequest
+     * @return DescribeStreamLinkRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(DescribeStreamLinkRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkRegions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1180,6 +1442,66 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *修改媒体传输的传输流配置信息。
+     * @param req ModifyStreamLinkFlowRequest
+     * @return ModifyStreamLinkFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(ModifyStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLinkFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStreamLinkFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改媒体传输流的输入信息。
+     * @param req ModifyStreamLinkInputRequest
+     * @return ModifyStreamLinkInputResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLinkInputResponse ModifyStreamLinkInput(ModifyStreamLinkInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLinkInputResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkInputResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStreamLinkInput");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改媒体传输流的输出配置。
+     * @param req ModifyStreamLinkOutputInfoRequest
+     * @return ModifyStreamLinkOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(ModifyStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLinkOutputInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkOutputInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStreamLinkOutputInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户自定义转码模板信息。
      * @param req ModifyTranscodeTemplateRequest
      * @return ModifyTranscodeTemplateResponse
@@ -1368,6 +1690,46 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetWorkflowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetWorkflow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启动媒体传输流。
+     * @param req StartStreamLinkFlowRequest
+     * @return StartStreamLinkFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStreamLinkFlowResponse StartStreamLinkFlow(StartStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartStreamLinkFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartStreamLinkFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartStreamLinkFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止媒体传输流。
+     * @param req StopStreamLinkFlowRequest
+     * @return StopStreamLinkFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopStreamLinkFlowResponse StopStreamLinkFlow(StopStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopStreamLinkFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopStreamLinkFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

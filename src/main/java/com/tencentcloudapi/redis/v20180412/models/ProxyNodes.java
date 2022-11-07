@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProxyNodes extends AbstractModel{
 
     /**
-    * 节点ID
+    * 节点 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeId")
@@ -31,9 +31,17 @@ public class ProxyNodes extends AbstractModel{
     private String NodeId;
 
     /**
-     * Get 节点ID
+    * 可用区 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
+     * Get 节点 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeId 节点ID
+     * @return NodeId 节点 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeId() {
@@ -41,13 +49,33 @@ public class ProxyNodes extends AbstractModel{
     }
 
     /**
-     * Set 节点ID
+     * Set 节点 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeId 节点ID
+     * @param NodeId 节点 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
+    }
+
+    /**
+     * Get 可用区 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneId 可用区 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 可用区 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId 可用区 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     public ProxyNodes() {
@@ -61,6 +89,9 @@ public class ProxyNodes extends AbstractModel{
         if (source.NodeId != null) {
             this.NodeId = new String(source.NodeId);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
     }
 
 
@@ -69,6 +100,7 @@ public class ProxyNodes extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

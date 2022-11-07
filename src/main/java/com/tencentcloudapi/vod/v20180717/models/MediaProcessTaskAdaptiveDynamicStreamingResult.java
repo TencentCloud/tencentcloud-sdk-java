@@ -51,6 +51,13 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     private String Message;
 
     /**
+    * 转自适应码流任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
     * 对视频转自适应码流任务的输入。
     */
     @SerializedName("Input")
@@ -129,6 +136,22 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     }
 
     /**
+     * Get 转自适应码流任务进度，取值范围 [0-100] 。 
+     * @return Progress 转自适应码流任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 转自适应码流任务进度，取值范围 [0-100] 。
+     * @param Progress 转自适应码流任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Get 对视频转自适应码流任务的输入。 
      * @return Input 对视频转自适应码流任务的输入。
      */
@@ -180,6 +203,9 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.Input != null) {
             this.Input = new AdaptiveDynamicStreamingTaskInput(source.Input);
         }
@@ -197,6 +223,7 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
 

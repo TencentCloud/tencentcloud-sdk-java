@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SecRuleRelatedInfo extends AbstractModel{
 
     /**
-    * 规则ID列表（99999为无效id）。
+    * 规则ID。
     */
     @SerializedName("RuleId")
     @Expose
@@ -77,16 +77,24 @@ public class SecRuleRelatedInfo extends AbstractModel{
     private String RuleTypeName;
 
     /**
-     * Get 规则ID列表（99999为无效id）。 
-     * @return RuleId 规则ID列表（99999为无效id）。
+    * 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackContent")
+    @Expose
+    private String AttackContent;
+
+    /**
+     * Get 规则ID。 
+     * @return RuleId 规则ID。
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID列表（99999为无效id）。
-     * @param RuleId 规则ID列表（99999为无效id）。
+     * Set 规则ID。
+     * @param RuleId 规则ID。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
@@ -220,6 +228,26 @@ public class SecRuleRelatedInfo extends AbstractModel{
         this.RuleTypeName = RuleTypeName;
     }
 
+    /**
+     * Get 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackContent 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAttackContent() {
+        return this.AttackContent;
+    }
+
+    /**
+     * Set 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackContent 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackContent(String AttackContent) {
+        this.AttackContent = AttackContent;
+    }
+
     public SecRuleRelatedInfo() {
     }
 
@@ -246,6 +274,9 @@ public class SecRuleRelatedInfo extends AbstractModel{
         if (source.RuleTypeName != null) {
             this.RuleTypeName = new String(source.RuleTypeName);
         }
+        if (source.AttackContent != null) {
+            this.AttackContent = new String(source.AttackContent);
+        }
     }
 
 
@@ -259,6 +290,7 @@ public class SecRuleRelatedInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
+        this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
 
     }
 }

@@ -145,6 +145,14 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     private Long Status;
 
     /**
+    * 0表示pulsar，1表示rocketmq
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BrokerType")
+    @Expose
+    private Long BrokerType;
+
+    /**
      * Get 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicId 主题的 ID。
@@ -452,6 +460,26 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.Status = Status;
     }
 
+    /**
+     * Get 0表示pulsar，1表示rocketmq
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BrokerType 0表示pulsar，1表示rocketmq
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBrokerType() {
+        return this.BrokerType;
+    }
+
+    /**
+     * Set 0表示pulsar，1表示rocketmq
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BrokerType 0表示pulsar，1表示rocketmq
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBrokerType(Long BrokerType) {
+        this.BrokerType = BrokerType;
+    }
+
     public CmqTopic() {
     }
 
@@ -508,6 +536,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.BrokerType != null) {
+            this.BrokerType = new Long(source.BrokerType);
+        }
     }
 
 
@@ -530,6 +561,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BrokerType", this.BrokerType);
 
     }
 }

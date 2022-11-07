@@ -79,6 +79,18 @@ public class SecHitRuleInfo extends AbstractModel{
     private String Domain;
 
     /**
+    * Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
+    */
+    @SerializedName("BotLabel")
+    @Expose
+    private String BotLabel;
+
+    /**
      * Get 规则ID。 
      * @return RuleId 规则ID。
      */
@@ -218,6 +230,42 @@ public class SecHitRuleInfo extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li> 
+     * @return BotLabel Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
+     */
+    public String getBotLabel() {
+        return this.BotLabel;
+    }
+
+    /**
+     * Set Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
+     * @param BotLabel Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
+     */
+    public void setBotLabel(String BotLabel) {
+        this.BotLabel = BotLabel;
+    }
+
     public SecHitRuleInfo() {
     }
 
@@ -247,6 +295,9 @@ public class SecHitRuleInfo extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.BotLabel != null) {
+            this.BotLabel = new String(source.BotLabel);
+        }
     }
 
 
@@ -261,6 +312,7 @@ public class SecHitRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RequestNum", this.RequestNum);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "BotLabel", this.BotLabel);
 
     }
 }
