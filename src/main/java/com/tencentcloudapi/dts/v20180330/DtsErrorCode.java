@@ -126,6 +126,9 @@ public enum DtsErrorCode {
     // 认证失败，没有足够权限。
      UNAUTHORIZEDOPERATION_NOTENOUGHPRIVILEGES("UnauthorizedOperation.NotEnoughPrivileges"),
      
+    // 未授权的操作。
+     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATIONERROR("UnauthorizedOperation.UnauthorizedOperationError"),
+     
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      

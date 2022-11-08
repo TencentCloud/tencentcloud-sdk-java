@@ -177,6 +177,14 @@ public class PushQualityData extends AbstractModel{
     private Float Flux;
 
     /**
+    * 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServerIp")
+    @Expose
+    private String ServerIp;
+
+    /**
      * Get 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
      * @return Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
@@ -528,6 +536,26 @@ public class PushQualityData extends AbstractModel{
         this.Flux = Flux;
     }
 
+    /**
+     * Get 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServerIp 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServerIp() {
+        return this.ServerIp;
+    }
+
+    /**
+     * Set 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServerIp 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServerIp(String ServerIp) {
+        this.ServerIp = ServerIp;
+    }
+
     public PushQualityData() {
     }
 
@@ -602,6 +630,9 @@ public class PushQualityData extends AbstractModel{
         if (source.Flux != null) {
             this.Flux = new Float(source.Flux);
         }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
     }
 
 
@@ -631,6 +662,7 @@ public class PushQualityData extends AbstractModel{
         this.setParamSimple(map, prefix + "StreamParam", this.StreamParam);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Flux", this.Flux);
+        this.setParamSimple(map, prefix + "ServerIp", this.ServerIp);
 
     }
 }

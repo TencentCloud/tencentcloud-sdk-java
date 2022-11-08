@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class RenewInstanceRequest extends AbstractModel{
 
     /**
-    * 购买时长，单位：月
+    * 购买时长，单位：月。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 购买时长，单位：月 
-     * @return Period 购买时长，单位：月
+    * 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+    */
+    @SerializedName("ModifyPayMode")
+    @Expose
+    private String ModifyPayMode;
+
+    /**
+     * Get 购买时长，单位：月。 
+     * @return Period 购买时长，单位：月。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月
-     * @param Period 购买时长，单位：月
+     * Set 购买时长，单位：月。
+     * @param Period 购买时长，单位：月。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul> 
+     * @return ModifyPayMode 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+     */
+    public String getModifyPayMode() {
+        return this.ModifyPayMode;
+    }
+
+    /**
+     * Set 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+     * @param ModifyPayMode 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+     */
+    public void setModifyPayMode(String ModifyPayMode) {
+        this.ModifyPayMode = ModifyPayMode;
     }
 
     public RenewInstanceRequest() {
@@ -82,6 +105,9 @@ public class RenewInstanceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ModifyPayMode != null) {
+            this.ModifyPayMode = new String(source.ModifyPayMode);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class RenewInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
 
     }
 }

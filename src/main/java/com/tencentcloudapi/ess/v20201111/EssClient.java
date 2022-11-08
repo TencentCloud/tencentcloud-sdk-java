@@ -454,6 +454,27 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *查询企业印章的列表，需要操作者具有查询印章权限
+客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
+     * @param req DescribeOrganizationSealsRequest
+     * @return DescribeOrganizationSealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationSealsResponse DescribeOrganizationSeals(DescribeOrganizationSealsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationSealsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationSealsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationSeals");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过AuthCode查询用户是否实名
      * @param req DescribeThirdPartyAuthCodeRequest
      * @return DescribeThirdPartyAuthCodeResponse

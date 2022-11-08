@@ -75,6 +75,9 @@ public enum TemErrorCode {
     // 停止应用失败。
      INTERNALERROR_STOPAPPLICATIONERROR("InternalError.StopApplicationError"),
      
+    // 调用标签接口异常。
+     INTERNALERROR_TAGINTERFACEERROR("InternalError.TagInterfaceError"),
+     
     // 更新 ingress 失败。
      INTERNALERROR_UPDATEINGRESSERROR("InternalError.UpdateIngressError"),
      
@@ -230,6 +233,9 @@ public enum TemErrorCode {
      
     // 应用创建失败，达到上限。
      INVALIDPARAMETERVALUE_SERVICEREACHMAXIMUM("InvalidParameterValue.ServiceReachMaximum"),
+     
+    // 服务名使用了保留后缀。
+     INVALIDPARAMETERVALUE_SERVICEUSERESERVESUFFIX("InvalidParameterValue.ServiceUseReserveSuffix"),
      
     // 企业版 TCR 实例名称不合法。
      INVALIDPARAMETERVALUE_TCRENTINSTANCENAMENOTVALID("InvalidParameterValue.TcrEntInstanceNameNotValid"),

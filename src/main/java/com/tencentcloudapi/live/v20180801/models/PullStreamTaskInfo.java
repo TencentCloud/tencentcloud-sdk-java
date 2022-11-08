@@ -32,7 +32,8 @@ public class PullStreamTaskInfo extends AbstractModel{
     /**
     * 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
     */
     @SerializedName("SourceType")
     @Expose
@@ -256,6 +257,16 @@ PullVodPushLive -点播。
     private PullPushWatermarkInfo [] WatermarkList;
 
     /**
+    * 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VodLocalMode")
+    @Expose
+    private Long VodLocalMode;
+
+    /**
      * Get 拉流任务Id。 
      * @return TaskId 拉流任务Id。
      */
@@ -274,10 +285,12 @@ PullVodPushLive -点播。
     /**
      * Get 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。 
+PullVodPushLive -点播，
+PullPicPushLive -图片。 
      * @return SourceType 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
      */
     public String getSourceType() {
         return this.SourceType;
@@ -286,10 +299,12 @@ PullVodPushLive -点播。
     /**
      * Set 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
      * @param SourceType 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
@@ -875,6 +890,34 @@ PullVodPushLive -点播。
         this.WatermarkList = WatermarkList;
     }
 
+    /**
+     * Get 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVodLocalMode() {
+        return this.VodLocalMode;
+    }
+
+    /**
+     * Set 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVodLocalMode(Long VodLocalMode) {
+        this.VodLocalMode = VodLocalMode;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -970,6 +1013,9 @@ PullVodPushLive -点播。
                 this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
             }
         }
+        if (source.VodLocalMode != null) {
+            this.VodLocalMode = new Long(source.VodLocalMode);
+        }
     }
 
 
@@ -1003,6 +1049,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+        this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
 
     }
 }

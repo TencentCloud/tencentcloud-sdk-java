@@ -33,7 +33,7 @@ public class ParseNotificationResponse extends AbstractModel{
     private String EventType;
 
     /**
-    * 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+    * 视频处理任务信息，仅当 EventType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowTaskEvent")
@@ -41,7 +41,7 @@ public class ParseNotificationResponse extends AbstractModel{
     private WorkflowTask WorkflowTaskEvent;
 
     /**
-    * 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+    * 视频编辑任务信息，仅当 EventType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EditMediaTaskEvent")
@@ -63,7 +63,7 @@ public class ParseNotificationResponse extends AbstractModel{
     private String SessionContext;
 
     /**
-    * 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+    * 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTaskEvent")
@@ -106,9 +106,9 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
-     * Get 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+     * Get 视频处理任务信息，仅当 EventType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowTaskEvent 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+     * @return WorkflowTaskEvent 视频处理任务信息，仅当 EventType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowTask getWorkflowTaskEvent() {
@@ -116,9 +116,9 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
-     * Set 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+     * Set 视频处理任务信息，仅当 EventType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTaskEvent 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+     * @param WorkflowTaskEvent 视频处理任务信息，仅当 EventType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowTaskEvent(WorkflowTask WorkflowTaskEvent) {
@@ -126,9 +126,9 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
-     * Get 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+     * Get 视频编辑任务信息，仅当 EventType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EditMediaTaskEvent 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+     * @return EditMediaTaskEvent 视频编辑任务信息，仅当 EventType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTask getEditMediaTaskEvent() {
@@ -136,9 +136,9 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
-     * Set 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+     * Set 视频编辑任务信息，仅当 EventType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EditMediaTaskEvent 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+     * @param EditMediaTaskEvent 视频编辑任务信息，仅当 EventType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditMediaTaskEvent(EditMediaTask EditMediaTaskEvent) {
@@ -178,9 +178,9 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
-     * Get 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+     * Get 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTaskEvent 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+     * @return ScheduleTaskEvent 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduleTask getScheduleTaskEvent() {
@@ -188,9 +188,9 @@ public class ParseNotificationResponse extends AbstractModel{
     }
 
     /**
-     * Set 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+     * Set 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTaskEvent 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+     * @param ScheduleTaskEvent 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTaskEvent(ScheduleTask ScheduleTaskEvent) {

@@ -183,6 +183,14 @@ public class TemNamespaceInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 资源是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasAuthority")
+    @Expose
+    private Boolean HasAuthority;
+
+    /**
      * Get 环境id 
      * @return EnvironmentId 环境id
      */
@@ -558,6 +566,26 @@ public class TemNamespaceInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 资源是否有权限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasAuthority 资源是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasAuthority() {
+        return this.HasAuthority;
+    }
+
+    /**
+     * Set 资源是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasAuthority 资源是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasAuthority(Boolean HasAuthority) {
+        this.HasAuthority = HasAuthority;
+    }
+
     public TemNamespaceInfo() {
     }
 
@@ -635,6 +663,9 @@ public class TemNamespaceInfo extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.HasAuthority != null) {
+            this.HasAuthority = new Boolean(source.HasAuthority);
+        }
     }
 
 
@@ -664,6 +695,7 @@ public class TemNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HasAuthority", this.HasAuthority);
 
     }
 }

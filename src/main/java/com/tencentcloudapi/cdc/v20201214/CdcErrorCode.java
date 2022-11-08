@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cdc.v20201214;
 public enum CdcErrorCode {
+    // CDC绑定VPC失败。
+     FAILEDOPERATION_CDCBINDVPCFAIL("FailedOperation.CdcBindVpcFail"),
+     
     // 删除site失败。
      FAILEDOPERATION_FAILDELETESITE("FailedOperation.FailDeleteSite"),
      

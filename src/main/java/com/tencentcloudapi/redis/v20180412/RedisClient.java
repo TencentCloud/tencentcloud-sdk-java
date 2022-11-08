@@ -1539,7 +1539,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *续费实例
+     *本接口（RenewInstance）可用于为实例续费。
      * @param req RenewInstanceRequest
      * @return RenewInstanceResponse
      * @throws TencentCloudSDKException

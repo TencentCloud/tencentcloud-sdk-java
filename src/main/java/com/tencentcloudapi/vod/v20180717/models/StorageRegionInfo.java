@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class StorageRegionInfo extends AbstractModel{
 
     /**
-    * 存储地域
+    * 存储地域。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 存储地域描述信息
+    * 存储地域描述信息。
     */
     @SerializedName("Description")
     @Expose
@@ -46,39 +46,48 @@ public class StorageRegionInfo extends AbstractModel{
     private String Status;
 
     /**
-    * 是否默认的存储地域，true：是；false：否
+    * 是否默认的存储地域，true：是；false：否。
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-     * Get 存储地域 
-     * @return Region 存储地域
+    * 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+     * Get 存储地域。 
+     * @return Region 存储地域。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 存储地域
-     * @param Region 存储地域
+     * Set 存储地域。
+     * @param Region 存储地域。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 存储地域描述信息 
-     * @return Description 存储地域描述信息
+     * Get 存储地域描述信息。 
+     * @return Description 存储地域描述信息。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 存储地域描述信息
-     * @param Description 存储地域描述信息
+     * Set 存储地域描述信息。
+     * @param Description 存储地域描述信息。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -109,19 +118,43 @@ public class StorageRegionInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否默认的存储地域，true：是；false：否 
-     * @return IsDefault 是否默认的存储地域，true：是；false：否
+     * Get 是否默认的存储地域，true：是；false：否。 
+     * @return IsDefault 是否默认的存储地域，true：是；false：否。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否默认的存储地域，true：是；false：否
-     * @param IsDefault 是否默认的存储地域，true：是；false：否
+     * Set 是否默认的存储地域，true：是；false：否。
+     * @param IsDefault 是否默认的存储地域，true：是；false：否。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li> 
+     * @return Area 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
+     * @param Area 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     public StorageRegionInfo() {
@@ -144,6 +177,9 @@ public class StorageRegionInfo extends AbstractModel{
         if (source.IsDefault != null) {
             this.IsDefault = new Boolean(source.IsDefault);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -155,6 +191,7 @@ public class StorageRegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

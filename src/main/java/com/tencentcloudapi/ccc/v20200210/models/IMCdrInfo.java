@@ -104,6 +104,14 @@ public class IMCdrInfo extends AbstractModel{
     private String SkillGroupName;
 
     /**
+    * 满意度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Satisfaction")
+    @Expose
+    private IMSatisfaction Satisfaction;
+
+    /**
      * Get 服务记录ID 
      * @return Id 服务记录ID
      */
@@ -307,6 +315,26 @@ public class IMCdrInfo extends AbstractModel{
         this.SkillGroupName = SkillGroupName;
     }
 
+    /**
+     * Get 满意度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Satisfaction 满意度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IMSatisfaction getSatisfaction() {
+        return this.Satisfaction;
+    }
+
+    /**
+     * Set 满意度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Satisfaction 满意度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSatisfaction(IMSatisfaction Satisfaction) {
+        this.Satisfaction = Satisfaction;
+    }
+
     public IMCdrInfo() {
     }
 
@@ -345,6 +373,9 @@ public class IMCdrInfo extends AbstractModel{
         if (source.SkillGroupName != null) {
             this.SkillGroupName = new String(source.SkillGroupName);
         }
+        if (source.Satisfaction != null) {
+            this.Satisfaction = new IMSatisfaction(source.Satisfaction);
+        }
     }
 
 
@@ -362,6 +393,7 @@ public class IMCdrInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
         this.setParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
+        this.setParamObj(map, prefix + "Satisfaction.", this.Satisfaction);
 
     }
 }

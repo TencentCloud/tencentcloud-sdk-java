@@ -279,7 +279,7 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *查询文件系统快照d定期策略列表信息
+     *查询文件系统快照定期策略列表信息
      * @param req DescribeAutoSnapshotPoliciesRequest
      * @return DescribeAutoSnapshotPoliciesResponse
      * @throws TencentCloudSDKException
