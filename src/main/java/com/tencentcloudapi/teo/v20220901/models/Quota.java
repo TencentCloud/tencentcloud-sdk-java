@@ -44,11 +44,12 @@ public class Quota extends AbstractModel{
     private Long DailyAvailable;
 
     /**
-    * 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
+    * 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -103,32 +104,36 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Get 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li> 
-     * @return Type 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
+     * Get 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li> 
+     * @return Type 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
-     * @param Type 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
+     * Set 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
+     * @param Type 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -30,11 +30,18 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 子域名/应用名。
+    * 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
+
+    /**
+    * 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
 
     /**
      * Get 站点Id。 
@@ -53,19 +60,35 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 子域名/应用名。 
-     * @return Entity 子域名/应用名。
+     * Get 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。 
+     * @return Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set 子域名/应用名。
-     * @param Entity 子域名/应用名。
+     * Set 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
+    }
+
+    /**
+     * Get 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。 
+     * @return TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     * @param TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
     public DescribeSecurityPolicyRequest() {
@@ -82,6 +105,9 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
         if (source.Entity != null) {
             this.Entity = new String(source.Entity);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

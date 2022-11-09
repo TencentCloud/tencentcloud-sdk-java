@@ -82,6 +82,38 @@ off(关闭)
     private ListenerCcThreholdConfig [] ListenerCcThresholdList;
 
     /**
+    * SYN FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SynFloodThreshold")
+    @Expose
+    private Long SynFloodThreshold;
+
+    /**
+    * SYN FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SynFloodPktThreshold")
+    @Expose
+    private Long SynFloodPktThreshold;
+
+    /**
+    * UDP FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UdpFloodThreshold")
+    @Expose
+    private Long UdpFloodThreshold;
+
+    /**
+    * UDP FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UdpFloodPktThreshold")
+    @Expose
+    private Long UdpFloodPktThreshold;
+
+    /**
      * Get DDoS防护等级，取值[
 low(宽松)
 middle(适中)
@@ -233,6 +265,86 @@ off(关闭)
         this.ListenerCcThresholdList = ListenerCcThresholdList;
     }
 
+    /**
+     * Get SYN FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SynFloodThreshold SYN FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSynFloodThreshold() {
+        return this.SynFloodThreshold;
+    }
+
+    /**
+     * Set SYN FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SynFloodThreshold SYN FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSynFloodThreshold(Long SynFloodThreshold) {
+        this.SynFloodThreshold = SynFloodThreshold;
+    }
+
+    /**
+     * Get SYN FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SynFloodPktThreshold SYN FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSynFloodPktThreshold() {
+        return this.SynFloodPktThreshold;
+    }
+
+    /**
+     * Set SYN FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SynFloodPktThreshold SYN FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSynFloodPktThreshold(Long SynFloodPktThreshold) {
+        this.SynFloodPktThreshold = SynFloodPktThreshold;
+    }
+
+    /**
+     * Get UDP FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UdpFloodThreshold UDP FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUdpFloodThreshold() {
+        return this.UdpFloodThreshold;
+    }
+
+    /**
+     * Set UDP FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UdpFloodThreshold UDP FLOOD流量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUdpFloodThreshold(Long UdpFloodThreshold) {
+        this.UdpFloodThreshold = UdpFloodThreshold;
+    }
+
+    /**
+     * Get UDP FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UdpFloodPktThreshold UDP FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUdpFloodPktThreshold() {
+        return this.UdpFloodPktThreshold;
+    }
+
+    /**
+     * Set UDP FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UdpFloodPktThreshold UDP FLOOD包量阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUdpFloodPktThreshold(Long UdpFloodPktThreshold) {
+        this.UdpFloodPktThreshold = UdpFloodPktThreshold;
+    }
+
     public ProtectThresholdRelation() {
     }
 
@@ -268,6 +380,18 @@ off(关闭)
                 this.ListenerCcThresholdList[i] = new ListenerCcThreholdConfig(source.ListenerCcThresholdList[i]);
             }
         }
+        if (source.SynFloodThreshold != null) {
+            this.SynFloodThreshold = new Long(source.SynFloodThreshold);
+        }
+        if (source.SynFloodPktThreshold != null) {
+            this.SynFloodPktThreshold = new Long(source.SynFloodPktThreshold);
+        }
+        if (source.UdpFloodThreshold != null) {
+            this.UdpFloodThreshold = new Long(source.UdpFloodThreshold);
+        }
+        if (source.UdpFloodPktThreshold != null) {
+            this.UdpFloodPktThreshold = new Long(source.UdpFloodPktThreshold);
+        }
     }
 
 
@@ -282,6 +406,10 @@ off(关闭)
         this.setParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
         this.setParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
         this.setParamArrayObj(map, prefix + "ListenerCcThresholdList.", this.ListenerCcThresholdList);
+        this.setParamSimple(map, prefix + "SynFloodThreshold", this.SynFloodThreshold);
+        this.setParamSimple(map, prefix + "SynFloodPktThreshold", this.SynFloodPktThreshold);
+        this.setParamSimple(map, prefix + "UdpFloodThreshold", this.UdpFloodThreshold);
+        this.setParamSimple(map, prefix + "UdpFloodPktThreshold", this.UdpFloodPktThreshold);
 
     }
 }

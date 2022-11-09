@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DdlOption extends AbstractModel{
 
     /**
-    * ddl类型，如database,table,view等
+    * ddl类型，如Database,Table,View,Index等
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlObject")
@@ -31,7 +31,7 @@ public class DdlOption extends AbstractModel{
     private String DdlObject;
 
     /**
-    * ddl具体值，如Create,Drop等
+    * ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlValue")
@@ -39,9 +39,9 @@ public class DdlOption extends AbstractModel{
     private String [] DdlValue;
 
     /**
-     * Get ddl类型，如database,table,view等
+     * Get ddl类型，如Database,Table,View,Index等
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdlObject ddl类型，如database,table,view等
+     * @return DdlObject ddl类型，如Database,Table,View,Index等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDdlObject() {
@@ -49,9 +49,9 @@ public class DdlOption extends AbstractModel{
     }
 
     /**
-     * Set ddl类型，如database,table,view等
+     * Set ddl类型，如Database,Table,View,Index等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdlObject ddl类型，如database,table,view等
+     * @param DdlObject ddl类型，如Database,Table,View,Index等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlObject(String DdlObject) {
@@ -59,9 +59,9 @@ public class DdlOption extends AbstractModel{
     }
 
     /**
-     * Get ddl具体值，如Create,Drop等
+     * Get ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdlValue ddl具体值，如Create,Drop等
+     * @return DdlValue ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDdlValue() {
@@ -69,9 +69,9 @@ public class DdlOption extends AbstractModel{
     }
 
     /**
-     * Set ddl具体值，如Create,Drop等
+     * Set ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdlValue ddl具体值，如Create,Drop等
+     * @param DdlValue ddl具体值，对于Database可取值[Create,Drop,Alter]<br>对于Table可取值[Create,Drop,Alter,Truncate,Rename]<br/>对于View可取值[Create,Drop]<br/>对于Index可取值[Create,Drop]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlValue(String [] DdlValue) {

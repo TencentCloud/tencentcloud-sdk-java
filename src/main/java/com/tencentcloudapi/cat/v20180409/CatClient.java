@@ -219,6 +219,26 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *更新探测任务属性
+     * @param req UpdateProbeTaskAttributesRequest
+     * @return UpdateProbeTaskAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProbeTaskAttributesResponse UpdateProbeTaskAttributes(UpdateProbeTaskAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProbeTaskAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProbeTaskAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProbeTaskAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量更新拨测任务配置
      * @param req UpdateProbeTaskConfigurationListRequest
      * @return UpdateProbeTaskConfigurationListResponse

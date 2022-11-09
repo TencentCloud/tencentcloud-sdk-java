@@ -74,6 +74,13 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
     private Long AudioChannel;
 
     /**
+    * 指定输出要保留的音频轨道。默认是全部保留源的。
+    */
+    @SerializedName("StreamSelects")
+    @Expose
+    private Long [] StreamSelects;
+
+    /**
      * Get 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -229,6 +236,22 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get 指定输出要保留的音频轨道。默认是全部保留源的。 
+     * @return StreamSelects 指定输出要保留的音频轨道。默认是全部保留源的。
+     */
+    public Long [] getStreamSelects() {
+        return this.StreamSelects;
+    }
+
+    /**
+     * Set 指定输出要保留的音频轨道。默认是全部保留源的。
+     * @param StreamSelects 指定输出要保留的音频轨道。默认是全部保留源的。
+     */
+    public void setStreamSelects(Long [] StreamSelects) {
+        this.StreamSelects = StreamSelects;
+    }
+
     public AudioTemplateInfoForUpdate() {
     }
 
@@ -249,6 +272,12 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.StreamSelects != null) {
+            this.StreamSelects = new Long[source.StreamSelects.length];
+            for (int i = 0; i < source.StreamSelects.length; i++) {
+                this.StreamSelects[i] = new Long(source.StreamSelects[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamArraySimple(map, prefix + "StreamSelects.", this.StreamSelects);
 
     }
 }

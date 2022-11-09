@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
 
     /**
-    * 站点Id。
+    * 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 子域名。
+    * 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
     */
     @SerializedName("Entity")
     @Expose
@@ -88,32 +88,39 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
     private WafGroup [] WafGroups;
 
     /**
-     * Get 站点Id。 
-     * @return ZoneId 站点Id。
+    * 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+     * Get 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。 
+     * @return ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点Id。
-     * @param ZoneId 站点Id。
+     * Set 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 子域名。 
-     * @return Entity 子域名。
+     * Get 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。 
+     * @return Entity 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set 子域名。
-     * @param Entity 子域名。
+     * Set 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param Entity 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
@@ -251,6 +258,22 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
         this.WafGroups = WafGroups;
     }
 
+    /**
+     * Get 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。 
+     * @return TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     * @param TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public ModifySecurityWafGroupPolicyRequest() {
     }
 
@@ -286,6 +309,9 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
                 this.WafGroups[i] = new WafGroup(source.WafGroups[i]);
             }
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -301,6 +327,7 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
         this.setParamObj(map, prefix + "WafRules.", this.WafRules);
         this.setParamObj(map, prefix + "AiRule.", this.AiRule);
         this.setParamArrayObj(map, prefix + "WafGroups.", this.WafGroups);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

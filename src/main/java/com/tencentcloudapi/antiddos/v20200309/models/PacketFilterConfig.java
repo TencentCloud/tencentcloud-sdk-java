@@ -213,6 +213,13 @@ pcre(正则表达式)
     private String Id;
 
     /**
+    * 大于报文长度，取值1+
+    */
+    @SerializedName("PktLenGT")
+    @Expose
+    private Long PktLenGT;
+
+    /**
      * Get 协议，取值[tcp udp icmp all] 
      * @return Protocol 协议，取值[tcp udp icmp all]
      */
@@ -708,6 +715,22 @@ pcre(正则表达式)
         this.Id = Id;
     }
 
+    /**
+     * Get 大于报文长度，取值1+ 
+     * @return PktLenGT 大于报文长度，取值1+
+     */
+    public Long getPktLenGT() {
+        return this.PktLenGT;
+    }
+
+    /**
+     * Set 大于报文长度，取值1+
+     * @param PktLenGT 大于报文长度，取值1+
+     */
+    public void setPktLenGT(Long PktLenGT) {
+        this.PktLenGT = PktLenGT;
+    }
+
     public PacketFilterConfig() {
     }
 
@@ -782,6 +805,9 @@ pcre(正则表达式)
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.PktLenGT != null) {
+            this.PktLenGT = new Long(source.PktLenGT);
+        }
     }
 
 
@@ -811,6 +837,7 @@ pcre(正则表达式)
         this.setParamSimple(map, prefix + "Offset2", this.Offset2);
         this.setParamSimple(map, prefix + "IsNot2", this.IsNot2);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "PktLenGT", this.PktLenGT);
 
     }
 }

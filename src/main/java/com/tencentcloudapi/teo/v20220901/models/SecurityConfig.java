@@ -87,6 +87,14 @@ public class SecurityConfig extends AbstractModel{
     private DropPageConfig DropPageConfig;
 
     /**
+    * 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateConfig")
+    @Expose
+    private TemplateConfig TemplateConfig;
+
+    /**
      * Get 托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WafConfig 托管规则。如果为null，默认使用历史配置。
@@ -246,6 +254,26 @@ public class SecurityConfig extends AbstractModel{
         this.DropPageConfig = DropPageConfig;
     }
 
+    /**
+     * Get 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateConfig 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TemplateConfig getTemplateConfig() {
+        return this.TemplateConfig;
+    }
+
+    /**
+     * Set 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateConfig 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateConfig(TemplateConfig TemplateConfig) {
+        this.TemplateConfig = TemplateConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -278,6 +306,9 @@ public class SecurityConfig extends AbstractModel{
         if (source.DropPageConfig != null) {
             this.DropPageConfig = new DropPageConfig(source.DropPageConfig);
         }
+        if (source.TemplateConfig != null) {
+            this.TemplateConfig = new TemplateConfig(source.TemplateConfig);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class SecurityConfig extends AbstractModel{
         this.setParamObj(map, prefix + "IpTableConfig.", this.IpTableConfig);
         this.setParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
         this.setParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
+        this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
 
     }
 }

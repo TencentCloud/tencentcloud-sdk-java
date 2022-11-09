@@ -30,14 +30,14 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * AutoScalingGroupPara AS组参数
+    * AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
     */
     @SerializedName("AutoScalingGroupPara")
     @Expose
     private String AutoScalingGroupPara;
 
     /**
-    * LaunchConfigurePara 运行参数
+    * LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
     */
     @SerializedName("LaunchConfigurePara")
     @Expose
@@ -137,32 +137,32 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get AutoScalingGroupPara AS组参数 
-     * @return AutoScalingGroupPara AutoScalingGroupPara AS组参数
+     * Get AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440 
+     * @return AutoScalingGroupPara AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
      */
     public String getAutoScalingGroupPara() {
         return this.AutoScalingGroupPara;
     }
 
     /**
-     * Set AutoScalingGroupPara AS组参数
-     * @param AutoScalingGroupPara AutoScalingGroupPara AS组参数
+     * Set AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+     * @param AutoScalingGroupPara AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
      */
     public void setAutoScalingGroupPara(String AutoScalingGroupPara) {
         this.AutoScalingGroupPara = AutoScalingGroupPara;
     }
 
     /**
-     * Get LaunchConfigurePara 运行参数 
-     * @return LaunchConfigurePara LaunchConfigurePara 运行参数
+     * Get LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447 
+     * @return LaunchConfigurePara LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
      */
     public String getLaunchConfigurePara() {
         return this.LaunchConfigurePara;
     }
 
     /**
-     * Set LaunchConfigurePara 运行参数
-     * @param LaunchConfigurePara LaunchConfigurePara 运行参数
+     * Set LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
+     * @param LaunchConfigurePara LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
      */
     public void setLaunchConfigurePara(String LaunchConfigurePara) {
         this.LaunchConfigurePara = LaunchConfigurePara;

@@ -20,70 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FailReason extends AbstractModel{
+public class TemplateConfig extends AbstractModel{
 
     /**
-    * 失败原因。
+    * 模板ID。
     */
-    @SerializedName("Reason")
+    @SerializedName("TemplateId")
     @Expose
-    private String Reason;
+    private String TemplateId;
 
     /**
-    * 处理失败的资源列表。
+    * 模板名称。
     */
-    @SerializedName("Targets")
+    @SerializedName("TemplateName")
     @Expose
-    private String [] Targets;
+    private String TemplateName;
 
     /**
-     * Get 失败原因。 
-     * @return Reason 失败原因。
+     * Get 模板ID。 
+     * @return TemplateId 模板ID。
      */
-    public String getReason() {
-        return this.Reason;
+    public String getTemplateId() {
+        return this.TemplateId;
     }
 
     /**
-     * Set 失败原因。
-     * @param Reason 失败原因。
+     * Set 模板ID。
+     * @param TemplateId 模板ID。
      */
-    public void setReason(String Reason) {
-        this.Reason = Reason;
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 处理失败的资源列表。 
-     * @return Targets 处理失败的资源列表。
+     * Get 模板名称。 
+     * @return TemplateName 模板名称。
      */
-    public String [] getTargets() {
-        return this.Targets;
+    public String getTemplateName() {
+        return this.TemplateName;
     }
 
     /**
-     * Set 处理失败的资源列表。
-     * @param Targets 处理失败的资源列表。
+     * Set 模板名称。
+     * @param TemplateName 模板名称。
      */
-    public void setTargets(String [] Targets) {
-        this.Targets = Targets;
+    public void setTemplateName(String TemplateName) {
+        this.TemplateName = TemplateName;
     }
 
-    public FailReason() {
+    public TemplateConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public FailReason(FailReason source) {
-        if (source.Reason != null) {
-            this.Reason = new String(source.Reason);
+    public TemplateConfig(TemplateConfig source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
         }
-        if (source.Targets != null) {
-            this.Targets = new String[source.Targets.length];
-            for (int i = 0; i < source.Targets.length; i++) {
-                this.Targets[i] = new String(source.Targets[i]);
-            }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
         }
     }
 
@@ -92,8 +89,8 @@ public class FailReason extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Reason", this.Reason);
-        this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
 
     }
 }

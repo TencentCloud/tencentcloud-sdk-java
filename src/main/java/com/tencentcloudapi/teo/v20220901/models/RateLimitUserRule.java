@@ -73,8 +73,7 @@ public class RateLimitUserRule extends AbstractModel{
     /**
     * 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -104,7 +103,6 @@ public class RateLimitUserRule extends AbstractModel{
 
     /**
     * 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -119,6 +117,16 @@ public class RateLimitUserRule extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FreqScope")
+    @Expose
+    private String [] FreqScope;
 
     /**
      * Get 速率限制统计阈值，单位是次，取值范围0-4294967294。 
@@ -243,12 +251,10 @@ public class RateLimitUserRule extends AbstractModel{
     /**
      * Get 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。 
+<li>off：不生效。</li>默认on生效。 
      * @return RuleStatus 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
      */
     public String getRuleStatus() {
         return this.RuleStatus;
@@ -257,12 +263,10 @@ public class RateLimitUserRule extends AbstractModel{
     /**
      * Set 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
      * @param RuleStatus 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
@@ -322,11 +326,9 @@ public class RateLimitUserRule extends AbstractModel{
 
     /**
      * Get 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FreqFields 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -336,11 +338,9 @@ public class RateLimitUserRule extends AbstractModel{
 
     /**
      * Set 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FreqFields 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -366,6 +366,34 @@ public class RateLimitUserRule extends AbstractModel{
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFreqScope() {
+        return this.FreqScope;
+    }
+
+    /**
+     * Set 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFreqScope(String [] FreqScope) {
+        this.FreqScope = FreqScope;
     }
 
     public RateLimitUserRule() {
@@ -418,6 +446,12 @@ public class RateLimitUserRule extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.FreqScope != null) {
+            this.FreqScope = new String[source.FreqScope.length];
+            for (int i = 0; i < source.FreqScope.length; i++) {
+                this.FreqScope[i] = new String(source.FreqScope[i]);
+            }
+        }
     }
 
 
@@ -437,6 +471,7 @@ public class RateLimitUserRule extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
 
     }
 }

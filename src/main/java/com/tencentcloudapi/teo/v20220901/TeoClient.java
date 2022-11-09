@@ -1399,7 +1399,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询安全防护配置详情
+     *查询安全防护配置详情。请求参数中ZoneId+Entity或TemplateId至少填一项。
      * @param req DescribeSecurityPolicyRequest
      * @return DescribeSecurityPolicyResponse
      * @throws TencentCloudSDKException
@@ -2359,7 +2359,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *修改Web&Bot安全配置
+     *修改Web&Bot安全配置。
      * @param req ModifySecurityPolicyRequest
      * @return ModifySecurityPolicyResponse
      * @throws TencentCloudSDKException

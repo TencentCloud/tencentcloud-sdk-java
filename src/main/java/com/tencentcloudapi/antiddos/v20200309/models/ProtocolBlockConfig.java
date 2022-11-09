@@ -58,6 +58,20 @@ public class ProtocolBlockConfig extends AbstractModel{
     private Long CheckExceptNullConnect;
 
     /**
+    * ping of death防护，取值[0(防护关)，1(防护开)]
+    */
+    @SerializedName("PingOfDeath")
+    @Expose
+    private Long PingOfDeath;
+
+    /**
+    * tear drop防护，取值[0(防护关)，1(防护开)]
+    */
+    @SerializedName("TearDrop")
+    @Expose
+    private Long TearDrop;
+
+    /**
      * Get TCP封禁，取值[0(封禁关)，1(封禁开)] 
      * @return DropTcp TCP封禁，取值[0(封禁关)，1(封禁开)]
      */
@@ -137,6 +151,38 @@ public class ProtocolBlockConfig extends AbstractModel{
         this.CheckExceptNullConnect = CheckExceptNullConnect;
     }
 
+    /**
+     * Get ping of death防护，取值[0(防护关)，1(防护开)] 
+     * @return PingOfDeath ping of death防护，取值[0(防护关)，1(防护开)]
+     */
+    public Long getPingOfDeath() {
+        return this.PingOfDeath;
+    }
+
+    /**
+     * Set ping of death防护，取值[0(防护关)，1(防护开)]
+     * @param PingOfDeath ping of death防护，取值[0(防护关)，1(防护开)]
+     */
+    public void setPingOfDeath(Long PingOfDeath) {
+        this.PingOfDeath = PingOfDeath;
+    }
+
+    /**
+     * Get tear drop防护，取值[0(防护关)，1(防护开)] 
+     * @return TearDrop tear drop防护，取值[0(防护关)，1(防护开)]
+     */
+    public Long getTearDrop() {
+        return this.TearDrop;
+    }
+
+    /**
+     * Set tear drop防护，取值[0(防护关)，1(防护开)]
+     * @param TearDrop tear drop防护，取值[0(防护关)，1(防护开)]
+     */
+    public void setTearDrop(Long TearDrop) {
+        this.TearDrop = TearDrop;
+    }
+
     public ProtocolBlockConfig() {
     }
 
@@ -160,6 +206,12 @@ public class ProtocolBlockConfig extends AbstractModel{
         if (source.CheckExceptNullConnect != null) {
             this.CheckExceptNullConnect = new Long(source.CheckExceptNullConnect);
         }
+        if (source.PingOfDeath != null) {
+            this.PingOfDeath = new Long(source.PingOfDeath);
+        }
+        if (source.TearDrop != null) {
+            this.TearDrop = new Long(source.TearDrop);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class ProtocolBlockConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "DropIcmp", this.DropIcmp);
         this.setParamSimple(map, prefix + "DropOther", this.DropOther);
         this.setParamSimple(map, prefix + "CheckExceptNullConnect", this.CheckExceptNullConnect);
+        this.setParamSimple(map, prefix + "PingOfDeath", this.PingOfDeath);
+        this.setParamSimple(map, prefix + "TearDrop", this.TearDrop);
 
     }
 }

@@ -218,6 +218,14 @@ public class Machine extends AbstractModel{
     private Long IsAddedOnTheFifteen;
 
     /**
+    * 主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpList")
+    @Expose
+    private String IpList;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -685,6 +693,26 @@ public class Machine extends AbstractModel{
         this.IsAddedOnTheFifteen = IsAddedOnTheFifteen;
     }
 
+    /**
+     * Get 主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpList 主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpList() {
+        return this.IpList;
+    }
+
+    /**
+     * Set 主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpList 主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpList(String IpList) {
+        this.IpList = IpList;
+    }
+
     public Machine() {
     }
 
@@ -777,6 +805,9 @@ public class Machine extends AbstractModel{
         if (source.IsAddedOnTheFifteen != null) {
             this.IsAddedOnTheFifteen = new Long(source.IsAddedOnTheFifteen);
         }
+        if (source.IpList != null) {
+            this.IpList = new String(source.IpList);
+        }
     }
 
 
@@ -810,6 +841,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamSimple(map, prefix + "IsAddedOnTheFifteen", this.IsAddedOnTheFifteen);
+        this.setParamSimple(map, prefix + "IpList", this.IpList);
 
     }
 }

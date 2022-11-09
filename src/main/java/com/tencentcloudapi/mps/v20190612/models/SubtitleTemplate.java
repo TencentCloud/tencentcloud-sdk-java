@@ -22,6 +22,184 @@ import java.util.HashMap;
 
 public class SubtitleTemplate extends AbstractModel{
 
+    /**
+    * 要压制到视频中的字幕文件地址。
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+    */
+    @SerializedName("StreamIndex")
+    @Expose
+    private Long StreamIndex;
+
+    /**
+    * 字体类型，
+<li>hei.ttf：黑体</li>
+<li>song.ttf：宋体</li>
+<li>simkai.ttf：楷体</li>
+<li>arial.ttf：仅支持英文</li>
+默认hei.ttf
+    */
+    @SerializedName("FontType")
+    @Expose
+    private String FontType;
+
+    /**
+    * 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+    */
+    @SerializedName("FontSize")
+    @Expose
+    private String FontSize;
+
+    /**
+    * 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+    */
+    @SerializedName("FontColor")
+    @Expose
+    private String FontColor;
+
+    /**
+    * 文字透明度，取值范围：(0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：1。
+    */
+    @SerializedName("FontAlpha")
+    @Expose
+    private Float FontAlpha;
+
+    /**
+     * Get 要压制到视频中的字幕文件地址。 
+     * @return Path 要压制到视频中的字幕文件地址。
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 要压制到视频中的字幕文件地址。
+     * @param Path 要压制到视频中的字幕文件地址。
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    /**
+     * Get 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。 
+     * @return StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     */
+    public Long getStreamIndex() {
+        return this.StreamIndex;
+    }
+
+    /**
+     * Set 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     * @param StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     */
+    public void setStreamIndex(Long StreamIndex) {
+        this.StreamIndex = StreamIndex;
+    }
+
+    /**
+     * Get 字体类型，
+<li>hei.ttf：黑体</li>
+<li>song.ttf：宋体</li>
+<li>simkai.ttf：楷体</li>
+<li>arial.ttf：仅支持英文</li>
+默认hei.ttf 
+     * @return FontType 字体类型，
+<li>hei.ttf：黑体</li>
+<li>song.ttf：宋体</li>
+<li>simkai.ttf：楷体</li>
+<li>arial.ttf：仅支持英文</li>
+默认hei.ttf
+     */
+    public String getFontType() {
+        return this.FontType;
+    }
+
+    /**
+     * Set 字体类型，
+<li>hei.ttf：黑体</li>
+<li>song.ttf：宋体</li>
+<li>simkai.ttf：楷体</li>
+<li>arial.ttf：仅支持英文</li>
+默认hei.ttf
+     * @param FontType 字体类型，
+<li>hei.ttf：黑体</li>
+<li>song.ttf：宋体</li>
+<li>simkai.ttf：楷体</li>
+<li>arial.ttf：仅支持英文</li>
+默认hei.ttf
+     */
+    public void setFontType(String FontType) {
+        this.FontType = FontType;
+    }
+
+    /**
+     * Get 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。 
+     * @return FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+     */
+    public String getFontSize() {
+        return this.FontSize;
+    }
+
+    /**
+     * Set 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+     * @param FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+     */
+    public void setFontSize(String FontSize) {
+        this.FontSize = FontSize;
+    }
+
+    /**
+     * Get 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色） 
+     * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     */
+    public String getFontColor() {
+        return this.FontColor;
+    }
+
+    /**
+     * Set 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     */
+    public void setFontColor(String FontColor) {
+        this.FontColor = FontColor;
+    }
+
+    /**
+     * Get 文字透明度，取值范围：(0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：1。 
+     * @return FontAlpha 文字透明度，取值范围：(0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：1。
+     */
+    public Float getFontAlpha() {
+        return this.FontAlpha;
+    }
+
+    /**
+     * Set 文字透明度，取值范围：(0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：1。
+     * @param FontAlpha 文字透明度，取值范围：(0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：1。
+     */
+    public void setFontAlpha(Float FontAlpha) {
+        this.FontAlpha = FontAlpha;
+    }
+
     public SubtitleTemplate() {
     }
 
@@ -30,6 +208,24 @@ public class SubtitleTemplate extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SubtitleTemplate(SubtitleTemplate source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.StreamIndex != null) {
+            this.StreamIndex = new Long(source.StreamIndex);
+        }
+        if (source.FontType != null) {
+            this.FontType = new String(source.FontType);
+        }
+        if (source.FontSize != null) {
+            this.FontSize = new String(source.FontSize);
+        }
+        if (source.FontColor != null) {
+            this.FontColor = new String(source.FontColor);
+        }
+        if (source.FontAlpha != null) {
+            this.FontAlpha = new Float(source.FontAlpha);
+        }
     }
 
 
@@ -37,6 +233,12 @@ public class SubtitleTemplate extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
+        this.setParamSimple(map, prefix + "FontType", this.FontType);
+        this.setParamSimple(map, prefix + "FontSize", this.FontSize);
+        this.setParamSimple(map, prefix + "FontColor", this.FontColor);
+        this.setParamSimple(map, prefix + "FontAlpha", this.FontAlpha);
 
     }
 }

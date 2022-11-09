@@ -63,6 +63,16 @@ public class IpTableRule extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 动作，取值有：
 <li> drop：拦截；</li>
 <li> trans：放行；</li>
@@ -162,6 +172,34 @@ public class IpTableRule extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public IpTableRule() {
     }
 
@@ -185,6 +223,9 @@ public class IpTableRule extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -197,6 +238,7 @@ public class IpTableRule extends AbstractModel{
         this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

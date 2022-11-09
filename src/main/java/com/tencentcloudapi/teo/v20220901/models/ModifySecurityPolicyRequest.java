@@ -30,18 +30,25 @@ public class ModifySecurityPolicyRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 子域名/应用名。
+    * 安全配置。
+    */
+    @SerializedName("SecurityConfig")
+    @Expose
+    private SecurityConfig SecurityConfig;
+
+    /**
+    * 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * 安全配置。
+    * 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
     */
-    @SerializedName("SecurityConfig")
+    @SerializedName("TemplateId")
     @Expose
-    private SecurityConfig SecurityConfig;
+    private String TemplateId;
 
     /**
      * Get 站点Id。 
@@ -60,22 +67,6 @@ public class ModifySecurityPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 子域名/应用名。 
-     * @return Entity 子域名/应用名。
-     */
-    public String getEntity() {
-        return this.Entity;
-    }
-
-    /**
-     * Set 子域名/应用名。
-     * @param Entity 子域名/应用名。
-     */
-    public void setEntity(String Entity) {
-        this.Entity = Entity;
-    }
-
-    /**
      * Get 安全配置。 
      * @return SecurityConfig 安全配置。
      */
@@ -91,6 +82,38 @@ public class ModifySecurityPolicyRequest extends AbstractModel{
         this.SecurityConfig = SecurityConfig;
     }
 
+    /**
+     * Get 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。 
+     * @return Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     */
+    public String getEntity() {
+        return this.Entity;
+    }
+
+    /**
+     * Set 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     */
+    public void setEntity(String Entity) {
+        this.Entity = Entity;
+    }
+
+    /**
+     * Get 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。 
+     * @return TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     * @param TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public ModifySecurityPolicyRequest() {
     }
 
@@ -102,11 +125,14 @@ public class ModifySecurityPolicyRequest extends AbstractModel{
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.SecurityConfig != null) {
+            this.SecurityConfig = new SecurityConfig(source.SecurityConfig);
+        }
         if (source.Entity != null) {
             this.Entity = new String(source.Entity);
         }
-        if (source.SecurityConfig != null) {
-            this.SecurityConfig = new SecurityConfig(source.SecurityConfig);
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
         }
     }
 
@@ -116,8 +142,9 @@ public class ModifySecurityPolicyRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "Entity", this.Entity);
         this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
+        this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

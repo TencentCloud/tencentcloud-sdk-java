@@ -34,14 +34,15 @@ public class CreatePurgeTaskRequest extends AbstractModel{
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 要刷新的资源列表，每个元素格式依据Type而定：
+    * 要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -50,6 +51,8 @@ public class CreatePurgeTaskRequest extends AbstractModel{
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。
     */
     @SerializedName("Targets")
     @Expose
@@ -84,12 +87,14 @@ Targets可为空，不需要填写。
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li> 
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li> 
      * @return Type 清除缓存类型，取值有：
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
      */
     public String getType() {
         return this.Type;
@@ -100,28 +105,21 @@ Targets可为空，不需要填写。
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
      * @param Type 清除缓存类型，取值有：
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 要刷新的资源列表，每个元素格式依据Type而定：
-1) Type = purge_host 时：
-形如：www.example.com 或 foo.bar.example.com。
-2) Type = purge_prefix 时：
-形如：http://www.example.com/example。
-3) Type = purge_url 时：
-形如：https://www.example.com/example.jpg。
-4）Type = purge_all 时：
-Targets可为空，不需要填写。 
-     * @return Targets 要刷新的资源列表，每个元素格式依据Type而定：
+     * Get 要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -130,13 +128,26 @@ Targets可为空，不需要填写。
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。 
+     * @return Targets 要清除缓存的资源列表，每个元素格式依据Type而定：
+1) Type = purge_host 时：
+形如：www.example.com 或 foo.bar.example.com。
+2) Type = purge_prefix 时：
+形如：http://www.example.com/example。
+3) Type = purge_url 时：
+形如：https://www.example.com/example.jpg。
+4）Type = purge_all 时：
+Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 要刷新的资源列表，每个元素格式依据Type而定：
+     * Set 要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -145,7 +156,9 @@ Targets可为空，不需要填写。
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
-     * @param Targets 要刷新的资源列表，每个元素格式依据Type而定：
+5）Type = purge_cache_tag 时：
+形如：tag1。
+     * @param Targets 要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -154,6 +167,8 @@ Targets可为空，不需要填写。
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

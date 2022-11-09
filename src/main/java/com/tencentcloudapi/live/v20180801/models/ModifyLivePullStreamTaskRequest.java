@@ -148,8 +148,9 @@ PullLivePushLive -直播，
 PullVodPushLive -点播。
 注意：
 1. 仅当主源类型为直播源时，备源才会生效。
-2. 主直播源拉流中断时，自动使用备源进行拉流。
-3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+2. 将该参数置为空，则可将任务去除备源信息。
+3. 主直播源拉流中断时，自动使用备源进行拉流。
+4. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
     */
     @SerializedName("BackupSourceType")
     @Expose
@@ -177,6 +178,16 @@ PullVodPushLive -点播。
     @SerializedName("WatermarkList")
     @Expose
     private PullPushWatermarkInfo [] WatermarkList;
+
+    /**
+    * 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+    */
+    @SerializedName("VodLocalMode")
+    @Expose
+    private Long VodLocalMode;
 
     /**
      * Get 任务Id。 
@@ -508,15 +519,17 @@ PullLivePushLive -直播，
 PullVodPushLive -点播。
 注意：
 1. 仅当主源类型为直播源时，备源才会生效。
-2. 主直播源拉流中断时，自动使用备源进行拉流。
-3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。 
+2. 将该参数置为空，则可将任务去除备源信息。
+3. 主直播源拉流中断时，自动使用备源进行拉流。
+4. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。 
      * @return BackupSourceType 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
 注意：
 1. 仅当主源类型为直播源时，备源才会生效。
-2. 主直播源拉流中断时，自动使用备源进行拉流。
-3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+2. 将该参数置为空，则可将任务去除备源信息。
+3. 主直播源拉流中断时，自动使用备源进行拉流。
+4. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
      */
     public String getBackupSourceType() {
         return this.BackupSourceType;
@@ -528,15 +541,17 @@ PullLivePushLive -直播，
 PullVodPushLive -点播。
 注意：
 1. 仅当主源类型为直播源时，备源才会生效。
-2. 主直播源拉流中断时，自动使用备源进行拉流。
-3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+2. 将该参数置为空，则可将任务去除备源信息。
+3. 主直播源拉流中断时，自动使用备源进行拉流。
+4. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
      * @param BackupSourceType 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
 注意：
 1. 仅当主源类型为直播源时，备源才会生效。
-2. 主直播源拉流中断时，自动使用备源进行拉流。
-3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+2. 将该参数置为空，则可将任务去除备源信息。
+3. 主直播源拉流中断时，自动使用备源进行拉流。
+4. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
      */
     public void setBackupSourceType(String BackupSourceType) {
         this.BackupSourceType = BackupSourceType;
@@ -610,6 +625,34 @@ PullVodPushLive -点播。
         this.WatermarkList = WatermarkList;
     }
 
+    /**
+     * Get 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。 
+     * @return VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+     */
+    public Long getVodLocalMode() {
+        return this.VodLocalMode;
+    }
+
+    /**
+     * Set 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+     * @param VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+     */
+    public void setVodLocalMode(Long VodLocalMode) {
+        this.VodLocalMode = VodLocalMode;
+    }
+
     public ModifyLivePullStreamTaskRequest() {
     }
 
@@ -675,6 +718,9 @@ PullVodPushLive -点播。
                 this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
             }
         }
+        if (source.VodLocalMode != null) {
+            this.VodLocalMode = new Long(source.VodLocalMode);
+        }
     }
 
 
@@ -698,6 +744,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+        this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
 
     }
 }
