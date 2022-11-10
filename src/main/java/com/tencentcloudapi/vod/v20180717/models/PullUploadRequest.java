@@ -45,7 +45,7 @@ public class PullUploadRequest extends AbstractModel{
     private String MediaName;
 
     /**
-    * 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+    * 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -162,16 +162,16 @@ public class PullUploadRequest extends AbstractModel{
     }
 
     /**
-     * Get 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。 
-     * @return CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+     * Get 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。 
+     * @return CoverUrl 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
-     * @param CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+     * Set 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
+     * @param CoverUrl 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
