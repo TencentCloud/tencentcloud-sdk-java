@@ -279,6 +279,26 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *指定条件删除文件系统配额
+     * @param req DeleteUserQuotaRequest
+     * @return DeleteUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserQuotaResponse DeleteUserQuota(DeleteUserQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUserQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文件系统快照定期策略列表信息
      * @param req DescribeAutoSnapshotPoliciesRequest
      * @return DescribeAutoSnapshotPoliciesResponse
@@ -491,6 +511,46 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSnapshotOperationLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询文件系统配额
+     * @param req DescribeUserQuotaRequest
+     * @return DescribeUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置文件系统配额，提供UID/GID的配额设置的接口
+     * @param req SetUserQuotaRequest
+     * @return SetUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetUserQuotaResponse SetUserQuota(SetUserQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetUserQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetUserQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetUserQuota");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

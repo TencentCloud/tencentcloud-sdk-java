@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetWebVerificationResultRequest extends AbstractModel{
+public class SetUserQuotaResponse extends AbstractModel{
 
     /**
-    * Web核验令牌，由ApplyWebVerificationToken接口生成。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("BizToken")
+    @SerializedName("RequestId")
     @Expose
-    private String BizToken;
+    private String RequestId;
 
     /**
-     * Get Web核验令牌，由ApplyWebVerificationToken接口生成。 
-     * @return BizToken Web核验令牌，由ApplyWebVerificationToken接口生成。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getBizToken() {
-        return this.BizToken;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Web核验令牌，由ApplyWebVerificationToken接口生成。
-     * @param BizToken Web核验令牌，由ApplyWebVerificationToken接口生成。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setBizToken(String BizToken) {
-        this.BizToken = BizToken;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public GetWebVerificationResultRequest() {
+    public SetUserQuotaResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetWebVerificationResultRequest(GetWebVerificationResultRequest source) {
-        if (source.BizToken != null) {
-            this.BizToken = new String(source.BizToken);
+    public SetUserQuotaResponse(SetUserQuotaResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class GetWebVerificationResultRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BizToken", this.BizToken);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

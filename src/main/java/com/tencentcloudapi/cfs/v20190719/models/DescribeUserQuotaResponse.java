@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyWebVerificationTokenResponse extends AbstractModel{
+public class DescribeUserQuotaResponse extends AbstractModel{
 
     /**
-    * 用户浏览器需要打开此地址开始核验流程。
+    * UserQuota条目总数
     */
-    @SerializedName("VerificationUrl")
+    @SerializedName("TotalCount")
     @Expose
-    private String VerificationUrl;
+    private Long TotalCount;
 
     /**
-    * 标识一次Web核验流程的令牌，有效时间为7,200秒。流程结束后可用该令牌获取核验结果信息。
+    * UserQuota条目
     */
-    @SerializedName("BizToken")
+    @SerializedName("UserQuotaInfo")
     @Expose
-    private String BizToken;
+    private UserQuota [] UserQuotaInfo;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class ApplyWebVerificationTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户浏览器需要打开此地址开始核验流程。 
-     * @return VerificationUrl 用户浏览器需要打开此地址开始核验流程。
+     * Get UserQuota条目总数 
+     * @return TotalCount UserQuota条目总数
      */
-    public String getVerificationUrl() {
-        return this.VerificationUrl;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 用户浏览器需要打开此地址开始核验流程。
-     * @param VerificationUrl 用户浏览器需要打开此地址开始核验流程。
+     * Set UserQuota条目总数
+     * @param TotalCount UserQuota条目总数
      */
-    public void setVerificationUrl(String VerificationUrl) {
-        this.VerificationUrl = VerificationUrl;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 标识一次Web核验流程的令牌，有效时间为7,200秒。流程结束后可用该令牌获取核验结果信息。 
-     * @return BizToken 标识一次Web核验流程的令牌，有效时间为7,200秒。流程结束后可用该令牌获取核验结果信息。
+     * Get UserQuota条目 
+     * @return UserQuotaInfo UserQuota条目
      */
-    public String getBizToken() {
-        return this.BizToken;
+    public UserQuota [] getUserQuotaInfo() {
+        return this.UserQuotaInfo;
     }
 
     /**
-     * Set 标识一次Web核验流程的令牌，有效时间为7,200秒。流程结束后可用该令牌获取核验结果信息。
-     * @param BizToken 标识一次Web核验流程的令牌，有效时间为7,200秒。流程结束后可用该令牌获取核验结果信息。
+     * Set UserQuota条目
+     * @param UserQuotaInfo UserQuota条目
      */
-    public void setBizToken(String BizToken) {
-        this.BizToken = BizToken;
+    public void setUserQuotaInfo(UserQuota [] UserQuotaInfo) {
+        this.UserQuotaInfo = UserQuotaInfo;
     }
 
     /**
@@ -91,19 +91,22 @@ public class ApplyWebVerificationTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ApplyWebVerificationTokenResponse() {
+    public DescribeUserQuotaResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApplyWebVerificationTokenResponse(ApplyWebVerificationTokenResponse source) {
-        if (source.VerificationUrl != null) {
-            this.VerificationUrl = new String(source.VerificationUrl);
+    public DescribeUserQuotaResponse(DescribeUserQuotaResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.BizToken != null) {
-            this.BizToken = new String(source.BizToken);
+        if (source.UserQuotaInfo != null) {
+            this.UserQuotaInfo = new UserQuota[source.UserQuotaInfo.length];
+            for (int i = 0; i < source.UserQuotaInfo.length; i++) {
+                this.UserQuotaInfo[i] = new UserQuota(source.UserQuotaInfo[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +118,8 @@ public class ApplyWebVerificationTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VerificationUrl", this.VerificationUrl);
-        this.setParamSimple(map, prefix + "BizToken", this.BizToken);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "UserQuotaInfo.", this.UserQuotaInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
