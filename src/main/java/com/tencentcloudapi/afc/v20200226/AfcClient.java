@@ -80,4 +80,24 @@ public class AfcClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *天御信鸽取数平台接口
+     * @param req TransportGeneralInterfaceRequest
+     * @return TransportGeneralInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransportGeneralInterfaceResponse TransportGeneralInterface(TransportGeneralInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransportGeneralInterfaceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TransportGeneralInterface");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
