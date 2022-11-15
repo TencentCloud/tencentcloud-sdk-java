@@ -81,6 +81,22 @@ public class RocketMQClusterInfo extends AbstractModel{
     private Boolean SupportNamespaceEndpoint;
 
     /**
+    * VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vpcs")
+    @Expose
+    private VpcConfig [] Vpcs;
+
+    /**
+    * 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsVip")
+    @Expose
+    private Boolean IsVip;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -216,6 +232,46 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.SupportNamespaceEndpoint = SupportNamespaceEndpoint;
     }
 
+    /**
+     * Get VPC信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vpcs VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcConfig [] getVpcs() {
+        return this.Vpcs;
+    }
+
+    /**
+     * Set VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vpcs VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcs(VpcConfig [] Vpcs) {
+        this.Vpcs = Vpcs;
+    }
+
+    /**
+     * Get 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsVip 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsVip() {
+        return this.IsVip;
+    }
+
+    /**
+     * Set 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsVip 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsVip(Boolean IsVip) {
+        this.IsVip = IsVip;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -248,6 +304,15 @@ public class RocketMQClusterInfo extends AbstractModel{
         if (source.SupportNamespaceEndpoint != null) {
             this.SupportNamespaceEndpoint = new Boolean(source.SupportNamespaceEndpoint);
         }
+        if (source.Vpcs != null) {
+            this.Vpcs = new VpcConfig[source.Vpcs.length];
+            for (int i = 0; i < source.Vpcs.length; i++) {
+                this.Vpcs[i] = new VpcConfig(source.Vpcs[i]);
+            }
+        }
+        if (source.IsVip != null) {
+            this.IsVip = new Boolean(source.IsVip);
+        }
     }
 
 
@@ -263,6 +328,8 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
         this.setParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
+        this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamSimple(map, prefix + "IsVip", this.IsVip);
 
     }
 }

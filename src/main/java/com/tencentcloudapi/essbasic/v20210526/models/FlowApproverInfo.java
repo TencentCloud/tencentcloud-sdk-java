@@ -30,7 +30,7 @@ public class FlowApproverInfo extends AbstractModel{
     private String Name;
 
     /**
-    * 经办人身份证件类型
+    * 签署人身份证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
@@ -40,7 +40,7 @@ public class FlowApproverInfo extends AbstractModel{
     private String IdCardType;
 
     /**
-    * 经办人证件号
+    * 签署人证件号
     */
     @SerializedName("IdCardNumber")
     @Expose
@@ -173,11 +173,11 @@ ENTERPRISESERVER-企业静默签;
     }
 
     /**
-     * Get 经办人身份证件类型
+     * Get 签署人身份证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证 
-     * @return IdCardType 经办人身份证件类型
+     * @return IdCardType 签署人身份证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
@@ -187,11 +187,11 @@ ENTERPRISESERVER-企业静默签;
     }
 
     /**
-     * Set 经办人身份证件类型
+     * Set 签署人身份证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-     * @param IdCardType 经办人身份证件类型
+     * @param IdCardType 签署人身份证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
@@ -201,16 +201,16 @@ ENTERPRISESERVER-企业静默签;
     }
 
     /**
-     * Get 经办人证件号 
-     * @return IdCardNumber 经办人证件号
+     * Get 签署人证件号 
+     * @return IdCardNumber 签署人证件号
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 经办人证件号
-     * @param IdCardNumber 经办人证件号
+     * Set 签署人证件号
+     * @param IdCardNumber 签署人证件号
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;

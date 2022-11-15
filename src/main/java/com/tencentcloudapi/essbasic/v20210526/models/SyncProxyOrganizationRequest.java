@@ -52,6 +52,13 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     private String UniformSocialCreditCode;
 
     /**
+    * 渠道侧合作企业法人/负责人姓名
+    */
+    @SerializedName("ProxyLegalName")
+    @Expose
+    private String ProxyLegalName;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
@@ -127,6 +134,22 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     }
 
     /**
+     * Get 渠道侧合作企业法人/负责人姓名 
+     * @return ProxyLegalName 渠道侧合作企业法人/负责人姓名
+     */
+    public String getProxyLegalName() {
+        return this.ProxyLegalName;
+    }
+
+    /**
+     * Set 渠道侧合作企业法人/负责人姓名
+     * @param ProxyLegalName 渠道侧合作企业法人/负责人姓名
+     */
+    public void setProxyLegalName(String ProxyLegalName) {
+        this.ProxyLegalName = ProxyLegalName;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -162,6 +185,9 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
         if (source.UniformSocialCreditCode != null) {
             this.UniformSocialCreditCode = new String(source.UniformSocialCreditCode);
         }
+        if (source.ProxyLegalName != null) {
+            this.ProxyLegalName = new String(source.ProxyLegalName);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -176,6 +202,7 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
+        this.setParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

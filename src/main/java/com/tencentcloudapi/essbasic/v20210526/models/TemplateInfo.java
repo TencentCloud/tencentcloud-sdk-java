@@ -93,6 +93,14 @@ public class TemplateInfo extends AbstractModel{
     private Long CreatedOn;
 
     /**
+    * 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreviewUrl")
+    @Expose
+    private String PreviewUrl;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -252,6 +260,26 @@ public class TemplateInfo extends AbstractModel{
         this.CreatedOn = CreatedOn;
     }
 
+    /**
+     * Get 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreviewUrl 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreviewUrl() {
+        return this.PreviewUrl;
+    }
+
+    /**
+     * Set 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreviewUrl 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreviewUrl(String PreviewUrl) {
+        this.PreviewUrl = PreviewUrl;
+    }
+
     public TemplateInfo() {
     }
 
@@ -299,6 +327,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.CreatedOn != null) {
             this.CreatedOn = new Long(source.CreatedOn);
         }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
     }
 
 
@@ -316,6 +347,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
 
     }
 }

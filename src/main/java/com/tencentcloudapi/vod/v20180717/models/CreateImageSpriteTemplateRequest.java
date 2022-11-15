@@ -120,6 +120,17 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
     private String ResolutionAdaptive;
 
     /**
+    * 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li> 
@@ -375,6 +386,38 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
         this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
+    /**
+     * Get 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。 
+     * @return Format 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
+     * @param Format 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public CreateImageSpriteTemplateRequest() {
     }
 
@@ -416,6 +459,9 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
         if (source.ResolutionAdaptive != null) {
             this.ResolutionAdaptive = new String(source.ResolutionAdaptive);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -434,6 +480,7 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

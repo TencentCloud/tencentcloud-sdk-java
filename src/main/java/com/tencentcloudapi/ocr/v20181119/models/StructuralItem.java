@@ -52,6 +52,13 @@ public class StructuralItem extends AbstractModel{
     private ItemCoord ItemCoord;
 
     /**
+    * 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+    */
+    @SerializedName("Row")
+    @Expose
+    private Long Row;
+
+    /**
      * Get 识别出的字段名称(关键字)。 
      * @return Name 识别出的字段名称(关键字)。
      */
@@ -119,6 +126,22 @@ public class StructuralItem extends AbstractModel{
         this.ItemCoord = ItemCoord;
     }
 
+    /**
+     * Get 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。 
+     * @return Row 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+     */
+    public Long getRow() {
+        return this.Row;
+    }
+
+    /**
+     * Set 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+     * @param Row 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+     */
+    public void setRow(Long Row) {
+        this.Row = Row;
+    }
+
     public StructuralItem() {
     }
 
@@ -139,6 +162,9 @@ public class StructuralItem extends AbstractModel{
         if (source.ItemCoord != null) {
             this.ItemCoord = new ItemCoord(source.ItemCoord);
         }
+        if (source.Row != null) {
+            this.Row = new Long(source.Row);
+        }
     }
 
 
@@ -150,6 +176,7 @@ public class StructuralItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+        this.setParamSimple(map, prefix + "Row", this.Row);
 
     }
 }

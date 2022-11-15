@@ -60,7 +60,7 @@ public class ScanVoiceRequest extends AbstractModel{
     private String Callback;
 
     /**
-    * 语言，目前jp代表日语
+    * 语种，不传默认中文
     */
     @SerializedName("Lang")
     @Expose
@@ -155,16 +155,16 @@ public class ScanVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 语言，目前jp代表日语 
-     * @return Lang 语言，目前jp代表日语
+     * Get 语种，不传默认中文 
+     * @return Lang 语种，不传默认中文
      */
     public String getLang() {
         return this.Lang;
     }
 
     /**
-     * Set 语言，目前jp代表日语
-     * @param Lang 语言，目前jp代表日语
+     * Set 语种，不传默认中文
+     * @param Lang 语种，不传默认中文
      */
     public void setLang(String Lang) {
         this.Lang = Lang;

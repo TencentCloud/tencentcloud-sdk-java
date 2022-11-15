@@ -139,6 +139,13 @@ public class ImageSpriteTemplate extends AbstractModel{
     private String Comment;
 
     /**
+    * 图片格式。
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get 雪碧图模板唯一标识。 
      * @return Definition 雪碧图模板唯一标识。
      */
@@ -434,6 +441,22 @@ public class ImageSpriteTemplate extends AbstractModel{
         this.Comment = Comment;
     }
 
+    /**
+     * Get 图片格式。 
+     * @return Format 图片格式。
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 图片格式。
+     * @param Format 图片格式。
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public ImageSpriteTemplate() {
     }
 
@@ -484,6 +507,9 @@ public class ImageSpriteTemplate extends AbstractModel{
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -505,6 +531,7 @@ public class ImageSpriteTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

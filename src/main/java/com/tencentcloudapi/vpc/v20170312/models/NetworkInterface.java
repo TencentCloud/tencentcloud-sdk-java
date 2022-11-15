@@ -173,6 +173,18 @@ public class NetworkInterface extends AbstractModel{
     private String ResourceId;
 
     /**
+    * 服务质量级别：
+<li>`DEFAULT`：默认</li>
+<li>`PT`：云金</li>
+<li>`AU`：云银</li>
+<li>`AG`：云铜</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -532,6 +544,42 @@ public class NetworkInterface extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 服务质量级别：
+<li>`DEFAULT`：默认</li>
+<li>`PT`：云金</li>
+<li>`AU`：云银</li>
+<li>`AG`：云铜</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QosLevel 服务质量级别：
+<li>`DEFAULT`：默认</li>
+<li>`PT`：云金</li>
+<li>`AU`：云银</li>
+<li>`AG`：云铜</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set 服务质量级别：
+<li>`DEFAULT`：默认</li>
+<li>`PT`：云金</li>
+<li>`AU`：云银</li>
+<li>`AG`：云铜</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QosLevel 服务质量级别：
+<li>`DEFAULT`：默认</li>
+<li>`PT`：云金</li>
+<li>`AU`：云银</li>
+<li>`AG`：云铜</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
     public NetworkInterface() {
     }
 
@@ -612,6 +660,9 @@ public class NetworkInterface extends AbstractModel{
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
     }
 
 
@@ -639,6 +690,7 @@ public class NetworkInterface extends AbstractModel{
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "AttachType", this.AttachType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

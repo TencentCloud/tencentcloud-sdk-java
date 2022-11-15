@@ -366,6 +366,9 @@ public enum MariadbErrorCode {
     // 数据库实例状态不正确，当前无法操作。
      RESOURCEUNAVAILABLE_INSTANCESTATUSABNORMAL("ResourceUnavailable.InstanceStatusAbnormal"),
      
+    // 安全组校验失败。
+     RESOURCEUNAVAILABLE_SGCHECKFAIL("ResourceUnavailable.SGCheckFail"),
+     
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      

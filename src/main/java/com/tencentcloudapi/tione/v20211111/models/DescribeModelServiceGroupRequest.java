@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeModelServiceGroupRequest extends AbstractModel{
 
     /**
-    * 无
+    * 服务组ID
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-     * Get 无 
-     * @return ServiceGroupId 无
+     * Get 服务组ID 
+     * @return ServiceGroupId 服务组ID
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 无
-     * @param ServiceGroupId 无
+     * Set 服务组ID
+     * @param ServiceGroupId 服务组ID
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;

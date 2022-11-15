@@ -86,6 +86,14 @@ public class DetailResults extends AbstractModel{
     private String SubLabel;
 
     /**
+    * 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
      * @return Label 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
@@ -241,6 +249,26 @@ public class DetailResults extends AbstractModel{
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DetailResults() {
     }
 
@@ -276,6 +304,12 @@ public class DetailResults extends AbstractModel{
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -291,6 +325,7 @@ public class DetailResults extends AbstractModel{
         this.setParamSimple(map, prefix + "LibId", this.LibId);
         this.setParamSimple(map, prefix + "LibName", this.LibName);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

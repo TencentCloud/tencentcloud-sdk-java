@@ -79,6 +79,13 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 是否获取模板预览链接
+    */
+    @SerializedName("WithPreviewUrl")
+    @Expose
+    private Boolean WithPreviewUrl;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -206,6 +213,22 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 是否获取模板预览链接 
+     * @return WithPreviewUrl 是否获取模板预览链接
+     */
+    public Boolean getWithPreviewUrl() {
+        return this.WithPreviewUrl;
+    }
+
+    /**
+     * Set 是否获取模板预览链接
+     * @param WithPreviewUrl 是否获取模板预览链接
+     */
+    public void setWithPreviewUrl(Boolean WithPreviewUrl) {
+        this.WithPreviewUrl = WithPreviewUrl;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -238,6 +261,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.WithPreviewUrl != null) {
+            this.WithPreviewUrl = new Boolean(source.WithPreviewUrl);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
 
     }
 }

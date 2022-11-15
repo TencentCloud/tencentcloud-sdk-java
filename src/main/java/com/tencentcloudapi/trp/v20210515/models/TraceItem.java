@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TraceItem extends AbstractModel{
 
     /**
-    * 名称
+    * 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -31,7 +31,7 @@ public class TraceItem extends AbstractModel{
     private String Name;
 
     /**
-    * 单个值
+    * 字段值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,7 +39,7 @@ public class TraceItem extends AbstractModel{
     private String Value;
 
     /**
-    * 类型
+    * 类型 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -87,9 +87,9 @@ public class TraceItem extends AbstractModel{
     private String Ext;
 
     /**
-     * Get 名称
+     * Get 字段名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名称
+     * @return Name 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -97,9 +97,9 @@ public class TraceItem extends AbstractModel{
     }
 
     /**
-     * Set 名称
+     * Set 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名称
+     * @param Name 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -107,9 +107,9 @@ public class TraceItem extends AbstractModel{
     }
 
     /**
-     * Get 单个值
+     * Get 字段值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 单个值
+     * @return Value 字段值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -117,9 +117,9 @@ public class TraceItem extends AbstractModel{
     }
 
     /**
-     * Set 单个值
+     * Set 字段值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 单个值
+     * @param Value 字段值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
@@ -127,9 +127,9 @@ public class TraceItem extends AbstractModel{
     }
 
     /**
-     * Get 类型
+     * Get 类型 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型
+     * @return Type 类型 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -137,9 +137,9 @@ public class TraceItem extends AbstractModel{
     }
 
     /**
-     * Set 类型
+     * Set 类型 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型
+     * @param Type 类型 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

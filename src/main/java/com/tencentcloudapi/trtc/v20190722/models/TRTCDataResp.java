@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TRTCDataResp extends AbstractModel{
 
     /**
-    * StatementID值
+    * StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatementID")
@@ -31,7 +31,7 @@ public class TRTCDataResp extends AbstractModel{
     private Long StatementID;
 
     /**
-    * Series数据
+    * 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Series")
@@ -39,7 +39,7 @@ public class TRTCDataResp extends AbstractModel{
     private SeriesInfo [] Series;
 
     /**
-    * Total值
+    * Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -47,9 +47,9 @@ public class TRTCDataResp extends AbstractModel{
     private Long Total;
 
     /**
-     * Get StatementID值
+     * Get StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatementID StatementID值
+     * @return StatementID StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatementID() {
@@ -57,9 +57,9 @@ public class TRTCDataResp extends AbstractModel{
     }
 
     /**
-     * Set StatementID值
+     * Set StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatementID StatementID值
+     * @param StatementID StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatementID(Long StatementID) {
@@ -67,9 +67,9 @@ public class TRTCDataResp extends AbstractModel{
     }
 
     /**
-     * Get Series数据
+     * Get 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Series Series数据
+     * @return Series 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SeriesInfo [] getSeries() {
@@ -77,9 +77,9 @@ public class TRTCDataResp extends AbstractModel{
     }
 
     /**
-     * Set Series数据
+     * Set 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Series Series数据
+     * @param Series 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeries(SeriesInfo [] Series) {
@@ -87,9 +87,9 @@ public class TRTCDataResp extends AbstractModel{
     }
 
     /**
-     * Get Total值
+     * Get Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total Total值
+     * @return Total Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -97,9 +97,9 @@ public class TRTCDataResp extends AbstractModel{
     }
 
     /**
-     * Set Total值
+     * Set Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total Total值
+     * @param Total Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {

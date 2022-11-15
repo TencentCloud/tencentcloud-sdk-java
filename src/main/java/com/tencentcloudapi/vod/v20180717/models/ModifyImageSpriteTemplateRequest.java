@@ -117,6 +117,16 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
     private String Comment;
 
     /**
+    * 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get 雪碧图模板唯一标识。 
      * @return Definition 雪碧图模板唯一标识。
      */
@@ -348,6 +358,34 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
         this.Comment = Comment;
     }
 
+    /**
+     * Get 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li> 
+     * @return Format 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+     * @param Format 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public ModifyImageSpriteTemplateRequest() {
     }
 
@@ -392,6 +430,9 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -411,6 +452,7 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

@@ -1230,7 +1230,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享分布式数据库实例。
+     *本接口（TerminateDedicatedDBInstance）用于销毁已隔离的独享分布式数据库实例。
      * @param req TerminateDedicatedDBInstanceRequest
      * @return TerminateDedicatedDBInstanceResponse
      * @throws TencentCloudSDKException

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRabbitMQNodeListRequest extends AbstractModel{
 
     /**
-    * 不适用，默认参数
+    * rabbitmq集群ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 不适用，默认参数 
-     * @return InstanceId 不适用，默认参数
+     * Get rabbitmq集群ID 
+     * @return InstanceId rabbitmq集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 不适用，默认参数
-     * @param InstanceId 不适用，默认参数
+     * Set rabbitmq集群ID
+     * @param InstanceId rabbitmq集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

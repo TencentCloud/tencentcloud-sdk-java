@@ -219,6 +219,9 @@ public enum CvmErrorCode {
     // 当前接口不支持实例镜像。
      INVALIDPARAMETER_INSTANCEIMAGENOTSUPPORT("InvalidParameter.InstanceImageNotSupport"),
      
+    // 不支持设置公网带宽相关信息。
+     INVALIDPARAMETER_INTERNETACCESSIBLENOTSUPPORTED("InvalidParameter.InternetAccessibleNotSupported"),
+     
     // 云盘资源售罄。
      INVALIDPARAMETER_INVALIDCLOUDDISKSOLDOUT("InvalidParameter.InvalidCloudDiskSoldOut"),
      

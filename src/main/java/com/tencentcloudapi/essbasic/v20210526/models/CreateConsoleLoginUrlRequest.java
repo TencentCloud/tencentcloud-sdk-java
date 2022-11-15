@@ -73,6 +73,20 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private String MenuStatus;
 
     /**
+    * 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
+    */
+    @SerializedName("Endpoint")
+    @Expose
+    private String Endpoint;
+
+    /**
+    * 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
+    */
+    @SerializedName("AutoJumpBackEvent")
+    @Expose
+    private String AutoJumpBackEvent;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
@@ -196,6 +210,38 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     }
 
     /**
+     * Get 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台 
+     * @return Endpoint 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
+     */
+    public String getEndpoint() {
+        return this.Endpoint;
+    }
+
+    /**
+     * Set 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
+     * @param Endpoint 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
+     */
+    public void setEndpoint(String Endpoint) {
+        this.Endpoint = Endpoint;
+    }
+
+    /**
+     * Get 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序 
+     * @return AutoJumpBackEvent 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
+     */
+    public String getAutoJumpBackEvent() {
+        return this.AutoJumpBackEvent;
+    }
+
+    /**
+     * Set 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
+     * @param AutoJumpBackEvent 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
+     */
+    public void setAutoJumpBackEvent(String AutoJumpBackEvent) {
+        this.AutoJumpBackEvent = AutoJumpBackEvent;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -240,6 +286,12 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         if (source.MenuStatus != null) {
             this.MenuStatus = new String(source.MenuStatus);
         }
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
+        if (source.AutoJumpBackEvent != null) {
+            this.AutoJumpBackEvent = new String(source.AutoJumpBackEvent);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -257,6 +309,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "MenuStatus", this.MenuStatus);
+        this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
+        this.setParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

@@ -83,11 +83,11 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private Boolean NeedPreview;
 
     /**
-    * 签署流程描述,最大长度1000个字符
+    * 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
     */
-    @SerializedName("FlowDescription")
+    @SerializedName("PreviewType")
     @Expose
-    private String FlowDescription;
+    private Long PreviewType;
 
     /**
     * 签署流程的签署截止时间。
@@ -147,6 +147,13 @@ MobileCheck：手机号验证
     @SerializedName("ApproverVerifyType")
     @Expose
     private String ApproverVerifyType;
+
+    /**
+    * 签署流程描述,最大长度1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
 
     /**
      * Get 调用方用户信息，userId 必填 
@@ -293,19 +300,19 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 签署流程描述,最大长度1000个字符 
-     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     * Get 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效, 
+     * @return PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
      */
-    public String getFlowDescription() {
-        return this.FlowDescription;
+    public Long getPreviewType() {
+        return this.PreviewType;
     }
 
     /**
-     * Set 签署流程描述,最大长度1000个字符
-     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     * Set 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+     * @param PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
      */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
+    public void setPreviewType(Long PreviewType) {
+        this.PreviewType = PreviewType;
     }
 
     /**
@@ -460,6 +467,22 @@ MobileCheck：手机号验证
         this.ApproverVerifyType = ApproverVerifyType;
     }
 
+    /**
+     * Get 签署流程描述,最大长度1000个字符 
+     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程描述,最大长度1000个字符
+     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -504,8 +527,8 @@ MobileCheck：手机号验证
         if (source.NeedPreview != null) {
             this.NeedPreview = new Boolean(source.NeedPreview);
         }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
+        if (source.PreviewType != null) {
+            this.PreviewType = new Long(source.PreviewType);
         }
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
@@ -528,6 +551,9 @@ MobileCheck：手机号验证
         if (source.ApproverVerifyType != null) {
             this.ApproverVerifyType = new String(source.ApproverVerifyType);
         }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
     }
 
 
@@ -543,7 +569,7 @@ MobileCheck：手机号验证
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
+        this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
@@ -551,6 +577,7 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
 
     }
 }

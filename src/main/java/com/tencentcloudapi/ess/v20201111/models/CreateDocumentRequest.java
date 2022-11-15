@@ -66,11 +66,11 @@ public class CreateDocumentRequest extends AbstractModel{
     private Boolean NeedPreview;
 
     /**
-    * 客户端Token，保持接口幂等性,最大长度64个字符
+    * 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
     */
-    @SerializedName("ClientToken")
+    @SerializedName("PreviewType")
     @Expose
-    private String ClientToken;
+    private Long PreviewType;
 
     /**
     * 应用相关信息
@@ -78,6 +78,13 @@ public class CreateDocumentRequest extends AbstractModel{
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
+
+    /**
+    * 客户端Token，保持接口幂等性,最大长度64个字符
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
 
     /**
      * Get 调用方用户信息，userId 必填 
@@ -180,19 +187,19 @@ public class CreateDocumentRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户端Token，保持接口幂等性,最大长度64个字符 
-     * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * Get 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效, 
+     * @return PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
      */
-    public String getClientToken() {
-        return this.ClientToken;
+    public Long getPreviewType() {
+        return this.PreviewType;
     }
 
     /**
-     * Set 客户端Token，保持接口幂等性,最大长度64个字符
-     * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * Set 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+     * @param PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
      */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
+    public void setPreviewType(Long PreviewType) {
+        this.PreviewType = PreviewType;
     }
 
     /**
@@ -209,6 +216,22 @@ public class CreateDocumentRequest extends AbstractModel{
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get 客户端Token，保持接口幂等性,最大长度64个字符 
+     * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
     }
 
     public CreateDocumentRequest() {
@@ -243,11 +266,14 @@ public class CreateDocumentRequest extends AbstractModel{
         if (source.NeedPreview != null) {
             this.NeedPreview = new Boolean(source.NeedPreview);
         }
-        if (source.ClientToken != null) {
-            this.ClientToken = new String(source.ClientToken);
+        if (source.PreviewType != null) {
+            this.PreviewType = new Long(source.PreviewType);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
         }
     }
 
@@ -262,8 +288,9 @@ public class CreateDocumentRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }
