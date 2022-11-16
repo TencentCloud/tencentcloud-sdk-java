@@ -23,187 +23,238 @@ import java.util.HashMap;
 public class AbstractRuntimeMC extends AbstractModel{
 
     /**
-    * 运行时id
+    * 环境id
     */
     @SerializedName("RuntimeId")
     @Expose
     private Long RuntimeId;
 
     /**
-    * 运行时名称，用户输入，同一uin内唯一
+    * 环境名称，用户输入，同一uin内唯一
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 运行时类型：0: sandbox, 1:shared, 2:private
+    * 环境类型：0: sandbox, 1:shared, 2:private
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 运行时所在地域，tianjin，beijiing，guangzhou等
+    * 环境所在地域，tianjin，beijiing，guangzhou等
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
+    * 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 运行时应用listener地址后缀
+    * 环境应用listener地址后缀
     */
     @SerializedName("Addr")
     @Expose
     private String Addr;
 
     /**
-    * 运行时状态
+    * 环境状态
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 运行时过期时间
+    * 环境过期时间
     */
     @SerializedName("ExpiredAt")
     @Expose
     private Long ExpiredAt;
 
     /**
-     * Get 运行时id 
-     * @return RuntimeId 运行时id
+    * 环境运行类型：0:运行时类型、1:api类型
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
+    * 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deployed")
+    @Expose
+    private Boolean Deployed;
+
+    /**
+     * Get 环境id 
+     * @return RuntimeId 环境id
      */
     public Long getRuntimeId() {
         return this.RuntimeId;
     }
 
     /**
-     * Set 运行时id
-     * @param RuntimeId 运行时id
+     * Set 环境id
+     * @param RuntimeId 环境id
      */
     public void setRuntimeId(Long RuntimeId) {
         this.RuntimeId = RuntimeId;
     }
 
     /**
-     * Get 运行时名称，用户输入，同一uin内唯一 
-     * @return DisplayName 运行时名称，用户输入，同一uin内唯一
+     * Get 环境名称，用户输入，同一uin内唯一 
+     * @return DisplayName 环境名称，用户输入，同一uin内唯一
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 运行时名称，用户输入，同一uin内唯一
-     * @param DisplayName 运行时名称，用户输入，同一uin内唯一
+     * Set 环境名称，用户输入，同一uin内唯一
+     * @param DisplayName 环境名称，用户输入，同一uin内唯一
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 运行时类型：0: sandbox, 1:shared, 2:private 
-     * @return Type 运行时类型：0: sandbox, 1:shared, 2:private
+     * Get 环境类型：0: sandbox, 1:shared, 2:private 
+     * @return Type 环境类型：0: sandbox, 1:shared, 2:private
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 运行时类型：0: sandbox, 1:shared, 2:private
-     * @param Type 运行时类型：0: sandbox, 1:shared, 2:private
+     * Set 环境类型：0: sandbox, 1:shared, 2:private
+     * @param Type 环境类型：0: sandbox, 1:shared, 2:private
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 运行时所在地域，tianjin，beijiing，guangzhou等 
-     * @return Zone 运行时所在地域，tianjin，beijiing，guangzhou等
+     * Get 环境所在地域，tianjin，beijiing，guangzhou等 
+     * @return Zone 环境所在地域，tianjin，beijiing，guangzhou等
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 运行时所在地域，tianjin，beijiing，guangzhou等
-     * @param Zone 运行时所在地域，tianjin，beijiing，guangzhou等
+     * Set 环境所在地域，tianjin，beijiing，guangzhou等
+     * @param Zone 环境所在地域，tianjin，beijiing，guangzhou等
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone） 
-     * @return Area 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
+     * Get 环境所在地域，tianjin，beijiing，guangzhou等（同Zone） 
+     * @return Area 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
-     * @param Area 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
+     * Set 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
+     * @param Area 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 运行时应用listener地址后缀 
-     * @return Addr 运行时应用listener地址后缀
+     * Get 环境应用listener地址后缀 
+     * @return Addr 环境应用listener地址后缀
      */
     public String getAddr() {
         return this.Addr;
     }
 
     /**
-     * Set 运行时应用listener地址后缀
-     * @param Addr 运行时应用listener地址后缀
+     * Set 环境应用listener地址后缀
+     * @param Addr 环境应用listener地址后缀
      */
     public void setAddr(String Addr) {
         this.Addr = Addr;
     }
 
     /**
-     * Get 运行时状态 
-     * @return Status 运行时状态
+     * Get 环境状态 
+     * @return Status 环境状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 运行时状态
-     * @param Status 运行时状态
+     * Set 环境状态
+     * @param Status 环境状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 运行时过期时间 
-     * @return ExpiredAt 运行时过期时间
+     * Get 环境过期时间 
+     * @return ExpiredAt 环境过期时间
      */
     public Long getExpiredAt() {
         return this.ExpiredAt;
     }
 
     /**
-     * Set 运行时过期时间
-     * @param ExpiredAt 运行时过期时间
+     * Set 环境过期时间
+     * @param ExpiredAt 环境过期时间
      */
     public void setExpiredAt(Long ExpiredAt) {
         this.ExpiredAt = ExpiredAt;
+    }
+
+    /**
+     * Get 环境运行类型：0:运行时类型、1:api类型 
+     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 环境运行类型：0:运行时类型、1:api类型
+     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
+    }
+
+    /**
+     * Get 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deployed 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeployed() {
+        return this.Deployed;
+    }
+
+    /**
+     * Set 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deployed 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployed(Boolean Deployed) {
+        this.Deployed = Deployed;
     }
 
     public AbstractRuntimeMC() {
@@ -238,6 +289,12 @@ public class AbstractRuntimeMC extends AbstractModel{
         if (source.ExpiredAt != null) {
             this.ExpiredAt = new Long(source.ExpiredAt);
         }
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
+        if (source.Deployed != null) {
+            this.Deployed = new Boolean(source.Deployed);
+        }
     }
 
 
@@ -253,6 +310,8 @@ public class AbstractRuntimeMC extends AbstractModel{
         this.setParamSimple(map, prefix + "Addr", this.Addr);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+        this.setParamSimple(map, prefix + "Deployed", this.Deployed);
 
     }
 }

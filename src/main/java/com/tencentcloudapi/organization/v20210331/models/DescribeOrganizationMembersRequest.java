@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeOrganizationMembersRequest extends AbstractModel{
 
     /**
-    * 偏移量
+    * 偏移量。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目
+    * 限制数目。最大50
     */
     @SerializedName("Limit")
     @Expose
@@ -44,53 +44,53 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
     private String Lang;
 
     /**
-    * 成员名或者成员ID搜索
+    * 成员名称或者成员ID搜索。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 主体名称
+    * 主体名称搜索。
     */
     @SerializedName("AuthName")
     @Expose
     private String AuthName;
 
     /**
-    * 集团服务（服务管理员查询时，必须指定）
+    * 可信服务产品简称。可信服务管理员查询时必须指定
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量。 
+     * @return Offset 偏移量。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量。
+     * @param Offset 偏移量。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get 限制数目。最大50 
+     * @return Limit 限制数目。最大50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set 限制数目。最大50
+     * @param Limit 限制数目。最大50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -113,48 +113,48 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
     }
 
     /**
-     * Get 成员名或者成员ID搜索 
-     * @return SearchKey 成员名或者成员ID搜索
+     * Get 成员名称或者成员ID搜索。 
+     * @return SearchKey 成员名称或者成员ID搜索。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 成员名或者成员ID搜索
-     * @param SearchKey 成员名或者成员ID搜索
+     * Set 成员名称或者成员ID搜索。
+     * @param SearchKey 成员名称或者成员ID搜索。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 主体名称 
-     * @return AuthName 主体名称
+     * Get 主体名称搜索。 
+     * @return AuthName 主体名称搜索。
      */
     public String getAuthName() {
         return this.AuthName;
     }
 
     /**
-     * Set 主体名称
-     * @param AuthName 主体名称
+     * Set 主体名称搜索。
+     * @param AuthName 主体名称搜索。
      */
     public void setAuthName(String AuthName) {
         this.AuthName = AuthName;
     }
 
     /**
-     * Get 集团服务（服务管理员查询时，必须指定） 
-     * @return Product 集团服务（服务管理员查询时，必须指定）
+     * Get 可信服务产品简称。可信服务管理员查询时必须指定 
+     * @return Product 可信服务产品简称。可信服务管理员查询时必须指定
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 集团服务（服务管理员查询时，必须指定）
-     * @param Product 集团服务（服务管理员查询时，必须指定）
+     * Set 可信服务产品简称。可信服务管理员查询时必须指定
+     * @param Product 可信服务产品简称。可信服务管理员查询时必须指定
      */
     public void setProduct(String Product) {
         this.Product = Product;

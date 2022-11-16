@@ -321,6 +321,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询单个saas域名详情
+     * @param req DescribeDomainDetailsSaasRequest
+     * @return DescribeDomainDetailsSaasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaas(DescribeDomainDetailsSaasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainDetailsSaasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainDetailsSaasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainDetailsSaas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取域名的规则白名单
 
 

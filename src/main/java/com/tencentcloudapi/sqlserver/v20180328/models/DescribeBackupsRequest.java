@@ -72,7 +72,7 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long Strategy;
 
     /**
-    * 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+    * 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
     */
     @SerializedName("BackupWay")
     @Expose
@@ -226,16 +226,16 @@ public class DescribeBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项 
-     * @return BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     * Get 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项 
+     * @return BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
      */
     public Long getBackupWay() {
         return this.BackupWay;
     }
 
     /**
-     * Set 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
-     * @param BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     * Set 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
+     * @param BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
      */
     public void setBackupWay(Long BackupWay) {
         this.BackupWay = BackupWay;

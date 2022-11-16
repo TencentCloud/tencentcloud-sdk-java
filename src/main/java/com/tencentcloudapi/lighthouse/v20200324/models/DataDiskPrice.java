@@ -58,6 +58,14 @@ public class DataDiskPrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
+    * 数据盘挂载的实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 云硬盘ID。 
      * @return DiskId 云硬盘ID。
      */
@@ -137,6 +145,26 @@ public class DataDiskPrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    /**
+     * Get 数据盘挂载的实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 数据盘挂载的实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 数据盘挂载的实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 数据盘挂载的实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DataDiskPrice() {
     }
 
@@ -160,6 +188,9 @@ public class DataDiskPrice extends AbstractModel{
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class DataDiskPrice extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

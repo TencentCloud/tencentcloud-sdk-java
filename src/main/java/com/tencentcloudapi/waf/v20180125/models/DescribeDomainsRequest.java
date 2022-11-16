@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDomainsRequest extends AbstractModel{
 
     /**
-    * 偏移
+    * 数据偏移量，从1开始。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 容量
+    * 返回域名的数量
     */
     @SerializedName("Limit")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDomainsRequest extends AbstractModel{
     private FiltersItemNew [] Filters;
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+     * Get 数据偏移量，从1开始。 
+     * @return Offset 数据偏移量，从1开始。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set 数据偏移量，从1开始。
+     * @param Offset 数据偏移量，从1开始。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 容量 
-     * @return Limit 容量
+     * Get 返回域名的数量 
+     * @return Limit 返回域名的数量
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 容量
-     * @param Limit 容量
+     * Set 返回域名的数量
+     * @param Limit 返回域名的数量
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

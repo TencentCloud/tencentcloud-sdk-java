@@ -44,6 +44,13 @@ public class EnhancedService extends AbstractModel{
     private RunAutomationServiceEnabled [] AutomationService;
 
     /**
+    * 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutomationToolsService")
+    @Expose
+    private RunAutomationServiceEnabled AutomationToolsService;
+
+    /**
      * Get 开启云安全服务。若不指定该参数，则默认开启云安全服务。 
      * @return SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
      */
@@ -91,6 +98,22 @@ public class EnhancedService extends AbstractModel{
         this.AutomationService = AutomationService;
     }
 
+    /**
+     * Get 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutomationToolsService 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RunAutomationServiceEnabled getAutomationToolsService() {
+        return this.AutomationToolsService;
+    }
+
+    /**
+     * Set 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutomationToolsService 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutomationToolsService(RunAutomationServiceEnabled AutomationToolsService) {
+        this.AutomationToolsService = AutomationToolsService;
+    }
+
     public EnhancedService() {
     }
 
@@ -111,6 +134,9 @@ public class EnhancedService extends AbstractModel{
                 this.AutomationService[i] = new RunAutomationServiceEnabled(source.AutomationService[i]);
             }
         }
+        if (source.AutomationToolsService != null) {
+            this.AutomationToolsService = new RunAutomationServiceEnabled(source.AutomationToolsService);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class EnhancedService extends AbstractModel{
         this.setParamObj(map, prefix + "SecurityService.", this.SecurityService);
         this.setParamObj(map, prefix + "MonitorService.", this.MonitorService);
         this.setParamArrayObj(map, prefix + "AutomationService.", this.AutomationService);
+        this.setParamObj(map, prefix + "AutomationToolsService.", this.AutomationToolsService);
 
     }
 }

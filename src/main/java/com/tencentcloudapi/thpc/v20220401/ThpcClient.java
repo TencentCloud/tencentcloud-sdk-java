@@ -139,6 +139,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeClusterActivities）用于查询集群活动历史记录列表。
+     * @param req DescribeClusterActivitiesRequest
+     * @return DescribeClusterActivitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterActivitiesResponse DescribeClusterActivities(DescribeClusterActivitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterActivitiesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterActivitiesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterActivities");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeClusters）用于查询集群列表。
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse

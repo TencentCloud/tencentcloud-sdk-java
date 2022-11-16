@@ -100,6 +100,13 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
     private Long ProjectType;
 
     /**
+    * 应用版本：0:旧版 1:3.0新控制台
+    */
+    @SerializedName("ProjectVersion")
+    @Expose
+    private Long ProjectVersion;
+
+    /**
      * Get 项目id 
      * @return GroupId 项目id
      */
@@ -275,6 +282,22 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
         this.ProjectType = ProjectType;
     }
 
+    /**
+     * Get 应用版本：0:旧版 1:3.0新控制台 
+     * @return ProjectVersion 应用版本：0:旧版 1:3.0新控制台
+     */
+    public Long getProjectVersion() {
+        return this.ProjectVersion;
+    }
+
+    /**
+     * Set 应用版本：0:旧版 1:3.0新控制台
+     * @param ProjectVersion 应用版本：0:旧版 1:3.0新控制台
+     */
+    public void setProjectVersion(Long ProjectVersion) {
+        this.ProjectVersion = ProjectVersion;
+    }
+
     public RuntimeDeployedInstanceMC() {
     }
 
@@ -316,6 +339,9 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
         if (source.ProjectType != null) {
             this.ProjectType = new Long(source.ProjectType);
         }
+        if (source.ProjectVersion != null) {
+            this.ProjectVersion = new Long(source.ProjectVersion);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class RuntimeDeployedInstanceMC extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
+        this.setParamSimple(map, prefix + "ProjectVersion", this.ProjectVersion);
 
     }
 }

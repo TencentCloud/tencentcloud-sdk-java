@@ -44,6 +44,13 @@ public class ExpandShardConfig extends AbstractModel{
     private Long ShardStorage;
 
     /**
+    * 分片节点数
+    */
+    @SerializedName("ShardNodeCount")
+    @Expose
+    private Long ShardNodeCount;
+
+    /**
      * Get 分片ID数组 
      * @return ShardInstanceIds 分片ID数组
      */
@@ -91,6 +98,22 @@ public class ExpandShardConfig extends AbstractModel{
         this.ShardStorage = ShardStorage;
     }
 
+    /**
+     * Get 分片节点数 
+     * @return ShardNodeCount 分片节点数
+     */
+    public Long getShardNodeCount() {
+        return this.ShardNodeCount;
+    }
+
+    /**
+     * Set 分片节点数
+     * @param ShardNodeCount 分片节点数
+     */
+    public void setShardNodeCount(Long ShardNodeCount) {
+        this.ShardNodeCount = ShardNodeCount;
+    }
+
     public ExpandShardConfig() {
     }
 
@@ -111,6 +134,9 @@ public class ExpandShardConfig extends AbstractModel{
         if (source.ShardStorage != null) {
             this.ShardStorage = new Long(source.ShardStorage);
         }
+        if (source.ShardNodeCount != null) {
+            this.ShardNodeCount = new Long(source.ShardNodeCount);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class ExpandShardConfig extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ShardInstanceIds.", this.ShardInstanceIds);
         this.setParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
         this.setParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
+        this.setParamSimple(map, prefix + "ShardNodeCount", this.ShardNodeCount);
 
     }
 }

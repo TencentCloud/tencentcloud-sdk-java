@@ -37,6 +37,13 @@ public class DescribeRuleDataSourcesRequest extends AbstractModel{
     private String DatasourceId;
 
     /**
+    * 数据源类型
+    */
+    @SerializedName("DsTypes")
+    @Expose
+    private Long [] DsTypes;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -68,6 +75,22 @@ public class DescribeRuleDataSourcesRequest extends AbstractModel{
         this.DatasourceId = DatasourceId;
     }
 
+    /**
+     * Get 数据源类型 
+     * @return DsTypes 数据源类型
+     */
+    public Long [] getDsTypes() {
+        return this.DsTypes;
+    }
+
+    /**
+     * Set 数据源类型
+     * @param DsTypes 数据源类型
+     */
+    public void setDsTypes(Long [] DsTypes) {
+        this.DsTypes = DsTypes;
+    }
+
     public DescribeRuleDataSourcesRequest() {
     }
 
@@ -82,6 +105,12 @@ public class DescribeRuleDataSourcesRequest extends AbstractModel{
         if (source.DatasourceId != null) {
             this.DatasourceId = new String(source.DatasourceId);
         }
+        if (source.DsTypes != null) {
+            this.DsTypes = new Long[source.DsTypes.length];
+            for (int i = 0; i < source.DsTypes.length; i++) {
+                this.DsTypes[i] = new Long(source.DsTypes[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class DescribeRuleDataSourcesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamArraySimple(map, prefix + "DsTypes.", this.DsTypes);
 
     }
 }

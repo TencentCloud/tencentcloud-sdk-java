@@ -107,6 +107,13 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long IsSM;
 
     /**
+    * 筛选证书是否即将过期，传1是筛选，0不筛选
+    */
+    @SerializedName("FilterExpiring")
+    @Expose
+    private Long FilterExpiring;
+
+    /**
      * Get 分页偏移量，从0开始。 
      * @return Offset 分页偏移量，从0开始。
      */
@@ -298,6 +305,22 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.IsSM = IsSM;
     }
 
+    /**
+     * Get 筛选证书是否即将过期，传1是筛选，0不筛选 
+     * @return FilterExpiring 筛选证书是否即将过期，传1是筛选，0不筛选
+     */
+    public Long getFilterExpiring() {
+        return this.FilterExpiring;
+    }
+
+    /**
+     * Set 筛选证书是否即将过期，传1是筛选，0不筛选
+     * @param FilterExpiring 筛选证书是否即将过期，传1是筛选，0不筛选
+     */
+    public void setFilterExpiring(Long FilterExpiring) {
+        this.FilterExpiring = FilterExpiring;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -345,6 +368,9 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.IsSM != null) {
             this.IsSM = new Long(source.IsSM);
         }
+        if (source.FilterExpiring != null) {
+            this.FilterExpiring = new Long(source.FilterExpiring);
+        }
     }
 
 
@@ -364,6 +390,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Renew", this.Renew);
         this.setParamSimple(map, prefix + "FilterSource", this.FilterSource);
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
+        this.setParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
 
     }
 }

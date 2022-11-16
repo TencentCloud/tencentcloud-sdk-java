@@ -37,7 +37,7 @@ public class GetFaceIdTokenRequest extends AbstractModel{
     private String IdCard;
 
     /**
-    * CompareLib为商业库库时必传。
+    * CompareLib为商业库时必传。
     */
     @SerializedName("Name")
     @Expose
@@ -74,6 +74,13 @@ public class GetFaceIdTokenRequest extends AbstractModel{
     private Boolean UseCos;
 
     /**
+    * 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
      * Get 本地上传照片(LOCAL)、商业库(BUSINESS) 
      * @return CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
      */
@@ -106,16 +113,16 @@ public class GetFaceIdTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get CompareLib为商业库库时必传。 
-     * @return Name CompareLib为商业库库时必传。
+     * Get CompareLib为商业库时必传。 
+     * @return Name CompareLib为商业库时必传。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set CompareLib为商业库库时必传。
-     * @param Name CompareLib为商业库库时必传。
+     * Set CompareLib为商业库时必传。
+     * @param Name CompareLib为商业库时必传。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -193,6 +200,22 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         this.UseCos = UseCos;
     }
 
+    /**
+     * Get 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public GetFaceIdTokenRequest() {
     }
 
@@ -222,6 +245,9 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         if (source.UseCos != null) {
             this.UseCos = new Boolean(source.UseCos);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Meta", this.Meta);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "UseCos", this.UseCos);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
 
     }
 }

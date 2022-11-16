@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class GetRuntimeMCRequest extends AbstractModel{
 
     /**
-    * 运行时id
+    * 环境id
     */
     @SerializedName("RuntimeId")
     @Expose
     private Long RuntimeId;
 
     /**
-    * 运行时地域
+    * 环境地域
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 运行时id 
-     * @return RuntimeId 运行时id
+    * 环境运行类型：0:运行时类型、1:api类型
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
+     * Get 环境id 
+     * @return RuntimeId 环境id
      */
     public Long getRuntimeId() {
         return this.RuntimeId;
     }
 
     /**
-     * Set 运行时id
-     * @param RuntimeId 运行时id
+     * Set 环境id
+     * @param RuntimeId 环境id
      */
     public void setRuntimeId(Long RuntimeId) {
         this.RuntimeId = RuntimeId;
     }
 
     /**
-     * Get 运行时地域 
-     * @return Zone 运行时地域
+     * Get 环境地域 
+     * @return Zone 环境地域
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 运行时地域
-     * @param Zone 运行时地域
+     * Set 环境地域
+     * @param Zone 环境地域
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get 环境运行类型：0:运行时类型、1:api类型 
+     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 环境运行类型：0:运行时类型、1:api类型
+     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
     }
 
     public GetRuntimeMCRequest() {
@@ -82,6 +105,9 @@ public class GetRuntimeMCRequest extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class GetRuntimeMCRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuntimeId", this.RuntimeId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
 
     }
 }

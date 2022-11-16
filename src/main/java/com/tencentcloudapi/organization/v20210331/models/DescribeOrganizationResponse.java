@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeOrganizationResponse extends AbstractModel{
 
     /**
-    * 企业组织ID
+    * 企业组织ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgId")
@@ -31,7 +31,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Long OrgId;
 
     /**
-    * 创建者UIN
+    * 创建者UIN。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostUin")
@@ -39,7 +39,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Long HostUin;
 
     /**
-    * 创建者昵称
+    * 创建者昵称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
@@ -47,7 +47,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String NickName;
 
     /**
-    * 企业组织类型
+    * 企业组织类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgType")
@@ -55,7 +55,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Long OrgType;
 
     /**
-    * 组织管理员：true，组织成员：false
+    * 是否组织管理员。是：true ，否：false
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsManager")
@@ -63,7 +63,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Boolean IsManager;
 
     /**
-    * 策略类型
+    * 策略类型。财务管理：Financial
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgPolicyType")
@@ -71,7 +71,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String OrgPolicyType;
 
     /**
-    * 策略名
+    * 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgPolicyName")
@@ -79,7 +79,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String OrgPolicyName;
 
     /**
-    * 策略权限
+    * 成员财务权限列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgPermission")
@@ -87,7 +87,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private OrgPermission [] OrgPermission;
 
     /**
-    * 根节点ID
+    * 组织根节点ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootNodeId")
@@ -95,7 +95,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Long RootNodeId;
 
     /**
-    * 创建时间
+    * 组织创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -103,7 +103,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 成员加入时间
+    * 成员加入时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinTime")
@@ -111,7 +111,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String JoinTime;
 
     /**
-    * 是否允许退出。允许：Allow，不允许：Denied。
+    * 成员是否允许退出。允许：Allow，不允许：Denied
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAllowQuit")
@@ -119,7 +119,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String IsAllowQuit;
 
     /**
-    * 代付者Uin
+    * 代付者Uin。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayUin")
@@ -127,7 +127,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String PayUin;
 
     /**
-    * 代付者名称
+    * 代付者名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayName")
@@ -135,7 +135,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String PayName;
 
     /**
-    * 是否集团服务委派管理员 true-是、false-否
+    * 是否可信服务管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAssignManager")
@@ -143,7 +143,7 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private Boolean IsAssignManager;
 
     /**
-    * 是否主体管理员 true-是、false-否
+    * 是否实名主体管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAuthManager")
@@ -158,9 +158,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 企业组织ID
+     * Get 企业组织ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgId 企业组织ID
+     * @return OrgId 企业组织ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrgId() {
@@ -168,9 +168,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 企业组织ID
+     * Set 企业组织ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgId 企业组织ID
+     * @param OrgId 企业组织ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgId(Long OrgId) {
@@ -178,9 +178,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 创建者UIN
+     * Get 创建者UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostUin 创建者UIN
+     * @return HostUin 创建者UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostUin() {
@@ -188,9 +188,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 创建者UIN
+     * Set 创建者UIN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostUin 创建者UIN
+     * @param HostUin 创建者UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostUin(Long HostUin) {
@@ -198,9 +198,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 创建者昵称
+     * Get 创建者昵称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NickName 创建者昵称
+     * @return NickName 创建者昵称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
@@ -208,9 +208,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 创建者昵称
+     * Set 创建者昵称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NickName 创建者昵称
+     * @param NickName 创建者昵称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
@@ -218,9 +218,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 企业组织类型
+     * Get 企业组织类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgType 企业组织类型
+     * @return OrgType 企业组织类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrgType() {
@@ -228,9 +228,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 企业组织类型
+     * Set 企业组织类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgType 企业组织类型
+     * @param OrgType 企业组织类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgType(Long OrgType) {
@@ -238,9 +238,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 组织管理员：true，组织成员：false
+     * Get 是否组织管理员。是：true ，否：false
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsManager 组织管理员：true，组织成员：false
+     * @return IsManager 是否组织管理员。是：true ，否：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsManager() {
@@ -248,9 +248,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 组织管理员：true，组织成员：false
+     * Set 是否组织管理员。是：true ，否：false
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsManager 组织管理员：true，组织成员：false
+     * @param IsManager 是否组织管理员。是：true ，否：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsManager(Boolean IsManager) {
@@ -258,9 +258,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 策略类型
+     * Get 策略类型。财务管理：Financial
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgPolicyType 策略类型
+     * @return OrgPolicyType 策略类型。财务管理：Financial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgPolicyType() {
@@ -268,9 +268,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 策略类型
+     * Set 策略类型。财务管理：Financial
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgPolicyType 策略类型
+     * @param OrgPolicyType 策略类型。财务管理：Financial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgPolicyType(String OrgPolicyType) {
@@ -278,9 +278,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 策略名
+     * Get 策略名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgPolicyName 策略名
+     * @return OrgPolicyName 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgPolicyName() {
@@ -288,9 +288,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 策略名
+     * Set 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgPolicyName 策略名
+     * @param OrgPolicyName 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgPolicyName(String OrgPolicyName) {
@@ -298,9 +298,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 策略权限
+     * Get 成员财务权限列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgPermission 策略权限
+     * @return OrgPermission 成员财务权限列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrgPermission [] getOrgPermission() {
@@ -308,9 +308,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 策略权限
+     * Set 成员财务权限列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgPermission 策略权限
+     * @param OrgPermission 成员财务权限列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgPermission(OrgPermission [] OrgPermission) {
@@ -318,9 +318,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 根节点ID
+     * Get 组织根节点ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RootNodeId 根节点ID
+     * @return RootNodeId 组织根节点ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRootNodeId() {
@@ -328,9 +328,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 根节点ID
+     * Set 组织根节点ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RootNodeId 根节点ID
+     * @param RootNodeId 组织根节点ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootNodeId(Long RootNodeId) {
@@ -338,9 +338,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 创建时间
+     * Get 组织创建时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime 组织创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -348,9 +348,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 创建时间
+     * Set 组织创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime 组织创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -358,9 +358,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 成员加入时间
+     * Get 成员加入时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JoinTime 成员加入时间
+     * @return JoinTime 成员加入时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJoinTime() {
@@ -368,9 +368,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 成员加入时间
+     * Set 成员加入时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JoinTime 成员加入时间
+     * @param JoinTime 成员加入时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinTime(String JoinTime) {
@@ -378,9 +378,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否允许退出。允许：Allow，不允许：Denied。
+     * Get 成员是否允许退出。允许：Allow，不允许：Denied
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAllowQuit 是否允许退出。允许：Allow，不允许：Denied。
+     * @return IsAllowQuit 成员是否允许退出。允许：Allow，不允许：Denied
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsAllowQuit() {
@@ -388,9 +388,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否允许退出。允许：Allow，不允许：Denied。
+     * Set 成员是否允许退出。允许：Allow，不允许：Denied
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAllowQuit 是否允许退出。允许：Allow，不允许：Denied。
+     * @param IsAllowQuit 成员是否允许退出。允许：Allow，不允许：Denied
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAllowQuit(String IsAllowQuit) {
@@ -398,9 +398,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 代付者Uin
+     * Get 代付者Uin。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayUin 代付者Uin
+     * @return PayUin 代付者Uin。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayUin() {
@@ -408,9 +408,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 代付者Uin
+     * Set 代付者Uin。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayUin 代付者Uin
+     * @param PayUin 代付者Uin。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayUin(String PayUin) {
@@ -418,9 +418,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 代付者名称
+     * Get 代付者名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayName 代付者名称
+     * @return PayName 代付者名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayName() {
@@ -428,9 +428,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 代付者名称
+     * Set 代付者名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayName 代付者名称
+     * @param PayName 代付者名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayName(String PayName) {
@@ -438,9 +438,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否集团服务委派管理员 true-是、false-否
+     * Get 是否可信服务管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAssignManager 是否集团服务委派管理员 true-是、false-否
+     * @return IsAssignManager 是否可信服务管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAssignManager() {
@@ -448,9 +448,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否集团服务委派管理员 true-是、false-否
+     * Set 是否可信服务管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAssignManager 是否集团服务委派管理员 true-是、false-否
+     * @param IsAssignManager 是否可信服务管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAssignManager(Boolean IsAssignManager) {
@@ -458,9 +458,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否主体管理员 true-是、false-否
+     * Get 是否实名主体管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAuthManager 是否主体管理员 true-是、false-否
+     * @return IsAuthManager 是否实名主体管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAuthManager() {
@@ -468,9 +468,9 @@ public class DescribeOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否主体管理员 true-是、false-否
+     * Set 是否实名主体管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAuthManager 是否主体管理员 true-是、false-否
+     * @param IsAuthManager 是否实名主体管理员。是：true，否：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAuthManager(Boolean IsAuthManager) {

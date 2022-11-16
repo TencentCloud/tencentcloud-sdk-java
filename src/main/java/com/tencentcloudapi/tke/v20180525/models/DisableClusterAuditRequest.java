@@ -30,6 +30,13 @@ public class DisableClusterAuditRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+    */
+    @SerializedName("DeleteLogSetAndTopic")
+    @Expose
+    private Boolean DeleteLogSetAndTopic;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -45,6 +52,22 @@ public class DisableClusterAuditRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除 
+     * @return DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     */
+    public Boolean getDeleteLogSetAndTopic() {
+        return this.DeleteLogSetAndTopic;
+    }
+
+    /**
+     * Set 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * @param DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     */
+    public void setDeleteLogSetAndTopic(Boolean DeleteLogSetAndTopic) {
+        this.DeleteLogSetAndTopic = DeleteLogSetAndTopic;
+    }
+
     public DisableClusterAuditRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DisableClusterAuditRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.DeleteLogSetAndTopic != null) {
+            this.DeleteLogSetAndTopic = new Boolean(source.DeleteLogSetAndTopic);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DisableClusterAuditRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "DeleteLogSetAndTopic", this.DeleteLogSetAndTopic);
 
     }
 }

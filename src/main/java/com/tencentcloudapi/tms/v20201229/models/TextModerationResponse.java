@@ -99,6 +99,14 @@ public class TextModerationResponse extends AbstractModel{
     private String SubLabel;
 
     /**
+    * 该字段用于返回上下文关联文本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContextText")
+    @Expose
+    private String ContextText;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -290,6 +298,26 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
+     * Get 该字段用于返回上下文关联文本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContextText 该字段用于返回上下文关联文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContextText() {
+        return this.ContextText;
+    }
+
+    /**
+     * Set 该字段用于返回上下文关联文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContextText 该字段用于返回上下文关联文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContextText(String ContextText) {
+        this.ContextText = ContextText;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -352,6 +380,9 @@ public class TextModerationResponse extends AbstractModel{
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.ContextText != null) {
+            this.ContextText = new String(source.ContextText);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -372,6 +403,7 @@ public class TextModerationResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamSimple(map, prefix + "ContextText", this.ContextText);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

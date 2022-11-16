@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeOrganizationMembersResponse extends AbstractModel{
 
     /**
-    * 成员列表
+    * 成员列表。
     */
     @SerializedName("Items")
     @Expose
     private OrgMember [] Items;
 
     /**
-    * 总数目
+    * 总数目。
     */
     @SerializedName("Total")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeOrganizationMembersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 成员列表 
-     * @return Items 成员列表
+     * Get 成员列表。 
+     * @return Items 成员列表。
      */
     public OrgMember [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 成员列表
-     * @param Items 成员列表
+     * Set 成员列表。
+     * @param Items 成员列表。
      */
     public void setItems(OrgMember [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 总数目 
-     * @return Total 总数目
+     * Get 总数目。 
+     * @return Total 总数目。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数目
-     * @param Total 总数目
+     * Set 总数目。
+     * @param Total 总数目。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

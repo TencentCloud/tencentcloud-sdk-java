@@ -37,6 +37,15 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
     private Long Period;
 
     /**
+    * 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+    */
+    @SerializedName("AmountUnit")
+    @Expose
+    private String AmountUnit;
+
+    /**
      * Get 待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -68,6 +77,30 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
         this.Period = Period;
     }
 
+    /**
+     * Get 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分 
+     * @return AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public String getAmountUnit() {
+        return this.AmountUnit;
+    }
+
+    /**
+     * Set 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     * @param AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public void setAmountUnit(String AmountUnit) {
+        this.AmountUnit = AmountUnit;
+    }
+
     public DescribeRenewalPriceRequest() {
     }
 
@@ -82,6 +115,9 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.AmountUnit != null) {
+            this.AmountUnit = new String(source.AmountUnit);
+        }
     }
 
 
@@ -91,6 +127,7 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
 
     }
 }

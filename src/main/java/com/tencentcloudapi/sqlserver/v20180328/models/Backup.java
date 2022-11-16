@@ -93,7 +93,7 @@ public class Backup extends AbstractModel{
     private Long Strategy;
 
     /**
-    * 备份方式，0-定时备份；1-手动临时备份
+    * 备份方式，0-定时备份；1-手动临时备份；2-定期备份
     */
     @SerializedName("BackupWay")
     @Expose
@@ -302,16 +302,16 @@ public class Backup extends AbstractModel{
     }
 
     /**
-     * Get 备份方式，0-定时备份；1-手动临时备份 
-     * @return BackupWay 备份方式，0-定时备份；1-手动临时备份
+     * Get 备份方式，0-定时备份；1-手动临时备份；2-定期备份 
+     * @return BackupWay 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      */
     public Long getBackupWay() {
         return this.BackupWay;
     }
 
     /**
-     * Set 备份方式，0-定时备份；1-手动临时备份
-     * @param BackupWay 备份方式，0-定时备份；1-手动临时备份
+     * Set 备份方式，0-定时备份；1-手动临时备份；2-定期备份
+     * @param BackupWay 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      */
     public void setBackupWay(Long BackupWay) {
         this.BackupWay = BackupWay;

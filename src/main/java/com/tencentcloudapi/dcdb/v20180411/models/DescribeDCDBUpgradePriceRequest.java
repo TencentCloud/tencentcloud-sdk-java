@@ -61,6 +61,15 @@ public class DescribeDCDBUpgradePriceRequest extends AbstractModel{
     private SplitShardConfig SplitShardConfig;
 
     /**
+    * 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+    */
+    @SerializedName("AmountUnit")
+    @Expose
+    private String AmountUnit;
+
+    /**
      * Get 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
@@ -152,6 +161,30 @@ public class DescribeDCDBUpgradePriceRequest extends AbstractModel{
         this.SplitShardConfig = SplitShardConfig;
     }
 
+    /**
+     * Get 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分 
+     * @return AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public String getAmountUnit() {
+        return this.AmountUnit;
+    }
+
+    /**
+     * Set 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     * @param AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public void setAmountUnit(String AmountUnit) {
+        this.AmountUnit = AmountUnit;
+    }
+
     public DescribeDCDBUpgradePriceRequest() {
     }
 
@@ -175,6 +208,9 @@ public class DescribeDCDBUpgradePriceRequest extends AbstractModel{
         if (source.SplitShardConfig != null) {
             this.SplitShardConfig = new SplitShardConfig(source.SplitShardConfig);
         }
+        if (source.AmountUnit != null) {
+            this.AmountUnit = new String(source.AmountUnit);
+        }
     }
 
 
@@ -187,6 +223,7 @@ public class DescribeDCDBUpgradePriceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "AddShardConfig.", this.AddShardConfig);
         this.setParamObj(map, prefix + "ExpandShardConfig.", this.ExpandShardConfig);
         this.setParamObj(map, prefix + "SplitShardConfig.", this.SplitShardConfig);
+        this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
 
     }
 }

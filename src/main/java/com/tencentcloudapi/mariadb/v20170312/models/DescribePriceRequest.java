@@ -75,6 +75,15 @@ public class DescribePriceRequest extends AbstractModel{
     private String Paymode;
 
     /**
+    * 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+    */
+    @SerializedName("AmountUnit")
+    @Expose
+    private String AmountUnit;
+
+    /**
      * Get 欲新购实例的可用区ID。 
      * @return Zone 欲新购实例的可用区ID。
      */
@@ -198,6 +207,30 @@ public class DescribePriceRequest extends AbstractModel{
         this.Paymode = Paymode;
     }
 
+    /**
+     * Get 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分 
+     * @return AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public String getAmountUnit() {
+        return this.AmountUnit;
+    }
+
+    /**
+     * Set 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     * @param AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public void setAmountUnit(String AmountUnit) {
+        this.AmountUnit = AmountUnit;
+    }
+
     public DescribePriceRequest() {
     }
 
@@ -227,6 +260,9 @@ public class DescribePriceRequest extends AbstractModel{
         if (source.Paymode != null) {
             this.Paymode = new String(source.Paymode);
         }
+        if (source.AmountUnit != null) {
+            this.AmountUnit = new String(source.AmountUnit);
+        }
     }
 
 
@@ -241,6 +277,7 @@ public class DescribePriceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
+        this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
 
     }
 }

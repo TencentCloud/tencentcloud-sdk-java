@@ -65,6 +65,13 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
     private Long Interval;
 
     /**
+    * 环境运行类型：0:运行时类型、1:api类型
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -160,6 +167,22 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
         this.Interval = Interval;
     }
 
+    /**
+     * Get 环境运行类型：0:运行时类型、1:api类型 
+     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 环境运行类型：0:运行时类型、1:api类型
+     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
+    }
+
     public GetRuntimeResourceMonitorMetricMCRequest() {
     }
 
@@ -186,6 +209,9 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
         if (source.Interval != null) {
             this.Interval = new Long(source.Interval);
         }
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MetricType", this.MetricType);
         this.setParamSimple(map, prefix + "RateType", this.RateType);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
 
     }
 }

@@ -71,6 +71,22 @@ public class DatabaseInfo extends AbstractModel{
     private Long DatasourceType;
 
     /**
+    * 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginDatabaseName")
+    @Expose
+    private String OriginDatabaseName;
+
+    /**
+    * schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginSchemaName")
+    @Expose
+    private String OriginSchemaName;
+
+    /**
      * Get 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceName 数据源名称
@@ -190,6 +206,46 @@ public class DatabaseInfo extends AbstractModel{
         this.DatasourceType = DatasourceType;
     }
 
+    /**
+     * Get 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginDatabaseName 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginDatabaseName() {
+        return this.OriginDatabaseName;
+    }
+
+    /**
+     * Set 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginDatabaseName 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginDatabaseName(String OriginDatabaseName) {
+        this.OriginDatabaseName = OriginDatabaseName;
+    }
+
+    /**
+     * Get schema名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginSchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginSchemaName() {
+        return this.OriginSchemaName;
+    }
+
+    /**
+     * Set schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginSchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginSchemaName(String OriginSchemaName) {
+        this.OriginSchemaName = OriginSchemaName;
+    }
+
     public DatabaseInfo() {
     }
 
@@ -216,6 +272,12 @@ public class DatabaseInfo extends AbstractModel{
         if (source.DatasourceType != null) {
             this.DatasourceType = new Long(source.DatasourceType);
         }
+        if (source.OriginDatabaseName != null) {
+            this.OriginDatabaseName = new String(source.OriginDatabaseName);
+        }
+        if (source.OriginSchemaName != null) {
+            this.OriginSchemaName = new String(source.OriginSchemaName);
+        }
     }
 
 
@@ -229,6 +291,8 @@ public class DatabaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+        this.setParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
+        this.setParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
 
     }
 }

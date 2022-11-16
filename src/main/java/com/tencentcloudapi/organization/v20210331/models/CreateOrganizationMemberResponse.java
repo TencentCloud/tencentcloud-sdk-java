@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateOrganizationMemberResponse extends AbstractModel{
 
     /**
-    * 成员Uin
+    * 成员Uin。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
@@ -38,9 +38,9 @@ public class CreateOrganizationMemberResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 成员Uin
+     * Get 成员Uin。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uin 成员Uin
+     * @return Uin 成员Uin。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUin() {
@@ -48,9 +48,9 @@ public class CreateOrganizationMemberResponse extends AbstractModel{
     }
 
     /**
-     * Set 成员Uin
+     * Set 成员Uin。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uin 成员Uin
+     * @param Uin 成员Uin。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(Long Uin) {

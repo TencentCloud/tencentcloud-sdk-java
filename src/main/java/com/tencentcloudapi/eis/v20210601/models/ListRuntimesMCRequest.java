@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class ListRuntimesMCRequest extends AbstractModel{
 
+    /**
+    * 环境运行类型：0:运行时类型、1:api类型
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
+     * Get 环境运行类型：0:运行时类型、1:api类型 
+     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 环境运行类型：0:运行时类型、1:api类型
+     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
+    }
+
     public ListRuntimesMCRequest() {
     }
 
@@ -30,6 +53,9 @@ public class ListRuntimesMCRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListRuntimesMCRequest(ListRuntimesMCRequest source) {
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class ListRuntimesMCRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
 
     }
 }

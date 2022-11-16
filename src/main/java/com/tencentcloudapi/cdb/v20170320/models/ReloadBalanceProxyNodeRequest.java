@@ -30,6 +30,13 @@ public class ReloadBalanceProxyNodeRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
+    * 代理组地址ID
+    */
+    @SerializedName("ProxyAddressId")
+    @Expose
+    private String ProxyAddressId;
+
+    /**
      * Get 代理组ID 
      * @return ProxyGroupId 代理组ID
      */
@@ -45,6 +52,22 @@ public class ReloadBalanceProxyNodeRequest extends AbstractModel{
         this.ProxyGroupId = ProxyGroupId;
     }
 
+    /**
+     * Get 代理组地址ID 
+     * @return ProxyAddressId 代理组地址ID
+     */
+    public String getProxyAddressId() {
+        return this.ProxyAddressId;
+    }
+
+    /**
+     * Set 代理组地址ID
+     * @param ProxyAddressId 代理组地址ID
+     */
+    public void setProxyAddressId(String ProxyAddressId) {
+        this.ProxyAddressId = ProxyAddressId;
+    }
+
     public ReloadBalanceProxyNodeRequest() {
     }
 
@@ -56,6 +79,9 @@ public class ReloadBalanceProxyNodeRequest extends AbstractModel{
         if (source.ProxyGroupId != null) {
             this.ProxyGroupId = new String(source.ProxyGroupId);
         }
+        if (source.ProxyAddressId != null) {
+            this.ProxyAddressId = new String(source.ProxyAddressId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class ReloadBalanceProxyNodeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+        this.setParamSimple(map, prefix + "ProxyAddressId", this.ProxyAddressId);
 
     }
 }

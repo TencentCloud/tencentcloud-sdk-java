@@ -61,6 +61,14 @@ public class UsageDetail extends AbstractModel{
     private Long Cancel;
 
     /**
+    * 消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowChannel")
+    @Expose
+    private String FlowChannel;
+
+    /**
      * Get 渠道侧合作企业唯一标识 
      * @return ProxyOrganizationOpenId 渠道侧合作企业唯一标识
      */
@@ -152,6 +160,26 @@ public class UsageDetail extends AbstractModel{
         this.Cancel = Cancel;
     }
 
+    /**
+     * Get 消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowChannel 消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlowChannel() {
+        return this.FlowChannel;
+    }
+
+    /**
+     * Set 消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowChannel 消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowChannel(String FlowChannel) {
+        this.FlowChannel = FlowChannel;
+    }
+
     public UsageDetail() {
     }
 
@@ -175,6 +203,9 @@ public class UsageDetail extends AbstractModel{
         if (source.Cancel != null) {
             this.Cancel = new Long(source.Cancel);
         }
+        if (source.FlowChannel != null) {
+            this.FlowChannel = new String(source.FlowChannel);
+        }
     }
 
 
@@ -187,6 +218,7 @@ public class UsageDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Date", this.Date);
         this.setParamSimple(map, prefix + "Usage", this.Usage);
         this.setParamSimple(map, prefix + "Cancel", this.Cancel);
+        this.setParamSimple(map, prefix + "FlowChannel", this.FlowChannel);
 
     }
 }

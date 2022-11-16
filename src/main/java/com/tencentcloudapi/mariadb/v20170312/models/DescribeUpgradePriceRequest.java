@@ -53,6 +53,15 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
     private Long NodeCount;
 
     /**
+    * 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+    */
+    @SerializedName("AmountUnit")
+    @Expose
+    private String AmountUnit;
+
+    /**
      * Get 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -124,6 +133,30 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
         this.NodeCount = NodeCount;
     }
 
+    /**
+     * Get 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分 
+     * @return AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public String getAmountUnit() {
+        return this.AmountUnit;
+    }
+
+    /**
+     * Set 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     * @param AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public void setAmountUnit(String AmountUnit) {
+        this.AmountUnit = AmountUnit;
+    }
+
     public DescribeUpgradePriceRequest() {
     }
 
@@ -144,6 +177,9 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
         if (source.NodeCount != null) {
             this.NodeCount = new Long(source.NodeCount);
         }
+        if (source.AmountUnit != null) {
+            this.AmountUnit = new String(source.AmountUnit);
+        }
     }
 
 
@@ -155,6 +191,7 @@ public class DescribeUpgradePriceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
 
     }
 }

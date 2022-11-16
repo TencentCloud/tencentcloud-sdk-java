@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RuntimeMC extends AbstractModel{
 
     /**
-    * 运行时id
+    * 环境id
     */
     @SerializedName("RuntimeId")
     @Expose
@@ -37,21 +37,21 @@ public class RuntimeMC extends AbstractModel{
     private String Uin;
 
     /**
-    * 运行时名称，用户输入，同一uin内唯一
+    * 环境名称，用户输入，同一uin内唯一
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 运行时所在地域，tianjin，beijiing，guangzhou等
+    * 环境所在地域，tianjin，beijiing，guangzhou等
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 运行时类型：0: sandbox, 1:shared, 2:private
+    * 环境类型：0: sandbox, 1:shared, 2:private 3: trial
     */
     @SerializedName("Type")
     @Expose
@@ -65,28 +65,28 @@ public class RuntimeMC extends AbstractModel{
     private Long Status;
 
     /**
-    * 运行时创建时间
+    * 环境创建时间
     */
     @SerializedName("CreatedAt")
     @Expose
     private Long CreatedAt;
 
     /**
-    * 运行时更新时间
+    * 环境更新时间
     */
     @SerializedName("UpdatedAt")
     @Expose
     private Long UpdatedAt;
 
     /**
-    * 运行时资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
+    * 环境资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
     */
     @SerializedName("WorkerSize")
     @Expose
     private Long WorkerSize;
 
     /**
-    * 运行时资源配置，worker副本数
+    * 环境资源配置，worker副本数
     */
     @SerializedName("WorkerReplica")
     @Expose
@@ -128,7 +128,7 @@ public class RuntimeMC extends AbstractModel{
     private Float MemoryLimit;
 
     /**
-    * 运行时过期时间
+    * 环境过期时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredAt")
@@ -136,7 +136,7 @@ public class RuntimeMC extends AbstractModel{
     private Long ExpiredAt;
 
     /**
-    * 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+    * 收费类型：0:缺省，1:自助下单页购买(支持续费/升配等操作)，2:代销下单页购买
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
@@ -160,16 +160,56 @@ public class RuntimeMC extends AbstractModel{
     private Boolean AutoRenewal;
 
     /**
-     * Get 运行时id 
-     * @return RuntimeId 运行时id
+    * 扩展组件列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkerExtensions")
+    @Expose
+    private RuntimeExtensionMC [] WorkerExtensions;
+
+    /**
+    * 环境类型：0: sandbox, 1:shared, 2:private 3: trial
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuntimeType")
+    @Expose
+    private Long RuntimeType;
+
+    /**
+    * 环境运行类型：0:运行时类型、1:api类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
+    * 已使用出带宽 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BandwidthOutUsed")
+    @Expose
+    private Float BandwidthOutUsed;
+
+    /**
+    * 出带宽上限 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BandwidthOutLimit")
+    @Expose
+    private Float BandwidthOutLimit;
+
+    /**
+     * Get 环境id 
+     * @return RuntimeId 环境id
      */
     public Long getRuntimeId() {
         return this.RuntimeId;
     }
 
     /**
-     * Set 运行时id
-     * @param RuntimeId 运行时id
+     * Set 环境id
+     * @param RuntimeId 环境id
      */
     public void setRuntimeId(Long RuntimeId) {
         this.RuntimeId = RuntimeId;
@@ -192,48 +232,48 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Get 运行时名称，用户输入，同一uin内唯一 
-     * @return DisplayName 运行时名称，用户输入，同一uin内唯一
+     * Get 环境名称，用户输入，同一uin内唯一 
+     * @return DisplayName 环境名称，用户输入，同一uin内唯一
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 运行时名称，用户输入，同一uin内唯一
-     * @param DisplayName 运行时名称，用户输入，同一uin内唯一
+     * Set 环境名称，用户输入，同一uin内唯一
+     * @param DisplayName 环境名称，用户输入，同一uin内唯一
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 运行时所在地域，tianjin，beijiing，guangzhou等 
-     * @return Zone 运行时所在地域，tianjin，beijiing，guangzhou等
+     * Get 环境所在地域，tianjin，beijiing，guangzhou等 
+     * @return Zone 环境所在地域，tianjin，beijiing，guangzhou等
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 运行时所在地域，tianjin，beijiing，guangzhou等
-     * @param Zone 运行时所在地域，tianjin，beijiing，guangzhou等
+     * Set 环境所在地域，tianjin，beijiing，guangzhou等
+     * @param Zone 环境所在地域，tianjin，beijiing，guangzhou等
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 运行时类型：0: sandbox, 1:shared, 2:private 
-     * @return Type 运行时类型：0: sandbox, 1:shared, 2:private
+     * Get 环境类型：0: sandbox, 1:shared, 2:private 3: trial 
+     * @return Type 环境类型：0: sandbox, 1:shared, 2:private 3: trial
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 运行时类型：0: sandbox, 1:shared, 2:private
-     * @param Type 运行时类型：0: sandbox, 1:shared, 2:private
+     * Set 环境类型：0: sandbox, 1:shared, 2:private 3: trial
+     * @param Type 环境类型：0: sandbox, 1:shared, 2:private 3: trial
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -256,64 +296,64 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Get 运行时创建时间 
-     * @return CreatedAt 运行时创建时间
+     * Get 环境创建时间 
+     * @return CreatedAt 环境创建时间
      */
     public Long getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 运行时创建时间
-     * @param CreatedAt 运行时创建时间
+     * Set 环境创建时间
+     * @param CreatedAt 环境创建时间
      */
     public void setCreatedAt(Long CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 运行时更新时间 
-     * @return UpdatedAt 运行时更新时间
+     * Get 环境更新时间 
+     * @return UpdatedAt 环境更新时间
      */
     public Long getUpdatedAt() {
         return this.UpdatedAt;
     }
 
     /**
-     * Set 运行时更新时间
-     * @param UpdatedAt 运行时更新时间
+     * Set 环境更新时间
+     * @param UpdatedAt 环境更新时间
      */
     public void setUpdatedAt(Long UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 运行时资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited 
-     * @return WorkerSize 运行时资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
+     * Get 环境资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited 
+     * @return WorkerSize 环境资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
      */
     public Long getWorkerSize() {
         return this.WorkerSize;
     }
 
     /**
-     * Set 运行时资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
-     * @param WorkerSize 运行时资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
+     * Set 环境资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
+     * @param WorkerSize 环境资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
      */
     public void setWorkerSize(Long WorkerSize) {
         this.WorkerSize = WorkerSize;
     }
 
     /**
-     * Get 运行时资源配置，worker副本数 
-     * @return WorkerReplica 运行时资源配置，worker副本数
+     * Get 环境资源配置，worker副本数 
+     * @return WorkerReplica 环境资源配置，worker副本数
      */
     public Long getWorkerReplica() {
         return this.WorkerReplica;
     }
 
     /**
-     * Set 运行时资源配置，worker副本数
-     * @param WorkerReplica 运行时资源配置，worker副本数
+     * Set 环境资源配置，worker副本数
+     * @param WorkerReplica 环境资源配置，worker副本数
      */
     public void setWorkerReplica(Long WorkerReplica) {
         this.WorkerReplica = WorkerReplica;
@@ -400,9 +440,9 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Get 运行时过期时间
+     * Get 环境过期时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpiredAt 运行时过期时间
+     * @return ExpiredAt 环境过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpiredAt() {
@@ -410,9 +450,9 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Set 运行时过期时间
+     * Set 环境过期时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpiredAt 运行时过期时间
+     * @param ExpiredAt 环境过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredAt(Long ExpiredAt) {
@@ -420,9 +460,9 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Get 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+     * Get 收费类型：0:缺省，1:自助下单页购买(支持续费/升配等操作)，2:代销下单页购买
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+     * @return ChargeType 收费类型：0:缺省，1:自助下单页购买(支持续费/升配等操作)，2:代销下单页购买
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeType() {
@@ -430,9 +470,9 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Set 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+     * Set 收费类型：0:缺省，1:自助下单页购买(支持续费/升配等操作)，2:代销下单页购买
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+     * @param ChargeType 收费类型：0:缺省，1:自助下单页购买(支持续费/升配等操作)，2:代销下单页购买
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(Long ChargeType) {
@@ -477,6 +517,106 @@ public class RuntimeMC extends AbstractModel{
      */
     public void setAutoRenewal(Boolean AutoRenewal) {
         this.AutoRenewal = AutoRenewal;
+    }
+
+    /**
+     * Get 扩展组件列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkerExtensions 扩展组件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuntimeExtensionMC [] getWorkerExtensions() {
+        return this.WorkerExtensions;
+    }
+
+    /**
+     * Set 扩展组件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkerExtensions 扩展组件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkerExtensions(RuntimeExtensionMC [] WorkerExtensions) {
+        this.WorkerExtensions = WorkerExtensions;
+    }
+
+    /**
+     * Get 环境类型：0: sandbox, 1:shared, 2:private 3: trial
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuntimeType 环境类型：0: sandbox, 1:shared, 2:private 3: trial
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuntimeType() {
+        return this.RuntimeType;
+    }
+
+    /**
+     * Set 环境类型：0: sandbox, 1:shared, 2:private 3: trial
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuntimeType 环境类型：0: sandbox, 1:shared, 2:private 3: trial
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuntimeType(Long RuntimeType) {
+        this.RuntimeType = RuntimeType;
+    }
+
+    /**
+     * Get 环境运行类型：0:运行时类型、1:api类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 环境运行类型：0:运行时类型、1:api类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
+    }
+
+    /**
+     * Get 已使用出带宽 Mbps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BandwidthOutUsed 已使用出带宽 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getBandwidthOutUsed() {
+        return this.BandwidthOutUsed;
+    }
+
+    /**
+     * Set 已使用出带宽 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BandwidthOutUsed 已使用出带宽 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidthOutUsed(Float BandwidthOutUsed) {
+        this.BandwidthOutUsed = BandwidthOutUsed;
+    }
+
+    /**
+     * Get 出带宽上限 Mbps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BandwidthOutLimit 出带宽上限 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getBandwidthOutLimit() {
+        return this.BandwidthOutLimit;
+    }
+
+    /**
+     * Set 出带宽上限 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BandwidthOutLimit 出带宽上限 Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidthOutLimit(Float BandwidthOutLimit) {
+        this.BandwidthOutLimit = BandwidthOutLimit;
     }
 
     public RuntimeMC() {
@@ -544,6 +684,24 @@ public class RuntimeMC extends AbstractModel{
         if (source.AutoRenewal != null) {
             this.AutoRenewal = new Boolean(source.AutoRenewal);
         }
+        if (source.WorkerExtensions != null) {
+            this.WorkerExtensions = new RuntimeExtensionMC[source.WorkerExtensions.length];
+            for (int i = 0; i < source.WorkerExtensions.length; i++) {
+                this.WorkerExtensions[i] = new RuntimeExtensionMC(source.WorkerExtensions[i]);
+            }
+        }
+        if (source.RuntimeType != null) {
+            this.RuntimeType = new Long(source.RuntimeType);
+        }
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
+        if (source.BandwidthOutUsed != null) {
+            this.BandwidthOutUsed = new Float(source.BandwidthOutUsed);
+        }
+        if (source.BandwidthOutLimit != null) {
+            this.BandwidthOutLimit = new Float(source.BandwidthOutLimit);
+        }
     }
 
 
@@ -570,6 +728,11 @@ public class RuntimeMC extends AbstractModel{
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ResourceLimitType", this.ResourceLimitType);
         this.setParamSimple(map, prefix + "AutoRenewal", this.AutoRenewal);
+        this.setParamArrayObj(map, prefix + "WorkerExtensions.", this.WorkerExtensions);
+        this.setParamSimple(map, prefix + "RuntimeType", this.RuntimeType);
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+        this.setParamSimple(map, prefix + "BandwidthOutUsed", this.BandwidthOutUsed);
+        this.setParamSimple(map, prefix + "BandwidthOutLimit", this.BandwidthOutLimit);
 
     }
 }

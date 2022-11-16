@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquirePriceRenewInstancesRequest extends AbstractModel{
 
     /**
-    * 待续费的实例。
+    * 待续费的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573 )接口返回值中的InstanceId获取。每次请求批量实例的上限为50。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -37,30 +37,30 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 是否续费数据盘
+    * 是否续费数据盘。默认值: false, 即不续费。
     */
     @SerializedName("RenewDataDisk")
     @Expose
     private Boolean RenewDataDisk;
 
     /**
-    * 数据盘是否对齐实例到期时间
+    * 数据盘是否对齐实例到期时间。默认值: false, 即不对齐。
     */
     @SerializedName("AlignInstanceExpiredTime")
     @Expose
     private Boolean AlignInstanceExpiredTime;
 
     /**
-     * Get 待续费的实例。 
-     * @return InstanceIds 待续费的实例。
+     * Get 待续费的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573 )接口返回值中的InstanceId获取。每次请求批量实例的上限为50。 
+     * @return InstanceIds 待续费的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573 )接口返回值中的InstanceId获取。每次请求批量实例的上限为50。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 待续费的实例。
-     * @param InstanceIds 待续费的实例。
+     * Set 待续费的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573 )接口返回值中的InstanceId获取。每次请求批量实例的上限为50。
+     * @param InstanceIds 待续费的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573 )接口返回值中的InstanceId获取。每次请求批量实例的上限为50。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -83,32 +83,32 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否续费数据盘 
-     * @return RenewDataDisk 是否续费数据盘
+     * Get 是否续费数据盘。默认值: false, 即不续费。 
+     * @return RenewDataDisk 是否续费数据盘。默认值: false, 即不续费。
      */
     public Boolean getRenewDataDisk() {
         return this.RenewDataDisk;
     }
 
     /**
-     * Set 是否续费数据盘
-     * @param RenewDataDisk 是否续费数据盘
+     * Set 是否续费数据盘。默认值: false, 即不续费。
+     * @param RenewDataDisk 是否续费数据盘。默认值: false, 即不续费。
      */
     public void setRenewDataDisk(Boolean RenewDataDisk) {
         this.RenewDataDisk = RenewDataDisk;
     }
 
     /**
-     * Get 数据盘是否对齐实例到期时间 
-     * @return AlignInstanceExpiredTime 数据盘是否对齐实例到期时间
+     * Get 数据盘是否对齐实例到期时间。默认值: false, 即不对齐。 
+     * @return AlignInstanceExpiredTime 数据盘是否对齐实例到期时间。默认值: false, 即不对齐。
      */
     public Boolean getAlignInstanceExpiredTime() {
         return this.AlignInstanceExpiredTime;
     }
 
     /**
-     * Set 数据盘是否对齐实例到期时间
-     * @param AlignInstanceExpiredTime 数据盘是否对齐实例到期时间
+     * Set 数据盘是否对齐实例到期时间。默认值: false, 即不对齐。
+     * @param AlignInstanceExpiredTime 数据盘是否对齐实例到期时间。默认值: false, 即不对齐。
      */
     public void setAlignInstanceExpiredTime(Boolean AlignInstanceExpiredTime) {
         this.AlignInstanceExpiredTime = AlignInstanceExpiredTime;

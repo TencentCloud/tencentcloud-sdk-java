@@ -72,6 +72,41 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private Long BackupSaveDays;
 
     /**
+    * 定期备份状态 enable-开启，disable-关闭，默认关闭
+    */
+    @SerializedName("RegularBackupEnable")
+    @Expose
+    private String RegularBackupEnable;
+
+    /**
+    * 定期备份保留天数 [90 - 3650]天，默认365天
+    */
+    @SerializedName("RegularBackupSaveDays")
+    @Expose
+    private Long RegularBackupSaveDays;
+
+    /**
+    * 定期备份策略 years-每年，quarters-每季度，months-每月，默认months
+    */
+    @SerializedName("RegularBackupStrategy")
+    @Expose
+    private String RegularBackupStrategy;
+
+    /**
+    * 定期备份保留个数，默认1个
+    */
+    @SerializedName("RegularBackupCounts")
+    @Expose
+    private Long RegularBackupCounts;
+
+    /**
+    * 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期
+    */
+    @SerializedName("RegularBackupStartTime")
+    @Expose
+    private String RegularBackupStartTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -183,6 +218,86 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupSaveDays = BackupSaveDays;
     }
 
+    /**
+     * Get 定期备份状态 enable-开启，disable-关闭，默认关闭 
+     * @return RegularBackupEnable 定期备份状态 enable-开启，disable-关闭，默认关闭
+     */
+    public String getRegularBackupEnable() {
+        return this.RegularBackupEnable;
+    }
+
+    /**
+     * Set 定期备份状态 enable-开启，disable-关闭，默认关闭
+     * @param RegularBackupEnable 定期备份状态 enable-开启，disable-关闭，默认关闭
+     */
+    public void setRegularBackupEnable(String RegularBackupEnable) {
+        this.RegularBackupEnable = RegularBackupEnable;
+    }
+
+    /**
+     * Get 定期备份保留天数 [90 - 3650]天，默认365天 
+     * @return RegularBackupSaveDays 定期备份保留天数 [90 - 3650]天，默认365天
+     */
+    public Long getRegularBackupSaveDays() {
+        return this.RegularBackupSaveDays;
+    }
+
+    /**
+     * Set 定期备份保留天数 [90 - 3650]天，默认365天
+     * @param RegularBackupSaveDays 定期备份保留天数 [90 - 3650]天，默认365天
+     */
+    public void setRegularBackupSaveDays(Long RegularBackupSaveDays) {
+        this.RegularBackupSaveDays = RegularBackupSaveDays;
+    }
+
+    /**
+     * Get 定期备份策略 years-每年，quarters-每季度，months-每月，默认months 
+     * @return RegularBackupStrategy 定期备份策略 years-每年，quarters-每季度，months-每月，默认months
+     */
+    public String getRegularBackupStrategy() {
+        return this.RegularBackupStrategy;
+    }
+
+    /**
+     * Set 定期备份策略 years-每年，quarters-每季度，months-每月，默认months
+     * @param RegularBackupStrategy 定期备份策略 years-每年，quarters-每季度，months-每月，默认months
+     */
+    public void setRegularBackupStrategy(String RegularBackupStrategy) {
+        this.RegularBackupStrategy = RegularBackupStrategy;
+    }
+
+    /**
+     * Get 定期备份保留个数，默认1个 
+     * @return RegularBackupCounts 定期备份保留个数，默认1个
+     */
+    public Long getRegularBackupCounts() {
+        return this.RegularBackupCounts;
+    }
+
+    /**
+     * Set 定期备份保留个数，默认1个
+     * @param RegularBackupCounts 定期备份保留个数，默认1个
+     */
+    public void setRegularBackupCounts(Long RegularBackupCounts) {
+        this.RegularBackupCounts = RegularBackupCounts;
+    }
+
+    /**
+     * Get 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期 
+     * @return RegularBackupStartTime 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期
+     */
+    public String getRegularBackupStartTime() {
+        return this.RegularBackupStartTime;
+    }
+
+    /**
+     * Set 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期
+     * @param RegularBackupStartTime 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期
+     */
+    public void setRegularBackupStartTime(String RegularBackupStartTime) {
+        this.RegularBackupStartTime = RegularBackupStartTime;
+    }
+
     public ModifyBackupStrategyRequest() {
     }
 
@@ -215,6 +330,21 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         if (source.BackupSaveDays != null) {
             this.BackupSaveDays = new Long(source.BackupSaveDays);
         }
+        if (source.RegularBackupEnable != null) {
+            this.RegularBackupEnable = new String(source.RegularBackupEnable);
+        }
+        if (source.RegularBackupSaveDays != null) {
+            this.RegularBackupSaveDays = new Long(source.RegularBackupSaveDays);
+        }
+        if (source.RegularBackupStrategy != null) {
+            this.RegularBackupStrategy = new String(source.RegularBackupStrategy);
+        }
+        if (source.RegularBackupCounts != null) {
+            this.RegularBackupCounts = new Long(source.RegularBackupCounts);
+        }
+        if (source.RegularBackupStartTime != null) {
+            this.RegularBackupStartTime = new String(source.RegularBackupStartTime);
+        }
     }
 
 
@@ -229,6 +359,11 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
         this.setParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
         this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+        this.setParamSimple(map, prefix + "RegularBackupEnable", this.RegularBackupEnable);
+        this.setParamSimple(map, prefix + "RegularBackupSaveDays", this.RegularBackupSaveDays);
+        this.setParamSimple(map, prefix + "RegularBackupStrategy", this.RegularBackupStrategy);
+        this.setParamSimple(map, prefix + "RegularBackupCounts", this.RegularBackupCounts);
+        this.setParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
 
     }
 }

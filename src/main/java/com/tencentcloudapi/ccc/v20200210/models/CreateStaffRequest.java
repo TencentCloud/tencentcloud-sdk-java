@@ -37,6 +37,13 @@ public class CreateStaffRequest extends AbstractModel{
     private SeatUserInfo [] Staffs;
 
     /**
+    * 是否发送密码邮件，默认true
+    */
+    @SerializedName("SendPassword")
+    @Expose
+    private Boolean SendPassword;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -68,6 +75,22 @@ public class CreateStaffRequest extends AbstractModel{
         this.Staffs = Staffs;
     }
 
+    /**
+     * Get 是否发送密码邮件，默认true 
+     * @return SendPassword 是否发送密码邮件，默认true
+     */
+    public Boolean getSendPassword() {
+        return this.SendPassword;
+    }
+
+    /**
+     * Set 是否发送密码邮件，默认true
+     * @param SendPassword 是否发送密码邮件，默认true
+     */
+    public void setSendPassword(Boolean SendPassword) {
+        this.SendPassword = SendPassword;
+    }
+
     public CreateStaffRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateStaffRequest extends AbstractModel{
                 this.Staffs[i] = new SeatUserInfo(source.Staffs[i]);
             }
         }
+        if (source.SendPassword != null) {
+            this.SendPassword = new Boolean(source.SendPassword);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateStaffRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamArrayObj(map, prefix + "Staffs.", this.Staffs);
+        this.setParamSimple(map, prefix + "SendPassword", this.SendPassword);
 
     }
 }

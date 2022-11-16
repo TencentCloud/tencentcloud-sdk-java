@@ -39,7 +39,27 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *绑定组织成员和子账号的授权关系
+     *添加企业组织节点
+     * @param req AddOrganizationNodeRequest
+     * @return AddOrganizationNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrganizationNodeResponse AddOrganizationNode(AddOrganizationNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddOrganizationNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddOrganizationNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定组织成员和组织管理员子账号的授权关系
      * @param req BindOrganizationMemberAuthAccountRequest
      * @return BindOrganizationMemberAuthAccountResponse
      * @throws TencentCloudSDKException
@@ -79,7 +99,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *创建组织成员的授权策略
+     *创建组织成员访问授权策略
      * @param req CreateOrganizationMemberPolicyRequest
      * @return CreateOrganizationMemberPolicyResponse
      * @throws TencentCloudSDKException
@@ -91,6 +111,46 @@ public class OrganizationClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateOrganizationMemberPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除企业组织成员
+     * @param req DeleteOrganizationMembersRequest
+     * @return DeleteOrganizationMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationMembersResponse DeleteOrganizationMembers(DeleteOrganizationMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteOrganizationMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除企业组织节点
+     * @param req DeleteOrganizationNodesRequest
+     * @return DeleteOrganizationNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationNodesResponse DeleteOrganizationNodes(DeleteOrganizationNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteOrganizationNodes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,6 +179,66 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取可创建组织成员的认证主体关系列表
+     * @param req DescribeOrganizationAuthNodeRequest
+     * @return DescribeOrganizationAuthNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationAuthNodeResponse DescribeOrganizationAuthNode(DescribeOrganizationAuthNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationAuthNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationAuthNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationAuthNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取组织成员可被管理的身份列表
+     * @param req DescribeOrganizationMemberAuthIdentitiesRequest
+     * @return DescribeOrganizationMemberAuthIdentitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationMemberAuthIdentitiesResponse DescribeOrganizationMemberAuthIdentities(DescribeOrganizationMemberAuthIdentitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationMemberAuthIdentities");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取组织成员的授权策略列表
+     * @param req DescribeOrganizationMemberPoliciesRequest
+     * @return DescribeOrganizationMemberPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationMemberPoliciesResponse DescribeOrganizationMemberPolicies(DescribeOrganizationMemberPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationMemberPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMemberPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationMemberPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取企业组织成员列表
      * @param req DescribeOrganizationMembersRequest
      * @return DescribeOrganizationMembersResponse
@@ -131,6 +251,86 @@ public class OrganizationClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMembersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOrganizationMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取组织节点列表
+     * @param req DescribeOrganizationNodesRequest
+     * @return DescribeOrganizationNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationNodesResponse DescribeOrganizationNodes(DescribeOrganizationNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取组织成员访问身份列表
+     * @param req ListOrganizationIdentityRequest
+     * @return ListOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOrganizationIdentityResponse ListOrganizationIdentity(ListOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListOrganizationIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListOrganizationIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListOrganizationIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *移动成员到指定企业组织节点
+     * @param req MoveOrganizationNodeMembersRequest
+     * @return MoveOrganizationNodeMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembers(MoveOrganizationNodeMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MoveOrganizationNodeMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<MoveOrganizationNodeMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "MoveOrganizationNodeMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新企业组织节点
+     * @param req UpdateOrganizationNodeRequest
+     * @return UpdateOrganizationNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationNodeResponse UpdateOrganizationNode(UpdateOrganizationNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateOrganizationNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateOrganizationNode");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

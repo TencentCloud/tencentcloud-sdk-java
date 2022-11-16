@@ -23,14 +23,18 @@ import java.util.HashMap;
 public class DescribeDCDBRenewalPriceResponse extends AbstractModel{
 
     /**
-    * 原价，单位：分
+    * 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * 实际价格，单位：分。受折扣等影响，可能和原价不同。
+    * 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
     */
     @SerializedName("Price")
     @Expose
@@ -44,32 +48,48 @@ public class DescribeDCDBRenewalPriceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 原价，单位：分 
-     * @return OriginalPrice 原价，单位：分
+     * Get 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元 
+     * @return OriginalPrice 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 原价，单位：分
-     * @param OriginalPrice 原价，单位：分
+     * Set 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
+     * @param OriginalPrice 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 实际价格，单位：分。受折扣等影响，可能和原价不同。 
-     * @return Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
+     * Get 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元 
+     * @return Price 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实际价格，单位：分。受折扣等影响，可能和原价不同。
-     * @param Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
+     * Set 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
+     * @param Price 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
      */
     public void setPrice(Long Price) {
         this.Price = Price;

@@ -30,14 +30,14 @@ public class CreateOrganizationMemberPolicyRequest extends AbstractModel{
     private Long MemberUin;
 
     /**
-    * 策略名。
+    * 策略名。最大长度为128个字符，支持英文字母、数字、符号+=,.@_-
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 身份ID。
+    * 成员访问身份ID。可以调用DescribeOrganizationMemberAuthIdentities获取
     */
     @SerializedName("IdentityId")
     @Expose
@@ -67,32 +67,32 @@ public class CreateOrganizationMemberPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略名。 
-     * @return PolicyName 策略名。
+     * Get 策略名。最大长度为128个字符，支持英文字母、数字、符号+=,.@_- 
+     * @return PolicyName 策略名。最大长度为128个字符，支持英文字母、数字、符号+=,.@_-
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名。
-     * @param PolicyName 策略名。
+     * Set 策略名。最大长度为128个字符，支持英文字母、数字、符号+=,.@_-
+     * @param PolicyName 策略名。最大长度为128个字符，支持英文字母、数字、符号+=,.@_-
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 身份ID。 
-     * @return IdentityId 身份ID。
+     * Get 成员访问身份ID。可以调用DescribeOrganizationMemberAuthIdentities获取 
+     * @return IdentityId 成员访问身份ID。可以调用DescribeOrganizationMemberAuthIdentities获取
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 身份ID。
-     * @param IdentityId 身份ID。
+     * Set 成员访问身份ID。可以调用DescribeOrganizationMemberAuthIdentities获取
+     * @param IdentityId 成员访问身份ID。可以调用DescribeOrganizationMemberAuthIdentities获取
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

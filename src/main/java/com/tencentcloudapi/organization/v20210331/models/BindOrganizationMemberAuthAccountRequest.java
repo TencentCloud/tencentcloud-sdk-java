@@ -30,14 +30,14 @@ public class BindOrganizationMemberAuthAccountRequest extends AbstractModel{
     private Long MemberUin;
 
     /**
-    * 策略ID。
+    * 策略ID。可以调用DescribeOrganizationMemberPolicies获取
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 组织子账号Uin。
+    * 组织管理员子账号Uin列表。最大5个
     */
     @SerializedName("OrgSubAccountUins")
     @Expose
@@ -60,32 +60,32 @@ public class BindOrganizationMemberAuthAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略ID。 
-     * @return PolicyId 策略ID。
+     * Get 策略ID。可以调用DescribeOrganizationMemberPolicies获取 
+     * @return PolicyId 策略ID。可以调用DescribeOrganizationMemberPolicies获取
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID。
-     * @param PolicyId 策略ID。
+     * Set 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+     * @param PolicyId 策略ID。可以调用DescribeOrganizationMemberPolicies获取
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 组织子账号Uin。 
-     * @return OrgSubAccountUins 组织子账号Uin。
+     * Get 组织管理员子账号Uin列表。最大5个 
+     * @return OrgSubAccountUins 组织管理员子账号Uin列表。最大5个
      */
     public Long [] getOrgSubAccountUins() {
         return this.OrgSubAccountUins;
     }
 
     /**
-     * Set 组织子账号Uin。
-     * @param OrgSubAccountUins 组织子账号Uin。
+     * Set 组织管理员子账号Uin列表。最大5个
+     * @param OrgSubAccountUins 组织管理员子账号Uin列表。最大5个
      */
     public void setOrgSubAccountUins(Long [] OrgSubAccountUins) {
         this.OrgSubAccountUins = OrgSubAccountUins;
