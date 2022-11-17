@@ -31,7 +31,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -112,6 +113,12 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
 
     /**
     * 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -186,6 +193,34 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Float OffsetY;
 
     /**
+    * 指定关键字排序规则
+    */
+    @SerializedName("KeywordOrder")
+    @Expose
+    private String KeywordOrder;
+
+    /**
+    * 指定关键字页码
+    */
+    @SerializedName("KeywordPage")
+    @Expose
+    private Long KeywordPage;
+
+    /**
+    * 关键字位置模式
+    */
+    @SerializedName("RelativeLocation")
+    @Expose
+    private String RelativeLocation;
+
+    /**
+    * 关键字索引
+    */
+    @SerializedName("KeywordIndexes")
+    @Expose
+    private Long [] KeywordIndexes;
+
+    /**
      * Get 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 MULTI_LINE_TEXT - 多行文本控件；
@@ -194,7 +229,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -213,7 +249,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -238,7 +275,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -257,7 +295,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -419,6 +458,12 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
 
     /**
      * Get 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -428,6 +473,12 @@ OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]} 
      * @return ComponentExtra 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -443,6 +494,12 @@ ESIGN -- 个人印章类型
 
     /**
      * Set 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -452,6 +509,12 @@ OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
      * @param ComponentExtra 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -621,6 +684,70 @@ KEYWORD 关键字，使用ComponentId指定关键字
         this.OffsetY = OffsetY;
     }
 
+    /**
+     * Get 指定关键字排序规则 
+     * @return KeywordOrder 指定关键字排序规则
+     */
+    public String getKeywordOrder() {
+        return this.KeywordOrder;
+    }
+
+    /**
+     * Set 指定关键字排序规则
+     * @param KeywordOrder 指定关键字排序规则
+     */
+    public void setKeywordOrder(String KeywordOrder) {
+        this.KeywordOrder = KeywordOrder;
+    }
+
+    /**
+     * Get 指定关键字页码 
+     * @return KeywordPage 指定关键字页码
+     */
+    public Long getKeywordPage() {
+        return this.KeywordPage;
+    }
+
+    /**
+     * Set 指定关键字页码
+     * @param KeywordPage 指定关键字页码
+     */
+    public void setKeywordPage(Long KeywordPage) {
+        this.KeywordPage = KeywordPage;
+    }
+
+    /**
+     * Get 关键字位置模式 
+     * @return RelativeLocation 关键字位置模式
+     */
+    public String getRelativeLocation() {
+        return this.RelativeLocation;
+    }
+
+    /**
+     * Set 关键字位置模式
+     * @param RelativeLocation 关键字位置模式
+     */
+    public void setRelativeLocation(String RelativeLocation) {
+        this.RelativeLocation = RelativeLocation;
+    }
+
+    /**
+     * Get 关键字索引 
+     * @return KeywordIndexes 关键字索引
+     */
+    public Long [] getKeywordIndexes() {
+        return this.KeywordIndexes;
+    }
+
+    /**
+     * Set 关键字索引
+     * @param KeywordIndexes 关键字索引
+     */
+    public void setKeywordIndexes(Long [] KeywordIndexes) {
+        this.KeywordIndexes = KeywordIndexes;
+    }
+
     public Component() {
     }
 
@@ -683,6 +810,21 @@ KEYWORD 关键字，使用ComponentId指定关键字
         if (source.OffsetY != null) {
             this.OffsetY = new Float(source.OffsetY);
         }
+        if (source.KeywordOrder != null) {
+            this.KeywordOrder = new String(source.KeywordOrder);
+        }
+        if (source.KeywordPage != null) {
+            this.KeywordPage = new Long(source.KeywordPage);
+        }
+        if (source.RelativeLocation != null) {
+            this.RelativeLocation = new String(source.RelativeLocation);
+        }
+        if (source.KeywordIndexes != null) {
+            this.KeywordIndexes = new Long[source.KeywordIndexes.length];
+            for (int i = 0; i < source.KeywordIndexes.length; i++) {
+                this.KeywordIndexes[i] = new Long(source.KeywordIndexes[i]);
+            }
+        }
     }
 
 
@@ -708,6 +850,10 @@ KEYWORD 关键字，使用ComponentId指定关键字
         this.setParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
         this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
         this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
+        this.setParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
+        this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
+        this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
+        this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
 
     }
 }

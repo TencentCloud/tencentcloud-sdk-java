@@ -37,6 +37,13 @@ public class CreateCustomizationRequest extends AbstractModel{
     private String TextUrl;
 
     /**
+    * 模型名称，名称长度不超过36，默认为BizId。
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
      * Get 应用 ID，登录控制台创建应用得到的AppID 
      * @return BizId 应用 ID，登录控制台创建应用得到的AppID
      */
@@ -68,6 +75,22 @@ public class CreateCustomizationRequest extends AbstractModel{
         this.TextUrl = TextUrl;
     }
 
+    /**
+     * Get 模型名称，名称长度不超过36，默认为BizId。 
+     * @return ModelName 模型名称，名称长度不超过36，默认为BizId。
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set 模型名称，名称长度不超过36，默认为BizId。
+     * @param ModelName 模型名称，名称长度不超过36，默认为BizId。
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
+    }
+
     public CreateCustomizationRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CreateCustomizationRequest extends AbstractModel{
         if (source.TextUrl != null) {
             this.TextUrl = new String(source.TextUrl);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CreateCustomizationRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamSimple(map, prefix + "TextUrl", this.TextUrl);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
 
     }
 }

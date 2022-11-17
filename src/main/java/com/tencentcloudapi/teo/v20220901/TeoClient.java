@@ -39,6 +39,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *将未绑定套餐的站点绑定到已有套餐
+     * @param req BindZoneToPlanRequest
+     * @return BindZoneToPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindZoneToPlanResponse BindZoneToPlan(BindZoneToPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindZoneToPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindZoneToPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindZoneToPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *校验证书
      * @param req CheckCertificateRequest
      * @return CheckCertificateResponse

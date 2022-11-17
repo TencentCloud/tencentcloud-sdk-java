@@ -55,6 +55,13 @@ SIGN_REJECT:拒签(流程结束)
     private String ReviewMessage;
 
     /**
+    * 签署节点审核时需要指定
+    */
+    @SerializedName("RecipientId")
+    @Expose
+    private String RecipientId;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -134,6 +141,22 @@ SIGN_REJECT:拒签(流程结束)
         this.ReviewMessage = ReviewMessage;
     }
 
+    /**
+     * Get 签署节点审核时需要指定 
+     * @return RecipientId 签署节点审核时需要指定
+     */
+    public String getRecipientId() {
+        return this.RecipientId;
+    }
+
+    /**
+     * Set 签署节点审核时需要指定
+     * @param RecipientId 签署节点审核时需要指定
+     */
+    public void setRecipientId(String RecipientId) {
+        this.RecipientId = RecipientId;
+    }
+
     public ChannelCreateFlowSignReviewRequest() {
     }
 
@@ -154,6 +177,9 @@ SIGN_REJECT:拒签(流程结束)
         if (source.ReviewMessage != null) {
             this.ReviewMessage = new String(source.ReviewMessage);
         }
+        if (source.RecipientId != null) {
+            this.RecipientId = new String(source.RecipientId);
+        }
     }
 
 
@@ -165,6 +191,7 @@ SIGN_REJECT:拒签(流程结束)
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "ReviewType", this.ReviewType);
         this.setParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
+        this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
 
     }
 }

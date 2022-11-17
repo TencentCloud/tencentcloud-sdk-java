@@ -45,6 +45,28 @@ public class DescribeZonesRequest extends AbstractModel{
     private AdvancedFilter [] Filters;
 
     /**
+    * 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
+    */
+    @SerializedName("Direction")
+    @Expose
+    private String Direction;
+
+    /**
      * Get 分页查询偏移量。默认值：0。 
      * @return Offset 分页查询偏移量。默认值：0。
      */
@@ -96,6 +118,70 @@ public class DescribeZonesRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。 
+     * @return Order 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+     * @param Order 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。 
+     * @return Direction 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
+     */
+    public String getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
+     * @param Direction 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
+     */
+    public void setDirection(String Direction) {
+        this.Direction = Direction;
+    }
+
     public DescribeZonesRequest() {
     }
 
@@ -116,6 +202,12 @@ public class DescribeZonesRequest extends AbstractModel{
                 this.Filters[i] = new AdvancedFilter(source.Filters[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
+        }
     }
 
 
@@ -126,6 +218,8 @@ public class DescribeZonesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

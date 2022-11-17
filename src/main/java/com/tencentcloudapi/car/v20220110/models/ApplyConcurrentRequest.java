@@ -30,7 +30,7 @@ public class ApplyConcurrentRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * 用户IP
+    * 用户IP，用户客户端的公网IP，用于就近调度
     */
     @SerializedName("UserIp")
     @Expose
@@ -67,16 +67,16 @@ public class ApplyConcurrentRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户IP 
-     * @return UserIp 用户IP
+     * Get 用户IP，用户客户端的公网IP，用于就近调度 
+     * @return UserIp 用户IP，用户客户端的公网IP，用于就近调度
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 用户IP
-     * @param UserIp 用户IP
+     * Set 用户IP，用户客户端的公网IP，用于就近调度
+     * @param UserIp 用户IP，用户客户端的公网IP，用于就近调度
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

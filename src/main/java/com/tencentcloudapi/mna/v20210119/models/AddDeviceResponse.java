@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AddDeviceResponse extends AbstractModel{
 
     /**
-    * 后台生成的base64字符串密钥
+    * 经过加密算法加密后的base64格式密钥
     */
     @SerializedName("DataKey")
     @Expose
@@ -37,6 +37,14 @@ public class AddDeviceResponse extends AbstractModel{
     private String DeviceId;
 
     /**
+    * 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Signature")
+    @Expose
+    private String Signature;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -44,16 +52,16 @@ public class AddDeviceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 后台生成的base64字符串密钥 
-     * @return DataKey 后台生成的base64字符串密钥
+     * Get 经过加密算法加密后的base64格式密钥 
+     * @return DataKey 经过加密算法加密后的base64格式密钥
      */
     public String getDataKey() {
         return this.DataKey;
     }
 
     /**
-     * Set 后台生成的base64字符串密钥
-     * @param DataKey 后台生成的base64字符串密钥
+     * Set 经过加密算法加密后的base64格式密钥
+     * @param DataKey 经过加密算法加密后的base64格式密钥
      */
     public void setDataKey(String DataKey) {
         this.DataKey = DataKey;
@@ -73,6 +81,26 @@ public class AddDeviceResponse extends AbstractModel{
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Signature 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSignature() {
+        return this.Signature;
+    }
+
+    /**
+     * Set 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Signature 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignature(String Signature) {
+        this.Signature = Signature;
     }
 
     /**
@@ -105,6 +133,9 @@ public class AddDeviceResponse extends AbstractModel{
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +148,7 @@ public class AddDeviceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataKey", this.DataKey);
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "Signature", this.Signature);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

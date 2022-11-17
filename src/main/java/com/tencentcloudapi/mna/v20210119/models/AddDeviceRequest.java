@@ -44,6 +44,13 @@ public class AddDeviceRequest extends AbstractModel{
     private String DataKey;
 
     /**
+    * 是否设置预置密钥
+    */
+    @SerializedName("Encrypted")
+    @Expose
+    private Boolean Encrypted;
+
+    /**
      * Get 新建设备的名称 
      * @return DeviceName 新建设备的名称
      */
@@ -91,6 +98,22 @@ public class AddDeviceRequest extends AbstractModel{
         this.DataKey = DataKey;
     }
 
+    /**
+     * Get 是否设置预置密钥 
+     * @return Encrypted 是否设置预置密钥
+     */
+    public Boolean getEncrypted() {
+        return this.Encrypted;
+    }
+
+    /**
+     * Set 是否设置预置密钥
+     * @param Encrypted 是否设置预置密钥
+     */
+    public void setEncrypted(Boolean Encrypted) {
+        this.Encrypted = Encrypted;
+    }
+
     public AddDeviceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class AddDeviceRequest extends AbstractModel{
         if (source.DataKey != null) {
             this.DataKey = new String(source.DataKey);
         }
+        if (source.Encrypted != null) {
+            this.Encrypted = new Boolean(source.Encrypted);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class AddDeviceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DataKey", this.DataKey);
+        this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
 
     }
 }

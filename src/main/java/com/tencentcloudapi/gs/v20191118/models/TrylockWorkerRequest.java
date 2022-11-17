@@ -51,7 +51,7 @@ public class TrylockWorkerRequest extends AbstractModel{
     private Long SetNo;
 
     /**
-    * 【必选】用户IP，用于就近调度，不填将严重影响用户体验
+    * 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
     */
     @SerializedName("UserIp")
     @Expose
@@ -129,16 +129,16 @@ public class TrylockWorkerRequest extends AbstractModel{
     }
 
     /**
-     * Get 【必选】用户IP，用于就近调度，不填将严重影响用户体验 
-     * @return UserIp 【必选】用户IP，用于就近调度，不填将严重影响用户体验
+     * Get 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验 
+     * @return UserIp 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 【必选】用户IP，用于就近调度，不填将严重影响用户体验
-     * @param UserIp 【必选】用户IP，用于就近调度，不填将严重影响用户体验
+     * Set 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+     * @param UserIp 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

@@ -79,6 +79,26 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *取消组织成员和子账号的授权绑定关系
+     * @param req CancelOrganizationMemberAuthAccountRequest
+     * @return CancelOrganizationMemberAuthAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(CancelOrganizationMemberAuthAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelOrganizationMemberAuthAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelOrganizationMemberAuthAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelOrganizationMemberAuthAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建组织成员
      * @param req CreateOrganizationMemberRequest
      * @return CreateOrganizationMemberResponse
@@ -191,6 +211,26 @@ public class OrganizationClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationAuthNodeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOrganizationAuthNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取组织成员被绑定的子账号列表
+     * @param req DescribeOrganizationMemberAuthAccountsRequest
+     * @return DescribeOrganizationMemberAuthAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationMemberAuthAccountsResponse DescribeOrganizationMemberAuthAccounts(DescribeOrganizationMemberAuthAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationMemberAuthAccounts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

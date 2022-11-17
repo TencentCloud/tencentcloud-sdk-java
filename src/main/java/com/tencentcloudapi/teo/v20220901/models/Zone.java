@@ -150,6 +150,24 @@ public class Zone extends AbstractModel{
     private VanityNameServersIps [] VanityNameServersIps;
 
     /**
+    * 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+    */
+    @SerializedName("ActiveStatus")
+    @Expose
+    private String ActiveStatus;
+
+    /**
+    * 站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -465,6 +483,54 @@ public class Zone extends AbstractModel{
         this.VanityNameServersIps = VanityNameServersIps;
     }
 
+    /**
+     * Get 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li> 
+     * @return ActiveStatus 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+     */
+    public String getActiveStatus() {
+        return this.ActiveStatus;
+    }
+
+    /**
+     * Set 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+     * @param ActiveStatus 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+     */
+    public void setActiveStatus(String ActiveStatus) {
+        this.ActiveStatus = ActiveStatus;
+    }
+
+    /**
+     * Get 站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set 站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
     public Zone() {
     }
 
@@ -536,6 +602,12 @@ public class Zone extends AbstractModel{
                 this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
             }
         }
+        if (source.ActiveStatus != null) {
+            this.ActiveStatus = new String(source.ActiveStatus);
+        }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -559,6 +631,8 @@ public class Zone extends AbstractModel{
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
         this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+        this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

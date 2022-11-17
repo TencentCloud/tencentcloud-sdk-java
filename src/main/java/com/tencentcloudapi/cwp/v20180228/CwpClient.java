@@ -1822,6 +1822,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取客户端异常事件
+     * @param req DescribeClientExceptionRequest
+     * @return DescribeClientExceptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientExceptionResponse DescribeClientException(DescribeClientExceptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClientExceptionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClientExceptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClientException");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
      * @param req DescribeComponentStatisticsRequest
      * @return DescribeComponentStatisticsResponse

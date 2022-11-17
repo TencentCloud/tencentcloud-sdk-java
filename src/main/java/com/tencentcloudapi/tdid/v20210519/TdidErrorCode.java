@@ -3,6 +3,9 @@ public enum TdidErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 无访问权限。
      FAILEDOPERATION_INVALIDAUTH("FailedOperation.InvalidAuth"),
      
@@ -33,8 +36,14 @@ public enum TdidErrorCode {
     // 参数错误。
      INVALIDPARAMETERVALUE_ILLEGALVALUE("InvalidParameterValue.IllegalValue"),
      
+    // 缺少参数错误。
+     MISSINGPARAMETER("MissingParameter"),
+     
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation");

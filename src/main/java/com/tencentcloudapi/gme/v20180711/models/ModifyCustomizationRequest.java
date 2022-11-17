@@ -30,7 +30,7 @@ public class ModifyCustomizationRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * 文本文件
+    * 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
     */
     @SerializedName("TextUrl")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyCustomizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 文本文件 
-     * @return TextUrl 文本文件
+     * Get 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos 
+     * @return TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
      */
     public String getTextUrl() {
         return this.TextUrl;
     }
 
     /**
-     * Set 文本文件
-     * @param TextUrl 文本文件
+     * Set 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
+     * @param TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
      */
     public void setTextUrl(String TextUrl) {
         this.TextUrl = TextUrl;

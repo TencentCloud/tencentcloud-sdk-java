@@ -199,7 +199,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *供代理商拉取缓存的全量客户订单
+     *供代理商拉取缓存的全量预付费客户订单
      * @param req DescribeAgentDealsByCacheRequest
      * @return DescribeAgentDealsByCacheResponse
      * @throws TencentCloudSDKException
@@ -259,7 +259,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *可以查询代理商代付的所有订单
+     *可以查询代理商代付的预付费订单
      * @param req DescribeAgentPayDealsV2Request
      * @return DescribeAgentPayDealsV2Response
      * @throws TencentCloudSDKException
@@ -299,7 +299,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *查询代理商名下指定代客的自付订单
+     *查询代理商名下指定代客的自付订单（预付费）
      * @param req DescribeAgentSelfPayDealsV2Request
      * @return DescribeAgentSelfPayDealsV2Response
      * @throws TencentCloudSDKException

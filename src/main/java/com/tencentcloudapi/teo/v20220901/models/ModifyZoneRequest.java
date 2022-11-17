@@ -46,6 +46,13 @@ public class ModifyZoneRequest extends AbstractModel{
     private VanityNameServers VanityNameServers;
 
     /**
+    * 站点别名。数字、英文、-和_组合，限制20个字符。
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -101,6 +108,22 @@ public class ModifyZoneRequest extends AbstractModel{
         this.VanityNameServers = VanityNameServers;
     }
 
+    /**
+     * Get 站点别名。数字、英文、-和_组合，限制20个字符。 
+     * @return AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set 站点别名。数字、英文、-和_组合，限制20个字符。
+     * @param AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
     public ModifyZoneRequest() {
     }
 
@@ -118,6 +141,9 @@ public class ModifyZoneRequest extends AbstractModel{
         if (source.VanityNameServers != null) {
             this.VanityNameServers = new VanityNameServers(source.VanityNameServers);
         }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -128,6 +154,7 @@ public class ModifyZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

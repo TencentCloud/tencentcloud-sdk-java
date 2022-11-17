@@ -76,7 +76,10 @@ public enum GmeErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+    // 语音转文本开关未开启。
+     UNSUPPORTEDOPERATION_PTTSWITCHOFF("UnsupportedOperation.PTTSwitchOff");
      
     private String value;
     private GmeErrorCode (String value){

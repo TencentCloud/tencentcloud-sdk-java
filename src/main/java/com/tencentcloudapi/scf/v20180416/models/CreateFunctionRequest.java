@@ -205,6 +205,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private ProtocolParams ProtocolParams;
 
     /**
+    * 单实例多并发配置。只支持Web函数。
+    */
+    @SerializedName("InstanceConcurrencyConfig")
+    @Expose
+    private InstanceConcurrencyConfig InstanceConcurrencyConfig;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -620,6 +627,22 @@ public class CreateFunctionRequest extends AbstractModel{
         this.ProtocolParams = ProtocolParams;
     }
 
+    /**
+     * Get 单实例多并发配置。只支持Web函数。 
+     * @return InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
+     */
+    public InstanceConcurrencyConfig getInstanceConcurrencyConfig() {
+        return this.InstanceConcurrencyConfig;
+    }
+
+    /**
+     * Set 单实例多并发配置。只支持Web函数。
+     * @param InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
+     */
+    public void setInstanceConcurrencyConfig(InstanceConcurrencyConfig InstanceConcurrencyConfig) {
+        this.InstanceConcurrencyConfig = InstanceConcurrencyConfig;
+    }
+
     public CreateFunctionRequest() {
     }
 
@@ -712,6 +735,9 @@ public class CreateFunctionRequest extends AbstractModel{
         if (source.ProtocolParams != null) {
             this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
         }
+        if (source.InstanceConcurrencyConfig != null) {
+            this.InstanceConcurrencyConfig = new InstanceConcurrencyConfig(source.InstanceConcurrencyConfig);
+        }
     }
 
 
@@ -745,6 +771,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+        this.setParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
 
     }
 }

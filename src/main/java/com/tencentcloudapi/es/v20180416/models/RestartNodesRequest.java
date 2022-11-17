@@ -44,6 +44,20 @@ public class RestartNodesRequest extends AbstractModel{
     private Boolean ForceRestart;
 
     /**
+    * 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+    */
+    @SerializedName("RestartMode")
+    @Expose
+    private String RestartMode;
+
+    /**
+    * 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+    */
+    @SerializedName("IsOffline")
+    @Expose
+    private Boolean IsOffline;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -91,6 +105,38 @@ public class RestartNodesRequest extends AbstractModel{
         this.ForceRestart = ForceRestart;
     }
 
+    /**
+     * Get 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place" 
+     * @return RestartMode 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+     */
+    public String getRestartMode() {
+        return this.RestartMode;
+    }
+
+    /**
+     * Set 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+     * @param RestartMode 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+     */
+    public void setRestartMode(String RestartMode) {
+        this.RestartMode = RestartMode;
+    }
+
+    /**
+     * Get 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险 
+     * @return IsOffline 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+     */
+    public Boolean getIsOffline() {
+        return this.IsOffline;
+    }
+
+    /**
+     * Set 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+     * @param IsOffline 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+     */
+    public void setIsOffline(Boolean IsOffline) {
+        this.IsOffline = IsOffline;
+    }
+
     public RestartNodesRequest() {
     }
 
@@ -111,6 +157,12 @@ public class RestartNodesRequest extends AbstractModel{
         if (source.ForceRestart != null) {
             this.ForceRestart = new Boolean(source.ForceRestart);
         }
+        if (source.RestartMode != null) {
+            this.RestartMode = new String(source.RestartMode);
+        }
+        if (source.IsOffline != null) {
+            this.IsOffline = new Boolean(source.IsOffline);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class RestartNodesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "NodeNames.", this.NodeNames);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
+        this.setParamSimple(map, prefix + "IsOffline", this.IsOffline);
 
     }
 }

@@ -69,6 +69,14 @@ public class ImageConfig extends AbstractModel{
     private String Args;
 
     /**
+    * 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerImageAccelerate")
+    @Expose
+    private Boolean ContainerImageAccelerate;
+
+    /**
      * Get 镜像仓库类型，个人版或者企业版：personal/enterprise 
      * @return ImageType 镜像仓库类型，个人版或者企业版：personal/enterprise
      */
@@ -180,6 +188,26 @@ public class ImageConfig extends AbstractModel{
         this.Args = Args;
     }
 
+    /**
+     * Get 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerImageAccelerate 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getContainerImageAccelerate() {
+        return this.ContainerImageAccelerate;
+    }
+
+    /**
+     * Set 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerImageAccelerate 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerImageAccelerate(Boolean ContainerImageAccelerate) {
+        this.ContainerImageAccelerate = ContainerImageAccelerate;
+    }
+
     public ImageConfig() {
     }
 
@@ -206,6 +234,9 @@ public class ImageConfig extends AbstractModel{
         if (source.Args != null) {
             this.Args = new String(source.Args);
         }
+        if (source.ContainerImageAccelerate != null) {
+            this.ContainerImageAccelerate = new Boolean(source.ContainerImageAccelerate);
+        }
     }
 
 
@@ -219,6 +250,7 @@ public class ImageConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Args", this.Args);
+        this.setParamSimple(map, prefix + "ContainerImageAccelerate", this.ContainerImageAccelerate);
 
     }
 }

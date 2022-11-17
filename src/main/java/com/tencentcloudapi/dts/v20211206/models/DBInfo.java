@@ -159,7 +159,7 @@ public class DBInfo extends AbstractModel{
     private String AccountMode;
 
     /**
-    * 临时秘钥Id
+    * 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretId")
@@ -167,7 +167,7 @@ public class DBInfo extends AbstractModel{
     private String TmpSecretId;
 
     /**
-    * 临时秘钥Key
+    * 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretKey")
@@ -523,9 +523,9 @@ public class DBInfo extends AbstractModel{
     }
 
     /**
-     * Get 临时秘钥Id
+     * Get 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmpSecretId 临时秘钥Id
+     * @return TmpSecretId 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretId() {
@@ -533,9 +533,9 @@ public class DBInfo extends AbstractModel{
     }
 
     /**
-     * Set 临时秘钥Id
+     * Set 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmpSecretId 临时秘钥Id
+     * @param TmpSecretId 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretId(String TmpSecretId) {
@@ -543,9 +543,9 @@ public class DBInfo extends AbstractModel{
     }
 
     /**
-     * Get 临时秘钥Key
+     * Get 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmpSecretKey 临时秘钥Key
+     * @return TmpSecretKey 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretKey() {
@@ -553,9 +553,9 @@ public class DBInfo extends AbstractModel{
     }
 
     /**
-     * Set 临时秘钥Key
+     * Set 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmpSecretKey 临时秘钥Key
+     * @param TmpSecretKey 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretKey(String TmpSecretKey) {

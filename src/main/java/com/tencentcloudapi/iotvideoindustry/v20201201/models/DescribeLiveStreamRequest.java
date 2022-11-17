@@ -30,7 +30,7 @@ public class DescribeLiveStreamRequest extends AbstractModel{
     private String LiveChannelId;
 
     /**
-    * 过期时间
+    * 过期时间 秒级unix时间戳
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeLiveStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get 过期时间 秒级unix时间戳 
+     * @return ExpireTime 过期时间 秒级unix时间戳
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set 过期时间 秒级unix时间戳
+     * @param ExpireTime 过期时间 秒级unix时间戳
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

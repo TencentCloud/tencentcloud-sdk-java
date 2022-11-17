@@ -72,21 +72,21 @@ public class DescribeMigrateDBInstancesRequest extends AbstractModel{
     private String AccountMode;
 
     /**
-    * 临时秘钥Id，若为跨账号资源此项必填
+    * 临时密钥Id，若为跨账号资源此项必填
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * 临时秘钥Key，若为跨账号资源此项必填
+    * 临时密钥Key，若为跨账号资源此项必填
     */
     @SerializedName("TmpSecretKey")
     @Expose
     private String TmpSecretKey;
 
     /**
-    * 临时秘钥Token，若为跨账号资源此项必填
+    * 临时密钥Token，若为跨账号资源此项必填
     */
     @SerializedName("TmpToken")
     @Expose
@@ -205,48 +205,48 @@ public class DescribeMigrateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 临时秘钥Id，若为跨账号资源此项必填 
-     * @return TmpSecretId 临时秘钥Id，若为跨账号资源此项必填
+     * Get 临时密钥Id，若为跨账号资源此项必填 
+     * @return TmpSecretId 临时密钥Id，若为跨账号资源此项必填
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * Set 临时秘钥Id，若为跨账号资源此项必填
-     * @param TmpSecretId 临时秘钥Id，若为跨账号资源此项必填
+     * Set 临时密钥Id，若为跨账号资源此项必填
+     * @param TmpSecretId 临时密钥Id，若为跨账号资源此项必填
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get 临时秘钥Key，若为跨账号资源此项必填 
-     * @return TmpSecretKey 临时秘钥Key，若为跨账号资源此项必填
+     * Get 临时密钥Key，若为跨账号资源此项必填 
+     * @return TmpSecretKey 临时密钥Key，若为跨账号资源此项必填
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * Set 临时秘钥Key，若为跨账号资源此项必填
-     * @param TmpSecretKey 临时秘钥Key，若为跨账号资源此项必填
+     * Set 临时密钥Key，若为跨账号资源此项必填
+     * @param TmpSecretKey 临时密钥Key，若为跨账号资源此项必填
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;
     }
 
     /**
-     * Get 临时秘钥Token，若为跨账号资源此项必填 
-     * @return TmpToken 临时秘钥Token，若为跨账号资源此项必填
+     * Get 临时密钥Token，若为跨账号资源此项必填 
+     * @return TmpToken 临时密钥Token，若为跨账号资源此项必填
      */
     public String getTmpToken() {
         return this.TmpToken;
     }
 
     /**
-     * Set 临时秘钥Token，若为跨账号资源此项必填
-     * @param TmpToken 临时秘钥Token，若为跨账号资源此项必填
+     * Set 临时密钥Token，若为跨账号资源此项必填
+     * @param TmpToken 临时密钥Token，若为跨账号资源此项必填
      */
     public void setTmpToken(String TmpToken) {
         this.TmpToken = TmpToken;

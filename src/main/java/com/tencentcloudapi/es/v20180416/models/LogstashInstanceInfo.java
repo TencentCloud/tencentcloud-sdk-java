@@ -208,6 +208,30 @@ public class LogstashInstanceInfo extends AbstractModel{
     private OperationDuration OperationDuration;
 
     /**
+    * CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CpuNum")
+    @Expose
+    private Long CpuNum;
+
+    /**
+    * 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
+    * 内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MemSize")
+    @Expose
+    private Long MemSize;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -635,6 +659,66 @@ public class LogstashInstanceInfo extends AbstractModel{
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get CPU数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CpuNum CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCpuNum() {
+        return this.CpuNum;
+    }
+
+    /**
+     * Set CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CpuNum CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpuNum(Long CpuNum) {
+        this.CpuNum = CpuNum;
+    }
+
+    /**
+     * Get 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
+     * Get 内存大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MemSize 内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMemSize() {
+        return this.MemSize;
+    }
+
+    /**
+     * Set 内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MemSize 内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemSize(Long MemSize) {
+        this.MemSize = MemSize;
+    }
+
     public LogstashInstanceInfo() {
     }
 
@@ -727,6 +811,18 @@ public class LogstashInstanceInfo extends AbstractModel{
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDuration(source.OperationDuration);
         }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
     }
 
 
@@ -760,6 +856,9 @@ public class LogstashInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "YMLConfig", this.YMLConfig);
         this.setParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "MemSize", this.MemSize);
 
     }
 }

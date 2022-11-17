@@ -62,6 +62,13 @@ public class CreateZoneRequest extends AbstractModel{
     private Boolean AllowDuplicates;
 
     /**
+    * 站点别名。数字、英文、-和_组合，限制20个字符。
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -157,6 +164,22 @@ public class CreateZoneRequest extends AbstractModel{
         this.AllowDuplicates = AllowDuplicates;
     }
 
+    /**
+     * Get 站点别名。数字、英文、-和_组合，限制20个字符。 
+     * @return AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set 站点别名。数字、英文、-和_组合，限制20个字符。
+     * @param AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
     public CreateZoneRequest() {
     }
 
@@ -183,6 +206,9 @@ public class CreateZoneRequest extends AbstractModel{
         if (source.AllowDuplicates != null) {
             this.AllowDuplicates = new Boolean(source.AllowDuplicates);
         }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -195,6 +221,7 @@ public class CreateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JumpStart", this.JumpStart);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

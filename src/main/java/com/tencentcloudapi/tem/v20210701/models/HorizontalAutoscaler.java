@@ -37,14 +37,28 @@ public class HorizontalAutoscaler extends AbstractModel{
     private Long MaxReplicas;
 
     /**
-    * 指标度量（CPU or MEMORY）
+    * 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
     */
     @SerializedName("Metrics")
     @Expose
     private String Metrics;
 
     /**
-    * 阈值（百分比）
+    * 阈值（整数）
     */
     @SerializedName("Threshold")
     @Expose
@@ -56,6 +70,14 @@ public class HorizontalAutoscaler extends AbstractModel{
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
+
+    /**
+    * 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DoubleThreshold")
+    @Expose
+    private Float DoubleThreshold;
 
     /**
      * Get 最小实例数（可以不传） 
@@ -90,32 +112,88 @@ public class HorizontalAutoscaler extends AbstractModel{
     }
 
     /**
-     * Get 指标度量（CPU or MEMORY） 
-     * @return Metrics 指标度量（CPU or MEMORY）
+     * Get 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s) 
+     * @return Metrics 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
      */
     public String getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 指标度量（CPU or MEMORY）
-     * @param Metrics 指标度量（CPU or MEMORY）
+     * Set 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
+     * @param Metrics 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
      */
     public void setMetrics(String Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get 阈值（百分比） 
-     * @return Threshold 阈值（百分比）
+     * Get 阈值（整数） 
+     * @return Threshold 阈值（整数）
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set 阈值（百分比）
-     * @param Threshold 阈值（百分比）
+     * Set 阈值（整数）
+     * @param Threshold 阈值（整数）
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;
@@ -135,6 +213,26 @@ public class HorizontalAutoscaler extends AbstractModel{
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DoubleThreshold 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDoubleThreshold() {
+        return this.DoubleThreshold;
+    }
+
+    /**
+     * Set 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DoubleThreshold 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDoubleThreshold(Float DoubleThreshold) {
+        this.DoubleThreshold = DoubleThreshold;
     }
 
     public HorizontalAutoscaler() {
@@ -160,6 +258,9 @@ public class HorizontalAutoscaler extends AbstractModel{
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
+        if (source.DoubleThreshold != null) {
+            this.DoubleThreshold = new Float(source.DoubleThreshold);
+        }
     }
 
 
@@ -172,6 +273,7 @@ public class HorizontalAutoscaler extends AbstractModel{
         this.setParamSimple(map, prefix + "Metrics", this.Metrics);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "DoubleThreshold", this.DoubleThreshold);
 
     }
 }

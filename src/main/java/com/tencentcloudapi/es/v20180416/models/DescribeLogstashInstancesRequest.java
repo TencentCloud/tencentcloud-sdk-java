@@ -79,6 +79,13 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
     private String [] VpcIds;
 
     /**
+    * 标签信息列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
      * Get 实例所属可用区，不传则默认所有可用区 
      * @return Zone 实例所属可用区，不传则默认所有可用区
      */
@@ -206,6 +213,22 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
         this.VpcIds = VpcIds;
     }
 
+    /**
+     * Get 标签信息列表 
+     * @return TagList 标签信息列表
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签信息列表
+     * @param TagList 标签信息列表
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
     public DescribeLogstashInstancesRequest() {
     }
 
@@ -247,6 +270,12 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
                 this.VpcIds[i] = new String(source.VpcIds[i]);
             }
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -262,6 +291,7 @@ public class DescribeLogstashInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByKey", this.OrderByKey);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

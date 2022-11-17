@@ -23,11 +23,29 @@ import java.util.HashMap;
 public class CreateFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 出证报告 URL（有效期5分钟）
+    * 出证报告 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportId")
+    @Expose
+    private String ReportId;
+
+    /**
+    * 废除，字段无效
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
     @Expose
     private String ReportUrl;
+
+    /**
+    * 执行中：EvidenceStatusExecuting
+成功：EvidenceStatusSuccess
+失败：EvidenceStatusFailed
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +55,67 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 出证报告 URL（有效期5分钟） 
-     * @return ReportUrl 出证报告 URL（有效期5分钟）
+     * Get 出证报告 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportId 出证报告 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReportId() {
+        return this.ReportId;
+    }
+
+    /**
+     * Set 出证报告 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportId 出证报告 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportId(String ReportId) {
+        this.ReportId = ReportId;
+    }
+
+    /**
+     * Get 废除，字段无效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportUrl 废除，字段无效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportUrl() {
         return this.ReportUrl;
     }
 
     /**
-     * Set 出证报告 URL（有效期5分钟）
-     * @param ReportUrl 出证报告 URL（有效期5分钟）
+     * Set 废除，字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportUrl 废除，字段无效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportUrl(String ReportUrl) {
         this.ReportUrl = ReportUrl;
+    }
+
+    /**
+     * Get 执行中：EvidenceStatusExecuting
+成功：EvidenceStatusSuccess
+失败：EvidenceStatusFailed 
+     * @return Status 执行中：EvidenceStatusExecuting
+成功：EvidenceStatusSuccess
+失败：EvidenceStatusFailed
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 执行中：EvidenceStatusExecuting
+成功：EvidenceStatusSuccess
+失败：EvidenceStatusFailed
+     * @param Status 执行中：EvidenceStatusExecuting
+成功：EvidenceStatusSuccess
+失败：EvidenceStatusFailed
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
@@ -76,8 +142,14 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowEvidenceReportResponse(CreateFlowEvidenceReportResponse source) {
+        if (source.ReportId != null) {
+            this.ReportId = new String(source.ReportId);
+        }
         if (source.ReportUrl != null) {
             this.ReportUrl = new String(source.ReportUrl);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +161,9 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ReportId", this.ReportId);
         this.setParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
