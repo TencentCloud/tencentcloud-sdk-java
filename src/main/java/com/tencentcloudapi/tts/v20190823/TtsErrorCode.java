@@ -54,8 +54,14 @@ public enum TtsErrorCode {
     // ModelType非法。
      INVALIDPARAMETERVALUE_MODELTYPE("InvalidParameterValue.ModelType"),
      
+    // 文本分词错误。
+     INVALIDPARAMETERVALUE_PARTICIPLEERROR("InvalidParameterValue.ParticipleError"),
+     
     // PrimaryLanguage非法，请参考PrimaryLanguage参数说明。
      INVALIDPARAMETERVALUE_PRIMARYLANGUAGE("InvalidParameterValue.PrimaryLanguage"),
+     
+    // SSML标签非法。
+     INVALIDPARAMETERVALUE_SSMLINVALID("InvalidParameterValue.SSMLInvalid"),
      
     // SampleRate非法，请参考SampleRate参数说明。
      INVALIDPARAMETERVALUE_SAMPLERATE("InvalidParameterValue.SampleRate"),

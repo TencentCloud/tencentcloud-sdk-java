@@ -104,11 +104,19 @@ SourceType为点播（PullVodToLive）可以填多个，上限10个。
     private String EndTime;
 
     /**
-    * 拉流源所在地域（请就近选取）：
+    * 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
     */
     @SerializedName("Region")
     @Expose
@@ -483,32 +491,64 @@ SourceType为点播（PullVodToLive）可以填多个，上限10个。
     }
 
     /**
-     * Get 拉流源所在地域（请就近选取）：
+     * Get 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。 
-     * @return Region 拉流源所在地域（请就近选取）：
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。 
+     * @return Region 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 拉流源所在地域（请就近选取）：
+     * Set 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
-     * @param Region 拉流源所在地域（请就近选取）：
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
+     * @param Region 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
      */
     public void setRegion(String Region) {
         this.Region = Region;

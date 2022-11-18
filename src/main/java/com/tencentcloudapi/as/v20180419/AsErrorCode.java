@@ -93,6 +93,9 @@ public enum AsErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+    // 当前账户不支持带宽包ID参数。
+     INVALIDPARAMETERVALUE_ACCOUNTNOTSUPPORTBANDWIDTHPACKAGEID("InvalidParameterValue.AccountNotSupportBandwidthPackageId"),
+     
     // 指定的基础容量过大，需小于等于最大实例数。
      INVALIDPARAMETERVALUE_BASECAPACITYTOOLARGE("InvalidParameterValue.BaseCapacityTooLarge"),
      
@@ -131,6 +134,9 @@ public enum AsErrorCode {
      
     // 主机名不合法。
      INVALIDPARAMETERVALUE_HOSTNAMEILLEGAL("InvalidParameterValue.HostNameIllegal"),
+     
+    // 指定的IPv6公网带宽计费模式不合法。
+     INVALIDPARAMETERVALUE_IPV6INTERNETCHARGETYPE("InvalidParameterValue.IPv6InternetChargeType"),
      
     // 指定的镜像不存在。
      INVALIDPARAMETERVALUE_IMAGENOTFOUND("InvalidParameterValue.ImageNotFound"),
@@ -212,6 +218,9 @@ public enum AsErrorCode {
      
     // 取值超出限制。
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
+     
+    // 当前账户在带宽包模式中必须填写带宽包ID参数。
+     INVALIDPARAMETERVALUE_MISSINGBANDWIDTHPACKAGEID("InvalidParameterValue.MissingBandwidthPackageId"),
      
     // 无资源权限。
      INVALIDPARAMETERVALUE_NORESOURCEPERMISSION("InvalidParameterValue.NoResourcePermission"),
@@ -341,6 +350,9 @@ public enum AsErrorCode {
      
     // 通知不存在。
      RESOURCENOTFOUND_AUTOSCALINGNOTIFICATIONNOTFOUND("ResourceNotFound.AutoScalingNotificationNotFound"),
+     
+    // 指定的带宽包ID不存在。
+     RESOURCENOTFOUND_BANDWIDTHPACKAGEIDNOTFOUND("ResourceNotFound.BandwidthPackageIdNotFound"),
      
     // 指定的 CMQ queue 不存在。
      RESOURCENOTFOUND_CMQQUEUENOTFOUND("ResourceNotFound.CmqQueueNotFound"),

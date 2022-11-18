@@ -329,6 +329,22 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private NotificationHook [] NotificationHooks;
 
     /**
+    * 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkReceiveRate")
+    @Expose
+    private Float NetworkReceiveRate;
+
+    /**
+    * 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkSendRate")
+    @Expose
+    private Float NetworkSendRate;
+
+    /**
      * Get 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 任务的JobID
@@ -1096,6 +1112,46 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.NotificationHooks = NotificationHooks;
     }
 
+    /**
+     * Get 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkReceiveRate 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getNetworkReceiveRate() {
+        return this.NetworkReceiveRate;
+    }
+
+    /**
+     * Set 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkReceiveRate 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkReceiveRate(Float NetworkReceiveRate) {
+        this.NetworkReceiveRate = NetworkReceiveRate;
+    }
+
+    /**
+     * Get 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkSendRate 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getNetworkSendRate() {
+        return this.NetworkSendRate;
+    }
+
+    /**
+     * Set 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkSendRate 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkSendRate(Float NetworkSendRate) {
+        this.NetworkSendRate = NetworkSendRate;
+    }
+
     public Job() {
     }
 
@@ -1248,6 +1304,12 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
                 this.NotificationHooks[i] = new NotificationHook(source.NotificationHooks[i]);
             }
         }
+        if (source.NetworkReceiveRate != null) {
+            this.NetworkReceiveRate = new Float(source.NetworkReceiveRate);
+        }
+        if (source.NetworkSendRate != null) {
+            this.NetworkSendRate = new Float(source.NetworkSendRate);
+        }
     }
 
 
@@ -1293,6 +1355,8 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
+        this.setParamSimple(map, prefix + "NetworkReceiveRate", this.NetworkReceiveRate);
+        this.setParamSimple(map, prefix + "NetworkSendRate", this.NetworkSendRate);
 
     }
 }

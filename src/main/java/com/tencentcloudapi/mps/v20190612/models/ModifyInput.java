@@ -96,6 +96,13 @@ public class ModifyInput extends AbstractModel{
     private CreateInputRTSPPullSettings RTSPPullSettings;
 
     /**
+    * HLS_PULL的配置信息。
+    */
+    @SerializedName("HLSPullSettings")
+    @Expose
+    private CreateInputHLSPullSettings HLSPullSettings;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -267,6 +274,22 @@ public class ModifyInput extends AbstractModel{
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
+    /**
+     * Get HLS_PULL的配置信息。 
+     * @return HLSPullSettings HLS_PULL的配置信息。
+     */
+    public CreateInputHLSPullSettings getHLSPullSettings() {
+        return this.HLSPullSettings;
+    }
+
+    /**
+     * Set HLS_PULL的配置信息。
+     * @param HLSPullSettings HLS_PULL的配置信息。
+     */
+    public void setHLSPullSettings(CreateInputHLSPullSettings HLSPullSettings) {
+        this.HLSPullSettings = HLSPullSettings;
+    }
+
     public ModifyInput() {
     }
 
@@ -308,6 +331,9 @@ public class ModifyInput extends AbstractModel{
         if (source.RTSPPullSettings != null) {
             this.RTSPPullSettings = new CreateInputRTSPPullSettings(source.RTSPPullSettings);
         }
+        if (source.HLSPullSettings != null) {
+            this.HLSPullSettings = new CreateInputHLSPullSettings(source.HLSPullSettings);
+        }
     }
 
 
@@ -325,6 +351,7 @@ public class ModifyInput extends AbstractModel{
         this.setParamSimple(map, prefix + "FailOver", this.FailOver);
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+        this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
 
     }
 }

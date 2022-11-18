@@ -180,6 +180,13 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     private String DiskTypePolicy;
 
     /**
+    * IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+    */
+    @SerializedName("IPv6InternetAccessible")
+    @Expose
+    private IPv6InternetAccessible IPv6InternetAccessible;
+
+    /**
      * Get 启动配置ID。 
      * @return LaunchConfigurationId 启动配置ID。
      */
@@ -555,6 +562,22 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
+    /**
+     * Get IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。 
+     * @return IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     */
+    public IPv6InternetAccessible getIPv6InternetAccessible() {
+        return this.IPv6InternetAccessible;
+    }
+
+    /**
+     * Set IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     * @param IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     */
+    public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
+        this.IPv6InternetAccessible = IPv6InternetAccessible;
+    }
+
     public UpgradeLaunchConfigurationRequest() {
     }
 
@@ -638,6 +661,9 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
         if (source.DiskTypePolicy != null) {
             this.DiskTypePolicy = new String(source.DiskTypePolicy);
         }
+        if (source.IPv6InternetAccessible != null) {
+            this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
+        }
     }
 
 
@@ -666,6 +692,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+        this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
 
     }
 }

@@ -93,6 +93,27 @@ public class User extends AbstractModel{
     private String Desc;
 
     /**
+    * 该字段表示业务群聊场景时的房间ID。
+    */
+    @SerializedName("RoomId")
+    @Expose
+    private String RoomId;
+
+    /**
+    * 该字段表示消息接受者ID
+    */
+    @SerializedName("ReceiverId")
+    @Expose
+    private String ReceiverId;
+
+    /**
+    * 消息生成时间，精确到毫秒
+    */
+    @SerializedName("SendTime")
+    @Expose
+    private Long SendTime;
+
+    /**
      * Get 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
 备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。 
      * @return UserId 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
@@ -264,6 +285,54 @@ public class User extends AbstractModel{
         this.Desc = Desc;
     }
 
+    /**
+     * Get 该字段表示业务群聊场景时的房间ID。 
+     * @return RoomId 该字段表示业务群聊场景时的房间ID。
+     */
+    public String getRoomId() {
+        return this.RoomId;
+    }
+
+    /**
+     * Set 该字段表示业务群聊场景时的房间ID。
+     * @param RoomId 该字段表示业务群聊场景时的房间ID。
+     */
+    public void setRoomId(String RoomId) {
+        this.RoomId = RoomId;
+    }
+
+    /**
+     * Get 该字段表示消息接受者ID 
+     * @return ReceiverId 该字段表示消息接受者ID
+     */
+    public String getReceiverId() {
+        return this.ReceiverId;
+    }
+
+    /**
+     * Set 该字段表示消息接受者ID
+     * @param ReceiverId 该字段表示消息接受者ID
+     */
+    public void setReceiverId(String ReceiverId) {
+        this.ReceiverId = ReceiverId;
+    }
+
+    /**
+     * Get 消息生成时间，精确到毫秒 
+     * @return SendTime 消息生成时间，精确到毫秒
+     */
+    public Long getSendTime() {
+        return this.SendTime;
+    }
+
+    /**
+     * Set 消息生成时间，精确到毫秒
+     * @param SendTime 消息生成时间，精确到毫秒
+     */
+    public void setSendTime(Long SendTime) {
+        this.SendTime = SendTime;
+    }
+
     public User() {
     }
 
@@ -299,6 +368,15 @@ public class User extends AbstractModel{
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.ReceiverId != null) {
+            this.ReceiverId = new String(source.ReceiverId);
+        }
+        if (source.SendTime != null) {
+            this.SendTime = new Long(source.SendTime);
+        }
     }
 
 
@@ -315,6 +393,9 @@ public class User extends AbstractModel{
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "HeadUrl", this.HeadUrl);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "ReceiverId", this.ReceiverId);
+        this.setParamSimple(map, prefix + "SendTime", this.SendTime);
 
     }
 }

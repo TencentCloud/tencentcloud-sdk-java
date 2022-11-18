@@ -234,6 +234,13 @@ public class LaunchConfiguration extends AbstractModel{
     private String HpcClusterId;
 
     /**
+    * IPv6公网带宽相关信息设置。
+    */
+    @SerializedName("IPv6InternetAccessible")
+    @Expose
+    private IPv6InternetAccessible IPv6InternetAccessible;
+
+    /**
      * Get 实例所属项目ID。 
      * @return ProjectId 实例所属项目ID。
      */
@@ -729,6 +736,22 @@ public class LaunchConfiguration extends AbstractModel{
         this.HpcClusterId = HpcClusterId;
     }
 
+    /**
+     * Get IPv6公网带宽相关信息设置。 
+     * @return IPv6InternetAccessible IPv6公网带宽相关信息设置。
+     */
+    public IPv6InternetAccessible getIPv6InternetAccessible() {
+        return this.IPv6InternetAccessible;
+    }
+
+    /**
+     * Set IPv6公网带宽相关信息设置。
+     * @param IPv6InternetAccessible IPv6公网带宽相关信息设置。
+     */
+    public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
+        this.IPv6InternetAccessible = IPv6InternetAccessible;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -842,6 +865,9 @@ public class LaunchConfiguration extends AbstractModel{
         if (source.HpcClusterId != null) {
             this.HpcClusterId = new String(source.HpcClusterId);
         }
+        if (source.IPv6InternetAccessible != null) {
+            this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
+        }
     }
 
 
@@ -878,6 +904,7 @@ public class LaunchConfiguration extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
 
     }
 }

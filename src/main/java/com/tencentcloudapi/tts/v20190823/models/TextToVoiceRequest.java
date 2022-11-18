@@ -105,6 +105,13 @@ public class TextToVoiceRequest extends AbstractModel{
     private Boolean EnableSubtitle;
 
     /**
+    * 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+    */
+    @SerializedName("SegmentRate")
+    @Expose
+    private Long SegmentRate;
+
+    /**
      * Get 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。 
      * @return Text 合成语音的源文本，按UTF-8编码统一计算。
@@ -300,6 +307,22 @@ public class TextToVoiceRequest extends AbstractModel{
         this.EnableSubtitle = EnableSubtitle;
     }
 
+    /**
+     * Get 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。 
+     * @return SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+     */
+    public Long getSegmentRate() {
+        return this.SegmentRate;
+    }
+
+    /**
+     * Set 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+     * @param SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+     */
+    public void setSegmentRate(Long SegmentRate) {
+        this.SegmentRate = SegmentRate;
+    }
+
     public TextToVoiceRequest() {
     }
 
@@ -341,6 +364,9 @@ public class TextToVoiceRequest extends AbstractModel{
         if (source.EnableSubtitle != null) {
             this.EnableSubtitle = new Boolean(source.EnableSubtitle);
         }
+        if (source.SegmentRate != null) {
+            this.SegmentRate = new Long(source.SegmentRate);
+        }
     }
 
 
@@ -359,6 +385,7 @@ public class TextToVoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
+        this.setParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
 
     }
 }

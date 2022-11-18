@@ -120,6 +120,14 @@ public class DescribeInput extends AbstractModel{
     private DescribeInputRTSPPullSettings RTSPPullSettings;
 
     /**
+    * 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HLSPullSettings")
+    @Expose
+    private DescribeInputHLSPullSettings HLSPullSettings;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -351,6 +359,26 @@ public class DescribeInput extends AbstractModel{
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
+    /**
+     * Get 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HLSPullSettings 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeInputHLSPullSettings getHLSPullSettings() {
+        return this.HLSPullSettings;
+    }
+
+    /**
+     * Set 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HLSPullSettings 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHLSPullSettings(DescribeInputHLSPullSettings HLSPullSettings) {
+        this.HLSPullSettings = HLSPullSettings;
+    }
+
     public DescribeInput() {
     }
 
@@ -404,6 +432,9 @@ public class DescribeInput extends AbstractModel{
         if (source.RTSPPullSettings != null) {
             this.RTSPPullSettings = new DescribeInputRTSPPullSettings(source.RTSPPullSettings);
         }
+        if (source.HLSPullSettings != null) {
+            this.HLSPullSettings = new DescribeInputHLSPullSettings(source.HLSPullSettings);
+        }
     }
 
 
@@ -424,6 +455,7 @@ public class DescribeInput extends AbstractModel{
         this.setParamSimple(map, prefix + "FailOver", this.FailOver);
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+        this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
 
     }
 }

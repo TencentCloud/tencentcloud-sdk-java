@@ -86,6 +86,13 @@ public class CreateInput extends AbstractModel{
     private CreateInputRTSPPullSettings RTSPPullSettings;
 
     /**
+    * 输入的HLS_PULL配置信息。
+    */
+    @SerializedName("HLSPullSettings")
+    @Expose
+    private CreateInputHLSPullSettings HLSPullSettings;
+
+    /**
      * Get 输入名称，可填大小写、数字和下划线，长度为[1, 32]。 
      * @return InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      */
@@ -229,6 +236,22 @@ public class CreateInput extends AbstractModel{
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
+    /**
+     * Get 输入的HLS_PULL配置信息。 
+     * @return HLSPullSettings 输入的HLS_PULL配置信息。
+     */
+    public CreateInputHLSPullSettings getHLSPullSettings() {
+        return this.HLSPullSettings;
+    }
+
+    /**
+     * Set 输入的HLS_PULL配置信息。
+     * @param HLSPullSettings 输入的HLS_PULL配置信息。
+     */
+    public void setHLSPullSettings(CreateInputHLSPullSettings HLSPullSettings) {
+        this.HLSPullSettings = HLSPullSettings;
+    }
+
     public CreateInput() {
     }
 
@@ -267,6 +290,9 @@ public class CreateInput extends AbstractModel{
         if (source.RTSPPullSettings != null) {
             this.RTSPPullSettings = new CreateInputRTSPPullSettings(source.RTSPPullSettings);
         }
+        if (source.HLSPullSettings != null) {
+            this.HLSPullSettings = new CreateInputHLSPullSettings(source.HLSPullSettings);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class CreateInput extends AbstractModel{
         this.setParamSimple(map, prefix + "FailOver", this.FailOver);
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+        this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
 
     }
 }

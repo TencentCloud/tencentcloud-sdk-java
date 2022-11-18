@@ -59,6 +59,26 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *通过此接口设置和更新预置密钥
+     * @param req CreateEncryptedKeyRequest
+     * @return CreateEncryptedKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEncryptedKeyResponse CreateEncryptedKey(CreateEncryptedKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEncryptedKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEncryptedKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEncryptedKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *移动网络发起Qos加速过程
      * @param req CreateQosRequest
      * @return CreateQosResponse
@@ -191,6 +211,26 @@ public class MnaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetFlowStatisticResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetFlowStatistic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取公钥用于验签
+     * @param req GetPublicKeyRequest
+     * @return GetPublicKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPublicKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetPublicKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
