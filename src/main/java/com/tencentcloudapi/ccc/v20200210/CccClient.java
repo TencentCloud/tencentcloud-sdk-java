@@ -119,6 +119,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *用于无限频率地呼叫坐席手机
+     * @param req CreateCarrierPrivilegeNumberApplicantRequest
+     * @return CreateCarrierPrivilegeNumberApplicantResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCarrierPrivilegeNumberApplicantResponse CreateCarrierPrivilegeNumberApplicant(CreateCarrierPrivilegeNumberApplicantRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCarrierPrivilegeNumberApplicantResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCarrierPrivilegeNumberApplicantResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCarrierPrivilegeNumberApplicant");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建话机账号
      * @param req CreateExtensionRequest
      * @return CreateExtensionResponse
@@ -239,6 +259,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *查询生效运营商白名单规则
+     * @param req DescribeActiveCarrierPrivilegeNumberRequest
+     * @return DescribeActiveCarrierPrivilegeNumberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActiveCarrierPrivilegeNumberResponse DescribeActiveCarrierPrivilegeNumber(DescribeActiveCarrierPrivilegeNumberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeActiveCarrierPrivilegeNumberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeActiveCarrierPrivilegeNumberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeActiveCarrierPrivilegeNumber");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询自动外呼任务详情
      * @param req DescribeAutoCalloutTaskRequest
      * @return DescribeAutoCalloutTaskResponse
@@ -311,6 +351,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCallInMetricsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCallInMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询单状态
+     * @param req DescribeCarrierPrivilegeNumberApplicantsRequest
+     * @return DescribeCarrierPrivilegeNumberApplicantsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCarrierPrivilegeNumberApplicantsResponse DescribeCarrierPrivilegeNumberApplicants(DescribeCarrierPrivilegeNumberApplicantsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCarrierPrivilegeNumberApplicantsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCarrierPrivilegeNumberApplicantsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCarrierPrivilegeNumberApplicants");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

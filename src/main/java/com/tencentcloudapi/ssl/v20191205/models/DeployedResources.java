@@ -44,12 +44,20 @@ public class DeployedResources extends AbstractModel{
     private String Type;
 
     /**
-    * 关联资源ID或关联域名
+    * 不建议使用。字段返回和Resources相同。本字段后续只返回null
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
+
+    /**
+    * 关联资源ID或关联域名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Resources")
+    @Expose
+    private String [] Resources;
 
     /**
      * Get 证书ID 
@@ -100,9 +108,9 @@ public class DeployedResources extends AbstractModel{
     }
 
     /**
-     * Get 关联资源ID或关联域名
+     * Get 不建议使用。字段返回和Resources相同。本字段后续只返回null
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceIds 关联资源ID或关联域名
+     * @return ResourceIds 不建议使用。字段返回和Resources相同。本字段后续只返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceIds() {
@@ -110,13 +118,33 @@ public class DeployedResources extends AbstractModel{
     }
 
     /**
-     * Set 关联资源ID或关联域名
+     * Set 不建议使用。字段返回和Resources相同。本字段后续只返回null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceIds 关联资源ID或关联域名
+     * @param ResourceIds 不建议使用。字段返回和Resources相同。本字段后续只返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
+    }
+
+    /**
+     * Get 关联资源ID或关联域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Resources 关联资源ID或关联域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set 关联资源ID或关联域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Resources 关联资源ID或关联域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResources(String [] Resources) {
+        this.Resources = Resources;
     }
 
     public DeployedResources() {
@@ -142,6 +170,12 @@ public class DeployedResources extends AbstractModel{
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
         }
+        if (source.Resources != null) {
+            this.Resources = new String[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new String(source.Resources[i]);
+            }
+        }
     }
 
 
@@ -153,6 +187,7 @@ public class DeployedResources extends AbstractModel{
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamArraySimple(map, prefix + "Resources.", this.Resources);
 
     }
 }

@@ -30,6 +30,13 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
     private String SnapshotId;
 
     /**
+    * 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+    */
+    @SerializedName("SnapshotIds")
+    @Expose
+    private String [] SnapshotIds;
+
+    /**
      * Get 文件系统快照id 
      * @return SnapshotId 文件系统快照id
      */
@@ -45,6 +52,22 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
         this.SnapshotId = SnapshotId;
     }
 
+    /**
+     * Get 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项 
+     * @return SnapshotIds 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     */
+    public String [] getSnapshotIds() {
+        return this.SnapshotIds;
+    }
+
+    /**
+     * Set 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     * @param SnapshotIds 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     */
+    public void setSnapshotIds(String [] SnapshotIds) {
+        this.SnapshotIds = SnapshotIds;
+    }
+
     public DeleteCfsSnapshotRequest() {
     }
 
@@ -56,6 +79,12 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
+        if (source.SnapshotIds != null) {
+            this.SnapshotIds = new String[source.SnapshotIds.length];
+            for (int i = 0; i < source.SnapshotIds.length; i++) {
+                this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
 
     }
 }

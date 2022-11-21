@@ -93,6 +93,27 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private String OsCustomizeType;
 
     /**
+    * GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
+    * base64编码后的自定义脚本
+    */
+    @SerializedName("UserScript")
+    @Expose
+    private String UserScript;
+
+    /**
+    * 更新label和taint时忽略存量节点
+    */
+    @SerializedName("IgnoreExistedNode")
+    @Expose
+    private Boolean IgnoreExistedNode;
+
+    /**
     * 节点自定义参数
     */
     @SerializedName("ExtraArgs")
@@ -119,6 +140,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
+
+    /**
+    * dockerd --graph 指定值, 默认为 /var/lib/docker
+    */
+    @SerializedName("DockerGraphPath")
+    @Expose
+    private String DockerGraphPath;
 
     /**
      * Get 集群ID 
@@ -281,6 +309,54 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性 
+     * @return GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     * @param GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
+     * Get base64编码后的自定义脚本 
+     * @return UserScript base64编码后的自定义脚本
+     */
+    public String getUserScript() {
+        return this.UserScript;
+    }
+
+    /**
+     * Set base64编码后的自定义脚本
+     * @param UserScript base64编码后的自定义脚本
+     */
+    public void setUserScript(String UserScript) {
+        this.UserScript = UserScript;
+    }
+
+    /**
+     * Get 更新label和taint时忽略存量节点 
+     * @return IgnoreExistedNode 更新label和taint时忽略存量节点
+     */
+    public Boolean getIgnoreExistedNode() {
+        return this.IgnoreExistedNode;
+    }
+
+    /**
+     * Set 更新label和taint时忽略存量节点
+     * @param IgnoreExistedNode 更新label和taint时忽略存量节点
+     */
+    public void setIgnoreExistedNode(Boolean IgnoreExistedNode) {
+        this.IgnoreExistedNode = IgnoreExistedNode;
+    }
+
+    /**
      * Get 节点自定义参数 
      * @return ExtraArgs 节点自定义参数
      */
@@ -344,6 +420,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get dockerd --graph 指定值, 默认为 /var/lib/docker 
+     * @return DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+     */
+    public String getDockerGraphPath() {
+        return this.DockerGraphPath;
+    }
+
+    /**
+     * Set dockerd --graph 指定值, 默认为 /var/lib/docker
+     * @param DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+     */
+    public void setDockerGraphPath(String DockerGraphPath) {
+        this.DockerGraphPath = DockerGraphPath;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -388,6 +480,15 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.OsCustomizeType != null) {
             this.OsCustomizeType = new String(source.OsCustomizeType);
         }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
+        if (source.UserScript != null) {
+            this.UserScript = new String(source.UserScript);
+        }
+        if (source.IgnoreExistedNode != null) {
+            this.IgnoreExistedNode = new Boolean(source.IgnoreExistedNode);
+        }
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
@@ -402,6 +503,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         }
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
+        if (source.DockerGraphPath != null) {
+            this.DockerGraphPath = new String(source.DockerGraphPath);
         }
     }
 
@@ -420,10 +524,14 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+        this.setParamSimple(map, prefix + "UserScript", this.UserScript);
+        this.setParamSimple(map, prefix + "IgnoreExistedNode", this.IgnoreExistedNode);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
 
     }
 }

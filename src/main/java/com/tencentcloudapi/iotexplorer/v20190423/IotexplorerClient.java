@@ -699,6 +699,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取实时位置解析
+     * @param req DescribeDeviceLocationSolveRequest
+     * @return DescribeDeviceLocationSolveResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolve(DescribeDeviceLocationSolveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceLocationSolveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceLocationSolveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeviceLocationSolve");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取设备位置列表
      * @param req DescribeDevicePositionListRequest
      * @return DescribeDevicePositionListResponse
