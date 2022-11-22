@@ -1659,7 +1659,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *升级实例
+     *变更实例配置
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException

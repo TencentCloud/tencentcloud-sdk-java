@@ -101,6 +101,14 @@ public class TemplateInfo extends AbstractModel{
     private String PreviewUrl;
 
     /**
+    * 渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelTemplateId")
+    @Expose
+    private String ChannelTemplateId;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -280,6 +288,26 @@ public class TemplateInfo extends AbstractModel{
         this.PreviewUrl = PreviewUrl;
     }
 
+    /**
+     * Get 渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelTemplateId 渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelTemplateId() {
+        return this.ChannelTemplateId;
+    }
+
+    /**
+     * Set 渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelTemplateId 渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelTemplateId(String ChannelTemplateId) {
+        this.ChannelTemplateId = ChannelTemplateId;
+    }
+
     public TemplateInfo() {
     }
 
@@ -330,6 +358,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.PreviewUrl != null) {
             this.PreviewUrl = new String(source.PreviewUrl);
         }
+        if (source.ChannelTemplateId != null) {
+            this.ChannelTemplateId = new String(source.ChannelTemplateId);
+        }
     }
 
 
@@ -348,6 +379,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+        this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
 
     }
 }

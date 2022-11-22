@@ -194,6 +194,37 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
+     *可对图片中厨师穿戴进行识别，支持厨师服识别，厨师帽识别，赤膊识别和口罩识别,可应用于明厨亮灶场景。
+"被优选过滤"标签值在人体优选开关开启时才会返回。
+厨师服：厨师服定义为白色上衣
+厨师服识别(酒店版)：厨师服定义为红色，白色，黑色上衣
+
+|序号 | 标签名称 | 标签值 |
+| :-----|  :----------   |:-----------------  |
+| 1 | 厨师服识别<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+| 2 | 厨师服识别（酒店版）<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+| 3 | 厨师帽识别<div style="width: 70pt"> |无厨师帽、有厨师帽、被优选过滤	|
+| 4 | 赤膊识别<div style="width: 70pt"> |非赤膊、赤膊、被优选过滤|
+| 5 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤	|
+     * @param req DetectChefDressRequest
+     * @return DetectChefDressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectChefDressResponse DetectChefDress(DetectChefDressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectChefDressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectChefDressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetectChefDress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *输入一张图片，返回AI针对一张图片是否是恶心的一系列判断值。
 
 通过恶心图片识别, 可以判断一张图片是否令人恶心, 同时给出它属于的潜在类别, 让您能够过滤掉使人不愉快的图片。
@@ -413,6 +444,39 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetectProductBetaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DetectProductBeta");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *识别常安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
+"被优选过滤"标签值在人体优选开关开启时才会返回。
+
+|序号 | 标签名称 | 标签值 |
+| :-----|  :----------   |:-----------------  |
+| 1 | 安全帽识别<div style="width: 70pt"> |无安全帽、有安全帽、被优选过滤|
+| 2 | 玩手机识别<div style="width: 70pt"> |没有电话、打电话、玩手机、被优选过滤|
+| 3 | 抽烟识别<div style="width: 70pt"> |没有抽烟、抽烟、被优选过滤	|
+| 4 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤|
+| 5 | 工地安全带识别<div style="width: 70pt"> |无工地安全带、工地安全带、被优选过滤	|
+| 6 | 手套识别<div style="width: 70pt"> |无手套、有手套、手套不确定、被优选过滤	|
+| 7 | 工服识别<div style="width: 70pt"> |无工服、有工服、被优选过滤|
+| 8 | 护目镜识别<div style="width: 70pt"> |无护目镜、有护目镜、被优选过滤|
+| 9 | 反光衣识别<div style="width: 70pt"> |无反光衣、有反光衣、被优选过滤|
+     * @param req DetectSecurityRequest
+     * @return DetectSecurityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectSecurityResponse DetectSecurity(DetectSecurityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectSecurityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectSecurityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetectSecurity");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

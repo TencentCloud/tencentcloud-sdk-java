@@ -48,7 +48,7 @@ public class DescribeKeyPairsRequest extends AbstractModel{
 <li>key-id</li>按照【密钥对ID】进行过滤。
 类型：String
 必选：否
-<li>key-name</li>按照【密钥对名称】进行过滤。
+<li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
@@ -110,7 +110,7 @@ public class DescribeKeyPairsRequest extends AbstractModel{
 <li>key-id</li>按照【密钥对ID】进行过滤。
 类型：String
 必选：否
-<li>key-name</li>按照【密钥对名称】进行过滤。
+<li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。 
@@ -118,7 +118,7 @@ public class DescribeKeyPairsRequest extends AbstractModel{
 <li>key-id</li>按照【密钥对ID】进行过滤。
 类型：String
 必选：否
-<li>key-name</li>按照【密钥对名称】进行过滤。
+<li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
@@ -132,7 +132,7 @@ public class DescribeKeyPairsRequest extends AbstractModel{
 <li>key-id</li>按照【密钥对ID】进行过滤。
 类型：String
 必选：否
-<li>key-name</li>按照【密钥对名称】进行过滤。
+<li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
@@ -140,7 +140,7 @@ public class DescribeKeyPairsRequest extends AbstractModel{
 <li>key-id</li>按照【密钥对ID】进行过滤。
 类型：String
 必选：否
-<li>key-name</li>按照【密钥对名称】进行过滤。
+<li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。

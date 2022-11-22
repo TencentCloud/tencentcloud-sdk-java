@@ -128,6 +128,14 @@ public class DescribeInput extends AbstractModel{
     private DescribeInputHLSPullSettings HLSPullSettings;
 
     /**
+    * 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResilientStream")
+    @Expose
+    private ResilientStreamConf ResilientStream;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -379,6 +387,26 @@ public class DescribeInput extends AbstractModel{
         this.HLSPullSettings = HLSPullSettings;
     }
 
+    /**
+     * Get 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResilientStream 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResilientStreamConf getResilientStream() {
+        return this.ResilientStream;
+    }
+
+    /**
+     * Set 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResilientStream 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResilientStream(ResilientStreamConf ResilientStream) {
+        this.ResilientStream = ResilientStream;
+    }
+
     public DescribeInput() {
     }
 
@@ -435,6 +463,9 @@ public class DescribeInput extends AbstractModel{
         if (source.HLSPullSettings != null) {
             this.HLSPullSettings = new DescribeInputHLSPullSettings(source.HLSPullSettings);
         }
+        if (source.ResilientStream != null) {
+            this.ResilientStream = new ResilientStreamConf(source.ResilientStream);
+        }
     }
 
 
@@ -456,6 +487,7 @@ public class DescribeInput extends AbstractModel{
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+        this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
 
     }
 }

@@ -44,6 +44,20 @@ public class SubnetInfos extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
+    * 系统
+    */
+    @SerializedName("Os")
+    @Expose
+    private String Os;
+
+    /**
+    * 硬件架构
+    */
+    @SerializedName("Arch")
+    @Expose
+    private String Arch;
+
+    /**
      * Get 子网id 
      * @return SubnetId 子网id
      */
@@ -91,6 +105,38 @@ public class SubnetInfos extends AbstractModel{
         this.SecurityGroups = SecurityGroups;
     }
 
+    /**
+     * Get 系统 
+     * @return Os 系统
+     */
+    public String getOs() {
+        return this.Os;
+    }
+
+    /**
+     * Set 系统
+     * @param Os 系统
+     */
+    public void setOs(String Os) {
+        this.Os = Os;
+    }
+
+    /**
+     * Get 硬件架构 
+     * @return Arch 硬件架构
+     */
+    public String getArch() {
+        return this.Arch;
+    }
+
+    /**
+     * Set 硬件架构
+     * @param Arch 硬件架构
+     */
+    public void setArch(String Arch) {
+        this.Arch = Arch;
+    }
+
     public SubnetInfos() {
     }
 
@@ -111,6 +157,12 @@ public class SubnetInfos extends AbstractModel{
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.Os != null) {
+            this.Os = new String(source.Os);
+        }
+        if (source.Arch != null) {
+            this.Arch = new String(source.Arch);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class SubnetInfos extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "Os", this.Os);
+        this.setParamSimple(map, prefix + "Arch", this.Arch);
 
     }
 }

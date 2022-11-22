@@ -131,6 +131,13 @@ MobileCheck：手机号验证
     private String ApproverVerifyType;
 
     /**
+    * 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+    */
+    @SerializedName("SignBeanTag")
+    @Expose
+    private Long SignBeanTag;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -382,6 +389,22 @@ MobileCheck：手机号验证
         this.ApproverVerifyType = ApproverVerifyType;
     }
 
+    /**
+     * Get 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件 
+     * @return SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     */
+    public Long getSignBeanTag() {
+        return this.SignBeanTag;
+    }
+
+    /**
+     * Set 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * @param SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     */
+    public void setSignBeanTag(Long SignBeanTag) {
+        this.SignBeanTag = SignBeanTag;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -444,6 +467,9 @@ MobileCheck：手机号验证
         if (source.ApproverVerifyType != null) {
             this.ApproverVerifyType = new String(source.ApproverVerifyType);
         }
+        if (source.SignBeanTag != null) {
+            this.SignBeanTag = new Long(source.SignBeanTag);
+        }
     }
 
 
@@ -466,6 +492,7 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
+        this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
 
     }
 }

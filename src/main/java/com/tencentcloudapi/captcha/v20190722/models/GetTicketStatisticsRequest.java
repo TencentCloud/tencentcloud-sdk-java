@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetTicketStatisticsRequest extends AbstractModel{
 
     /**
-    * 验证码appid
+    * 验证码AppId
     */
     @SerializedName("CaptchaAppId")
     @Expose
@@ -51,16 +51,16 @@ public class GetTicketStatisticsRequest extends AbstractModel{
     private String Dimension;
 
     /**
-     * Get 验证码appid 
-     * @return CaptchaAppId 验证码appid
+     * Get 验证码AppId 
+     * @return CaptchaAppId 验证码AppId
      */
     public String getCaptchaAppId() {
         return this.CaptchaAppId;
     }
 
     /**
-     * Set 验证码appid
-     * @param CaptchaAppId 验证码appid
+     * Set 验证码AppId
+     * @param CaptchaAppId 验证码AppId
      */
     public void setCaptchaAppId(String CaptchaAppId) {
         this.CaptchaAppId = CaptchaAppId;

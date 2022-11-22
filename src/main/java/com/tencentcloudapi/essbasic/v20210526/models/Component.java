@@ -222,6 +222,14 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private Float OffsetY;
 
     /**
+    * 渠道控件ID。
+如果不为空，属于渠道预设控件；
+    */
+    @SerializedName("ChannelComponentId")
+    @Expose
+    private String ChannelComponentId;
+
+    /**
     * 指定关键字页码
     */
     @SerializedName("KeywordPage")
@@ -811,6 +819,26 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
+     * Get 渠道控件ID。
+如果不为空，属于渠道预设控件； 
+     * @return ChannelComponentId 渠道控件ID。
+如果不为空，属于渠道预设控件；
+     */
+    public String getChannelComponentId() {
+        return this.ChannelComponentId;
+    }
+
+    /**
+     * Set 渠道控件ID。
+如果不为空，属于渠道预设控件；
+     * @param ChannelComponentId 渠道控件ID。
+如果不为空，属于渠道预设控件；
+     */
+    public void setChannelComponentId(String ChannelComponentId) {
+        this.ChannelComponentId = ChannelComponentId;
+    }
+
+    /**
      * Get 指定关键字页码 
      * @return KeywordPage 指定关键字页码
      */
@@ -923,6 +951,9 @@ SIGN_PAGING_SEAL - 可以指定印章ID
         if (source.OffsetY != null) {
             this.OffsetY = new Float(source.OffsetY);
         }
+        if (source.ChannelComponentId != null) {
+            this.ChannelComponentId = new String(source.ChannelComponentId);
+        }
         if (source.KeywordPage != null) {
             this.KeywordPage = new Long(source.KeywordPage);
         }
@@ -961,6 +992,7 @@ SIGN_PAGING_SEAL - 可以指定印章ID
         this.setParamSimple(map, prefix + "ComponentDescription", this.ComponentDescription);
         this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
         this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
+        this.setParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
         this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
         this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);

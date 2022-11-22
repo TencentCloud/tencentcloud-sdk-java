@@ -147,6 +147,9 @@ public enum TemErrorCode {
     // 弹性伸缩最小值/最大值不合法。
      INVALIDPARAMETERVALUE_HPAMINMAXINVALID("InvalidParameterValue.HpaMinMaxInvalid"),
      
+    // 弹性伸缩阈值不合法。
+     INVALIDPARAMETERVALUE_HPATHRESHOLDINVALID("InvalidParameterValue.HpaThresholdInvalid"),
+     
     // 访问配置重定向需要启用 HTTPS。
      INVALIDPARAMETERVALUE_INGRESSREWRITEREQUIREDHTTPSENABLE("InvalidParameterValue.IngressRewriteRequiredHttpsEnable"),
      
@@ -254,6 +257,9 @@ public enum TemErrorCode {
      
     // 版本的路由流量不为0。
      INVALIDPARAMETERVALUE_VERSIONROUTERATENOTZERO("InvalidParameterValue.VersionRouteRateNotZero"),
+     
+    // 弹性规则名称不能为空。
+     MISSINGPARAMETER_AUTOSCALERNAMENULL("MissingParameter.AutoScalerNameNull"),
      
     // 部署方式不能为空。
      MISSINGPARAMETER_DEPLOYMODENULL("MissingParameter.DeployModeNull"),

@@ -156,6 +156,13 @@ MobileCheck：手机号验证
     private String FlowDescription;
 
     /**
+    * 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+    */
+    @SerializedName("SignBeanTag")
+    @Expose
+    private Long SignBeanTag;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -483,6 +490,22 @@ MobileCheck：手机号验证
         this.FlowDescription = FlowDescription;
     }
 
+    /**
+     * Get 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件 
+     * @return SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     */
+    public Long getSignBeanTag() {
+        return this.SignBeanTag;
+    }
+
+    /**
+     * Set 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * @param SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     */
+    public void setSignBeanTag(Long SignBeanTag) {
+        this.SignBeanTag = SignBeanTag;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -554,6 +577,9 @@ MobileCheck：手机号验证
         if (source.FlowDescription != null) {
             this.FlowDescription = new String(source.FlowDescription);
         }
+        if (source.SignBeanTag != null) {
+            this.SignBeanTag = new Long(source.SignBeanTag);
+        }
     }
 
 
@@ -578,6 +604,7 @@ MobileCheck：手机号验证
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
+        this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
 
     }
 }

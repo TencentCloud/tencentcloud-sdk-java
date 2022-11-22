@@ -70,6 +70,7 @@ public class FlowApproverInfo extends AbstractModel{
 
     /**
     * 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
     */
     @SerializedName("OpenId")
     @Expose
@@ -269,8 +270,10 @@ ENTERPRISESERVER-企业静默签;
     }
 
     /**
-     * Get 用户侧第三方id，最大长度64个字符 
+     * Get 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程 
      * @return OpenId 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public String getOpenId() {
         return this.OpenId;
@@ -278,7 +281,9 @@ ENTERPRISESERVER-企业静默签;
 
     /**
      * Set 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
      * @param OpenId 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

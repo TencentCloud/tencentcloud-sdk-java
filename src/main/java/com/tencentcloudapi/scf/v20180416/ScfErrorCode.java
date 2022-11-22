@@ -180,6 +180,9 @@ public enum ScfErrorCode {
     // 内部服务错误。
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
      
+    // 日志参数有误。
+     INVALIDPARAMETER_CLS("InvalidParameter.Cls"),
+     
     // FunctionName取值与规范不符，请修正后再试。可参考：https://tencentcs.com/5jXKFnBW。
      INVALIDPARAMETER_FUNCTIONNAME("InvalidParameter.FunctionName"),
      
@@ -284,6 +287,9 @@ public enum ScfErrorCode {
      
     // CosBucketRegion取值与规范不符，请修正后再试。可参考：https://tencentcs.com/5jXKFnBW。
      INVALIDPARAMETERVALUE_COSBUCKETREGION("InvalidParameterValue.CosBucketRegion"),
+     
+    // COS通知规则冲突。
+     INVALIDPARAMETERVALUE_COSNOTIFYRULECONFLICT("InvalidParameterValue.CosNotifyRuleConflict"),
      
     // CosObjectName不符合规范。
      INVALIDPARAMETERVALUE_COSOBJECTNAME("InvalidParameterValue.CosObjectName"),
@@ -630,6 +636,9 @@ public enum ScfErrorCode {
     // 缺失 Runtime 字段。
      MISSINGPARAMETER_RUNTIME("MissingParameter.Runtime"),
      
+    // 账号已被隔离。
+     OPERATIONDENIED_ACCOUNTISOLATE("OperationDenied.AccountIsolate"),
+     
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      
@@ -809,6 +818,9 @@ public enum ScfErrorCode {
      
     // 指定的配置EipFixed暂不支持。
      UNSUPPORTEDOPERATION_EIPFIXED("UnsupportedOperation.EipFixed"),
+     
+    // 不支持的地域。
+     UNSUPPORTEDOPERATION_NOTSUPPORTREGION("UnsupportedOperation.NotSupportRegion"),
      
     // 不支持此地域。
      UNSUPPORTEDOPERATION_REGION("UnsupportedOperation.Region"),

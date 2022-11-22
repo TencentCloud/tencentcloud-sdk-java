@@ -37,6 +37,13 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel{
     private Long Status;
 
     /**
+    * 企业ID
+    */
+    @SerializedName("CorpId")
+    @Expose
+    private Long CorpId;
+
+    /**
      * Get 码规则ID 
      * @return CustomId 码规则ID
      */
@@ -68,6 +75,22 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 企业ID 
+     * @return CorpId 企业ID
+     */
+    public Long getCorpId() {
+        return this.CorpId;
+    }
+
+    /**
+     * Set 企业ID
+     * @param CorpId 企业ID
+     */
+    public void setCorpId(Long CorpId) {
+        this.CorpId = CorpId;
+    }
+
     public ModifyCustomRuleStatusRequest() {
     }
 
@@ -82,6 +105,9 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.CorpId != null) {
+            this.CorpId = new Long(source.CorpId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomId", this.CustomId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CorpId", this.CorpId);
 
     }
 }

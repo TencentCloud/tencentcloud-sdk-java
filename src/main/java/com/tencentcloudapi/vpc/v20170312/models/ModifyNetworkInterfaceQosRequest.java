@@ -37,6 +37,13 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
     private String QosLevel;
 
     /**
+    * DirectSend端口范围最大值。
+    */
+    @SerializedName("DirectSendMaxPort")
+    @Expose
+    private Long DirectSendMaxPort;
+
+    /**
      * Get 弹性网卡ID，支持批量修改。 
      * @return NetworkInterfaceIds 弹性网卡ID，支持批量修改。
      */
@@ -68,6 +75,22 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
         this.QosLevel = QosLevel;
     }
 
+    /**
+     * Get DirectSend端口范围最大值。 
+     * @return DirectSendMaxPort DirectSend端口范围最大值。
+     */
+    public Long getDirectSendMaxPort() {
+        return this.DirectSendMaxPort;
+    }
+
+    /**
+     * Set DirectSend端口范围最大值。
+     * @param DirectSendMaxPort DirectSend端口范围最大值。
+     */
+    public void setDirectSendMaxPort(Long DirectSendMaxPort) {
+        this.DirectSendMaxPort = DirectSendMaxPort;
+    }
+
     public ModifyNetworkInterfaceQosRequest() {
     }
 
@@ -85,6 +108,9 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
         if (source.QosLevel != null) {
             this.QosLevel = new String(source.QosLevel);
         }
+        if (source.DirectSendMaxPort != null) {
+            this.DirectSendMaxPort = new Long(source.DirectSendMaxPort);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NetworkInterfaceIds.", this.NetworkInterfaceIds);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
+        this.setParamSimple(map, prefix + "DirectSendMaxPort", this.DirectSendMaxPort);
 
     }
 }

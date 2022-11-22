@@ -30,6 +30,13 @@ public class CreateWhitelistResponse extends AbstractModel{
     private String Msg;
 
     /**
+    * 白名单ID
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class CreateWhitelistResponse extends AbstractModel{
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
+    }
+
+    /**
+     * Get 白名单ID 
+     * @return ID 白名单ID
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set 白名单ID
+     * @param ID 白名单ID
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
     }
 
     /**
@@ -79,6 +102,9 @@ public class CreateWhitelistResponse extends AbstractModel{
         if (source.Msg != null) {
             this.Msg = new String(source.Msg);
         }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class CreateWhitelistResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

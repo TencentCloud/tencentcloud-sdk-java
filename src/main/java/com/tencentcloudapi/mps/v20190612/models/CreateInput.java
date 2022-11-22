@@ -93,6 +93,13 @@ public class CreateInput extends AbstractModel{
     private CreateInputHLSPullSettings HLSPullSettings;
 
     /**
+    * 延播平滑吐流配置信息。
+    */
+    @SerializedName("ResilientStream")
+    @Expose
+    private ResilientStreamConf ResilientStream;
+
+    /**
      * Get 输入名称，可填大小写、数字和下划线，长度为[1, 32]。 
      * @return InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      */
@@ -252,6 +259,22 @@ public class CreateInput extends AbstractModel{
         this.HLSPullSettings = HLSPullSettings;
     }
 
+    /**
+     * Get 延播平滑吐流配置信息。 
+     * @return ResilientStream 延播平滑吐流配置信息。
+     */
+    public ResilientStreamConf getResilientStream() {
+        return this.ResilientStream;
+    }
+
+    /**
+     * Set 延播平滑吐流配置信息。
+     * @param ResilientStream 延播平滑吐流配置信息。
+     */
+    public void setResilientStream(ResilientStreamConf ResilientStream) {
+        this.ResilientStream = ResilientStream;
+    }
+
     public CreateInput() {
     }
 
@@ -293,6 +316,9 @@ public class CreateInput extends AbstractModel{
         if (source.HLSPullSettings != null) {
             this.HLSPullSettings = new CreateInputHLSPullSettings(source.HLSPullSettings);
         }
+        if (source.ResilientStream != null) {
+            this.ResilientStream = new ResilientStreamConf(source.ResilientStream);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateInput extends AbstractModel{
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+        this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
 
     }
 }

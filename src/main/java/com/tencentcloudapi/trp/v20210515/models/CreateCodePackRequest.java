@@ -79,6 +79,13 @@ public class CreateCodePackRequest extends AbstractModel{
     private PackSpec [] PackSpec;
 
     /**
+    * 批次ID，如果传了生码后会同时绑定批次，并激活码
+    */
+    @SerializedName("BatchId")
+    @Expose
+    private String BatchId;
+
+    /**
      * Get 商户ID 
      * @return MerchantId 商户ID
      */
@@ -206,6 +213,22 @@ public class CreateCodePackRequest extends AbstractModel{
         this.PackSpec = PackSpec;
     }
 
+    /**
+     * Get 批次ID，如果传了生码后会同时绑定批次，并激活码 
+     * @return BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
+     */
+    public String getBatchId() {
+        return this.BatchId;
+    }
+
+    /**
+     * Set 批次ID，如果传了生码后会同时绑定批次，并激活码
+     * @param BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
+     */
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
+    }
+
     public CreateCodePackRequest() {
     }
 
@@ -241,6 +264,9 @@ public class CreateCodePackRequest extends AbstractModel{
                 this.PackSpec[i] = new PackSpec(source.PackSpec[i]);
             }
         }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class CreateCodePackRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PackType", this.PackType);
         this.setParamSimple(map, prefix + "PackLevel", this.PackLevel);
         this.setParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
 
     }
 }

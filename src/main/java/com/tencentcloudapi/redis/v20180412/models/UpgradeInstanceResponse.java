@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpgradeInstanceResponse extends AbstractModel{
 
     /**
-    * 订单ID
+    * 订单ID。
     */
     @SerializedName("DealId")
     @Expose
@@ -37,16 +37,16 @@ public class UpgradeInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单ID 
-     * @return DealId 订单ID
+     * Get 订单ID。 
+     * @return DealId 订单ID。
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set 订单ID
-     * @param DealId 订单ID
+     * Set 订单ID。
+     * @param DealId 订单ID。
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;
