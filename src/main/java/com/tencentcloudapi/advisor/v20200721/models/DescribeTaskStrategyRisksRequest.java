@@ -30,7 +30,7 @@ public class DescribeTaskStrategyRisksRequest extends AbstractModel{
     private Long StrategyId;
 
     /**
-    * 限制数量,默认100
+    * 返回数量,默认值为100,最大值为200
     */
     @SerializedName("Limit")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeTaskStrategyRisksRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制数量,默认100 
-     * @return Limit 限制数量,默认100
+     * Get 返回数量,默认值为100,最大值为200 
+     * @return Limit 返回数量,默认值为100,最大值为200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数量,默认100
-     * @param Limit 限制数量,默认100
+     * Set 返回数量,默认值为100,最大值为200
+     * @param Limit 返回数量,默认值为100,最大值为200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

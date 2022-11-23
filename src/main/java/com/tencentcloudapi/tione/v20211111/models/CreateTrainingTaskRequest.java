@@ -121,7 +121,7 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     private StartCmdInfo StartCmdInfo;
 
     /**
-    * 数据配置
+    * 数据配置，依赖DataSource字段
     */
     @SerializedName("DataConfigs")
     @Expose
@@ -394,16 +394,16 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据配置 
-     * @return DataConfigs 数据配置
+     * Get 数据配置，依赖DataSource字段 
+     * @return DataConfigs 数据配置，依赖DataSource字段
      */
     public DataConfig [] getDataConfigs() {
         return this.DataConfigs;
     }
 
     /**
-     * Set 数据配置
-     * @param DataConfigs 数据配置
+     * Set 数据配置，依赖DataSource字段
+     * @param DataConfigs 数据配置，依赖DataSource字段
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
         this.DataConfigs = DataConfigs;

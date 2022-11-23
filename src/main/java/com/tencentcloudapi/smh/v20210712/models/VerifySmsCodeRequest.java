@@ -23,18 +23,11 @@ import java.util.HashMap;
 public class VerifySmsCodeRequest extends AbstractModel{
 
     /**
-    * 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
+    * 验证码目的，当前支持换绑超级管理员账号，BindSuperAdmin；体验版企业升级验证ChannelUpdateVerify，等
     */
     @SerializedName("Purpose")
     @Expose
     private String Purpose;
-
-    /**
-    * 官方云盘实例 ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
 
     /**
     * 将作为超级管理员账号的手机号码
@@ -51,6 +44,13 @@ public class VerifySmsCodeRequest extends AbstractModel{
     private String Code;
 
     /**
+    * 官方云盘实例 ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
     */
     @SerializedName("CountryCode")
@@ -58,35 +58,19 @@ public class VerifySmsCodeRequest extends AbstractModel{
     private String CountryCode;
 
     /**
-     * Get 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。 
-     * @return Purpose 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
+     * Get 验证码目的，当前支持换绑超级管理员账号，BindSuperAdmin；体验版企业升级验证ChannelUpdateVerify，等 
+     * @return Purpose 验证码目的，当前支持换绑超级管理员账号，BindSuperAdmin；体验版企业升级验证ChannelUpdateVerify，等
      */
     public String getPurpose() {
         return this.Purpose;
     }
 
     /**
-     * Set 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
-     * @param Purpose 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
+     * Set 验证码目的，当前支持换绑超级管理员账号，BindSuperAdmin；体验版企业升级验证ChannelUpdateVerify，等
+     * @param Purpose 验证码目的，当前支持换绑超级管理员账号，BindSuperAdmin；体验版企业升级验证ChannelUpdateVerify，等
      */
     public void setPurpose(String Purpose) {
         this.Purpose = Purpose;
-    }
-
-    /**
-     * Get 官方云盘实例 ID 
-     * @return InstanceId 官方云盘实例 ID
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 官方云盘实例 ID
-     * @param InstanceId 官方云盘实例 ID
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
     }
 
     /**
@@ -122,6 +106,22 @@ public class VerifySmsCodeRequest extends AbstractModel{
     }
 
     /**
+     * Get 官方云盘实例 ID 
+     * @return InstanceId 官方云盘实例 ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 官方云盘实例 ID
+     * @param InstanceId 官方云盘实例 ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Get 将作为超级管理员账号的手机号码的国家代码。默认为 +86。 
      * @return CountryCode 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
      */
@@ -148,14 +148,14 @@ public class VerifySmsCodeRequest extends AbstractModel{
         if (source.Purpose != null) {
             this.Purpose = new String(source.Purpose);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.PhoneNumber != null) {
             this.PhoneNumber = new String(source.PhoneNumber);
         }
         if (source.Code != null) {
             this.Code = new String(source.Code);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.CountryCode != null) {
             this.CountryCode = new String(source.CountryCode);
@@ -168,9 +168,9 @@ public class VerifySmsCodeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Purpose", this.Purpose);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
 
     }

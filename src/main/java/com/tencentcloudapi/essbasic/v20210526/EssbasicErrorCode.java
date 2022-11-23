@@ -117,6 +117,9 @@ public enum EssbasicErrorCode {
     // 参数错误，不合法的日期，请检查后重试。
      INVALIDPARAMETER_DATE("InvalidParameter.Date"),
      
+    // 员工ID不正确。
+     INVALIDPARAMETER_DEPARTUSERID("InvalidParameter.DepartUserId"),
+     
     // 重复提交任务。
      INVALIDPARAMETER_DUPTASK("InvalidParameter.DupTask"),
      

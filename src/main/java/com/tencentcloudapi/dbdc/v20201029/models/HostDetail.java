@@ -184,6 +184,13 @@ public class HostDetail extends AbstractModel{
     private Long Pid;
 
     /**
+    * 独享集群实例Id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 主机Id 
      * @return HostId 主机Id
      */
@@ -551,6 +558,22 @@ public class HostDetail extends AbstractModel{
         this.Pid = Pid;
     }
 
+    /**
+     * Get 独享集群实例Id 
+     * @return InstanceId 独享集群实例Id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 独享集群实例Id
+     * @param InstanceId 独享集群实例Id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public HostDetail() {
     }
 
@@ -628,6 +651,9 @@ public class HostDetail extends AbstractModel{
         if (source.Pid != null) {
             this.Pid = new Long(source.Pid);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -658,6 +684,7 @@ public class HostDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "PidTag", this.PidTag);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

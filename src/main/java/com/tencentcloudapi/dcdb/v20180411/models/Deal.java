@@ -51,7 +51,7 @@ public class Deal extends AbstractModel{
     private Long FlowId;
 
     /**
-    * 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+    * 只有创建实例且已完成发货的订单会填充该字段，表示该订单创建的实例的 ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
@@ -130,9 +130,9 @@ public class Deal extends AbstractModel{
     }
 
     /**
-     * Get 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * Get 只有创建实例且已完成发货的订单会填充该字段，表示该订单创建的实例的 ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * @return InstanceIds 只有创建实例且已完成发货的订单会填充该字段，表示该订单创建的实例的 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
@@ -140,9 +140,9 @@ public class Deal extends AbstractModel{
     }
 
     /**
-     * Set 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * Set 只有创建实例且已完成发货的订单会填充该字段，表示该订单创建的实例的 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * @param InstanceIds 只有创建实例且已完成发货的订单会填充该字段，表示该订单创建的实例的 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {

@@ -149,6 +149,29 @@ public class DcnDetailItem extends AbstractModel{
     private Long InstanceType;
 
     /**
+    * DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicaConfig")
+    @Expose
+    private DCNReplicaConfig ReplicaConfig;
+
+    /**
+    * DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicaStatus")
+    @Expose
+    private DCNReplicaStatus ReplicaStatus;
+
+    /**
+    * 是否开启了 kms
+    */
+    @SerializedName("EncryptStatus")
+    @Expose
+    private Long EncryptStatus;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -436,6 +459,62 @@ public class DcnDetailItem extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicaConfig DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DCNReplicaConfig getReplicaConfig() {
+        return this.ReplicaConfig;
+    }
+
+    /**
+     * Set DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicaConfig DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicaConfig(DCNReplicaConfig ReplicaConfig) {
+        this.ReplicaConfig = ReplicaConfig;
+    }
+
+    /**
+     * Get DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicaStatus DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DCNReplicaStatus getReplicaStatus() {
+        return this.ReplicaStatus;
+    }
+
+    /**
+     * Set DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicaStatus DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicaStatus(DCNReplicaStatus ReplicaStatus) {
+        this.ReplicaStatus = ReplicaStatus;
+    }
+
+    /**
+     * Get 是否开启了 kms 
+     * @return EncryptStatus 是否开启了 kms
+     */
+    public Long getEncryptStatus() {
+        return this.EncryptStatus;
+    }
+
+    /**
+     * Set 是否开启了 kms
+     * @param EncryptStatus 是否开启了 kms
+     */
+    public void setEncryptStatus(Long EncryptStatus) {
+        this.EncryptStatus = EncryptStatus;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -498,6 +577,15 @@ public class DcnDetailItem extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.ReplicaConfig != null) {
+            this.ReplicaConfig = new DCNReplicaConfig(source.ReplicaConfig);
+        }
+        if (source.ReplicaStatus != null) {
+            this.ReplicaStatus = new DCNReplicaStatus(source.ReplicaStatus);
+        }
+        if (source.EncryptStatus != null) {
+            this.EncryptStatus = new Long(source.EncryptStatus);
+        }
     }
 
 
@@ -523,6 +611,9 @@ public class DcnDetailItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
+        this.setParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
+        this.setParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
 
     }
 }

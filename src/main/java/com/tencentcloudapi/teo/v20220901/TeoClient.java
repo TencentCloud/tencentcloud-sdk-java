@@ -719,26 +719,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *获取计费数据。
-     * @param req DescribeBillingDataRequest
-     * @return DescribeBillingDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillingDataResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillingDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillingData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DescribeBotClientIpList）用于查询Bot攻击客户端Ip信息列表。
      * @param req DescribeBotClientIpListRequest
      * @return DescribeBotClientIpListResponse

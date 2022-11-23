@@ -149,6 +149,13 @@ public class DcnDetailItem extends AbstractModel{
     private Long InstanceType;
 
     /**
+    * 是否开启了 kms
+    */
+    @SerializedName("EncryptStatus")
+    @Expose
+    private Long EncryptStatus;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -436,6 +443,22 @@ public class DcnDetailItem extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 是否开启了 kms 
+     * @return EncryptStatus 是否开启了 kms
+     */
+    public Long getEncryptStatus() {
+        return this.EncryptStatus;
+    }
+
+    /**
+     * Set 是否开启了 kms
+     * @param EncryptStatus 是否开启了 kms
+     */
+    public void setEncryptStatus(Long EncryptStatus) {
+        this.EncryptStatus = EncryptStatus;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -498,6 +521,9 @@ public class DcnDetailItem extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.EncryptStatus != null) {
+            this.EncryptStatus = new Long(source.EncryptStatus);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class DcnDetailItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
 
     }
 }

@@ -221,6 +221,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *添加记录分组
+     * @param req CreateRecordGroupRequest
+     * @return CreateRecordGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordGroupResponse CreateRecordGroup(CreateRecordGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRecordGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRecordGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRecordGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建快照
      * @param req CreateSnapshotRequest
      * @return CreateSnapshotResponse
@@ -294,6 +314,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除记录分组
+     * @param req DeleteRecordGroupRequest
+     * @return DeleteRecordGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordGroupResponse DeleteRecordGroup(DeleteRecordGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecordGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecordGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRecordGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -534,6 +574,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询解析记录分组列表
+     * @param req DescribeRecordGroupListRequest
+     * @return DescribeRecordGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordGroupListResponse DescribeRecordGroupList(DescribeRecordGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordGroupListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordGroupList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -943,6 +1003,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *修改记录分组
+     * @param req ModifyRecordGroupRequest
+     * @return ModifyRecordGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordGroupResponse ModifyRecordGroup(ModifyRecordGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置记录备注
      * @param req ModifyRecordRemarkRequest
      * @return ModifyRecordRemarkResponse
@@ -975,6 +1055,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRecordStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将记录添加到分组
+     * @param req ModifyRecordToGroupRequest
+     * @return ModifyRecordToGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordToGroupResponse ModifyRecordToGroup(ModifyRecordToGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordToGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordToGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordToGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

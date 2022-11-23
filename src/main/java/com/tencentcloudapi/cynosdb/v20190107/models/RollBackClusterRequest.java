@@ -51,7 +51,7 @@ public class RollBackClusterRequest extends AbstractModel{
     private String ExpectTime;
 
     /**
-    * 期望阈值
+    * 期望阈值（已废弃）
     */
     @SerializedName("ExpectTimeThresh")
     @Expose
@@ -65,7 +65,7 @@ public class RollBackClusterRequest extends AbstractModel{
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * 回档数据库表
+    * 回档数据库表列表
     */
     @SerializedName("RollbackTables")
     @Expose
@@ -136,16 +136,16 @@ public class RollBackClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 期望阈值 
-     * @return ExpectTimeThresh 期望阈值
+     * Get 期望阈值（已废弃） 
+     * @return ExpectTimeThresh 期望阈值（已废弃）
      */
     public Long getExpectTimeThresh() {
         return this.ExpectTimeThresh;
     }
 
     /**
-     * Set 期望阈值
-     * @param ExpectTimeThresh 期望阈值
+     * Set 期望阈值（已废弃）
+     * @param ExpectTimeThresh 期望阈值（已废弃）
      */
     public void setExpectTimeThresh(Long ExpectTimeThresh) {
         this.ExpectTimeThresh = ExpectTimeThresh;
@@ -168,16 +168,16 @@ public class RollBackClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 回档数据库表 
-     * @return RollbackTables 回档数据库表
+     * Get 回档数据库表列表 
+     * @return RollbackTables 回档数据库表列表
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set 回档数据库表
-     * @param RollbackTables 回档数据库表
+     * Set 回档数据库表列表
+     * @param RollbackTables 回档数据库表列表
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;

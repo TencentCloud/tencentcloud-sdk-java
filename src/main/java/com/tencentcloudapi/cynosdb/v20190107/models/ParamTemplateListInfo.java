@@ -51,6 +51,21 @@ public class ParamTemplateListInfo extends AbstractModel{
     private String EngineVersion;
 
     /**
+    * 数据库类型，可选值：NORMAL，SERVERLESS
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamInfoSet")
+    @Expose
+    private TemplateParamInfo [] ParamInfoSet;
+
+    /**
      * Get 参数模板ID 
      * @return Id 参数模板ID
      */
@@ -114,6 +129,42 @@ public class ParamTemplateListInfo extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    /**
+     * Get 数据库类型，可选值：NORMAL，SERVERLESS 
+     * @return DbMode 数据库类型，可选值：NORMAL，SERVERLESS
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set 数据库类型，可选值：NORMAL，SERVERLESS
+     * @param DbMode 数据库类型，可选值：NORMAL，SERVERLESS
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamInfoSet 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TemplateParamInfo [] getParamInfoSet() {
+        return this.ParamInfoSet;
+    }
+
+    /**
+     * Set 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamInfoSet 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamInfoSet(TemplateParamInfo [] ParamInfoSet) {
+        this.ParamInfoSet = ParamInfoSet;
+    }
+
     public ParamTemplateListInfo() {
     }
 
@@ -134,6 +185,15 @@ public class ParamTemplateListInfo extends AbstractModel{
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
+        if (source.ParamInfoSet != null) {
+            this.ParamInfoSet = new TemplateParamInfo[source.ParamInfoSet.length];
+            for (int i = 0; i < source.ParamInfoSet.length; i++) {
+                this.ParamInfoSet[i] = new TemplateParamInfo(source.ParamInfoSet[i]);
+            }
+        }
     }
 
 
@@ -145,6 +205,8 @@ public class ParamTemplateListInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamArrayObj(map, prefix + "ParamInfoSet.", this.ParamInfoSet);
 
     }
 }

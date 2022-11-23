@@ -725,6 +725,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *文件路径的根目录为 /datastudio/resource，如果要在根目录下创建 aaa 文件夹，FilePath的值应该为 /datastudio/resource，如果根目录下已经创建了 aaa 文件夹，要在 aaa 下创建  bbb 文件夹，FilePath的值应该为 /datastudio/resource/aaa
+     * @param req CreateResourcePathRequest
+     * @return CreateResourcePathResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourcePathResponse CreateResourcePath(CreateResourcePathRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateResourcePathResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateResourcePathResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateResourcePath");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建质量规则接口
      * @param req CreateRuleRequest
      * @return CreateRuleResponse

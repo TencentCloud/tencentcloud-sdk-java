@@ -959,6 +959,26 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *用于更新模型服务
+     * @param req ModifyModelServiceRequest
+     * @return ModifyModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelServiceResponse ModifyModelService(ModifyModelServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyModelServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyModelServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyModelService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *增量更新在线推理服务的部分配置，不更新的配置项不需要传入
      * @param req ModifyModelServicePartialConfigRequest
      * @return ModifyModelServicePartialConfigResponse

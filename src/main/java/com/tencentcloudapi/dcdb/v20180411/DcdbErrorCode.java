@@ -36,11 +36,17 @@ public enum DcdbErrorCode {
     // 解绑安全组失败。
      FAILEDOPERATION_DISASSOCIATESECURITYGROUPSFAILED("FailedOperation.DisassociateSecurityGroupsFailed"),
      
+    // 拉取安全组详情失败。
+     FAILEDOPERATION_GETSECURITYGROUPDETAILFAILED("FailedOperation.GetSecurityGroupDetailFailed"),
+     
     // 修改账号权限失败。
      FAILEDOPERATION_MODIFYRIGHTFAILED("FailedOperation.ModifyRightFailed"),
      
     // 消息队列操作失败。
      FAILEDOPERATION_MSGQUEUEOPERATIONFAILED("FailedOperation.MsgQueueOperationFailed"),
+     
+    // 隔离实例失败。
+     FAILEDOPERATION_OSSISOLATEINSTANCEFAILED("FailedOperation.OssIsolateInstanceFailed"),
      
     // 请求后端接口失败。
      FAILEDOPERATION_OSSOPERATIONFAILED("FailedOperation.OssOperationFailed"),
@@ -56,6 +62,9 @@ public enum DcdbErrorCode {
      
     // 设置规则失败。
      FAILEDOPERATION_SETRULELOCATIONFAILED("FailedOperation.SetRuleLocationFailed"),
+     
+    // 安全组规则下发失败。
+     FAILEDOPERATION_SETSVCLOCATIONFAILED("FailedOperation.SetSvcLocationFailed"),
      
     // 标签键值校验或鉴权失败。
      FAILEDOPERATION_TAGDRYRUNERROR("FailedOperation.TagDryRunError"),
@@ -92,6 +101,9 @@ public enum DcdbErrorCode {
      
     // 备份文件签名失败。
      INTERNALERROR_COSSIGNURL("InternalError.CosSignUrl"),
+     
+    // 创建任务流程失败。
+     INTERNALERROR_CREATEFLOWFAILED("InternalError.CreateFlowFailed"),
      
     // DB影响行数为0错误。
      INTERNALERROR_DBROWSAFFECTEDERROR("InternalError.DBRowsAffectedError"),
@@ -285,6 +297,9 @@ public enum DcdbErrorCode {
     // 找不到指定的可用区。
      INVALIDPARAMETERVALUE_ILLEGALZONE("InvalidParameterValue.IllegalZone"),
      
+    // 参数值传入错误。
+     INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUEERROR("InvalidParameterValue.InvalidParameterValueError"),
+     
     // 分片不存在。
      INVALIDPARAMETERVALUE_SHARDNOTEXIST("InvalidParameterValue.ShardNotExist"),
      
@@ -293,6 +308,9 @@ public enum DcdbErrorCode {
      
     // 系统用户不允许操作。
      INVALIDPARAMETERVALUE_SUPERUSERFORBIDDEN("InvalidParameterValue.SuperUserForbidden"),
+     
+    // 当前部署方式不允许设置此同步模式。
+     INVALIDPARAMETERVALUE_SYNCMODENOTALLOWED("InvalidParameterValue.SyncModeNotAllowed"),
      
     // 请求过于频繁。
      LIMITEXCEEDED_TOOFREQUENTLYCALLED("LimitExceeded.TooFrequentlyCalled"),
@@ -323,6 +341,9 @@ public enum DcdbErrorCode {
      
     // 数据库实例状态不正确，当前无法操作。
      RESOURCEUNAVAILABLE_INSTANCESTATUSABNORMAL("ResourceUnavailable.InstanceStatusAbnormal"),
+     
+    // 安全组校验失败。
+     RESOURCEUNAVAILABLE_SGCHECKFAIL("ResourceUnavailable.SGCheckFail"),
      
     // 没有权限操作该接口或资源。
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),

@@ -86,6 +86,13 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
     private String SchemaName;
 
     /**
+    * 上游节点的字段信息
+    */
+    @SerializedName("SourceFieldInfoList")
+    @Expose
+    private SourceFieldInfo [] SourceFieldInfoList;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -229,6 +236,22 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         this.SchemaName = SchemaName;
     }
 
+    /**
+     * Get 上游节点的字段信息 
+     * @return SourceFieldInfoList 上游节点的字段信息
+     */
+    public SourceFieldInfo [] getSourceFieldInfoList() {
+        return this.SourceFieldInfoList;
+    }
+
+    /**
+     * Set 上游节点的字段信息
+     * @param SourceFieldInfoList 上游节点的字段信息
+     */
+    public void setSourceFieldInfoList(SourceFieldInfo [] SourceFieldInfoList) {
+        this.SourceFieldInfoList = SourceFieldInfoList;
+    }
+
     public GenHiveTableDDLSqlRequest() {
     }
 
@@ -264,6 +287,12 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         if (source.SchemaName != null) {
             this.SchemaName = new String(source.SchemaName);
         }
+        if (source.SourceFieldInfoList != null) {
+            this.SourceFieldInfoList = new SourceFieldInfo[source.SourceFieldInfoList.length];
+            for (int i = 0; i < source.SourceFieldInfoList.length; i++) {
+                this.SourceFieldInfoList[i] = new SourceFieldInfo(source.SourceFieldInfoList[i]);
+            }
+        }
     }
 
 
@@ -280,6 +309,7 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "SinkType", this.SinkType);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamArrayObj(map, prefix + "SourceFieldInfoList.", this.SourceFieldInfoList);
 
     }
 }

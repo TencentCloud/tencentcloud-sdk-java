@@ -166,6 +166,26 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *创建高性能计算集群
+     * @param req CreateHpcClusterRequest
+     * @return CreateHpcClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHpcClusterResponse CreateHpcCluster(CreateHpcClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHpcClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHpcClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHpcCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
      * @param req CreateImageRequest
      * @return CreateImageResponse
@@ -267,6 +287,26 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDisasterRecoverGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDisasterRecoverGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *当高性能计算集群为空, 即集群内没有任何设备时候, 可以删除改集群。
+     * @param req DeleteHpcClustersRequest
+     * @return DeleteHpcClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHpcClustersResponse DeleteHpcClusters(DeleteHpcClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteHpcClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteHpcClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteHpcClusters");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -477,6 +517,26 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeHostsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeHosts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询高性能集群信息
+     * @param req DescribeHpcClustersRequest
+     * @return DescribeHpcClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHpcClustersResponse DescribeHpcClusters(DescribeHpcClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHpcClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHpcClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHpcClusters");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1327,6 +1387,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyHostsAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改高性能计算集群属性。
+     * @param req ModifyHpcClusterAttributeRequest
+     * @return ModifyHpcClusterAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHpcClusterAttributeResponse ModifyHpcClusterAttribute(ModifyHpcClusterAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyHpcClusterAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyHpcClusterAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyHpcClusterAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -33,6 +33,9 @@ public enum SmhErrorCode {
     // 指定的手机号码与当前的相同。
      INVALIDPARAMETERVALUE_NOTMODIFIED("InvalidParameterValue.NotModified"),
      
+    // 指定的手机号码非该企业的超级管理员。
+     INVALIDPARAMETERVALUE_NOTSUPERADMIN("InvalidParameterValue.NotSuperAdmin"),
+     
     // 指定的手机号码无效。
      INVALIDPARAMETERVALUE_PHONENUMBER("InvalidParameterValue.PhoneNumber"),
      

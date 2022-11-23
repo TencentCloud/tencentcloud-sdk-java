@@ -60,6 +60,14 @@ public class IntegrationNodeSchema extends AbstractModel{
     private RecordField [] Properties;
 
     /**
+    * schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get schema id 
      * @return Id schema id
      */
@@ -147,6 +155,26 @@ public class IntegrationNodeSchema extends AbstractModel{
         this.Properties = Properties;
     }
 
+    /**
+     * Get schema别名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Alias schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Alias schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public IntegrationNodeSchema() {
     }
 
@@ -173,6 +201,9 @@ public class IntegrationNodeSchema extends AbstractModel{
                 this.Properties[i] = new RecordField(source.Properties[i]);
             }
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -185,6 +216,7 @@ public class IntegrationNodeSchema extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

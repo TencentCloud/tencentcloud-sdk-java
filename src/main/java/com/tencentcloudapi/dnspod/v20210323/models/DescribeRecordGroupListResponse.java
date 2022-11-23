@@ -13,30 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillingDataResponse extends AbstractModel{
+public class DescribeRecordGroupListResponse extends AbstractModel{
 
     /**
-    * 统计曲线数据
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分组列表
     */
-    @SerializedName("Data")
+    @SerializedName("GroupList")
     @Expose
-    private DnsData [] Data;
-
-    /**
-    * 时间粒度
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Interval")
-    @Expose
-    private String Interval;
+    private RecordGroupInfo [] GroupList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +37,19 @@ public class DescribeBillingDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 统计曲线数据
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 统计曲线数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组列表 
+     * @return GroupList 分组列表
      */
-    public DnsData [] getData() {
-        return this.Data;
+    public RecordGroupInfo [] getGroupList() {
+        return this.GroupList;
     }
 
     /**
-     * Set 统计曲线数据
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 统计曲线数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分组列表
+     * @param GroupList 分组列表
      */
-    public void setData(DnsData [] Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get 时间粒度
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Interval 时间粒度
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getInterval() {
-        return this.Interval;
-    }
-
-    /**
-     * Set 时间粒度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Interval 时间粒度
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setInterval(String Interval) {
-        this.Interval = Interval;
+    public void setGroupList(RecordGroupInfo [] GroupList) {
+        this.GroupList = GroupList;
     }
 
     /**
@@ -101,22 +68,19 @@ public class DescribeBillingDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeBillingDataResponse() {
+    public DescribeRecordGroupListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBillingDataResponse(DescribeBillingDataResponse source) {
-        if (source.Data != null) {
-            this.Data = new DnsData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new DnsData(source.Data[i]);
+    public DescribeRecordGroupListResponse(DescribeRecordGroupListResponse source) {
+        if (source.GroupList != null) {
+            this.GroupList = new RecordGroupInfo[source.GroupList.length];
+            for (int i = 0; i < source.GroupList.length; i++) {
+                this.GroupList[i] = new RecordGroupInfo(source.GroupList[i]);
             }
-        }
-        if (source.Interval != null) {
-            this.Interval = new String(source.Interval);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +92,7 @@ public class DescribeBillingDataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

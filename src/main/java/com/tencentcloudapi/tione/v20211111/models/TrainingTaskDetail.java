@@ -58,7 +58,7 @@ public class TrainingTaskDetail extends AbstractModel{
     private String Region;
 
     /**
-    * 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+    * 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkName")
@@ -305,7 +305,7 @@ public class TrainingTaskDetail extends AbstractModel{
     private String Message;
 
     /**
-    * 任务状态
+    * 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
     */
     @SerializedName("Status")
     @Expose
@@ -392,9 +392,9 @@ public class TrainingTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * Get 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkName 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * @return FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkName() {
@@ -402,9 +402,9 @@ public class TrainingTaskDetail extends AbstractModel{
     }
 
     /**
-     * Set 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * Set 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkName 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * @param FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkName(String FrameworkName) {
@@ -996,16 +996,16 @@ public class TrainingTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成 
+     * @return Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * @param Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     public void setStatus(String Status) {
         this.Status = Status;

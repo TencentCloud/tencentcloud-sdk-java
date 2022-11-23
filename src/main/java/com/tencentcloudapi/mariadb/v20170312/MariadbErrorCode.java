@@ -39,6 +39,9 @@ public enum MariadbErrorCode {
     // 解绑安全组失败。
      FAILEDOPERATION_DISASSOCIATESECURITYGROUPSFAILED("FailedOperation.DisassociateSecurityGroupsFailed"),
      
+    // 拉取安全组详情失败。
+     FAILEDOPERATION_GETSECURITYGROUPDETAILFAILED("FailedOperation.GetSecurityGroupDetailFailed"),
+     
     // 实例不可退费。
      FAILEDOPERATION_INSTANCECANNOTRETURN("FailedOperation.InstanceCanNotReturn"),
      
@@ -47,6 +50,9 @@ public enum MariadbErrorCode {
      
     // 修改账号权限失败。
      FAILEDOPERATION_MODIFYRIGHTFAILED("FailedOperation.ModifyRightFailed"),
+     
+    // 隔离实例失败。
+     FAILEDOPERATION_OSSISOLATEINSTANCEFAILED("FailedOperation.OssIsolateInstanceFailed"),
      
     // 请求后端接口失败。
      FAILEDOPERATION_OSSOPERATIONFAILED("FailedOperation.OssOperationFailed"),
@@ -63,6 +69,9 @@ public enum MariadbErrorCode {
     // 设置规则失败。
      FAILEDOPERATION_SETRULELOCATIONFAILED("FailedOperation.SetRuleLocationFailed"),
      
+    // 安全组规则下发失败。
+     FAILEDOPERATION_SETSVCLOCATIONFAILED("FailedOperation.SetSvcLocationFailed"),
+     
     // 标签键值校验或鉴权失败。
      FAILEDOPERATION_TAGDRYRUNERROR("FailedOperation.TagDryRunError"),
      
@@ -71,6 +80,9 @@ public enum MariadbErrorCode {
      
     // 实例安全组信息更新失败。
      FAILEDOPERATION_UPDATEINSTANCEINFOFAILED("FailedOperation.UpdateInstanceInfoFailed"),
+     
+    // 用户未经鉴权。
+     FAILEDOPERATION_USERNOTAUTHED("FailedOperation.UserNotAuthed"),
      
     // VIP不能与之前一样。
      FAILEDOPERATION_VIPNOTCHANGE("FailedOperation.VipNotChange"),
@@ -143,6 +155,9 @@ public enum MariadbErrorCode {
      
     // 获取账号列表失败。
      INTERNALERROR_GETUSERLISTFAILED("InternalError.GetUserListFailed"),
+     
+    // 获取用户安全组数量失败。
+     INTERNALERROR_GETUSERSGCOUNTFAILED("InternalError.GetUserSGCountFailed"),
      
     // 获取用户安全组配额失败。
      INTERNALERROR_GETUSGQUOTAERROR("InternalError.GetUsgQuotaError"),
@@ -323,6 +338,9 @@ public enum MariadbErrorCode {
      
     // 系统用户不允许操作。
      INVALIDPARAMETERVALUE_SUPERUSERFORBIDDEN("InvalidParameterValue.SuperUserForbidden"),
+     
+    // 当前部署方式不允许设置此同步模式。
+     INVALIDPARAMETERVALUE_SYNCMODENOTALLOWED("InvalidParameterValue.SyncModeNotAllowed"),
      
     // 请求过于频繁。
      LIMITEXCEEDED_TOOFREQUENTLYCALLED("LimitExceeded.TooFrequentlyCalled"),
