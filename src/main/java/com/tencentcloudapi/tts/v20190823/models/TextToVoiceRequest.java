@@ -105,7 +105,7 @@ public class TextToVoiceRequest extends AbstractModel{
     private Boolean EnableSubtitle;
 
     /**
-    * 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+    * 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
     */
     @SerializedName("SegmentRate")
     @Expose
@@ -308,16 +308,16 @@ public class TextToVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。 
-     * @return SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+     * Get 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。 
+     * @return SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
      */
     public Long getSegmentRate() {
         return this.SegmentRate;
     }
 
     /**
-     * Set 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
-     * @param SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+     * Set 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
+     * @param SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
      */
     public void setSegmentRate(Long SegmentRate) {
         this.SegmentRate = SegmentRate;

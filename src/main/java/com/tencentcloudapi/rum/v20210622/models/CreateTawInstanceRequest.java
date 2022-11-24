@@ -30,7 +30,7 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private Long AreaId;
 
     /**
-    * 计费类型, (1=后付费，2=预付费)
+    * 计费类型, (1=后付费)
     */
     @SerializedName("ChargeType")
     @Expose
@@ -102,16 +102,16 @@ public class CreateTawInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 计费类型, (1=后付费，2=预付费) 
-     * @return ChargeType 计费类型, (1=后付费，2=预付费)
+     * Get 计费类型, (1=后付费) 
+     * @return ChargeType 计费类型, (1=后付费)
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费类型, (1=后付费，2=预付费)
-     * @param ChargeType 计费类型, (1=后付费，2=预付费)
+     * Set 计费类型, (1=后付费)
+     * @param ChargeType 计费类型, (1=后付费)
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;

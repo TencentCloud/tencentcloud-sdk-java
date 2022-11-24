@@ -79,6 +79,26 @@ public class TcmClient extends AbstractClient{
     }
 
     /**
+     *获取AccessLog配置
+     * @param req DescribeAccessLogConfigRequest
+     * @return DescribeAccessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessLogConfigResponse DescribeAccessLogConfig(DescribeAccessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccessLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询网格详情
      * @param req DescribeMeshRequest
      * @return DescribeMeshResponse
@@ -151,6 +171,26 @@ public class TcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<LinkPrometheusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "LinkPrometheus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改访问日志配置
+     * @param req ModifyAccessLogConfigRequest
+     * @return ModifyAccessLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessLogConfigResponse ModifyAccessLogConfig(ModifyAccessLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccessLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccessLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccessLogConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

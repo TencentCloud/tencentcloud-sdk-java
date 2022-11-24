@@ -57,6 +57,14 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel{
     private Long TimeSpan;
 
     /**
+    * 价格详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PriceDetail")
+    @Expose
+    private PriceDetail [] PriceDetail;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -152,6 +160,26 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get 价格详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PriceDetail 价格详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PriceDetail [] getPriceDetail() {
+        return this.PriceDetail;
+    }
+
+    /**
+     * Set 价格详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PriceDetail 价格详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPriceDetail(PriceDetail [] PriceDetail) {
+        this.PriceDetail = PriceDetail;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -187,6 +215,12 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel{
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.PriceDetail != null) {
+            this.PriceDetail = new PriceDetail[source.PriceDetail.length];
+            for (int i = 0; i < source.PriceDetail.length; i++) {
+                this.PriceDetail[i] = new PriceDetail(source.PriceDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -201,6 +235,7 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamArrayObj(map, prefix + "PriceDetail.", this.PriceDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

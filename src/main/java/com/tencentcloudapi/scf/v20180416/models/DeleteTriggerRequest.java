@@ -58,7 +58,7 @@ public class DeleteTriggerRequest extends AbstractModel{
     private String TriggerDesc;
 
     /**
-    * 函数的版本信息
+    * 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
     */
     @SerializedName("Qualifier")
     @Expose
@@ -145,16 +145,16 @@ public class DeleteTriggerRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数的版本信息 
-     * @return Qualifier 函数的版本信息
+     * Get 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。 
+     * @return Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set 函数的版本信息
-     * @param Qualifier 函数的版本信息
+     * Set 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+     * @param Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

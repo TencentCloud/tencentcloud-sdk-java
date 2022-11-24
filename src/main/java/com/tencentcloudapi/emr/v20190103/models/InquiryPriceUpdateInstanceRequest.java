@@ -72,6 +72,13 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
     private String Currency;
 
     /**
+    * 批量变配资源ID列表
+    */
+    @SerializedName("ResourceIdList")
+    @Expose
+    private String [] ResourceIdList;
+
+    /**
      * Get 变配的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -195,6 +202,22 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         this.Currency = Currency;
     }
 
+    /**
+     * Get 批量变配资源ID列表 
+     * @return ResourceIdList 批量变配资源ID列表
+     */
+    public String [] getResourceIdList() {
+        return this.ResourceIdList;
+    }
+
+    /**
+     * Set 批量变配资源ID列表
+     * @param ResourceIdList 批量变配资源ID列表
+     */
+    public void setResourceIdList(String [] ResourceIdList) {
+        this.ResourceIdList = ResourceIdList;
+    }
+
     public InquiryPriceUpdateInstanceRequest() {
     }
 
@@ -221,6 +244,12 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
+        if (source.ResourceIdList != null) {
+            this.ResourceIdList = new String[source.ResourceIdList.length];
+            for (int i = 0; i < source.ResourceIdList.length; i++) {
+                this.ResourceIdList[i] = new String(source.ResourceIdList[i]);
+            }
+        }
     }
 
 
@@ -234,6 +263,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);
 
     }
 }

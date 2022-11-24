@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateAuditTrackResponse extends AbstractModel{
 
     /**
+    * 跟踪集 ID
+    */
+    @SerializedName("TrackId")
+    @Expose
+    private Long TrackId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 跟踪集 ID 
+     * @return TrackId 跟踪集 ID
+     */
+    public Long getTrackId() {
+        return this.TrackId;
+    }
+
+    /**
+     * Set 跟踪集 ID
+     * @param TrackId 跟踪集 ID
+     */
+    public void setTrackId(Long TrackId) {
+        this.TrackId = TrackId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreateAuditTrackResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAuditTrackResponse(CreateAuditTrackResponse source) {
+        if (source.TrackId != null) {
+            this.TrackId = new Long(source.TrackId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateAuditTrackResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TrackId", this.TrackId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

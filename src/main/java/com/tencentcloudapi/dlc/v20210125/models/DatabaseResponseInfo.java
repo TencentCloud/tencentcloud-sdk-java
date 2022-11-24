@@ -86,6 +86,22 @@ public class DatabaseResponseInfo extends AbstractModel{
     private String UserSubUin;
 
     /**
+    * 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GovernPolicy")
+    @Expose
+    private DataGovernPolicy GovernPolicy;
+
+    /**
+    * 数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseId")
+    @Expose
+    private String DatabaseId;
+
+    /**
      * Get 数据库名称。 
      * @return DatabaseName 数据库名称。
      */
@@ -241,6 +257,46 @@ public class DatabaseResponseInfo extends AbstractModel{
         this.UserSubUin = UserSubUin;
     }
 
+    /**
+     * Get 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataGovernPolicy getGovernPolicy() {
+        return this.GovernPolicy;
+    }
+
+    /**
+     * Set 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGovernPolicy(DataGovernPolicy GovernPolicy) {
+        this.GovernPolicy = GovernPolicy;
+    }
+
+    /**
+     * Get 数据库ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseId 数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseId() {
+        return this.DatabaseId;
+    }
+
+    /**
+     * Set 数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseId 数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseId(String DatabaseId) {
+        this.DatabaseId = DatabaseId;
+    }
+
     public DatabaseResponseInfo() {
     }
 
@@ -276,6 +332,12 @@ public class DatabaseResponseInfo extends AbstractModel{
         if (source.UserSubUin != null) {
             this.UserSubUin = new String(source.UserSubUin);
         }
+        if (source.GovernPolicy != null) {
+            this.GovernPolicy = new DataGovernPolicy(source.GovernPolicy);
+        }
+        if (source.DatabaseId != null) {
+            this.DatabaseId = new String(source.DatabaseId);
+        }
     }
 
 
@@ -291,6 +353,8 @@ public class DatabaseResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
+        this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
+        this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
 
     }
 }

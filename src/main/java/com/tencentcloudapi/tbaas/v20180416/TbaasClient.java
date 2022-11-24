@@ -39,6 +39,26 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *批量申请长安链用户签名证书
+     * @param req ApplyChainMakerBatchUserCertRequest
+     * @return ApplyChainMakerBatchUserCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyChainMakerBatchUserCertResponse ApplyChainMakerBatchUserCert(ApplyChainMakerBatchUserCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyChainMakerBatchUserCertResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyChainMakerBatchUserCertResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyChainMakerBatchUserCert");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *申请用户证书
      * @param req ApplyUserCertRequest
      * @return ApplyUserCertResponse

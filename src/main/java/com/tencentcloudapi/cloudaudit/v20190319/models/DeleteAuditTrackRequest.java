@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DeleteAuditTrackRequest extends AbstractModel{
 
+    /**
+    * 跟踪集 ID
+    */
+    @SerializedName("TrackId")
+    @Expose
+    private Long TrackId;
+
+    /**
+     * Get 跟踪集 ID 
+     * @return TrackId 跟踪集 ID
+     */
+    public Long getTrackId() {
+        return this.TrackId;
+    }
+
+    /**
+     * Set 跟踪集 ID
+     * @param TrackId 跟踪集 ID
+     */
+    public void setTrackId(Long TrackId) {
+        this.TrackId = TrackId;
+    }
+
     public DeleteAuditTrackRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DeleteAuditTrackRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteAuditTrackRequest(DeleteAuditTrackRequest source) {
+        if (source.TrackId != null) {
+            this.TrackId = new Long(source.TrackId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DeleteAuditTrackRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TrackId", this.TrackId);
 
     }
 }

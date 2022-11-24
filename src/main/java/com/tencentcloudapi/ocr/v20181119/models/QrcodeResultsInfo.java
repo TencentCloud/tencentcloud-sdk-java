@@ -37,7 +37,7 @@ public class QrcodeResultsInfo extends AbstractModel{
     private String Url;
 
     /**
-    * 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+    * 二维码/条形码坐标
     */
     @SerializedName("Position")
     @Expose
@@ -76,16 +76,16 @@ public class QrcodeResultsInfo extends AbstractModel{
     }
 
     /**
-     * Get 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1） 
-     * @return Position 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+     * Get 二维码/条形码坐标 
+     * @return Position 二维码/条形码坐标
      */
     public QrcodePositionObj getPosition() {
         return this.Position;
     }
 
     /**
-     * Set 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
-     * @param Position 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+     * Set 二维码/条形码坐标
+     * @param Position 二维码/条形码坐标
      */
     public void setPosition(QrcodePositionObj Position) {
         this.Position = Position;

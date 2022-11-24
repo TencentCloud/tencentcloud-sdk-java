@@ -25,6 +25,7 @@ public class DescribeModelAccelerateTasksRequest extends AbstractModel{
     /**
     * 过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
     */
     @SerializedName("Filters")
     @Expose
@@ -52,7 +53,7 @@ ModelAccTaskName 任务名称
     private Long Offset;
 
     /**
-    * 返回记录条数，默认20
+    * 返回记录条数，默认10
     */
     @SerializedName("Limit")
     @Expose
@@ -67,9 +68,11 @@ ModelAccTaskName 任务名称
 
     /**
      * Get 过滤器
-ModelAccTaskName 任务名称 
+ModelAccTaskName 任务名称
+ModelSource 模型来源 
      * @return Filters 过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -78,8 +81,10 @@ ModelAccTaskName 任务名称
     /**
      * Set 过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
      * @param Filters 过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -134,16 +139,16 @@ ModelAccTaskName 任务名称
     }
 
     /**
-     * Get 返回记录条数，默认20 
-     * @return Limit 返回记录条数，默认20
+     * Get 返回记录条数，默认10 
+     * @return Limit 返回记录条数，默认10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，默认20
-     * @param Limit 返回记录条数，默认20
+     * Set 返回记录条数，默认10
+     * @param Limit 返回记录条数，默认10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

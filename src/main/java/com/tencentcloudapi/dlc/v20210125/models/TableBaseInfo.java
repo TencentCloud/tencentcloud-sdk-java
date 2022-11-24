@@ -85,6 +85,14 @@ public class TableBaseInfo extends AbstractModel{
     private String UserSubUin;
 
     /**
+    * 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GovernPolicy")
+    @Expose
+    private DataGovernPolicy GovernPolicy;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -236,6 +244,26 @@ public class TableBaseInfo extends AbstractModel{
         this.UserSubUin = UserSubUin;
     }
 
+    /**
+     * Get 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataGovernPolicy getGovernPolicy() {
+        return this.GovernPolicy;
+    }
+
+    /**
+     * Set 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGovernPolicy(DataGovernPolicy GovernPolicy) {
+        this.GovernPolicy = GovernPolicy;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -268,6 +296,9 @@ public class TableBaseInfo extends AbstractModel{
         if (source.UserSubUin != null) {
             this.UserSubUin = new String(source.UserSubUin);
         }
+        if (source.GovernPolicy != null) {
+            this.GovernPolicy = new DataGovernPolicy(source.GovernPolicy);
+        }
     }
 
 
@@ -283,6 +314,7 @@ public class TableBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TableFormat", this.TableFormat);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
+        this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
 
     }
 }

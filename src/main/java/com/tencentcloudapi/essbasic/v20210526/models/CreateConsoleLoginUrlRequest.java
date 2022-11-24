@@ -94,6 +94,13 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+    */
+    @SerializedName("AuthorizationTypes")
+    @Expose
+    private Long [] AuthorizationTypes;
+
+    /**
      * Get 应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填 
      * @return Agent 应用信息
@@ -257,6 +264,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证 
+     * @return AuthorizationTypes 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+     */
+    public Long [] getAuthorizationTypes() {
+        return this.AuthorizationTypes;
+    }
+
+    /**
+     * Set 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+     * @param AuthorizationTypes 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+     */
+    public void setAuthorizationTypes(Long [] AuthorizationTypes) {
+        this.AuthorizationTypes = AuthorizationTypes;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -295,6 +318,12 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.AuthorizationTypes != null) {
+            this.AuthorizationTypes = new Long[source.AuthorizationTypes.length];
+            for (int i = 0; i < source.AuthorizationTypes.length; i++) {
+                this.AuthorizationTypes[i] = new Long(source.AuthorizationTypes[i]);
+            }
+        }
     }
 
 
@@ -312,6 +341,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
 
     }
 }

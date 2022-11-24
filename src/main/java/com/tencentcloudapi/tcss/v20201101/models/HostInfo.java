@@ -128,6 +128,22 @@ public class HostInfo extends AbstractModel{
     private Long RegionID;
 
     /**
+    * 所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Project")
+    @Expose
+    private ProjectInfo Project;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get 主机id 
      * @return HostID 主机id
      */
@@ -367,6 +383,46 @@ public class HostInfo extends AbstractModel{
         this.RegionID = RegionID;
     }
 
+    /**
+     * Get 所属项目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Project 所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProjectInfo getProject() {
+        return this.Project;
+    }
+
+    /**
+     * Set 所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Project 所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProject(ProjectInfo Project) {
+        this.Project = Project;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public HostInfo() {
     }
 
@@ -420,6 +476,15 @@ public class HostInfo extends AbstractModel{
         if (source.RegionID != null) {
             this.RegionID = new Long(source.RegionID);
         }
+        if (source.Project != null) {
+            this.Project = new ProjectInfo(source.Project);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -442,6 +507,8 @@ public class HostInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "RegionID", this.RegionID);
+        this.setParamObj(map, prefix + "Project.", this.Project);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

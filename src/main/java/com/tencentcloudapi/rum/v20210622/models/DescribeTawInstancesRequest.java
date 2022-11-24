@@ -58,14 +58,14 @@ public class DescribeTawInstancesRequest extends AbstractModel{
     private Long [] AreaIds;
 
     /**
-    * 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
+    * 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
     */
     @SerializedName("InstanceStatuses")
     @Expose
     private Long [] InstanceStatuses;
 
     /**
-    * 实例Id
+    * 实例Id, 该参数已废弃，请在Filters内注明
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -166,32 +166,32 @@ public class DescribeTawInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁) 
-     * @return InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
+     * Get 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明 
+     * @return InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
      */
     public Long [] getInstanceStatuses() {
         return this.InstanceStatuses;
     }
 
     /**
-     * Set 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
-     * @param InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
+     * Set 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
+     * @param InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
      */
     public void setInstanceStatuses(Long [] InstanceStatuses) {
         this.InstanceStatuses = InstanceStatuses;
     }
 
     /**
-     * Get 实例Id 
-     * @return InstanceIds 实例Id
+     * Get 实例Id, 该参数已废弃，请在Filters内注明 
+     * @return InstanceIds 实例Id, 该参数已废弃，请在Filters内注明
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceIds 实例Id
+     * Set 实例Id, 该参数已废弃，请在Filters内注明
+     * @param InstanceIds 实例Id, 该参数已废弃，请在Filters内注明
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

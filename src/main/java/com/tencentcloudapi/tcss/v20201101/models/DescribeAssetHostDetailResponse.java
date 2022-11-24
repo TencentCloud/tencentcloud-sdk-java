@@ -191,6 +191,20 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     private Long RegionID;
 
     /**
+    * 所属项目
+    */
+    @SerializedName("Project")
+    @Expose
+    private ProjectInfo Project;
+
+    /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -582,6 +596,38 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 所属项目 
+     * @return Project 所属项目
+     */
+    public ProjectInfo getProject() {
+        return this.Project;
+    }
+
+    /**
+     * Set 所属项目
+     * @param Project 所属项目
+     */
+    public void setProject(ProjectInfo Project) {
+        this.Project = Project;
+    }
+
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -677,6 +723,15 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
         if (source.RegionID != null) {
             this.RegionID = new Long(source.RegionID);
         }
+        if (source.Project != null) {
+            this.Project = new ProjectInfo(source.Project);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -711,6 +766,8 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "RegionID", this.RegionID);
+        this.setParamObj(map, prefix + "Project.", this.Project);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

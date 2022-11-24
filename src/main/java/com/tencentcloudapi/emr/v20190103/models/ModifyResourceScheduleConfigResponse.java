@@ -38,6 +38,14 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel{
     private String ErrorMsg;
 
     /**
+    * 返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 返回数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(String Data) {
+        this.Data = Data;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -110,6 +138,9 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel{
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,6 +153,7 @@ public class ModifyResourceScheduleConfigResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsDraft", this.IsDraft);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

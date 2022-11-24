@@ -408,6 +408,22 @@ public class NodeHardwareInfo extends AbstractModel{
     private String ServiceClient;
 
     /**
+    * 该实例是否开启实例保护，true为开启 false为关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
+    * 0表示老计费，1表示新计费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TradeVersion")
+    @Expose
+    private Long TradeVersion;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1371,6 +1387,46 @@ public class NodeHardwareInfo extends AbstractModel{
         this.ServiceClient = ServiceClient;
     }
 
+    /**
+     * Get 该实例是否开启实例保护，true为开启 false为关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableApiTermination 该实例是否开启实例保护，true为开启 false为关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set 该实例是否开启实例保护，true为开启 false为关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableApiTermination 该实例是否开启实例保护，true为开启 false为关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
+    /**
+     * Get 0表示老计费，1表示新计费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TradeVersion 0表示老计费，1表示新计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTradeVersion() {
+        return this.TradeVersion;
+    }
+
+    /**
+     * Set 0表示老计费，1表示新计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TradeVersion 0表示老计费，1表示新计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTradeVersion(Long TradeVersion) {
+        this.TradeVersion = TradeVersion;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1529,6 +1585,12 @@ public class NodeHardwareInfo extends AbstractModel{
         if (source.ServiceClient != null) {
             this.ServiceClient = new String(source.ServiceClient);
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
+        if (source.TradeVersion != null) {
+            this.TradeVersion = new Long(source.TradeVersion);
+        }
     }
 
 
@@ -1584,6 +1646,8 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsFederation", this.IsFederation);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
 
     }
 }

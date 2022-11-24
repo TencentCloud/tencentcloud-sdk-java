@@ -136,6 +136,7 @@ public class TrainingModelVersionDTO extends AbstractModel{
 
     /**
     * 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainingModelStatus")
@@ -472,8 +473,10 @@ public class TrainingModelVersionDTO extends AbstractModel{
 
     /**
      * Get 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TrainingModelStatus 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainingModelStatus() {
@@ -482,8 +485,10 @@ public class TrainingModelVersionDTO extends AbstractModel{
 
     /**
      * Set 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TrainingModelStatus 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainingModelStatus(String TrainingModelStatus) {

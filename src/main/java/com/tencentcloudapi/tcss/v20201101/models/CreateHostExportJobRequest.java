@@ -23,14 +23,17 @@ import java.util.HashMap;
 public class CreateHostExportJobRequest extends AbstractModel{
 
     /**
-    * 导出字段
-    */
-    @SerializedName("ExportField")
-    @Expose
-    private String [] ExportField;
-
-    /**
-    * 需要返回的数量，默认为10，最大值为10000
+    * 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -44,7 +47,7 @@ public class CreateHostExportJobRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+    * 需要返回的数量，默认为10，最大值为10000
     */
     @SerializedName("Offset")
     @Expose
@@ -65,32 +68,63 @@ public class CreateHostExportJobRequest extends AbstractModel{
     private String Order;
 
     /**
-     * Get 导出字段 
-     * @return ExportField 导出字段
-     */
-    public String [] getExportField() {
-        return this.ExportField;
-    }
+    * 导出字段
+    */
+    @SerializedName("ExportField")
+    @Expose
+    private String [] ExportField;
 
     /**
-     * Set 导出字段
-     * @param ExportField 导出字段
-     */
-    public void setExportField(String [] ExportField) {
-        this.ExportField = ExportField;
-    }
-
-    /**
-     * Get 需要返回的数量，默认为10，最大值为10000 
-     * @return Filters 需要返回的数量，默认为10，最大值为10000
+     * Get 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li> 
+     * @return Filters 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为10000
-     * @param Filters 需要返回的数量，默认为10，最大值为10000
+     * Set 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
+     * @param Filters 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
@@ -113,16 +147,16 @@ public class CreateHostExportJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Offset 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * Get 需要返回的数量，默认为10，最大值为10000 
+     * @return Offset 需要返回的数量，默认为10，最大值为10000
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Offset 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * Set 需要返回的数量，默认为10，最大值为10000
+     * @param Offset 需要返回的数量，默认为10，最大值为10000
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -160,6 +194,22 @@ public class CreateHostExportJobRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    /**
+     * Get 导出字段 
+     * @return ExportField 导出字段
+     */
+    public String [] getExportField() {
+        return this.ExportField;
+    }
+
+    /**
+     * Set 导出字段
+     * @param ExportField 导出字段
+     */
+    public void setExportField(String [] ExportField) {
+        this.ExportField = ExportField;
+    }
+
     public CreateHostExportJobRequest() {
     }
 
@@ -168,12 +218,6 @@ public class CreateHostExportJobRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateHostExportJobRequest(CreateHostExportJobRequest source) {
-        if (source.ExportField != null) {
-            this.ExportField = new String[source.ExportField.length];
-            for (int i = 0; i < source.ExportField.length; i++) {
-                this.ExportField[i] = new String(source.ExportField[i]);
-            }
-        }
         if (source.Filters != null) {
             this.Filters = new AssetFilters[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -192,6 +236,12 @@ public class CreateHostExportJobRequest extends AbstractModel{
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
+        if (source.ExportField != null) {
+            this.ExportField = new String[source.ExportField.length];
+            for (int i = 0; i < source.ExportField.length; i++) {
+                this.ExportField[i] = new String(source.ExportField[i]);
+            }
+        }
     }
 
 
@@ -199,12 +249,12 @@ public class CreateHostExportJobRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
 
     }
 }

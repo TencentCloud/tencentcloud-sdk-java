@@ -249,6 +249,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeApplicationList)用于查询自己账号下的应用列表
+     * @param req DescribeApplicationListRequest
+     * @return DescribeApplicationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationListResponse DescribeApplicationList(DescribeApplicationListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户自定义送检信息
      * @param req DescribeRealtimeScanConfigRequest
      * @return DescribeRealtimeScanConfigResponse

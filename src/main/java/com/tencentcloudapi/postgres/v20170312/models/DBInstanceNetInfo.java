@@ -74,6 +74,14 @@ public class DBInstanceNetInfo extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private String ProtocolType;
+
+    /**
      * Get DNS域名 
      * @return Address DNS域名
      */
@@ -193,6 +201,26 @@ public class DBInstanceNetInfo extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocolType(String ProtocolType) {
+        this.ProtocolType = ProtocolType;
+    }
+
     public DBInstanceNetInfo() {
     }
 
@@ -222,6 +250,9 @@ public class DBInstanceNetInfo extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
     }
 
 
@@ -236,6 +267,7 @@ public class DBInstanceNetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
 
     }
 }

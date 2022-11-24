@@ -80,7 +80,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *查询硬件节点信息
+     *查询集群节点信息
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
      * @throws TencentCloudSDKException
@@ -381,7 +381,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *修改yarn资源调度的资源配置
+     *修改YARN资源调度的资源配置
      * @param req ModifyResourceScheduleConfigRequest
      * @return ModifyResourceScheduleConfigResponse
      * @throws TencentCloudSDKException
@@ -441,7 +441,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *实例扩容
+     *扩容节点
      * @param req ScaleOutInstanceRequest
      * @return ScaleOutInstanceResponse
      * @throws TencentCloudSDKException

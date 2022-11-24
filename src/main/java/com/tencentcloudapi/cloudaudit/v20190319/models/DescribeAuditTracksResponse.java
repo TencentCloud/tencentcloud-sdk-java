@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeAuditTracksResponse extends AbstractModel{
 
     /**
+    * 跟踪集列表
+    */
+    @SerializedName("Tracks")
+    @Expose
+    private Tracks [] Tracks;
+
+    /**
+    * 总数目
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 跟踪集列表 
+     * @return Tracks 跟踪集列表
+     */
+    public Tracks [] getTracks() {
+        return this.Tracks;
+    }
+
+    /**
+     * Set 跟踪集列表
+     * @param Tracks 跟踪集列表
+     */
+    public void setTracks(Tracks [] Tracks) {
+        this.Tracks = Tracks;
+    }
+
+    /**
+     * Get 总数目 
+     * @return TotalCount 总数目
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数目
+     * @param TotalCount 总数目
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribeAuditTracksResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAuditTracksResponse(DescribeAuditTracksResponse source) {
+        if (source.Tracks != null) {
+            this.Tracks = new Tracks[source.Tracks.length];
+            for (int i = 0; i < source.Tracks.length; i++) {
+                this.Tracks[i] = new Tracks(source.Tracks[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribeAuditTracksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Tracks.", this.Tracks);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
