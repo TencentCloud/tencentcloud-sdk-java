@@ -97,6 +97,14 @@ public class RocketMQClusterInfo extends AbstractModel{
     private Boolean IsVip;
 
     /**
+    * Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RocketMQFlag")
+    @Expose
+    private Boolean RocketMQFlag;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -272,6 +280,26 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.IsVip = IsVip;
     }
 
+    /**
+     * Get Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RocketMQFlag Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRocketMQFlag() {
+        return this.RocketMQFlag;
+    }
+
+    /**
+     * Set Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RocketMQFlag Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRocketMQFlag(Boolean RocketMQFlag) {
+        this.RocketMQFlag = RocketMQFlag;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -313,6 +341,9 @@ public class RocketMQClusterInfo extends AbstractModel{
         if (source.IsVip != null) {
             this.IsVip = new Boolean(source.IsVip);
         }
+        if (source.RocketMQFlag != null) {
+            this.RocketMQFlag = new Boolean(source.RocketMQFlag);
+        }
     }
 
 
@@ -330,6 +361,7 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamSimple(map, prefix + "IsVip", this.IsVip);
+        this.setParamSimple(map, prefix + "RocketMQFlag", this.RocketMQFlag);
 
     }
 }

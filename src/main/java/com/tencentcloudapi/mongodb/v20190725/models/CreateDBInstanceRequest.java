@@ -114,7 +114,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+    * 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
     */
     @SerializedName("Password")
     @Expose
@@ -203,6 +203,27 @@ public class CreateDBInstanceRequest extends AbstractModel{
     @SerializedName("MongosNodeNum")
     @Expose
     private Long MongosNodeNum;
+
+    /**
+    * 只读节点数量，最大不超过7个
+    */
+    @SerializedName("ReadonlyNodeNum")
+    @Expose
+    private Long ReadonlyNodeNum;
+
+    /**
+    * 只读节点部署可用区
+    */
+    @SerializedName("ReadonlyNodeAvailabilityZoneList")
+    @Expose
+    private String [] ReadonlyNodeAvailabilityZoneList;
+
+    /**
+    * Hidden节点所在的可用区，跨可用区实例必传
+    */
+    @SerializedName("HiddenZone")
+    @Expose
+    private String HiddenZone;
 
     /**
      * Get 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数 
@@ -413,16 +434,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种 
-     * @return Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * Get 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种 
+     * @return Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
-     * @param Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * Set 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
+     * @param Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -620,6 +641,54 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.MongosNodeNum = MongosNodeNum;
     }
 
+    /**
+     * Get 只读节点数量，最大不超过7个 
+     * @return ReadonlyNodeNum 只读节点数量，最大不超过7个
+     */
+    public Long getReadonlyNodeNum() {
+        return this.ReadonlyNodeNum;
+    }
+
+    /**
+     * Set 只读节点数量，最大不超过7个
+     * @param ReadonlyNodeNum 只读节点数量，最大不超过7个
+     */
+    public void setReadonlyNodeNum(Long ReadonlyNodeNum) {
+        this.ReadonlyNodeNum = ReadonlyNodeNum;
+    }
+
+    /**
+     * Get 只读节点部署可用区 
+     * @return ReadonlyNodeAvailabilityZoneList 只读节点部署可用区
+     */
+    public String [] getReadonlyNodeAvailabilityZoneList() {
+        return this.ReadonlyNodeAvailabilityZoneList;
+    }
+
+    /**
+     * Set 只读节点部署可用区
+     * @param ReadonlyNodeAvailabilityZoneList 只读节点部署可用区
+     */
+    public void setReadonlyNodeAvailabilityZoneList(String [] ReadonlyNodeAvailabilityZoneList) {
+        this.ReadonlyNodeAvailabilityZoneList = ReadonlyNodeAvailabilityZoneList;
+    }
+
+    /**
+     * Get Hidden节点所在的可用区，跨可用区实例必传 
+     * @return HiddenZone Hidden节点所在的可用区，跨可用区实例必传
+     */
+    public String getHiddenZone() {
+        return this.HiddenZone;
+    }
+
+    /**
+     * Set Hidden节点所在的可用区，跨可用区实例必传
+     * @param HiddenZone Hidden节点所在的可用区，跨可用区实例必传
+     */
+    public void setHiddenZone(String HiddenZone) {
+        this.HiddenZone = HiddenZone;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -715,6 +784,18 @@ public class CreateDBInstanceRequest extends AbstractModel{
         if (source.MongosNodeNum != null) {
             this.MongosNodeNum = new Long(source.MongosNodeNum);
         }
+        if (source.ReadonlyNodeNum != null) {
+            this.ReadonlyNodeNum = new Long(source.ReadonlyNodeNum);
+        }
+        if (source.ReadonlyNodeAvailabilityZoneList != null) {
+            this.ReadonlyNodeAvailabilityZoneList = new String[source.ReadonlyNodeAvailabilityZoneList.length];
+            for (int i = 0; i < source.ReadonlyNodeAvailabilityZoneList.length; i++) {
+                this.ReadonlyNodeAvailabilityZoneList[i] = new String(source.ReadonlyNodeAvailabilityZoneList[i]);
+            }
+        }
+        if (source.HiddenZone != null) {
+            this.HiddenZone = new String(source.HiddenZone);
+        }
     }
 
 
@@ -748,6 +829,9 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
         this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
         this.setParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+        this.setParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
+        this.setParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
+        this.setParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
 
     }
 }

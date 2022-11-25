@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteDomainAliasRequest extends AbstractModel{
 
     /**
-    * 域名别名ID
+    * 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
     */
     @SerializedName("DomainAliasId")
     @Expose
@@ -37,23 +37,23 @@ public class DeleteDomainAliasRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+    * 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-     * Get 域名别名ID 
-     * @return DomainAliasId 域名别名ID
+     * Get 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID 
+     * @return DomainAliasId 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
      */
     public Long getDomainAliasId() {
         return this.DomainAliasId;
     }
 
     /**
-     * Set 域名别名ID
-     * @param DomainAliasId 域名别名ID
+     * Set 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
+     * @param DomainAliasId 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
      */
     public void setDomainAliasId(Long DomainAliasId) {
         this.DomainAliasId = DomainAliasId;
@@ -76,16 +76,16 @@ public class DeleteDomainAliasRequest extends AbstractModel{
     }
 
     /**
-     * Get 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 
-     * @return DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * Get 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
+     * @return DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
-     * @param DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * Set 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

@@ -399,7 +399,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
+     *查询备份Rdb下载地址
      * @param req DescribeBackupUrlRequest
      * @return DescribeBackupUrlResponse
      * @throws TencentCloudSDKException

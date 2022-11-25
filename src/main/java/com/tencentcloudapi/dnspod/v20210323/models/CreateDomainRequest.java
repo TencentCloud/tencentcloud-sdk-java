@@ -30,7 +30,7 @@ public class CreateDomainRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 域名分组ID
+    * 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
     */
     @SerializedName("GroupId")
     @Expose
@@ -60,16 +60,16 @@ public class CreateDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get 域名分组ID 
-     * @return GroupId 域名分组ID
+     * Get 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息 
+     * @return GroupId 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 域名分组ID
-     * @param GroupId 域名分组ID
+     * Set 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
+     * @param GroupId 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

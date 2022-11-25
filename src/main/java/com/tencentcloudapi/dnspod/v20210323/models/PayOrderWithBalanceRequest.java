@@ -30,7 +30,7 @@ public class PayOrderWithBalanceRequest extends AbstractModel{
     private String [] BigDealIdList;
 
     /**
-    * 代金券ID数组
+    * 代金券ID数组。可以从控制台查到拥有的代金券
     */
     @SerializedName("VoucherIdList")
     @Expose
@@ -53,16 +53,16 @@ public class PayOrderWithBalanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 代金券ID数组 
-     * @return VoucherIdList 代金券ID数组
+     * Get 代金券ID数组。可以从控制台查到拥有的代金券 
+     * @return VoucherIdList 代金券ID数组。可以从控制台查到拥有的代金券
      */
     public String [] getVoucherIdList() {
         return this.VoucherIdList;
     }
 
     /**
-     * Set 代金券ID数组
-     * @param VoucherIdList 代金券ID数组
+     * Set 代金券ID数组。可以从控制台查到拥有的代金券
+     * @param VoucherIdList 代金券ID数组。可以从控制台查到拥有的代金券
      */
     public void setVoucherIdList(String [] VoucherIdList) {
         this.VoucherIdList = VoucherIdList;

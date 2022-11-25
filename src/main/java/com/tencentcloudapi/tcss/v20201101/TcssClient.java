@@ -741,6 +741,66 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *创建k8s api异常事件导出任务
+     * @param req CreateK8sApiAbnormalEventExportJobRequest
+     * @return CreateK8sApiAbnormalEventExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateK8sApiAbnormalEventExportJobResponse CreateK8sApiAbnormalEventExportJob(CreateK8sApiAbnormalEventExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateK8sApiAbnormalEventExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateK8sApiAbnormalEventExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateK8sApiAbnormalEventExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建k8sApi异常规则导出任务
+     * @param req CreateK8sApiAbnormalRuleExportJobRequest
+     * @return CreateK8sApiAbnormalRuleExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateK8sApiAbnormalRuleExportJobResponse CreateK8sApiAbnormalRuleExportJob(CreateK8sApiAbnormalRuleExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateK8sApiAbnormalRuleExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateK8sApiAbnormalRuleExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateK8sApiAbnormalRuleExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建k8sapi异常事件规则
+     * @param req CreateK8sApiAbnormalRuleInfoRequest
+     * @return CreateK8sApiAbnormalRuleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(CreateK8sApiAbnormalRuleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateK8sApiAbnormalRuleInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateK8sApiAbnormalRuleInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateK8sApiAbnormalRuleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *容器网络集群下发刷新任务
      * @param req CreateNetworkFirewallClusterRefreshRequest
      * @return CreateNetworkFirewallClusterRefreshResponse
@@ -1254,6 +1314,26 @@ public class TcssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIgnoreVulResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIgnoreVul");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除k8sapi异常事件规则
+     * @param req DeleteK8sApiAbnormalRuleRequest
+     * @return DeleteK8sApiAbnormalRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(DeleteK8sApiAbnormalRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteK8sApiAbnormalRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteK8sApiAbnormalRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteK8sApiAbnormalRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1814,6 +1894,26 @@ public class TcssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetAppServiceListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAssetAppServiceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群列表
+     * @param req DescribeAssetClusterListRequest
+     * @return DescribeAssetClusterListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetClusterListResponse DescribeAssetClusterList(DescribeAssetClusterListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetClusterListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetClusterListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetClusterList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3454,6 +3554,146 @@ public class TcssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInspectionReportResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInspectionReport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8s api 异常事件详情
+     * @param req DescribeK8sApiAbnormalEventInfoRequest
+     * @return DescribeK8sApiAbnormalEventInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalEventInfoResponse DescribeK8sApiAbnormalEventInfo(DescribeK8sApiAbnormalEventInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalEventInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalEventInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalEventInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8s api异常事件列表
+     * @param req DescribeK8sApiAbnormalEventListRequest
+     * @return DescribeK8sApiAbnormalEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalEventListResponse DescribeK8sApiAbnormalEventList(DescribeK8sApiAbnormalEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalEventListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalEventListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8sapi异常请求规则详情
+     * @param req DescribeK8sApiAbnormalRuleInfoRequest
+     * @return DescribeK8sApiAbnormalRuleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalRuleInfoResponse DescribeK8sApiAbnormalRuleInfo(DescribeK8sApiAbnormalRuleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalRuleInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalRuleInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalRuleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8sapi异常请求规则列表
+     * @param req DescribeK8sApiAbnormalRuleListRequest
+     * @return DescribeK8sApiAbnormalRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(DescribeK8sApiAbnormalRuleListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalRuleListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalRuleListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalRuleList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8s api 异常规则中范围列表
+     * @param req DescribeK8sApiAbnormalRuleScopeListRequest
+     * @return DescribeK8sApiAbnormalRuleScopeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeList(DescribeK8sApiAbnormalRuleScopeListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalRuleScopeListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalRuleScopeListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalRuleScopeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8sapi异常事件统计
+     * @param req DescribeK8sApiAbnormalSummaryRequest
+     * @return DescribeK8sApiAbnormalSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(DescribeK8sApiAbnormalSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询k8sapi异常事件趋势
+     * @param req DescribeK8sApiAbnormalTendencyRequest
+     * @return DescribeK8sApiAbnormalTendencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(DescribeK8sApiAbnormalTendencyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeK8sApiAbnormalTendencyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeK8sApiAbnormalTendencyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeK8sApiAbnormalTendency");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -5594,6 +5834,66 @@ public class TcssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyImageAuthorizedResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyImageAuthorized");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改k8sapi异常事件状态
+     * @param req ModifyK8sApiAbnormalEventStatusRequest
+     * @return ModifyK8sApiAbnormalEventStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyK8sApiAbnormalEventStatusResponse ModifyK8sApiAbnormalEventStatus(ModifyK8sApiAbnormalEventStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyK8sApiAbnormalEventStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyK8sApiAbnormalEventStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyK8sApiAbnormalEventStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改k8sapi异常规则信息
+     * @param req ModifyK8sApiAbnormalRuleInfoRequest
+     * @return ModifyK8sApiAbnormalRuleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(ModifyK8sApiAbnormalRuleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyK8sApiAbnormalRuleInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyK8sApiAbnormalRuleInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyK8sApiAbnormalRuleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改k8sapi异常事件规则状态
+     * @param req ModifyK8sApiAbnormalRuleStatusRequest
+     * @return ModifyK8sApiAbnormalRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(ModifyK8sApiAbnormalRuleStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyK8sApiAbnormalRuleStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyK8sApiAbnormalRuleStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyK8sApiAbnormalRuleStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

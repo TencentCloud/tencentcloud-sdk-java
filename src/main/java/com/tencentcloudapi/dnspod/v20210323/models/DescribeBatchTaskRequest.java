@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeBatchTaskRequest extends AbstractModel{
 
     /**
-    * 任务ID
+    * 任务ID。操作批量接口时会返回JobId
     */
     @SerializedName("JobId")
     @Expose
     private Long JobId;
 
     /**
-     * Get 任务ID 
-     * @return JobId 任务ID
+     * Get 任务ID。操作批量接口时会返回JobId 
+     * @return JobId 任务ID。操作批量接口时会返回JobId
      */
     public Long getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID
-     * @param JobId 任务ID
+     * Set 任务ID。操作批量接口时会返回JobId
+     * @param JobId 任务ID。操作批量接口时会返回JobId
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;

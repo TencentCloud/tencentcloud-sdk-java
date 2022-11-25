@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeBackupUrlRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份ID，通过DescribeInstanceBackups接口可查
+    * 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份ID，通过DescribeInstanceBackups接口可查 
-     * @return BackupId 备份ID，通过DescribeInstanceBackups接口可查
+     * Get 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。 
+     * @return BackupId 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份ID，通过DescribeInstanceBackups接口可查
-     * @param BackupId 备份ID，通过DescribeInstanceBackups接口可查
+     * Set 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
+     * @param BackupId 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;

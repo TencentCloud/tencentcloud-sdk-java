@@ -622,7 +622,7 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
-     *获取某个域名下的解析记录
+     *获取某个域名下的解析记录列表
      * @param req DescribeRecordListRequest
      * @return DescribeRecordListResponse
      * @throws TencentCloudSDKException
@@ -995,6 +995,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRecordBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改记录可选字段
+     * @param req ModifyRecordFieldsRequest
+     * @return ModifyRecordFieldsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordFieldsResponse ModifyRecordFields(ModifyRecordFieldsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordFieldsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordFieldsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordFields");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

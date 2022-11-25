@@ -30,7 +30,7 @@ public class DescribeRecordListRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数
+    * 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainId")
     @Expose
@@ -51,21 +51,21 @@ public class DescribeRecordListRequest extends AbstractModel{
     private String RecordType;
 
     /**
-    * 获取某条线路名称的解析记录
+    * 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
     */
     @SerializedName("RecordLine")
     @Expose
     private String RecordLine;
 
     /**
-    * 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数
+    * 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
     */
     @SerializedName("RecordLineId")
     @Expose
     private String RecordLineId;
 
     /**
-    * 获取某个分组下的解析记录时，传这个分组Id
+    * 获取某个分组下的解析记录时，传这个分组Id。
     */
     @SerializedName("GroupId")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数 
-     * @return DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数
+     * Get 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
+     * @return DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数
-     * @param DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数
+     * Set 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
@@ -171,48 +171,48 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 获取某条线路名称的解析记录 
-     * @return RecordLine 获取某条线路名称的解析记录
+     * Get 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息 
+     * @return RecordLine 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
      */
     public String getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set 获取某条线路名称的解析记录
-     * @param RecordLine 获取某条线路名称的解析记录
+     * Set 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+     * @param RecordLine 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数 
-     * @return RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数
+     * Get 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息 
+     * @return RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数
-     * @param RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数
+     * Set 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+     * @param RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;
     }
 
     /**
-     * Get 获取某个分组下的解析记录时，传这个分组Id 
-     * @return GroupId 获取某个分组下的解析记录时，传这个分组Id
+     * Get 获取某个分组下的解析记录时，传这个分组Id。 
+     * @return GroupId 获取某个分组下的解析记录时，传这个分组Id。
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 获取某个分组下的解析记录时，传这个分组Id
-     * @param GroupId 获取某个分组下的解析记录时，传这个分组Id
+     * Set 获取某个分组下的解析记录时，传这个分组Id。
+     * @param GroupId 获取某个分组下的解析记录时，传这个分组Id。
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

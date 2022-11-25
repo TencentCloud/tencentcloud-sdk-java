@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyRecordBatchRequest extends AbstractModel{
 
     /**
-    * 记录ID数组
+    * 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
     */
     @SerializedName("RecordIdList")
     @Expose
@@ -58,16 +58,16 @@ public class ModifyRecordBatchRequest extends AbstractModel{
     private String MX;
 
     /**
-     * Get 记录ID数组 
-     * @return RecordIdList 记录ID数组
+     * Get 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId 
+     * @return RecordIdList 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
      */
     public Long [] getRecordIdList() {
         return this.RecordIdList;
     }
 
     /**
-     * Set 记录ID数组
-     * @param RecordIdList 记录ID数组
+     * Set 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * @param RecordIdList 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
      */
     public void setRecordIdList(Long [] RecordIdList) {
         this.RecordIdList = RecordIdList;

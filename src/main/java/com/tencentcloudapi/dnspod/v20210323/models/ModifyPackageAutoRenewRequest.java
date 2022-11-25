@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyPackageAutoRenewRequest extends AbstractModel{
 
     /**
-    * 资源ID
+    * 资源ID。可以在控制台查看所有的资源
     */
     @SerializedName("ResourceId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyPackageAutoRenewRequest extends AbstractModel{
     private String Status;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get 资源ID。可以在控制台查看所有的资源 
+     * @return ResourceId 资源ID。可以在控制台查看所有的资源
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set 资源ID。可以在控制台查看所有的资源
+     * @param ResourceId 资源ID。可以在控制台查看所有的资源
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
