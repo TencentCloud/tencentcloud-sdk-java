@@ -117,6 +117,9 @@ public enum TeoErrorCode {
     // 非法操作-非法参数-参数值数量超出限制。
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMTOOMANYVALUES("InvalidParameter.ErrInvalidActionParamTooManyValues"),
      
+    // 非法操作-非法类型。
+     INVALIDPARAMETER_ERRINVALIDACTIONTYPE("InvalidParameter.ErrInvalidActionType"),
+     
     // 非法条件-非法忽略大小写。
      INVALIDPARAMETER_ERRINVALIDCONDITIONIGNORECASE("InvalidParameter.ErrInvalidConditionIgnoreCase"),
      
@@ -132,8 +135,14 @@ public enum TeoErrorCode {
     // 非法条件-非法参数值-参数值长度超出限制。
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUETOOLONGVALUE("InvalidParameter.ErrInvalidConditionValueTooLongValue"),
      
+    // 非法条件-非法参数值-参数值数量为0。
+     INVALIDPARAMETER_ERRINVALIDCONDITIONVALUEZEROLENGTH("InvalidParameter.ErrInvalidConditionValueZeroLength"),
+     
     // 域名不存在。
      INVALIDPARAMETER_HOSTNOTFOUND("InvalidParameter.HostNotFound"),
+     
+    // 无效的token鉴权。
+     INVALIDPARAMETER_INVALIDAUTHENTICATION("InvalidParameter.InvalidAuthentication"),
      
     // 无效的token鉴权参数。
      INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESIGNPARAM("InvalidParameter.InvalidAuthenticationTypeSignParam"),
@@ -234,7 +243,7 @@ public enum TeoErrorCode {
     // 参数错误
      INVALIDPARAMETER_SECURITY("InvalidParameter.Security"),
      
-    // 参数错误-setting非法参数。
+    // 配置项参数错误。
      INVALIDPARAMETER_SETTINGINVALIDPARAM("InvalidParameter.SettingInvalidParam"),
      
     // 资源存在错误。
@@ -311,6 +320,9 @@ public enum TeoErrorCode {
      
     // 4层代理资源处于封禁中，禁止操作。
      OPERATIONDENIED_L4PROXYINBANNEDSTATUS("OperationDenied.L4ProxyInBannedStatus"),
+     
+    // 绑定4层实例有处于非运行中的状态，禁止操作。
+     OPERATIONDENIED_L4STATUSNOTINONLINE("OperationDenied.L4StatusNotInOnline"),
      
     // 已存在多个Cname接入站点，不允许切换至NS。
      OPERATIONDENIED_MULTIPLECNAMEZONE("OperationDenied.MultipleCnameZone"),

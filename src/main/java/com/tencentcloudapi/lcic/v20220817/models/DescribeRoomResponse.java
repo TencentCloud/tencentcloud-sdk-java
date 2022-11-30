@@ -68,7 +68,7 @@ public class DescribeRoomResponse extends AbstractModel{
     private Long Resolution;
 
     /**
-    * 最大连麦人数（不包括老师）。取值范围[0, 17)
+    * 最大连麦人数（不包括老师）。取值范围[0, 16]
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -243,16 +243,16 @@ coteaching 双师
     }
 
     /**
-     * Get 最大连麦人数（不包括老师）。取值范围[0, 17) 
-     * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * Get 最大连麦人数（不包括老师）。取值范围[0, 16] 
+     * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set 最大连麦人数（不包括老师）。取值范围[0, 17)
-     * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * Set 最大连麦人数（不包括老师）。取值范围[0, 16]
+     * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;

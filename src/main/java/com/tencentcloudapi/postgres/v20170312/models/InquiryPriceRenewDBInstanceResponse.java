@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
 
     /**
-    * 总费用，打折前的。比如24650表示246.5元
+    * 刊例价，单位为分。如24650表示246.5元
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * 实际需要付款金额。比如24650表示246.5元
+    * 折后实际付款金额，单位为分。如24650表示246.5元
     */
     @SerializedName("Price")
     @Expose
@@ -51,32 +51,32 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总费用，打折前的。比如24650表示246.5元 
-     * @return OriginalPrice 总费用，打折前的。比如24650表示246.5元
+     * Get 刊例价，单位为分。如24650表示246.5元 
+     * @return OriginalPrice 刊例价，单位为分。如24650表示246.5元
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 总费用，打折前的。比如24650表示246.5元
-     * @param OriginalPrice 总费用，打折前的。比如24650表示246.5元
+     * Set 刊例价，单位为分。如24650表示246.5元
+     * @param OriginalPrice 刊例价，单位为分。如24650表示246.5元
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 实际需要付款金额。比如24650表示246.5元 
-     * @return Price 实际需要付款金额。比如24650表示246.5元
+     * Get 折后实际付款金额，单位为分。如24650表示246.5元 
+     * @return Price 折后实际付款金额，单位为分。如24650表示246.5元
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实际需要付款金额。比如24650表示246.5元
-     * @param Price 实际需要付款金额。比如24650表示246.5元
+     * Set 折后实际付款金额，单位为分。如24650表示246.5元
+     * @param Price 折后实际付款金额，单位为分。如24650表示246.5元
      */
     public void setPrice(Long Price) {
         this.Price = Price;

@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel{
 
     /**
-    * 用户在渠道的编号，最大64位字符串
+    * 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 用户的来源渠道
+    * 内部参数，暂未开放使用
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * 自定义用户编号
+    * 内部参数，暂未开放使用
     */
     @SerializedName("CustomUserId")
     @Expose
     private String CustomUserId;
 
     /**
-    * 用户真实IP
+    * 内部参数，暂未开放使用
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 用户代理IP
+    * 内部参数，暂未开放使用
     */
     @SerializedName("ProxyIp")
     @Expose
     private String ProxyIp;
 
     /**
-     * Get 用户在渠道的编号，最大64位字符串 
-     * @return OpenId 用户在渠道的编号，最大64位字符串
+     * Get 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串 
+     * @return OpenId 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 用户在渠道的编号，最大64位字符串
-     * @param OpenId 用户在渠道的编号，最大64位字符串
+     * Set 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * @param OpenId 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 用户的来源渠道 
-     * @return Channel 用户的来源渠道
+     * Get 内部参数，暂未开放使用 
+     * @return Channel 内部参数，暂未开放使用
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 用户的来源渠道
-     * @param Channel 用户的来源渠道
+     * Set 内部参数，暂未开放使用
+     * @param Channel 内部参数，暂未开放使用
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 自定义用户编号 
-     * @return CustomUserId 自定义用户编号
+     * Get 内部参数，暂未开放使用 
+     * @return CustomUserId 内部参数，暂未开放使用
      */
     public String getCustomUserId() {
         return this.CustomUserId;
     }
 
     /**
-     * Set 自定义用户编号
-     * @param CustomUserId 自定义用户编号
+     * Set 内部参数，暂未开放使用
+     * @param CustomUserId 内部参数，暂未开放使用
      */
     public void setCustomUserId(String CustomUserId) {
         this.CustomUserId = CustomUserId;
     }
 
     /**
-     * Get 用户真实IP 
-     * @return ClientIp 用户真实IP
+     * Get 内部参数，暂未开放使用 
+     * @return ClientIp 内部参数，暂未开放使用
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 用户真实IP
-     * @param ClientIp 用户真实IP
+     * Set 内部参数，暂未开放使用
+     * @param ClientIp 内部参数，暂未开放使用
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 用户代理IP 
-     * @return ProxyIp 用户代理IP
+     * Get 内部参数，暂未开放使用 
+     * @return ProxyIp 内部参数，暂未开放使用
      */
     public String getProxyIp() {
         return this.ProxyIp;
     }
 
     /**
-     * Set 用户代理IP
-     * @param ProxyIp 用户代理IP
+     * Set 内部参数，暂未开放使用
+     * @param ProxyIp 内部参数，暂未开放使用
      */
     public void setProxyIp(String ProxyIp) {
         this.ProxyIp = ProxyIp;

@@ -67,6 +67,13 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel{
     private AiRecognitionTaskSegmentResultOutput Output;
 
     /**
+    * 视频拆条任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -170,6 +177,22 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel{
         this.Output = Output;
     }
 
+    /**
+     * Get 视频拆条任务进度，取值范围 [0-100] 。 
+     * @return Progress 视频拆条任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 视频拆条任务进度，取值范围 [0-100] 。
+     * @param Progress 视频拆条任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public AiRecognitionTaskSegmentResult() {
     }
 
@@ -196,6 +219,9 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel{
         if (source.Output != null) {
             this.Output = new AiRecognitionTaskSegmentResultOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -209,6 +235,7 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

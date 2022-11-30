@@ -30,7 +30,7 @@ public class HostItem extends AbstractModel{
     private Placement Placement;
 
     /**
-    * 专用宿主机实例id
+    * 专用宿主机实例ID
     */
     @SerializedName("HostId")
     @Expose
@@ -93,7 +93,7 @@ public class HostItem extends AbstractModel{
     private String HostState;
 
     /**
-    * 专用宿主机实例ip
+    * 专用宿主机实例IP
     */
     @SerializedName("HostIp")
     @Expose
@@ -131,16 +131,16 @@ public class HostItem extends AbstractModel{
     }
 
     /**
-     * Get 专用宿主机实例id 
-     * @return HostId 专用宿主机实例id
+     * Get 专用宿主机实例ID 
+     * @return HostId 专用宿主机实例ID
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set 专用宿主机实例id
-     * @param HostId 专用宿主机实例id
+     * Set 专用宿主机实例ID
+     * @param HostId 专用宿主机实例ID
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;
@@ -275,16 +275,16 @@ public class HostItem extends AbstractModel{
     }
 
     /**
-     * Get 专用宿主机实例ip 
-     * @return HostIp 专用宿主机实例ip
+     * Get 专用宿主机实例IP 
+     * @return HostIp 专用宿主机实例IP
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set 专用宿主机实例ip
-     * @param HostIp 专用宿主机实例ip
+     * Set 专用宿主机实例IP
+     * @param HostIp 专用宿主机实例IP
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;

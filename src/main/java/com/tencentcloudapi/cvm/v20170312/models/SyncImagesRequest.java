@@ -51,6 +51,13 @@ public class SyncImagesRequest extends AbstractModel{
     private String ImageName;
 
     /**
+    * 是否需要返回目的地域的镜像ID。
+    */
+    @SerializedName("ImageSetRequired")
+    @Expose
+    private Boolean ImageSetRequired;
+
+    /**
      * Get 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。 
      * @return ImageIds 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。
      */
@@ -114,6 +121,22 @@ public class SyncImagesRequest extends AbstractModel{
         this.ImageName = ImageName;
     }
 
+    /**
+     * Get 是否需要返回目的地域的镜像ID。 
+     * @return ImageSetRequired 是否需要返回目的地域的镜像ID。
+     */
+    public Boolean getImageSetRequired() {
+        return this.ImageSetRequired;
+    }
+
+    /**
+     * Set 是否需要返回目的地域的镜像ID。
+     * @param ImageSetRequired 是否需要返回目的地域的镜像ID。
+     */
+    public void setImageSetRequired(Boolean ImageSetRequired) {
+        this.ImageSetRequired = ImageSetRequired;
+    }
+
     public SyncImagesRequest() {
     }
 
@@ -140,6 +163,9 @@ public class SyncImagesRequest extends AbstractModel{
         if (source.ImageName != null) {
             this.ImageName = new String(source.ImageName);
         }
+        if (source.ImageSetRequired != null) {
+            this.ImageSetRequired = new Boolean(source.ImageSetRequired);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class SyncImagesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
 
     }
 }

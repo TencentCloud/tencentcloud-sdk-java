@@ -81,6 +81,13 @@ public class SplitMediaTask extends AbstractModel{
     private String SessionId;
 
     /**
+    * 视频拆条任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
@@ -216,6 +223,22 @@ public class SplitMediaTask extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get 视频拆条任务进度，取值范围 [0-100] 。 
+     * @return Progress 视频拆条任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 视频拆条任务进度，取值范围 [0-100] 。
+     * @param Progress 视频拆条任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public SplitMediaTask() {
     }
 
@@ -251,6 +274,9 @@ public class SplitMediaTask extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -266,6 +292,7 @@ public class SplitMediaTask extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FileInfoSet.", this.FileInfoSet);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

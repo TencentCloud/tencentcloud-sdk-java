@@ -44,7 +44,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 查询信息类型，为0时不返回授权用户，为1时返回
+    * 查询信息类型，为1时返回授权用户，为其他值时不返回
     */
     @SerializedName("InfoType")
     @Expose
@@ -106,16 +106,16 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询信息类型，为0时不返回授权用户，为1时返回 
-     * @return InfoType 查询信息类型，为0时不返回授权用户，为1时返回
+     * Get 查询信息类型，为1时返回授权用户，为其他值时不返回 
+     * @return InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
      */
     public Long getInfoType() {
         return this.InfoType;
     }
 
     /**
-     * Set 查询信息类型，为0时不返回授权用户，为1时返回
-     * @param InfoType 查询信息类型，为0时不返回授权用户，为1时返回
+     * Set 查询信息类型，为1时返回授权用户，为其他值时不返回
+     * @param InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
      */
     public void setInfoType(Long InfoType) {
         this.InfoType = InfoType;

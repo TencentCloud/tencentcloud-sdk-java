@@ -24,26 +24,18 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>1：表示EMR-V1.3.1。</li>
-<li>2：表示EMR-V2.0.1。</li>
-<li>4：表示EMR-V2.1.0。</li>
-<li>7：表示EMR-V3.0.0。</li>
-<li>9：表示EMR-V2.2.0。</li>
-<li>11：表示CLICKHOUSE-V1.0.0。</li>
-<li>13：表示DRUID-V1.0.0。</li>
-<li>15：表示EMR-V2.2.1。</li>
 <li>16：表示EMR-V2.3.0。</li>
-<li>17：表示CLICKHOUSE-V1.1.0。</li>
-<li>19：表示EMR-V2.4.0。</li>
 <li>20：表示EMR-V2.5.0。</li>
-<li>22：表示CLICKHOUSE-V1.2.0。</li>
-<li>24：表示EMR-TianQiong-V1.0.0。</li>
 <li>25：表示EMR-V3.1.0。</li>
-<li>26：表示DORIS-V1.0.0。</li>
 <li>27：表示KAFKA-V1.0.0。</li>
-<li>28：表示EMR-V3.2.0。</li>
-<li>29：表示EMR-V2.5.1。</li>
 <li>30：表示EMR-V2.6.0。</li>
+<li>33 :   表示EMR-V3.2.1。</li>
+<li>34 :   表示EMR-V3.3.0。</li>
+<li>36 :   表示STARROCKS-V1.0.0。</li>
+<li>37 :   表示EMR-V3.4.0。</li>
+<li>38 :   表示EMR-V2.7.0。</li>
+<li>39 :   表示STARROCKS-V1.1.0。</li>
+<li>41 :   表示DRUID-V1.1.0。</li>
     */
     @SerializedName("ProductId")
     @Expose
@@ -293,47 +285,31 @@ Hadoop-Hbase
 
     /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>1：表示EMR-V1.3.1。</li>
-<li>2：表示EMR-V2.0.1。</li>
-<li>4：表示EMR-V2.1.0。</li>
-<li>7：表示EMR-V3.0.0。</li>
-<li>9：表示EMR-V2.2.0。</li>
-<li>11：表示CLICKHOUSE-V1.0.0。</li>
-<li>13：表示DRUID-V1.0.0。</li>
-<li>15：表示EMR-V2.2.1。</li>
 <li>16：表示EMR-V2.3.0。</li>
-<li>17：表示CLICKHOUSE-V1.1.0。</li>
-<li>19：表示EMR-V2.4.0。</li>
 <li>20：表示EMR-V2.5.0。</li>
-<li>22：表示CLICKHOUSE-V1.2.0。</li>
-<li>24：表示EMR-TianQiong-V1.0.0。</li>
 <li>25：表示EMR-V3.1.0。</li>
-<li>26：表示DORIS-V1.0.0。</li>
 <li>27：表示KAFKA-V1.0.0。</li>
-<li>28：表示EMR-V3.2.0。</li>
-<li>29：表示EMR-V2.5.1。</li>
-<li>30：表示EMR-V2.6.0。</li> 
-     * @return ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>1：表示EMR-V1.3.1。</li>
-<li>2：表示EMR-V2.0.1。</li>
-<li>4：表示EMR-V2.1.0。</li>
-<li>7：表示EMR-V3.0.0。</li>
-<li>9：表示EMR-V2.2.0。</li>
-<li>11：表示CLICKHOUSE-V1.0.0。</li>
-<li>13：表示DRUID-V1.0.0。</li>
-<li>15：表示EMR-V2.2.1。</li>
-<li>16：表示EMR-V2.3.0。</li>
-<li>17：表示CLICKHOUSE-V1.1.0。</li>
-<li>19：表示EMR-V2.4.0。</li>
-<li>20：表示EMR-V2.5.0。</li>
-<li>22：表示CLICKHOUSE-V1.2.0。</li>
-<li>24：表示EMR-TianQiong-V1.0.0。</li>
-<li>25：表示EMR-V3.1.0。</li>
-<li>26：表示DORIS-V1.0.0。</li>
-<li>27：表示KAFKA-V1.0.0。</li>
-<li>28：表示EMR-V3.2.0。</li>
-<li>29：表示EMR-V2.5.1。</li>
 <li>30：表示EMR-V2.6.0。</li>
+<li>33 :   表示EMR-V3.2.1。</li>
+<li>34 :   表示EMR-V3.3.0。</li>
+<li>36 :   表示STARROCKS-V1.0.0。</li>
+<li>37 :   表示EMR-V3.4.0。</li>
+<li>38 :   表示EMR-V2.7.0。</li>
+<li>39 :   表示STARROCKS-V1.1.0。</li>
+<li>41 :   表示DRUID-V1.1.0。</li> 
+     * @return ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>16：表示EMR-V2.3.0。</li>
+<li>20：表示EMR-V2.5.0。</li>
+<li>25：表示EMR-V3.1.0。</li>
+<li>27：表示KAFKA-V1.0.0。</li>
+<li>30：表示EMR-V2.6.0。</li>
+<li>33 :   表示EMR-V3.2.1。</li>
+<li>34 :   表示EMR-V3.3.0。</li>
+<li>36 :   表示STARROCKS-V1.0.0。</li>
+<li>37 :   表示EMR-V3.4.0。</li>
+<li>38 :   表示EMR-V2.7.0。</li>
+<li>39 :   表示STARROCKS-V1.1.0。</li>
+<li>41 :   表示DRUID-V1.1.0。</li>
      */
     public Long getProductId() {
         return this.ProductId;
@@ -341,47 +317,31 @@ Hadoop-Hbase
 
     /**
      * Set 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>1：表示EMR-V1.3.1。</li>
-<li>2：表示EMR-V2.0.1。</li>
-<li>4：表示EMR-V2.1.0。</li>
-<li>7：表示EMR-V3.0.0。</li>
-<li>9：表示EMR-V2.2.0。</li>
-<li>11：表示CLICKHOUSE-V1.0.0。</li>
-<li>13：表示DRUID-V1.0.0。</li>
-<li>15：表示EMR-V2.2.1。</li>
 <li>16：表示EMR-V2.3.0。</li>
-<li>17：表示CLICKHOUSE-V1.1.0。</li>
-<li>19：表示EMR-V2.4.0。</li>
 <li>20：表示EMR-V2.5.0。</li>
-<li>22：表示CLICKHOUSE-V1.2.0。</li>
-<li>24：表示EMR-TianQiong-V1.0.0。</li>
 <li>25：表示EMR-V3.1.0。</li>
-<li>26：表示DORIS-V1.0.0。</li>
 <li>27：表示KAFKA-V1.0.0。</li>
-<li>28：表示EMR-V3.2.0。</li>
-<li>29：表示EMR-V2.5.1。</li>
 <li>30：表示EMR-V2.6.0。</li>
+<li>33 :   表示EMR-V3.2.1。</li>
+<li>34 :   表示EMR-V3.3.0。</li>
+<li>36 :   表示STARROCKS-V1.0.0。</li>
+<li>37 :   表示EMR-V3.4.0。</li>
+<li>38 :   表示EMR-V2.7.0。</li>
+<li>39 :   表示STARROCKS-V1.1.0。</li>
+<li>41 :   表示DRUID-V1.1.0。</li>
      * @param ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>1：表示EMR-V1.3.1。</li>
-<li>2：表示EMR-V2.0.1。</li>
-<li>4：表示EMR-V2.1.0。</li>
-<li>7：表示EMR-V3.0.0。</li>
-<li>9：表示EMR-V2.2.0。</li>
-<li>11：表示CLICKHOUSE-V1.0.0。</li>
-<li>13：表示DRUID-V1.0.0。</li>
-<li>15：表示EMR-V2.2.1。</li>
 <li>16：表示EMR-V2.3.0。</li>
-<li>17：表示CLICKHOUSE-V1.1.0。</li>
-<li>19：表示EMR-V2.4.0。</li>
 <li>20：表示EMR-V2.5.0。</li>
-<li>22：表示CLICKHOUSE-V1.2.0。</li>
-<li>24：表示EMR-TianQiong-V1.0.0。</li>
 <li>25：表示EMR-V3.1.0。</li>
-<li>26：表示DORIS-V1.0.0。</li>
 <li>27：表示KAFKA-V1.0.0。</li>
-<li>28：表示EMR-V3.2.0。</li>
-<li>29：表示EMR-V2.5.1。</li>
 <li>30：表示EMR-V2.6.0。</li>
+<li>33 :   表示EMR-V3.2.1。</li>
+<li>34 :   表示EMR-V3.3.0。</li>
+<li>36 :   表示STARROCKS-V1.0.0。</li>
+<li>37 :   表示EMR-V3.4.0。</li>
+<li>38 :   表示EMR-V2.7.0。</li>
+<li>39 :   表示STARROCKS-V1.1.0。</li>
+<li>41 :   表示DRUID-V1.1.0。</li>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;

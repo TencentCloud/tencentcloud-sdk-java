@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSyncJobRequest extends AbstractModel{
 
     /**
-    * 支付类型，PrePay：包年包月  PostPay：按时按量
+    * 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
     */
     @SerializedName("PayMode")
     @Expose
@@ -65,35 +65,35 @@ public class CreateSyncJobRequest extends AbstractModel{
     private String Specification;
 
     /**
-    * 无
+    * 标签信息
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-    * 同步任务数量
+    * 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 自动续费标识
+    * 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 同步链路规格
+    * 同步链路规格，如micro,small,medium,large，默认为medium
     */
     @SerializedName("InstanceClass")
     @Expose
     private String InstanceClass;
 
     /**
-    * 同步链路名称
+    * 同步任务名称
     */
     @SerializedName("JobName")
     @Expose
@@ -107,16 +107,16 @@ public class CreateSyncJobRequest extends AbstractModel{
     private String ExistedJobId;
 
     /**
-     * Get 支付类型，PrePay：包年包月  PostPay：按时按量 
-     * @return PayMode 支付类型，PrePay：包年包月  PostPay：按时按量
+     * Get 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量) 
+     * @return PayMode 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 支付类型，PrePay：包年包月  PostPay：按时按量
-     * @param PayMode 支付类型，PrePay：包年包月  PostPay：按时按量
+     * Set 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
+     * @param PayMode 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -203,80 +203,80 @@ public class CreateSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 无 
-     * @return Tags 无
+     * Get 标签信息 
+     * @return Tags 标签信息
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 无
-     * @param Tags 无
+     * Set 标签信息
+     * @param Tags 标签信息
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 同步任务数量 
-     * @return Count 同步任务数量
+     * Get 一次购买的同步任务数量，取值范围为[1, 10]，默认为1 
+     * @return Count 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 同步任务数量
-     * @param Count 同步任务数量
+     * Set 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
+     * @param Count 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 自动续费标识 
-     * @return AutoRenew 自动续费标识
+     * Get 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值） 
+     * @return AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费标识
-     * @param AutoRenew 自动续费标识
+     * Set 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
+     * @param AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 同步链路规格 
-     * @return InstanceClass 同步链路规格
+     * Get 同步链路规格，如micro,small,medium,large，默认为medium 
+     * @return InstanceClass 同步链路规格，如micro,small,medium,large，默认为medium
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 同步链路规格
-     * @param InstanceClass 同步链路规格
+     * Set 同步链路规格，如micro,small,medium,large，默认为medium
+     * @param InstanceClass 同步链路规格，如micro,small,medium,large，默认为medium
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
     }
 
     /**
-     * Get 同步链路名称 
-     * @return JobName 同步链路名称
+     * Get 同步任务名称 
+     * @return JobName 同步任务名称
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 同步链路名称
-     * @param JobName 同步链路名称
+     * Set 同步任务名称
+     * @param JobName 同步任务名称
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;

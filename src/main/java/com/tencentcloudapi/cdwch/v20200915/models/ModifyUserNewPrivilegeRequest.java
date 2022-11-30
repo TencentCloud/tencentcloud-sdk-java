@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoWeight extends AbstractModel{
+public class ModifyUserNewPrivilegeRequest extends AbstractModel{
 
-    public RoWeight() {
+    public ModifyUserNewPrivilegeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RoWeight(RoWeight source) {
+    public ModifyUserNewPrivilegeRequest(ModifyUserNewPrivilegeRequest source) {
     }
 
 

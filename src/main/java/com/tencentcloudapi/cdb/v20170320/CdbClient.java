@@ -1969,26 +1969,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *配置数据库代理读写分离
-     * @param req ModifyCDBProxyRequest
-     * @return ModifyCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCDBProxyResponse ModifyCDBProxy(ModifyCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCDBProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
      * @param req ModifyCDBProxyConnectionPoolRequest
      * @return ModifyCDBProxyConnectionPoolResponse

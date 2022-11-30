@@ -69,6 +69,9 @@ public enum EssbasicErrorCode {
     // 生成唯一ID错误。
      INTERNALERROR_GENERATEID("InternalError.GenerateId"),
      
+    // Pdf合成错误。
+     INTERNALERROR_PDF("InternalError.Pdf"),
+     
     // 上传印章失败。
      INTERNALERROR_SEALUPLOAD("InternalError.SealUpload"),
      
@@ -179,6 +182,9 @@ public enum EssbasicErrorCode {
      
     // 缺少必填参数的值。
      INVALIDPARAMETER_MISSINGREQUIREDPARAMETERVALUE("InvalidParameter.MissingRequiredParameterValue"),
+     
+    // 手机号码不正确。
+     INVALIDPARAMETER_MOBILE("InvalidParameter.Mobile"),
      
     // 姓名不符合要求。
      INVALIDPARAMETER_NAME("InvalidParameter.Name"),
@@ -312,6 +318,9 @@ public enum EssbasicErrorCode {
     // 流程已终止。
      OPERATIONDENIED_FLOWHASTERMINATED("OperationDenied.FlowHasTerminated"),
      
+    // 签署流程状态不正确，请检查后重试。
+     OPERATIONDENIED_FLOWSTATUSFORBID("OperationDenied.FlowStatusForbid"),
+     
     // 禁止操作。
      OPERATIONDENIED_FORBID("OperationDenied.Forbid"),
      
@@ -330,6 +339,9 @@ public enum EssbasicErrorCode {
     // 流程配额不足。
      OPERATIONDENIED_NOQUOTA("OperationDenied.NoQuota"),
      
+    // 不属于企业超管或者法人。
+     OPERATIONDENIED_NOTBELONGSUPERADMINORLEGALPERSON("OperationDenied.NotBelongSuperAdminOrLegalPerson"),
+     
     // 操作类型不支持。
      OPERATIONDENIED_OPERATETYPE("OperationDenied.OperateType"),
      
@@ -341,6 +353,9 @@ public enum EssbasicErrorCode {
      
     // 用户不归属于当前企业，无法操作，请检查后重试。
      OPERATIONDENIED_USERNOTINORGANIZATION("OperationDenied.UserNotInOrganization"),
+     
+    // 未开通功能白名单，请联系客服处理。
+     OPERATIONDENIED_WHITELISTFORBID("OperationDenied.WhiteListForbid"),
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
@@ -360,6 +375,9 @@ public enum EssbasicErrorCode {
     // 未找到对应流程。
      RESOURCENOTFOUND_FLOW("ResourceNotFound.Flow"),
      
+    // 签署流程的签署人不存在，请检查后重试。
+     RESOURCENOTFOUND_FLOWAPPROVER("ResourceNotFound.FlowApprover"),
+     
     // 签署人信息不存在，请检查后重试。
      RESOURCENOTFOUND_FLOWAPPROVERS("ResourceNotFound.FlowApprovers"),
      
@@ -378,6 +396,9 @@ public enum EssbasicErrorCode {
     // 模板不存在。
      RESOURCENOTFOUND_TEMPLATE("ResourceNotFound.Template"),
      
+    // Url不存在。
+     RESOURCENOTFOUND_URL("ResourceNotFound.URL"),
+     
     // 用户信息不存在。
      RESOURCENOTFOUND_USER("ResourceNotFound.User"),
      
@@ -389,6 +410,12 @@ public enum EssbasicErrorCode {
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 未授权下载权限。
+     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATIONDOWNLOAD("UnauthorizedOperation.UnauthorizedOperationDownload"),
+     
+    // 企业没有被授权。
+     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATIONORGANIZATION("UnauthorizedOperation.UnauthorizedOperationOrganization"),
      
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),

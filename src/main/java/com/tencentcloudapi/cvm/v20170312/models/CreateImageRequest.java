@@ -62,7 +62,7 @@ public class CreateImageRequest extends AbstractModel{
     private String Sysprep;
 
     /**
-    * 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+    * 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
     */
     @SerializedName("DataDiskIds")
     @Expose
@@ -186,16 +186,16 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id 
-     * @return DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+     * Get 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID 
+     * @return DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
      */
     public String [] getDataDiskIds() {
         return this.DataDiskIds;
     }
 
     /**
-     * Set 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
-     * @param DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+     * Set 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
+     * @param DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
      */
     public void setDataDiskIds(String [] DataDiskIds) {
         this.DataDiskIds = DataDiskIds;

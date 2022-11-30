@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateSecurityDropPageRequest extends AbstractModel{
 
     /**
-    * 站点Id。
+    * 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 站点子域名。
+    * 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
     */
     @SerializedName("Entity")
     @Expose
@@ -69,32 +69,39 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
     private String Module;
 
     /**
-     * Get 站点Id。 
-     * @return ZoneId 站点Id。
+    * 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+     * Get 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。 
+     * @return ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点Id。
-     * @param ZoneId 站点Id。
+     * Set 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 站点子域名。 
-     * @return Entity 站点子域名。
+     * Get 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。 
+     * @return Entity 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set 站点子域名。
-     * @param Entity 站点子域名。
+     * Set 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param Entity 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
@@ -180,6 +187,22 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
         this.Module = Module;
     }
 
+    /**
+     * Get 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。 
+     * @return TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     * @param TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public CreateSecurityDropPageRequest() {
     }
 
@@ -206,6 +229,9 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
         if (source.Module != null) {
             this.Module = new String(source.Module);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -219,6 +245,7 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

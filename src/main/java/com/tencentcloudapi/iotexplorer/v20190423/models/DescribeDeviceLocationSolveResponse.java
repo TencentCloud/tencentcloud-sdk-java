@@ -30,7 +30,7 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel{
     private Float Longitude;
 
     /**
-    * 维度
+    * 纬度
     */
     @SerializedName("Latitude")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel{
     }
 
     /**
-     * Get 维度 
-     * @return Latitude 维度
+     * Get 纬度 
+     * @return Latitude 纬度
      */
     public Float getLatitude() {
         return this.Latitude;
     }
 
     /**
-     * Set 维度
-     * @param Latitude 维度
+     * Set 纬度
+     * @param Latitude 纬度
      */
     public void setLatitude(Float Latitude) {
         this.Latitude = Latitude;

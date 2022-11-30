@@ -86,6 +86,13 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Boolean WithPreviewUrl;
 
     /**
+    * 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+    */
+    @SerializedName("WithPdfUrl")
+    @Expose
+    private Boolean WithPdfUrl;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -229,6 +236,22 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.WithPreviewUrl = WithPreviewUrl;
     }
 
+    /**
+     * Get 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。 
+     * @return WithPdfUrl 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     */
+    public Boolean getWithPdfUrl() {
+        return this.WithPdfUrl;
+    }
+
+    /**
+     * Set 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     * @param WithPdfUrl 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     */
+    public void setWithPdfUrl(Boolean WithPdfUrl) {
+        this.WithPdfUrl = WithPdfUrl;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -264,6 +287,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.WithPreviewUrl != null) {
             this.WithPreviewUrl = new Boolean(source.WithPreviewUrl);
         }
+        if (source.WithPdfUrl != null) {
+            this.WithPdfUrl = new Boolean(source.WithPdfUrl);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
+        this.setParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
 
     }
 }

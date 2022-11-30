@@ -151,7 +151,7 @@ public class LaunchTemplateVersionData extends AbstractModel{
     private String UserData;
 
     /**
-    * 置放群组id，仅支持指定一个。
+    * 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisasterRecoverGroupIds")
@@ -527,9 +527,9 @@ public class LaunchTemplateVersionData extends AbstractModel{
     }
 
     /**
-     * Get 置放群组id，仅支持指定一个。
+     * Get 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * @return DisasterRecoverGroupIds 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDisasterRecoverGroupIds() {
@@ -537,9 +537,9 @@ public class LaunchTemplateVersionData extends AbstractModel{
     }
 
     /**
-     * Set 置放群组id，仅支持指定一个。
+     * Set 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * @param DisasterRecoverGroupIds 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {

@@ -37,7 +37,7 @@ public class DescribeAccessLogConfigResponse extends AbstractModel{
     private String Format;
 
     /**
-    * 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+    * 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
     */
     @SerializedName("Encoding")
     @Expose
@@ -52,12 +52,47 @@ public class DescribeAccessLogConfigResponse extends AbstractModel{
     private SelectedRange SelectedRange;
 
     /**
-    * 采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。
+    * 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
     */
     @SerializedName("Template")
     @Expose
     private String Template;
+
+    /**
+    * 腾讯云日志服务相关参数
+    */
+    @SerializedName("CLS")
+    @Expose
+    private CLS CLS;
+
+    /**
+    * GRPC第三方服务器地址
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
+
+    /**
+    * 是否启用GRPC第三方服务器
+    */
+    @SerializedName("EnableServer")
+    @Expose
+    private Boolean EnableServer;
+
+    /**
+    * 是否启用标准输出
+    */
+    @SerializedName("EnableStdout")
+    @Expose
+    private Boolean EnableStdout;
+
+    /**
+    * 是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Boolean Enable;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -99,16 +134,16 @@ public class DescribeAccessLogConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON” 
-     * @return Encoding 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+     * Get 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT" 
+     * @return Encoding 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
      */
     public String getEncoding() {
         return this.Encoding;
     }
 
     /**
-     * Set 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
-     * @param Encoding 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+     * Set 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
+     * @param Encoding 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
      */
     public void setEncoding(String Encoding) {
         this.Encoding = Encoding;
@@ -135,23 +170,103 @@ public class DescribeAccessLogConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Template 采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 采用的模板，可取值为"istio" 或 "trace"，默认为"istio" 
+     * @return Template 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
      */
     public String getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set 采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Template 采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
+     * @param Template 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
      */
     public void setTemplate(String Template) {
         this.Template = Template;
+    }
+
+    /**
+     * Get 腾讯云日志服务相关参数 
+     * @return CLS 腾讯云日志服务相关参数
+     */
+    public CLS getCLS() {
+        return this.CLS;
+    }
+
+    /**
+     * Set 腾讯云日志服务相关参数
+     * @param CLS 腾讯云日志服务相关参数
+     */
+    public void setCLS(CLS CLS) {
+        this.CLS = CLS;
+    }
+
+    /**
+     * Get GRPC第三方服务器地址 
+     * @return Address GRPC第三方服务器地址
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set GRPC第三方服务器地址
+     * @param Address GRPC第三方服务器地址
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    /**
+     * Get 是否启用GRPC第三方服务器 
+     * @return EnableServer 是否启用GRPC第三方服务器
+     */
+    public Boolean getEnableServer() {
+        return this.EnableServer;
+    }
+
+    /**
+     * Set 是否启用GRPC第三方服务器
+     * @param EnableServer 是否启用GRPC第三方服务器
+     */
+    public void setEnableServer(Boolean EnableServer) {
+        this.EnableServer = EnableServer;
+    }
+
+    /**
+     * Get 是否启用标准输出 
+     * @return EnableStdout 是否启用标准输出
+     */
+    public Boolean getEnableStdout() {
+        return this.EnableStdout;
+    }
+
+    /**
+     * Set 是否启用标准输出
+     * @param EnableStdout 是否启用标准输出
+     */
+    public void setEnableStdout(Boolean EnableStdout) {
+        this.EnableStdout = EnableStdout;
+    }
+
+    /**
+     * Get 是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Enable 是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Enable 是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
     }
 
     /**
@@ -193,6 +308,21 @@ public class DescribeAccessLogConfigResponse extends AbstractModel{
         if (source.Template != null) {
             this.Template = new String(source.Template);
         }
+        if (source.CLS != null) {
+            this.CLS = new CLS(source.CLS);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.EnableServer != null) {
+            this.EnableServer = new Boolean(source.EnableServer);
+        }
+        if (source.EnableStdout != null) {
+            this.EnableStdout = new Boolean(source.EnableStdout);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -208,6 +338,11 @@ public class DescribeAccessLogConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Encoding", this.Encoding);
         this.setParamObj(map, prefix + "SelectedRange.", this.SelectedRange);
         this.setParamSimple(map, prefix + "Template", this.Template);
+        this.setParamObj(map, prefix + "CLS.", this.CLS);
+        this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "EnableServer", this.EnableServer);
+        this.setParamSimple(map, prefix + "EnableStdout", this.EnableStdout);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

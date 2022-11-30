@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyBlockIgnoreListRequest extends AbstractModel{
 
     /**
-    * 1拦截列表 2 忽略列表
+    * 1封禁列表 2 放通列表
     */
     @SerializedName("RuleType")
     @Expose
@@ -51,23 +51,23 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+    * 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 1拦截列表 2 忽略列表 
-     * @return RuleType 1拦截列表 2 忽略列表
+     * Get 1封禁列表 2 放通列表 
+     * @return RuleType 1封禁列表 2 放通列表
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 1拦截列表 2 忽略列表
-     * @param RuleType 1拦截列表 2 忽略列表
+     * Set 1封禁列表 2 放通列表
+     * @param RuleType 1封禁列表 2 放通列表
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
@@ -122,16 +122,16 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填 
-     * @return EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * Get 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime 
+     * @return EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
-     * @param EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * Set 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+     * @param EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

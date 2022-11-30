@@ -51,18 +51,18 @@ public class TemplateInfo extends AbstractModel{
     private Component [] Components;
 
     /**
-    * 签署区模板信息结构
-    */
-    @SerializedName("SignComponents")
-    @Expose
-    private Component [] SignComponents;
-
-    /**
     * 模板中的流程参与人信息
     */
     @SerializedName("Recipients")
     @Expose
     private Recipient [] Recipients;
+
+    /**
+    * 签署区模板信息结构
+    */
+    @SerializedName("SignComponents")
+    @Expose
+    private Component [] SignComponents;
 
     /**
     * 模板类型：1-静默签；3-普通模板
@@ -102,11 +102,18 @@ public class TemplateInfo extends AbstractModel{
 
     /**
     * 渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelTemplateId")
     @Expose
     private String ChannelTemplateId;
+
+    /**
+    * 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PdfUrl")
+    @Expose
+    private String PdfUrl;
 
     /**
      * Get 模板ID 
@@ -173,22 +180,6 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署区模板信息结构 
-     * @return SignComponents 签署区模板信息结构
-     */
-    public Component [] getSignComponents() {
-        return this.SignComponents;
-    }
-
-    /**
-     * Set 签署区模板信息结构
-     * @param SignComponents 签署区模板信息结构
-     */
-    public void setSignComponents(Component [] SignComponents) {
-        this.SignComponents = SignComponents;
-    }
-
-    /**
      * Get 模板中的流程参与人信息 
      * @return Recipients 模板中的流程参与人信息
      */
@@ -202,6 +193,22 @@ public class TemplateInfo extends AbstractModel{
      */
     public void setRecipients(Recipient [] Recipients) {
         this.Recipients = Recipients;
+    }
+
+    /**
+     * Get 签署区模板信息结构 
+     * @return SignComponents 签署区模板信息结构
+     */
+    public Component [] getSignComponents() {
+        return this.SignComponents;
+    }
+
+    /**
+     * Set 签署区模板信息结构
+     * @param SignComponents 签署区模板信息结构
+     */
+    public void setSignComponents(Component [] SignComponents) {
+        this.SignComponents = SignComponents;
     }
 
     /**
@@ -289,10 +296,8 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 渠道模板ID 
      * @return ChannelTemplateId 渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelTemplateId() {
         return this.ChannelTemplateId;
@@ -300,12 +305,30 @@ public class TemplateInfo extends AbstractModel{
 
     /**
      * Set 渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelTemplateId 渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelTemplateId(String ChannelTemplateId) {
         this.ChannelTemplateId = ChannelTemplateId;
+    }
+
+    /**
+     * Get 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PdfUrl 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPdfUrl() {
+        return this.PdfUrl;
+    }
+
+    /**
+     * Set 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PdfUrl 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPdfUrl(String PdfUrl) {
+        this.PdfUrl = PdfUrl;
     }
 
     public TemplateInfo() {
@@ -331,16 +354,16 @@ public class TemplateInfo extends AbstractModel{
                 this.Components[i] = new Component(source.Components[i]);
             }
         }
-        if (source.SignComponents != null) {
-            this.SignComponents = new Component[source.SignComponents.length];
-            for (int i = 0; i < source.SignComponents.length; i++) {
-                this.SignComponents[i] = new Component(source.SignComponents[i]);
-            }
-        }
         if (source.Recipients != null) {
             this.Recipients = new Recipient[source.Recipients.length];
             for (int i = 0; i < source.Recipients.length; i++) {
                 this.Recipients[i] = new Recipient(source.Recipients[i]);
+            }
+        }
+        if (source.SignComponents != null) {
+            this.SignComponents = new Component[source.SignComponents.length];
+            for (int i = 0; i < source.SignComponents.length; i++) {
+                this.SignComponents[i] = new Component(source.SignComponents[i]);
             }
         }
         if (source.TemplateType != null) {
@@ -361,6 +384,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.ChannelTemplateId != null) {
             this.ChannelTemplateId = new String(source.ChannelTemplateId);
         }
+        if (source.PdfUrl != null) {
+            this.PdfUrl = new String(source.PdfUrl);
+        }
     }
 
 
@@ -372,14 +398,15 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
-        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
         this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+        this.setParamSimple(map, prefix + "PdfUrl", this.PdfUrl);
 
     }
 }

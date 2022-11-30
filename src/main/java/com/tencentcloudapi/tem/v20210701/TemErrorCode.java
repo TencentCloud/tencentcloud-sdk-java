@@ -45,6 +45,9 @@ public enum TemErrorCode {
     // 查询 ingress 失败。
      INTERNALERROR_DESCRIBEINGRESSERROR("InternalError.DescribeIngressError"),
      
+    // 查询 ingress 列表失败。
+     INTERNALERROR_DESCRIBEINGRESSLISTERROR("InternalError.DescribeIngressListError"),
+     
     // 查询 LogConfig 错误。
      INTERNALERROR_DESCRIBELOGCONFIGERROR("InternalError.DescribeLogConfigError"),
      

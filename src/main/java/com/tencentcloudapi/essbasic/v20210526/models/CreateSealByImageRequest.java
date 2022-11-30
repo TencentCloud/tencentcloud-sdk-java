@@ -30,14 +30,14 @@ public class CreateSealByImageRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 印章名称，最大长度不超过30字符
+    * 印章名称，最大长度不超过50字符
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
 
     /**
-    * 印章图片base64
+    * 印章图片base64，大小不超过10M（原始图片不超过7.6M）
     */
     @SerializedName("SealImage")
     @Expose
@@ -67,32 +67,32 @@ public class CreateSealByImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 印章名称，最大长度不超过30字符 
-     * @return SealName 印章名称，最大长度不超过30字符
+     * Get 印章名称，最大长度不超过50字符 
+     * @return SealName 印章名称，最大长度不超过50字符
      */
     public String getSealName() {
         return this.SealName;
     }
 
     /**
-     * Set 印章名称，最大长度不超过30字符
-     * @param SealName 印章名称，最大长度不超过30字符
+     * Set 印章名称，最大长度不超过50字符
+     * @param SealName 印章名称，最大长度不超过50字符
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
     }
 
     /**
-     * Get 印章图片base64 
-     * @return SealImage 印章图片base64
+     * Get 印章图片base64，大小不超过10M（原始图片不超过7.6M） 
+     * @return SealImage 印章图片base64，大小不超过10M（原始图片不超过7.6M）
      */
     public String getSealImage() {
         return this.SealImage;
     }
 
     /**
-     * Set 印章图片base64
-     * @param SealImage 印章图片base64
+     * Set 印章图片base64，大小不超过10M（原始图片不超过7.6M）
+     * @param SealImage 印章图片base64，大小不超过10M（原始图片不超过7.6M）
      */
     public void setSealImage(String SealImage) {
         this.SealImage = SealImage;

@@ -95,6 +95,13 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     private IntentionQuestion [] IntentionQuestions;
 
     /**
+    * RuleId相关配置
+    */
+    @SerializedName("Config")
+    @Expose
+    private RuleIdConfig Config;
+
+    /**
      * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。 
      * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      */
@@ -262,6 +269,22 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.IntentionQuestions = IntentionQuestions;
     }
 
+    /**
+     * Get RuleId相关配置 
+     * @return Config RuleId相关配置
+     */
+    public RuleIdConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set RuleId相关配置
+     * @param Config RuleId相关配置
+     */
+    public void setConfig(RuleIdConfig Config) {
+        this.Config = Config;
+    }
+
     public DetectAuthRequest() {
     }
 
@@ -303,6 +326,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
                 this.IntentionQuestions[i] = new IntentionQuestion(source.IntentionQuestions[i]);
             }
         }
+        if (source.Config != null) {
+            this.Config = new RuleIdConfig(source.Config);
+        }
     }
 
 
@@ -320,6 +346,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
+        this.setParamObj(map, prefix + "Config.", this.Config);
 
     }
 }

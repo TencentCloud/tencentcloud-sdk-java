@@ -130,7 +130,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *此接口（CreateConsoleLoginUrl）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取
+     *此接口（ChannelCreateBoundFlows）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取。
      * @param req ChannelCreateBoundFlowsRequest
      * @return ChannelCreateBoundFlowsResponse
      * @throws TencentCloudSDKException
@@ -254,6 +254,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *渠道版发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
+合同发起人必须在电子签已经进行实名。
+     * @param req ChannelCreateReleaseFlowRequest
+     * @return ChannelCreateReleaseFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(ChannelCreateReleaseFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateReleaseFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateReleaseFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateReleaseFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询企业员工列表
      * @param req ChannelDescribeEmployeesRequest
      * @return ChannelDescribeEmployeesResponse
@@ -327,6 +348,27 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ChannelVerifyPdfResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ChannelVerifyPdf");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建出证报告，返回报告 ID
+
+     * @param req CreateChannelFlowEvidenceReportRequest
+     * @return CreateChannelFlowEvidenceReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReport(CreateChannelFlowEvidenceReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateChannelFlowEvidenceReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -428,6 +470,27 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSignUrlsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateSignUrls");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询出证报告，返回报告 URL。
+
+     * @param req DescribeChannelFlowEvidenceReportRequest
+     * @return DescribeChannelFlowEvidenceReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReport(DescribeChannelFlowEvidenceReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChannelFlowEvidenceReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChannelFlowEvidenceReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChannelFlowEvidenceReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

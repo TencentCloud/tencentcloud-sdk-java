@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SentenceRecognitionRequest extends AbstractModel{
 
     /**
-    * 腾讯云项目 ID，废弃参数，默认填写0即可。
+    * 腾讯云项目 ID，废弃参数，填写0即可。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -47,6 +47,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -67,7 +69,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private String VoiceFormat;
 
     /**
-    * 用户端对此任务的唯一标识。废弃参数，忽略即可。
+    * 废弃参数，填写任意字符串即可。
     */
     @SerializedName("UsrAudioKey")
     @Expose
@@ -144,16 +146,23 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private String CustomizationId;
 
     /**
-     * Get 腾讯云项目 ID，废弃参数，默认填写0即可。 
-     * @return ProjectId 腾讯云项目 ID，废弃参数，默认填写0即可。
+    * 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+    */
+    @SerializedName("ReinforceHotword")
+    @Expose
+    private Long ReinforceHotword;
+
+    /**
+     * Get 腾讯云项目 ID，废弃参数，填写0即可。 
+     * @return ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 腾讯云项目 ID，废弃参数，默认填写0即可。
-     * @param ProjectId 腾讯云项目 ID，废弃参数，默认填写0即可。
+     * Set 腾讯云项目 ID，废弃参数，填写0即可。
+     * @param ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -185,7 +194,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
-• 16k_zh_medical：16k 医疗； 
+• 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）； 
      * @return EngSerViceType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -196,6 +207,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public String getEngSerViceType() {
         return this.EngSerViceType;
@@ -212,6 +225,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param EngSerViceType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -222,6 +237,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public void setEngSerViceType(String EngSerViceType) {
         this.EngSerViceType = EngSerViceType;
@@ -260,16 +277,16 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户端对此任务的唯一标识。废弃参数，忽略即可。 
-     * @return UsrAudioKey 用户端对此任务的唯一标识。废弃参数，忽略即可。
+     * Get 废弃参数，填写任意字符串即可。 
+     * @return UsrAudioKey 废弃参数，填写任意字符串即可。
      */
     public String getUsrAudioKey() {
         return this.UsrAudioKey;
     }
 
     /**
-     * Set 用户端对此任务的唯一标识。废弃参数，忽略即可。
-     * @param UsrAudioKey 用户端对此任务的唯一标识。废弃参数，忽略即可。
+     * Set 废弃参数，填写任意字符串即可。
+     * @param UsrAudioKey 废弃参数，填写任意字符串即可。
      */
     public void setUsrAudioKey(String UsrAudioKey) {
         this.UsrAudioKey = UsrAudioKey;
@@ -435,6 +452,22 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.CustomizationId = CustomizationId;
     }
 
+    /**
+     * Get 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。 
+     * @return ReinforceHotword 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+     */
+    public Long getReinforceHotword() {
+        return this.ReinforceHotword;
+    }
+
+    /**
+     * Set 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+     * @param ReinforceHotword 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+     */
+    public void setReinforceHotword(Long ReinforceHotword) {
+        this.ReinforceHotword = ReinforceHotword;
+    }
+
     public SentenceRecognitionRequest() {
     }
 
@@ -491,6 +524,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
         if (source.CustomizationId != null) {
             this.CustomizationId = new String(source.CustomizationId);
         }
+        if (source.ReinforceHotword != null) {
+            this.ReinforceHotword = new Long(source.ReinforceHotword);
+        }
     }
 
 
@@ -514,6 +550,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
         this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
         this.setParamSimple(map, prefix + "CustomizationId", this.CustomizationId);
+        this.setParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
 
     }
 }

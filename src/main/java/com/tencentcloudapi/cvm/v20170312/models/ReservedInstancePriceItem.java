@@ -66,8 +66,8 @@ public class ReservedInstancePriceItem extends AbstractModel{
     private Long Duration;
 
     /**
-    * 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+    * 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
     */
     @SerializedName("ProductDescription")
     @Expose
@@ -174,20 +174,20 @@ public class ReservedInstancePriceItem extends AbstractModel{
     }
 
     /**
-     * Get 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。 
-     * @return ProductDescription 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+     * Get 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。 
+     * @return ProductDescription 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
      */
     public String getProductDescription() {
         return this.ProductDescription;
     }
 
     /**
-     * Set 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
-     * @param ProductDescription 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+     * Set 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
+     * @param ProductDescription 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
      */
     public void setProductDescription(String ProductDescription) {
         this.ProductDescription = ProductDescription;

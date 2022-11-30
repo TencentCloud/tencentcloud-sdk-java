@@ -140,7 +140,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *预付费集群隔离后续费资源查询
+     *查询待续费节点信息
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *查询EMR实例
+     *查询集群实例信息
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *EMR集群实例列表查询
+     *查询集群列表
      * @param req DescribeInstancesListRequest
      * @return DescribeInstancesListResponse
      * @throws TencentCloudSDKException
@@ -220,7 +220,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *获取yarn资源调度页面的数据
+     *查询YARN资源调度数据信息
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
      * @throws TencentCloudSDKException
@@ -361,7 +361,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *刷新动态资源池
+     *刷新YARN的动态资源池
      * @param req ModifyResourcePoolsRequest
      * @return ModifyResourcePoolsResponse
      * @throws TencentCloudSDKException

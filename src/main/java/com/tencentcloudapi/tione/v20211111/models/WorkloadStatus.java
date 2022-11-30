@@ -77,6 +77,13 @@ Stopping 停止中
     private StatefulSetCondition [] StatefulSetCondition;
 
     /**
+    * 工作负载历史的状况信息
+    */
+    @SerializedName("Conditions")
+    @Expose
+    private StatefulSetCondition [] Conditions;
+
+    /**
      * Get 当前实例数 
      * @return Replicas 当前实例数
      */
@@ -208,6 +215,22 @@ Stopping 停止中
         this.StatefulSetCondition = StatefulSetCondition;
     }
 
+    /**
+     * Get 工作负载历史的状况信息 
+     * @return Conditions 工作负载历史的状况信息
+     */
+    public StatefulSetCondition [] getConditions() {
+        return this.Conditions;
+    }
+
+    /**
+     * Set 工作负载历史的状况信息
+     * @param Conditions 工作负载历史的状况信息
+     */
+    public void setConditions(StatefulSetCondition [] Conditions) {
+        this.Conditions = Conditions;
+    }
+
     public WorkloadStatus() {
     }
 
@@ -240,6 +263,12 @@ Stopping 停止中
                 this.StatefulSetCondition[i] = new StatefulSetCondition(source.StatefulSetCondition[i]);
             }
         }
+        if (source.Conditions != null) {
+            this.Conditions = new StatefulSetCondition[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new StatefulSetCondition(source.Conditions[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ Stopping 停止中
         this.setParamSimple(map, prefix + "UnavailableReplicas", this.UnavailableReplicas);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "StatefulSetCondition.", this.StatefulSetCondition);
+        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
 
     }
 }

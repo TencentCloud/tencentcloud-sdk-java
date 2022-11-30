@@ -87,6 +87,22 @@ public class SentenceDetail extends AbstractModel{
     private Long SpeakerId;
 
     /**
+    * 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmotionalEnergy")
+    @Expose
+    private Float EmotionalEnergy;
+
+    /**
+    * 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SilenceTime")
+    @Expose
+    private Long SilenceTime;
+
+    /**
      * Get 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalSentence 单句最终识别结果
@@ -246,6 +262,46 @@ public class SentenceDetail extends AbstractModel{
         this.SpeakerId = SpeakerId;
     }
 
+    /**
+     * Get 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmotionalEnergy 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getEmotionalEnergy() {
+        return this.EmotionalEnergy;
+    }
+
+    /**
+     * Set 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmotionalEnergy 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmotionalEnergy(Float EmotionalEnergy) {
+        this.EmotionalEnergy = EmotionalEnergy;
+    }
+
+    /**
+     * Get 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SilenceTime 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSilenceTime() {
+        return this.SilenceTime;
+    }
+
+    /**
+     * Set 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SilenceTime 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSilenceTime(Long SilenceTime) {
+        this.SilenceTime = SilenceTime;
+    }
+
     public SentenceDetail() {
     }
 
@@ -281,6 +337,12 @@ public class SentenceDetail extends AbstractModel{
         if (source.SpeakerId != null) {
             this.SpeakerId = new Long(source.SpeakerId);
         }
+        if (source.EmotionalEnergy != null) {
+            this.EmotionalEnergy = new Float(source.EmotionalEnergy);
+        }
+        if (source.SilenceTime != null) {
+            this.SilenceTime = new Long(source.SilenceTime);
+        }
     }
 
 
@@ -296,6 +358,8 @@ public class SentenceDetail extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Words.", this.Words);
         this.setParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
         this.setParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
+        this.setParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
+        this.setParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
 
     }
 }

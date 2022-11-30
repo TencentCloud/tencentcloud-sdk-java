@@ -181,6 +181,14 @@ public class DeviceInfo extends AbstractModel{
     private String DeviceType;
 
     /**
+    * 是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLora")
+    @Expose
+    private Boolean IsLora;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -572,6 +580,26 @@ public class DeviceInfo extends AbstractModel{
         this.DeviceType = DeviceType;
     }
 
+    /**
+     * Get 是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLora 是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsLora() {
+        return this.IsLora;
+    }
+
+    /**
+     * Set 是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLora 是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLora(Boolean IsLora) {
+        this.IsLora = IsLora;
+    }
+
     public DeviceInfo() {
     }
 
@@ -640,6 +668,9 @@ public class DeviceInfo extends AbstractModel{
         if (source.DeviceType != null) {
             this.DeviceType = new String(source.DeviceType);
         }
+        if (source.IsLora != null) {
+            this.IsLora = new Boolean(source.IsLora);
+        }
     }
 
 
@@ -667,6 +698,7 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "IsLora", this.IsLora);
 
     }
 }

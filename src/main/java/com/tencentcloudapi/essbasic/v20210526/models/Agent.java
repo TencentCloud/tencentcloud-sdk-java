@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class Agent extends AbstractModel{
 
     /**
-    * 腾讯电子签颁发给渠道的应用ID，32位字符串
+    * 应用的唯一标识。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 渠道/平台合作企业的企业ID，最大64位字符串
+    * 渠道平台自定义，对于渠道子客企业的唯一标识。一个渠道子客企业主体与子客企业ProxyOrganizationOpenId是一一对应的，不可更改，不可重复使用。（例如，可以使用企业名称的hash值，或者社会统一信用代码的hash值，或者随机hash值，需要渠道平台保存），最大64位字符串
     */
     @SerializedName("ProxyOrganizationOpenId")
     @Expose
     private String ProxyOrganizationOpenId;
 
     /**
-    * 渠道/平台合作企业经办人（操作员）
+    * 渠道子客企业中的员工/经办人，通过渠道平台进入电子签完成实名、且被赋予相关权限后，可以参与到企业资源的管理或签署流程中。
     */
     @SerializedName("ProxyOperator")
     @Expose
     private UserInfo ProxyOperator;
 
     /**
-    * 腾讯电子签颁发给渠道侧合作企业的应用ID
+    * 在子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
     */
     @SerializedName("ProxyAppId")
     @Expose
     private String ProxyAppId;
 
     /**
-    * 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
+    * 内部参数，暂未开放使用
     */
     @SerializedName("ProxyOrganizationId")
     @Expose
     private String ProxyOrganizationId;
 
     /**
-     * Get 腾讯电子签颁发给渠道的应用ID，32位字符串 
-     * @return AppId 腾讯电子签颁发给渠道的应用ID，32位字符串
+     * Get 应用的唯一标识。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。 
+     * @return AppId 应用的唯一标识。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 腾讯电子签颁发给渠道的应用ID，32位字符串
-     * @param AppId 腾讯电子签颁发给渠道的应用ID，32位字符串
+     * Set 应用的唯一标识。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。
+     * @param AppId 应用的唯一标识。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 渠道/平台合作企业的企业ID，最大64位字符串 
-     * @return ProxyOrganizationOpenId 渠道/平台合作企业的企业ID，最大64位字符串
+     * Get 渠道平台自定义，对于渠道子客企业的唯一标识。一个渠道子客企业主体与子客企业ProxyOrganizationOpenId是一一对应的，不可更改，不可重复使用。（例如，可以使用企业名称的hash值，或者社会统一信用代码的hash值，或者随机hash值，需要渠道平台保存），最大64位字符串 
+     * @return ProxyOrganizationOpenId 渠道平台自定义，对于渠道子客企业的唯一标识。一个渠道子客企业主体与子客企业ProxyOrganizationOpenId是一一对应的，不可更改，不可重复使用。（例如，可以使用企业名称的hash值，或者社会统一信用代码的hash值，或者随机hash值，需要渠道平台保存），最大64位字符串
      */
     public String getProxyOrganizationOpenId() {
         return this.ProxyOrganizationOpenId;
     }
 
     /**
-     * Set 渠道/平台合作企业的企业ID，最大64位字符串
-     * @param ProxyOrganizationOpenId 渠道/平台合作企业的企业ID，最大64位字符串
+     * Set 渠道平台自定义，对于渠道子客企业的唯一标识。一个渠道子客企业主体与子客企业ProxyOrganizationOpenId是一一对应的，不可更改，不可重复使用。（例如，可以使用企业名称的hash值，或者社会统一信用代码的hash值，或者随机hash值，需要渠道平台保存），最大64位字符串
+     * @param ProxyOrganizationOpenId 渠道平台自定义，对于渠道子客企业的唯一标识。一个渠道子客企业主体与子客企业ProxyOrganizationOpenId是一一对应的，不可更改，不可重复使用。（例如，可以使用企业名称的hash值，或者社会统一信用代码的hash值，或者随机hash值，需要渠道平台保存），最大64位字符串
      */
     public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
         this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;
     }
 
     /**
-     * Get 渠道/平台合作企业经办人（操作员） 
-     * @return ProxyOperator 渠道/平台合作企业经办人（操作员）
+     * Get 渠道子客企业中的员工/经办人，通过渠道平台进入电子签完成实名、且被赋予相关权限后，可以参与到企业资源的管理或签署流程中。 
+     * @return ProxyOperator 渠道子客企业中的员工/经办人，通过渠道平台进入电子签完成实名、且被赋予相关权限后，可以参与到企业资源的管理或签署流程中。
      */
     public UserInfo getProxyOperator() {
         return this.ProxyOperator;
     }
 
     /**
-     * Set 渠道/平台合作企业经办人（操作员）
-     * @param ProxyOperator 渠道/平台合作企业经办人（操作员）
+     * Set 渠道子客企业中的员工/经办人，通过渠道平台进入电子签完成实名、且被赋予相关权限后，可以参与到企业资源的管理或签署流程中。
+     * @param ProxyOperator 渠道子客企业中的员工/经办人，通过渠道平台进入电子签完成实名、且被赋予相关权限后，可以参与到企业资源的管理或签署流程中。
      */
     public void setProxyOperator(UserInfo ProxyOperator) {
         this.ProxyOperator = ProxyOperator;
     }
 
     /**
-     * Get 腾讯电子签颁发给渠道侧合作企业的应用ID 
-     * @return ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
+     * Get 在子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。 
+     * @return ProxyAppId 在子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
      */
     public String getProxyAppId() {
         return this.ProxyAppId;
     }
 
     /**
-     * Set 腾讯电子签颁发给渠道侧合作企业的应用ID
-     * @param ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
+     * Set 在子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
+     * @param ProxyAppId 在子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
      */
     public void setProxyAppId(String ProxyAppId) {
         this.ProxyAppId = ProxyAppId;
     }
 
     /**
-     * Get 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传 
-     * @return ProxyOrganizationId 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
+     * Get 内部参数，暂未开放使用 
+     * @return ProxyOrganizationId 内部参数，暂未开放使用
      */
     public String getProxyOrganizationId() {
         return this.ProxyOrganizationId;
     }
 
     /**
-     * Set 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
-     * @param ProxyOrganizationId 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
+     * Set 内部参数，暂未开放使用
+     * @param ProxyOrganizationId 内部参数，暂未开放使用
      */
     public void setProxyOrganizationId(String ProxyOrganizationId) {
         this.ProxyOrganizationId = ProxyOrganizationId;

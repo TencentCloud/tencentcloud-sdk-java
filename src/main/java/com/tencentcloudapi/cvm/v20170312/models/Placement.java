@@ -44,7 +44,7 @@ public class Placement extends AbstractModel{
     private String [] HostIds;
 
     /**
-    * 指定母机ip生产子机
+    * 指定母机IP生产子机
     */
     @SerializedName("HostIps")
     @Expose
@@ -106,16 +106,16 @@ public class Placement extends AbstractModel{
     }
 
     /**
-     * Get 指定母机ip生产子机 
-     * @return HostIps 指定母机ip生产子机
+     * Get 指定母机IP生产子机 
+     * @return HostIps 指定母机IP生产子机
      */
     public String [] getHostIps() {
         return this.HostIps;
     }
 
     /**
-     * Set 指定母机ip生产子机
-     * @param HostIps 指定母机ip生产子机
+     * Set 指定母机IP生产子机
+     * @param HostIps 指定母机IP生产子机
      */
     public void setHostIps(String [] HostIps) {
         this.HostIps = HostIps;

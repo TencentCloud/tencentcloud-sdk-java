@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class LoginSettings extends AbstractModel{
 
     /**
-    * Password
+    * 实例登录密码，8-16个字符，包含大写字母、小写字母、数字和特殊字符四种，特殊符号仅支持!@%^*，密码第一位不能为特殊字符
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Public Key
+    * 密钥ID。关联密钥后，就可以通过对应的私钥来访问实例；PublicKeyId可通过接口[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)获取
     */
     @SerializedName("PublicKeyId")
     @Expose
     private String PublicKeyId;
 
     /**
-     * Get Password 
-     * @return Password Password
+     * Get 实例登录密码，8-16个字符，包含大写字母、小写字母、数字和特殊字符四种，特殊符号仅支持!@%^*，密码第一位不能为特殊字符 
+     * @return Password 实例登录密码，8-16个字符，包含大写字母、小写字母、数字和特殊字符四种，特殊符号仅支持!@%^*，密码第一位不能为特殊字符
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password
-     * @param Password Password
+     * Set 实例登录密码，8-16个字符，包含大写字母、小写字母、数字和特殊字符四种，特殊符号仅支持!@%^*，密码第一位不能为特殊字符
+     * @param Password 实例登录密码，8-16个字符，包含大写字母、小写字母、数字和特殊字符四种，特殊符号仅支持!@%^*，密码第一位不能为特殊字符
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Public Key 
-     * @return PublicKeyId Public Key
+     * Get 密钥ID。关联密钥后，就可以通过对应的私钥来访问实例；PublicKeyId可通过接口[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)获取 
+     * @return PublicKeyId 密钥ID。关联密钥后，就可以通过对应的私钥来访问实例；PublicKeyId可通过接口[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)获取
      */
     public String getPublicKeyId() {
         return this.PublicKeyId;
     }
 
     /**
-     * Set Public Key
-     * @param PublicKeyId Public Key
+     * Set 密钥ID。关联密钥后，就可以通过对应的私钥来访问实例；PublicKeyId可通过接口[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)获取
+     * @param PublicKeyId 密钥ID。关联密钥后，就可以通过对应的私钥来访问实例；PublicKeyId可通过接口[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)获取
      */
     public void setPublicKeyId(String PublicKeyId) {
         this.PublicKeyId = PublicKeyId;

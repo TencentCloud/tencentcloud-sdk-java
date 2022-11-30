@@ -50,7 +50,7 @@ public class ParamInfo extends AbstractModel{
     private String ParamValueType;
 
     /**
-    * 参数值 单位。参数没有单位是，该字段返回空
+    * 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
@@ -74,20 +74,20 @@ public class ParamInfo extends AbstractModel{
     private String CurrentValue;
 
     /**
-    * 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("EnumValue")
-    @Expose
-    private String [] EnumValue;
-
-    /**
     * 数值类型（integer、real）参数，取值下界
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
     @Expose
     private Float Max;
+
+    /**
+    * 枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnumValue")
+    @Expose
+    private String [] EnumValue;
 
     /**
     * 数值类型（integer、real）参数，取值上界
@@ -162,6 +162,30 @@ public class ParamInfo extends AbstractModel{
     private String LastModifyTime;
 
     /**
+    * 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StandbyRelated")
+    @Expose
+    private Long StandbyRelated;
+
+    /**
+    * 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionRelationSet")
+    @Expose
+    private ParamVersionRelation [] VersionRelationSet;
+
+    /**
+    * 参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecRelationSet")
+    @Expose
+    private ParamSpecRelation [] SpecRelationSet;
+
+    /**
      * Get 参数ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ID 参数ID
@@ -234,9 +258,9 @@ public class ParamInfo extends AbstractModel{
     }
 
     /**
-     * Get 参数值 单位。参数没有单位是，该字段返回空
+     * Get 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Unit 参数值 单位。参数没有单位是，该字段返回空
+     * @return Unit 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
@@ -244,9 +268,9 @@ public class ParamInfo extends AbstractModel{
     }
 
     /**
-     * Set 参数值 单位。参数没有单位是，该字段返回空
+     * Set 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Unit 参数值 单位。参数没有单位是，该字段返回空
+     * @param Unit 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
@@ -294,26 +318,6 @@ public class ParamInfo extends AbstractModel{
     }
 
     /**
-     * Get 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnumValue 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getEnumValue() {
-        return this.EnumValue;
-    }
-
-    /**
-     * Set 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnumValue 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setEnumValue(String [] EnumValue) {
-        this.EnumValue = EnumValue;
-    }
-
-    /**
      * Get 数值类型（integer、real）参数，取值下界
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Max 数值类型（integer、real）参数，取值下界
@@ -331,6 +335,26 @@ public class ParamInfo extends AbstractModel{
      */
     public void setMax(Float Max) {
         this.Max = Max;
+    }
+
+    /**
+     * Get 枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnumValue 枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getEnumValue() {
+        return this.EnumValue;
+    }
+
+    /**
+     * Set 枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnumValue 枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnumValue(String [] EnumValue) {
+        this.EnumValue = EnumValue;
     }
 
     /**
@@ -513,6 +537,66 @@ public class ParamInfo extends AbstractModel{
         this.LastModifyTime = LastModifyTime;
     }
 
+    /**
+     * Get 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StandbyRelated 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStandbyRelated() {
+        return this.StandbyRelated;
+    }
+
+    /**
+     * Set 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandbyRelated 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandbyRelated(Long StandbyRelated) {
+        this.StandbyRelated = StandbyRelated;
+    }
+
+    /**
+     * Get 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionRelationSet 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ParamVersionRelation [] getVersionRelationSet() {
+        return this.VersionRelationSet;
+    }
+
+    /**
+     * Set 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionRelationSet 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionRelationSet(ParamVersionRelation [] VersionRelationSet) {
+        this.VersionRelationSet = VersionRelationSet;
+    }
+
+    /**
+     * Get 参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecRelationSet 参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ParamSpecRelation [] getSpecRelationSet() {
+        return this.SpecRelationSet;
+    }
+
+    /**
+     * Set 参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecRelationSet 参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecRelationSet(ParamSpecRelation [] SpecRelationSet) {
+        this.SpecRelationSet = SpecRelationSet;
+    }
+
     public ParamInfo() {
     }
 
@@ -539,14 +623,14 @@ public class ParamInfo extends AbstractModel{
         if (source.CurrentValue != null) {
             this.CurrentValue = new String(source.CurrentValue);
         }
+        if (source.Max != null) {
+            this.Max = new Float(source.Max);
+        }
         if (source.EnumValue != null) {
             this.EnumValue = new String[source.EnumValue.length];
             for (int i = 0; i < source.EnumValue.length; i++) {
                 this.EnumValue[i] = new String(source.EnumValue[i]);
             }
-        }
-        if (source.Max != null) {
-            this.Max = new Float(source.Max);
         }
         if (source.Min != null) {
             this.Min = new Float(source.Min);
@@ -575,6 +659,21 @@ public class ParamInfo extends AbstractModel{
         if (source.LastModifyTime != null) {
             this.LastModifyTime = new String(source.LastModifyTime);
         }
+        if (source.StandbyRelated != null) {
+            this.StandbyRelated = new Long(source.StandbyRelated);
+        }
+        if (source.VersionRelationSet != null) {
+            this.VersionRelationSet = new ParamVersionRelation[source.VersionRelationSet.length];
+            for (int i = 0; i < source.VersionRelationSet.length; i++) {
+                this.VersionRelationSet[i] = new ParamVersionRelation(source.VersionRelationSet[i]);
+            }
+        }
+        if (source.SpecRelationSet != null) {
+            this.SpecRelationSet = new ParamSpecRelation[source.SpecRelationSet.length];
+            for (int i = 0; i < source.SpecRelationSet.length; i++) {
+                this.SpecRelationSet[i] = new ParamSpecRelation(source.SpecRelationSet[i]);
+            }
+        }
     }
 
 
@@ -588,8 +687,8 @@ public class ParamInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
-        this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "Max", this.Max);
+        this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "ParamDescriptionCH", this.ParamDescriptionCH);
         this.setParamSimple(map, prefix + "ParamDescriptionEN", this.ParamDescriptionEN);
@@ -599,6 +698,9 @@ public class ParamInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SpecRelated", this.SpecRelated);
         this.setParamSimple(map, prefix + "Advanced", this.Advanced);
         this.setParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+        this.setParamSimple(map, prefix + "StandbyRelated", this.StandbyRelated);
+        this.setParamArrayObj(map, prefix + "VersionRelationSet.", this.VersionRelationSet);
+        this.setParamArrayObj(map, prefix + "SpecRelationSet.", this.SpecRelationSet);
 
     }
 }

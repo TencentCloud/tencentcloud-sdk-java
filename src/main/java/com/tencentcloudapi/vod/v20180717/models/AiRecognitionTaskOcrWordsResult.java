@@ -66,6 +66,13 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel{
     private AiRecognitionTaskOcrWordsResultOutput Output;
 
     /**
+    * 文本关键词识别任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -165,6 +172,22 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel{
         this.Output = Output;
     }
 
+    /**
+     * Get 文本关键词识别任务进度，取值范围 [0-100] 。 
+     * @return Progress 文本关键词识别任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 文本关键词识别任务进度，取值范围 [0-100] 。
+     * @param Progress 文本关键词识别任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public AiRecognitionTaskOcrWordsResult() {
     }
 
@@ -191,6 +214,9 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel{
         if (source.Output != null) {
             this.Output = new AiRecognitionTaskOcrWordsResultOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -204,6 +230,7 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

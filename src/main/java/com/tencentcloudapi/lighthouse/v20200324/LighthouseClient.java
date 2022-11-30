@@ -328,6 +328,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAllScenes)用于查询全地域使用场景列表。
+     * @param req DescribeAllScenesRequest
+     * @return DescribeAllScenesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllScenesResponse DescribeAllScenes(DescribeAllScenesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllScenesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllScenesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllScenes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
      * @param req DescribeBlueprintInstancesRequest
      * @return DescribeBlueprintInstancesResponse
@@ -818,6 +838,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeResetInstanceBlueprintsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeResetInstanceBlueprints");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeScenes)用于查看使用场景列表。
+     * @param req DescribeScenesRequest
+     * @return DescribeScenesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScenesResponse DescribeScenes(DescribeScenesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScenesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScenesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScenes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

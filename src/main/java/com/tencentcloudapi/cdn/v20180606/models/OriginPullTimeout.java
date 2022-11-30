@@ -31,7 +31,7 @@ public class OriginPullTimeout extends AbstractModel{
     private Long ConnectTimeout;
 
     /**
-    * 回源接收超时时间，单位为秒，要求10 ~ 60之间
+    * 回源接收超时时间，单位为秒，要求10 ~ 300之间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiveTimeout")
@@ -59,9 +59,9 @@ public class OriginPullTimeout extends AbstractModel{
     }
 
     /**
-     * Get 回源接收超时时间，单位为秒，要求10 ~ 60之间
+     * Get 回源接收超时时间，单位为秒，要求10 ~ 300之间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReceiveTimeout 回源接收超时时间，单位为秒，要求10 ~ 60之间
+     * @return ReceiveTimeout 回源接收超时时间，单位为秒，要求10 ~ 300之间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReceiveTimeout() {
@@ -69,9 +69,9 @@ public class OriginPullTimeout extends AbstractModel{
     }
 
     /**
-     * Set 回源接收超时时间，单位为秒，要求10 ~ 60之间
+     * Set 回源接收超时时间，单位为秒，要求10 ~ 300之间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReceiveTimeout 回源接收超时时间，单位为秒，要求10 ~ 60之间
+     * @param ReceiveTimeout 回源接收超时时间，单位为秒，要求10 ~ 300之间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiveTimeout(Long ReceiveTimeout) {

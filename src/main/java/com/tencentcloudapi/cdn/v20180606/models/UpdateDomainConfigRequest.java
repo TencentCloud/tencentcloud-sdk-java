@@ -149,7 +149,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Cache Cache;
 
     /**
-    * 跨国链路优化配置
+    * 跨国链路优化配置（已下线）
     */
     @SerializedName("OriginPullOptimization")
     @Expose
@@ -648,16 +648,16 @@ global：全球加速
     }
 
     /**
-     * Get 跨国链路优化配置 
-     * @return OriginPullOptimization 跨国链路优化配置
+     * Get 跨国链路优化配置（已下线） 
+     * @return OriginPullOptimization 跨国链路优化配置（已下线）
      */
     public OriginPullOptimization getOriginPullOptimization() {
         return this.OriginPullOptimization;
     }
 
     /**
-     * Set 跨国链路优化配置
-     * @param OriginPullOptimization 跨国链路优化配置
+     * Set 跨国链路优化配置（已下线）
+     * @param OriginPullOptimization 跨国链路优化配置（已下线）
      */
     public void setOriginPullOptimization(OriginPullOptimization OriginPullOptimization) {
         this.OriginPullOptimization = OriginPullOptimization;

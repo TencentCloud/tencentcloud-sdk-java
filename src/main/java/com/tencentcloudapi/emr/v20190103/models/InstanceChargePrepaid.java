@@ -32,6 +32,8 @@ public class InstanceChargePrepaid extends AbstractModel{
 
     /**
     * 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -58,8 +60,12 @@ public class InstanceChargePrepaid extends AbstractModel{
     }
 
     /**
-     * Get 是否自动续费，默认为否。 
+     * Get 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li> 
      * @return RenewFlag 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
@@ -67,7 +73,11 @@ public class InstanceChargePrepaid extends AbstractModel{
 
     /**
      * Set 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
      * @param RenewFlag 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;

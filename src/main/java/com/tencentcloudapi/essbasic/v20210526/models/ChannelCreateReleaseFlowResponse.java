@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCDBProxyResponse extends AbstractModel{
+public class ChannelCreateReleaseFlowResponse extends AbstractModel{
+
+    /**
+    * 解除协议流程编号
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class ModifyCDBProxyResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 解除协议流程编号 
+     * @return FlowId 解除协议流程编号
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 解除协议流程编号
+     * @param FlowId 解除协议流程编号
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,17 @@ public class ModifyCDBProxyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyCDBProxyResponse() {
+    public ChannelCreateReleaseFlowResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyCDBProxyResponse(ModifyCDBProxyResponse source) {
+    public ChannelCreateReleaseFlowResponse(ChannelCreateReleaseFlowResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class ModifyCDBProxyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

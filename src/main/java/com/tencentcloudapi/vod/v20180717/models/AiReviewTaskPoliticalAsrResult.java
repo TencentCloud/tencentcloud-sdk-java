@@ -65,6 +65,13 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
     private AiReviewPoliticalAsrTaskOutput Output;
 
     /**
+    * 音视频审核 Asr 文字涉及令人不适宜信息的任务进度，取值范围 [0-100] 。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -160,6 +167,22 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
         this.Output = Output;
     }
 
+    /**
+     * Get 音视频审核 Asr 文字涉及令人不适宜信息的任务进度，取值范围 [0-100] 。 
+     * @return Progress 音视频审核 Asr 文字涉及令人不适宜信息的任务进度，取值范围 [0-100] 。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 音视频审核 Asr 文字涉及令人不适宜信息的任务进度，取值范围 [0-100] 。
+     * @param Progress 音视频审核 Asr 文字涉及令人不适宜信息的任务进度，取值范围 [0-100] 。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public AiReviewTaskPoliticalAsrResult() {
     }
 
@@ -186,6 +209,9 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
         if (source.Output != null) {
             this.Output = new AiReviewPoliticalAsrTaskOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

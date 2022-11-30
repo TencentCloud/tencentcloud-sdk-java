@@ -147,6 +147,22 @@ public class ProcedureTask extends AbstractModel{
     private String SessionId;
 
     /**
+    * 操作者。取值范围：
+<li>System: 表示系统触发。</li>
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
+    * 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private String OperationType;
+
+    /**
      * Get 音视频处理任务 ID。 
      * @return TaskId 音视频处理任务 ID。
      */
@@ -450,6 +466,46 @@ public class ProcedureTask extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get 操作者。取值范围：
+<li>System: 表示系统触发。</li> 
+     * @return Operator 操作者。取值范围：
+<li>System: 表示系统触发。</li>
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。取值范围：
+<li>System: 表示系统触发。</li>
+     * @param Operator 操作者。取值范围：
+<li>System: 表示系统触发。</li>
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li> 
+     * @return OperationType 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
+     */
+    public String getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
+     * @param OperationType 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
+     */
+    public void setOperationType(String OperationType) {
+        this.OperationType = OperationType;
+    }
+
     public ProcedureTask() {
     }
 
@@ -518,6 +574,12 @@ public class ProcedureTask extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
     }
 
 
@@ -541,6 +603,8 @@ public class ProcedureTask extends AbstractModel{
         this.setParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
 
     }
 }

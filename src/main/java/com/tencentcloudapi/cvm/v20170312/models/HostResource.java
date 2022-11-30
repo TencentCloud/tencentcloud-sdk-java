@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class HostResource extends AbstractModel{
 
     /**
-    * 专用宿主机实例总cpu核数
+    * 专用宿主机实例总CPU核数
     */
     @SerializedName("CpuTotal")
     @Expose
     private Long CpuTotal;
 
     /**
-    * 专用宿主机实例可用cpu核数
+    * 专用宿主机实例可用CPU核数
     */
     @SerializedName("CpuAvailable")
     @Expose
@@ -86,32 +86,32 @@ public class HostResource extends AbstractModel{
     private Long GpuAvailable;
 
     /**
-     * Get 专用宿主机实例总cpu核数 
-     * @return CpuTotal 专用宿主机实例总cpu核数
+     * Get 专用宿主机实例总CPU核数 
+     * @return CpuTotal 专用宿主机实例总CPU核数
      */
     public Long getCpuTotal() {
         return this.CpuTotal;
     }
 
     /**
-     * Set 专用宿主机实例总cpu核数
-     * @param CpuTotal 专用宿主机实例总cpu核数
+     * Set 专用宿主机实例总CPU核数
+     * @param CpuTotal 专用宿主机实例总CPU核数
      */
     public void setCpuTotal(Long CpuTotal) {
         this.CpuTotal = CpuTotal;
     }
 
     /**
-     * Get 专用宿主机实例可用cpu核数 
-     * @return CpuAvailable 专用宿主机实例可用cpu核数
+     * Get 专用宿主机实例可用CPU核数 
+     * @return CpuAvailable 专用宿主机实例可用CPU核数
      */
     public Long getCpuAvailable() {
         return this.CpuAvailable;
     }
 
     /**
-     * Set 专用宿主机实例可用cpu核数
-     * @param CpuAvailable 专用宿主机实例可用cpu核数
+     * Set 专用宿主机实例可用CPU核数
+     * @param CpuAvailable 专用宿主机实例可用CPU核数
      */
     public void setCpuAvailable(Long CpuAvailable) {
         this.CpuAvailable = CpuAvailable;
