@@ -30,6 +30,13 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
     private String FileId;
 
     /**
+    * 音视频审核模板 ID。
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
      * Get 媒体文件 ID。 
      * @return FileId 媒体文件 ID。
      */
@@ -45,6 +52,22 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
         this.FileId = FileId;
     }
 
+    /**
+     * Get 音视频审核模板 ID。 
+     * @return Definition 音视频审核模板 ID。
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 音视频审核模板 ID。
+     * @param Definition 音视频审核模板 ID。
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
     public ReviewAudioVideoTaskInput() {
     }
 
@@ -56,6 +79,9 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

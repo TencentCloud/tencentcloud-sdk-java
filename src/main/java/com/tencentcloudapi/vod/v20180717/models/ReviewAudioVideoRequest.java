@@ -37,6 +37,14 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
+    * 音视频审核模板 ID，默认值为 10。取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
     */
     @SerializedName("TasksPriority")
@@ -94,6 +102,26 @@ public class ReviewAudioVideoRequest extends AbstractModel{
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get 音视频审核模板 ID，默认值为 10。取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li> 
+     * @return Definition 音视频审核模板 ID，默认值为 10。取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 音视频审核模板 ID，默认值为 10。取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+     * @param Definition 音视频审核模板 ID，默认值为 10。取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
     /**
@@ -174,6 +202,9 @@ public class ReviewAudioVideoRequest extends AbstractModel{
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.TasksPriority != null) {
             this.TasksPriority = new Long(source.TasksPriority);
         }
@@ -195,6 +226,7 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

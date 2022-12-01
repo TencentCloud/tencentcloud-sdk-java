@@ -55,38 +55,20 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
     /**
     * 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 当 Form 为 Image 或 Voice 时有效，表示当前标签（Label）下的二级标签。
-当 Form 为 Image 且 Label 为 Porn 时，取值范围：
-<li>porn：色情；</li>
-<li>vulgar：低俗。</li>
-
-当 Form 为 Image 且 Label 为 Terrorism 时，取值范围：
-<li>guns：武器枪支；</li>
-<li>bloody：血腥画面；</li>
-<li>banners：暴恐旗帜；</li>
-<li> scenario：暴恐画面；</li>
-<li>explosion：爆炸火灾。</li>
-
-当 Form 为 Image 且 Label 为 Political 时，取值范围：
-<li>violation_photo：违规图标；</li>
-<li>nation_politician：国家领导人；</li>
-<li>province_politician：省部级领导人；</li>
-<li>county_politician：市/县级领导人；</li>
-<li>sensitive_politician：敏感相关人物；</li>
-<li>foreign_politician：国外政治人物；</li>
-<li>sensitive_entertainment：敏感娱乐明星；</li>
-<li>sensitive_military：敏感军事人物。</li>
-
-当 Form 为 Voice 且 Label 为 Porn 时，取值范围：
-<li>moan：娇喘。</li>
+    * 违规子标签。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -199,12 +181,22 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
     /**
      * Get 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li> 
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li> 
      * @return Label 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
      */
     public String getLabel() {
         return this.Label;
@@ -213,120 +205,38 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
     /**
      * Set 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
      * @param Label 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 当 Form 为 Image 或 Voice 时有效，表示当前标签（Label）下的二级标签。
-当 Form 为 Image 且 Label 为 Porn 时，取值范围：
-<li>porn：色情；</li>
-<li>vulgar：低俗。</li>
-
-当 Form 为 Image 且 Label 为 Terrorism 时，取值范围：
-<li>guns：武器枪支；</li>
-<li>bloody：血腥画面；</li>
-<li>banners：暴恐旗帜；</li>
-<li> scenario：暴恐画面；</li>
-<li>explosion：爆炸火灾。</li>
-
-当 Form 为 Image 且 Label 为 Political 时，取值范围：
-<li>violation_photo：违规图标；</li>
-<li>nation_politician：国家领导人；</li>
-<li>province_politician：省部级领导人；</li>
-<li>county_politician：市/县级领导人；</li>
-<li>sensitive_politician：敏感相关人物；</li>
-<li>foreign_politician：国外政治人物；</li>
-<li>sensitive_entertainment：敏感娱乐明星；</li>
-<li>sensitive_military：敏感军事人物。</li>
-
-当 Form 为 Voice 且 Label 为 Porn 时，取值范围：
-<li>moan：娇喘。</li> 
-     * @return SubLabel 当 Form 为 Image 或 Voice 时有效，表示当前标签（Label）下的二级标签。
-当 Form 为 Image 且 Label 为 Porn 时，取值范围：
-<li>porn：色情；</li>
-<li>vulgar：低俗。</li>
-
-当 Form 为 Image 且 Label 为 Terrorism 时，取值范围：
-<li>guns：武器枪支；</li>
-<li>bloody：血腥画面；</li>
-<li>banners：暴恐旗帜；</li>
-<li> scenario：暴恐画面；</li>
-<li>explosion：爆炸火灾。</li>
-
-当 Form 为 Image 且 Label 为 Political 时，取值范围：
-<li>violation_photo：违规图标；</li>
-<li>nation_politician：国家领导人；</li>
-<li>province_politician：省部级领导人；</li>
-<li>county_politician：市/县级领导人；</li>
-<li>sensitive_politician：敏感相关人物；</li>
-<li>foreign_politician：国外政治人物；</li>
-<li>sensitive_entertainment：敏感娱乐明星；</li>
-<li>sensitive_military：敏感军事人物。</li>
-
-当 Form 为 Voice 且 Label 为 Porn 时，取值范围：
-<li>moan：娇喘。</li>
+     * Get 违规子标签。 
+     * @return SubLabel 违规子标签。
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 当 Form 为 Image 或 Voice 时有效，表示当前标签（Label）下的二级标签。
-当 Form 为 Image 且 Label 为 Porn 时，取值范围：
-<li>porn：色情；</li>
-<li>vulgar：低俗。</li>
-
-当 Form 为 Image 且 Label 为 Terrorism 时，取值范围：
-<li>guns：武器枪支；</li>
-<li>bloody：血腥画面；</li>
-<li>banners：暴恐旗帜；</li>
-<li> scenario：暴恐画面；</li>
-<li>explosion：爆炸火灾。</li>
-
-当 Form 为 Image 且 Label 为 Political 时，取值范围：
-<li>violation_photo：违规图标；</li>
-<li>nation_politician：国家领导人；</li>
-<li>province_politician：省部级领导人；</li>
-<li>county_politician：市/县级领导人；</li>
-<li>sensitive_politician：敏感相关人物；</li>
-<li>foreign_politician：国外政治人物；</li>
-<li>sensitive_entertainment：敏感娱乐明星；</li>
-<li>sensitive_military：敏感军事人物。</li>
-
-当 Form 为 Voice 且 Label 为 Porn 时，取值范围：
-<li>moan：娇喘。</li>
-     * @param SubLabel 当 Form 为 Image 或 Voice 时有效，表示当前标签（Label）下的二级标签。
-当 Form 为 Image 且 Label 为 Porn 时，取值范围：
-<li>porn：色情；</li>
-<li>vulgar：低俗。</li>
-
-当 Form 为 Image 且 Label 为 Terrorism 时，取值范围：
-<li>guns：武器枪支；</li>
-<li>bloody：血腥画面；</li>
-<li>banners：暴恐旗帜；</li>
-<li> scenario：暴恐画面；</li>
-<li>explosion：爆炸火灾。</li>
-
-当 Form 为 Image 且 Label 为 Political 时，取值范围：
-<li>violation_photo：违规图标；</li>
-<li>nation_politician：国家领导人；</li>
-<li>province_politician：省部级领导人；</li>
-<li>county_politician：市/县级领导人；</li>
-<li>sensitive_politician：敏感相关人物；</li>
-<li>foreign_politician：国外政治人物；</li>
-<li>sensitive_entertainment：敏感娱乐明星；</li>
-<li>sensitive_military：敏感军事人物。</li>
-
-当 Form 为 Voice 且 Label 为 Porn 时，取值范围：
-<li>moan：娇喘。</li>
+     * Set 违规子标签。
+     * @param SubLabel 违规子标签。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;

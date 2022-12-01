@@ -35,8 +35,13 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     /**
     * 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
     */
     @SerializedName("Label")
     @Expose
@@ -106,12 +111,22 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     /**
      * Get 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li> 
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li> 
      * @return Label 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
      */
     public String getLabel() {
         return this.Label;
@@ -120,12 +135,22 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     /**
      * Set 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
      * @param Label 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terrorism：暴恐；</li>
-<li>Political：令人不适宜的信息。</li>
+<li>Terror：暴恐；</li>
+<li>Polity：不适宜的信息；</li>
+<li>Ad：广告；</li>
+<li>Illegal：违法；</li>
+<li>Religion：宗教；</li>
+<li>Abuse：谩骂；</li>
+<li>Moan：娇喘。</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
