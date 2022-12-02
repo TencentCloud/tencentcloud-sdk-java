@@ -259,6 +259,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *创建按量计费实例
+     * @param req CreateInstancePostRequest
+     * @return CreateInstancePostResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancePostResponse CreateInstancePost(CreateInstancePostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancePostResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancePostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstancePost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建实例(预付费包年包月)
      * @param req CreateInstancePreRequest
      * @return CreateInstancePreResponse
@@ -1173,6 +1193,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "FetchMessageListByOffset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Ckafka实例购买/续费询价
+     * @param req InquireCkafkaPriceRequest
+     * @return InquireCkafkaPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquireCkafkaPriceResponse InquireCkafkaPrice(InquireCkafkaPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquireCkafkaPriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquireCkafkaPrice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

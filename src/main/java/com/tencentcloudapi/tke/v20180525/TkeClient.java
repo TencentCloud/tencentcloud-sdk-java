@@ -299,6 +299,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *在应用市场中集群创建应用
+     * @param req CreateClusterReleaseRequest
+     * @return CreateClusterReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterReleaseResponse CreateClusterRelease(CreateClusterReleaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterReleaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterReleaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateClusterRelease");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建集群路由
      * @param req CreateClusterRouteRequest
      * @return CreateClusterRouteResponse
