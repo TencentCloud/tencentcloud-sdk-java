@@ -46,6 +46,13 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
     private InstancePriceDetail [] InstancePriceDetailSet;
 
     /**
+    * 总计价格。
+    */
+    @SerializedName("TotalPrice")
+    @Expose
+    private TotalPrice TotalPrice;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -109,6 +116,22 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
     }
 
     /**
+     * Get 总计价格。 
+     * @return TotalPrice 总计价格。
+     */
+    public TotalPrice getTotalPrice() {
+        return this.TotalPrice;
+    }
+
+    /**
+     * Set 总计价格。
+     * @param TotalPrice 总计价格。
+     */
+    public void setTotalPrice(TotalPrice TotalPrice) {
+        this.TotalPrice = TotalPrice;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -147,6 +170,9 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
                 this.InstancePriceDetailSet[i] = new InstancePriceDetail(source.InstancePriceDetailSet[i]);
             }
         }
+        if (source.TotalPrice != null) {
+            this.TotalPrice = new TotalPrice(source.TotalPrice);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -160,6 +186,7 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
         this.setParamObj(map, prefix + "Price.", this.Price);
         this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
         this.setParamArrayObj(map, prefix + "InstancePriceDetailSet.", this.InstancePriceDetailSet);
+        this.setParamObj(map, prefix + "TotalPrice.", this.TotalPrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

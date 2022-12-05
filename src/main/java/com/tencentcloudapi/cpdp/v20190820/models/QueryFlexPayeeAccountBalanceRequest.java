@@ -50,6 +50,13 @@ __test__:测试环境
     private String Environment;
 
     /**
+    * 快照日期。格式yyyy-MM-dd
+    */
+    @SerializedName("SnapshotDate")
+    @Expose
+    private String SnapshotDate;
+
+    /**
      * Get 收款用户ID 
      * @return PayeeId 收款用户ID
      */
@@ -121,6 +128,22 @@ __test__:测试环境
         this.Environment = Environment;
     }
 
+    /**
+     * Get 快照日期。格式yyyy-MM-dd 
+     * @return SnapshotDate 快照日期。格式yyyy-MM-dd
+     */
+    public String getSnapshotDate() {
+        return this.SnapshotDate;
+    }
+
+    /**
+     * Set 快照日期。格式yyyy-MM-dd
+     * @param SnapshotDate 快照日期。格式yyyy-MM-dd
+     */
+    public void setSnapshotDate(String SnapshotDate) {
+        this.SnapshotDate = SnapshotDate;
+    }
+
     public QueryFlexPayeeAccountBalanceRequest() {
     }
 
@@ -138,6 +161,9 @@ __test__:测试环境
         if (source.Environment != null) {
             this.Environment = new String(source.Environment);
         }
+        if (source.SnapshotDate != null) {
+            this.SnapshotDate = new String(source.SnapshotDate);
+        }
     }
 
 
@@ -148,6 +174,7 @@ __test__:测试环境
         this.setParamSimple(map, prefix + "PayeeId", this.PayeeId);
         this.setParamSimple(map, prefix + "IncomeType", this.IncomeType);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamSimple(map, prefix + "SnapshotDate", this.SnapshotDate);
 
     }
 }

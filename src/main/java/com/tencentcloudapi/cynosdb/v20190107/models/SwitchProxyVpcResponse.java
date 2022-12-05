@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyUserMicStatusResponse extends AbstractModel{
+public class SwitchProxyVpcResponse extends AbstractModel{
 
     /**
-    * 返回结果：0为成功，非0为失败。
+    * 异步任务id。
     */
-    @SerializedName("Result")
+    @SerializedName("FlowId")
     @Expose
-    private Long Result;
-
-    /**
-    * 错误信息。
-    */
-    @SerializedName("ErrMsg")
-    @Expose
-    private String ErrMsg;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ModifyUserMicStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果：0为成功，非0为失败。 
-     * @return Result 返回结果：0为成功，非0为失败。
+     * Get 异步任务id。 
+     * @return FlowId 异步任务id。
      */
-    public Long getResult() {
-        return this.Result;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 返回结果：0为成功，非0为失败。
-     * @param Result 返回结果：0为成功，非0为失败。
+     * Set 异步任务id。
+     * @param FlowId 异步任务id。
      */
-    public void setResult(Long Result) {
-        this.Result = Result;
-    }
-
-    /**
-     * Get 错误信息。 
-     * @return ErrMsg 错误信息。
-     */
-    public String getErrMsg() {
-        return this.ErrMsg;
-    }
-
-    /**
-     * Set 错误信息。
-     * @param ErrMsg 错误信息。
-     */
-    public void setErrMsg(String ErrMsg) {
-        this.ErrMsg = ErrMsg;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -91,19 +68,16 @@ public class ModifyUserMicStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyUserMicStatusResponse() {
+    public SwitchProxyVpcResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyUserMicStatusResponse(ModifyUserMicStatusResponse source) {
-        if (source.Result != null) {
-            this.Result = new Long(source.Result);
-        }
-        if (source.ErrMsg != null) {
-            this.ErrMsg = new String(source.ErrMsg);
+    public SwitchProxyVpcResponse(SwitchProxyVpcResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +89,7 @@ public class ModifyUserMicStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

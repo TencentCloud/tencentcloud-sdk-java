@@ -51,7 +51,7 @@ public class CreateCcGeoIPBlockConfigRequest extends AbstractModel{
     private String Protocol;
 
     /**
-    * CC区域封禁配置，填写参数时配置ID请为空
+    * CC区域封禁配置
     */
     @SerializedName("CcGeoIPBlockConfig")
     @Expose
@@ -122,16 +122,16 @@ public class CreateCcGeoIPBlockConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get CC区域封禁配置，填写参数时配置ID请为空 
-     * @return CcGeoIPBlockConfig CC区域封禁配置，填写参数时配置ID请为空
+     * Get CC区域封禁配置 
+     * @return CcGeoIPBlockConfig CC区域封禁配置
      */
     public CcGeoIPBlockConfig getCcGeoIPBlockConfig() {
         return this.CcGeoIPBlockConfig;
     }
 
     /**
-     * Set CC区域封禁配置，填写参数时配置ID请为空
-     * @param CcGeoIPBlockConfig CC区域封禁配置，填写参数时配置ID请为空
+     * Set CC区域封禁配置
+     * @param CcGeoIPBlockConfig CC区域封禁配置
      */
     public void setCcGeoIPBlockConfig(CcGeoIPBlockConfig CcGeoIPBlockConfig) {
         this.CcGeoIPBlockConfig = CcGeoIPBlockConfig;

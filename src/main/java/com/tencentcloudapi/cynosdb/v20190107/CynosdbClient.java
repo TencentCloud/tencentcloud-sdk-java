@@ -1179,6 +1179,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ResetAccountPassword)用于重置实例的数据库账号密码。
+     * @param req ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetAccountPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *恢复serverless集群
      * @param req ResumeServerlessRequest
      * @return ResumeServerlessResponse
@@ -1239,6 +1259,46 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(SearchClusterDatabases)搜索集群database列表
+     * @param req SearchClusterDatabasesRequest
+     * @return SearchClusterDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClusterDatabasesResponse SearchClusterDatabases(SearchClusterDatabasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClusterDatabasesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchClusterDatabases");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(SearchClusterTables)搜索集群数据表列表
+     * @param req SearchClusterTablesRequest
+     * @return SearchClusterTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClusterTablesResponse SearchClusterTables(SearchClusterTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClusterTablesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClusterTablesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchClusterTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *SetRenewFlag设置实例的自动续费功能
      * @param req SetRenewFlagRequest
      * @return SetRenewFlagResponse
@@ -1271,6 +1331,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SwitchClusterZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchClusterZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(SwitchProxyVpc)更换数据库代理vpc
+     * @param req SwitchProxyVpcRequest
+     * @return SwitchProxyVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchProxyVpcResponse SwitchProxyVpc(SwitchProxyVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchProxyVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchProxyVpc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

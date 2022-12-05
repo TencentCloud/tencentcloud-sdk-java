@@ -30,14 +30,14 @@ public class DescribeOverviewAttackTrendResponse extends AbstractModel{
     private String Type;
 
     /**
-    * 起始时间
+    * 统计起始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 统计结束时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeOverviewAttackTrendResponse extends AbstractModel{
     }
 
     /**
-     * Get 起始时间 
-     * @return StartTime 起始时间
+     * Get 统计起始时间 
+     * @return StartTime 统计起始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间
-     * @param StartTime 起始时间
+     * Set 统计起始时间
+     * @param StartTime 统计起始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 统计结束时间 
+     * @return EndTime 统计结束时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 统计结束时间
+     * @param EndTime 统计结束时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

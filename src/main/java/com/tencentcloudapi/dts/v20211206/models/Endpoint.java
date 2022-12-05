@@ -199,6 +199,14 @@ public class Endpoint extends AbstractModel{
     private String TmpToken;
 
     /**
+    * 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RoleExternalId")
+    @Expose
+    private String RoleExternalId;
+
+    /**
      * Get 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域英文名，如：ap-guangzhou
@@ -638,6 +646,26 @@ public class Endpoint extends AbstractModel{
         this.TmpToken = TmpToken;
     }
 
+    /**
+     * Get 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RoleExternalId 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRoleExternalId() {
+        return this.RoleExternalId;
+    }
+
+    /**
+     * Set 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RoleExternalId 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRoleExternalId(String RoleExternalId) {
+        this.RoleExternalId = RoleExternalId;
+    }
+
     public Endpoint() {
     }
 
@@ -712,6 +740,9 @@ public class Endpoint extends AbstractModel{
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
+        if (source.RoleExternalId != null) {
+            this.RoleExternalId = new String(source.RoleExternalId);
+        }
     }
 
 
@@ -741,6 +772,7 @@ public class Endpoint extends AbstractModel{
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
+        this.setParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
 
     }
 }

@@ -64,7 +64,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String TaskType;
 
     /**
-    * 导出项目输出信息。
+    * 导出项目输出信息。仅当 TaskType 为 VIDEO_EDIT_PROJECT_EXPORT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoEditProjectOutput")
@@ -190,9 +190,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 导出项目输出信息。
+     * Get 导出项目输出信息。仅当 TaskType 为 VIDEO_EDIT_PROJECT_EXPORT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoEditProjectOutput 导出项目输出信息。
+     * @return VideoEditProjectOutput 导出项目输出信息。仅当 TaskType 为 VIDEO_EDIT_PROJECT_EXPORT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoEditProjectOutput getVideoEditProjectOutput() {
@@ -200,9 +200,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 导出项目输出信息。
+     * Set 导出项目输出信息。仅当 TaskType 为 VIDEO_EDIT_PROJECT_EXPORT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoEditProjectOutput 导出项目输出信息。
+     * @param VideoEditProjectOutput 导出项目输出信息。仅当 TaskType 为 VIDEO_EDIT_PROJECT_EXPORT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoEditProjectOutput(VideoEditProjectOutput VideoEditProjectOutput) {

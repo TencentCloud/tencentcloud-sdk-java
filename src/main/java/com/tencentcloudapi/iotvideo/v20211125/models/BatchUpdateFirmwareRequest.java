@@ -79,6 +79,13 @@ public class BatchUpdateFirmwareRequest extends AbstractModel{
     private String [] DeviceNames;
 
     /**
+    * 固件升级任务默认超时时间。 最小取值60秒，最大为3600秒
+    */
+    @SerializedName("TimeoutInterval")
+    @Expose
+    private Long TimeoutInterval;
+
+    /**
      * Get 产品ID 
      * @return ProductID 产品ID
      */
@@ -206,6 +213,22 @@ public class BatchUpdateFirmwareRequest extends AbstractModel{
         this.DeviceNames = DeviceNames;
     }
 
+    /**
+     * Get 固件升级任务默认超时时间。 最小取值60秒，最大为3600秒 
+     * @return TimeoutInterval 固件升级任务默认超时时间。 最小取值60秒，最大为3600秒
+     */
+    public Long getTimeoutInterval() {
+        return this.TimeoutInterval;
+    }
+
+    /**
+     * Set 固件升级任务默认超时时间。 最小取值60秒，最大为3600秒
+     * @param TimeoutInterval 固件升级任务默认超时时间。 最小取值60秒，最大为3600秒
+     */
+    public void setTimeoutInterval(Long TimeoutInterval) {
+        this.TimeoutInterval = TimeoutInterval;
+    }
+
     public BatchUpdateFirmwareRequest() {
     }
 
@@ -241,6 +264,9 @@ public class BatchUpdateFirmwareRequest extends AbstractModel{
                 this.DeviceNames[i] = new String(source.DeviceNames[i]);
             }
         }
+        if (source.TimeoutInterval != null) {
+            this.TimeoutInterval = new Long(source.TimeoutInterval);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class BatchUpdateFirmwareRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
+        this.setParamSimple(map, prefix + "TimeoutInterval", this.TimeoutInterval);
 
     }
 }

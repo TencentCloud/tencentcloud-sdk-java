@@ -66,6 +66,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
 
     /**
     * 函数所属命名空间
+默认值: default
     */
     @SerializedName("Namespace")
     @Expose
@@ -266,8 +267,10 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数所属命名空间 
+     * Get 函数所属命名空间
+默认值: default 
      * @return Namespace 函数所属命名空间
+默认值: default
      */
     public String getNamespace() {
         return this.Namespace;
@@ -275,7 +278,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
 
     /**
      * Set 函数所属命名空间
+默认值: default
      * @param Namespace 函数所属命名空间
+默认值: default
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

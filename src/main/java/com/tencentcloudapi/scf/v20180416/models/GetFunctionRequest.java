@@ -31,6 +31,7 @@ public class GetFunctionRequest extends AbstractModel{
 
     /**
     * 函数的版本号
+默认值: $LATEST
     */
     @SerializedName("Qualifier")
     @Expose
@@ -38,6 +39,7 @@ public class GetFunctionRequest extends AbstractModel{
 
     /**
     * 函数所属命名空间
+默认值: default
     */
     @SerializedName("Namespace")
     @Expose
@@ -67,8 +69,10 @@ public class GetFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数的版本号 
+     * Get 函数的版本号
+默认值: $LATEST 
      * @return Qualifier 函数的版本号
+默认值: $LATEST
      */
     public String getQualifier() {
         return this.Qualifier;
@@ -76,15 +80,19 @@ public class GetFunctionRequest extends AbstractModel{
 
     /**
      * Set 函数的版本号
+默认值: $LATEST
      * @param Qualifier 函数的版本号
+默认值: $LATEST
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get 函数所属命名空间 
+     * Get 函数所属命名空间
+默认值: default 
      * @return Namespace 函数所属命名空间
+默认值: default
      */
     public String getNamespace() {
         return this.Namespace;
@@ -92,7 +100,9 @@ public class GetFunctionRequest extends AbstractModel{
 
     /**
      * Set 函数所属命名空间
+默认值: default
      * @param Namespace 函数所属命名空间
+默认值: default
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

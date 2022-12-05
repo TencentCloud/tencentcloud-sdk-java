@@ -135,6 +135,9 @@ public enum CynosdbErrorCode {
     // 参数值无效。
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUEERROR("InvalidParameterValue.InvalidParameterValueError"),
      
+    // 密码不合规。
+     INVALIDPARAMETERVALUE_INVALIDPASSWORDVALUEERROR("InvalidParameterValue.InvalidPasswordValueError"),
+     
     // 无效的地域。
      INVALIDPARAMETERVALUE_INVALIDREGIONIDERROR("InvalidParameterValue.InvalidRegionIdError"),
      
@@ -185,6 +188,9 @@ public enum CynosdbErrorCode {
      
     // 实例当前状态不允许该操作。
      OPERATIONDENIED_INSTANCESTATUSDENIEDERROR("OperationDenied.InstanceStatusDeniedError"),
+     
+    // 实例未处于运行状态
+     OPERATIONDENIED_INSTANCESTATUSLIMITERROR("OperationDenied.InstanceStatusLimitError"),
      
     // 账号余额不足。
      OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),

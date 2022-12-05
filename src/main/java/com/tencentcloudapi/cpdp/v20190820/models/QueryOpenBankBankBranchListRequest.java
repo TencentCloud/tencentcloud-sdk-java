@@ -63,7 +63,7 @@ __OPENBANK_PAYMENT__: openbank付款
     private String BankAbbreviation;
 
     /**
-    * 页码。Index和Count必须大于等于1。
+    * 页码。Index和Count必须大于等于1。Count建议不超过100。
     */
     @SerializedName("PageNumber")
     @Expose
@@ -180,16 +180,16 @@ __OPENBANK_PAYMENT__: openbank付款
     }
 
     /**
-     * Get 页码。Index和Count必须大于等于1。 
-     * @return PageNumber 页码。Index和Count必须大于等于1。
+     * Get 页码。Index和Count必须大于等于1。Count建议不超过100。 
+     * @return PageNumber 页码。Index和Count必须大于等于1。Count建议不超过100。
      */
     public Paging getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码。Index和Count必须大于等于1。
-     * @param PageNumber 页码。Index和Count必须大于等于1。
+     * Set 页码。Index和Count必须大于等于1。Count建议不超过100。
+     * @param PageNumber 页码。Index和Count必须大于等于1。Count建议不超过100。
      */
     public void setPageNumber(Paging PageNumber) {
         this.PageNumber = PageNumber;

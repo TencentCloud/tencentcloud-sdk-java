@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyUserMicStatusRequest extends AbstractModel{
 
     /**
-    * 应用ID
+    * 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 房间ID
+    * 实时语音房间号。
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 用户麦克风状态，数组长度不超过20
+    * 需要操作的房间内用户以及该用户的目标麦克风状态。
     */
     @SerializedName("Users")
     @Expose
     private UserMicStatus [] Users;
 
     /**
-     * Get 应用ID 
-     * @return BizId 应用ID
+     * Get 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。 
+     * @return BizId 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BizId 应用ID
+     * Set 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
+     * @param BizId 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get 房间ID 
-     * @return RoomId 房间ID
+     * Get 实时语音房间号。 
+     * @return RoomId 实时语音房间号。
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间ID
-     * @param RoomId 房间ID
+     * Set 实时语音房间号。
+     * @param RoomId 实时语音房间号。
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 用户麦克风状态，数组长度不超过20 
-     * @return Users 用户麦克风状态，数组长度不超过20
+     * Get 需要操作的房间内用户以及该用户的目标麦克风状态。 
+     * @return Users 需要操作的房间内用户以及该用户的目标麦克风状态。
      */
     public UserMicStatus [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set 用户麦克风状态，数组长度不超过20
-     * @param Users 用户麦克风状态，数组长度不超过20
+     * Set 需要操作的房间内用户以及该用户的目标麦克风状态。
+     * @param Users 需要操作的房间内用户以及该用户的目标麦克风状态。
      */
     public void setUsers(UserMicStatus [] Users) {
         this.Users = Users;

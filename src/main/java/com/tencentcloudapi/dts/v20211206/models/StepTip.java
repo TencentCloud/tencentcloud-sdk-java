@@ -55,6 +55,14 @@ public class StepTip extends AbstractModel{
     private String HelpDoc;
 
     /**
+    * 当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SkipInfo")
+    @Expose
+    private String SkipInfo;
+
+    /**
      * Get 错误码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 错误码
@@ -134,6 +142,26 @@ public class StepTip extends AbstractModel{
         this.HelpDoc = HelpDoc;
     }
 
+    /**
+     * Get 当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SkipInfo 当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSkipInfo() {
+        return this.SkipInfo;
+    }
+
+    /**
+     * Set 当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SkipInfo 当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSkipInfo(String SkipInfo) {
+        this.SkipInfo = SkipInfo;
+    }
+
     public StepTip() {
     }
 
@@ -154,6 +182,9 @@ public class StepTip extends AbstractModel{
         if (source.HelpDoc != null) {
             this.HelpDoc = new String(source.HelpDoc);
         }
+        if (source.SkipInfo != null) {
+            this.SkipInfo = new String(source.SkipInfo);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class StepTip extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Solution", this.Solution);
         this.setParamSimple(map, prefix + "HelpDoc", this.HelpDoc);
+        this.setParamSimple(map, prefix + "SkipInfo", this.SkipInfo);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSyncJobsRequest extends AbstractModel{
 
     /**
-    * 同步任务id
+    * 同步任务id，如sync-werwfs23
     */
     @SerializedName("JobId")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeSyncJobsRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
-     * Get 同步任务id 
-     * @return JobId 同步任务id
+     * Get 同步任务id，如sync-werwfs23 
+     * @return JobId 同步任务id，如sync-werwfs23
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步任务id
-     * @param JobId 同步任务id
+     * Set 同步任务id，如sync-werwfs23
+     * @param JobId 同步任务id，如sync-werwfs23
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

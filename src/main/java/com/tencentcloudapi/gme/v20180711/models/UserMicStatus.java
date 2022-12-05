@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UserMicStatus extends AbstractModel{
 
     /**
-    * 用户ID
+    * 客户端用于标识用户的Openid。
     */
     @SerializedName("Uid")
     @Expose
     private Long Uid;
 
     /**
-    * 是否开麦 。1闭麦  2开麦
+    * 开麦状态。1表示关闭麦克风，2表示打开麦克风。
     */
     @SerializedName("EnableMic")
     @Expose
     private Long EnableMic;
 
     /**
-     * Get 用户ID 
-     * @return Uid 用户ID
+     * Get 客户端用于标识用户的Openid。 
+     * @return Uid 客户端用于标识用户的Openid。
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 用户ID
-     * @param Uid 用户ID
+     * Set 客户端用于标识用户的Openid。
+     * @param Uid 客户端用于标识用户的Openid。
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get 是否开麦 。1闭麦  2开麦 
-     * @return EnableMic 是否开麦 。1闭麦  2开麦
+     * Get 开麦状态。1表示关闭麦克风，2表示打开麦克风。 
+     * @return EnableMic 开麦状态。1表示关闭麦克风，2表示打开麦克风。
      */
     public Long getEnableMic() {
         return this.EnableMic;
     }
 
     /**
-     * Set 是否开麦 。1闭麦  2开麦
-     * @param EnableMic 是否开麦 。1闭麦  2开麦
+     * Set 开麦状态。1表示关闭麦克风，2表示打开麦克风。
+     * @param EnableMic 开麦状态。1表示关闭麦克风，2表示打开麦克风。
      */
     public void setEnableMic(Long EnableMic) {
         this.EnableMic = EnableMic;

@@ -1351,6 +1351,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *列出 Prometheus 服务可用区
+     * @param req DescribePrometheusZonesRequest
+     * @return DescribePrometheusZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusZonesResponse DescribePrometheusZones(DescribePrometheusZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据条件查询 Prometheus 预聚合规则
      * @param req DescribeRecordingRulesRequest
      * @return DescribeRecordingRulesResponse

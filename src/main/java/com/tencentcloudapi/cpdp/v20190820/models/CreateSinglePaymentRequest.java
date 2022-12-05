@@ -24,6 +24,9 @@ public class CreateSinglePaymentRequest extends AbstractModel{
 
     /**
     * 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
     */
     @SerializedName("TransferType")
     @Expose
@@ -86,8 +89,14 @@ public class CreateSinglePaymentRequest extends AbstractModel{
     private String NotifyUrl;
 
     /**
-     * Get 转账类型 
+     * Get 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账 
      * @return TransferType 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
      */
     public Long getTransferType() {
         return this.TransferType;
@@ -95,7 +104,13 @@ public class CreateSinglePaymentRequest extends AbstractModel{
 
     /**
      * Set 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
      * @param TransferType 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
      */
     public void setTransferType(Long TransferType) {
         this.TransferType = TransferType;

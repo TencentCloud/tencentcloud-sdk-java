@@ -156,6 +156,14 @@ public class BackupInfo extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 备份文件是否加密， on-加密， off-未加密
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptionFlag")
+    @Expose
+    private String EncryptionFlag;
+
+    /**
      * Get 备份文件名 
      * @return Name 备份文件名
      */
@@ -459,6 +467,26 @@ public class BackupInfo extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 备份文件是否加密， on-加密， off-未加密
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptionFlag 备份文件是否加密， on-加密， off-未加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptionFlag() {
+        return this.EncryptionFlag;
+    }
+
+    /**
+     * Set 备份文件是否加密， on-加密， off-未加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptionFlag 备份文件是否加密， on-加密， off-未加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptionFlag(String EncryptionFlag) {
+        this.EncryptionFlag = EncryptionFlag;
+    }
+
     public BackupInfo() {
     }
 
@@ -527,6 +555,9 @@ public class BackupInfo extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.EncryptionFlag != null) {
+            this.EncryptionFlag = new String(source.EncryptionFlag);
+        }
     }
 
 
@@ -553,6 +584,7 @@ public class BackupInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
         this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
 
     }
 }

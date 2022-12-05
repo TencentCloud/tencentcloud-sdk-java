@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePendingRiskInfoResponse extends AbstractModel{
 
     /**
-    * 是否为付费用户
+    * 是否为付费用户，true：付费用户， false：普通用户
     */
     @SerializedName("IsPaidUsr")
     @Expose
@@ -65,16 +65,16 @@ public class DescribePendingRiskInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 是否为付费用户 
-     * @return IsPaidUsr 是否为付费用户
+     * Get 是否为付费用户，true：付费用户， false：普通用户 
+     * @return IsPaidUsr 是否为付费用户，true：付费用户， false：普通用户
      */
     public Boolean getIsPaidUsr() {
         return this.IsPaidUsr;
     }
 
     /**
-     * Set 是否为付费用户
-     * @param IsPaidUsr 是否为付费用户
+     * Set 是否为付费用户，true：付费用户， false：普通用户
+     * @param IsPaidUsr 是否为付费用户，true：付费用户， false：普通用户
      */
     public void setIsPaidUsr(Boolean IsPaidUsr) {
         this.IsPaidUsr = IsPaidUsr;

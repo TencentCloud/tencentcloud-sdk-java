@@ -76,6 +76,14 @@ public class DescribeFirmwareResponse extends AbstractModel{
     private String ProductName;
 
     /**
+    * 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -211,6 +219,26 @@ public class DescribeFirmwareResponse extends AbstractModel{
     }
 
     /**
+     * Get 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FwType 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FwType 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -255,6 +283,9 @@ public class DescribeFirmwareResponse extends AbstractModel{
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -272,6 +303,7 @@ public class DescribeFirmwareResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Md5sum", this.Md5sum);
         this.setParamSimple(map, prefix + "Createtime", this.Createtime);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

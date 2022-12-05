@@ -30,7 +30,7 @@ public class ModifyDDoSBlackWhiteIpListRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 当前黑名单类型，取值black时黑名单；取值white时白名单
+    * 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
     */
     @SerializedName("OldIpType")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyDDoSBlackWhiteIpListRequest extends AbstractModel{
     }
 
     /**
-     * Get 当前黑名单类型，取值black时黑名单；取值white时白名单 
-     * @return OldIpType 当前黑名单类型，取值black时黑名单；取值white时白名单
+     * Get 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单 
+     * @return OldIpType 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
      */
     public String getOldIpType() {
         return this.OldIpType;
     }
 
     /**
-     * Set 当前黑名单类型，取值black时黑名单；取值white时白名单
-     * @param OldIpType 当前黑名单类型，取值black时黑名单；取值white时白名单
+     * Set 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
+     * @param OldIpType 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
      */
     public void setOldIpType(String OldIpType) {
         this.OldIpType = OldIpType;

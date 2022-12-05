@@ -65,6 +65,14 @@ public class Docker extends AbstractModel{
     private Long DelayOnRetry;
 
     /**
+    * Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DockerRunOption")
+    @Expose
+    private String DockerRunOption;
+
+    /**
      * Get Docker Hub 用户名或 Tencent Registry 用户名 
      * @return User Docker Hub 用户名或 Tencent Registry 用户名
      */
@@ -160,6 +168,26 @@ public class Docker extends AbstractModel{
         this.DelayOnRetry = DelayOnRetry;
     }
 
+    /**
+     * Get Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DockerRunOption Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDockerRunOption() {
+        return this.DockerRunOption;
+    }
+
+    /**
+     * Set Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DockerRunOption Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDockerRunOption(String DockerRunOption) {
+        this.DockerRunOption = DockerRunOption;
+    }
+
     public Docker() {
     }
 
@@ -186,6 +214,9 @@ public class Docker extends AbstractModel{
         if (source.DelayOnRetry != null) {
             this.DelayOnRetry = new Long(source.DelayOnRetry);
         }
+        if (source.DockerRunOption != null) {
+            this.DockerRunOption = new String(source.DockerRunOption);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class Docker extends AbstractModel{
         this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
         this.setParamSimple(map, prefix + "DelayOnRetry", this.DelayOnRetry);
+        this.setParamSimple(map, prefix + "DockerRunOption", this.DockerRunOption);
 
     }
 }

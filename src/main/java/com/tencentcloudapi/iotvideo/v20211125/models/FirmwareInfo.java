@@ -72,6 +72,14 @@ public class FirmwareInfo extends AbstractModel{
     private String ProductId;
 
     /**
+    * 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
      * Get 固件版本 
      * @return Version 固件版本
      */
@@ -183,6 +191,26 @@ public class FirmwareInfo extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FwType 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FwType 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
     public FirmwareInfo() {
     }
 
@@ -212,6 +240,9 @@ public class FirmwareInfo extends AbstractModel{
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class FirmwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }
