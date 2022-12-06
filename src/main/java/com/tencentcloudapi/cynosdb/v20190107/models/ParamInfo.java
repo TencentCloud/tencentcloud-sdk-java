@@ -101,6 +101,38 @@ public class ParamInfo extends AbstractModel{
     private String Description;
 
     /**
+    * 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Long IsGlobal;
+
+    /**
+    * 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifiableInfo")
+    @Expose
+    private ModifiableInfo ModifiableInfo;
+
+    /**
+    * 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsFunc")
+    @Expose
+    private Boolean IsFunc;
+
+    /**
+    * 函数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Func")
+    @Expose
+    private String Func;
+
+    /**
      * Get 当前值 
      * @return CurrentValue 当前值
      */
@@ -280,6 +312,86 @@ public class ParamInfo extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsGlobal 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsGlobal 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsGlobal(Long IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
+    /**
+     * Get 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifiableInfo 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModifiableInfo getModifiableInfo() {
+        return this.ModifiableInfo;
+    }
+
+    /**
+     * Set 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifiableInfo 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
+        this.ModifiableInfo = ModifiableInfo;
+    }
+
+    /**
+     * Get 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsFunc 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsFunc() {
+        return this.IsFunc;
+    }
+
+    /**
+     * Set 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsFunc 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsFunc(Boolean IsFunc) {
+        this.IsFunc = IsFunc;
+    }
+
+    /**
+     * Get 函数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Func 函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFunc() {
+        return this.Func;
+    }
+
+    /**
+     * Set 函数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Func 函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFunc(String Func) {
+        this.Func = Func;
+    }
+
     public ParamInfo() {
     }
 
@@ -324,6 +436,18 @@ public class ParamInfo extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+        if (source.ModifiableInfo != null) {
+            this.ModifiableInfo = new ModifiableInfo(source.ModifiableInfo);
+        }
+        if (source.IsFunc != null) {
+            this.IsFunc = new Boolean(source.IsFunc);
+        }
+        if (source.Func != null) {
+            this.Func = new String(source.Func);
+        }
     }
 
 
@@ -342,6 +466,10 @@ public class ParamInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MatchType", this.MatchType);
         this.setParamSimple(map, prefix + "MatchValue", this.MatchValue);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
+        this.setParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+        this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
+        this.setParamSimple(map, prefix + "Func", this.Func);
 
     }
 }

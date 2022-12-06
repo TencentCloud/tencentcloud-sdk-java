@@ -51,7 +51,7 @@ public class CreateMigrationServiceRequest extends AbstractModel{
     private String DstRegion;
 
     /**
-    * 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+    * 实例规格，包括：small、medium、large、xlarge、2xlarge
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -143,16 +143,16 @@ public class CreateMigrationServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例规格，包括：micro、small、medium、large、xlarge、2xlarge 
-     * @return InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+     * Get 实例规格，包括：small、medium、large、xlarge、2xlarge 
+     * @return InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
-     * @param InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+     * Set 实例规格，包括：small、medium、large、xlarge、2xlarge
+     * @param InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;

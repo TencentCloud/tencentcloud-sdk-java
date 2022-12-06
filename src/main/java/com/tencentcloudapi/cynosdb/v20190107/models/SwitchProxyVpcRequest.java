@@ -51,7 +51,7 @@ public class SwitchProxyVpcRequest extends AbstractModel{
     private Long OldIpReserveHours;
 
     /**
-    * 数据库代理组Id
+    * 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -122,16 +122,16 @@ public class SwitchProxyVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库代理组Id 
-     * @return ProxyGroupId 数据库代理组Id
+     * Get 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得） 
+     * @return ProxyGroupId 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理组Id
-     * @param ProxyGroupId 数据库代理组Id
+     * Set 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
+     * @param ProxyGroupId 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

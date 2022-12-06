@@ -320,6 +320,45 @@ pause
     private Long StoragePayMode;
 
     /**
+    * 物理区
+    */
+    @SerializedName("PhysicalZone")
+    @Expose
+    private String PhysicalZone;
+
+    /**
+    * 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
+    * 任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private ObjectTask [] Tasks;
+
+    /**
+    * 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsFreeze")
+    @Expose
+    private String IsFreeze;
+
+    /**
+    * 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1003,6 +1042,102 @@ pause
         this.StoragePayMode = StoragePayMode;
     }
 
+    /**
+     * Get 物理区 
+     * @return PhysicalZone 物理区
+     */
+    public String getPhysicalZone() {
+        return this.PhysicalZone;
+    }
+
+    /**
+     * Set 物理区
+     * @param PhysicalZone 物理区
+     */
+    public void setPhysicalZone(String PhysicalZone) {
+        this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
+     * Get 商业类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessType 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessType 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
+
+    /**
+     * Get 任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tasks 任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ObjectTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set 任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tasks 任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTasks(ObjectTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsFreeze 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsFreeze() {
+        return this.IsFreeze;
+    }
+
+    /**
+     * Set 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsFreeze 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsFreeze(String IsFreeze) {
+        this.IsFreeze = IsFreeze;
+    }
+
+    /**
+     * Get 资源标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceTags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceTags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1137,6 +1272,27 @@ pause
         if (source.StoragePayMode != null) {
             this.StoragePayMode = new Long(source.StoragePayMode);
         }
+        if (source.PhysicalZone != null) {
+            this.PhysicalZone = new String(source.PhysicalZone);
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new ObjectTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new ObjectTask(source.Tasks[i]);
+            }
+        }
+        if (source.IsFreeze != null) {
+            this.IsFreeze = new String(source.IsFreeze);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -1186,6 +1342,11 @@ pause
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
         this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

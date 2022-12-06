@@ -44,14 +44,14 @@ public class DescribeOverviewAttackTrendRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * 统计开始时间
+    * 防护概览攻击趋势开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 统计结束时间
+    * 防护概览攻击趋势结束时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -106,32 +106,32 @@ public class DescribeOverviewAttackTrendRequest extends AbstractModel{
     }
 
     /**
-     * Get 统计开始时间 
-     * @return StartTime 统计开始时间
+     * Get 防护概览攻击趋势开始时间 
+     * @return StartTime 防护概览攻击趋势开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 统计开始时间
-     * @param StartTime 统计开始时间
+     * Set 防护概览攻击趋势开始时间
+     * @param StartTime 防护概览攻击趋势开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 统计结束时间 
-     * @return EndTime 统计结束时间
+     * Get 防护概览攻击趋势结束时间 
+     * @return EndTime 防护概览攻击趋势结束时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 统计结束时间
-     * @param EndTime 统计结束时间
+     * Set 防护概览攻击趋势结束时间
+     * @param EndTime 防护概览攻击趋势结束时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

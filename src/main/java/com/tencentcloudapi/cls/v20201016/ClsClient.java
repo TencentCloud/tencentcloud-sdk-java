@@ -159,7 +159,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建特殊采集配置任务
+     *本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
      * @param req CreateConfigExtraRequest
      * @return CreateConfigExtraResponse
      * @throws TencentCloudSDKException
@@ -379,7 +379,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于删除特殊采集规则配置
+     *本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
      * @param req DeleteConfigExtraRequest
      * @return DeleteConfigExtraResponse
      * @throws TencentCloudSDKException
@@ -619,7 +619,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于获取特殊采集配置
+     *本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
      * @param req DescribeConfigExtrasRequest
      * @return DescribeConfigExtrasResponse
      * @throws TencentCloudSDKException
@@ -1039,7 +1039,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于修改特殊采集配置任务
+     *本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
      * @param req ModifyConfigExtraRequest
      * @return ModifyConfigExtraResponse
      * @throws TencentCloudSDKException

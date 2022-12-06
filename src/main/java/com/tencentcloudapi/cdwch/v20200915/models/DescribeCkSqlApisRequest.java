@@ -30,21 +30,32 @@ public class DescribeCkSqlApisRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * api接口名称
+    * api接口名称,GetClusters:获取集群cluster列表
+GetSystemUsers:获取系统用户列表
+CheckNodeCluster: 检查节点是否隶属一个cluster
+GetClusterDatabases: 获取一个cluster下的数据库列表
+GetClusterTables: 获取一个cluster下的数据库表列表
+GetPrivilegeUsers: 获取授权的用户列表
+GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
+GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
+RevokeClusterUser:解绑cluster用户
+DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
+GetUserOptionMessages:获取用户配置备注信息
+GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
     */
     @SerializedName("ApiType")
     @Expose
     private String ApiType;
 
     /**
-    * 集群名称
+    * 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
     */
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
 
     /**
-    * 用户名称
+    * 用户名称，api与user相关的必填
     */
     @SerializedName("UserName")
     @Expose
@@ -67,48 +78,92 @@ public class DescribeCkSqlApisRequest extends AbstractModel{
     }
 
     /**
-     * Get api接口名称 
-     * @return ApiType api接口名称
+     * Get api接口名称,GetClusters:获取集群cluster列表
+GetSystemUsers:获取系统用户列表
+CheckNodeCluster: 检查节点是否隶属一个cluster
+GetClusterDatabases: 获取一个cluster下的数据库列表
+GetClusterTables: 获取一个cluster下的数据库表列表
+GetPrivilegeUsers: 获取授权的用户列表
+GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
+GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
+RevokeClusterUser:解绑cluster用户
+DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
+GetUserOptionMessages:获取用户配置备注信息
+GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY 
+     * @return ApiType api接口名称,GetClusters:获取集群cluster列表
+GetSystemUsers:获取系统用户列表
+CheckNodeCluster: 检查节点是否隶属一个cluster
+GetClusterDatabases: 获取一个cluster下的数据库列表
+GetClusterTables: 获取一个cluster下的数据库表列表
+GetPrivilegeUsers: 获取授权的用户列表
+GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
+GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
+RevokeClusterUser:解绑cluster用户
+DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
+GetUserOptionMessages:获取用户配置备注信息
+GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
      */
     public String getApiType() {
         return this.ApiType;
     }
 
     /**
-     * Set api接口名称
-     * @param ApiType api接口名称
+     * Set api接口名称,GetClusters:获取集群cluster列表
+GetSystemUsers:获取系统用户列表
+CheckNodeCluster: 检查节点是否隶属一个cluster
+GetClusterDatabases: 获取一个cluster下的数据库列表
+GetClusterTables: 获取一个cluster下的数据库表列表
+GetPrivilegeUsers: 获取授权的用户列表
+GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
+GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
+RevokeClusterUser:解绑cluster用户
+DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
+GetUserOptionMessages:获取用户配置备注信息
+GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
+     * @param ApiType api接口名称,GetClusters:获取集群cluster列表
+GetSystemUsers:获取系统用户列表
+CheckNodeCluster: 检查节点是否隶属一个cluster
+GetClusterDatabases: 获取一个cluster下的数据库列表
+GetClusterTables: 获取一个cluster下的数据库表列表
+GetPrivilegeUsers: 获取授权的用户列表
+GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
+GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
+RevokeClusterUser:解绑cluster用户
+DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
+GetUserOptionMessages:获取用户配置备注信息
+GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
      */
     public void setApiType(String ApiType) {
         this.ApiType = ApiType;
     }
 
     /**
-     * Get 集群名称 
-     * @return Cluster 集群名称
+     * Get 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填 
+     * @return Cluster 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
      */
     public String getCluster() {
         return this.Cluster;
     }
 
     /**
-     * Set 集群名称
-     * @param Cluster 集群名称
+     * Set 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
+     * @param Cluster 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * Get 用户名称 
-     * @return UserName 用户名称
+     * Get 用户名称，api与user相关的必填 
+     * @return UserName 用户名称，api与user相关的必填
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名称
-     * @param UserName 用户名称
+     * Set 用户名称，api与user相关的必填
+     * @param UserName 用户名称，api与user相关的必填
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

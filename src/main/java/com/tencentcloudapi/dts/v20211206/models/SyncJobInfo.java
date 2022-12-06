@@ -191,20 +191,20 @@ public class SyncJobInfo extends AbstractModel{
     private String StartTime;
 
     /**
+    * 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 结束时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-
-    /**
-    * 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
 
     /**
     * 标签相关信息
@@ -675,6 +675,26 @@ public class SyncJobInfo extends AbstractModel{
     }
 
     /**
+     * Get 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 结束时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 结束时间，格式为 yyyy-mm-dd hh:mm:ss
@@ -692,26 +712,6 @@ public class SyncJobInfo extends AbstractModel{
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
-    }
-
-    /**
-     * Get 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
     }
 
     /**
@@ -911,11 +911,11 @@ public class SyncJobInfo extends AbstractModel{
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
-        if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
-        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
         }
         if (source.Tags != null) {
             this.Tags = new TagItem[source.Tags.length];
@@ -966,8 +966,8 @@ public class SyncJobInfo extends AbstractModel{
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamSimple(map, prefix + "TradeStatus", this.TradeStatus);

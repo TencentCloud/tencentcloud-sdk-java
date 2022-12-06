@@ -30,7 +30,8 @@ public class ActionAlterCkUserRequest extends AbstractModel{
     private CkUserAlterInfo UserInfo;
 
     /**
-    * api接口类型
+    * api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
     */
     @SerializedName("ApiType")
     @Expose
@@ -53,16 +54,20 @@ public class ActionAlterCkUserRequest extends AbstractModel{
     }
 
     /**
-     * Get api接口类型 
-     * @return ApiType api接口类型
+     * Get api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户 
+     * @return ApiType api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
      */
     public String getApiType() {
         return this.ApiType;
     }
 
     /**
-     * Set api接口类型
-     * @param ApiType api接口类型
+     * Set api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
+     * @param ApiType api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
      */
     public void setApiType(String ApiType) {
         this.ApiType = ApiType;

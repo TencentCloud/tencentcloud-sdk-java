@@ -62,6 +62,14 @@ public class ApmField extends AbstractModel{
     private String Key;
 
     /**
+    * 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastPeriodValue")
+    @Expose
+    private APMKV [] LastPeriodValue;
+
+    /**
      * Get 昨日同比指标值，已弃用，不建议使用
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompareVal 昨日同比指标值，已弃用，不建议使用
@@ -157,6 +165,26 @@ public class ApmField extends AbstractModel{
         this.Key = Key;
     }
 
+    /**
+     * Get 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastPeriodValue 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public APMKV [] getLastPeriodValue() {
+        return this.LastPeriodValue;
+    }
+
+    /**
+     * Set 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastPeriodValue 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastPeriodValue(APMKV [] LastPeriodValue) {
+        this.LastPeriodValue = LastPeriodValue;
+    }
+
     public ApmField() {
     }
 
@@ -183,6 +211,12 @@ public class ApmField extends AbstractModel{
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }
+        if (source.LastPeriodValue != null) {
+            this.LastPeriodValue = new APMKV[source.LastPeriodValue.length];
+            for (int i = 0; i < source.LastPeriodValue.length; i++) {
+                this.LastPeriodValue[i] = new APMKV(source.LastPeriodValue[i]);
+            }
+        }
     }
 
 
@@ -195,6 +229,7 @@ public class ApmField extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
 
     }
 }

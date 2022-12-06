@@ -37,10 +37,10 @@ DISTRICT - 省市区行政区划控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
-DATE， 日期控件，默认是格式化为xxxx年xx月xx日
 SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
+SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认
 
 表单域的控件不能作为印章和签名控件
     */
@@ -49,11 +49,11 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
     private String ComponentType;
 
     /**
-    * 参数控件宽度，单位pt
+    * 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
     */
-    @SerializedName("ComponentWidth")
+    @SerializedName("FileIndex")
     @Expose
-    private Float ComponentWidth;
+    private Long FileIndex;
 
     /**
     * 参数控件高度，单位pt
@@ -61,6 +61,13 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
     @SerializedName("ComponentHeight")
     @Expose
     private Float ComponentHeight;
+
+    /**
+    * 参数控件宽度，单位pt
+    */
+    @SerializedName("ComponentWidth")
+    @Expose
+    private Float ComponentWidth;
 
     /**
     * 参数控件所在页码，取值为：1-N
@@ -84,13 +91,6 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
     private Float ComponentPosY;
 
     /**
-    * 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-    */
-    @SerializedName("FileIndex")
-    @Expose
-    private Long FileIndex;
-
-    /**
     * GenerateMode==KEYWORD 指定关键字
     */
     @SerializedName("ComponentId")
@@ -110,6 +110,13 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
     @SerializedName("ComponentRequired")
     @Expose
     private Boolean ComponentRequired;
+
+    /**
+    * 控件关联的签署人ID
+    */
+    @SerializedName("ComponentRecipientId")
+    @Expose
+    private String ComponentRecipientId;
 
     /**
     * 扩展参数：
@@ -133,11 +140,11 @@ ESIGN -- 个人印章类型
     private String ComponentExtra;
 
     /**
-    * 控件关联的签署人ID
+    * 是否是表单域类型，默认不存在
     */
-    @SerializedName("ComponentRecipientId")
+    @SerializedName("IsFormType")
     @Expose
-    private String ComponentRecipientId;
+    private Boolean IsFormType;
 
     /**
     * 控件填充vaule，ComponentType和传入值类型对应关系：
@@ -156,13 +163,6 @@ SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
     private String ComponentValue;
 
     /**
-    * 是否是表单域类型，默认不存在
-    */
-    @SerializedName("IsFormType")
-    @Expose
-    private Boolean IsFormType;
-
-    /**
     * NORMAL 正常模式，使用坐标制定签署控件位置
 FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
@@ -172,11 +172,18 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private String GenerateMode;
 
     /**
-    * 日期控件类型字号
+    * 日期签署控件的字号，默认为 12
     */
     @SerializedName("ComponentDateFontSize")
     @Expose
     private Long ComponentDateFontSize;
+
+    /**
+    * 渠道版控件 id 标识
+    */
+    @SerializedName("ChannelComponentId")
+    @Expose
+    private String ChannelComponentId;
 
     /**
     * 指定关键字时横坐标偏移量，单位pt
@@ -191,6 +198,13 @@ KEYWORD 关键字，使用ComponentId指定关键字
     @SerializedName("OffsetY")
     @Expose
     private Float OffsetY;
+
+    /**
+    * //渠道子客控件来源。0-渠道指定；1-用户自定义
+    */
+    @SerializedName("ChannelComponentSource")
+    @Expose
+    private Long ChannelComponentSource;
 
     /**
     * 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
@@ -236,10 +250,10 @@ DISTRICT - 省市区行政区划控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
-DATE， 日期控件，默认是格式化为xxxx年xx月xx日
 SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
+SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认
 
 表单域的控件不能作为印章和签名控件 
      * @return ComponentType 如果是Component控件类型，则可选的字段为：
@@ -256,10 +270,10 @@ DISTRICT - 省市区行政区划控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
-DATE， 日期控件，默认是格式化为xxxx年xx月xx日
 SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
+SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认
 
 表单域的控件不能作为印章和签名控件
      */
@@ -282,10 +296,10 @@ DISTRICT - 省市区行政区划控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
-DATE， 日期控件，默认是格式化为xxxx年xx月xx日
 SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
+SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认
 
 表单域的控件不能作为印章和签名控件
      * @param ComponentType 如果是Component控件类型，则可选的字段为：
@@ -302,10 +316,10 @@ DISTRICT - 省市区行政区划控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
-DATE， 日期控件，默认是格式化为xxxx年xx月xx日
 SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
+SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认
 
 表单域的控件不能作为印章和签名控件
      */
@@ -314,19 +328,19 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
     }
 
     /**
-     * Get 参数控件宽度，单位pt 
-     * @return ComponentWidth 参数控件宽度，单位pt
+     * Get 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N） 
+     * @return FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
      */
-    public Float getComponentWidth() {
-        return this.ComponentWidth;
+    public Long getFileIndex() {
+        return this.FileIndex;
     }
 
     /**
-     * Set 参数控件宽度，单位pt
-     * @param ComponentWidth 参数控件宽度，单位pt
+     * Set 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+     * @param FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
      */
-    public void setComponentWidth(Float ComponentWidth) {
-        this.ComponentWidth = ComponentWidth;
+    public void setFileIndex(Long FileIndex) {
+        this.FileIndex = FileIndex;
     }
 
     /**
@@ -343,6 +357,22 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
      */
     public void setComponentHeight(Float ComponentHeight) {
         this.ComponentHeight = ComponentHeight;
+    }
+
+    /**
+     * Get 参数控件宽度，单位pt 
+     * @return ComponentWidth 参数控件宽度，单位pt
+     */
+    public Float getComponentWidth() {
+        return this.ComponentWidth;
+    }
+
+    /**
+     * Set 参数控件宽度，单位pt
+     * @param ComponentWidth 参数控件宽度，单位pt
+     */
+    public void setComponentWidth(Float ComponentWidth) {
+        this.ComponentWidth = ComponentWidth;
     }
 
     /**
@@ -394,22 +424,6 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
     }
 
     /**
-     * Get 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N） 
-     * @return FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-     */
-    public Long getFileIndex() {
-        return this.FileIndex;
-    }
-
-    /**
-     * Set 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-     * @param FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-     */
-    public void setFileIndex(Long FileIndex) {
-        this.FileIndex = FileIndex;
-    }
-
-    /**
      * Get GenerateMode==KEYWORD 指定关键字 
      * @return ComponentId GenerateMode==KEYWORD 指定关键字
      */
@@ -455,6 +469,22 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
      */
     public void setComponentRequired(Boolean ComponentRequired) {
         this.ComponentRequired = ComponentRequired;
+    }
+
+    /**
+     * Get 控件关联的签署人ID 
+     * @return ComponentRecipientId 控件关联的签署人ID
+     */
+    public String getComponentRecipientId() {
+        return this.ComponentRecipientId;
+    }
+
+    /**
+     * Set 控件关联的签署人ID
+     * @param ComponentRecipientId 控件关联的签署人ID
+     */
+    public void setComponentRecipientId(String ComponentRecipientId) {
+        this.ComponentRecipientId = ComponentRecipientId;
     }
 
     /**
@@ -530,19 +560,19 @@ ESIGN -- 个人印章类型
     }
 
     /**
-     * Get 控件关联的签署人ID 
-     * @return ComponentRecipientId 控件关联的签署人ID
+     * Get 是否是表单域类型，默认不存在 
+     * @return IsFormType 是否是表单域类型，默认不存在
      */
-    public String getComponentRecipientId() {
-        return this.ComponentRecipientId;
+    public Boolean getIsFormType() {
+        return this.IsFormType;
     }
 
     /**
-     * Set 控件关联的签署人ID
-     * @param ComponentRecipientId 控件关联的签署人ID
+     * Set 是否是表单域类型，默认不存在
+     * @param IsFormType 是否是表单域类型，默认不存在
      */
-    public void setComponentRecipientId(String ComponentRecipientId) {
-        this.ComponentRecipientId = ComponentRecipientId;
+    public void setIsFormType(Boolean IsFormType) {
+        this.IsFormType = IsFormType;
     }
 
     /**
@@ -598,22 +628,6 @@ SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
     }
 
     /**
-     * Get 是否是表单域类型，默认不存在 
-     * @return IsFormType 是否是表单域类型，默认不存在
-     */
-    public Boolean getIsFormType() {
-        return this.IsFormType;
-    }
-
-    /**
-     * Set 是否是表单域类型，默认不存在
-     * @param IsFormType 是否是表单域类型，默认不存在
-     */
-    public void setIsFormType(Boolean IsFormType) {
-        this.IsFormType = IsFormType;
-    }
-
-    /**
      * Get NORMAL 正常模式，使用坐标制定签署控件位置
 FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字 
@@ -638,19 +652,35 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 日期控件类型字号 
-     * @return ComponentDateFontSize 日期控件类型字号
+     * Get 日期签署控件的字号，默认为 12 
+     * @return ComponentDateFontSize 日期签署控件的字号，默认为 12
      */
     public Long getComponentDateFontSize() {
         return this.ComponentDateFontSize;
     }
 
     /**
-     * Set 日期控件类型字号
-     * @param ComponentDateFontSize 日期控件类型字号
+     * Set 日期签署控件的字号，默认为 12
+     * @param ComponentDateFontSize 日期签署控件的字号，默认为 12
      */
     public void setComponentDateFontSize(Long ComponentDateFontSize) {
         this.ComponentDateFontSize = ComponentDateFontSize;
+    }
+
+    /**
+     * Get 渠道版控件 id 标识 
+     * @return ChannelComponentId 渠道版控件 id 标识
+     */
+    public String getChannelComponentId() {
+        return this.ChannelComponentId;
+    }
+
+    /**
+     * Set 渠道版控件 id 标识
+     * @param ChannelComponentId 渠道版控件 id 标识
+     */
+    public void setChannelComponentId(String ChannelComponentId) {
+        this.ChannelComponentId = ChannelComponentId;
     }
 
     /**
@@ -683,6 +713,22 @@ KEYWORD 关键字，使用ComponentId指定关键字
      */
     public void setOffsetY(Float OffsetY) {
         this.OffsetY = OffsetY;
+    }
+
+    /**
+     * Get //渠道子客控件来源。0-渠道指定；1-用户自定义 
+     * @return ChannelComponentSource //渠道子客控件来源。0-渠道指定；1-用户自定义
+     */
+    public Long getChannelComponentSource() {
+        return this.ChannelComponentSource;
+    }
+
+    /**
+     * Set //渠道子客控件来源。0-渠道指定；1-用户自定义
+     * @param ChannelComponentSource //渠道子客控件来源。0-渠道指定；1-用户自定义
+     */
+    public void setChannelComponentSource(Long ChannelComponentSource) {
+        this.ChannelComponentSource = ChannelComponentSource;
     }
 
     /**
@@ -764,11 +810,14 @@ KEYWORD 关键字，使用ComponentId指定关键字
         if (source.ComponentType != null) {
             this.ComponentType = new String(source.ComponentType);
         }
-        if (source.ComponentWidth != null) {
-            this.ComponentWidth = new Float(source.ComponentWidth);
+        if (source.FileIndex != null) {
+            this.FileIndex = new Long(source.FileIndex);
         }
         if (source.ComponentHeight != null) {
             this.ComponentHeight = new Float(source.ComponentHeight);
+        }
+        if (source.ComponentWidth != null) {
+            this.ComponentWidth = new Float(source.ComponentWidth);
         }
         if (source.ComponentPage != null) {
             this.ComponentPage = new Long(source.ComponentPage);
@@ -779,9 +828,6 @@ KEYWORD 关键字，使用ComponentId指定关键字
         if (source.ComponentPosY != null) {
             this.ComponentPosY = new Float(source.ComponentPosY);
         }
-        if (source.FileIndex != null) {
-            this.FileIndex = new Long(source.FileIndex);
-        }
         if (source.ComponentId != null) {
             this.ComponentId = new String(source.ComponentId);
         }
@@ -791,17 +837,17 @@ KEYWORD 关键字，使用ComponentId指定关键字
         if (source.ComponentRequired != null) {
             this.ComponentRequired = new Boolean(source.ComponentRequired);
         }
-        if (source.ComponentExtra != null) {
-            this.ComponentExtra = new String(source.ComponentExtra);
-        }
         if (source.ComponentRecipientId != null) {
             this.ComponentRecipientId = new String(source.ComponentRecipientId);
         }
-        if (source.ComponentValue != null) {
-            this.ComponentValue = new String(source.ComponentValue);
+        if (source.ComponentExtra != null) {
+            this.ComponentExtra = new String(source.ComponentExtra);
         }
         if (source.IsFormType != null) {
             this.IsFormType = new Boolean(source.IsFormType);
+        }
+        if (source.ComponentValue != null) {
+            this.ComponentValue = new String(source.ComponentValue);
         }
         if (source.GenerateMode != null) {
             this.GenerateMode = new String(source.GenerateMode);
@@ -809,11 +855,17 @@ KEYWORD 关键字，使用ComponentId指定关键字
         if (source.ComponentDateFontSize != null) {
             this.ComponentDateFontSize = new Long(source.ComponentDateFontSize);
         }
+        if (source.ChannelComponentId != null) {
+            this.ChannelComponentId = new String(source.ChannelComponentId);
+        }
         if (source.OffsetX != null) {
             this.OffsetX = new Float(source.OffsetX);
         }
         if (source.OffsetY != null) {
             this.OffsetY = new Float(source.OffsetY);
+        }
+        if (source.ChannelComponentSource != null) {
+            this.ChannelComponentSource = new Long(source.ChannelComponentSource);
         }
         if (source.KeywordOrder != null) {
             this.KeywordOrder = new String(source.KeywordOrder);
@@ -838,23 +890,25 @@ KEYWORD 关键字，使用ComponentId指定关键字
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ComponentType", this.ComponentType);
-        this.setParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
+        this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "ComponentHeight", this.ComponentHeight);
+        this.setParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
         this.setParamSimple(map, prefix + "ComponentPage", this.ComponentPage);
         this.setParamSimple(map, prefix + "ComponentPosX", this.ComponentPosX);
         this.setParamSimple(map, prefix + "ComponentPosY", this.ComponentPosY);
-        this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "ComponentId", this.ComponentId);
         this.setParamSimple(map, prefix + "ComponentName", this.ComponentName);
         this.setParamSimple(map, prefix + "ComponentRequired", this.ComponentRequired);
-        this.setParamSimple(map, prefix + "ComponentExtra", this.ComponentExtra);
         this.setParamSimple(map, prefix + "ComponentRecipientId", this.ComponentRecipientId);
-        this.setParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
+        this.setParamSimple(map, prefix + "ComponentExtra", this.ComponentExtra);
         this.setParamSimple(map, prefix + "IsFormType", this.IsFormType);
+        this.setParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
         this.setParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
         this.setParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
+        this.setParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
         this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
         this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
+        this.setParamSimple(map, prefix + "ChannelComponentSource", this.ChannelComponentSource);
         this.setParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
         this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);

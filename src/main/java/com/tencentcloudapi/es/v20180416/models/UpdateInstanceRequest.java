@@ -59,7 +59,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     private String Password;
 
     /**
-    * 访问控制列表
+    * 可视化组件（Kibana、Cerebro）的公网访问策略
     */
     @SerializedName("EsAcl")
     @Expose
@@ -349,16 +349,16 @@ CLOSE 关闭
     }
 
     /**
-     * Get 访问控制列表 
-     * @return EsAcl 访问控制列表
+     * Get 可视化组件（Kibana、Cerebro）的公网访问策略 
+     * @return EsAcl 可视化组件（Kibana、Cerebro）的公网访问策略
      */
     public EsAcl getEsAcl() {
         return this.EsAcl;
     }
 
     /**
-     * Set 访问控制列表
-     * @param EsAcl 访问控制列表
+     * Set 可视化组件（Kibana、Cerebro）的公网访问策略
+     * @param EsAcl 可视化组件（Kibana、Cerebro）的公网访问策略
      */
     public void setEsAcl(EsAcl EsAcl) {
         this.EsAcl = EsAcl;

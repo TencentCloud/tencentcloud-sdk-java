@@ -748,7 +748,7 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *终止同步任务
+     *结束同步任务，操作后可通过查询同步任务信息接口DescribeSyncJobs，获取操作后的状态。
      * @param req StopSyncJobRequest
      * @return StopSyncJobResponse
      * @throws TencentCloudSDKException

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUsageRequest extends AbstractModel{
 
     /**
-    * 应用信息
+    * 应用信息，此接口Agent.AppId必填
     */
     @SerializedName("Agent")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeUsageRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-     * Get 应用信息 
-     * @return Agent 应用信息
+     * Get 应用信息，此接口Agent.AppId必填 
+     * @return Agent 应用信息，此接口Agent.AppId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用信息
-     * @param Agent 应用信息
+     * Set 应用信息，此接口Agent.AppId必填
+     * @param Agent 应用信息，此接口Agent.AppId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

@@ -79,6 +79,26 @@ public class TdsClient extends AbstractClient{
     }
 
     /**
+     *查询设备标识及风险（旗舰版）
+     * @param req DescribeFraudUltimateRequest
+     * @return DescribeFraudUltimateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFraudUltimateResponse DescribeFraudUltimate(DescribeFraudUltimateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFraudUltimateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFraudUltimate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询设备标识
      * @param req DescribeTrustedIDRequest
      * @return DescribeTrustedIDResponse
