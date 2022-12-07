@@ -99,7 +99,7 @@ __ALIPAY__: 支付宝
     private String NotifyUrl;
 
     /**
-    * 备注信息。
+    * 备注信息。限制200个字符。
     */
     @SerializedName("Remark")
     @Expose
@@ -300,16 +300,16 @@ __ALIPAY__: 支付宝
     }
 
     /**
-     * Get 备注信息。 
-     * @return Remark 备注信息。
+     * Get 备注信息。限制200个字符。 
+     * @return Remark 备注信息。限制200个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息。
-     * @param Remark 备注信息。
+     * Set 备注信息。限制200个字符。
+     * @param Remark 备注信息。限制200个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

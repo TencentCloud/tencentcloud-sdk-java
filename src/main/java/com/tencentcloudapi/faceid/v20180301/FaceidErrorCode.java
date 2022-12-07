@@ -1,5 +1,8 @@
 package com.tencentcloudapi.faceid.v20180301;
 public enum FaceidErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // 未检测到闭眼动作。
      FAILEDOPERATION_ACTIONCLOSEEYE("FailedOperation.ActionCloseEye"),
      

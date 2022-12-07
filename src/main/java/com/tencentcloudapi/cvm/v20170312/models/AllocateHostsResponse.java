@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AllocateHostsResponse extends AbstractModel{
 
     /**
-    * 新创建云子机的实例id列表。
+    * 新创建云子机的实例ID列表。
     */
     @SerializedName("HostIdSet")
     @Expose
@@ -37,16 +37,16 @@ public class AllocateHostsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 新创建云子机的实例id列表。 
-     * @return HostIdSet 新创建云子机的实例id列表。
+     * Get 新创建云子机的实例ID列表。 
+     * @return HostIdSet 新创建云子机的实例ID列表。
      */
     public String [] getHostIdSet() {
         return this.HostIdSet;
     }
 
     /**
-     * Set 新创建云子机的实例id列表。
-     * @param HostIdSet 新创建云子机的实例id列表。
+     * Set 新创建云子机的实例ID列表。
+     * @param HostIdSet 新创建云子机的实例ID列表。
      */
     public void setHostIdSet(String [] HostIdSet) {
         this.HostIdSet = HostIdSet;

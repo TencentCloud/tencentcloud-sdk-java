@@ -319,6 +319,14 @@ public class VmGroup extends AbstractModel{
     private WarmupSetting WarmupSetting;
 
     /**
+    * Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayConfig")
+    @Expose
+    private GatewayConfig GatewayConfig;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -1058,6 +1066,26 @@ public class VmGroup extends AbstractModel{
         this.WarmupSetting = WarmupSetting;
     }
 
+    /**
+     * Get Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayConfig Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GatewayConfig getGatewayConfig() {
+        return this.GatewayConfig;
+    }
+
+    /**
+     * Set Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayConfig Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayConfig(GatewayConfig GatewayConfig) {
+        this.GatewayConfig = GatewayConfig;
+    }
+
     public VmGroup() {
     }
 
@@ -1183,6 +1211,9 @@ public class VmGroup extends AbstractModel{
         if (source.WarmupSetting != null) {
             this.WarmupSetting = new WarmupSetting(source.WarmupSetting);
         }
+        if (source.GatewayConfig != null) {
+            this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
+        }
     }
 
 
@@ -1227,6 +1258,7 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
         this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
+        this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
 
     }
 }

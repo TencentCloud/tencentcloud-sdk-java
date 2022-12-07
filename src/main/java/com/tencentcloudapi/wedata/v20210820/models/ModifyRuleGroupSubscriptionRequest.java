@@ -72,6 +72,13 @@ public class ModifyRuleGroupSubscriptionRequest extends AbstractModel{
     private String TableId;
 
     /**
+    * 群机器人webhook信息
+    */
+    @SerializedName("WebHooks")
+    @Expose
+    private SubscribeWebHook [] WebHooks;
+
+    /**
      * Get 规则组ID 
      * @return RuleGroupId 规则组ID
      */
@@ -183,6 +190,22 @@ public class ModifyRuleGroupSubscriptionRequest extends AbstractModel{
         this.TableId = TableId;
     }
 
+    /**
+     * Get 群机器人webhook信息 
+     * @return WebHooks 群机器人webhook信息
+     */
+    public SubscribeWebHook [] getWebHooks() {
+        return this.WebHooks;
+    }
+
+    /**
+     * Set 群机器人webhook信息
+     * @param WebHooks 群机器人webhook信息
+     */
+    public void setWebHooks(SubscribeWebHook [] WebHooks) {
+        this.WebHooks = WebHooks;
+    }
+
     public ModifyRuleGroupSubscriptionRequest() {
     }
 
@@ -218,6 +241,12 @@ public class ModifyRuleGroupSubscriptionRequest extends AbstractModel{
         if (source.TableId != null) {
             this.TableId = new String(source.TableId);
         }
+        if (source.WebHooks != null) {
+            this.WebHooks = new SubscribeWebHook[source.WebHooks.length];
+            for (int i = 0; i < source.WebHooks.length; i++) {
+                this.WebHooks[i] = new SubscribeWebHook(source.WebHooks[i]);
+            }
+        }
     }
 
 
@@ -232,6 +261,7 @@ public class ModifyRuleGroupSubscriptionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
+        this.setParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
 
     }
 }

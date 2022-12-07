@@ -421,6 +421,46 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *创建异常进程规则导出任务
+     * @param req CreateAbnormalProcessRulesExportJobRequest
+     * @return CreateAbnormalProcessRulesExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJob(CreateAbnormalProcessRulesExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAbnormalProcessRulesExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建文件篡改规则导出任务
+     * @param req CreateAccessControlsRuleExportJobRequest
+     * @return CreateAccessControlsRuleExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJob(CreateAccessControlsRuleExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccessControlsRuleExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccessControlsRuleExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccessControlsRuleExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *镜像仓库创建镜像扫描任务
      * @param req CreateAssetImageRegistryScanTaskRequest
      * @return CreateAssetImageRegistryScanTaskResponse

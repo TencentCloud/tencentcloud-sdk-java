@@ -459,6 +459,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询渠道商下属企业额度使用情况
+     * @param req DescribeCorpQuotasRequest
+     * @return DescribeCorpQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCorpQuotasResponse DescribeCorpQuotas(DescribeCorpQuotasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCorpQuotasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCorpQuotasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCorpQuotas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查自定义码规则
      * @param req DescribeCustomRuleByIdRequest
      * @return DescribeCustomRuleByIdResponse

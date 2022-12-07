@@ -24,6 +24,7 @@ public class DescribeContainerGroupDeployInfoResponse extends AbstractModel{
 
     /**
     * 获取部署组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -37,8 +38,10 @@ public class DescribeContainerGroupDeployInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 获取部署组 
+     * Get 获取部署组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 获取部署组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ContainerGroupDeploy getResult() {
         return this.Result;
@@ -46,7 +49,9 @@ public class DescribeContainerGroupDeployInfoResponse extends AbstractModel{
 
     /**
      * Set 获取部署组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 获取部署组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ContainerGroupDeploy Result) {
         this.Result = Result;

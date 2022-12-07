@@ -30,7 +30,7 @@ public class TagInfo extends AbstractModel{
     private String TagName;
 
     /**
-    * 镜像Id
+    * 制品的 ID
     */
     @SerializedName("TagId")
     @Expose
@@ -51,14 +51,14 @@ public class TagInfo extends AbstractModel{
     private String Size;
 
     /**
-    * 镜像的创建时间
+    * 制品的创建时间
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 镜像创建至今时间长度
+    * 制品创建至今时间长度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationDays")
@@ -66,42 +66,42 @@ public class TagInfo extends AbstractModel{
     private String DurationDays;
 
     /**
-    * 镜像的作者
+    * 标注的制品作者
     */
     @SerializedName("Author")
     @Expose
     private String Author;
 
     /**
-    * 次镜像建议运行的系统架构
+    * 标注的制品平台
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * 创建此镜像的docker版本
+    * 创建制品的 Docker 版本
     */
     @SerializedName("DockerVersion")
     @Expose
     private String DockerVersion;
 
     /**
-    * 此镜像建议运行系统
+    * 标注的制品操作系统
     */
     @SerializedName("OS")
     @Expose
     private String OS;
 
     /**
-    * SizeByte
+    * 制品大小
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * Id
+    * 序号
     */
     @SerializedName("Id")
     @Expose
@@ -115,11 +115,18 @@ public class TagInfo extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 镜像更新时间
+    * 制品更新时间
     */
     @SerializedName("PushTime")
     @Expose
     private String PushTime;
+
+    /**
+    * 制品类型
+    */
+    @SerializedName("Kind")
+    @Expose
+    private String Kind;
 
     /**
      * Get Tag名称 
@@ -138,16 +145,16 @@ public class TagInfo extends AbstractModel{
     }
 
     /**
-     * Get 镜像Id 
-     * @return TagId 镜像Id
+     * Get 制品的 ID 
+     * @return TagId 制品的 ID
      */
     public String getTagId() {
         return this.TagId;
     }
 
     /**
-     * Set 镜像Id
-     * @param TagId 镜像Id
+     * Set 制品的 ID
+     * @param TagId 制品的 ID
      */
     public void setTagId(String TagId) {
         this.TagId = TagId;
@@ -186,25 +193,25 @@ public class TagInfo extends AbstractModel{
     }
 
     /**
-     * Get 镜像的创建时间 
-     * @return CreationTime 镜像的创建时间
+     * Get 制品的创建时间 
+     * @return CreationTime 制品的创建时间
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 镜像的创建时间
-     * @param CreationTime 镜像的创建时间
+     * Set 制品的创建时间
+     * @param CreationTime 制品的创建时间
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 镜像创建至今时间长度
+     * Get 制品创建至今时间长度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DurationDays 镜像创建至今时间长度
+     * @return DurationDays 制品创建至今时间长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDurationDays() {
@@ -212,9 +219,9 @@ public class TagInfo extends AbstractModel{
     }
 
     /**
-     * Set 镜像创建至今时间长度
+     * Set 制品创建至今时间长度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DurationDays 镜像创建至今时间长度
+     * @param DurationDays 制品创建至今时间长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationDays(String DurationDays) {
@@ -222,96 +229,96 @@ public class TagInfo extends AbstractModel{
     }
 
     /**
-     * Get 镜像的作者 
-     * @return Author 镜像的作者
+     * Get 标注的制品作者 
+     * @return Author 标注的制品作者
      */
     public String getAuthor() {
         return this.Author;
     }
 
     /**
-     * Set 镜像的作者
-     * @param Author 镜像的作者
+     * Set 标注的制品作者
+     * @param Author 标注的制品作者
      */
     public void setAuthor(String Author) {
         this.Author = Author;
     }
 
     /**
-     * Get 次镜像建议运行的系统架构 
-     * @return Architecture 次镜像建议运行的系统架构
+     * Get 标注的制品平台 
+     * @return Architecture 标注的制品平台
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 次镜像建议运行的系统架构
-     * @param Architecture 次镜像建议运行的系统架构
+     * Set 标注的制品平台
+     * @param Architecture 标注的制品平台
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get 创建此镜像的docker版本 
-     * @return DockerVersion 创建此镜像的docker版本
+     * Get 创建制品的 Docker 版本 
+     * @return DockerVersion 创建制品的 Docker 版本
      */
     public String getDockerVersion() {
         return this.DockerVersion;
     }
 
     /**
-     * Set 创建此镜像的docker版本
-     * @param DockerVersion 创建此镜像的docker版本
+     * Set 创建制品的 Docker 版本
+     * @param DockerVersion 创建制品的 Docker 版本
      */
     public void setDockerVersion(String DockerVersion) {
         this.DockerVersion = DockerVersion;
     }
 
     /**
-     * Get 此镜像建议运行系统 
-     * @return OS 此镜像建议运行系统
+     * Get 标注的制品操作系统 
+     * @return OS 标注的制品操作系统
      */
     public String getOS() {
         return this.OS;
     }
 
     /**
-     * Set 此镜像建议运行系统
-     * @param OS 此镜像建议运行系统
+     * Set 标注的制品操作系统
+     * @param OS 标注的制品操作系统
      */
     public void setOS(String OS) {
         this.OS = OS;
     }
 
     /**
-     * Get SizeByte 
-     * @return SizeByte SizeByte
+     * Get 制品大小 
+     * @return SizeByte 制品大小
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set SizeByte
-     * @param SizeByte SizeByte
+     * Set 制品大小
+     * @param SizeByte 制品大小
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get 序号 
+     * @return Id 序号
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set 序号
+     * @param Id 序号
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -334,19 +341,35 @@ public class TagInfo extends AbstractModel{
     }
 
     /**
-     * Get 镜像更新时间 
-     * @return PushTime 镜像更新时间
+     * Get 制品更新时间 
+     * @return PushTime 制品更新时间
      */
     public String getPushTime() {
         return this.PushTime;
     }
 
     /**
-     * Set 镜像更新时间
-     * @param PushTime 镜像更新时间
+     * Set 制品更新时间
+     * @param PushTime 制品更新时间
      */
     public void setPushTime(String PushTime) {
         this.PushTime = PushTime;
+    }
+
+    /**
+     * Get 制品类型 
+     * @return Kind 制品类型
+     */
+    public String getKind() {
+        return this.Kind;
+    }
+
+    /**
+     * Set 制品类型
+     * @param Kind 制品类型
+     */
+    public void setKind(String Kind) {
+        this.Kind = Kind;
     }
 
     public TagInfo() {
@@ -399,6 +422,9 @@ public class TagInfo extends AbstractModel{
         if (source.PushTime != null) {
             this.PushTime = new String(source.PushTime);
         }
+        if (source.Kind != null) {
+            this.Kind = new String(source.Kind);
+        }
     }
 
 
@@ -420,6 +446,7 @@ public class TagInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "PushTime", this.PushTime);
+        this.setParamSimple(map, prefix + "Kind", this.Kind);
 
     }
 }

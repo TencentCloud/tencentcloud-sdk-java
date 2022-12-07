@@ -59,26 +59,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *针对主实例申请创建数据库代理。
-     * @param req ApplyCDBProxyRequest
-     * @return ApplyCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public ApplyCDBProxyResponse ApplyCDBProxy(ApplyCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ApplyCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyCDBProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse

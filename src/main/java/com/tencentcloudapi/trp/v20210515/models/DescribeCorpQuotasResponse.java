@@ -13,22 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.trp.v20210515.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyCDBProxyResponse extends AbstractModel{
+public class DescribeCorpQuotasResponse extends AbstractModel{
 
     /**
-    * 异步处理ID
+    * 子企业额度使用情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("CorpQuotas")
     @Expose
-    private String AsyncRequestId;
+    private CorpQuota [] CorpQuotas;
+
+    /**
+    * 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +46,43 @@ public class ApplyCDBProxyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步处理ID
+     * Get 子企业额度使用情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步处理ID
+     * @return CorpQuotas 子企业额度使用情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public CorpQuota [] getCorpQuotas() {
+        return this.CorpQuotas;
     }
 
     /**
-     * Set 异步处理ID
+     * Set 子企业额度使用情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步处理ID
+     * @param CorpQuotas 子企业额度使用情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setCorpQuotas(CorpQuota [] CorpQuotas) {
+        this.CorpQuotas = CorpQuotas;
+    }
+
+    /**
+     * Get 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -73,16 +101,22 @@ public class ApplyCDBProxyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ApplyCDBProxyResponse() {
+    public DescribeCorpQuotasResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApplyCDBProxyResponse(ApplyCDBProxyResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public DescribeCorpQuotasResponse(DescribeCorpQuotasResponse source) {
+        if (source.CorpQuotas != null) {
+            this.CorpQuotas = new CorpQuota[source.CorpQuotas.length];
+            for (int i = 0; i < source.CorpQuotas.length; i++) {
+                this.CorpQuotas[i] = new CorpQuota(source.CorpQuotas[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +128,8 @@ public class ApplyCDBProxyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArrayObj(map, prefix + "CorpQuotas.", this.CorpQuotas);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

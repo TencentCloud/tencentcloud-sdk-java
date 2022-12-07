@@ -79,6 +79,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long DealMode;
 
     /**
+    * NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
+    */
+    @SerializedName("UpgradeMode")
+    @Expose
+    private String UpgradeMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -206,6 +213,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.DealMode = DealMode;
     }
 
+    /**
+     * Get NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。 
+     * @return UpgradeMode NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
+     */
+    public String getUpgradeMode() {
+        return this.UpgradeMode;
+    }
+
+    /**
+     * Set NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
+     * @param UpgradeMode NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
+     */
+    public void setUpgradeMode(String UpgradeMode) {
+        this.UpgradeMode = UpgradeMode;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -238,6 +261,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.DealMode != null) {
             this.DealMode = new Long(source.DealMode);
         }
+        if (source.UpgradeMode != null) {
+            this.UpgradeMode = new String(source.UpgradeMode);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
 
     }
 }

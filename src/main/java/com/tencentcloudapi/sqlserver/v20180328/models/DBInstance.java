@@ -380,6 +380,21 @@ public class DBInstance extends AbstractModel{
     private String TimeZone;
 
     /**
+    * 是否跨AZ
+    */
+    @SerializedName("IsDrZone")
+    @Expose
+    private Boolean IsDrZone;
+
+    /**
+    * 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private SlaveZones SlaveZones;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1207,6 +1222,42 @@ public class DBInstance extends AbstractModel{
         this.TimeZone = TimeZone;
     }
 
+    /**
+     * Get 是否跨AZ 
+     * @return IsDrZone 是否跨AZ
+     */
+    public Boolean getIsDrZone() {
+        return this.IsDrZone;
+    }
+
+    /**
+     * Set 是否跨AZ
+     * @param IsDrZone 是否跨AZ
+     */
+    public void setIsDrZone(Boolean IsDrZone) {
+        this.IsDrZone = IsDrZone;
+    }
+
+    /**
+     * Get 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZones 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlaveZones getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZones 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZones(SlaveZones SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
     public DBInstance() {
     }
 
@@ -1374,6 +1425,12 @@ public class DBInstance extends AbstractModel{
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.IsDrZone != null) {
+            this.IsDrZone = new Boolean(source.IsDrZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new SlaveZones(source.SlaveZones);
+        }
     }
 
 
@@ -1431,6 +1488,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
+        this.setParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
 
     }
 }

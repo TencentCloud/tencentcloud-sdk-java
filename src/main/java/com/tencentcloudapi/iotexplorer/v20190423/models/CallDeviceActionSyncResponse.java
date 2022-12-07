@@ -30,7 +30,7 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
     private String ClientToken;
 
     /**
-    * 输出参数
+    * 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputParams")
@@ -38,7 +38,7 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
     private String OutputParams;
 
     /**
-    * 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+    * 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
     */
     @SerializedName("Status")
     @Expose
@@ -68,9 +68,9 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
     }
 
     /**
-     * Get 输出参数
+     * Get 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputParams 输出参数
+     * @return OutputParams 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputParams() {
@@ -78,9 +78,9 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
     }
 
     /**
-     * Set 输出参数
+     * Set 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputParams 输出参数
+     * @param OutputParams 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputParams(String OutputParams) {
@@ -88,16 +88,16 @@ public class CallDeviceActionSyncResponse extends AbstractModel{
     }
 
     /**
-     * Get 返回状态，当设备不在线等部分情况，会通过该 Status 返回。 
-     * @return Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * Get 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8 
+     * @return Status 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
-     * @param Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * Set 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
+     * @param Status 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
      */
     public void setStatus(String Status) {
         this.Status = Status;

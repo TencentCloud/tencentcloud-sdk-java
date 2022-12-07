@@ -37,7 +37,7 @@ public class SkillGroupInfoItem extends AbstractModel{
     private String SkillGroupName;
 
     /**
-    * 类型：IM、TEL、ALL（全媒体）
+    * （废弃）类型：IM、TEL、ALL（全媒体）
     */
     @SerializedName("Type")
     @Expose
@@ -76,6 +76,14 @@ public class SkillGroupInfoItem extends AbstractModel{
     private Long LastModifyTimestamp;
 
     /**
+    * 技能组类型0-电话，1-在线，3-音频，4-视频	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SkillGroupType")
+    @Expose
+    private Long SkillGroupType;
+
+    /**
      * Get 技能组ID 
      * @return SkillGroupId 技能组ID
      */
@@ -108,16 +116,16 @@ public class SkillGroupInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 类型：IM、TEL、ALL（全媒体） 
-     * @return Type 类型：IM、TEL、ALL（全媒体）
+     * Get （废弃）类型：IM、TEL、ALL（全媒体） 
+     * @return Type （废弃）类型：IM、TEL、ALL（全媒体）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：IM、TEL、ALL（全媒体）
-     * @param Type 类型：IM、TEL、ALL（全媒体）
+     * Set （废弃）类型：IM、TEL、ALL（全媒体）
+     * @param Type （废弃）类型：IM、TEL、ALL（全媒体）
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -203,6 +211,26 @@ public class SkillGroupInfoItem extends AbstractModel{
         this.LastModifyTimestamp = LastModifyTimestamp;
     }
 
+    /**
+     * Get 技能组类型0-电话，1-在线，3-音频，4-视频	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSkillGroupType() {
+        return this.SkillGroupType;
+    }
+
+    /**
+     * Set 技能组类型0-电话，1-在线，3-音频，4-视频	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSkillGroupType(Long SkillGroupType) {
+        this.SkillGroupType = SkillGroupType;
+    }
+
     public SkillGroupInfoItem() {
     }
 
@@ -232,6 +260,9 @@ public class SkillGroupInfoItem extends AbstractModel{
         if (source.LastModifyTimestamp != null) {
             this.LastModifyTimestamp = new Long(source.LastModifyTimestamp);
         }
+        if (source.SkillGroupType != null) {
+            this.SkillGroupType = new Long(source.SkillGroupType);
+        }
     }
 
 
@@ -246,6 +277,7 @@ public class SkillGroupInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "UsingLastSeat", this.UsingLastSeat);
         this.setParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
+        this.setParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
 
     }
 }

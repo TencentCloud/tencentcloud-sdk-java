@@ -30,18 +30,18 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+    * 企业组织相关信息
     */
-    @SerializedName("Filters")
+    @SerializedName("Organization")
     @Expose
-    private Filter [] Filters;
+    private OrganizationInfo Organization;
 
     /**
-    * 查询个数，默认20，最大200
+    * 应用相关信息
     */
-    @SerializedName("Limit")
+    @SerializedName("Agent")
     @Expose
-    private Long Limit;
+    private Agent Agent;
 
     /**
     * 查询偏移位置，默认0
@@ -51,11 +51,36 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 查询内容：0-模板列表及详情（默认），1-仅模板列表
+    * 查询个数，默认20，最大200
     */
-    @SerializedName("ContentType")
+    @SerializedName("Limit")
     @Expose
-    private Long ContentType;
+    private Long Limit;
+
+    /**
+    * 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 这个参数跟下面的IsChannel参数配合使用。
+IsChannel=false时，ApplicationId参数不起任何作用。
+IsChannel=true时，ApplicationId为空，查询所有渠道模板列表；ApplicationId不为空，查询指定渠道下的模板列表
+ApplicationId为空，查询渠道模板列表
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * 默认为false，查询SaaS模板库列表；
+为true，查询渠道模板库管理列表
+    */
+    @SerializedName("IsChannel")
+    @Expose
+    private Boolean IsChannel;
 
     /**
     * 暂未开放
@@ -65,11 +90,11 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private Long GenerateSource;
 
     /**
-    * 应用相关信息
+    * 查询内容：0-模板列表及详情（默认），1-仅模板列表
     */
-    @SerializedName("Agent")
+    @SerializedName("ContentType")
     @Expose
-    private Agent Agent;
+    private Long ContentType;
 
     /**
      * Get 调用方用户信息，userId 必填 
@@ -88,35 +113,35 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤 
-     * @return Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     * Get 企业组织相关信息 
+     * @return Organization 企业组织相关信息
      */
-    public Filter [] getFilters() {
-        return this.Filters;
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
     }
 
     /**
-     * Set 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-     * @param Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     * Set 企业组织相关信息
+     * @param Organization 企业组织相关信息
      */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
     }
 
     /**
-     * Get 查询个数，默认20，最大200 
-     * @return Limit 查询个数，默认20，最大200
+     * Get 应用相关信息 
+     * @return Agent 应用相关信息
      */
-    public Long getLimit() {
-        return this.Limit;
+    public Agent getAgent() {
+        return this.Agent;
     }
 
     /**
-     * Set 查询个数，默认20，最大200
-     * @param Limit 查询个数，默认20，最大200
+     * Set 应用相关信息
+     * @param Agent 应用相关信息
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     /**
@@ -136,19 +161,83 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
-     * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * Get 查询个数，默认20，最大200 
+     * @return Limit 查询个数，默认20，最大200
      */
-    public Long getContentType() {
-        return this.ContentType;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 查询内容：0-模板列表及详情（默认），1-仅模板列表
-     * @param ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * Set 查询个数，默认20，最大200
+     * @param Limit 查询个数，默认20，最大200
      */
-    public void setContentType(Long ContentType) {
-        this.ContentType = ContentType;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤 
+     * @return Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     * @param Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 这个参数跟下面的IsChannel参数配合使用。
+IsChannel=false时，ApplicationId参数不起任何作用。
+IsChannel=true时，ApplicationId为空，查询所有渠道模板列表；ApplicationId不为空，查询指定渠道下的模板列表
+ApplicationId为空，查询渠道模板列表 
+     * @return ApplicationId 这个参数跟下面的IsChannel参数配合使用。
+IsChannel=false时，ApplicationId参数不起任何作用。
+IsChannel=true时，ApplicationId为空，查询所有渠道模板列表；ApplicationId不为空，查询指定渠道下的模板列表
+ApplicationId为空，查询渠道模板列表
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 这个参数跟下面的IsChannel参数配合使用。
+IsChannel=false时，ApplicationId参数不起任何作用。
+IsChannel=true时，ApplicationId为空，查询所有渠道模板列表；ApplicationId不为空，查询指定渠道下的模板列表
+ApplicationId为空，查询渠道模板列表
+     * @param ApplicationId 这个参数跟下面的IsChannel参数配合使用。
+IsChannel=false时，ApplicationId参数不起任何作用。
+IsChannel=true时，ApplicationId为空，查询所有渠道模板列表；ApplicationId不为空，查询指定渠道下的模板列表
+ApplicationId为空，查询渠道模板列表
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 默认为false，查询SaaS模板库列表；
+为true，查询渠道模板库管理列表 
+     * @return IsChannel 默认为false，查询SaaS模板库列表；
+为true，查询渠道模板库管理列表
+     */
+    public Boolean getIsChannel() {
+        return this.IsChannel;
+    }
+
+    /**
+     * Set 默认为false，查询SaaS模板库列表；
+为true，查询渠道模板库管理列表
+     * @param IsChannel 默认为false，查询SaaS模板库列表；
+为true，查询渠道模板库管理列表
+     */
+    public void setIsChannel(Boolean IsChannel) {
+        this.IsChannel = IsChannel;
     }
 
     /**
@@ -168,19 +257,19 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
+     * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
-    public Agent getAgent() {
-        return this.Agent;
+    public Long getContentType() {
+        return this.ContentType;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * @param ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
+    public void setContentType(Long ContentType) {
+        this.ContentType = ContentType;
     }
 
     public DescribeFlowTemplatesRequest() {
@@ -194,26 +283,35 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
-        if (source.ContentType != null) {
-            this.ContentType = new Long(source.ContentType);
+        if (source.IsChannel != null) {
+            this.IsChannel = new Boolean(source.IsChannel);
         }
         if (source.GenerateSource != null) {
             this.GenerateSource = new Long(source.GenerateSource);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
         }
     }
 
@@ -223,12 +321,15 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
-        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "IsChannel", this.IsChannel);
+        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
 
     }
 }

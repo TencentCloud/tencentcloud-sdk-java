@@ -30,7 +30,7 @@ public class CreateBackUpScheduleRequest extends AbstractModel{
     private Long ScheduleId;
 
     /**
-    * 选择的星期 逗号分隔
+    * 选择的星期 逗号分隔，例如 2 代表周二
     */
     @SerializedName("WeekDays")
     @Expose
@@ -67,16 +67,16 @@ public class CreateBackUpScheduleRequest extends AbstractModel{
     }
 
     /**
-     * Get 选择的星期 逗号分隔 
-     * @return WeekDays 选择的星期 逗号分隔
+     * Get 选择的星期 逗号分隔，例如 2 代表周二 
+     * @return WeekDays 选择的星期 逗号分隔，例如 2 代表周二
      */
     public String getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set 选择的星期 逗号分隔
-     * @param WeekDays 选择的星期 逗号分隔
+     * Set 选择的星期 逗号分隔，例如 2 代表周二
+     * @param WeekDays 选择的星期 逗号分隔，例如 2 代表周二
      */
     public void setWeekDays(String WeekDays) {
         this.WeekDays = WeekDays;

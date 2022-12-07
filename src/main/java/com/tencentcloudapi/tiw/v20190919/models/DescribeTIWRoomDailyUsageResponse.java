@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateApiGroupResponse extends AbstractModel{
+public class DescribeTIWRoomDailyUsageResponse extends AbstractModel{
 
     /**
-    * 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
+    * 指定区间指定产品的房间用量列表
     */
-    @SerializedName("Result")
+    @SerializedName("Usages")
     @Expose
-    private Boolean Result;
+    private RoomUsageDataItem [] Usages;
+
+    /**
+    * 用量列表总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class UpdateApiGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 指定区间指定产品的房间用量列表 
+     * @return Usages 指定区间指定产品的房间用量列表
      */
-    public Boolean getResult() {
-        return this.Result;
+    public RoomUsageDataItem [] getUsages() {
+        return this.Usages;
     }
 
     /**
-     * Set 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 指定区间指定产品的房间用量列表
+     * @param Usages 指定区间指定产品的房间用量列表
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setUsages(RoomUsageDataItem [] Usages) {
+        this.Usages = Usages;
+    }
+
+    /**
+     * Get 用量列表总数 
+     * @return Total 用量列表总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 用量列表总数
+     * @param Total 用量列表总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -73,16 +91,22 @@ public class UpdateApiGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateApiGroupResponse() {
+    public DescribeTIWRoomDailyUsageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateApiGroupResponse(UpdateApiGroupResponse source) {
-        if (source.Result != null) {
-            this.Result = new Boolean(source.Result);
+    public DescribeTIWRoomDailyUsageResponse(DescribeTIWRoomDailyUsageResponse source) {
+        if (source.Usages != null) {
+            this.Usages = new RoomUsageDataItem[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new RoomUsageDataItem(source.Usages[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +118,8 @@ public class UpdateApiGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "Usages.", this.Usages);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -80,6 +80,27 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *删除用户列表（用户管理）
+
+     * @param req DeleteUserManagerUserListRequest
+     * @return DeleteUserManagerUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserManagerUserListResponse DeleteUserManagerUserList(DeleteUserManagerUserListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserManagerUserListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserManagerUserListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUserManagerUserList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群节点信息
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse

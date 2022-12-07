@@ -165,6 +165,20 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     private String Remark;
 
     /**
+    * 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+    */
+    @SerializedName("GpuCount")
+    @Expose
+    private Float GpuCount;
+
+    /**
+    * 实例的CPU主频信息
+    */
+    @SerializedName("Frequency")
+    @Expose
+    private String Frequency;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -492,6 +506,38 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。 
+     * @return GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     */
+    public Float getGpuCount() {
+        return this.GpuCount;
+    }
+
+    /**
+     * Set 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     * @param GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     */
+    public void setGpuCount(Float GpuCount) {
+        this.GpuCount = GpuCount;
+    }
+
+    /**
+     * Get 实例的CPU主频信息 
+     * @return Frequency 实例的CPU主频信息
+     */
+    public String getFrequency() {
+        return this.Frequency;
+    }
+
+    /**
+     * Set 实例的CPU主频信息
+     * @param Frequency 实例的CPU主频信息
+     */
+    public void setFrequency(String Frequency) {
+        this.Frequency = Frequency;
+    }
+
     public InstanceTypeQuotaItem() {
     }
 
@@ -563,6 +609,12 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.GpuCount != null) {
+            this.GpuCount = new Float(source.GpuCount);
+        }
+        if (source.Frequency != null) {
+            this.Frequency = new String(source.Frequency);
+        }
     }
 
 
@@ -590,6 +642,8 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "Fpga", this.Fpga);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
+        this.setParamSimple(map, prefix + "Frequency", this.Frequency);
 
     }
 }

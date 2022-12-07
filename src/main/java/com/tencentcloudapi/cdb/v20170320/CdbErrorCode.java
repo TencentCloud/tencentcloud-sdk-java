@@ -78,9 +78,6 @@ public enum CdbErrorCode {
     // 查询日志失败。
      FAILEDOPERATION_QUERYLOGERROR("FailedOperation.QueryLogError"),
      
-    // 代理创建中或则已存在，请勿重复创建。
-     FAILEDOPERATION_REPEATCREATEPROXYERROR("FailedOperation.RepeatCreateProxyError"),
-     
     // 后台请求服务异常，请您联系客服解决。
      FAILEDOPERATION_RESPONSEVALUEERROR("FailedOperation.ResponseValueError"),
      

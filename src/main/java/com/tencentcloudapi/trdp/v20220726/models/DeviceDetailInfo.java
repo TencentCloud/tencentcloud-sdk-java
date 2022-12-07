@@ -201,7 +201,7 @@ Android设备
     private String VendorId;
 
     /**
-    * 安卓API等级
+    * Android API等级
 Android设备
     */
     @SerializedName("AndroidApiLevel")
@@ -313,7 +313,7 @@ Android设备
     private String ChargeStatus;
 
     /**
-    * 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+    * 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
     */
     @SerializedName("NetworkType")
@@ -321,7 +321,7 @@ Android设备
     private String NetworkType;
 
     /**
-    * WiFi MAC地址
+    * Wi-Fi MAC地址
 Android设备
     */
     @SerializedName("WifiMac")
@@ -771,9 +771,9 @@ Android设备
     }
 
     /**
-     * Get 安卓API等级
+     * Get Android API等级
 Android设备 
-     * @return AndroidApiLevel 安卓API等级
+     * @return AndroidApiLevel Android API等级
 Android设备
      */
     public String getAndroidApiLevel() {
@@ -781,9 +781,9 @@ Android设备
     }
 
     /**
-     * Set 安卓API等级
+     * Set Android API等级
 Android设备
-     * @param AndroidApiLevel 安卓API等级
+     * @param AndroidApiLevel Android API等级
 Android设备
      */
     public void setAndroidApiLevel(String AndroidApiLevel) {
@@ -1051,9 +1051,9 @@ Android设备
     }
 
     /**
-     * Get 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+     * Get 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备 
-     * @return NetworkType 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+     * @return NetworkType 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
      */
     public String getNetworkType() {
@@ -1061,9 +1061,9 @@ Android设备
     }
 
     /**
-     * Set 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+     * Set 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
-     * @param NetworkType 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+     * @param NetworkType 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
      */
     public void setNetworkType(String NetworkType) {
@@ -1071,9 +1071,9 @@ Android设备
     }
 
     /**
-     * Get WiFi MAC地址
+     * Get Wi-Fi MAC地址
 Android设备 
-     * @return WifiMac WiFi MAC地址
+     * @return WifiMac Wi-Fi MAC地址
 Android设备
      */
     public String getWifiMac() {
@@ -1081,9 +1081,9 @@ Android设备
     }
 
     /**
-     * Set WiFi MAC地址
+     * Set Wi-Fi MAC地址
 Android设备
-     * @param WifiMac WiFi MAC地址
+     * @param WifiMac Wi-Fi MAC地址
 Android设备
      */
     public void setWifiMac(String WifiMac) {

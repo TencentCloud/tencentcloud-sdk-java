@@ -53,7 +53,7 @@ public class EvaluateUserRiskRequest extends AbstractModel{
     /**
     * 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
     */
     @SerializedName("SceneCode")
@@ -141,11 +141,11 @@ e_register_protection：注册保护场景
     /**
      * Get 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景 
      * @return SceneCode 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
      */
     public String getSceneCode() {
@@ -155,11 +155,11 @@ e_register_protection：注册保护场景
     /**
      * Set 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
      * @param SceneCode 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
      */
     public void setSceneCode(String SceneCode) {

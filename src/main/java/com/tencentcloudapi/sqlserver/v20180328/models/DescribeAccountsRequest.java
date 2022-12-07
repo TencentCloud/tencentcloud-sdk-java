@@ -44,6 +44,27 @@ public class DescribeAccountsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 账号名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * createTime,updateTime,passTime" note:"排序字段，默认按照账号创建时间倒序
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 排序规则（desc-降序，asc-升序），默认desc
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -91,6 +112,54 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 账号名称 
+     * @return Name 账号名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 账号名称
+     * @param Name 账号名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get createTime,updateTime,passTime" note:"排序字段，默认按照账号创建时间倒序 
+     * @return OrderBy createTime,updateTime,passTime" note:"排序字段，默认按照账号创建时间倒序
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set createTime,updateTime,passTime" note:"排序字段，默认按照账号创建时间倒序
+     * @param OrderBy createTime,updateTime,passTime" note:"排序字段，默认按照账号创建时间倒序
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 排序规则（desc-降序，asc-升序），默认desc 
+     * @return OrderByType 排序规则（desc-降序，asc-升序），默认desc
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序规则（desc-降序，asc-升序），默认desc
+     * @param OrderByType 排序规则（desc-降序，asc-升序），默认desc
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -108,6 +177,15 @@ public class DescribeAccountsRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

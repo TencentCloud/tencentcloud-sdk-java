@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateApiGroupResponse extends AbstractModel{
+public class CreateAbnormalProcessRulesExportJobResponse extends AbstractModel{
 
     /**
-    * 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
+    * 导出任务ID，前端拿着任务ID查询任务进度
     */
-    @SerializedName("Result")
+    @SerializedName("JobId")
     @Expose
-    private Boolean Result;
+    private String JobId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class UpdateApiGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 导出任务ID，前端拿着任务ID查询任务进度 
+     * @return JobId 导出任务ID，前端拿着任务ID查询任务进度
      */
-    public Boolean getResult() {
-        return this.Result;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 导出任务ID，前端拿着任务ID查询任务进度
+     * @param JobId 导出任务ID，前端拿着任务ID查询任务进度
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -73,16 +68,16 @@ public class UpdateApiGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateApiGroupResponse() {
+    public CreateAbnormalProcessRulesExportJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateApiGroupResponse(UpdateApiGroupResponse source) {
-        if (source.Result != null) {
-            this.Result = new Boolean(source.Result);
+    public CreateAbnormalProcessRulesExportJobResponse(CreateAbnormalProcessRulesExportJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ public class UpdateApiGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

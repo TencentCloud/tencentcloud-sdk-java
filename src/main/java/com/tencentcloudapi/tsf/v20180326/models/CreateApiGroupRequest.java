@@ -65,6 +65,34 @@ public class CreateApiGroupRequest extends AbstractModel{
     private String GatewayInstanceId;
 
     /**
+    * 命名空间参数key值
+    */
+    @SerializedName("NamespaceNameKey")
+    @Expose
+    private String NamespaceNameKey;
+
+    /**
+    * 微服务名参数key值
+    */
+    @SerializedName("ServiceNameKey")
+    @Expose
+    private String ServiceNameKey;
+
+    /**
+    * 命名空间参数位置，path，header或query，默认是path
+    */
+    @SerializedName("NamespaceNameKeyPosition")
+    @Expose
+    private String NamespaceNameKeyPosition;
+
+    /**
+    * 微服务名参数位置，path，header或query，默认是path
+    */
+    @SerializedName("ServiceNameKeyPosition")
+    @Expose
+    private String ServiceNameKeyPosition;
+
+    /**
      * Get 分组名称, 不能包含中文 
      * @return GroupName 分组名称, 不能包含中文
      */
@@ -160,6 +188,70 @@ public class CreateApiGroupRequest extends AbstractModel{
         this.GatewayInstanceId = GatewayInstanceId;
     }
 
+    /**
+     * Get 命名空间参数key值 
+     * @return NamespaceNameKey 命名空间参数key值
+     */
+    public String getNamespaceNameKey() {
+        return this.NamespaceNameKey;
+    }
+
+    /**
+     * Set 命名空间参数key值
+     * @param NamespaceNameKey 命名空间参数key值
+     */
+    public void setNamespaceNameKey(String NamespaceNameKey) {
+        this.NamespaceNameKey = NamespaceNameKey;
+    }
+
+    /**
+     * Get 微服务名参数key值 
+     * @return ServiceNameKey 微服务名参数key值
+     */
+    public String getServiceNameKey() {
+        return this.ServiceNameKey;
+    }
+
+    /**
+     * Set 微服务名参数key值
+     * @param ServiceNameKey 微服务名参数key值
+     */
+    public void setServiceNameKey(String ServiceNameKey) {
+        this.ServiceNameKey = ServiceNameKey;
+    }
+
+    /**
+     * Get 命名空间参数位置，path，header或query，默认是path 
+     * @return NamespaceNameKeyPosition 命名空间参数位置，path，header或query，默认是path
+     */
+    public String getNamespaceNameKeyPosition() {
+        return this.NamespaceNameKeyPosition;
+    }
+
+    /**
+     * Set 命名空间参数位置，path，header或query，默认是path
+     * @param NamespaceNameKeyPosition 命名空间参数位置，path，header或query，默认是path
+     */
+    public void setNamespaceNameKeyPosition(String NamespaceNameKeyPosition) {
+        this.NamespaceNameKeyPosition = NamespaceNameKeyPosition;
+    }
+
+    /**
+     * Get 微服务名参数位置，path，header或query，默认是path 
+     * @return ServiceNameKeyPosition 微服务名参数位置，path，header或query，默认是path
+     */
+    public String getServiceNameKeyPosition() {
+        return this.ServiceNameKeyPosition;
+    }
+
+    /**
+     * Set 微服务名参数位置，path，header或query，默认是path
+     * @param ServiceNameKeyPosition 微服务名参数位置，path，header或query，默认是path
+     */
+    public void setServiceNameKeyPosition(String ServiceNameKeyPosition) {
+        this.ServiceNameKeyPosition = ServiceNameKeyPosition;
+    }
+
     public CreateApiGroupRequest() {
     }
 
@@ -186,6 +278,18 @@ public class CreateApiGroupRequest extends AbstractModel{
         if (source.GatewayInstanceId != null) {
             this.GatewayInstanceId = new String(source.GatewayInstanceId);
         }
+        if (source.NamespaceNameKey != null) {
+            this.NamespaceNameKey = new String(source.NamespaceNameKey);
+        }
+        if (source.ServiceNameKey != null) {
+            this.ServiceNameKey = new String(source.ServiceNameKey);
+        }
+        if (source.NamespaceNameKeyPosition != null) {
+            this.NamespaceNameKeyPosition = new String(source.NamespaceNameKeyPosition);
+        }
+        if (source.ServiceNameKeyPosition != null) {
+            this.ServiceNameKeyPosition = new String(source.ServiceNameKeyPosition);
+        }
     }
 
 
@@ -199,6 +303,10 @@ public class CreateApiGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
+        this.setParamSimple(map, prefix + "NamespaceNameKey", this.NamespaceNameKey);
+        this.setParamSimple(map, prefix + "ServiceNameKey", this.ServiceNameKey);
+        this.setParamSimple(map, prefix + "NamespaceNameKeyPosition", this.NamespaceNameKeyPosition);
+        this.setParamSimple(map, prefix + "ServiceNameKeyPosition", this.ServiceNameKeyPosition);
 
     }
 }

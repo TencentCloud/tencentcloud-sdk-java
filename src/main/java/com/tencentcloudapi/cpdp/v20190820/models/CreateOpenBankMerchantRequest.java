@@ -32,8 +32,6 @@ public class CreateOpenBankMerchantRequest extends AbstractModel{
     /**
     * 渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
     */
     @SerializedName("ChannelName")
     @Expose
@@ -95,13 +93,9 @@ _不填默认为生产环境_
 
     /**
      * Get 渠道名称。
-__TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝 
+__TENPAY__: 商企付 
      * @return ChannelName 渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
      */
     public String getChannelName() {
         return this.ChannelName;
@@ -110,12 +104,8 @@ __ALIPAY__: 支付宝
     /**
      * Set 渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
      * @param ChannelName 渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;

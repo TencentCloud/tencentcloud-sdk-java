@@ -202,6 +202,29 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *查询互动白板房间维度每天计费用量。
+1. 单次查询统计区间最多不能超过31天。
+2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
+
+     * @param req DescribeTIWRoomDailyUsageRequest
+     * @return DescribeTIWRoomDailyUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTIWRoomDailyUsageResponse DescribeTIWRoomDailyUsage(DescribeTIWRoomDailyUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTIWRoomDailyUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTIWRoomDailyUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTIWRoomDailyUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文档转码任务的执行进度与转码结果
      * @param req DescribeTranscodeRequest
      * @return DescribeTranscodeResponse

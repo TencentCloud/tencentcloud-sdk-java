@@ -65,6 +65,20 @@ public class ClusterParamModifyLog extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 参数名称 
      * @return ParamName 参数名称
      */
@@ -160,6 +174,38 @@ public class ClusterParamModifyLog extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public ClusterParamModifyLog() {
     }
 
@@ -186,6 +232,12 @@ public class ClusterParamModifyLog extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class ClusterParamModifyLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

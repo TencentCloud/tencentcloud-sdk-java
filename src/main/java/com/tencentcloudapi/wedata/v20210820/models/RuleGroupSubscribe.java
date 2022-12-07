@@ -47,6 +47,14 @@ public class RuleGroupSubscribe extends AbstractModel{
     private Long [] SubscribeType;
 
     /**
+    * 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebHooks")
+    @Expose
+    private SubscribeWebHook [] WebHooks;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -106,6 +114,26 @@ public class RuleGroupSubscribe extends AbstractModel{
         this.SubscribeType = SubscribeType;
     }
 
+    /**
+     * Get 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebHooks 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubscribeWebHook [] getWebHooks() {
+        return this.WebHooks;
+    }
+
+    /**
+     * Set 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebHooks 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebHooks(SubscribeWebHook [] WebHooks) {
+        this.WebHooks = WebHooks;
+    }
+
     public RuleGroupSubscribe() {
     }
 
@@ -129,6 +157,12 @@ public class RuleGroupSubscribe extends AbstractModel{
                 this.SubscribeType[i] = new Long(source.SubscribeType[i]);
             }
         }
+        if (source.WebHooks != null) {
+            this.WebHooks = new SubscribeWebHook[source.WebHooks.length];
+            for (int i = 0; i < source.WebHooks.length; i++) {
+                this.WebHooks[i] = new SubscribeWebHook(source.WebHooks[i]);
+            }
+        }
     }
 
 
@@ -139,6 +173,7 @@ public class RuleGroupSubscribe extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleGroupId", this.RuleGroupId);
         this.setParamArrayObj(map, prefix + "Receivers.", this.Receivers);
         this.setParamArraySimple(map, prefix + "SubscribeType.", this.SubscribeType);
+        this.setParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
 
     }
 }

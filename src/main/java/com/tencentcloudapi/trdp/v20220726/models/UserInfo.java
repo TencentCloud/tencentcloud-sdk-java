@@ -37,7 +37,7 @@ public class UserInfo extends AbstractModel{
     private String ChannelSource;
 
     /**
-    * 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+    * 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
     */
     @SerializedName("Platform")
     @Expose
@@ -127,16 +127,16 @@ female（女）
     }
 
     /**
-     * Get 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序 
-     * @return Platform 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+     * Get 用户登录平台。1：Android 2：iOS 3：H5 4：小程序 
+     * @return Platform 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
      */
     public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
-     * @param Platform 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+     * Set 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
+     * @param Platform 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;

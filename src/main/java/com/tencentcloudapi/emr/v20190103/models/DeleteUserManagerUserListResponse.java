@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateApiGroupResponse extends AbstractModel{
-
-    /**
-    * 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Result")
-    @Expose
-    private Boolean Result;
+public class DeleteUserManagerUserListResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,26 +28,6 @@ public class UpdateApiGroupResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Boolean getResult() {
-        return this.Result;
-    }
-
-    /**
-     * Set 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 返回结果，true: 成功, false: 失败
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -73,17 +45,14 @@ public class UpdateApiGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpdateApiGroupResponse() {
+    public DeleteUserManagerUserListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateApiGroupResponse(UpdateApiGroupResponse source) {
-        if (source.Result != null) {
-            this.Result = new Boolean(source.Result);
-        }
+    public DeleteUserManagerUserListResponse(DeleteUserManagerUserListResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ public class UpdateApiGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

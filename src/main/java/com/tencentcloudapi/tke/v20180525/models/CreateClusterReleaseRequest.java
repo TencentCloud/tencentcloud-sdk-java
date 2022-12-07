@@ -58,7 +58,7 @@ public class CreateClusterReleaseRequest extends AbstractModel{
     private ReleaseValues Values;
 
     /**
-    * 制品来源，范围：tke-market/tcr/other
+    * 制品来源，范围：tke 应用市场/第三方chart
     */
     @SerializedName("ChartFrom")
     @Expose
@@ -98,6 +98,13 @@ public class CreateClusterReleaseRequest extends AbstractModel{
     @SerializedName("ChartNamespace")
     @Expose
     private String ChartNamespace;
+
+    /**
+    * 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
 
     /**
      * Get 集群ID 
@@ -180,16 +187,16 @@ public class CreateClusterReleaseRequest extends AbstractModel{
     }
 
     /**
-     * Get 制品来源，范围：tke-market/tcr/other 
-     * @return ChartFrom 制品来源，范围：tke-market/tcr/other
+     * Get 制品来源，范围：tke 应用市场/第三方chart 
+     * @return ChartFrom 制品来源，范围：tke 应用市场/第三方chart
      */
     public String getChartFrom() {
         return this.ChartFrom;
     }
 
     /**
-     * Set 制品来源，范围：tke-market/tcr/other
-     * @param ChartFrom 制品来源，范围：tke-market/tcr/other
+     * Set 制品来源，范围：tke 应用市场/第三方chart
+     * @param ChartFrom 制品来源，范围：tke 应用市场/第三方chart
      */
     public void setChartFrom(String ChartFrom) {
         this.ChartFrom = ChartFrom;
@@ -275,6 +282,22 @@ public class CreateClusterReleaseRequest extends AbstractModel{
         this.ChartNamespace = ChartNamespace;
     }
 
+    /**
+     * Get 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群） 
+     * @return ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * @param ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public CreateClusterReleaseRequest() {
     }
 
@@ -316,6 +339,9 @@ public class CreateClusterReleaseRequest extends AbstractModel{
         if (source.ChartNamespace != null) {
             this.ChartNamespace = new String(source.ChartNamespace);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class CreateClusterReleaseRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ChartNamespace", this.ChartNamespace);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

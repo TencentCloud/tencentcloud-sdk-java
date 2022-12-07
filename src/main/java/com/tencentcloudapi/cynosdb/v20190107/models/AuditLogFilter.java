@@ -100,6 +100,20 @@ public class AuditLogFilter extends AbstractModel{
     private String [] Sqls;
 
     /**
+    * 返回行数。
+    */
+    @SerializedName("SentRows")
+    @Expose
+    private Long SentRows;
+
+    /**
+    * 线程ID。
+    */
+    @SerializedName("ThreadId")
+    @Expose
+    private String [] ThreadId;
+
+    /**
      * Get 客户端地址。 
      * @return Host 客户端地址。
      */
@@ -275,6 +289,38 @@ public class AuditLogFilter extends AbstractModel{
         this.Sqls = Sqls;
     }
 
+    /**
+     * Get 返回行数。 
+     * @return SentRows 返回行数。
+     */
+    public Long getSentRows() {
+        return this.SentRows;
+    }
+
+    /**
+     * Set 返回行数。
+     * @param SentRows 返回行数。
+     */
+    public void setSentRows(Long SentRows) {
+        this.SentRows = SentRows;
+    }
+
+    /**
+     * Get 线程ID。 
+     * @return ThreadId 线程ID。
+     */
+    public String [] getThreadId() {
+        return this.ThreadId;
+    }
+
+    /**
+     * Set 线程ID。
+     * @param ThreadId 线程ID。
+     */
+    public void setThreadId(String [] ThreadId) {
+        this.ThreadId = ThreadId;
+    }
+
     public AuditLogFilter() {
     }
 
@@ -337,6 +383,15 @@ public class AuditLogFilter extends AbstractModel{
                 this.Sqls[i] = new String(source.Sqls[i]);
             }
         }
+        if (source.SentRows != null) {
+            this.SentRows = new Long(source.SentRows);
+        }
+        if (source.ThreadId != null) {
+            this.ThreadId = new String[source.ThreadId.length];
+            for (int i = 0; i < source.ThreadId.length; i++) {
+                this.ThreadId[i] = new String(source.ThreadId[i]);
+            }
+        }
     }
 
 
@@ -355,6 +410,8 @@ public class AuditLogFilter extends AbstractModel{
         this.setParamSimple(map, prefix + "AffectRows", this.AffectRows);
         this.setParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
         this.setParamArraySimple(map, prefix + "Sqls.", this.Sqls);
+        this.setParamSimple(map, prefix + "SentRows", this.SentRows);
+        this.setParamArraySimple(map, prefix + "ThreadId.", this.ThreadId);
 
     }
 }

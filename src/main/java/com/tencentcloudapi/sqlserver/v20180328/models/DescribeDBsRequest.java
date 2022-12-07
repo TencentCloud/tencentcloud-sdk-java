@@ -44,6 +44,20 @@ public class DescribeDBsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 数据库名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 排序规则（desc-降序，asc-升序），默认desc
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get 实例ID 
      * @return InstanceIdSet 实例ID
      */
@@ -91,6 +105,38 @@ public class DescribeDBsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 数据库名称 
+     * @return Name 数据库名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 数据库名称
+     * @param Name 数据库名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 排序规则（desc-降序，asc-升序），默认desc 
+     * @return OrderByType 排序规则（desc-降序，asc-升序），默认desc
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序规则（desc-降序，asc-升序），默认desc
+     * @param OrderByType 排序规则（desc-降序，asc-升序），默认desc
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public DescribeDBsRequest() {
     }
 
@@ -111,6 +157,12 @@ public class DescribeDBsRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class DescribeDBsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

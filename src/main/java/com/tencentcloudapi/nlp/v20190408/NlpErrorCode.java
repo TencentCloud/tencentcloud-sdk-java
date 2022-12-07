@@ -1,5 +1,8 @@
 package com.tencentcloudapi.nlp.v20190408;
 public enum NlpErrorCode {
+    // 请求头部的 Authorization 不符合腾讯云标准。
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
